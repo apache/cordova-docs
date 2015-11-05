@@ -1,8 +1,19 @@
 (function () {
-    var DOCS_VERSION_PATTERN = /(docs\/..\/[\d\.edge]+)/;
+
+    // regexes as strings
+    // NOTE:
+    //      these patterns should NOT contain capturing groups (parentheses)
+    //      because they might be combined with other regexes
+    var DOCS_VERSION_PATTERN      = "(?:[\\d\\.]+|edge|latest)";
+    var DOCS_VERSION_PATH_PATTERN = "docs\\/..\\/" + DOCS_VERSION_PATTERN;
+
+    function splitDocsURL(url) {
+        var splitPattern = new RegExp("(" + DOCS_VERSION_PATH_PATTERN + ")");
+        return url.split(splitPattern);
+    }
 
     function transformOldURL(oldURL) {
-        var splitURL = oldURL.split(DOCS_VERSION_PATTERN);
+        var splitURL = splitDocsURL(oldURL);
 
         var baseURL       = splitURL[0];
         var versionString = splitURL[1];
@@ -27,11 +38,13 @@
     }
 
     function getEdgeURL(url) {
-        return url.replace(/docs\/(..)\/([\d\.]+|latest|edge)/, 'docs/$1/edge');
+        var replaceWhat = new RegExp("docs\\/(..)\\/" + DOCS_VERSION_PATTERN);
+        var replaceWith = "docs/$1/edge";
+        return url.replace(replaceWhat, replaceWith);
     }
 
     function getRootURL(url) {
-        var splitURL      = url.split(DOCS_VERSION_PATTERN);
+        var splitURL      = splitDocsURL(url);
         var baseURL       = splitURL[0];
         var versionString = splitURL[1];
 
@@ -39,7 +52,8 @@
     }
 
     function isDocsURL(url) {
-        return DOCS_VERSION_PATTERN.test(url);
+        var testPattern = new RegExp(DOCS_VERSION_PATH_PATTERN);
+        return testPattern.test(url);
     }
 
     function showNewRedirect(url) {

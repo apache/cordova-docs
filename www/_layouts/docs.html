@@ -154,7 +154,7 @@ analytics_id: UA-64283057-1
 
         <!-- Get URL for this page in the latest version -->
         {% capture current_version_path %}/docs/{{ page.language }}/{{ page.version }}/{% endcapture %}
-        {% capture latest_version_path %}/docs/{{ page.language }}/{{ site.latest_docs_version }}/{% endcapture %}
+        {% capture latest_version_path %}/docs/{{ page.language }}/latest/{% endcapture %}
         {% assign latest_url = page.url | replace:current_version_path,latest_version_path %}
 
         <!-- Show warnings for special versions (i.e. non-latest, and edge) -->
@@ -172,8 +172,10 @@ analytics_id: UA-64283057-1
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                {{ warning_text }} {{ page.click_here_text }}:
-                <a href="{{ site.baseurl }}{{ latest_url }}">{{ site.latest_docs_version }}</a>
+                {{ warning_text }}
+                <a href="{{ site.baseurl }}{{ latest_url }}">
+                    {{ page.click_here_text }}
+                </a>
             </div>
 
         {% endif %}

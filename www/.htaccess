@@ -26,7 +26,7 @@ RewriteEngine on
 # NOTE:
 #       these can both apply, turning "/docs" into "/docs/en/latest/"
 RewriteRule ^.*docs/$ {{site.baseurl}}/docs/en/
-RewriteRule ^.*docs/(\w\w)/$ {{site.baseurl}}/docs/$1/latest/ [R=302]
+RewriteRule ^.*docs/(\w\w)/$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
 
 # rewrite only:
 #       /docs/XX/latest/* -> /docs/XX/Y.Y.Y/*
