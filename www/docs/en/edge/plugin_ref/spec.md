@@ -677,11 +677,11 @@ specified as a command-line argument:
 To make the variable mandatory, the `<platform>` tag needs to contain
 a `<preference>` tag. For example:
 
-    <preference name="API_KEY" />
+    <preference name="API_KEY" default="default-value" />
 
 plugman checks that these required preferences are passed in.  If not,
 it should warn the user how to pass the variable in and exit with a
-non-zero code.
+non-zero code. If the optional `default` attribute is present its value will be used and no error will be emitted.
 
 Certain variable names should be reserved, as listed below.
 
