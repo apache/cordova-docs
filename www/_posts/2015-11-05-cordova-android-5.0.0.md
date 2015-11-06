@@ -7,13 +7,13 @@ title:  "Apache Cordova 5.0.0"
 categories: announcements
 tags: news releases
 ---
-We are happy to announce that Cordova Android 5.0.0` has been released.
+We are happy to announce that `Cordova Android 5.0.0` has been released.
 
 With this release, there is now support for Android Marshmallow permission checking in plugins.  Due to the nature of the recent Android changes, the
 major version has been incremented to reflect the new API changes.  Only plugins that use certain permissions as defined by Google are affected
 by this change.
 
-Information on how to use the new Android Permission APIs can be found in the Cordova documentation, which can be found here.
+Information on how to use the new Android Permission APIs can be found in the Cordova documentation, which can be found [here](https://http://cordova.apache.org/docs/en/latest/guide/platforms/android/plugin.html).
 
 To upgrade:
 
