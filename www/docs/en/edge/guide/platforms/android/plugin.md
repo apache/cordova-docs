@@ -289,6 +289,9 @@ To cut down on verbosity, it's standard practice to assign this to a local stati
 
     public static final String READ = Manifest.permission.READ_CONTACTS;
 
+It is also standard practice to define the requestCode as follows:
+
+    public static final int SEARCH_REQ_CODE = 0;
 
 Then, in the exec method, the permission should be checked:
 
