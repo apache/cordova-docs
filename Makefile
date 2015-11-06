@@ -116,7 +116,7 @@ build: JEKYLL_CONFIGS += $(DOCS_EXCLUDE_CONFIG)
 endif
 
 build: JEKYLL_FLAGS += --config $(subst $(SPACE),$(COMMA),$(strip $(JEKYLL_CONFIGS)))
-build: $(JEKYLL_CONFIGS) $(STYLES) $(PLUGINS_APP)
+build: $(JEKYLL_CONFIGS) $(TOC_FILES) $(LANGUAGES_DATA) $(STYLES) $(PLUGINS_APP)
 	$(JEKYLL) build $(JEKYLL_FLAGS)
 
 install:
