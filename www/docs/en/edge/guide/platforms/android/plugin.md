@@ -279,7 +279,7 @@ applications must handle these permission changes to be future-proof, which
 was the focus of the Cordova-Android 5.0 release.
 
 The permissions that need to be handled at runtime can be found in the Android Developer
-documentation here.
+documentation [here](http://developer.android.com/guide/topics/security/permissions.html#perm-groups).
 
 As far as a plugin is concerned, the permission can be requested by calling the permission method, which signature is as follows:
 
