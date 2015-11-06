@@ -129,7 +129,7 @@ function jekyllBuild(done) {
 }
 
 // tasks
-gulp.task("watch", [], function () {
+gulp.task("watch", ["serve"], function () {
     gulp.watch(
         [
             path.join(CSS_SRC_DIR, "**", "*"),
