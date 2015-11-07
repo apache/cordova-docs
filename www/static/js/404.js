@@ -48,7 +48,7 @@
         var baseURL       = splitURL[0];
         var versionString = splitURL[1];
 
-        return baseURL + versionString;
+        return baseURL + versionString + "/";
     }
 
     function isDocsURL(url) {

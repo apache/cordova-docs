@@ -28,6 +28,10 @@ RewriteEngine on
 RewriteRule ^.*docs/$ {{site.baseurl}}/docs/en/
 RewriteRule ^.*docs/(\w\w)/$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
 
+# 302:
+#       docs/XX/latest -> docs/XX/latest/
+RewriteRule ^.*docs/(\w\w)/latest$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
+
 # rewrite only:
 #       /docs/XX/latest/* -> /docs/XX/Y.Y.Y/*
 #
@@ -44,4 +48,4 @@ RewriteRule ^.*docs/(\w\w)/latest/(.*)$ {{site.baseurl}}/docs/$1/{{site.latest_d
 #       The first part of the path (i.e. the ".*") is
 #       thrown away and replaced by site.baseurl.
 {% for redirect in site.data.docs-redirects %}
-RewriteRule ^.*docs/(\w\w)/([^/]+)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/$2/{{redirect.new}} [R=301]{% endfor %}
+RewriteRule ^.*docs/(\w\w)/([^/]+)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/$2/{{redirect.new}} [R=301,L]{% endfor %}
