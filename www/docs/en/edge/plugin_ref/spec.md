@@ -509,6 +509,23 @@ Android example:
 
     <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
 
+The Windows platform supports `resource-file` only and three additional attributes
+(all optional) to refine when the resource-file should be included:
+
+* `arch`: Indicates that the file should only be included when building for the specified architecture.
+  Supported values are `x86`, `x64` or `ARM`.
+
+* `device-target`: Indicates that the file should only be included when building for the specified target device
+  type. Supported values are `win` (or `windows`), `phone` or `all`.
+
+* `versions`: Indicates that the file should only be included when building for versions that match the specified version
+  string. Value can be any valid node semantic version range string.
+
+Windows example:
+
+    <resource-file src="src/windows/win81/MobServices.pri" target="win81/MobServices.pri"
+    device-target="windows" versions="8.1" arch="x64"/>
+
 ## _lib-file_ Element
 
 Like source, resource, and header files, but specifically for
@@ -603,7 +620,7 @@ application project. It allows to add references between sub projects like in th
 
 ### _framework_ for Windows
 
-The Windows platform supports three additional attributes (all optional) to refine when the framework should be included:
+The Windows platform supports four additional attributes (all optional) to refine when the framework should be included and to adjust target location:
 
     <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
 
@@ -616,12 +633,18 @@ type. Supported values are `win` (or `windows`), `phone` or `all`.
 The `versions` attribute indicates that the framework should only be included when building for versions that match the
 specified version string. Value can be any valid node semantic version range string.
 
+The `target-dir` attribute indicates a subdirectory into which the framework should be
+copied. In practice, this is most important when plugin contains different framework
+versions for different chip architectures or device targets, but which have the same name. This allows you to specify different subfolders for each framework version so that they
+don't overlap each other.
+
 Examples of using these Windows specific attributes:
 
     <framework src="src/windows/example.dll" arch="x64" />
     <framework src="src/windows/example.dll" versions=">=8.0" />
     <framework src="src/windows/example.vcxproj" type="projectReference" target="win" />
     <framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" />
+    <framework src="src/windows/example.dll" target-dir="bin/x64" arch="x64" custom="true"/>
 
 ## _info_ Element
 
