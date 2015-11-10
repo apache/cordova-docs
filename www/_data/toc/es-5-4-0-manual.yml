@@ -1,4 +1,4 @@
-- {name: "Gu\xEDas", url: !!python/unicode '/docs/es5.4.0'}
+- {name: "Gu\xEDas", url: !!python/unicode '/docs/es/5.4.0'}
 - {name: !!python/unicode 'Resumen', url: !!python/unicode '/docs/es/edge/guide/overview/index.html'}
 - {name: !!python/unicode 'Soporte de plataformas', url: !!python/unicode '/docs/es/edge/guide/support/index.html'}
 - {name: !!python/unicode 'La interfaz de linea de comandos', url: !!python/unicode '/docs/es/edge/guide/cli/index.html'}
