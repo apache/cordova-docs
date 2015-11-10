@@ -21,7 +21,7 @@ We are in the process of releasing these plugins to [npm](https://www.npmjs.com/
 
     cordova plugin add https://github.com/apache/cordova-plugin-camera.git
 
-Information on how to use the new **Android Permission APIs** can be found in the Cordova documentation, which can be found [here](https://http://cordova.apache.org/docs/en/latest/guide/platforms/android/plugin.html).
+Information on how to use the new **Android Permission APIs** can be found in the Cordova documentation, which can be found [here](http://cordova.apache.org/docs/en/latest/guide/platforms/android/plugin.html).
 
 To upgrade:
 
