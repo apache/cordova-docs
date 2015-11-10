@@ -1,0 +1,19 @@
+- {name: "\u8F14\u52A9\u7DDA", url: !!python/unicode '/docs/zh5.4.0'}
+- {name: "\u6982\u8FF0", url: !!python/unicode '/docs/zh/edge/guide/overview/index.html'}
+- {name: "\u5E73\u81FA\u652F\u63F4", url: !!python/unicode '/docs/zh/edge/guide/support/index.html'}
+- {name: "\u547D\u4EE4\u5217\u4ECB\u9762", url: !!python/unicode '/docs/zh/edge/guide/cli/index.html'}
+- {name: "\u5E73\u81FA\u6307\u5357", url: !!python/unicode '/docs/zh/edge/guide/platforms/index.html'}
+- {name: "\u4F7F\u7528 Plugman \u4F86\u7BA1\u7406\u5916\u639B\u7A0B\u5F0F", url: !!python/unicode '/docs/zh/edge/plugin_ref/plugman.html'}
+- {name: "Config.xml \u6A94", url: !!python/unicode '/docs/zh/edge/config_ref/index.html'}
+- {name: "\u5716\u793A\u548C\u555F\u52D5\u756B\u9762", url: !!python/unicode '/docs/zh/edge/config_ref/images.html'}
+- {name: "\u5D4C\u5165 WebViews", url: !!python/unicode '/docs/zh/edge/guide/hybrid/webviews/index.html'}
+- {name: "\u5916\u639B\u7A0B\u5F0F\u958B\u767C\u6307\u5357", url: !!python/unicode '/docs/zh/edge/guide/hybrid/plugins/index.html'}
+- {name: "\u5916\u639B\u7A0B\u5F0F\u898F\u7BC4", url: !!python/unicode '/docs/zh/edge/plugin_ref/spec.html'}
+- {name: "\u96B1\u79C1\u6307\u5357", url: !!python/unicode '/docs/zh/edge/guide/appdev/privacy/index.html'}
+- {name: "\u5B89\u5168\u6307\u5357", url: !!python/unicode '/docs/zh/edge/guide/appdev/security/index.html'}
+- {name: "\u5E73\u81FA\u548C\u5916\u639B\u7A0B\u5F0F\u7248\u672C\u7BA1\u7406", url: !!python/unicode '/docs/zh/edge/platform_plugin_versioning_ref/index.html'}
+- {name: "\u767D\u540D\u55AE\u6307\u5357", url: !!python/unicode '/docs/zh/edge/guide/appdev/whitelist/index.html'}
+- {name: "\u5B58\u5132", url: !!python/unicode '/docs/zh/edge/cordova/storage/storage.html'}
+- {name: "\u4E8B\u4EF6", url: !!python/unicode '/docs/zh/edge/cordova/events/events.html'}
+- {name: "\u5916\u639B\u7A0B\u5F0F\u7684 Api", url: !!python/unicode '/docs/zh/edge/cordova/plugins/pluginapis.html'}
+- {name: "\u95DC\u9375\u5B57\u7D22\u5F15", url: !!python/unicode '/docs/zh/edge/page_index.html'}
