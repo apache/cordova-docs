@@ -3,7 +3,7 @@ layout: post
 author:
     name: Joe Bowser
     url: https://twitter.com/infil00p
-title:  "Apache Cordova 5.0.0"
+title:  "Cordova Android 5.0.0"
 categories: announcements
 tags: news releases
 ---
