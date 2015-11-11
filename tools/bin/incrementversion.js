@@ -127,10 +127,17 @@ function main () {
             console.log(newVersionPath + " created");
         });
 
-        // if there is a manual ToC file for the dev version, create one for the new version
+        // if there is a manual ToC file for the dev version, create one
+        // for the new version by transforming the dev ToC file
         if (fs.existsSync(devTocfilePath)) {
+
+            // compute replacement strings
+            var devVersionString = "/" + DEV_VERSION_NAME + "/";
+            var newVersionString = "/" + newVersion + "/";
+
+            // replace dev version name with new version name
             var devToc = fs.readFileSync(devTocfilePath, ENCODING);
-            var newToc = devToc.replace("/" + DEV_VERSION_NAME + "/", newVersion)
+            var newToc = devToc.replace(new RegExp(devVersionString, "g"), newVersionString)
             fs.writeFile(newTocfilePath, newToc, ENCODING, function (error) {
                 if (error) {
                     return console.error(error);

@@ -1,20 +1,20 @@
-- {name: !!python/unicode 'Guide', url: !!python/unicode '/docs/it/5.4.0'}
-- {name: !!python/unicode 'Panoramica', url: !!python/unicode '/docs/it/edge/guide/overview/index.html'}
-- {name: !!python/unicode 'Supporto di piattaforma', url: !!python/unicode '/docs/it/edge/guide/support/index.html'}
-- {name: !!python/unicode 'L&apos;interfaccia della riga di comando', url: !!python/unicode '/docs/it/edge/guide/cli/index.html'}
-- {name: !!python/unicode 'Piattaforma guide', url: !!python/unicode '/docs/it/edge/guide/platforms/index.html'}
-- {name: !!python/unicode 'L&apos;utilizzo di Plugman per gestire i plugin', url: !!python/unicode '/docs/it/edge/plugin_ref/plugman.html'}
-- {name: !!python/unicode 'Il File config. Xml', url: !!python/unicode '/docs/it/edge/config_ref/index.html'}
-- {name: !!python/unicode 'Icone e Splash screen', url: !!python/unicode '/docs/it/edge/config_ref/images.html'}
-- {name: !!python/unicode 'Incorporamento visualizzazioni Web', url: !!python/unicode '/docs/it/edge/guide/hybrid/webviews/index.html'}
-- {name: !!python/unicode 'Guida allo sviluppo di plugin', url: !!python/unicode '/docs/it/edge/guide/hybrid/plugins/index.html'}
-- {name: !!python/unicode 'Plugin Specification', url: !!python/unicode '/docs/it/edge/plugin_ref/spec.html'}
-- {name: !!python/unicode 'Guida sulla privacy', url: !!python/unicode '/docs/it/edge/guide/appdev/privacy/index.html'}
-- {name: !!python/unicode 'Guida alla sicurezza', url: !!python/unicode '/docs/it/edge/guide/appdev/security/index.html'}
-- {name: !!python/unicode 'Piattaforme e gestione plugin versione', url: !!python/unicode '/docs/it/edge/platform_plugin_versioning_ref/index.html'}
-- {name: !!python/unicode 'Guida di whitelist', url: !!python/unicode '/docs/it/edge/guide/appdev/whitelist/index.html'}
-- {name: !!python/unicode 'Guida di ganci', url: !!python/unicode '/docs/it/edge/guide/appdev/hooks/index.html'}
-- {name: !!python/unicode 'Prossimi passi', url: !!python/unicode '/docs/it/edge/guide/next/index.html'}
-- {name: !!python/unicode 'Eventi', url: !!python/unicode '/docs/it/edge/cordova/events/events.html'}
-- {name: !!python/unicode 'Plugin API', url: !!python/unicode '/docs/it/edge/cordova/plugins/pluginapis.html'}
-- {name: !!python/unicode 'Indice delle parole chiave', url: !!python/unicode '/docs/it/edge/page_index.html'}
+- {name: !!python/unicode 'Guide', url: !!python/unicode '/docs/it/5.4.0/'}
+- {name: !!python/unicode 'Panoramica', url: !!python/unicode '/docs/it/5.4.0/guide/overview/index.html'}
+- {name: !!python/unicode 'Supporto di piattaforma', url: !!python/unicode '/docs/it/5.4.0/guide/support/index.html'}
+- {name: !!python/unicode 'L&apos;interfaccia della riga di comando', url: !!python/unicode '/docs/it/5.4.0/guide/cli/index.html'}
+- {name: !!python/unicode 'Piattaforma guide', url: !!python/unicode '/docs/it/5.4.0/guide/platforms/index.html'}
+- {name: !!python/unicode 'L&apos;utilizzo di Plugman per gestire i plugin', url: !!python/unicode '/docs/it/5.4.0/plugin_ref/plugman.html'}
+- {name: !!python/unicode 'Il File config. Xml', url: !!python/unicode '/docs/it/5.4.0/config_ref/index.html'}
+- {name: !!python/unicode 'Icone e Splash screen', url: !!python/unicode '/docs/it/5.4.0/config_ref/images.html'}
+- {name: !!python/unicode 'Incorporamento visualizzazioni Web', url: !!python/unicode '/docs/it/5.4.0/guide/hybrid/webviews/index.html'}
+- {name: !!python/unicode 'Guida allo sviluppo di plugin', url: !!python/unicode '/docs/it/5.4.0/guide/hybrid/plugins/index.html'}
+- {name: !!python/unicode 'Plugin Specification', url: !!python/unicode '/docs/it/5.4.0/plugin_ref/spec.html'}
+- {name: !!python/unicode 'Guida sulla privacy', url: !!python/unicode '/docs/it/5.4.0/guide/appdev/privacy/index.html'}
+- {name: !!python/unicode 'Guida alla sicurezza', url: !!python/unicode '/docs/it/5.4.0/guide/appdev/security/index.html'}
+- {name: !!python/unicode 'Piattaforme e gestione plugin versione', url: !!python/unicode '/docs/it/5.4.0/platform_plugin_versioning_ref/index.html'}
+- {name: !!python/unicode 'Guida di whitelist', url: !!python/unicode '/docs/it/5.4.0/guide/appdev/whitelist/index.html'}
+- {name: !!python/unicode 'Guida di ganci', url: !!python/unicode '/docs/it/5.4.0/guide/appdev/hooks/index.html'}
+- {name: !!python/unicode 'Prossimi passi', url: !!python/unicode '/docs/it/5.4.0/guide/next/index.html'}
+- {name: !!python/unicode 'Eventi', url: !!python/unicode '/docs/it/5.4.0/cordova/events/events.html'}
+- {name: !!python/unicode 'Plugin API', url: !!python/unicode '/docs/it/5.4.0/cordova/plugins/pluginapis.html'}
+- {name: !!python/unicode 'Indice delle parole chiave', url: !!python/unicode '/docs/it/5.4.0/page_index.html'}
