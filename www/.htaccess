@@ -47,5 +47,10 @@ RewriteRule ^.*docs/(\w\w)/latest/(.*)$ {{site.baseurl}}/docs/$1/{{site.latest_d
 # NOTE:
 #       The first part of the path (i.e. the ".*") is
 #       thrown away and replaced by site.baseurl.
+# NOTE:
+#       The reason for this not just being "redirects" and rather being
+#       docs-specific is: these redirects happen for every version of the
+#       docs. That's 157 redirects * 84 versions ~= 13000 redirects! Doing
+#       special pattern-matching for docs keeps that number at _only_ 157.
 {% for redirect in site.data.docs-redirects %}
 RewriteRule ^.*docs/(\w\w)/([^/]+)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/$2/{{redirect.new}} [R=301,L]{% endfor %}
