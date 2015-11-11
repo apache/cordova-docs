@@ -23,6 +23,10 @@ repo:
 latest_docs_version: edge
 
 # NOTE:
+#      this value might get overwritten on some pages; see _defaults.yml
+language: en
+
+# NOTE:
 #      this value gets overwritten in _defaults.yml, which is a generated file
 defaults:
 

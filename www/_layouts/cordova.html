@@ -3,7 +3,7 @@ analytics_id: UA-64283057-3
 ---
 
 <!DOCTYPE html>
-<html lang="{{ page.language }}">
+<html lang="{% if page.language %}{{ page.language }}{% else %}{{ site.language }}{% endif %}">
 {% include head.html %}
 <body>
     {% include header.html %}
