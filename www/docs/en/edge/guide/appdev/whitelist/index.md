@@ -97,14 +97,14 @@ prior to 4.0.0, see older versions of this documentation.
 As above, see [cordova-plugin-whitelist][wlp] for details.  For cordova-ios
 prior to 4.0.0, see older versions of this documentation.
 
-[Application Transport Security (ATS)](https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/) is new in iOS 9 (Xcode 7). This new feature acts as a whitelist for your app. The cli will automatically convert &lt;access&gt; and &lt;allow-navigation&gt; tags to the appropriate ATS directives.
+[Application Transport Security (ATS)](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) is new in iOS 9 (Xcode 7). This new feature acts as a whitelist for your app. The cli will automatically convert &lt;access&gt; and &lt;allow-navigation&gt; tags to the appropriate ATS directives.
 
 The two tags mentioned above support these two new attributes below, which have their equivalents in ATS:
 
     1. minimum-tls-version (String, defaults to 'TLSv1.2')
 	2. requires-forward-secrecy (Boolean, defaults to 'true')
 	
-See the [ATS Technote](https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/) for details.
+See the [ATS Technote](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) for details.
 
 
 ## BlackBerry 10 Whitelisting
