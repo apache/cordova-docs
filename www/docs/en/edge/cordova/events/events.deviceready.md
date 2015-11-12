@@ -52,7 +52,6 @@ callback function called immediately.
 - Android
 - BlackBerry 10
 - iOS
-- Tizen
 - Windows Phone 8
 - Windows 8
 

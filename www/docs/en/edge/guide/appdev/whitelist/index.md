@@ -103,7 +103,7 @@ The two tags mentioned above support these two new attributes below, which have 
 
     1. minimum-tls-version (String, defaults to 'TLSv1.2')
 	2. requires-forward-secrecy (Boolean, defaults to 'true')
-	
+
 See the [ATS Technote](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) for details.
 
 
@@ -118,7 +118,7 @@ ways:
   explicitly. Setting `origin="*"` does not work in this case.
   Alternatively, all web security may be disabled using the
   `WebSecurity` preference described in BlackBerry Configuration:
- 
+
         <preference name="websecurity" value="disable" />
 
 * As an alternative to setting `*.domain`, set an additional
@@ -143,7 +143,7 @@ ways:
 ## Firefox OS
 
 In Firefox OS there is no concept of whitelisting a specific domain. Instead
-there is a special permission called 
+there is a special permission called
 [SystemXHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Permissions).
 There is a need to add this permission to `config.xml`:
 
@@ -151,7 +151,7 @@ There is a need to add this permission to `config.xml`:
 		<permission name="systemXHR" privileged="true" description="load data from server" />
 	</platform>
 
-The `XMLHttpRequest` object needs to be instantiated with two parameters 
+The `XMLHttpRequest` object needs to be instantiated with two parameters
 `mozAnon` and `mozSystem`:
 
 	var request = new XMLHttpRequest({
@@ -165,14 +165,6 @@ This solution is transparent so there is no difference for other platforms.
 The whitelisting rules for Windows Phone 8 are found in the
 app's `config.xml` file.
 
-## Tizen Whitelisting
-
-Whitelisting rules are found in the app's `config.xml` file. The
-platform relies on the same `subdomains` attribute as the BlackBerry
-platform.
-(For more information on support, see Tizen's documentation on the
-[access element][9].)
-
 [wlp]: https://github.com/apache/cordova-plugin-whitelist
 [1]: http://www.w3.org/TR/widgets-access/
 [2]: http://google.com
@@ -182,5 +174,3 @@ platform.
 [6]: http://docs.google.com
 [7]: http://developer.mozilla.org
 [8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
-[9]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm
-

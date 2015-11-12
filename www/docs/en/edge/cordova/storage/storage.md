@@ -47,7 +47,6 @@ The following platforms support WebSQL:
 - Android
 - BlackBerry 10
 - iOS
-- Tizen
 
 ## IndexedDB
 

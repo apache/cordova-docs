@@ -195,13 +195,11 @@ listed below, and each builds on the simple Echo Plugin example above:
 - [Windows Phone 8 Plugins](../../platforms/wp8/plugin.html)
 - [Windows Plugins](../../platforms/win8/plugin.html)
 
-The Tizen platform does not support plugins.
-
 ## Publishing Plugins
 
 Once you develop your plugin, you may want to publish and share it
 with the community. You can publish your plugin to any `npmjs`-based
-registry, but the recommended one is the [NPM registry](https://www.npmjs.com). 
+registry, but the recommended one is the [NPM registry](https://www.npmjs.com).
 Please read our [publishing plugins to npm guide](http://plugins.cordova.io/npm/developers.html).
 
 

@@ -40,7 +40,7 @@ platform: (optional) target platform
 
 width: (optional) icon width in pixels
 
-height: (optional) icon height in pixels 
+height: (optional) icon height in pixels
 
 density: (optional) android specific, specifies icon density
 
@@ -49,7 +49,7 @@ which will be used for all platforms.
 
         <icon src="res/icon.png" />
 
-For each platform you can also define a pixel-perfect icons set to fit 
+For each platform you can also define a pixel-perfect icons set to fit
 different screen resolutions.
 
 Amazon Fire OS
@@ -117,12 +117,6 @@ iOS
                   <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
          </platform>
 
-Tizen
-
-         <platform name="tizen">
-                  <icon src="res/tizen/icon-128.png" width="128" height="128" />
-         </platform>
-        
 Windows Phone8
 
          <platform name="wp8">
@@ -143,7 +137,7 @@ Windows8
 
 In the top-level `config.xml` file (not the one in `platforms`), add configuration elements like those specified here.
 
-# Example configuration 
+# Example configuration
 
 Please notice that the value of the "src" attribute is relative to the project directory and not to the www directory.
 You can name the source image whatever you like. The internal name in the app are determined by Cordova.
@@ -194,7 +188,7 @@ You can name the source image whatever you like. The internal name in the app ar
 
     <preference name="SplashScreenDelay" value="10000" />
 
-# Supported platforms 
+# Supported platforms
 
 As of now (Cordova 3.5.0 July 2014) the following platforms support splash screens.
 
