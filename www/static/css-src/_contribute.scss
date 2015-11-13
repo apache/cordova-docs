@@ -128,3 +128,11 @@ a:hover .report-bug-icon {
         margin-bottom:.5em;
     }
 }
+
+// Issues and Contributing guides within contribute
+.contribute-help {
+    table {
+        @extend .table;
+        @extend .table-bordered;
+    }
+}
