@@ -7,7 +7,7 @@ Thank you for helping to improve Cordova! Issues for Apache Cordova are hosted a
 
 
 ## Creating an issue in JIRA
-Once you have created an account and logged in, click the blue "Create" button at the top of the [Cordova JIRA](https://issues.apache.org/jira/browse/CB) page to create an issue. In the dialog that appears, please fill out the following fields to the best of your ability. All fields besides those listed here can be left blank
+Once you have created an account and logged in, click the blue "Create" button at the top of the [Cordova JIRA](https://issues.apache.org/jira/browse/CB) page to create an issue. In the dialog that appears, please fill out the following fields to the best of your ability. All fields besides those listed here can be left blank.
 
 Field           | Description
 ----------------| -----
