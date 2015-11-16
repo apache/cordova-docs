@@ -8,6 +8,15 @@
         }
     }
 
+    pre {
+        word-wrap: normal;
+
+        code {
+            overflow: auto;
+            white-space: pre;
+        }
+    }
+
     .site-toc-title {
         font-weight: 300;
         font-size: 22px;
