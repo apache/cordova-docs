@@ -5,6 +5,14 @@
 #         A description that can
 #         span multiple lines.
 
+-   name: Klipfolio
+    image: Klipfolio.png
+    url: http://www.klipfolio.com/
+    description: >
+        Track your most important business metrics and KPIs wherever you are.
+        Get real-time marketing, sales, finance, and business dashboards in the
+        palm of your hand.
+
 -   name: NewVo - Fast Style Advice
     image: NewVo.png
     url: https://newvo.me
