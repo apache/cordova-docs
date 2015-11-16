@@ -79,6 +79,6 @@
 
         -   label: Browse online
             text: Issues Mailing List Archive
-            href: http://callback.markmail.org/search/?q=#query:%20list%3Aorg.apache.incubator.callback-issues+page:1+state:facets
+            href: http://apache.markmail.org/search/?q=#query:%20list%3Aorg.apache.cordova.issues%20order%3Adate-backward+page:1+state:facets
     description: >
         Issues mailing list tracks comments and updates to <a href="http://issues.apache.org/jira/browse/CB">Jira items</a> regarding Apache Cordova.
