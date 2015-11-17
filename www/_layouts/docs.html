@@ -115,6 +115,9 @@ analytics_id: UA-64283057-1
             <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     {{ page.version }}
+                    {% if page.version == site.latest_docs_version %}
+                        (Latest)
+                    {% endif %}
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="versionDropdown">
@@ -124,6 +127,13 @@ analytics_id: UA-64283057-1
                     <li>
                         {% capture current_version_path %}/docs/{{ page.language }}/{{ page.version }}/{% endcapture %}
                         {% capture target_version_path %}/docs/{{ page.language }}/{{ version }}/{% endcapture %}
+
+                        {% capture version_entry_string %}
+                            {{ version }}
+                            {% if version == site.latest_docs_version %}
+                                (Latest)
+                            {% endif %}
+                        {% endcapture %}
 
                         <!--
                         Replace only the version part of the URI, thereby
@@ -138,10 +148,10 @@ analytics_id: UA-64283057-1
                         <a href="{{ site.baseurl }}{{ target_version_url }}">
                             {% if page.version == version %}
                                 <span class="selected">
-                                    {{ version }}
+                                    {{ version_entry_string }}
                                 </span>
                             {% else %}
-                                {{ version }}
+                                {{ version_entry_string }}
                             {% endif %}
                         </a>
                     </li>
