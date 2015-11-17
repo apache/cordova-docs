@@ -100,6 +100,12 @@
             background-color: rgb(191, 191, 191);
         }
     }
+
+    .dropdown-menu {
+        left: inherit;
+        right: 0;
+    }
+
     .content-header .edit {
         margin-right: 0.5em;
         margin-left: 0.5em;
