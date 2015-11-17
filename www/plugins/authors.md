@@ -1,6 +1,6 @@
 ---
 layout: plugins-help
-title: Apache Cordova Plugin Contributors
+title: Plugin Contributors
 ---
 
 # Plugin Search for Plugin Authors

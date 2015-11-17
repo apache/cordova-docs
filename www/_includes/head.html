@@ -8,10 +8,10 @@
 
     <title>
         {% if page.title %}
-            {% if page.title_prefix %}
-                {{ page.title_prefix }} - {{ page.title }}
+            {% if page.title_suffix %}
+                {{ page.title }} - {{ page.title_suffix }}
             {% else %}
-                {{ page.title }}
+                {{ page.title }} - {{ site.title_suffix }}
             {% endif %}
         {% else %}
             {{ site.title }}
