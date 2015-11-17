@@ -12,6 +12,16 @@ analytics_id: UA-64283057-1
     {% assign tocfile = toc_dir.[page.generated_toc] %}
 {% endif %}
 
+{% comment %}
+    <!-- We want TOC links to be relative in order to make sure we preserve aliases
+    like "latest" in the URL. The captures are both horrendous single line
+    statements in order to prevent the capturing of extra whitespace. -->
+{% endcomment %}
+
+{% assign url_split = page.url | split: "/" %}
+{% capture relative_base_path %}{% for item in url_split %}{% if forloop.index0 > 3 and forloop.rindex > 1 %}../{% endif %}{% endfor %}{% endcapture %}
+{% capture actual_base_path %}{% for item in url_split %}{% if forloop.index0 < 4 and forloop.index0 != 0 %}/{{item}}{% endif %}{% endfor %}/{% endcapture %}
+
 <div class="docs container">
 
     <!-- Table of Contents -->
@@ -20,7 +30,7 @@ analytics_id: UA-64283057-1
         <ul class="site-toc">
             {% for entry in tocfile %}
             <li>
-                <a class="{% if page.url == entry.url %}this-page{% endif %}" href="{{ site.baseurl }}{{ entry.url }}">
+                <a class="{% if page.url == entry.url %}this-page{% endif %}" href="{{ entry.url | replace:actual_base_path,relative_base_path }}">
                     {{ entry.name }}
                 </a>
                 {% if page.url == entry.url %}
@@ -44,7 +54,7 @@ analytics_id: UA-64283057-1
                 <ul class="dropdown-menu">
                     {% for entry in tocfile %}
                     <li>
-                        <a class="{% if page.url == entry.url %}this-page{% endif %}" href="{{ site.baseurl }}{{ entry.url }}">
+                        <a class="{% if page.url == entry.url %}this-page{% endif %}" href="{{ entry.url | replace:actual_base_path,relative_base_path }}">
                             {% if page.url == entry.url %}
                                 <em>{{ entry.name }}</em>
                             {% else %}
