@@ -71,6 +71,8 @@ redcarpet:
         # not have a leading or trailing newline
         - lax_spacing
 
+        - tables
+
 kramdown:
     input: GFM
     hard_wrap: false
