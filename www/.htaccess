@@ -11,7 +11,7 @@ RewriteEngine on
 #       Some of the below redirects are 302s, and some are 301s. 302s are used
 #       for redirects whose targets change sometimes. For example:
 #           - /docs/          -> /docs/fr/, /docs/en/, etc.
-#           - /docs/en/       -> /docs/en/edge/, /docs/en/latest/, etc.
+#           - /docs/en/       -> /docs/en/dev/, /docs/en/latest/, etc.
 #           - /docs/en/latest -> /docs/en/4.0.0/, /docs/en/5.0.0/, etc.
 #
 #       301s are for PERMANENT redirects. These are used only for mapping old

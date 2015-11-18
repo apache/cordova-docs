@@ -20,12 +20,12 @@
 /*jslint node:true, nomen: true */
 
 var yargs = require('yargs')
-    .describe('edge', 'Compare version of English docs with translated version')
+    .describe('dev', 'Compare version of English docs with translated version')
     .count("verbose")
     .alias('v', 'verbose')
     .describe('verbose', 'Increase verbosity level of produced output')
     .describe('source', 'Path to the documentation sources. Default: public')
-    .usage('Usage: $0 [-v] [lang] [version] [--edge]\n' +
+    .usage('Usage: $0 [-v] [lang] [version] [--dev]\n' +
         '    <lang>: Language for which generate docs. If not specified then generate for all languages.\n' +
         '    <version>: Version for which generate docs. If not specified then generate all versions.\n');
 var argv = yargs.argv;
@@ -37,9 +37,9 @@ if (argv.help) {
 
 var language = null;
 var version = null;
-if (argv.edge) {
+if (argv.dev) {
     language = null;
-    version = "edge";
+    version = "dev";
 } else {
     var argumentsCount = argv._.length;
     if (argumentsCount !== 0) {

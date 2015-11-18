@@ -22,7 +22,7 @@
 var fs = require('fs-extra'),
     path = require('path'),
     yargs = require('yargs')
-    .describe('edge', 'Compare edge version of English docs with Ruby version')
+    .describe('dev', 'Compare dev version of English docs with Ruby version')
     .count("verbose")
     .alias('v', 'verbose')
     .describe('verbose', 'Increase verbosity level of produced output')
@@ -71,18 +71,18 @@ if (argumentsCount === 2) {
 }
 
 var prevVersion = fs.readFileSync('VERSION', { encoding: 'utf8' }),
-    edge_dir = path.join('docs', language, 'edge'),
+    dev_dir = path.join('docs', language, 'dev'),
     release_dir = path.join('docs', language, version),
     versionShort;
 
 prevVersion = prevVersion.replace(/rc\d+$/, '').trim();
 
 if (argv.verbose > 0) {
-    console.log("Copy edge docs to " + release_dir);
+    console.log("Copy dev docs to " + release_dir);
 }
 
 fs.mkdirSync(release_dir);
-fs.copySync(edge_dir, release_dir);
+fs.copySync(dev_dir, release_dir);
 
 versionShort = version.replace(/rc\d+$/, '').trim();
 if (prevVersion !== versionShort) {
@@ -91,7 +91,7 @@ if (prevVersion !== versionShort) {
         if (path.extname(filename) != ".md" && path.extname(filename) != ".html") {
             return;
         }
-        
+
         var content = fs.readFileSync(filename, { encoding: 'utf8' });
         content.replace('x.x.x', versionShort);
         fs.writeFileSync(filename, content);

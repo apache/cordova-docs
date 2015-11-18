@@ -20,7 +20,7 @@ repo:
 
 # NOTE:
 #      this value gets overwritten in _version.yml, which is a generated file
-latest_docs_version: edge
+latest_docs_version: dev
 
 # NOTE:
 #      this value might get overwritten on some pages; see _defaults.yml

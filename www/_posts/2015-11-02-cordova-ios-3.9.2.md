@@ -21,7 +21,7 @@ To add it explicitly:
 
     cordova platform add ios@3.9.2 --save
 
-For non-CLI projects or for pre-3.0 projects, refer to the [upgrade guides](http://cordova.apache.org/docs/en/edge/guide_platforms_index.md.html).
+For non-CLI projects or for pre-3.0 projects, refer to the [upgrade guides](http://cordova.apache.org/docs/en/dev/guide_platforms_index.md.html).
 
 Warning: Some people are seeing the following error when adding the new platform:
 
