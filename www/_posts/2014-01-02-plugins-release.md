@@ -31,7 +31,7 @@ With this release, documentation for plugins have moved from
 [http://cordova.apache.org/docs](http://cordova.apache.org/docs) to the `doc/` directory
 within plugins themselves. Eventually, docs will be available online through
 [plugins.cordova.io](http://plugins.cordova.io). Until then, they will be viewable online
-[via github](http://cordova.apache.org/docs/en/edge/cordova_plugins_pluginapis.md.html).
+[via github](http://cordova.apache.org/docs/en/dev/cordova_plugins_pluginapis.md.html).
 
 Aside from documentation, changes include:
 

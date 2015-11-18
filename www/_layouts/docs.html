@@ -175,10 +175,10 @@ analytics_id: UA-64283057-1
         {% capture latest_version_path %}/docs/{{ page.language }}/latest/{% endcapture %}
         {% assign latest_url = page.url | replace:current_version_path,latest_version_path %}
 
-        <!-- Show warnings for special versions (i.e. non-latest, and edge) -->
-        {% if page.version == 'edge' or page.version != site.latest_docs_version %}
+        <!-- Show warnings for special versions (i.e. non-latest, and dev) -->
+        {% if page.version == 'dev' or page.version != site.latest_docs_version %}
 
-            {% if page.version == 'edge' %}
+            {% if page.version == 'dev' %}
                 {% assign alert_class = "alert-info" %}
                 {% assign warning_text = page.in_development_text %}
             {% elsif page.version != site.latest_docs_version %}

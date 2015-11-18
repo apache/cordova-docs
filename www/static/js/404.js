@@ -4,7 +4,7 @@
     // NOTE:
     //      these patterns should NOT contain capturing groups (parentheses)
     //      because they might be combined with other regexes
-    var DOCS_VERSION_PATTERN      = "(?:[\\d\\.]+|edge|latest)";
+    var DOCS_VERSION_PATTERN      = "(?:[\\d\\.]+|dev|latest)";
     var DOCS_VERSION_PATH_PATTERN = "docs\\/..\\/" + DOCS_VERSION_PATTERN;
 
     function splitDocsURL(url) {
@@ -37,9 +37,9 @@
         return baseURL + versionString + pageExtension;
     }
 
-    function getEdgeURL(url) {
+    function getDevURL(url) {
         var replaceWhat = new RegExp("docs\\/(..)\\/" + DOCS_VERSION_PATTERN);
-        var replaceWith = "docs/$1/edge";
+        var replaceWith = "docs/$1/dev";
         return url.replace(replaceWhat, replaceWith);
     }
 
@@ -61,8 +61,8 @@
         $("#not-found-redirect-alert").css("display", "block");
     }
 
-    function showEdgeRedirect(url) {
-        $("#edge-redirect-link").attr("href", url);
+    function showDevRedirect(url) {
+        $("#dev-redirect-link").attr("href", url);
         $("#no-version-redirect-alert").css("display", "block");
     }
 
@@ -81,7 +81,7 @@
 
         // get related URLs
         var rootURL = getRootURL(url);
-        var edgeURL = getEdgeURL(url);
+        var devURL = getDevURL(url);
         var newURL  = transformOldURL(url);
 
         // try the root URL
@@ -109,9 +109,9 @@
                 },
 
                 // if root doesn't exist, assume that the version
-                // is invalid and redirect to edge
+                // is invalid and redirect to dev
                 404: function () {
-                    showEdgeRedirect(edgeURL)
+                    showDevRedirect(devURL)
                 }
             }
         });

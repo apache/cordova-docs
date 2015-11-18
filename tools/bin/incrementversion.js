@@ -28,7 +28,7 @@ var util = require("./util");
 
 // constants
 var VERSION_FILE_NAME = "VERSION";
-var DEV_VERSION_NAME  = "edge";
+var DEV_VERSION_NAME  = "dev";
 var ENCODING          = "utf8";
 
 // helpers

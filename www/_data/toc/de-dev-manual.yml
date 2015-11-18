@@ -1,0 +1,19 @@
+- {name: "Reisef\xFChrer", url: !!python/unicode '/docs/de/dev/'}
+- {name: "\xDCbersicht", url: !!python/unicode '/docs/de/dev/guide/overview/index.html'}
+- {name: "Plattformunterst\xFCtzung", url: !!python/unicode '/docs/de/dev/guide/support/index.html'}
+- {name: !!python/unicode 'Die Befehlszeilenschnittstelle', url: !!python/unicode '/docs/de/dev/guide/cli/index.html'}
+- {name: !!python/unicode 'Plattform-Guides', url: !!python/unicode '/docs/de/dev/guide/platforms/index.html'}
+- {name: !!python/unicode 'Plugins verwalten mithilfe Plugman', url: !!python/unicode '/docs/de/dev/plugin_ref/plugman.html'}
+- {name: !!python/unicode 'Die Datei config.xml', url: !!python/unicode '/docs/de/dev/config_ref/index.html'}
+- {name: !!python/unicode 'Symbole und Splash-Screens', url: !!python/unicode '/docs/de/dev/config_ref/images.html'}
+- {name: "Einbetten von Webansichten f\xFCr", url: !!python/unicode '/docs/de/dev/guide/hybrid/webviews/index.html'}
+- {name: !!python/unicode 'Plugin-Entwicklung-Guide', url: !!python/unicode '/docs/de/dev/guide/hybrid/plugins/index.html'}
+- {name: !!python/unicode 'Plugin-Spezifikation', url: !!python/unicode '/docs/de/dev/plugin_ref/spec.html'}
+- {name: !!python/unicode 'Datenschutz-Guide', url: !!python/unicode '/docs/de/dev/guide/appdev/privacy/index.html'}
+- {name: !!python/unicode 'Sicherheitshandbuch', url: !!python/unicode '/docs/de/dev/guide/appdev/security/index.html'}
+- {name: !!python/unicode 'Plattformen und Plugins Versionsmanagement', url: !!python/unicode '/docs/de/dev/platform_plugin_versioning_ref/index.html'}
+- {name: !!python/unicode 'Whitelist-Guide', url: !!python/unicode '/docs/de/dev/guide/appdev/whitelist/index.html'}
+- {name: "Die n\xE4chsten Schritte", url: !!python/unicode '/docs/de/dev/guide/next/index.html'}
+- {name: !!python/unicode 'Veranstaltungen', url: !!python/unicode '/docs/de/dev/cordova/events/events.html'}
+- {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/de/dev/cordova/plugins/pluginapis.html'}
+- {name: !!python/unicode 'Stichwort-Index', url: !!python/unicode '/docs/de/dev/page_index.html'}

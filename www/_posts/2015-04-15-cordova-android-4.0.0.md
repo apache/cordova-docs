@@ -42,7 +42,7 @@ version of `cordova`. If you just can't wait though, you can try it out now:
   * Android Studio is now fully supported, and recommended over Eclipse
   * Use `cordova plugin add ../path/to/my-plugin --link` to symlink .java files for development
 * Build using Gradle
-  * All builds [use Gradle by default](https://cordova.apache.org/docs/en/edge/guide_platforms_android_tools.md.html#Android%20Shell%20Tool%20Guide_building_with_gradle), instead of Ant
+  * All builds [use Gradle by default](https://cordova.apache.org/docs/en/dev/guide_platforms_android_tools.md.html#Android%20Shell%20Tool%20Guide_building_with_gradle), instead of Ant
   * Plugins can add their own gradle build steps!
   * Plugins can depend on Maven libraries using `<framework>` tags
 * New APIs: `onStart`, `onStop`, `onConfigurationChanged`

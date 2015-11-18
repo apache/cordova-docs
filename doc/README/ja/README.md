@@ -72,8 +72,8 @@
 
     $ rm -r tmp public      # Clear out old docs
     $ ./bin/genjs           # compile all docs
-    $ ./bin/genjs en edge   # compile English Edge docs
-    $ ./bin/genjs ru edge   # compile Russian Edge docs
+    $ ./bin/genjs en dev    # compile English Dev docs
+    $ ./bin/genjs ru dev    # compile Russian Dev docs
     $ ./bin/genjs es 3.5.0  # compile Spanish 3.5.0 docs
 
 
