@@ -94,18 +94,18 @@ prior to 4.0.0, see older versions of this documentation.
 
 ## iOS Whitelisting
 
-As above, see [cordova-plugin-whitelist][wlp] for details.  For cordova-ios
-prior to 4.0.0, see older versions of this documentation.
+The `<allow-intent>` and `<allow-navigation>` tags are _new_ for cordova-ios 4.x and greater, see the [cordova-plugin-whitelist][wlp] documentation for details. cordova-ios version 4.0 and greater does **not** require the [cordova-plugin-whitelist][wlp] plugin to be installed.
 
-[Application Transport Security (ATS)](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) is new in iOS 9 (Xcode 7). This new feature acts as a whitelist for your app. The cli will automatically convert &lt;access&gt; and &lt;allow-navigation&gt; tags to the appropriate ATS directives.
+For cordova-ios versions prior to 4.0.0, see the older versions of this documentation. 
 
-The two tags mentioned above support these two new attributes below, which have their equivalents in ATS:
+[Application Transport Security (ATS)](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) is new in iOS 9 (Xcode 7). This new feature acts as a whitelist for your app. The cordova cli will automatically convert `<access>` and `<allow-navigation>` tags to the appropriate ATS directives.
+
+The `<access>` and `<allow-navigation>` tags support these two new attributes below, which have their equivalents in ATS:
 
     1. minimum-tls-version (String, defaults to 'TLSv1.2')
-	2. requires-forward-secrecy (Boolean, defaults to 'true')
+    2. requires-forward-secrecy (Boolean, defaults to 'true')
 
 See the [ATS Technote](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) for details.
-
 
 ## BlackBerry 10 Whitelisting
 
