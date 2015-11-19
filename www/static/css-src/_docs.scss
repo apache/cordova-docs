@@ -116,6 +116,11 @@
         color: gray !important;
     }
 
+    table {
+        @extend .table;
+        @extend .table-bordered;
+    }
+
     .keyword-index-list {
         list-style: none;
 
