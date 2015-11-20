@@ -4,7 +4,7 @@
 # Variable Reference:
 # 	https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
 
-# config
+# Makefile's own config
 ifeq ($(OS),Windows_NT)
 WINDOWS=1
 endif
@@ -51,6 +51,7 @@ SASSC      = $(NODE_BIN_DIR)/node-sass
 BROWSERIFY = $(NODE_BIN_DIR)/browserify
 UGLIFY     = $(NODE_BIN_DIR)/uglifyjs
 
+# replace slashes in executables on Windows
 ifdef WINDOWS
 GULP       := $(subst /,\,$(GULP))
 LESSC      := $(subst /,\,$(LESSC))
@@ -68,7 +69,8 @@ PLUGINS_SRC         = $(PLUGINS_SRC_DIR)/app.js
 
 # NOTE:
 #      the .scss files are separate because they combine into MAIN_STYLE_FILE,
-#      which names them on its own, and the SCSS compiler takes care of them
+#      which includes them on its own, and the SCSS compiler takes care of them;
+#      because of this, there is also no .scss -> .css pattern rule
 ifdef WINDOWS
 SCSS_SRC   = $(shell cd $(CSS_SRC_DIR) && dir *.scss /S /B)
 STYLES_SRC = $(shell cd $(CSS_SRC_DIR) && dir *.less *.css /S /B)
@@ -139,9 +141,11 @@ plugins: $(PLUGINS_APP)
 dev: JEKYLL_CONFIGS += $(DEV_CONFIG)
 dev: JEKYLL_FLAGS += --trace
 dev: DEBUG = 1
+
 prod: JEKYLL_CONFIGS += $(PROD_CONFIG)
 prod: JEKYLL_FLAGS +=
 prod: DEBUG =
+
 dev prod: build
 
 ifdef NODOCS
@@ -160,6 +164,8 @@ serve:
 	cd $(DEV_DIR) && python -m SimpleHTTPServer 8000
 
 # real targets
+# NOTE:
+#      the ">>" operator appends to a file in both CMD and SH
 $(PLUGINS_APP): $(PLUGINS_SRC) Makefile
 	echo ---> $@
 	echo --->> $@
@@ -208,7 +214,7 @@ clean:
 	$(RM) $(PLUGINS_APP)
 	$(RM) -r $(CSS_DEST_DIR)
 
-# I couldn't find a way to do this on Windows
+# I couldn't find a way to do this nicely on Windows
 ifdef WINDOWS
 else
 	find . -name *.pyc -delete
