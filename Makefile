@@ -4,6 +4,21 @@
 # Variable Reference:
 # 	https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
 
+# config
+ifeq ($(OS),Windows_NT)
+WINDOWS=1
+endif
+
+ifdef WINDOWS
+SHELL  = cmd
+JEKYLL = jekyll.bat
+MKDIRP = mkdir
+else
+SHELL  = sh
+JEKYLL = jekyll
+MKDIRP = mkdir -p
+endif
+
 # constants
 EMPTY =
 SPACE = $(EMPTY) $(EMPTY)
@@ -36,8 +51,13 @@ SASSC      = $(NODE_BIN_DIR)/node-sass
 BROWSERIFY = $(NODE_BIN_DIR)/browserify
 UGLIFY     = $(NODE_BIN_DIR)/uglifyjs
 
-JEKYLL = jekyll
-# JEKYLL = jekyll.bat
+ifdef WINDOWS
+GULP       := $(subst /,\,$(GULP))
+LESSC      := $(subst /,\,$(LESSC))
+SASSC      := $(subst /,\,$(SASSC))
+BROWSERIFY := $(subst /,\,$(BROWSERIFY))
+UGLIFY     := $(subst /,\,$(UGLIFY))
+endif
 
 # existing files
 MAIN_CONFIG         = _config.yml
@@ -49,8 +69,13 @@ PLUGINS_SRC         = $(PLUGINS_SRC_DIR)/app.js
 # NOTE:
 #      the .scss files are separate because they combine into MAIN_STYLE_FILE,
 #      which names them on its own, and the SCSS compiler takes care of them
+ifdef WINDOWS
+SCSS_SRC   = $(shell cd $(CSS_SRC_DIR) && dir *.scss /S /B)
+STYLES_SRC = $(shell cd $(CSS_SRC_DIR) && dir *.less *.css /S /B)
+else
 SCSS_SRC   = $(shell find $(CSS_SRC_DIR) -name "*.scss")
 STYLES_SRC = $(shell find $(CSS_SRC_DIR) -name "*.less" -or -name "*.css")
+endif
 
 # generated files
 VERSION_CONFIG  = _version.yml
@@ -95,7 +120,15 @@ help usage default:
 	@echo ""
 
 debug:
-	@echo "SCSS_SRC:" $(SCSS_SRC)
+	@echo "OS: " $(OS)
+	@echo ""
+	@echo "SCSS_SRC: " $(SCSS_SRC)
+	@echo ""
+	@echo "STYLES_SRC: " $(STYLES_SRC)
+	@echo ""
+	@echo "TOC_FILES: " $(TOC_FILES)
+	@echo ""
+	@echo "MKDIRP: " $(MKDIRP)
 	@echo ""
 
 data: $(TOC_FILES) $(LANGUAGES_DATA)
@@ -123,9 +156,13 @@ install:
 	bundle install
 	npm install
 
+serve:
+	cd $(DEV_DIR) && python -m SimpleHTTPServer 8000
+
 # real targets
 $(PLUGINS_APP): $(PLUGINS_SRC) Makefile
-	echo "---\n---" > $@
+	echo ---> $@
+	echo --->> $@
 	$(BROWSERIFY) -t reactify -t envify $< | $(UGLIFY) >> $@
 
 $(LANGUAGES_DATA): $(BIN_DIR)/gen_languages.js Makefile
@@ -135,7 +172,7 @@ $(DEFAULTS_CONFIG): $(BIN_DIR)/gen_defaults.js Makefile
 	$(NODE) $(BIN_DIR)/gen_defaults.js $(DOCS_DIR) > $@
 
 $(VERSION_CONFIG): VERSION Makefile
-	sed -e 's/^/$(VERSION_VAR_NAME): /' < $< > $@
+	sed -e "s/^/$(VERSION_VAR_NAME): /" < $< > $@
 
 $(TOC_FILES): $(BIN_DIR)/toc.js Makefile
 	$(NODE) $(BIN_DIR)/toc.js $(DOCS_DIR) $(DATA_DIR)
@@ -143,23 +180,26 @@ $(TOC_FILES): $(BIN_DIR)/toc.js Makefile
 $(MAIN_STYLE_FILE): $(SCSS_SRC)
 
 $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.less Makefile
-	mkdir -p $(@D)
-	echo "---\n---" > $@
+	-$(MKDIRP) $(subst /,\,$(@D))
+	echo ---> $@
+	echo --->> $@
 	$(LESSC) $< >> $@
 
 $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.scss Makefile
-	mkdir -p $(@D)
-	echo "---\n---" > $@
+	-$(MKDIRP) $(subst /,\,$(@D))
+	echo ---> $@
+	echo --->> $@
 	$(SASSC) $< >> $@
 
 $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.css Makefile
-	mkdir -p $(@D)
-	echo "---\n---" > $@
+	-$(MKDIRP) $(subst /,\,$(@D))
+	echo ---> $@
+	echo --->> $@
 	cat $< >> $@
 
 # maintenance
 clean:
-	find . -name *.pyc -delete
+
 	$(RM) -r $(PROD_DIR) $(DEV_DIR)
 	$(RM) $(VERSION_CONFIG)
 	$(RM) $(DEFAULTS_CONFIG)
@@ -167,6 +207,12 @@ clean:
 	$(RM) $(LANGUAGES_DATA)
 	$(RM) $(PLUGINS_APP)
 	$(RM) -r $(CSS_DEST_DIR)
+
+# I couldn't find a way to do this on Windows
+ifdef WINDOWS
+else
+	find . -name *.pyc -delete
+endif
 
 nuke: clean
 	$(RM) -r node_modules
