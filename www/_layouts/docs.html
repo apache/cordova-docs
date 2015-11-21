@@ -126,7 +126,7 @@ analytics_id: UA-64283057-1
                 <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     {{ page.version }}
                     {% if page.version == site.latest_docs_version %}
-                        (Latest)
+                        ({{ page.latest_text }})
                     {% endif %}
                     <span class="caret"></span>
                 </button>
@@ -141,7 +141,7 @@ analytics_id: UA-64283057-1
                         {% capture version_entry_string %}
                             {{ version }}
                             {% if version == site.latest_docs_version %}
-                                (Latest)
+                                ({{ page.latest_text }})
                             {% endif %}
                         {% endcapture %}
 
