@@ -23,6 +23,17 @@ var yaml = require("js-yaml");
 
 var util = require("./util");
 
+// constants
+var DEV_VERSION_NAME = "dev";
+
+// page change frequency for sitemap.xml
+// reference:
+//      http://www.sitemaps.org/protocol.html#xmlTagDefinitions
+var DEV_CHANGE_FREQUENCY     = "daily";
+var DEV_PAGE_PRIORITY        = 0.8;
+var DEFAULT_CHANGE_FREQUENCY = "monthly";
+var DEFAULT_PAGE_PRIORITY    = DEV_PAGE_PRIORITY / 2;
+
 function main () {
 
     var rootDir = process.argv[2];
@@ -54,8 +65,7 @@ function main () {
             var manual    = util.manualTocfileName(langName, versionName);
             var generated = util.generatedTocfileName(langName, versionName);
 
-            // define version scope
-            config.defaults.push({
+            var versionDefaults = {
                 scope: {
                     path: "docs/" + langName + "/" + versionName
                 },
@@ -64,7 +74,18 @@ function main () {
                     manual_toc:    manual.replace(".yml", ""),
                     generated_toc: generated.replace(".yml", "")
                 }
-            });
+            };
+
+            if (versionName === DEV_VERSION_NAME) {
+                versionDefaults.values.change_frequency = DEV_CHANGE_FREQUENCY;
+                versionDefaults.values.priority         = DEV_PAGE_PRIORITY;
+            } else {
+                versionDefaults.values.change_frequency = DEFAULT_CHANGE_FREQUENCY;
+                versionDefaults.values.priority         = DEFAULT_PAGE_PRIORITY
+            }
+
+            // define version scope
+            config.defaults.push(versionDefaults);
         });
     });
 
