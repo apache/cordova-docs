@@ -17,7 +17,7 @@ RewriteEngine on
 #       301s are for PERMANENT redirects. These are used only for mapping old
 #       docs pages to new docs pages.
 
-# 302:
+# 302 (temp):
 #       docs     -> docs/en/latest/
 #       docs/    -> docs/en/latest/
 #       docs/XX  -> docs/XX/latest/
@@ -28,7 +28,7 @@ RewriteEngine on
 RewriteRule ^.*docs/$ {{site.baseurl}}/docs/en/
 RewriteRule ^.*docs/(\w\w)/$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
 
-# 302:
+# 302 (temp):
 #       docs/XX/latest -> docs/XX/latest/
 RewriteRule ^.*docs/(\w\w)/latest$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
 
@@ -41,7 +41,13 @@ RewriteRule ^.*docs/(\w\w)/latest$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
 #       resource, but the browser won't change the URI (no redirects followed).
 RewriteRule ^.*docs/(\w\w)/latest/(.*)$ {{site.baseurl}}/docs/$1/{{site.latest_docs_version}}/$2 [L]
 
-# 301:
+# 301 (perm):
+#       docs/XX/edge  -> docs/xx/edge/
+#       docs/XX/edge/ -> docs/xx/dev/
+RewriteRule ^.*docs/(\w\w)/edge$ {{site.baseurl}}/docs/$1/edge/
+RewriteRule ^.*docs/(\w\w)/edge/(.*)$ {{site.baseurl}}/docs/$1/dev/$2 [R=301,L]
+
+# 301 (perm):
 #       old docs pages -> new docs pages (from www/_data/docs-redirects.yml)
 #
 # NOTE:
@@ -52,5 +58,5 @@ RewriteRule ^.*docs/(\w\w)/latest/(.*)$ {{site.baseurl}}/docs/$1/{{site.latest_d
 #       docs-specific is: these redirects happen for every version of the
 #       docs. That's 157 redirects * 84 versions ~= 13000 redirects! Doing
 #       special pattern-matching for docs keeps that number at _only_ 157.
-{% for redirect in site.data.docs-redirects %}
-RewriteRule ^.*docs/(\w\w)/([^/]+)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/$2/{{redirect.new}} [R=301,L]{% endfor %}
+{% for redirect in site.data.docs-redirects %}RewriteRule ^.*docs/(\w\w)/([^/]+)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/$2/{{redirect.new}} [R=301,L]
+{% endfor %}
