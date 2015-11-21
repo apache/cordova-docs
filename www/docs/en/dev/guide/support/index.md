@@ -35,14 +35,14 @@ CLI's shorthand names.
 <thead>
     <tr>
         <th></td>
-        <th><tt>amazon-fireos</tt></th>
-        <th><tt>android</tt></th>
-        <th><tt>blackberry10</tt></th>
-        <th><tt>Firefox OS</tt></th>
-        <th><tt>ios</tt></th>
-        <th><tt>Ubuntu</tt></th>
-        <th><tt>wp8</tt><br/>(Windows Phone 8)</th>
-        <th><tt>windows</tt><br/>(8.0, 8.1, 10,<br/>Phone 8.1)</th>
+        <th>amazon-fireos</th>
+        <th>android</th>
+        <th>blackberry10</th>
+        <th>Firefox OS</th>
+        <th>ios</th>
+        <th>Ubuntu</th>
+        <th>wp8<br/>(Windows Phone 8)</th>
+        <th>windows<br/>(8.0, 8.1, 10,<br/>Phone 8.1)</th>
     </tr>
 
 </thead>

@@ -30,736 +30,736 @@ Naslednje prikazuje nabor razvojna orodja in naprave API na voljo za vsak mobiln
   <tr>
     <th>
       </td> <th>
-        <tt>Amazon-fireos</tt>
+        Amazon-fireos
       </th>
-      
+
       <th>
-        <tt>Android</tt>
+        Android
       </th>
-      
+
       <th>
-        <tt>blackberry10</tt>
+        blackberry10
       </th>
-      
+
       <th>
-        <tt>IOS</tt>
+        IOS
       </th>
-      
+
       <th>
-        <tt>Ubuntu</tt>
+        Ubuntu
       </th>
-      
+
       <th>
-        <tt>WP7</tt> (Windows<br />Telefon 7)
+        WP7 (Windows<br />Telefon 7)
       </th>
-      
+
       <th>
-        <tt>WP8</tt> (Windows<br />Telefon 8)
+        WP8 (Windows<br />Telefon 8)
       </th>
-      
+
       <th>
-        <tt>Win8</tt><br />(Windows 8)
+        Win8<br />(Windows 8)
       </th>
-      
-      <!--        <th><tt>firefoxos</tt></th> -->
-      
+
+      <!--        <th>firefoxos</th> -->
+
       <th>
-        <tt>tizen</tt>
-      </th></tr> </thead> 
-      
+        tizen
+      </th></tr> </thead>
+
       <tr>
         <th>
           <a href="../cli/index.html">Cordova<br />CLI</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
           Mac, Windows, Linux
         </td>
-        
+
         <td data-col="android"    class="y">
           Mac, Windows, Linux
         </td>
-        
+
         <td data-col="blackberry10" class="y">
           Mac, Windows
         </td>
-        
+
         <td data-col="ios"        class="y">
           Mac
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
           Ubuntu
         </td>
-        
+
         <td data-col="winphone7"  class="y">
           Windows
         </td>
-        
+
         <td data-col="winphone8"  class="y">
           Windows
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../hybrid/webviews/index.html">Vgrajeni<br />Spletni pogled</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
           <a href="../platforms/amazonfireos/webview.html">(glej podrobnosti)</a>
         </td>
-        
+
         <td data-col="android"    class="y">
           <a href="../platforms/android/webview.html">(glej podrobnosti)</a>
         </td>
-        
+
         <td data-col="blackberry10" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
           <a href="../platforms/ios/webview.html">(glej podrobnosti)</a>
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="n">
         </td>
-        
+
         <td data-col="winphone8"  class="n">
         </td>
-        
+
         <td data-col="win8"       class="n">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../hybrid/plugins/index.html">Plug-in<br />Vmesnik</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
           <a href="../guide/platforms/amazonfireos/plugin.html">(glej podrobnosti)</a>
         </td>
-        
+
         <td data-col="android"    class="y">
           <a href="../guide/platforms/android/plugin.html">(glej podrobnosti)</a>
         </td>
-        
+
         <td data-col="blackberry10" class="y">
           <a href="../guide/platforms/blackberry10/plugin.html">(glej podrobnosti)</a>
         </td>
-        
+
         <td data-col="ios"        class="y">
           <a href="../guide/platforms/ios/plugin.html">(glej podrobnosti)</a>
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
           <a href="../guide/platforms/wp8/plugin.html">(glej podrobnosti)</a>
         </td>
-        
+
         <td data-col="winphone8"  class="y">
           <a href="../guide/platforms/wp8/plugin.html">(glej podrobnosti)</a>
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
         </th>
-        
+
         <th colspan="20">
           Platforma APIs
         </th>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/accelerometer/accelerometer.html">Accelerometer</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/camera/camera.html">Kamero</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/media/capture/capture.html">Zajem</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="n">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/compass/compass.html">Kompas</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
           (3GS +)
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/connection/connection.html">Povezave</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/contacts/contacts.html">Stiki</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="n">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/device/device.html">Naprava</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/events/events.html">Dogodki</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/file/file.html">Datoteke</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/geolocation/geolocation.html">Geolocation</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/globalization/globalization.html">Globalizacija</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="n">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="p">
           uses iframe
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/media/media.html">Media</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/notification/notification.html">Obvestilo</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/splashscreen/splashscreen.html">Splashscreen</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/storage/storage.html">Shranjevanje</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone7"  class="y">
           localStorage & indexedDB
         </td>
-        
+
         <td data-col="winphone8"  class="y">
           localStorage & indexedDB
         </td>
-        
+
         <td data-col="win8"       class="y">
           localStorage & indexedDB
         </td>
-        
+
         <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
+
         <td data-col="tizen"       class="y">
         </td>
-      </tr></table> 
-      
+      </tr></table>
+
       <!-- END HTML -->

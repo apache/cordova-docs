@@ -32,833 +32,833 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
   <tr>
     <th>
       </td> <th>
-        <tt>Amazon-fireos</tt>
+        Amazon-fireos
       </th>
-      
+
       <th>
-        <tt>Android</tt>
+        Android
       </th>
-      
+
       <th>
-        <tt>blackberry10</tt>
+        blackberry10
       </th>
-      
+
       <th>
-        <tt>Firefox OS</tt>
+        Firefox OS
       </th>
-      
+
       <th>
-        <tt>Ios</tt>
+        Ios
       </th>
-      
+
       <th>
-        <tt>Ubuntu</tt>
+        Ubuntu
       </th>
-      
+
       <th>
-        <tt>WP8</tt><br />(Windows Phone 8)
+        WP8<br />(Windows Phone 8)
       </th>
-      
+
       <th>
-        <tt>Windows</tt><br />(8.0, 8.1, 10,<br />Teléfono 8.1)
+        Windows<br />(8.0, 8.1, 10,<br />Teléfono 8.1)
       </th>
-      
+
       <th>
-        <tt>Tizen</tt>
-      </th></tr> </thead> 
-      
+        Tizen
+      </th></tr> </thead>
+
       <tr>
         <th>
           <a href="../cli/index.html">cordova<br />CLI</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
           Mac, Windows, Linux
         </td>
-        
+
         <td data-col="android"    class="y">
           Mac, Windows, Linux
         </td>
-        
+
         <td data-col="blackberry10" class="y">
           Mac, Windows
         </td>
-        
+
         <td data-col="firefoxos" class="y">
           Mac, Windows, Linux
         </td>
-        
+
         <td data-col="ios"        class="y">
           Mac
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
           Ubuntu
         </td>
-        
+
         <td data-col="winphone8"  class="y">
           Windows
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../hybrid/webviews/index.html">Embedded<br />WebView</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
           <a href="../platforms/amazonfireos/webview.html">(ver detalles)</a>
         </td>
-        
+
         <td data-col="android"    class="y">
           <a href="../platforms/android/webview.html">(ver detalles)</a>
         </td>
-        
+
         <td data-col="blackberry10" class="n">
         </td>
-        
+
         <td data-col="firefoxos" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
           <a href="../platforms/ios/webview.html">(ver detalles)</a>
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="n">
         </td>
-        
+
         <td data-col="win8"       class="n">
         </td>
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../hybrid/plugins/index.html">Plug-in<br />Interface</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
           <a href="../platforms/amazonfireos/plugin.html">(ver detalles)</a>
         </td>
-        
+
         <td data-col="android"    class="y">
           <a href="../platforms/android/plugin.html">(ver detalles)</a>
         </td>
-        
+
         <td data-col="blackberry10" class="y">
           <a href="../platforms/blackberry10/plugin.html">(ver detalles)</a>
         </td>
-        
+
         <td data-col="firefoxos" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
           <a href="../platforms/ios/plugin.html">(ver detalles)</a>
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
           <a href="../platforms/wp8/plugin.html">(ver detalles)</a>
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
         </th>
-        
+
         <th colspan="20">
           API de la plataforma
         </th>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-device-motion">Acelerómetro</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-battery-status">HomeScreen PlusPlus</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="n">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
           * Windows Phone 8.1 sólo
         </td>
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-camera">Cámara</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-media-capture">Captura</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-device-orientation">Brújula</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
           (3GS+)
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-network-information">Conexión</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-contacts">Contactos</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="p">
           parcialmente
         </td>
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-device">Dispositivo</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/events/events.html">Eventos</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-file">Archivo</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-file-transfer">Transferencia de archivos</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
           * No apoyan onprogress ni abortar
         </td>
-        
+
         <td data-col="firefoxos" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="n">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
           * No apoyan onprogress ni abortar
         </td>
-        
+
         <td data-col="win8"       class="y">
           * No apoyan onprogress ni abortar
         </td>
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-geolocation">Geolocalización</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-globalization">Globalización</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-inappbrowser">InAppBrowser</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="p">
           utiliza el iframe
         </td>
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-media">Los medios de comunicación</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-dialogs">Notificación</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-splashscreen">SplashScreen</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
         </td>
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-statusbar">Barra de estado</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="n">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="n">
         </td>
-        
+
         <td data-col="firefoxos" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="n">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
           Windows Phone 8.1 sólo
         </td>
-        
+
         <td data-col="tizen"       class="n">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="../../cordova/storage/storage.html">Almacenamiento de información</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="n">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="y">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
           <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
         </td>
-        
+
         <td data-col="win8"       class="y">
           <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
         </td>
-        
+
         <td data-col="tizen"       class="y">
         </td>
       </tr>
-      
+
       <tr>
         <th>
           <a href="https://www.npmjs.com/package/cordova-plugin-vibration">Vibración</a>
         </th>
-        
+
         <td data-col="amazon-fireos" class="y">
         </td>
-        
+
         <td data-col="android"    class="y">
         </td>
-        
+
         <td data-col="blackberry10" class="y">
         </td>
-        
+
         <td data-col="firefoxos" class="y">
         </td>
-        
+
         <td data-col="ios"        class="y">
         </td>
-        
+
         <td data-col="ubuntu"        class="n">
         </td>
-        
+
         <td data-col="winphone8"  class="y">
         </td>
-        
+
         <td data-col="win8"       class="y">
           * Windows Phone 8.1 sólo
         </td>
-        
+
         <td data-col="tizen"       class="n">
         </td>
-      </tr></table> 
-      
+      </tr></table>
+
       <!-- END HTML -->
