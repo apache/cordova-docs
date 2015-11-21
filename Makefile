@@ -194,20 +194,34 @@ $(TOC_FILES): $(BIN_DIR)/toc.js Makefile
 
 $(MAIN_STYLE_FILE): $(SCSS_SRC)
 
+# NODE:
+#      $(@D) means "directory part of target"
 $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.less Makefile
+ifdef WINDOWS
 	-$(MKDIRP) $(subst /,\,$(@D))
+else
+	$(MKDIRP) $(@D)
+endif
 	echo ---> $@
 	echo --->> $@
 	$(LESSC) $< >> $@
 
 $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.scss Makefile
+ifdef WINDOWS
 	-$(MKDIRP) $(subst /,\,$(@D))
+else
+	$(MKDIRP) $(@D)
+endif
 	echo ---> $@
 	echo --->> $@
 	$(SASSC) $< >> $@
 
 $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.css Makefile
+ifdef WINDOWS
 	-$(MKDIRP) $(subst /,\,$(@D))
+else
+	$(MKDIRP) $(@D)
+endif
 	echo ---> $@
 	echo --->> $@
 	cat $< >> $@

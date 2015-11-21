@@ -4,11 +4,13 @@ title: Apache Cordova Reporting Issues
 ---
 
 # Reporting Issues
-Thank you for helping to improve Cordova! Issues for Apache Cordova are hosted at the Apache [JIRA](https://issues.apache.org/jira/browse/CB). A JIRA account is required before you can submit issues (you can [create one here](https://issues.apache.org/jira/secure/Signup!default.jspa)). Before submitting an issue, please take a moment to search JIRA to see if an issue already exists. If it does, please consider commenting or voting for the issue to help raise its visibility.
+
+Thank you for helping to improve Cordova! Issues for Apache Cordova are hosted at the Apache [JIRA](https://issues.apache.org/jira/browse/CB). A JIRA account is required before you can submit issues (you can easily [create one here](https://issues.apache.org/jira/secure/Signup!default.jspa)). Before submitting an issue, please take a moment to search JIRA to see if an issue already exists. If it does, please consider commenting or voting for the issue to help raise its visibility.
 
 
 ## Creating an issue in JIRA
-Once you have created an account and logged in, click the blue "Create" button at the top of the [Cordova JIRA](https://issues.apache.org/jira/browse/CB) page to create an issue. In the dialog that appears, please fill out the following fields to the best of your ability. All fields besides those listed here can be left blank.
+
+Once you have created an account and logged in, click the blue "Create" button at the top of the [Cordova JIRA](https://issues.apache.org/jira/browse/CB) page to create an issue. In the dialog that appears, please fill out the following fields _to the best of your ability_. All fields besides those listed here can be left blank.
 
 Field           | Description
 ----------------| -----
@@ -20,7 +22,7 @@ Affects Version | The version of the component that this issue pertains to
 Environment     | Some extra context about the environment in which a bug was found (e.g. the version of Android you are running, your version of the Cordova CLI, your development platform, etc.)
 Description     | A thorough description of the issue. For bugs, please provide code or steps for reproduction as well as any device logs or stack traces you might have.
 Labels          | Please label your issue with the platforms it affects (e.g. ios, windows, android, etc.) and nothing else
-Priority        | The impact of the issue. See below
+Priority        | The impact of the issue (see below)
 
 ## Issue Priority
 
@@ -31,3 +33,17 @@ We gauge issue priority on the following scale:
 * **Blocker:**  Catastrophic bugs that prevent projects from building or cause basic projects to crash immediately. It is very unlikely that a bug is a Blocker
 
 If you aren't sure about the priority, leave the default (major) selected. Please be aware that as our contributors triage issues, they may change the priority based on our criteria.
+
+## Finding out versions
+
+You can quickly find out versions of platforms/plugins you're using by running:
+
+    cordova platform ls
+
+or
+
+    cordova plugin ls
+
+in your project respectively. You can find out the version of the Cordova CLI you're using by running:
+
+    cordova --version
