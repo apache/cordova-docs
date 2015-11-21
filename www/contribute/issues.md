@@ -1,7 +1,8 @@
 ---
-layout: contribute-help
+layout: contribute
 title: Apache Cordova Reporting Issues
 ---
+
 # Reporting Issues
 Thank you for helping to improve Cordova! Issues for Apache Cordova are hosted at the Apache [JIRA](https://issues.apache.org/jira/browse/CB). A JIRA account is required before you can submit issues (you can [create one here](https://issues.apache.org/jira/secure/Signup!default.jspa)). Before submitting an issue, please take a moment to search JIRA to see if an issue already exists. If it does, please consider commenting or voting for the issue to help raise its visibility.
 

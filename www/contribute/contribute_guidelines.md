@@ -1,7 +1,8 @@
 ---
-layout: contribute-help
+layout: contribute
 title: Apache Cordova Contribute Guidelines
 ---
+
 # Contributor Guidelines
 
 Thanks for helping to improve Cordova! This page provides a general guide on making contributions to Cordova. If you can't find something on this page, please feel free to contact the [dev mailing list](http://cordova.apache.org/contact) or ask questions on the Cordova Slack.

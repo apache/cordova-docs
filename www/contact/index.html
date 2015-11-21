@@ -1,56 +1,55 @@
 ---
-layout: cordova
+layout: page
 title: Contact
 ---
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <h1>Mailing List</h1>
-        </div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <h1>Mailing List</h1>
     </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                {% for category in site.data.mailing-lists %}
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                {{ category.title }}
-                            </a>
-                        </h4>
-                        <p>
-                            {{ category.description }}
-                        </p>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            <ul class="list mailing-list">
-                                {% for list in category.links %}
-                                <li>
-                                    <div class="row">
-                                        <div class="col-sm-5">
-                                            <div class="list-label">
-                                                {{ list.label }}
-                                            </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            {% for category in site.data.mailing-lists %}
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            {{ category.title }}
+                        </a>
+                    </h4>
+                    <p>
+                        {{ category.description }}
+                    </p>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <ul class="list mailing-list">
+                            {% for list in category.links %}
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <div class="list-label">
+                                            {{ list.label }}
                                         </div>
-                                        <div class="col-sm-7">
-                                            <div class="email-link">
-                                                <a href="{{ list.href }}">{{ list.text }}<span></span></a>
-                                                <div class="email_link_button">
-                                                    <a href="{{ list.href }}"><span class="glyphicon glyphicon-menu-right"></span></a>
-                                                </div>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <div class="email-link">
+                                            <a href="{{ list.href }}">{{ list.text }}<span></span></a>
+                                            <div class="email_link_button">
+                                                <a href="{{ list.href }}"><span class="glyphicon glyphicon-menu-right"></span></a>
                                             </div>
                                         </div>
                                     </div>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
     </div>
 </div>

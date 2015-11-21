@@ -1,5 +1,5 @@
 ---
-layout: plugins-help
+layout: plugins
 title: Plugin Contributors
 ---
 
