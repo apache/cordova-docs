@@ -24,33 +24,46 @@ var yaml = require("js-yaml");
 var util = require("./util");
 
 // constants
+var USAGE = "Usage: gen_defaults.js [docsRoot] [latestVersion]"
+
 var DEV_VERSION_NAME = "dev";
 
-// page change frequency for sitemap.xml
+// constants for sitemap.xml
 // reference:
 //      http://www.sitemaps.org/protocol.html#xmlTagDefinitions
-var DEV_CHANGE_FREQUENCY     = "daily";
-var DEV_PAGE_PRIORITY        = 0.8;
+var LATEST_CHANGE_FREQUENCY = "monthly";
+var LATEST_PAGE_PRIORITY    = 0.8;
+
 var DEFAULT_CHANGE_FREQUENCY = "monthly";
-var DEFAULT_PAGE_PRIORITY    = DEV_PAGE_PRIORITY / 2;
+var DEFAULT_PAGE_PRIORITY    = LATEST_PAGE_PRIORITY / 2;
+
+var DEV_CHANGE_FREQUENCY = "daily";
+var DEV_PAGE_PRIORITY    = LATEST_PAGE_PRIORITY / 4;
 
 function main () {
 
-    var rootDir = process.argv[2];
-    var config  = {"defaults": []};
+    var rootDir           = process.argv[2];
+    var latestVersionName = process.argv[3];
+
+    var config = {"defaults": []};
 
     if (!rootDir) {
-        console.error("Please specify a directory from which to generate.");
+        console.error(USAGE);
+        console.error("Please specify the docs root directory from which to generate defaults.");
         process.exit(1);
     }
 
-    // go through directory that contains all languages
+    if (!latestVersionName) {
+        console.error(USAGE);
+        console.error("Please specify the latest version of the docs.");
+        process.exit(1);
+    }
+
+    // set defaults for each language
     util.listdirsSync(rootDir).forEach(function (langName) {
 
         var langPath = path.join(rootDir, langName);
-
-        // define language scope
-        config.defaults.push({
+        var languageDefaults = {
             scope: {
                 path: "docs/" + langName
             },
@@ -58,33 +71,41 @@ function main () {
                 language: langName,
                 layout:   "docs-" + langName
             }
-        });
+        };
 
+        config.defaults.push(languageDefaults);
+
+        // set defaults for each version
         util.listdirsSync(langPath).forEach(function (versionName) {
 
-            var manual    = util.manualTocfileName(langName, versionName);
-            var generated = util.generatedTocfileName(langName, versionName);
+            var manualToc    = util.manualTocfileName(langName, versionName);
+            var generatedToc = util.generatedTocfileName(langName, versionName);
+
+            var changeFrequency = DEFAULT_CHANGE_FREQUENCY;
+            var pagePriority    = DEFAULT_PAGE_PRIORITY;
+
+            // adjust priority and frequency based on version
+            if (versionName === latestVersionName) {
+                changeFrequency = LATEST_CHANGE_FREQUENCY;
+                pagePriority    = LATEST_PAGE_PRIORITY;
+            } else if (versionName == DEV_VERSION_NAME) {
+                changeFrequency = DEV_CHANGE_FREQUENCY;
+                pagePriority    = DEV_PAGE_PRIORITY;
+            }
 
             var versionDefaults = {
                 scope: {
                     path: "docs/" + langName + "/" + versionName
                 },
                 values: {
-                    version:       versionName,
-                    manual_toc:    manual.replace(".yml", ""),
-                    generated_toc: generated.replace(".yml", "")
+                    version:          versionName,
+                    manual_toc:       manualToc.replace(".yml", ""),
+                    generated_toc:    generatedToc.replace(".yml", ""),
+                    change_frequency: changeFrequency,
+                    priority:         pagePriority,
                 }
             };
 
-            if (versionName === DEV_VERSION_NAME) {
-                versionDefaults.values.change_frequency = DEV_CHANGE_FREQUENCY;
-                versionDefaults.values.priority         = DEV_PAGE_PRIORITY;
-            } else {
-                versionDefaults.values.change_frequency = DEFAULT_CHANGE_FREQUENCY;
-                versionDefaults.values.priority         = DEFAULT_PAGE_PRIORITY
-            }
-
-            // define version scope
             config.defaults.push(versionDefaults);
         });
     });

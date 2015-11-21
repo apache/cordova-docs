@@ -66,6 +66,7 @@ DEV_CONFIG          = _dev.yml
 PROD_CONFIG         = _prod.yml
 DOCS_EXCLUDE_CONFIG = _nodocs.yml
 PLUGINS_SRC         = $(PLUGINS_SRC_DIR)/app.js
+VERSION_FILE        = VERSION
 
 # NOTE:
 #      the .scss files are separate because they combine into MAIN_STYLE_FILE,
@@ -99,6 +100,12 @@ TOC_FILES          = $(addprefix $(TOC_DIR)/,$(addsuffix -generated.yml,$(DOCS_V
 #      the order of config files matters to Jekyll
 JEKYLL_CONFIGS = $(MAIN_CONFIG) $(DEFAULTS_CONFIG) $(VERSION_CONFIG)
 
+ifdef WINDOWS
+LATEST_DOCS_VERSION = $(shell type $(VERSION_FILE))
+else
+LATEST_DOCS_VERSION = $(shell cat $(VERSION_FILE))
+endif
+
 # convenience targets
 help usage default:
 	@echo ""
@@ -122,6 +129,8 @@ help usage default:
 	@echo ""
 
 debug:
+	@echo "LATEST_DOCS_VERSION: " $(LATEST_DOCS_VERSION)
+	@echo ""
 	@echo "OS: " $(OS)
 	@echo ""
 	@echo "SCSS_SRC: " $(SCSS_SRC)
@@ -174,10 +183,10 @@ $(PLUGINS_APP): $(PLUGINS_SRC) Makefile
 $(LANGUAGES_DATA): $(BIN_DIR)/gen_languages.js Makefile
 	$(NODE) $(BIN_DIR)/gen_languages.js $(DOCS_DIR) > $@
 
-$(DEFAULTS_CONFIG): $(BIN_DIR)/gen_defaults.js Makefile
-	$(NODE) $(BIN_DIR)/gen_defaults.js $(DOCS_DIR) > $@
+$(DEFAULTS_CONFIG): $(BIN_DIR)/gen_defaults.js $(VERSION_FILE) Makefile
+	$(NODE) $(BIN_DIR)/gen_defaults.js $(DOCS_DIR) "$(LATEST_DOCS_VERSION)" > $@
 
-$(VERSION_CONFIG): VERSION Makefile
+$(VERSION_CONFIG): $(VERSION_FILE) Makefile
 	sed -e "s/^/$(VERSION_VAR_NAME): /" < $< > $@
 
 $(TOC_FILES): $(BIN_DIR)/toc.js Makefile
