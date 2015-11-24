@@ -33,7 +33,8 @@ The following plugins were updated today:
 * cordova-plugin-vibration@2.0.0
 * cordova-plugin-whitelist@1.2.0
 
-The following plugins now require `cordova-android@5.0.0`.
+The following plugins now require `cordova-android@5.0.0`. Please read the [Android 5.0.0 release blog](http://cordova.apache.org/announcements/2015/11/09/cordova-android-5.0.0.html) for instructions to update. 
+
 * cordova-plugin-camera
 * cordova-plugin-contacts
 * cordova-plugin-file
@@ -178,7 +179,7 @@ cordova-plugin-file@4.0.0
 * [CB-9851](https://issues.apache.org/jira/browse/CB-9851) Document `cdvfile` protocol quirk - using `cdvfile://` in the `DOM` is not supported on **Windows**
 * [CB-9752](https://issues.apache.org/jira/browse/CB-9752) `getDirectory` fails on valid directory with assets filesystem
 * [CB-7253](https://issues.apache.org/jira/browse/CB-7253) `requestFileSystem` fails when no external storage is present
-* Adding permissions for **Marshmallow**. Now supports **Anrdoid 6.0**
+* Adding permissions for **Marshmallow**. Now supports **Android 6.0**
 * Fixing contribute link.
 * always use setters to fix memory issues without `ARC` for **iOS**
 * [CB-9331](https://issues.apache.org/jira/browse/CB-9331) `getFreeDiskSpace` **iOS**.
@@ -199,7 +200,7 @@ cordova-plugin-file-transfer@1.4.0
 * [CB-9950](https://issues.apache.org/jira/browse/CB-9950) Unpend Filetransfer spec.27 on **wp8** as custom headers are now supported
 * [CB-9843](https://issues.apache.org/jira/browse/CB-9843) Added **wp8** quirk to test spec 12
 * Fixing contribute link.
-* [CB-8431](https://issues.apache.org/jira/browse/CB-8431) File Transfer tests crash on **Android Lolipop**
+* [CB-8431](https://issues.apache.org/jira/browse/CB-8431) File Transfer tests crash on **Android Lollipop**
 * [CB-9790](https://issues.apache.org/jira/browse/CB-9790) Align `FileUploadOptions` `fileName` and `mimeType` default parameter values to the docs on **iOS**
 * [CB-9385](https://issues.apache.org/jira/browse/CB-9385) Return `FILE_NOT_FOUND_ERR` when receiving `404` code on **iOS**
 * [CB-9791](https://issues.apache.org/jira/browse/CB-9791) Decreased download and upload tests timeout
