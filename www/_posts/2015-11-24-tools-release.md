@@ -23,23 +23,17 @@ To update your tools:
 <!--more-->
 # Changes include:
 
-## Platform updates
-When adding these platforms to your project, the following versions are now used by default.
-These platform versions were released recently, and the tools' defaults were updated:
-
-* [Cordova iOS ~3.9.0 (3.9.2)](http://cordova.apache.org/announcements/2015/11/02/cordova-ios-3-9-2.html)
-
 ## cordova-lib
 
-* CB-9976 Reinstall plugins for platforms if they were installed with `cordova@<5.4.0`. 
-* CB-9981 `path.parse` only available on `node 0.12+`.
-* CB-9987 Adds compatibility layer for `cordova.raw.*` methods
-* CB-9975 Fix issue with using `all" as orientation for **iOS**
-* CB-9984 Bumps `plist` version and fixes failing `cordova-common` test
+* [CB-9976](https://issues.apache.org/jira/browse/CB-9976) Reinstall plugins for platforms if they were installed with `cordova@<5.4.0`. 
+* [CB-9981](https://issues.apache.org/jira/browse/CB-9981) `path.parse` only available on `node 0.12+`.
+* [CB-9987](https://issues.apache.org/jira/browse/CB-9987) Adds compatibility layer for `cordova.raw.*` methods
+* [CB-9975](https://issues.apache.org/jira/browse/CB-9975) Fix issue with using `all` as orientation value
+* [CB-9984](https://issues.apache.org/jira/browse/CB-9984) Bumps `plist` version and fixes failing `cordova-common` test
 
 ## cordova-cli
 
-* CB-10049 updated cordova-lib dependency to 5.4.1
+* [CB-10049](https://issues.apache.org/jira/browse/CB-10049) updated cordova-lib dependency to 5.4.1
 
 ## Pinned Platform Versions for **Cordova CLI 5.4.0**
 
