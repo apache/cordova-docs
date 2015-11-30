@@ -121,7 +121,7 @@ To install the `cordova` command-line tool, follow these steps:
 Go to the directory where you maintain your source code, and run a
 command such as the following:
 
-        $ cordova create hello com.example.hello HelloWorld
+        $ cordova create hello com.example.hello HelloWorld [--template templatePath]
 
 It may take some time for the command to complete, so be patient. Running
 the command with the ` -d` option displays information about its progress.
@@ -149,6 +149,12 @@ This argument is optional. You can edit this value later in the `config.xml`
 file, but do be aware that there may be code generated outside of `config.xml`
 using this value, such as Java class names. The default value is `HelloCordova`,
 but it is recommended that you select an appropriate value.
+
+The fourth argument `--template templatePath` allows for a template application
+to be used to create a project. All files, and folders from the template will
+be copied into the new project. Platforms, and plugins may be included in a
+template, but are optional. This argument is optional. The path to the
+template can be a local path, NPM module, or Git URL.
 
 ## Add Platforms
 
