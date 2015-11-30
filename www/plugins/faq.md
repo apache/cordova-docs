@@ -1,6 +1,6 @@
 ---
-layout: plugins-help
-title: Apache Cordova Plugins FAQ
+layout: plugins
+title: Plugins FAQ
 ---
 
 # Plugin Search FAQ

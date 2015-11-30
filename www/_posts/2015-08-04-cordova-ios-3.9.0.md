@@ -26,7 +26,7 @@ requirements for iOS platform:
     ios-sim: installed 4.1.1
 
 and support for [Signing the App for iOS platform](
-http://cordova.apache.org/docs/en/edge/guide_platforms_ios_tools.md.html#signing-the-app):
+http://cordova.apache.org/docs/en/dev/guide_platforms_ios_tools.md.html#signing-the-app):
 
     $>/path/to/my/project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954"
 
@@ -41,7 +41,7 @@ To add it explicitly:
 
     cordova platform add ios@3.9.0 --save
 
-For non-CLI projects or for pre-3.0 projects, refer to the [upgrade guides](http://cordova.apache.org/docs/en/edge/guide_platforms_index.md.html).
+For non-CLI projects or for pre-3.0 projects, refer to the [upgrade guides](http://cordova.apache.org/docs/en/dev/guide_platforms_index.md.html).
 
 
 ## What's new in iOS platform

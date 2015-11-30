@@ -67,8 +67,8 @@ Right now documentation could be run using Node.js either on Windows, or on Linu
 
     $ rm -r tmp public      # Clear out old docs
     $ ./bin/genjs           # compile all docs
-    $ ./bin/genjs en edge   # compile English Edge docs
-    $ ./bin/genjs ru edge   # compile Russian Edge docs
+    $ ./bin/genjs en dev    # compile English dev docs
+    $ ./bin/genjs ru dev    # compile Russian dev docs
     $ ./bin/genjs es 3.5.0  # compile Spanish 3.5.0 docs
 
 ### Setting up Node.js
@@ -129,7 +129,7 @@ Usage:
 
     bin\fixyaml             # Runs fixyaml across all docs.
     bin\fixyaml ru          # Runs fixyaml across all Russian docs.
-    bin\fixyaml ru edge     # Runs fixyaml on the latest Russian docs.
+    bin\fixyaml ru dev      # Runs fixyaml on the latest Russian docs.
     bin\fixyaml ru 5.0.0    # Runs fixyaml on the version 5.0.0 of Russian docs.
 
 ### Translation Report tool.
@@ -185,37 +185,37 @@ Now you ready to download content from CrowdIn. Run following commands (All comm
 4. Copy the unpacked content to the `docs` folder.
     * on Linux:
 
-            cp tmp/ru/cordova-docs/docs/ru/edge/* docs/ru/edge/
+            cp tmp/ru/cordova-docs/docs/ru/dev/* docs/ru/dev/
 
     * on Windows:
 
-            xcopy tmp/ru/cordova-docs/docs/ru/edge/* docs/ru/edge/
+            xcopy tmp/ru/cordova-docs/docs/ru/dev/* docs/ru/dev/
 
 5. Remove temporary directory. In my case `tmp/ru`. Now you have fresh translation and could generate content.
 
 6. Fix Yaml headers by running.
 
-        bin/fixyaml ru edge
+        bin/fixyaml ru dev
 
 7. Run generator. You should generate both English version and language which you tranlate.
 
-        bin/genjs en edge
-        bin/genjs ru edge
+        bin/genjs en dev
+        bin/genjs ru dev
 
-    The generated documentation contains in the `public/en/edge` and `public/ru/edge`
+    The generated documentation contains in the `public/en/dev` and `public/ru/dev`
 
     You need both versions, to validate that translated docs would have same structure as original documentation.
 
 8. Validate you translation.
 
-        bin/translationreport ru edge
+        bin/translationreport ru dev
 
     This will give you list of files which has structural differences from the original docs.
     Below the example output:
 
-        => Validating translation for version edge on language ru...
-        Comparing C:\Users\kant\Documents\GitHub\cordova-docs\public\en\edge
-        with C:\Users\kant\Documents\GitHub\cordova-docs\public\ru\edge
+        => Validating translation for version dev on language ru...
+        Comparing C:\Users\kant\Documents\GitHub\cordova-docs\public\en\dev
+        with C:\Users\kant\Documents\GitHub\cordova-docs\public\ru\dev
         Path guide_platforms_blackberry10_upgrade.md.html is different.
         Path guide_platforms_blackberry_upgrade.md.html is different.
         Path guide_platforms_ios_tools.md.html is different.
@@ -227,7 +227,7 @@ Now you ready to download content from CrowdIn. Run following commands (All comm
     If on the first sight you could not find the differences, you could add switch `-v` which will increase verbosity of the tool.
     For example:
 
-    `bin/translationreport ru edge -v`
+    `bin/translationreport ru dev -v`
 
 10. Currently there two type of errors reported:
 

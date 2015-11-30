@@ -8,10 +8,10 @@
 
     <title>
         {% if page.title %}
-            {% if page.title_prefix %}
-                {{ page.title_prefix }} - {{ page.title }}
+            {% if page.title_suffix %}
+                {{ page.title }} - {{ page.title_suffix }}
             {% else %}
-                {{ page.title }}
+                {{ page.title }} - {{ site.title_suffix }}
             {% endif %}
         {% else %}
             {{ site.title }}
@@ -23,7 +23,12 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/main.css">
+
+    {% if page.no_code_highlight %}
+        <!-- The ! operator doesn't seem to work here -->
+    {% else %}
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/js/lib/prettify/prettify.css">
+    {% endif %}
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

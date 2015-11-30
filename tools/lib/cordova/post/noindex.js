@@ -53,9 +53,9 @@ var NoIndex = (function () {
         versions.sort().reverse();
 
         // we want the latest stable release
-        // if edge is the most recent, remove it
+        // if dev is the most recent, remove it
         last = versions.shift();
-        if (last === 'edge') {
+        if (last === 'dev') {
             last = versions.shift();
         }
 

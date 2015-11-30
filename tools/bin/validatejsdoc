@@ -21,11 +21,11 @@
 /*jslint node:true, nomen: true */
 
 var yargs = require('yargs')
-    .describe('edge', 'Compare edge version of English docs with Ruby version')
+    .describe('dev', 'Compare dev version of English docs with Ruby version')
     .count("verbose")
     .alias('v', 'verbose')
     .describe('verbose', 'Increase verbosity level of produced output')
-    .usage('Usage: $0 [-v] [lang] [version] [--edge]\n' +
+    .usage('Usage: $0 [-v] [lang] [version] [--dev]\n' +
         '    <lang>: Language for which generate docs. If not specified then generate for all languages.\n' +
         '    <version>: Version for which generate docs. If not specified then generate all versions.\n');
 var argv = yargs.argv;
@@ -37,9 +37,9 @@ if (argv.help) {
 
 var language = null;
 var version = null;
-if (argv.edge) {
+if (argv.dev) {
     language = "en";
-    version = "edge";
+    version = "dev";
 } else {
     var argumentsCount = argv._.length;
     if (argumentsCount !== 0) {

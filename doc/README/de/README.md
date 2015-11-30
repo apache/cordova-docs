@@ -72,8 +72,8 @@ Jetzt konnte die Dokumentation mit Node.js entweder auf Windows oder Linux-Rechn
 
     $ rm -r tmp public      # Clear out old docs
     $ ./bin/genjs           # compile all docs
-    $ ./bin/genjs en edge   # compile English Edge docs
-    $ ./bin/genjs ru edge   # compile Russian Edge docs
+    $ ./bin/genjs en dev    # compile English dev docs
+    $ ./bin/genjs ru dev    # compile Russian dev docs
     $ ./bin/genjs es 3.5.0  # compile Spanish 3.5.0 docs
 
 

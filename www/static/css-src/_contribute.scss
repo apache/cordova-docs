@@ -1,130 +1,154 @@
-.sprite_img {
-    position:relative;
-    left: 0px;
-    margin: 0;
-    padding: 0;
-    top:0;
-    width: 85px;
-    height: 85px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.report-bug-icon {
-    @extend .sprite_img;
-    height:1em;
-    width:1em;
-    background-image: url("{{ site.baseurl }}/static/img/bug_icon.svg");
-    background-size: 2em 1em;
-    display: inline-block;
-}
-
-a:hover .report-bug-icon {
-    background-position: -1em 0;
-}
-
-.list {
-    padding:0;
-}
-
-.list li {
-    background:$gray-10;
-    position: relative;
-    list-style: none;
-    margin-bottom: 16px;
-
-    white-space:nowrap;
-    text-overflow:ellipsis;
-    overflow: hidden;
-}
-
-.platforms-list {
-    li {
-        a {
-            float: right;
-            -webkit-transition: background 0.25s linear;
-            -moz-transition: background 0.25s linear;
-            transition: background 0.25s linear;
-            width: 36px;
-            background: url("{{ site.baseurl }}/static/img/sprite.png") no-repeat;
-            background-position: 3px -127px;
-            background-color: #4cc2e4;
-            height: 36px;
-        }
-
-        a.link-apache {
-            background-position: 2px -94px;
-            margin-right: 3px;
-        }
-
-        a.link-github {
-            background-position: 3px -127px;
-        }
-
-        .project-label {
-            margin: 8px -8px 8px 8px;
-        }
+.contribute-help {
+    .sprite_img {
+        position:relative;
+        left: 0px;
+        margin: 0;
+        padding: 0;
+        top:0;
+        width: 85px;
+        height: 85px;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
-    @media (min-width: $screen-sm-min) {
-        li.first {
-            a.link-apache {
-                width: 115px;
-            }
+    .report-bug-icon {
+        @extend .sprite_img;
+        height:1em;
+        width:1em;
+        background-image: url("{{ site.baseurl }}/static/img/bug_icon.svg");
+        background-size: 2em 1em;
+        display: inline-block;
+    }
 
-            a.link-github {
-                width: 90px;
-            }
+    a:hover .report-bug-icon {
+        background-position: -1em 0;
+    }
 
-            .project-label {
-                width: 35%;
-            }
+    .list {
+        padding:0;
+    }
 
-            .project-links {
-                width: 65%;
+    .list li {
+        background:$gray-10;
+        position: relative;
+        list-style: none;
+        margin-bottom: 16px;
+
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        overflow: hidden;
+    }
+
+    .well {
+        .issue-links {
+            li {
+                margin: 10px 0px;
+                a {
+                    color: $brand-primary;
+                    display: inline;
+                    padding: 0px;
+                    &:hover {
+                        color: $brand-primary-darker;
+                        text-decoration: underline;
+                    }
+                }
             }
         }
     }
 
-    @media (max-width: $screen-xs-max) {
+    .platforms-list {
         li {
             a {
-                display: inline-block;
-                float: none;
+                float: right;
+                -webkit-transition: background 0.25s linear;
+                -moz-transition: background 0.25s linear;
+                transition: background 0.25s linear;
+                width: 36px;
+                background: url("{{ site.baseurl }}/static/img/sprite.png") no-repeat;
+                background-position: 3px -127px;
+                background-color: #4cc2e4;
+                height: 36px;
             }
 
             a.link-apache {
                 background-position: 2px -94px;
-                width: 108px;
                 margin-right: 3px;
             }
 
             a.link-github {
                 background-position: 3px -127px;
-                width: 90px;
             }
 
-            .project-label{
-                text-align: center;
-                padding: 12px;
-                margin: 0px;
+            .project-label {
+                margin: 8px -8px 8px 8px;
             }
+        }
 
-            .link-box {
-                width: 49.5%;
-                display: inline-block;
-                text-align: center;
-                background-color: $brand-primary;
-                padding-top: 4px;
+        @media (min-width: $screen-sm-min) {
+            li.first {
+                a.link-apache {
+                    width: 115px;
+                }
+
+                a.link-github {
+                    width: 90px;
+                }
+
+                .project-label {
+                    width: 35%;
+                }
+
+                .project-links {
+                    width: 65%;
+                }
+            }
+        }
+
+        @media (max-width: $screen-xs-max) {
+            li {
+                a {
+                    display: inline-block;
+                    float: none;
+                }
+
+                a.link-apache {
+                    background-position: 2px -94px;
+                    width: 108px;
+                    margin-right: 3px;
+                }
+
+                a.link-github {
+                    background-position: 3px -127px;
+                    width: 90px;
+                }
+
+                .project-label{
+                    text-align: center;
+                    padding: 12px;
+                    margin: 0px;
+                }
+
+                .link-box {
+                    width: 49.5%;
+                    display: inline-block;
+                    text-align: center;
+                    background-color: $brand-primary;
+                    padding-top: 4px;
+                }
             }
         }
     }
-}
 
-.contribute-get-started-steps {
-    padding-left: 17px;
-    counter-reset: contribute-steps-counter;
-    > li {
-        margin-bottom:.5em;
+    .contribute-get-started-steps {
+        padding-left: 17px;
+        counter-reset: contribute-steps-counter;
+        > li {
+            margin-bottom:.5em;
+        }
+    }
+
+    table {
+        @extend .table;
+        @extend .table-bordered;
     }
 }

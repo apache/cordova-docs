@@ -2,6 +2,7 @@
 
 // dependencies
 var path          = require("path");
+var fs            = require("fs");
 var fse           = require("fs-extra");
 var child_process = require("child_process");
 
@@ -66,9 +67,10 @@ var VERSION_VAR_NAME  = "latest_docs_version";
 var PROD_BY_DEFAULT = false;
 
 // compute/get/set/adjust passed options
-gutil.env.prod   = gutil.env.prod || PROD_BY_DEFAULT;
-gutil.env.dev    = !gutil.env.prod;
-gutil.env.outDir = gutil.env.prod ? PROD_DIR : DEV_DIR;
+gutil.env.prod              = gutil.env.prod || PROD_BY_DEFAULT;
+gutil.env.dev               = !gutil.env.prod;
+gutil.env.outDir            = gutil.env.prod ? PROD_DIR : DEV_DIR;
+gutil.env.latestDocsVersion = fs.readFileSync(VERSION_FILE, 'utf-8');
 
 // helpers
 function execPiped(command, args, fileName) {
@@ -217,7 +219,7 @@ gulp.task("version", function () {
 });
 
 gulp.task("defaults", function () {
-    return execPiped("node", [bin("gen_defaults.js"), DOCS_DIR], DEFAULTS_CONFIG_FILE)
+    return execPiped("node", [bin("gen_defaults.js"), DOCS_DIR, gutil.env.latestDocsVersion], DEFAULTS_CONFIG_FILE)
         .pipe(gulp.dest(ROOT_DIR));
 });
 

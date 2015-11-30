@@ -8,6 +8,15 @@
         }
     }
 
+    pre {
+        word-wrap: normal;
+
+        code {
+            overflow: auto;
+            white-space: pre;
+        }
+    }
+
     .site-toc-title {
         font-weight: 300;
         font-size: 22px;
@@ -91,6 +100,12 @@
             background-color: rgb(191, 191, 191);
         }
     }
+
+    .dropdown-menu {
+        left: inherit;
+        right: 0;
+    }
+
     .content-header .edit {
         margin-right: 0.5em;
         margin-left: 0.5em;
@@ -99,6 +114,11 @@
     /* missing version highlight */
     .missing-version {
         color: gray !important;
+    }
+
+    table {
+        @extend .table;
+        @extend .table-bordered;
     }
 
     .keyword-index-list {
