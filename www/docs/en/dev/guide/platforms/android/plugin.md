@@ -346,16 +346,119 @@ In addition to asking for permission for a single permission, it is also possibl
     String [] permissions = { Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION };
 
 Then when requesting the permission, all that needs to be done is the following:
-    
+
     cordova.requestPermissions(this, 0, permissions);
 
-This requests the permissions specified in the array.  It's a good idea to provide a publicly accessible permissions array since this can be used by plugins that use your plugin as a 
+This requests the permissions specified in the array.  It's a good idea to provide a publicly accessible permissions array since this can be used by plugins that use your plugin as a
 dependency, although this is not required.
 
 ## Debugging Android Plugins
 
 Android debugging can be done with either Eclipse or Android Studio, although Android
 studio is recommended.  Since Cordova-Android is currently used as a library project,
-and plugins are supported as source code, it is possible to debug the Java code inside 
+and plugins are supported as source code, it is possible to debug the Java code inside
 a Cordova application just like a native Android application.
 
+## Launching Other Activities
+
+There are special considerations to be made if your plugin launches an Activity
+that pushes the Cordova Activity to the background. The Android OS will destroy
+Activities in the background if the device is running low on memory. In that
+case, the CordovaPlugin instance will be destroyed as well. If your plugin is
+waiting on a result from the Activity it launched, a new instance of your plugin
+will be created when the Cordova Activity is brought back to the foreground and
+the result is obtained. However, state for the plugin will not be automatically
+saved or restored and the CallbackContext for the plugin will be lost. There are
+two methods that your CordovaPlugin may implement to handle this situation:
+
+```java
+/**
+ * Called when the Activity is being destroyed (e.g. if a plugin calls out to an
+ * external Activity and the OS kills the CordovaActivity in the background).
+ * The plugin should save its state in this method only if it is awaiting the
+ * result of an external Activity and needs to preserve some information so as
+ * to handle that result; onRestoreStateForActivityResult() will only be called
+ * if the plugin is the recipient of an Activity result
+ *
+ * @return  Bundle containing the state of the plugin or null if state does not
+ *          need to be saved
+ */
+public Bundle onSaveInstanceState() {}
+
+/**
+ * Called when a plugin is the recipient of an Activity result after the
+ * CordovaActivity has been destroyed. The Bundle will be the same as the one
+ * the plugin returned in onSaveInstanceState()
+ *
+ * @param state             Bundle containing the state of the plugin
+ * @param callbackContext   Replacement Context to return the plugin result to
+ */
+public void onRestoreStateForActivityResult(Bundle state, CallbackContext callbackContext) {}
+```
+
+It is important to note that the above methods should only be used if your
+plugin launches an Activity for a result and should only restore the state
+necessary to handle that Activity result. The state of the plugin will *NOT* be
+restored except in the case where an Activity result is obtained that your
+plugin requested using the CordovaInterface's `startActivityForResult()` method
+and the Cordova Activity was destroyed by the OS while in the background.
+
+As part of `onRestoreStateForActivityResult()`, your plugin will be passed a
+replacement CallbackContext. It is important to realize that this
+CallbackContext *IS NOT* the same one that was destroyed with the Activity. The
+original callback is lost, and will not be fired in the javascript application.
+Instead, this replacement CallbackContext will return the result as part of the
+`resume` event that is fired when the application resumes. The payload of the
+`resume` event follows this structure:
+
+```
+{
+    action: "resume",
+    pendingResult: {
+        pluginServiceName: <name of the plugin e.g. "Camera">,
+        pluginStatus: <description of the result's status>,
+        result: <argument(s) that would have been given to the callback>
+    }
+}
+```
+
+* `pluginServiceName` will match the `name` attribute from your plugin.xml
+* `pluginStatus` will be a String describing the status of the PluginResult
+   passed to the CallbackContext. See PluginResult.java for the String values
+   that correspond to plugin statuses
+* `result` will be whatever result the plugin passes to the CallbackContext
+   (e.g. a String, a number, a JSON object, etc.)
+
+This resume payload will be passed to any callbacks that the javascript
+application has registered for the `resume` event. This means that the result is
+going *directly* to the Cordova application; your plugin will not have a chance
+to process the result with javascript before the application receives it.
+Consequently, you should strive to make the result returned by the native code
+as complete as possible and not rely on any javascript callbacks when launching
+activities.
+
+Be sure to communicate how the Cordova application should interpret the result
+they receive in the `resume` event. It is up to the Cordova application to
+maintain their own state and remember what requests they made and what arguments
+they provided if necessary. However, you should still clearly communicate the
+meaning of `pluginStatus` values and what sort of data is being returned in the
+`result` field as part of your plugin's API.
+
+The complete sequence of events for launching an Activity is as follows
+
+1. The Cordova application makes a call to your plugin
+2. Your plugin launches an Activity for a result
+3. The Android OS destroys the Cordova Activity and your plugin instance
+    * *`onSaveInstanceState()` is called*
+4. The user interacts with your Activity and the Activity finishes
+5. The Cordova Activity is recreated and the Activity result is received
+    * *`onRestoreStateForActivityResult()` is called*
+6. `onActivityResult()` is called and your plugin passes a result to the new
+    CallbackContext
+7. The `resume` event is fired and received by the Cordova application
+
+Android provides a developer setting for debugging Activity destruction on low
+memory. Enable the "Don't keep activities" setting in the Developer Options menu
+on your device or emulator to simulate low memory scenarios. If your plugin
+launches external activities, you should always do some testing with this
+setting enabled to ensure that you are properly handling low memory scenarios.
