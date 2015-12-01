@@ -33,7 +33,7 @@ Aby dodać obsługę lub przebudować projekt dla którejkolwiek z platform, trz
 *   iOS (Mac)
 *   Amazon ogień OS (Mac, Linux, Windows)
 *   Android (Mac, Linux, Windows)
-*   Jeżyna 10 (Mac, Linux, Windows)
+*   BlackBerry 10 (Mac, Linux, Windows)
 *   Windows Phone 8 (Windows)
 *   Systemu Windows (Windows)
 *   Firefox OS (Mac, Linux, Windows)
