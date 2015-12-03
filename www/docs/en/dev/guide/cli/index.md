@@ -121,7 +121,7 @@ To install the `cordova` command-line tool, follow these steps:
 Go to the directory where you maintain your source code, and run a
 command such as the following:
 
-        $ cordova create hello com.example.hello HelloWorld
+        $ cordova create hello com.example.hello HelloWorld [--template templatePath]
 
 It may take some time for the command to complete, so be patient. Running
 the command with the ` -d` option displays information about its progress.
