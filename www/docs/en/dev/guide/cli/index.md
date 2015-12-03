@@ -152,9 +152,9 @@ but it is recommended that you select an appropriate value.
 
 The fourth argument `--template templatePath` allows for a template application
 to be used to create a project. All files, and folders from the template will
-be copied into the new project. Platforms, and plugs may be included in a
+be copied into the new project. Platforms, and plugins may be included in a
 template, but are optional. This argument is optional. The path to the
-template can be a local path, NPM module, or GitHub URL.
+template can be a local path, NPM module, or Git URL.
 
 ## Add Platforms
 
