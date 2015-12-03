@@ -91,7 +91,7 @@ To work on the website and see changes live as you save, run:
 
     node_modules/.bin/gulp serve
 
-That command will build the sute and start a local server. To work on only the website without the docs, add the `--nodocs` flag, as follows:
+That command will build the site and start a local server. To work on only the website without the docs, add the `--nodocs` flag, as follows:
 
     node_modules/.bin/gulp serve --nodocs
 
