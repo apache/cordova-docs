@@ -53,6 +53,23 @@ $screen-md-max: $screen-lg - 1;
   #{$property}: #{$argument};
 }
 
+/* header */
+header {
+    .navbar-form {
+        margin-bottom: 0px;
+    }
+    .btn.search-button {
+        padding: 0px 10px 0px 15px;
+        font-size: 27px;
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 0px;
+        color: $gray-40;
+        &:hover {
+            color: $gray-10;
+        }
+    }
+}
+
 /* footer */
 footer {
     background-color: $gray-5;

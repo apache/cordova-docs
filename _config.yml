@@ -24,7 +24,8 @@ repo:
 latest_docs_version: dev
 
 # NOTE:
-#      this value might get overwritten on some pages; see _defaults.yml
+#      this value _might_ get overwritten on some pages;
+#      see _defaults.yml, which is a generated file
 language: en
 
 # NOTE:

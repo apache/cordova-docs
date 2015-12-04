@@ -168,7 +168,9 @@ $(document).ready(function () {
     // jira search code
     $("#jira-search-button").on("click", submitJiraSearchForm);
     $("#jira-search-box").on("keypress", function searchKeypressEventHandler (e) {
-        if(e.keyCode == 13) submitJiraSearchForm();
+        if(e.keyCode == 13) {
+            submitJiraSearchForm();
+        }
     });
 
     // add prettyprint class to code blocks for prettify.js

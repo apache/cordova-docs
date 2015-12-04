@@ -194,6 +194,8 @@ $(TOC_FILES): $(BIN_DIR)/toc.js Makefile
 
 $(MAIN_STYLE_FILE): $(SCSS_SRC)
 
+# pattern rules
+
 # NODE:
 #      $(@D) means "directory part of target"
 $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.less Makefile

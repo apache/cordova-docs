@@ -1,40 +1,49 @@
-<a class="scroll-point pt-top" name="top"></a>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ site.baseurl }}/"><img id="logo_top" src="{{ site.baseurl }}/static/img/cordova-logo-newbrand.svg"/></a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <!-- <img class="pull-right hidden-xs" style="width:25px" src="{{ site.baseurl }}/static/img/search_icon.svg"/> -->
-            <div class="nav_bar_center">
-                <ul class="nav navbar-nav">
-                    <li {% if page.docs_tab %}class="active"{% endif %}>
-                        <a href="{{ site.baseurl }}/docs/en/latest/guide/overview/">Documentation</a>
-                    </li>
-                    <li {% if page.plugins_tab %}class="active"{% endif %}>
-                        <a href="{{ site.baseurl }}/plugins">Plugins</a>
-                    </li>
-                    <li {% if page.blog_tab %}class="active"{% endif %}>
-                        <a href="{{ site.baseurl }}/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
-                    </li>
-                    <li {% if page.contribute_tab %}class="active"{% endif %}>
-                        <a href="{{ site.baseurl }}/contribute">Contribute</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.baseurl }}/#getstarted">Get Started</a>
-                    </li>
-                    <!-- <li class="visible-xs">
-                        <img class="" style="width:25px;margin-left:13px" src="{{ site.baseurl }}/static/img/search_icon.svg"/>
-                    </li> -->
-                </ul>
+<header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ site.baseurl }}/"><img id="logo_top" src="{{ site.baseurl }}/static/img/cordova-logo-newbrand.svg"/></a>
             </div>
-        </div><!--/.navbar-collapse -->
-    </div>
-</nav>
-<div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li {% if page.docs_tab %}class="active"{% endif %}>
+                            <a href="{{ site.baseurl }}/docs/en/latest/guide/overview/">Documentation</a>
+                        </li>
+                        <li {% if page.plugins_tab %}class="active"{% endif %}>
+                            <a href="{{ site.baseurl }}/plugins">Plugins</a>
+                        </li>
+                        <li {% if page.blog_tab %}class="active"{% endif %}>
+                            <a href="{{ site.baseurl }}/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li {% if page.contribute_tab %}class="active"{% endif %}>
+                            <a href="{{ site.baseurl }}/contribute">Contribute</a>
+                        </li>
+                        <li>
+                            <a href="{{ site.baseurl }}/#getstarted">Get Started</a>
+                        </li>
+                    </ul>
+                    <form action="https://www.google.com/search" method="GET" class="navbar-form navbar-right" id="header-search-form" role="search">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control hidden-sm" placeholder="Site-wide Search">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn search-button">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </span>
+                        </div>
+                        <input type="hidden" name="q" value="site:cordova.apache.org">
+                    </form>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>

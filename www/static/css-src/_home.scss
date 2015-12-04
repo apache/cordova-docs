@@ -175,24 +175,26 @@ html {
 #sprite_apis { @include sprite-img(100%, 0) }
 
 .navbar-brand {
-    padding:0;
+    padding: 0;
     position: absolute;
 }
+
 img#logo_top {
-    width:150px;
-    padding:10px;
+    width: 150px;
+    padding: 10px;
+    height: 50px;
 }
 
 @media (min-width: 767px) { /* Center the navs when not collapsed */
     .nav_bar_center {
-        text-align:center;
-        height:50px;
+        text-align: center;
+        height: 50px;
     }
     .nav_bar_center > ul {
         display: inline-block;
-        float:none;
+        float: none;
     }
-  }
+}
 
 .vertical-center-parent {
     position: relative;
