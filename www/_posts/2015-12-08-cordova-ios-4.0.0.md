@@ -12,6 +12,10 @@ We are happy to announce that `Cordova iOS 4.0.0` has been released.
 
 This is a major release, and [deprecated APIs have been removed](https://github.com/apache/cordova-ios/blob/master/guides/API%20changes%20in%204.0.md). Some 3rd party plugins might require updates before they are compatible. This release adds first-class support for pluggable webviews - namely we now support [WKWebView](https://developer.apple.com/library/ios/documentation/WebKit/Reference/WKWebView_Ref/) -- a bundled modern WebView for iOS! 
 
+The platform now supports Asset Catalogs for splashscreens and icons -- this is all transparent to you when using the `<splash>` and `<icon>` tags in [config.xml](http://cordova.apache.org/docs/en/latest/config_ref/images.html). 
+
+[ios-sim](https://www.npmjs.com/package/ios-sim) is bundled with the platform now, you will not need to install this separately anymore. However for [ios-deploy](https://www.npmjs.com/package/ios-deploy) you will need to update your version to the latest.
+
 `cordova-ios@4.0.0` will be the default iOS version in the next version of `cordova`. If you just can't wait though, you can try it out now:
 
     cd my_project
