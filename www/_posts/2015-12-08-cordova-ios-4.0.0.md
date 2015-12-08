@@ -10,7 +10,7 @@ tags: news releases
 
 We are happy to announce that `Cordova iOS 4.0.0` has been released.
 
-This release adds significant functionality, and also introduces a number of [breaking changes](https://github.com/apache/cordova-ios/blob/master/guides/API%20changes%20in%204.0.md). Mostly though, it adds first-class support for pluggable webviews - namely we now support [WKWebView](https://developer.apple.com/library/ios/documentation/WebKit/Reference/WKWebView_Ref/) -- a bundled modern WebView for iOS! 
+This is a major release, and [deprecated APIs have been removed](https://github.com/apache/cordova-ios/blob/master/guides/API%20changes%20in%204.0.md). Some 3rd party plugins might require updates before they are compatible. This release adds first-class support for pluggable webviews - namely we now support [WKWebView](https://developer.apple.com/library/ios/documentation/WebKit/Reference/WKWebView_Ref/) -- a bundled modern WebView for iOS! 
 
 `cordova-ios@4.0.0` will be the default iOS version in the next version of `cordova`. If you just can't wait though, you can try it out now:
 
