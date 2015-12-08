@@ -16,6 +16,8 @@ The platform now supports Asset Catalogs for splashscreens and icons -- this is 
 
 [ios-sim](https://www.npmjs.com/package/ios-sim) is bundled with the platform now, you will not need to install this separately anymore. However for [ios-deploy](https://www.npmjs.com/package/ios-deploy) you will need to update your version to the latest.
 
+The minimum deployment target has been updated to **iOS 8.0**. This means that this platform release has only been tested on iOS 8 devices and greater only and will only support those iOS versions.
+
 `cordova-ios@4.0.0` will be the default iOS version in the next version of `cordova`. If you just can't wait though, you can try it out now:
 
     cd my_project
