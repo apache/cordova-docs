@@ -40,6 +40,7 @@ var LANGUAGE_MAP = {
 
 function main () {
 
+    var scriptName = process.argv[1];
     var rootDir = process.argv[2];
     var config = {};
 
@@ -54,6 +55,16 @@ function main () {
         var langPath     = path.join(rootDir, langId);
         var versionNames = util.listdirsSync(langPath);
 
+        // get language ID
+        var langName;
+        if (langId in LANGUAGE_MAP) {
+            langName = LANGUAGE_MAP[langId];
+        } else {
+            console.error("Language identifier '" + langId + "' doesn't have an associated name. Please fix that by changing " + scriptName + ".");
+            process.exit(1);
+        }
+
+        // set the language name and the versions it has
         config[langId] = {
             'name':     LANGUAGE_MAP[langId],
             'versions': versionNames
