@@ -77,6 +77,7 @@ PLUGINS_DEST_DIR = $(STATIC_DIR)/js
 
 # executables
 NODE       = node
+CROWDIN    = crowdin-cli
 GULP       = $(NODE_BIN_DIR)/gulp
 LESSC      = $(NODE_BIN_DIR)/lessc
 SASSC      = $(NODE_BIN_DIR)/node-sass
@@ -90,6 +91,7 @@ LESSC      := $(subst /,\,$(LESSC))
 SASSC      := $(subst /,\,$(SASSC))
 BROWSERIFY := $(subst /,\,$(BROWSERIFY))
 UGLIFY     := $(subst /,\,$(UGLIFY))
+MAKE       := $(subst /,\,$(MAKE))
 endif
 
 # existing files
@@ -102,6 +104,13 @@ REDIRECTS_FILE      = $(DATA_DIR)/redirects.yml
 PLUGINS_SRC         = $(PLUGINS_SRC_DIR)/app.js
 VERSION_FILE        = VERSION
 FETCH_SCRIPT        = $(BIN_DIR)/fetch_docs.js
+CROWDIN_CONFIG      = $(CONFIG_DIR)/crowdin.yml
+
+ifdef WINDOWS
+CROWDIN_IDENTITY_FILE = %HOME%/.crowdin.yml
+else
+CROWDIN_IDENTITY_FILE = $$HOME/.crowdin.yml
+endif
 
 # NOTE:
 #      the .scss files are separate because they combine into MAIN_STYLE_FILE,
@@ -285,8 +294,47 @@ $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.css
 	echo --->> $@
 	$(call printfile,$<) >> $@
 
+# crowdin
+CROWDIN_SRC      = www/docs/en/dev
+CROWDIN_JAIL     = crowdin-jail
+CROWDIN_COPY_DIR = $(CROWDIN_JAIL)/cordova-docs/docs/en
+CROWDIN_COPY     = $(CROWDIN_COPY_DIR)/dev
+
+$(CROWDIN_JAIL) $(CROWDIN_COPY_DIR):
+ifdef WINDOWS
+	-$(MKDIRP) $(subst /,\,$@)
+else
+	$(MKDIRP) $@
+endif
+
+$(CROWDIN_COPY): $(CROWDIN_SRC) $(CROWDIN_COPY_DIR) $(FETCHED_FILES)
+	cp -R $(CROWDIN_SRC) $(CROWDIN_COPY_DIR)
+
+cw_project: CW_COMMAND = list project
+cw_translations: CW_COMMAND = list translations
+cw_sources: CW_COMMAND = list sources
+cw_upload: CW_COMMAND = upload sources --auto-update
+cw_download: CW_COMMAND = download en
+cw_project cw_translations cw_sources cw_upload cw_download: crowdin
+
+crowdin: $(CROWDIN_JAIL) $(CROWDIN_COPY)
+	(cd $(CROWDIN_JAIL) && $(CROWDIN) --identity=$(CROWDIN_IDENTITY_FILE) --config=../$(CROWDIN_CONFIG) $(CW_COMMAND))
+
+on_disk.txt: $(CROWDIN_COPY)
+	$(MAKE) cw_sources | grep "^/cordova-docs" | sort > $@
+
+on_crowdin.txt: $(CROWDIN_COPY)
+	$(MAKE) cw_project | grep "^/cordova-docs" | sort > $@
+
+cw_diff: on_disk.txt on_crowdin.txt
+	comm -3 $^
+	$(RM) $^
+
 # maintenance
 clean:
+
+	$(RM) -r $(CROWDIN_JAIL)
+	$(RM) -r $(PROD_DIR) $(DEV_DIR)
 	$(RM) $(VERSION_CONFIG)
 	$(RM) $(DEFAULTS_CONFIG)
 	$(RM) $(DOCS_PAGE_LIST)

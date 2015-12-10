@@ -1,0 +1,28 @@
+# Reference:
+#       https://github.com/crowdin/crowdin-cli/blob/master/README.md
+
+# environment variables for the three values below
+project_identifier_env: CROWDIN_PROJECT_ID
+api_key_env:            CROWDIN_API_KEY
+base_path_env:          CROWDIN_BASE_PATH
+
+# the ID of the project; found on the API settings page
+project_identifier: cordova
+
+# key required for using this tool; found on the API settings page
+# WARNING:
+#         DO NOT PUT A VALUE HERE; put it into $HOME/.crowdin.yml
+#         or into the environment variable defined above
+api_key:
+
+# Crowdin by default truncates the common prefix of all source paths
+# and this flag tells it to keep it instead of truncating it
+preserve_hierarchy: true
+
+# prefix for source paths
+base_path: .
+
+# patterns for file translation
+files:
+    -   source: '/**/*.md'
+        translation: '/cordova-docs/docs/%locale%/dev/**/%original_file_name%'

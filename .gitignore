@@ -18,3 +18,4 @@ www/docs/*/dev/reference
 
 node_modules
 Gemfile.lock
+crowdin-jail
