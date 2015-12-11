@@ -283,7 +283,7 @@ documentation [here](http://developer.android.com/guide/topics/security/permissi
 
 As far as a plugin is concerned, the permission can be requested by calling the permission method, which signature is as follows:
 
-        cordova.reqquestPermission(CordovaPlugin plugin, int requestCode, String permission);
+        cordova.requestPermission(CordovaPlugin plugin, int requestCode, String permission);
 
 To cut down on verbosity, it's standard practice to assign this to a local static variable:
 
