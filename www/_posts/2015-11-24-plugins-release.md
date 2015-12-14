@@ -35,19 +35,20 @@ The following plugins were updated today:
 
 The following plugins now require `cordova-android@5.0.0`. Please read the [Android 5.0.0 release blog](http://cordova.apache.org/announcements/2015/11/09/cordova-android-5.0.0.html) for instructions to update. 
 
-* cordova-plugin-camera
-* cordova-plugin-contacts
-* cordova-plugin-file
-* cordova-plugin-geolocation
-* cordova-plugin-media
+* cordova-plugin-camera@2.0.0
+* cordova-plugin-contacts@2.0.0
+* cordova-plugin-file@4.0.0
+* cordova-plugin-geolocation@2.0.0
+* cordova-plugin-media@2.0.0
 
-If you are using an older version of `cordova-android`, you will have to explicitly install older versions of these plugins now.
-
+## Update
+Since `cordova-android@5.0.0` isn't yet pinned by default in `cordova`, you will have to explicitly install these new versions of these five plugins now. The previous released versions of the above five plugins are still set to `latest` on npm instead of these newly released versions. These will be set to `latest` once we release `cordova@6` which will have `cordova-android@5.0.0` pinned.
+ 
 E.g. 
 
-    cordova plugin add cordova-plugin-camera@1.2.0 --save
+    cordova plugin add cordova-plugin-camera@2.0.0 --save
 
-To see what versions exist for a plugin, run `npm info PLUGINNAME`. 
+To see what versions exist for a plugin, run `npm info PLUGINNAME versions`. 
 
 ----
 You can update any plugin by removing it, and then re-adding it.
