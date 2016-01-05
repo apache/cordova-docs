@@ -78,7 +78,7 @@ __Install__ button next to the __Command Line Tools__ listing.
 
 ## Install Deploy Tools
 
-Run from comman-line terminal:
+Run from command-line terminal:
 
         $ npm install -g ios-sim
         $ npm install -g ios-deploy
