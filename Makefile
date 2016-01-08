@@ -239,12 +239,6 @@ clean:
 	$(RM) $(PLUGINS_APP)
 	$(RM) -r $(CSS_DEST_DIR)
 
-# I couldn't find a way to do this nicely on Windows
-ifdef WINDOWS
-else
-	find . -name *.pyc -delete
-endif
-
 nuke: clean
 	$(RM) -r node_modules
 	$(RM) Gemfile.lock
