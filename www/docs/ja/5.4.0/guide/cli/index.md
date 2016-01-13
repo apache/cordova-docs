@@ -31,9 +31,9 @@ title: コマンド ライン インターフェイス
 サポートを追加する任意のプラットフォーム用のプロジェクトをリビルド プラットフォームの SDK をサポートしている同じマシンからコマンド ライン インターフェイスを実行する必要があります。CLI には、次の組み合わせをサポートします。
 
 *   iOS (Mac)
-*   アマゾン火 OS （Mac、Linux、Windows）
-*   アンドロイド (Mac、Linux、Windows)
-*   ブラックベリー 10 (Mac、Linux、Windows)
+*   Amazon Fire OS （Mac、Linux、Windows）
+*   Android (Mac、Linux、Windows)
+*   Blackberry 10 (Mac、Linux、Windows)
 *   Windows Phone 8 (Windows)
 *   Windows (Windows)
 *   Firefox OS （Mac、Linux、Windows）
@@ -114,7 +114,12 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
 
 *Wp*は Windows Phone オペレーティング システムの異なるバージョンを参照 Windows マシンからこれらのいずれかを実行します。
 
-        $ コルドバ プラットフォーム追加 wp8 $ コルドバ プラットフォーム追加 $ コルドバ プラットフォームは、追加の windows アマゾン fireos $ コルドバ プラットフォーム追加 android の $ コルドバ プラットフォームは blackberry10 $、追加コルドバ プラットフォーム firefoxos を追加
+        $ cordova platform add wp8
+        $ cordova platform add windows
+        $ cordova platform add amazon-fireos
+        $ cordova platform add android
+        $ cordova platform add blackberry10
+        $ cordova platform add firefoxos
     
 
 現在のプラットフォームのセットを確認するこれを実行します。
