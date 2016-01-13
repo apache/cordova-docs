@@ -45,6 +45,38 @@ Verify the installation by running:
 
     ruby --version
 
+## Python
+To build cordova-docs, the python version 2.7 must be used. cordova-docs is incompatible with python 3. 
+
+### Mac OS X
+
+Mac OS X comes with the python 2.7 pre-installed. Else, Follow these steps:
+
+1. Download [this installer][python_installer_mac] from [this page][python_downloads].
+2. Run the downloaded file.
+
+### Windows
+
+Follow these steps:
+
+1. Download [this installer][python_installer_windows] from [this page][python_downloads].
+2. Run the downloaded file.
+   1. Use the default installation path
+   1. Make sure the **'add executable to path'** option is checked.
+
+### Linux
+
+The latest version of CentOS, Fedora, Redhat Enterprise (RHEL) and Ubuntu come with python 2.7 pre-installed. 
+Else, follow the steps from [this site][python_linux].
+
+***
+
+Verify the installation by running:
+
+    python --version
+
+The version must be 2.7.x.
+
 ## JavaScript
 
 ### Mac OS X &amp; Windows
@@ -293,3 +325,7 @@ Please ask for help on the Slack channel. Join at [slack.cordova.io](http://slac
 [svn]: http://svnbook.red-bean.com/en/1.7/svn.intro.quickstart.html
 [pr]: https://help.github.com/articles/using-pull-requests/
 [rbenvgh]: https://github.com/sstephenson/rbenv
+[python_downloads]: https://www.python.org/downloads/release/python-2711/
+[python_installer_mac]: https://www.python.org/ftp/python/2.7.11/python-2.7.11-macosx10.6.pkg
+[python_installer_windows]: https://www.python.org/ftp/python/2.7.11/python-2.7.11.amd64.msi
+[python_linux]: http://docs.python-guide.org/en/latest/starting/install/linux/
