@@ -20,7 +20,7 @@ Summary         | A one line description of the issue
 Component       | The [part of Cordova](https://issues.apache.org/jira/browse/CB/?selectedTab=com.atlassian.jira.jira-projects-plugin:components-panel) this issue pertains to. Please select only one component if possible (e.g. if you find a bug while using cordova-plugin-camera in Android, select the "Plugin Camera" component and not "Android")
 Affects Version | The version of the component that this issue pertains to
 Environment     | Some extra context about the environment in which a bug was found (e.g. the version of Android you are running, your version of the Cordova CLI, your development platform, etc.)
-Description     | A thorough description of the issue. For bugs, please provide code or steps for reproduction as well as any device logs or stack traces you might have.
+Description     | A thorough description of the issue. For bugs, please provide code (using github) or steps for reproduction as well as any device logs or stack traces you might have.
 Labels          | Please label your issue with the platforms it affects (e.g. ios, windows, android, etc.) and nothing else
 Priority        | The impact of the issue (see below)
 
@@ -47,3 +47,9 @@ or
 in your project respectively. You can find out the version of the Cordova CLI you're using by running:
 
     cordova --version
+
+# Generating CLI logs
+
+You can use `--verbose` flag to generate detailed logs for cordova build-time bugs related with the CLI. This helps significantly in debugging.
+
+
