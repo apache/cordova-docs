@@ -44,6 +44,7 @@ Run the commands from [this site][ruby_linux] that apply to your Linux distribut
 Verify the installation by running:
 
     ruby --version
+
 ## Python
 To build cordova-docs, the python version 2.7 must be used. cordova-docs is incompatible with python 3. 
 
