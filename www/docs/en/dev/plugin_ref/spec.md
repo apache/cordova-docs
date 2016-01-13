@@ -98,12 +98,14 @@ Here's a list of the default engines that the `<engine>` tag supports:
 
 * `cordova`
 * `cordova-plugman`
-* `cordova-amazon-fireos`
 * `cordova-android`
 * `cordova-ios`
 * `cordova-blackberry10`
 * `cordova-wp8`
 * `cordova-windows8`
+* `cordova-windows`
+* `cordova-osx`
+* `windows-sdk` // returns the native windows SDK version
 * `android-sdk` // returns the highest Android api level installed
 * `apple-xcode` // returns the xcode version 
 * `apple-ios` // returns the highest iOS version installed
@@ -345,7 +347,6 @@ associating the element's children with that platform.
 Platform names should be lowercase. Platform names, as arbitrarily
 chosen, are listed:
 
-* amazon-fireos
 * android
 * blackberry10
 * ios
