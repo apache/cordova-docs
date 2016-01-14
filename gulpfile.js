@@ -53,11 +53,11 @@ var PLUGINS_FILE_NAME = "plugins.js";
 var PLUGINS_FILE      = path.join(JS_DIR, PLUGINS_FILE_NAME);
 var PLUGINS_SRC_FILE  = path.join(PLUGINS_SRC_DIR, "app.js");
 
-var DEFAULT_CONFIGS = [CONFIG_FILE, DEFAULTS_CONFIG_FILE, VERSION_CONFIG_FILE];
-var DEV_CONFIGS     = [DEV_CONFIG_FILE];
-var PROD_CONFIGS    = [PROD_CONFIG_FILE];
-var DEV_FLAGS       = ["--trace"];
-var PROD_FLAGS      = [];
+var BASE_CONFIGS = [CONFIG_FILE, DEFAULTS_CONFIG_FILE, VERSION_CONFIG_FILE];
+var DEV_CONFIGS  = [DEV_CONFIG_FILE];
+var PROD_CONFIGS = [PROD_CONFIG_FILE];
+var DEV_FLAGS    = ["--trace"];
+var PROD_FLAGS   = [];
 
 var BASE_URL          = "";
 var YAML_FRONT_MATTER = "---\n---\n";
@@ -103,7 +103,7 @@ function getJekyllExecutable() {
 }
 
 function getJekyllConfigs() {
-    var configs = DEFAULT_CONFIGS;
+    var configs = BASE_CONFIGS;
 
     // add build-specific config files
     if (gutil.env.prod) {
@@ -131,6 +131,51 @@ function jekyllBuild(done) {
 }
 
 // tasks
+gulp.task("default", ["help"]);
+
+gulp.task("help", function () {
+    gutil.log("");
+    gutil.log("Tasks:");
+    gutil.log("");
+    gutil.log("    build         same as configs + styles + plugins + jekyll");
+    gutil.log("    jekyll        build with jekyll");
+    gutil.log("    regen         same as jekyll + reload");
+    gutil.log("    serve         build the site and open it in a browser");
+    gutil.log("    reload        refresh the browser");
+    gutil.log("");
+    gutil.log("    plugins       build " + PLUGINS_FILE);
+    gutil.log("");
+    gutil.log("    configs       create all the below files");
+    gutil.log("    defaults      create " + DEFAULTS_CONFIG_FILE);
+    gutil.log("    languages     create " + LANGUAGES_FILE);
+    gutil.log("    version       create " + VERSION_CONFIG_FILE);
+    gutil.log("    toc           create all generated ToC files in " + TOC_DIR);
+    gutil.log("");
+    gutil.log("    styles        compile all the below files");
+    gutil.log("    less          compile all .less files");
+    gutil.log("    sass          compile all .scss files");
+    gutil.log("    css           copy over all .css files");
+    gutil.log("");
+    gutil.log("    watch         serve + then watch all source files and regenerate as necessary");
+    gutil.log("");
+    gutil.log("    link-bugs     replace CB-XXXX references with nice ");
+    gutil.log("");
+    gutil.log("    newversion    create a new docs version from current dev version");
+    gutil.log("                  --version     the new version number (must be greater than the current latest version)");
+    gutil.log("                  --language    only increment the version for the given language");
+    gutil.log("");
+    gutil.log("    help          show this text");
+    gutil.log("    clean         remove all generated files and folders");
+    gutil.log("");
+    gutil.log("Arguments:");
+    gutil.log("    --nodocs      don't generate docs");
+    gutil.log("    --prod        build for production; without it, will build dev instead");
+    gutil.log("");
+});
+
+gulp.task("configs", ["toc", "languages", "defaults", "version"]);
+gulp.task("styles", ["less", "css", "sass"]);
+
 gulp.task("watch", ["serve"], function () {
     gulp.watch(
         [
@@ -184,15 +229,15 @@ gulp.task("serve", ["build"], function () {
     });
 });
 
-gulp.task("gen-full", ["configs", "styles", "plugins"], function (done) {
+gulp.task("build", ["configs", "styles", "plugins"], function (done) {
     jekyllBuild(done);
 });
 
-gulp.task("gen-only", function (done) {
+gulp.task("jekyll", function (done) {
     jekyllBuild(done);
 });
 
-gulp.task("regen", ["gen-only"], function () {
+gulp.task("regen", ["jekyll"], function () {
     browsersync.reload();
 });
 
@@ -278,23 +323,18 @@ gulp.task("plugins", function() {
     return stream
         .pipe(gulp.dest(JS_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
         .pipe(browsersync.reload({stream: true}))
+
         // NOTE:
-        //      adding YAML front matter at the end
-        //      so that uglify doesn't screw it up
+        //      adding YAML front matter after doing everything
+        //      else so that uglify doesn't screw it up
         .pipe(header(YAML_FRONT_MATTER))
 
-        // WORKAOUND:
+        // WORKAROUND:
         //           minified JS has some things that look like
         //           Liquid tags, so we replace them manually
         .pipe(replace("){{", "){ {"))
         .pipe(gulp.dest(JS_DIR));
 });
-
-// compound tasks
-gulp.task("configs", ["toc", "languages", "defaults", "version"]);
-gulp.task("styles", ["less", "css", "sass"]);
-gulp.task("build", ["gen-full"]);
-gulp.task("default", ["serve"]);
 
 // convenience tasks
 gulp.task("link-bugs", function (done) {

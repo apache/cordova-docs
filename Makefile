@@ -128,20 +128,6 @@ help usage default:
 	@echo "    NODOCS: (defined or undefined) - excludes docs from build"
 	@echo ""
 
-debug:
-	@echo "LATEST_DOCS_VERSION: " $(LATEST_DOCS_VERSION)
-	@echo ""
-	@echo "OS: " $(OS)
-	@echo ""
-	@echo "SCSS_SRC: " $(SCSS_SRC)
-	@echo ""
-	@echo "STYLES_SRC: " $(STYLES_SRC)
-	@echo ""
-	@echo "TOC_FILES: " $(TOC_FILES)
-	@echo ""
-	@echo "MKDIRP: " $(MKDIRP)
-	@echo ""
-
 data: $(TOC_FILES) $(LANGUAGES_DATA)
 configs: $(DEFAULTS_CONFIG) $(VERSION_CONFIG)
 styles: $(STYLES)
@@ -149,11 +135,9 @@ plugins: $(PLUGINS_APP)
 
 dev: JEKYLL_CONFIGS += $(DEV_CONFIG)
 dev: JEKYLL_FLAGS += --trace
-dev: DEBUG = 1
 
 prod: JEKYLL_CONFIGS += $(PROD_CONFIG)
 prod: JEKYLL_FLAGS +=
-prod: DEBUG =
 
 dev prod: build
 
