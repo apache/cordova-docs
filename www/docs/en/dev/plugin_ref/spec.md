@@ -352,11 +352,15 @@ chosen, are listed:
 * ios
 * wp8
 * windows8
+* windows
 
 ## _source-file_ Element
 
 The `<source-file>` element identifies executable source code that
-should be installed into a project. Examples:
+should be installed into a project. Usually, it will be nested within
+a `<platform>` element.
+
+Examples:
 
     <!-- android -->
     <source-file src="src/android/Foo.java"
@@ -446,7 +450,7 @@ It supports the following attributes:
   configuration change and continues installation.
 
 * `parent`: An XPath selector referencing the parent of the elements
-  to be added to the config file. If you use absolute selectors, you
+  to be added to in the config file. If you use absolute selectors, you
   can use a wildcard (`*`) to specify the root element,
   e.g., `/*/plugins`.
 
@@ -461,7 +465,7 @@ It supports the following attributes:
 
 The Windows platform supports two additional attributes (both optional) when affecting the meta-name `package.appxmanifest`:
 
-The `device-target` attribute indicates that the  should only be included when building for the specified target device
+The `device-target` attribute indicates that the XML should only be included when building for the specified target device
 type. Supported values are `win`, `phone`, or `all`.
 
 The `versions` attribute indicates that app manifests for specific Windows versions should only be altered for versions that match the
