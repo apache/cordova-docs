@@ -513,6 +513,10 @@ distinguish between source files, headers, and resources. iOS Examples:
 Android example:
 
     <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
+    
+Ubuntu example:
+
+    <header-file src="src/ubuntu/camera.h" />
 
 The Windows platform supports `resource-file` only and three additional attributes
 (all optional) to refine when the resource-file should be included:
