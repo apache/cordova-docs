@@ -46,11 +46,12 @@ Verify the installation by running:
     ruby --version
 
 ## Python
-To build cordova-docs, the python version 2.7 must be used. cordova-docs is incompatible with python 3. 
+
+Python 2.7 is also required to build the docs. NOTE: *The docs will not build with Python 3.0 or greater.*
 
 ### Mac OS X
 
-Mac OS X comes with the python 2.7 pre-installed. Else, Follow these steps:
+Mac OS X comes with Python 2.7 pre-installed. Else, follow these steps:
 
 1. Download [this installer][python_installer_mac] from [this page][python_downloads].
 2. Run the downloaded file.
@@ -66,8 +67,7 @@ Follow these steps:
 
 ### Linux
 
-The latest version of CentOS, Fedora, Redhat Enterprise (RHEL) and Ubuntu come with python 2.7 pre-installed. 
-Else, follow the steps from [this site][python_linux].
+The latest version of CentOS, Fedora, Redhat Enterprise (RHEL) and Ubuntu come with Python 2.7 pre-installed. Else, follow the steps from [this site][python_linux].
 
 ***
 
