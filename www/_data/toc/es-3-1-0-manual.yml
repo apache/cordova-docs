@@ -1,27 +1,27 @@
-- {name: "Gu\xEDas", url: !!python/unicode '/docs/es/3.1.0/'}
-- {name: !!python/unicode 'Perspectiva general', url: !!python/unicode '/docs/es/3.1.0/guide/overview/index.html'}
-- {name: "La interfaz de l\xEDnea de comandos", url: !!python/unicode '/docs/es/3.1.0/guide/cli/index.html'}
-- {name: "Gu\xEDas de plataforma", url: !!python/unicode '/docs/es/3.1.0/guide/platforms/index.html'}
-- {name: !!python/unicode 'El archivo config.xml', url: !!python/unicode '/docs/es/3.1.0/config_ref/index.html'}
-- {name: !!python/unicode 'Los iconos y las pantallas Splash', url: !!python/unicode '/docs/es/3.1.0/config_ref/images.html'}
-- {name: !!python/unicode 'Incrustar WebViews', url: !!python/unicode '/docs/es/3.1.0/guide/hybrid/webviews/index.html'}
-- {name: "Gu\xEDa de desarrollo de plugin", url: !!python/unicode '/docs/es/3.1.0/guide/hybrid/plugins/index.html'}
-- {name: "Gu\xEDa de privacidad", url: !!python/unicode '/docs/es/3.1.0/guide/appdev/privacy/index.html'}
-- {name: "Gu\xEDa de lista blanca", url: !!python/unicode '/docs/es/3.1.0/guide/appdev/whitelist/index.html'}
-- {name: "Aceler\xF3metro", url: !!python/unicode '/docs/es/3.1.0/cordova/accelerometer/accelerometer.html'}
-- {name: "C\xE1mara", url: !!python/unicode '/docs/es/3.1.0/cordova/camera/camera.html'}
-- {name: !!python/unicode 'Captura', url: !!python/unicode '/docs/es/3.1.0/cordova/media/capture/capture.html'}
-- {name: "Br\xFAjula", url: !!python/unicode '/docs/es/3.1.0/cordova/compass/compass.html'}
-- {name: "Conexi\xF3n", url: !!python/unicode '/docs/es/3.1.0/cordova/connection/connection.html'}
-- {name: !!python/unicode 'Contactos', url: !!python/unicode '/docs/es/3.1.0/cordova/contacts/contacts.html'}
-- {name: !!python/unicode 'Dispositivo', url: !!python/unicode '/docs/es/3.1.0/cordova/device/device.html'}
-- {name: !!python/unicode 'Eventos', url: !!python/unicode '/docs/es/3.1.0/cordova/events/events.html'}
-- {name: !!python/unicode 'Archivo', url: !!python/unicode '/docs/es/3.1.0/cordova/file/file.html'}
-- {name: "Geolocalizaci\xF3n", url: !!python/unicode '/docs/es/3.1.0/cordova/geolocation/geolocation.html'}
-- {name: "Globalizaci\xF3n", url: !!python/unicode '/docs/es/3.1.0/cordova/globalization/globalization.html'}
-- {name: !!python/unicode 'InAppBrowser', url: !!python/unicode '/docs/es/3.1.0/cordova/inappbrowser/inappbrowser.html'}
-- {name: "Los medios de comunicaci\xF3n", url: !!python/unicode '/docs/es/3.1.0/cordova/media/media.html'}
-- {name: "Notificaci\xF3n", url: !!python/unicode '/docs/es/3.1.0/cordova/notification/notification.html'}
-- {name: !!python/unicode 'SplashScreen', url: !!python/unicode '/docs/es/3.1.0/cordova/splashscreen/splashscreen.html'}
-- {name: "Almacenamiento de informaci\xF3n", url: !!python/unicode '/docs/es/3.1.0/cordova/storage/storage.html'}
-- {name: "\xCDndice de palabras clave", url: !!python/unicode '/docs/es/3.1.0/page_index.html'}
+- {name: "Gu\xEDas", url: !!python/unicode ''}
+- {name: !!python/unicode 'Perspectiva general', url: !!python/unicode 'guide/overview/index.html'}
+- {name: "La interfaz de l\xEDnea de comandos", url: !!python/unicode 'guide/cli/index.html'}
+- {name: "Gu\xEDas de plataforma", url: !!python/unicode 'guide/platforms/index.html'}
+- {name: !!python/unicode 'El archivo config.xml', url: !!python/unicode 'config_ref/index.html'}
+- {name: !!python/unicode 'Los iconos y las pantallas Splash', url: !!python/unicode 'config_ref/images.html'}
+- {name: !!python/unicode 'Incrustar WebViews', url: !!python/unicode 'guide/hybrid/webviews/index.html'}
+- {name: "Gu\xEDa de desarrollo de plugin", url: !!python/unicode 'guide/hybrid/plugins/index.html'}
+- {name: "Gu\xEDa de privacidad", url: !!python/unicode 'guide/appdev/privacy/index.html'}
+- {name: "Gu\xEDa de lista blanca", url: !!python/unicode 'guide/appdev/whitelist/index.html'}
+- {name: "Aceler\xF3metro", url: !!python/unicode 'cordova/accelerometer/accelerometer.html'}
+- {name: "C\xE1mara", url: !!python/unicode 'cordova/camera/camera.html'}
+- {name: !!python/unicode 'Captura', url: !!python/unicode 'cordova/media/capture/capture.html'}
+- {name: "Br\xFAjula", url: !!python/unicode 'cordova/compass/compass.html'}
+- {name: "Conexi\xF3n", url: !!python/unicode 'cordova/connection/connection.html'}
+- {name: !!python/unicode 'Contactos', url: !!python/unicode 'cordova/contacts/contacts.html'}
+- {name: !!python/unicode 'Dispositivo', url: !!python/unicode 'cordova/device/device.html'}
+- {name: !!python/unicode 'Eventos', url: !!python/unicode 'cordova/events/events.html'}
+- {name: !!python/unicode 'Archivo', url: !!python/unicode 'cordova/file/file.html'}
+- {name: "Geolocalizaci\xF3n", url: !!python/unicode 'cordova/geolocation/geolocation.html'}
+- {name: "Globalizaci\xF3n", url: !!python/unicode 'cordova/globalization/globalization.html'}
+- {name: !!python/unicode 'InAppBrowser', url: !!python/unicode 'cordova/inappbrowser/inappbrowser.html'}
+- {name: "Los medios de comunicaci\xF3n", url: !!python/unicode 'cordova/media/media.html'}
+- {name: "Notificaci\xF3n", url: !!python/unicode 'cordova/notification/notification.html'}
+- {name: !!python/unicode 'SplashScreen', url: !!python/unicode 'cordova/splashscreen/splashscreen.html'}
+- {name: "Almacenamiento de informaci\xF3n", url: !!python/unicode 'cordova/storage/storage.html'}
+- {name: "\xCDndice de palabras clave", url: !!python/unicode 'page_index.html'}

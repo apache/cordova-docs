@@ -1,19 +1,19 @@
-- {name: "Reisef\xFChrer", url: !!python/unicode '/docs/de/5.4.0/'}
-- {name: "\xDCbersicht", url: !!python/unicode '/docs/de/5.4.0/guide/overview/index.html'}
-- {name: "Plattformunterst\xFCtzung", url: !!python/unicode '/docs/de/5.4.0/guide/support/index.html'}
-- {name: !!python/unicode 'Die Befehlszeilenschnittstelle', url: !!python/unicode '/docs/de/5.4.0/guide/cli/index.html'}
-- {name: !!python/unicode 'Plattform-Guides', url: !!python/unicode '/docs/de/5.4.0/guide/platforms/index.html'}
-- {name: !!python/unicode 'Plugins verwalten mithilfe Plugman', url: !!python/unicode '/docs/de/5.4.0/plugin_ref/plugman.html'}
-- {name: !!python/unicode 'Die Datei config.xml', url: !!python/unicode '/docs/de/5.4.0/config_ref/index.html'}
-- {name: !!python/unicode 'Symbole und Splash-Screens', url: !!python/unicode '/docs/de/5.4.0/config_ref/images.html'}
-- {name: "Einbetten von Webansichten f\xFCr", url: !!python/unicode '/docs/de/5.4.0/guide/hybrid/webviews/index.html'}
-- {name: !!python/unicode 'Plugin-Entwicklung-Guide', url: !!python/unicode '/docs/de/5.4.0/guide/hybrid/plugins/index.html'}
-- {name: !!python/unicode 'Plugin-Spezifikation', url: !!python/unicode '/docs/de/5.4.0/plugin_ref/spec.html'}
-- {name: !!python/unicode 'Datenschutz-Guide', url: !!python/unicode '/docs/de/5.4.0/guide/appdev/privacy/index.html'}
-- {name: !!python/unicode 'Sicherheitshandbuch', url: !!python/unicode '/docs/de/5.4.0/guide/appdev/security/index.html'}
-- {name: !!python/unicode 'Plattformen und Plugins Versionsmanagement', url: !!python/unicode '/docs/de/5.4.0/platform_plugin_versioning_ref/index.html'}
-- {name: !!python/unicode 'Whitelist-Guide', url: !!python/unicode '/docs/de/5.4.0/guide/appdev/whitelist/index.html'}
-- {name: "Die n\xE4chsten Schritte", url: !!python/unicode '/docs/de/5.4.0/guide/next/index.html'}
-- {name: !!python/unicode 'Veranstaltungen', url: !!python/unicode '/docs/de/5.4.0/cordova/events/events.html'}
-- {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/de/5.4.0/cordova/plugins/pluginapis.html'}
-- {name: !!python/unicode 'Stichwort-Index', url: !!python/unicode '/docs/de/5.4.0/page_index.html'}
+- {name: "Reisef\xFChrer", url: !!python/unicode ''}
+- {name: "\xDCbersicht", url: !!python/unicode 'guide/overview/index.html'}
+- {name: "Plattformunterst\xFCtzung", url: !!python/unicode 'guide/support/index.html'}
+- {name: !!python/unicode 'Die Befehlszeilenschnittstelle', url: !!python/unicode 'guide/cli/index.html'}
+- {name: !!python/unicode 'Plattform-Guides', url: !!python/unicode 'guide/platforms/index.html'}
+- {name: !!python/unicode 'Plugins verwalten mithilfe Plugman', url: !!python/unicode 'plugin_ref/plugman.html'}
+- {name: !!python/unicode 'Die Datei config.xml', url: !!python/unicode 'config_ref/index.html'}
+- {name: !!python/unicode 'Symbole und Splash-Screens', url: !!python/unicode 'config_ref/images.html'}
+- {name: "Einbetten von Webansichten f\xFCr", url: !!python/unicode 'guide/hybrid/webviews/index.html'}
+- {name: !!python/unicode 'Plugin-Entwicklung-Guide', url: !!python/unicode 'guide/hybrid/plugins/index.html'}
+- {name: !!python/unicode 'Plugin-Spezifikation', url: !!python/unicode 'plugin_ref/spec.html'}
+- {name: !!python/unicode 'Datenschutz-Guide', url: !!python/unicode 'guide/appdev/privacy/index.html'}
+- {name: !!python/unicode 'Sicherheitshandbuch', url: !!python/unicode 'guide/appdev/security/index.html'}
+- {name: !!python/unicode 'Plattformen und Plugins Versionsmanagement', url: !!python/unicode 'platform_plugin_versioning_ref/index.html'}
+- {name: !!python/unicode 'Whitelist-Guide', url: !!python/unicode 'guide/appdev/whitelist/index.html'}
+- {name: "Die n\xE4chsten Schritte", url: !!python/unicode 'guide/next/index.html'}
+- {name: !!python/unicode 'Veranstaltungen', url: !!python/unicode 'cordova/events/events.html'}
+- {name: !!python/unicode 'Plugin APIs', url: !!python/unicode 'cordova/plugins/pluginapis.html'}
+- {name: !!python/unicode 'Stichwort-Index', url: !!python/unicode 'page_index.html'}

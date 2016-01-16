@@ -47,22 +47,36 @@ function getPageTitle(filePath) {
     return null;
 }
 
-function generate(sourceDir, prefix) {
+function generateToC(sourceDir) {
 
     var deferred = Q.defer();
     var toc      = [];
 
+    // go through each file in sourceDir
     var walker = walk.walk(sourceDir);
+    walker.on("file", function (dirPrefix, fileStats, next) {
 
-    walker.on("file", function (root, fileStats, next) {
-        var dirPrefix = root.replace(sourceDir, '');
-        var filePath  = path.join(dirPrefix, fileStats.name);
-        var heading = getPageTitle(path.join(root, fileStats.name));
+        var fileName = fileStats.name;
+        var filePath = path.join(dirPrefix, fileName);
 
-        if(heading) {
+        // get the page path
+        var pagePrefix = dirPrefix.replace(sourceDir, '');
+        var pagePath   = path.join(pagePrefix, fileName);
+        var pageURI    = pagePath.replace(".md", ".html").replace(/\\/g, "/");
+
+        // remove leading slash
+        if (pageURI[0] === "/") {
+            pageURI = pageURI.substr(1);
+        }
+
+        // get heading
+        var heading = getPageTitle(filePath);
+
+        // if the page has a heading, add it to the ToC
+        if (heading) {
             toc.push({
-                url:  path.join(prefix, filePath).replace(".md", ".html").replace(/\\/g, "/"),
-                name: heading
+                name: heading,
+                url:  pageURI
             });
         }
 
@@ -105,16 +119,18 @@ function main () {
         util.listdirsSync(languagePath).forEach(function (versionName) {
 
             var versionPath = path.join(languagePath, versionName);
-            var prefix      = "/docs/" + languageName + "/" + versionName;
             var outputName  = util.generatedTocfileName(languageName, versionName);
             var outputPath  = path.join(tocRoot, outputName);
 
-            // generate file
-            generate(versionPath, prefix).then(function (toc) {
+            // generate ToC
+            generateToC(versionPath).then(function (toc) {
+
+                // sort the ToC
                 toc.sort(function (a, b) {
                     return a.name.localeCompare(b.name, languageName);
                 });
 
+                // save it to a file
                 var tocText = yaml.dump(toc);
                 console.log(outputPath);
                 fs.writeFileSync(outputPath, tocText, 'utf8');

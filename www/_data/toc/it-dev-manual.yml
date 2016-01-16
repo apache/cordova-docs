@@ -1,20 +1,70 @@
-- {name: !!python/unicode 'Guide', url: !!python/unicode '/docs/it/dev/'}
-- {name: !!python/unicode 'Panoramica', url: !!python/unicode '/docs/it/dev/guide/overview/index.html'}
-- {name: !!python/unicode 'Supporto di piattaforma', url: !!python/unicode '/docs/it/dev/guide/support/index.html'}
-- {name: !!python/unicode 'L&apos;interfaccia della riga di comando', url: !!python/unicode '/docs/it/dev/guide/cli/index.html'}
-- {name: !!python/unicode 'Piattaforma guide', url: !!python/unicode '/docs/it/dev/guide/platforms/index.html'}
-- {name: !!python/unicode 'L&apos;utilizzo di Plugman per gestire i plugin', url: !!python/unicode '/docs/it/dev/plugin_ref/plugman.html'}
-- {name: !!python/unicode 'Il File config. Xml', url: !!python/unicode '/docs/it/dev/config_ref/index.html'}
-- {name: !!python/unicode 'Icone e Splash screen', url: !!python/unicode '/docs/it/dev/config_ref/images.html'}
-- {name: !!python/unicode 'Incorporamento visualizzazioni Web', url: !!python/unicode '/docs/it/dev/guide/hybrid/webviews/index.html'}
-- {name: !!python/unicode 'Guida allo sviluppo di plugin', url: !!python/unicode '/docs/it/dev/guide/hybrid/plugins/index.html'}
-- {name: !!python/unicode 'Plugin Specification', url: !!python/unicode '/docs/it/dev/plugin_ref/spec.html'}
-- {name: !!python/unicode 'Guida sulla privacy', url: !!python/unicode '/docs/it/dev/guide/appdev/privacy/index.html'}
-- {name: !!python/unicode 'Guida alla sicurezza', url: !!python/unicode '/docs/it/dev/guide/appdev/security/index.html'}
-- {name: !!python/unicode 'Piattaforme e gestione plugin versione', url: !!python/unicode '/docs/it/dev/platform_plugin_versioning_ref/index.html'}
-- {name: !!python/unicode 'Guida di whitelist', url: !!python/unicode '/docs/it/dev/guide/appdev/whitelist/index.html'}
-- {name: !!python/unicode 'Guida di ganci', url: !!python/unicode '/docs/it/dev/guide/appdev/hooks/index.html'}
-- {name: !!python/unicode 'Prossimi passi', url: !!python/unicode '/docs/it/dev/guide/next/index.html'}
-- {name: !!python/unicode 'Eventi', url: !!python/unicode '/docs/it/dev/cordova/events/events.html'}
-- {name: !!python/unicode 'Plugin API', url: !!python/unicode '/docs/it/dev/cordova/plugins/pluginapis.html'}
-- {name: !!python/unicode 'Indice delle parole chiave', url: !!python/unicode '/docs/it/dev/page_index.html'}
+-   name: "Overview"
+    url: "guide/overview/index.html"
+# -   name: "Architecture"
+#     children:
+#         -   name: "Runtime Architecture"
+#             url:
+#         -   name: "Tooling Architecture"
+#             url:
+-   name: "Create apps"
+    children:
+        -   name: "Create your first app"
+            url:
+        -   name: "Develop for platforms"
+            url: "guide/platforms/index.html"
+        -   name: "Manage versions and platforms"
+            url: "platform_plugin_versioning_ref/index.html"
+        -   name: "Debug and test"
+            url:
+        -   name: "Automate Tasks"
+            url:
+        -   name: "Store data"
+            url: "cordova/storage/storage.html"
+        -   name: "Manage privacy"
+            url: "guide/appdev/privacy/index.html"
+        -   name: "Manage security"
+            url: "guide/appdev/security/index.html"
+        -   name: "Whitelisting"
+            url: "guide/appdev/whitelist/index.html"
+        -   name: "Publish"
+            url:
+-   name: "Create plugins"
+    children:
+        -   name: "Create a plugin"
+            url: "guide/hybrid/plugins/index.html"
+        -   name: "Register with NPM"
+            url:
+        -   name: "Develop for platforms"
+            url:
+        -   name: "Use Plugman"
+            url: "plugin_ref/plugman.html"
+        -   name: "Debug and test"
+            url:
+-   name: "Advanced Topics"
+    children:
+        -   name: "Embed Cordova in native apps"
+            url: "guide/hybrid/webviews/index.html"
+        -   name: "Pass data from Cordova app to host"
+            url:
+-   name: "Reference"
+    children:
+        -   name: "Config.xml"
+            url: "config_ref/index.html"
+        -   name: "Events"
+            url: "cordova/events/events.html"
+        -   name: "Plugin APIs"
+            url: "cordova/plugins/pluginapis.html"
+        -   name: "CLI"
+            url: "guide/cli/index.html"
+        -   name: "Hooks"
+            url: "guide/appdev/hooks/index.html"
+        -   name: "Plugin.xml"
+            url: "plugin_ref/spec.html"
+-   name: "Tutorials"
+    children:
+        -   name: "Share your app in source control"
+            url:
+-   name: "Sample Apps"
+    url:
+-   name: "Keyword Index"
+    url: "page_index.html"

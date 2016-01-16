@@ -1,27 +1,27 @@
-- {name: "\u8F14\u52A9\u7DDA", url: !!python/unicode '/docs/zh/3.1.0/'}
-- {name: "\u6982\u8FF0", url: !!python/unicode '/docs/zh/3.1.0/guide/overview/index.html'}
-- {name: "\u547D\u4EE4\u5217\u4ECB\u9762", url: !!python/unicode '/docs/zh/3.1.0/guide/cli/index.html'}
-- {name: "\u5E73\u81FA\u6307\u5357", url: !!python/unicode '/docs/zh/3.1.0/guide/platforms/index.html'}
-- {name: "Config.xml \u6A94", url: !!python/unicode '/docs/zh/3.1.0/config_ref/index.html'}
-- {name: "\u5716\u793A\u548C\u555F\u52D5\u756B\u9762", url: !!python/unicode '/docs/zh/3.1.0/config_ref/images.html'}
-- {name: "\u5D4C\u5165 WebViews", url: !!python/unicode '/docs/zh/3.1.0/guide/hybrid/webviews/index.html'}
-- {name: "\u5916\u639B\u7A0B\u5F0F\u958B\u767C\u6307\u5357", url: !!python/unicode '/docs/zh/3.1.0/guide/hybrid/plugins/index.html'}
-- {name: "\u96B1\u79C1\u6307\u5357", url: !!python/unicode '/docs/zh/3.1.0/guide/appdev/privacy/index.html'}
-- {name: "\u767D\u540D\u55AE\u6307\u5357", url: !!python/unicode '/docs/zh/3.1.0/guide/appdev/whitelist/index.html'}
-- {name: "\u52A0\u901F\u5EA6\u8A08", url: !!python/unicode '/docs/zh/3.1.0/cordova/accelerometer/accelerometer.html'}
-- {name: "\u76F8\u6A5F", url: !!python/unicode '/docs/zh/3.1.0/cordova/camera/camera.html'}
-- {name: "\u6355\u7372", url: !!python/unicode '/docs/zh/3.1.0/cordova/media/capture/capture.html'}
-- {name: "\u6307\u5357\u91DD", url: !!python/unicode '/docs/zh/3.1.0/cordova/compass/compass.html'}
-- {name: "\u9023\u63A5", url: !!python/unicode '/docs/zh/3.1.0/cordova/connection/connection.html'}
-- {name: "\u9023\u7D61\u4EBA", url: !!python/unicode '/docs/zh/3.1.0/cordova/contacts/contacts.html'}
-- {name: "\u8A2D\u5099", url: !!python/unicode '/docs/zh/3.1.0/cordova/device/device.html'}
-- {name: "\u4E8B\u4EF6", url: !!python/unicode '/docs/zh/3.1.0/cordova/events/events.html'}
-- {name: "\u6A94", url: !!python/unicode '/docs/zh/3.1.0/cordova/file/file.html'}
-- {name: "\u5730\u7406\u5B9A\u4F4D", url: !!python/unicode '/docs/zh/3.1.0/cordova/geolocation/geolocation.html'}
-- {name: "\u5168\u7403\u5316", url: !!python/unicode '/docs/zh/3.1.0/cordova/globalization/globalization.html'}
-- {name: !!python/unicode 'InAppBrowser', url: !!python/unicode '/docs/zh/3.1.0/cordova/inappbrowser/inappbrowser.html'}
-- {name: "\u5A92\u9AD4", url: !!python/unicode '/docs/zh/3.1.0/cordova/media/media.html'}
-- {name: "\u901A\u77E5", url: !!python/unicode '/docs/zh/3.1.0/cordova/notification/notification.html'}
-- {name: "\u9583\u5C4F", url: !!python/unicode '/docs/zh/3.1.0/cordova/splashscreen/splashscreen.html'}
-- {name: "\u5B58\u5132", url: !!python/unicode '/docs/zh/3.1.0/cordova/storage/storage.html'}
-- {name: "\u95DC\u9375\u5B57\u7D22\u5F15", url: !!python/unicode '/docs/zh/3.1.0/page_index.html'}
+- {name: "\u8F14\u52A9\u7DDA", url: !!python/unicode ''}
+- {name: "\u6982\u8FF0", url: !!python/unicode 'guide/overview/index.html'}
+- {name: "\u547D\u4EE4\u5217\u4ECB\u9762", url: !!python/unicode 'guide/cli/index.html'}
+- {name: "\u5E73\u81FA\u6307\u5357", url: !!python/unicode 'guide/platforms/index.html'}
+- {name: "Config.xml \u6A94", url: !!python/unicode 'config_ref/index.html'}
+- {name: "\u5716\u793A\u548C\u555F\u52D5\u756B\u9762", url: !!python/unicode 'config_ref/images.html'}
+- {name: "\u5D4C\u5165 WebViews", url: !!python/unicode 'guide/hybrid/webviews/index.html'}
+- {name: "\u5916\u639B\u7A0B\u5F0F\u958B\u767C\u6307\u5357", url: !!python/unicode 'guide/hybrid/plugins/index.html'}
+- {name: "\u96B1\u79C1\u6307\u5357", url: !!python/unicode 'guide/appdev/privacy/index.html'}
+- {name: "\u767D\u540D\u55AE\u6307\u5357", url: !!python/unicode 'guide/appdev/whitelist/index.html'}
+- {name: "\u52A0\u901F\u5EA6\u8A08", url: !!python/unicode 'cordova/accelerometer/accelerometer.html'}
+- {name: "\u76F8\u6A5F", url: !!python/unicode 'cordova/camera/camera.html'}
+- {name: "\u6355\u7372", url: !!python/unicode 'cordova/media/capture/capture.html'}
+- {name: "\u6307\u5357\u91DD", url: !!python/unicode 'cordova/compass/compass.html'}
+- {name: "\u9023\u63A5", url: !!python/unicode 'cordova/connection/connection.html'}
+- {name: "\u9023\u7D61\u4EBA", url: !!python/unicode 'cordova/contacts/contacts.html'}
+- {name: "\u8A2D\u5099", url: !!python/unicode 'cordova/device/device.html'}
+- {name: "\u4E8B\u4EF6", url: !!python/unicode 'cordova/events/events.html'}
+- {name: "\u6A94", url: !!python/unicode 'cordova/file/file.html'}
+- {name: "\u5730\u7406\u5B9A\u4F4D", url: !!python/unicode 'cordova/geolocation/geolocation.html'}
+- {name: "\u5168\u7403\u5316", url: !!python/unicode 'cordova/globalization/globalization.html'}
+- {name: !!python/unicode 'InAppBrowser', url: !!python/unicode 'cordova/inappbrowser/inappbrowser.html'}
+- {name: "\u5A92\u9AD4", url: !!python/unicode 'cordova/media/media.html'}
+- {name: "\u901A\u77E5", url: !!python/unicode 'cordova/notification/notification.html'}
+- {name: "\u9583\u5C4F", url: !!python/unicode 'cordova/splashscreen/splashscreen.html'}
+- {name: "\u5B58\u5132", url: !!python/unicode 'cordova/storage/storage.html'}
+- {name: "\u95DC\u9375\u5B57\u7D22\u5F15", url: !!python/unicode 'page_index.html'}

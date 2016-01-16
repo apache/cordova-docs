@@ -12,33 +12,24 @@ analytics_id: UA-64283057-1
     {% assign tocfile = toc_dir.[page.generated_toc] %}
 {% endif %}
 
-{% comment %}
-    <!-- We want TOC links to be relative in order to make sure we preserve aliases
-    like "latest" in the URL. The captures are both horrendous single line
-    statements in order to prevent the capturing of extra whitespace. -->
-{% endcomment %}
+{% capture version_prefix %}/docs/{{ page.language }}/{{ page.version }}/{% endcapture %}
+{% assign my_entry = page.url | replace: version_prefix,"" %}
+{% assign my_entry_parts = my_entry | split: "/" %}
 
-{% assign url_split = page.url | split: "/" %}
-{% capture relative_base_path %}{% for item in url_split %}{% if forloop.index0 > 3 and forloop.rindex > 1 %}../{% endif %}{% endfor %}{% endcapture %}
-{% capture actual_base_path %}{% for item in url_split %}{% if forloop.index0 < 4 and forloop.index0 != 0 %}/{{item}}{% endif %}{% endfor %}/{% endcapture %}
+{% comment %}
+    path_to_root: path from here to version root, replacing all parts except the last one with '../'
+
+    NOTE:
+         the capture is a single line because extraneous whitespace would screw up the URI it produces
+{% endcomment %}
+{% capture path_to_root %}{% for item in my_entry_parts %}{% if forloop.rindex > 1 %}../{% endif %}{% endfor %}{% endcapture %}
 
 <div class="docs container">
 
     <!-- Table of Contents -->
     <div class="hidden-xs hidden-sm col-md-3 site-toc-container">
         <h2 class="site-toc-title">{{ page.toc_text }}</h2>
-        <ul class="site-toc">
-            {% for entry in tocfile %}
-            <li>
-                <a class="{% if page.url == entry.url %}this-page{% endif %}" href="{{ entry.url | replace:actual_base_path,relative_base_path }}">
-                    {{ entry.name }}
-                </a>
-                {% if page.url == entry.url %}
-                    <div id="page-toc" class="page-toc"></div>
-                {% endif %}
-            </li>
-            {% endfor %}
-        </ul>
+        {% include toc_recursive_main.html entries=tocfile my_entry=my_entry path_to_root=path_to_root %}
     </div>
 
     <!-- Page content -->
@@ -52,18 +43,7 @@ analytics_id: UA-64283057-1
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                    {% for entry in tocfile %}
-                    <li>
-                        <a class="{% if page.url == entry.url %}this-page{% endif %}" href="{{ entry.url | replace:actual_base_path,relative_base_path }}">
-                            {% if page.url == entry.url %}
-                                <em>{{ entry.name }}</em>
-                            {% else %}
-                                {{ entry.name }}
-                                <!-- DEBUG: {{ page.url }} != {{ entry.url }} -->
-                            {% endif %}
-                        </a>
-                    </li>
-                    {% endfor %}
+                    {% include toc_recursive_dropdown.html entries=tocfile my_entry=my_entry path_to_root=path_to_root %}
                 </ul>
             </div>
         </div>

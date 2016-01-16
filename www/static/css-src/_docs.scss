@@ -6,6 +6,10 @@
 
     margin-bottom: 20px;
 
+    .this-page {
+        font-weight: bold;
+    }
+
     /* this is so that wide images don't stick out of their paragraphs */
     p {
         img {
@@ -35,20 +39,22 @@
     }
 
     /* outer ToC for the site */
-    .site-toc {
-        padding: 0px;
-    }
-    .site-toc li {
-        list-style: none;
-    }
-    .site-toc > li {
-        list-style: none;
-        font-size: 18px;
-        font-weight: 300;
-        padding: 0.5em 0em;
-    }
-    .site-toc > li .this-page {
-        font-weight: bold;
+    .site-toc-container {
+        .site-toc {
+            padding: 0px;
+            .site-toc {
+                padding-left: 15px;
+            }
+        }
+        .site-toc li {
+            list-style: none;
+        }
+        .site-toc > li {
+            list-style: none;
+            font-size: 18px;
+            font-weight: 300;
+            padding-top: 0.5em;
+        }
     }
 
     /* inner ToC for the page */
