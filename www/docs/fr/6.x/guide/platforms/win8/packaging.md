@@ -58,7 +58,7 @@ Par ailleurs, ces valeurs peuvent être spécifiées à l'aide d'un fichier de c
             }
         }
     }
-    
+
 
 Il y a aussi des soutien à mélanger et assortir les arguments de ligne de commande et les paramètres dans le fichier build.json. Les valeurs de la ligne de commande arguments obtiendrez priorité.
 
@@ -70,16 +70,16 @@ Pour créer des certificats, il faut utiliser [makecert.exe](https://msdn.micros
 
 La première chose que nous devons faire est de créer une clé racine pour la signature de notre application.
 
-`makecert.exe -n "CN=FakeCorp.com" -r -eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" -e "01/01/2020" –h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer`
+`makecert.exe -n "CN=FakeCorp.com" -r -eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" -e "01/01/2020" -h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer`
 
 Pour mieux comprendre ce que makecert fait, voici une brève explication de ce que font les paramètres :
 
   * -n « CN=FakeCorp.com »: c'est le nom du sujet de certificat [X.509](http://en.wikipedia.org/wiki/X.509) . Dans cet exemple, c'est **C**ccomplis**N**ame=FakeCorp.com.
   * -r: crée un [certificat d'auto-signature](http://en.wikipedia.org/wiki/Self-signed_certificate).
-  * -eku #EKU_VAL #: séparés par des virgules amélioré utilisation de clé OID. 
+  * -eku #EKU_VAL #: séparés par des virgules amélioré utilisation de clé OID.
       * 1.3.6.1.5.5.7.3.3 indique que le certificat est valide pour la signature de code. Toujours spécifier cette valeur pour limiter l'utilisation prévue du certificat.
       * 1.3.6.1.4.1.311.10.3.13 indique que le certificat respecte signature de durée de vie. En règle générale, si une signature est horodatée, tant que le certificat n'était valide au point alors qu'il était temps tamponné, la signature reste valide même si le certificat expire. Cette EKU oblige la signature à échéance que la signature soit horodaté.
-  * -e "01/01/2020": définit la date d'expiration du certificat. 
+  * -e "01/01/2020": définit la date d'expiration du certificat.
   * -h 0: définit la hauteur max de l'arbre ci-dessous ce cert à 0 pour éviter que le certificat soit utilisé comme une autorité de Certification (AC) qui peuvent émettre des autres certificats.
   * sv - FakeCorp.com.pvk : sortie PVK fichier. Windows utilise des fichiers de PVK pour stocker des clés privées pour la signature de code.
   * FakeCorp.com.cer : Fichier de certificat de sortie. Fichier CER est utilisé pour stocker le certificat X.509.

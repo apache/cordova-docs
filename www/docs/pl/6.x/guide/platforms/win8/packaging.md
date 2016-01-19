@@ -58,7 +58,7 @@ Alternatywnie, tych wartości może być określona za pomocą zbudować plik ko
             }
         }
     }
-    
+
 
 Dostępna jest również obsługa mieszać i łączyć argumentów wiersza polecenia i parametry w pliku build.json. Wartości od argumentów wiersza polecenia otrzyma pierwszeństwo.
 
@@ -70,16 +70,16 @@ Do tworzenia certyfikatów musimy użyć [makecert.exe](https://msdn.microsoft.c
 
 Pierwszą rzeczą, jaką musimy zrobić jest do utworzenia klucza głównego do podpisania Nasza aplikacja.
 
-`makecert.exe -n "CN=FakeCorp.com" -r -eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" -e "01/01/2020" –h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer`
+`makecert.exe -n "CN=FakeCorp.com" -r -eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" -e "01/01/2020" -h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer`
 
 Aby zrozumieć, co makecert czy, Oto krótkie wyjaśnienie tego, co parametry:
 
   * -n "CN=FakeCorp.com": jest to nazwa podmiotu certyfikatu [X.509](http://en.wikipedia.org/wiki/X.509) . W tym przykładzie jest to **C**typowe**N**ame=FakeCorp.com.
   * -r: tworzy [własny podpisany certyfikat](http://en.wikipedia.org/wiki/Self-signed_certificate).
-  * -eku #EKU_VAL #: oddzielone przecinkami ulepszone użycie klucz identyfikatory OID. 
+  * -eku #EKU_VAL #: oddzielone przecinkami ulepszone użycie klucz identyfikatory OID.
       * 1.3.6.1.5.5.7.3.3 wskazuje, że certyfikat jest ważny do podpisywania kodu. Zawsze należy określić tę wartość, aby ograniczyć z przeznaczeniem na świadectwie.
       * 1.3.6.1.4.1.311.10.3.13 wskazuje, że certyfikat szanuje życia podpisywania. Zazwyczaj jeśli podpis jest godzina, jak długo certyfikat był ważny w momencie gdy był sygnaturami czasowymi, podpis pozostaje prawidłowa nawet jeśli certyfikat wygasa. Ten EKU sił podpis wygaśnie bez względu na to, czy podpis jest sygnaturami czasowymi.
-  * -e "01/01/2020": ustawia datę wygaśnięcia certyfikatu. 
+  * -e "01/01/2020": ustawia datę wygaśnięcia certyfikatu.
   * -h 0: Ustawia maksymalna wysokość drzewa poniżej tego certyfikatu na 0, aby zapobiec certyfikat używany jako urząd certyfikacji że można wydać inne certyfikaty.
   * -sv FakeCorp.com.pvk: wyjście PVK pliku. System Windows wykorzystuje PVK plików do przechowywania kluczy prywatnych do podpisywania kodu.
   * FakeCorp.com.cer: Wyjście pliku certyfikatu. Plik CER jest używany do przechowywania certyfikatów X.509.

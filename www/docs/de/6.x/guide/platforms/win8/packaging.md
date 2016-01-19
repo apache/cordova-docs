@@ -58,7 +58,7 @@ Alternativ können diese Werte angegeben werden mit einer Build-Konfigurationsda
             }
         }
     }
-    
+
 
 Es gibt auch Unterstützung zu kombinieren, Kommandozeilen-Parameter und Parameter in der Datei build.json. Werte aus der Befehlszeilenargumente erhalten Vorrang.
 
@@ -70,16 +70,16 @@ Zum Erstellen von Zertifikaten müssen wir [makecert.exe](https://msdn.microsoft
 
 Das erste, was, das wir tun müssen, was ist einen Root-Schlüssel zum Signieren unsere app zu erstellen.
 
-`makecert.exe -n "CN=FakeCorp.com" -r -eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" -e "01/01/2020" –h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer`
+`makecert.exe -n "CN=FakeCorp.com" -r -eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" -e "01/01/2020" -h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer`
 
 Um zu verstehen was Makecert tut, ist hier eine kurze Erläuterung was tun Parameter:
 
   * -n "CN=FakeCorp.com": Dies ist die [x. 509](http://en.wikipedia.org/wiki/X.509) -Zertifikatantragstellername. In diesem Beispiel ist es **C**Ommon**N**ame=FakeCorp.com.
   * -R: erstellt ein [selbstsigniertes Zertifikat](http://en.wikipedia.org/wiki/Self-signed_certificate).
-  * -Eku #EKU_VAL #: kommaseparierte erweiterte Schlüsselverwendung OIDs. 
+  * -Eku #EKU_VAL #: kommaseparierte erweiterte Schlüsselverwendung OIDs.
       * 1.3.6.1.5.5.7.3.3 bedeutet, dass das Zertifikat zum Signieren von Code gültig ist. Geben Sie immer diesen Wert, um den Verwendungszweck für das Zertifikat zu begrenzen.
       * 1.3.6.1.4.1.311.10.3.13 bedeutet, dass das Zertifikat signieren Lebensdauer respektiert. In der Regel ist eine Signatur Zeitstempel, solange das Zertifikat zum Zeitpunkt gültigen war Zeitstempel wurde, bleibt die Signatur gültig, selbst wenn das Zertifikat abläuft. Diese EKU zwingt die Signatur unabhängig davon, ob die Signatur Zeitstempel abläuft.
-  * -e "01.01.2020": setzt das Ablaufdatum des Zertifikats. 
+  * -e "01.01.2020": setzt das Ablaufdatum des Zertifikats.
   * -h 0: setzt max. Höhe der Struktur unterhalb dieses Zertifikat auf 0 zu verhindern, dass das Zertifikat als eine Certification Authority (CA), die andere Zertifikate ausstellen kann verwendet werden.
   * -sv FakeCorp.com.pvk: Ausgabe PVK Datei. Windows verwendet PVK-Dateien zum Speichern von privater Schlüsseln zum Signieren von Code.
   * FakeCorp.com.cer: Ausgabedatei Zertifikat. CER-Datei wird verwendet, um die x. 509-Zertifikatsspeicher.

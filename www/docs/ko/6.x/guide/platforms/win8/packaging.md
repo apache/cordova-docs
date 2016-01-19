@@ -58,7 +58,7 @@ Windows 프로젝트에서 신원 정보는 package.appxmanifest 라는 파일�
             }
         }
     }
-    
+
 
 또한 혼합 하 고 일치 명령줄 인수 및 매개 변수 build.json 파일에서 지원이 됩니다. 명령줄 인수에서 값 우선 순위를 얻을 것 이다.
 
@@ -70,16 +70,16 @@ Windows 프로젝트에서 신원 정보는 package.appxmanifest 라는 파일�
 
 우리가 해야 할 첫 번째 일 우리의 애플 리 케이 션 서명 루트 키를 만드는 것입니다.
 
-`makecert.exe -n "CN=FakeCorp.com" -r -eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" -e "01/01/2020" –h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer`
+`makecert.exe -n "CN=FakeCorp.com" -r -eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" -e "01/01/2020" -h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer`
 
 이해 하려면 어떤 makecert 않습니다, 여기에 매개 할의 간략 한 설명이입니다.
 
   * -n "CN=FakeCorp.com": 주제 [X.509](http://en.wikipedia.org/wiki/X.509) 인증서 이름입니다. 이 예제에서는 **C**ommon**N**ame=FakeCorp.com입니다.
   * -r: [자체 서명 인증서](http://en.wikipedia.org/wiki/Self-signed_certificate) 생성.
-  * -eku #EKU_VAL #: 쉼표로 구분 된 향상 된 키 용도 Oid. 
+  * -eku #EKU_VAL #: 쉼표로 구분 된 향상 된 키 용도 Oid.
       * 1.3.6.1.5.5.7.3.3 인증서는 코드 서명에 유효한 나타냅니다. 항상 인증서 용도 제한 하려면이 값을 지정 합니다.
       * 1.3.6.1.4.1.311.10.3.13은 인증서 수명 서명 존중을 나타냅니다. 일반적으로, 이면 서명이 시간 스탬프, 스탬프 시간 때 인증서가 유효한 시점으로 서명이 남아 있다 유효한 인증서가 만료 하는 경우에. 이 EKU 서명에 타임 스탬프가 기록 여부에 관계 없이 만료 서명을 하면 됩니다.
-  * -e "01/01/2020": 인증서의 만료 날짜를 설정 합니다. 
+  * -e "01/01/2020": 인증서의 만료 날짜를 설정 합니다.
   * -h 0: 0 사용으로 인증 기관 (CA) 다른 인증서를 발급할 수 있는 인증서를 방지 하기 위해이 인증서 아래 트리의 최대 높이 설정 합니다.
   * -sv FakeCorp.com.pvk: 출력 PVK 파일. Windows 코드 서명 개인 키 저장 하 PVK 파일을 사용 합니다.
   * FakeCorp.com.cer: 출력 인증서 파일입니다. CER 파일은 X.509 인증서를 저장 하는 데 사용 됩니다.

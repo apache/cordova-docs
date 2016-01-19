@@ -68,7 +68,7 @@ For creating certificates we need to use [makecert.exe][2] util. This tool ships
 
 The first thing we need to do is to create a root key for signing our app.
 
-`makecert.exe -n "CN=FakeCorp.com" -r -eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" -e "01/01/2020" –h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer`
+`makecert.exe -n "CN=FakeCorp.com" -r -eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" -e "01/01/2020" -h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer`
 
 To understand what makecert does, here's a brief explanation of what parameters do:
 
@@ -77,7 +77,7 @@ To understand what makecert does, here's a brief explanation of what parameters 
 - -eku #EKU_VAL# : Comma separated enhanced key usage OIDs.
     - 1.3.6.1.5.5.7.3.3 indicates that the certificate is valid for code signing. Always specify this value to limit the intended use for the certificate.
     - 1.3.6.1.4.1.311.10.3.13 indicates that the certificate respects lifetime signing. Typically, if a signature is time stamped, as long as the certificate was valid at the point when it was time stamped, the signature remains valid even if the certificate expires. This EKU forces the signature to expire regardless of whether the signature is time stamped.
-- -e "01/01/2020" : Sets the expiration date of the certificate. 
+- -e "01/01/2020" : Sets the expiration date of the certificate.
 - -h 0 : Sets max height of the tree below this cert to 0 to prevent the certificate from being used as a Certification Authority (CA) that can issue other certificates.
 - -sv FakeCorp.com.pvk : Output PVK file. Windows uses PVK files to store private keys for code signing.
 - FakeCorp.com.cer : Output certificate file. CER file is used to store X.509 certificate.
@@ -97,7 +97,7 @@ Where:
 - spc :  Input cert file name
 - pfx : Output pfx file name
 - po : pfx password; same as pvk password if not provided
- 
+
 If we provide this pfx file to build.json file, we will have the following error: "The key file may be password protected. To correct this, try to import the certificate manually into the current user's personal certificate  store.". In order to import it we have to use [certutil][4] from an admin prompt:
 
 `certutil -user -p PASSWORD -importPFX FakeCorp.com.pfx`

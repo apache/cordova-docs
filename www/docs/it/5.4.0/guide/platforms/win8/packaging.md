@@ -58,7 +58,7 @@ In alternativa, questi valori possono essere specificati utilizzando un file di 
             }
         }
     }
-    
+
 
 C'è anche il supporto di mescolare e abbinare gli argomenti della riga di comando e i parametri nel file di build.json. Valori da argomenti della riga di comando avranno la precedenza.
 
@@ -70,16 +70,16 @@ Per la creazione di certificati abbiamo bisogno di usare [makecert.exe](https://
 
 La prima cosa che dobbiamo fare è quello di creare una chiave principale per la firma del nostro app.
 
-`makecert.exe -n "CN=FakeCorp.com" -r -eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" -e "01/01/2020" –h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer`
+`makecert.exe -n "CN=FakeCorp.com" -r -eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" -e "01/01/2020" -h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer`
 
 Per comprendere quali makecert, ecco una breve spiegazione di cosa fanno i parametri:
 
   * -n "CN=FakeCorp.com": questo è il nome di soggetto del certificato [x. 509](http://en.wikipedia.org/wiki/X.509) . In questo esempio è ame=FakeCorp.com comune**N** **C**.
   * -r: crea un [certificato autofirmato](http://en.wikipedia.org/wiki/Self-signed_certificate).
-  * -eku #EKU_VAL #: separati da virgola migliorato l'utilizzo della chiave OID. 
+  * -eku #EKU_VAL #: separati da virgola migliorato l'utilizzo della chiave OID.
       * 1.3.6.1.5.5.7.3.3 indica che il certificato è valido per la firma del codice. Sempre specificare questo valore per limitare l'uso previsto per il certificato.
       * 1.3.6.1.4.1.311.10.3.13 indica che il certificato rispetta la vita firma. In genere, se una firma è il time stampato, purché il certificato era valido al punto quando è stato aggiunto il time stampato, la firma rimane valida anche se il certificato è scaduto. Questo EKU impone la firma in scadenza indipendentemente dal fatto se la firma è il time stampato.
-  * -e "01/01/2020": imposta la data di scadenza del certificato. 
+  * -e "01/01/2020": imposta la data di scadenza del certificato.
   * -h 0: imposta l'altezza massima dell'albero sotto questo certificato su 0 per impedire che il certificato venga utilizzato come un'autorità di certificazione (CA) che possono emettere altri certificati.
   * -sv FakeCorp.com.pvk: Output PVK file. Windows utilizza i file PVK per memorizzare le chiavi private di firma del codice.
   * FakeCorp.com.cer: File di Output del certificato. CER file è utilizzato per memorizzare il certificato x. 509.

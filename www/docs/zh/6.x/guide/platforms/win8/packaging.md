@@ -58,7 +58,7 @@ title: Windows 包裝
             }
         }
     }
-    
+
 
 此外，它還支援以混合和匹配的命令列參數和 build.json 檔中的參數。從命令列參數的值將會得到優先。
 
@@ -70,16 +70,16 @@ title: Windows 包裝
 
 我們需要做的第一件事是創建為簽署我們的應用程式的根鍵。
 
-`makecert.exe -n "CN=FakeCorp.com" -r -eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" -e "01/01/2020" –h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer`
+`makecert.exe -n "CN=FakeCorp.com" -r -eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" -e "01/01/2020" -h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer`
 
 要理解什麼金鑰做，這裡是參數做了簡要說明:
 
   * -n"CN=FakeCorp.com": 這是[X.509](http://en.wikipedia.org/wiki/X.509)證書主題名稱。在這個例子中它是**C**處理逐漸顯露出來**N**ame=FakeCorp.com。
   * -r: 創建[自簽章憑證](http://en.wikipedia.org/wiki/Self-signed_certificate).
-  * -eku #EKU_VAL #: 逗號分隔的增強型金鑰用法 Oid。 
+  * -eku #EKU_VAL #: 逗號分隔的增強型金鑰用法 Oid。
       * 1.3.6.1.5.5.7.3.3 表示該證書是有效的代碼簽名。始終指定此值以限制證書的用途。
       * 1.3.6.1.4.1.311.10.3.13 指示證書尊重一生簽署。 通常情況下，如果簽名是時間戳記，只要證書是在點有效時間戳記的時候，該簽名仍然有效即使在證書過期。 這 EKU 部隊要過期而不管簽名是否加蓋時間戳記的簽名。
-  * -e"2020/1/1": 設置證書的過期日期。 
+  * -e"2020/1/1": 設置證書的過期日期。
   * -h 0: 將此證書下面的樹的最大高度設置為 0，以防止證書被用於作為憑證授權單位 (CA) 可以頒發其他證書。
   * -sv FakeCorp.com.pvk: 輸出 PVK 檔。Windows 使用 PVK 檔來存儲用於代碼簽名的私密金鑰。
   * FakeCorp.com.cer: 輸出證書檔。CER 檔用於存儲 X.509 憑證。
