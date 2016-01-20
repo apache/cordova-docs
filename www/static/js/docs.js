@@ -14,7 +14,6 @@
 // KIND, either express or implied.  See the License for the
 // specific language governing permissions and limitations
 // under the License.
-//
 
 $(document).ready(function () {
 
@@ -29,7 +28,7 @@ $(document).ready(function () {
         }
         return name;
     }
-    
+
     var anchorLink = function (id) {
         var anchor = document.createElement("a");
         anchor.className = "header-link";
@@ -54,11 +53,11 @@ $(document).ready(function () {
         },
         'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
             // the first link is the H1 header of the page - exclude it
-            if (i > 0) { 
+            if (i > 0) {
                 // add a special class to the anchor for this toc entry
                 var anchorName = getAnchorName(i, heading, prefix);
                 $('#' + anchorName).addClass('fragment-anchor');
-                
+
                 $heading.append(anchorLink(anchorName));
             }
             // don't assign any special classes to the toc entry itself

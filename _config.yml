@@ -43,16 +43,6 @@ defaults:
 source:      www
 destination: build-dev
 
-sitemap:
-    file: "/sitemap.xml"
-    exclude:
-        - "/atom.xml"
-        - "/feed.xml"
-    include_posts:
-        - "/blog/index.html"
-    change_frequency_name: "change_frequency"
-    priority_name: "priority"
-
 # don't erase these files in the output directory
 keep_files: [".git", ".svn", "wiki-images", "images", "downloads"]
 
@@ -79,7 +69,7 @@ redcarpet:
 
         - tables
         - highlight
-        
+
         # enables anchor links
         - with_toc_data
 
