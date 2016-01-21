@@ -415,9 +415,9 @@ Instead, this replacement CallbackContext will return the result as part of the
 {
     action: "resume",
     pendingResult: {
-        pluginServiceName: <name of the plugin e.g. "Camera">,
-        pluginStatus: <description of the result's status>,
-        result: <argument(s) that would have been given to the callback>
+        pluginServiceName: string,
+        pluginStatus: string,
+        result: any
     }
 }
 ```
