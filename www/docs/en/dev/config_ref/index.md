@@ -22,8 +22,8 @@ title: The config.xml File
 
 # The config.xml File
 
-Many aspects of an app's behavior can be controlled with a global
-configuration file, `config.xml`.  This
+config.xml is a global configuratino file that controls many aspects
+of a cordova application's behavior. This
 platform-agnostic XML file is arranged based on the W3C's [Packaged
 Web Apps (Widgets)](http://www.w3.org/TR/widgets/) specification, and
 extended to specify core Cordova API features, plugins, and
