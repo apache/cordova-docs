@@ -63,7 +63,7 @@ application components.
 This is the part where your application code resides. The application itself is 
 implemented as a web page, by default a local file named _index.html_, that 
 references whatever CSS, JavaScript, images, media files, or other resources 
-are necessary for it to run. The app executes as a _WebView_ within the native 
+are necessary for it to run. The app executes in a _WebView_ within the native 
 application wrapper, which you distribute to app stores.
 
 This container has a very crucial file - `config.xml` file that provides
