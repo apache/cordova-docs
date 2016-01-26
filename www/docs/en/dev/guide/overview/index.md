@@ -78,7 +78,7 @@ an interface for Cordova and native components to communicate with each
 other and bindings to standard device APIs. This enables you to invoke native 
 code from JavaScript. 
 
-Cordova provides a minimal set of plugins called core plugin. These core 
+Cordova provides a minimal set of plugins called core plugins. These core 
 plugins provide your application to access device capabilities such as 
 battery, camera, contacts, etc. Refer 
 [Plugin APIs](../../cordova/plugins/pluginapis.html) for further details. 
