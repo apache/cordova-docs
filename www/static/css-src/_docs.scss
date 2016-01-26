@@ -1,4 +1,9 @@
 .docs {
+    /* overriding h2 to correct value */
+    h2 {
+        font-size: 30px;
+    }
+
     margin-bottom: 20px;
 
     /* this is so that wide images don't stick out of their paragraphs */
