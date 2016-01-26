@@ -66,27 +66,26 @@ references whatever CSS, JavaScript, images, media files, or other resources
 are necessary for it to run. The app executes in a _WebView_ within the native 
 application wrapper, which you distribute to app stores.
 
-This container has a very crucial file - `config.xml` file that provides
-information about the app and specifies parameters affecting how it
-works, such as whether it responds to orientation shifts. 
-(See [config.xml file](../../config_ref/index.html) for details.)
+This container has a very crucial file - [config.xml](../../config_ref/index.html) 
+file that provides information about the app and specifies parameters affecting how it
+works, such as whether it responds to orientation shifts.
 
 ## Plugins
 
-Plugins are the integral part of the cordova ecosystem. They basically provide 
+Plugins are an integral part of the cordova ecosystem. They provide 
 an interface for Cordova and native components to communicate with each 
 other and bindings to standard device APIs. This enables you to invoke native 
 code from JavaScript. 
 
-Cordova provides a minimal set of plugins called core plugins. These core 
+Apache Cordova project maintains a set of plugins called the 
+[core plugins](../../cordova/plugins/pluginapis.html). These core 
 plugins provide your application to access device capabilities such as 
-battery, camera, contacts, etc. Refer 
-[Plugin APIs](../../cordova/plugins/pluginapis.html) for further details. 
+battery, camera, contacts, etc.
 
 In addition to the core plugins, there are several third-party plugins which 
 provide additional bindings to features not necessarily available on all 
-platforms. You can find these third-party plugins [here](http://plugins.cordova.io) 
-and [here](https://www.npmjs.com/search?q=ecosystem%3Acordova). You can also 
+platforms. You can search for Cordova plugins using [plugin search](http://plugins.cordova.io)  
+or [npm](https://www.npmjs.com/search?q=ecosystem%3Acordova). You can also 
 develop your own plugins, as described in the 
 [Plugin Development Guide](../hybrid/plugins/index.html). Plugins may be 
 necessary, for example, to communicate between Cordova and custom native 
