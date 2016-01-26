@@ -73,6 +73,9 @@ redcarpet:
         - lax_spacing
 
         - tables
+        
+        # enables anchor links
+        - with_toc_data
 
 kramdown:
     input: GFM
