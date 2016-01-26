@@ -167,6 +167,15 @@ all of them:
 
         <preference name="BackgroundColor" value="0xff0000ff"/>
 
+  Windows Quirk: CSS Color names are also supported:
+
+  ```
+    <platform name="windows">
+        <preference name="BackgroundColor" value="turquoise"/>
+    </platform>
+  ```
+  __NOTE__: `transparent` value will cause black/white background color in case of Dark/Light theme accordingly.
+
   Applies to Android and BlackBerry. Overrides CSS otherwise available
   across _all_ platforms, for example: `body{background-color:blue}`.
 
