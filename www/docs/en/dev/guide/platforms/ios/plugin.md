@@ -106,10 +106,10 @@ class's `action` method. A plugin method has this signature:
         }
 
 For more details, see
- `[CDVInvokedUrlCommand.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h)`,
- `[CDVPluginResult.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h)`,
+ [CDVInvokedUrlCommand.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVInvokedUrlCommand.h),
+ [CDVPluginResult.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPluginResult.h),
 and
- `[CDVCommandDelegate.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h)`.
+ [CDVCommandDelegate.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVCommandDelegate.h).
 
 ## iOS CDVPluginResult Message Types
 
@@ -207,9 +207,9 @@ success callback is called, it passes in the `echo` parameter.
 The `CDVPlugin` class features other methods that your plugin can
 override.  For example, you can capture the `[pause](../../../cordova/events/events.pause.html)`, `[resume](../../../cordova/events/events.resume.html)`, app
 terminate and `handleOpenURL` events. See the
-[CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
+[CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPlugin.h)
 and
-[CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
+[CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPlugin.m)
 class for guidance.
 
 ## Threading
