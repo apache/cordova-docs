@@ -6,6 +6,9 @@ general:
 
 # redirects paths relative to /docs/XX/
 docs:
+    - {old: "dev/guide/platforms/android/tools.html", new: "dev/guide/platforms/android/index.html"}
+    - {old: "dev/guide/platforms/android/lifecycle.html", new: "dev/guide/platforms/android/index.html#lifecycle-guide"}
+    - {old: "dev/guide/platforms/android/config.html", new: "dev/config_ref/index.html"}
 
 # redirects paths relative to /docs/XX/YYY/
 docs-global:

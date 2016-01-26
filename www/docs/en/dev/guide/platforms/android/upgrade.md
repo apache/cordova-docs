@@ -27,6 +27,67 @@ Most of these instructions apply to projects created with an older set
 of command-line tools that precede the `cordova` CLI utility. See [The Command-Line Interface](../../cli/index.html) for information how to update the
 version of the CLI.
 
+## Upgrading to 5.X.X
+
+The best way to upgrade to 5.X.X is to simply remove the Android platform from
+your project and re-add it with the new version. For example,
+
+```
+cordova platform remove android
+cordova platform add android@5.X.X
+```
+
+If you use the above method, be aware that any changes you made to the android
+platform folder will be lost (editing the contents of this folder is
+discouraged).
+
+Alternatively, you may attempt to use the platform update script. For non-CLI
+projects, run:
+
+        bin/update path/to/project
+
+For CLI projects:
+
+1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
+
+2. Run `cordova platform update android@5.0.0` in your existing projects.
+
+### Upgrading Plugins for Android Marshmallow
+
+Version 5.0.0 adds support for Android API level 23 (Marshmallow). Android
+Marshmallow introduced a new permissions model that may require you to update
+some installed plugins to ensure they are compatible with newer phones. Older
+plugin versions that do not properly handle permissions can cause your
+application to crash unexpectedly. Note that this does not affect every plugin,
+but only those that access Android permissions deemed *dangerous*
+(see [the table of dangerous permissions][android-dangerous-permissions]).
+
+The following core plugins are affected by this change and must be upgraded to
+be used with **cordova-android 5.0.0+**:
+
+Plugin                      | Minimum Compatible Version
+----------------------------|---------------------------
+cordova-plugin-camera       | 2.0.0
+cordova-plugin-contacts     | 2.0.0
+cordova-plugin-file         | 4.0.0
+cordova-plugin-geolocation  | 2.0.0
+cordova-plugin-media        | 2.0.0
+
+For non-core plugins, you can verify if a plugin requests a
+[dangerous permission][android-dangerous-permissions] by checking the plugin's
+`plugin.xml` file. If the plugin uses Android permissions, you will see entries
+in `plugin.xml` that declare them. For example:
+
+```       
+<uses-permission android:name="android.permission.PERMISSION_NAME" />
+```
+
+Where `PERMISSION_NAME` is replaced with the name of an Android permission.
+The `plugin.xml` file can be found in the plugin's folder in your Cordova
+project (e.g. `plugins/example-plugin/plugin.xml`). Consult the documentation of
+any plugins using dangerous permissions to determine what steps need to be taken
+to ensure **cordova-android 5.0.0+** compatibility.  
+
 ## Upgrading to 4.0.0
 
 There are specific upgrade steps required to take advantage of the significant
@@ -40,7 +101,7 @@ For CLI projects:
 
 1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
 
-2. Run `cordova platform update android` in your existing projects.
+2. Run `cordova platform update android@4.0.0` in your existing projects.
 
 ### Upgrading the Whitelist
 All whitelist functionality is now implemented via plugin.  Without a plugin,
@@ -83,7 +144,7 @@ upgrade step required is to add the plugin:
 For non-CLI projects, run:
 
         bin/update path/to/project
-        
+
 For CLI projects:
 
 1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
@@ -102,12 +163,12 @@ their workspace.
 
 ## Upgrading to 3.2.0 from 3.1.0
 
-For projects that were created with the cordova CLI: 
+For projects that were created with the cordova CLI:
 
 1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
 
 2. Run `cordova platform update android`
-        
+
 For projects not created with the cordova CLI, run:
 
         bin/update <project_path>
@@ -118,16 +179,16 @@ This is a regression with Chromium on Android and the problem can be reproduced 
 
 ## Upgrading to 3.1.0 from 3.0.0
 
-For projects that were created with the cordova CLI: 
+For projects that were created with the cordova CLI:
 
 1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
 
 2. Run `cordova platform update android`
-        
+
 For projects not created with the cordova CLI, run:
 
         bin/update <project_path>
-        
+
 ## Upgrade to the CLI (3.0.0) from 2.9.0
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
@@ -519,3 +580,4 @@ plugin maintainer and add this task to their bug tracker.
 
 6. Add the `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
 
+[android-dangerous-permissions]: http://developer.android.com/guide/topics/security/permissions.html#perm-groups
