@@ -159,6 +159,49 @@ platform. See [Icons and Splash Screens](images.html) for more information.
     </widget>
     
     
+## allow-navigation
+   Controls which URLs the WebView itself can be navigated to. Applies to top-level navigations only.
+   
+   Attributes (type) | Description
+   ----------------- | ------------
+   href (string) | *Required: true* <br/> Defines the set of external domains the WebView is allowed to navigate to. 
+   See the cordova-plugin-whitelist [cordova-plugin-whitelist](https://github.com/apache/cordova-plugin-whitelist#navigation-whitelist) for details.
+   
+   Examples:
+   
+    <!-- Allow links to example.com -->
+    <allow-navigation href="http://example.com/*" />
+
+    <!-- Wildcards are allowed for the protocol, as a prefix to the host, or as a suffix to the path -->
+    <allow-navigation href="*://*.example.com/*" />
+   
+## allow-intent
+   Controls which URLs the app is allowed to ask the system to open. By default, no external URLs are allowed.
+   
+   Attributes (type) | Description
+   ----------------- | ------------
+   href (string) | *Required: true* <br/> Defines which URLs the app is allowed to ask the system to open. 
+   See the cordova-plugin-whitelist [cordova-plugin-whitelist](https://github.com/apache/cordova-plugin-whitelist#intent-whitelist) for details.  
+  
+   Examples:
+   
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+  
+## engine
+   Specifies what platform to restore during a prepare. For more details, see the Platforms & Plugins Version Management.
+   
+   Attributes (type) | Description
+   ----------------- | ------------
+   name (string) | *Required: true* <br/> Name of the platform to be restored
+   spec (string) | *Required: true* <br/> Version of the platform to be restored
+   
+   Examples:
+
+    <engine name="android" spec="^4.0.0" />
+    
 ## preference
    Sets various optinos as pairs of name/value attributes. Each preference's name is case-insensitive. Many preferences are unique to specific platforms,
    and will be indicated as such.  
