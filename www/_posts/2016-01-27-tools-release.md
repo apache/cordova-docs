@@ -16,9 +16,9 @@ New versions of cordova tools are now live!
 
 Release Highlights include:
 * Updated default platform versions to `cordova-android@5`, `cordova-ios@4` and `cordova-windows@4.3`. 
-    - `cordova-android@5` supports **Android marshmallow** 
-    - `cordova-ios@4` adds **iOS9** and `WKWebView` support
-    - `cordova-windows@4` updated the platform to use the new Platform API.
+    - `cordova-android@5.1` supports **Android marshmallow** 
+    - `cordova-ios@4.0` adds **iOS9** and `WKWebView` support
+    - `cordova-windows@4.3` updated the platform to use the new Platform API.
 * Added a new template feature to `create` command. E.g. `cordova create --template cordova-app-hello-world`. This can fetch templates via **npm**, **git URL** or local paths.
 * Removed support for our old **Cordova Plugins Registry**. Now plugins can only be installed via **npm**, **git URL** or local paths.
 * Added default plugin pinning to `cordova`. This means that `cordova plugin add cordova-plugin-camera` will fetch the pinned version of the plugin instead of the always grabbing the `latest`. Users can still install any version of a plugin via `cordova plugin add cordova-plugin-camera@VERSION`.
@@ -41,7 +41,7 @@ To update your tools:
 When adding these platforms to your project, the following versions are now used by default:
 
 * [cordova-ios Release Notes](http://cordova.apache.org/announcements/2015/12/08/cordova-ios-4.0.0.html)
-* [cordova-android Release Notes](http://cordova.apache.org/announcements/2015/11/09/cordova-android-5.0.0.html)
+* [cordova-android Release Notes](http://cordova.apache.org/announcements/2016/01/24/cordova-android-5.1.0.html)
 * [cordova-windows Release Notes](http://cordova.apache.org/announcements/2016/01/18/cordova-windows-4.3.0.html)
 
 ## cordova-lib
