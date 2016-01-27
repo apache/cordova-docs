@@ -17,10 +17,10 @@ New versions of cordova tools are now live!
 Release Highlights include:
 * Updated default platform versions to `cordova-android@5`, `cordova-ios@4` and `cordova-windows@4.3`. 
     - `cordova-android@5` supports **Android marshmallow** 
-    - `cordova-ios@4` adds **iOS9** and `wkwebview` support
-    - `cordova-windows@4` updated the platform to use the new `PlatformAPI`
-* Added a new template feature to `create` command. E.g. `cordova create --template cordova-app-hello-world`. This can pull templates from **npm** and **git urls**.
-* Removed support for our old **Cordova Plugins Registry**. Now plugins can only be installed via **npm**, **gitURL** or local path.
+    - `cordova-ios@4` adds **iOS9** and `WKWebView` support
+    - `cordova-windows@4` updated the platform to use the new Platform API.
+* Added a new template feature to `create` command. E.g. `cordova create --template cordova-app-hello-world`. This can fetch templates via **npm**, **git URL** or local paths.
+* Removed support for our old **Cordova Plugins Registry**. Now plugins can only be installed via **npm**, **git URL** or local paths.
 * Added default plugin pinning to `cordova`. This means that `cordova plugin add cordova-plugin-camera` will fetch the pinned version of the plugin instead of the always grabbing the `latest`. Users can still install any version of a plugin via `cordova plugin add cordova-plugin-camera@VERSION`.
 * Added deprecation notices for **amazon-fireos** and **wp8**. We are aiming to remove support for these platforms in 6 months. Target **Android** and **Windows** instead.
 
