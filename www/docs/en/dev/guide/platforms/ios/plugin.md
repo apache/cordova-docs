@@ -106,10 +106,8 @@ class's `action` method. A plugin method has this signature:
         }
 
 For more details, see
- `[CDVInvokedUrlCommand.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h)`,
- `[CDVPluginResult.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h)`,
-and
- `[CDVCommandDelegate.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h)`.
+ [CDVInvokedUrlCommand.h][CDVInvokedUrlCommand.h], [CDVPluginResult.h][CDVPluginResult.h],
+and [CDVCommandDelegate.h][CDVCommandDelegate.h].
 
 ## iOS CDVPluginResult Message Types
 
@@ -207,10 +205,8 @@ success callback is called, it passes in the `echo` parameter.
 The `CDVPlugin` class features other methods that your plugin can
 override.  For example, you can capture the `[pause](../../../cordova/events/events.pause.html)`, `[resume](../../../cordova/events/events.resume.html)`, app
 terminate and `handleOpenURL` events. See the
-[CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
-and
-[CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
-class for guidance.
+[CDVPlugin.h][CDVPlugin.h] and [CDVPlugin.m][CDVPlugin.m]
+classes for guidance.
 
 ## Threading
 
@@ -247,3 +243,9 @@ can attach Safari 8.0 to the app running within the iOS 8 Simulator.
 - Don't forget to add any hosts you connect to in the whitelist, as
   described in Domain [Whitelist Guide](../../appdev/whitelist/index.html). If you forget, an error is
   logged in the Xcode console.
+
+[CDVInvokedUrlCommand.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVInvokedUrlCommand.h
+[CDVPluginResult.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPluginResult.h
+[CDVCommandDelegate.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVCommandDelegate.h
+[CDVPlugin.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPlugin.h
+[CDVPlugin.m]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPlugin.m
