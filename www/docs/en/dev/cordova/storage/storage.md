@@ -63,11 +63,11 @@ The following platforms support IndexedDB:
 
 In addition to the storage APIs listed above, the
 [File API][FileAPI] allows you to cache data on the local file system.  Other
-[Cordova plugins][Cordovaplugins] provide similar storage options.
+[Cordova plugins][CordovaPlugins] provide similar storage options.
 
 [Html5RocksStorage]: http://www.html5rocks.com/en/features/storage
 [W3CSpecStorage]: http://www.w3.org/TR/webstorage/
 [WebSQLDatabaseSpecification]: http://dev.w3.org/html5/webdatabase/
 [IndexedDB]: http://www.w3.org/TR/IndexedDB/
 [FileAPI]: https://github.com/apache/cordova-plugin-file/blob/master/README.md
-[Cordovaplugins]: /plugins
+[CordovaPlugins]: {{ site.baseurl }}/plugins
