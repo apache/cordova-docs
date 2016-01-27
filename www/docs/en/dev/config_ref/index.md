@@ -59,6 +59,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    versionCode (string) | *Required: false* <br/> **Platforms supported: Android** <br/> Alternative version for Android.
    CFBundleVersion (string) | *Required: false* <br/> **Platforms supported: iOS** <br/> Alternative version for iOS.  
    packageVersion (string) | *Required: false* <br/> **Platforms supported: Windows** <br/> Alternative version for Windows.
+   packageName (string) | *Default: Cordova.Example* <br/> **Platforms supported: Windows** <br/> Package name for Windows.
    xmlns (string) | *Required: true* <br/> namespace for the config.xml document.
    xmlns:cdv (string) | *Required: true* <br/> namespace prefix.
     
@@ -207,7 +208,9 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    ChildBrowser (string) | *Default: enable* <br/> **Platforms supported: BlackBerry** <br/> Disables child browser windows. By default, apps launch a secondary browser window to display resources accessed via window.open() or by specifying a _blank anchor target. Specify disable to override this default behavior.
    PopupBlocker (string) | *Default: enable* <br/> **Platforms supported: BlackBerry** <br/> Enables the popup blocker, which prevents calls to window.open(). By default, popups display in a child browser window. Setting the preference to enable prevents it from displaying at all.
    WebSecurity (string) | *Default: enable* <br/> **Platforms supported: BlackBerry** <br/> Set to disable to override web security settings, allowing access to remote content from unknown sources. This preference is intended as a development convenience only, so remove it before packaging the app for distribution. For the released app, all URIs should be known and whitelisted using the <access> element, described in the Domain Whitelist Guide.
-   
+   windows-phone-target-version (string) | **Platform supported: Windows** <br/> Sets the version of Windows Phone for which the package (resulting from ```cordova build```) will target. If none is specified, it will be set to the same version as ```windows-target-version``` (if found). 
+   windows-target-version (string) | **Platform supported: Windows** <br/> Sets the version of Windows for which the package (resulting from ```cordova build```) will target. If none is specified, it will be set to '8.1'.
+   Min/Max UAP (Regex) | Allowed values: ```/(Microsoft.+?|Windows.+?)\-(MinVersion|MaxVersionTested)/i``` <br/> **Platforms supported: Windows** <br/> Sets the min/max UAP versions for Windows. If nothing is specified, Windows.Universal at version 10.0.10240.0 will be used.
    
    Examples:
 
@@ -253,6 +256,11 @@ platform. See [Icons and Splash Screens](images.html) for more information.
     <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
     <preference name="AppendUserAgent" value="My Browser" />
     
+    <!-- Windows only preferences -->
+    <preference name="windows-phone-target-version" value="8.1" />
+    <preference name="windows-target-version" value="8.1" />
+    <preference name="Windows.Universal" value="10.0.10240.0" />
+
     <!-- BlackBerry only preferences -->
     <preference name="ChildBrowser" value="disable"/>
     <preference name="PopupBlocker" value="enable"/>
