@@ -210,7 +210,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    WebSecurity (string) | *Default: enable* <br/> **Platforms supported: BlackBerry** <br/> Set to disable to override web security settings, allowing access to remote content from unknown sources. This preference is intended as a development convenience only, so remove it before packaging the app for distribution. For the released app, all URIs should be known and whitelisted using the <access> element, described in the Domain Whitelist Guide.
    windows-phone-target-version (string) | **Platform supported: Windows** <br/> Sets the version of Windows Phone for which the package (resulting from ```cordova build```) will target. If none is specified, it will be set to the same version as ```windows-target-version``` (if found). 
    windows-target-version (string) | **Platform supported: Windows** <br/> Sets the version of Windows for which the package (resulting from ```cordova build```) will target. If none is specified, it will be set to '8.1'.
-   Min/Max UAP (Regex) | Allowed values: ```/(Microsoft.+?|Windows.+?)\-(MinVersion|MaxVersionTested)/i``` <br/> **Platforms supported: Windows** <br/> Sets the min/max UAP versions for Windows. If nothing is specified, Windows.Universal at version 10.0.10240.0 will be used.
+   Min/Max UAP (Regex) | Allowed values: **/(Microsoft.+? &#124; Windows.+?)-(MinVersion &#124; MaxVersionTested)/i** <br/> **Platforms supported: Windows** <br/> Sets the min/max UAP versions for Windows. If nothing is specified, Windows.Universal at version 10.0.10240.0 will be used.
    
    Examples:
 
