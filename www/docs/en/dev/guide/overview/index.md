@@ -45,7 +45,7 @@ Use Apache Cordova if you are:
 
 # Architecture
 
-There are several components to your cordova application. The following 
+There are several components to a cordova application. The following 
 diagram shows a high-level view of the cordova application architecture. 
     
 ![]({{ site.baseurl }}/static/img/guide/cordovaapparchitecture.png)
