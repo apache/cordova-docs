@@ -71,8 +71,8 @@ they dip below 5% on Google's
 Install the [Android Stand-alone SDK Tools](http://developer.android.com/sdk/installing/index.html?pkg=tools) or [Android Studio](http://developer.android.com/sdk/installing/index.html?pkg=studio).
 Proceed with Android Studio if you plan on
 developing new Cordova for Android plugins or using native tools to
-run and debug Android platform. Otherwise, the Android Stand-alone SDK Tools
-are enough to build and deploy Android application.
+run and debug the Android platform. Otherwise, the Android Stand-alone SDK Tools
+are enough to build and deploy Android applications.
 
 Detailed installation instructions are available as part of installation
 links above.

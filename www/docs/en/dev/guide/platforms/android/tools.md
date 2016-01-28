@@ -25,7 +25,7 @@ title: Android Shell Tool Guide
 
 As of **cordova-android@4.0.0**, Cordova for Android projects are built using
 [Gradle](http://www.gradle.org/). For instructions on building with Ant, refer
-to older versions of documentation.
+to older versions of the documentation.
 
 ### Gradle Properties
 
@@ -172,7 +172,7 @@ These parameters can be specified using the command line arguments above to
 the [Cordova CLI](../../cli/index.html) `build` or `run` commands.
 
 Alternatively, you could specify them in a build configuration file (`build.json`)
-using (`--buildConfig`) argument to the same commands. Here's a sample of a
+using the `--buildConfig` argument to the same commands. Here's a sample of a
 build configuration file:
 
     {
@@ -229,7 +229,7 @@ folder:
     $ cordova-android/bin/create ...
 
 The created project will have a folder named `cordova` inside that contains
-scripts for the project specific Cordova commands (e.g. `run`, `build`, etc.).
+scripts for the project-specific Cordova commands (e.g. `run`, `build`, etc.).
 Additionally, The project will feature a structure different from that of a
 normal Cordova project. Notably, `/www` is moved to `/assets/www`.
 
