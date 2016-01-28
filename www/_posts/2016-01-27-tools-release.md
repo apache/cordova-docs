@@ -16,7 +16,7 @@ New versions of cordova tools are now live!
 
 Release Highlights include:
 * Updated default platform versions to `cordova-android@5`, `cordova-ios@4` and `cordova-windows@4.3`. 
-    - `cordova-android@5.1` supports **Android marshmallow** 
+    - `cordova-android@5.1` supports **Android 6.X.X (Marshmallow)** 
     - `cordova-ios@4.0` adds **iOS9** and `WKWebView` support
     - `cordova-windows@4.3` updated the platform to use the new Platform API.
 * Added a new template feature to `create` command. E.g. `cordova create --template cordova-app-hello-world`. This can fetch templates via **npm**, **git URL** or local paths.
