@@ -147,7 +147,7 @@ A folder called `build-prod` will be created, and will contain the built website
 
 Copy the `cordova-docs/build-prod/` directory to the `public` directory in SVN like so:
 
-    cp -R cordova-docs/build-prod/* cordova-website/public/
+    cp -R cordova-docs/build-prod/. cordova-website/public/
 
 Finally, go into the `cordova-website` directory and commit *all* the changes introduced by the newly copied files. Some files will be new (`?` in SVN, and need to be `svn add`ed) and some files will be changed (`M` in SVN; no action required). To see just the `?` changes, run:
 

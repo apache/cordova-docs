@@ -40,5 +40,6 @@ exclude:
     - docs/en/4.0.0
     - docs/en/5.0.0
     - docs/en/5.1.1
-    #- docs/en/5.4.0
+    - docs/en/5.4.0
+    #- docs/en/6.0.0
     #- docs/en/dev
