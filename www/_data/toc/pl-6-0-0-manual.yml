@@ -1,0 +1,18 @@
+- {name: !!python/unicode 'Przewodniki', url: !!python/unicode '/docs/pl/6.0.0/'}
+- {name: "Przegl\u0105d", url: !!python/unicode '/docs/pl/6.0.0/guide/overview/index.html'}
+- {name: "Interfejs wiersza polece\u0144", url: !!python/unicode '/docs/pl/6.0.0/guide/cli/index.html'}
+- {name: "Platforma przewodnik\xF3w", url: !!python/unicode '/docs/pl/6.0.0/guide/platforms/index.html'}
+- {name: "Za pomoc\u0105 Plugman do zarz\u0105dzania wtyczki", url: !!python/unicode '/docs/pl/6.0.0/plugin_ref/plugman.html'}
+- {name: !!python/unicode 'Plik config.xml', url: !!python/unicode '/docs/pl/6.0.0/config_ref/index.html'}
+- {name: !!python/unicode 'Ikony i ekrany powitalne w aplikacjach', url: !!python/unicode '/docs/pl/6.0.0/config_ref/images.html'}
+- {name: !!python/unicode 'Osadzanie WebViews', url: !!python/unicode '/docs/pl/6.0.0/guide/hybrid/webviews/index.html'}
+- {name: !!python/unicode 'Plugin rozwoju Przewodnik', url: !!python/unicode '/docs/pl/6.0.0/guide/hybrid/plugins/index.html'}
+- {name: !!python/unicode 'Specyfikacja plugin', url: !!python/unicode '/docs/pl/6.0.0/plugin_ref/spec.html'}
+- {name: "Prywatno\u015Bci Przewodnik", url: !!python/unicode '/docs/pl/6.0.0/guide/appdev/privacy/index.html'}
+- {name: "Przewodnik bezpiecze\u0144stwa", url: !!python/unicode '/docs/pl/6.0.0/guide/appdev/security/index.html'}
+- {name: "Platform i Zarz\u0105dzanie wersjami plugin\xF3w", url: !!python/unicode '/docs/pl/6.0.0/platform_plugin_versioning_ref/index.html'}
+- {name: !!python/unicode 'Magazyn', url: !!python/unicode '/docs/pl/6.0.0/cordova/storage/storage.html'}
+- {name: !!python/unicode 'Kolejne kroki', url: !!python/unicode '/docs/pl/6.0.0/guide/next/index.html'}
+- {name: !!python/unicode 'Wydarzenia', url: !!python/unicode '/docs/pl/6.0.0/cordova/events/events.html'}
+- {name: !!python/unicode 'Plugin API', url: !!python/unicode '/docs/pl/6.0.0/cordova/plugins/pluginapis.html'}
+- {name: "Indeks s\u0142\xF3w kluczowych", url: !!python/unicode '/docs/pl/6.0.0/page_index.html'}
