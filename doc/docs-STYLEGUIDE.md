@@ -414,7 +414,7 @@ help identify them in Markdown.
 
   * Default: Use *italics* formatting to provide default value of the attribute
   * Required: Use *italics* formatting to provide if the attribute value is required
-  * Platforms supported: Use **bold** to specify platforms supported. Default is supported in all platforms.
+  * Platforms supported: Use ==platform-name== to specify different platforms. This gets custom highlighted on the website. Default is supported in all platforms.
   * Textual Description.
 
 * Below is an example documentation for 'platform' element for plugin.xml. 'source-file' is a sub-element of the 'platform' element.
@@ -424,7 +424,7 @@ help identify them in Markdown.
 
     Attributes(type) | Description
     ---------------- | ------------
-    name(string) | *Required: true* <br/> Allowed values: ios, android, blackberry10, amazon-fireos, wp8, windows <br/> Identifies a platform as supported, associating the element's children with that platform.
+    name(string) | *Required* <br/> Allowed values: ios, android, blackberry10, amazon-fireos, wp8, windows <br/> Identifies a platform as supported, associating the element's children with that platform.
 
     Example:
     ```
@@ -438,16 +438,15 @@ help identify them in Markdown.
 
     Attributes (type) | Description
     ----------------- | ------------
-    src(string) | *Required: true* <br/> Location of the file relative to plugin.xml. If the src file can't be found, plugman stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
+    src(string) | *Required* <br/> Location of the file relative to plugin.xml. If the src file can't be found, plugman stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
     target-dir(string) | A directory into which the files should be copied, relative to the root of the Cordova project. In practice, this is most important for Java-based platforms, where a file in the com.alunny.foo package must be located within the com/alunny/foo directory. For platforms where the source directory is not important, this attribute should be omitted.
-    framework(boolean) | *Default: false* <br/> **Platforms supported: iOS** <br/> If set to true, also adds the specified file as a framework to the project.
-    compiler-flags(string) | **Platforms supported: iOS** <br/> If set, assigns the specified compiler flags for the particular source file.
+    framework(boolean) | *Default: false* <br/> ==iOS== <br/> If set to true, also adds the specified file as a framework to the project.
+    compiler-flags(string) | ==iOS== <br/> If set, assigns the specified compiler flags for the particular source file.
 
     Examples:
     ```
     <!-- android -->
-    <source-file src="src/android/Foo.java"
-                  target-dir="src/com/alunny/foo" />
+    <source-file src="src/android/Foo.java" target-dir="src/com/alunny/foo" />
     <!-- ios -->
     <source-file src="src/ios/CDVFoo.m" />
     <source-file src="src/ios/someLib.a" framework="true" />
