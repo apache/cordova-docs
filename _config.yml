@@ -73,6 +73,7 @@ redcarpet:
         - lax_spacing
 
         - tables
+        - highlight
         
         # enables anchor links
         - with_toc_data
