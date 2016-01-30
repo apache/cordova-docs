@@ -52,7 +52,7 @@ CLI's shorthand names.
         <th><a href="../cli/index.html">cordova<br/>CLI</a></th>
         <td data-col="amazon-fireos" class="y">Mac, Windows, Linux</td>
         <td data-col="android"    class="y">Mac, Windows, Linux</td>
-        <td data-col="blackberry10" class="y">Mac, Windows</td>
+        <td data-col="blackberry10" class="y">Mac, Windows, Linux</td>
         <td data-col="firefoxos" class="y">Mac, Windows, Linux</td>
         <td data-col="ios"        class="y">Mac</td>
         <td data-col="ubuntu"        class="y">Ubuntu</td>
