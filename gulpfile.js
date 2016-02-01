@@ -96,9 +96,9 @@ function remove(path) {
 
 function getJekyllExecutable() {
     if (process.platform === "win32") {
-        return "jekyll.bat";
+        return "bundle.bat exec jekyll";
     } else {
-        return "jekyll";
+        return "bundle exec jekyll";
     }
 }
 
