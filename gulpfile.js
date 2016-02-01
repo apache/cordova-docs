@@ -94,11 +94,11 @@ function remove(path) {
     fse.removeSync(path);
 }
 
-function getJekyllExecutable() {
+function getBundleExecutable() {
     if (process.platform === "win32") {
-        return "jekyll.bat";
+        return "bundle.bat";
     } else {
-        return "jekyll";
+        return "bundle";
     }
 }
 
@@ -121,13 +121,13 @@ function getJekyllConfigs() {
 }
 
 function jekyllBuild(done) {
-    var jekyll  = getJekyllExecutable();
+    var bundle  = getBundleExecutable();
     var configs = getJekyllConfigs();
     var flags   = gutil.env.prod ? PROD_FLAGS : DEV_FLAGS;
 
     flags = flags.concat(["--config", configs.join(",")]);
 
-    exec(jekyll, ["build"].concat(flags), done);
+    exec(bundle, ["exec", "jekyll", "build"].concat(flags), done);
 }
 
 // tasks
