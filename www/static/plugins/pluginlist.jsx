@@ -47,7 +47,7 @@ var PluginList = React.createClass({
             if (plugins.length === 0) {
                 return (
                     <div className="container plugins-results-container">
-                            No plugins found. Learn how to <a href="{{site.baseurl}}/docs/en/latest/guide/hybrid/plugins/index.html">create one</a>
+                            No plugins found. Learn how to <a href="{{ site.baseurl }}/docs/en/{{ site.default_linked_docs_version }}/guide/hybrid/plugins/index.html">create one</a>
                     </div>
                 );
             } else {
