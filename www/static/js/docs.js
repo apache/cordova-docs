@@ -40,7 +40,7 @@ $(document).ready(function () {
 
     // Table of Contents
     $('#page-toc').toc({
-        'selectors':         'h1,h2,h3,h4,h5,h6', // elements to use as headings
+        'selectors':         'h1,h2', // elements to use as headings
         'container':         '#page-toc-source', // element to find all selectors in
         'prefix':            'link-', // prefix for anchor tags and class names
         'onHighlight':       function(el) {}, // called when a new section is highlighted
