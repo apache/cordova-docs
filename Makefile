@@ -11,11 +11,11 @@ endif
 
 ifdef WINDOWS
 SHELL  = cmd
-JEKYLL = jekyll.bat
+JEKYLL = bundle.bat exec jekyll
 MKDIRP = mkdir
 else
 SHELL  = sh
-JEKYLL = jekyll
+JEKYLL = bundle exec jekyll
 MKDIRP = mkdir -p
 endif
 
