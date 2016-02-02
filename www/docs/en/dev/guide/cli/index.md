@@ -231,7 +231,7 @@ development cycle.
 By default, the `cordova create` script generates a skeletal web-based
 application whose home page is the project's `www/index.html` file.
 Edit this application however you want, but any initialization should
-be specified as part of the `[deviceready](../../cordova/events/events.deviceready.html)` event handler, referenced by
+be specified as part of the [deviceready][DeviceReadyEvent] event handler, referenced by
 default from `www/js/index.js`.
 
 Run the following command to iteratively build the project:
@@ -340,7 +340,7 @@ use the CLI to add features to the app:
 
         $ cordova plugin add cordova-plugin-device
 
-* Network Connection and Battery [Events](../../cordova/events/events.html):
+* Network Connection and Battery:
 
         $ cordova plugin add cordova-plugin-network-information
         $ cordova plugin add cordova-plugin-battery-status
@@ -500,7 +500,7 @@ You can also use `merges` to add files not present in the original
 `www` directory. For example, an app can incorporate a _back button_
 graphic into the iOS interface, stored in
 `merges/ios/img/back_button.png`, while the Android version can
-instead capture `[backbutton](../../cordova/events/events.backbutton.html)` events from the corresponding hardware
+instead capture [backbutton][BackButtonEvent] events from the corresponding hardware
 button.
 
 ## Help Commands
@@ -566,3 +566,5 @@ you're building:
         $ cordova platform update ios
         ...etc.
 
+[DeviceReadyEvent]: ../../cordova/events/events.html#link-deviceready
+[BackButtonEvent]: ../../cordova/events/events.html#link-backbutton

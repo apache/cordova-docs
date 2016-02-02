@@ -70,7 +70,7 @@ most of the functionality you need:
 See the
 [BaseCommand.cs](https://github.com/apache/cordova-wp8/blob/master/wp8/template/cordovalib/Commands/BaseCommand.cs)
 class for methods available for the plugin to override.  For example,
-the plugin can capture '[pause](../../../cordova/events/events.pause.html)' and '[resume](../../../cordova/events/events.resume.html)' events.
+the plugin can capture [pause][PauseEvent] and [resume][ResumeEvent] events.
 
 ## Namespaces
 
@@ -236,3 +236,6 @@ yourself of errors.
   calling `exec()`. Doing so allows you to re-use more code and pull
   unnecessary functionality from the plugin's various native
   implementations.
+
+[PauseEvent]: ../../../cordova/events/events.html#link-pause
+[ResumeEvent]: ../../../cordova/events/events.html#link-resume
