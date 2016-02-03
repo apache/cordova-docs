@@ -58,7 +58,8 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    id(string) | *Required* <br/> Specifies the app's reverse-domain identifier, and the `version` its full version number expressed in major/minor/patch notation.
    version(string) | *Required* <br/> Full version number expressed in major/minor/patch notation.
    versionCode(string) | ==Android== <br/> Alternative version for Android. For further details, see [Android versioning](http://developer.android.com/tools/publishing/versioning.html)
-   CFBundleVersion(string) |  ==iOS== <br/> Alternative version for iOS. For further details, see [iOS versioning](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
+   ios-CFBundleVersion(string) |  ==iOS== <br/> Alternative version for iOS. For further details, see [iOS versioning](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
+   osx-CFBundleVersion(string) |  ==OS X== <br/> Alternative version for OS X. For further details, see [OS X versioning](https://developer.apple.com/library/prerelease/mac/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
    packageVersion(string) |   ==Windows== <br/> Alternative version for Windows. For futher details, see [Windows versioning](https://msdn.microsoft.com/en-us/library/windows/apps/br211441.aspx)
    packageName(string) | *Default: Cordova.Example* <br/> ==Windows== <br/> Package name for Windows.
    xmlns(string) | *Required* <br/> Namespace for the config.xml document.
@@ -74,13 +75,16 @@ platform. See [Icons and Splash Screens](images.html) for more information.
     </widget>
 
     <!-- iOS -->
-    <widget CFBundleVersion="0.1.3">
+    <widget ios-CFBundleVersion="0.1.3">
     </widget>
 
     <!-- Windows -->
     <widget packageVersion="0.1.3">
     </widget>
 
+    <!-- OS X -->
+    <widget osx-CFBundleVersion="0.1.3">
+    </widget>
 
 ## name
    Specifies the app's formal name, as it appears on the device's home screen and within app-store interfaces.
@@ -216,11 +220,13 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    DefaultVolumeStream(string) | *Default: default* <br/> ==Android==<br/> Added in cordova-android 3.7.0, This preference sets which volume the hardware volume buttons link to. By default this is "call" for phones and "media" for tablets. Set this to "media" to have your app's volume buttons always change the media volume. Note that when using Cordova's media plugin, the volume buttons will dynamically change to controlling the media volume when any Media objects are active.
    DisallowOverscroll(boolean) | *Default: false* <br/> ==iOS== ==Android== <br/> Set to **true** if you don't want the interface to display any feedback when users scroll past the beginning or end of content. On iOS, overscroll gestures cause content to bounce back to its original position. on Android, they produce a more subtle glowing effect along the top or bottom edge of the content. <br/>
    EnableViewportScale(boolean) | *Default: false* <br/>  ==iOS== <br/> Set to true to allow a viewport meta tag to either disable or restrict the range of user scaling, which is enabled by default. Place a viewport such as the following in the HTML to disable scaling and fit content flexibly within the rendering WebView: <br/> ```<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />```
+   EnableWebGL(boolean) | *Default: false* <br/>  ==OS X **4.0.0**== <br/> Set to true to enable WebGL on the web view.
    ErrorUrl(URL) | *Default: null* <br/> ==Android== <br/> If set, will display the referenced page upon an error in the application instead of a dialog with the title "Application Error".
    ErrorUrl(string) | ==iOS== <br/> If set, will display the referenced local page upon an error in the application.
    FullScreen(boolean) | *Default: false* <br/> Allows you to hide the status bar at the top of the screen.
    GapBetweenPages(float) | *Default: 0* <br/> ==iOS== <br/> The size of the gap, in points, between pages.
    HideKeyboardFormAccessoryBar(boolean) | *Default: false* <br/> ==BlackBerry== <br/> Set to true to hide the additional toolbar that appears above the keyboard, helping users navigate from one form input to another.
+   HideMousePointer(integer) | *Default: -1* <br/> ==OS X **4.0.0**== <br/> Sets the timeout for hiding the mouse pointer. Set to 0 for immediate, set to -1 for never.
    InAppBrowserStorageEnabled (boolean) | *Default: true* <br/> ==Android== <br/> Controls whether pages opened within an InAppBrowser can access the same localStorage and WebSQL storage as pages opened with the default browser.
    KeepRunning(boolean) | *Default: true* <br/> ==Android== <br/> Determines whether the application stays running in the background even after a [pause](../../../cordova/events/events.pause.html) event fires. Setting this to false does not kill the app after a [pause](../../../cordova/events/events.pause.html) event, but simply halts execution of code within the cordova webview while the app is in the background.
    KeyboardDisplayRequiresUserAction(boolean) | *Default: true* <br/> ==iOS== <br/> Set to false to allow the keyboard to appear when calling focus() on form inputs.
@@ -231,6 +237,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    MediaPlaybackRequiresUserAction(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to prevent HTML5 videos or audios from playing automatically with the autoplay attribute or via JavaScript.
    Min/Max Version(Regex) | ==Windows== <br/> Allowed values: **/(Microsoft.+? &#124; Windows.+?)-(MinVersion &#124; MaxVersionTested)/i** <br/> Identifies the ecosystems and their min/max versions the app is compatible with. There are three parts to each value: the **SDK**, the **version restriction**, and the **version value**.  These preferences are detected by beginning with `Windows` or `Microsoft` and ending in `-MinVersion` or `-MaxVersionTested`: <ul><li>The **SDK** defines what specialized platform you want to target.  The default is `Windows.Universal`.  Valid values for these are defined in the AppxManifest schema, in the `Package/Depednencies/TargetPlatform` elements.</li><li>The **version restriction** defines application compatibility rules.  For example, if the `-MinVersion` is set to 10.1.0.0, then OS versions which don't support at least 10.1.0.0 of the corresponding SDK won't be able to load it. Similarly you can also use `-MaxVersionTested` which specifies the highest-tested version of the SDK. If a new version of the corresponding SDK is released, it will run in compatibility mode for the specified version.</li><li>The **version value** is a 4-integer tuple in the form of *major.minor.build.qfe*.</li></ul> If no preferences of these types are specified in your config.xml file, then Windows.Universal version 10.0.0.0 will be chosen by default.
    Orientation(string) | *Default: default* <br/> Allowed values: default, landscape, portait <br/> Allows you to lock orientation and prevent the interface from rotating in response to changes in orientation. <br/> **NOTE:** The default value means Cordova will strip the orientation preference entry from the platform's manifest/configuration file allowing the platform to fallback to its default behavior. For iOS, to specify both portrait & landscape mode you would use the platform specific value 'all'.
+   OSXLocalStoragePath(string) | ==OS X **4.0.0**== <br/> *Default: `~/Library/Application Support/{bundle.id}`* <br/> Sets the directory for the local storage path.
    OverrideUserAgent(string) | ==Android== <br/> If set, the value will replace the old UserAgent of webview. It is helpful to identify the request from app/browser when requesting remote pages. Use with caution, this may causes compitiable issue with web servers. For most cases, use AppendUserAgent instead.
    PageLength(float) | *Default: 0* <br/> ==iOS== <br/> The size of each page, in points, in the direction that the pages flow. When PaginationMode is right to left or left to right, this property represents the width of each page. When PaginationMode is topToBottom or bottomToTop, this property represents the height of each page. The default value is 0, which means the layout uses the size of the viewport to determine the dimensions of the page.
    PaginationBreakingMode(string) | *Default: page* <br/> Allowed values: page, column <br/> ==iOS== <br/> Valid values are page and column.The manner in which column- or page-breaking occurs. This property determines whether certain CSS properties regarding column- and page-breaking are honored or ignored. When this property is set to column, the content respects the CSS properties related to column-breaking in place of page-breaking.
@@ -246,6 +253,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    TopActivityIndicator(string) | *Default: gray* <br/> Allowed values: whiteLarge, white, gray. <br/> ==iOS== <br/>  <br/> Controls the appearance of the small spinning icon in the status bar that indicates significant processor activity.
    UIWebViewDecelerationSpeed(string) | *Default: normal* <br/> Allowed values: normal, fast <br/> ==iOS== <br/> This property controls the deceleration speed of momentum scrolling. normal is the default speed for most native apps, and fast is the default for Mobile Safari.
    WebSecurity(string) | *Default: enable* <br/> ==BlackBerry== <br/> Set to disable to override web security settings, allowing access to remote content from unknown sources. This preference is intended as a development convenience only, so remove it before packaging the app for distribution. For the released app, all URIs should be known and whitelisted using the <access> element, described in the Domain Whitelist Guide.
+   WindowSize(string) | *Default: auto* <br/> ==OS X **4.0.0**== <br/> Sets the size of the application window. <br/> Accepts the format `WxH` for a specific width and height or the special values `auto` and `fullscreen`. The latter will open a borderless window spanning the entire desktop area. Please note, that this is different from the _normal_ OS X fullscreen mode, which would never span multiple displays. <br/> **Note**: The global cordova `fullscreen` preference has no effect in OS X.
    deployment-target(string) | ==iOS== <br/> This sets the IPHONEOS_DEPLOYMENT_TARGET in the build, which ultimately tranlsates to the MinimumOSVersion in the ipa. For more details please refer to Apple's documentation on Deployment Target Settings
    target-device(string) | *Default: universal* <br/> Allowed values: handset, tablet, universal <br/> ==iOS== <br/> This property maps directly to TARGETED_DEVICE_FAMILY in the xcode project. Note that if you target universal (which is the default) you will need to supply screen shots for both iPhone and iPad or your app may be rejected.
    windows-phone-target-version(string) | ==Windows== <br/> Sets the version of Windows Phone for which the package (resulting from ```cordova build```) will target. If none is specified, it will be set to the same version as ```windows-target-version``` (if found).
@@ -308,6 +316,12 @@ platform. See [Icons and Splash Screens](images.html) for more information.
     <preference name="ChildBrowser" value="disable"/>
     <preference name="PopupBlocker" value="enable"/>
     <preference name="WebSecurity" value="disable"/>
+    
+    <!-- OS X only preferences -->
+    <preference name="HideMousePointer" value="5"/>
+    <preference name="OSXLocalStoragePath" value="~/.myapp/database"/>
+    <preference name="WindowSize" value="800x400"/>
+    <preference name="EnableWebGL" value="true"/>
 
 ## feature
    If you use the CLI to build applications, you use the plugin command to enable device APIs. This does not modify the top-level config.xml file, so the <feature> element does not apply to your workflow. If you work directly in an SDK and using the platform-specific config.xml file as source, you use the <feature> tag to enable device-level APIs and external plugins. They often appear with custom values in platform-specific config.xml files. See the API Reference for details on how to specify each feature. See
@@ -324,8 +338,8 @@ platform. See [Icons and Splash Screens](images.html) for more information.
 
    Attributes(type) | Description
    ----------------- | ------------
-   name(string) | *Required* <br/> Allowed values: android-package, ios-package, onload. <br/> ==iOS== ==Android== <br/> 'ios-package' and 'android-package' are used to specify the name of the package (as specified by the 'value' attribute) to be used to initialize the plugin code, while 'onload' is used to specify whether the corresponding plugin (as specified in the 'value' attribute) is to be instantiated when the controller is initialized.
-   value(string or boolean) | *Required* <br/> ==iOS== ==Android== <br/> Specifies the name of the package to be used to initialize the plugin code (when the 'name' attribute is android-package or ios-package), specifies the name of the plugin to be loaded during controller initialization (when 'name' attribute is set to 'onload').
+   name(string) | *Required* <br/> Allowed values: android-package, ios-package, osx-package, onload. <br/> ==iOS== ==OS X== ==Android== <br/> 'ios-package', 'osx-package' and 'android-package' are used to specify the name of the package (as specified by the 'value' attribute) to be used to initialize the plugin code, while 'onload' is used to specify whether the corresponding plugin (as specified in the 'value' attribute) is to be instantiated when the controller is initialized.
+   value(string or boolean) | *Required* <br/> ==iOS== ==OS X== ==Android== <br/> Specifies the name of the package to be used to initialize the plugin code (when the 'name' attribute is android-package, ios-package or osx-package), specifies the name of the plugin to be loaded during controller initialization (when 'name' attribute is set to 'onload').
 
 
    Examples:
@@ -338,6 +352,12 @@ platform. See [Icons and Splash Screens](images.html) for more information.
     <!-- Here's how the element appears for iOS projects -->
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
+        <param name="onload" value="true" />
+    </feature>
+
+    <!-- Here's how the element appears for OS X projects -->
+    <feature name="Device">
+        <param name="osx-package" value="CDVDevice" />
         <param name="onload" value="true" />
     </feature>
 
