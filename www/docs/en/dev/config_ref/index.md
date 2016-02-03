@@ -57,10 +57,10 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    ---------------- | ------------
    id(string) | *Required* <br/> Specifies the app's reverse-domain identifier, and the `version` its full version number expressed in major/minor/patch notation.
    version(string) | *Required* <br/> Full version number expressed in major/minor/patch notation.
-   versionCode(string) | **Platforms supported: Android** <br/> Alternative version for Android.
-   CFBundleVersion(string) |  **Platforms supported: iOS** <br/> Alternative version for iOS.  
-   packageVersion(string) |   **Platforms supported: Windows** <br/> Alternative version for Windows.
-   packageName(string) | *Default: Cordova.Example* <br/> **Platforms supported: Windows** <br/> Package name for Windows.
+   versionCode(string) | ==Android== <br/> Alternative version for Android. For further details, see [Android versioning](http://developer.android.com/tools/publishing/versioning.html)
+   CFBundleVersion(string) |  ==iOS== <br/> Alternative version for iOS. For further details, see [iOS versioning](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
+   packageVersion(string) |   ==Windows== <br/> Alternative version for Windows. For futher details, see [Windows versioning](https://msdn.microsoft.com/en-us/library/windows/apps/br211441.aspx)
+   packageName(string) | *Default: Cordova.Example* <br/> ==Windows== <br/> Package name for Windows.
    xmlns(string) | *Required* <br/> Namespace for the config.xml document.
    xmlns:cdv(string) | *Required* <br/> Namespace prefix.
     
@@ -117,14 +117,13 @@ platform. See [Icons and Splash Screens](images.html) for more information.
 
     
 ## content
-   Optional.
    Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily
-   appears in a project's top-level www directory.
+   appears in a project's top-level ```www``` directory.
    
    Attributes(type) | Description
    ----------------- | ------------
    src(string) | *Required* <br/> Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily
-   appears in a project's top-level www directory.
+   appears in a project's top-level ```www``` directory.
 
    Examples:
 
@@ -186,7 +185,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
     <allow-intent href="sms:*" />
   
 ## engine
-   Specifies what platform to restore during a prepare. For more details, see the Platforms & Plugins Version Management.
+   Specifies what platform to restore during a prepare. For more details, see the [Platforms & Plugins Version Management](../platform_plugin_versioning_ref/index.html).
    
    Attributes(type) | Description
    ----------------- | ------------
@@ -198,57 +197,56 @@ platform. See [Icons and Splash Screens](images.html) for more information.
     <engine name="android" spec="^4.0.0" />
     
 ## preference
-   Sets various optinos as pairs of name/value attributes. Each preference's name is case-insensitive. Many preferences are unique to specific platforms,
+   Sets various options as pairs of name/value attributes. Each preference's name is case-insensitive. Many preferences are unique to specific platforms,
    and will be indicated as such.  
 
    Attributes(type) | Description
    ----------------- | ------------
-   AllowInlineMediaPlayback(boolean) | *Default: false* <br/> **Platforms supported: iOS** <br/> Set to true to allow HTML5 media playback to appear inline within the screen layout, using browser-supplied controls rather than native controls. For this to work, add the webkit-playsinline attribute to any ```<video>``` elements. 
-   AndroidLaunchMode(string) | *Default: singleTop* <br/> Allowed values: standard, singleTop, singleTask, singleInstance <br/> **Platforms supported: Android** <br/> Sets the Activity android:launchMode attribute. This changes what happens when the app is launched from app icon or intent and is already running. 
-   AppendUserAgent(string) | **Platforms supported: Android** <br/> If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.
-   AppendUserAgent(string) | **Platforms supported: iOS** <br/> If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.
-   BackgroundColor(string) | **Platforms supported: Android, BlackBerry** <br/> Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. 
-   BackupWebStorage(string) | *Default: cloud* <br/> Allowed values: none, local, cloud. <br/> **Platforms supported: iOS** <br/>  Set to cloud to allow web storage data to backup via iCloud. Set to local to allow only local backups via iTunes sync. Set to none prevent web storage backups.
-   ChildBrowser(string) | *Default: enable* <br/> **Platforms supported: BlackBerry** <br/> Disables child browser windows. By default, apps launch a secondary browser window to display resources accessed via window.open() or by specifying a _blank anchor target. Specify disable to override this default behavior.
-   CordovaWebViewEngine(string) | *Default: CDVUIWebViewEngine* <br/> **Platforms supported: iOS** <br/> This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The 'value' here should match the 'feature' name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.
-   DefaultVolumeStream(string) | *Default: default* <br/> **Platforms supported: Android**<br/> Added in cordova-android 3.7.0, This preference sets which volume the hardware volume buttons link to. By default this is "call" for phones and "media" for tablets. Set this to "media" to have your app's volume buttons always change the media volume. Note that when using Cordova's media plugin, the volume buttons will dynamically change to controlling the media volume when any Media objects are active.
-   DisallowOverscroll(boolean) | *Default: false* <br/> **Platforms supported: iOS, Android** <br/> Set to **true** if you don't want the interface to display any feedback when users scroll past the beginning or end of content. On iOS, overscroll gestures cause content to bounce back to its original position. on Android, they produce a more subtle glowing effect along the top or bottom edge of the content. <br/>
-   EnableViewportScale(boolean) | *Default: false* <br/>  **Platforms supported: iOS** <br/> Set to true to allow a viewport meta tag to either disable or restrict the range of user scaling, which is enabled by default. Place a viewport such as the following in the HTML to disable scaling and fit content flexibly within the rendering WebView: <br/> ```<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />```
-   ErrorUrl(URL) | *Default: null* <br/> **Platforms supported: Android** <br/> If set, will display the referenced page upon an error in the application instead of a dialog with the title "Application Error".
-   ErrorUrl(string) | **Platforms supported: iOS** <br/> If set, will display the referenced local page upon an error in the application.
+   AllowInlineMediaPlayback(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to allow HTML5 media playback to appear inline within the screen layout, using browser-supplied controls rather than native controls. For this to work, add the webkit-playsinline attribute to any ```<video>``` elements. 
+   AndroidLaunchMode(string) | *Default: singleTop* <br/> Allowed values: standard, singleTop, singleTask, singleInstance <br/> ==Android== <br/> Sets the Activity android:launchMode attribute. This changes what happens when the app is launched from app icon or intent and is already running. 
+   AppendUserAgent(string) | ==Android== <br/> If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.
+   AppendUserAgent(string) | ==iOS== <br/> If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.
+   BackgroundColor(string) | ==Android== ==BlackBerry== <br/> Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. 
+   BackupWebStorage(string) | *Default: cloud* <br/> Allowed values: none, local, cloud. <br/> ==iOS== <br/>  Set to cloud to allow web storage data to backup via iCloud. Set to local to allow only local backups via iTunes sync. Set to none prevent web storage backups.
+   ChildBrowser(string) | *Default: enable* <br/> ==BlackBerry== <br/> Disables child browser windows. By default, apps launch a secondary browser window to display resources accessed via window.open() or by specifying a _blank anchor target. Specify disable to override this default behavior.
+   CordovaWebViewEngine(string) | *Default: CDVUIWebViewEngine* <br/> ==iOS== <br/> This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The 'value' here should match the 'feature' name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.
+   DefaultVolumeStream(string) | *Default: default* <br/> ==Android==<br/> Added in cordova-android 3.7.0, This preference sets which volume the hardware volume buttons link to. By default this is "call" for phones and "media" for tablets. Set this to "media" to have your app's volume buttons always change the media volume. Note that when using Cordova's media plugin, the volume buttons will dynamically change to controlling the media volume when any Media objects are active.
+   DisallowOverscroll(boolean) | *Default: false* <br/> ==iOS== ==Android== <br/> Set to **true** if you don't want the interface to display any feedback when users scroll past the beginning or end of content. On iOS, overscroll gestures cause content to bounce back to its original position. on Android, they produce a more subtle glowing effect along the top or bottom edge of the content. <br/>
+   EnableViewportScale(boolean) | *Default: false* <br/>  ==iOS== <br/> Set to true to allow a viewport meta tag to either disable or restrict the range of user scaling, which is enabled by default. Place a viewport such as the following in the HTML to disable scaling and fit content flexibly within the rendering WebView: <br/> ```<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />```
+   ErrorUrl(URL) | *Default: null* <br/> ==Android== <br/> If set, will display the referenced page upon an error in the application instead of a dialog with the title "Application Error".
+   ErrorUrl(string) | ==iOS== <br/> If set, will display the referenced local page upon an error in the application.
    FullScreen(boolean) | *Default: false* <br/> Allows you to hide the status bar at the top of the screen.
-   GapBetweenPages(float) | *Default: 0* <br/> **Platforms supported: iOS** <br/> The size of the gap, in points, between pages.
-   HideKeyboardFormAccessoryBar(boolean) | *Default: false* <br/> **Platforms supported: BlackBerry** <br/> set to true to hide the additional toolbar that appears above the keyboard, helping users navigate from one form input to another.
-   InAppBrowserStorageEnabled (boolean) | *Default: true* <br/> **Platforms supported: Android** <br/> Controls whether pages opened within an InAppBrowser can access the same localStorage and WebSQL storage as pages opened with the default browser.
-   KeepRunning(boolean) | *Default: true* <br/> **Platforms supported: Android** <br/> Determines whether the application stays running in the background even after a [pause](../../../cordova/events/events.pause.html) event fires. Setting this to false does not kill the app after a [pause](../../../cordova/events/events.pause.html) event, but simply halts execution of code within the cordova webview while the app is in the background.
-   KeyboardDisplayRequiresUserAction(boolean) | *Default: true* <br/> **Platforms supported: iOS** <br/> Set to false to allow the keyboard to appear when calling focus() on form inputs.
-   LoadUrlTimeoutValue(number in milliseconds) | *Default: 20000, 20 seconds* <br/> **Platforms supported: Android** <br/> hen loading a page, the amount of time to wait before throwing a timeout error. 
-   LoadingDialog(string) | *Default: null* <br/> **Platforms supported: Android** <br/> If set, displays a dialog with the specified title and message, and a spinner, when loading the first page of an application. The title and message are separated by a comma in this value string, and that comma is removed before the dialog is displayed.
-   LogLevel(string) | *Default: ERROR* <br/> Allowed values: ERROR, WARN, INFO, DEBUG, VERBOSE <br/> **Platforms supported: Android** <br/> Sets the minimum log level through which log messages from your application will be filtered.
-   MediaPlaybackAllowsAirPlay(boolean) | *Default: true* <br/> **Platforms supported: iOS** <br/> Set to false to prevent Air Play from being used in this view. Available in default UIWebView and WKWebView.
-   MediaPlaybackRequiresUserAction(boolean) | *Default: false* <br/> **Platforms supported: iOS** <br/> Set to true to prevent HTML5 videos or audios from playing automatically with the autoplay attribute or via JavaScript.
-   Min/Max UAP(Regex) | Allowed values: **/(Microsoft.+? &#124; Windows.+?)-(MinVersion &#124; MaxVersionTested)/i** <br/> **Platforms supported: Windows** <br/> Sets the min/max UAP versions for Windows. If nothing is specified, Windows.Universal at version 10.0.10240.0 will be used.
+   GapBetweenPages(float) | *Default: 0* <br/> ==iOS== <br/> The size of the gap, in points, between pages.
+   HideKeyboardFormAccessoryBar(boolean) | *Default: false* <br/> ==BlackBerry== <br/> Set to true to hide the additional toolbar that appears above the keyboard, helping users navigate from one form input to another.
+   InAppBrowserStorageEnabled (boolean) | *Default: true* <br/> ==Android== <br/> Controls whether pages opened within an InAppBrowser can access the same localStorage and WebSQL storage as pages opened with the default browser.
+   KeepRunning(boolean) | *Default: true* <br/> ==Android== <br/> Determines whether the application stays running in the background even after a [pause](../../../cordova/events/events.pause.html) event fires. Setting this to false does not kill the app after a [pause](../../../cordova/events/events.pause.html) event, but simply halts execution of code within the cordova webview while the app is in the background.
+   KeyboardDisplayRequiresUserAction(boolean) | *Default: true* <br/> ==iOS== <br/> Set to false to allow the keyboard to appear when calling focus() on form inputs.
+   LoadUrlTimeoutValue(number in milliseconds) | *Default: 20000, 20 seconds* <br/> ==Android== <br/> When loading a page, the amount of time to wait before throwing a timeout error. 
+   LoadingDialog(string) | *Default: null* <br/> ==Android== <br/> If set, displays a dialog with the specified title and message, and a spinner, when loading the first page of an application. The title and message are separated by a comma in this value string, and that comma is removed before the dialog is displayed.
+   LogLevel(string) | *Default: ERROR* <br/> Allowed values: ERROR, WARN, INFO, DEBUG, VERBOSE <br/> ==Android== <br/> Sets the minimum log level through which log messages from your application will be filtered.
+   MediaPlaybackAllowsAirPlay(boolean) | *Default: true* <br/> ==iOS== <br/> Set to false to prevent Air Play from being used in this view. Available in default UIWebView and WKWebView.
+   MediaPlaybackRequiresUserAction(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to prevent HTML5 videos or audios from playing automatically with the autoplay attribute or via JavaScript.
+   Min/Max UAP(Regex) | Allowed values: **/(Microsoft.+? &#124; Windows.+?)-(MinVersion &#124; MaxVersionTested)/i** <br/> ==Windows== <br/> Sets the min/max UAP versions for Windows. If nothing is specified, Windows.Universal at version 10.0.10240.0 will be used.
    Orientation(string) | *Default: default* <br/> Allowed values: default, landscape, portait <br/> Allows you to lock orientation and prevent the interface from rotating in response to changes in orientation. <br/> **NOTE:** The default value means Cordova will strip the orientation preference entry from the platform's manifest/configuration file allowing the platform to fallback to its default behavior. For iOS, to specify both portrait & landscape mode you would use the platform specific value 'all'.
-   OverrideUserAgent(string) | **Platforms supported: Android** <br/> If set, the value will replace the old UserAgent of webview. It is helpful to identify the request from app/browser when requesting remote pages. Use with caution, this may causes compitiable issue with web servers. For most cases, use AppendUserAgent instead.
-   OverrideUserAgent(string) | **Platforms supported: iOS** <br/> If set, the value will replace the old UserAgent of webview. It is helpful to identify the request from app/browser when requesting remote pages. Use with caution, this may causes compitiable issue with web servers. For most cases, use AppendUserAgent instead.
-   PageLength(float) | *Default: 0* <br/> **Platforms supported: iOS** <br/> The size of each page, in points, in the direction that the pages flow. When PaginationMode is right to left or left to right, this property represents the width of each page. When PaginationMode is topToBottom or bottomToTop, this property represents the height of each page. The default value is 0, which means the layout uses the size of the viewport to determine the dimensions of the page.
-   PaginationBreakingMode(string) | *Default: page* <br/> Allowed values: page, column <br/> **Platforms supported: iOS** <br/> Valid values are page and column.The manner in which column- or page-breaking occurs. This property determines whether certain CSS properties regarding column- and page-breaking are honored or ignored. When this property is set to column, the content respects the CSS properties related to column-breaking in place of page-breaking.
-   PaginationMode(string) | *Default: unpaginated* <br/> Allowed values: unpaginated, leftToRight, topToBottom, bottomToTop, rightToLeft <br/> **Platforms supported: iOS** <br/> This property determines whether content in the web view is broken up into pages that fill the view one screen at a time,or shown as one long scrolling view. If set to a paginated form, this property toggles a paginated layout on the content, causing the web view to use the values of PageLength and GapBetweenPages to relayout its content.
-   PopupBlocker(string) | *Default: enable* <br/> **Platforms supported: BlackBerry** <br/> Enables the popup blocker, which prevents calls to window.open(). By default, popups display in a child browser window. Setting the preference to enable prevents it from displaying at all.
-   SetFullscreen(boolean) | *Default: false* <br/> **Platforms supported: Android** <br/> Same as the Fullscreen parameter in the global configuration of this xml file. This Android-specific element is deprecated in favor of the global Fullscreen element, and will be removed in a future version.
-   ShowTitle(boolean) | *Default: false* <br/> **Platforms supported: Android** <br/> Show the title at the top of the screen.
-   SplashScreen(string) | *Default: splash* <br/> **Platforms supported: Android** <br/> The name of the file minus its extension in the res/drawable directory. Various assets must share this common name in various subdirectories.
-   SplashScreenDelay(number in milliseconds) | *Default: 3000, 3 seconds* <br/> **Platforms supported: Android** <br/> The amount of time the splash screen image displays.
-   Suppresses3DTouchGesture(boolean) | *Default: false* <br/> **Platforms supported: iOS** <br/> Set to true to avoid 3D Touch capable iOS devices rendering a magnifying glass widget when the user applies force while longpressing the webview. Test your app thoroughly since this disables onclick handlers, but plays nice with ontouchend. If this setting is true, SuppressesLongPressGesture will effectively be true as well.
-   SuppressesIncrementalRendering(boolean) | *Default: false* <br/> **Platforms supported: iOS** <br/> Set to true to wait until all content has been received before it renders to the screen.
-   SuppressesLongPressGesture(boolean) | *Default: false* <br/> **Platforms supported: iOS** <br/> Set to true to avoid iOS9+ rendering a magnifying glass widget when the user longpresses the webview. Test your app thoroughly since this may interfere with text selection capabilities.
-   TopActivityIndicator(string) | *Default: gray* <br/> Allowed values: whiteLarge, white, gray. <br/> **Platforms supported: iOS** <br/>  <br/> Controls the appearance of the small spinning icon in the status bar that indicates significant processor activity. 
-   UIWebViewDecelerationSpeed(string) | *Default: normal* <br/> Allowed values: normal, fast <br/> **Platforms supported: iOS** <br/> This property controls the deceleration speed of momentum scrolling. normal is the default speed for most native apps, and fast is the default for Mobile Safari.
-   WebSecurity(string) | *Default: enable* <br/> **Platforms supported: BlackBerry** <br/> Set to disable to override web security settings, allowing access to remote content from unknown sources. This preference is intended as a development convenience only, so remove it before packaging the app for distribution. For the released app, all URIs should be known and whitelisted using the <access> element, described in the Domain Whitelist Guide.
-   deployment-target(string) | **Platforms supported: iOS** <br/> This sets the IPHONEOS_DEPLOYMENT_TARGET in the build, which ultimately tranlsates to the MinimumOSVersion in the ipa. For more details please refer to Apple's documentation on Deployment Target Settings
-   target-device(string) | *Default: universal* <br/> Allowed values: handset, tablet, universal <br/> **Platforms supported: iOS** <br/> This property maps directly to TARGETED_DEVICE_FAMILY in the xcode project. Note that if you target universal (which is the default) you will need to supply screen shots for both iPhone and iPad or your app may be rejected.
-   windows-phone-target-version(string) | **Platform supported: Windows** <br/> Sets the version of Windows Phone for which the package (resulting from ```cordova build```) will target. If none is specified, it will be set to the same version as ```windows-target-version``` (if found). 
-   windows-target-version(string) | **Platform supported: Windows** <br/> Sets the version of Windows for which the package (resulting from ```cordova build```) will target. If none is specified, it will be set to '8.1'.
+   OverrideUserAgent(string) | ==Android== <br/> If set, the value will replace the old UserAgent of webview. It is helpful to identify the request from app/browser when requesting remote pages. Use with caution, this may causes compitiable issue with web servers. For most cases, use AppendUserAgent instead.
+   PageLength(float) | *Default: 0* <br/> ==iOS== <br/> The size of each page, in points, in the direction that the pages flow. When PaginationMode is right to left or left to right, this property represents the width of each page. When PaginationMode is topToBottom or bottomToTop, this property represents the height of each page. The default value is 0, which means the layout uses the size of the viewport to determine the dimensions of the page.
+   PaginationBreakingMode(string) | *Default: page* <br/> Allowed values: page, column <br/> ==iOS== <br/> Valid values are page and column.The manner in which column- or page-breaking occurs. This property determines whether certain CSS properties regarding column- and page-breaking are honored or ignored. When this property is set to column, the content respects the CSS properties related to column-breaking in place of page-breaking.
+   PaginationMode(string) | *Default: unpaginated* <br/> Allowed values: unpaginated, leftToRight, topToBottom, bottomToTop, rightToLeft <br/> ==iOS== <br/> This property determines whether content in the web view is broken up into pages that fill the view one screen at a time,or shown as one long scrolling view. If set to a paginated form, this property toggles a paginated layout on the content, causing the web view to use the values of PageLength and GapBetweenPages to relayout its content.
+   PopupBlocker(string) | *Default: enable* <br/> ==BlackBerry== <br/> Enables the popup blocker, which prevents calls to window.open(). By default, popups display in a child browser window. Setting the preference to enable prevents it from displaying at all.
+   SetFullscreen(boolean) | *Default: false* <br/> ==Android== <br/> Same as the Fullscreen parameter in the global configuration of this xml file. This Android-specific element is deprecated in favor of the global Fullscreen element, and will be removed in a future version.
+   ShowTitle(boolean) | *Default: false* <br/> ==Android== <br/> Show the title at the top of the screen.
+   SplashScreen(string) | *Default: splash* <br/> ==Android== <br/> The name of the file minus its extension in the ```res/drawable``` directory. Various assets must share this common name in various subdirectories.
+   SplashScreenDelay(number in milliseconds) | *Default: 3000, 3 seconds* <br/> ==Android== <br/> The amount of time the splash screen image displays.
+   Suppresses3DTouchGesture(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to avoid 3D Touch capable iOS devices rendering a magnifying glass widget when the user applies force while longpressing the webview. Test your app thoroughly since this disables onclick handlers, but plays nice with ontouchend. If this setting is true, SuppressesLongPressGesture will effectively be true as well.
+   SuppressesIncrementalRendering(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to wait until all content has been received before it renders to the screen.
+   SuppressesLongPressGesture(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to avoid iOS9+ rendering a magnifying glass widget when the user longpresses the webview. Test your app thoroughly since this may interfere with text selection capabilities.
+   TopActivityIndicator(string) | *Default: gray* <br/> Allowed values: whiteLarge, white, gray. <br/> ==iOS== <br/>  <br/> Controls the appearance of the small spinning icon in the status bar that indicates significant processor activity. 
+   UIWebViewDecelerationSpeed(string) | *Default: normal* <br/> Allowed values: normal, fast <br/> ==iOS== <br/> This property controls the deceleration speed of momentum scrolling. normal is the default speed for most native apps, and fast is the default for Mobile Safari.
+   WebSecurity(string) | *Default: enable* <br/> ==BlackBerry== <br/> Set to disable to override web security settings, allowing access to remote content from unknown sources. This preference is intended as a development convenience only, so remove it before packaging the app for distribution. For the released app, all URIs should be known and whitelisted using the <access> element, described in the Domain Whitelist Guide.
+   deployment-target(string) | ==iOS== <br/> This sets the IPHONEOS_DEPLOYMENT_TARGET in the build, which ultimately tranlsates to the MinimumOSVersion in the ipa. For more details please refer to Apple's documentation on Deployment Target Settings
+   target-device(string) | *Default: universal* <br/> Allowed values: handset, tablet, universal <br/> ==iOS== <br/> This property maps directly to TARGETED_DEVICE_FAMILY in the xcode project. Note that if you target universal (which is the default) you will need to supply screen shots for both iPhone and iPad or your app may be rejected.
+   windows-phone-target-version(string) | ==Windows== <br/> Sets the version of Windows Phone for which the package (resulting from ```cordova build```) will target. If none is specified, it will be set to the same version as ```windows-target-version``` (if found). 
+   windows-target-version(string) | ==Windows== <br/> Sets the version of Windows for which the package (resulting from ```cordova build```) will target. If none is specified, it will be set to '8.1'.
    
    Examples:
 
@@ -307,6 +305,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
 ## feature
    If you use the CLI to build applications, you use the plugin command to enable device APIs. This does not modify the top-level config.xml file, so the <feature> element does not apply to your workflow. If you work directly in an SDK and using the platform-specific config.xml file as source, you use the <feature> tag to enable device-level APIs and external plugins. They often appear with custom values in platform-specific config.xml files. See the API Reference for details on how to specify each feature. See
    the [Plugin Development Guide](../guide/hybrid/plugins/index.html) for more information on plugins.
+   NOTE: Most of the time, you do NOT want to set this directly.
 
    Attributes(type) | Description
    ----------------- | ------------
@@ -318,8 +317,8 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    
    Attributes(type) | Description
    ----------------- | ------------
-   name(string) | *Required* <br/> Allowed values: android-package, ios-package, onload. <br/> **Platforms supported: iOS, Android** <br/> 'ios-package' and 'android-package' are used to specify the name of the package (as specified by the 'value' attribute) to be used to initialize the plugin code, while 'onload' is used to specify whether the corresponding plugin (as specified in the 'value' attribute) is to be instantiated when the controller is initialized.
-   value(string or boolean) | *Required* <br/> **Platforms supported: iOS, Android** <br/> Specifies the name of the package to be used to initialize the plugin code (when the 'name' attribute is android-package or ios-package), specifies the name of the plugin to be loaded during controller initialization (when 'name' attribute is set to 'onload').
+   name(string) | *Required* <br/> Allowed values: android-package, ios-package, onload. <br/> ==iOS== ==Android== <br/> 'ios-package' and 'android-package' are used to specify the name of the package (as specified by the 'value' attribute) to be used to initialize the plugin code, while 'onload' is used to specify whether the corresponding plugin (as specified in the 'value' attribute) is to be instantiated when the controller is initialized.
+   value(string or boolean) | *Required* <br/> ==iOS== ==Android== <br/> Specifies the name of the package to be used to initialize the plugin code (when the 'name' attribute is android-package or ios-package), specifies the name of the plugin to be loaded during controller initialization (when 'name' attribute is set to 'onload').
      
    
    Examples:
