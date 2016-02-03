@@ -94,3 +94,9 @@ a lower-level alternative to the `cordova` command-line utility.
 * [Windows Plugins](win8/plugin.html)
 * [Windows Packaging](win8/packaging.html)
 * [Upgrading Windows 8](win8/upgrade.html)
+
+## OS X
+
+* [OS X Platform Guide](osx/index.html)
+* [OS X Configuration](osx/config.html)
+* [OS X Plugins](osx/plugin.html)
