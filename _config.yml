@@ -19,14 +19,13 @@ repo:
     uri:    https://github.com/apache/cordova-docs
     branch: master
 
+# the version to which /latest/ points
 # NOTE:
 #      this value gets overwritten in _version.yml, which is a generated file
 latest_docs_version: dev
-# NOTE:
-#      this value is used to point to the documentation version to be used. 
-#      in development this may point to dev (in _dev.yml) and in prod this
-#      may point to latest (in _prod.yml).
-default_linked_docs_version: "latest"
+
+# the docs version that is shown by default when clicking on docs links on the site
+default_linked_docs_version: latest
 
 # NOTE:
 #      this value _might_ get overwritten on some pages;

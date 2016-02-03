@@ -1,5 +1,5 @@
 baseurl: ""
-default_linked_docs_version: "dev"
+default_linked_docs_version: dev
 destination: build-dev
 exclude:
     - static/css-src
