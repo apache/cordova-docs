@@ -37,10 +37,6 @@ title: Guides
             <span>Create, build, and deploy from the command-line.</span>
         </li>
         <li>
-            <h2><a href="guide/platforms/index.html">Platform Guides</a></h2>
-            <span>Set up each platform SDK and update projects.</span>
-        </li>
-        <li>
          <h2><a href="plugin_ref/plugman.html">Using Plugman to Manage Plugins</a></h2>
             <span>Manage plugins without the CLI when using the platform-centered workflow.</span>
         </li>
