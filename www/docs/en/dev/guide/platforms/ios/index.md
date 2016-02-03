@@ -32,10 +32,6 @@ following for more detailed platform-specific information:
 * [iOS Plugins](plugin.html)
 * [iOS Shell Tool Guide](tools.html)
 
-The command-line tools above refer to versions prior to Cordova 3.0.
-See [The Command-Line Interface](../../cli/index.html) for information about the
-current interface.
-
 ## Requirements and Support
 
 Apple® tools required to build iOS applications run only on the OS X
@@ -53,7 +49,7 @@ include all iPad® models, iPhone® 3GS and above, and iPod® Touch 3rd
 Generation or later. To install apps onto a device, you must also be a
 member of Apple's
 [iOS Developer Program](https://developer.apple.com/programs/ios/),
-which costs $99 per year. This guide shows how to deploy apps to the
+which costs [$99](https://developer.apple.com/support/purchase-activation/) per year. This guide shows how to deploy apps to the
 iOS emulator, for which you don't need to register with the developer
 program.
 
@@ -74,11 +70,11 @@ There are two ways to download Xcode:
 Once Xcode is installed, several command-line tools need to be enabled
 for Cordova to run. From the __Xcode__ menu, select __Preferences__,
 then the __Downloads__ tab. From the __Components__ panel, press the
-__Install__ button next to the __Command Line Tools__ listing.
+__Install__ button next to the __Command Line Tools__ listing. 
 
 ## Install Deploy Tools
 
-Run from comman-line terminal:
+Run from command-line terminal:
 
         $ npm install -g ios-sim
         $ npm install -g ios-deploy
@@ -109,10 +105,10 @@ device or emulator (for example,  `cordova run ios --target="iPhone-6"`).
 You can also use __cordova run --help__ to see additional build and run
 options.
 
-## Open a Project in the SDK
+## Open a Project within Xcode
 
-Once ios platform is added to your project, you can open it from 
-within Xcode. Double-click to open the `hello/platforms/ios/hello.xcodeproj`
+Once the ios platform is added to your project, you can open it from 
+within Xcode. Double-click to open the `hello/platforms/ios/HelloCordova.xcodeproj`
 file. The screen should look like this:
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png)
@@ -123,7 +119,7 @@ To preview the app in the iOS emulator:
 
 1. Make sure the _.xcodeproj_ file is selected in the left panel.
 
-2. Select the __hello__ app in the panel immediately to the right.
+2. Select the __HelloCordova__ app in the panel immediately to the right.
 
 3. Select the intended device from the toolbar's __Scheme__ menu, such
    as the iPhone 6.0 Simulator as highlighted here:
