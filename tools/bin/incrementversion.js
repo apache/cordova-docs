@@ -36,9 +36,11 @@ function isValidVersion(version) {
     if (version == DEV_VERSION_NAME) {
         return false;
     }
+    /*
     if (!semver.valid(version)) {
+        console.log('not valid')
         return false;
-    }
+    }*/
     return true;
 }
 
@@ -71,10 +73,10 @@ function main () {
     }
 
     // only create greater versions
-    if (!semver.gt(newVersion, oldVersion)) {
+    /*if (!semver.gt(newVersion, oldVersion)) {
         console.error(newVersion + " is not greater than " + oldVersion);
         return 1;
-    }
+    }*/
 
     if (language) {
         console.log(oldVersion + " -> " + newVersion + " ONLY for " + language);
