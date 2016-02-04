@@ -38,7 +38,7 @@ Install [Java Development Kit (JDK) 7](http://www.oracle.com/technetwork/java/ja
 or later.
 
 When installing on Windows you also need to set `JAVA_HOME` Environment Variable
-according to JDK installation path (for example, `C:\Program Files\Java\jdk1.7.0_75`).
+according to JDK installation path (see [Setting Environment Variables](#link-setting-environment-variables))
 
 ### Android SDK
 
@@ -77,45 +77,6 @@ are enough to build and deploy Android applications.
 Detailed installation instructions are available as part of installation
 links above.
 
-#### Update your PATH
-
-For Cordova's CLI and command line tools to work correctly, you will need to
-include the SDK's `tools` and `platform-tools` directories in your `PATH`.
-
-##### OS X and Linux
-
-On a Mac or Linux, you can use a text editor to create or modify the
-`~/.bash_profile` file, adding a line such as the following
-(substitute the paths with your local Android SDK installation's location):
-
-        export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
-
-Reload your terminal to see this change reflected or run the following command:
-
-        $ source ~/.bash_profile
-
-##### Windows
-
-On Windows, you must modify the `PATH` environment variable. These steps may
-vary depending on your installed version of Windows:
-
-1. Click on the __Start__ menu in the lower-left corner of the desktop
-
-1. In the search bar, search for __Environment Variables__ and select __Edit the system Environment Variables__ from the options that appear
-
-1. In the window that appears, click the __Environment Variables__ button
-
-1. Select the __PATH__ variable and press __Edit__.
-
-1. Append the relevant locations to the __PATH__ based on where you installed
-   the SDK, for example:
-
-        ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
-
-1. Save the value and close both dialog boxes.
-
-1. Close and reopen any command prompt windows to see the change reflected
-
 #### Adding SDK Packages
 
 After installing the Android SDK, you must also install the packages for
@@ -133,6 +94,61 @@ sure the following are installed:
 See Android's documentation on [Installing SDK Packages](http://developer.android.com/sdk/installing/adding-packages.html)
 for more details.
 
+### Setting environment variables
+
+Cordova's CLI tools require some environment variables to be set in order to
+function correctly. The CLI will attempt to set these variables for you, but
+in certain cases you may need to set them manually. The following variables
+should be updated:
+
+1. Set the `JAVA_HOME` environment variable to the location of your JDK installation
+2. Set the `ANDROID_HOME` environment variable to the location of your Android SDK installation
+3. It is also recommended that you add the Android SDK's `tools` and `platform-tools` directories to your `PATH`
+
+#### OS X and Linux
+
+On a Mac or Linux, you can use a text editor to create or modify the
+`~/.bash_profile` file. To set an environment variable, add a line that
+uses `export` like so (substitute the path with your local installation):
+
+        export ANDROID_HOME=/Development/android-sdk/
+
+To update your `PATH`, add a line resembling the following
+(substitute the paths with your local Android SDK installation's location):
+
+        export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
+
+Reload your terminal to see this change reflected or run the following command:
+
+        $ source ~/.bash_profile
+
+#### Windows
+
+These steps may vary depending on your installed version of Windows. Close and
+reopen any command prompt windows after making changes to see them reflected
+
+1. Click on the __Start__ menu in the lower-left corner of the desktop
+
+1. In the search bar, search for __Environment Variables__ and select __Edit the system Environment Variables__ from the options that appear
+
+1. In the window that appears, click the __Environment Variables__ button
+
+##### To create a new environment variable:
+
+1. Click __New...__ and enter the variable name and value
+
+##### To set your __PATH__:
+
+1. Select the __PATH__ variable and press __Edit__.
+
+1. Add entries for the relevant locations to the __PATH__. For example
+(substitute the paths with your local Android SDK installation's location):
+
+    ```
+    C:\Development\android-sdk\platform-tools
+    C:\Development\android-sdk\tools
+    ```
+
 ## Setting up an Emulator
 
 If you wish to run your Cordova app on an Android emulator, you will first need
@@ -142,7 +158,7 @@ and the [instructions](http://developer.android.com/tools/devices/emulator.html)
 for configuring the emulator and setting up hardware acceleration.
 
 Once your AVD is configured correctly, you should be able to see it by running
-the command:
+this command from within a Cordova project:
 
     $ cordova run --list
 
