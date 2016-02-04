@@ -90,7 +90,7 @@ Alternatively, you could specify them in a build configuration file (build.json)
                  "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954",
              },
              "release": {
-                 "codeSignIdentitiy": "iPhone Distribution"
+                 "codeSignIdentitiy": "iPhone Distribution",
                  "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306",
              }
          }
