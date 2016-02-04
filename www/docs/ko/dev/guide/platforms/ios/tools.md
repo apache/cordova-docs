@@ -80,11 +80,11 @@ IOS 위한 쉘 도구를 사용 하려면 [cordova.apache.org][1]에서 코르�
          "ios": {
              "debug": {
                  "codeSignIdentitiy": "iPhone Development",
-                 "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954",
+                 "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954"
              },
              "release": {
-                 "codeSignIdentitiy": "iPhone Distribution"
-                 "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306",
+                 "codeSignIdentitiy": "iPhone Distribution",
+                 "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306"
              }
          }
      }
