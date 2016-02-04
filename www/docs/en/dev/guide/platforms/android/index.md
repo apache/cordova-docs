@@ -38,7 +38,7 @@ Install [Java Development Kit (JDK) 7](http://www.oracle.com/technetwork/java/ja
 or later.
 
 When installing on Windows you also need to set `JAVA_HOME` Environment Variable
-according to JDK installation path (see [Setting Environment Variables](#link-setting-environment-variables))
+according to your JDK installation path (see [Setting Environment Variables](#link-setting-environment-variables))
 
 ### Android SDK
 
@@ -88,7 +88,7 @@ Open Android SDK Manager (for example, run `android` from the terminal) and make
 sure the following are installed:
 
 1. Android Platform SDK for your targeted version of Android
-1. Android SDK Build-tools version 19.1.0 or higher
+1. Android SDK build-tools version 19.1.0 or higher
 1. Android Support Repository (found under "Extras")
 
 See Android's documentation on [Installing SDK Packages](http://developer.android.com/sdk/installing/adding-packages.html)
@@ -191,7 +191,7 @@ To open a Cordova for Android project in Android Studio:
 
   1. For the `Gradle Sync` question you can simply answer __Yes__.
 
-Once it finishes importing, you should be able build and run the app directly
+Once it finishes importing, you should be able to build and run the app directly
 from __Android Studio__. See [Android Studio Overview](http://developer.android.com/tools/studio/index.html)
 and [Building and Running from Android Studio](http://developer.android.com/tools/building/building-studio.html)
 for more details.
