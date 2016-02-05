@@ -27,6 +27,7 @@ var crawler    = require("simplecrawler");
 
 // constants
 var ROOT_DIR   = ".";
+var CONFIG_DIR = "conf";
 var SOURCE_DIR = path.join(ROOT_DIR, "www");
 var DEV_DIR    = path.join(ROOT_DIR, "build-dev");
 var PROD_DIR   = path.join(ROOT_DIR, "build-prod");
@@ -40,15 +41,15 @@ var PLUGINS_SRC_DIR = path.join(SOURCE_DIR, "static", "plugins");
 var JS_DIR          = path.join(SOURCE_DIR, "static", "js");
 var BIN_DIR         = path.join(ROOT_DIR, "tools", "bin");
 
-var CONFIG_FILE          = "_config.yml";
-var DEFAULTS_CONFIG_FILE = "_defaults.yml";
-var VERSION_CONFIG_FILE  = "_version.yml";
-var PROD_CONFIG_FILE     = "_prod.yml";
-var DEV_CONFIG_FILE      = "_dev.yml";
-var NODOCS_CONFIG_FILE   = "_nodocs.yml";
+var CONFIG_FILE          = path.join(CONFIG_DIR, "_config.yml");
+var DEFAULTS_CONFIG_FILE = path.join(CONFIG_DIR, "_defaults.yml");
+var VERSION_CONFIG_FILE  = path.join(CONFIG_DIR, "_version.yml");
+var PROD_CONFIG_FILE     = path.join(CONFIG_DIR, "_prod.yml");
+var DEV_CONFIG_FILE      = path.join(CONFIG_DIR, "_dev.yml");
+var NODOCS_CONFIG_FILE   = path.join(CONFIG_DIR, "_nodocs.yml");
 
 var VERSION_FILE      = "VERSION";
-var LANGUAGES_FILE    = path.join(DATA_DIR, "languages.yml");
+var DOCS_VERSION_FILE = path.join(DATA_DIR, "docs-versions.yml");
 var PLUGINS_FILE_NAME = "plugins.js";
 var PLUGINS_FILE      = path.join(JS_DIR, PLUGINS_FILE_NAME);
 var PLUGINS_SRC_FILE  = path.join(PLUGINS_SRC_DIR, "app.js");
@@ -137,7 +138,7 @@ gulp.task("help", function () {
     gutil.log("");
     gutil.log("Tasks:");
     gutil.log("");
-    gutil.log("    build         same as configs + styles + plugins + jekyll");
+    gutil.log("    build         same as configs + data + styles + plugins + jekyll");
     gutil.log("    jekyll        build with jekyll");
     gutil.log("    regen         same as jekyll + reload");
     gutil.log("    serve         build the site and open it in a browser");
@@ -145,13 +146,15 @@ gulp.task("help", function () {
     gutil.log("");
     gutil.log("    plugins       build " + PLUGINS_FILE);
     gutil.log("");
-    gutil.log("    configs       create all the below files");
+    gutil.log("    configs       run all the below tasks");
     gutil.log("    defaults      create " + DEFAULTS_CONFIG_FILE);
-    gutil.log("    languages     create " + LANGUAGES_FILE);
     gutil.log("    version       create " + VERSION_CONFIG_FILE);
+    gutil.log("");
+    gutil.log("    data          run all the below tasks");
+    gutil.log("    docs-versions create " + DOCS_VERSION_FILE);
     gutil.log("    toc           create all generated ToC files in " + TOC_DIR);
     gutil.log("");
-    gutil.log("    styles        compile all the below files");
+    gutil.log("    styles        run all the below tasks");
     gutil.log("    less          compile all .less files");
     gutil.log("    sass          compile all .scss files");
     gutil.log("    css           copy over all .css files");
@@ -173,7 +176,8 @@ gulp.task("help", function () {
     gutil.log("");
 });
 
-gulp.task("configs", ["toc", "languages", "defaults", "version"]);
+gulp.task("data", ["toc", "docs-versions"])
+gulp.task("configs", ["defaults", "version"]);
 gulp.task("styles", ["less", "css", "sass"]);
 
 gulp.task("watch", ["serve"], function () {
@@ -190,7 +194,7 @@ gulp.task("watch", ["serve"], function () {
             path.join(DOCS_DIR, "**", "*.html"),
         ],
         {interval: WATCH_INTERVAL},
-        ["configs"]
+        ["configs", "data"]
     );
     gulp.watch(
         [
@@ -229,7 +233,7 @@ gulp.task("serve", ["build"], function () {
     });
 });
 
-gulp.task("build", ["configs", "styles", "plugins"], function (done) {
+gulp.task("build", ["configs", "data", "styles", "plugins"], function (done) {
     jekyllBuild(done);
 });
 
@@ -245,8 +249,8 @@ gulp.task("reload", function () {
     browsersync.reload();
 });
 
-gulp.task("languages", function () {
-    return execPiped("node", [bin("gen_languages.js"), DOCS_DIR], LANGUAGES_FILE)
+gulp.task("docs-versions", function () {
+    return execPiped("node", [bin("gen_versions.js"), DOCS_DIR], DOCS_VERSION_FILE)
         .pipe(gulp.dest(ROOT_DIR));
 });
 
@@ -386,7 +390,7 @@ gulp.task("clean", function () {
     remove(path.join(DATA_DIR, "toc", "*-generated.yml"));
     remove(CSS_OUT_DIR);
     remove(PLUGINS_FILE);
-    remove(LANGUAGES_FILE);
+    remove(DOCS_VERSION_FILE);
     remove(DEFAULTS_CONFIG_FILE);
     remove(VERSION_CONFIG_FILE);
 });

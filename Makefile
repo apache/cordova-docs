@@ -30,9 +30,10 @@ VERSION_VAR_NAME = latest_docs_version
 BIN_DIR      = tools/bin
 NODE_BIN_DIR = ./node_modules/.bin
 
-SRC_DIR  = www
-DEV_DIR  = build-dev
-PROD_DIR = build-prod
+SRC_DIR    = www
+DEV_DIR    = build-dev
+PROD_DIR   = build-prod
+CONFIG_DIR = conf
 
 DOCS_DIR         = $(SRC_DIR)/docs
 DATA_DIR         = $(SRC_DIR)/_data
@@ -61,10 +62,10 @@ UGLIFY     := $(subst /,\,$(UGLIFY))
 endif
 
 # existing files
-MAIN_CONFIG         = _config.yml
-DEV_CONFIG          = _dev.yml
-PROD_CONFIG         = _prod.yml
-DOCS_EXCLUDE_CONFIG = _nodocs.yml
+MAIN_CONFIG         = $(CONFIG_DIR)/_config.yml
+DEV_CONFIG          = $(CONFIG_DIR)/_dev.yml
+PROD_CONFIG         = $(CONFIG_DIR)/_prod.yml
+DOCS_EXCLUDE_CONFIG = $(CONFIG_DIR)/_nodocs.yml
 PLUGINS_SRC         = $(PLUGINS_SRC_DIR)/app.js
 VERSION_FILE        = VERSION
 
@@ -81,11 +82,11 @@ STYLES_SRC = $(shell find $(CSS_SRC_DIR) -name "*.less" -or -name "*.css")
 endif
 
 # generated files
-VERSION_CONFIG  = _version.yml
-DEFAULTS_CONFIG = _defaults.yml
-LANGUAGES_DATA  = $(DATA_DIR)/languages.yml
-PLUGINS_APP     = $(PLUGINS_DEST_DIR)/plugins.js
-MAIN_STYLE_FILE = $(CSS_DEST_DIR)/main.css
+VERSION_CONFIG    = $(CONFIG_DIR)/_version.yml
+DEFAULTS_CONFIG   = $(CONFIG_DIR)/_defaults.yml
+DOCS_VERSION_DATA = $(DATA_DIR)/docs-versions.yml
+PLUGINS_APP       = $(PLUGINS_DEST_DIR)/plugins.js
+MAIN_STYLE_FILE   = $(CSS_DEST_DIR)/main.css
 
 STYLES = $(MAIN_STYLE_FILE) $(addsuffix .css,$(basename $(subst $(CSS_SRC_DIR),$(CSS_DEST_DIR),$(STYLES_SRC))))
 
@@ -115,7 +116,7 @@ help usage default:
 	@echo "    make prod:    build site with prod config"
 	@echo "    make install: install dependencies"
 	@echo ""
-	@echo "    make data:    generate data files (Generated ToCs, $(LANGUAGES_DATA))"
+	@echo "    make data:    generate data files (Generated ToCs, $(DOCS_VERSION_DATA))"
 	@echo "    make configs: generate Jekyll configs ($(DEFAULTS_CONFIG), $(VERSION_CONFIG))"
 	@echo "    make styles:  generate CSS"
 	@echo "    make plugins: generate plugins app ($(PLUGINS_APP))"
@@ -128,7 +129,7 @@ help usage default:
 	@echo "    NODOCS: (defined or undefined) - excludes docs from build"
 	@echo ""
 
-data: $(TOC_FILES) $(LANGUAGES_DATA)
+data: $(TOC_FILES) $(DOCS_VERSION_DATA)
 configs: $(DEFAULTS_CONFIG) $(VERSION_CONFIG)
 styles: $(STYLES)
 plugins: $(PLUGINS_APP)
@@ -146,7 +147,7 @@ build: JEKYLL_CONFIGS += $(DOCS_EXCLUDE_CONFIG)
 endif
 
 build: JEKYLL_FLAGS += --config $(subst $(SPACE),$(COMMA),$(strip $(JEKYLL_CONFIGS)))
-build: $(JEKYLL_CONFIGS) $(TOC_FILES) $(LANGUAGES_DATA) $(STYLES) $(PLUGINS_APP)
+build: $(JEKYLL_CONFIGS) data styles plugins
 	$(JEKYLL) build $(JEKYLL_FLAGS)
 
 install:
@@ -159,21 +160,21 @@ serve:
 # real targets
 # NOTE:
 #      the ">>" operator appends to a file in both CMD and SH
-$(PLUGINS_APP): $(PLUGINS_SRC) Makefile
+$(PLUGINS_APP): $(PLUGINS_SRC)
 	echo ---> $@
 	echo --->> $@
 	$(BROWSERIFY) -t reactify -t envify $< | $(UGLIFY) >> $@
 
-$(LANGUAGES_DATA): $(BIN_DIR)/gen_languages.js Makefile
-	$(NODE) $(BIN_DIR)/gen_languages.js $(DOCS_DIR) > $@
+$(DOCS_VERSION_DATA): $(BIN_DIR)/gen_versions.js
+	$(NODE) $(BIN_DIR)/gen_versions.js $(DOCS_DIR) > $@
 
-$(DEFAULTS_CONFIG): $(BIN_DIR)/gen_defaults.js $(VERSION_FILE) Makefile
+$(DEFAULTS_CONFIG): $(BIN_DIR)/gen_defaults.js $(VERSION_FILE)
 	$(NODE) $(BIN_DIR)/gen_defaults.js $(DOCS_DIR) "$(LATEST_DOCS_VERSION)" > $@
 
-$(VERSION_CONFIG): $(VERSION_FILE) Makefile
+$(VERSION_CONFIG): $(VERSION_FILE)
 	sed -e "s/^/$(VERSION_VAR_NAME): /" < $< > $@
 
-$(TOC_FILES): $(BIN_DIR)/toc.js Makefile
+$(TOC_FILES): $(BIN_DIR)/toc.js
 	$(NODE) $(BIN_DIR)/toc.js $(DOCS_DIR) $(DATA_DIR)
 
 $(MAIN_STYLE_FILE): $(SCSS_SRC)
@@ -182,7 +183,7 @@ $(MAIN_STYLE_FILE): $(SCSS_SRC)
 
 # NODE:
 #      $(@D) means "directory part of target"
-$(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.less Makefile
+$(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.less
 ifdef WINDOWS
 	-$(MKDIRP) $(subst /,\,$(@D))
 else
@@ -192,7 +193,7 @@ endif
 	echo --->> $@
 	$(LESSC) $< >> $@
 
-$(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.scss Makefile
+$(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.scss
 ifdef WINDOWS
 	-$(MKDIRP) $(subst /,\,$(@D))
 else
@@ -202,7 +203,7 @@ endif
 	echo --->> $@
 	$(SASSC) $< >> $@
 
-$(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.css Makefile
+$(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.css
 ifdef WINDOWS
 	-$(MKDIRP) $(subst /,\,$(@D))
 else
@@ -219,7 +220,7 @@ clean:
 	$(RM) $(VERSION_CONFIG)
 	$(RM) $(DEFAULTS_CONFIG)
 	$(RM) $(TOC_FILES)
-	$(RM) $(LANGUAGES_DATA)
+	$(RM) $(DOCS_VERSION_DATA)
 	$(RM) $(PLUGINS_APP)
 	$(RM) -r $(CSS_DEST_DIR)
 
