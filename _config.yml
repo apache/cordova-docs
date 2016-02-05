@@ -66,11 +66,11 @@ redcarpet:
         # not have a leading or trailing newline
         - lax_spacing
 
+        # allows tables
         - tables
-        - highlight
 
-        # enables anchor links
-        - with_toc_data
+        # surrounds highlighted text with <mark>s
+        - highlight
 
 kramdown:
     input: GFM

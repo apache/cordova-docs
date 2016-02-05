@@ -123,4 +123,4 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
         <preference name="AppendUserAgent" value="My Browser" />
 
 
-[PauseEvent]: ../../../cordova/events/events.html#link-pause
+[PauseEvent]: ../../../cordova/events/events.html#pause

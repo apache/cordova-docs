@@ -23,7 +23,7 @@ title: Windows Phone 8 Plugins
 # Windows Phone 8 Plugins
 
 This section provides details for how to implement native plugin code
-on the Windows Phone platform. Before reading this, see [Plugin Development Guide](../../hybrid/plugins/index.html) 
+on the Windows Phone platform. Before reading this, see [Plugin Development Guide](../../hybrid/plugins/index.html)
 for an overview of the plugin's structure and its common
 JavaScript interface. This section continues to demonstrate the sample
 _echo_ plugin that communicates from the Cordova webview to the native
@@ -237,5 +237,5 @@ yourself of errors.
   unnecessary functionality from the plugin's various native
   implementations.
 
-[PauseEvent]: ../../../cordova/events/events.html#link-pause
-[ResumeEvent]: ../../../cordova/events/events.html#link-resume
+[PauseEvent]: ../../../cordova/events/events.html#pause
+[ResumeEvent]: ../../../cordova/events/events.html#resume

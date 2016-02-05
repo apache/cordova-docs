@@ -71,9 +71,7 @@ The application code could add listeners for these events. For example:
 
     // Add similar event handlers for other events
 
-**Note**: Applications typically should use `document.addEventListener` to
-attach an event listener once the [deviceready](#link-deviceready)
-event fires.
+**Note**: Applications typically should use `document.addEventListener` to attach an event listener once the [deviceready](#deviceready)
 
 The following table lists the cordova events and the supported platforms:
 
@@ -92,9 +90,9 @@ The following table lists the cordova events and the supported platforms:
     </tr>
 </thead>
 
-<tbody>    
+<tbody>
     <tr>
-        <th><a href="#link-deviceready">deviceready</a></th>
+        <th><a href="#deviceready">deviceready</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -103,7 +101,7 @@ The following table lists the cordova events and the supported platforms:
     </tr>
 
     <tr>
-        <th><a href="#link-pause">pause</a></th>
+        <th><a href="#pause">pause</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -112,7 +110,7 @@ The following table lists the cordova events and the supported platforms:
     </tr>
 
     <tr>
-        <th><a href="#link-resume">resume</a></th>
+        <th><a href="#resume">resume</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -121,7 +119,7 @@ The following table lists the cordova events and the supported platforms:
     </tr>
 
     <tr>
-        <th><a href="#link-backbutton">backbutton</a></th>
+        <th><a href="#backbutton">backbutton</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
@@ -130,7 +128,7 @@ The following table lists the cordova events and the supported platforms:
     </tr>
 
     <tr>
-        <th><a href="#link-menubutton">menubutton</a></th>
+        <th><a href="#menubutton">menubutton</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
@@ -139,7 +137,7 @@ The following table lists the cordova events and the supported platforms:
     </tr>
 
     <tr>
-        <th><a href="#link-searchbutton">searchbutton</a></th>
+        <th><a href="#searchbutton">searchbutton</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="n"></td>
@@ -148,7 +146,7 @@ The following table lists the cordova events and the supported platforms:
     </tr>
 
     <tr>
-        <th><a href="#link-startcallbutton">startcallbutton</a></th>
+        <th><a href="#startcallbutton">startcallbutton</a></th>
         <td data-col="android"    class="n"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
@@ -157,7 +155,7 @@ The following table lists the cordova events and the supported platforms:
     </tr>
 
     <tr>
-        <th><a href="#link-endcallbutton">endcallbutton</a></th>
+        <th><a href="#endcallbutton">endcallbutton</a></th>
         <td data-col="android"    class="n"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
@@ -166,7 +164,7 @@ The following table lists the cordova events and the supported platforms:
     </tr>
 
     <tr>
-        <th><a href="#link-volumedownbutton">volumedownbutton</a></th>
+        <th><a href="#volumedownbutton">volumedownbutton</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
@@ -175,13 +173,13 @@ The following table lists the cordova events and the supported platforms:
     </tr>
 
     <tr>
-        <th><a href="#link-volumeupbutton">volumeupbutton</a></th>
+        <th><a href="#volumeupbutton">volumeupbutton</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
         <td data-col="winphone8"  class="n"></td>
         <td data-col="win"       class="n"></td>
-    </tr>    
+    </tr>
 </tbody>
 </table>
 
@@ -261,7 +259,7 @@ The `resume` event fires when the native platform pulls the application out from
 
 ### iOS Quirks
 
-Any interactive functions called from a [pause](#link-pause) event handler execute
+Any interactive functions called from a [pause](#pause) event handler execute
 later when the app resumes, as signaled by the `resume` event. These
 include alerts, `console.log()`, and any calls from plugins or the
 Cordova API, which go through Objective-C.

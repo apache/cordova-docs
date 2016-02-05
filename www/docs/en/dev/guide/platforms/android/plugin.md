@@ -463,5 +463,5 @@ on your device or emulator to simulate low memory scenarios. If your plugin
 launches external activities, you should always do some testing with this
 setting enabled to ensure that you are properly handling low memory scenarios.
 
-[PauseEvent]: ../../../cordova/events/events.html#link-pause
-[ResumeEvent]: ../../../cordova/events/events.html#link-resume
+[PauseEvent]: ../../../cordova/events/events.html#pause
+[ResumeEvent]: ../../../cordova/events/events.html#resume

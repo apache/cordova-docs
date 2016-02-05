@@ -249,5 +249,5 @@ can attach Safari 8.0 to the app running within the iOS 8 Simulator.
 [CDVCommandDelegate.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVCommandDelegate.h
 [CDVPlugin.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPlugin.h
 [CDVPlugin.m]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPlugin.m
-[ResumeEvent]: ../../../cordova/events/events.html#link-resume
-[PauseEvent]: ../../../cordova/events/events.html#link-pause
+[ResumeEvent]: ../../../cordova/events/events.html#resume
+[PauseEvent]: ../../../cordova/events/events.html#pause

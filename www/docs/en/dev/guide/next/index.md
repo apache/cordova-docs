@@ -216,4 +216,4 @@ This Google Group was the old support forum when Cordova was still called PhoneG
 Consider finding a local Cordova/PhoneGap meetup group
 
 
-[DeviceReadyEvent]: ../../cordova/events/events.html#link-deviceready
+[DeviceReadyEvent]: ../../cordova/events/events.html#deviceready

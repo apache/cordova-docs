@@ -558,5 +558,5 @@ you're building:
         $ cordova platform update ios
         ...etc.
 
-[DeviceReadyEvent]: ../../cordova/events/events.html#link-deviceready
-[BackButtonEvent]: ../../cordova/events/events.html#link-backbutton
+[DeviceReadyEvent]: ../../cordova/events/events.html#deviceready
+[BackButtonEvent]: ../../cordova/events/events.html#backbutton
