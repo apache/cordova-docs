@@ -178,50 +178,15 @@ It is possible to configure the Gradle build by setting the values of certain
 [Gradle properties](https://docs.gradle.org/current/userguide/build_environment.html)
 that Cordova exposes. The following properties are available to be set:
 
-  * **cdvBuildMultipleApks** (default: false)
-
-      If this is set, then multiple APK files will be generated: One per native
-      platform supported by library projects (x86, ARM, etc). This can be important
-      if your project uses large native libraries, which can drastically increase
-      the size of the generated APK.
-
-      If not set, then a single APK will be generated which can be used on all devices.
-
-  * **cdvVersionCode**
-
-    Overrides the versionCode set in `AndroidManifest.xml`
-
-  * **cdvReleaseSigningPropertiesFile** (default: release-signing.properties)
-
-      Path to a .properties file that contains signing information for release builds.
-      The file should look like:
-      ```
-      storeFile=relative/path/to/keystore.p12
-      storePassword=SECRET1
-      storeType=pkcs12
-      keyAlias=DebugSigningKey
-      keyPassword=SECRET2
-      ```
-
-      `storePassword` and `keyPassword` are optional, and will be prompted for if omitted.
-
-  * **cdvDebugSigningPropertiesFile** (default: debug-signing.properties)
-
-    Same as cdvReleaseSigningPropertiesFile, but for debug builds. Useful when you need
-    to share a signing key with other developers.
-
-  * **cdvMinSdkVersion**
-
-      Overrides the value of `minSdkVersion` set in `AndroidManifest.xml`. Useful when
-      creating multiple APKs based on SDK version.
-
-  * **cdvBuildToolsVersion**
-
-      Override the automatically detected `android.buildToolsVersion` value.
-
-  * **cdvCompileSdkVersion**
-
-      Override the automatically detected `android.compileSdkVersion` value.
+| Property                          | Description
+|-----------------------------------|-------------------------------------------
+| `cdvBuildMultipleApks`            | If this is set, then multiple APK files will be generated: One per native platform supported by library projects (x86, ARM, etc). This can be important if your project uses large native libraries, which can drastically increase the size of the generated APK. If not set, then a single APK will be generated which can be used on all devices
+| `cdvVersionCode`                  | Overrides the versionCode set in `AndroidManifest.xml`
+| `cdvReleaseSigningPropertiesFile` | *Default: `release-signing.properties`*<br>Path to a .properties file that contains signing information for release builds (see [Signing an App](#link-signing-an-app))
+| `cdvDebugSigningPropertiesFile`   | *Default: `debug-signing.properties`*<br>Path to a .properties file that contains signing information for debug builds (see [Signing an App](#link-signing-an-app)). Useful when you need to share a signing key with other developers
+| `cdvMinSdkVersion`                | Overrides the value of `minSdkVersion` set in `AndroidManifest.xml`. Useful when creating multiple APKs based on SDK version
+| `cdvBuildToolsVersion`            | Overrides the automatically detected `android.buildToolsVersion` value
+| `cdvCompileSdkVersion`            | Overrides the automatically detected `android.compileSdkVersion` value
 
 You can set these properties in one of four ways:
 
@@ -291,30 +256,22 @@ Note that plugins can also include `build-extras.gradle` files via:
 
 First, you should read the [Android app signing requirements](http://developer.android.com/tools/publishing/app-signing.html).
 
+### Using Flags
+
 To sign an app, you need the following parameters:
 
-  * **Keystore** (`--keystore`)
-
-      Path to a binary file which can hold a set of keys.
-
-  * **Keystore password** (`--storePassword`)
-
-      Password to the keystore.
-
-  * **Alias** (`--alias`)
-
-      The id specifying the private key used for singing.
-
-  * **Password** (`--password`)
-
-      Password for the private key specified.
-
-  * **Type of the keystore** (`--keystoreType`)
-
-      Either pkcs12 or jks (Default: auto-detect based on file extension).
+| Parameter             | Flag              | Description
+|-----------------------|-------------------|-----------------------------------
+| Keystore              | `--keystore`      | Path to a binary file which can hold a set of keys
+| Keystore Password     | `--storePassword` | Password to the keystore
+| Alias                 | `--alias`         | The id specifying the private key used for singing
+| Password              | `--password`      | Password for the private key specified
+| Type of the Keystore  | `--keystoreType`  | *Default: auto-detect based on file extension*<br>Either pkcs12 or jks
 
 These parameters can be specified using the command line arguments above to
 the [Cordova CLI](../../cli/index.html) `build` or `run` commands.
+
+### Using build.json
 
 Alternatively, you could specify them in a build configuration file (`build.json`)
 using the `--buildConfig` argument to the same commands. Here's a sample of a
@@ -345,6 +302,23 @@ prompt asking for the password.
 There is also support to mix and match command line arguments and parameters in
 `build.json`. Values from the command line arguments will get precedence.
 This can be useful for specifying passwords on the command line.
+
+### Using Gradle
+
+You can also specify signing properties by including a `.properties` file and
+pointing to it with the `cdvReleaseSigningPropertiesFile` and
+`cdvDebugSigningPropertiesFile` Gradle properties (see [Setting Gradle Properties](#link-setting-gradle-properties)).
+The file should look like this:
+
+```
+storeFile=relative/path/to/keystore.p12
+storePassword=SECRET1
+storeType=pkcs12
+keyAlias=DebugSigningKey
+keyPassword=SECRET2
+```
+
+`storePassword` and `keyPassword` are optional, and will be prompted for if omitted.
 
 
 ## Debugging
