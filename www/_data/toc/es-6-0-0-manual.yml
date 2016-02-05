@@ -1,19 +1,19 @@
-- {name: "Gu\xEDas", url: !!python/unicode '/docs/es/6.0.0/'}
-- {name: !!python/unicode 'Resumen', url: !!python/unicode '/docs/es/6.0.0/guide/overview/index.html'}
-- {name: !!python/unicode 'Soporte de plataformas', url: !!python/unicode '/docs/es/6.0.0/guide/support/index.html'}
-- {name: !!python/unicode 'La interfaz de linea de comandos', url: !!python/unicode '/docs/es/6.0.0/guide/cli/index.html'}
-- {name: "Gu\xEDas de plataformas", url: !!python/unicode '/docs/es/6.0.0/guide/platforms/index.html'}
-- {name: !!python/unicode 'Utilizando Plugman para administrar Plugins', url: !!python/unicode '/docs/es/6.0.0/plugin_ref/plugman.html'}
-- {name: !!python/unicode 'El archivo config.xml', url: !!python/unicode '/docs/es/6.0.0/config_ref/index.html'}
-- {name: !!python/unicode 'Incrustar WebViews', url: !!python/unicode '/docs/es/6.0.0/guide/hybrid/webviews/index.html'}
-- {name: "Gu\xEDa de desarrollo de plugin", url: !!python/unicode '/docs/es/6.0.0/guide/hybrid/plugins/index.html'}
-- {name: "Especificaci\xf3n de plugin", url: !!python/unicode '/docs/es/6.0.0/plugin_ref/spec.html'}
-- {name: "Gu\xEDa de privacidad", url: !!python/unicode '/docs/es/6.0.0/guide/appdev/privacy/index.html'}
-- {name: "Gu\xEDa de seguridad", url: !!python/unicode '/docs/es/6.0.0/guide/appdev/security/index.html'}
-- {name: "Plataformas y gesti\xF3n de versiones de Plugins", url: !!python/unicode '/docs/es/6.0.0/platform_plugin_versioning_ref/index.html'}
-- {name: "Gu\xEDa de lista blanca", url: !!python/unicode '/docs/es/6.0.0/guide/appdev/whitelist/index.html'}
-- {name: "Almacenamiento de informaci\xF3n", url: !!python/unicode '/docs/es/6.0.0/cordova/storage/storage.html'}
-- {name: "Ganchos de gu\xEDa", url: !!python/unicode '/docs/es/6.0.0/guide/appdev/hooks/index.html'}
-- {name: !!python/unicode 'Eventos', url: !!python/unicode '/docs/es/6.0.0/cordova/events/events.html'}
-- {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/es/6.0.0/cordova/plugins/pluginapis.html'}
-- {name: "\xCDndice de palabra clave", url: !!python/unicode '/docs/es/6.0.0/page_index.html'}
+- {name: "Gu\xEDas", url: !!python/unicode ''}
+- {name: !!python/unicode 'Resumen', url: !!python/unicode 'guide/overview/index.html'}
+- {name: !!python/unicode 'Soporte de plataformas', url: !!python/unicode 'guide/support/index.html'}
+- {name: !!python/unicode 'La interfaz de linea de comandos', url: !!python/unicode 'guide/cli/index.html'}
+- {name: "Gu\xEDas de plataformas", url: !!python/unicode 'guide/platforms/index.html'}
+- {name: !!python/unicode 'Utilizando Plugman para administrar Plugins', url: !!python/unicode 'plugin_ref/plugman.html'}
+- {name: !!python/unicode 'El archivo config.xml', url: !!python/unicode 'config_ref/index.html'}
+- {name: !!python/unicode 'Incrustar WebViews', url: !!python/unicode 'guide/hybrid/webviews/index.html'}
+- {name: "Gu\xEDa de desarrollo de plugin", url: !!python/unicode 'guide/hybrid/plugins/index.html'}
+- {name: "Especificaci\xf3n de plugin", url: !!python/unicode 'plugin_ref/spec.html'}
+- {name: "Gu\xEDa de privacidad", url: !!python/unicode 'guide/appdev/privacy/index.html'}
+- {name: "Gu\xEDa de seguridad", url: !!python/unicode 'guide/appdev/security/index.html'}
+- {name: "Plataformas y gesti\xF3n de versiones de Plugins", url: !!python/unicode 'platform_plugin_versioning_ref/index.html'}
+- {name: "Gu\xEDa de lista blanca", url: !!python/unicode 'guide/appdev/whitelist/index.html'}
+- {name: "Almacenamiento de informaci\xF3n", url: !!python/unicode 'cordova/storage/storage.html'}
+- {name: "Ganchos de gu\xEDa", url: !!python/unicode 'guide/appdev/hooks/index.html'}
+- {name: !!python/unicode 'Eventos', url: !!python/unicode 'cordova/events/events.html'}
+- {name: !!python/unicode 'Plugin APIs', url: !!python/unicode 'cordova/plugins/pluginapis.html'}
+- {name: "\xCDndice de palabra clave", url: !!python/unicode 'page_index.html'}
