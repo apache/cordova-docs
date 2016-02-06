@@ -36,6 +36,7 @@ PROD_DIR   = build-prod
 CONFIG_DIR = conf
 
 DOCS_DIR         = $(SRC_DIR)/docs
+FETCH_DIR        = $(DOCS_DIR)/en/dev/gen
 DATA_DIR         = $(SRC_DIR)/_data
 TOC_DIR          = $(DATA_DIR)/toc
 STATIC_DIR       = $(SRC_DIR)/static
@@ -66,6 +67,7 @@ MAIN_CONFIG         = $(CONFIG_DIR)/_config.yml
 DEV_CONFIG          = $(CONFIG_DIR)/_dev.yml
 PROD_CONFIG         = $(CONFIG_DIR)/_prod.yml
 DOCS_EXCLUDE_CONFIG = $(CONFIG_DIR)/_nodocs.yml
+FETCH_CONFIG        = $(DATA_DIR)/fetched-files.yml
 PLUGINS_SRC         = $(PLUGINS_SRC_DIR)/app.js
 VERSION_FILE        = VERSION
 
@@ -129,7 +131,7 @@ help usage default:
 	@echo "    NODOCS: (defined or undefined) - excludes docs from build"
 	@echo ""
 
-data: $(TOC_FILES) $(DOCS_VERSION_DATA)
+data: fetch $(TOC_FILES) $(DOCS_VERSION_DATA)
 configs: $(DEFAULTS_CONFIG) $(VERSION_CONFIG)
 styles: $(STYLES)
 plugins: $(PLUGINS_APP)
@@ -156,6 +158,11 @@ install:
 
 serve:
 	cd $(DEV_DIR) && python -m SimpleHTTPServer 8000
+
+$(FETCH_DIR): $(FETCH_CONFIG) $(BIN_DIR)/fetch_docs.js
+	$(NODE) $(BIN_DIR)/fetch_docs.js $(FETCH_CONFIG) $(FETCH_DIR)
+
+fetch: $(FETCH_DIR)
 
 # real targets
 # NOTE:

@@ -183,6 +183,19 @@ analytics_id: UA-64283057-1
 
         {% endif %}
 
+        {% if page.plugin_name and page.plugin_version %}
+            <div class="alert alert-warning docs-alert" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                This documentation is for the version: {{ page.plugin_name }}:{{ page.plugin_version }}.
+                <a href="https://github.com/{{ page.plugin_name }}/releases">
+                    Visit Github for other versions.
+                </a>
+            </div>
+
+        {% endif %}
+
         <div id="page-toc-source">
             {{ content }}
         </div>
