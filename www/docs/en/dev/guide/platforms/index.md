@@ -45,7 +45,6 @@ a lower-level alternative to the `cordova` command-line utility.
 * [Android Platform Guide](android/index.html)
 * [Android Plugins](android/plugin.html)
 * [Android WebViews](android/webview.html)
-* [Android Lifecycle Guide](android/lifecycle.html)
 
 ## BlackBerry 10
 
