@@ -58,10 +58,6 @@ a lower-level alternative to the `cordova` command-line utility.
 * [BlackBerry 10 Plugins](blackberry10/plugin.html)
 * [Upgrading BlackBerry](blackberry/upgrade.html) 10
 
-## Firefox OS
-
-* [Firefox OS Platform Guide](firefoxos/index.html)
-
 ## iOS
 
 * [iOS Platform Guide](ios/index.html)

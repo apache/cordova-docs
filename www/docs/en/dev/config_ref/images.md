@@ -71,12 +71,6 @@ BlackBerry10
 See BlackBerry's documentation for targeting multiple sizes and locales.
 [http://developer.blackberry.com/html5/documentation/icon_element.html]
 
-Firefox OS
-
-         <platform name="firefoxos">
-                  <icon src="res/ff/logo.png" width="60" height="60" />
-         </platform>
-
 iOS
 
          <platform name="ios">

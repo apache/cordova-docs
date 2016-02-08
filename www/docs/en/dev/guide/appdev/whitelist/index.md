@@ -135,26 +135,6 @@ ways:
 (For more information on support, see BlackBerry's documentation on the
 [access element][8].)
 
-## Firefox OS
-
-In Firefox OS there is no concept of whitelisting a specific domain. Instead
-there is a special permission called
-[SystemXHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Permissions).
-There is a need to add this permission to `config.xml`:
-
-	<platform name="firefoxos">
-		<permission name="systemXHR" privileged="true" description="load data from server" />
-	</platform>
-
-The `XMLHttpRequest` object needs to be instantiated with two parameters
-`mozAnon` and `mozSystem`:
-
-	var request = new XMLHttpRequest({
-		mozAnon: true,
-		mozSystem: true});
-
-This solution is transparent so there is no difference for other platforms.
-
 ## Windows Phone Whitelisting
 
 The whitelisting rules for Windows Phone 8 are found in the
