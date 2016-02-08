@@ -40,13 +40,6 @@ configuration options, instructions to add plugins, how to upgrade
 each platform, and platform-specific command-line tools that serve as
 a lower-level alternative to the `cordova` command-line utility.
 
-## Amazon Fire OS
-
-* [Amazon Fire OS Platform Guide](amazonfireos/index.html)
-* [Amazon Fire OS Configuration](amazonfireos/config.html)
-* [Amazon Fire OS WebViews](amazonfireos/webview.html)
-* [Amazon Fire OS Plugins](amazonfireos/plugin.html)
-
 ## Android
 
 * [Android Platform Guide](android/index.html)

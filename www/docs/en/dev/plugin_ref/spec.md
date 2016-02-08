@@ -83,7 +83,7 @@ example:
         <engine name="cordova" version="<1.8.1" />
     </engines>
 
-The `<engine>` tags also has default support for all of the main platforms Cordova exists on. 
+The `<engine>` tags also has default support for all of the main platforms Cordova exists on.
 Specifying the `cordova` engine tag means that all versions of Cordova on any platform must
 satisfy the engine version attribute. You may also list specific platforms and their versions
 in order to override the catch-all `cordova` engine:
@@ -98,18 +98,17 @@ Here's a list of the default engines that the `<engine>` tag supports:
 
 * `cordova`
 * `cordova-plugman`
-* `cordova-amazon-fireos`
 * `cordova-android`
 * `cordova-ios`
 * `cordova-blackberry10`
 * `cordova-wp8`
 * `cordova-windows8`
 * `android-sdk` // returns the highest Android api level installed
-* `apple-xcode` // returns the xcode version 
+* `apple-xcode` // returns the xcode version
 * `apple-ios` // returns the highest iOS version installed
 * `apple-osx` // returns the OSX version
 * `blackberry-ndk` // returns the native blackberry SDK version
-        
+
 Specifying custom Apache Cordova-based frameworks should be listed under the engine tag like so:
 
     <engines>
@@ -118,18 +117,18 @@ Specifying custom Apache Cordova-based frameworks should be listed under the eng
         <engine name="even_more_framework" version=">=2.2.0" platform="*" scriptSrc="path_to_even_more_framework_version"/>
     </engines>
 
-A custom Apache Cordova-based framework requires that an engine element includes the following attributes: 
-`name`, `version`, `scriptSrc`, and `platform`. 
+A custom Apache Cordova-based framework requires that an engine element includes the following attributes:
+`name`, `version`, `scriptSrc`, and `platform`.
 
-* `name` (required): A human-readable name for your custom framework. 
+* `name` (required): A human-readable name for your custom framework.
 
 * `version` (required): The version that your framework must have in order to install.
 
-* `scriptSrc` (required): The script file that tells plugman what version of the custom framework is. 
+* `scriptSrc` (required): The script file that tells plugman what version of the custom framework is.
 Ideally, this file should be within the top level directory of your plugin directory.
 
 * `platform` (required): Which platforms that your framework supports. You may use the wildcard `*`
-to say supported for all platforms, specify multiple with a pipe character like `android|ios|blackberry10` 
+to say supported for all platforms, specify multiple with a pipe character like `android|ios|blackberry10`
 or just a single platform like `android`.
 
 plugman aborts with a non-zero code for any plugin whose target
@@ -190,7 +189,7 @@ Web-only plugins contains mostly `<asset>` elements. Any `<asset>`
 elements that are nested within `<platform>` elements specify
 platform-specific web assets, as described below. Attributes include:
 
-* `src` (required): 
+* `src` (required):
   Where the file or directory is located in the plugin package,
   relative to the `plugin.xml` document.  If a file does not exist at
   the specified `src` location, plugman stops and reverses the
@@ -345,7 +344,6 @@ associating the element's children with that platform.
 Platform names should be lowercase. Platform names, as arbitrarily
 chosen, are listed:
 
-* amazon-fireos
 * android
 * blackberry10
 * ios
@@ -476,7 +474,7 @@ Examples of using these Windows specific attributes:
         <DeviceCapability Name="webcam" />
     </config-file>
 
-The above example will set pre-8.1 platforms (Windows 8, specifically) to require the `webcam` device capability and the `picturesLibrary` general capability, and apply the `webcam` device capability only to Windows 8.1 projects that build for Windows Phone.  Windows desktop 8.1 systems are unmodified. 
+The above example will set pre-8.1 platforms (Windows 8, specifically) to require the `webcam` device capability and the `picturesLibrary` general capability, and apply the `webcam` device capability only to Windows 8.1 projects that build for Windows Phone.  Windows desktop 8.1 systems are unmodified.
 
 ## _plugins-plist_ Element
 

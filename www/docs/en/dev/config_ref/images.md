@@ -52,15 +52,6 @@ which will be used for all platforms.
 For each platform you can also define a pixel-perfect icons set to fit
 different screen resolutions.
 
-Amazon Fire OS
-
-         <platform name="amazon-fireos">
-                  <icon src="res/android/ldpi.png" density="ldpi" />
-                  <icon src="res/android/mdpi.png" density="mdpi" />
-                  <icon src="res/android/hdpi.png" density="hdpi" />
-                  <icon src="res/android/xhdpi.png" density="xhdpi" />
-         </platform>
-
 Android
 
          <platform name="android">
@@ -202,5 +193,3 @@ As of now (Cordova 3.5.0 July 2014) the following platforms support splash scree
 
   Apache Cordova also offers special splash screen plugin which could be used to programmatically display and hide a splash screen during application launch
   https://github.com/apache/cordova-plugin-splashscreen
-
-

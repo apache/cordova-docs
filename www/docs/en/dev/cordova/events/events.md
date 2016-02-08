@@ -22,7 +22,7 @@ title: Events
 
 # Events
 
-There are various events provided by cordova to be used by the application. 
+There are various events provided by cordova to be used by the application.
 The application code could add listeners for these events. For example:
 
 **HTML File**
@@ -54,7 +54,7 @@ The application code could add listeners for these events. For example:
         document.addEventListener("pause", onPause, false);
         document.addEventListener("resume", onResume, false);
         document.addEventListener("menubutton", onMenuKeyDown, false);
-        // Add similar listeners for other events 
+        // Add similar listeners for other events
     }
 
     function onPause() {
@@ -72,7 +72,7 @@ The application code could add listeners for these events. For example:
     // Add similar event handlers for other events
 
 **Note**: Applications typically should use `document.addEventListener` to
-attach an event listener once the [deviceready](#link-deviceready) 
+attach an event listener once the [deviceready](#link-deviceready)
 event fires.
 
 The following table lists the cordova events and the supported platforms:
@@ -84,7 +84,6 @@ The following table lists the cordova events and the supported platforms:
 <thead>
     <tr>
         <th>Supported Platforms/<br/>Events</td>
-        <th>amazon-fireos</th>
         <th>android</th>
         <th>blackberry10</th>
         <th>ios</th>
@@ -96,7 +95,6 @@ The following table lists the cordova events and the supported platforms:
 <tbody>    
     <tr>
         <th><a href="#link-deviceready">deviceready</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -106,7 +104,6 @@ The following table lists the cordova events and the supported platforms:
 
     <tr>
         <th><a href="#link-pause">pause</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -116,7 +113,6 @@ The following table lists the cordova events and the supported platforms:
 
     <tr>
         <th><a href="#link-resume">resume</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -126,7 +122,6 @@ The following table lists the cordova events and the supported platforms:
 
     <tr>
         <th><a href="#link-backbutton">backbutton</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
@@ -136,7 +131,6 @@ The following table lists the cordova events and the supported platforms:
 
     <tr>
         <th><a href="#link-menubutton">menubutton</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
@@ -146,7 +140,6 @@ The following table lists the cordova events and the supported platforms:
 
     <tr>
         <th><a href="#link-searchbutton">searchbutton</a></th>
-        <td data-col="amazon-fireos" class="n"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="n"></td>
@@ -156,7 +149,6 @@ The following table lists the cordova events and the supported platforms:
 
     <tr>
         <th><a href="#link-startcallbutton">startcallbutton</a></th>
-        <td data-col="amazon-fireos" class="n"></td>
         <td data-col="android"    class="n"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
@@ -166,7 +158,6 @@ The following table lists the cordova events and the supported platforms:
 
     <tr>
         <th><a href="#link-endcallbutton">endcallbutton</a></th>
-        <td data-col="amazon-fireos" class="n"></td>
         <td data-col="android"    class="n"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
@@ -176,7 +167,6 @@ The following table lists the cordova events and the supported platforms:
 
     <tr>
         <th><a href="#link-volumedownbutton">volumedownbutton</a></th>
-        <td data-col="amazon-fireos" class="n"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
@@ -186,7 +176,6 @@ The following table lists the cordova events and the supported platforms:
 
     <tr>
         <th><a href="#link-volumeupbutton">volumeupbutton</a></th>
-        <td data-col="amazon-fireos" class="n"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
@@ -201,8 +190,8 @@ The following table lists the cordova events and the supported platforms:
 
 ## deviceready
 
-The deviceready event fires when Cordova is fully loaded. This event is 
-essential to any application. It signals that Cordova's device APIs have 
+The deviceready event fires when Cordova is fully loaded. This event is
+essential to any application. It signals that Cordova's device APIs have
 loaded and are ready to access.
 
 Cordova consists of two code bases: native and JavaScript. While the
@@ -230,7 +219,7 @@ callback function called immediately.
 
 ## pause
 
-The pause event fires when the native platform puts the application into the background, 
+The pause event fires when the native platform puts the application into the background,
 typically when the user switches to a different application.
 
 ### Quick Example
@@ -288,7 +277,7 @@ iOS 5 that have multi-tasking enabled are pushed to the background.
 For apps to remain running when locked under iOS 5, disable the app's
 multi-tasking by setting [UIApplicationExitsOnSuspend][UIApplicationExitsOnSuspend]
 to `YES`. To run when locked on iOS 4, this setting does not matter.
-    
+
 - __resume__ event
 
     When called from a `resume` event handler, interactive functions such
@@ -309,7 +298,7 @@ the `resume` event.
 
 ## backbutton
 
-The event fires when the user presses the back button. To override the default 
+The event fires when the user presses the back button. To override the default
 back-button behavior, register an event listener for the `backbutton` event.
 It is no longer necessary to call any other method to override the
 back-button behavior.
@@ -324,7 +313,7 @@ back-button behavior.
 
 ## menubutton
 
-The event fires when the user presses the menu button. Applying an event handler 
+The event fires when the user presses the menu button. Applying an event handler
 overrides the default menu button behavior.
 
 ### Quick Example
@@ -337,8 +326,8 @@ overrides the default menu button behavior.
 
 ## searchbutton
 
-The event fires when the user presses the search button on Android. If you need to 
-override the default search button behavior on Android you can register an event 
+The event fires when the user presses the search button on Android. If you need to
+override the default search button behavior on Android you can register an event
 listener for the 'searchbutton' event.
 
 ### Quick Example
@@ -351,7 +340,7 @@ listener for the 'searchbutton' event.
 
 ## startcallbutton
 
-The event fires when the user presses the start call button. If you need to override 
+The event fires when the user presses the start call button. If you need to override
 the default start call behavior you can register an event listener for the `startcallbutton` event.
 
 ### Quick Example
@@ -364,7 +353,7 @@ the default start call behavior you can register an event listener for the `star
 
 ## endcallbutton
 
-This event fires when the user presses the end call button. The event overrides the 
+This event fires when the user presses the end call button. The event overrides the
 default end call behavior.
 
 ### Quick Example
@@ -377,7 +366,7 @@ default end call behavior.
 
 ## volumedownbutton
 
-The event fires when the user presses the volume down button. If you need to override 
+The event fires when the user presses the volume down button. If you need to override
 the default volume down behavior you can register an event listener for the `volumedownbutton` event.
 
 ### Quick Example
@@ -390,7 +379,7 @@ the default volume down behavior you can register an event listener for the `vol
 
 ## volumeupbutton
 
-The event fires when the user presses the volume up button. If you need to override 
+The event fires when the user presses the volume up button. If you need to override
 the default volume up behavior you can register an event listener for the `volumeupbutton` event.
 
 ### Quick Example
