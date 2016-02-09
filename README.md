@@ -131,6 +131,58 @@ Alternatively, to dynamically rebuild the site and refresh the browser _when cha
 
     node_modules/.bin/gulp watch
 
+## Redirects
+
+Sometimes docs pages get removed, renamed, and added. There is [a file][redirects] that contains redirects for such occasions. It has three sections:
+
+- `docs-global`: redirects across all docs versions and languages,
+- `docs`: version-specific docs redirects, and
+- `general`: single-page redirects.
+
+For non-docs URIs, there are no versioning considerations. Make redirects like so:
+
+    general:
+        - {old: "old/uri/for/page.html", new: "its/new/uri.html"}
+
+**NOTE**: Review (and test, if possible) these redirects before making them live, since they're permanent (HTTP 302) redirects. Incorrect permanent redirects will make a URI very hard to bring back into browsers and search indices.
+
+There are five cases of changing URIs:
+
+1. Adding a brand new (no past equivalent) URI starting at a version,
+2. Removing an old URI (with no replacement) starting at a version,
+3. Renaming (removing and adding) an existing URI starting at a version,
+4. Renaming an existing URI across all versions,
+5. Removing an existing URI across all versions.
+
+### Case 1: Adding a URI starting at a version
+
+Do nothing. Going back in time for new docs is unsupported.
+
+### Cases 2 &amp; 3: Removing or renaming a URI starting at a version
+
+If the URI is removed, mark it as deprecated in `latest/` like so:
+
+    docs:
+        - {old: "latest/old/uri/for/page.html", new: "deprecated.html"}
+
+If the URI is moved, point it to its new location in `latest/` like so:
+
+    docs:
+        - {old: "latest/old/uri/for/page.html", new: "latest/its/new/uri.html"}
+
+These will handle the case where the "this content is outdated" link is clicked. The case where a user jumps to a specific version is not yet supported.
+
+### Case 4: Renaming a URI across all versions
+
+Add the redirect (in the `docs-global` section this time) like so:
+
+    docs-global:
+        - {old: "old/uri/for/page.html", new: "its/new/uri.html"}
+
+### Case 5: Removing a URI across all versions
+
+Do nothing. It is now an un-URI. It never existed. Mentioning it is thoughtcrime.
+
 Deploying
 =========
 
@@ -329,3 +381,4 @@ Please ask for help on the Slack channel. Join at [slack.cordova.io](http://slac
 [python_installer_mac]: https://www.python.org/ftp/python/2.7.11/python-2.7.11-macosx10.6.pkg
 [python_installer_windows]: https://www.python.org/ftp/python/2.7.11/python-2.7.11.amd64.msi
 [python_linux]: http://docs.python-guide.org/en/latest/starting/install/linux/
+[redirects]: www/_docs/redirects.yml
