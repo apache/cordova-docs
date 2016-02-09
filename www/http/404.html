@@ -1,22 +1,42 @@
 ---
-layout: cordova
+license: >
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+layout: page
 title: Page Not Found
 permalink: 404.html
 priority: 0.1
 ---
 
-<div class="not-found-container">
-    <div class="not-found-header">
-        <h1>404: Not Found</h1>
-    </div>
-    <div id="not-found-redirect-alert" class="not-found-redirect">
-        <div class="alert alert-warning" role="alert">It looks like the content has <em>moved</em> <a id="new-redirect-link">here</a>.</div>
-    </div>
-    <div id="no-version-redirect-alert" class="not-found-redirect">
-        <div class="alert alert-warning" role="alert">It looks like this version <em>isn't translated</em>. The in-development version is <a id="dev-redirect-link">here</a>.</div>
-    </div>
-    <div id="no-page-redirect-alert" class="not-found-redirect">
-        <div class="alert alert-warning" role="alert">It looks like this page <em>doesn't exist in this version</em> of the docs. The main page for this version is <a id="root-redirect-link">here</a>.</div>
+<div class="whole-page-content vertical-center-parent not-found">
+    <div class="vertical-center-child">
+        <h1 class="not-found-header">
+            404: Not Found
+        </h1>
+        <div id="not-found-redirect-alert" class="not-found-redirect">
+            <div class="alert alert-warning" role="alert">It looks like the content has <em>moved</em> <a id="new-redirect-link">here</a>.</div>
+        </div>
+        <div id="no-version-redirect-alert" class="not-found-redirect">
+            <div class="alert alert-warning" role="alert">It looks like this version <em>isn't translated</em>. The in-development version is <a id="dev-redirect-link">here</a>.</div>
+        </div>
+        <div id="no-page-redirect-alert" class="not-found-redirect">
+            <div class="alert alert-warning" role="alert">It looks like this page <em>doesn't exist in this version</em> of the docs. The main page for this version is <a id="root-redirect-link">here</a>.</div>
+        </div>
     </div>
 </div>
 <script type="text/javascript" src="{{ site.baseurl }}/static/js/404.js" defer></script>
