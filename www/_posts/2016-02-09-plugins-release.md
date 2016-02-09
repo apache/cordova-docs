@@ -23,7 +23,7 @@ You can update any plugin by removing it, and then re-adding it.
  E.g. To update your media plugin:
 
     cordova plugin rm cordova-plugin-media --save
-    cordova plugin add cordova-plugin-media --save
+    cordova plugin add cordova-plugin-media@2.2.0 --save
 
 Changes include:
 <!--more-->
