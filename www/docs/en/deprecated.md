@@ -18,6 +18,17 @@ license: >
     under the License.
 
 title: Deprecated Content
+layout: page
+priority: 0.1
 ---
 
-Sorry, this content is deprecated!
+<div class="whole-page-content vertical-center-parent deprecated">
+    <div class="vertical-center-child">
+        <h1>
+            This content is deprecated in the latest docs (version {{ site.latest_docs_version }}).
+        </h1>
+        <h2>
+            To view the latest docs, go <a href="/docs/{{ page.language }}/latest/">here</a>.
+        </h2>
+    </div>
+</div>
