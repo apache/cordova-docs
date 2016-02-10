@@ -37,7 +37,7 @@ be built.  They will require Windows 10 at a minimum.
 
 ### Understanding Remote Mode vs. Local Mode ###
 Remote Mode is a new feature of the HTML Applications for Windows platform in Windows 10.  In
-Windows 8 and 8.1, HTML Applications worked in what is called "Local Mode" in Windows 10.  In
+Windows 8.1, HTML Applications worked in what is called "Local Mode" in Windows 10.  In
 Local Mode, HTML Applications have full access to the native Windows API surface and
 capabilities.  In order to prevent script injection attacks which could result in leaking
 personally-identifiable information due to malicious code, Local Mode disallows inline script,
@@ -82,8 +82,6 @@ app package to target.
 
 - `10.0`, `UAP`: Builds for Windows 10 Universal App Platform
 - `8.1`: Builds for Windows 8.1 or Windows Phone 8.1
-- `8.0`: Build for Windows 8.0.  Not valid for Windows Phone (use the **wp8** Cordova
-platform instead)
 
 **Scenarios**
 
@@ -103,7 +101,7 @@ elements with remote URIs.
 
 **Valid Values**
 
-- `ms-appx://` (Default for Windows 8.0, 8.1): The start page runs in the local context
+- `ms-appx://` (Default for Windows 8.1): The start page runs in the local context
 - `ms-appx-web://` (Default for Windows 10): The start page runs in the remote context
 
 #### {SDK}-MinVersion, {SDK}-MaxVersionTested ####

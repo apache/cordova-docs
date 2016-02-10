@@ -82,4 +82,4 @@ a lower-level alternative to the `cordova` command-line utility.
 * [Windows Platform Guide](win8/index.html)
 * [Windows Plugins](win8/plugin.html)
 * [Windows Packaging](win8/packaging.html)
-* [Upgrading Windows 8](win8/upgrade.html)
+* [Upgrading Windows](win8/upgrade.html)

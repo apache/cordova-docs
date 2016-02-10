@@ -102,7 +102,7 @@ Here's a list of the default engines that the `<engine>` tag supports:
 * `cordova-ios`
 * `cordova-blackberry10`
 * `cordova-wp8`
-* `cordova-windows8`
+* `cordova-windows`
 * `android-sdk` // returns the highest Android api level installed
 * `apple-xcode` // returns the xcode version
 * `apple-ios` // returns the highest iOS version installed
@@ -348,7 +348,7 @@ chosen, are listed:
 * blackberry10
 * ios
 * wp8
-* windows8
+* windows
 
 ## _source-file_ Element
 

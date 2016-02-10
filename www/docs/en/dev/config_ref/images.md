@@ -110,12 +110,12 @@ Windows Phone8
                   <icon src="res/wp/Background.png" width="159" height="159" />
          </platform>
 
-Windows8
+Windows
 
-         <platform name="windows8">
-                  <icon src="res/windows8/logo.png" width="150" height="150" />
-                  <icon src="res/windows8/smalllogo.png" width="30" height="30" />
-                  <icon src="res/windows8/storelogo.png" width="50" height="50" />
+         <platform name="windows">
+                  <icon src="res/windows/logo.png" width="150" height="150" />
+                  <icon src="res/windows/smalllogo.png" width="30" height="30" />
+                  <icon src="res/windows/storelogo.png" width="50" height="50" />
          </platform>
 
 ## Configuring Splash Screens in the CLI
@@ -159,15 +159,15 @@ You can name the source image whatever you like. The internal name in the app ar
         <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
     </platform>
 
-    <platform name="windows8">
+    <platform name="windows">
         <!-- images are determined by width and height. The following are supported -->
-        <splash src="res/screen/windows8/splashscreen.png" width="620" height="300"/>
+        <splash src="res/screen/windows/splashscreen.png" width="620" height="300"/>
     </platform>
 
     <platform name="blackberry10">
         <!-- Add a rim:splash element for each resolution and locale you wish -->
         <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
-        <rim:splash src="res/screen/windows8/splashscreen.png"/>
+        <rim:splash src="res/screen/blackberry10/splashscreen.png"/>
     </platform>
 
 
@@ -180,7 +180,7 @@ As of now (Cordova 3.5.0 July 2014) the following platforms support splash scree
     android
     ios
     wp8
-    windows8
+    windows
     blackberry10
 
 # Splashscreen Plugin

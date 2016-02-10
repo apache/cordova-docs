@@ -17,8 +17,17 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Upgrading Windows 8
+title: Upgrading Windows
 ---
+
+# Upgrading Windows
+
+Run `cordova platform update windows`.
+
+For projects not created with the cordova CLI, run:
+
+        bin\update <project_path>
+
 
 # Upgrading Windows 8
 
