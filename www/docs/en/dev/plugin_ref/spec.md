@@ -45,7 +45,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
 ### engines and engine
 
-  The child elements of the `<engines>` element specify versions of Apache Cordova-based frameworks that this plugin supports. CLI aborts with a non-zero code for any plugin whose target project does not meet the engine's constraints. If no <engine> tags are specified, CLI attempts to install into the specified cordova project directory blindly.
+  The child elements of the `<engines>` element specify versions of Apache Cordova-based frameworks that this plugin supports. The CLI aborts with a non-zero code for any plugin whose target project does not meet the engine's constraints. If no <engine> tags are specified, the CLI attempts to install into the specified cordova project directory blindly.
 
   Attributes(type) | Description
   ---------------- | ------------
@@ -137,8 +137,8 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
   Attributes(type) | Description
   ---------------- | ------------
-  src(string) | *Required* <br/>  Where the file or directory is located in the plugin package, relative to the `plugin.xml` document. If a file does not exist at the specified src location, CLI stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.
-  target(string) | *Required* <br/> Where the file or directory should be located in the Cordova app, relative to the `www` directory. If a file already exists at the target location, CLI stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.
+  src(string) | *Required* <br/>  Where the file or directory is located in the plugin package, relative to the `plugin.xml` document. If a file does not exist at the specified src location, the CLI stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.
+  target(string) | *Required* <br/> Where the file or directory should be located in the Cordova app, relative to the `www` directory. If a file already exists at the target location, the CLI stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.
 
   Examples: 
   ```
@@ -159,7 +159,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
   Attributes(type) | Description
   ---------------- | ------------
-  src(string) | References a file in the plugin directory relative to the `plugin.xml` file. If src does not resolve to an existing file, CLI stops and reverses the installation, issues a notification of the problem, and exits with a non-zero code.
+  src(string) | References a file in the plugin directory relative to the `plugin.xml` file. If src does not resolve to an existing file, the CLI stops and reverses the installation, issues a notification of the problem, and exits with a non-zero code.
   name(string) | Provides the last part of the module name. It can generally be whatever you like, and it only matters if you want to use cordova.require to import other parts of your plugins in your JavaScript code. The module name for a `<js-module>` is your plugin's id followed by the value of name.
 
   Example:
@@ -222,9 +222,9 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   Attributes(type) | Description
   ---------------- | ------------
   id(string) | Provides the ID of the plugin.
-  url(string) | A URL for the plugin. This should reference a git repository, which CLI attempts to clone.
+  url(string) | A URL for the plugin. This should reference a git repository, which the CLI attempts to clone.
   commit(string) | This is any git reference understood by `git checkout`: a branch or tag name (e.g., `master`, `0.3.1`), or a commit hash (e.g., `975ddb228af811dd8bb37ed1dfd092a3d05295f9`).
-  subdir(string) | Specifies that the targeted plugin dependency exists as a subdirectory of the git repository. This is helpful because it allows the repository to contain several related plugins, each specified individually. <br/> If you set the `url` of a `<dependency>` tag to `"."` and provide a `subdir`, the dependent plugin is installed from the same local or remote git repository as the parent plugin that specifies the `<dependency>` tag. <br/> Note that the `subdir` always specifies a path relative to the _root_ of the git repository, not the parent plugin. This is true even if you installed the plugin with a local path directly to it. CLI finds the root of the git repository and then finds the other plugin from there.
+  subdir(string) | Specifies that the targeted plugin dependency exists as a subdirectory of the git repository. This is helpful because it allows the repository to contain several related plugins, each specified individually. <br/> If you set the `url` of a `<dependency>` tag to `"."` and provide a `subdir`, the dependent plugin is installed from the same local or remote git repository as the parent plugin that specifies the `<dependency>` tag. <br/> Note that the `subdir` always specifies a path relative to the _root_ of the git repository, not the parent plugin. This is true even if you installed the plugin with a local path directly to it.The CLI finds the root of the git repository and then finds the other plugin from there.
   version(string) | The version of the plugin depended on. Semver syntax is supported.
 
   Examples:
@@ -254,7 +254,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
   Attributes(type) | Description
   ---------------- | ------------
-  src(string) | *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
+  src(string) | *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
   target-dir(string) | A directory into which the files should be copied, relative to the root of the Cordova project. In practice, this is most important for Java-based platforms, where a file in the `com.alunny.foo` package must be located within the `com/alunny/foo` directory. For platforms where the source directory is not important, this attribute should be omitted.
   framework(boolean) | *Default: false* <br/> ==iOS== <br/> If set to true, also adds the specified file as a framework to the project.
   compiler-flags(string) | ==iOS== <br/> If set, assigns the specified compiler flags for the particular source file.
@@ -271,11 +271,11 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
 #### header-file
 
-  This is like `<source-file>` element but specifically for platforms such as iOS and android that distinguish between source files, headers, and resources. This is not supported by Windows. 
+  This is like `<source-file>` element but specifically for platforms such as iOS and Android that distinguish between source files, headers, and resources. This is not supported by Windows. 
 
   Attributes(type) | Description
   ---------------- | ------------
-  src(string) | *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
+  src(string) | *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
   target(string) | Path to where the file will be copied in your directory.
 
   Example:
@@ -287,11 +287,11 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
 #### resource-file
   
-  This is like `<source-file>` element, but specifically for platforms such as iOS and android that distinguish between source files, headers, and resources. 
+  This is like `<source-file>` element, but specifically for platforms such as iOS and Android that distinguish between source files, headers, and resources. 
 
   Attributes(type) | Description
   ---------------- | ------------
-  src(string) | *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
+  src(string) | *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
   target(string) | Path to where the file will be copied in your directory.
   arch(string) | ==windows== <br/> Allowed values: `x86`, `x64` or `ARM`. <br/> Indicates that the file should only be included when building for the specified architecture.
   device-target | ==windows== <br/> Allowed values: `win` (or `windows`), `phone` or `all`. <br/> Indicates that the file should only be included when building for the specified target device type.
@@ -299,12 +299,12 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
   Examples:
 
-  For android:
+  For Android:
   ```
   <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
   ```
 
-  For windows:
+  For Windows:
   ```
   <resource-file src="src/windows/win81/MobServices.pri" target="win81/MobServices.pri" device-target="windows" versions="8.1" arch="x64"/>
   ```
@@ -317,7 +317,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
   Attributes(type) | Description
   ---------------- | ------------
-  target(string) | The file to be modified, and the path relative to the root of the Cordova project. If the specified file does not exist, the tool ignores the configuration change and continues installation. <br/> The target can include wildcard (`*`) elements. In this case, CLI recursively searches through the project directory structure and uses the first match. <br/> On iOS, the location of configuration files relative to the project directory root is not known, so specifying a target of `config.xml` resolves to `cordova-ios-project/MyAppName/config.xml`.
+  target(string) | The file to be modified, and the path relative to the root of the Cordova project. If the specified file does not exist, the tool ignores the configuration change and continues installation. <br/> The target can include wildcard (`*`) elements. In this case, the CLI recursively searches through the project directory structure and uses the first match. <br/> On iOS, the location of configuration files relative to the project directory root is not known, so specifying a target of `config.xml` resolves to `cordova-ios-project/MyAppName/config.xml`.
   parent(string) | An XPath selector referencing the parent of the elements to be added to the config file. If you use absolute selectors, you can use a wildcard (`*`) to specify the root element, e.g., `/*/plugins`. If the selector does not resolve to a child of the specified document, the tool stops and reverses the installation process, issues a warning, and exits with a non-zero code. <br/> For `plist` files, the `parent` determines under what parent key the specified XML should be inserted.
   after(string) | A prioritized list of accepted siblings after which to add the XML snippet. Useful for specifying changes in files which require strict ordering of XML elements like [this](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement).
   device-target(string) | ==windows== <br/> Allowed values: `win`, `phone`, `all`. <br/> Applicable when affecting the meta-name `package.appxmanifest`, this attribute indicates that the file should only be modified when building for the specified target device type.
@@ -374,7 +374,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
   Attributes(type) | Description
   ---------------- | ------------
-  src(string) | *Required* <br/> The location of the file relative to `plugin.xml`. If `src` can't be found, CLI stops and reverses the installation, issues a warning about the problem, and exits with a non-zero code. <br/> For Windows, it indicates the name of the SDK to include (which will be used as value of the `Include` attribute of the generated `<SDKReference>` element).
+  src(string) | *Required* <br/> The location of the file relative to `plugin.xml`. If `src` can't be found, the CLI stops and reverses the installation, issues a warning about the problem, and exits with a non-zero code. <br/> For Windows, it indicates the name of the SDK to include (which will be used as value of the `Include` attribute of the generated `<SDKReference>` element).
   arch(string) | The architecture for which the `.so` file has been built, either `device` or `simulator`. <br/> For Windows, it indicates that the `<SDKReference>` should only be included when building for the specified architecture. Supported values are `x86`, `x64` or `ARM`.
   device-target(string) | ==windows== <br/> Allowed values: `win` (or `windows`), `phone` or `all`. <br/> Indicates that the `<SDKReference>` should only be included when building for the specified target device type.
   versions(string) | ==windows== <br/> Indicates that the `<SDKReference>` should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
@@ -400,9 +400,9 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   Attributes(type) | Description
   ---------------- | ------------
   src(string) | *Required* <br/> The name of the system framework or the relative path to one which is included as part of your plugin files.
-  custom(boolean) | Is a boolean indicating whether the framework is one that is included as part of your plugin files.
-  weak(boolean) | *Default: false* <br/> Is a boolean indicating whether the framework should be weakly linked.
-  type(string) | Is a string indicating the type of framework to add. 
+  custom(boolean) | Indicates whether the framework is included as part of your plugin files.
+  weak(boolean) | *Default: false* <br/> Indicates whether the framework should be weakly linked.
+  type(string) | Indicates the type of framework to add. 
   parent(string) | *Default: .* <br/> Sets the relative path to the directory containing the sub-project to which to add the reference. The default, `.`, implies the application project.
   arch(string) | ==windows== <br/> Allowed values: `x86`, `x64` or `ARM`. <br/> Indicates that the framework should only be included when building for the specified architecture. 
   device-target(string) | ==windows== <br/> Allowed values: `win` (or `windows`), `phone` or `all`. <br/>  Indicates that the framework should only be included when building for the specified target device type.
@@ -449,7 +449,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
 ### info
 
-  Additional information provided to users. This is useful when you require extra steps that can't be easily automated or are beyond CLI's scope. The contents of this tag gets printed out when CLI installs the plugin.
+  Additional information provided to users. This is useful when you require extra steps that can't be easily automated or are beyond the CLI's scope. The contents of this tag gets printed out when the CLI installs the plugin.
 
   Example:
   ```
@@ -485,7 +485,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   <uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
   ```
 
-  CLI replaces variable references with the specified value, or the empty string if not found. The value of the variable reference may be detected (in this case, from the `AndroidManifest.xml` file) or specified by the user of the tool; the exact process is dependent on the particular tool.
+  The CLI replaces variable references with the specified value, or the empty string if not found. The value of the variable reference may be detected (in this case, from the `AndroidManifest.xml` file) or specified by the user of the tool; the exact process is dependent on the particular tool.
 
   Plugman can request users to specify a plugin's required variables. For example, API keys for C2M and Google Maps can be specified as a command-line argument:
 
@@ -499,7 +499,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
   As seen in the previous section, sometimes plugin might require user to specify values for their variables. To make those variable mandatory, the `<platform>` tag needs to contain
   a `<preference>` tag. 
-  CLI checks that these required preferences are passed in.  If not, it should warn the user how to pass the variable in and exit with a non-zero code.
+  The CLI checks that these required preferences are passed in.  If not, it should warn the user how to pass the variable in and exit with a non-zero code.
 
   Attributes(type) | Description
   ---------------- | ------------
