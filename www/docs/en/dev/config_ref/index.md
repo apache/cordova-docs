@@ -52,7 +52,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
 
 # widget
    Root element of the config.xml document.
-    
+
    Attributes(type) | Description
    ---------------- | ------------
    id(string) | *Required* <br/> Specifies the app's reverse-domain identifier, and the `version` its full version number expressed in major/minor/patch notation.
@@ -63,7 +63,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    packageName(string) | *Default: Cordova.Example* <br/> ==Windows== <br/> Package name for Windows.
    xmlns(string) | *Required* <br/> Namespace for the config.xml document.
    xmlns:cdv(string) | *Required* <br/> Namespace prefix.
-    
+
    Examples:
 
     <widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
@@ -90,20 +90,20 @@ platform. See [Icons and Splash Screens](images.html) for more information.
     <widget ...>
         <name>HelloCordova</name>
     </widget>
-    
+
 ## description
    Specifies metadata that may appear within app-store listings.
 
    Examples:
-   
+
     <widget ...>
         <description>A sample Apache Cordova application</description>
     </widget>
 
-    
+
 ## author
    Specifies contact information that may appear within app-store lisitngs.
-   
+
    Attributes(type) | Description
    ----------------- | ------------
    email(string) | *Required* <br/> Email of the author.
@@ -115,11 +115,11 @@ platform. See [Icons and Splash Screens](images.html) for more information.
         <author email="dev@cordova.apache.org" href="http://cordova.io"></author>
     </widget>
 
-    
+
 ## content
    Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily
    appears in a project's top-level ```www``` directory.
-   
+
    Attributes(type) | Description
    ----------------- | ------------
    src(string) | *Required* <br/> Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily
@@ -131,82 +131,85 @@ platform. See [Icons and Splash Screens](images.html) for more information.
         <content src="startPage.html"></content>
     </widget>
 
-    
+
 ## access
-   Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. 
-   See the Domain [Whitelist Guide](../guide/appdev/whitelist/index.html) for details. 
+   Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server.
+   See the Domain [Whitelist Guide](../guide/appdev/whitelist/index.html) for details.
 
    Attributes(type) | Description
    ----------------- | ------------
-   origin(string) | *Required* <br/> Defines the set of external domains the app is allowed to communicate with. 
-   The default value shown above allows it to access any server. 
-   See the Domain [Whitelist Guide](../guide/appdev/whitelist/index.html) for details. 
+   origin(string) | *Required* <br/> Defines the set of external domains the app is allowed to communicate with.
+   The default value shown above allows it to access any server.
+   See the Domain [Whitelist Guide](../guide/appdev/whitelist/index.html) for details.
 
    Examples:
 
     <widget ...>
         <access origin="*"></content>
     </widget>
-    
+
     <widget ...>
         <access origin="http://google.com"></content>
     </widget>
-    
-    
+
+
 ## allow-navigation
    Controls which URLs the WebView itself can be navigated to. Applies to top-level navigations only.
-   
+
    Attributes(type) | Description
    ----------------- | ------------
-   href(string) | *Required* <br/> Defines the set of external domains the WebView is allowed to navigate to. 
+   href(string) | *Required* <br/> Defines the set of external domains the WebView is allowed to navigate to.
    See the cordova-plugin-whitelist [cordova-plugin-whitelist](https://github.com/apache/cordova-plugin-whitelist#navigation-whitelist) for details.
-   
+
    Examples:
-   
+
     <!-- Allow links to example.com -->
     <allow-navigation href="http://example.com/*" />
 
     <!-- Wildcards are allowed for the protocol, as a prefix to the host, or as a suffix to the path -->
     <allow-navigation href="*://*.example.com/*" />
-   
+
 ## allow-intent
    Controls which URLs the app is allowed to ask the system to open. By default, no external URLs are allowed.
-   
+
    Attributes(type) | Description
    ----------------- | ------------
-   href(string) | *Required* <br/> Defines which URLs the app is allowed to ask the system to open. 
+   href(string) | *Required* <br/> Defines which URLs the app is allowed to ask the system to open.
    See the cordova-plugin-whitelist [cordova-plugin-whitelist](https://github.com/apache/cordova-plugin-whitelist#intent-whitelist) for details.  
-  
+
    Examples:
-   
+
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
-  
+
 ## engine
    Specifies what platform to restore during a prepare. For more details, see the [Platforms & Plugins Version Management](../platform_plugin_versioning_ref/index.html).
-   
+
    Attributes(type) | Description
    ----------------- | ------------
    name(string) | *Required* <br/> Name of the platform to be restored
    spec(string) | *Required* <br/> Version of the platform to be restored
-   
+
    Examples:
 
     <engine name="android" spec="^4.0.0" />
-    
+
 ## preference
    Sets various options as pairs of name/value attributes. Each preference's name is case-insensitive. Many preferences are unique to specific platforms,
    and will be indicated as such.  
 
    Attributes(type) | Description
    ----------------- | ------------
-   AllowInlineMediaPlayback(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to allow HTML5 media playback to appear inline within the screen layout, using browser-supplied controls rather than native controls. For this to work, add the webkit-playsinline attribute to any ```<video>``` elements. 
-   AndroidLaunchMode(string) | *Default: singleTop* <br/> Allowed values: standard, singleTop, singleTask, singleInstance <br/> ==Android== <br/> Sets the Activity android:launchMode attribute. This changes what happens when the app is launched from app icon or intent and is already running. 
+   AllowInlineMediaPlayback(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to allow HTML5 media playback to appear inline within the screen layout, using browser-supplied controls rather than native controls. For this to work, add the webkit-playsinline attribute to any ```<video>``` elements.
+   AndroidLaunchMode(string) | *Default: singleTop* <br/> Allowed values: standard, singleTop, singleTask, singleInstance <br/> ==Android== <br/> Sets the Activity android:launchMode attribute. This changes what happens when the app is launched from app icon or intent and is already running.
+   android-maxSdkVersion(integer) | *Default: Not Specified* <br/> ==Android== <br/> Sets the `maxSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
+   android-minSdkVersion(integer) | *Default: Dependent on cordova-android Version* <br/> ==Android== <br/> Sets the `minSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
+   android-targetSdkVersion(integer) | *Default: Dependent on cordova-android Version* <br/> ==Android== <br/> Sets the `targetSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
    AppendUserAgent(string) | ==Android== <br/> If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.
    AppendUserAgent(string) | ==iOS== <br/> If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.
-   BackgroundColor(string) | ==Android== ==BlackBerry== <br/> Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. 
+   BackgroundColor(string) | ==Android== ==BlackBerry== <br/> Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes.
    BackupWebStorage(string) | *Default: cloud* <br/> Allowed values: none, local, cloud. <br/> ==iOS== <br/>  Set to cloud to allow web storage data to backup via iCloud. Set to local to allow only local backups via iTunes sync. Set to none prevent web storage backups.
    ChildBrowser(string) | *Default: enable* <br/> ==BlackBerry== <br/> Disables child browser windows. By default, apps launch a secondary browser window to display resources accessed via window.open() or by specifying a _blank anchor target. Specify disable to override this default behavior.
    CordovaWebViewEngine(string) | *Default: CDVUIWebViewEngine* <br/> ==iOS== <br/> This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The 'value' here should match the 'feature' name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.
@@ -221,7 +224,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    InAppBrowserStorageEnabled (boolean) | *Default: true* <br/> ==Android== <br/> Controls whether pages opened within an InAppBrowser can access the same localStorage and WebSQL storage as pages opened with the default browser.
    KeepRunning(boolean) | *Default: true* <br/> ==Android== <br/> Determines whether the application stays running in the background even after a [pause](../../../cordova/events/events.pause.html) event fires. Setting this to false does not kill the app after a [pause](../../../cordova/events/events.pause.html) event, but simply halts execution of code within the cordova webview while the app is in the background.
    KeyboardDisplayRequiresUserAction(boolean) | *Default: true* <br/> ==iOS== <br/> Set to false to allow the keyboard to appear when calling focus() on form inputs.
-   LoadUrlTimeoutValue(number in milliseconds) | *Default: 20000, 20 seconds* <br/> ==Android== <br/> When loading a page, the amount of time to wait before throwing a timeout error. 
+   LoadUrlTimeoutValue(number in milliseconds) | *Default: 20000, 20 seconds* <br/> ==Android== <br/> When loading a page, the amount of time to wait before throwing a timeout error.
    LoadingDialog(string) | *Default: null* <br/> ==Android== <br/> If set, displays a dialog with the specified title and message, and a spinner, when loading the first page of an application. The title and message are separated by a comma in this value string, and that comma is removed before the dialog is displayed.
    LogLevel(string) | *Default: ERROR* <br/> Allowed values: ERROR, WARN, INFO, DEBUG, VERBOSE <br/> ==Android== <br/> Sets the minimum log level through which log messages from your application will be filtered.
    MediaPlaybackAllowsAirPlay(boolean) | *Default: true* <br/> ==iOS== <br/> Set to false to prevent Air Play from being used in this view. Available in default UIWebView and WKWebView.
@@ -240,14 +243,14 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    Suppresses3DTouchGesture(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to avoid 3D Touch capable iOS devices rendering a magnifying glass widget when the user applies force while longpressing the webview. Test your app thoroughly since this disables onclick handlers, but plays nice with ontouchend. If this setting is true, SuppressesLongPressGesture will effectively be true as well.
    SuppressesIncrementalRendering(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to wait until all content has been received before it renders to the screen.
    SuppressesLongPressGesture(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to avoid iOS9+ rendering a magnifying glass widget when the user longpresses the webview. Test your app thoroughly since this may interfere with text selection capabilities.
-   TopActivityIndicator(string) | *Default: gray* <br/> Allowed values: whiteLarge, white, gray. <br/> ==iOS== <br/>  <br/> Controls the appearance of the small spinning icon in the status bar that indicates significant processor activity. 
+   TopActivityIndicator(string) | *Default: gray* <br/> Allowed values: whiteLarge, white, gray. <br/> ==iOS== <br/>  <br/> Controls the appearance of the small spinning icon in the status bar that indicates significant processor activity.
    UIWebViewDecelerationSpeed(string) | *Default: normal* <br/> Allowed values: normal, fast <br/> ==iOS== <br/> This property controls the deceleration speed of momentum scrolling. normal is the default speed for most native apps, and fast is the default for Mobile Safari.
    WebSecurity(string) | *Default: enable* <br/> ==BlackBerry== <br/> Set to disable to override web security settings, allowing access to remote content from unknown sources. This preference is intended as a development convenience only, so remove it before packaging the app for distribution. For the released app, all URIs should be known and whitelisted using the <access> element, described in the Domain Whitelist Guide.
    deployment-target(string) | ==iOS== <br/> This sets the IPHONEOS_DEPLOYMENT_TARGET in the build, which ultimately tranlsates to the MinimumOSVersion in the ipa. For more details please refer to Apple's documentation on Deployment Target Settings
    target-device(string) | *Default: universal* <br/> Allowed values: handset, tablet, universal <br/> ==iOS== <br/> This property maps directly to TARGETED_DEVICE_FAMILY in the xcode project. Note that if you target universal (which is the default) you will need to supply screen shots for both iPhone and iPad or your app may be rejected.
-   windows-phone-target-version(string) | ==Windows== <br/> Sets the version of Windows Phone for which the package (resulting from ```cordova build```) will target. If none is specified, it will be set to the same version as ```windows-target-version``` (if found). 
+   windows-phone-target-version(string) | ==Windows== <br/> Sets the version of Windows Phone for which the package (resulting from ```cordova build```) will target. If none is specified, it will be set to the same version as ```windows-target-version``` (if found).
    windows-target-version(string) | ==Windows== <br/> Sets the version of Windows for which the package (resulting from ```cordova build```) will target. If none is specified, it will be set to '8.1'.
-   
+
    Examples:
 
     <preference name="DisallowOverscroll" value="true"/>
@@ -255,7 +258,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
     <preference name="BackgroundColor" value="0xff0000ff"/>
     <preference name="HideKeyboardFormAccessoryBar" value="true"/>
     <preference name="Orientation" value="landscape" />
-    
+
     <!-- iOS only preferences -->
     <preference name="EnableViewportScale" value="true"/>
     <preference name="MediaPlaybackAllowsAirPlay" value="false"/>
@@ -277,7 +280,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
     <preference name="CordovaWebViewEngine" value="CDVUIWebViewEngine" />
     <preference name="SuppressesLongPressGesture" value="true" />
     <preference name="Suppresses3DTouchGesture" value="true" />
-    
+
     <!-- Android only preferences -->
     <preference name="KeepRunning" value="false"/>
     <preference name="LoadUrlTimeoutValue" value="10000"/>
@@ -291,7 +294,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
     <preference name="DefaultVolumeStream" value="call" />
     <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
     <preference name="AppendUserAgent" value="My Browser" />
-    
+
     <!-- Windows only preferences -->
     <preference name="windows-phone-target-version" value="8.1" />
     <preference name="windows-target-version" value="8.1" />
@@ -301,7 +304,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
     <preference name="ChildBrowser" value="disable"/>
     <preference name="PopupBlocker" value="enable"/>
     <preference name="WebSecurity" value="disable"/>
-    
+
 ## feature
    If you use the CLI to build applications, you use the plugin command to enable device APIs. This does not modify the top-level config.xml file, so the <feature> element does not apply to your workflow. If you work directly in an SDK and using the platform-specific config.xml file as source, you use the <feature> tag to enable device-level APIs and external plugins. They often appear with custom values in platform-specific config.xml files. See the API Reference for details on how to specify each feature. See
    the [Plugin Development Guide](../guide/hybrid/plugins/index.html) for more information on plugins.
@@ -314,20 +317,20 @@ platform. See [Icons and Splash Screens](images.html) for more information.
 
 ### param
    Used to specify what certain plugin parameters such as: what package to retrieve the plugin code from, and whether the plugin code is to be initialized during the Webview's initialization.
-   
+
    Attributes(type) | Description
    ----------------- | ------------
    name(string) | *Required* <br/> Allowed values: android-package, ios-package, onload. <br/> ==iOS== ==Android== <br/> 'ios-package' and 'android-package' are used to specify the name of the package (as specified by the 'value' attribute) to be used to initialize the plugin code, while 'onload' is used to specify whether the corresponding plugin (as specified in the 'value' attribute) is to be instantiated when the controller is initialized.
    value(string or boolean) | *Required* <br/> ==iOS== ==Android== <br/> Specifies the name of the package to be used to initialize the plugin code (when the 'name' attribute is android-package or ios-package), specifies the name of the plugin to be loaded during controller initialization (when 'name' attribute is set to 'onload').
-     
-   
+
+
    Examples:
-    
+
     <!-- Here is how to specify the Device API for Android projects -->
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
-    
+
     <!-- Here's how the element appears for iOS projects -->
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
@@ -337,13 +340,13 @@ platform. See [Icons and Splash Screens](images.html) for more information.
 
 ## platform
    When using the CLI to build applications, it is sometimes necessary to specify preferences or other elements specific to a particular platform. Use the <platform> element to specify configuration that should only appear in a single platform-specific config.xml file.  
-  
+
    Attributes(type) | Description
    ----------------- | ------------
    name(string) | *Required* <br/> The platform whose preferences are being defined.
-   
+
    Examples:
-   
+
     <platform name="android">
         <preference name="Fullscreen" value="true" />
     </platform>
@@ -353,19 +356,19 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    certain action occurs (for example, after plugin is added or platform
    prepare logic is invoked). This is useful when you need to extend
    default Cordova functionality. See [Hooks Guide](../guide/appdev/hooks/index.html) for more information.
-   
+
    Attributes(type) | Description
    ----------------- | ------------
    type(string) | *Required* <br/> Specifies the action during which the custom script is to be called.
    src(string) | *Required* <br/> Specifies the location of the script to be called when a specific action occurs.
-   
+
    Examples:
-   
+
     <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
-    
+
 # Sample config.xml
   Below is a sample config.xml file:
-  
+
     <?xml version='1.0' encoding='utf-8'?>
     <widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
         <name>HelloCordova</name>
@@ -392,3 +395,6 @@ platform. See [Icons and Splash Screens](images.html) for more information.
             <allow-intent href="itms-apps:*" />
         </platform>
     </widget>
+
+
+[uses-sdk]: http://developer.android.com/guide/topics/manifest/uses-sdk-element.html

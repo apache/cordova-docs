@@ -17,6 +17,29 @@
         }
     }
 
+    /*
+    * Anchor links on documentation headers
+    */
+    .header-link {
+        position: relative;
+        left: 0.5em;
+        opacity: 0;
+        font-size: 0.7em;
+
+        -webkit-transition: opacity 0.2s ease-in-out 0.1s;
+        -moz-transition: opacity 0.2s ease-in-out 0.1s;
+        -ms-transition: opacity 0.2s ease-in-out 0.1s;
+    }
+
+    h1:hover .header-link,
+    h2:hover .header-link,
+    h3:hover .header-link,
+    h4:hover .header-link,
+    h5:hover .header-link,
+    h6:hover .header-link {
+        opacity: 1;
+    }
+
     pre {
         word-wrap: normal;
 
@@ -215,6 +238,7 @@
             margin: 0px 0px 10px 0px;
             padding: 0px;
             display: block;
+            font-size: 18px;
         }
 
         h2:after {
@@ -239,6 +263,12 @@
             width: 240px;
             height: 120px;
         }
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+    .header-link {
+        opacity: 1 !important;
     }
 }
 

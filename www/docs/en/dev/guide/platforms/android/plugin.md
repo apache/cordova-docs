@@ -35,7 +35,7 @@ Android WebView with hooks attached to it.  Plugins are represented as
 class mappings in the `config.xml` file.  A plugin consists of at
 least one Java class that extends the `CordovaPlugin` class,
 overriding one of its `execute` methods. As best practice, the plugin
-should also handle `[pause](../../../cordova/events/events.pause.html)` and `[resume](../../../cordova/events/events.resume.html)` events, along with any message
+should also handle [pause][PauseEvent] and [resume][ResumeEvent] events, along with any message
 passing between plugins.  Plugins with long-running requests,
 background activity such as media playback, listeners, or internal
 state should implement the `onReset()` method as well. It executes
@@ -462,3 +462,6 @@ memory. Enable the "Don't keep activities" setting in the Developer Options menu
 on your device or emulator to simulate low memory scenarios. If your plugin
 launches external activities, you should always do some testing with this
 setting enabled to ensure that you are properly handling low memory scenarios.
+
+[PauseEvent]: ../../../cordova/events/events.html#pause
+[ResumeEvent]: ../../../cordova/events/events.html#resume

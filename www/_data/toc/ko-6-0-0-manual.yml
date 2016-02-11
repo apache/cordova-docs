@@ -1,22 +1,22 @@
-- {name: "\uAC00\uC774\uB4DC", url: !!python/unicode '/docs/ko/6.0.0/'}
-- {name: "\uAC1C\uC694", url: !!python/unicode '/docs/ko/6.0.0/guide/overview/index.html'}
-- {name: "\uD50C\uB7AB\uD3FC \uC9C0\uC6D0", url: !!python/unicode '/docs/ko/6.0.0/guide/support/index.html'}
-- {name: "\uBA85\uB839\uC904 \uC778\uD130\uD398\uC774\uC2A4", url: !!python/unicode '/docs/ko/6.0.0/guide/cli/index.html'}
-- {name: "\uD50C\uB7AB\uD3FC \uAC00\uC774\uB4DC", url: !!python/unicode '/docs/ko/6.0.0/guide/platforms/index.html'}
+- {name: "\uAC00\uC774\uB4DC", url: !!python/unicode ''}
+- {name: "\uAC1C\uC694", url: !!python/unicode 'guide/overview/index.html'}
+- {name: "\uD50C\uB7AB\uD3FC \uC9C0\uC6D0", url: !!python/unicode 'guide/support/index.html'}
+- {name: "\uBA85\uB839\uC904 \uC778\uD130\uD398\uC774\uC2A4", url: !!python/unicode 'guide/cli/index.html'}
+- {name: "\uD50C\uB7AB\uD3FC \uAC00\uC774\uB4DC", url: !!python/unicode 'guide/platforms/index.html'}
 - {name: "Plugman\uB97C \uC0AC\uC6A9 \uD558 \uC5EC \uD50C\uB7EC\uADF8\uC778\uC744\
-    \ \uAD00\uB9AC \uD558", url: !!python/unicode '/docs/ko/6.0.0/plugin_ref/plugman.html'}
-- {name: "Config.xml \uD30C\uC77C", url: !!python/unicode '/docs/ko/6.0.0/config_ref/index.html'}
-- {name: "\uC544\uC774\uCF58 \uBC0F \uC2DC\uC791 \uD654\uBA74", url: !!python/unicode '/docs/ko/6.0.0/config_ref/images.html'}
-- {name: "WebViews \uD3EC\uD568", url: !!python/unicode '/docs/ko/6.0.0/guide/hybrid/webviews/index.html'}
-- {name: "\uD50C\uB7EC\uADF8\uC778 \uAC1C\uBC1C \uAC00\uC774\uB4DC", url: !!python/unicode '/docs/ko/6.0.0/guide/hybrid/plugins/index.html'}
-- {name: "\uD50C\uB7EC\uADF8\uC778 \uBA85\uC138", url: !!python/unicode '/docs/ko/6.0.0/plugin_ref/spec.html'}
-- {name: "\uBCF4\uC548 \uAC00\uC774\uB4DC", url: !!python/unicode '/docs/ko/6.0.0/guide/appdev/security/index.html'}
+    \ \uAD00\uB9AC \uD558", url: !!python/unicode 'plugin_ref/plugman.html'}
+- {name: "Config.xml \uD30C\uC77C", url: !!python/unicode 'config_ref/index.html'}
+- {name: "\uC544\uC774\uCF58 \uBC0F \uC2DC\uC791 \uD654\uBA74", url: !!python/unicode 'config_ref/images.html'}
+- {name: "WebViews \uD3EC\uD568", url: !!python/unicode 'guide/hybrid/webviews/index.html'}
+- {name: "\uD50C\uB7EC\uADF8\uC778 \uAC1C\uBC1C \uAC00\uC774\uB4DC", url: !!python/unicode 'guide/hybrid/plugins/index.html'}
+- {name: "\uD50C\uB7EC\uADF8\uC778 \uBA85\uC138", url: !!python/unicode 'plugin_ref/spec.html'}
+- {name: "\uBCF4\uC548 \uAC00\uC774\uB4DC", url: !!python/unicode 'guide/appdev/security/index.html'}
 - {name: "\uD50C\uB7AB\uD3FC \uBC0F \uD50C\uB7EC\uADF8\uC778 \uBC84\uC804 \uAD00\uB9AC",
-  url: !!python/unicode '/docs/ko/6.0.0/platform_plugin_versioning_ref/index.html'}
-- {name: "\uD654\uC774\uD2B8 \uB9AC\uC2A4\uD2B8 \uAC00\uC774\uB4DC", url: !!python/unicode '/docs/ko/6.0.0/guide/appdev/whitelist/index.html'}
-- {name: "\uC2A4\uD1A0\uB9AC\uC9C0", url: !!python/unicode '/docs/ko/6.0.0/cordova/storage/storage.html'}
-- {name: "\uD6C4\uD06C \uAC00\uC774\uB4DC", url: !!python/unicode '/docs/ko/6.0.0/guide/appdev/hooks/index.html'}
-- {name: "\uB2E4\uC74C \uB2E8\uACC4", url: !!python/unicode '/docs/ko/6.0.0/guide/next/index.html'}
-- {name: "\uC774\uBCA4\uD2B8", url: !!python/unicode '/docs/ko/6.0.0/cordova/events/events.html'}
-- {name: "\uD50C\uB7EC\uADF8\uC778 Api", url: !!python/unicode '/docs/ko/6.0.0/cordova/plugins/pluginapis.html'}
-- {name: "\uD0A4\uC6CC\uB4DC \uC778\uB371\uC2A4", url: !!python/unicode '/docs/ko/6.0.0/page_index.html'}
+  url: !!python/unicode 'platform_plugin_versioning_ref/index.html'}
+- {name: "\uD654\uC774\uD2B8 \uB9AC\uC2A4\uD2B8 \uAC00\uC774\uB4DC", url: !!python/unicode 'guide/appdev/whitelist/index.html'}
+- {name: "\uC2A4\uD1A0\uB9AC\uC9C0", url: !!python/unicode 'cordova/storage/storage.html'}
+- {name: "\uD6C4\uD06C \uAC00\uC774\uB4DC", url: !!python/unicode 'guide/appdev/hooks/index.html'}
+- {name: "\uB2E4\uC74C \uB2E8\uACC4", url: !!python/unicode 'guide/next/index.html'}
+- {name: "\uC774\uBCA4\uD2B8", url: !!python/unicode 'cordova/events/events.html'}
+- {name: "\uD50C\uB7EC\uADF8\uC778 Api", url: !!python/unicode 'cordova/plugins/pluginapis.html'}
+- {name: "\uD0A4\uC6CC\uB4DC \uC778\uB371\uC2A4", url: !!python/unicode 'page_index.html'}

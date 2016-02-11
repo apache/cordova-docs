@@ -60,10 +60,10 @@
             url: "guide/appdev/hooks/index.html"
         -   name: "Plugin.xml"
             url: "plugin_ref/spec.html"
--   name: "Tutorials"
-    children:
-        -   name: "Share your app in source control"
-            url:
+# -   name: "Tutorials"
+#     children:
+#         -   name: "Share your app in source control"
+#             url:
 -   name: "Sample Apps"
     url:
 -   name: "Keyword Index"

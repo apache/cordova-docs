@@ -40,13 +40,6 @@ configuration options, instructions to add plugins, how to upgrade
 each platform, and platform-specific command-line tools that serve as
 a lower-level alternative to the `cordova` command-line utility.
 
-## Amazon Fire OS
-
-* [Amazon Fire OS Platform Guide](amazonfireos/index.html)
-* [Amazon Fire OS Configuration](amazonfireos/config.html)
-* [Amazon Fire OS WebViews](amazonfireos/webview.html)
-* [Amazon Fire OS Plugins](amazonfireos/plugin.html)
-
 ## Android
 
 * [Android Platform Guide](android/index.html)
@@ -64,10 +57,6 @@ a lower-level alternative to the `cordova` command-line utility.
 * [BlackBerry 10 Configuration](blackberry10/config.html)
 * [BlackBerry 10 Plugins](blackberry10/plugin.html)
 * [Upgrading BlackBerry](blackberry/upgrade.html) 10
-
-## Firefox OS
-
-* [Firefox OS Platform Guide](firefoxos/index.html)
 
 ## iOS
 
@@ -93,7 +82,7 @@ a lower-level alternative to the `cordova` command-line utility.
 * [Windows Platform Guide](win8/index.html)
 * [Windows Plugins](win8/plugin.html)
 * [Windows Packaging](win8/packaging.html)
-* [Upgrading Windows 8](win8/upgrade.html)
+* [Upgrading Windows](win8/upgrade.html)
 
 ## OS X
 

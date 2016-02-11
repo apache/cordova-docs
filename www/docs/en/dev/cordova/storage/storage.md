@@ -55,7 +55,6 @@ than LocalStorage but fewer than WebSQL.
 The following platforms support IndexedDB:
 
 - BlackBerry 10
-- Firefox OS
 - Windows Phone 8
 - Windows 8
 

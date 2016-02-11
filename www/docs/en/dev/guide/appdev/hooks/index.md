@@ -101,10 +101,10 @@ Hooks can be defined in project's `config.xml` using `<hook>` elements, for exam
         ...
     </platform>
 
-    <platform name="windows8">
-        <hook type="before_build" src="scripts/windows8/appWin8BeforeBuild.bat" />
-        <hook type="before_build" src="scripts/windows8/appWin8BeforeBuild.js" />
-        <hook type="before_plugin_install" src="scripts/windows8/appWin8BeforePluginInstall.js" />
+    <platform name="windows">
+        <hook type="before_build" src="scripts/windows/appWinBeforeBuild.bat" />
+        <hook type="before_build" src="scripts/windows/appWinBeforeBuild.js" />
+        <hook type="before_plugin_install" src="scripts/windows/appWinBeforePluginInstall.js" />
         ...
     </platform>
 

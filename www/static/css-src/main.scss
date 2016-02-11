@@ -40,8 +40,7 @@ $screen-xs-max: $screen-sm-min - 1;
 $screen-md-min: 992px;
 $screen-sm-max: $screen-md-min - 1;
 $screen-lg-min: 1200px;
-$screen-lg: (min-width: $screen-lg-min);
-$screen-md-max: $screen-lg - 1;
+$screen-md-max: $screen-lg-min - 1;
 
 
 /* Mixin that prefixes any CSS rule */
@@ -108,27 +107,6 @@ footer .copyright_text {
     display: block;
     position: relative;
     bottom: 50px;
-}
-
-/*
-* Anchor links on documentation headers
-*/
-.header-link {
-  position: relative;
-  left: 0.5em;
-  opacity: 0;
-
-  -webkit-transition: opacity 0.2s ease-in-out 0.1s;
-  -moz-transition: opacity 0.2s ease-in-out 0.1s;
-  -ms-transition: opacity 0.2s ease-in-out 0.1s;
-}
-
-h2:hover .header-link,
-h3:hover .header-link,
-h4:hover .header-link,
-h5:hover .header-link,
-h6:hover .header-link {
-  opacity: 1;
 }
 
 /*

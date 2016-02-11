@@ -82,11 +82,6 @@ as you are building your whitelist.
 Note that the whitelist applies only to the main Cordova webview, and does not
 apply to an InAppBrowser webview or opening links in the system web browser.
 
-## Amazon Fire OS Whitelisting
-
-Platform-specific whitelisting rules are found in
-`res/xml/config.xml`.
-
 ## Android Whitelisting
 
 As above, see [cordova-plugin-whitelist][wlp] for details.  For cordova-android
@@ -96,7 +91,7 @@ prior to 4.0.0, see older versions of this documentation.
 
 The `<allow-intent>` and `<allow-navigation>` tags are _new_ for cordova-ios 4.x and greater, see the [cordova-plugin-whitelist][wlp] documentation for details. cordova-ios version 4.0 and greater does **not** require the [cordova-plugin-whitelist][wlp] plugin to be installed.
 
-For cordova-ios versions prior to 4.0.0, see the older versions of this documentation. 
+For cordova-ios versions prior to 4.0.0, see the older versions of this documentation.
 
 [Application Transport Security (ATS)](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) is new in iOS 9 (Xcode 7). This new feature acts as a whitelist for your app. The cordova cli will automatically convert `<access>` and `<allow-navigation>` tags to the appropriate ATS directives.
 
@@ -139,26 +134,6 @@ ways:
 
 (For more information on support, see BlackBerry's documentation on the
 [access element][8].)
-
-## Firefox OS
-
-In Firefox OS there is no concept of whitelisting a specific domain. Instead
-there is a special permission called
-[SystemXHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Permissions).
-There is a need to add this permission to `config.xml`:
-
-	<platform name="firefoxos">
-		<permission name="systemXHR" privileged="true" description="load data from server" />
-	</platform>
-
-The `XMLHttpRequest` object needs to be instantiated with two parameters
-`mozAnon` and `mozSystem`:
-
-	var request = new XMLHttpRequest({
-		mozAnon: true,
-		mozSystem: true});
-
-This solution is transparent so there is no difference for other platforms.
 
 ## Windows Phone Whitelisting
 

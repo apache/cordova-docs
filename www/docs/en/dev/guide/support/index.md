@@ -35,14 +35,12 @@ CLI's shorthand names.
 <thead>
     <tr>
         <th></td>
-        <th>amazon-fireos</th>
         <th>android</th>
         <th>blackberry10</th>
-        <th>Firefox OS</th>
         <th>ios</th>
         <th>Ubuntu</th>
         <th>wp8<br/>(Windows Phone 8)</th>
-        <th>windows<br/>(8.0, 8.1, 10,<br/>Phone 8.1)</th>
+        <th>windows<br/>(8.1, 10,<br/>Phone 8.1)</th>
     </tr>
 
 </thead>
@@ -50,10 +48,8 @@ CLI's shorthand names.
 <tbody>
     <tr>
         <th><a href="../cli/index.html">cordova<br/>CLI</a></th>
-        <td data-col="amazon-fireos" class="y">Mac, Windows, Linux</td>
         <td data-col="android"    class="y">Mac, Windows, Linux</td>
         <td data-col="blackberry10" class="y">Mac, Windows</td>
-        <td data-col="firefoxos" class="y">Mac, Windows, Linux</td>
         <td data-col="ios"        class="y">Mac</td>
         <td data-col="ubuntu"        class="y">Ubuntu</td>
         <td data-col="winphone8"  class="y">Windows</td>
@@ -62,10 +58,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="../hybrid/webviews/index.html">Embedded<br/>WebView</a></th>
-        <td data-col="amazon-fireos" class="y"><a href="../platforms/amazonfireos/webview.html">(see details)</a></td>
         <td data-col="android"    class="y"><a href="../platforms/android/webview.html">(see details)</a></td>
         <td data-col="blackberry10" class="n"></td>
-        <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"><a href="../platforms/ios/webview.html">(see details)</a></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="n"></td>
@@ -74,10 +68,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="../hybrid/plugins/index.html">Plug-in<br/>Interface</a></th>
-         <td data-col="amazon-fireos" class="y"><a href="../platforms/amazonfireos/plugin.html">(see details)</a></td>
         <td data-col="android"    class="y"><a href="../platforms/android/plugin.html">(see details)</a></td>
         <td data-col="blackberry10" class="y"><a href="../platforms/blackberry10/plugin.html">(see details)</a></td>
-        <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"><a href="../platforms/ios/plugin.html">(see details)</a></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"><a href="../platforms/wp8/plugin.html">(see details)</a></td>
@@ -91,10 +83,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-device-motion">Accelerometer</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -103,10 +93,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-battery-status">BatteryStatus</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="n"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -115,10 +103,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-camera">Camera</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -127,10 +113,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-media-capture">Capture</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -139,10 +123,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-device-orientation">Compass</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y">(3GS+)</td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -151,10 +133,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-network-information">Connection</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -163,10 +143,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-contacts">Contacts</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -175,10 +153,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-device">Device</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -187,10 +163,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="../../cordova/events/events.html">Events</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -199,10 +173,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-file">File</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -211,10 +183,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-file-transfer">File Transfer</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y">* Do not support onprogress nor abort</td>
-        <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="n"></td>
         <td data-col="winphone8"  class="y">* Do not support onprogress nor abort</td>
@@ -223,10 +193,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-geolocation">Geolocation</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -235,10 +203,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-globalization">Globalization</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -247,10 +213,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-inappbrowser">InAppBrowser</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -259,10 +223,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-media">Media</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -271,10 +233,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-dialogs">Notification</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -283,10 +243,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-splashscreen">Splashscreen</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -295,10 +253,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-statusbar">Status Bar</a></th>
-        <td data-col="amazon-fireos" class="n"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="n"></td>
-        <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="n"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -307,10 +263,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="../../cordova/storage/storage.html">Storage</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y">localStorage &amp; indexedDB</td>
@@ -319,10 +273,8 @@ CLI's shorthand names.
 
     <tr>
         <th><a href="https://www.npmjs.com/package/cordova-plugin-vibration">Vibration</a></th>
-        <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
-        <td data-col="firefoxos" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="n"></td>
         <td data-col="winphone8"  class="y"></td>

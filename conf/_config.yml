@@ -19,14 +19,13 @@ repo:
     uri:    https://github.com/apache/cordova-docs
     branch: master
 
+# the version to which /latest/ points
 # NOTE:
 #      this value gets overwritten in _version.yml, which is a generated file
 latest_docs_version: dev
-# NOTE:
-#      this value is used to point to the documentation version to be used. 
-#      in development this may point to dev (in _dev.yml) and in prod this
-#      may point to latest (in _prod.yml).
-default_linked_docs_version: "latest"
+
+# the docs version that is shown by default when clicking on docs links on the site
+default_linked_docs_version: latest
 
 # NOTE:
 #      this value _might_ get overwritten on some pages;
@@ -42,16 +41,6 @@ defaults:
 # =======
 source:      www
 destination: build-dev
-
-sitemap:
-    file: "/sitemap.xml"
-    exclude:
-        - "/atom.xml"
-        - "/feed.xml"
-    include_posts:
-        - "/blog/index.html"
-    change_frequency_name: "change_frequency"
-    priority_name: "priority"
 
 # don't erase these files in the output directory
 keep_files: [".git", ".svn", "wiki-images", "images", "downloads"]
@@ -77,11 +66,11 @@ redcarpet:
         # not have a leading or trailing newline
         - lax_spacing
 
+        # allows tables
         - tables
+
+        # surrounds highlighted text with <mark>s
         - highlight
-        
-        # enables anchor links
-        - with_toc_data
 
 kramdown:
     input: GFM

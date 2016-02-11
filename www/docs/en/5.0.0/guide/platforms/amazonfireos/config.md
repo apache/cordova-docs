@@ -46,7 +46,7 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
   page of an application. The title and message are separated by a comma
   in this value string, and that comma is removed before the dialog is
   displayed.
-  
+
         <preference name="LoadingDialog" value="Please wait, the app is loading"/>
 
 - `LoadingPageDialog` (string, defaults to `null`): The same as `LoadingDialog`,
@@ -70,7 +70,7 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
   time the splash screen image displays.
 
         <preference name="SplashScreenDelay" value="10000"/>
-        
+
 - `ShowTitle` (boolean, defaults to `false`): Show the title at the top
   of the screen.
 
@@ -81,4 +81,3 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
   values are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `VERBOSE`.
 
         <preference name="LogLevel" value="VERBOSE"/>
-

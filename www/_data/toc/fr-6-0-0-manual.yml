@@ -1,16 +1,16 @@
-- {name: !!python/unicode 'Guides', url: !!python/unicode '/docs/fr/6.0.0/'}
-- {name: !!python/unicode 'Plateforme de Support', url: !!python/unicode '/docs/fr/6.0.0/guide/support/index.html'}
-- {name: !!python/unicode 'Guides de la plate-forme', url: !!python/unicode '/docs/fr/6.0.0/guide/platforms/index.html'}
-- {name: !!python/unicode 'Le fichier config.xml', url: !!python/unicode '/docs/fr/6.0.0/config_ref/index.html'}
-- {name: !!python/unicode 'Icones et Splash Screen', url: !!python/unicode '/docs/fr/6.0.0/config_ref/images.html'}
-- {name: "Guide de d\xE9veloppement de plugin", url: !!python/unicode '/docs/fr/6.0.0/guide/hybrid/plugins/index.html'}
-- {name: "Sp\xE9cification des plugins", url: !!python/unicode '/docs/fr/6.0.0/plugin_ref/spec.html'}
-- {name: "Guide de la vie priv\xE9e", url: !!python/unicode '/docs/fr/6.0.0/guide/appdev/privacy/index.html'}
-- {name: "Guide de s\xE9curit\xE9", url: !!python/unicode '/docs/fr/6.0.0/guide/appdev/security/index.html'}
-- {name: !!python/unicode 'Plates-formes et gestion de Plugins Version', url: !!python/unicode '/docs/fr/6.0.0/platform_plugin_versioning_ref/index.html'}
-- {name: !!python/unicode 'Guide de la liste blanche', url: !!python/unicode '/docs/fr/6.0.0/guide/appdev/whitelist/index.html'}
-- {name: !!python/unicode 'Stockage', url: !!python/unicode '/docs/fr/6.0.0/cordova/storage/storage.html'}
-- {name: !!python/unicode 'Guide de crochets', url: !!python/unicode '/docs/fr/6.0.0/guide/appdev/hooks/index.html'}
-- {name: "Prochaines \xE9tapes", url: !!python/unicode '/docs/fr/6.0.0/guide/next/index.html'}
-- {name: !!python/unicode 'Plugin API', url: !!python/unicode '/docs/fr/6.0.0/cordova/plugins/pluginapis.html'}
-- {name: "Index des mots cl\xE9s", url: !!python/unicode '/docs/fr/6.0.0/page_index.html'}
+- {name: !!python/unicode 'Guides', url: !!python/unicode ''}
+- {name: !!python/unicode 'Plateforme de Support', url: !!python/unicode 'guide/support/index.html'}
+- {name: !!python/unicode 'Guides de la plate-forme', url: !!python/unicode 'guide/platforms/index.html'}
+- {name: !!python/unicode 'Le fichier config.xml', url: !!python/unicode 'config_ref/index.html'}
+- {name: !!python/unicode 'Icones et Splash Screen', url: !!python/unicode 'config_ref/images.html'}
+- {name: "Guide de d\xE9veloppement de plugin", url: !!python/unicode 'guide/hybrid/plugins/index.html'}
+- {name: "Sp\xE9cification des plugins", url: !!python/unicode 'plugin_ref/spec.html'}
+- {name: "Guide de la vie priv\xE9e", url: !!python/unicode 'guide/appdev/privacy/index.html'}
+- {name: "Guide de s\xE9curit\xE9", url: !!python/unicode 'guide/appdev/security/index.html'}
+- {name: !!python/unicode 'Plates-formes et gestion de Plugins Version', url: !!python/unicode 'platform_plugin_versioning_ref/index.html'}
+- {name: !!python/unicode 'Guide de la liste blanche', url: !!python/unicode 'guide/appdev/whitelist/index.html'}
+- {name: !!python/unicode 'Stockage', url: !!python/unicode 'cordova/storage/storage.html'}
+- {name: !!python/unicode 'Guide de crochets', url: !!python/unicode 'guide/appdev/hooks/index.html'}
+- {name: "Prochaines \xE9tapes", url: !!python/unicode 'guide/next/index.html'}
+- {name: !!python/unicode 'Plugin API', url: !!python/unicode 'cordova/plugins/pluginapis.html'}
+- {name: "Index des mots cl\xE9s", url: !!python/unicode 'page_index.html'}

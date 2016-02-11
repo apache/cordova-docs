@@ -42,12 +42,10 @@ the command-line interface from the same machine that supports the
 platform's SDK. The CLI supports the following combinations:
 
 * iOS             (Mac)
-* Amazon Fire OS  (Mac, Linux, Windows)
 * Android         (Mac, Linux, Windows)
 * BlackBerry 10   (Mac, Linux, Windows)
 * Windows Phone 8 (Windows)
 * Windows         (Windows)
-* Firefox OS      (Mac, Linux, Windows)
 
 On the Mac, the command-line is available via the _Terminal_
 application. On the PC, it's available as _Command Prompt_ under
@@ -71,7 +69,7 @@ To install the `cordova` command-line tool, follow these steps:
 
 1. Download and install [Node.js](http://nodejs.org/). Following
    installation, you should be able to invoke `node` and `npm` on your
-   command line. If desired, you may optionally use a tool such as `nvm` 
+   command line. If desired, you may optionally use a tool such as `nvm`
    or `nave` to manage your Node.js installation.
 
 1. Download and install a [git client](http://git-scm.com/), if you don't
@@ -89,7 +87,7 @@ To install the `cordova` command-line tool, follow these steps:
 
        On OS X and Linux, prefixing the `npm` command with
        `sudo` may be necessary to install this development utility in
-       otherwise restricted directories such as 
+       otherwise restricted directories such as
        `/usr/local/share`. If you are using the optional
        nvm/nave tool or have write access to the install directory,
        you may be able to omit the `sudo` prefix. There are
@@ -108,7 +106,7 @@ To install the `cordova` command-line tool, follow these steps:
    globally installed `npm` modules. On Windows, `npm` can usually be found at
    `C:\Users\username\AppData\Roaming\npm`. On OS X and Linux it can usually
    be found at `/usr/local/share/npm`.
-   
+
    The installation log may produce errors for any uninstalled
    platform SDKs.
 
@@ -169,20 +167,16 @@ machine supports each SDK, and whether you have already installed each
 SDK.  Run any of these from a Mac:
 
         $ cordova platform add ios
-        $ cordova platform add amazon-fireos
         $ cordova platform add android
         $ cordova platform add blackberry10
-        $ cordova platform add firefoxos
 
 Run any of these from a Windows machine, where _wp_ refers to
 different versions of the Windows Phone operating system:
 
         $ cordova platform add wp8
         $ cordova platform add windows
-        $ cordova platform add amazon-fireos
         $ cordova platform add android
         $ cordova platform add blackberry10
-        $ cordova platform add firefoxos
 
 Run this to check your current set of platforms:
 
@@ -193,7 +187,6 @@ Run this to check your current set of platforms:
 Run either of the following synonymous commands to remove a platform:
 
         $ cordova platform remove blackberry10
-        $ cordova platform rm amazon-fireos
         $ cordova platform rm android
 
 Running commands to add or remove platforms affects the contents of
@@ -203,7 +196,7 @@ within each platform's subdirectory, appearing for example in
 `platforms/ios/www` or `platforms/android/assets/www`. Because the CLI
 constantly copies over files from the source _www_ folder, you should only
 edit these files and not the ones located under the _platforms_ subdirectories.
-If you use version control software, you should add this source _www_ folder, 
+If you use version control software, you should add this source _www_ folder,
 along with the _merges_ folder, to your version control system. (More information
 about the _merges_ folder can be found in the Customize Each Platform section below.)
 
@@ -220,7 +213,7 @@ to open the project you created. You will need to open the derivative set of ass
 from the `/platforms/` directory to develop with an SDK. This is because
 the SDK specific metadata files are stored within the appropriate `/platform/` subdirectory.
 (See the [Platform Guides](../platforms/index.html) for information on how to develop applications within each IDE.)
-Use this approach if you simply want to initialize a project using the CLI and 
+Use this approach if you simply want to initialize a project using the CLI and
 then switch to an SDK for native work.
 
 Read on if you wish to use the cross-platform workflow approach (the CLI) for the entire
@@ -231,7 +224,7 @@ development cycle.
 By default, the `cordova create` script generates a skeletal web-based
 application whose home page is the project's `www/index.html` file.
 Edit this application however you want, but any initialization should
-be specified as part of the `[deviceready](../../cordova/events/events.deviceready.html)` event handler, referenced by
+be specified as part of the [deviceready][DeviceReadyEvent] event handler, referenced by
 default from `www/js/index.js`.
 
 Run the following command to iteratively build the project:
@@ -269,7 +262,6 @@ Some mobile platforms emulate a particular device by default, such as
 the iPhone for iOS projects. For other platforms, you may need to
 first associate a device with an emulator.
 
-__NOTE__: Emulator support is currently not available for Amazon Fire OS.
 
 (See the [Platform Guides](../platforms/index.html) for details.)
 For example, you may first run the `android` command to launch the
@@ -291,7 +283,7 @@ app directly:
 
 Before running this command, you need to set up the device for
 testing, following procedures that vary for each platform. In
-Android and Amazon Fire OS devices, you would have to enable a __USB debugging__ option on
+Android devices, you would have to enable a __USB debugging__ option on
 the device, and perhaps add a USB driver depending on your development
 environmnent.
 See [Platform Guides](../platforms/index.html) for details on each platform's requirements.
@@ -310,7 +302,7 @@ example when designing a hybrid app that mixes a Cordova WebView with
 native components. (See [Embedding WebViews](../hybrid/webviews/index.html) and [Plugin Development
 Guide](guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide) for details.)  More commonly, you would add a plugin to enable
 one of Cordova's basic device-level features
-detailed in the API Reference. 
+detailed in the API Reference.
 
 As of version 3.0, when you create a Cordova project it does not have any
 plugins present. This is the new default behavior. Any plugins you desire,
@@ -340,7 +332,7 @@ use the CLI to add features to the app:
 
         $ cordova plugin add cordova-plugin-device
 
-* Network Connection and Battery [Events](../../cordova/events/events.html):
+* Network Connection and Battery:
 
         $ cordova plugin add cordova-plugin-network-information
         $ cordova plugin add cordova-plugin-battery-status
@@ -476,7 +468,7 @@ assets to deploy on specific platforms. Each platform-specific
 subdirectory within `merges` mirrors the directory structure of the
 `www` source tree, allowing you to override or add files as needed.
 For example, here is how you might uses `merges` to boost the default
-font size for Android and Amazon Fire OS devices:
+font size for Android devices:
 
 * Edit the `www/index.html` file, adding a link to an additional CSS
   file, `overrides.css` in this case:
@@ -500,7 +492,7 @@ You can also use `merges` to add files not present in the original
 `www` directory. For example, an app can incorporate a _back button_
 graphic into the iOS interface, stored in
 `merges/ios/img/back_button.png`, while the Android version can
-instead capture `[backbutton](../../cordova/events/events.backbutton.html)` events from the corresponding hardware
+instead capture [backbutton][BackButtonEvent] events from the corresponding hardware
 button.
 
 ## Help Commands
@@ -566,3 +558,5 @@ you're building:
         $ cordova platform update ios
         ...etc.
 
+[DeviceReadyEvent]: ../../cordova/events/events.html#deviceready
+[BackButtonEvent]: ../../cordova/events/events.html#backbutton

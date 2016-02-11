@@ -1,0 +1,28 @@
+---
+---
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+
+<!-- posts -->
+{% for post in site.posts %}
+{% include sitemap_entry.html url=post.url change_frequency=post.change_frequency priority=post.priority %}
+{% endfor %}
+
+<!-- pages -->
+{% for site_page in site.pages %}
+    {% include sitemap_entry.html url=site_page.url change_frequency=site_page.change_frequency priority=site_page.priority %}
+
+    {% comment %}
+    Add an extra entry for all pages that have "/{latest version}/" in their URI.
+    The extra entry is the same, with "/{latest version}/" replaced with "/latest/".
+    This is done because "/latest/" doesn't actually exist as a page; it's an alias
+    in the .htaccess file.
+    {% endcomment %}
+    {% capture latest_docs_version_prefix %}/{{ site.latest_docs_version }}/{% endcapture %}
+    {% if site_page.url contains latest_docs_version_prefix %}
+        {% assign latest_url = site_page.url | replace: latest_docs_version_prefix,"/latest/" %}
+        {% include sitemap_entry.html url=latest_url change_frequency=site_page.change_frequency priority=0.9 %}
+    {% endif %}
+{% endfor %}
+
+</urlset>
