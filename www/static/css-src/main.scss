@@ -134,11 +134,44 @@ h2 {
     margin-top:-14px;
     padding: 1px 5px;
 }
-
 .blue-divider {
     width:100%;
     height:4px;
     background-color: $brand-primary;
+}
+
+/* misc */
+.vertical-center-parent {
+    position: relative;
+    width:100%;
+    height:100%;
+    .vertical-center-child {
+        position:absolute;
+        top:50%;
+        left:50%;
+        @include vendor-prefix(transform, translate(-50%,-50%));
+    }
+}
+.whole-page-content {
+    min-height: 300px;
+    height: 60%;
+    margin: auto;
+}
+.not-found, .deprecated {
+    .vertical-center-child {
+        width: 100%;
+    }
+}
+.not-found-header {
+    text-align: center;
+}
+.not-found-redirect {
+    margin-bottom: 20px;
+    text-align: center;
+    display: none;
+    em {
+        text-decoration: underline;
+    }
 }
 
 /* fixing prettyprint formatting */
