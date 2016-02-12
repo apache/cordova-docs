@@ -22,7 +22,7 @@ title: Upgrading Windows
 
 # Upgrading Windows
 
-Run `cordova platform update windows`.
+For upgrading from `windows` version 4.0.0 or higher, run `cordova platform update windows`.
 
 For projects not created with the cordova CLI, run:
 
@@ -31,7 +31,7 @@ For projects not created with the cordova CLI, run:
 
 # Upgrading Windows 8
 
-This guide shows how to modify Windows 8 projects to upgrade from older versions of Cordova.
+This is for people still using `windows8` platform to upgrade from older versions of Cordova.
 Most of these instructions apply to projects created with an older set
 of command-line tools that precede the `cordova` CLI utility. See [The Command-Line Interface](../../cli/index.html) for information how to update the
 version of the CLI.
