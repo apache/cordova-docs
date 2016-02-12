@@ -330,8 +330,8 @@ platform. See [Icons and Splash Screens](images.html) for more information.
 
    Attributes(type) | Description
    ----------------- | ------------
-   name(string) | *Required* <br/> Allowed values: android-package, ios-package, onload. <br/> ==iOS== ==OS X== ==Android== <br/> 'ios-package' and 'android-package' are used to specify the name of the package (as specified by the 'value' attribute) to be used to initialize the plugin code, while 'onload' is used to specify whether the corresponding plugin (as specified in the 'value' attribute) is to be instantiated when the controller is initialized.
-   value(string or boolean) | *Required* <br/> ==iOS== ==OS X== ==Android== <br/> Specifies the name of the package to be used to initialize the plugin code (when the 'name' attribute is android-package or ios-package), specifies the name of the plugin to be loaded during controller initialization (when 'name' attribute is set to 'onload').
+   name(string) | *Required* <br/> Allowed values: android-package, ios-package, osx-package, onload. <br/> ==iOS== ==OS X== ==Android== <br/> 'ios-package', 'osx-package' and 'android-package' are used to specify the name of the package (as specified by the 'value' attribute) to be used to initialize the plugin code, while 'onload' is used to specify whether the corresponding plugin (as specified in the 'value' attribute) is to be instantiated when the controller is initialized.
+   value(string or boolean) | *Required* <br/> ==iOS== ==OS X== ==Android== <br/> Specifies the name of the package to be used to initialize the plugin code (when the 'name' attribute is android-package, ios-package or osx-package), specifies the name of the plugin to be loaded during controller initialization (when 'name' attribute is set to 'onload').
 
 
    Examples:
@@ -341,9 +341,15 @@ platform. See [Icons and Splash Screens](images.html) for more information.
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
 
-    <!-- Here's how the element appears for iOS and OS X projects -->
+    <!-- Here's how the element appears for iOS projects -->
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
+        <param name="onload" value="true" />
+    </feature>
+
+    <!-- Here's how the element appears for OS X projects -->
+    <feature name="Device">
+        <param name="osx-package" value="CDVDevice" />
         <param name="onload" value="true" />
     </feature>
 
