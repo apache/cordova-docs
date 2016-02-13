@@ -35,6 +35,7 @@ var PROD_DIR   = path.join(ROOT_DIR, "build-prod");
 var DATA_DIR        = path.join(SOURCE_DIR, "_data");
 var TOC_DIR         = path.join(DATA_DIR, "toc");
 var DOCS_DIR        = path.join(SOURCE_DIR, "docs");
+var FETCH_DIR       = path.join(DOCS_DIR, "en", "dev", "gen");
 var CSS_SRC_DIR     = path.join(SOURCE_DIR, "static", "css-src");
 var CSS_OUT_DIR     = path.join(SOURCE_DIR, "static", "css");
 var PLUGINS_SRC_DIR = path.join(SOURCE_DIR, "static", "plugins");
@@ -53,6 +54,7 @@ var DOCS_VERSION_FILE = path.join(DATA_DIR, "docs-versions.yml");
 var PLUGINS_FILE_NAME = "plugins.js";
 var PLUGINS_FILE      = path.join(JS_DIR, PLUGINS_FILE_NAME);
 var PLUGINS_SRC_FILE  = path.join(PLUGINS_SRC_DIR, "app.js");
+var FETCH_CONFIG      = path.join(DATA_DIR, "fetched-files.yml");
 
 var BASE_CONFIGS = [CONFIG_FILE, DEFAULTS_CONFIG_FILE, VERSION_CONFIG_FILE];
 var DEV_CONFIGS  = [DEV_CONFIG_FILE];
@@ -153,6 +155,7 @@ gulp.task("help", function () {
     gutil.log("    data          run all the below tasks");
     gutil.log("    docs-versions create " + DOCS_VERSION_FILE);
     gutil.log("    toc           create all generated ToC files in " + TOC_DIR);
+    gutil.log("    fetch         download docs specified in " + FETCH_CONFIG);
     gutil.log("");
     gutil.log("    styles        run all the below tasks");
     gutil.log("    less          compile all .less files");
@@ -245,6 +248,10 @@ gulp.task("regen", ["jekyll"], function () {
     browsersync.reload();
 });
 
+gulp.task("fetch", function (done) {
+    exec("node", [bin("fetch_docs.js"), FETCH_CONFIG, FETCH_DIR], done);
+});
+
 gulp.task("reload", function () {
     browsersync.reload();
 });
@@ -272,7 +279,7 @@ gulp.task("defaults", function () {
         .pipe(gulp.dest(ROOT_DIR));
 });
 
-gulp.task("toc", function (done) {
+gulp.task("toc", ["fetch"], function (done) {
     exec("node", [bin("toc.js"), DOCS_DIR, DATA_DIR], done);
 });
 
