@@ -23,18 +23,17 @@ title: iOS Platform Guide
 # iOS Platform Guide
 
 This guide shows how to set up your SDK development environment to
-deploy Cordova apps for iOS devices such as iPhone and iPad. See the
-following for more detailed platform-specific information:
-
-* [iOS Configuration](config.html)
-* [Upgrading iOS](upgrade.html)
-* [iOS WebViews](webview.html)
-* [iOS Plugins](plugin.html)
-* [iOS Shell Tool Guide](tools.html)
+deploy Cordova apps for iOS devices such as iPhone and iPad, 
+and how to optionally use iOS-centered command-line tools in your 
+development workflow. You need to install the SDK tools regardless of 
+whether you want to use these platform-centered shell tools 
+or cross-platform Cordova CLI for development. For a comparison of the two 
+development paths, see the [Overview](../../overview/index.html#development-paths). 
+For details on the CLI, see [The Command-Line Interface](../../cli/index.html).  
 
 ## Requirements and Support
 
-Apple® tools required to build iOS applications run only on the OS X
+Apple® tools required to build iOS applications only run on the OS X
 operating system on Intel-based Macs. Xcode® 6.0 (the minimum required
 version) runs only on OS X version 10.9 (Mavericks) or greater, and
 includes the iOS 8 SDK (Software Development Kit).  To submit apps to
