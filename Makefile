@@ -94,7 +94,7 @@ STYLES = $(MAIN_STYLE_FILE) $(addsuffix .css,$(basename $(subst $(CSS_SRC_DIR),$
 
 # NOTE:
 #      docs slugs are lang/version pairs, with "/" and "." replaced by "-"
-DOCS_VERSION_DIRS  = $(wildcard $(DOCS_DIR)/**/*)
+DOCS_VERSION_DIRS  = $(filter-out %.md,$(wildcard $(DOCS_DIR)/**/*))
 DOCS_VERSION_SLUGS = $(subst /,-,$(subst .,-,$(subst $(DOCS_DIR)/,,$(DOCS_VERSION_DIRS))))
 TOC_FILES          = $(addprefix $(TOC_DIR)/,$(addsuffix -generated.yml,$(DOCS_VERSION_SLUGS)))
 
@@ -135,6 +135,7 @@ data: fetch $(TOC_FILES) $(DOCS_VERSION_DATA)
 configs: $(DEFAULTS_CONFIG) $(VERSION_CONFIG)
 styles: $(STYLES)
 plugins: $(PLUGINS_APP)
+toc: $(TOC_FILES)
 
 dev: JEKYLL_CONFIGS += $(DEV_CONFIG)
 dev: JEKYLL_FLAGS += --trace
@@ -224,6 +225,7 @@ endif
 clean:
 
 	$(RM) -r $(PROD_DIR) $(DEV_DIR)
+	$(RM) -r $(FETCH_DIRS)
 	$(RM) $(VERSION_CONFIG)
 	$(RM) $(DEFAULTS_CONFIG)
 	$(RM) $(TOC_FILES)

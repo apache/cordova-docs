@@ -394,6 +394,7 @@ gulp.task("checklinks", function(done) {
 gulp.task("clean", function () {
     remove(DEV_DIR);
     remove(PROD_DIR);
+    remove(FETCH_DIR);
     remove(path.join(DATA_DIR, "toc", "*-generated.yml"));
     remove(CSS_OUT_DIR);
     remove(PLUGINS_FILE);

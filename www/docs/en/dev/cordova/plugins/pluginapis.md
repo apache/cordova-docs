@@ -32,8 +32,9 @@ The traditional set of core Cordova plugins are as follows:
 {% if fileSpec.src.repoName contains "cordova-plugin" %}
     {% assign repoSplit = fileSpec.src.repoName | split:'/' %}
     {% capture packageName %}{% if fileSpec.src.packageName %}{{ fileSpec.src.packageName }}{% else %}{{ repoSplit[1] }}{% endif %}{% endcapture %}
-- [{{ fileSpec.src.displayName }}](../../gen/{{ packageName }}/)
-> {{ fileSpec.src.description }}
+# [{{ fileSpec.src.displayName }}](../../gen/{{ packageName }}/)
+
+{{ fileSpec.src.description }}
 {% endif %}
 {% endfor %}
 
