@@ -50,10 +50,15 @@ fully test all of the app's device features before submitting to the
 App Store.  The device must have at least iOS 6.x installed, the
 minimum iOS version supported as of Cordova 3.0.  Supporting devices
 include all iPad® models, iPhone® 3GS and above, and iPod® Touch 3rd
-Generation or later. To install apps onto a device, you must also be a
-member of Apple's
+Generation or later. Earlier, to install apps onto a device, you had
+to be a member of Apple's
 [iOS Developer Program](https://developer.apple.com/programs/ios/),
-which costs $99 per year. This guide shows how to deploy apps to the
+which costs $99 per year. In the The Apple Worldwide Developers 
+Conference (WWDC) 2015, Apple announced that with Xcode 7, 
+everyone would be able to install any apps they develop on their 
+devices without an Apple Developer Program Certificate. 
+
+This guide shows how to deploy apps to the
 iOS emulator, for which you don't need to register with the developer
 program.
 
