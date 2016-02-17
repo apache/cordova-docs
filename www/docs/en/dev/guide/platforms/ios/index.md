@@ -135,7 +135,7 @@ and this [video](https://developer.apple.com/videos/play/wwdc2014-413/).
 
 Cordova for iOS projects can be opened in Xcode. This can be useful if 
 you wish to use Xcode built in debugging/profiling tools or if you are
-developing iOS plugins. Please note that when opening your project in Android studio, 
+developing iOS plugins. Please note that when opening your project in Xcode, 
 it is recommended that you do NOT edit your code in the IDE. This will edit the code 
 in the ```platforms``` folder of your project (not ```www```), and changes are liable to be overwritten. 
 Instead, edit the ```www``` folder and copy over your changes by running ```cordova build```.
@@ -150,147 +150,40 @@ file. The screen should look like this:
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png)
 
-## Deploy to Emulator
+## Platform Centered Workflow
 
-To preview the app in the iOS emulator:
+cordova-ios includes a number of scripts that allow the platform to be used
+without the full Cordova CLI. This development path may offer you a greater
+range of development options in certain situations than the cross-platform CLI
+tool described in [The Command-Line Interface](../../cli/index.html).
+For example, you need to use shell tools when deploying a custom
+Cordova WebView alongside native components. Before using this
+development path, you must still configure the SDK environment
+as described in [Requirements and Support](#link-requirements-and-support)
+above.
 
-1. Make sure the _.xcodeproj_ file is selected in the left panel.
+For each of the scripts discussed below, refer to
+[The Command-Line Interface](../../cli/index.html) for more information on their
+arguments and usage. Each script has a name that matches the corresponding CLI
+command. For example, `cordova-ios/bin/create` is equivalent to
+`cordova create`.
 
-2. Select the __HelloCordova__ app in the panel immediately to the right.
+To get started, either download the cordova-ios package from
+[npm](https://www.npmjs.com/package/cordova-ios) or
+[Github](https://github.com/apache/cordova-ios).
 
-3. Select the intended device from the toolbar's __Scheme__ menu, such
-   as the iPhone 6.0 Simulator as highlighted here:
+To create a project using this package, run the `create` script in the `bin`
+folder:
 
-   ![]({{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png)
+    $ cordova-ios/bin/create ...
 
-4. Press the __Run__ button that appears in the same toolbar to the
-   left of the __Scheme__. That builds, deploys and runs the
-   application in the emulator. A separate emulator application opens
-   to display the app:
+The created project will have a folder named `cordova` inside that contains
+scripts for the project-specific Cordova commands (e.g. `run`, `build`, etc.).
+Additionally, The project will feature a structure different from that of a
+normal Cordova project. Notably, `/www` is moved to `/assets/www`.
 
-   ![]({{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png)
+To install plugins in this project, use the [Cordova Plugman Utility](../../../plugin_ref/plugman.html).
 
-   Only one emulator may run at a time, so if you want to test the app
-   in a different emulator, you need to quit the emulator application
-   and run a different target within Xcode.
-
-Xcode comes bundled with emulators for the latest versions of iPhone
-and iPad. Older versions may be available from the __Xcode &rarr;
-Preferences &rarr; Downloads &rarr; Components__ panel.
-
-## Deploy to Device
-
-For details about various requirements to deploy to a device, refer
-to the _Launch Your App On Devices_ section of
-Apple's
-[About App Distribution Workflows](https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html).
-Briefly, you need to do the following before deploying:
-
-1. Join the Apple iOS Developer Program.
-
-2. Create a _Provisioning Profile_ within the
-   [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action).
-   You can use its _Development Provisioning Assistant_ to create and
-   install the profile and certificate Xcode requires.
-
-3. Verify that the _Code Signing_ section's _Code Signing Identity_
-   within the project settings is set to your provisioning profile
-   name.
-
-To deploy to the device:
-
-1. Use the USB cable to plug the device into your Mac.
-
-2. Select the name of the project in the Xcode window's __Scheme__
-   drop-down list.
-
-3. Select your device from the __Device__ drop-down list. If it is
-   plugged in via USB but still does not appear, press the
-   __Organizer__ button to resolve any errors.
-
-4. Press the __Run__ button to build, deploy and run the application
-   on your device.
-
-## Common Problems
-
-__Deprecation Warnings__: When an application programming interface
-(API) is changed or replaced by another API, it is marked as
-_deprecated_.  The API still works in the near term, but is eventually
-removed.  Some of these deprecated interfaces are reflected in Apache
-Cordova, and Xcode issues warnings about them when you build and
-deploy an application.
-
-Xcode's warning about the `invokeString` method concerns functionality
-that launches an app from a custom URL. While the mechanism to load
-from a custom URL has changed, this code is still present to provide
-backwards functionality for apps created with older versions of
-Cordova.  The sample app does not use this functionality, so these
-warnings can be ignored.  To prevent these warnings from appearing,
-remove the code that references the deprecated invokeString API:
-
-* Edit the _Classes/MainViewController.m_ file, surround the following
-  block of code with `/*` and `*/` comments as shown below, then type
-  __Command-s__ to save the file:
-
-        (void)webViewDidFinishLoad:(UIWebView*)theWebView
-        {
-        // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
-        /*
-        if (self.invokeString) {
-          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
-          NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
-          NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
-          [theWebView stringByEvaluatingJavaScriptFromString:jsString];
-        }
-        */
-        // Black base color for background matches the native apps
-        theWebView.backgroundColor = [UIColor blackColor];
-
-        return [super webViewDidFinishLoad:theWebView];
-        }
-
-* Edit the _Classes/AppViewDelegate.m_ file, comment out the following
-  line by inserting a double slash as shown below, then type
-  __Command-s__ to save the file:
-
-        //self.viewController.invokeString = invokeString;
-
-* Press __Command-b__ to rebuild the project and eliminate the warnings.
-
-<!-- Does this fix only last until the next "cordova prepare"? -->
-
-__Missing Headers__: Compilation errors relating to missing headers
-result from problems with the build location, and can be fixed 
-via Xcode preferences:
-
-1. Select __Xcode &rarr; Preferences &rarr; Locations__.
-
-2. In the __Derived Data__ section, press the __Advanced__ button and
-   select __Unique__ as the __Build Location__ as shown here:
-
-   ![]({{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png)
-
-This is the default setting for a new Xcode install, but it may be set
-differently following an upgrade from an older version of Xcode.
-
-For further information, consult Apple's documentation:
-
-*  [Start Developing iOS Apps Today](http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343) provides a quick overview of steps for developing iOS Apps.
-
-* [Member Center home page](https://developer.apple.com/membercenter/index.action)
-   provides links to several iOS technical resources including
-   technical resources, the provisioning portal, distribution guides
-   and community forums.
-
-* [Tools Workflow Guide for iOS](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959)
-
-* [Xcode User Guide](http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215)
-
-* [Session Videos](https://developer.apple.com/videos/wwdc/2012/) from
-  the Apple World Wide Developer Conference 2012 (WWDC2012)
-
-* The [xcode-select command](http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html),
-  which helps specify the correct version of Xcode if more than one is installed.
 
 (Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)
 
