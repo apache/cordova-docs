@@ -41,6 +41,9 @@ RewriteRule ^.*docs/(\w\w)/latest$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
 #       resource, but the browser won't change the URI (no redirects followed).
 RewriteRule ^.*docs/(\w\w)/latest/(.*)$ {{site.baseurl}}/docs/$1/{{site.latest_docs_version}}/$2 [L]
 
+# rewrite 6.0.0 links to point to 6.x links
+RewriteRule ^.*docs/(\w\w)/6.0.0/(.*)$ {{site.baseurl}}/docs/$1/6.x/$2 [L]
+
 # 301 (perm):
 #       docs/XX/edge  -> docs/xx/edge/
 #       docs/XX/edge/ -> docs/xx/dev/
