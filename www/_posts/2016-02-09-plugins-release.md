@@ -14,7 +14,7 @@ The following plugins were updated today:
 * cordova-plugin-inappbrowser@1.3.0
 * cordova-plugin-media@2.2.0
 * cordova-plugin-statusbar@2.1.1
-* cordova-plugin-spashscreen@3.2.0
+* cordova-plugin-splashscreen@3.2.0
 * cordova-plugin-wkwebviewengine@1.0.2
 
 ----
@@ -51,7 +51,7 @@ cordova-plugin-media@2.2.0
 cordova-plugin-statusbar@2.1.1
 * [CB-10102](https://issues.apache.org/jira/browse/CB-10102) The `removeObserver` code was wrong and it might crash on plugin deallocation
 
-cordova-plugin-spashscreen@3.2.0
+cordova-plugin-splashscreen@3.2.0
 * [CB-10422](https://issues.apache.org/jira/browse/CB-10422) Splashscreen displays black screen with no image on **Android**
 * [CB-10412](https://issues.apache.org/jira/browse/CB-10412) `AutoHideSplashScreen` "false" isn't taken in account on **iOS**
 * [CB-9516](https://issues.apache.org/jira/browse/CB-9516) **Android** SplashScreen - Spinner Does Not Display
