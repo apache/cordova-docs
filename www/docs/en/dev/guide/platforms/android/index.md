@@ -28,13 +28,13 @@ command-line tools in your development workflow.  You need to install
 the Android SDK regardless of whether you want to use these
 platform-centered shell tools or cross-platform Cordova CLI for
 development. For a comparison of the two development paths, see the
-[Overview](../../overview/index.html).  For details on the CLI, see [The Command-Line Interface](../../cli/index.html).
+[Overview](../../overview/index.html#development-paths).  For details on the CLI, see [The Command-Line Interface](../../cli/index.html).
 
 
 ## Requirements and Support
 
 Cordova for Android requires the Android SDK which can be installed
-on OS X, Linux or Windows operation system. See the Android SDK's
+on OS X, Linux or Windows. See the Android SDK's
 [System Requirements](http://developer.android.com/sdk/index.html#Requirements).
 Cordova's latest Android package supports up to Android [API-Level](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels) 23.
 The supported Android API-Levels for the past few cordova-android releases can
@@ -65,7 +65,7 @@ Install [Java Development Kit (JDK) 7](http://www.oracle.com/technetwork/java/ja
 or later.
 
 When installing on Windows you also need to set `JAVA_HOME` Environment Variable
-according to your JDK installation path (see [Setting Environment Variables](#link-setting-environment-variables))
+according to your JDK installation path (see [Setting Environment Variables](#setting-environment-variables))
 
 #### Android SDK
 
@@ -182,8 +182,8 @@ that Cordova exposes. The following properties are available to be set:
 |-----------------------------------|-------------------------------------------
 | `cdvBuildMultipleApks`            | If this is set, then multiple APK files will be generated: One per native platform supported by library projects (x86, ARM, etc). This can be important if your project uses large native libraries, which can drastically increase the size of the generated APK. If not set, then a single APK will be generated which can be used on all devices
 | `cdvVersionCode`                  | Overrides the versionCode set in `AndroidManifest.xml`
-| `cdvReleaseSigningPropertiesFile` | *Default: `release-signing.properties`*<br>Path to a .properties file that contains signing information for release builds (see [Signing an App](#link-signing-an-app))
-| `cdvDebugSigningPropertiesFile`   | *Default: `debug-signing.properties`*<br>Path to a .properties file that contains signing information for debug builds (see [Signing an App](#link-signing-an-app)). Useful when you need to share a signing key with other developers
+| `cdvReleaseSigningPropertiesFile` | *Default: `release-signing.properties`*<br>Path to a .properties file that contains signing information for release builds (see [Signing an App](#signing-an-app))
+| `cdvDebugSigningPropertiesFile`   | *Default: `debug-signing.properties`*<br>Path to a .properties file that contains signing information for debug builds (see [Signing an App](#signing-an-app)). Useful when you need to share a signing key with other developers
 | `cdvMinSdkVersion`                | Overrides the value of `minSdkVersion` set in `AndroidManifest.xml`. Useful when creating multiple APKs based on SDK version
 | `cdvBuildToolsVersion`            | Overrides the automatically detected `android.buildToolsVersion` value
 | `cdvCompileSdkVersion`            | Overrides the automatically detected `android.compileSdkVersion` value
@@ -212,7 +212,7 @@ You can set these properties in one of four ways:
       cdvMinSdkVersion=20
       ```
 
-  4. By extending `build.gradle` via a [`build-extras.gradle` file](#link-extending-build-gradle)
+  4. By extending `build.gradle` via a [`build-extras.gradle` file](#extending-build-gradle)
     and setting the property like so:
 
       ```
@@ -307,7 +307,7 @@ This can be useful for specifying passwords on the command line.
 
 You can also specify signing properties by including a `.properties` file and
 pointing to it with the `cdvReleaseSigningPropertiesFile` and
-`cdvDebugSigningPropertiesFile` Gradle properties (see [Setting Gradle Properties](#link-setting-gradle-properties)).
+`cdvDebugSigningPropertiesFile` Gradle properties (see [Setting Gradle Properties](#setting-gradle-properties)).
 The file should look like this:
 
 ```
@@ -376,7 +376,7 @@ tool described in [The Command-Line Interface](../../cli/index.html).
 For example, you need to use shell tools when deploying a custom
 Cordova WebView alongside native components. Before using this
 development path, you must still configure the Android SDK environment
-as described in [Requirements and Support](#link-requirements-and-support)
+as described in [Requirements and Support](#requirements-and-support)
 above.
 
 For each of the scripts discussed below, refer to

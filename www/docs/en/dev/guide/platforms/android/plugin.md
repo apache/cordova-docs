@@ -466,13 +466,13 @@ launches external activities, you should always do some testing with this
 setting enabled to ensure that you are properly handling low memory scenarios.
 
 [cordova-plugin]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
-[event-resume]: ../../../cordova/events/events.html#link-resume
+[event-resume]: ../../../cordova/events/events.html#resume
 [gradle-dep-management]: https://docs.gradle.org/current/userguide/dependency_management.html
 [permissions-guide]: http://developer.android.com/guide/topics/security/permissions.html#perm-groups
 [plugin-dev]: ../../hybrid/plugins/index.html
-[plugin-ref-framework]: ../../../plugin_ref/spec.html#link-framework
-[plugin-ref-lib-file]: ../../../plugin_ref/spec.html#link-lib-file
-[plugin-ref-name]: ../../../plugin_ref/spec.html#link-name
+[plugin-ref-framework]: ../../../plugin_ref/spec.html#framework
+[plugin-ref-lib-file]: ../../../plugin_ref/spec.html#lib-file
+[plugin-ref-name]: ../../../plugin_ref/spec.html#name
 [ref-context]: http://developer.android.com/reference/android/content/Context.html
 [ref-executor]: http://developer.android.com/reference/java/util/concurrent/ExecutorService.html
 [ref-intent]: http://developer.android.com/reference/android/content/Intent.html
