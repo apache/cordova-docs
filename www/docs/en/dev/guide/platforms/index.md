@@ -61,11 +61,8 @@ a lower-level alternative to the `cordova` command-line utility.
 ## iOS
 
 * [iOS Platform Guide](ios/index.html)
-* [iOS Shell Tool Guide](ios/tools.html)
-* [iOS Configuration](ios/config.html)
 * [iOS Plugins](ios/plugin.html)
 * [iOS WebViews](ios/webview.html)
-* [Upgrading iOS](ios/upgrade.html)
 
 ## Ubuntu
 
