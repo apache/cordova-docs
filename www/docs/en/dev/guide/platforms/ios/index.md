@@ -95,8 +95,8 @@ To sign an app, you need the following parameters:
 
 | Parameter                | Flag                     | Description
 |--------------------------|--------------------------|-----------------------------------
-| Code Sign Identity       | `--codeSignIdentity`     | Name of the code signing identity to use for signing
-| Provisioning Profile     | `--provisioningProfile`  | GUID representing the provisioning profile to be used for signing
+| Code Sign Identity       | `--codeSignIdentity`     | Code signing identity to use for signing. It can be created with Xcode and added to your keychain.
+| Provisioning Profile     | `--provisioningProfile`  | GUID of the provisioning profile to be used for signing. It is copied here on your Mac: ~/Library/MobileDevice/Provisioning\ Profiles/. Opening it in a text editor, you can find the GUID which needs to be specified here.
 | Code Sign Resource Rules | `--codesignResourceRules`| (Optional) Used to control which files in a bundle should be sealed by a code signature. For more details, read [The OS X Code Signing In Depth article](https://developer.apple.com/library/mac/technotes/tn2206/_index.html#//apple_ref/doc/uid/DTS40007919-CH1-TNTAG206) 
 
 ### Using build.json
