@@ -155,3 +155,5 @@
 - {old: "guide_plugin-development_blackberry10_index.md.html", new: "guide/plugin-development/blackberry10/index.html"}
 - {old: "guide_privacy_index.md.html", new: "guide/privacy/index.html"}
 - {old: "guide_upgrading_windows-8_index.md.html", new: "guide/upgrading/windows-8/index.html"}
+- {old: "dev/guide/platforms/ios/tools.html", new: "dev/guide/platforms/ios/index.html"}
+- {old: "dev/guide/platforms/ios/config.html", new: "dev/config_ref/index.html"}
