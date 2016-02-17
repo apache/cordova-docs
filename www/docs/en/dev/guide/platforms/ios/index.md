@@ -52,11 +52,9 @@ which costs [$99](https://developer.apple.com/support/purchase-activation/) per 
 iOS emulator, for which you don't need to register with the developer
 program.
 
-The [ios-sim](https://www.npmjs.org/package/ios-sim) and 
-[ios-deploy](https://www.npmjs.org/package/ios-deploy) tools - allows you
-to launch iOS apps into the iOS Simulator and iOS Device from the command-line.
+## Installing the Requirements
 
-## Install the SDK
+### Xcode
 
 There are two ways to download Xcode:
 
@@ -71,43 +69,83 @@ for Cordova to run. From the __Xcode__ menu, select __Preferences__,
 then the __Downloads__ tab. From the __Components__ panel, press the
 __Install__ button next to the __Command Line Tools__ listing. 
 
-## Install Deploy Tools
+### Deployment Tools
 
-Run from command-line terminal:
+The [ios-sim](https://www.npmjs.org/package/ios-sim) and 
+[ios-deploy](https://www.npmjs.org/package/ios-deploy) tools - allows you
+to launch iOS apps into the iOS Simulator and iOS Device from the command-line.
+
+To install them, run the following from command-line terminal:
 
         $ npm install -g ios-sim
         $ npm install -g ios-deploy
 
-## Create a New Project
+## Project Configuration
 
-Use the `cordova` utility to set up a new project, as described in The
-Cordova [The Command-Line Interface](../../cli/index.html). For example, in a source-code directory:
+Installing Xcode will mostly set everything needed to get started.
 
-        $ cordova create hello com.example.hello "HelloWorld"
-        $ cd hello
-        $ cordova platform add ios
-        $ cordova prepare              # or "cordova build"
+## Signing an App
 
-## Deploy the app
+First, you should read through the [Code Signing Support Page](https://developer.apple.com/support/code-signing/) 
+and the [App Distribution Workflows](https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html).
 
-To deploy the app on a connected iOS device:
+### Using Flags
 
-        $ cordova run ios --device
-To deploy the app on a default iOS emulator:
+To sign an app, you need the following parameters:
 
-        $ cordova emulate ios
+| Parameter                | Flag                     | Description
+|--------------------------|--------------------------|-----------------------------------
+| Code Sign Identity       | `--codeSignIdentity`     | Name of the code signing identity to use for signing
+| Provisioning Profile     | `--provisioningProfile`  | GUID representing the provisioning profile to be used for signing
+| Code Sign Resource Rules | `--codesignResourceRules`| (Optional) Used to control which files in a bundle should be sealed by a code signature. For more details, read [The OS X Code Signing In Depth article](https://developer.apple.com/library/mac/technotes/tn2206/_index.html#//apple_ref/doc/uid/DTS40007919-CH1-TNTAG206) 
 
-You can use __cordova run ios --list__ to see all available targets and 
-__cordova run ios --target=target_name__ to run application on a specific 
-device or emulator (for example,  `cordova run ios --target="iPhone-6"`).
+### Using build.json
 
-You can also use __cordova run --help__ to see additional build and run
-options.
+Alternatively, you could specify them in a build configuration file (`build.json`)
+using the `--buildConfig` argument to the same commands. Here's a sample of a
+build configuration file:
 
-## Open a Project within Xcode
+    {
+         "ios": {
+             "debug": {
+                 "codeSignIdentitiy": "iPhone Development",
+                 "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954",
+             },
+             "release": {
+                 "codeSignIdentitiy": "iPhone Distribution"
+                 "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306",
+             }
+         }
+    }
+    
+### Using xcrun
 
-Once the ios platform is added to your project, you can open it from 
-within Xcode. Double-click to open the `hello/platforms/ios/HelloCordova.xcodeproj`
+You can also sign from the command line using the following command:
+
+```
+    xcrun -sdk iphoneos PackageApplication -v /home/user/app/build/device/MyApp.app -o /home/user/app/build/device/MyApp.ipa --sign "iPhone Development" --embed "7151ab45-6085-4ea1-9bcd-022b5cebe44b"
+```
+
+## Debugging
+
+For details on the debugging tools that come with Xcode, see this [article](https://developer.apple.com/support/debugging)
+and this [video](https://developer.apple.com/videos/play/wwdc2014-413/).
+
+### Open a Project within Xcode
+
+Cordova for iOS projects can be opened in Xcode. This can be useful if 
+you wish to use Xcode built in debugging/profiling tools or if you are
+developing iOS plugins. Please note that when opening your project in Android studio, 
+it is recommended that you do NOT edit your code in the IDE. This will edit the code 
+in the ```platforms``` folder of your project (not ```www```), and changes are liable to be overwritten. 
+Instead, edit the ```www``` folder and copy over your changes by running ```cordova build```.
+
+Plugin developers wishing to edit their native code in the IDE should use the ```--link``` flag when adding their 
+plugin to the project via cordova plugin add. This will link the files so that changes to the plugin files in the 
+platforms folder are reflected in your plugin's source folder (and vice versa).
+
+Once the ios platform is added to your project and built using ```cordova build```, you can open it from 
+within Xcode. Double-click to open the `${PROJECT_NAME}/platforms/ios/${PROJECT_NAME}.xcodeproj`
 file. The screen should look like this:
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png)
