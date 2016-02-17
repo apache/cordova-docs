@@ -25,10 +25,11 @@ $(document).ready(function () {
         //      a better regex would have been /[^\d\s\w]/ug, but the 'u' flag
         //      (Unicode) is not supported in some browsers, and we support
         //      many languages that use Unicode characters
-        text = text.replace(/[\[\]\(\)\=\+\?]/g, ' ');
+        text = text.replace(/[\[\]\(\)\=\+\?\.\,]/g, ' ');
 
         // trim whitespace and replace runs of whitespace with single dashes
-        text = text.trim().replace(/ +/g, '-');
+        text = text.trim();
+        text = text.replace(/ +/g, '-');
 
         return text;
     }
