@@ -161,7 +161,8 @@ serve:
 	cd $(DEV_DIR) && python -m SimpleHTTPServer 8000
 
 $(FETCH_DIR): $(FETCH_CONFIG) $(BIN_DIR)/fetch_docs.js
-	$(NODE) $(BIN_DIR)/fetch_docs.js $(FETCH_CONFIG) $(FETCH_DIR)
+	$(NODE) $(BIN_DIR)/fetch_docs.js $(FETCH_CONFIG) $@
+	touch $@
 
 fetch: $(FETCH_DIR)
 
@@ -225,7 +226,7 @@ endif
 clean:
 
 	$(RM) -r $(PROD_DIR) $(DEV_DIR)
-	$(RM) -r $(FETCH_DIRS)
+	$(RM) -r $(FETCH_DIR)
 	$(RM) $(VERSION_CONFIG)
 	$(RM) $(DEFAULTS_CONFIG)
 	$(RM) $(TOC_FILES)
