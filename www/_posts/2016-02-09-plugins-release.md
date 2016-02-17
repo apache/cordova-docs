@@ -14,7 +14,7 @@ The following plugins were updated today:
 * cordova-plugin-inappbrowser@1.3.0
 * cordova-plugin-media@2.2.0
 * cordova-plugin-statusbar@2.1.1
-* cordova-plugin-spashscreen@3.2.0
+* cordova-plugin-splashscreen@3.2.0
 * cordova-plugin-wkwebviewengine@1.0.2
 
 ----
