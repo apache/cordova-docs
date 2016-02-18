@@ -402,6 +402,12 @@ normal Cordova project. Notably, `/www` is moved to `/assets/www`.
 To install plugins in this project, use the [Cordova Plugman Utility](../../../plugin_ref/plugman.html).
 
 
+## Upgrading
+
+Refer to [this](./upgrade.html) article for instructions to upgrade your
+`cordova-android` version.
+
+
 ## Lifecycle Guide
 
 ### Cordova and Android
