@@ -48,15 +48,22 @@ RewriteRule ^.*docs/(\w\w)/edge$ {{site.baseurl}}/docs/$1/edge/
 RewriteRule ^.*docs/(\w\w)/edge/(.*)$ {{site.baseurl}}/docs/$1/dev/$2 [R=301,L]
 
 # 301 (perm):
-#       old docs pages -> new docs pages (from www/_data/docs-redirects.yml)
+#       old docs pages -> new docs pages (global)
 #
 # NOTE:
-#       The first part of the path (i.e. the ".*") is
-#       thrown away and replaced by site.baseurl.
-# NOTE:
-#       The reason for this not just being "redirects" and rather being
-#       docs-specific is: these redirects happen for every version of the
-#       docs. That's 157 redirects * 84 versions ~= 13000 redirects! Doing
-#       special pattern-matching for docs keeps that number at _only_ 157.
-{% for redirect in site.data.docs-redirects %}RewriteRule ^.*docs/(\w\w)/([^/]+)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/$2/{{redirect.new}} [R=301,L]
+#       The first part of the path (i.e. the ".*") is thrown away and replaced
+#       by site.baseurl. It is thrown away because there is no RewriteCond to
+#       control whether the rewrite happens to a URI or a local file path
+#       (when Apache is locating the local file to serve).
+{% for redirect in site.data.redirects.docs-global %}RewriteRule ^.*docs/(\w\w)/([^/]+)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/$2/{{redirect.new}} [R=301,L]
+{% endfor %}
+
+# 301 (perm):
+#       old docs pages -> new docs pages (version-specific)
+{% for redirect in site.data.redirects.docs %}RewriteRule ^.*docs/(\w\w)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/{{redirect.new}} [R=301,L]
+{% endfor %}
+
+# 301 (perm):
+#       old pages -> new pages
+{% for redirect in site.data.redirects.general %}RewriteRule ^.*/{{redirect.old}}$ {{site.baseurl}}/{{redirect.new}} [R=301,L]
 {% endfor %}
