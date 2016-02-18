@@ -22,4 +22,3 @@
 - {name: !!python/unicode 'Plugin Development Guide', url: !!python/unicode 'guide/plugin-development/index.html'}
 - {name: !!python/unicode 'Domain Whitelist Guide', url: !!python/unicode 'guide/whitelist/index.html'}
 - {name: !!python/unicode 'Embedding WebView', url: !!python/unicode 'guide/cordova-webview/index.html'}
-- {name: !!python/unicode 'Keyword Index', url: !!python/unicode 'page_index.html'}

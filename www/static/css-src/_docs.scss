@@ -161,27 +161,6 @@
         @extend .table-bordered;
     }
 
-    .keyword-index-list {
-        list-style: none;
-
-        // h2 styling for headers to avoid creating sub-headers in the TOC
-        .keyword-index-h2 {
-            margin-top: 20px;
-            margin-bottom: 10px;
-            color: gray;
-            font-size: 18px;
-            display: inline-block;
-            font-family: inherit;
-            font-weight: 500;
-            line-height: 1.1;
-        }
-
-        .keyword-index-sublist {
-            min-height: 180px;
-            list-style: none;
-        }
-    }
-
     .docs-alert {
         margin-top: 22px;
     }

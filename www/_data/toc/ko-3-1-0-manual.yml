@@ -18,4 +18,3 @@
 - {name: "\uC704\uCE58", url: !!python/unicode 'cordova/geolocation/geolocation.html'}
 - {name: "\uC54C\uB9BC", url: !!python/unicode 'cordova/notification/notification.html'}
 - {name: "\uC2A4\uD1A0\uB9AC\uC9C0", url: !!python/unicode 'cordova/storage/storage.html'}
-- {name: "\uD0A4\uC6CC\uB4DC \uC778\uB371\uC2A4", url: !!python/unicode 'page_index.html'}

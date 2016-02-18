@@ -27,4 +27,3 @@
 - {name: "\u901A\u77E5", url: !!python/unicode 'cordova/notification/notification.html'}
 - {name: "\u30B9\u30D7\u30E9\u30C3\u30B7\u30E5 \u30B9\u30AF\u30EA\u30FC\u30F3", url: !!python/unicode 'cordova/splashscreen/splashscreen.html'}
 - {name: "\u30B9\u30C8\u30EC\u30FC\u30B8", url: !!python/unicode 'cordova/storage/storage.html'}
-- {name: "\u30AD\u30FC\u30EF\u30FC\u30C9 \u30A4\u30F3\u30C7\u30C3\u30AF\u30B9", url: !!python/unicode 'page_index.html'}
