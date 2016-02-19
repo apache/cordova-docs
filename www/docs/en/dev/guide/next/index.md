@@ -22,7 +22,7 @@ title: Next Steps
 
 # Next Steps
 
-For developers who have an understanding of how to use the Cordova CLI and make use of plugins, there are a few things you may want to consider researching next to build better, more performant Cordova applications. The following document offers advice on various topics relating to best practices, testing, upgrades, and other topics, but is not meant to be prescriptive. Consider this your launching point for your growth as a Cordova developer. Also, if you see something that can be improved, please [contribute](http://cordova.apache.org/#contribute)!
+For developers who have an understanding of how to use the Cordova CLI and make use of plugins, there are a few things you may want to consider researching next to build better, more performant Cordova applications. The following document offers advice on various topics relating to best practices, testing, upgrades, and other topics, but is not meant to be prescriptive. Consider this your launching point for your growth as a Cordova developer. Also, if you see something that can be improved, please [contribute](http://cordova.apache.org/contribute/)!
 
 This guide contains the following topics:
 
@@ -60,9 +60,9 @@ And many, many, more.
 
 ## 2) Performance Considerations
 
-One of the biggest mistakes a new Cordova developer can make is to assume that the performance they get on a desktop machine is the same they will get on a mobile device. While our mobile devices have gotten more powerful every year, they still lack the power and performance of a desktop. Mobile devices typically have much less RAM and a GPU that is a far cry from their desktop (or even laptop) brethren. A full list of tips here would be too much, but here are a few things to keep in mind (with a list of longer resources at the end for further research).
+Consider the following issues to improve the performance in your mobile applications:
 
-**Click versus Touch** - The biggest and simplest mistake you can make is to use click events. While these "work" just fine on mobile, most devices impose a 300ms delay on them in order to distinguish between a touch and a touch "hold" event. Using `touchstart`, or `touchend`, will result in a dramatic improvement - 300ms doesn't sound like much, but it can result in jerky UI updates and behavior. You should also consider the fact that “touch” events are not supported on non-webkit browsers, see [CanIUse](http://caniuse.com/#search=touch). In order to deal with these limitations, you can checkout various libraries like HandJS and Fastouch.
+**Click versus Touch** - The biggest and simplest mistake you can make is to use click events. While these "work" just fine on mobile, most devices impose a 300ms delay on them in order to distinguish between a touch and a touch "hold" event. Using `touchstart`, or `touchend`, will result in a dramatic improvement - 300ms doesn't sound like much, but it can result in jerky UI updates and behavior. You should also consider the fact that “touch” events are not supported on non-webkit browsers, see [CanIUse](http://caniuse.com/#search=touch). In order to deal with these limitations, you can checkout various libraries like HandJS and Fastclick.
 
 **CSS Transitions versus DOM Manipulation** - Using hardware accelerated CSS transitions will be dramatically better than using JavaScript to create animations. See the list of resources at the end of this section for examples.
 
@@ -105,10 +105,13 @@ Regardless of the project's prior version, it is absolutely critical that you re
 Note: some plugins may not be compatible with the new version of Cordova. If a plugin is not compatible, you may be able to find a replacement plugin that does what you need, or you may need to delay upgrading your project. Alternatively, alter the plugin so that it does work under the new version and contribute back to the community.
 
 ## Plugin Upgrades
-As of Cordova 3.4, there is no mechanism for upgrading changed plugins using a single command. Instead, remove the plugin and add it back to your project, and the new version will be installed:
+Currently there is no mechanism for upgrading changed plugins using a single command. Instead, remove the plugin and add it back to your project, and the new version will be installed:
 
-	cordova plugin rm com.some.plugin
-	cordova plugin add com.some.plugin
+```
+cordova plugin rm "some-plugin"
+cordova plugin add "some-plugin"
+```
+Refer to [Manage versions and platforms](../../platform_plugin_versioning_ref/index.html) for more details.
 
 Be sure to check the updated plugin's documentation, as you may need to adjust your code to work with the new version. Also, double check that the new version of the plugin works with your project’s version of Cordova.
 
@@ -132,7 +135,7 @@ It’s not uncommon to use desktop browsers and device simulators/emulators when
 
 It is, of course, impossible to test on every possible device on the market. For this reason, it’s wise to recruit many testers who have different devices. Although they won’t catch every problem, chances are good that they will discover quirks and issues that you would never find alone.
 
-Tip: It is possible on Android Nexus devices to easily flash different versions of Android onto the device. This simple process will allow you to easily test your application on different levels of Android with a single device, without voiding your warranty or requiring you to “jailbreak” or “root” your device. The Google Android factory images and instructions are located at: https://developers.google.com/android/nexus/images#instructions
+Tip: It is possible on Android Nexus devices to easily flash different versions of Android onto the device. This simple process will allow you to easily test your application on different levels of Android with a single device, without voiding your warranty or requiring you to “jailbreak” or “root” your device. Refer to the [Google Android factory images and instructions](https://developers.google.com/android/nexus/images#instructions). 
 
 # Debugging Cordova apps
 
@@ -141,10 +144,10 @@ Debugging Cordova requires some setup. Unlike a desktop application, you can't s
 ## iOS Debugging
 
 ### Xcode
-With Xcode you can debug the iOS native side of your Cordova application. Make sure the Debug Area is showing (View -> Debug Area). Once your app is running on the device (or simulator), you can view log output in the debug area. This is where any errors or warnings will print. You can also set breakpoints within the source files. This will allow you to step through the code one line at a time and view the state of the variables at that time. The state of the variables is shown in the debug area when a breakpoint is hit. Once your app is up and running on the device, you can bring up Safari's web inspector (as described below) to debug the webview and js side of your application. For more details and help, see the Xcode guide: [Xcode Debugging Guide](https://developer.apple.com/library/mac/documentation/ToolsLanguages/Conceptual/Xcode_Overview/DebugYourApp/DebugYourApp.html#//apple_ref/doc/uid/TP40010215-CH18-SW1)
+With Xcode you can debug the iOS native side of your Cordova application. Make sure the Debug Area is showing (View -> Debug Area). Once your app is running on the device (or simulator), you can view log output in the debug area. This is where any errors or warnings will print. You can also set breakpoints within the source files. This will allow you to step through the code one line at a time and view the state of the variables at that time. The state of the variables is shown in the debug area when a breakpoint is hit. Once your app is up and running on the device, you can bring up Safari's web inspector (as described below) to debug the webview and js side of your application. For more details refer to the [Apple Support](https://developer.apple.com/support/debugging/) docs.
 
 ### Safari Remote Debugging with Web Inspector
-With Safari's web inspector you can debug the webview and js code in your Cordova application. This works only on OSX and only with iOS 6 (and higher). It uses Safari to connect to your device (or the simulator) and will connect the browser's dev tools to the Cordova application. You get what you expect from dev tools - DOM inspection/manipulation, a JavaScript debugger, network inspection, the console, and more. Like Xcode, with Safari's web inspector you can set breakpoints in the JavaScript code and view the state of the variables at that time. You can view any errors, warnings or messages that are printed to the console. You can also run JavaScript commands directly from the console as your app is running. For more details on how to set it up and what you can do, see this excellent blog post: [http://moduscreate.com/enable-remote-web-inspector-in-ios-6/](http://moduscreate.com/enable-remote-web-inspector-in-ios-6/) and this guide: [Safari Web Inspector Guide](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html)
+With Safari's web inspector you can debug the webview and js code in your Cordova application. This works only on OSX and only with iOS 6 (and higher). It uses Safari to connect to your device (or the simulator) and will connect the browser's dev tools to the Cordova application. You get what you expect from dev tools - DOM inspection/manipulation, a JavaScript debugger, network inspection, the console, and more. Like Xcode, with Safari's web inspector you can set breakpoints in the JavaScript code and view the state of the variables at that time. You can view any errors, warnings or messages that are printed to the console. You can also run JavaScript commands directly from the console as your app is running. For more details on how to set it up and what you can do, see the blog post about [Enabling Remote Web Inspector in iOS 6](http://moduscreate.com/enable-remote-web-inspector-in-ios-6/) and [Safari Web Inspector Guide](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html).
 
 ## Chrome Remote Debugging
 Virtually the same as the Safari version, this works with Android only but can be used from any desktop operating system. It requires a minimum of Android 4.4 (KitKat), minimum API level of 19, and Chrome 30+ (on the desktop). Once connected, you get the same Chrome Dev Tools experience for your mobile applications as you do with your desktop applications. Even better, the Chrome Dev Tools have a mirror option that shows your app running on the mobile device. This is more than just a view - you can scroll and click from dev tools and it updates on the mobile device. More details on Chrome Remote Debugging may be found here: [https://developers.google.com/chrome/mobile/docs/debugging](https://developers.google.com/chrome/mobile/docs/debugging)
@@ -176,8 +179,8 @@ Building a Cordova application that looks nice on mobile can be a challenge, esp
 When building your user interface, it is important to think about all platforms that you are targeting and the differences between the user’s expectations. For example, an Android application that has an iOS-style UI will probably not go over well with users. This sometimes is even enforced by the various application stores. Because of this, it is important that you respect the conventions of each platform and therefore are familiar with the various Human Interface Guidelines:
 
 * [iOS](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html)
-* [Android](https://developer.android.com/designWP8)
-* [Windows Phone](http://dev.windowsphone.com/en-us/design/library)
+* [Android](http://developer.android.com/design/index.html)
+* [Windows Phone](https://dev.windows.com/en-us/design)
 
 ## Additional UI Articles and Resources
 
