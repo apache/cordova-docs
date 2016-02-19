@@ -20,7 +20,7 @@ license: >
 title: Android Plugins
 ---
 
-# Android Plugins
+# Android Plugin Development Guide
 
 This section provides details for how to implement native plugin code
 on the Android platform. Before reading this, see the [Plugin Development Guide][plugin-dev]
