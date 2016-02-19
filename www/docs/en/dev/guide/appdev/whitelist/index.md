@@ -29,7 +29,7 @@ accessed.  By default, new apps are configured to allow access to any site.
 Before moving your application to production, you should formulate a whitelist
 and allow access to specific network domains and subdomains.
 
-For Android and iOS (as of their 4.0 releases), Cordova's security policy is extensible via a plugin
+For Android (as of its 4.0 release), Cordova's security policy is extensible via a plugin
 interface.  Your app should use the [cordova-plugin-whitelist][wlp], as it provides
 better security and configurability than earlier versions of Cordova.  While
 it is possible to implement your own whitelist plugin, it is not recommended
@@ -72,9 +72,9 @@ The following examples demonstrate `<access>` whitelist syntax:
 
 Be aware that some websites may automatically redirect from their home page to
 a different url, such as using https protocol or to a country-specific
-domain. For example http://www.google.com will redirect to use SSL/TLS at
-https://www.google.com, and then may further redirect to a geography such as
-https://www.google.co.uk. Such scenarios may require modified or additional
+domain. For example `http://www.google.com` will redirect to use SSL/TLS at
+`https://www.google.com`, and then may further redirect to a geography such as
+`https://www.google.co.uk`. Such scenarios may require modified or additional
 whitelist entries beyond your initial requirement. Please consider this
 as you are building your whitelist.
 
@@ -88,7 +88,7 @@ prior to 4.0.0, see older versions of this documentation.
 
 ## iOS Whitelisting
 
-The `<allow-intent>` and `<allow-navigation>` tags are _new_ for cordova-ios 4.x and greater, see the [cordova-plugin-whitelist][wlp] documentation for details. cordova-ios version 4.0 and greater does **not** require the [cordova-plugin-whitelist][wlp] plugin to be installed.
+`Cordova-ios` version 4.0 and greater does **not** require the [cordova-plugin-whitelist][wlp] plugin to be installed, however it's configuration details apply to iOS too. The `<allow-intent>` and `<allow-navigation>` tags are _new_ for cordova-ios 4.x and greater, see the [cordova-plugin-whitelist][wlp] documentation for details on the usage of these tags. 
 
 For cordova-ios versions prior to 4.0.0, see the older versions of this documentation.
 
@@ -147,4 +147,4 @@ app's `config.xml` file.
 [5]: http://mail.google.com
 [6]: http://docs.google.com
 [7]: http://developer.mozilla.org
-[8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
+[8]: https://developer.blackberry.com/html5/documentation/v1_0/access_element_834677_11.html
