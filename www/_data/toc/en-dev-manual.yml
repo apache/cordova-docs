@@ -25,12 +25,12 @@
                 -   name: "Windows"
                     url: "guide/platforms/win8/index.html"
                 -   name: "WP8"
-                    url: "guide/platforms/wp8/home.html"                                                           
+                    url: "guide/platforms/wp8/home.html"
         -   name: "Manage versions and platforms"
             url: "platform_plugin_versioning_ref/index.html"
         -   name: "Debug and test"
             url:
-        -   name: "Use icons and splash screens"
+        -   name: "Use Icons"
             url: "config_ref/images.html"
         -   name: "Automate Tasks"
             url:

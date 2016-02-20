@@ -17,15 +17,12 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Icons and Splash Screens
+title: Icons
 ---
 
-# Icons and Splash Screens
+# Icons
 
-This section shows how to configure an app's icon and optional splash
-screen for various platforms, both when working in the Cordova CLI
-(described in The Command-Line Interface) or using platform-specific
-SDK tools (detailed in the Platform Guides).
+This section shows how to configure an app's icon for various platforms.
 
 ## Configuring Icons in the CLI
 
@@ -34,15 +31,14 @@ If you do not specify an icon then the Apache Cordova logo is used.
 
         <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
 
-src: (required) specifies the location of the image file, relative to your project directory
+Attributes    | Description
+--------------|--------------------------------------------------------------------------------
+src           | *Required* <br/> Location of the image file, relative to your project directory
+platform      | *Optional* <br/> Target platform
+width         | *Optional* <br/> Icon width in pixels
+height        | *Optional* <br/> Icon height in pixels
+density       | *Optional* <br/> Specified icon density (Android Specific)
 
-platform: (optional) target platform
-
-width: (optional) icon width in pixels
-
-height: (optional) icon height in pixels
-
-density: (optional) android specific, specifies icon density
 
 The following configuration can be used to define single default icon
 which will be used for all platforms.
@@ -52,7 +48,7 @@ which will be used for all platforms.
 For each platform you can also define a pixel-perfect icons set to fit
 different screen resolutions.
 
-Android
+##Android
 
          <platform name="android">
                   <icon src="res/android/ldpi.png" density="ldpi" />
@@ -61,17 +57,16 @@ Android
                   <icon src="res/android/xhdpi.png" density="xhdpi" />
          </platform>
 
-BlackBerry10
+##BlackBerry10
 
          <platform name="blackberry10">
                   <icon src="res/bb10/icon-86.png" />
                   <icon src="res/bb10/icon-150.png" />
          </platform>
 
-See BlackBerry's documentation for targeting multiple sizes and locales.
-[http://developer.blackberry.com/html5/documentation/icon_element.html]
+See [BlackBerry's documentation][blackberry_icon] for targeting multiple sizes and locales.
 
-iOS
+##iOS
 
          <platform name="ios">
                   <!-- iOS 8.0+ -->
@@ -102,7 +97,7 @@ iOS
                   <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
          </platform>
 
-Windows Phone8
+##Windows Phone8
 
          <platform name="wp8">
                   <icon src="res/wp/ApplicationIcon.png" width="99" height="99" />
@@ -110,7 +105,7 @@ Windows Phone8
                   <icon src="res/wp/Background.png" width="159" height="159" />
          </platform>
 
-Windows
+##Windows
 
          <platform name="windows">
                   <icon src="res/windows/logo.png" width="150" height="150" />
@@ -118,72 +113,8 @@ Windows
                   <icon src="res/windows/storelogo.png" width="50" height="50" />
          </platform>
 
-## Configuring Splash Screens in the CLI
 
-In the top-level `config.xml` file (not the one in `platforms`), add configuration elements like those specified here.
+The splash screen configuration options can be found in the [Splashscreen plugin docs][splashscreen_plugin].
 
-# Example configuration
-
-Please notice that the value of the "src" attribute is relative to the project directory and not to the www directory.
-You can name the source image whatever you like. The internal name in the app are determined by Cordova.
-
-    <platform name="android">
-        <!-- you can use any density that exists in the Android project -->
-        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
-        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
-        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
-        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
-
-        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
-        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
-        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
-        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
-    </platform>
-
-    <platform name="ios">
-        <!-- images are determined by width and height. The following are supported -->
-        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
-        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
-        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
-        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
-        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
-        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
-        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
-        <splash src="res/screen/ios/Default-667h.png" width="750" height="1334"/>
-        <splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/>
-        <splash src="res/screen/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
-    </platform>
-
-    <platform name="wp8">
-        <!-- images are determined by width and height. The following are supported -->
-        <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
-    </platform>
-
-    <platform name="windows">
-        <!-- images are determined by width and height. The following are supported -->
-        <splash src="res/screen/windows/splashscreen.png" width="620" height="300"/>
-    </platform>
-
-    <platform name="blackberry10">
-        <!-- Add a rim:splash element for each resolution and locale you wish -->
-        <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
-        <rim:splash src="res/screen/blackberry10/splashscreen.png"/>
-    </platform>
-
-
-    <preference name="SplashScreenDelay" value="10000" />
-
-# Supported platforms
-
-As of now (Cordova 3.5.0 July 2014) the following platforms support splash screens.
-
-    android
-    ios
-    wp8
-    windows
-    blackberry10
-
-# Splashscreen Plugin
-
-  Apache Cordova also offers special splash screen plugin which could be used to programmatically display and hide a splash screen during application launch
-  https://github.com/apache/cordova-plugin-splashscreen
+[blackberry_icon]: http://developer.blackberry.com/html5/documentation/icon_element.html
+[splashscreen_plugin]: ../gen/cordova-plugin-splashscreen/
