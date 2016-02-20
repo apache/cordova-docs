@@ -1,153 +1,146 @@
+# REFERENCE ENTRY:
+#
+# -
+#     src:                                                            # required
+#         repoName:    "apache/cordova-cli"                           # required
+#         packageName: "cordova"                                      # if empty: second part of repoName
+#         commit:      "master"                                       # if empty: latest in NPM
+#         path:        "relative/path/to/file/in/repo.md"             # if empty: "README.md"
+#     dest:                                                           # required
+#         permalink:   "/absolute/path/on/cordova/site/index.html"    # if empty: "/gen/" + packageName + "/"
+#
+
 -
     src:
         repoName: "apache/cordova-cli"
         packageName: "cordova"
+        commit: "master"
         path: "doc/bash.md"
-    dest: "cordova-cli/index.md"
+    dest:
+        permalink: "/docs/en/dev/cordova-cli/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-battery-status
-        packageName: cordova-plugin-battery-status
-        displayName: Battery Status
-        description: Monitor the status of the device's battery.
-    dest: cordova-plugin-battery-status/index.md
+        repoName: "apache/cordova-plugin-battery-status"
+        packageName: "cordova-plugin-battery-status"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-battery-status/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-camera
-        packageName: cordova-plugin-camera
-        displayName: Camera
-        description: Capture a photo using the device's camera.
-    dest: cordova-plugin-camera/index.md
+        repoName: "apache/cordova-plugin-camera"
+        packageName: "cordova-plugin-camera"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-camera/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-console
-        packageName: cordova-plugin-console
-        displayName: Console
-        description: Add additional capability to console.log().
-    dest: cordova-plugin-console/index.md
+        repoName: "apache/cordova-plugin-console"
+        packageName: "cordova-plugin-console"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-console/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-contacts
-        packageName: cordova-plugin-contacts
-        displayName: Contacts
-        description: Work with the devices contact database.
-    dest: cordova-plugin-contacts/index.md
+        repoName: "apache/cordova-plugin-contacts"
+        packageName: "cordova-plugin-contacts"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-contacts/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-device
-        packageName: cordova-plugin-device
-        displayName: Device
-        description: Gather device specific information.
-    dest: cordova-plugin-device/index.md
+        repoName: "apache/cordova-plugin-device"
+        packageName: "cordova-plugin-device"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-device/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-device-motion
-        packageName: cordova-plugin-device-motion
-        displayName: Device Motion (Accelerometer)
-        description: Tap into the device's motion sensor.
-    dest: cordova-plugin-device-motion/index.md
+        repoName: "apache/cordova-plugin-device-motion"
+        packageName: "cordova-plugin-device-motion"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-device-motion/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-device-orientation
-        packageName: cordova-plugin-device-orientation
-        displayName: Device Orientation (Compass)
-        description: Obtain the direction that the device is pointing.
-    dest: cordova-plugin-device-orientation/index.md
+        repoName: "apache/cordova-plugin-device-orientation"
+        packageName: "cordova-plugin-device-orientation"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-device-orientation/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-dialogs
-        packageName: cordova-plugin-dialogs
-        displayName: Dialogs
-        description: Visual device notifications.
-    dest: cordova-plugin-dialogs/index.md
+        repoName: "apache/cordova-plugin-dialogs"
+        packageName: "cordova-plugin-dialogs"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-dialogs/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-file
-        packageName: cordova-plugin-file
-        displayName: FileSystem
-        description: Hook into native file system through JavaScript.
-    dest: cordova-plugin-file/index.md
+        repoName: "apache/cordova-plugin-file"
+        packageName: "cordova-plugin-file"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-file/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-file-transfer
-        packageName: cordova-plugin-file-transfer
-        displayName: File Transfer
-        description: Hook into native file system through JavaScript.
-    dest: cordova-plugin-file-transfer/index.md
+        repoName: "apache/cordova-plugin-file-transfer"
+        packageName: "cordova-plugin-file-transfer"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-file-transfer/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-geolocation
-        packageName: cordova-plugin-geolocation
-        displayName: Geolocation
-        description: Make your application location aware.
-    dest: cordova-plugin-geolocation/index.md
+        repoName: "apache/cordova-plugin-geolocation"
+        packageName: "cordova-plugin-geolocation"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-geolocation/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-globalization
-        packageName: cordova-plugin-globalization
-        displayName: Globalization
-        description: Enable representation of objects specific to a locale.
-    dest: cordova-plugin-globalization/index.md
+        repoName: "apache/cordova-plugin-globalization"
+        packageName: "cordova-plugin-globalization"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-globalization/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-inappbrowser
-        packageName: cordova-plugin-inappbrowser
-        displayName: InAppBrowser
-        description: Launch URLs in another in-app browser instance.
-    dest: cordova-plugin-inappbrowser/index.md
+        repoName: "apache/cordova-plugin-inappbrowser"
+        packageName: "cordova-plugin-inappbrowser"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-inappbrowser/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-media
-        packageName: cordova-plugin-media
-        displayName: Media
-        description: Record and play back audio files.
-    dest: cordova-plugin-media/index.md
+        repoName: "apache/cordova-plugin-media"
+        packageName: "cordova-plugin-media"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-media/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-media-capture
-        packageName: cordova-plugin-media-capture
-        displayName: Media Capture
-        description: Capture media files using device's media capture applications.
-    dest: cordova-plugin-media-capture/index.md
+        repoName: "apache/cordova-plugin-media-capture"
+        packageName: "cordova-plugin-media-capture"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-media-capture/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-network-information
-        packageName: cordova-plugin-network-information
-        displayName: Network Information (Connection)
-        description: Quickly check the network state, and cellular network information.
-    dest: cordova-plugin-network-information/index.md
+        repoName: "apache/cordova-plugin-network-information"
+        packageName: "cordova-plugin-network-information"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-network-information/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-splashscreen
-        packageName: cordova-plugin-splashscreen
-        displayName: Splashscreen
-        description: Show and hide the applications splash screen.
-    dest: cordova-plugin-splashscreen/index.md
+        repoName: "apache/cordova-plugin-splashscreen"
+        packageName: "cordova-plugin-splashscreen"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-splashscreen/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-vibration
-        packageName: cordova-plugin-vibration
-        displayName: Vibration
-        description: An API to vibrate the device.
-    dest: cordova-plugin-vibration/index.md
+        repoName: "apache/cordova-plugin-vibration"
+        packageName: "cordova-plugin-vibration"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-vibration/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-statusbar
-        packageName: cordova-plugin-statusbar
-        displayName: StatusBar
-        description: An API for showing, hiding and configuring status bar background.
-    dest: cordova-plugin-statusbar/index.md
+        repoName: "apache/cordova-plugin-statusbar"
+        packageName: "cordova-plugin-statusbar"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-statusbar/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-whitelist
-        packageName: cordova-plugin-whitelist
-        displayName: Whitelist
-        description: A plugin to whitelist network requests. Must install to have any network requests in your applications.
-    dest: cordova-plugin-whitelist/index.md
+        repoName: "apache/cordova-plugin-whitelist"
+        packageName: "cordova-plugin-whitelist"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-whitelist/index.html"
 -
     src:
-        repoName: apache/cordova-plugin-legacy-whitelist
-        packageName: cordova-plugin-legacy-whitelist
-        displayName: Legacy Whitelist
-        description: A plugin to use the old style of whitelist before it was ripped out and changed in the whitelist plugin.
-    dest: cordova-plugin-legacy-whitelist/index.md
+        repoName: "apache/cordova-plugin-legacy-whitelist"
+        packageName: "cordova-plugin-legacy-whitelist"
+    dest:
+        permalink: "/docs/en/dev/cordova-plugin-legacy-whitelist/index.html"

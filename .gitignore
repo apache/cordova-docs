@@ -11,4 +11,4 @@ www/static/js/plugins.js
 
 node_modules
 Gemfile.lock
-www/**/gen
+www/docs/en/dev/gen

@@ -27,40 +27,105 @@ var yaml          = require("js-yaml");
 // constants
 var DEFAULT_REPO_PATH = "README.md";
 
-function generateFrontMatter (useDirectSrcURI, filePath, name, version) {
-    var obj                 = {};
+function generateFrontMatter(fetchedFile) {
 
-    if(useDirectSrcURI) {
-        var p               = /https:\/\/raw.githubusercontent.com\/([^\/]+)\/([^\/]+)\/([^\/]+)\/(.+)/;
-        var filePathSplit   = filePath.match(p);
-        name                = filePathSplit[1] + "/" + filePathSplit[2];
-        version             = filePathSplit[3];
-        filePath            = filePathSplit.slice(4).join("/");
+    var frontMatterConfig = {};
+
+    frontMatterConfig.edit_link = fetchedFile.editLink;
+    frontMatterConfig.permalink = fetchedFile.permalink;
+
+    // set special values for plugins
+    if (isPluginName(fetchedFile.packageName)) {
+        frontMatterConfig.plugin_name    = fetchedFile.packageName;
+        frontMatterConfig.plugin_version = fetchedFile.version;
     }
 
-    obj.edit_link           = getRepoURIForFrontMatter(name, version, filePath);
-    obj.plugin_name         = name;
-    obj.plugin_version      = version;
-
-    var frontMatter         = "---\n" + yaml.dump(obj) + "\n---\n\n";
-    return frontMatter;
+    // return front matter as a string
+    var frontMatterString = "---\n" + yaml.dump(frontMatterConfig) + "---\n\n";
+    return frontMatterString;
 }
 
-function getRepoFileURI (name, version, filePath) {
-    return "https://raw.githubusercontent.com/" + name + "/" + version + "/" + filePath;
+function isPluginName(packageName) {
+    return packageName.match(/cordova-plugin-.*/);
 }
 
-function getRepoURIForFrontMatter (name, version, filePath) {
-    return "https://github.com/" + name + "/blob/" + version + "/"+ filePath
+function getRepoFileURI(repoName, commit, filePath) {
+    return "https://raw.githubusercontent.com/" + repoName + "/" + commit + "/" + filePath;
 }
 
-function getLatestRelease (packageName) {
+function getRepoEditURI(repoName, commit, filePath) {
+    return "https://github.com/" + repoName + "/blob/" + commit + "/"+ filePath
+}
+
+function getLatestRelease(packageName) {
     var latestRelease = child_process.execSync("npm info " + packageName + " dist-tags.latest");
     return latestRelease.toString().trim();
 }
 
-function getPackageName (fileConfigSrc) {
-    return fileConfigSrc.packageName || fileConfigSrc.repoName.split('/')[1];
+function packageNameFromRepoName(repoName) {
+    var repoSplit      = repoName.split('/');
+    var repoOwner      = repoSplit[0];
+    var actualRepoName = repoSplit[1];
+    return actualRepoName;
+}
+
+function getFetchedFile(entry) {
+
+    // get entry components
+    var srcConfig  = entry.src;
+    var destConfig = entry.dest;
+
+    // validate entry
+    if (!srcConfig) {
+        console.error("entry '" + entry.toString() + "' missing 'src'");
+        return;
+    }
+
+    if (!srcConfig.repoName) {
+        console.error("entry '" + entry.toString() + "' missing 'repoName' in 'src'");
+        return;
+    }
+
+    if (!srcConfig.repoName) {
+        console.error("entry '" + entry.toString() + "' missing 'repoName' in 'src'");
+        return;
+    }
+
+    if (!destConfig) {
+        console.error("entry '" + entry.toString() + "' missing 'dest'");
+        return;
+    }
+
+    if (!destConfig.permalink) {
+        console.error("entry '" + entry.toString() + "' missing 'permalink' in 'dest'");
+        return;
+    }
+
+    // complete src config
+    if (!srcConfig.packageName) {
+        srcConfig.packageName = packageNameFromRepoName(srcConfig.repoName);
+    }
+
+    if (!srcConfig.path) {
+        srcConfig.path = DEFAULT_REPO_PATH;
+    }
+
+    if (!srcConfig.commit) {
+        srcConfig.commit = getLatestRelease(srcConfig.packageName);
+    }
+
+    // set returned values
+    var fetchedFile = {
+        packageName: srcConfig.packageName,
+        version:     srcConfig.commit,
+        editLink:    getRepoEditURI(srcConfig.repoName, srcConfig.commit, srcConfig.path),
+        permalink:   destConfig.permalink,
+
+        downloadURI:   getRepoFileURI(srcConfig.repoName, srcConfig.commit, srcConfig.path),
+        localFileName: srcConfig.packageName + ".md",
+    };
+
+    return fetchedFile;
 }
 
 // main
@@ -91,49 +156,39 @@ function main () {
     }
 
     // get config
-    var config       = fs.readFileSync(configFile);
-    var fetchedFiles = yaml.load(config);
+    var fetchConfig   = fs.readFileSync(configFile);
+    var configEntries = yaml.load(fetchConfig);
 
-    // fetch all entries
-    fetchedFiles.forEach(function (fetchedFile) {
+    // fetch all files
+    configEntries.forEach(function (entry) {
 
-        if (!fetchedFile.dest) {
-            fetchedFile.dest = getPackageName(fetchedFile) + "/index.md";
+        // verify and process entry
+        var fetchedFile = getFetchedFile(entry);
+        if (!fetchedFile) {
+            return;
         }
 
-        var outFilePath = path.join(fetchRoot, fetchedFile.dest);
+        // get info for fetching
+        var fetchURI    = fetchedFile.downloadURI;
+        var frontMatter = generateFrontMatter(fetchedFile);
+        var outFilePath = path.join(fetchRoot, fetchedFile.localFileName);
         var outDirPath  = path.dirname(outFilePath);
-
-        var fileURI, frontMatter;
-
-        if (typeof(fetchedFile.src) === "string") {
-            fileURI     = fetchedFile.src;
-            frontMatter = generateFrontMatter(true, fileURI);
-        } else {
-            var packageName = getPackageName(fetchedFile.src);
-            var filePath    = fetchedFile.src.path || DEFAULT_REPO_PATH;
-
-            if (!fetchedFile.src.commit) {
-                fetchedFile.src.commit = getLatestRelease(packageName);
-            }
-
-            fileURI     = getRepoFileURI(fetchedFile.src.repoName, fetchedFile.src.commit, filePath);
-            frontMatter = generateFrontMatter(false, filePath, fetchedFile.src.repoName, fetchedFile.src.commit);
-        }
 
         // ensure that the output directory exists
         if (!fs.existsSync(outDirPath)) {
             fs.mkdirSync(outDirPath);
         }
 
-        console.log(fileURI + " -> " + outFilePath);
+        console.log(fetchURI + " -> " + outFilePath);
 
+        // open the file for writing
         var outFile = fs.createWriteStream(outFilePath);
         outFile.write(frontMatter, function () {
 
             // open an HTTP request for the file
-            var request = https.get(fileURI, function (response) {
-                // write the response to the file
+            var request = https.get(fetchURI, function (response) {
+
+                // write the HTTP response to the file
                 response.pipe(outFile);
             });
         });

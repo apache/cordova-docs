@@ -2,10 +2,10 @@
     children:
         -   name: "Overview"
             url: "guide/overview/index.html"
-#       -   name: "Runtime Architecture"
-#           url:
-#       -   name: "Tooling Architecture"
-#           url:
+#        -   name: "Runtime Architecture"
+#            url:
+#        -   name: "Tooling Architecture"
+#            url:
 -   name: "Create apps"
     children:
         -   name: "Create your first app"
@@ -80,14 +80,56 @@
             url: "config_ref/index.html"
         -   name: "Events"
             url: "cordova/events/events.html"
-        -   name: "Plugin APIs"
-            url: "cordova/plugins/pluginapis.html"
         -   name: "CLI"
             url: "guide/cli/index.html"
         -   name: "Hooks"
             url: "guide/appdev/hooks/index.html"
         -   name: "Plugin.xml"
             url: "plugin_ref/spec.html"
+        -   name: "Plugin APIs"
+            children:
+                -   name: Battery Status
+                    url: "cordova-plugin-battery-status/index.html"
+                -   name: Camera
+                    url: "cordova-plugin-camera/index.html"
+                -   name: Console
+                    url: "cordova-plugin-console/index.html"
+                -   name: Contacts
+                    url: "cordova-plugin-contacts/index.html"
+                -   name: Device
+                    url: "cordova-plugin-device/index.html"
+                -   name: Device Motion
+                    url: "cordova-plugin-device-motion/index.html"
+                -   name: Device Orientation
+                    url: "cordova-plugin-device-orientation/index.html"
+                -   name: Dialogs
+                    url: "cordova-plugin-dialogs/index.html"
+                -   name: File
+                    url: "cordova-plugin-file/index.html"
+                -   name: File Transfer
+                    url: "cordova-plugin-file-transfer/index.html"
+                -   name: Geolocation
+                    url: "cordova-plugin-geolocation/index.html"
+                -   name: Globalization
+                    url: "cordova-plugin-globalization/index.html"
+                -   name: Inappbrowser
+                    url: "cordova-plugin-inappbrowser/index.html"
+                -   name: Media
+                    url: "cordova-plugin-media/index.html"
+                -   name: Media Capture
+                    url: "cordova-plugin-media-capture/index.html"
+                -   name: Network Information
+                    url: "cordova-plugin-network-information/index.html"
+                -   name: Splashscreen
+                    url: "cordova-plugin-splashscreen/index.html"
+                -   name: Vibration
+                    url: "cordova-plugin-vibration/index.html"
+                -   name: Statusbar
+                    url: "cordova-plugin-statusbar/index.html"
+                -   name: Whitelist
+                    url: "cordova-plugin-whitelist/index.html"
+                -   name: Legacy Whitelist
+                    url: "cordova-plugin-legacy-whitelist/index.html"
 # -   name: "Tutorials"
 #     children:
 #         -   name: "Share your app in source control"
