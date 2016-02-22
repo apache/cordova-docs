@@ -11,8 +11,6 @@ docs:
     - {old: "dev/guide/platforms/android/config.html", new: "dev/config_ref/index.html"}
     - {old: "dev/guide/platforms/ios/tools.html", new: "dev/guide/platforms/ios/index.html"}
     - {old: "dev/guide/platforms/ios/config.html", new: "dev/config_ref/index.html"}
-    - {old: "latest/guide/platforms/ios/tools.html", new: "latest/guide/platforms/ios/index.html"}
-    - {old: "latest/guide/platforms/ios/config.html", new: "latest/config_ref/index.html"}
 
 # redirects paths relative to /docs/XX/YYY/
 docs-global:
