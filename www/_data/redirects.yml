@@ -11,6 +11,8 @@ docs:
     - {old: "dev/guide/platforms/android/config.html", new: "dev/config_ref/index.html"}
     - {old: "dev/guide/platforms/ios/tools.html", new: "dev/guide/platforms/ios/index.html"}
     - {old: "dev/guide/platforms/ios/config.html", new: "dev/config_ref/index.html"}
+    - {old: "dev/guide/platforms/win8/packaging.html", new: "dev/guide/platforms/win8/index.html#signing-an-app"}
+    - {old: "dev/guide/platforms/win8/win10-support.html", new: "dev/guide/platforms/win8/index.html"}
 
 # redirects paths relative to /docs/XX/YYY/
 docs-global:
