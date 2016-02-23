@@ -145,7 +145,7 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
 
       <tr>
         <th>
-          <a href="../hybrid/plugins/index.html">Plug-in<br />Interfejs</a>
+          <a href="../hybrid/plugins/index.html">Plugin<br />Interfejs</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">

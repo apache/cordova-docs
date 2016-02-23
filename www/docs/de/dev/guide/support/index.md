@@ -22,7 +22,7 @@ title: Plattformunterstützung
 
 # Plattformunterstützung
 
-Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät für jede mobile Plattform. Das Gerät, das APIs hier aufgelistet werden bereitgestellt von Core-Plugins, zusätzliche APIs über [Drittanbieter Plug-ins][1]verfügbar sind. Spaltenüberschriften die CLI Stenographie Namen angezeigt.
+Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät für jede mobile Plattform. Das Gerät, das APIs hier aufgelistet werden bereitgestellt von Core-Plugins, zusätzliche APIs über [Drittanbieter Plugins][1]verfügbar sind. Spaltenüberschriften die CLI Stenographie Namen angezeigt.
 
  [1]: http://plugins.cordova.io
 
@@ -145,7 +145,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
 
       <tr>
         <th>
-          <a href="../hybrid/plugins/index.html">Plug-in<br />Schnittstelle</a>
+          <a href="../hybrid/plugins/index.html">Plugin<br />Schnittstelle</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">

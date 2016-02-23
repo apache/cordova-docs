@@ -31,7 +31,7 @@ Questa guida Mostra come modificare progetti iOS per l'aggiornamento da versioni
 Per i progetti non-CLI, eseguire:
 
         bin/update percorso/per/progetto
-    
+
 
 Per i progetti di CLI:
 
@@ -44,7 +44,7 @@ Per i progetti di CLI:
 Per i progetti non-CLI, eseguire:
 
         bin/update percorso/per/progetto
-    
+
 
 Per i progetti di CLI:
 
@@ -57,7 +57,7 @@ Per i progetti di CLI:
 Per i progetti non-CLI, eseguire:
 
         bin/update percorso/per/progetto
-    
+
 
 Per i progetti di CLI:
 
@@ -70,7 +70,7 @@ Per i progetti di CLI:
 Per i progetti non-CLI, eseguire:
 
         bin/update percorso/per/progetto
-    
+
 
 Per i progetti di CLI:
 
@@ -83,7 +83,7 @@ Per i progetti di CLI:
 Per i progetti non-CLI, eseguire:
 
         bin/update percorso/per/progetto
-    
+
 
 Per i progetti di CLI:
 
@@ -117,7 +117,7 @@ Xcode 5 temi:
 
 5.  Copiare il `file config. xml` nella directory di `www` e rimuovere eventuali definizioni di plugin. Modificare le impostazioni qui invece di directory della piattaforma.
 
-6.  Utilizzare lo strumento CLI di cordova per installare il plug-in che è necessario. Si noti che il CLI gestisce tutti i core API come plugin, così che può essere necessario aggiungere. Solo 3.0.0 plugin sono compatibili con il CLI.
+6.  Utilizzare lo strumento CLI di cordova per installare il plugin che è necessario. Si noti che il CLI gestisce tutti i core API come plugin, così che può essere necessario aggiungere. Solo 3.0.0 plugin sono compatibili con il CLI.
 
 7.  Costruire e testare.
 
@@ -170,26 +170,26 @@ Xcode 5 temi:
 6.  Aggiornare il riferimento allo script di Cordova nella `www/index.html` file (e qualsiasi altro file che contengono il riferimento allo script) per puntare al nuovo `cordova.js` file.
 
 7.  Aggiornare qualsiasi tag `<plugin>` nel file `config.xml` il tag `<feature>`. Si noti che tag `<plugin>` esistenti ancora lavorare, ma sono deprecati. È possibile copiare queste informazioni nel file `config. xml` per un nuovo progetto. Per esempio:
-    
+
         <plugins>
             <plugin name="LocalStorage" value="CDVLocalStorage" />
             <!-- other plugins -->
         </plugins>
-        
+
         <!-- change to: (note that a <feature> tag is on the same level as <plugins> -->
         <feature name="LocalStorage">
             <param name="ios-package" value="CDVLocalStorage" />
         </feature>
         <!-- other <feature> tags -->
-        
+
 
 8.  Eliminare il `CordovaLib` directory e copia il `CordovaLib` dalla nuovo progetto directory nella directory radice del progetto.
 
 9.  Aggiungere questi due quadri al progetto:
-    
+
         OpenAL
         ImageIO
-        
+
 
 10. Aggiornare la destinazione del progetto **Build Settings**. Sotto **link → altre bandiere Linker**, edit **"- Obj - C"** per essere **"-ObjC"**.
 
@@ -336,14 +336,14 @@ Xcode 5 temi:
 10. Convertire il file `Cordova.plist` in `config. xml`, eseguendo lo script `bin/cordova\_plist\_to\_config\_xml` su file di progetto.
 
 11. Aggiungere il plugin InAppBrowser per il file `config. xml`, aggiungendo questo tag sotto `< cordova >< plugins >`:
-    
+
         <plugin name="InAppBrowser" value="CDVInAppBrowser" />
-        
+
 
 12. Nota che i plugin di Objective-C sono *non* whitelisted piu '. Alla whitelist le connessioni con la whitelist app, è necessario impostare l'intestazione dell `User-Agent` della connessione per lo stesso user-agent come principale Cordova WebView. È possibile ottenere ciò accedendo alla proprietà `userAgent` spegne la vista-controllore principale. Il controller principale-vista (`CDVViewController`) ha anche un metodo `URLisAllowed` per verificare se un URL passa la whitelist.
 
 13. Modifiche del dispositivo API:
-    
+
     *   Per iOS, il device utilizzato per restituire `iPhone`, `iPad` o `iPod Touch`; ora restituisce (correttamente) `iOS`.
     *   Per iOS, device.name (ormai obsoleto per tutte le piattaforme) utilizzato per restituire il nome del dispositivo dell'utente (ad esempio ' iPhone 5 ′ su Shazron '); ora restituisce quale device utilizzato per restituire: `iPhone`, `iPad` o `iPod Touch`.
     *   Per tutte le piattaforme, c'è una nuova proprietà denominata device.model; Questo metodo restituisce il modello di dispositivo specifico, ad esempio `iPad2, 5` (per altre piattaforme, questo restituisce ciò che device.name per restituire).
@@ -363,17 +363,17 @@ Xcode 5 temi:
 6.  Aggiornare il riferimento allo script di Cordova nel file `www/index.html` (e qualsiasi altro file che contengono il riferimento allo script) che punti al nuovo file `cordova-2.2.0.js`.
 
 7.  Aggiornare (o sostituire, se non hai mai cambiato il file) la `MainViewController.m` secondo quello dal nuovo progetto:
-    
+
     *   Aggiornato → viewWillAppear
 
 8.  Copiare la directory di `cordova` dal nuovo progetto nella directory radice del progetto. In 2.2.0, questo ha un aggiornato script 'emulare'.
 
 9.  Successivamente, aggiornare il riferimento al sotto-progetto `CordovaLib`. A partire da Cordova 2.1.0, non stiamo utilizzando la variabile CORDOVALIB Xcode piu ' quando fa riferimento a dove risiede il `CordovaLib`, il riferimento è un riferimento di file assoluto ora.
-    
+
     1.  Lanciare Terminal. app
     2.  Vai al percorso dove avete installato Cordova (vedi punto 1), nella sottodirectory `bin`
     3.  Eseguire lo script sotto dove il primo parametro è il percorso per il file del progetto `.xcodeproj`:
-        
+
         `update_cordova_subproject path/to/your/project/xcodeproj`
 
 **Nota**: In 2.2.0, `bin/creare` script copia del progetto sub-`CordovaLib` nel vostro progetto. Per avere lo stesso tipo di installazione, basta copiare nella destra `CordovaLib` nella directory del progetto e aggiornare la posizione del sotto-progetto `CordovaLib` (relativo al progetto) in Ispettore File Xcode.
@@ -395,12 +395,12 @@ Con Cordova 2.1.0, `CordovaLib` è stato aggiornato per utilizzare il **Automati
 6.  Aggiornare il riferimento allo script di Cordova nel file `www/index.html` (e qualsiasi altro file che contengono il riferimento allo script) che punti al nuovo file `cordova-2.1.0.js`.
 
 7.  Aggiornare (o sostituire, se non hai mai cambiato il file) la `AppDelegate.m` secondo quello dal nuovo progetto:
-    
+
     *   Edited → application:didFinishLaunchingWithOptions:
     *   Added → application:supportedInterfaceOrientationsForWindow:
 
 8.  Aggiornare (o sostituire, se non hai mai cambiato il file) la `MainViewController.m` secondo quello dal nuovo progetto:
-    
+
     *   Added → viewWillAppear
 
 9.  Copiare la directory di `cordova` dal nuovo progetto nella directory radice del progetto. In 2.1.0, questo ha gli script aggiornati per supportare i percorsi con spazi.
@@ -408,11 +408,11 @@ Con Cordova 2.1.0, `CordovaLib` è stato aggiornato per utilizzare il **Automati
 10. Rimuovere il riferimento al file `VERSION` dal progetto (*non* quello in `CordovaLib`).
 
 11. Successivamente, aggiornare il riferimento al sotto-progetto `CordovaLib`. A partire da Cordova 2.1.0, non stiamo utilizzando la variabile CORDOVALIB Xcode piu ' quando fa riferimento a dove risiede il `CordovaLib`, il riferimento è un riferimento di file assoluto ora.
-    
+
     1.  Lanciare Terminal. app
     2.  Vai al percorso dove avete installato Cordova (vedi punto 1), nella sottodirectory `bin`
     3.  Eseguire lo script sotto dove il primo parametro è il percorso per il file del progetto `.xcodeproj`:
-        
+
         `update_cordova_subproject path/to/your/project/xcodeproj`
 
 ## All'aggiornamento 1.9.0 progetti a 2.0.0
@@ -444,15 +444,15 @@ Con Cordova 2.1.0, `CordovaLib` è stato aggiornato per utilizzare il **Automati
 13. Compilare il progetto, si dovrebbero ottenere alcuni errori relativi alle direttive `#import`.
 
 14. Per gli errori di `#import`, modificare eventuali importazioni basata sulla citazione in questo stile:
-    
+
         #import "CDV.h"
-        
-    
+
+
     a questo stile basato su staffe:
-    
+
         #import <Cordova/CDV.h>
-        
-    
+
+
     e rimuovere eventuali `#ifdef` wrapper intorno a qualsiasi importazione di Cordova, non sono piu ' necessari (le importazioni sono ora unificate)
 
 15. Compilare nuovamente il progetto, e non dovrebbe avere alcun errori `#import`.
@@ -490,18 +490,18 @@ Con Cordova 2.1.0, `CordovaLib` è stato aggiornato per utilizzare il **Automati
 31. Selezionare l' **project icon** nel Navigatore progetto, selezionare il **Target** del progetto, quindi selezionare la scheda **Build Settings**.
 
 32. Ricerca di **Header Search Paths**. Per tale impostazione, aggiungere questi tre valori, incluse le virgolette:
-    
+
         "$(TARGET_BUILD_DIR)/usr/local/lib/include"
-        
+
         "$(OBJROOT)/UninstalledProducts/include"
-        
+
         "$(BUILT_PRODUCTS_DIR)"
-        
+
 
 33. Ricerca per **Other Linker Flags**. Per tale impostazione, aggiungere questo valore:
-    
+
         -weak_framework CoreFoundation
-        
+
 
 34. Compilare il progetto, deve compilare e collegare **senza** problemi.
 
@@ -562,13 +562,13 @@ Se si intende usare l'API di cattura, è necessario i nuovo **iPad retina-displa
 3.  Creare un nuovo progetto. Alcuni dei beni da questo nuovo progetto sarà necessario.
 
 4.  Copiare questi file dal nuovo progetto nella directory 1.5.0-based del progetto su disco, sostituendo qualsiasi vecchi file (backup i file prima dal passo 2 sopra):
-    
+
         AppDelegate.h
         AppDelegate.m
         MainViewController.h
         MainViewController.m
         Cordova.plist
-        
+
 
 5.  Aggiungere tutti i nuovi file di `MainViewController` e `AppDelegate` nel vostro progetto in Xcode.
 
@@ -627,9 +627,9 @@ Se si intende usare l'API di cattura, è necessario i nuovo **iPad retina-displa
 17. Premere il pulsante **Add** nella finestra **Add Files...**.
 
 18. In `AppDelegate.h`, `AppDelegate.m` e `MainViewController.h` file, sostituire il blocco intero `#ifdef PHONEGAP_FRAMEWORK` con:
-    
+
         #import "CDVDeprecated.h"
-        
+
 
 19. Selezionare l' **project icon** nel Navigatore progetto, selezionare il **Target** del progetto, quindi selezionare la scheda **Build Settings**.
 
@@ -686,13 +686,13 @@ Se si intende usare l'API di cattura, è necessario i nuovo **iPad retina-displa
 3.  Creare un nuovo progetto. Alcuni dei beni da questo nuovo progetto sarà necessario.
 
 4.  Copiare questi file dal nuovo progetto nella directory 1.3.0-based del progetto su disco, sostituendo qualsiasi vecchi file (backup i file prima dal passo 2 sopra):
-    
+
         AppDelegate.h
         AppDelegate.m
         MainViewController.h
         MainViewController.m
         MainViewController.xib
-        
+
 
 5.  Aggiungere tutti i `MainViewController` i file nel progetto Xcode.
 
@@ -713,13 +713,13 @@ Se si intende usare l'API di cattura, è necessario i nuovo **iPad retina-displa
 3.  Creare un nuovo progetto. Alcuni dei beni da questo nuovo progetto sarà necessario.
 
 4.  Copiare questi file dal nuovo progetto nella directory 1.2.0-based del progetto su disco, sostituendo qualsiasi vecchi file (backup i file prima dal passo 2 sopra):
-    
+
         AppDelegate.h
         AppDelegate.m
         MainViewController.h
         MainViewController.m
         MainViewController.xib
-        
+
 
 5.  Aggiungere tutti i `MainViewController` i file nel progetto Xcode.
 
@@ -740,13 +740,13 @@ Se si intende usare l'API di cattura, è necessario i nuovo **iPad retina-displa
 3.  Creare un nuovo progetto. Alcuni dei beni da questo nuovo progetto sarà necessario.
 
 4.  Copiare questi file dal nuovo progetto nella directory 1.1.0-based del progetto su disco, sostituendo qualsiasi vecchi file (backup i file prima dal passo 2 sopra):
-    
+
         AppDelegate.h
         AppDelegate.m
         MainViewController.h
         MainViewController.m
         MainViewController.xib
-        
+
 
 5.  Aggiungere tutti i `MainViewController` i file nel progetto Xcode.
 
@@ -767,13 +767,13 @@ Se si intende usare l'API di cattura, è necessario i nuovo **iPad retina-displa
 3.  Creare un nuovo progetto. Alcuni dei beni da questo nuovo progetto sarà necessario.
 
 4.  Copiare questi file dal nuovo progetto nella directory 1.0.0-based del progetto su disco, sostituendo qualsiasi vecchi file (backup i file prima dal passo 2 sopra):
-    
+
         AppDelegate.h
         AppDelegate.m
         MainViewController.h
         MainViewController.m
         MainViewController.xib
-        
+
 
 5.  Aggiungere tutti i `MainViewController` i file nel progetto Xcode.
 
@@ -794,13 +794,13 @@ Se si intende usare l'API di cattura, è necessario i nuovo **iPad retina-displa
 3.  Creare un nuovo progetto. Alcuni dei beni da questo nuovo progetto sarà necessario.
 
 4.  Copiare questi file dal nuovo progetto nella directory 0.9.6-based del progetto su disco, sostituendo qualsiasi vecchi file (backup i file prima dal passo 2 sopra):
-    
+
         AppDelegate.h
         AppDelegate.m
         MainViewController.h
         MainViewController.m
         MainViewController.xib
-        
+
 
 5.  Aggiungere tutti i `MainViewController` i file nel progetto Xcode.
 

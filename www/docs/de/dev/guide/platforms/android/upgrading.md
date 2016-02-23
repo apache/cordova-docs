@@ -41,7 +41,7 @@ Für Projekte, die mit Cordova CLI erstellt wurden:
 Für Projekte, die nicht mit der Cordova CLI erstellt ausgeführt:
 
         bin/update <project_path>
-    
+
 
 ## Upgrade von 3.0.0 auf 3.1.0
 
@@ -54,7 +54,7 @@ Für Projekte, die mit Cordova CLI erstellt wurden:
 Für Projekte, die nicht mit der Cordova CLI erstellt ausgeführt:
 
         bin/update <project_path>
-    
+
 
 ## Upgrade auf die CLI (3.0.0) von 2.9.0
 
@@ -82,7 +82,7 @@ platform add android`.
 5.  Achten Sie darauf, alle veraltet aktualisieren `<plugin>` Referenzen aus Ihrem alten `config.xml` Datei an den neuen `<feature>` Spezifikation.
 
 6.  Aktualisieren Sie alle Verweise auf die `org.apache.cordova.api` Paket ist`org.apache.cordova`.
-    
+
     **Hinweis**: alle Core APIs wurden entfernt und als Plugins installiert sein. Einzelheiten finden Sie unter der Verwendung von Plugman zum Verwalten von Plugins-Anleitung.
 
 ## Ein Upgrade auf 2.9.0 von 2.8.0
@@ -259,7 +259,7 @@ Die 2.0.0 release, die `config.xml` Datei kombiniert und ersetzt `cordova.xml` u
 
 6.  Update `res/xml/plugins.xml` entsprechend`framework/res/xml/plugins.xml`.
 
-Durch die Einführung der `CordovaWebView` in der 1.9.0 Release, Drittanbieter Plug-ins funktionieren nicht. Diese Plugins brauchen, um einen Kontext aus dem `CordovaInterface` mit `getContext()` oder `getActivity()` . Wenn Sie kein erfahrener Android-Entwickler sind, bitte kontaktieren Sie den Plugin-Betreuer und fügen Sie diese Aufgabe auf ihre Bug-Tracker.
+Durch die Einführung der `CordovaWebView` in der 1.9.0 Release, Drittanbieter Plugins funktionieren nicht. Diese Plugins brauchen, um einen Kontext aus dem `CordovaInterface` mit `getContext()` oder `getActivity()` . Wenn Sie kein erfahrener Android-Entwickler sind, bitte kontaktieren Sie den Plugin-Betreuer und fügen Sie diese Aufgabe auf ihre Bug-Tracker.
 
 ## Ein Upgrade auf 1.8.0 von 1.8.0
 

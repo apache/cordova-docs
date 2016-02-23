@@ -67,7 +67,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../hybrid/plugins/index.html">Plug-in<br/>Interface</a></th>
+        <th><a href="../hybrid/plugins/index.html">Plugin<br/>Interface</a></th>
         <td data-col="android"    class="y"><a href="../platforms/android/plugin.html">(see details)</a></td>
         <td data-col="blackberry10" class="y"><a href="../platforms/blackberry10/plugin.html">(see details)</a></td>
         <td data-col="ios"        class="y"><a href="../platforms/ios/plugin.html">(see details)</a></td>

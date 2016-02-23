@@ -149,7 +149,7 @@ Naslednje prikazuje nabor razvojna orodja in naprave API na voljo za vsak mobiln
 
       <tr>
         <th>
-          <a href="../hybrid/plugins/index.html">Plug-in<br />Vmesnik</a>
+          <a href="../hybrid/plugins/index.html">Plugin<br />Vmesnik</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">

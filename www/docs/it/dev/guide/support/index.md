@@ -145,7 +145,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
 
       <tr>
         <th>
-          <a href="../hybrid/plugins/index.html">Plug-in<br />Interfaccia</a>
+          <a href="../hybrid/plugins/index.html">Plugin<br />Interfaccia</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">

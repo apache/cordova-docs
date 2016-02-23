@@ -40,17 +40,17 @@ Die folgende Anleitung beinhaltet einige bewährte Sicherheitsmethoden, die Sie,
 
 *   Lesen und verstehen der [Whitelist-Guide](../whitelist/index.html)
 
-*   Domain-Whitelist funktioniert nicht auf Android API 10 und unten und WP8 für Iframes und XMLHttpRequest. Dies bedeutet ein Angreifer kann einer beliebigen Domäne in einem Iframe laden und jedes Skript auf dieser Seite in Iframe direkt auf Cordova JavaScript-Objekte und die entsprechenden native Java-Objekte zugreifen kann. Sie sollten dies in Betracht ziehen, beim Erstellen von Anwendungen für diese Plattformen. In der Praxis bedeutet dies, um sicherzustellen, dass Sie Ziel einer höher als 10 Android API und, wenn möglich nicht Iframe zu verwenden, um externe Inhalte - laden das InAppBrowser-Plugin oder andere Drittanbieter Plug-ins verwenden.
+*   Domain-Whitelist funktioniert nicht auf Android API 10 und unten und WP8 für Iframes und XMLHttpRequest. Dies bedeutet ein Angreifer kann einer beliebigen Domäne in einem Iframe laden und jedes Skript auf dieser Seite in Iframe direkt auf Cordova JavaScript-Objekte und die entsprechenden native Java-Objekte zugreifen kann. Sie sollten dies in Betracht ziehen, beim Erstellen von Anwendungen für diese Plattformen. In der Praxis bedeutet dies, um sicherzustellen, dass Sie Ziel einer höher als 10 Android API und, wenn möglich nicht Iframe zu verwenden, um externe Inhalte - laden das InAppBrowser-Plugin oder andere Drittanbieter Plugins verwenden.
 
 ## Iframes und die Id Rückrufmechanismus
 
-Wenn Inhalte in einem Iframe aus einer Whitelist-Domäne bereitgestellt werden, haben diese Domäne Zugriff auf die native Cordova-Brücke. Dies bedeutet, dass Sie ein Drittanbieter-Werbe-Netzwerk Whitelist und dienen diese anzeigen über ein Iframe, ist es möglich, dass eine böswillige Anzeige ist aus Iframe ausbrechen und bösartige Aktionen ausführen können. Aus diesem Grund sollten Sie in der Regel nicht Iframes verwenden, wenn Sie den Server steuern, der den Iframe-Inhalt hostet. Beachten Sie, dass es Drittanbieter Plug-ins zur Verfügung gibt, um Werbe-Netzwerke zu unterstützen. Beachten Sie, dass diese Aussage nicht für iOS, nämlich alles gilt, einschließlich der Iframe Verbindungen abfängt.
+Wenn Inhalte in einem Iframe aus einer Whitelist-Domäne bereitgestellt werden, haben diese Domäne Zugriff auf die native Cordova-Brücke. Dies bedeutet, dass Sie ein Drittanbieter-Werbe-Netzwerk Whitelist und dienen diese anzeigen über ein Iframe, ist es möglich, dass eine böswillige Anzeige ist aus Iframe ausbrechen und bösartige Aktionen ausführen können. Aus diesem Grund sollten Sie in der Regel nicht Iframes verwenden, wenn Sie den Server steuern, der den Iframe-Inhalt hostet. Beachten Sie, dass es Drittanbieter Plugins zur Verfügung gibt, um Werbe-Netzwerke zu unterstützen. Beachten Sie, dass diese Aussage nicht für iOS, nämlich alles gilt, einschließlich der Iframe Verbindungen abfängt.
 
 ## Zertifikat fixieren
 
 Cordova unterstützt keine wahre Zertifikat zu fixieren. Das größte Hindernis für das ist ein Mangel an systemeigenen APIs in Android zum Abfangen des SSL-Verbindungen um die Überprüfung des Zertifikats des Servers ausführen. (Obwohl es fixieren auf Android in Java mit JSSE Zertifikat kann, die Webview auf Android in C++ geschrieben ist und Server-Verbindungen für Sie, indem die Webview verarbeitet werden, ist also es nicht möglich, Java und JSSE es zu verwenden.) Da Apache Cordova über mehrere Plattformen hinweg konsistent APIs bieten soll, bricht nicht mit einer Funktion in eine größere Plattform die Konsistenz.
 
-Es gibt Möglichkeiten zur Angleichung Zertifikat fixieren, z. B. Überprüfung, dass die öffentlichen Schlüssel des Servers (Fingerabdruck) der erwartete Wert ist, wenn die Anwendung gestartet wird oder zu anderen verschiedenen Zeiten während der Lebensdauer der Anwendung. Es gibt Drittanbieter Plug-ins zur Cordova, die das tun kann. Jedoch ist dies nicht dasselbe wie wahre Zertifikat fixieren, die automatisch den erwarteten Wert auf jede Verbindung zu dem Server überprüft.
+Es gibt Möglichkeiten zur Angleichung Zertifikat fixieren, z. B. Überprüfung, dass die öffentlichen Schlüssel des Servers (Fingerabdruck) der erwartete Wert ist, wenn die Anwendung gestartet wird oder zu anderen verschiedenen Zeiten während der Lebensdauer der Anwendung. Es gibt Drittanbieter Plugins zur Cordova, die das tun kann. Jedoch ist dies nicht dasselbe wie wahre Zertifikat fixieren, die automatisch den erwarteten Wert auf jede Verbindung zu dem Server überprüft.
 
 ## Selbstsignierte Zertifikate
 
@@ -70,19 +70,19 @@ Beim Ausführen von Cordova auf Android verwenden `android:debuggable="true"` in
 
 ### Verwenden Sie keine Android Gingerbread!
 
-*   Legen Sie Ihr höher als 10 min-Ziel-Sdk-Niveau. API 10 ist Lebkuchen und Lebkuchen wird nicht mehr von Google oder Geräte-Herstellern unterstützt und wird daher nicht empfohlen von Cordova-Team. 
-*   Lebkuchen nachweislich unsicher und einer der wichtigsten gezielte mobile OSs [http://www.mobilemag.com/2012/11/06/andriod-2-3-gingerbread-security/][2]. 
-*   Die Whitelist auf Android funktioniert nicht mit Lebkuchen oder niedriger. Dies bedeutet, dass ein Angreifer schädlichen Code in einem Iframe geladen werden kann, das müsste dann Zugriff auf alle von Cordova-APIs und können, dass der Zugang zu persönliche Daten stehlen, SMS-Nachrichten an Premium-Rate-Nummern zu schicken und andere böswillige Aktionen durchzuführen. 
+*   Legen Sie Ihr höher als 10 min-Ziel-Sdk-Niveau. API 10 ist Lebkuchen und Lebkuchen wird nicht mehr von Google oder Geräte-Herstellern unterstützt und wird daher nicht empfohlen von Cordova-Team.
+*   Lebkuchen nachweislich unsicher und einer der wichtigsten gezielte mobile OSs [http://www.mobilemag.com/2012/11/06/andriod-2-3-gingerbread-security/][2].
+*   Die Whitelist auf Android funktioniert nicht mit Lebkuchen oder niedriger. Dies bedeutet, dass ein Angreifer schädlichen Code in einem Iframe geladen werden kann, das müsste dann Zugriff auf alle von Cordova-APIs und können, dass der Zugang zu persönliche Daten stehlen, SMS-Nachrichten an Premium-Rate-Nummern zu schicken und andere böswillige Aktionen durchzuführen.
 
  [2]: http://bgr.com/2012/11/06/android-security-gingerbread-malware/
 
 ### InAppBrowser für externe Links verwenden
 
-*   Verwenden Sie die InAppBrowser beim Öffnen von Links zu externen Websites. Das ist viel sicherer als Whitelisting eines Domain-namens und einschließlich der Inhalte direkt in der Anwendung, da die InAppBrowser der native Browser-Sicherheits-Features verwenden und nicht die Website geben auf Ihre Cordova-Umgebung Zugriff. Selbst wenn Sie der Website Dritter Vertrauen und direkt in Ihre Anwendung aufnehmen, kann diese Websites Dritter schädlichen Webinhalten verknüpfen. 
+*   Verwenden Sie die InAppBrowser beim Öffnen von Links zu externen Websites. Das ist viel sicherer als Whitelisting eines Domain-namens und einschließlich der Inhalte direkt in der Anwendung, da die InAppBrowser der native Browser-Sicherheits-Features verwenden und nicht die Website geben auf Ihre Cordova-Umgebung Zugriff. Selbst wenn Sie der Website Dritter Vertrauen und direkt in Ihre Anwendung aufnehmen, kann diese Websites Dritter schädlichen Webinhalten verknüpfen.
 
 ### Validieren Sie alle Benutzereingaben
 
-*   Überprüfen Sie immer alle Eingaben, die die Anwendung akzeptiert. Dazu gehören Benutzernamen, Kennwörter, Termine, hochgeladen Medien usw.. Da ein Angreifer Ihr HTML und JS Vermögen (entweder durch Dekompilierung der Anwendung oder mithilfe von debugging-Tools wie Chrome://inspect) manipulieren könnte, sollten diese Validierung auch auf Ihrem Server durchgeführt werden, insbesondere vor der Übergabe der Daten an einen Back-End-Dienst. 
+*   Überprüfen Sie immer alle Eingaben, die die Anwendung akzeptiert. Dazu gehören Benutzernamen, Kennwörter, Termine, hochgeladen Medien usw.. Da ein Angreifer Ihr HTML und JS Vermögen (entweder durch Dekompilierung der Anwendung oder mithilfe von debugging-Tools wie Chrome://inspect) manipulieren könnte, sollten diese Validierung auch auf Ihrem Server durchgeführt werden, insbesondere vor der Übergabe der Daten an einen Back-End-Dienst.
 *   Andere Quellen, wo die Daten überprüft werden sollten: Benutzerdokumente, Kontakte, push-Benachrichtigungen
 
 ### Sensible Daten nicht zwischenspeichern
@@ -91,11 +91,11 @@ Beim Ausführen von Cordova auf Android verwenden `android:debuggable="true"` in
 
 ### Verwenden Sie keine eval(), es sei denn, Sie wissen was Sie tun
 
-*   Die JavaScript-Funktion eval() hat eine lange Geschichte, die missbraucht werden. Benutze es falsch kann Ihren Code für Injection-Angriffen, Debuggen von Schwierigkeiten und langsamer Ausführung von Code öffnen. 
+*   Die JavaScript-Funktion eval() hat eine lange Geschichte, die missbraucht werden. Benutze es falsch kann Ihren Code für Injection-Angriffen, Debuggen von Schwierigkeiten und langsamer Ausführung von Code öffnen.
 
 ### Nicht davon ausgehen Sie, dass der Quellcode sicher ist
 
-*   Da eine Anwendung von Cordova aus HTML und JavaScript basiert, die in einem einheitlichen Container gepackt bekommen, sollten Sie nicht Ihr Code sicher sein. Es ist möglich, reverse Engineering eine Cordova-Anwendung. 
+*   Da eine Anwendung von Cordova aus HTML und JavaScript basiert, die in einem einheitlichen Container gepackt bekommen, sollten Sie nicht Ihr Code sicher sein. Es ist möglich, reverse Engineering eine Cordova-Anwendung.
 
 ## Empfohlene Artikel und andere Ressourcen
 

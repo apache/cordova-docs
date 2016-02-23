@@ -37,7 +37,7 @@ Uno scenario dove salvare/ripristinare funzionalità tornare utile è in grandi 
 Per salvare una piattaforma, si utilizza il comando seguente:
 
     $ cordova platform add <platform[@<version>] | directory | git_url> --save
-    
+
 
 Dopo aver eseguito il comando precedente, il file config. XML risultante è simile:
 
@@ -46,7 +46,7 @@ Dopo aver eseguito il comando precedente, il file config. XML risultante è simi
         <engine name="android" spec="~4.0.0" />
         ...
     </xml>
-    
+
 
 Alcuni esempi:
 
@@ -60,7 +60,7 @@ Alcuni esempi:
 La '--save ' bandiera sopra descritto è utile solo quando si ricorda di usarlo durante l'aggiunta di piattaforma. Se avete un progetto preesistente e si desidera salvare tutte le piattaforme attualmente aggiunta nel progetto, è possibile utilizzare:
 
     $ cordova platform save
-    
+
 
 ### Aggiornamento / rimozione di piattaforme
 
@@ -68,7 +68,7 @@ La '--save ' bandiera sopra descritto è utile solo quando si ricorda di usarlo 
 
     $ cordova platform update <platform[@<version>] | directory | git_url> --save
     $ cordova platform remove <platform> --save
-    
+
 
 Alcuni esempi:
 
@@ -92,7 +92,7 @@ Si supponga che il file config. XML contiene la seguente voce:
         <engine name="android" spec="3.7.0" />
         ...
     </xml>
-    
+
 
 Se si esegue il comando **'cordova platform add android'** (nessuna versione/cartella/git_url specificato), verrà installata la piattaforma 'android@3.7.0' (come Estratto dal file config. Xml).
 
@@ -107,7 +107,7 @@ Se si esegue il comando **'cordova platform add android'** (nessuna versione/car
 Per salvare un plugin, si utilizza il comando seguente:
 
     $ cordova plugin add <plugin[@<version>] | directory | git_url> --save
-    
+
 
 Dopo aver eseguito il comando precedente, il file config. XML risultante è simile:
 
@@ -116,13 +116,13 @@ Dopo aver eseguito il comando precedente, il file config. XML risultante è simi
         <plugin name="cordova-plugin-console" spec="~1.0.0" />
         ...
     </xml>
-    
+
 
 Alcuni esempi:
 
   * **'cordova plugin Aggiungi cordova-plugin-console - Risparmia'** => recupera la versione bloccata del plugin console, si aggiunge al progetto e quindi aggiorna il file config. XML.
   * **'cordova plugin Aggiungi cordova-plugin-console@0.2.13 - Risparmia'** => Recupera il plugin android, versione 0.2.13 da npm, si aggiunge al progetto e quindi aggiornamenti config. XML.
-  * **'cordova plugin Aggiungi https://github.com/apache/cordova-plugin-console.git - Risparmia'** => cloni il repository git di plugin console specificato, aggiunge il plug-in console al progetto, quindi aggiorna il file config. XML e scegliere la versione git-url specificato.
+  * **'cordova plugin Aggiungi https://github.com/apache/cordova-plugin-console.git - Risparmia'** => cloni il repository git di plugin console specificato, aggiunge il plugin console al progetto, quindi aggiorna il file config. XML e scegliere la versione git-url specificato.
   * **'cordova plugin aggiungere c: / percorso/per/console/plugin-- Salva'** => Recupera il plugin console dalla directory specificata, si aggiunge al progetto, quindi gli aggiornamenti config. XML e punto alla directory.
 
 ### Massa plugin di risparmio su un progetto esistente
@@ -130,7 +130,7 @@ Alcuni esempi:
 La '..--salvare ' bandiera sopra descritto è utile solo quando si ricorda di usarlo durante l'aggiunta di plugin. Se avete un progetto preesistente e si desidera salvare tutti attualmente aggiunto plugin nel progetto, è possibile utilizzare:
 
     $ cordova plugin save
-    
+
 
 ### Aggiornamento / rimozione plugin
 
@@ -138,7 +138,7 @@ La '..--salvare ' bandiera sopra descritto è utile solo quando si ricorda di us
 
     $ cordova plugin update <plugin[@<version>] | directory | git_url> --save
     $ cordova plugin remove <plugin> --save
-    
+
 
 Alcuni esempi:
 
@@ -162,6 +162,6 @@ Si supponga che il file config. XML contiene la seguente voce:
         <plugin name="cordova-plugin-console" spec="0.2.11" />
         ...
     </ xml>
-    
+
 
 Se si esegue il comando **'cordova plugin Aggiungi cordova-plugin-console'** (nessuna versione/cartella/git_url specificato), verrà installato il plugin 'cordova-plugin-console@0.2.11' (come Estratto dal file config. Xml).
