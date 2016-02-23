@@ -39,10 +39,7 @@ function generateFrontMatter(fetchedFile) {
         frontMatterConfig.plugin_name    = fetchedFile.packageName;
         frontMatterConfig.plugin_version = fetchedFile.version;
     }
-
-    // return front matter as a string
-    var frontMatterString = "---\n" + yaml.dump(frontMatterConfig) + "---\n\n";
-    return frontMatterString;
+    return frontMatterConfig;
 }
 
 function isPluginName(packageName) {
@@ -161,7 +158,6 @@ function main () {
 
     // fetch all files
     configEntries.forEach(function (entry) {
-
         // verify and process entry
         var fetchedFile = getFetchedFile(entry);
         if (!fetchedFile) {
@@ -183,16 +179,53 @@ function main () {
 
         // open the file for writing
         var outFile = fs.createWriteStream(outFilePath);
-        outFile.write(frontMatter, function () {
-
-            // open an HTTP request for the file
-            var request = https.get(fetchURI, function (response) {
-
-                // write the HTTP response to the file
-                response.pipe(outFile);
+        // open an HTTP request for the file
+        var request = https.get(fetchURI, function (response) {
+            var res = '';
+            response.setEncoding('utf8');
+            response.on('data', function(data) {
+                res += data;
             });
-        });
+
+            response.on('end', function() {
+                var mergedFile = mergeFrontMatter(res, frontMatter);
+                outFile.end(mergedFile);
+            }).on('error', function(e) {
+                console.error(e);
+            });
+        }); 
     }); // entries
 }
 
 main();
+
+// If front matter exists in the source, merge it!
+function mergeFrontMatter(originalFile, frontMatter) {
+    var lines = originalFile.split(/\r?\n/);
+    var mergedFile = originalFile;
+    var endLine;
+    if (lines[0] && lines[0] === "---") {
+        for (var i = 1; i < lines.length; i++) {
+            if(lines[i] && lines[i] === "---") {
+                endLine = i;
+                break;
+            }
+        }
+    }
+    if (endLine) {
+        var fm = '';
+        for (var j = 1; j <= endLine - 1; j++) {
+            fm += lines[j] + '\n';
+        }
+        var fmFile = yaml.load(fm);
+        Object.keys(fmFile).forEach(function(key) {
+            frontMatter[key] = fmFile[key];
+        });
+        mergedFile = '';
+        for (var j = endLine + 1; j < lines.length; j++) {
+            mergedFile += lines[j] + '\n';
+        }
+    }
+    mergedFile = "---\n" + yaml.dump(frontMatter) + "---\n\n" + mergedFile;
+    return mergedFile; 
+}

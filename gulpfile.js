@@ -24,6 +24,8 @@ var uglify     = require("gulp-uglify");
 var envify     = require("envify");
 var htmllint   = require("gulp-htmllint");
 var crawler    = require("simplecrawler");
+var argv       = require('yargs').argv;
+var yaml       = require('js-yaml');
 
 // constants
 var ROOT_DIR   = ".";
@@ -176,6 +178,7 @@ gulp.task("help", function () {
     gutil.log("Arguments:");
     gutil.log("    --nodocs      don't generate docs");
     gutil.log("    --prod        build for production; without it, will build dev instead");
+    gutil.log("    --nofetch     skips fetching external docs");
     gutil.log("");
 });
 
@@ -232,7 +235,7 @@ gulp.task("serve", ["build"], function () {
     });
 });
 
-gulp.task("build", ["configs", "data", "styles", "plugins"], function (done) {
+gulp.task("build", [ "configs", "data", "styles", "plugins"], function (done) {
     jekyllBuild(done);
 });
 

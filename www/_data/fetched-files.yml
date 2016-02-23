@@ -15,7 +15,7 @@
         repoName: "apache/cordova-cli"
         packageName: "cordova"
         commit: "master"
-        path: "doc/bash.md"
+        path: "doc/readme.md"
     dest:
         permalink: "/docs/en/dev/cordova-cli/index.html"
 -

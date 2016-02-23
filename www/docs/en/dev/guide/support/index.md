@@ -78,7 +78,7 @@ CLI's shorthand names.
 
     <tr>
         <th></th>
-        <th colspan="20">Platform APIs</th>
+        <th colspan="20"><h2>Core plugin APIs</h2></th>
     </tr>
 
     <tr>

@@ -9,7 +9,7 @@
 -   name: "Create apps"
     children:
         -   name: "Create your first app"
-            url:
+            url: "guide/cli/index.html"
         -   name: "Platform support"
             url: "guide/support/index.html"
         -   name: "Develop for platforms"
@@ -81,7 +81,7 @@
         -   name: "Events"
             url: "cordova/events/events.html"
         -   name: "CLI"
-            url: "guide/cli/index.html"
+            url: "cordova-cli/index.html"
         -   name: "Hooks"
             url: "guide/appdev/hooks/index.html"
         -   name: "Plugin.xml"
