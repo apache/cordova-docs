@@ -203,7 +203,7 @@ directory, here's the CLI approach:
         $ cordova create hello com.example.hello HelloWorld
         $ cd hello
         $ cordova platform add android
-        $ ccordova prepare              # or "cordova build"
+        $ cordova prepare              # or "cordova build"
 
 Here's the corresponding lower-level shell-tool approach for both Unix
 and Windows:
