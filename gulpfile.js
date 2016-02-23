@@ -193,14 +193,6 @@ gulp.task("watch", ["serve"], function () {
     );
     gulp.watch(
         [
-            path.join(DOCS_DIR, "**", "*.md"),
-            path.join(DOCS_DIR, "**", "*.html"),
-        ],
-        {interval: WATCH_INTERVAL},
-        ["configs", "data"]
-    );
-    gulp.watch(
-        [
             path.join(PLUGINS_SRC_DIR, "**", "*.js"),
             path.join(PLUGINS_SRC_DIR, "**", "*.jsx"),
             path.join(PLUGINS_SRC_DIR, "**", "*.json"),
@@ -211,8 +203,12 @@ gulp.task("watch", ["serve"], function () {
     gulp.watch(
         [
             path.join(ROOT_DIR, "**", "*.yml"),
-            path.join(SOURCE_DIR, "**", "*.html"),
-            path.join(SOURCE_DIR, "**", "*.md"),
+            // Source dir contains docs - but we don't want to watch _all_ 
+            // the docs only en/dev as specified below.
+            path.join(SOURCE_DIR, "**", "*.html") + "!" + path.join(DOCS_DIR, "**"),
+            path.join(SOURCE_DIR, "**", "*.md") + "!" + path.join(DOCS_DIR, "**") ,
+            path.join(DOCS_DIR, "en", "dev", "**", "*.md") ,
+            path.join(DOCS_DIR, "en", "dev", "**", "*.html"),
             path.join(JS_DIR, "**", "*.js"),
             path.join(CSS_OUT_DIR, "**", "*.css"),
         ],
@@ -249,7 +245,13 @@ gulp.task("regen", ["jekyll"], function () {
 });
 
 gulp.task("fetch", function (done) {
-    exec("node", [bin("fetch_docs.js"), FETCH_CONFIG, FETCH_DIR], done);
+    if (!fs.existsSync(FETCH_DIR)) {
+        exec("node", [bin("fetch_docs.js"), FETCH_CONFIG, FETCH_DIR], done);
+    } else {
+        gutil.log(gutil.colors.yellow(
+            "Skipping fetching external docs. Run 'gulp clean' first to initiate another fetch."));
+        done();
+    }
 });
 
 gulp.task("reload", function () {
@@ -280,7 +282,11 @@ gulp.task("defaults", function () {
 });
 
 gulp.task("toc", ["fetch"], function (done) {
-    exec("node", [bin("toc.js"), DOCS_DIR, DATA_DIR], done);
+    if (gutil.env.prod) {
+        exec("node", [bin("toc.js"), DOCS_DIR, DATA_DIR], done);
+    } else {
+        done();
+    }
 });
 
 gulp.task("less", function () {
