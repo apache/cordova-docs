@@ -68,7 +68,7 @@ with just `plugman`.
 
 Before you can use Plugman, you must create a Cordova project.  You can do this with either the Command-line Interface or with
 the lower level shell scripts. Instructions for using the shell scripts to create your project are located in the various "Command-line Tools" guides
-listed on the [Platform Guides](../guide/platforms/index.html) page.
+listed on the Platform guides page.
 
 ## Adding a Plugin
 

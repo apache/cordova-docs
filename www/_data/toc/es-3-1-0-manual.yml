@@ -24,4 +24,3 @@
 - {name: "Notificaci\xF3n", url: !!python/unicode 'cordova/notification/notification.html'}
 - {name: !!python/unicode 'SplashScreen', url: !!python/unicode 'cordova/splashscreen/splashscreen.html'}
 - {name: "Almacenamiento de informaci\xF3n", url: !!python/unicode 'cordova/storage/storage.html'}
-- {name: "\xCDndice de palabras clave", url: !!python/unicode 'page_index.html'}

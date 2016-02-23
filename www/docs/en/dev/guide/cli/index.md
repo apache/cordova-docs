@@ -35,7 +35,6 @@ and shell tools for continued development.
 
 Before running any command-line tools, you need to install SDKs for
 each platform you wish to target.
-(See the [Platform Guides](../platforms/index.html) for more details.)
 
 To add support or rebuild a project for any platform, you need to run
 the command-line interface from the same machine that supports the
@@ -212,7 +211,6 @@ If you wish at this point, you can use an SDK such as Eclipse or Xcode
 to open the project you created. You will need to open the derivative set of assets
 from the `/platforms/` directory to develop with an SDK. This is because
 the SDK specific metadata files are stored within the appropriate `/platform/` subdirectory.
-(See the [Platform Guides](../platforms/index.html) for information on how to develop applications within each IDE.)
 Use this approach if you simply want to initialize a project using the CLI and
 then switch to an SDK for native work.
 
@@ -263,7 +261,6 @@ the iPhone for iOS projects. For other platforms, you may need to
 first associate a device with an emulator.
 
 
-(See the [Platform Guides](../platforms/index.html) for details.)
 For example, you may first run the `android` command to launch the
 Android SDK, then run a particular device image, which launches it
 according to its default behavior:
@@ -286,7 +283,6 @@ testing, following procedures that vary for each platform. In
 Android devices, you would have to enable a __USB debugging__ option on
 the device, and perhaps add a USB driver depending on your development
 environmnent.
-See [Platform Guides](../platforms/index.html) for details on each platform's requirements.
 
 ## Add Plugin Features
 
@@ -542,8 +538,7 @@ Cordova 3.0 is the first version to support the command-line interface
 described in this section. If you are updating from a version prior to
 3.0, you need to create a new project as described above, then copy
 the older application's assets into the top-level `www` directory.
-Where applicable, further details about upgrading to 3.0 are available
-in the [Platform Guides](../platforms/index.html).  Once you upgrade to the `cordova`
+Once you upgrade to the `cordova`
 command-line interface and use `npm update` to stay current, the more
 time-consuming procedures described there are no longer relevant.
 

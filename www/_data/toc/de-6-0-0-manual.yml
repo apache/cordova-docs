@@ -16,4 +16,3 @@
 - {name: "Die n\xE4chsten Schritte", url: !!python/unicode 'guide/next/index.html'}
 - {name: !!python/unicode 'Veranstaltungen', url: !!python/unicode 'cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin APIs', url: !!python/unicode 'cordova/plugins/pluginapis.html'}
-- {name: !!python/unicode 'Stichwort-Index', url: !!python/unicode 'page_index.html'}

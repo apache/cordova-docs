@@ -13,4 +13,3 @@
 - {name: !!python/unicode 'Notification', url: !!python/unicode 'phonegap/notification/notification.html'}
 - {name: !!python/unicode 'Storage', url: !!python/unicode 'phonegap/storage/storage.html'}
 - {name: !!python/unicode 'Getting Started Guides', url: !!python/unicode 'guide/getting-started/index.html'}
-- {name: !!python/unicode 'Keyword Index', url: !!python/unicode 'page_index.html'}

@@ -134,9 +134,7 @@ task, they each offer advantages:
   higher-level tool means separate build cycles and plugin
   modifications for each platform. Still, this workflow allows you
   greater access to development options provided by each SDK, and is
-  essential for complex hybrid apps. See the various 
-  [Platform Guides](../platforms/index.html) for details on each platform's 
-  available shell utilities.
+  essential for complex hybrid apps.
 
 When first starting out, it may be easiest to use the cross-platform
 workflow to create an app, as described in [The Command-Line Interface](../cli/index.html).
@@ -164,10 +162,10 @@ you choose:
 
   * Cross-platform workflow: see [The Command-Line Interface](../cli/index.html).
 
-  * Platform-centered workflow: see the [Platform Guides](../platforms/index.html).
+  * Platform-centered workflow.
 
 After installing Cordova, it is recommended that you review the 
-[Platform Guides](../platforms/index.html) for the mobile platforms that you 
+```Develop for platforms``` section for the mobile platforms that you 
 will be developing for. It is also recommended that you also review the 
 [Privacy Guide](../appdev/privacy/index.html) and 
 [Security Guide](../appdev/security/index.html). And refer to the other 

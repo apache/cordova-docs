@@ -42,8 +42,7 @@ enable network access to specific domains. For projects that rely on
 the CLI workflow described in [The Command-Line Interface](../../cli/index.html), this file is
 located in the project's top-level directory. Otherwise for
 platform-specific development paths, locations are listed in the
-sections below. (See the various [Platform Guides](../../platforms/index.html) for more information
-on each platform.)
+sections below. 
 
 The following examples demonstrate `<access>` whitelist syntax:
 

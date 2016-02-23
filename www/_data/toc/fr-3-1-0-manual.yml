@@ -22,4 +22,3 @@
 - {name: !!python/unicode 'Notification', url: !!python/unicode 'cordova/notification/notification.html'}
 - {name: !!python/unicode 'SplashScreen', url: !!python/unicode 'cordova/splashscreen/splashscreen.html'}
 - {name: !!python/unicode 'Stockage', url: !!python/unicode 'cordova/storage/storage.html'}
-- {name: "Index de mots-cl\xE9s", url: !!python/unicode 'page_index.html'}

@@ -23,4 +23,3 @@
 - {name: "\u6B21\u306E\u30B9\u30C6\u30C3\u30D7", url: !!python/unicode 'guide/next/index.html'}
 - {name: "\u30A4\u30D9\u30F3\u30C8", url: !!python/unicode 'cordova/events/events.html'}
 - {name: "\u30D7\u30E9\u30B0\u30A4\u30F3 Api", url: !!python/unicode 'cordova/plugins/pluginapis.html'}
-- {name: "\u30AD\u30FC\u30EF\u30FC\u30C9 \u30A4\u30F3\u30C7\u30C3\u30AF\u30B9", url: !!python/unicode 'page_index.html'}

@@ -24,4 +24,3 @@
 - {name: "\u901A\u77E5", url: !!python/unicode 'cordova/notification/notification.html'}
 - {name: "\u9583\u5C4F", url: !!python/unicode 'cordova/splashscreen/splashscreen.html'}
 - {name: "\u5B58\u5132", url: !!python/unicode 'cordova/storage/storage.html'}
-- {name: "\u95DC\u9375\u5B57\u7D22\u5F15", url: !!python/unicode 'page_index.html'}

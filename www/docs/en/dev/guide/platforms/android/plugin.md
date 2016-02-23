@@ -20,27 +20,20 @@ license: >
 title: Android Plugins
 ---
 
-# Android Plugins
+# Android Plugin Development Guide
 
 This section provides details for how to implement native plugin code
-on the Android platform. Before reading this, see Application Plugins
+on the Android platform. Before reading this, see the [Plugin Development Guide][plugin-dev]
 for an overview of the plugin's structure and its common JavaScript
 interface. This section continues to demonstrate the sample _echo_
 plugin that communicates from the Cordova webview to the native
 platform and back.  For another sample, see also the comments in
-[CordovaPlugin.java](https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java).
+[CordovaPlugin.java][cordova-plugin].
 
-Android plugins are based on Cordova-Android, which consists of an
-Android WebView with hooks attached to it.  Plugins are represented as
-class mappings in the `config.xml` file.  A plugin consists of at
-least one Java class that extends the `CordovaPlugin` class,
-overriding one of its `execute` methods. As best practice, the plugin
-should also handle [pause][PauseEvent] and [resume][ResumeEvent] events, along with any message
-passing between plugins.  Plugins with long-running requests,
-background activity such as media playback, listeners, or internal
-state should implement the `onReset()` method as well. It executes
-when the `WebView` navigates to a new page or refreshes, which reloads
-the JavaScript.
+Android plugins are based on Cordova-Android, which is built from an
+Android WebView with a native bridge. The native portion of an Android plugin
+consists of at least one Java class that extends the `CordovaPlugin` class and
+overrides one of its `execute` methods.
 
 ## Plugin Class Mapping
 
@@ -72,7 +65,7 @@ Otherwise, the plugin may compile but still be unavailable to Cordova.
 One instance of a plugin object is created for the life of each
 `WebView`. Plugins are not instantiated until they are first
 referenced by a call from JavaScript, unless `<param>` with an `onload`
-`name` attribute is set to `"true"` in `config.xml`. E.g.:
+`name` attribute is set to `"true"` in `config.xml`. For example,
 
     <feature name="Echo">
         <param name="android-package" value="<full_name_including_namespace>" />
@@ -86,6 +79,13 @@ Plugins should use the `initialize` method for their start-up logic.
         super.initialize(cordova, webView);
         // your init code here
     }
+
+Plugins also have access to Android lifecycle events and can handle them
+by extending one of the provided methods (`onResume`, `onDestroy`, etc).
+Plugins with long-running requests, background activity such as media playback,
+listeners, or internal state should implement the `onReset()` method. It
+executes when the `WebView` navigates to a new page or refreshes, which reloads
+the JavaScript.
 
 ## Writing an Android Java Plugin
 
@@ -118,7 +118,8 @@ exception names as much as possible.
 The plugin's JavaScript does _not_ run in the main thread of the
 `WebView` interface; instead, it runs on the `WebCore` thread, as
 does the `execute` method.  If you need to interact with the user
-interface, you should use the following variation:
+interface, you should use the [Activity's `runOnUiThread`][ref-runonuithread]
+method like so:
 
         @Override
         public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
@@ -135,8 +136,10 @@ interface, you should use the following variation:
             return false;
         }
 
-Use the following if you do not need to run on the main interface's
-thread, but do not want to block the `WebCore` thread either:
+If you do not need to run on the UI thread, but do not wish to block the
+`WebCore` thread either, you should execute your code using the Cordova
+[`ExecutorService`][ref-executor] obtained with `cordova.getThreadPool()` like
+so:
 
         @Override
         public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
@@ -155,27 +158,24 @@ thread, but do not want to block the `WebCore` thread either:
 
 ## Adding Dependency Libraries
 
-If a plugin requires additional libraries to work, you can use
-one of the following approaches to add them via `config.xml`.
+If your Android plugin has extra dependencies, they must be listed in the
+`plugin.xml` in one of two ways.
 
-Option A. Via _Gradle_ reference, for example:
+The preferred way is to use the `<framework />` tag (see the
+[Plugin Specification][plugin-ref-framework] for more details).
+Specifying libraries in this manner allows them to be resolved via Gradle's
+[Dependency Management logic][gradle-dep-management]. This allows commonly used
+libraries such as _gson_, _android-support-v4_, and _google-play-services_ to be
+used by multiple plugins without conflict.
 
-        <framework src="com.android.support:support-v4:+" />
-
-This is a recommended approach as it allows multiple plugins
-to refer to the same dependency library such as _gson_,
-_android-support-v4_, _google-play-services_, etc and
-_Gradle_ will resolve duplicate dependencies using its
-[Dependency Management logic](https://docs.gradle.org/current/userguide/dependency_management.html).
-
-Option B. As _JAR_ files placed to some plugin's folder and
-linked using `lib-file`, for example:
-
-        <lib-file src="src/android/libs/gcm.jar"/>
-
-We recommend using this approach only if you are sure that
-dependency jar is plugin specific and won't be used by
-other plugins. Otherwise, there will be platform build issue.
+The second option is to use the `<lib-file />` tag to specify the location of
+a jar file (see the [Plugin Specification][plugin-ref-lib-file] for
+more details). This approach should only be used if you are sure that no other
+plugin will be depending on the library you are referencing (e.g. if the library
+is specific to your plugin). Otherwise, you risk causing build errors for users
+of your plugin if another plugin adds the same library. It is worth noting that
+Cordova app developers are not necessarily native developers, so native platform
+build errors can be especially frustrating.
 
 ## Echo Android Plugin Example
 
@@ -189,10 +189,11 @@ specification to the local platform's `config.xml` file:
                     <param name="android-package" value="org.apache.cordova.plugin.Echo"/>
                 </feature>
             </config-file>
+
+            <source-file src="src/android/Echo.java" target-dir="src/org/apache/cordova/plugin" />
         </platform>
 
-Then add the following to the
-`src/org/apache/cordova/plugin/Echo.java` file:
+Then add the following to the `src/android/Echo.java` file:
 
         package org.apache.cordova.plugin;
 
@@ -246,17 +247,17 @@ callback as a parameter.
 
 ## Android Integration
 
-Android features an `Intent` system that allows processes to
+Android features an [Intent][ref-intent] system that allows processes to
 communicate with each other.  Plugins have access to a
-`CordovaInterface` object, which can access the Android `Activity`
-that runs the application.  This is the `Context` required to launch a
-new Android `Intent`.  The `CordovaInterface` allows plugins to start
-an `Activity` for a result, and to set the callback plugin for when
-the `Intent` returns to the application.
+`CordovaInterface` object, which can access the Android [Activity][ref-activity]
+that runs the application.  This is the [Context][ref-context] required to launch a
+new Android [Intent][ref-intent].  The `CordovaInterface` allows plugins to start
+an [Activity][ref-activity] for a result, and to set the callback plugin for when
+the [Intent][ref-intent] returns to the application.
 
 As of Cordova 2.0, Plugins can no longer directly access the
-`Context`, and the legacy `ctx` member is deprecated. All `ctx`
-methods exist on the `Context`, so both `getContext()` and
+[Context][ref-context], and the legacy `ctx` member is deprecated. All `ctx`
+methods exist on the [Context][ref-context], so both `getContext()` and
 `getActivity()` can return the required object.
 
 ## Android Permissions
@@ -264,22 +265,22 @@ methods exist on the `Context`, so both `getContext()` and
 Android permissions until recently have been handled at install-time instead
 of runtime.  These permissions are required to be declared on an application that uses
 the permissions, and these permissions need to be added to the Android Manifest.  This can be
-accomplished by using the config.xml to inject these permissions in the AndroidManifest.xml file.
+accomplished by using the `config.xml` to inject these permissions in the `AndroidManifest.xml` file.
 The example below uses the Contacts permission.
 
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.READ_CONTACTS" />
         </config-file>
 
-## Android Permissions (Cordova-Android 5.0.x and greater)
+### Runtime Permissions (Cordova-Android 5.0.0+)
 
 Android 6.0 "Marshmallow" introduced a new permissions model where
 the user can turn on and off permissions as necessary.  This means that
 applications must handle these permission changes to be future-proof, which
-was the focus of the Cordova-Android 5.0 release.
+was the focus of the Cordova-Android 5.0.0 release.
 
 The permissions that need to be handled at runtime can be found in the Android Developer
-documentation [here](http://developer.android.com/guide/topics/security/permissions.html#perm-groups).
+documentation [here][permissions-guide].
 
 As far as a plugin is concerned, the permission can be requested by calling the permission method, which signature is as follows:
 
@@ -295,7 +296,8 @@ It is also standard practice to define the requestCode as follows:
 
 Then, in the exec method, the permission should be checked:
 
-            if(cordova.hasPermission(READ)) {
+            if(cordova.hasPermission(READ))
+            {
                 search(executeArgs);
             }
             else
@@ -310,7 +312,7 @@ In this case, we just call requestPermission:
         cordova.requestPermission(this, requestCode, READ);
     }
 
-This will call the activity and cause a prompt to appear asking for the permission.  Once the user has the permission, the result must be handled with the onRequestPermissionResult method, which
+This will call the activity and cause a prompt to appear asking for the permission.  Once the user has the permission, the result must be handled with the `onRequestPermissionResult` method, which
 every plugin should override.  An example of this can be found below:
 
     public void onRequestPermissionResult(int requestCode, String[] permissions,
@@ -362,14 +364,14 @@ a Cordova application just like a native Android application.
 ## Launching Other Activities
 
 There are special considerations to be made if your plugin launches an Activity
-that pushes the Cordova Activity to the background. The Android OS will destroy
+that pushes the Cordova [Activity][ref-activity] to the background. The Android OS will destroy
 Activities in the background if the device is running low on memory. In that
-case, the CordovaPlugin instance will be destroyed as well. If your plugin is
-waiting on a result from the Activity it launched, a new instance of your plugin
-will be created when the Cordova Activity is brought back to the foreground and
+case, the `CordovaPlugin` instance will be destroyed as well. If your plugin is
+waiting on a result from the [Activity][ref-activity] it launched, a new instance of your plugin
+will be created when the Cordova [Activity][ref-activity] is brought back to the foreground and
 the result is obtained. However, state for the plugin will not be automatically
-saved or restored and the CallbackContext for the plugin will be lost. There are
-two methods that your CordovaPlugin may implement to handle this situation:
+saved or restored and the `CallbackContext` for the plugin will be lost. There are
+two methods that your `CordovaPlugin` may implement to handle this situation:
 
 ```java
 /**
@@ -397,19 +399,19 @@ public void onRestoreStateForActivityResult(Bundle state, CallbackContext callba
 ```
 
 It is important to note that the above methods should only be used if your
-plugin launches an Activity for a result and should only restore the state
+plugin launches an [Activity][ref-activity] for a result and should only restore the state
 necessary to handle that Activity result. The state of the plugin will *NOT* be
 restored except in the case where an Activity result is obtained that your
-plugin requested using the CordovaInterface's `startActivityForResult()` method
+plugin requested using the `CordovaInterface`'s `startActivityForResult()` method
 and the Cordova Activity was destroyed by the OS while in the background.
 
 As part of `onRestoreStateForActivityResult()`, your plugin will be passed a
 replacement CallbackContext. It is important to realize that this
 CallbackContext *IS NOT* the same one that was destroyed with the Activity. The
 original callback is lost, and will not be fired in the javascript application.
-Instead, this replacement CallbackContext will return the result as part of the
-`resume` event that is fired when the application resumes. The payload of the
-`resume` event follows this structure:
+Instead, this replacement `CallbackContext` will return the result as part of the
+[`resume`][event-resume] event that is fired when the application resumes. The
+payload of the [`resume`][event-resume] event follows this structure:
 
 ```
 {
@@ -422,15 +424,15 @@ Instead, this replacement CallbackContext will return the result as part of the
 }
 ```
 
-* `pluginServiceName` will match the `name` attribute from your plugin.xml
+* `pluginServiceName` will match the [name element][plugin-ref-name] from your plugin.xml.
 * `pluginStatus` will be a String describing the status of the PluginResult
    passed to the CallbackContext. See PluginResult.java for the String values
    that correspond to plugin statuses
 * `result` will be whatever result the plugin passes to the CallbackContext
    (e.g. a String, a number, a JSON object, etc.)
 
-This resume payload will be passed to any callbacks that the javascript
-application has registered for the `resume` event. This means that the result is
+This [`resume`][event-resume] payload will be passed to any callbacks that the javascript
+application has registered for the [`resume`][event-resume] event. This means that the result is
 going *directly* to the Cordova application; your plugin will not have a chance
 to process the result with javascript before the application receives it.
 Consequently, you should strive to make the result returned by the native code
@@ -438,11 +440,11 @@ as complete as possible and not rely on any javascript callbacks when launching
 activities.
 
 Be sure to communicate how the Cordova application should interpret the result
-they receive in the `resume` event. It is up to the Cordova application to
+they receive in the [`resume`][event-resume] event. It is up to the Cordova application to
 maintain their own state and remember what requests they made and what arguments
 they provided if necessary. However, you should still clearly communicate the
 meaning of `pluginStatus` values and what sort of data is being returned in the
-`result` field as part of your plugin's API.
+[`resume`][event-resume] field as part of your plugin's API.
 
 The complete sequence of events for launching an Activity is as follows
 
@@ -455,7 +457,7 @@ The complete sequence of events for launching an Activity is as follows
     * *`onRestoreStateForActivityResult()` is called*
 6. `onActivityResult()` is called and your plugin passes a result to the new
     CallbackContext
-7. The `resume` event is fired and received by the Cordova application
+7. The [`resume`][event-resume] event is fired and received by the Cordova application
 
 Android provides a developer setting for debugging Activity destruction on low
 memory. Enable the "Don't keep activities" setting in the Developer Options menu
@@ -463,5 +465,16 @@ on your device or emulator to simulate low memory scenarios. If your plugin
 launches external activities, you should always do some testing with this
 setting enabled to ensure that you are properly handling low memory scenarios.
 
-[PauseEvent]: ../../../cordova/events/events.html#pause
-[ResumeEvent]: ../../../cordova/events/events.html#resume
+[cordova-plugin]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
+[event-resume]: ../../../cordova/events/events.html#resume
+[gradle-dep-management]: https://docs.gradle.org/current/userguide/dependency_management.html
+[permissions-guide]: http://developer.android.com/guide/topics/security/permissions.html#perm-groups
+[plugin-dev]: ../../hybrid/plugins/index.html
+[plugin-ref-framework]: ../../../plugin_ref/spec.html#framework
+[plugin-ref-lib-file]: ../../../plugin_ref/spec.html#lib-file
+[plugin-ref-name]: ../../../plugin_ref/spec.html#name
+[ref-context]: http://developer.android.com/reference/android/content/Context.html
+[ref-executor]: http://developer.android.com/reference/java/util/concurrent/ExecutorService.html
+[ref-intent]: http://developer.android.com/reference/android/content/Intent.html
+[ref-activity]: http://developer.android.com/reference/android/app/Activity.html
+[ref-runonuithread]: http://developer.android.com/reference/android/app/Activity.html#runOnUiThread(java.lang.Runnable)

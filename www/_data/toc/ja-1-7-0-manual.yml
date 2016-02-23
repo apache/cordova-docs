@@ -13,4 +13,3 @@
 - {name: !!python/unicode 'Notification', url: !!python/unicode 'cordova/notification/notification.html'}
 - {name: !!python/unicode 'Storage', url: !!python/unicode 'cordova/storage/storage.html'}
 - {name: "\u5165\u9580\u30AC\u30A4\u30C9", url: !!python/unicode 'guide/getting-started/index.html'}
-- {name: "\u7D22\u5F15", url: !!python/unicode 'page_index.html'}
