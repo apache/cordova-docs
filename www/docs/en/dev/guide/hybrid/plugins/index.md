@@ -107,7 +107,7 @@ correctly for each platform.  Install `plugman` with the following
 
 You need an valid app source directory, such as the top-level `www`
 directory included in a default CLI-generated project as described in
-[Create your first app](../../cli/index.html) guide.  
+[Create your first app](../../cli/index.html) guide.
 
 Then run a command such as the following to test whether iOS
 dependencies load properly:
@@ -202,13 +202,13 @@ listed below, and each builds on the simple Echo Plugin example above:
 
 ## Publishing Plugins
 
-You can publish your plugin to any `npmjs`-based registry, but the recommended one is the [NPM registry](https://www.npmjs.com). Other developers can install your plugin automatically using either `plugman` or the Cordova CLI.  
+You can publish your plugin to any `npmjs`-based registry, but the recommended one is the [NPM registry](https://www.npmjs.com). Other developers can install your plugin automatically using either `plugman` or the Cordova CLI.
 
 To publish a plugin to NPM registry you need to follow steps below:
   * install the `plugman` CLI:
-        
+
         $ npm install -g plugman
- 
+
   * create `package.json` file for your plugin:
 
         $ plugman createpackagejson /path/to/your/plugin
@@ -222,9 +222,9 @@ For more details on npm usage refer to [publishing a npm package](https://docs.n
 
 ## Integrating with Plugin Search
 
-To surface the plugin in [Cordova Plugin Search](/plugins/), add the `ecosystem:cordova` keyword to the `package.json` file of your plugin before publishing. 
+To surface the plugin in [Cordova Plugin Search](/plugins/), add the `ecosystem:cordova` keyword to the `package.json` file of your plugin before publishing.
 
-To indicate support for a particular platform add a keyword with the `<platformName>` as `**cordova-<platformName>**` to the list of keywords in package.json. 
+To indicate support for a particular platform add a keyword with the `<platformName>` as `**cordova-<platformName>**` to the list of keywords in package.json.
 Plugman's `createpackagejson` command does this for you, but if you did not use it to generate your `package.json`, you should manually edit it as shown below.
 
 For example, for a plugin that supports android, iOS & Windows, the keywords in package.json should include:
@@ -239,3 +239,96 @@ For example, for a plugin that supports android, iOS & Windows, the keywords in 
 ```
 
 For more detailed example of a package.json, review the [package.json file of cordova-plugin-device](https://github.com/apache/cordova-plugin-device/blob/master/package.json).
+
+### Specifying Project requirements
+
+Cordova recently added support for specifying the project requirements of a plugin
+as part of the plugin's `package.json` file. These requirements provide
+guidance to the Cordova CLI when it is choosing which version of a plugin to
+fetch from npm for a given project. The CLI will attempt to fetch the highest
+version of your plugin that the current Cordova project supports. If no versions
+of the plugin are compatible, the CLI will give a warning and fetch the latest
+release.
+
+To add project requirements for a plugin, alter the `engines` element in
+`package.json` to include a `cordovaDependencies` sub-element adhering to the
+following structure
+
+```javascript
+engines: {
+    cordovaDependencies: {
+        PLUGIN_VERSION: {
+            DEPENDENCY: SEMVER_RANGE,
+            DEPENDENCY: SEMVER_RANGE,
+            ...
+        },
+        ...
+    }
+}
+```
+
+* `PLUGIN_VERSION` specifies a version of your plugin. It should adhere the syntax for a single version as used by [npm's semver package][npm-semver] or an upper bound (see [below](#upper-bounds))
+* `DEPENDENCY` may be one of the following:
+    * The Cordova CLI, `"cordova"`
+    * A Cordova platform (e.g. `"cordova-android"`, `"cordova-ios"`, `"cordova-windows"`, etc.)
+    * Another Cordova plugin (e.g. `"cordova-plugin-camera"`, etc.)
+* `SEMVER_RANGE` should adhere to the syntax used by [npm's semver package][npm-semver]
+
+**NOTE:** A Cordova platform `DEPENDENCY` refers to the Cordova platform and not
+the OS (i.e. `cordova-android` rather than the Android OS)
+
+Your `cordovaDependencies` may list any number of `PLUGIN_VERSION` requirements
+and any number of `DEPENDENCY` constraints within them. Versions of your plugin
+that do not have their dependencies listed will be assumed to have the same
+dependency information as the highest `PLUGIN_VERSION` listed below them. For
+example, consider the following entry:
+
+```javascript
+engines: {
+    cordovaDependencies: {
+        "1.0.0": { "cordova-android": "<3.0.0"},
+        "2.0.0": { "cordova-android": ">4.0.0"}
+    }
+}
+```
+
+Any version of the plugin between 1.0.0 and 2.0.0 is assumed to have the same
+dependencies as version 1.0.0 (a cordova-android version less than 3.0.0). This
+lets you only update your `cordovaDependencies` information when there are
+breaking changes.
+
+#### Upper Bounds
+
+In addition to a single versions for `PLUGIN_VERSION`, you may also specify upper
+bounds as part of your `cordovaDependencies` to amend entries for older versions
+of your plugin. This is useful when a breaking change occurs in a `DEPENDENCY`
+and a new constraint must be added for all older versions of a plugin that do
+not support it. These bounds should be written as, a `<` followed by a single
+[semver][npm-semver] version (**Not an arbitrary range!**). This will apply
+whatever `DEPENDENCY` values are given to all versions of the plugin below the
+specified version. For example, consider the following entry:
+
+```javascript
+engines: {
+    cordovaDependencies: {
+        "0.0.1":  { "cordova-ios": ">1.0.0" },
+        "<1.0.0": { "cordova-ios": "<2.0.0" },
+        "<2.0.0": { "cordova-ios": "<5.0.0" }
+    }
+}
+```
+
+Here we specify one plugin version (0.0.1) and two upper bounds (<1.0.0 and <2.0.0)
+that constrain cordova-ios. The two upper bounds do not override the constraint
+of 0.0.1, they are combined via AND at evaluation time. When we go to check the
+cordova-ios version of the project, the constraint that will be evaluated for
+plugin version 0.0.1 will be the combination of these three:
+
+```
+    cordova-ios >1.0.0 AND cordova-ios <2.0.0 AND cordova-ios <5.0.0
+```
+
+Please note that the only `PLUGIN_VERSION` values allowed are single versions or
+upper bounds; no other semver ranges are supported.
+
+[npm-semver]: https://www.npmjs.com/package/semver
