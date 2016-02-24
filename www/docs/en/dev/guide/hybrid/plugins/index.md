@@ -245,4 +245,104 @@ For example, for a plugin that supports android, iOS & Windows, the keywords in 
 
 For more detailed example of a package.json, review the [package.json file of cordova-plugin-device](https://github.com/apache/cordova-plugin-device/blob/master/package.json).
 
+### Specifying Cordova Dependencies
+
+**Cordova 6.1.0** added support for specifying the Cordova-related dependencies of a plugin
+as part of the plugin's `package.json` file. Plugins may list the dependencies for multiple
+releases so as to provide guidance to the Cordova CLI when it is selecting the version of a
+plugin to fetch from npm. The CLI will choose the latest release of a plugin that is
+compatible with the local project's installed platforms and plugins as well as the
+the local Cordova CLI version. If no releases of the plugin are compatible, the CLI will warn
+the user about the failed requirements and fall back to the old behavior of fetching the
+latest release.
+
+Listing dependencies is a good way to ensure that your plugin will not appear broken or cause
+build errors when fetched from npm. If the latest release of the plugin is not compatible with
+a project, the CLI will give the app developer a list of unmet project requirements so that
+they are aware of incompatibilites and can update their project to support your plugin. This
+allows your plugin to respond to breaking changes without fear of confusing devlopers who
+are building against old platforms and plugins.
+
+To specify Cordova-related dependencies for a plugin, alter the `engines` element in
+`package.json` to include a `cordovaDependencies` object using the following
+structure:
+
+```javascript
+engines: {
+    cordovaDependencies: {
+        PLUGIN_VERSION: {
+            DEPENDENCY: SEMVER_RANGE,
+            DEPENDENCY: SEMVER_RANGE,
+            ...
+        },
+        ...
+    }
+}
+```
+
+* `PLUGIN_VERSION` specifies a version of your plugin. It should adhere the syntax for a single version as defined by [npm's semver package][npm-semver] or an upper bound (see [below](#upper-bounds))
+* `DEPENDENCY` may be one of the following:
+    * The Cordova CLI, `"cordova"`
+    * A Cordova platform (e.g. `"cordova-android"`, `"cordova-ios"`, `"cordova-windows"`, etc.)
+    * Another Cordova plugin (e.g. `"cordova-plugin-camera"`, etc.)
+* `SEMVER_RANGE` should adhere to the syntax for a range as defined by [npm's semver package][npm-semver]
+
+**NOTE:** A Cordova platform `DEPENDENCY` refers to the Cordova platform and not
+the OS (i.e. `cordova-android` rather than the Android OS)
+
+Your `cordovaDependencies` may list any number of `PLUGIN_VERSION` requirements
+and any number of `DEPENDENCY` constraints within them. Versions of your plugin
+that do not have their dependencies listed will be assumed to have the same
+dependency information as the highest `PLUGIN_VERSION` listed below them. For
+example, consider the following entry:
+
+```javascript
+engines: {
+    cordovaDependencies: {
+        "1.0.0": { "cordova-android": "<3.0.0"},
+        "2.1.0": { "cordova-android": ">4.0.0"}
+    }
+}
+```
+All plugin versions below the lowest entry (1.0.0 in this example) are assumed
+to have no dependencies. Any version of the plugin between 1.0.0 and 2.1.0 is
+assumed to have the same dependencies as version 1.0.0 (a cordova-android
+version less than 3.0.0). This lets you only update your `cordovaDependencies`
+information when there are breaking changes.
+
+#### Upper Bounds
+
+In addition to a single version, a `PLUGIN_VERSION` in `cordovaDependencies`
+may also specify an upper bound to amend entries for older releases
+of your plugin. This is useful when a breaking change occurs in a `DEPENDENCY`
+and a new constraint must be added for all older versions of a plugin that do
+not support it. These bounds should be written as, a `<` followed by a single
+[semver][npm-semver] version (**Not an arbitrary range!**). This will apply
+whatever `DEPENDENCY` values are given to all versions of the plugin below the
+specified version. For example, consider the following entry:
+
+```javascript
+engines: {
+    cordovaDependencies: {
+        "0.0.1":  { "cordova-ios": ">1.0.0" },
+        "<1.0.0": { "cordova-ios": "<2.0.0" },
+        "<2.0.0": { "cordova-ios": "<5.0.0" }
+    }
+}
+```
+
+Here we specify one plugin version (0.0.1) and two upper bounds (<1.0.0 and <2.0.0)
+that constrain cordova-ios. The two upper bounds do not override the constraint
+of 0.0.1, they are combined via AND at evaluation time. When the CLI checks the
+cordova-ios version of the project, the constraint that will be evaluated for
+plugin version 0.0.1 will be the combination of these three:
+
+```
+    cordova-ios >1.0.0 AND cordova-ios <2.0.0 AND cordova-ios <5.0.0
+```
+
+Please note that the only `PLUGIN_VERSION` values allowed are single versions or
+upper bounds; no other semver ranges are supported.
+
 [cdv_plugin]: ../../../reference/cordova-cli/index.html#cordova-plugin-command
+[npm-semver]: https://www.npmjs.com/package/semver
