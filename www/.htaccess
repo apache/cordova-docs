@@ -15,7 +15,7 @@ RewriteEngine on
 #           - /docs/en/latest -> /docs/en/4.0.0/, /docs/en/5.0.0/, etc.
 #
 #       301s are for PERMANENT redirects. These are used only for mapping old
-#       docs pages to new docs pages.
+#       pages to new pages.
 
 # 302 (temp):
 #       docs     -> docs/en/latest/
@@ -46,6 +46,10 @@ RewriteRule ^.*docs/(\w\w)/latest/(.*)$ {{site.baseurl}}/docs/$1/{{site.latest_d
 #       docs/XX/edge/ -> docs/xx/dev/
 RewriteRule ^.*docs/(\w\w)/edge$ {{site.baseurl}}/docs/$1/edge/
 RewriteRule ^.*docs/(\w\w)/edge/(.*)$ {{site.baseurl}}/docs/$1/dev/$2 [R=301,L]
+
+# 301 (perm):
+#       docs version renames
+RewriteRule ^.*docs/(\w\w)/6.0.0/(.*)$ {{site.baseurl}}/docs/$1/6.x/$2 [R=301,L]
 
 # 301 (perm):
 #       old docs pages -> new docs pages (global)
