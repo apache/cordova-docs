@@ -24,22 +24,25 @@ var path          = require("path");
 var child_process = require("child_process");
 var yaml          = require("js-yaml");
 
+var util = require("./util");
+
 // constants
 var DEFAULT_REPO_PATH = "README.md";
 
 function generateFrontMatter(fetchedFile) {
 
-    var frontMatterConfig = {};
-
-    frontMatterConfig.edit_link = fetchedFile.editLink;
-    frontMatterConfig.permalink = fetchedFile.permalink;
+    var frontMatter = {
+        edit_link: fetchedFile.editLink,
+        permalink: fetchedFile.permalink,
+    };
 
     // set special values for plugins
     if (isPluginName(fetchedFile.packageName)) {
-        frontMatterConfig.plugin_name    = fetchedFile.packageName;
-        frontMatterConfig.plugin_version = fetchedFile.version;
+        frontMatter.plugin_name    = fetchedFile.packageName;
+        frontMatter.plugin_version = fetchedFile.version;
     }
-    return frontMatterConfig;
+
+    return frontMatter;
 }
 
 function isPluginName(packageName) {
@@ -66,7 +69,7 @@ function packageNameFromRepoName(repoName) {
     return actualRepoName;
 }
 
-function getFetchedFile(entry) {
+function getFetchedFileConfig(entry) {
 
     // get entry components
     var srcConfig  = entry.src;
@@ -112,17 +115,28 @@ function getFetchedFile(entry) {
     }
 
     // set returned values
-    var fetchedFile = {
+    var fetchedFileConfig = {
         packageName: srcConfig.packageName,
         version:     srcConfig.commit,
         editLink:    getRepoEditURI(srcConfig.repoName, srcConfig.commit, srcConfig.path),
         permalink:   destConfig.permalink,
-
-        downloadURI:   getRepoFileURI(srcConfig.repoName, srcConfig.commit, srcConfig.path),
-        localFileName: srcConfig.packageName + ".md",
+        downloadURI: getRepoFileURI(srcConfig.repoName, srcConfig.commit, srcConfig.path),
     };
 
-    return fetchedFile;
+    return fetchedFileConfig;
+}
+
+function getFrontMatter(text) {
+    var frontMatterString = util.getFrontMatterString(text);
+    if (frontMatterString !== null) {
+        return yaml.load(frontMatterString);
+    }
+    return {};
+}
+
+function setFrontMatter(text, frontMatter) {
+    var frontMatterString = yaml.dump(frontMatter);
+    return util.setFrontMatterString(text, frontMatterString);
 }
 
 // main
@@ -158,74 +172,53 @@ function main () {
 
     // fetch all files
     configEntries.forEach(function (entry) {
+
         // verify and process entry
-        var fetchedFile = getFetchedFile(entry);
-        if (!fetchedFile) {
+        var fetchedFileConfig = getFetchedFileConfig(entry);
+        if (!fetchedFileConfig) {
             return;
         }
 
         // get info for fetching
-        var fetchURI    = fetchedFile.downloadURI;
-        var frontMatter = generateFrontMatter(fetchedFile);
-        var outFilePath = path.join(fetchRoot, fetchedFile.localFileName);
-        var outDirPath  = path.dirname(outFilePath);
-
-        // ensure that the output directory exists
-        if (!fs.existsSync(outDirPath)) {
-            fs.mkdirSync(outDirPath);
-        }
+        var fetchURI    = fetchedFileConfig.downloadURI;
+        var outFileName = fetchedFileConfig.packageName + ".md";
+        var outFilePath = path.join(fetchRoot, outFileName);
 
         console.log(fetchURI + " -> " + outFilePath);
 
         // open the file for writing
         var outFile = fs.createWriteStream(outFilePath);
+
         // open an HTTP request for the file
         var request = https.get(fetchURI, function (response) {
-            var res = '';
+
+            // read in the response
+            var fileContents = '';
             response.setEncoding('utf8');
-            response.on('data', function(data) {
-                res += data;
+            response.on('data', function (data) {
+                fileContents += data;
             });
 
-            response.on('end', function() {
-                var mergedFile = mergeFrontMatter(res, frontMatter);
-                outFile.end(mergedFile);
+            // process the response when it finishes
+            response.on('end', function () {
+
+                // merge new front matter and file's
+                // own front matter (if it had any)
+                var newFrontMatter    = generateFrontMatter(fetchedFileConfig);
+                var fileFrontMatter   = getFrontMatter(fileContents);
+                var mergedFrontMatter = util.mergeObjects(newFrontMatter, fileFrontMatter);
+
+                // set merged file matter in the file
+                var augmentedContents = setFrontMatter(fileContents, mergedFrontMatter);
+
+                // write out the file
+                outFile.end(augmentedContents);
+
             }).on('error', function(e) {
                 console.error(e);
             });
-        }); 
+        });
     }); // entries
 }
 
 main();
-
-// If front matter exists in the source, merge it!
-function mergeFrontMatter(originalFile, frontMatter) {
-    var lines = originalFile.split(/\r?\n/);
-    var mergedFile = originalFile;
-    var endLine;
-    if (lines[0] && lines[0] === "---") {
-        for (var i = 1; i < lines.length; i++) {
-            if(lines[i] && lines[i] === "---") {
-                endLine = i;
-                break;
-            }
-        }
-    }
-    if (endLine) {
-        var fm = '';
-        for (var j = 1; j <= endLine - 1; j++) {
-            fm += lines[j] + '\n';
-        }
-        var fmFile = yaml.load(fm);
-        Object.keys(fmFile).forEach(function(key) {
-            frontMatter[key] = fmFile[key];
-        });
-        mergedFile = '';
-        for (var j = endLine + 1; j < lines.length; j++) {
-            mergedFile += lines[j] + '\n';
-        }
-    }
-    mergedFile = "---\n" + yaml.dump(frontMatter) + "---\n\n" + mergedFile;
-    return mergedFile; 
-}

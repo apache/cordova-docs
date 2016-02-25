@@ -32,15 +32,15 @@ function isUnderline(line) {
 
 function getPageTitle(filePath) {
     var file = fs.readFileSync(filePath, 'utf8');
-    var res = /<h1>([^<]*)<\/h1>|#\ (.*)|(.*)[\n\f\r]+(?:={3}=+|-{3}-+)/.exec(file);
-    if(res) {
-        if(res[1]) {
+    var res  = /<h1>([^<]*)<\/h1>|#\ (.*)|(.*)[\n\f\r]+(?:={3}=+|-{3}-+)/.exec(file);
+    if (res) {
+        if (res[1]) {
             return res[1].trim();
         }
-        if(res[2]) {
+        if (res[2]) {
             return res[2].trim();
         }
-        if(res[3]) {
+        if (res[3]) {
             return res[3].trim();
         }
     }

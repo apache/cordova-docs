@@ -24,8 +24,6 @@ var uglify     = require("gulp-uglify");
 var envify     = require("envify");
 var htmllint   = require("gulp-htmllint");
 var crawler    = require("simplecrawler");
-var argv       = require('yargs').argv;
-var yaml       = require('js-yaml');
 
 // constants
 var ROOT_DIR   = ".";
@@ -178,7 +176,6 @@ gulp.task("help", function () {
     gutil.log("Arguments:");
     gutil.log("    --nodocs      don't generate docs");
     gutil.log("    --prod        build for production; without it, will build dev instead");
-    gutil.log("    --nofetch     skips fetching external docs");
     gutil.log("");
 });
 
@@ -206,14 +203,17 @@ gulp.task("watch", ["serve"], function () {
     gulp.watch(
         [
             path.join(ROOT_DIR, "**", "*.yml"),
-            // Source dir contains docs - but we don't want to watch _all_ 
-            // the docs only en/dev as specified below.
+            path.join(JS_DIR, "**", "*.js"),
+            path.join(CSS_OUT_DIR, "**", "*.css"),
+
+            // NOTE:
+            //      watch all non-docs HTML, and only docs/en/dev HTML because
+            //      versions other than dev usually don't change much; this is
+            //      an optimization
             path.join(SOURCE_DIR, "**", "*.html") + "!" + path.join(DOCS_DIR, "**"),
             path.join(SOURCE_DIR, "**", "*.md") + "!" + path.join(DOCS_DIR, "**") ,
             path.join(DOCS_DIR, "en", "dev", "**", "*.md") ,
             path.join(DOCS_DIR, "en", "dev", "**", "*.html"),
-            path.join(JS_DIR, "**", "*.js"),
-            path.join(CSS_OUT_DIR, "**", "*.css"),
         ],
         {interval: WATCH_INTERVAL},
         ["regen"]
@@ -222,7 +222,9 @@ gulp.task("watch", ["serve"], function () {
 
 gulp.task("serve", ["build"], function () {
     var route = {};
-    if(gutil.env.prod) {
+
+    // set site root for browsersync
+    if (gutil.env.prod) {
         route[BASE_URL] = gutil.env.outDir;
     }
 
@@ -235,7 +237,7 @@ gulp.task("serve", ["build"], function () {
     });
 });
 
-gulp.task("build", [ "configs", "data", "styles", "plugins"], function (done) {
+gulp.task("build", ["configs", "data", "styles", "plugins"], function (done) {
     jekyllBuild(done);
 });
 

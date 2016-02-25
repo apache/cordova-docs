@@ -1,5 +1,4 @@
 # REFERENCE ENTRY:
-#
 # -
 #     src:                                                            # required
 #         repoName:    "apache/cordova-cli"                           # required
@@ -7,9 +6,7 @@
 #         commit:      "master"                                       # if empty: latest in NPM
 #         path:        "relative/path/to/file/in/repo.md"             # if empty: "README.md"
 #     dest:                                                           # required
-#         permalink:   "/absolute/path/on/cordova/site/index.html"    # if empty: "/gen/" + packageName + "/"
-#
-
+#         permalink:  "/absolute/path/on/cordova/site/index.html"     # required
 -
     src:
         repoName: "apache/cordova-cli"
@@ -28,6 +25,7 @@
     src:
         repoName: "apache/cordova-plugin-camera"
         packageName: "cordova-plugin-camera"
+        commit: "master"
     dest:
         permalink: "/docs/en/dev/cordova-plugin-camera/index.html"
 -
