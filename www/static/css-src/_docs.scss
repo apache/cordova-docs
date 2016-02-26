@@ -74,9 +74,9 @@
         }
         .site-toc > li {
             list-style: none;
-            font-size: 18px;
-            font-weight: 300;
-            padding-top: 0.1em;
+            font-size: 16px;
+            font-weight: 400;
+            padding-top: 0.05em;
         }
     }
 
@@ -85,7 +85,7 @@
         padding: 0px;
     }
     .page-toc ul > li {
-        padding: 0.1em 0em 0.5em 1em;
+        padding: 0.05em 0em 0.05em 1em;
         font-size: 14px;
         border-left: 0.5em solid rgba($brand-primary, 0.5);
     }
@@ -99,7 +99,12 @@
         display: none;
     }
     .page-toc li:nth-of-type(2) {
-        margin-top: 14px;
+        margin-top: 5px;
+    }
+    .toc-section-heading {
+        font-size: 18px;
+        padding-top: 5px;
+        display: block;
     }
 
     /* header above page content */
