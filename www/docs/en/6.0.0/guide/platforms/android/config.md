@@ -94,6 +94,8 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
   element is deprecated in favor of the global `Fullscreen` element, and will
   be removed in a future version.
 
+        <preference name="SetFullscreen" value="true"/>
+
 - `AndroidLaunchMode` (string, defaults to `singleTop`): Sets the Activity
   `android:launchMode` attribute.  This changes what happens when the app is
   launched from app icon or intent and is already running.
