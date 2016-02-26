@@ -59,15 +59,15 @@ RewriteRule ^.*docs/(\w\w)/6.0.0/(.*)$ {{site.baseurl}}/docs/$1/6.x/$2 [R=301,L]
 #       by site.baseurl. It is thrown away because there is no RewriteCond to
 #       control whether the rewrite happens to a URI or a local file path
 #       (when Apache is locating the local file to serve).
-{% for redirect in site.data.redirects.docs-global %}RewriteRule ^.*docs/(\w\w)/([^/]+)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/$2/{{redirect.new}} [R=301,L]
+{% for redirect in site.data.redirects.docs-global %}RewriteRule ^.*docs/(\w\w)/([^/]+)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/$2/{{redirect.new}} [NE,R=301,L]
 {% endfor %}
 
 # 301 (perm):
 #       old docs pages -> new docs pages (version-specific)
-{% for redirect in site.data.redirects.docs %}RewriteRule ^.*docs/(\w\w)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/{{redirect.new}} [R=301,L]
+{% for redirect in site.data.redirects.docs %}RewriteRule ^.*docs/(\w\w)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/{{redirect.new}} [NE,R=301,L]
 {% endfor %}
 
 # 301 (perm):
 #       old pages -> new pages
-{% for redirect in site.data.redirects.general %}RewriteRule ^.*/{{redirect.old}}$ {{site.baseurl}}/{{redirect.new}} [R=301,L]
+{% for redirect in site.data.redirects.general %}RewriteRule ^.*/{{redirect.old}}$ {{site.baseurl}}/{{redirect.new}} [NE,R=301,L]
 {% endfor %}
