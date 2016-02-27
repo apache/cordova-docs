@@ -107,6 +107,30 @@ Finally, install JavaScript dependencies by running:
 
     npm install
 
+## Make (optional)
+
+The website can be built with Gulp or Make. The Gulp workflow is enabled by just installing all the JavaScript dependencies. The Make workflow usually allows for faster builds, but requires installation of the `make` tool.
+
+### Windows
+
+Make can be installed on Windows from [this page][make_page] by downloading the [setup tool][make_setup] and running it.
+
+### OS X
+
+Make comes with the Xcode Command Line Tools. To install them, run:
+
+    xcode-select --install
+
+### Linux
+
+Make is installed by default on Linux.
+
+***
+
+Verify the installation by running:
+
+    make --version
+
 Building
 ========
 
@@ -382,3 +406,5 @@ Please ask for help on the Slack channel. Join at [slack.cordova.io](http://slac
 [python_installer_windows]: https://www.python.org/ftp/python/2.7.11/python-2.7.11.amd64.msi
 [python_linux]: http://docs.python-guide.org/en/latest/starting/install/linux/
 [redirects]: www/_docs/redirects.yml
+[make_page]: http://gnuwin32.sourceforge.net/packages/make.htm
+[make_setup]: http://gnuwin32.sourceforge.net/downlinks/make.php
