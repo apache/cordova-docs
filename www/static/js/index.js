@@ -145,17 +145,46 @@ $(document).ready(function () {
 
     // Smooth scroll to anchor links
     $("a[href^='#']").on('click', function(e) {
-        if(this.hash) {
+
+        // scroll only if there is a hash in the link's href
+        var hash = this.hash;
+        if (hash) {
 
             // prevent default anchor click behavior
             e.preventDefault();
 
-            // store hash
-            var hash = this.hash;
+            // get the fragment without the "#" symbol because location.hash
+            // is returned with it
+            var targetName = hash.slice(1);
+
+            // escape single quotes in target name because
+            // we use them in the selector to find matching targets
+            targetName.replace(/'/g, "\\\'").replace(/"/g, "\\\"");
+
+            // check if the target exists by looking at either ID or name
+            // NOTE:
+            //      we're not using "# + targetName" to select by ID
+            //      because the ID might contain special characters that
+            //      are annoying to escape
+            var targetSelector = "*[id='" + targetName + "'], *[name='" + targetName + "']";
+
+            var matchingTargets  = $(targetSelector);
+            if (matchingTargets.length < 1) {
+                return;
+            }
+            if (matchingTargets.length > 1) {
+                console.warn("found more than one anchor to go to; will go to the first one");
+            }
+
+            // get resulting scroll height
+            // NOTE:
+            //      offset() returns the offset for the first element
+            //      if the array contains more than one element
+            var scrollHeight = matchingTargets.offset().top;
 
             // animate
             $('html, body').animate(
-                {scrollTop: $(hash).offset().top},
+                {scrollTop: scrollHeight},
                 300,
                 function () {
                     // when done, add hash to url (default click behaviour)
