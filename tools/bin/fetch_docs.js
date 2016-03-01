@@ -176,7 +176,7 @@ function main () {
         // verify and process entry
         var fetchedFileConfig = getFetchedFileConfig(entry);
         if (!fetchedFileConfig) {
-            return;
+            process.exit(1);
         }
 
         // get info for fetching
@@ -191,6 +191,11 @@ function main () {
 
         // open an HTTP request for the file
         var request = https.get(fetchURI, function (response) {
+
+            if (response.statusCode !== 200) {
+                console.error("Failed to download " + fetchURI + ": got " + response.statusCode);
+                process.exit(1);
+            }
 
             // read in the response
             var fileContents = '';
