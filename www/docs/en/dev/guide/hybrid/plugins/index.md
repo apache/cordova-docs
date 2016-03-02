@@ -25,11 +25,11 @@ title: Plugin Development Guide
 A _plugin_ is a package of injected code that allows the Cordova webview within
 which the app renders to communicate with the native platform on
 which it runs.  Plugins provide access to device and platform
-functionality that is ordinarily unavailable to web-based apps.  All
+functionality that is ordinarily unavailable to web-based apps. All
 the main Cordova API features are implemented as plugins, and many
 others are available that enable features such as bar code scanners,
-NFC communication, or to tailor calendar interfaces. There is a
-[registry](http://plugins.cordova.io) of available plugins.
+NFC communication, or to tailor calendar interfaces. You can search for available plugins
+on [Cordova Plugin Search page](/plugins/).
 
 Plugins comprise a single JavaScript interface along with
 corresponding native code libraries for each supported platform.  In essence
@@ -45,43 +45,45 @@ this section.
 
 In addition to these instructions, when preparing to write a plugin it
 is best to look over
-[existing plugins](http://cordova.apache.org/#contribute)
+[existing plugins](http://cordova.apache.org/contribute)
 for guidance.
 
 ## Building a Plugin
 
-Application developers use the CLI's `plugin add` command (discussed
-in The Command-Line Interface) to apply a plugin to a project. The
+Application developers use the CLI's [plugin add command](../../../cordova-cli/index.html#cordova-plugin-add-command) to add a plugin to a project. The
 argument to that command is the URL for a _git_ repository containing
 the plugin code.  This example implements Cordova's Device API:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+```bash
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+```
 
 The plugin repository must feature a top-level `plugin.xml` manifest
 file. There are many ways to configure this file, details for which
-are available in the [Plugin Specification](../../../plugin_ref/spec.html). This abbreviated version of
-the `Device` plugin provides a simple example to use as a model:
+are available in the [Plugin Specification](../../../plugin_ref/spec.html). This abbreviated version of the `Device` plugin provides a simple example to use as a model:
 
-        <?xml version="1.0" encoding="UTF-8"?>
-        <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-                id="cordova-plugin-device" version="0.2.3">
-            <name>Device</name>
-            <description>Cordova Device Plugin</description>
-            <license>Apache 2.0</license>
-            <keywords>cordova,device</keywords>
-            <js-module src="www/device.js" name="device">
-                <clobbers target="device" />
-            </js-module>
-            <platform name="ios">
-                <config-file target="config.xml" parent="/*">
-                    <feature name="Device">
-                        <param name="ios-package" value="CDVDevice"/>
-                    </feature>
-                </config-file>
-                <header-file src="src/ios/CDVDevice.h" />
-                <source-file src="src/ios/CDVDevice.m" />
-            </platform>
-        </plugin>
+```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+            id="cordova-plugin-device" version="0.2.3">
+        <name>Device</name>
+        <description>Cordova Device Plugin</description>
+        <license>Apache 2.0</license>
+        <keywords>cordova,device</keywords>
+        <js-module src="www/device.js" name="device">
+            <clobbers target="device" />
+        </js-module>
+        <platform name="ios">
+            <config-file target="config.xml" parent="/*">
+                <feature name="Device">
+                    <param name="ios-package" value="CDVDevice"/>
+                </feature>
+            </config-file>
+            <header-file src="src/ios/CDVDevice.h" />
+            <source-file src="src/ios/CDVDevice.m" />
+        </platform>
+    </plugin>
+```
 
 The top-level `plugin` tag's `id` attribute uses the same
 reverse-domain format to identify the plugin package as the apps to
@@ -93,30 +95,28 @@ the platform-specific `config.xml` file to make the platform aware of
 the additional code library.  The `header-file` and `source-file` tags
 specify the path to the library's component files.
 
-## Validating a Plugin
+## Validating a Plugin using Plugman
 
 You can use the `plugman` utility to check whether the plugin installs
 correctly for each platform.  Install `plugman` with the following
 [node](http://nodejs.org/) command:
 
-        $ npm install -g plugman
+```bash
+    $ npm install -g plugman
+```
 
 You need an valid app source directory, such as the top-level `www`
 directory included in a default CLI-generated project as described in
-[The Command-Line Interface](../../cli/index.html).  Make sure the app's `index.html` home
-page reference the name of the plugin's JavaScript interface, as if it
-were in the same source directory:
-
-        <script src="myplugin.js"></script>
+[Create your first app](../../cli/index.html) guide.  
 
 Then run a command such as the following to test whether iOS
 dependencies load properly:
 
-         $ plugman install --platform ios --project /path/to/my/project/www --plugin /path/to/my/plugin
+```bash
+    $ plugman install --platform ios --project /path/to/my/project/www --plugin /path/to/my/plugin
+```
 
-For details on `plugman` options, see [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html).
-For information on how to actually _debug_ plugins, see each
-platform's native interface listed at the bottom of this page.
+For details on `plugman` options, see [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html). For information on how to actually _debug_ plugins, see each platform's native interface listed at the bottom of this page.
 
 ## The JavaScript Interface
 
@@ -126,11 +126,13 @@ plugin's JavaScript however you like, but you need to call
 `cordova.exec` to communicate with the native platform, using the
 following syntax:
 
-        cordova.exec(function(winParam) {},
-                     function(error) {},
-                     "service",
-                     "action",
-                     ["firstArgument", "secondArgument", 42, false]);
+```js
+    cordova.exec(function(winParam) {},
+                 function(error) {},
+                 "service",
+                 "action",
+                 ["firstArgument", "secondArgument", 42, false]);
+```
 
 Here is how each parameter works:
 
@@ -209,7 +211,7 @@ use corresponding `npm` commands.
 
 Other developers can install your plugin automatically using either `plugman`
  or the Cordova CLI.  (For details on each development path, see
- [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html) and [The Command-Line Interface](../../cli/index.html).)
+ [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html) and [The Command-Line Interface reference](../../../cordova-cli/index.html).)
 
 To publish a plugin to NPM registry you need to follow steps below:
 

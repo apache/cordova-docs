@@ -17,15 +17,14 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Overview
+title: Architectural overview of Cordova platform
 ---
 
 # Overview
 
 Apache Cordova is an open-source mobile development framework. It allows you
-to use standard web technologies such as HTML5, CSS3, and JavaScript
-for cross-platform development, avoiding each mobile platform's native
-development language.  Applications execute within wrappers targeted
+to use standard web technologies - HTML5, CSS3, and JavaScript
+for cross-platform development. Applications execute within wrappers targeted
 to each platform, and rely on standards-compliant API bindings to
 access each device's capabilities such as sensors, data, network status, etc. 
 
@@ -62,7 +61,7 @@ application components.
 
 This is the part where your application code resides. The application itself is 
 implemented as a web page, by default a local file named _index.html_, that 
-references whatever CSS, JavaScript, images, media files, or other resources 
+references CSS, JavaScript, images, media files, or other resources 
 are necessary for it to run. The app executes in a _WebView_ within the native 
 application wrapper, which you distribute to app stores.
 
@@ -78,14 +77,13 @@ other and bindings to standard device APIs. This enables you to invoke native
 code from JavaScript. 
 
 Apache Cordova project maintains a set of plugins called the 
-[core plugins](../../cordova/plugins/pluginapis.html). These core 
+[Core Plugins](../guide/support/index.html#core-plugin-apis). These core 
 plugins provide your application to access device capabilities such as 
 battery, camera, contacts, etc.
 
 In addition to the core plugins, there are several third-party plugins which 
 provide additional bindings to features not necessarily available on all 
-platforms. You can search for Cordova plugins using [plugin search](http://plugins.cordova.io)  
-or [npm](https://www.npmjs.com/search?q=ecosystem%3Acordova). You can also 
+platforms. You can search for Cordova plugins using [plugin search](/plugins/) or [npm](https://www.npmjs.com/search?q=ecosystem%3Acordova). You can also 
 develop your own plugins, as described in the 
 [Plugin Development Guide](../hybrid/plugins/index.html). Plugins may be 
 necessary, for example, to communicate between Cordova and custom native 
@@ -98,7 +96,7 @@ desire, even the core plugins, must be explicitly added.
 Cordova does not provide any UI widgets or MV* frameworks. Cordova provides
 only the runtime in which those can execute. If you wish to use UI widgets
 and/or an MV* framework, you will need to select those and include them in
-your application yourself as third-party material.
+your application.
 
 ## Development Paths
 
@@ -108,17 +106,15 @@ task, they each offer advantages:
 
 - __Cross-platform (CLI) workflow__: Use this workflow if you want your app
   to run on as many different mobile operating systems as possible,
-  with little need for platform-specific development.  This workflow
-  centers around the `cordova` utility, otherwise known as the Cordova
-  _CLI_. The CLI is a high-level tool that allows you to build projects 
+  with little need for platform-specific development. This workflow
+  centers around the `cordova` CLI. The CLI is a high-level tool that allows you to build projects 
   for many platforms at once, abstracting away much of the functionality of 
   lower-level shell scripts. The CLI copies a common set of web assets into
   subdirectories for each mobile platform, makes any necessary
   configuration changes for each, runs build scripts to generate
   application binaries. The CLI also provides a common interface to
-  apply plugins to your app. For more details on the CLI, see The
-  Command-Line Interface. Unless you have a need for the platform-centered
-  workflow, the cross-platform workflow is recommended.
+  apply plugins to your app. To get started follow the steps in the 
+  [Create your first app] guide. Unless you have a need for the platform-centered workflow, the cross-platform workflow is recommended.
 
 - __Platform-centered workflow__: Use this workflow if you want to
   focus on building an app for a single platform and need to be able
@@ -129,27 +125,20 @@ task, they each offer advantages:
   this workflow if you need to modify the project within the SDK. This 
   workflow relies on a set of lower-level shell scripts that are tailored for 
   each supported platform, and a separate Plugman utility that allows you to 
-  apply plugins.  While you can use this workflow to build cross-platform
+  apply plugins. While you can use this workflow to build cross-platform
   apps, it is generally more difficult because the lack of a
   higher-level tool means separate build cycles and plugin
-  modifications for each platform. Still, this workflow allows you
-  greater access to development options provided by each SDK, and is
-  essential for complex hybrid apps.
+  modifications for each platform. 
 
 When first starting out, it may be easiest to use the cross-platform
-workflow to create an app, as described in [The Command-Line Interface](../cli/index.html).
+workflow to create an app, as described in [Create your first app] guide.
 You then have the option to switch to a platform-centered workflow if
-you need the greater control the SDK provides.  Lower-level shell
-utilities are available at
-[cordova.apache.org](http://cordova.apache.org) in a separate
-distribution than the CLI. For projects initially generated by the
-CLI, these shell tools are also available in the project's various
-`platforms/*/cordova` directories.
+you need the greater control the SDK provides.  
 
-__NOTE__: Once you switch from the CLI-based workflow to one centered
+> __NOTE__: Once you switch from the CLI-based workflow to one centered
 around the platform-specific SDKs and shell tools, you can't go back.
 The CLI maintains a common set of cross-platform source code, which on
-each build it uses to write over platform-specific source code.  To
+each build it uses to write over platform-specific source code. To
 preserve any modifications you make to the platform-specific assets,
 you need to switch to the platform-centered shell tools, which ignore
 the cross-platform source code, and instead relies on the
@@ -160,13 +149,14 @@ platform-specific source code.
 The installation of Cordova will differ depending on the workflow above
 you choose:
 
-  * Cross-platform workflow: see [The Command-Line Interface](../cli/index.html).
+  * Cross-platform workflow: See [Create your first app] guide.
 
   * Platform-centered workflow.
 
 After installing Cordova, it is recommended that you review the 
-```Develop for platforms``` section for the mobile platforms that you 
+```Develop for Platforms``` section for the mobile platforms that you 
 will be developing for. It is also recommended that you also review the 
 [Privacy Guide](../appdev/privacy/index.html) and 
-[Security Guide](../appdev/security/index.html). And refer to the other 
-included guides as necessary.
+[Security Guide](../appdev/security/index.html).
+
+[Create your first app]:../cli/index.html

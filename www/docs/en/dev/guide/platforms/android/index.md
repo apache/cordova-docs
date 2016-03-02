@@ -28,7 +28,7 @@ command-line tools in your development workflow.  You need to install
 the Android SDK regardless of whether you want to use these
 platform-centered shell tools or cross-platform Cordova CLI for
 development. For a comparison of the two development paths, see the
-[Overview](../../overview/index.html#development-paths).  For details on the CLI, see [The Command-Line Interface](../../cli/index.html).
+[Overview](../../overview/index.html#development-paths).  For details on the CLI, see [Cordova CLI Reference].
 
 
 ## Requirements and Support
@@ -269,7 +269,7 @@ To sign an app, you need the following parameters:
 | Type of the Keystore  | `--keystoreType`  | *Default: auto-detect based on file extension*<br>Either pkcs12 or jks
 
 These parameters can be specified using the command line arguments above to
-the [Cordova CLI](../../cli/index.html) `build` or `run` commands.
+the [Cordova CLI](../../../cordova-cli/index.html) `build` or `run` commands.
 
 ### Using build.json
 
@@ -371,16 +371,14 @@ for more details.
 
 cordova-android includes a number of scripts that allow the platform to be used
 without the full Cordova CLI. This development path may offer you a greater
-range of development options in certain situations than the cross-platform CLI
-tool described in [The Command-Line Interface](../../cli/index.html).
+range of development options in certain situations than the cross-platform cordova CLI. 
 For example, you need to use shell tools when deploying a custom
 Cordova WebView alongside native components. Before using this
 development path, you must still configure the Android SDK environment
 as described in [Requirements and Support](#requirements-and-support)
 above.
 
-For each of the scripts discussed below, refer to
-[The Command-Line Interface](../../cli/index.html) for more information on their
+For each of the scripts discussed below, refer to [Cordova CLI Reference] for more information on their
 arguments and usage. Each script has a name that matches the corresponding CLI
 command. For example, `cordova-android/bin/create` is equivalent to
 `cordova create`.
@@ -709,3 +707,5 @@ memory. Enable the "Don't keep activities" setting in the Developer Options menu
 on your device or emulator to simulate low memory scenarios. You should always
 do some amount of testing with this setting enabled to make sure that your
 application is properly maintaining state.
+
+[Cordova CLI Reference]:(../../../cordova-cli/index.html)

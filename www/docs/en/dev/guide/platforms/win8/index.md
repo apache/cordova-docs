@@ -25,8 +25,7 @@ title: Windows Platform Guide
 This guide shows how to set up your SDK development environment to build 
 and deploy Cordova apps for Windows 8.1, Windows Phone 8.1, and 
 Windows 10 Universal App Platform.  It shows how to use either shell tools 
-to generate and build apps, or the cross-platform Cordova CLI discussed in 
-[The Command-Line Interface](../../cli/index.html). (See the [Overview](../../overview/index.html#development-paths) for a comparison of these 
+to generate and build apps, or the cross-platform Cordova CLI. (See the [Overview](../../overview/index.html#development-paths) for a comparison of these 
 development options.) This section also shows how to modify Cordova apps 
 within Visual Studio. Regardless of [which](../../overview/index.html#development-paths) approach you take, you need to 
 install the Visual Studio SDK, as described below.
@@ -90,7 +89,7 @@ when installing to install the required SDK.
 
 ### Target Windows version
 
-After installation, you should be ready to develop apps targetting Windows platform. Refer to [The Command-Line Interface](../../cli/index.html) for details.
+After installation, you should be ready to develop apps targetting Windows platform. Refer to [Create your first app](../../cli/index.html) guide for details.
 
 By default the `cordova build` command produces two packages: Windows 8.1 and Windows Phone 8.1.
 To upgrade Windows package to version 10 the following configuration setting must be 

@@ -29,7 +29,7 @@ development workflow. You need to install the SDK tools regardless of
 whether you want to use these platform-centered shell tools 
 or cross-platform Cordova CLI for development. For a comparison of the two 
 development paths, see the [Overview](../../overview/index.html#development-paths). 
-For details on the CLI, see [The Command-Line Interface](../../cli/index.html).  
+For details on the CLI, see [Cordova CLI Reference].  
 
 ## Requirements and Support
 
@@ -78,7 +78,7 @@ To install them, run the following from command-line terminal:
 
 Installing Xcode will mostly set everything needed to get started with the native side of things. 
 You should now be able to create and build a cordova project. 
-For more details on installing and using the CLI, refer to [CLI](../../cli/index.html).
+For more details on installing and using the CLI, refer to [Create your first app](../../cli/index.html) guide.
 
 ### Deploying to Simulator
 
@@ -209,8 +209,7 @@ file. The screen should look like this:
 
 cordova-ios includes a number of scripts that allow the platform to be used
 without the full Cordova CLI. This development path may offer you a greater
-range of development options in certain situations than the cross-platform CLI
-tool described in [The Command-Line Interface](../../cli/index.html).
+range of development options in certain situations than the cross-platform cordova CLI.
 For example, you need to use shell tools when deploying a custom
 Cordova WebView alongside native components. Before using this
 development path, you must still configure the SDK environment
@@ -218,7 +217,7 @@ as described in [Requirements and Support](#link-requirements-and-support)
 above.
 
 For each of the scripts discussed below, refer to
-[The Command-Line Interface](../../cli/index.html) for more information on their
+ [Cordova CLI Reference](../../../cordova-cli/index.html) for more information on their
 arguments and usage. Each script has a name that matches the corresponding CLI
 command. For example, `cordova-ios/bin/create` is equivalent to
 `cordova create`.
@@ -250,3 +249,4 @@ Refer to [this](./upgrade.html) article for instructions to upgrade your ```cord
 
 (Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)
 
+ [Cordova CLI Reference]:(../../../cordova-cli/index.html)
