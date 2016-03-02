@@ -17,19 +17,25 @@
 
 $(document).ready(function () {
 
-    function slugify(text) {
+    function slugifyLikeGitHub(originalText) {
+
+        var text = originalText;
+
+        // convert to lowercase
         text = text.toLowerCase();
 
-        // replace unaccepted characters with spaces
+        // replace spaces with dashes
+        text = text.replace(/ /g, '-');
+
+        // remove unaccepted characters
         // NOTE:
-        //      a better regex would have been /[^\d\s\w]/ug, but the 'u' flag
+        //      a better regex would have been /[^\d\s\w-_]/ug, but the 'u' flag
         //      (Unicode) is not supported in some browsers, and we support
         //      many languages that use Unicode characters
-        text = text.replace(/[\[\]\(\)\=\+\?\.\,]/g, ' ');
+        text = text.replace(/[\[\]\(\)\=\+\?\!\.\,\{\}\\\/\>\<]/g, '');
 
-        // trim whitespace and replace runs of whitespace with single dashes
+        // trim remaining whitespace
         text = text.trim();
-        text = text.replace(/ +/g, '-');
 
         return text;
     }
@@ -40,7 +46,7 @@ $(document).ready(function () {
         } else if (heading.name) {
             return heading.name;
         } else {
-            return slugify(heading.innerText);
+            return slugifyLikeGitHub(heading.innerText);
         }
     }
 
