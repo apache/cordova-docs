@@ -10,7 +10,7 @@ tags: news releases
 
 We are happy to announce that `Cordova Android 5.1.1` has been released.
 
-Cordova 6.0.0 will automatically start using this version of **Cordova-Android** when creating new projects. 
+Cordova CLI 6.0.0 will automatically start using this version of **Cordova-Android** when creating new projects. 
 
 To upgrade:
 
@@ -25,7 +25,7 @@ To add it explicitly:
 <!--more-->
 ## What's new in Android platform
 
-* updated `cordova-common` dependnecy to `1.1.0`
+* updated `cordova-common` dependenecy to `1.1.0`
 * [CB-10628](https://issues.apache.org/jira/browse/CB-10628) Fix `emulate android --target`
 * [CB-10618](https://issues.apache.org/jira/browse/CB-10618) Handle gradle frameworks on plugin installation/uninstallation
 * [CB-10510](https://issues.apache.org/jira/browse/CB-10510): Add an optional timeout to `emu` start script
