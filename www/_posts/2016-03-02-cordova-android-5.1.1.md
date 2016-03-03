@@ -3,7 +3,7 @@ layout: post
 author:
     name: Steve Gill
     url: https://twitter.com/stevesgill
-title:  "Cordova Android 5.1.0"
+title:  "Cordova Android 5.1.1"
 categories: announcements
 tags: news releases
 ---
