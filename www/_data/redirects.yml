@@ -14,15 +14,14 @@ docs:
     - {old: "dev/guide/platforms/win8/packaging.html", new: "dev/guide/platforms/win8/index.html#signing-an-app"}
     - {old: "dev/guide/platforms/win8/win10-support.html", new: "dev/guide/platforms/win8/index.html"}
 
-    # To be uncommented when 6.x is released
-    #- {old: "latest/guide/platforms/android/tools.html", new: "latest/guide/platforms/android/index.html"}
-    #- {old: "latest/guide/platforms/android/lifecycle.html", new: "latest/guide/platforms/android/index.html#lifecycle-guide"}
-    #- {old: "latest/guide/platforms/android/config.html", new: "latest/config_ref/index.html"}
-    #- {old: "latest/guide/platforms/ios/tools.html", new: "latest/guide/platforms/ios/index.html"}
-    #- {old: "latest/guide/platforms/ios/config.html", new: "latest/config_ref/index.html"}
-    #- {old: "latest/guide/platforms/win8/packaging.html", new: "latest/guide/platforms/win8/index.html#signing-an-app"}
-    #- {old: "latest/guide/platforms/win8/win10-support.html", new: "latest/guide/platforms/win8/index.html"}
-    #- {old: "latest/cordova/plugins/pluginapis.html", new: "deprecated.html"}
+    - {old: "latest/guide/platforms/android/tools.html", new: "latest/guide/platforms/android/index.html"}
+    - {old: "latest/guide/platforms/android/lifecycle.html", new: "latest/guide/platforms/android/index.html#lifecycle-guide"}
+    - {old: "latest/guide/platforms/android/config.html", new: "latest/config_ref/index.html"}
+    - {old: "latest/guide/platforms/ios/tools.html", new: "latest/guide/platforms/ios/index.html"}
+    - {old: "latest/guide/platforms/ios/config.html", new: "latest/config_ref/index.html"}
+    - {old: "latest/guide/platforms/win8/packaging.html", new: "latest/guide/platforms/win8/index.html#signing-an-app"}
+    - {old: "latest/guide/platforms/win8/win10-support.html", new: "latest/guide/platforms/win8/index.html"}
+    - {old: "latest/cordova/plugins/pluginapis.html", new: "deprecated.html"}
 
 # redirects paths relative to /docs/XX/YYY/
 docs-global:
