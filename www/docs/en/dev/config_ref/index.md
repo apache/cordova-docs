@@ -60,7 +60,7 @@ platform. See [Customize icons topic](images.html) for more information.
    android-versionCode(string) | ==Android== <br/> Alternative version for Android. Sets the [version code](http://developer.android.com/tools/publishing/versioning.html) for the application. See [the Android guide](../guide/platforms/android/index.html#setting-the-version-code) for information on how this attribute may be modified.
    ios-CFBundleVersion(string) |  ==iOS== <br/> Alternative version for iOS. For further details, see [iOS versioning](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
    osx-CFBundleVersion(string) |  ==OS X== <br/> Alternative version for OS X. For further details, see [OS X versioning](https://developer.apple.com/library/prerelease/mac/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
-   packageVersion(string) |   ==Windows== <br/> Alternative version for Windows. For futher details, see [Windows versioning](https://msdn.microsoft.com/en-us/library/windows/apps/br211441.aspx)
+   windows-packageVersion(string) |   ==Windows== <br/> Alternative version for Windows. For futher details, see [Windows versioning](https://msdn.microsoft.com/en-us/library/windows/apps/br211441.aspx)
    packageName(string) | *Default: Cordova.Example* <br/> ==Windows== <br/> Package name for Windows.
    xmlns(string) | *Required* <br/> Namespace for the config.xml document.
    xmlns:cdv(string) | *Required* <br/> Namespace prefix.
@@ -103,7 +103,7 @@ platform. See [Customize icons topic](images.html) for more information.
     <widget ...>
         <description>A sample Apache Cordova application</description>
     </widget>
-
+    
 
 ## author
    Specifies contact information that may appear within app-store lisitngs.
@@ -225,9 +225,8 @@ platform. See [Customize icons topic](images.html) for more information.
    android-maxSdkVersion(integer) | *Default: Not Specified* <br/> ==Android== <br/> Sets the `maxSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
    android-minSdkVersion(integer) | *Default: Dependent on cordova-android Version* <br/> ==Android== <br/> Sets the `minSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
    android-targetSdkVersion(integer) | *Default: Dependent on cordova-android Version* <br/> ==Android== <br/> Sets the `targetSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
-   AppendUserAgent(string) | ==Android== <br/> If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.
-   AppendUserAgent(string) | ==iOS== <br/> If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.
-   BackgroundColor(string) | ==Android== ==BlackBerry== ==Windows== <br/> Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes.
+   AppendUserAgent(string) | ==Android== ==iOS== <br/> If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.
+   BackgroundColor(string) | ==Android== ==BlackBerry== ==Windows== <br/> Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. <br/> For Windows, it is a three-byte hexadecimal number preceded by "#" or a named color.
    BackupWebStorage(string) | *Default: cloud* <br/> Allowed values: none, local, cloud. <br/> ==iOS== <br/>  Set to cloud to allow web storage data to backup via iCloud. Set to local to allow only local backups via iTunes sync. Set to none prevent web storage backups.
    ChildBrowser(string) | *Default: enable* <br/> ==BlackBerry== <br/> Disables child browser windows. By default, apps launch a secondary browser window to display resources accessed via window.open() or by specifying a _blank anchor target. Specify disable to override this default behavior.
    CordovaWebViewEngine(string) | *Default: CDVUIWebViewEngine* <br/> ==iOS== <br/> This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The 'value' here should match the 'feature' name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.
@@ -259,6 +258,9 @@ platform. See [Customize icons topic](images.html) for more information.
    PopupBlocker(string) | *Default: enable* <br/> ==BlackBerry== <br/> Enables the popup blocker, which prevents calls to window.open(). By default, popups display in a child browser window. Setting the preference to enable prevents it from displaying at all.
    SetFullscreen(boolean) | *Default: false* <br/> ==Android== <br/> Same as the Fullscreen parameter in the global configuration of this xml file. This Android-specific element is deprecated in favor of the global Fullscreen element, and will be removed in a future version.
    ShowTitle(boolean) | *Default: false* <br/> ==Android== <br/> Show the title at the top of the screen.
+   SplashScreen(string) | *Default: splash* <br/> ==Android== <br/> The name of the file minus its extension in the ```res/drawable``` directory. Various assets must share this common name in various subdirectories.
+   SplashScreenBackgroundColor(string) | ==Windows== <br/> Supports either a three-byte hex value preceded by '#' or a named color. <br/> Specifies the background color of the splash screen.
+   SplashScreenDelay(number in milliseconds) | *Default: 3000, 3 seconds* <br/> ==Android== <br/> The amount of time the splash screen image displays.
    Suppresses3DTouchGesture(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to avoid 3D Touch capable iOS devices rendering a magnifying glass widget when the user applies force while longpressing the webview. Test your app thoroughly since this disables onclick handlers, but plays nice with ontouchend. If this setting is true, SuppressesLongPressGesture will effectively be true as well.
    SuppressesIncrementalRendering(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to wait until all content has been received before it renders to the screen.
    SuppressesLongPressGesture(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to avoid iOS9+ rendering a magnifying glass widget when the user longpresses the webview. Test your app thoroughly since this may interfere with text selection capabilities.
@@ -275,7 +277,6 @@ platform. See [Customize icons topic](images.html) for more information.
    target-device(string) | *Default: universal* <br/> Allowed values: handset, tablet, universal <br/> ==iOS== <br/> This property maps directly to TARGETED_DEVICE_FAMILY in the xcode project. Note that if you target universal (which is the default) you will need to supply screen shots for both iPhone and iPad or your app may be rejected.
    windows-phone-target-version(string) | ==Windows== <br/> Sets the version of Windows Phone for which the package (resulting from ```cordova build```) will target. If none is specified, it will be set to the same version as ```windows-target-version``` (if found).
    windows-target-version(string) | ==Windows== <br/> Sets the version of Windows for which the package (resulting from ```cordova build```) will target. If none is specified, it will be set to '8.1'.
-   WindowsDefaultUriPrefix(string) | ==Windows== <br/> Allowed values: `ms-appx://`, `ms-appx-web://` <br/>  Identifies whether you want your app to target the local context or remote context as its startup URI. When building for Windows 10, the default is the remote context (`ms-appx-web://`). <br/> In order to have a local-mode application that is not impacted by Remote Mode capability restrictions, you must set this preference to `ms-appx://` and not declare any `<access>` elements with remote URIs. The local mode is the default for Windows 8.1
 
    Examples:
 
