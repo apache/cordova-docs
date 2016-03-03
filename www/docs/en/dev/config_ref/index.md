@@ -48,7 +48,7 @@ For example:
 
 In addition to the various configuration options detailed below, you
 can also configure an application's core set of images for each target
-platform. See [Icons and Splash Screens](images.html) for more information.
+platform. See [Customize icons topic](images.html) for more information.
 
 # widget
    Root element of the config.xml document.
@@ -163,7 +163,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    Attributes(type) | Description
    ----------------- | ------------
    href(string) | *Required* <br/> Defines the set of external domains the WebView is allowed to navigate to.
-   See the cordova-plugin-whitelist [cordova-plugin-whitelist](https://github.com/apache/cordova-plugin-whitelist#navigation-whitelist) for details.
+   See the cordova-plugin-whitelist [cordova-plugin-whitelist](../cordova-plugin-whitelist/index.html#navigation-whitelist) for details.
 
    Examples:
 
@@ -179,7 +179,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    Attributes(type) | Description
    ----------------- | ------------
    href(string) | *Required* <br/> Defines which URLs the app is allowed to ask the system to open.
-   See the cordova-plugin-whitelist [cordova-plugin-whitelist](https://github.com/apache/cordova-plugin-whitelist#intent-whitelist) for details.  
+   See the cordova-plugin-whitelist [cordova-plugin-whitelist](../cordova-plugin-whitelist/index.html#intent-whitelist) for details.  
 
    Examples:
 
@@ -213,7 +213,7 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    android-targetSdkVersion(integer) | *Default: Dependent on cordova-android Version* <br/> ==Android== <br/> Sets the `targetSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
    AppendUserAgent(string) | ==Android== <br/> If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.
    AppendUserAgent(string) | ==iOS== <br/> If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.
-   BackgroundColor(string) | ==Android== ==BlackBerry== <br/> Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes.
+   BackgroundColor(string) | ==Android== ==BlackBerry== ==Windows== <br/> Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes.
    BackupWebStorage(string) | *Default: cloud* <br/> Allowed values: none, local, cloud. <br/> ==iOS== <br/>  Set to cloud to allow web storage data to backup via iCloud. Set to local to allow only local backups via iTunes sync. Set to none prevent web storage backups.
    ChildBrowser(string) | *Default: enable* <br/> ==BlackBerry== <br/> Disables child browser windows. By default, apps launch a secondary browser window to display resources accessed via window.open() or by specifying a _blank anchor target. Specify disable to override this default behavior.
    CordovaWebViewEngine(string) | *Default: CDVUIWebViewEngine* <br/> ==iOS== <br/> This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The 'value' here should match the 'feature' name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.
@@ -245,8 +245,6 @@ platform. See [Icons and Splash Screens](images.html) for more information.
    PopupBlocker(string) | *Default: enable* <br/> ==BlackBerry== <br/> Enables the popup blocker, which prevents calls to window.open(). By default, popups display in a child browser window. Setting the preference to enable prevents it from displaying at all.
    SetFullscreen(boolean) | *Default: false* <br/> ==Android== <br/> Same as the Fullscreen parameter in the global configuration of this xml file. This Android-specific element is deprecated in favor of the global Fullscreen element, and will be removed in a future version.
    ShowTitle(boolean) | *Default: false* <br/> ==Android== <br/> Show the title at the top of the screen.
-   SplashScreen(string) | *Default: splash* <br/> ==Android== <br/> The name of the file minus its extension in the ```res/drawable``` directory. Various assets must share this common name in various subdirectories.
-   SplashScreenDelay(number in milliseconds) | *Default: 3000, 3 seconds* <br/> ==Android== <br/> The amount of time the splash screen image displays.
    Suppresses3DTouchGesture(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to avoid 3D Touch capable iOS devices rendering a magnifying glass widget when the user applies force while longpressing the webview. Test your app thoroughly since this disables onclick handlers, but plays nice with ontouchend. If this setting is true, SuppressesLongPressGesture will effectively be true as well.
    SuppressesIncrementalRendering(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to wait until all content has been received before it renders to the screen.
    SuppressesLongPressGesture(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to avoid iOS9+ rendering a magnifying glass widget when the user longpresses the webview. Test your app thoroughly since this may interfere with text selection capabilities.
@@ -293,7 +291,6 @@ platform. See [Icons and Splash Screens](images.html) for more information.
     <!-- Android only preferences -->
     <preference name="KeepRunning" value="false"/>
     <preference name="LoadUrlTimeoutValue" value="10000"/>
-    <preference name="SplashScreen" value="mySplash"/>
     <preference name="InAppBrowserStorageEnabled" value="true"/>
     <preference name="LoadingDialog" value="My Title,My Message"/>
     <preference name="ErrorUrl" value="myErrorPage.html"/>

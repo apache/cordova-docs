@@ -30,7 +30,7 @@
             url: "platform_plugin_versioning_ref/index.html"
         -   name: "Debug and test"
             url:
-        -   name: "Use icons"
+        -   name: "Customize icons"
             url: "config_ref/images.html"
         -   name: "Automate Tasks"
             url:
