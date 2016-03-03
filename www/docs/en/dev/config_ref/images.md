@@ -117,4 +117,4 @@ See [BlackBerry's documentation][blackberry_icon] for targeting multiple sizes a
 The splash screen configuration options can be found in the [Splashscreen plugin docs][splashscreen_plugin].
 
 [blackberry_icon]: http://developer.blackberry.com/html5/documentation/icon_element.html
-[splashscreen_plugin]: ../gen/cordova-plugin-splashscreen/
+[splashscreen_plugin]: ../cordova-plugin-splashscreen/
