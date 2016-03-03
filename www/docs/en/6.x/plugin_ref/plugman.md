@@ -68,21 +68,21 @@ with just `plugman`.
 
 Before you can use Plugman, you must create a Cordova project.  You can do this with either the Command-line Interface or with
 the lower level shell scripts. Instructions for using the shell scripts to create your project are located in the various "Command-line Tools" guides
-listed on the [Platform Guides](../guide/platforms/index.html) page. 
+listed on the Platform guides page.
 
 ## Adding a Plugin
 
 Once you have installed Plugman and have created a Cordova project, you can start adding plugins to the platform with:
 
-    $ plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin <name|url|path> [--plugins_dir <directory>] [--www <directory>] [--variable <name>=<value> [--variable <name>=<value> ...]]
+    $ plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin <name|url|path> [--plugins_dir <directory>] [--www <directory>] [--variable <name>=<value> [--variable <name>=<value> ...]]
 
 Using minimum parameters, this command installs a plugin into a cordova project. You must specify a platform and cordova project location for that platform. You also must specify a plugin, with the different `--plugin` parameter forms being:
 
   * `name`: The directory name where the plugin contents exist. This must be an existing directory under the `--plugins_dir` path (see below for more info) or a plugin in the Cordova registry.
   * `url`: A URL starting with https:// or git://, pointing to a valid git repository that is clonable and contains a `plugin.xml` file. The contents of this repository would be copied into the `--plugins_dir`.
   * `path`: A path to a directory containing a valid plugin which includes a `plugin.xml` file. This path's contents will be copied into the `--plugins_dir`.
-  
-Other parameters: 
+
+Other parameters:
 
 * `--plugins_dir` defaults to `<project>/cordova/plugins`, but can be any directory containing a subdirectory for each fetched plugin.
 * `--www` defaults to the project's `www` folder location, but can be any directory that is to be used as cordova project application web assets.
@@ -92,7 +92,7 @@ Other parameters:
 
 To uninstall a plugin, you simply pass the `--uninstall` flag and provide the plugin ID.
 
-    $ plugman --uninstall --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin <id> [--www <directory>] [--plugins_dir <directory>]
+    $ plugman --uninstall --platform <ios|android|blackberry10|wp8> --project <directory> --plugin <id> [--www <directory>] [--plugins_dir <directory>]
 
 
 ## Help Commands
@@ -107,7 +107,7 @@ a list of all available Plugman commands and their syntax:
 
 
 You can also append the `--debug|-d` flag to any Plugman command to run that command in verbose mode, which will display
-any internal debugging messages as they are emitted and may help you track down problems like missing files. 
+any internal debugging messages as they are emitted and may help you track down problems like missing files.
 
     # Adding Android battery-status plugin to "myProject":
     plugman -d --platform android --project myProject --plugin cordova-plugin-battery-status
@@ -115,7 +115,7 @@ any internal debugging messages as they are emitted and may help you track down 
 Finally, you can use the `--version|-v` flag to see which version of Plugman you are using.
 
     plugman -v
-    
+
 ## Registry Actions
 
 There are a number of plugman commands that can be used for interacting with the [Plugin registry](http://plugins.cordova.io).
@@ -141,7 +141,7 @@ You can get information about any specific plugin stored in the plugin repositor
 
     plugman info <id>
 
-This will contact the plugin registry and fetch information such as the plugin's version number. 
+This will contact the plugin registry and fetch information such as the plugin's version number.
 
 ## Installing Core Plugins
 
@@ -152,72 +152,72 @@ platform, and reference the platform's project directory.
 
 * cordova-plugin-battery-status
 
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-battery-status`
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-battery-status`
 
 * cordova-plugin-camera
 
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-camera`
-    
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-camera`
+
 * cordova-plugin-console
 
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-console`
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-console`
 
 * cordova-plugin-contacts
-    
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-contacts`
-    
+
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-contacts`
+
 * cordova-plugin-device
-    
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-device`
+
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-device`
 
 * cordova-plugin-device-motion (accelerometer)
-    
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-device-motion`
+
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-device-motion`
 
 * cordova-plugin-device-orientation (compass)
-    
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-device-orientation`
+
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-device-orientation`
 
 * cordova-plugin-dialogs
-    
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-dialogs`
+
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-dialogs`
 
 * cordova-plugin-file
-    
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-file`
+
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-file`
 
 * cordova-plugin-file-transfer
-    
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-file-transfer`
+
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-file-transfer`
 
 * cordova-plugin-geolocation
-    
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-geolocation`
+
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-geolocation`
 
 * cordova-plugin-globalization
-    
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-globalization`
+
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-globalization`
 
 * cordova-plugin-inappbrowser
-    
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-inappbrowser`
+
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-inappbrowser`
 
 * cordova-plugin-media
-    
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-media`
+
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-media`
 
 * cordova-plugin-media-capture
-    
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-media-capture`
+
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-media-capture`
 
 * cordova-plugin-network-information
-    
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-network-information`
+
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-network-information`
 
 * cordova-plugin-splashscreen
-    
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-splashscreen`
+
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-splashscreen`
 
 * cordova-plugin-vibration
-    
-    `plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-vibration`
+
+    `plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-vibration`

@@ -29,7 +29,7 @@ accessed.  By default, new apps are configured to allow access to any site.
 Before moving your application to production, you should formulate a whitelist
 and allow access to specific network domains and subdomains.
 
-For Android and iOS (as of their 4.0 releases), Cordova's security policy is extensible via a plugin
+For Android (as of its 4.0 release), Cordova's security policy is extensible via a plugin
 interface.  Your app should use the [cordova-plugin-whitelist][wlp], as it provides
 better security and configurability than earlier versions of Cordova.  While
 it is possible to implement your own whitelist plugin, it is not recommended
@@ -42,8 +42,7 @@ enable network access to specific domains. For projects that rely on
 the CLI workflow described in [The Command-Line Interface](../../cli/index.html), this file is
 located in the project's top-level directory. Otherwise for
 platform-specific development paths, locations are listed in the
-sections below. (See the various [Platform Guides](../../platforms/index.html) for more information
-on each platform.)
+sections below. 
 
 The following examples demonstrate `<access>` whitelist syntax:
 
@@ -73,19 +72,14 @@ The following examples demonstrate `<access>` whitelist syntax:
 
 Be aware that some websites may automatically redirect from their home page to
 a different url, such as using https protocol or to a country-specific
-domain. For example http://www.google.com will redirect to use SSL/TLS at
-https://www.google.com, and then may further redirect to a geography such as
-https://www.google.co.uk. Such scenarios may require modified or additional
+domain. For example `http://www.google.com` will redirect to use SSL/TLS at
+`https://www.google.com`, and then may further redirect to a geography such as
+`https://www.google.co.uk`. Such scenarios may require modified or additional
 whitelist entries beyond your initial requirement. Please consider this
 as you are building your whitelist.
 
 Note that the whitelist applies only to the main Cordova webview, and does not
 apply to an InAppBrowser webview or opening links in the system web browser.
-
-## Amazon Fire OS Whitelisting
-
-Platform-specific whitelisting rules are found in
-`res/xml/config.xml`.
 
 ## Android Whitelisting
 
@@ -94,9 +88,9 @@ prior to 4.0.0, see older versions of this documentation.
 
 ## iOS Whitelisting
 
-The `<allow-intent>` and `<allow-navigation>` tags are _new_ for cordova-ios 4.x and greater, see the [cordova-plugin-whitelist][wlp] documentation for details. cordova-ios version 4.0 and greater does **not** require the [cordova-plugin-whitelist][wlp] plugin to be installed.
+`Cordova-ios` version 4.0 and greater does **not** require the [cordova-plugin-whitelist][wlp] plugin to be installed, however it's configuration details apply to iOS too. The `<allow-intent>` and `<allow-navigation>` tags are _new_ for cordova-ios 4.x and greater, see the [cordova-plugin-whitelist][wlp] documentation for details on the usage of these tags. 
 
-For cordova-ios versions prior to 4.0.0, see the older versions of this documentation. 
+For cordova-ios versions prior to 4.0.0, see the older versions of this documentation.
 
 [Application Transport Security (ATS)](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) is new in iOS 9 (Xcode 7). This new feature acts as a whitelist for your app. The cordova cli will automatically convert `<access>` and `<allow-navigation>` tags to the appropriate ATS directives.
 
@@ -140,32 +134,12 @@ ways:
 (For more information on support, see BlackBerry's documentation on the
 [access element][8].)
 
-## Firefox OS
-
-In Firefox OS there is no concept of whitelisting a specific domain. Instead
-there is a special permission called
-[SystemXHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Permissions).
-There is a need to add this permission to `config.xml`:
-
-	<platform name="firefoxos">
-		<permission name="systemXHR" privileged="true" description="load data from server" />
-	</platform>
-
-The `XMLHttpRequest` object needs to be instantiated with two parameters
-`mozAnon` and `mozSystem`:
-
-	var request = new XMLHttpRequest({
-		mozAnon: true,
-		mozSystem: true});
-
-This solution is transparent so there is no difference for other platforms.
-
 ## Windows Phone Whitelisting
 
 The whitelisting rules for Windows Phone 8 are found in the
 app's `config.xml` file.
 
-[wlp]: https://github.com/apache/cordova-plugin-whitelist
+[wlp]: ../../../cordova-plugin-whitelist/
 [1]: http://www.w3.org/TR/widgets-access/
 [2]: http://google.com
 [3]: https://google.com
@@ -173,4 +147,4 @@ app's `config.xml` file.
 [5]: http://mail.google.com
 [6]: http://docs.google.com
 [7]: http://developer.mozilla.org
-[8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
+[8]: https://developer.blackberry.com/html5/documentation/v1_0/access_element_834677_11.html

@@ -28,280 +28,684 @@ command-line tools in your development workflow.  You need to install
 the Android SDK regardless of whether you want to use these
 platform-centered shell tools or cross-platform Cordova CLI for
 development. For a comparison of the two development paths, see the
-[Overview](../../overview/index.html).  For details on the CLI, see [The Command-Line Interface](../../cli/index.html).
+[Overview](../../overview/index.html#development-paths).  For details on the CLI, see [Cordova CLI Reference].
+
 
 ## Requirements and Support
 
-Cordova for Android requires the Android SDK which could be installed
-on OS X, Linux or Windows operation system. See the Android SDK's
+Cordova for Android requires the Android SDK which can be installed
+on OS X, Linux or Windows. See the Android SDK's
 [System Requirements](http://developer.android.com/sdk/index.html#Requirements).
+Cordova's latest Android package supports up to Android [API-Level](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels) 23.
+The supported Android API-Levels for the past few cordova-android releases can
+be found in this table:
 
-Cordova supports Android 4.0.x (starting with Android API level 14)
-and higher.  As a general rule, Android versions become unsupported by Cordova as
+cordova-android Version | Supported Android API-Levels
+------------------------|-----------------------------
+5.X.X                   | 14 - 23
+4.1.X                   | 14 - 22
+4.0.X                   | 10 - 22
+3.7.X                   | 10 - 21
+
+Please note that the versions listed here are for Cordova's Android package,
+[cordova-android](https://github.com/apache/cordova-android), and not for the
+Cordova CLI. To determine what version of Cordova's Android package is installed
+in your Cordova project, run the command `cordova platform ls` in the directory
+that holds your project.
+
+As a general rule, Android versions become unsupported by Cordova as
 they dip below 5% on Google's
 [distribution dashboard](http://developer.android.com/about/dashboards/index.html).
-Android versions earlier than API level 10, and the 3.x versions (Honeycomb,
-API levels 11-13) fall significantly below that 5% threshold.
 
-## Install Cordova Shell Tools
+## Installing the Requirements
 
-If you want to use Cordova's Android-centered shell tools in
-conjunction with the SDK, download Cordova from
-[cordova.apache.org](http://cordova.apache.org). Otherwise ignore this
-section if you plan to use the cross-platform CLI tool described in
-[The Command-Line Interface](../../cli/index.html).
-
-The Cordova download contains separate archives for each platform. Be
-sure to expand the appropriate archive, `android` in this case, within
-an empty directory.  The relevant executible utilities are available
-in the top-level `bin` directory. (Consult the __README__ file if
-necessary for more detailed directions.)
-
-These shell tools allow you to create, build, and run Android apps.
-For information on the additional command-line interface that enables
-plugin features across all platforms, see Using Plugman to Manage
-Plugins. See Application Plugins for details on how to develop
-plugins.
-
-## Install the Java Development Kit (JDK)
+### Java Development Kit (JDK)
 
 Install [Java Development Kit (JDK) 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
-or later. 
+or later.
 
 When installing on Windows you also need to set `JAVA_HOME` Environment Variable
-according to JDK installation path (for example, C:\Program Files\Java\jdk1.7.0_75).
+according to your JDK installation path (see [Setting Environment Variables](#setting-environment-variables))
 
-## Install the Android SDK
+#### Android SDK
 
-Install the [Android Stand-alone SDK Tools](http://developer.android.com/sdk/installing/index.html?pkg=tools) or [Android Studio](http://developer.android.com/sdk/installing/index.html?pkg=studio). Procceed with `Android Studio` if you plan 
+Install the [Android Stand-alone SDK Tools](http://developer.android.com/sdk/installing/index.html?pkg=tools) or [Android Studio](http://developer.android.com/sdk/installing/index.html?pkg=studio).
+Proceed with Android Studio if you plan on
 developing new Cordova for Android plugins or using native tools to
-run and debug Android platform. Otherwise, `Android Stand-alone SDK Tools`
-are enough to build and deploy Android application.
+run and debug the Android platform. Otherwise, the Android Stand-alone SDK Tools
+are enough to build and deploy Android applications.
 
 Detailed installation instructions are available as part of installation
 links above.
 
-For Cordova command-line tools to work, or the CLI that is based upon
-them, you need to include the SDK's `tools` and `platform-tools`
-directories in your `PATH`.  On a Mac or Linux, you can use a text editor to
-create or modify the `~/.bash_profile` file, adding a line such as the
-following, depending on where the SDK installs:
+#### Adding SDK Packages
+
+After installing the Android SDK, you must also install the packages for
+whatever [API level](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
+you wish to target. It is recommended that you install the highest SDK version
+that your version of cordova-android supports (see above).
+
+Open Android SDK Manager (for example, run `android` from the terminal) and make
+sure the following are installed:
+
+1. Android Platform SDK for your targeted version of Android
+1. Android SDK build-tools version 19.1.0 or higher
+1. Android Support Repository (found under "Extras")
+
+See Android's documentation on [Installing SDK Packages](http://developer.android.com/sdk/installing/adding-packages.html)
+for more details.
+
+### Setting environment variables
+
+Cordova's CLI tools require some environment variables to be set in order to
+function correctly. The CLI will attempt to set these variables for you, but
+in certain cases you may need to set them manually. The following variables
+should be updated:
+
+1. Set the `JAVA_HOME` environment variable to the location of your JDK installation
+2. Set the `ANDROID_HOME` environment variable to the location of your Android SDK installation
+3. It is also recommended that you add the Android SDK's `tools` and `platform-tools` directories to your `PATH`
+
+#### OS X and Linux
+
+On a Mac or Linux, you can use a text editor to create or modify the
+`~/.bash_profile` file. To set an environment variable, add a line that
+uses `export` like so (substitute the path with your local installation):
+
+        export ANDROID_HOME=/Development/android-sdk/
+
+To update your `PATH`, add a line resembling the following
+(substitute the paths with your local Android SDK installation's location):
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
 
-This line in `~/.bash_profile` exposes these tools in newly opened terminal
-windows. If your terminal window is already open in OSX, or to avoid a logout/login
-on Linux, run this to make them available in the current terminal window:
+Reload your terminal to see this change reflected or run the following command:
 
         $ source ~/.bash_profile
 
-To modify the `PATH` environment on Windows:
+#### Windows
 
-1. Click on the __Start__ menu in the lower-left corner of the desktop,
-   right-click on __Computer__, then select __Properties__.
+These steps may vary depending on your installed version of Windows. Close and
+reopen any command prompt windows after making changes to see them reflected
 
-1. Select __Advanced System Settings__ in the column on the left.
+1. Click on the __Start__ menu in the lower-left corner of the desktop
 
-1. In the resulting dialog box, press __Environment Variables__.
+1. In the search bar, search for __Environment Variables__ and select __Edit the system Environment Variables__ from the options that appear
+
+1. In the window that appears, click the __Environment Variables__ button
+
+##### To create a new environment variable:
+
+1. Click __New...__ and enter the variable name and value
+
+##### To set your __PATH__:
 
 1. Select the __PATH__ variable and press __Edit__.
 
-1. Append the following to the `PATH` based on where you installed the
-   SDK, for example:
+1. Add entries for the relevant locations to the __PATH__. For example
+(substitute the paths with your local Android SDK installation's location):
 
-        ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
+    ```
+    C:\Development\android-sdk\platform-tools
+    C:\Development\android-sdk\tools
+    ```
 
-1. Save the value and close both dialog boxes.
 
-## Install SDK Packages
+## Project Configuration
 
-Open Android SDK Manager (for example, via terminal: `android`) and install:
+### Setting up an Emulator
 
-1. Android 5.1.1 (API 22) platform SDK
-1. Android SDK Build-tools version 19.1.0 or higher
-1. Android Support Repository (Extras)
+If you wish to run your Cordova app on an Android emulator, you will first need
+to create an Android Virtual Device (AVD). See the Android documentation for
+[managing AVDs](http://developer.android.com/tools/devices/managing-avds.html)
+and the [instructions](http://developer.android.com/tools/devices/emulator.html)
+for configuring the emulator and setting up hardware acceleration.
 
-See [Installing SDK Packages](http://developer.android.com/sdk/installing/adding-packages.html)
+Once your AVD is configured correctly, you should be able to see it by running
+this command from within a Cordova project:
+
+    $ cordova run --list
+
+### Configuring Gradle
+
+As of **cordova-android@4.0.0**, Cordova for Android projects are built using
+[Gradle](http://www.gradle.org/). For instructions on building with Ant, refer
+to older versions of the documentation.
+
+#### Setting Gradle Properties
+
+It is possible to configure the Gradle build by setting the values of certain
+[Gradle properties](https://docs.gradle.org/current/userguide/build_environment.html)
+that Cordova exposes. The following properties are available to be set:
+
+| Property                          | Description
+|-----------------------------------|-------------------------------------------
+| `cdvBuildMultipleApks`            | If this is set, then multiple APK files will be generated: One per native platform supported by library projects (x86, ARM, etc). This can be important if your project uses large native libraries, which can drastically increase the size of the generated APK. If not set, then a single APK will be generated which can be used on all devices
+| `cdvVersionCode`                  | Overrides the versionCode set in `AndroidManifest.xml`
+| `cdvReleaseSigningPropertiesFile` | *Default: `release-signing.properties`*<br>Path to a .properties file that contains signing information for release builds (see [Signing an App](#signing-an-app))
+| `cdvDebugSigningPropertiesFile`   | *Default: `debug-signing.properties`*<br>Path to a .properties file that contains signing information for debug builds (see [Signing an App](#signing-an-app)). Useful when you need to share a signing key with other developers
+| `cdvMinSdkVersion`                | Overrides the value of `minSdkVersion` set in `AndroidManifest.xml`. Useful when creating multiple APKs based on SDK version
+| `cdvBuildToolsVersion`            | Overrides the automatically detected `android.buildToolsVersion` value
+| `cdvCompileSdkVersion`            | Overrides the automatically detected `android.compileSdkVersion` value
+
+You can set these properties in one of four ways:
+
+  1. By setting environment variables like so:
+
+      ```
+      $ export ORG_GRADLE_PROJECT_cdvMinSdkVersion=20
+      $ cordova build android
+  ```
+
+  2. By using the `--gradleArg` flag in your Cordova `build` or `run` commands:
+
+      ```
+      $ cordova run android -- --gradleArg=-PcdvMinSdkVersion=20
+      ```
+
+  3. By placing a file called `gradle.properties` in your Android platform
+      folder (`<your-project>/platforms/android`) and setting the properties in it
+      like so:
+
+      ```
+      # In <your-project>/platforms/android/gradle.properties
+      cdvMinSdkVersion=20
+      ```
+
+  4. By extending `build.gradle` via a [`build-extras.gradle` file](#extending-build-gradle)
+    and setting the property like so:
+
+      ```
+      # In <your-project>/platforms/android/build-extras.gradle
+      ext.cdvMinSdkVersion = 20
+      ```
+
+The latter two options both involve including an extra file in your Android
+platform folder. In general, it is discouraged that you edit the contents of
+this folder because it is easy for those changes to be lost or overwritten.
+Instead, these two files should be copied from another location into that folder
+as part of the build command by using the `before_build`
+[hook](../../appdev/hooks/index.html).
+
+#### Extending build.gradle
+
+If you need to customize `build.gradle`, rather than edit it directly, you
+should create a sibling file named `build-extras.gradle`. This file will be
+included by the main `build.gradle` when present. This file must be placed in
+the android platform directory (`<your-project>/platforms/android`), so it is
+recommended that you copy it over via a script attached to the `before_build`
+[hook](../../appdev/hooks/index.html).
+
+Here's an example:
+
+    # Example build-extras.gradle
+    # This file is included at the beginning of `build.gradle`
+    ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
+
+    # When set, this function allows code to run at the end of `build.gradle`
+    ext.postBuildExtras = {
+        android.buildTypes.debug.applicationIdSuffix = '.debug'
+    }
+
+Note that plugins can also include `build-extras.gradle` files via:
+
+    <framework src="some.gradle" custom="true" type="gradleReference" />
+
+
+## Signing an App
+
+First, you should read the [Android app signing requirements](http://developer.android.com/tools/publishing/app-signing.html).
+
+### Using Flags
+
+To sign an app, you need the following parameters:
+
+| Parameter             | Flag              | Description
+|-----------------------|-------------------|-----------------------------------
+| Keystore              | `--keystore`      | Path to a binary file which can hold a set of keys
+| Keystore Password     | `--storePassword` | Password to the keystore
+| Alias                 | `--alias`         | The id specifying the private key used for singing
+| Password              | `--password`      | Password for the private key specified
+| Type of the Keystore  | `--keystoreType`  | *Default: auto-detect based on file extension*<br>Either pkcs12 or jks
+
+These parameters can be specified using the command line arguments above to
+the [Cordova CLI](../../../cordova-cli/index.html) `build` or `run` commands.
+
+### Using build.json
+
+Alternatively, you could specify them in a build configuration file (`build.json`)
+using the `--buildConfig` argument to the same commands. Here's a sample of a
+build configuration file:
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+
+For release signing, passwords can be excluded and the build system will issue a
+prompt asking for the password.
+
+There is also support to mix and match command line arguments and parameters in
+`build.json`. Values from the command line arguments will get precedence.
+This can be useful for specifying passwords on the command line.
+
+### Using Gradle
+
+You can also specify signing properties by including a `.properties` file and
+pointing to it with the `cdvReleaseSigningPropertiesFile` and
+`cdvDebugSigningPropertiesFile` Gradle properties (see [Setting Gradle Properties](#setting-gradle-properties)).
+The file should look like this:
+
+```
+storeFile=relative/path/to/keystore.p12
+storePassword=SECRET1
+storeType=pkcs12
+keyAlias=DebugSigningKey
+keyPassword=SECRET2
+```
+
+`storePassword` and `keyPassword` are optional, and will be prompted for if omitted.
+
+
+## Debugging
+
+For details on the debugging tools that come packaged with the Android SDK, see
+[Android's developer documentation for debugging](http://developer.android.com/tools/debugging/index.html).
+Additionally, Android's developer documentation for [debugging web apps](http://developer.android.com/guide/webapps/debugging.html)
+provides an introduction for debugging the portion of your app running in the
+Webview.
+
+
+### Opening a Project in Android Studio
+
+Cordova for Android projects can be opened in the Android IDE, [Android Studio](http://developer.android.com/sdk/installing/index.html?pkg=studio).
+This can be useful if you wish to use Android Studio's built in Android
+debugging/profiling tools or if you are developing Android plugins. Please note
+that when opening your project in Android studio, it is recommended that you do
+NOT edit your code in the IDE. This will edit the code in the `platforms` folder
+of your project (not `www`), and changes are liable to be overwritten. Instead,
+edit the `www` folder and copy over your changes by running `cordova build`.
+
+Plugin developers wishing to edit their native code in the IDE should use the
+`--link` flag when adding their plugin to the project via `cordova plugin add`.
+This will link the files so that changes to the plugin files in the `platforms`
+folder are reflected in your plugin's source folder (and vice versa).
+
+To open a Cordova for Android project in Android Studio:
+
+  1. Launch __Android Studio__.
+
+  1. Select __Import Project (Eclipse ADT, Gradle, etc)__.
+
+      ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_project.png)
+
+  1. Select the Android platform directory in your project (`<your-project>/platforms/android`).
+
+      ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_select_location.png)
+
+  1. For the `Gradle Sync` question you can simply answer __Yes__.
+
+Once it finishes importing, you should be able to build and run the app directly
+from __Android Studio__. See [Android Studio Overview](http://developer.android.com/tools/studio/index.html)
+and [Building and Running from Android Studio](http://developer.android.com/tools/building/building-studio.html)
 for more details.
-
-## Configure an Emulator
-
-Android sdk doesn't provide any default emulator instance by default. You can 
-create a new one by running `android` on the command line.
-The press __Tools &rarr; Manage AVDs__ (Android Virtual Devices),
-then choose any item from __Device Definitions__ in the resulting dialog
-box:
-
-![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png)
-
-Press __Create AVD__, optionally modifying the name, then press __OK__
-to accept the changes:
-
-![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png)
-
-The AVD then appears in the __Android Virtual Devices__ list:
-
-![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png)
-
-To open the emulator as a separate application, select the AVD and
-press __Start__. It launches much as it would on the device, with
-additional controls available for hardware buttons:
-
-![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png)
-
-
-For a faster experience, you can use the `Virtual Machine Acceleration` to improve 
-the execution speed.
-Many modern CPUs provide extensions to execute Virtual Machines more efficiently.
-Before attempting to use this type of acceleration, you need to determine if your 
-current development system's CPU, supports one the following virtualization technologies:
-
-* __Intel Virtualization Technology__ (VT-x, vmx) &rarr; [Intel VT-x supported processor list](http://ark.intel.com/products/virtualizationtechnology)
-* __AMD Virtualization__ (AMD-V, SVM), only supported for Linux (Since May 2006, all CPUs AMD include AMD-V, except Sempron).
-
-Another way to find out if your Intel processor supports VT-x Technology, it's by executing the 
-`Intel Processor Identification Utility`, for `Windows`you can download it from the Intel [Download Center](https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7838),
-or you can use the [booteable utility](https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7840&lang=eng), which is `OS Independent`.
-
-After install and execute the `Intel Processor Identification Utility` over Windows, you will get the following window, 
-in order to check if your CPU supports the Virtualization Technologies:
-
-![]({{ site.baseurl }}/static/img/guide/platforms/android/intel_pid_util_620px.png)
-
-In order to speed up the emulator, you need to download and install one or more `Intel x86 Atom` System Images, 
-as well as the `Intel Hardware Accelerated Execution Manager (HAXM)`.
-
-Open your Android SDK Manager, and select the `Intel x86 Atom` System Image, for whichever version that you want to test. Then go to `Extras` 
-and select `Intel x86 Emulator Accelerator (HAXM)`, and install those packages:
-
-![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png)
-
-After download, run the Intel installer, which is available within your
-Android SDK at `extras/intel/Hardware_Accelerated_Execution_Manager`. 
-__Note__:`If you have any problems installing the package, you can find more information and step by step guidance check this` 
-[Intel Article](http://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture).
-
-1. Install one or more `Intel x86 Atom` System Images as well as the
-   `Intel Hardware Accelerated Execution Manager`, available under
-   __Extras__.
-
-1. Run the Intel installer, which is available within your Android SDK
-   at `extras/intel/Hardware_Accelerated_Execution_Manager`.
-
-1. Create a new AVD with the target set to an Intel image.
-
-1. When starting the emulator, ensure there are no error messages
-   indicating a failure to load HAX modules.
-
-## Create a New Project
-
-At this point, to create a new project you can choose between the
-cross-platform CLI tool described in [The Command-Line Interface](../../cli/index.html), or
-the set of Android-specific shell tools. From within a source-code
-directory, here's the CLI approach:
-
-        $ cordova create hello com.example.hello HelloWorld
-        $ cd hello
-        $ cordova platform add android
-        $ ccordova prepare              # or "cordova build"
-
-Here's the corresponding lower-level shell-tool approach for both Unix
-and Windows:
-
-        $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
-        C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-
-## Build the Project
-
-If you are using the CLI in development, the project directory's
-top-level `www` directory contains the source files. Run any of
-these within the project directory to rebuild the app:
-
-        $ cordova build                   # build all platforms that were added
-        $ cordova build android           # build debug for only Android
-        $ cordova build android --debug   # build debug for only Android
-        $ cordova build android --release # build release for only Android
-
-If you are using the Android-specific shell tools in development,
-there is a different approach.  Once you generate the project, the
-default app's source is available in the `assets/www` subdirectory.
-Subsequent commands are available in its `cordova` subdirectory.
-
-The `build` command cleans project files and rebuilds the app. Here is
-the syntax for both Mac and Windows. The first pair of examples
-generate debugging information, and the second builds the apps for
-release:
-
-        $ /path/to/project/cordova/build --debug
-        C:\path\to\project\cordova\build.bat --debug
-        
-        $ /path/to/project/cordova/build --release
-        C:\path\to\project\cordova\build.bat --release
-
-## Deploy the app
-
-You can use the `cordova` CLI utility to deploy the
-application to the emulator or the device from the command line:
-
-        $ cordova emulate android       #to deploy the app on a default android emulator
-        $ cordova run android --device  #to deploy the app on a connected device
-
-Otherwise, use the alternate shell interface:
-
-        $ /path/to/project/cordova/run --emulator
-        $ /path/to/project/cordova/run --device
-
-You can use __cordova run android --list__ to see all available targets and 
-__cordova run android --target=target_name__ to run application on a specific 
-device or emulator (for example,  `cordova run android --target="Nexus4_emulator"`).
-
-You can also use __cordova run --help__ to see additional build and run
-options.
-
-This pushes the app to the home screen and launches it:
-
-![]({{ site.baseurl }}/static/img/guide/platforms/android/emulator2x.png)
-
-When you `run` the app, you also `build` it. You can append additional
-`--debug`, `--release`, and `--nobuild` flags to control how it is
-built, or even whether a rebuild is necessary:
-
-        $ /path/to/project/cordova/run --emulator --nobuild
-
-## Other Commands
-
-The following generates a detailed log of the app as it runs:
-
-        $ /path/to/project/cordova/log
-        C:\path\to\project\cordova\log.bat
-
-The following cleans the project files:
-
-        $ /path/to/project/cordova/clean
-        C:\path\to\project\cordova\clean.bat
-
-## Open a New Project in the SDK
-
-Once android platform is added to your project, you can open it from 
-within [Android Studio](http://developer.android.com/sdk/installing/index.html?pkg=studio):
-
-1. Launch the __Android Studio__ application.
-
-1. Select __Import Project (Eclipse ADT, Gradle, etc)__.
-
-  ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_project.png)
-
-1. Select location where android platform is stored (`your/project/platforms/android`).
-  
-  ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_select_location.png)
-
-1. For the `Gradle Sync` question you can simply answer __Yes__.
-
-You are all set now and can build and run the app directly from `Android Studio`.
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png)
 
-See [Android Studio Overview](http://developer.android.com/tools/studio/index.html) and
-And [Building and Running from Android Studio](http://developer.android.com/tools/building/building-studio.html) for more details.
+
+## Platform Centered Workflow
+
+cordova-android includes a number of scripts that allow the platform to be used
+without the full Cordova CLI. This development path may offer you a greater
+range of development options in certain situations than the cross-platform cordova CLI. 
+For example, you need to use shell tools when deploying a custom
+Cordova WebView alongside native components. Before using this
+development path, you must still configure the Android SDK environment
+as described in [Requirements and Support](#requirements-and-support)
+above.
+
+For each of the scripts discussed below, refer to [Cordova CLI Reference] for more information on their
+arguments and usage. Each script has a name that matches the corresponding CLI
+command. For example, `cordova-android/bin/create` is equivalent to
+`cordova create`.
+
+To get started, either download the cordova-android package from
+[npm](https://www.npmjs.com/package/cordova-android) or
+[Github](https://github.com/apache/cordova-android).
+
+To create a project using this package, run the `create` script in the `bin`
+folder:
+
+    $ cordova-android/bin/create ...
+
+The created project will have a folder named `cordova` inside that contains
+scripts for the project-specific Cordova commands (e.g. `run`, `build`, etc.).
+Additionally, The project will feature a structure different from that of a
+normal Cordova project. Notably, `/www` is moved to `/assets/www`.
+
+To install plugins in this project, use the [Cordova Plugman Utility](../../../plugin_ref/plugman.html).
 
 
+## Upgrading
+
+Refer to [this](./upgrade.html) article for instructions to upgrade your
+`cordova-android` version.
+
+
+## Lifecycle Guide
+
+### Cordova and Android
+
+Native Android apps typically consist of a series of [activities](http://developer.android.com/reference/android/app/Activity.html) that the user
+interacts with. Activities can be thought of as the individual screens that make
+up an application; different tasks in an app will often have their own activity.
+Each activity has its own lifecycle that is maintained as the activity enters
+and leaves the foreground of a user's device.
+
+In contrast, Cordova applications on the Android platform are executed within a
+Webview that is embedded in a *single* Android activity. The lifecycle of this
+activity is exposed to your application through the document events that are
+fired. The events are not guaranteed to line up with Android's lifecycle, but
+they can provide guidelines for saving and restoring your state. These events
+roughly map to Android callbacks as follows:
+
+Cordova Event   | Rough Android Equivalent  | Meaning
+----------------|---------------------------|-----------------
+`deviceready`   | `onCreate()`              | Application is starting (not from background)
+`pause`         | `onPause()`               | Application is moving to the background
+`resume`        | `onResume()`              | Application is returning to the foreground
+
+Most other Cordova platforms have a similar concept of lifecycles and should
+fire these same events when similar actions happen on a user's device. However,
+Android presents some unique challenges that can sometimes show up thanks to the
+native Activity lifecycle.
+
+### What makes Android different?
+
+In Android, the OS can choose to kill activities in the background in
+order to free up resources if the device running the application is low on
+memory. Unfortunately, when the activity holding your application is killed,
+the Webview in which your application lives will be destroyed as well. Any state
+that your application is maintaining will be lost in this case. When the user
+navigates back to your application, the Activity and Webview will be
+recreated by the OS, but state will not be automatically restored for your
+Cordova app. For this reason, it is imperative that your application be aware of
+the lifecycle events that are fired and maintain whatever state is appropriate
+to make sure a user's context in your app is not lost when they leave the
+application.
+
+### When can this happen?
+
+Your application is susceptible to being destroyed by the OS whenever it leaves
+the sight of the user. There are two main situations in which this can occur.
+The first and most obvious case is when the user presses the home button or
+switches to another application.
+
+However, there is a second (and much more subtle) case that certain plugins can
+introduce. As noted above, Cordova applications are usually confined to the
+single activity that contains the Webview. However, there are instances in which
+other activities may be launched by plugins and temporarily push the Cordova
+activity to the background. These other Activities are typically launched in
+order to perform a specific task using a native application installed on the
+device. For example, the Apache camera plugin launches whatever camera activity
+is natively installed on the device in order to take a photo. Reusing the
+installed camera application in this way makes your application feel much more
+like a native app when the user tries to take a photo. Unfortunately, when the
+native Activity pushes your app to the background there is a chance the OS
+will kill it.
+
+For a clearer understanding of this second case, let's walk through an example
+using the camera plugin. Imagine you have an application that requires the user
+to take a profile photo. The flow of events in the application when everything
+goes as planned will look something like this:
+
+1. The user is interacting with your app and needs to take a picture
+2. The camera plugin launches the native camera activity
+    * *The Cordova activity is pushed to the background (pause event is fired)*
+3. The user takes a photo
+4. The camera activity finishes
+    * *The Cordova activity is moved to the foreground (resume event is fired)*
+5. The user is returned to your application where they left off
+
+However, this flow of events can be disrupted if a device is low on memory. If
+the Activity is killed by the OS, the above sequence of events instead plays out
+as follows:
+
+1. The user is interacting with your app and needs to take a picture
+2. The camera plugin launches the native camera activity
+    * *The OS destroys the Cordova activity (pause event is fired)*
+3. The user takes a photo
+4. The camera activity finishes
+    * *The OS recreates the Cordova activity (deviceready and resume events are fired)*
+5. The user is confused as to why they are suddenly back at your app's login screen
+
+In this instance, the OS killed the application in the background and the
+application did not maintain its state as part of the lifecycle. When the user
+returned to the app, the Webview was recreated and the app appeared to have
+restarted from scratch (hence the user's confusion). This sequence of events is
+equivalent to what happens when the home button is pressed or the user switches
+applications. The key to preventing the above experience is subscribing to
+events and properly maintaining state as part of the activity lifecycle.
+
+### Respecting the Lifecycle
+
+In the examples above, the javascript events that are fired are noted in
+italics. These events are your opportunity to save and restore your
+application's state. You should register callbacks in your application's
+`bindEvents` function that respond to the lifecycle events by saving state. What
+information you save and how you save it is left to your discretion, but you
+should be sure to save enough information so that you can restore the user to
+exactly where they left off when they return to your application.
+
+There is one additional factor in the example above that only applies in the
+second-discussed situation (i.e. when a plugin launches an external activity).
+Not only was the state of the application lost when the user finished taking a
+photo, but so was the photo that the user took. Normally, that photo would be
+delivered to your application through the callback that was registered with the
+camera plugin. However, when the Webview was destroyed that callback was lost
+forever. Luckily, cordova-android 5.1.0 and above provide a means for getting
+the result of that plugin call when your application resumes.
+
+### Retrieving plugin callback results (cordova-android 5.1.0+)
+
+When the OS destroys the Cordova activity that was pushed into the background
+by a plugin, any pending callbacks are lost as well. This means that if you
+passed a callback to the plugin that launched the new activity (e.g. the camera
+plugin), that callback will NOT be fired when the application is recreated.
+However, starting in cordova-android **5.1.0**, the `resume` event's payload will
+contain any pending plugin results from the plugin request that launched the
+external activity made prior to the activity being destroyed.
+
+The payload for the `resume` event adheres to the following format:
+
+```
+{
+    action: "resume",
+    pendingResult: {
+        pluginServiceName: string,
+        pluginStatus: string,
+        result: any
+    }
+}
+```
+
+The fields of that payload are defined as follows:
+
+* `pluginServiceName`: The name of the plugin returning the result (e.g. "Camera"). This can be found in the `<name>` tag of a plugin's plugin.xml file
+* `pluginStatus`: The status of the plugin call (see below)
+* `result`: Whatever the result of the plugin call is
+
+The possible values for `pluginStatus` in the `pendingResult` field include the following:
+* `"OK"` - The plugin call was successful
+* `"No Result"` - The plugin call ended with no result
+* `"Error"` - The plugin call resulted in some general error
+* Other miscellaneous errors
+    * `"Class not found"`
+    * `"Illegal access"`
+    * `"Instantiation error"`
+    * `"Malformed url"`
+    * `"IO error"`
+    * `"Invalid action"`
+    * `"JSON error"`
+
+Please note that it is up to the plugin to decide what is contained in the
+`result` field and the meaning of the `pluginStatus` that is returned. Reference
+the API of the plugin you are using to see what you should expect those fields
+to contain and how to use their values.
+
+#### Example
+
+Below is a brief example application that uses the `resume` and `pause` events
+to manage state. It uses the Apache camera plugin as an example of how to
+retrieve the results of a plugin call from the `resume` event payload. The
+portion of the code dealing with the `resume`'s `event.pendingResult` object
+requires cordova-android **5.1.0+**
+
+```javascript
+// This state represents the state of our application and will be saved and
+// restored by onResume() and onPause()
+var appState = {
+    takingPicture: true,
+    imageUri: ""
+};
+
+var APP_STORAGE_KEY = "exampleAppState";
+
+var app = {
+    initialize: function() {
+        this.bindEvents();
+    },
+    bindEvents: function() {
+        // Here we register our callbacks for the lifecycle events we care about
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('pause', this.onPause, false);
+        document.addEventListener('resume', this.onResume, false);
+    },
+    onDeviceReady: function() {
+        document.getElementById("take-picture-button").addEventListener("click", function() {
+            // Because the camera plugin method launches an external Activity,
+            // there is a chance that our application will be killed before the
+            // success or failure callbacks are called. See onPause() and
+            // onResume() where we save and restore our state to handle this case
+            appState.takingPicture = true;
+
+            navigator.camera.getPicture(cameraSuccessCallback, cameraFailureCallback,
+                {
+                    sourceType: Camera.PictureSourceType.CAMERA,
+                    destinationType: Camera.DestinationType.FILE_URI,
+                    targetWidth: 250,
+                    targetHeight: 250
+                }
+            );
+        });
+    },
+    onPause: function() {
+        // Here, we check to see if we are in the middle of taking a picture. If
+        // so, we want to save our state so that we can properly retrieve the
+        // plugin result in onResume(). We also save if we have already fetched
+        // an image URI
+        if(appState.takingPicture || appState.imageUri) {
+            window.localStorage.setItem(APP_STORAGE_KEY, JSON.stringify(appState));
+        }
+    },
+    onResume: function(event) {
+        // Here we check for stored state and restore it if necessary. In your
+        // application, it's up to you to keep track of where any pending plugin
+        // results are coming from (i.e. what part of your code made the call)
+        // and what arguments you provided to the plugin if relevant
+        var storedState = window.localStorage.getItem(APP_STORAGE_KEY);
+
+        if(storedState) {
+            appState = JSON.parse(storedState);
+        }
+
+        // Check to see if we need to restore an image we took
+        if(!appState.takingPicture && appState.imageUri) {
+            document.getElementById("get-picture-result").src = appState.imageUri;
+        }
+        // Now we can check if there is a plugin result in the event object.
+        // This requires cordova-android 5.1.0+
+        else if(appState.takingPicture && event.pendingResult) {
+            // Figure out whether or not the plugin call was successful and call
+            // the relevant callback. For the camera plugin, "OK" means a
+            // successful result and all other statuses mean error
+            if(event.pendingResult.pluginStatus === "OK") {
+                // The camera plugin places the same result in the resume object
+                // as it passes to the success callback passed to getPicture(),
+                // thus we can pass it to the same callback. Other plugins may
+                // return something else. Consult the documentation for
+                // whatever plugin you are using to learn how to interpret the
+                // result field
+                cameraSuccessCallback(event.pendingResult.result);
+            } else {
+                cameraFailureCallback(event.pendingResult.result);
+            }
+        }
+    }
+}
+
+// Here are the callbacks we pass to getPicture()
+function cameraSuccessCallback(imageUri) {
+    appState.takingPicture = false;
+    appState.imageUri = imageUri;
+    document.getElementById("get-picture-result").src = imageUri;
+}
+
+function cameraFailureCallback(error) {
+    appState.takingPicture = false;
+    console.log(error);
+}
+
+app.initialize();
+```
+
+The corresponding html:
+
+```html
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Cordova Android Lifecycle Example</title>
+    </head>
+    <body>
+        <div class="app">
+            <div>
+                <img id="get-picture-result" />
+            </div>
+            <Button id="take-picture-button">Take Picture</button>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
+```
+
+### Testing the Activity Lifecycle
+
+Android provides a developer setting for testing Activity destruction on low
+memory. Enable the "Don't keep activities" setting in the Developer Options menu
+on your device or emulator to simulate low memory scenarios. You should always
+do some amount of testing with this setting enabled to make sure that your
+application is properly maintaining state.
+
+[Cordova CLI Reference]:(../../../cordova-cli/index.html)

@@ -17,190 +17,135 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Icons and Splash Screens
+title: Customize app icons
+description: Learn how to customize icons for your Cordova app
 ---
 
-# Icons and Splash Screens
+# Customize Icons
 
-This section shows how to configure an app's icon and optional splash
-screen for various platforms, both when working in the Cordova CLI
-(described in The Command-Line Interface) or using platform-specific
-SDK tools (detailed in the Platform Guides).
+This section shows how to configure an app's icon for various platforms. Support for splash screen has moved to a Cordova plugin of its own. The configuration options can be found in the [Splashscreen plugin docs][splashscreen_plugin].
 
 ## Configuring Icons in the CLI
 
 When working in the CLI you can define app icon(s) via `<icon>` element (`config.xml`).
 If you do not specify an icon then the Apache Cordova logo is used.
 
-        <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
+```xml
+    <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
+```
 
-src: (required) specifies the location of the image file, relative to your project directory
+Attributes    | Description
+--------------|--------------------------------------------------------------------------------
+src           | *Required* <br/> Location of the image file, relative to your project directory
+platform      | *Optional* <br/> Target platform
+width         | *Optional* <br/> Icon width in pixels
+height        | *Optional* <br/> Icon height in pixels
+density       | *Optional* <br/> Specified icon density (Android Specific)
 
-platform: (optional) target platform
-
-width: (optional) icon width in pixels
-
-height: (optional) icon height in pixels
-
-density: (optional) android specific, specifies icon density
 
 The following configuration can be used to define single default icon
 which will be used for all platforms.
-
-        <icon src="res/icon.png" />
-
+```xml
+    <icon src="res/icon.png" />
+```
 For each platform you can also define a pixel-perfect icons set to fit
 different screen resolutions.
 
-Amazon Fire OS
-
-         <platform name="amazon-fireos">
-                  <icon src="res/android/ldpi.png" density="ldpi" />
-                  <icon src="res/android/mdpi.png" density="mdpi" />
-                  <icon src="res/android/hdpi.png" density="hdpi" />
-                  <icon src="res/android/xhdpi.png" density="xhdpi" />
-         </platform>
-
-Android
-
-         <platform name="android">
-                  <icon src="res/android/ldpi.png" density="ldpi" />
-                  <icon src="res/android/mdpi.png" density="mdpi" />
-                  <icon src="res/android/hdpi.png" density="hdpi" />
-                  <icon src="res/android/xhdpi.png" density="xhdpi" />
-         </platform>
-
-BlackBerry10
-
-         <platform name="blackberry10">
-                  <icon src="res/bb10/icon-86.png" />
-                  <icon src="res/bb10/icon-150.png" />
-         </platform>
-
-See BlackBerry's documentation for targeting multiple sizes and locales.
-[http://developer.blackberry.com/html5/documentation/icon_element.html]
-
-Firefox OS
-
-         <platform name="firefoxos">
-                  <icon src="res/ff/logo.png" width="60" height="60" />
-         </platform>
-
-iOS
-
-         <platform name="ios">
-                  <!-- iOS 8.0+ -->
-                  <!-- iPhone 6 Plus  -->
-                  <icon src="res/ios/icon-60@3x.png" width="180" height="180" />
-                  <!-- iOS 7.0+ -->
-                  <!-- iPhone / iPod Touch  -->
-                  <icon src="res/ios/icon-60.png" width="60" height="60" />
-                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
-                  <!-- iPad -->
-                  <icon src="res/ios/icon-76.png" width="76" height="76" />
-                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
-                  <!-- iOS 6.1 -->
-                  <!-- Spotlight Icon -->
-                  <icon src="res/ios/icon-40.png" width="40" height="40" />
-                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
-                  <!-- iPhone / iPod Touch -->
-                  <icon src="res/ios/icon.png" width="57" height="57" />
-                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
-                  <!-- iPad -->
-                  <icon src="res/ios/icon-72.png" width="72" height="72" />
-                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
-                  <!-- iPhone Spotlight and Settings Icon -->
-                  <icon src="res/ios/icon-small.png" width="29" height="29" />
-                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
-                  <!-- iPad Spotlight and Settings Icon -->
-                  <icon src="res/ios/icon-50.png" width="50" height="50" />
-                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
-         </platform>
-
-Windows Phone8
-
-         <platform name="wp8">
-                  <icon src="res/wp/ApplicationIcon.png" width="99" height="99" />
-                  <!-- tile image -->
-                  <icon src="res/wp/Background.png" width="159" height="159" />
-         </platform>
-
-Windows8
-
-         <platform name="windows8">
-                  <icon src="res/windows8/logo.png" width="150" height="150" />
-                  <icon src="res/windows8/smalllogo.png" width="30" height="30" />
-                  <icon src="res/windows8/storelogo.png" width="50" height="50" />
-         </platform>
-
-## Configuring Splash Screens in the CLI
-
-In the top-level `config.xml` file (not the one in `platforms`), add configuration elements like those specified here.
-
-# Example configuration
-
-Please notice that the value of the "src" attribute is relative to the project directory and not to the www directory.
-You can name the source image whatever you like. The internal name in the app are determined by Cordova.
-
+##Android
+```xml
     <platform name="android">
-        <!-- you can use any density that exists in the Android project -->
-        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
-        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
-        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
-        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
-
-        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
-        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
-        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
-        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+        <!-- 
+            ldpi    : 36x36 px
+            mdpi    : 48x48 px
+            hdpi    : 72x72 px
+            xhdpi   : 96x96 px
+            xxhdpi  : 144x144 px
+            xxxhdpi : 192x192 px
+        -->
+        <icon src="res/android/ldpi.png" density="ldpi" />
+        <icon src="res/android/mdpi.png" density="mdpi" />
+        <icon src="res/android/hdpi.png" density="hdpi" />
+        <icon src="res/android/xhdpi.png" density="xhdpi" />
+        <icon src="res/android/xxhdpi.png" density="xxhdpi" />
+        <icon src="res/android/xxxhdpi.png" density="xxxhdpi" />
     </platform>
+```
+###See Also
+- [Android icon guide](https://www.google.com/design/spec/style/icons.html)
+- [Android - Supporting multiple screens](http://developer.android.com/guide/practices/screens_support.html)
 
-    <platform name="ios">
-        <!-- images are determined by width and height. The following are supported -->
-        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
-        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
-        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
-        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
-        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
-        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
-        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
-        <splash src="res/screen/ios/Default-667h.png" width="750" height="1334"/>
-        <splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/>
-        <splash src="res/screen/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
-    </platform>
-
-    <platform name="wp8">
-        <!-- images are determined by width and height. The following are supported -->
-        <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
-    </platform>
-
-    <platform name="windows8">
-        <!-- images are determined by width and height. The following are supported -->
-        <splash src="res/screen/windows8/splashscreen.png" width="620" height="300"/>
-    </platform>
-
+##BlackBerry10
+```xml
     <platform name="blackberry10">
-        <!-- Add a rim:splash element for each resolution and locale you wish -->
-        <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
-        <rim:splash src="res/screen/windows8/splashscreen.png"/>
+        <icon src="res/bb10/icon-86.png" />
+        <icon src="res/bb10/icon-150.png" />
     </platform>
+```
+###See Also
+- [BlackBerry's documentation][blackberry_icon] for targeting multiple sizes and locales.
 
+##iOS
+```xml
+    <platform name="ios">
+        <!-- iOS 8.0+ -->
+        <!-- iPhone 6 Plus  -->
+        <icon src="res/ios/icon-60@3x.png" width="180" height="180" />
+        <!-- iOS 7.0+ -->
+        <!-- iPhone / iPod Touch  -->
+        <icon src="res/ios/icon-60.png" width="60" height="60" />
+        <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+        <!-- iPad -->
+        <icon src="res/ios/icon-76.png" width="76" height="76" />
+        <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+        <!-- iOS 6.1 -->
+        <!-- Spotlight Icon -->
+        <icon src="res/ios/icon-40.png" width="40" height="40" />
+        <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+        <!-- iPhone / iPod Touch -->
+        <icon src="res/ios/icon.png" width="57" height="57" />
+        <icon src="res/ios/icon@2x.png" width="114" height="114" />
+        <!-- iPad -->
+        <icon src="res/ios/icon-72.png" width="72" height="72" />
+        <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+        <!-- iPhone Spotlight and Settings Icon -->
+        <icon src="res/ios/icon-small.png" width="29" height="29" />
+        <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+        <!-- iPad Spotlight and Settings Icon -->
+        <icon src="res/ios/icon-50.png" width="50" height="50" />
+        <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+    </platform>
+```
+###See Also
+- [App icon and image size guidelines](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html)
 
-    <preference name="SplashScreenDelay" value="10000" />
+##Windows
+```xml
+    <platform name="windows">
+        <icon src="res/windows/logo.png" width="150" height="150" />
+        <icon src="res/windows/smalllogo.png" width="30" height="30" />
+        <icon src="res/windows/storelogo.png" width="50" height="50" />
+        <icon src="res/Windows/Square44x44Logo.scale-100.png" width="44" height="44" />
+        <icon src="res/Windows/Square44x44Logo.scale-240.png" width="106" height="106" />
+        <icon src="res/Windows/Square70x70Logo.scale-100.png" width="70" height="70" />
+        <icon src="res/Windows/Square71x71Logo.scale-100.png" width="71" height="71" />
+        <icon src="res/Windows/Square71x71Logo.scale-240.png" width="170" height="170" />
+        <icon src="res/Windows/Square150x150Logo.scale-240.png" width="360" height="360" />
+        <icon src="res/Windows/Square310x310Logo.scale-100.png" width="310" height="310" />
+        <icon src="res/Windows/Wide310x150Logo.scale-100.png" width="310" height="150" />
+        <icon src="res/Windows/Wide310x150Logo.scale-240.png" width="744" height="360" />
+    </platform>
+```
+###See Also:
+- [Windows platform guidelines for icons](https://msdn.microsoft.com/en-us/library/windows/apps/mt412102.aspx).
 
-# Supported platforms
+##Windows Phone 8 (WP8 Platform)
+```xml
+    <platform name="wp8">
+        <icon src="res/wp/ApplicationIcon.png" width="99" height="99" />
+        <!-- tile image -->
+        <icon src="res/wp/Background.png" width="159" height="159" />
+    </platform>
+```
 
-As of now (Cordova 3.5.0 July 2014) the following platforms support splash screens.
-
-    android
-    ios
-    wp8
-    windows8
-    blackberry10
-
-# Splashscreen Plugin
-
-  Apache Cordova also offers special splash screen plugin which could be used to programmatically display and hide a splash screen during application launch
-  https://github.com/apache/cordova-plugin-splashscreen
-
-
+[blackberry_icon]: http://developer.blackberry.com/html5/documentation/icon_element.html
+[splashscreen_plugin]: ../cordova-plugin-splashscreen/
