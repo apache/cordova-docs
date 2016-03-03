@@ -189,16 +189,30 @@ platform. See [Customize icons topic](images.html) for more information.
     <allow-intent href="sms:*" />
 
 ## engine
-   Specifies what platform to restore during a prepare. For more details, see the [Platforms & Plugins Version Management](../platform_plugin_versioning_ref/index.html).
+   Specifies details about what platform to restore during a prepare. 
 
    Attributes(type) | Description
    ----------------- | ------------
    name(string) | *Required* <br/> Name of the platform to be restored
-   spec(string) | *Required* <br/> Version of the platform to be restored
+   spec(string) | *Required* <br/> Details about the platform to be restored. This could be a ```major.minor.patch``` version number, a directory containing the platform or a url pointing to a git repository. This information will be used to retrieve the platform code to restore from NPM, a local directory or a git repository. See [Platform Spec](../cordova-cli/index.html#platform-spec) for further details.
 
    Examples:
 
-    <engine name="android" spec="^4.0.0" />
+    <engine name="android" spec="https://github.com/apache/cordova-android.git#5.1.1" />
+    <engine name="ios" spec="^4.0.0" />
+    
+## plugin
+   Specifies details about what plugin to restore during a prepare.  
+
+   Attributes(type) | Description
+   ----------------- | ------------
+   name(string) | *Required* <br/> Name of the plugin to be restored
+   spec(string) | *Required* <br/> Details about the plugin to be restored. This could be a ```major.minor.patch``` version number, a directory containing the plugin or a url pointing to a git repository. This information will be used to retrieve the plugin code to restore from NPM, a local directory or a git repository. See [Plugin Spec](../cordova-cli/index.html#plugin-spec) for further details.
+
+   Examples:
+
+    <plugin name="cordova-plugin-device" spec="^1.1.0" />
+    <plugin name="cordova-plugin-device" spec="https://github.com/apache/cordova-plugin-device.git#1.0.0" />
 
 ## preference
    Sets various options as pairs of name/value attributes. Each preference's name is case-insensitive. Many preferences are unique to specific platforms,
@@ -252,6 +266,11 @@ platform. See [Customize icons topic](images.html) for more information.
    UIWebViewDecelerationSpeed(string) | *Default: normal* <br/> Allowed values: normal, fast <br/> ==iOS== <br/> This property controls the deceleration speed of momentum scrolling. normal is the default speed for most native apps, and fast is the default for Mobile Safari.
    WebSecurity(string) | *Default: enable* <br/> ==BlackBerry== <br/> Set to disable to override web security settings, allowing access to remote content from unknown sources. This preference is intended as a development convenience only, so remove it before packaging the app for distribution. For the released app, all URIs should be known and whitelisted using the <access> element, described in the Domain Whitelist Guide.
    WindowSize(string) | *Default: auto* <br/> ==OS X **4.0.0**== <br/> Sets the size of the application window. <br/> Accepts the format `WxH` for a specific width and height or the special values `auto` and `fullscreen`. The latter will open a borderless window spanning the entire desktop area. Please note, that this is different from the _normal_ OS X fullscreen mode, which would never span multiple displays. <br/> **Note**: The global cordova `fullscreen` preference has no effect in OS X.
+   WindowsDefaultUriPrefix(string) | ==Windows== <br/> Allowed values: `ms-appx://`, `ms-appx-web://` <br/>  Identifies whether you want your app to target the local context or remote context as its startup URI. When building for Windows 10, the default is the remote context (`ms-appx-web://`). <br/> In order to have a local-mode application that is not impacted by Remote Mode capability restrictions, you must set this preference to `ms-appx://` and not declare any `<access>` elements with remote URIs. The local mode is the default for Windows 8.1
+   WindowsStoreDisplayName(string) | ==Windows== <br/> A friendly name for the publisher that can be displayed to users. 
+   WindowsStoreIdentityName(string) | ==Windows== <br/> Identity name used for Windows store. The identity defines a globally unique identifier for a package. A package identity is represented as a tuple of attributes of the package. See the [identity page on the package manifest schema reference](https://msdn.microsoft.com/en-us/library/windows/apps/br211441.aspx) for further details.
+   WindowsStorePublisherName(string) | ==Windows== <br/> Publisher Display Name.
+   WindowsToastCapable(boolean) | *Default: false* <br/> ==Windows== <br/> A value of ```true``` indicates that the app is allowed to provide 'toast notifications'.
    deployment-target(string) | ==iOS== <br/> This sets the IPHONEOS_DEPLOYMENT_TARGET in the build, which ultimately tranlsates to the MinimumOSVersion in the ipa. For more details please refer to Apple's documentation on Deployment Target Settings
    target-device(string) | *Default: universal* <br/> Allowed values: handset, tablet, universal <br/> ==iOS== <br/> This property maps directly to TARGETED_DEVICE_FAMILY in the xcode project. Note that if you target universal (which is the default) you will need to supply screen shots for both iPhone and iPad or your app may be rejected.
    windows-phone-target-version(string) | ==Windows== <br/> Sets the version of Windows Phone for which the package (resulting from ```cordova build```) will target. If none is specified, it will be set to the same version as ```windows-target-version``` (if found).
