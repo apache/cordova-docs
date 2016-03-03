@@ -20,6 +20,8 @@
                     url: "guide/platforms/blackberry10/home.html"
                 -   name: "iOS"
                     url: "guide/platforms/ios/index.html"
+                -   name: "OS X"
+                    url: "guide/platforms/osx/index.html"
                 -   name: "Ubuntu"
                     url: "guide/platforms/ubuntu/index.html"
                 -   name: "Windows"
