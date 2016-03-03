@@ -67,23 +67,20 @@ platform. See [Customize icons topic](images.html) for more information.
 
    Examples:
 
-    <widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    </widget>
-
     <!-- Android -->
-    <widget android-versionCode="0.1.3">
+    <widget id="io.cordova.hellocordova" version="0.0.1" android-versionCode="0.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     </widget>
 
     <!-- iOS -->
-    <widget ios-CFBundleVersion="0.1.3">
+    <widget id="io.cordova.hellocordova" version="0.0.1" ios-CFBundleVersion="0.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     </widget>
 
     <!-- Windows -->
-    <widget packageVersion="0.1.3">
+    <widget id="io.cordova.hellocordova" version="0.0.1" windows-packageVersion="0.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     </widget>
 
     <!-- OS X -->
-    <widget osx-CFBundleVersion="0.1.3">
+    <widget id="io.cordova.hellocordova" version="0.0.1" osx-CFBundleVersion="0.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     </widget>
 
 ## name
@@ -226,7 +223,7 @@ platform. See [Customize icons topic](images.html) for more information.
    android-minSdkVersion(integer) | *Default: Dependent on cordova-android Version* <br/> ==Android== <br/> Sets the `minSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
    android-targetSdkVersion(integer) | *Default: Dependent on cordova-android Version* <br/> ==Android== <br/> Sets the `targetSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
    AppendUserAgent(string) | ==Android== ==iOS== <br/> If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.
-   BackgroundColor(string) | ==Android== ==BlackBerry== ==Windows== <br/> Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. <br/> For Windows, it is a three-byte hexadecimal number preceded by "#" or a named color.
+   BackgroundColor(string) | ==Android== ==BlackBerry== ==Windows== <br/> Sets the app's background color. Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. <br/> For Windows, the alpha channel is ignored.
    BackupWebStorage(string) | *Default: cloud* <br/> Allowed values: none, local, cloud. <br/> ==iOS== <br/>  Set to cloud to allow web storage data to backup via iCloud. Set to local to allow only local backups via iTunes sync. Set to none prevent web storage backups.
    ChildBrowser(string) | *Default: enable* <br/> ==BlackBerry== <br/> Disables child browser windows. By default, apps launch a secondary browser window to display resources accessed via window.open() or by specifying a _blank anchor target. Specify disable to override this default behavior.
    CordovaWebViewEngine(string) | *Default: CDVUIWebViewEngine* <br/> ==iOS== <br/> This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The 'value' here should match the 'feature' name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.
@@ -258,9 +255,6 @@ platform. See [Customize icons topic](images.html) for more information.
    PopupBlocker(string) | *Default: enable* <br/> ==BlackBerry== <br/> Enables the popup blocker, which prevents calls to window.open(). By default, popups display in a child browser window. Setting the preference to enable prevents it from displaying at all.
    SetFullscreen(boolean) | *Default: false* <br/> ==Android== <br/> Same as the Fullscreen parameter in the global configuration of this xml file. This Android-specific element is deprecated in favor of the global Fullscreen element, and will be removed in a future version.
    ShowTitle(boolean) | *Default: false* <br/> ==Android== <br/> Show the title at the top of the screen.
-   SplashScreen(string) | *Default: splash* <br/> ==Android== <br/> The name of the file minus its extension in the ```res/drawable``` directory. Various assets must share this common name in various subdirectories.
-   SplashScreenBackgroundColor(string) | ==Windows== <br/> Supports either a three-byte hex value preceded by '#' or a named color. <br/> Specifies the background color of the splash screen.
-   SplashScreenDelay(number in milliseconds) | *Default: 3000, 3 seconds* <br/> ==Android== <br/> The amount of time the splash screen image displays.
    Suppresses3DTouchGesture(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to avoid 3D Touch capable iOS devices rendering a magnifying glass widget when the user applies force while longpressing the webview. Test your app thoroughly since this disables onclick handlers, but plays nice with ontouchend. If this setting is true, SuppressesLongPressGesture will effectively be true as well.
    SuppressesIncrementalRendering(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to wait until all content has been received before it renders to the screen.
    SuppressesLongPressGesture(boolean) | *Default: false* <br/> ==iOS== <br/> Set to true to avoid iOS9+ rendering a magnifying glass widget when the user longpresses the webview. Test your app thoroughly since this may interfere with text selection capabilities.
@@ -328,6 +322,9 @@ platform. See [Customize icons topic](images.html) for more information.
     <preference name="WindowsDefaultUriPrefix" value="ms-appx://"" />
     <preference name="Windows.Mobile-MaxVersionTested" value="10.0.10031.0" />
     <preference name="Windows.Universal-MinVersion" value="10.0.0.0" />
+    <preference name="WindowsStoreIdentityName" value="Cordova.Example.ApplicationDataSample" />
+    <preference name="WindowsStorePublisherName" value="CN=Contoso Corp, O=Contoso Corp, L=Redmond, S=Washington, C=US" />
+    <preference name="WindowsToastCapable" value="true" />
 
     <!-- BlackBerry only preferences -->
     <preference name="ChildBrowser" value="disable"/>
