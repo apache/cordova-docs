@@ -57,7 +57,7 @@ platform. See [Customize icons topic](images.html) for more information.
    ---------------- | ------------
    id(string) | *Required* <br/> Specifies the app's reverse-domain identifier, and the `version` its full version number expressed in major/minor/patch notation.
    version(string) | *Required* <br/> Full version number expressed in major/minor/patch notation.
-   versionCode(string) | ==Android== <br/> Alternative version for Android. For further details, see [Android versioning](http://developer.android.com/tools/publishing/versioning.html)
+   android-versionCode(string) | ==Android== <br/> Alternative version for Android. Sets the [version code](http://developer.android.com/tools/publishing/versioning.html) for the application. See [the Android guide](../guide/platforms/android/index.html#setting-the-version-code) for information on how this attribute may be modified.
    ios-CFBundleVersion(string) |  ==iOS== <br/> Alternative version for iOS. For further details, see [iOS versioning](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
    osx-CFBundleVersion(string) |  ==OS X== <br/> Alternative version for OS X. For further details, see [OS X versioning](https://developer.apple.com/library/prerelease/mac/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
    packageVersion(string) |   ==Windows== <br/> Alternative version for Windows. For futher details, see [Windows versioning](https://msdn.microsoft.com/en-us/library/windows/apps/br211441.aspx)
@@ -71,7 +71,7 @@ platform. See [Customize icons topic](images.html) for more information.
     </widget>
 
     <!-- Android -->
-    <widget versionCode="0.1.3">
+    <widget android-versionCode="0.1.3">
     </widget>
 
     <!-- iOS -->
@@ -179,7 +179,7 @@ platform. See [Customize icons topic](images.html) for more information.
    Attributes(type) | Description
    ----------------- | ------------
    href(string) | *Required* <br/> Defines which URLs the app is allowed to ask the system to open.
-   See the cordova-plugin-whitelist [cordova-plugin-whitelist](../cordova-plugin-whitelist/index.html#intent-whitelist) for details.  
+   See the cordova-plugin-whitelist [cordova-plugin-whitelist](../cordova-plugin-whitelist/index.html#intent-whitelist) for details.
 
    Examples:
 
@@ -202,7 +202,7 @@ platform. See [Customize icons topic](images.html) for more information.
 
 ## preference
    Sets various options as pairs of name/value attributes. Each preference's name is case-insensitive. Many preferences are unique to specific platforms,
-   and will be indicated as such.  
+   and will be indicated as such.
 
    Attributes(type) | Description
    ----------------- | ------------
@@ -313,7 +313,7 @@ platform. See [Customize icons topic](images.html) for more information.
     <preference name="ChildBrowser" value="disable"/>
     <preference name="PopupBlocker" value="enable"/>
     <preference name="WebSecurity" value="disable"/>
-    
+
     <!-- OS X only preferences -->
     <preference name="HideMousePointer" value="5"/>
     <preference name="OSXLocalStoragePath" value="~/.myapp/database"/>
@@ -360,7 +360,7 @@ platform. See [Customize icons topic](images.html) for more information.
 
 
 ## platform
-   When using the CLI to build applications, it is sometimes necessary to specify preferences or other elements specific to a particular platform. Use the <platform> element to specify configuration that should only appear in a single platform-specific config.xml file.  
+   When using the CLI to build applications, it is sometimes necessary to specify preferences or other elements specific to a particular platform. Use the <platform> element to specify configuration that should only appear in a single platform-specific config.xml file.
 
    Attributes(type) | Description
    ----------------- | ------------

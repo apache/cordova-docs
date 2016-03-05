@@ -252,6 +252,34 @@ Note that plugins can also include `build-extras.gradle` files via:
     <framework src="some.gradle" custom="true" type="gradleReference" />
 
 
+### Setting the Version Code
+
+To change the [version code](http://developer.android.com/tools/publishing/versioning.html) for your app's generated apk,
+set the `android-versionCode` attribute in the widget element of your application's
+[config.xml file](../../../config_ref/index.html). If the `android-versionCode` is not set, the
+version code will be determined using the `version` attribute. For example,
+if the version is `MAJOR.MINOR.PATCH`:
+
+```
+versionCode = MAJOR * 10000 + MINOR * 100 + PATCH
+```
+
+If your application has enabled the `cdvBuildMultipleApks` Gradle property (see
+[Setting Gradle Properties](#setting-gradle-properties)), the version code of your app
+will also be multiplied by 10 so that the last digit of the code can be used
+to indicate the architecture the apk was built for. This multiplication will happen
+regardless of whether the version code is taken from the `android-versionCode`
+attribute or generated using the `version`. Be aware that some plugins added to your
+project (including cordova-plugin-crosswalk-webview) may set this Gradle property
+automatically.
+
+**Please Note:** When updating the `android-versionCode` property, it is unwise to
+increment the version code taken from built apks. Instead, you should increment
+the code based off the value in your `config.xml` file's `android-versionCode`
+attribute. This is because the `cdvBuildMultipleApks` property causes the version code
+to be multiplied by 10 in the built apks and thus using that value will cause your next
+version code to be 100 times the original, etc.
+
 ## Signing an App
 
 First, you should read the [Android app signing requirements](http://developer.android.com/tools/publishing/app-signing.html).
@@ -371,7 +399,7 @@ for more details.
 
 cordova-android includes a number of scripts that allow the platform to be used
 without the full Cordova CLI. This development path may offer you a greater
-range of development options in certain situations than the cross-platform cordova CLI. 
+range of development options in certain situations than the cross-platform cordova CLI.
 For example, you need to use shell tools when deploying a custom
 Cordova WebView alongside native components. Before using this
 development path, you must still configure the Android SDK environment
