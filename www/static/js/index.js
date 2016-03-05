@@ -168,7 +168,7 @@ $(document).ready(function () {
             //      are annoying to escape
             var targetSelector = "*[id='" + targetName + "'], *[name='" + targetName + "']";
 
-            var matchingTargets  = $(targetSelector);
+            var matchingTargets = $(targetSelector);
             if (matchingTargets.length < 1) {
                 return;
             }
@@ -177,10 +177,15 @@ $(document).ready(function () {
             }
 
             // get resulting scroll height
-            // NOTE:
-            //      offset() returns the offset for the first element
-            //      if the array contains more than one element
-            var scrollHeight = matchingTargets.offset().top;
+            var matchingTarget = matchingTargets.first();
+            var scrollHeight   = matchingTarget.offset().top;
+
+            // add an extra offset (to account for the fixed page header),
+            // but only if there is no "fragment-anchor" class (because it
+            // already has an offset of its own for this purpose)
+            if (!matchingTarget.hasClass("fragment-anchor")) {
+                scrollHeight -= 50;
+            }
 
             // animate
             $('html, body').animate(
