@@ -1,8 +1,0 @@
-{
-    "language": "English",
-    "merge": {
-        "events.md": [
-            "cordova/events/events.md"
-        ]
-    }
-}
