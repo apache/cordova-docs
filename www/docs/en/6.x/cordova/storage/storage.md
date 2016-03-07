@@ -25,21 +25,19 @@ title: Storage
 > An overview of storage options for Cordova.
 
 Several storage APIs are available for Cordova applications.
-See
-[html5rocks](http://www.html5rocks.com/en/features/storage).
-for a more complete overview and examples.
+See [html5rocks][Html5RocksStorage], for a more complete overview and examples.
 
 ## LocalStorage
 
 Also known as _web storage_, _simple storage_, or by its alternate
 _session storage_ interface, this API provides synchronous key/value
 pair storage, and is available in underlying WebView implementations.
-Refer to [the W3C spec](http://www.w3.org/TR/webstorage/) for details.
+Refer to the [W3C spec][W3CSpecStorage] for details.
 
 ## WebSQL
 
 This API is available in the underlying WebView.
-The [Web SQL Database Specification](http://dev.w3.org/html5/webdatabase/)
+The [Web SQL Database Specification][WebSQLDatabaseSpecification]
 offers more full-featured database tables accessed via SQL queries.
 
 The following platforms support WebSQL:
@@ -51,19 +49,24 @@ The following platforms support WebSQL:
 ## IndexedDB
 
 This API is available in the underlying WebView.
-[Indexed DB](http://www.w3.org/TR/IndexedDB/) offers more features
+[Indexed DB][IndexedDB] offers more features
 than LocalStorage but fewer than WebSQL.
 
 The following platforms support IndexedDB:
 
 - BlackBerry 10
-- Firefox OS
 - Windows Phone 8
 - Windows 8
 
 ## Plugin-Based Options
 
 In addition to the storage APIs listed above, the
-[File API](https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md)
-allows you to cache data on the local file system.  Other
-[Cordova plugins](http://plugins.cordova.io/) provide similar storage options.
+[File API][FileAPI] allows you to cache data on the local file system.  Other
+[Cordova plugins][CordovaPlugins] provide similar storage options.
+
+[Html5RocksStorage]: http://www.html5rocks.com/en/features/storage
+[W3CSpecStorage]: http://www.w3.org/TR/webstorage/
+[WebSQLDatabaseSpecification]: http://dev.w3.org/html5/webdatabase/
+[IndexedDB]: http://www.w3.org/TR/IndexedDB/
+[FileAPI]: https://github.com/apache/cordova-plugin-file/blob/master/README.md
+[CordovaPlugins]: {{ site.baseurl }}/plugins

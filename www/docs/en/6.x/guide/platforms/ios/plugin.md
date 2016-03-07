@@ -17,13 +17,13 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: iOS Plugins
+title: iOS Plugin Development Guide
 ---
 
-# iOS Plugins
+# iOS Plugin Development Guide
 
 This section provides details for how to implement native plugin code
-on the iOS platform. Before reading this, see Application Plugins for
+on the iOS platform. Before reading this, see [Plugin Development Guide][plugin-dev] for
 an overview of the plugin's structure and its common JavaScript
 interface. This section continues to demonstrate the sample _echo_
 plugin that communicates from the Cordova webview to the native
@@ -48,8 +48,7 @@ the arguments passed in the `args` array.
 
 Specify the plugin as a `<feature>` tag in your Cordova-iOS
 application's project's `config.xml` file, using the `plugin.xml` file
-to inject this markup automatically, as described in Application
-Plugins:
+to inject this markup automatically, as described in [Plugin Development Guide][plugin-dev]:
 
         <feature name="LocalStorage">
             <param name="ios-package" value="CDVLocalStorage" />
@@ -65,22 +64,22 @@ able to access it.
 ## Plugin Initialization and Lifetime
 
 One instance of a plugin object is created for the life of each
-`UIWebView`. Plugins are ordinarily instantiated when first referenced
-by a call from JavaScript. Otherwise they can be instantiated by
-setting a `param` named `onload` to `true` in the `config.xml` file:
+`UIWebView`. Plugins are not instantiated until they are first
+referenced by a call from JavaScript, unless `<param>` with an `onload`
+`name` attribute is set to `"true"` in `config.xml`. For example,
 
         <feature name="Echo">
             <param name="ios-package" value="Echo" />
             <param name="onload" value="true" />
         </feature>
 
-There is _no_ designated initializer for plugins. Instead, plugins
-should use the `pluginInitialize` method for their startup logic.
+Plugins should use the `pluginInitialize` method for their startup logic.
 
-Plugins with long-running requests, background activity such as media
-playback, listeners, or that maintain internal state should implement
-the `onReset` method to clean up those activities. The method runs
-when the `UIWebView` navigates to a new page or refreshes, which
+Plugins with long-running requests or background activities such as media
+playback, listeners, or that maintain internal state should implement 
+the `onReset` method to cancel those long-running requests or to clean up 
+after those activities.
+The method runs when the `UIWebView` navigates to a new page or refreshes, which
 reloads the JavaScript.
 
 ## Writing an iOS Cordova Plugin
@@ -154,7 +153,7 @@ Then we would add the following `Echo.h` and `Echo.m` files to the
 
         /********* Echo.h Cordova Plugin Header *******/
 
-        #import <Cordova/CDV.h>
+        #import <Cordova/CDVPlugin.h>
 
         @interface Echo : CDVPlugin
 
@@ -165,7 +164,7 @@ Then we would add the following `Echo.h` and `Echo.m` files to the
         /********* Echo.m Cordova Plugin Implementation *******/
 
         #import "Echo.h"
-        #import <Cordova/CDV.h>
+        #import <Cordova/CDVPlugin.h>
 
         @implementation Echo
 
@@ -203,7 +202,7 @@ success callback is called, it passes in the `echo` parameter.
 ## iOS Integration
 
 The `CDVPlugin` class features other methods that your plugin can
-override.  For example, you can capture the `[pause](../../../cordova/events/events.pause.html)`, `[resume](../../../cordova/events/events.resume.html)`, app
+override.  For example, you can capture the [pause][PauseEvent], [resume][ResumeEvent], app
 terminate and `handleOpenURL` events. See the
 [CDVPlugin.h][CDVPlugin.h] and [CDVPlugin.m][CDVPlugin.m]
 classes for guidance.
@@ -230,10 +229,7 @@ example:
 ## Debugging iOS Plugins
 
 To debug on the Objective-C side, you need Xcode's built-in debugger.
-For JavaScript, on iOS 5.0 or greater you can use [Weinre, an Apache Cordova
-Project](https://github.com/apache/cordova-weinre) or [iWebInspector,
-a third-party utility](http://www.iwebinspector.com/).  For iOS 8, you
-can attach Safari 8.0 to the app running within the iOS 8 Simulator.
+For JavaScript, you can attach Safari to the app running within the iOS Simulator/Device.
 
 ## Common Pitfalls
 
@@ -249,3 +245,5 @@ can attach Safari 8.0 to the app running within the iOS 8 Simulator.
 [CDVCommandDelegate.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVCommandDelegate.h
 [CDVPlugin.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPlugin.h
 [CDVPlugin.m]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPlugin.m
+[ResumeEvent]: ../../../cordova/events/events.html#resume
+[PauseEvent]: ../../../cordova/events/events.html#pause

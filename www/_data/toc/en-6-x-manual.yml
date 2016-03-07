@@ -1,20 +1,140 @@
-- {name: !!python/unicode 'Guides', url: !!python/unicode ''}
-- {name: !!python/unicode 'Overview', url: !!python/unicode 'guide/overview/index.html'}
-- {name: !!python/unicode 'Platform Support', url: !!python/unicode 'guide/support/index.html'}
-- {name: !!python/unicode 'The Command-Line Interface', url: !!python/unicode 'guide/cli/index.html'}
-- {name: !!python/unicode 'Platform Guides', url: !!python/unicode 'guide/platforms/index.html'}
-- {name: !!python/unicode 'Using Plugman to Manage Plugins', url: !!python/unicode 'plugin_ref/plugman.html'}
-- {name: !!python/unicode 'The config.xml File', url: !!python/unicode 'config_ref/index.html'}
-- {name: !!python/unicode 'Icons and Splash Screens', url: !!python/unicode 'config_ref/images.html'}
-- {name: !!python/unicode 'Embedding WebViews', url: !!python/unicode 'guide/hybrid/webviews/index.html'}
-- {name: !!python/unicode 'Plugin Development Guide', url: !!python/unicode 'guide/hybrid/plugins/index.html'}
-- {name: !!python/unicode 'Plugin Specification', url: !!python/unicode 'plugin_ref/spec.html'}
-- {name: !!python/unicode 'Privacy Guide', url: !!python/unicode 'guide/appdev/privacy/index.html'}
-- {name: !!python/unicode 'Security Guide', url: !!python/unicode 'guide/appdev/security/index.html'}
-- {name: !!python/unicode 'Platforms and Plugins Version Management', url: !!python/unicode 'platform_plugin_versioning_ref/index.html'}
-- {name: !!python/unicode 'Whitelist Guide', url: !!python/unicode 'guide/appdev/whitelist/index.html'}
-- {name: !!python/unicode 'Storage', url: !!python/unicode 'cordova/storage/storage.html'}
-- {name: !!python/unicode 'Hooks Guide', url: !!python/unicode 'guide/appdev/hooks/index.html'}
-- {name: !!python/unicode 'Next Steps', url: !!python/unicode 'guide/next/index.html'}
-- {name: !!python/unicode 'Events', url: !!python/unicode 'cordova/events/events.html'}
-- {name: !!python/unicode 'Plugin APIs', url: !!python/unicode 'cordova/plugins/pluginapis.html'}
+-   name: "Introduction"
+    children:
+        -   name: "Overview"
+            url: "guide/overview/index.html"
+#        -   name: "Runtime Architecture"
+#            url:
+#        -   name: "Tooling Architecture"
+#            url:
+-   name: "Create apps"
+    children:
+        -   name: "Create your first app"
+            url: "guide/cli/index.html"
+        -   name: "Platform support"
+            url: "guide/support/index.html"
+        -   name: "Develop for platforms"
+            children:
+                -   name: "Android"
+                    url: "guide/platforms/android/index.html"
+                -   name: "Blackberry 10"
+                    url: "guide/platforms/blackberry10/home.html"
+                -   name: "iOS"
+                    url: "guide/platforms/ios/index.html"
+                -   name: "OS X"
+                    url: "guide/platforms/osx/index.html"
+                -   name: "Ubuntu"
+                    url: "guide/platforms/ubuntu/index.html"
+                -   name: "Windows"
+                    url: "guide/platforms/win8/index.html"
+                -   name: "WP8"
+                    url: "guide/platforms/wp8/home.html"
+        -   name: "Manage versions and platforms"
+            url: "platform_plugin_versioning_ref/index.html"
+        -   name: "Debug and test"
+            url:
+        -   name: "Customize icons"
+            url: "config_ref/images.html"
+        -   name: "Automate Tasks"
+            url:
+        -   name: "Store data"
+            url: "cordova/storage/storage.html"
+        -   name: "Manage privacy"
+            url: "guide/appdev/privacy/index.html"
+        -   name: "Manage security"
+            url: "guide/appdev/security/index.html"
+        -   name: "Whitelisting"
+            url: "guide/appdev/whitelist/index.html"
+        -   name: "Publish"
+            url:
+-   name: "Create plugins"
+    children:
+        -   name: "Create a plugin"
+            url: "guide/hybrid/plugins/index.html"
+        -   name: "Register with NPM"
+            url:
+        -   name: "Develop for platforms"
+            children:
+                -   name: "Android"
+                    url: "guide/platforms/android/plugin.html"
+                -   name: "Blackberry 10"
+                    url: "guide/platforms/blackberry10/plugin.html"
+                -   name: "iOS"
+                    url: "guide/platforms/ios/plugin.html"
+                -   name: "Windows"
+                    url: "guide/platforms/win8/plugin.html"
+                -   name: "WP8"
+                    url: "guide/platforms/wp8/plugin.html"
+        -   name: "Use Plugman"
+            url: "plugin_ref/plugman.html"
+        -   name: "Debug and test"
+            url:
+-   name: "Advanced Topics"
+    children:
+        -   name: "Embed Cordova in native apps"
+            url: "guide/hybrid/webviews/index.html"
+        -   name: "Pass data from Cordova app to host"
+            url:
+        -   name: "Next Steps"
+            url: "guide/next/index.html"
+-   name: "Reference"
+    children:
+        -   name: "Config.xml"
+            url: "config_ref/index.html"
+        -   name: "Events"
+            url: "cordova/events/events.html"
+        -   name: "CLI"
+            url: "cordova-cli/index.html"
+        -   name: "Hooks"
+            url: "guide/appdev/hooks/index.html"
+        -   name: "Plugin.xml"
+            url: "plugin_ref/spec.html"
+        -   name: "Plugin APIs"
+            children:
+                -   name: Battery Status
+                    url: "cordova-plugin-battery-status/index.html"
+                -   name: Camera
+                    url: "cordova-plugin-camera/index.html"
+                -   name: Console
+                    url: "cordova-plugin-console/index.html"
+                -   name: Contacts
+                    url: "cordova-plugin-contacts/index.html"
+                -   name: Device
+                    url: "cordova-plugin-device/index.html"
+                -   name: Device Motion
+                    url: "cordova-plugin-device-motion/index.html"
+                -   name: Device Orientation
+                    url: "cordova-plugin-device-orientation/index.html"
+                -   name: Dialogs
+                    url: "cordova-plugin-dialogs/index.html"
+                -   name: File
+                    url: "cordova-plugin-file/index.html"
+                -   name: File Transfer
+                    url: "cordova-plugin-file-transfer/index.html"
+                -   name: Geolocation
+                    url: "cordova-plugin-geolocation/index.html"
+                -   name: Globalization
+                    url: "cordova-plugin-globalization/index.html"
+                -   name: Inappbrowser
+                    url: "cordova-plugin-inappbrowser/index.html"
+                -   name: Media
+                    url: "cordova-plugin-media/index.html"
+                -   name: Media Capture
+                    url: "cordova-plugin-media-capture/index.html"
+                -   name: Network Information
+                    url: "cordova-plugin-network-information/index.html"
+                -   name: Splashscreen
+                    url: "cordova-plugin-splashscreen/index.html"
+                -   name: Vibration
+                    url: "cordova-plugin-vibration/index.html"
+                -   name: Statusbar
+                    url: "cordova-plugin-statusbar/index.html"
+                -   name: Whitelist
+                    url: "cordova-plugin-whitelist/index.html"
+                -   name: Legacy Whitelist
+                    url: "cordova-plugin-legacy-whitelist/index.html"
+# -   name: "Tutorials"
+#     children:
+#         -   name: "Share your app in source control"
+#             url:
+-   name: "Sample Apps"
+    url:
