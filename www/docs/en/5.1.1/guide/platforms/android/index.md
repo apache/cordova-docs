@@ -73,7 +73,7 @@ according to JDK installation path (for example, C:\Program Files\Java\jdk1.7.0_
 
 ## Install the Android SDK
 
-Install the [Android Stand-alone SDK Tools](http://developer.android.com/sdk/installing/index.html?pkg=tools) or [Android Studio](http://developer.android.com/sdk/installing/index.html?pkg=studio). Procceed with `Android Studio` if you plan
+Install the [Android Stand-alone SDK Tools](http://developer.android.com/sdk/installing/index.html?pkg=tools) or [Android Studio](http://developer.android.com/sdk/installing/index.html?pkg=studio). Proceed with `Android Studio` if you plan 
 developing new Cordova for Android plugins or using native tools to
 run and debug Android platform. Otherwise, `Android Stand-alone SDK Tools`
 are enough to build and deploy Android application.
@@ -128,7 +128,7 @@ for more details.
 
 Android sdk doesn't provide any default emulator instance by default. You can
 create a new one by running `android` on the command line.
-The press __Tools &rarr; Manage AVDs__ (Android Virtual Devices),
+Then, press __Tools &rarr; Manage AVDs__ (Android Virtual Devices),
 then choose any item from __Device Definitions__ in the resulting dialog
 box:
 
@@ -163,7 +163,7 @@ Another way to find out if your Intel processor supports VT-x Technology, it's b
 `Intel Processor Identification Utility`, for `Windows`you can download it from the Intel [Download Center](https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7838),
 or you can use the [booteable utility](https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7840&lang=eng), which is `OS Independent`.
 
-After install and execute the `Intel Processor Identification Utility` over Windows, you will get the following window,
+After installing and executing the `Intel Processor Identification Utility` over Windows, you will get the following window, 
 in order to check if your CPU supports the Virtualization Technologies:
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/android/intel_pid_util_620px.png)
