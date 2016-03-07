@@ -257,7 +257,7 @@ Note that plugins can also include `build-extras.gradle` files via:
 To change the [version code](http://developer.android.com/tools/publishing/versioning.html) for your app's generated apk,
 set the `android-versionCode` attribute in the widget element of your application's
 [config.xml file](../../../config_ref/index.html). If the `android-versionCode` is not set, the
-version code will instead be determined using the `version` attribute. For example,
+version code will be determined using the `version` attribute. For example,
 if the version is `MAJOR.MINOR.PATCH`:
 
 ```

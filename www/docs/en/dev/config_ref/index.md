@@ -57,7 +57,7 @@ platform. See [Customize icons topic](images.html) for more information.
    ---------------- | ------------
    id(string) | *Required* <br/> Specifies the app's reverse-domain identifier, and the `version` its full version number expressed in major/minor/patch notation.
    version(string) | *Required* <br/> Full version number expressed in major/minor/patch notation.
-   android-versionCode(string) | ==Android== <br/> Alternative version for Android. Sets the [version code](http://developer.android.com/tools/publishing/versioning.html) for the application. See [the Android guide](../guide/platforms/android/index.html#setting-the-version-code) for information on how this code may be modified.
+   android-versionCode(string) | ==Android== <br/> Alternative version for Android. Sets the [version code](http://developer.android.com/tools/publishing/versioning.html) for the application. See [the Android guide](../guide/platforms/android/index.html#setting-the-version-code) for information on how this attribute may be modified.
    ios-CFBundleVersion(string) |  ==iOS== <br/> Alternative version for iOS. For further details, see [iOS versioning](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
    osx-CFBundleVersion(string) |  ==OS X== <br/> Alternative version for OS X. For further details, see [OS X versioning](https://developer.apple.com/library/prerelease/mac/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
    packageVersion(string) |   ==Windows== <br/> Alternative version for Windows. For futher details, see [Windows versioning](https://msdn.microsoft.com/en-us/library/windows/apps/br211441.aspx)
@@ -71,7 +71,7 @@ platform. See [Customize icons topic](images.html) for more information.
     </widget>
 
     <!-- Android -->
-    <widget versionCode="0.1.3">
+    <widget android-versionCode="0.1.3">
     </widget>
 
     <!-- iOS -->
