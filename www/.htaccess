@@ -32,15 +32,6 @@ RewriteRule ^.*docs/(\w\w)/$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
 #       docs/XX/latest -> docs/XX/latest/
 RewriteRule ^.*docs/(\w\w)/latest$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
 
-# rewrite only:
-#       /docs/XX/latest/* -> /docs/XX/Y.Y.Y/*
-#
-# NOTE:
-#       This does NOT return a redirect. It returns the resource *as if* the
-#       redirected URI was requested. That is, both URIs return the same
-#       resource, but the browser won't change the URI (no redirects followed).
-RewriteRule ^.*docs/(\w\w)/latest/(.*)$ {{site.baseurl}}/docs/$1/{{site.latest_docs_version}}/$2 [L]
-
 # 301 (perm):
 #       docs/XX/edge  -> docs/xx/edge/
 #       docs/XX/edge/ -> docs/xx/dev/
@@ -71,3 +62,17 @@ RewriteRule ^.*docs/(\w\w)/6.0.0/(.*)$ {{site.baseurl}}/docs/$1/6.x/$2 [R=301,L]
 #       old pages -> new pages
 {% for redirect in site.data.redirects.general %}RewriteRule ^.*/{{redirect.old}}$ {{site.baseurl}}/{{redirect.new}} [NE,R=301,L]
 {% endfor %}
+
+# rewrite only:
+#       /docs/XX/latest/* -> /docs/XX/Y.Y.Y/*
+#
+# NOTE:
+#       This does NOT return a redirect. It returns the resource *as if* the
+#       redirected URI was requested. That is, both URIs return the same
+#       resource, but the browser won't change the URI (no redirects followed).
+# NOTE:
+#       This needs to be *after* the docs redirects because they might need the
+#       "/latest/" to be in the URI in order to activate. Placing this rule
+#       before them will rewrite "/latest/" to the latest version and redirects
+#       for "/latest/some/path.html" will never activate.
+RewriteRule ^.*docs/(\w\w)/latest/(.*)$ {{site.baseurl}}/docs/$1/{{site.latest_docs_version}}/$2 [L]
