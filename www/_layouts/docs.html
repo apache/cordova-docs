@@ -68,8 +68,8 @@ analytics_id: UA-64283057-1
                     {% assign language_id = language_entry[0] %}
                     {% assign language    = language_entry[1] %}
 
-                    {% capture current_language_path %}/docs/{{ page.language }}/{{ page.version }}/{% endcapture %}
-                    {% capture target_language_path %}/docs/{{ language_id }}/{{ page.version }}/{% endcapture %}
+                    {% capture current_language_path %}/docs/{{ page.language }}/{% endcapture %}
+                    {% capture target_language_path %}/docs/{{ language_id }}/{% endcapture %}
 
                     {% comment %}
                     <!--
@@ -118,8 +118,18 @@ analytics_id: UA-64283057-1
                     <!-- List versions available in this language -->
                     {% for version in site.data.docs-versions.[page.language].versions reversed %}
                     <li>
+                        {% comment %}
+                        Name the latest version as "latest" to take advantage of
+                        redirects for "/latest/".
+                        {% endcomment %}
+                        {% if version == site.latest_docs_version %}
+                            {% assign version_string = "latest" %}
+                        {% else %}
+                            {% assign version_string = version %}
+                        {% endif %}
+
                         {% capture current_version_path %}/docs/{{ page.language }}/{{ page.version }}/{% endcapture %}
-                        {% capture target_version_path %}/docs/{{ page.language }}/{{ version }}/{% endcapture %}
+                        {% capture target_version_path %}/docs/{{ page.language }}/{{ version_string }}/{% endcapture %}
 
                         {% capture version_entry_string %}
                             {{ version }}
