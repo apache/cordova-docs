@@ -4,7 +4,7 @@
     // NOTE:
     //      these patterns should NOT contain capturing groups (parentheses)
     //      because they might be combined with other regexes
-    var DOCS_VERSION_PATTERN      = "(?:[\\d\\.]+|dev|latest)";
+    var DOCS_VERSION_PATTERN      = "(?:[\\d\\.]+x?|dev|latest)";
     var DOCS_VERSION_PATH_PATTERN = "docs\\/..\\/" + DOCS_VERSION_PATTERN;
 
     function splitDocsURL(url) {
