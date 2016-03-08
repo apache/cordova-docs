@@ -45,8 +45,6 @@ function main () {
     var rootDir           = process.argv[2];
     var latestVersionName = process.argv[3];
 
-    var config = {"defaults": []};
-
     if (!rootDir) {
         console.error(USAGE);
         console.error("Please specify the docs root directory from which to generate defaults.");
@@ -58,6 +56,9 @@ function main () {
         console.error("Please specify the latest version of the docs.");
         process.exit(1);
     }
+
+    // create defaults config
+    var config = {"defaults": []};
 
     // set defaults for each language
     util.listdirsSync(rootDir).forEach(function (langName) {

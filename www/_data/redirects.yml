@@ -3,7 +3,7 @@
 
 # redirects paths relative to /
 general:
-   - {old: "plugins/authors.html", new: "docs/en/latest/guide/hybrid/plugins/index.html#publishing-plugins" }
+    - {old: "plugins/authors.html", new: "docs/en/latest/guide/hybrid/plugins/index.html#publishing-plugins"}
 
 # redirects paths relative to /docs/XX/
 docs:
@@ -23,6 +23,29 @@ docs:
     - {old: "latest/guide/platforms/win8/packaging.html", new: "latest/guide/platforms/win8/index.html#signing-an-app"}
     - {old: "latest/guide/platforms/win8/win10-support.html", new: "latest/guide/platforms/win8/index.html"}
     - {old: "latest/cordova/plugins/pluginapis.html", new: "deprecated.html"}
+
+    - {old: "latest/cordova-cli/index.html", new: "latest/reference/cordova-cli/index.html"}
+    - {old: "latest/cordova-plugin-battery-status/index.html", new: "latest/reference/cordova-plugin-battery-status/index.html"}
+    - {old: "latest/cordova-plugin-camera/index.html", new: "latest/reference/cordova-plugin-camera/index.html"}
+    - {old: "latest/cordova-plugin-console/index.html", new: "latest/reference/cordova-plugin-console/index.html"}
+    - {old: "latest/cordova-plugin-contacts/index.html", new: "latest/reference/cordova-plugin-contacts/index.html"}
+    - {old: "latest/cordova-plugin-device/index.html", new: "latest/reference/cordova-plugin-device/index.html"}
+    - {old: "latest/cordova-plugin-device-motion/index.html", new: "latest/reference/cordova-plugin-device-motion/index.html"}
+    - {old: "latest/cordova-plugin-device-orientation/index.html", new: "latest/reference/cordova-plugin-device-orientation/index.html"}
+    - {old: "latest/cordova-plugin-dialogs/index.html", new: "latest/reference/cordova-plugin-dialogs/index.html"}
+    - {old: "latest/cordova-plugin-file/index.html", new: "latest/reference/cordova-plugin-file/index.html"}
+    - {old: "latest/cordova-plugin-file-transfer/index.html", new: "latest/reference/cordova-plugin-file-transfer/index.html"}
+    - {old: "latest/cordova-plugin-geolocation/index.html", new: "latest/reference/cordova-plugin-geolocation/index.html"}
+    - {old: "latest/cordova-plugin-globalization/index.html", new: "latest/reference/cordova-plugin-globalization/index.html"}
+    - {old: "latest/cordova-plugin-inappbrowser/index.html", new: "latest/reference/cordova-plugin-inappbrowser/index.html"}
+    - {old: "latest/cordova-plugin-media/index.html", new: "latest/reference/cordova-plugin-media/index.html"}
+    - {old: "latest/cordova-plugin-media-capture/index.html", new: "latest/reference/cordova-plugin-media-capture/index.html"}
+    - {old: "latest/cordova-plugin-network-information/index.html", new: "latest/reference/cordova-plugin-network-information/index.html"}
+    - {old: "latest/cordova-plugin-splashscreen/index.html", new: "latest/reference/cordova-plugin-splashscreen/index.html"}
+    - {old: "latest/cordova-plugin-vibration/index.html", new: "latest/reference/cordova-plugin-vibration/index.html"}
+    - {old: "latest/cordova-plugin-statusbar/index.html", new: "latest/reference/cordova-plugin-statusbar/index.html"}
+    - {old: "latest/cordova-plugin-whitelist/index.html", new: "latest/reference/cordova-plugin-whitelist/index.html"}
+    - {old: "latest/cordova-plugin-legacy-whitelist/index.html", new: "latest/reference/cordova-plugin-legacy-whitelist/index.html"}
 
 # redirects paths relative to /docs/XX/YYY/
 docs-global:

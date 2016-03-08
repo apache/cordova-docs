@@ -150,7 +150,7 @@ For more information on support, see BlackBerry's documentation on the
 The whitelisting rules for Windows Phone 8 are found in the
 app's `config.xml` file.
 
-[wlp]: ../../../cordova-plugin-whitelist/
+[wlp]: ../../../reference/cordova-plugin-whitelist/
 [1]: http://www.w3.org/TR/widgets-access/
 [2]: http://google.com
 [3]: https://google.com

@@ -190,4 +190,4 @@ Though it is not recommended but is still possible to define icons using `width`
 ```
 
 [blackberry_icon]: http://developer.blackberry.com/html5/documentation/icon_element.html
-[splashscreen_plugin]: ../cordova-plugin-splashscreen/
+[splashscreen_plugin]: ../reference/cordova-plugin-splashscreen/

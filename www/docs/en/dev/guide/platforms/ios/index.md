@@ -29,7 +29,7 @@ development workflow. You need to install the SDK tools regardless of
 whether you want to use these platform-centered shell tools
 or cross-platform Cordova CLI for development. For a comparison of the two
 development paths, see the [Overview](../../overview/index.html#development-paths).
-For details on the CLI, see [Cordova CLI Reference].
+For details on the CLI, see [Cordova CLI Reference][cli].
 
 ## Requirements and Support
 
@@ -223,7 +223,7 @@ as described in [Requirements and Support](#link-requirements-and-support)
 above.
 
 For each of the scripts discussed below, refer to
- [Cordova CLI Reference](../../../cordova-cli/index.html) for more information on their
+ [Cordova CLI Reference][cli] for more information on their
 arguments and usage. Each script has a name that matches the corresponding CLI
 command. For example, `cordova-ios/bin/create` is equivalent to
 `cordova create`.
@@ -259,4 +259,4 @@ Refer to [this](./upgrade.html) article for instructions to upgrade your ```cord
 
 (Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)
 
- [Cordova CLI Reference]: ../../../cordova-cli/index.html
+[cli]: ../../../reference/cordova-cli/index.html

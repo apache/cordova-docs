@@ -8,7 +8,7 @@ conf/fetched_docs.json
 www/_data/docs-versions.yml
 www/static/css
 www/static/js/plugins.js
+www/docs/en/dev/reference
 
 node_modules
 Gemfile.lock
-www/docs/en/dev/gen

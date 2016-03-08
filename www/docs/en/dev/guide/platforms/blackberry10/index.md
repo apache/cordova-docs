@@ -30,7 +30,7 @@ For BlackBerry 10, you need to install the SDK regardless of whether
 you want to use the cross-platform Cordova CLI for development, or a
 narrower set of platform-centered command-line tools.  For a
 comparison of the two development paths, see the [Overview](../../overview/index.html).  For
-details on each, see [Cordova CLI Reference] and the BlackBerry 10
+details on each, see [Cordova CLI Reference][cli] and the BlackBerry 10
 Shell Tool Guide.
 
 ## Requirements
@@ -145,7 +145,7 @@ $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
 ## Create a Project
 
 Use the `cordova` utility to set up a new project, as described in
-[Cordova CLI Reference]. For example, in a source-code directory:
+[Cordova CLI Reference][cli]. For example, in a source-code directory:
 
 ```bash
 $ cordova create hello com.example.hello
@@ -294,4 +294,4 @@ Once the target is defined, you can provide it to the run command using
 $ cordova run blackberry10 --target=emu
 ```
 
-[Cordova CLI Reference]: ../../../cordova-cli/index.html
+[cli]: ../../../reference/cordova-cli/index.html

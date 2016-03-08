@@ -82,8 +82,8 @@ $ cordova create hello com.example.hello HelloWorld
 This creates the required directory structure for your cordova app. By default, the `cordova create` script generates a skeletal web-based application whose home page is the project's `www/index.html` file.
 
 ###See Also
-- [Cordova create command reference documentation](../../cordova-cli/index.html#cordova-create-command)
-- [Cordova project directory structure](../../cordova-cli/index.html#directory-structure)
+- [Cordova create command reference documentation][cdv_create]
+- [Cordova project directory structure][cdv_dir]
 
 ## Add Platforms
 
@@ -117,7 +117,7 @@ in this directory are routinely overwritten when preparing
 applications for building, or when plugins are re-installed.
 
 ###See Also
-- [Cordova platform command reference documentation](../../cordova-cli/index.html#cordova-platform-command)
+- [Cordova platform command reference documentation][cdv_platform]
 
 ##Install pre-requrisites for building
 To build and run apps, you need to install SDKs for each platform you wish to target. Alternatively, if you are using browser for development you can use `browser` platform which does not require any platform SDKs.
@@ -161,7 +161,7 @@ $ cordova build ios
 ```
 
 ###See Also
-- [Cordova build command reference documentation](../../dev/cordova-cli/index.html#cordova-build-command)
+- [Cordova build command reference documentation][cdv_build]
 
 ##Test the App
 
@@ -195,8 +195,8 @@ testing, following procedures that vary for each platform.
 
 ###See Also
 - [Setting up Android emulator](../../guide/platforms/android/index.html#setting-up-an-emulator)
-- [Cordova run command reference documentation](../../cordova-cli/index.html#cordova-run-command)
-- [Cordova emulate command reference documentation](../../cordova-cli/index.html#cordova-emulate-command)
+- [Cordova run command reference documentation][cdv_run]
+- [Cordova emulate command reference documentation][cdv_emulate]
 
 ## Add Plugins
 
@@ -237,7 +237,7 @@ cordova-plugin-whitelist 1.2.1 "Whitelist"
 ```
 
 ###See Also
-- [Cordova plugin command reference documentation](../../cordova-cli/index.html#cordova-plugin-command)
+- [Cordova plugin command reference documentation][cdv_plugin]
 - [Cordova plugin search page](/plugins/)
 - [Core Plugin APIs]
 
@@ -316,6 +316,14 @@ $ cordova platform update ios --save
 ```
 
 [DeviceReadyEvent]: ../../cordova/events/events.html#deviceready
-[BackButtonEvent]: ../../cordova/events/events.html#backbutton
-[CLI reference]: ../../cordova-cli/index.html
+[BackButtonEvent]:  ../../cordova/events/events.html#backbutton
 [Core Plugin APIs]: ../../guide/support/index.html#core-plugin-apis
+
+[CLI reference]: ../../reference/cordova-cli/index.html
+[cdv_create]:    ../../reference/cordova-cli/index.html#cordova-create-command
+[cdv_dir]:       ../../reference/cordova-cli/index.html#directory-structure
+[cdv_platform]:  ../../reference/cordova-cli/index.html#cordova-platform-command
+[cdv_run]:       ../../reference/cordova-cli/index.html#cordova-run-command
+[cdv_emulate]:   ../../reference/cordova-cli/index.html#cordova-emulate-command
+[cdv_plugin]:    ../../reference/cordova-cli/index.html#cordova-plugin-command
+[cdv_build]:     ../../reference/cordova-cli/index.html#cordova-build-command

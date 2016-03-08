@@ -13,10 +13,18 @@ ifdef WINDOWS
 SHELL  = cmd
 JEKYLL = bundle.bat exec jekyll
 MKDIRP = mkdir
+CPR    = xcopy /e
+CP     = copy
+CAT    = type
+LS     = ls
 else
 SHELL  = sh
 JEKYLL = bundle exec jekyll
 MKDIRP = mkdir -p
+CPR    = cp -R
+CP     = cp
+CAT    = cat
+LS     = ls
 endif
 
 # constants
@@ -36,7 +44,6 @@ PROD_DIR   = build-prod
 CONFIG_DIR = conf
 
 DOCS_DIR         = $(SRC_DIR)/docs
-FETCH_DIR        = $(DOCS_DIR)/en/dev/gen
 DATA_DIR         = $(SRC_DIR)/_data
 TOC_DIR          = $(DATA_DIR)/toc
 STATIC_DIR       = $(SRC_DIR)/static
@@ -70,6 +77,7 @@ DOCS_EXCLUDE_CONFIG = $(CONFIG_DIR)/_nodocs.yml
 FETCH_CONFIG        = $(DATA_DIR)/fetched-files.yml
 PLUGINS_SRC         = $(PLUGINS_SRC_DIR)/app.js
 VERSION_FILE        = VERSION
+FETCH_SCRIPT        = $(BIN_DIR)/fetch_docs.js
 
 # NOTE:
 #      the .scss files are separate because they combine into MAIN_STYLE_FILE,
@@ -82,6 +90,17 @@ else
 SCSS_SRC   = $(shell find $(CSS_SRC_DIR) -name "*.scss")
 STYLES_SRC = $(shell find $(CSS_SRC_DIR) -name "*.less" -or -name "*.css")
 endif
+
+LANGUAGES = $(shell $(LS) $(DOCS_DIR))
+
+LATEST_DOCS_VERSION = $(shell $(CAT) $(VERSION_FILE))
+NEXT_DOCS_VERSION   = $(shell $(NODE) $(BIN_DIR)/nextversion.js $(LATEST_DOCS_VERSION))
+
+LATEST_DOCS_VERSION_SLUG = $(subst .,-,$(LATEST_DOCS_VERSION))
+NEXT_DOCS_VERSION_SLUG   = $(subst .,-,$(NEXT_DOCS_VERSION))
+
+DEV_DOCS      = $(addprefix $(DOCS_DIR)/,$(addsuffix /dev,$(LANGUAGES)))
+DEV_DOCS_TOCS = $(addprefix $(TOC_DIR)/,$(addsuffix -dev-manual.yml, $(LANGUAGES)))
 
 # generated files
 VERSION_CONFIG    = $(CONFIG_DIR)/_version.yml
@@ -98,16 +117,20 @@ DOCS_VERSION_DIRS  = $(filter-out %.md,$(wildcard $(DOCS_DIR)/**/*))
 DOCS_VERSION_SLUGS = $(subst /,-,$(subst .,-,$(subst $(DOCS_DIR)/,,$(DOCS_VERSION_DIRS))))
 TOC_FILES          = $(addprefix $(TOC_DIR)/,$(addsuffix -generated.yml,$(DOCS_VERSION_SLUGS)))
 
-# variables
+FETCH_FLAGS   = --config $(FETCH_CONFIG) --docsRoot $(DOCS_DIR)
+FETCHED_FILES = $(shell $(NODE) $(FETCH_SCRIPT) $(FETCH_FLAGS) --dump)
+
+LATEST_DOCS      = $(addprefix $(DOCS_DIR)/,$(addsuffix /$(LATEST_DOCS_VERSION),$(LANGUAGES)))
+LATEST_DOCS_TOCS = $(addprefix $(TOC_DIR)/,$(addsuffix -$(LATEST_DOCS_VERSION_SLUG)-manual.yml, $(LANGUAGES)))
+
+NEXT_DOCS      = $(addprefix $(DOCS_DIR)/,$(addsuffix /$(NEXT_DOCS_VERSION),$(LANGUAGES)))
+NEXT_DOCS_TOCS = $(addprefix $(TOC_DIR)/,$(addsuffix -$(NEXT_DOCS_VERSION_SLUG)-manual.yml, $(LANGUAGES)))
+
+# other variables
 # NOTE:
 #      the order of config files matters to Jekyll
 JEKYLL_CONFIGS = $(MAIN_CONFIG) $(DEFAULTS_CONFIG) $(VERSION_CONFIG)
-
-ifdef WINDOWS
-LATEST_DOCS_VERSION = $(shell type $(VERSION_FILE))
-else
-LATEST_DOCS_VERSION = $(shell cat $(VERSION_FILE))
-endif
+JEKYLL_FLAGS   =
 
 # convenience targets
 help usage default:
@@ -131,7 +154,7 @@ help usage default:
 	@echo "    NODOCS: (defined or undefined) - excludes docs from build"
 	@echo ""
 
-data: fetch $(TOC_FILES) $(DOCS_VERSION_DATA)
+data: $(TOC_FILES) $(DOCS_VERSION_DATA)
 configs: $(DEFAULTS_CONFIG) $(VERSION_CONFIG)
 styles: $(STYLES)
 plugins: $(PLUGINS_APP)
@@ -141,7 +164,6 @@ dev: JEKYLL_CONFIGS += $(DEV_CONFIG)
 dev: JEKYLL_FLAGS += --trace
 
 prod: JEKYLL_CONFIGS += $(PROD_CONFIG)
-prod: JEKYLL_FLAGS +=
 
 dev prod: build
 
@@ -150,7 +172,7 @@ build: JEKYLL_CONFIGS += $(DOCS_EXCLUDE_CONFIG)
 endif
 
 build: JEKYLL_FLAGS += --config $(subst $(SPACE),$(COMMA),$(strip $(JEKYLL_CONFIGS)))
-build: $(JEKYLL_CONFIGS) data styles plugins
+build: $(JEKYLL_CONFIGS) fetch data styles plugins
 	$(JEKYLL) build $(JEKYLL_FLAGS)
 
 install:
@@ -160,13 +182,17 @@ install:
 serve:
 	cd $(DEV_DIR) && python -m SimpleHTTPServer 8000
 
-$(FETCH_DIR): $(FETCH_CONFIG) $(BIN_DIR)/fetch_docs.js
-	$(NODE) $(BIN_DIR)/fetch_docs.js $(FETCH_CONFIG) $@
-	touch $@
+fetch: $(FETCHED_FILES)
 
-fetch: $(FETCH_DIR)
+snap: fetch $(LATEST_DOCS) $(LATEST_DOCS_TOCS)
+
+newversion: $(NEXT_DOCS) $(NEXT_DOCS_TOCS)
+	echo $(NEXT_DOCS_VERSION) > $(VERSION_FILE)
 
 # real targets
+$(FETCHED_FILES): $(FETCH_CONFIG) $(FETCH_SCRIPT)
+	$(NODE) $(FETCH_SCRIPT) $(FETCH_FLAGS)
+
 # NOTE:
 #      the ">>" operator appends to a file in both CMD and SH
 $(PLUGINS_APP): $(PLUGINS_SRC)
@@ -174,21 +200,39 @@ $(PLUGINS_APP): $(PLUGINS_SRC)
 	echo --->> $@
 	$(BROWSERIFY) -t reactify -t envify $< | $(UGLIFY) >> $@
 
-$(DOCS_VERSION_DATA): $(BIN_DIR)/gen_versions.js
+$(DOCS_VERSION_DATA): $(BIN_DIR)/gen_versions.js $(DOCS_DIR)
 	$(NODE) $(BIN_DIR)/gen_versions.js $(DOCS_DIR) > $@
 
-$(DEFAULTS_CONFIG): $(BIN_DIR)/gen_defaults.js $(VERSION_FILE)
+$(DEFAULTS_CONFIG): $(BIN_DIR)/gen_defaults.js $(VERSION_FILE) $(DOCS_DIR)
 	$(NODE) $(BIN_DIR)/gen_defaults.js $(DOCS_DIR) "$(LATEST_DOCS_VERSION)" > $@
 
 $(VERSION_CONFIG): $(VERSION_FILE)
 	sed -e "s/^/$(VERSION_VAR_NAME): /" < $< > $@
 
-$(TOC_FILES): $(BIN_DIR)/toc.js
+$(TOC_FILES): $(BIN_DIR)/toc.js $(DOCS_DIR)
 	$(NODE) $(BIN_DIR)/toc.js $(DOCS_DIR) $(DATA_DIR)
 
 $(MAIN_STYLE_FILE): $(SCSS_SRC)
 
 # pattern rules
+$(DOCS_DIR)/%/$(LATEST_DOCS_VERSION): $(DOCS_DIR)/%/dev
+	$(RM) -r $@
+	$(CPR) $^ $@
+ifndef WINDOWS
+	touch $(DOCS_DIR)
+endif
+
+$(DOCS_DIR)/%/$(NEXT_DOCS_VERSION): $(DOCS_DIR)/%/dev
+	$(CPR) $^ $@
+ifndef WINDOWS
+	touch $(DOCS_DIR)
+endif
+
+$(TOC_DIR)/%-$(LATEST_DOCS_VERSION_SLUG)-manual.yml: $(TOC_DIR)/%-dev-manual.yml
+	$(CP) $^ $@
+
+$(TOC_DIR)/%-$(NEXT_DOCS_VERSION_SLUG)-manual.yml: $(TOC_DIR)/%-dev-manual.yml
+	$(CP) $^ $@
 
 # NODE:
 #      $(@D) means "directory part of target"
@@ -226,16 +270,16 @@ endif
 clean:
 
 	$(RM) -r $(PROD_DIR) $(DEV_DIR)
-	$(RM) -r $(FETCH_DIR)
 	$(RM) $(VERSION_CONFIG)
 	$(RM) $(DEFAULTS_CONFIG)
 	$(RM) $(TOC_FILES)
 	$(RM) $(DOCS_VERSION_DATA)
 	$(RM) $(PLUGINS_APP)
 	$(RM) -r $(CSS_DEST_DIR)
+	$(RM) $(FETCHED_FILES)
 
 nuke: clean
 	$(RM) -r node_modules
 	$(RM) Gemfile.lock
 
-.PHONY: clean usage help default build
+.PHONY: clean usage help default build $(DEV_DOCS)

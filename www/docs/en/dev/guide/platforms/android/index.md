@@ -28,8 +28,8 @@ command-line tools in your development workflow.  You need to install
 the Android SDK regardless of whether you want to use these
 platform-centered shell tools or cross-platform Cordova CLI for
 development. For a comparison of the two development paths, see the
-[Overview](../../overview/index.html#development-paths).  For details on the CLI, see [Cordova CLI Reference].
-
+[Overview](../../overview/index.html#development-paths). For details on
+the CLI, see [Cordova CLI Reference][cli_reference].
 
 ## Requirements and Support
 
@@ -155,7 +155,6 @@ reopen any command prompt windows after making changes to see them reflected
     C:\Development\android-sdk\platform-tools
     C:\Development\android-sdk\tools
     ```
-
 
 ## Project Configuration
 
@@ -308,7 +307,7 @@ To sign an app, you need the following parameters:
 | Type of the Keystore  | `--keystoreType`  | *Default: auto-detect based on file extension*<br>Either pkcs12 or jks
 
 These parameters can be specified using the command line arguments above to
-the [Cordova CLI](../../../cordova-cli/index.html) `build` or `run` commands.
+the [Cordova CLI][cli_reference] `build` or `run` commands.
 
 __Note__: You should use double `--` to indicate that these are platform-specific arguments, for example:
 
@@ -365,7 +364,6 @@ keyPassword=SECRET2
 
 `storePassword` and `keyPassword` are optional, and will be prompted for if omitted.
 
-
 ## Debugging
 
 For details on the debugging tools that come packaged with the Android SDK, see
@@ -373,7 +371,6 @@ For details on the debugging tools that come packaged with the Android SDK, see
 Additionally, Android's developer documentation for [debugging web apps](http://developer.android.com/guide/webapps/debugging.html)
 provides an introduction for debugging the portion of your app running in the
 Webview.
-
 
 ### Opening a Project in Android Studio
 
@@ -411,7 +408,6 @@ for more details.
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png)
 
-
 ## Platform Centered Workflow
 
 cordova-android includes a number of scripts that allow the platform to be used
@@ -423,7 +419,7 @@ development path, you must still configure the Android SDK environment
 as described in [Requirements and Support](#requirements-and-support)
 above.
 
-For each of the scripts discussed below, refer to [Cordova CLI Reference] for more information on their
+For each of the scripts discussed below, refer to [Cordova CLI Reference][cli_reference] for more information on their
 arguments and usage. Each script has a name that matches the corresponding CLI
 command. For example, `cordova-android/bin/create` is equivalent to
 `cordova create`.
@@ -451,7 +447,6 @@ To install plugins in this project, use the [Cordova Plugman Utility](../../../p
 
 Refer to [this](./upgrade.html) article for instructions to upgrade your
 `cordova-android` version.
-
 
 ## Lifecycle Guide
 
@@ -755,4 +750,4 @@ on your device or emulator to simulate low memory scenarios. You should always
 do some amount of testing with this setting enabled to make sure that your
 application is properly maintaining state.
 
-[Cordova CLI Reference]: ../../../cordova-cli/index.html
+[cli_reference]: ../../../reference/cordova-cli/index.html

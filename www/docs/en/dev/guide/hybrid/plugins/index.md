@@ -44,13 +44,12 @@ For each corresponding native interface, see the list at the end of
 this section.
 
 In addition to these instructions, when preparing to write a plugin it
-is best to look over
-[existing plugins](http://cordova.apache.org/contribute)
+is best to look over [existing plugins](http://cordova.apache.org/contribute)
 for guidance.
 
 ## Building a Plugin
 
-Application developers use the CLI's [plugin add command](../../../cordova-cli/index.html#cordova-plugin-add-command) to add a plugin to a project. The
+Application developers use the CLI's [plugin add command][cdv_plugin] to add a plugin to a project. The
 argument to that command is the URL for a _git_ repository containing
 the plugin code.  This example implements Cordova's Device API:
 
@@ -245,3 +244,5 @@ For example, for a plugin that supports android, iOS & Windows, the keywords in 
 ```
 
 For more detailed example of a package.json, review the [package.json file of cordova-plugin-device](https://github.com/apache/cordova-plugin-device/blob/master/package.json).
+
+[cdv_plugin]: ../../../reference/cordova-cli/index.html#cordova-plugin-command

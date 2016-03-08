@@ -174,7 +174,7 @@ platform. See [Customize icons topic](images.html) for more information.
    Attributes(type) | Description
    ----------------- | ------------
    href(string) | *Required* <br/> Defines the set of external domains the WebView is allowed to navigate to.
-   See the cordova-plugin-whitelist [cordova-plugin-whitelist](../cordova-plugin-whitelist/index.html#navigation-whitelist) for details.
+   See the cordova-plugin-whitelist [cordova-plugin-whitelist][whitelist_navigation] for details.
 
    Examples:
 
@@ -192,7 +192,7 @@ platform. See [Customize icons topic](images.html) for more information.
    Attributes(type) | Description
    ----------------- | ------------
    href(string) | *Required* <br/> Defines which URLs the app is allowed to ask the system to open.
-   See the cordova-plugin-whitelist [cordova-plugin-whitelist](../cordova-plugin-whitelist/index.html#intent-whitelist) for details.
+   See the cordova-plugin-whitelist [cordova-plugin-whitelist][whitelist_intent] for details.
 
    Examples:
 
@@ -209,7 +209,7 @@ platform. See [Customize icons topic](images.html) for more information.
    Attributes(type) | Description
    ----------------- | ------------
    name(string) | *Required* <br/> Name of the platform to be restored
-   spec(string) | *Required* <br/> Details about the platform to be restored. This could be a ```major.minor.patch``` version number, a directory containing the platform or a url pointing to a git repository. This information will be used to retrieve the platform code to restore from NPM, a local directory or a git repository. See [Platform Spec](../cordova-cli/index.html#platform-spec) for further details.
+   spec(string) | *Required* <br/> Details about the platform to be restored. This could be a ```major.minor.patch``` version number, a directory containing the platform or a url pointing to a git repository. This information will be used to retrieve the platform code to restore from NPM, a local directory or a git repository. See [Platform Spec][platform_spec] for further details.
 
    Examples:
 
@@ -224,7 +224,7 @@ platform. See [Customize icons topic](images.html) for more information.
    Attributes(type) | Description
    ----------------- | ------------
    name(string) | *Required* <br/> Name of the plugin to be restored
-   spec(string) | *Required* <br/> Details about the plugin to be restored. This could be a ```major.minor.patch``` version number, a directory containing the plugin or a url pointing to a git repository. This information will be used to retrieve the plugin code to restore from NPM, a local directory or a git repository. See [Plugin Spec](../cordova-cli/index.html#plugin-spec) for further details.
+   spec(string) | *Required* <br/> Details about the plugin to be restored. This could be a ```major.minor.patch``` version number, a directory containing the plugin or a url pointing to a git repository. This information will be used to retrieve the plugin code to restore from NPM, a local directory or a git repository. See [Plugin Spec][plugin_spec] for further details.
 
    Examples:
 
@@ -466,4 +466,8 @@ platform. See [Customize icons topic](images.html) for more information.
   </widget>
   ```
 
-[uses-sdk]: http://developer.android.com/guide/topics/manifest/uses-sdk-element.html
+[uses-sdk]:             http://developer.android.com/guide/topics/manifest/uses-sdk-element.html
+[platform_spec]:        ../reference/cordova-cli/index.html#platform-spec
+[plugin_spec]:          ../reference/cordova-cli/index.html#plugin-spec
+[whitelist_navigation]: ../reference/cordova-plugin-whitelist/index.html#navigation-whitelist
+[whitelist_intent]:     ../reference/cordova-plugin-whitelist/index.html#intent-whitelist

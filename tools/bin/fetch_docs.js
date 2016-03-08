@@ -23,28 +23,19 @@ var https         = require("https");
 var path          = require("path");
 var child_process = require("child_process");
 var yaml          = require("js-yaml");
+var optimist      = require("optimist");
 
 var util = require("./util");
 
 // constants
-var DEFAULT_REPO_PATH = "README.md";
+var DEFAULT_REPO_PATH     = "README.md";
+var DEFAULT_VERSION_NAME  = "dev";
+var DEFAULT_LANGUAGE_NAME = "en";
 
-function generateFrontMatter(fetchedFile) {
+var THIS_FILE       = path.basename(__filename);
+var WARNING_COMMENT = "<!-- WARNING: This file is generated. See " + THIS_FILE + ". -->\n\n";
 
-    var frontMatter = {
-        edit_link: fetchedFile.editLink,
-        permalink: fetchedFile.permalink,
-    };
-
-    // set special values for plugins
-    if (isPluginName(fetchedFile.packageName)) {
-        frontMatter.plugin_name    = fetchedFile.packageName;
-        frontMatter.plugin_version = fetchedFile.version;
-    }
-
-    return frontMatter;
-}
-
+// helpers
 function isPluginName(packageName) {
     return packageName.match(/cordova-plugin-.*/);
 }
@@ -96,8 +87,8 @@ function getFetchedFileConfig(entry) {
         return;
     }
 
-    if (!destConfig.permalink) {
-        console.error("entry '" + entry.toString() + "' missing 'permalink' in 'dest'");
+    if (!destConfig.path) {
+        console.error("entry '" + entry.toString() + "' missing 'path' in 'dest'");
         return;
     }
 
@@ -114,13 +105,23 @@ function getFetchedFileConfig(entry) {
         srcConfig.commit = getLatestRelease(srcConfig.packageName);
     }
 
+    // make front matter
+    var frontMatter = {
+        edit_link: getRepoEditURI(srcConfig.repoName, srcConfig.commit, srcConfig.path),
+        title:     srcConfig.packageName
+    }
+
+    // set special front matter values for plugins
+    if (isPluginName(srcConfig.packageName)) {
+        frontMatter.plugin_name    = srcConfig.packageName;
+        frontMatter.plugin_version = srcConfig.commit;
+    }
+
     // set returned values
     var fetchedFileConfig = {
-        packageName: srcConfig.packageName,
-        version:     srcConfig.commit,
-        editLink:    getRepoEditURI(srcConfig.repoName, srcConfig.commit, srcConfig.path),
-        permalink:   destConfig.permalink,
+        frontMatter: frontMatter,
         downloadURI: getRepoFileURI(srcConfig.repoName, srcConfig.commit, srcConfig.path),
+        savePath:    destConfig.path
     };
 
     return fetchedFileConfig;
@@ -139,39 +140,35 @@ function setFrontMatter(text, frontMatter) {
     return util.setFrontMatterString(text, frontMatterString);
 }
 
-// main
-function main () {
+function dumpEntries(downloadPrefix, entries) {
+    entries.forEach(function (entry) {
 
-    var configFile = process.argv[2];
-    var fetchRoot  = process.argv[3];
+        // validate entry's dest config
+        if (!entry.dest) {
+            console.error("entry '" + entry.toString() + "' missing 'dest'");
+            return;
+        }
 
-    // validate args
-    if (!configFile) {
-        console.error("Please specify config file.");
-        process.exit(1);
-    }
+        if (!entry.dest.path) {
+            console.error("entry '" + entry.toString() + "' missing 'path' in 'dest'");
+            return;
+        }
 
-    if (!fetchRoot) {
-        console.error("Please specify fetch root.");
-        process.exit(1);
-    }
+        // print the save path for the entry
+        if (entry.dest && entry.dest.path) {
+            var filePath = path.join(downloadPrefix, entry.dest.path);
+            console.log(filePath);
 
-    if (!fs.existsSync(configFile)) {
-        console.error("Config file doesn't exist.");
-        process.exit();
-    }
+        // error out on invalid entries
+        } else {
+            console.error("Invalid dest: " + entry);
+            process.exit(1);
+        }
+    });
+}
 
-    // ensure that the root for all fetched files exists
-    if (!fs.existsSync(fetchRoot)) {
-        fse.mkdirsSync(fetchRoot);
-    }
-
-    // get config
-    var fetchConfig   = fs.readFileSync(configFile);
-    var configEntries = yaml.load(fetchConfig);
-
-    // fetch all files
-    configEntries.forEach(function (entry) {
+function downloadEntries(downloadPrefix, entries) {
+    entries.forEach(function (entry) {
 
         // verify and process entry
         var fetchedFileConfig = getFetchedFileConfig(entry);
@@ -181,8 +178,13 @@ function main () {
 
         // get info for fetching
         var fetchURI    = fetchedFileConfig.downloadURI;
-        var outFileName = fetchedFileConfig.packageName + ".md";
-        var outFilePath = path.join(fetchRoot, outFileName);
+        var outFilePath = path.join(downloadPrefix, fetchedFileConfig.savePath);
+        var outFileDir  = path.dirname(outFilePath);
+
+        // create directory for the file if it doesn't exist
+        if (!fs.existsSync(outFileDir)) {
+            fse.mkdirsSync(outFileDir);
+        }
 
         console.log(fetchURI + " -> " + outFilePath);
 
@@ -209,12 +211,15 @@ function main () {
 
                 // merge new front matter and file's
                 // own front matter (if it had any)
-                var newFrontMatter    = generateFrontMatter(fetchedFileConfig);
+                var newFrontMatter    = fetchedFileConfig.frontMatter;
                 var fileFrontMatter   = getFrontMatter(fileContents);
                 var mergedFrontMatter = util.mergeObjects(newFrontMatter, fileFrontMatter);
 
-                // set merged file matter in the file
-                var augmentedContents = setFrontMatter(fileContents, mergedFrontMatter);
+                // add a warning and set the merged file matter in the file
+                var contentsOnly = util.stripFrontMatter(fileContents);
+                contentsOnly     = WARNING_COMMENT + contentsOnly;
+
+                var augmentedContents = setFrontMatter(contentsOnly, mergedFrontMatter);
 
                 // write out the file
                 outFile.end(augmentedContents);
@@ -222,8 +227,58 @@ function main () {
             }).on('error', function(e) {
                 console.error(e);
             });
-        });
+        }); // http request
     }); // entries
+}
+
+// main
+function main () {
+
+    // get args
+    var argv = optimist
+        .usage("Usage: $0 [options]")
+        .demand("config")
+        .demand("docsRoot")
+        .string("version")
+        .string("language")
+        .boolean("dump")
+        .describe("config", ".yml file listing fetched files")
+        .describe("docsRoot", "docs root directory")
+        .describe("version", "version in which to save the downloaded files").default("version", DEFAULT_VERSION_NAME)
+        .describe("language", "language in which to save the downloaded files").default("language", DEFAULT_LANGUAGE_NAME)
+        .describe("dump", "only print the downloaded files")
+        .argv;
+
+    var configFile     = argv.config;
+    var docsRoot       = argv.docsRoot;
+    var targetVersion  = argv.version;
+    var targetLanguage = argv.language;
+    var printOnly      = argv.dump;
+    var downloadPrefix = path.join(docsRoot, targetLanguage, targetVersion);
+
+    // validate args
+    if (!fs.existsSync(configFile)) {
+        console.error("Config file doesn't exist.");
+        process.exit();
+    }
+
+    if (!fs.existsSync(docsRoot)) {
+        console.error("Docs root doesn't exist.");
+        process.exit();
+    }
+
+    // get config
+    var fetchConfig   = fs.readFileSync(configFile);
+    var configEntries = yaml.load(fetchConfig);
+
+    // just dump entries if --dump was passed
+    if (printOnly === true) {
+        dumpEntries(downloadPrefix, configEntries);
+
+    // otherwise, fetch them
+    } else {
+        downloadEntries(downloadPrefix, configEntries);
+    }
 }
 
 main();
