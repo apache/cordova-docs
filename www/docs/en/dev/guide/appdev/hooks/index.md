@@ -44,6 +44,9 @@ Cordova supports the following hook types:
 <!-- START HTML -->
 
 <table class="hooks" width="100%">
+    <col width="20%">
+    <col width="30%">
+    <col width="50%">
     <thead>
         <tr>
             <th>Hook Type</th>
@@ -54,7 +57,7 @@ Cordova supports the following hook types:
     <tbody>
         <tr>
             <th data-col="beforeplatformadd">before_platform_add</th>
-            <td data-col="code" rowspan="2"><code>cordova platform add</code></td>
+            <td data-col="code" rowspan="2" ><code>cordova platform add</code></td>
             <td rowspan="2" class="description" data-col="description">To be executed before and after adding a platform.</td>
         </tr>
         <tr>
@@ -78,7 +81,7 @@ Cordova supports the following hook types:
         </tr>
         <tr>
             <th data-col="beforeprepare">before_prepare</th>
-            <td data-col="code" rowspan="2"><code>cordova prepare</code><br/><code>cordova platform add</code><br/><code>cordova run</code></td>
+            <td data-col="code" rowspan="2"><code>cordova prepare</code><br/><code>cordova platform add</code><br/><code>cordova build</code><br/><code>cordova run</code></td>
             <td rowspan="2" data-col="description">To be executed before and after preparing your application.</td>
         </tr>
         <tr>
@@ -86,7 +89,7 @@ Cordova supports the following hook types:
         </tr>
         <tr>
             <th data-col="beforecompile">before_compile</th>
-            <td data-col="code" rowspan="2"><code>cordova compile</code><br/><code>cordova run</code></td>
+            <td data-col="code" rowspan="2"><code>cordova compile</code><br/><code>cordova build</code></td>
             <td rowspan="2" data-col="description">To be executed before and after compiling your application.</td>
         </tr>
         <tr>
@@ -94,7 +97,7 @@ Cordova supports the following hook types:
         </tr>
         <tr>
             <th data-col="beforebuild">before_build</th>
-            <td data-col="code" rowspan="2"><code>cordova build</code><br/><code>cordova run</code></td>
+            <td data-col="code" rowspan="2"><code>cordova build</code></td>
             <td rowspan="2" data-col="description">To be executed before and after building your application.</td>
         </tr>
         <tr>
