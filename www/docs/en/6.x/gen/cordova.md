@@ -131,12 +131,12 @@ myapp/
 |-- merges/
 | | |-- android/
 | | |-- windows/
-| | -- ios/
+| | |-- ios/
 |-- www/
 |-- platforms/
 | |-- android/
 | |-- windows/
-| -- ios/
+| |-- ios/
 -- plugins/
 ```
 
