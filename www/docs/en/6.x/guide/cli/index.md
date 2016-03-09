@@ -193,7 +193,7 @@ npm and you can search for them on the [plugin search page](/plugins/). Some key
         
 To add the camera plugin, we will specify the npm package name for the camera plugin:
 
-      $ cordova pluign add cordova-plugin-camera
+      $ cordova plugin add cordova-plugin-camera
       Fetching plugin "cordova-plugin-camera@~2.1.0" via npm
       Installing "cordova-plugin-camera" for android
       Installing "cordova-plugin-camera" for ios
