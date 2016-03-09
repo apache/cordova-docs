@@ -248,6 +248,6 @@ Now you ready to download content from CrowdIn. Run following commands (All comm
     Most likely these erorrs reappear after next exprot from CrowdIn, so don't hunt for these errors until release, or create
     tool which will fix these error after each export and use it.
 
-13. Now you ready to create pull request with documentation to the main `crodova-docs` repository.
+13. Now you ready to create pull request with documentation to the main `cordova-docs` repository.
 
 Enjoy translation!!!
