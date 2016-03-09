@@ -234,3 +234,5 @@ To indicate support for a particular platform add a keyword with the `<platformN
     ]
 ```
 
+For more detailed example of a package.json, review the [package.json file of cordova-plugin-device](https://github.com/apache/cordova-plugin-device/blob/master/package.json).
+

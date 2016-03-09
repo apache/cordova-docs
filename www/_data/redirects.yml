@@ -3,6 +3,7 @@
 
 # redirects paths relative to /
 general:
+   - {old: "plugins/authors.html" new: "docs/en/latest/guide/hybrid/plugins/index.html#publishing-plugins" }
 
 # redirects paths relative to /docs/XX/
 docs:
