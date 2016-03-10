@@ -308,13 +308,13 @@ cordova.requestPermission(CordovaPlugin plugin, int requestCode, String permissi
 
 To cut down on verbosity, it's standard practice to assign this to a local static variable:
 
-```
+```java
 public static final String READ = Manifest.permission.READ_CONTACTS;
 ```
 
 It is also standard practice to define the requestCode as follows:
 
-```
+```java
 public static final int SEARCH_REQ_CODE = 0;
 ```
 
@@ -446,7 +446,7 @@ Instead, this replacement `CallbackContext` will return the result as part of th
 [`resume`][event-resume] event that is fired when the application resumes. The
 payload of the [`resume`][event-resume] event follows this structure:
 
-```
+```json
 {
     action: "resume",
     pendingResult: {
