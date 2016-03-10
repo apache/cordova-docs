@@ -417,7 +417,7 @@ platform. See [Customize icons topic](images.html) for more information.
             Apache Cordova Team
         </author>
         <content src="index.html" />
-        <plugin name="cordova-plugin-whitelist" version="1" />
+        <plugin name="cordova-plugin-whitelist" spec="1" />
         <access origin="*" />
         <allow-intent href="http://*/*" />
         <allow-intent href="https://*/*" />
