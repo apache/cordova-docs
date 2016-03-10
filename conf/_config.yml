@@ -27,6 +27,9 @@ latest_docs_version: dev
 # the docs version that is shown by default when clicking on docs links on the site
 default_linked_docs_version: latest
 
+# the language that serves as the source for the translations
+src_language: en
+
 # NOTE:
 #      this value _might_ get overwritten on some pages;
 #      see _defaults.yml, which is a generated file

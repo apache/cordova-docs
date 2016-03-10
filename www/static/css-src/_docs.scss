@@ -111,49 +111,51 @@
     .content-header {
         text-align: right;
         margin-top: 22px;
-        .alert {
-            text-align:left;
+
+        /* this trick sets spacing _between_ items in .content-header, but _not inside_ them */
+        word-spacing: 0.3em;
+        * {
+            word-spacing: 0em;
         }
-    }
-    .toc-dropdown {
-        text-align: center;
-        width: 100%;
-        .dropdown {
-            width: inherit;
+
+        .alert {
+            text-align: left;
+        }
+        .dropdown, .edit {
+            margin-top: 0.3em;
+            margin-bottom: 0.3em;
+            display: inline-block;
+        }
+        .edit {
+            line-height: 32px;
+        }
+        .dropdown.toc-dropdown {
+            text-align: center;
+            width: 100%;
             button {
-                width: inherit;
+                width: 100%;
+            }
+        }
+        .dropdown {
+            .dropdown-menu {
+                left: inherit;
+                right: 0;
+            }
+            .selected {
+                font-weight: bold;
+                font-style: italic;
+            }
+            button.dropdown-toggle {
+                border-radius: 4px;
+                background-color: rgb(214, 214, 214);
+                &:hover {
+                    background-color: rgb(191, 191, 191);
+                }
             }
         }
     }
     .alert.alert-warning.alert-dismissible {
         margin-top: 15px;
-    }
-    .dropdown {
-        display: inline-block;
-        &:not(:last-child) {
-            margin-right: 0.3em;
-        }
-    }
-    .dropdown .selected {
-        font-weight: bold;
-        font-style: italic;
-    }
-    .dropdown button.dropdown-toggle {
-        border-radius: 4px;
-        background-color: rgb(214, 214, 214);
-        &:hover {
-            background-color: rgb(191, 191, 191);
-        }
-    }
-
-    .dropdown-menu {
-        left: inherit;
-        right: 0;
-    }
-
-    .content-header .edit {
-        margin-right: 0.5em;
-        margin-left: 0.5em;
     }
 
     /* missing version highlight */

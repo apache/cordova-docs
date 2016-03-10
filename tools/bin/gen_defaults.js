@@ -88,9 +88,14 @@ function main () {
             if (versionName === latestVersionName) {
                 changeFrequency = LATEST_CHANGE_FREQUENCY;
                 pagePriority    = LATEST_PAGE_PRIORITY;
-            } else if (versionName == DEV_VERSION_NAME) {
+            } else if (versionName === DEV_VERSION_NAME) {
                 changeFrequency = DEV_CHANGE_FREQUENCY;
                 pagePriority    = DEV_PAGE_PRIORITY;
+            }
+
+            var current = false;
+            if (versionName === latestVersionName || versionName === DEV_VERSION_NAME) {
+                current = true;
             }
 
             var versionDefaults = {
@@ -103,6 +108,7 @@ function main () {
                     generated_toc:    generatedToc.replace(".yml", ""),
                     change_frequency: changeFrequency,
                     priority:         pagePriority,
+                    current:          current
                 }
             };
 
