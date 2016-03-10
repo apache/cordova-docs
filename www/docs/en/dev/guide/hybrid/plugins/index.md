@@ -220,10 +220,14 @@ To publish a plugin to NPM registry you need to follow steps below:
 
 For more details on npm usage refer to [publishing a npm package](https://docs.npmjs.com/getting-started/publishing-npm-packages) on the NPM documentation site.
 
-## Integrating with Cordova Plugin Search
-To surface the plugin in [Cordova Plugin Search](/plugins/), add the `ecosystem:cordova` keyword to the `package.json` file of your plugin and publish it to npm registry. 
+## Integrating with Plugin Search
 
-To indicate support for a particular platform add a keyword with the `<platformName>` as "**cordova-<platformName>**" to the list of keywords in package.json. For example, for a plugin that supports android, iOS & Windows, the keywords in package.json should include:
+To surface the plugin in [Cordova Plugin Search](/plugins/), add the `ecosystem:cordova` keyword to the `package.json` file of your plugin before publishing. 
+
+To indicate support for a particular platform add a keyword with the `<platformName>` as `**cordova-<platformName>**` to the list of keywords in package.json. 
+Plugman's `createpackagejson` command does this for you, but if you did not use it to generate your `package.json`, you should manually edit it as shown below.
+
+For example, for a plugin that supports android, iOS & Windows, the keywords in package.json should include:
 
 ```json
     "keywords": [
@@ -235,4 +239,3 @@ To indicate support for a particular platform add a keyword with the `<platformN
 ```
 
 For more detailed example of a package.json, review the [package.json file of cordova-plugin-device](https://github.com/apache/cordova-plugin-device/blob/master/package.json).
-
