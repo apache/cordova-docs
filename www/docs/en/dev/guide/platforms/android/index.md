@@ -736,4 +736,4 @@ on your device or emulator to simulate low memory scenarios. You should always
 do some amount of testing with this setting enabled to make sure that your
 application is properly maintaining state.
 
-[Cordova CLI Reference]:(../../../cordova-cli/index.html)
+[Cordova CLI Reference]: ../../../cordova-cli/index.html

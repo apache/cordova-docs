@@ -371,7 +371,7 @@ for more details.
 
 cordova-android includes a number of scripts that allow the platform to be used
 without the full Cordova CLI. This development path may offer you a greater
-range of development options in certain situations than the cross-platform cordova CLI. 
+range of development options in certain situations than the cross-platform cordova CLI.
 For example, you need to use shell tools when deploying a custom
 Cordova WebView alongside native components. Before using this
 development path, you must still configure the Android SDK environment
@@ -708,4 +708,4 @@ on your device or emulator to simulate low memory scenarios. You should always
 do some amount of testing with this setting enabled to make sure that your
 application is properly maintaining state.
 
-[Cordova CLI Reference]:(../../../cordova-cli/index.html)
+[Cordova CLI Reference]: ../../../cordova-cli/index.html

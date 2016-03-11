@@ -23,13 +23,13 @@ title: iOS Platform Guide
 # iOS Platform Guide
 
 This guide shows how to set up your SDK development environment to
-deploy Cordova apps for iOS devices such as iPhone and iPad, 
-and how to optionally use iOS-centered command-line tools in your 
-development workflow. You need to install the SDK tools regardless of 
-whether you want to use these platform-centered shell tools 
-or cross-platform Cordova CLI for development. For a comparison of the two 
-development paths, see the [Overview](../../overview/index.html#development-paths). 
-For details on the CLI, see [Cordova CLI Reference].  
+deploy Cordova apps for iOS devices such as iPhone and iPad,
+and how to optionally use iOS-centered command-line tools in your
+development workflow. You need to install the SDK tools regardless of
+whether you want to use these platform-centered shell tools
+or cross-platform Cordova CLI for development. For a comparison of the two
+development paths, see the [Overview](../../overview/index.html#development-paths).
+For details on the CLI, see [Cordova CLI Reference].
 
 ## Requirements and Support
 
@@ -45,7 +45,7 @@ fully test all of the app's device features before submitting to the
 App Store.  The device must have at least iOS 6.x installed, the
 minimum iOS version supported as of Cordova 3.0.  Supporting devices
 include all iPad® models, iPhone® 3GS and above, and iPod® Touch 3rd
-Generation or later. 
+Generation or later.
 
 ## Installing the Requirements
 
@@ -60,12 +60,12 @@ There are two ways to download Xcode:
   which requires registration as an Apple Developer.
 
 Once Xcode is installed, several command-line tools need to be enabled
-for Cordova to run. From the command line, run: 
-``` xcode-select --install``` 
+for Cordova to run. From the command line, run:
+``` xcode-select --install```
 
 ### Deployment Tools
 
-The [ios-sim](https://www.npmjs.org/package/ios-sim) and 
+The [ios-sim](https://www.npmjs.org/package/ios-sim) and
 [ios-deploy](https://www.npmjs.org/package/ios-deploy) tools - allows you
 to launch iOS apps into the iOS Simulator and iOS Device from the command-line.
 
@@ -76,8 +76,8 @@ To install them, run the following from command-line terminal:
 
 ## Project Configuration
 
-Installing Xcode will mostly set everything needed to get started with the native side of things. 
-You should now be able to create and build a cordova project. 
+Installing Xcode will mostly set everything needed to get started with the native side of things.
+You should now be able to create and build a cordova project.
 For more details on installing and using the CLI, refer to [Create your first app](../../cli/index.html) guide.
 
 ### Deploying to Simulator
@@ -141,7 +141,7 @@ To deploy to the device:
 
 ## Signing an App
 
-First, you should read through the [Code Signing Support Page](https://developer.apple.com/support/code-signing/) 
+First, you should read through the [Code Signing Support Page](https://developer.apple.com/support/code-signing/)
 and the [App Distribution Workflows](https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html).
 
 ### Using Flags
@@ -152,7 +152,7 @@ To sign an app, you need the following parameters:
 |--------------------------|--------------------------|-----------------------------------
 | Code Sign Identity       | `--codeSignIdentity`     | Code signing identity to use for signing. It can be created with Xcode and added to your keychain.
 | Provisioning Profile     | `--provisioningProfile`  | GUID of the provisioning profile to be used for signing. It is copied here on your Mac: ```~/Library/MobileDevice/Provisioning\ Profiles/```. Opening it in a text editor, you can find the GUID which needs to be specified here.
-| Code Sign Resource Rules | `--codesignResourceRules`| (Optional) Used to control which files in a bundle should be sealed by a code signature. For more details, read [The OS X Code Signing In Depth article](https://developer.apple.com/library/mac/technotes/tn2206/_index.html#//apple_ref/doc/uid/DTS40007919-CH1-TNTAG206) 
+| Code Sign Resource Rules | `--codesignResourceRules`| (Optional) Used to control which files in a bundle should be sealed by a code signature. For more details, read [The OS X Code Signing In Depth article](https://developer.apple.com/library/mac/technotes/tn2206/_index.html#//apple_ref/doc/uid/DTS40007919-CH1-TNTAG206)
 
 ### Using build.json
 
@@ -172,7 +172,7 @@ build configuration file:
              }
          }
     }
-    
+
 ### Using xcrun
 
 You can also sign from the command line using the following command:
@@ -188,18 +188,18 @@ and this [video](https://developer.apple.com/videos/play/wwdc2014-413/).
 
 ### Open a Project within Xcode
 
-Cordova for iOS projects can be opened in Xcode. This can be useful if 
+Cordova for iOS projects can be opened in Xcode. This can be useful if
 you wish to use Xcode built in debugging/profiling tools or if you are
-developing iOS plugins. Please note that when opening your project in Xcode, 
-it is recommended that you do NOT edit your code in the IDE. This will edit the code 
-in the ```platforms``` folder of your project (not ```www```), and changes are liable to be overwritten. 
+developing iOS plugins. Please note that when opening your project in Xcode,
+it is recommended that you do NOT edit your code in the IDE. This will edit the code
+in the ```platforms``` folder of your project (not ```www```), and changes are liable to be overwritten.
 Instead, edit the ```www``` folder and copy over your changes by running ```cordova build```.
 
-Plugin developers wishing to edit their native code in the IDE should use the ```--link``` flag when adding their 
-plugin to the project via cordova plugin add. This will link the files so that changes to the plugin files in the 
+Plugin developers wishing to edit their native code in the IDE should use the ```--link``` flag when adding their
+plugin to the project via cordova plugin add. This will link the files so that changes to the plugin files in the
 platforms folder are reflected in your plugin's source folder (and vice versa).
 
-Once the ios platform is added to your project and built using ```cordova build```, you can open it from 
+Once the ios platform is added to your project and built using ```cordova build```, you can open it from
 within Xcode. Double-click to open the `${PROJECT_NAME}/platforms/ios/${PROJECT_NAME}.xcodeproj`
 file. The screen should look like this:
 
@@ -217,7 +217,7 @@ as described in [Requirements and Support](#link-requirements-and-support)
 above.
 
 For each of the scripts discussed below, refer to
- [Cordova CLI Reference](../../../cordova-cli/index.html) for more information on their
+ [Cordova CLI Reference] for more information on their
 arguments and usage. Each script has a name that matches the corresponding CLI
 command. For example, `cordova-ios/bin/create` is equivalent to
 `cordova create`.
@@ -230,10 +230,10 @@ To create a project using this package, run the `create` script in the `bin`
 folder:
 
     $ cordova-ios/bin/create ...
-    
+
 To run the app, use the `run` script in the `bin` folder:
 
-    $ cordova-ios/bin/run 
+    $ cordova-ios/bin/run
 
 The created project will have a folder named `cordova` inside that contains
 scripts for the project-specific Cordova commands (e.g. `run`, `build`, etc.).
@@ -249,4 +249,4 @@ Refer to [this](./upgrade.html) article for instructions to upgrade your ```cord
 
 (Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)
 
- [Cordova CLI Reference]:(../../../cordova-cli/index.html)
+[Cordova CLI Reference]: ../../../cordova-cli/index.html

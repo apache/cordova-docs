@@ -45,8 +45,8 @@ build and deploy for each platform.
 BlackBerry 10 Device Simulator:
 
 * Processor: Intel dual core 2.0 GHz/AMD Athlon 4200+ or higher
-* Disk space: 10 GB 
-* RAM Memory: 4 GB 
+* Disk space: 10 GB
+* RAM Memory: 4 GB
 * Virtualization: one of the following:
   * __Intel Virtualization Technology__ (VT, VT-x, vmx) &rarr; [Intel VT-x supported processor list](http://ark.intel.com/products/virtualizationtechnology)
   * __AMD Virtualization__ (AMD-V, SVM) (Since May 2006 all AMD CPUs include AMD-V except Sempron).
@@ -136,9 +136,9 @@ The final step is to generate a signing certificate:
 
 ## Create a Project
 
-Use the `cordova` utility to set up a new project, as described in 
-[Cordova CLI Reference](../../../cordova-cli/index.html). For example, in a source-code directory:
- 
+Use the `cordova` utility to set up a new project, as described in
+[Cordova CLI Reference]. For example, in a source-code directory:
+
         $ cordova create hello com.example.hello
         $ cd hello
         $ cordova platform add blackberry10
@@ -269,4 +269,4 @@ Once the target is defined, you can provide it to the run command using
 
     $ cordova run blackberry10 --target=emu
 
-[Cordova CLI Reference]:(../../../cordova-cli/index.html)
+[Cordova CLI Reference]: ../../../cordova-cli/index.html
