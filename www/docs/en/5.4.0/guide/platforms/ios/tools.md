@@ -79,18 +79,18 @@ To sign the app in Cordova you need the following:
 
 These parameters can be specified using the command line arguments above to `build` or `run` scripts:
 
-        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
+        $ /path/to/my_new_project/cordova/build --codeSignIdentity="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
 
 Alternatively, you could specify them in a build configuration file (build.json) using (`--buildConfig`) argument. Here's a sample of a build configuration file:
 
     {
          "ios": {
              "debug": {
-                 "codeSignIdentitiy": "iPhone Development",
+                 "codeSignIdentity": "iPhone Development",
                  "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954"
              },
              "release": {
-                 "codeSignIdentitiy": "iPhone Distribution",
+                 "codeSignIdentity": "iPhone Distribution",
                  "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306"
              }
          }

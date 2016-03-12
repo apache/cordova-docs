@@ -70,7 +70,7 @@ title: Руководство по инструментам командной �
 
 Эти параметры могут быть заданы с помощью аргументов командной строки указанных выше для `построения` или `запуска` скриптов:
 
-        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
+        $ /path/to/my_new_project/cordova/build --codeSignIdentity="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
     
 
 Кроме того их можно указать в файле конфигурации сборки (build.json) с помощью аргумента (`--buildConfig`). Ниже приведен пример файла конфигурации построения:
@@ -78,11 +78,11 @@ title: Руководство по инструментам командной �
     {
          "ios": {
              "debug": {
-                 "codeSignIdentitiy": "iPhone Development",
+                 "codeSignIdentity": "iPhone Development",
                  "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954"
              },
              "release": {
-                 "codeSignIdentitiy": "iPhone Distribution",
+                 "codeSignIdentity": "iPhone Distribution",
                  "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306"
              }
          }

@@ -71,7 +71,7 @@ Para firmar la aplicación en Córdoba es necesario lo siguiente:
 
 Estos parámetros pueden especificarse usando los argumentos de línea de comandos sobre `build` o `run` secuencias de comandos:
 
-        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
+        $ /path/to/my_new_project/cordova/build --codeSignIdentity="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
     
 
 Por otra parte, les puede especificar en un archivo de configuración de construcción (build.json) con un argumento (`--buildConfig`). Este es un ejemplo de un archivo de configuración de compilación:
@@ -79,11 +79,11 @@ Por otra parte, les puede especificar en un archivo de configuración de constru
     {
          "ios": {
              "debug": {
-                 "codeSignIdentitiy": "iPhone Development",
+                 "codeSignIdentity": "iPhone Development",
                  "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954"
              },
              "release": {
-                 "codeSignIdentitiy": "iPhone Distribution",
+                 "codeSignIdentity": "iPhone Distribution",
                  "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306"
              }
          }

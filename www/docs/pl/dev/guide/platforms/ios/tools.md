@@ -71,7 +71,7 @@ Aby zarejestrować aplikację w Cordova należy następujące:
 
 Parametry te mogą być określone za pomocą argumentów wiersza polecenia powyżej do `budowy` lub `uruchomić` skrypty:
 
-        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
+        $ /path/to/my_new_project/cordova/build --codeSignIdentity="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
     
 
 Alternatywnie można je określić w pliku konfiguracyjnym budować (build.json) za pomocą argumentu (`-buildConfig`). Oto przykład pliku konfiguracyjnego budować:
@@ -79,11 +79,11 @@ Alternatywnie można je określić w pliku konfiguracyjnym budować (build.json)
     {
          "ios": {
              "debug": {
-                 "codeSignIdentitiy": "iPhone Development",
+                 "codeSignIdentity": "iPhone Development",
                  "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954"
              },
              "release": {
-                 "codeSignIdentitiy": "iPhone Distribution",
+                 "codeSignIdentity": "iPhone Distribution",
                  "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306"
              }
          }

@@ -71,7 +71,7 @@ Um die app in Cordova anzumelden, benötigen Sie Folgendes:
 
 Diese Parameter können mithilfe der Befehlszeilenargumente oben zu `build` oder `run` von Skripts angegeben werden:
 
-        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
+        $ /path/to/my_new_project/cordova/build --codeSignIdentity="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
     
 
 Alternativ könnten Sie sie in ein Build Startkonfigurationsdatei (build.json) angeben (`--buildConfig`) Argument. Hier ist ein Beispiel für eine Konfigurationsdatei erstellen:
@@ -79,11 +79,11 @@ Alternativ könnten Sie sie in ein Build Startkonfigurationsdatei (build.json) a
     {
          "ios": {
              "debug": {
-                 "codeSignIdentitiy": "iPhone Development",
+                 "codeSignIdentity": "iPhone Development",
                  "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954"
              },
              "release": {
-                 "codeSignIdentitiy": "iPhone Distribution",
+                 "codeSignIdentity": "iPhone Distribution",
                  "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306"
              }
          }

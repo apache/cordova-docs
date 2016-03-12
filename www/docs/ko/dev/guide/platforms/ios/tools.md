@@ -71,7 +71,7 @@ IOS 위한 쉘 도구를 사용 하려면 [cordova.apache.org][1]에서 코르�
 
 위의 `빌드` 또는 `실행` 스크립트에 명령줄 인수를 사용 하 여 이러한 매개 변수를 지정할 수 있습니다.
 
-        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
+        $ /path/to/my_new_project/cordova/build --codeSignIdentity="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
     
 
 양자 택일로, (`-buildConfig`) 인수를 사용 하 여 빌드 구성 파일 (build.json)에서 그들을 지정할 수 있습니다. 빌드 구성 파일의 예제는 다음과 같습니다.
@@ -79,11 +79,11 @@ IOS 위한 쉘 도구를 사용 하려면 [cordova.apache.org][1]에서 코르�
     {
          "ios": {
              "debug": {
-                 "codeSignIdentitiy": "iPhone Development",
+                 "codeSignIdentity": "iPhone Development",
                  "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954"
              },
              "release": {
-                 "codeSignIdentitiy": "iPhone Distribution",
+                 "codeSignIdentity": "iPhone Distribution",
                  "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306"
              }
          }

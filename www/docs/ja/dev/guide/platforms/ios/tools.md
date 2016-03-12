@@ -71,7 +71,7 @@ IOS 用シェル ・ ツールを有効にするには、コルドバ[cordova.ap
 
 これらのパラメーターは、`buid`または`run`スクリプトを上記のコマンドライン引数を使用して指定できます。
 
-        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
+        $ /path/to/my_new_project/cordova/build --codeSignIdentity="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
     
 
 また、(`-buildConfig`) 引数を使用してビルド構成ファイル (build.json) で指定する可能性があります。ビルドの構成ファイルのサンプルを次に示します。
@@ -79,11 +79,11 @@ IOS 用シェル ・ ツールを有効にするには、コルドバ[cordova.ap
     {
          "ios": {
              "debug": {
-                 "codeSignIdentitiy": "iPhone Development",
+                 "codeSignIdentity": "iPhone Development",
                  "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954"
              },
              "release": {
-                 "codeSignIdentitiy": "iPhone Distribution",
+                 "codeSignIdentity": "iPhone Distribution",
                  "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306"
              }
          }

@@ -71,7 +71,7 @@ Pour signer l'application à Cordoue, vous devez le texte suivant :
 
 Ces paramètres peuvent être spécifiés en utilisant les arguments de ligne de commande ci-dessus à `buile` ou `run` des scripts :
 
-        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
+        $ /path/to/my_new_project/cordova/build --codeSignIdentity="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
     
 
 Alternativement, vous pouvez spécifier les dans un fichier (build.json) de configuration de build à l'aide (`--buildConfig`) argument. Voici un exemple de fichier de configuration de génération :
@@ -79,11 +79,11 @@ Alternativement, vous pouvez spécifier les dans un fichier (build.json) de conf
     {
          "ios": {
              "debug": {
-                 "codeSignIdentitiy": "iPhone Development",
+                 "codeSignIdentity": "iPhone Development",
                  "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954"
              },
              "release": {
-                 "codeSignIdentitiy": "iPhone Distribution",
+                 "codeSignIdentity": "iPhone Distribution",
                  "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306"
              }
          }

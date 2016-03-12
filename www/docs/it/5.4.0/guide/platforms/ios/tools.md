@@ -71,7 +71,7 @@ Per firmare l'app a Cordova è necessario quanto segue:
 
 Questi parametri possono essere specificati utilizzando gli argomenti della riga di comando sopra per `compile` o `run` script:
 
-        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
+        $ /path/to/my_new_project/cordova/build --codeSignIdentity="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
     
 
 In alternativa, è possibile specificare in un file di configurazione di compilazione (build.json) utilizzando l'argomento (`-buildConfig`). Ecco un esempio di un file di configurazione di generazione:
@@ -79,11 +79,11 @@ In alternativa, è possibile specificare in un file di configurazione di compila
     {
          "ios": {
              "debug": {
-                 "codeSignIdentitiy": "iPhone Development",
+                 "codeSignIdentity": "iPhone Development",
                  "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954"
              },
              "release": {
-                 "codeSignIdentitiy": "iPhone Distribution",
+                 "codeSignIdentity": "iPhone Distribution",
                  "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306"
              }
          }

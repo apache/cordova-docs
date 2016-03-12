@@ -28,7 +28,7 @@ requirements for iOS platform:
 and support for [Signing the App for iOS platform](
 http://cordova.apache.org/docs/en/dev/guide_platforms_ios_tools.md.html#signing-the-app):
 
-    $>/path/to/my/project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954"
+    $>/path/to/my/project/cordova/build --codeSignIdentity="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954"
 
 To upgrade:
 
