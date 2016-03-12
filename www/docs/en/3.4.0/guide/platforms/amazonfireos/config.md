@@ -28,7 +28,7 @@ details preferences that only apply to  Amazon Fire OS builds. See The
 config.xml File for information on global configuration options.
 
 - `KeepRunning` (boolean, defaults to `true`): Determines whether the
-  application stays running in the background even after a `[pause](../../../cordova/events/events.pause.html)`
+  application stays running in the background even after a [`pause`](../../../cordova/events/events.pause.html)
   event fires.
 
         <preference name="KeepRunning" value="false"/>

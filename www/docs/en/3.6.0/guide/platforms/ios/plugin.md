@@ -205,7 +205,7 @@ success callback is called, it passes in the `echo` parameter.
 ## iOS Integration
 
 The `CDVPlugin` class features other methods that your plugin can
-override.  For example, you can capture the `[pause](../../../cordova/events/events.pause.html)`, `[resume](../../../cordova/events/events.resume.html)`, app
+override.  For example, you can capture the [`pause`](../../../cordova/events/events.pause.html), [`resume`](../../../cordova/events/events.resume.html), app
 terminate and `handleOpenURL` events. See the
 [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
 and

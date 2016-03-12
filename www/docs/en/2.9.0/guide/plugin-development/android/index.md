@@ -28,7 +28,7 @@ file.
 
 A plugin consists of at least one Java class that extends the `CordovaPlugin` class. A plugin must override one
 of the `execute` methods from `CordovaPlugin`.
-As best practice, the plugin should handle `[pause](../../../cordova/events/events.pause.html)` and `[resume](../../../cordova/events/events.resume.html)` events, and any message passing between plugins.
+As best practice, the plugin should handle [`pause`](../../../cordova/events/events.pause.html) and [`resume`](../../../cordova/events/events.resume.html) events, and any message passing between plugins.
 Plugins with long-running requests, background activity such as media payback, listeners, or internal state should implement the `onReset()` method as well. This method is run when the `WebView` navigates to a new page or refreshes, which reloads the JavaScript.
 
 ## Plugin Class Mapping

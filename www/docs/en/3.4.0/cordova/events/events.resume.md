@@ -86,7 +86,7 @@ attach an event listener once the `[deviceready](events.deviceready.html)` event
 
 ## iOS Quirks
 
-Any interactive functions called from a `[pause](events.pause.html)` event handler execute
+Any interactive functions called from a [`pause`](events.pause.html) event handler execute
 later when the app resumes, as signaled by the `resume` event. These
 include alerts, `console.log()`, and any calls from plugins or the
 Cordova API, which go through Objective-C.
