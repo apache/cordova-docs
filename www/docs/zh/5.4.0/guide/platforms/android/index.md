@@ -64,12 +64,12 @@ title: Android 平臺指南
 科爾多瓦的命令列工具來工作，或者基於他們的 CLI，您需要在您的`路徑`中包括 SDK 的`工具`和`平臺工具`目錄。 在 Mac 或 Linux 上，你可以使用一個文字編輯器來創建或修改`~/.bash_profile`檔，添加行，如下，根據 SDK 安裝的位置:
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
-    
+
 
 這條線在`~/.bash_profile`公開這些工具在新打開的終端視窗。 如果您的終端視窗已經打開在 OSX，或避免在 Linux 上的登出/登錄，運行此工具以使他們在當前的終端視窗中可用：
 
         $ source ~/.bash_profile
-    
+
 
 若要修改`PATH`在窗戶上的環境：
 
@@ -82,9 +82,9 @@ title: Android 平臺指南
 4.  選擇**PATH**變數，然後按**編輯**.
 
 5.  追加到以下 `PATH` 基於在安裝 SDK，例如：
-    
+
         ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
-        
+
 
 6.  將值保存並關閉這兩個對話方塊。
 
@@ -171,14 +171,14 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
         $ cordova create hello com.example.hello HelloWorld
         $ cd hello
         $ cordova platform add android
-        $ ccordova prepare              # or "cordova build"
-    
+        $ cordova prepare              # or "cordova build"
+
 
 這裡是 Unix 和 Windows 的相應較低級別 shell 工具方法：
 
         $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
         C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## 生成專案
 
@@ -188,7 +188,7 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
         $ cordova build android           # build debug for only Android
         $ cordova build android --debug   # build debug for only Android
         $ cordova build android --release # build release for only Android
-    
+
 
 如果使用的特定于 Android 的 shell 工具在發展中，還有一個不同的方法。 一旦您生成專案時，預設的應用程式的來源是可用的`資產/www`子目錄中。 後續的命令，可在其`科爾多瓦`子目錄。
 
@@ -196,10 +196,10 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
-    
+
         $ /path/to/project/cordova/build --release
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 ## 部署應用程式
 
@@ -207,13 +207,13 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
         $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
-    
+
 
 否則，請使用備用殼介面：
 
         $ /path/to/project/cordova/run --emulator
         $ /path/to/project/cordova/run --device
-    
+
 
 您可以使用**cordova run android --list**看到所有可用的目標和**cordova run android --target=target_name**在一個特定的設備或模擬器上運行應用程式 （例如，`cordova run android --target="Nexus4_emulator"`).
 
@@ -228,7 +228,7 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 當您`run`該應用程式，您還`build`它。 您可以附加額外`--debug`， `--release`，和`--nobuild`標誌來控制它如何構建的或甚至是否重建是必需的：
 
         $ /path/to/project/cordova/run --emulator --nobuild
-    
+
 
 ## 其他命令
 
@@ -236,13 +236,13 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
         $ /path/to/project/cordova/log
         C:\path\to\project\cordova\log.bat
-    
+
 
 以下清理的專案檔案：
 
         $ /path/to/project/cordova/clean
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## 在 SDK 中打開一個新專案
 
@@ -251,11 +251,11 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 1.  推出**Android 工作室**中的應用。
 
 2.  選擇**導入專案 （Eclipse ADT，Gradle 等）**.
-    
+
     ![][19]
 
 3.  選擇存儲 （`你/專案/platforms/android` android 平臺的位置).
-    
+
     ![][20]
 
 4.  `Gradle Sync`問題你可以乾脆的回答**是**.

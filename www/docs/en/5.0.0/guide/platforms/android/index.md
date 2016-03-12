@@ -66,14 +66,14 @@ plugins.
 ## Install the Java Development Kit (JDK)
 
 Install [Java Development Kit (JDK) 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
-or later. 
+or later.
 
 When installing on Windows you also need to set `JAVA_HOME` Environment Variable
 according to JDK installation path (for example, C:\Program Files\Java\jdk1.7.0_75).
 
 ## Install the Android SDK
 
-Install the [Android Stand-alone SDK Tools](http://developer.android.com/sdk/installing/index.html?pkg=tools) or [Android Studio](http://developer.android.com/sdk/installing/index.html?pkg=studio). Procceed with `Android Studio` if you plan 
+Install the [Android Stand-alone SDK Tools](http://developer.android.com/sdk/installing/index.html?pkg=tools) or [Android Studio](http://developer.android.com/sdk/installing/index.html?pkg=studio). Procceed with `Android Studio` if you plan
 developing new Cordova for Android plugins or using native tools to
 run and debug Android platform. Otherwise, `Android Stand-alone SDK Tools`
 are enough to build and deploy Android application.
@@ -126,7 +126,7 @@ for more details.
 
 ## Configure an Emulator
 
-Android sdk doesn't provide any default emulator instance by default. You can 
+Android sdk doesn't provide any default emulator instance by default. You can
 create a new one by running `android` on the command line.
 The press __Tools &rarr; Manage AVDs__ (Android Virtual Devices),
 then choose any item from __Device Definitions__ in the resulting dialog
@@ -150,35 +150,35 @@ additional controls available for hardware buttons:
 ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png)
 
 
-For a faster experience, you can use the `Virtual Machine Acceleration` to improve 
+For a faster experience, you can use the `Virtual Machine Acceleration` to improve
 the execution speed.
 Many modern CPUs provide extensions to execute Virtual Machines more efficiently.
-Before attempting to use this type of acceleration, you need to determine if your 
+Before attempting to use this type of acceleration, you need to determine if your
 current development system's CPU, supports one the following virtualization technologies:
 
 * __Intel Virtualization Technology__ (VT-x, vmx) &rarr; [Intel VT-x supported processor list](http://ark.intel.com/products/virtualizationtechnology)
 * __AMD Virtualization__ (AMD-V, SVM), only supported for Linux (Since May 2006, all CPUs AMD include AMD-V, except Sempron).
 
-Another way to find out if your Intel processor supports VT-x Technology, it's by executing the 
+Another way to find out if your Intel processor supports VT-x Technology, it's by executing the
 `Intel Processor Identification Utility`, for `Windows`you can download it from the Intel [Download Center](https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7838),
 or you can use the [booteable utility](https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7840&lang=eng), which is `OS Independent`.
 
-After install and execute the `Intel Processor Identification Utility` over Windows, you will get the following window, 
+After install and execute the `Intel Processor Identification Utility` over Windows, you will get the following window,
 in order to check if your CPU supports the Virtualization Technologies:
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/android/intel_pid_util_620px.png)
 
-In order to speed up the emulator, you need to download and install one or more `Intel x86 Atom` System Images, 
+In order to speed up the emulator, you need to download and install one or more `Intel x86 Atom` System Images,
 as well as the `Intel Hardware Accelerated Execution Manager (HAXM)`.
 
-Open your Android SDK Manager, and select the `Intel x86 Atom` System Image, for whichever version that you want to test. Then go to `Extras` 
+Open your Android SDK Manager, and select the `Intel x86 Atom` System Image, for whichever version that you want to test. Then go to `Extras`
 and select `Intel x86 Emulator Accelerator (HAXM)`, and install those packages:
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png)
 
 After download, run the Intel installer, which is available within your
-Android SDK at `extras/intel/Hardware_Accelerated_Execution_Manager`. 
-__Note__:`If you have any problems installing the package, you can find more information and step by step guidance check this` 
+Android SDK at `extras/intel/Hardware_Accelerated_Execution_Manager`.
+__Note__:`If you have any problems installing the package, you can find more information and step by step guidance check this`
 [Intel Article](http://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture).
 
 1. Install one or more `Intel x86 Atom` System Images as well as the
@@ -203,7 +203,7 @@ directory, here's the CLI approach:
         $ cordova create hello com.example.hello HelloWorld
         $ cd hello
         $ cordova platform add android
-        $ ccordova prepare              # or "cordova build"
+        $ cordova prepare              # or "cordova build"
 
 Here's the corresponding lower-level shell-tool approach for both Unix
 and Windows:
@@ -234,7 +234,7 @@ release:
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
-        
+
         $ /path/to/project/cordova/build --release
         C:\path\to\project\cordova\build.bat --release
 
@@ -251,8 +251,8 @@ Otherwise, use the alternate shell interface:
         $ /path/to/project/cordova/run --emulator
         $ /path/to/project/cordova/run --device
 
-You can use __cordova run android --list__ to see all available targets and 
-__cordova run android --target=target_name__ to run application on a specific 
+You can use __cordova run android --list__ to see all available targets and
+__cordova run android --target=target_name__ to run application on a specific
 device or emulator (for example,  `cordova run android --target="Nexus4_emulator"`).
 
 You can also use __cordova run --help__ to see additional build and run
@@ -282,7 +282,7 @@ The following cleans the project files:
 
 ## Open a New Project in the SDK
 
-Once android platform is added to your project, you can open it from 
+Once android platform is added to your project, you can open it from
 within [Android Studio](http://developer.android.com/sdk/installing/index.html?pkg=studio):
 
 1. Launch the __Android Studio__ application.
@@ -292,7 +292,7 @@ within [Android Studio](http://developer.android.com/sdk/installing/index.html?p
   ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_project.png)
 
 1. Select location where android platform is stored (`your/project/platforms/android`).
-  
+
   ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_select_location.png)
 
 1. For the `Gradle Sync` question you can simply answer __Yes__.

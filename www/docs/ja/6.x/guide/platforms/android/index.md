@@ -64,12 +64,12 @@ Windows をインストールするときも JDK インストール パス (た�
 コルドバするために、コマンド ライン ツールまたはに基づいては、CLI は、SDK の`ツール`や`プラットフォーム固有のツール`ディレクトリ`パス`に含める必要があります。 Mac または Linux は、作成または変更するテキスト エディターを使用することができます、 `~/.bash_profile` ファイルは、SDK がインストールに応じて、次のような行を追加します。
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
-    
+
 
 `~/.Bash_profile`内のこの行は、新しくオープンしたターミナル ウィンドウでこれらのツールを公開します。 ターミナル ・ ウィンドウをまだ開いて場合は osx 版、またはログアウト/ログイン Linux 上を避けるために、現在の端末ウィンドウで使用できるようにするこれを実行します。
 
         $ source ~/.bash_profile
-    
+
 
 Windows の`PATH`環境を変更: する
 
@@ -82,9 +82,9 @@ Windows の`PATH`環境を変更: する
 4.  **パス**変数を選択し、キーを押して**編集**.
 
 5.  追加するのには、次の `PATH` 例えば、SDK をインストールしたに基づきます。
-    
+
         ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
-        
+
 
 6.  値を保存して両方のダイアログ ボックスを閉じます。
 
@@ -171,14 +171,14 @@ Windows の`PATH`環境を変更: する
         $ cordova create hello com.example.hello HelloWorld
         $ cd hello
         $ cordova platform add android
-        $ ccordova prepare              # or "cordova build"
-    
+        $ cordova prepare              # or "cordova build"
+
 
 ここでは Unix および Windows の対応する低レベル シェル ツール アプローチ：
 
         $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
         C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## プロジェクトをビルドします。
 
@@ -188,7 +188,7 @@ Windows の`PATH`環境を変更: する
         $ cordova build android           # build debug for only Android
         $ cordova build android --debug   # build debug for only Android
         $ cordova build android --release # build release for only Android
-    
+
 
 開発で人造人間に固有のシェルのツールを使用している場合、別のアプローチがあります。 プロジェクトを生成した後、既定のアプリのソースは`資産/www`サブディレクトリで利用可能です。 以降のコマンドはその`コルドバ`サブディレクトリで利用できます。
 
@@ -196,10 +196,10 @@ Windows の`PATH`環境を変更: する
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
-    
+
         $ /path/to/project/cordova/build --release
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 ## アプリを展開します。
 
@@ -207,13 +207,13 @@ Windows の`PATH`環境を変更: する
 
         $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
-    
+
 
 それ以外の場合は、代替シェル インターフェイスを使用します。
 
         $ /path/to/project/cordova/run --emulator
         $ /path/to/project/cordova/run --device
-    
+
 
 使用することができます**cordova run android --list**を見るすべての利用可能なターゲットと**cordova run android --target=target_name** 、特定のデバイスまたはエミュレーターでアプリケーションを実行する (たとえば、`cordova run android --target="Nexus4_emulator"`).
 
@@ -228,7 +228,7 @@ Windows の`PATH`環境を変更: する
 ときにアプリを`実行`を`構築`することもそれ。 追加を追加することができます`--デバッグ`、 `-リリース`、および構築方法や、再構築が必要かどうかも制御する`--nobuild`フラグ。
 
         $ /path/to/project/cordova/run --emulator --nobuild
-    
+
 
 ## その他のコマンド
 
@@ -236,13 +236,13 @@ Windows の`PATH`環境を変更: する
 
         $ /path/to/project/cordova/log
         C:\path\to\project\cordova\log.bat
-    
+
 
 次のプロジェクト ファイルが消去されます。
 
         $ /path/to/project/cordova/clean
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## SDK で新しいプロジェクトを開く
 
@@ -251,11 +251,11 @@ Android プラットフォームは、プロジェクトに追加されます、
 1.  **アンドロイド Studio**アプリケーションを起動します。
 
 2.  **インポート プロジェクト (Eclipse ADT、Gradle など)**を選択します.
-    
+
     ![][19]
 
 3.  Android プラットフォームは、ストアド`あなた/プロジェクト/プラットフォーム/android`の場所を選択します。).
-    
+
     ![][20]
 
 4.  `Gradle 同期`質問の単に答えが**はい**.

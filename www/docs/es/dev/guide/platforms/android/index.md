@@ -64,12 +64,12 @@ Instrucciones de instalación detalladas están disponibles como parte de los en
 Cordova Herramientas de línea de comandos para trabajar, o la CLI que se basa en ellos, necesita incluir directorios `Herramientas` y `herramientas de la plataforma` de la SDK en tu `camino`. En un Mac o Linux, puede utilizar un editor de texto para crear o modificar la `~/.bash_profile` archivo, agregar una línea como la siguiente, dependiendo de donde se instala el SDK:
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
-    
+
 
 Esta línea en `~/.bash_profile` expone estas herramientas en windows terminales recién inauguradas. Si tu ventana de terminal ya está abierto en OSX o para evitar un cierre de sesión/inicio de sesión en Linux, ejecute esto para que estén disponibles en la ventana de terminal actual:
 
         $ source ~/.bash_profile
-    
+
 
 Para modificar el entorno `PATH` en Windows:
 
@@ -82,9 +82,9 @@ Para modificar el entorno `PATH` en Windows:
 4.  Seleccione la variable **PATH** y pulse **Editar**.
 
 5.  Añadir lo siguiente a la `PATH` basada en donde se ha instalado el SDK, por ejemplo:
-    
+
         ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
-        
+
 
 6.  El valor de guardar y cerrar ambos cuadros de diálogo.
 
@@ -171,14 +171,14 @@ En este punto, para crear un nuevo proyecto puede elegir entre la herramienta de
         $ cordova create hello com.example.hello HelloWorld
         $ cd hello
         $ cordova platform add android
-        $ ccordova prepare              # or "cordova build"
-    
+        $ cordova prepare              # or "cordova build"
+
 
 Aquí es el enfoque de shell-herramienta de nivel inferior correspondiente para Unix y Windows:
 
         $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
         C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## Construcción del proyecto
 
@@ -188,7 +188,7 @@ Si utilizas la CLI en desarrollo, directorio de nivel superior `www` del directo
         $ cordova build android           # build debug for only Android
         $ cordova build android --debug   # build debug for only Android
         $ cordova build android --release # build release for only Android
-    
+
 
 Si está utilizando las herramientas de shell específicas para Android en desarrollo, hay un enfoque diferente. Una vez que se genera el proyecto, fuente de la aplicación por defecto está disponible en el subdirectorio de `activos/www` . Los comandos están disponibles en su subdirectorio `cordova` .
 
@@ -196,10 +196,10 @@ El comando `build` limpia archivos de proyecto y reconstruye la aplicación. Aqu
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
-    
+
         $ /path/to/project/cordova/build --release
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 ## Desplegar la aplicación
 
@@ -207,13 +207,13 @@ Puede utilizar la utilidad CLI `cordova` para desplegar la aplicación en el emu
 
         $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
-    
+
 
 De lo contrario, utilice la interfaz de shell alterno:
 
         $ /path/to/project/cordova/run --emulator
         $ /path/to/project/cordova/run --device
-    
+
 
 Puede utilizar **cordova run android --list** para ver todos los destinos disponibles y **cordova run android --target = target_name** para ejecutar la aplicación en un dispositivo específico o un emulador (por ejemplo, `cordova run android --target = "Nexus4_emulator"`).
 
@@ -228,7 +228,7 @@ Esto empuja la aplicación a la pantalla de inicio y lo lanza:
 Cuando se `ejecuta` la aplicación, también se `construye` . Puede anexar adicional `--debug`, `--release`y `--nobuild` banderas para controlar cómo se construye, o incluso si es necesaria una reconstrucción:
 
         $ /path/to/project/cordova/run --emulator --nobuild
-    
+
 
 ## Otros comandos
 
@@ -236,13 +236,13 @@ Los siguientes genera un registro detallado de la aplicación que se ejecuta:
 
         $ /path/to/project/cordova/log
         C:\path\to\project\cordova\log.bat
-    
+
 
 A continuación limpia los archivos del proyecto:
 
         $ /path/to/project/cordova/clean
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## Abra un nuevo proyecto en el SDK
 
@@ -251,11 +251,11 @@ Una vez que la plataforma android se agrega a su proyecto, puede abrir desde den
 1.  Inicie la aplicación **Android Studio** .
 
 2.  Seleccione **Importar proyecto (Eclipse ADT, Gradle, etc.)**.
-    
+
     ![][19]
 
 3.  Seleccione la ubicación donde la plataforma android es almacenado (`su/proyecto/platform/android`).
-    
+
     ![][20]
 
 4.  Para la pregunta `Gradle Sync` puede responder simplemente **Sí**.

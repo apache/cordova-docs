@@ -64,12 +64,12 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
 Чтобы инструменты командной строки Cordova работали, или другое CLI которое основано на них, вам необходимо включить каталоги SDK `tools` и `platform-tools` в вашу переменную окружения `PATH`. На Mac, вы можете использовать текстовый редактор для создания или изменения файла `~/.bash_profile`, добавив линию, наподобие нижеуказанной, в зависимости от того где установлен SDK:
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
-    
+
 
 Эта строка в `~/.bash_profile` добавляет эти инструменты во вновь открытых окнах терминала. Если ваше окно терминала уже открыт в OSX, или чтобы избежать процедуры выхода/входа на Linux, выполните ниже указанную команду, чтобы сделать эти инструменты доступными в текущем окне терминала:
 
         $ source ~/.bash_profile
-    
+
 
 Чтобы изменить переменную окружения `PATH` на Windows 7:
 
@@ -82,9 +82,9 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
 4.  Выберите переменную **PATH** и нажмите **редактировать**.
 
 5.  Добавьте следующее в `PATH`, в зависимости от того куда был установлен пакет SDK, например:
-    
+
         ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
-        
+
 6.  Сохраните значение и закройте оба диалоговые окна.
 
 ## Установить пакеты SDK
@@ -170,14 +170,14 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
         $ cordova create hello com.example.hello HelloWorld
         $ cd hello
         $ cordova platform add android
-        $ ccordova prepare              # or "cordova build"
-    
+        $ cordova prepare              # or "cordova build"
+
 
 Вот соотвествующий низкоуровневый подход для Unix и Windows:
 
         $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
         C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## Построение проекта
 
@@ -187,7 +187,7 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
         $ cordova build android           # build debug for only Android
         $ cordova build android --debug   # build debug for only Android
         $ cordova build android --release # build release for only Android
-    
+
 
 Если вы используете Android-ориентированные инструментыв разработке, используйте другой подход. После того как вы создали проект, исходный код приложения по умолчанию доступен в подкаталоге `assets/www`. Последующие команды доступны в подкаталоге `cordova` проекта.
 
@@ -195,10 +195,10 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
-    
+
         $ /path/to/project/cordova/build --release
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 ## Развертывание приложения
 
@@ -206,13 +206,13 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
 
         $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
-    
+
 
 В противном случае используйте интерфейс альтернативной оболочки:
 
         $ /path/to/project/cordova/run --emulator
         $ /path/to/project/cordova/run --device
-    
+
 
 Можно использовать **cordova run android --list** чтобы увидеть все доступные цели и **cordova run android --target=имя_устройства** для запуска приложения на конкретном устройстве или эмуляторе (например, `cordova run android --target="Nexus4_emulator"`).
 
@@ -227,7 +227,7 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
 Когда вы запускаете приложение с помощью `run`, вы также собираете его с помощью `build` автоматически. Вы можете добавить дополнительные флаги `--debug`, `--release`, и `--nobuild` для управления как приложение будет построен, или даже когда перепостроение необходимо:
 
         $ /path/to/project/cordova/run --emulator --nobuild
-    
+
 
 ## Другие команды
 
@@ -235,13 +235,13 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
 
         $ /path/to/project/cordova/log
         C:\path\to\project\cordova\log.bat
-    
+
 
 Следующие команды очищают файлы проекта:
 
         $ /path/to/project/cordova/clean
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## Откройте новый проект в SDK
 
@@ -250,11 +250,11 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
 1.  Запустите приложение **Android Studio** .
 
 2.  Выберите пункт **Import Project (Eclipse ADT, Gradle, etc)**.
-    
+
     ![][19]
 
 3.  Выберите местоположение, где платформа android сохраняется (`ваш/каталог/проекта/platforms/android`).
-    
+
     ![][20]
 
 4.  Для вопроса `Gradle Sync` можно просто ответить **Yes**.

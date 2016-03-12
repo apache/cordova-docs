@@ -64,12 +64,12 @@ SDK와 함께에서 코르도바의 안 드 로이드 중심으로 셸 도구를
 일, 코르도바 명령줄 도구 또는 그들 따라 CLI에 대 한 `경로`에 SDK의 `도구` 및 `플랫폼 도구` 디렉터리를 포함 해야 합니다. 만들거나 수정 하려면 텍스트 편집기를 사용할 수 맥 이나 리눅스에는 `~/.bash_profile` 파일, SDK 설치에 따라 다음 줄을 추가:
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
-    
+
 
 `~/.Bash_profile` 에이 라인 새롭게 문이 연된 터미널 창에서 이러한 도구를 제공합니다. 당신의 최종적인 창 이미 OSX 또는 리눅스에 로그 아웃/로그인을 피하기 위해 열려 있으면 현재 터미널 창에서 사용할 수 있도록이 실행.
 
         $ source ~/.bash_profile
-    
+
 
 Windows에서 `경로` 환경 수정:
 
@@ -82,9 +82,9 @@ Windows에서 `경로` 환경 수정:
 4.  **경로** 변수를 선택 하 고 **편집** 을 누릅니다.
 
 5.  다음을 추가 `PATH` 기반으로 설치한 SDK, 예를 들면:
-    
+
         ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
-        
+
 
 6.  값을 저장 하 고 두 대화 상자를 닫습니다.
 
@@ -171,14 +171,14 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
         $ cordova create hello com.example.hello HelloWorld
         $ cd hello
         $ cordova platform add android
-        $ ccordova prepare              # or "cordova build"
-    
+        $ cordova prepare              # or "cordova build"
+
 
 다음은 유닉스와 윈도우에 대 한 해당 하위 셸 도구 접근이입니다.
 
         $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
         C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## 프로젝트 빌드
 
@@ -188,7 +188,7 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
         $ cordova build android           # build debug for only Android
         $ cordova build android --debug   # build debug for only Android
         $ cordova build android --release # build release for only Android
-    
+
 
 개발에서 안 드 로이드 관련 셸 도구를 사용 하는 경우는 다른 접근이 이다.입니다. 일단 프로젝트를 생성 하면 기본 응용 프로그램의 소스는 `자산/www` 하위 디렉터리에. 후속 명령 그것의 `코르도바` 하위 디렉터리에 사용할 수 있습니다.
 
@@ -196,10 +196,10 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
-    
+
         $ /path/to/project/cordova/build --release
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 ## 응용 프로그램 배포
 
@@ -207,13 +207,13 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
         $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
-    
+
 
 그렇지 않으면 대체 셸 인터페이스를 사용 하 여:
 
         $ /path/to/project/cordova/run --emulator
         $ /path/to/project/cordova/run --device
-    
+
 
 사용할 수 있습니다 **cordova run android --list** 모든 사용할 수 있는 대상을 참조 하 고 **cordova run android --target=target_name** 특정 장치 또는 에뮬레이터에서 응용 프로그램을 실행 하 (예를 들어 `cordova run android --target="Nexus4_emulator"`).
 
@@ -228,7 +228,7 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 때 `실행` 애플 리 케이 션, 당신은 또한 `빌드` 그것. 추가 추가 할 수 있습니다 `--debug`, `--release`, 그리고 어떻게 그것은 내장, 또는 심지어 여부 재건은 필요한 제어 `--nobuild` 플래그:
 
         $ /path/to/project/cordova/run --emulator --nobuild
-    
+
 
 ## 다른 명령
 
@@ -236,13 +236,13 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
         $ /path/to/project/cordova/log
         C:\path\to\project\cordova\log.bat
-    
+
 
 다음 프로젝트 파일 정리:
 
         $ /path/to/project/cordova/clean
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## SDK에는 새 프로젝트를 엽니다
 
@@ -251,11 +251,11 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 1.  **안 드 로이드 Studio** 응용 프로그램을 시작 합니다.
 
 2.  **가져오기 프로젝트 (이클립스 ADT, Gradle, 등)** 선택.
-    
+
     ![][19]
 
 3.  안 드 로이드 플랫폼 저장된 (`your/project/platforms/android` 위치 선택).
-    
+
     ![][20]
 
 4.  `Gradle 동기화` 질문에 대답할 수 있는 단순히 **네**.
