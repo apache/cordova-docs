@@ -24,5 +24,4 @@
         {% include sitemap_entry.html url=latest_url change_frequency=site_page.change_frequency priority=0.9 %}
     {% endif %}
 {% endfor %}
-
 </urlset>
