@@ -41,6 +41,7 @@ platform      | *Optional* <br/> Target platform
 width         | *Optional* <br/> Icon width in pixels
 height        | *Optional* <br/> Icon height in pixels
 density       | *Optional* <br/> Specified icon density (Android Specific)
+target        | *Optional* <br/> Destination filename for the image file and all its' MRT companions (Windows Specific)
 
 
 The following configuration can be used to define single default icon
@@ -54,7 +55,7 @@ different screen resolutions.
 ##Android
 ```xml
     <platform name="android">
-        <!-- 
+        <!--
             ldpi    : 36x36 px
             mdpi    : 48x48 px
             hdpi    : 72x72 px
@@ -135,6 +136,22 @@ different screen resolutions.
         <icon src="res/Windows/Wide310x150Logo.scale-240.png" width="744" height="360" />
     </platform>
 ```
+
+For Windows it's also possible to specify icons destination using `target` attribute. This approach has the following advantages:
+
+  * it is possible to define group of icons for different device scale factors using one `<icon ...>` element, for example:
+```xml
+    <icon src="res/Windows/AppListIcon.png" target="Square44x44Logo.png" />
+```
+  which is equal to the following lines:
+```xml
+    <icon src="res/Windows/Square44x44Logo.scale-100.png" width="44" height="44" />
+    <icon src="res/Windows/Square44x44Logo.scale-150.png" width="66" height="66" />
+    <icon src="res/Windows/Square44x44Logo.scale-150.png" width="88" height="88" />
+    <icon src="res/Windows/Square44x44Logo.scale-240.png" width="106" height="106" />
+```
+  * it is possible to define icons with scale factors other than `scale-100` and `scale-240` (and any other MRT qualifiers)
+
 ###See Also:
 - [Windows platform guidelines for icons](https://msdn.microsoft.com/en-us/library/windows/apps/mt412102.aspx).
 
