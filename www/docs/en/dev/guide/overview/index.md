@@ -77,7 +77,7 @@ other and bindings to standard device APIs. This enables you to invoke native
 code from JavaScript. 
 
 Apache Cordova project maintains a set of plugins called the 
-[Core Plugins](../guide/support/index.html#core-plugin-apis). These core 
+[Core Plugins](../support/index.html#core-plugin-apis). These core 
 plugins provide your application to access device capabilities such as 
 battery, camera, contacts, etc.
 
