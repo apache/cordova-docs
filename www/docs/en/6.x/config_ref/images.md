@@ -40,8 +40,8 @@ src           | *Required* <br/> Location of the image file, relative to your pr
 platform      | *Optional* <br/> Target platform
 width         | *Optional* <br/> Icon width in pixels
 height        | *Optional* <br/> Icon height in pixels
-density       | *Optional* <br/> Specified icon density (Android Specific)
-target        | *Optional* <br/> Destination filename for the image file and all its' MRT companions (Windows Specific)
+density       | *Optional* <br/> ==Android== <br/> Specified icon density
+target        | *Optional* <br/> ==Windows== <br/> Destination filename for the image file and all its' MRT companions
 
 
 The following configuration can be used to define single default icon
@@ -120,6 +120,39 @@ different screen resolutions.
 - [App icon and image size guidelines](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html)
 
 ##Windows
+
+For Windows the recommended approach to define app icons is to use `target` attribute.
+
+```xml
+    <platform name="windows">
+        <icon src="res/windows/storelogo.png" target="StoreLogo" />
+        <icon src="res/windows/smalllogo.png" target="Square30x30Logo" />
+        <icon src="res/Windows/Square44x44Logo.png" target="Square44x44Logo" />
+        <icon src="res/Windows/Square70x70Logo.png" target="Square70x70Logo" />
+        <icon src="res/Windows/Square71x71Logo.png" target="Square71x71Logo" />
+        <icon src="res/Windows/Square150x150Logo.png" target="Square150x150Logo" />
+        <icon src="res/Windows/Square310x310Logo.png" target="Square310x310Logo" />
+        <icon src="res/Windows/Wide310x150Logo.png" target="Wide310x150Logo" />
+    </platform>
+```
+
+Using `target` attribute is is possible to:
+
+  * define a group of icons for different device scale factors using one `<icon ...>` element, for example:
+```xml
+    <icon src="res/Windows/AppListIcon.png" target="Square44x44Logo.png" />
+```
+  which is equivalent to the following lines:
+```xml
+    <icon src="res/Windows/Square44x44Logo.scale-100.png" width="44" height="44" />
+    <icon src="res/Windows/Square44x44Logo.scale-150.png" width="66" height="66" />
+    <icon src="res/Windows/Square44x44Logo.scale-200.png" width="88" height="88" />
+    <icon src="res/Windows/Square44x44Logo.scale-240.png" width="106" height="106" />
+```
+  * define icons with scale factors other than `scale-100` and `scale-240` (and any other MRT qualifiers)
+
+Though, use of `width` and `height` attributes is still possible:
+
 ```xml
     <platform name="windows">
         <icon src="res/windows/logo.png" width="150" height="150" />
@@ -137,23 +170,9 @@ different screen resolutions.
     </platform>
 ```
 
-For Windows it's also possible to specify icons destination using `target` attribute. This approach has the following advantages:
-
-  * it is possible to define group of icons for different device scale factors using one `<icon ...>` element, for example:
-```xml
-    <icon src="res/Windows/AppListIcon.png" target="Square44x44Logo.png" />
-```
-  which is equal to the following lines:
-```xml
-    <icon src="res/Windows/Square44x44Logo.scale-100.png" width="44" height="44" />
-    <icon src="res/Windows/Square44x44Logo.scale-150.png" width="66" height="66" />
-    <icon src="res/Windows/Square44x44Logo.scale-150.png" width="88" height="88" />
-    <icon src="res/Windows/Square44x44Logo.scale-240.png" width="106" height="106" />
-```
-  * it is possible to define icons with scale factors other than `scale-100` and `scale-240` (and any other MRT qualifiers)
-
 ###See Also:
-- [Windows platform guidelines for icons](https://msdn.microsoft.com/en-us/library/windows/apps/mt412102.aspx).
+- [Windows 10 platform guidelines for icons](https://msdn.microsoft.com/en-us/library/windows/apps/mt412102.aspx).
+- [Windows 8.1 tiles and icons sizes](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh781198.aspx)
 
 ##Windows Phone 8 (WP8 Platform)
 ```xml
