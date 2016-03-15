@@ -458,7 +458,7 @@ var App = React.createClass({
                         </div>
                             <div className="plugins_links">
                                     <ul className="nav nav-justified">
-                                    <li><a href="{{ site.baseurl }}/docs/en/latest/guide/hybrid/plugins/index.html#publishing-plugins"><span className="glyphicon glyphicon-plus"></span><i>&nbsp;</i>Contribute Plugins</a></li>
+                                    <li><a href="{{ site.baseurl }}/docs/en//{{ site.default_linked_docs_version }}/guide/hybrid/plugins/index.html#publishing-plugins"><span className="glyphicon glyphicon-plus"></span><i>&nbsp;</i>Contribute Plugins</a></li>
                                     <li><a href="{{ site.baseurl }}/plugins/faq.html"><span className="glyphicon glyphicon-question-sign"></span><i>&nbsp;</i>Plugin Help</a></li>
                                     </ul>
                             </div>
