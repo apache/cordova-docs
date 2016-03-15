@@ -22,11 +22,11 @@ title: WebViews 포함
 
 # WebViews 포함
 
-코르 도우 바 응용 프로그램은 일반적으로는 브라우저 기반의 *WebView* 네이티브 모바일 플랫폼으로 구현 됩니다. 이 섹션 사용 방법을 보여 줍니다, 플랫폼 지원에 대 한 자신의 WebView를 만들 있도록 전체 구성 요소 코르도바 api. 다음 혼합 응용 프로그램에서 기본 구성 요소와 함께이 코르도바 응용 프로그램 구성 요소를 배포할 수 있습니다.
+코르도바 응용 프로그램은 일반적으로는 브라우저 기반의 *WebView* 네이티브 모바일 플랫폼으로 구현 됩니다. 이 섹션은 사용방법을 보여 줍니다, 플랫폼 지원에 대한 자신의 WebView를 만들 있도록 전체 구성 요소 코르도바 api. 다음 혼합 응용 프로그램에서 기본 구성 요소와 함께 이 코르도바 응용 프로그램 구성 요소를 배포할 수 있습니다.
 
 WebView를 배포 하려면 각 네이티브 프로그래밍 환경에 잘 알고 해야 합니다. 다음은 지원 되는 플랫폼에 대 한 지침.
 
-*   [아마존 화재 OS WebViews](../../platforms/amazonfireos/webview.html)
-*   [안 드 로이드 WebViews](../../platforms/android/webview.html)
+*   [아마존 파이어 OS WebViews](../../platforms/amazonfireos/webview.html)
+*   [안드로이드 WebViews](../../platforms/android/webview.html)
 *   [iOS WebViews](../../platforms/ios/webview.html)
 *   [Windows Phone 8.0 WebViews](../../platforms/wp8/webview.html)
