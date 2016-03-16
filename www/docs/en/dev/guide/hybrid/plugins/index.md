@@ -251,6 +251,7 @@ the local Cordova CLI version. If no releases of the plugin are compatible, the 
 the user about the failed requirements and fall back to the old behavior of fetching the
 latest release.
 
+This feature is intended to eventually replace the [engines element](../../../plugin_ref/spec.html#engines-and-engine) in plugin.xml.
 Listing dependencies is a good way to ensure that your plugin will not appear broken or cause
 build errors when fetched from npm. If the latest release of the plugin is not compatible with
 a project, the CLI will give the app developer a list of unmet project requirements so that
