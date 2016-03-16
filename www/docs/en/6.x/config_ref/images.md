@@ -136,9 +136,15 @@ For Windows the recommended approach to define app icons is to use `target` attr
     </platform>
 ```
 
-Using `target` attribute is is possible to:
+where `source` is the path to the icon which needs to be added.
 
-  * define a group of icons for different device scale factors using one `<icon ...>` element, for example:
+Please note that Windows platform handles MRT icons automatically, so if you specify `src="res/windows/storelogo.png"` the following files will be copied into app's `images` folder: `res/windows/storelogo.scale-100.png`, `res/windows/storelogo.scale-200.png`, etc.
+
+The `target` attribute specifies the base name for resultant icons. For every icon file destination filename is calculated as `target + '.' + MRT_qualifiers + extension(src)`. For the icons to display properly in resultant app every `target` value should be the one of icon filenames, defined in application's `.appxmanifest` file.
+
+Summarizing the above, using `target` attribute it is possible to:
+
+  * define a group of icons for different device scale factors using single `<icon ...>` element, for example:
 ```xml
     <icon src="res/Windows/AppListIcon.png" target="Square44x44Logo.png" />
 ```
@@ -151,7 +157,7 @@ Using `target` attribute is is possible to:
 ```
   * define icons with scale factors other than `scale-100` and `scale-240` (and any other MRT qualifiers)
 
-Though, use of `width` and `height` attributes is still possible:
+Though it is not recommended but is still possible to define icons using `width` and `height` attributes:
 
 ```xml
     <platform name="windows">
