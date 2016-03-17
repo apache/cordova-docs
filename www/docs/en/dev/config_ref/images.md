@@ -146,7 +146,7 @@ Summarizing the above, using `target` attribute it is possible to:
 
   * define a group of icons for different device scale factors using single `<icon ...>` element, for example:
 ```xml
-    <icon src="res/Windows/AppListIcon.png" target="Square44x44Logo.png" />
+    <icon src="res/Windows/AppListIcon.png" target="Square44x44Logo" />
 ```
   which is equivalent to the following lines:
 ```xml
