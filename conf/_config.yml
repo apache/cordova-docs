@@ -55,10 +55,6 @@ markdown: redcarpet
 
 redcarpet:
     extensions:
-
-        # this adds the ".prettyprint" class to <code> and <pre> tags
-        - prettify
-
         # this enables code blocks denoted by backticks, like in GFM
         # NOTE:
         #      this is turned on by default by Jekyll, but is still
@@ -74,6 +70,8 @@ redcarpet:
 
         # surrounds highlighted text with <mark>s
         - highlight
+
+highlighter: rouge
 
 kramdown:
     input: GFM
