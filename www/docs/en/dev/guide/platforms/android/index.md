@@ -299,6 +299,10 @@ To sign an app, you need the following parameters:
 These parameters can be specified using the command line arguments above to
 the [Cordova CLI](../../../cordova-cli/index.html) `build` or `run` commands.
 
+__Note__: You should use double `--` to indicate that these are platform-specific arguments, for example:
+
+`cordova run android --release -- --keystore=../my-release-key.keystore --storePassword=password --alias=alias_name --password=password`.
+
 ### Using build.json
 
 Alternatively, you could specify them in a build configuration file (`build.json`)
@@ -308,14 +312,14 @@ build configuration file:
     {
          "android": {
              "debug": {
-                 "keystore": "..\android.keystore",
+                 "keystore": "../android.keystore",
                  "storePassword": "android",
                  "alias": "mykey1",
                  "password" : "password",
                  "keystoreType": ""
              },
              "release": {
-                 "keystore": "..\android.keystore",
+                 "keystore": "../android.keystore",
                  "storePassword": "",
                  "alias": "mykey2",
                  "password" : "password",
