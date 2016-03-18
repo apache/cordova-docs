@@ -26,8 +26,9 @@ For upgrading from `windows` version 4.0.0 or higher, run `cordova platform upda
 
 For projects not created with the cordova CLI, run:
 
-        bin\update <project_path>
-
+```
+bin\update <project_path>
+```
 
 # Upgrading Windows 8
 
@@ -38,19 +39,21 @@ version of the CLI.
 
 ## Upgrade to 4.0.0 from 3.1.0 or later
 
-For projects that were created with the cordova CLI: 
+For projects that were created with the cordova CLI:
 
-1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html). 
+1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
 
 2. Run `cordova platform update windows8`.
-        
+
 For projects not created with the cordova CLI, run:
 
-        bin\update <project_path>
+```
+bin\update <project_path>
+````
 
 ## Upgrade to 3.1.0
 
-Cordova CLI support for Windows 8 was introduced in Cordova 3.1.0. To upgrade, we suggest creating a new Cordova CLI project and moving over all necessary assets.  
+Cordova CLI support for Windows 8 was introduced in Cordova 3.1.0. To upgrade, we suggest creating a new Cordova CLI project and moving over all necessary assets.
 
 ## Upgrade to 2.9.0 from 2.8.0
 
@@ -66,7 +69,7 @@ The following commands should be done from within Visual Studio to be sure that 
 
 The following commands should be done from within Visual Studio to be sure that the any project references are updated/deleted.
 
-1. Remove `cordova-2.7.0.js` from the project's `www` directory. 
+1. Remove `cordova-2.7.0.js` from the project's `www` directory.
 
 2. Add `cordova.js` file from the source to the project's `www` directory. (Note that the file no longer contains a version number in the filename.)
 

@@ -91,16 +91,16 @@ legacy `CordovaActivity` component that pre-dates the 1.9 release.
         public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
             this.activityResultCallback = command;
             this.activityResultKeepRunning = this.keepRunning;
-            
+
             // If multitasking turned on, then disable it for activities that return results
             if (command != null) {
                 this.keepRunning = false;
             }
-        
+
             // Start activity
             super.startActivityForResult(intent, requestCode);
-        }   
-    
+        }
+
         @Override
         /**
          * Called when an activity you launched exits, giving you the requestCode you started it with,

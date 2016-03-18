@@ -42,7 +42,7 @@ includes the OS X SDK (Software Development Kit). To submit apps to
 the Apple App Store℠ requires the latest versions of the Apple tools.
 
 You can test all of the Cordova features using the XCode or any other
-IDE such as [JetBrain's AppCode](https://www.jetbrains.com/objc/), but 
+IDE such as [JetBrain's AppCode](https://www.jetbrains.com/objc/), but
 you need to use XCode to sign before submitting to the
 App Store. To sign the apps, you must also be a member of Apple's
 [OS X Developer Program](https://developer.apple.com/osx/).
@@ -67,16 +67,20 @@ __Install__ button next to the __Command Line Tools__ listing.
 Use the `cordova` utility to set up a new project, as described in The
 Cordova [The Command-Line Interface](../../cli/index.html). For example, in a source-code directory:
 
-        $ cordova create hello com.example.hello "HelloWorld"
-        $ cd hello
-        $ cordova platform add osx
-        $ cordova prepare              # or "cordova build"
+```bash
+$ cordova create hello com.example.hello "HelloWorld"
+$ cd hello
+$ cordova platform add osx
+$ cordova prepare              # or "cordova build"
+```
 
 ## Run the app
 
 To run the app on your desktop:
 
-        $ cordova run
+```bash
+$ cordova run
+```
 
 And you should see a bordered window with the example app:
 
@@ -87,13 +91,13 @@ options.
 
 ## Open a Project in the SDK
 
-Once osx platform is added to your project, you can open it from 
+Once osx platform is added to your project, you can open it from
 within Xcode. Double-click to open the `hello/platforms/osx/HelloWorld.xcodeproj`
 file. The screen should look like this:
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/osx/helloworld_project.png)
 
-> **TIP**  
+> **TIP**
 > You can also use the `open` command to open the XCode project directly
 > from the command line:
 > ```
@@ -110,7 +114,7 @@ Cordova, and Xcode issues warnings about them when you build and
 deploy an application.
 
 __Missing Headers__: Compilation errors relating to missing headers
-result from problems with the build location, and can be fixed 
+result from problems with the build location, and can be fixed
 via Xcode preferences:
 
 1. Select __Xcode &rarr; Preferences &rarr; Locations__.

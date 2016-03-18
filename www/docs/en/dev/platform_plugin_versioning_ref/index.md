@@ -21,7 +21,7 @@ title: Platforms and Plugins Version Management
 ---
 
 # Platforms and Plugins Version Management
-From version 4.3.0 onwards, Cordova provides the ability to save and restore platforms and plugins. 
+From version 4.3.0 onwards, Cordova provides the ability to save and restore platforms and plugins.
 
 This feature allows developers to save and restore their app to a known state without having to check in all of the platform and plugin source code.
 
@@ -36,16 +36,19 @@ One scenario where save/restore capabilities come in handy is in large teams tha
 ### Saving platforms
 To save a platform, you issue the following command :
 
-    $ cordova platform add <platform[@<version>] | directory | git_url> --save
+```bash
+$ cordova platform add <platform[@<version>] | directory | git_url> --save
+```
 
 After running the above command, the resulting config.xml looks like :
 
-    <?xml version='1.0' encoding='utf-8'?>
-        ...
-        <engine name="android" spec="~4.0.0" />
-        ...
-    </xml>
-
+```xml
+<?xml version='1.0' encoding='utf-8'?>
+    ...
+    <engine name="android" spec="~4.0.0" />
+    ...
+</xml>
+```
 
 Some examples :
 
@@ -58,14 +61,18 @@ Some examples :
 The '--save' flag described above is only useful when you remember to use it during the platform addition.
 If you have a pre-existing project and you want to save all the currently added platforms in your project, you can use :
 
-    $ cordova platform save
-
+```bash
+$ cordova platform save
+```
 
 ### Updating / Removing platforms
 It is also possible to update/delete from config.xml during the commands 'cordova platform update' and 'cordova platform remove' :
 
-    $ cordova platform update <platform[@<version>] | directory | git_url> --save
-    $ cordova platform remove <platform> --save
+```bash
+$ cordova platform update <platform[@<version>] | directory | git_url> --save
+$ cordova platform remove <platform> --save
+```
+
 Some examples :
 
   * **'cordova platform update android --save'** => In addition to updating the android platform to the pinned version, update config.xml entry
@@ -84,11 +91,13 @@ Example:
 
 Suppose your config.xml file contains the following entry:
 
-    <?xml version='1.0' encoding='utf-8'?>
-        ...
-        <engine name="android" spec="3.7.0" />
-        ...
-    </xml>
+```xml
+<?xml version='1.0' encoding='utf-8'?>
+    ...
+    <engine name="android" spec="3.7.0" />
+    ...
+</xml>
+```
 
 If you run the command **'cordova platform add android'** (no version/folder/git_url specified), the platform 'android@3.7.0' (as retrieved from config.xml) will be installed.
 
@@ -102,15 +111,19 @@ _(The plugin commands are a mirror of the platform commands)_
 ### Saving plugins
 To save a plugin, you issue the following command :
 
-    $ cordova plugin add <plugin[@<version>] | directory | git_url> --save
+```bash
+$ cordova plugin add <plugin[@<version>] | directory | git_url> --save
+```
 
 After running the above command, the resulting config.xml looks like :
 
-    <?xml version='1.0' encoding='utf-8'?>
-        ...
-        <plugin name="cordova-plugin-console" spec="~1.0.0" />
-        ...
-    </xml>
+```xml
+<?xml version='1.0' encoding='utf-8'?>
+    ...
+    <plugin name="cordova-plugin-console" spec="~1.0.0" />
+    ...
+</xml>
+```
 
 
 Some examples :
@@ -124,14 +137,18 @@ Some examples :
 The '--save' flag described above is only useful when you remember to use it during the plugin addition.
 If you have a pre-existing project and you want to save all currently added plugins in the project, you can use :
 
-    $ cordova plugin save
+```bash
+$ cordova plugin save
+```
 
 
 ### Updating / Removing plugins
 It is also possible to update/delete from config.xml during the commands 'cordova plugin update' and 'cordova plugin remove' :
 
-    $ cordova plugin update <plugin[@<version>] | directory | git_url> --save
-    $ cordova plugin remove <plugin> --save
+```bash
+$ cordova plugin update <plugin[@<version>] | directory | git_url> --save
+$ cordova plugin remove <plugin> --save
+```
 Some examples :
 
   * **'cordova plugin update cordova-plugin-console --save'** => In addition to updating the console plugin to the pinned version, update config.xml entry
@@ -150,11 +167,13 @@ Example:
 
 Suppose your config.xml file contains the following entry:
 
-    <?xml version='1.0' encoding='utf-8'?>
-        ...
-        <plugin name="cordova-plugin-console" spec="0.2.11" />
-        ...
-    </ xml>
+```xml
+<?xml version='1.0' encoding='utf-8'?>
+    ...
+    <plugin name="cordova-plugin-console" spec="0.2.11" />
+    ...
+</ xml>
+```
 
 If you run the command **'cordova plugin add cordova-plugin-console'** (no version/folder/git_url specified), the plugin 'cordova-plugin-console@0.2.11' (as retrieved from config.xml) will be installed.
 

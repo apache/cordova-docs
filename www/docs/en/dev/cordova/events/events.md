@@ -27,49 +27,53 @@ The application code could add listeners for these events. For example:
 
 **HTML File**
 
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <title>Device Ready Example</title>
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Device Ready Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-        <script type="text/javascript" charset="utf-8" src="example.js"></script>
-      </head>
-      <body onload="onLoad()">
-      </body>
-    </html>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="example.js"></script>
+    </head>
+    <body onload="onLoad()">
+    </body>
+</html>
+```
 
 **JS File**
 
-    // example.js file
-    // Wait for device API libraries to load
-    //
-    function onLoad() {
-        document.addEventListener("deviceready", onDeviceReady, false);
-    }
+```javascript
+// example.js file
+// Wait for device API libraries to load
+//
+function onLoad() {
+    document.addEventListener("deviceready", onDeviceReady, false);
+}
 
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        document.addEventListener("pause", onPause, false);
-        document.addEventListener("resume", onResume, false);
-        document.addEventListener("menubutton", onMenuKeyDown, false);
-        // Add similar listeners for other events
-    }
+// device APIs are available
+//
+function onDeviceReady() {
+    document.addEventListener("pause", onPause, false);
+    document.addEventListener("resume", onResume, false);
+    document.addEventListener("menubutton", onMenuKeyDown, false);
+    // Add similar listeners for other events
+}
 
-    function onPause() {
-        // Handle the pause event
-    }
+function onPause() {
+    // Handle the pause event
+}
 
-    function onResume() {
-        // Handle the resume event
-    }
+function onResume() {
+    // Handle the resume event
+}
 
-    function onMenuKeyDown() {
-        // Handle the menubutton event
-    }
+function onMenuKeyDown() {
+    // Handle the menubutton event
+}
 
-    // Add similar event handlers for other events
+// Add similar event handlers for other events
+```
 
 **Note**: Applications typically should use `document.addEventListener` to attach an event listener once the [deviceready](#deviceready)
 
@@ -209,11 +213,13 @@ callback function called immediately.
 
 ### Quick Example
 
-    document.addEventListener("deviceready", onDeviceReady, false);
+```javascript
+document.addEventListener("deviceready", onDeviceReady, false);
 
-    function onDeviceReady() {
-        // Now safe to use device APIs
-    }
+function onDeviceReady() {
+    // Now safe to use device APIs
+}
+```
 
 ## pause
 
@@ -222,11 +228,13 @@ typically when the user switches to a different application.
 
 ### Quick Example
 
-    document.addEventListener("pause", onPause, false);
+```javascript
+document.addEventListener("pause", onPause, false);
 
-    function onPause() {
-        // Handle the pause event
-    }
+function onPause() {
+    // Handle the pause event
+}
+```
 
 ### iOS Quirks
 
@@ -251,11 +259,13 @@ The `resume` event fires when the native platform pulls the application out from
 
 ### Quick Example
 
-    document.addEventListener("resume", onResume, false);
+```javascript
+document.addEventListener("resume", onResume, false);
 
-    function onResume() {
-        // Handle the resume event
-    }
+function onResume() {
+    // Handle the resume event
+}
+```
 
 ### iOS Quirks
 
@@ -282,12 +292,14 @@ to `YES`. To run when locked on iOS 4, this setting does not matter.
 as `alert()` need to be wrapped in a `setTimeout()` call with a
 timeout value of zero, or else the app hangs. For example:
 
-        document.addEventListener("resume", onResume, false);
-        function onResume() {
-           setTimeout(function() {
-                  // TODO: do your thing!
-                }, 0);
-        }
+    ```javascript
+    document.addEventListener("resume", onResume, false);
+    function onResume() {
+        setTimeout(function() {
+                // TODO: do your thing!
+            }, 0);
+    }
+    ```
 
 ### Android Quirks
 
@@ -303,11 +315,13 @@ back-button behavior.
 
 ### Quick Example
 
-    document.addEventListener("backbutton", onBackKeyDown, false);
+```javascript
+document.addEventListener("backbutton", onBackKeyDown, false);
 
-    function onBackKeyDown() {
-        // Handle the back button
-    }
+function onBackKeyDown() {
+    // Handle the back button
+}
+```
 
 ## menubutton
 
@@ -316,11 +330,13 @@ overrides the default menu button behavior.
 
 ### Quick Example
 
-    document.addEventListener("menubutton", onMenuKeyDown, false);
+```javascript
+document.addEventListener("menubutton", onMenuKeyDown, false);
 
-    function onMenuKeyDown() {
-        // Handle the back button
-    }
+function onMenuKeyDown() {
+    // Handle the back button
+}
+```
 
 ## searchbutton
 
@@ -330,11 +346,13 @@ listener for the 'searchbutton' event.
 
 ### Quick Example
 
-    document.addEventListener("searchbutton", onSearchKeyDown, false);
+```javascript
+document.addEventListener("searchbutton", onSearchKeyDown, false);
 
-    function onSearchKeyDown() {
-        // Handle the search button
-    }
+function onSearchKeyDown() {
+    // Handle the search button
+}
+```
 
 ## startcallbutton
 
@@ -343,11 +361,13 @@ the default start call behavior you can register an event listener for the `star
 
 ### Quick Example
 
-    document.addEventListener("startcallbutton", onStartCallKeyDown, false);
+```javascript
+document.addEventListener("startcallbutton", onStartCallKeyDown, false);
 
-    function onStartCallKeyDown() {
-        // Handle the start call button
-    }
+function onStartCallKeyDown() {
+    // Handle the start call button
+}
+```
 
 ## endcallbutton
 
@@ -356,11 +376,13 @@ default end call behavior.
 
 ### Quick Example
 
-    document.addEventListener("endcallbutton", onEndCallKeyDown, false);
+```javascript
+document.addEventListener("endcallbutton", onEndCallKeyDown, false);
 
-    function onEndCallKeyDown() {
-        // Handle the end call button
-    }
+function onEndCallKeyDown() {
+    // Handle the end call button
+}
+```
 
 ## volumedownbutton
 
@@ -369,11 +391,13 @@ the default volume down behavior you can register an event listener for the `vol
 
 ### Quick Example
 
-    document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
+```javascript
+document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
 
-    function onVolumeDownKeyDown() {
-        // Handle the volume down button
-    }
+function onVolumeDownKeyDown() {
+    // Handle the volume down button
+}
+```
 
 ## volumeupbutton
 
@@ -382,11 +406,13 @@ the default volume up behavior you can register an event listener for the `volum
 
 ### Quick Example
 
-    document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
+```javascript
+document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
 
-    function onVolumeUpKeyDown() {
-        // Handle the volume up button
-    }
+function onVolumeUpKeyDown() {
+    // Handle the volume up button
+}
+```
 
 [UIApplicationExitsOnSuspend]: http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html
 [AndroidLifeCycleGuide]: ../../guide/platforms/android/lifecycle.html

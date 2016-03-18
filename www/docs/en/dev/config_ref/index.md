@@ -33,7 +33,9 @@ For projects created with the Cordova CLI (described in [The
 Command-Line Interface](../guide/cli/index.html)), this file can be found in the top-level
 directory:
 
-        app/config.xml
+```
+app/config.xml
+```
 
 Note that before version 3.3.1-0.2.0, the file existed at `app/www/config.xml`,
 and that having it here is still supported.
@@ -42,9 +44,11 @@ When using the CLI to build a project, versions of this file are
 passively copied into various `platforms/` subdirectories.
 For example:
 
-        app/platforms/ios/AppName/config.xml
-        app/platforms/blackberry10/www/config.xml
-        app/platforms/android/res/xml/config.xml
+```
+app/platforms/ios/AppName/config.xml
+app/platforms/blackberry10/www/config.xml
+app/platforms/android/res/xml/config.xml
+```
 
 In addition to the various configuration options detailed below, you
 can also configure an application's core set of images for each target
@@ -67,40 +71,45 @@ platform. See [Customize icons topic](images.html) for more information.
 
    Examples:
 
-    <!-- Android -->
-    <widget id="io.cordova.hellocordova" version="0.0.1" android-versionCode="0.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    </widget>
+   ```xml
+   <!-- Android -->
+   <widget id="io.cordova.hellocordova" version="0.0.1" android-versionCode="0.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+   </widget>
 
-    <!-- iOS -->
-    <widget id="io.cordova.hellocordova" version="0.0.1" ios-CFBundleVersion="0.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    </widget>
+   <!-- iOS -->
+   <widget id="io.cordova.hellocordova" version="0.0.1" ios-CFBundleVersion="0.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+   </widget>
 
-    <!-- Windows -->
-    <widget id="io.cordova.hellocordova" version="0.0.1" windows-packageVersion="0.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    </widget>
+   <!-- Windows -->
+   <widget id="io.cordova.hellocordova" version="0.0.1" windows-packageVersion="0.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+   </widget>
 
-    <!-- OS X -->
-    <widget id="io.cordova.hellocordova" version="0.0.1" osx-CFBundleVersion="0.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    </widget>
+   <!-- OS X -->
+   <widget id="io.cordova.hellocordova" version="0.0.1" osx-CFBundleVersion="0.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+   </widget>
+   ```
 
 ## name
    Specifies the app's formal name, as it appears on the device's home screen and within app-store interfaces.
 
    Examples:
 
-    <widget ...>
-        <name>HelloCordova</name>
-    </widget>
+   ```xml
+   <widget ...>
+       <name>HelloCordova</name>
+   </widget>
+   ```
 
 ## description
    Specifies metadata that may appear within app-store listings.
 
    Examples:
 
-    <widget ...>
-        <description>A sample Apache Cordova application</description>
-    </widget>
-    
+   ```xml
+   <widget ...>
+       <description>A sample Apache Cordova application</description>
+   </widget>
+   ```
 
 ## author
    Specifies contact information that may appear within app-store lisitngs.
@@ -112,9 +121,11 @@ platform. See [Customize icons topic](images.html) for more information.
 
    Examples:
 
-    <widget ...>
-        <author email="dev@cordova.apache.org" href="http://cordova.io"></author>
-    </widget>
+   ```xml
+   <widget ...>
+       <author email="dev@cordova.apache.org" href="http://cordova.io"></author>
+   </widget>
+   ```
 
 
 ## content
@@ -128,10 +139,11 @@ platform. See [Customize icons topic](images.html) for more information.
 
    Examples:
 
-    <widget ...>
-        <content src="startPage.html"></content>
-    </widget>
-
+   ```xml
+   <widget ...>
+       <content src="startPage.html"></content>
+   </widget>
+   ```
 
 ## access
    Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server.
@@ -145,13 +157,15 @@ platform. See [Customize icons topic](images.html) for more information.
 
    Examples:
 
-    <widget ...>
-        <access origin="*"></content>
-    </widget>
+   ```xml
+   <widget ...>
+       <access origin="*"></content>
+   </widget>
 
-    <widget ...>
-        <access origin="http://google.com"></content>
-    </widget>
+   <widget ...>
+       <access origin="http://google.com"></content>
+   </widget>
+   ```
 
 
 ## allow-navigation
@@ -164,11 +178,13 @@ platform. See [Customize icons topic](images.html) for more information.
 
    Examples:
 
-    <!-- Allow links to example.com -->
-    <allow-navigation href="http://example.com/*" />
+   ```xml
+   <!-- Allow links to example.com -->
+   <allow-navigation href="http://example.com/*" />
 
-    <!-- Wildcards are allowed for the protocol, as a prefix to the host, or as a suffix to the path -->
-    <allow-navigation href="*://*.example.com/*" />
+   <!-- Wildcards are allowed for the protocol, as a prefix to the host, or as a suffix to the path -->
+   <allow-navigation href="*://*.example.com/*" />
+   ```
 
 ## allow-intent
    Controls which URLs the app is allowed to ask the system to open. By default, no external URLs are allowed.
@@ -180,13 +196,15 @@ platform. See [Customize icons topic](images.html) for more information.
 
    Examples:
 
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
+   ```xml
+   <allow-intent href="http://*/*" />
+   <allow-intent href="https://*/*" />
+   <allow-intent href="tel:*" />
+   <allow-intent href="sms:*" />
+   ```
 
 ## engine
-   Specifies details about what platform to restore during a prepare. 
+   Specifies details about what platform to restore during a prepare.
 
    Attributes(type) | Description
    ----------------- | ------------
@@ -195,11 +213,13 @@ platform. See [Customize icons topic](images.html) for more information.
 
    Examples:
 
-    <engine name="android" spec="https://github.com/apache/cordova-android.git#5.1.1" />
-    <engine name="ios" spec="^4.0.0" />
-    
+   ```xml
+   <engine name="android" spec="https://github.com/apache/cordova-android.git#5.1.1" />
+   <engine name="ios" spec="^4.0.0" />
+   ```
+
 ## plugin
-   Specifies details about what plugin to restore during a prepare.  
+   Specifies details about what plugin to restore during a prepare.
 
    Attributes(type) | Description
    ----------------- | ------------
@@ -208,8 +228,10 @@ platform. See [Customize icons topic](images.html) for more information.
 
    Examples:
 
-    <plugin name="cordova-plugin-device" spec="^1.1.0" />
-    <plugin name="cordova-plugin-device" spec="https://github.com/apache/cordova-plugin-device.git#1.0.0" />
+   ```xml
+   <plugin name="cordova-plugin-device" spec="^1.1.0" />
+   <plugin name="cordova-plugin-device" spec="https://github.com/apache/cordova-plugin-device.git#1.0.0" />
+   ```
 
 ## preference
    Sets various options as pairs of name/value attributes. Each preference's name is case-insensitive. Many preferences are unique to specific platforms,
@@ -263,7 +285,7 @@ platform. See [Customize icons topic](images.html) for more information.
    WebSecurity(string) | *Default: enable* <br/> ==BlackBerry== <br/> Set to disable to override web security settings, allowing access to remote content from unknown sources. This preference is intended as a development convenience only, so remove it before packaging the app for distribution. For the released app, all URIs should be known and whitelisted using the <access> element, described in the Domain Whitelist Guide.
    WindowSize(string) | *Default: auto* <br/> ==OS X **4.0.0**== <br/> Sets the size of the application window. <br/> Accepts the format `WxH` for a specific width and height or the special values `auto` and `fullscreen`. The latter will open a borderless window spanning the entire desktop area. Please note, that this is different from the _normal_ OS X fullscreen mode, which would never span multiple displays. <br/> **Note**: The global cordova `fullscreen` preference has no effect in OS X.
    WindowsDefaultUriPrefix(string) | ==Windows== <br/> Allowed values: `ms-appx://`, `ms-appx-web://` <br/>  Identifies whether you want your app to target the local context or remote context as its startup URI. When building for Windows 10, the default is the remote context (`ms-appx-web://`). <br/> In order to have a local-mode application that is not impacted by Remote Mode capability restrictions, you must set this preference to `ms-appx://` and not declare any `<access>` elements with remote URIs. The local mode is the default for Windows 8.1
-   WindowsStoreDisplayName(string) | ==Windows== <br/> A friendly name for the publisher that can be displayed to users. 
+   WindowsStoreDisplayName(string) | ==Windows== <br/> A friendly name for the publisher that can be displayed to users.
    WindowsStoreIdentityName(string) | ==Windows== <br/> Identity name used for Windows store. The identity defines a globally unique identifier for a package. A package identity is represented as a tuple of attributes of the package. See the [identity page on the package manifest schema reference](https://msdn.microsoft.com/en-us/library/windows/apps/br211441.aspx) for further details.
    WindowsStorePublisherName(string) | ==Windows== <br/> Publisher Display Name.
    WindowsToastCapable(boolean) | *Default: false* <br/> ==Windows== <br/> A value of ```true``` indicates that the app is allowed to provide 'toast notifications'.
@@ -274,68 +296,70 @@ platform. See [Customize icons topic](images.html) for more information.
 
    Examples:
 
-    <preference name="DisallowOverscroll" value="true"/>
-    <preference name="Fullscreen" value="true" />
-    <preference name="BackgroundColor" value="0xff0000ff"/>
-    <preference name="HideKeyboardFormAccessoryBar" value="true"/>
-    <preference name="Orientation" value="landscape" />
+   ```xml
+   <preference name="DisallowOverscroll" value="true"/>
+   <preference name="Fullscreen" value="true" />
+   <preference name="BackgroundColor" value="0xff0000ff"/>
+   <preference name="HideKeyboardFormAccessoryBar" value="true"/>
+   <preference name="Orientation" value="landscape" />
 
-    <!-- iOS only preferences -->
-    <preference name="EnableViewportScale" value="true"/>
-    <preference name="MediaPlaybackAllowsAirPlay" value="false"/>
-    <preference name="MediaPlaybackRequiresUserAction" value="true"/>
-    <preference name="AllowInlineMediaPlayback" value="true"/>
-    <preference name="BackupWebStorage" value="local"/>
-    <preference name="TopActivityIndicator" value="white"/>
-    <preference name="SuppressesIncrementalRendering" value="true"/>
-    <preference name="GapBetweenPages" value="0"/>
-    <preference name="PageLength" value="0"/>
-    <preference name="PaginationBreakingMode" value="page"/>
-    <preference name="PaginationMode" value="unpaginated"/>
-    <preference name="UIWebViewDecelerationSpeed" value="fast" />
-    <preference name="ErrorUrl" value="myErrorPage.html"/>
-    <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
-    <preference name="AppendUserAgent" value="My Browser" />
-    <preference name="target-device" value="universal" />
-    <preference name="deployment-target" value="7.0" />
-    <preference name="CordovaWebViewEngine" value="CDVUIWebViewEngine" />
-    <preference name="SuppressesLongPressGesture" value="true" />
-    <preference name="Suppresses3DTouchGesture" value="true" />
+   <!-- iOS only preferences -->
+   <preference name="EnableViewportScale" value="true"/>
+   <preference name="MediaPlaybackAllowsAirPlay" value="false"/>
+   <preference name="MediaPlaybackRequiresUserAction" value="true"/>
+   <preference name="AllowInlineMediaPlayback" value="true"/>
+   <preference name="BackupWebStorage" value="local"/>
+   <preference name="TopActivityIndicator" value="white"/>
+   <preference name="SuppressesIncrementalRendering" value="true"/>
+   <preference name="GapBetweenPages" value="0"/>
+   <preference name="PageLength" value="0"/>
+   <preference name="PaginationBreakingMode" value="page"/>
+   <preference name="PaginationMode" value="unpaginated"/>
+   <preference name="UIWebViewDecelerationSpeed" value="fast" />
+   <preference name="ErrorUrl" value="myErrorPage.html"/>
+   <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+   <preference name="AppendUserAgent" value="My Browser" />
+   <preference name="target-device" value="universal" />
+   <preference name="deployment-target" value="7.0" />
+   <preference name="CordovaWebViewEngine" value="CDVUIWebViewEngine" />
+   <preference name="SuppressesLongPressGesture" value="true" />
+   <preference name="Suppresses3DTouchGesture" value="true" />
 
-    <!-- Android only preferences -->
-    <preference name="KeepRunning" value="false"/>
-    <preference name="LoadUrlTimeoutValue" value="10000"/>
-    <preference name="InAppBrowserStorageEnabled" value="true"/>
-    <preference name="LoadingDialog" value="My Title,My Message"/>
-    <preference name="ErrorUrl" value="myErrorPage.html"/>
-    <preference name="ShowTitle" value="true"/>
-    <preference name="LogLevel" value="VERBOSE"/>
-    <preference name="AndroidLaunchMode" value="singleTop"/>
-    <preference name="DefaultVolumeStream" value="call" />
-    <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
-    <preference name="AppendUserAgent" value="My Browser" />
+   <!-- Android only preferences -->
+   <preference name="KeepRunning" value="false"/>
+   <preference name="LoadUrlTimeoutValue" value="10000"/>
+   <preference name="InAppBrowserStorageEnabled" value="true"/>
+   <preference name="LoadingDialog" value="My Title,My Message"/>
+   <preference name="ErrorUrl" value="myErrorPage.html"/>
+   <preference name="ShowTitle" value="true"/>
+   <preference name="LogLevel" value="VERBOSE"/>
+   <preference name="AndroidLaunchMode" value="singleTop"/>
+   <preference name="DefaultVolumeStream" value="call" />
+   <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+   <preference name="AppendUserAgent" value="My Browser" />
 
-    <!-- Windows only preferences -->
-    <preference name="windows-phone-target-version" value="8.1" />
-    <preference name="windows-target-version" value="8.1" />
-    <preference name="Windows.Universal" value="10.0.10240.0" />
-    <preference name="WindowsDefaultUriPrefix" value="ms-appx://"" />
-    <preference name="Windows.Mobile-MaxVersionTested" value="10.0.10031.0" />
-    <preference name="Windows.Universal-MinVersion" value="10.0.0.0" />
-    <preference name="WindowsStoreIdentityName" value="Cordova.Example.ApplicationDataSample" />
-    <preference name="WindowsStorePublisherName" value="CN=Contoso Corp, O=Contoso Corp, L=Redmond, S=Washington, C=US" />
-    <preference name="WindowsToastCapable" value="true" />
+   <!-- Windows only preferences -->
+   <preference name="windows-phone-target-version" value="8.1" />
+   <preference name="windows-target-version" value="8.1" />
+   <preference name="Windows.Universal" value="10.0.10240.0" />
+   <preference name="WindowsDefaultUriPrefix" value="ms-appx://"" />
+   <preference name="Windows.Mobile-MaxVersionTested" value="10.0.10031.0" />
+   <preference name="Windows.Universal-MinVersion" value="10.0.0.0" />
+   <preference name="WindowsStoreIdentityName" value="Cordova.Example.ApplicationDataSample" />
+   <preference name="WindowsStorePublisherName" value="CN=Contoso Corp, O=Contoso Corp, L=Redmond, S=Washington, C=US" />
+   <preference name="WindowsToastCapable" value="true" />
 
-    <!-- BlackBerry only preferences -->
-    <preference name="ChildBrowser" value="disable"/>
-    <preference name="PopupBlocker" value="enable"/>
-    <preference name="WebSecurity" value="disable"/>
+   <!-- BlackBerry only preferences -->
+   <preference name="ChildBrowser" value="disable"/>
+   <preference name="PopupBlocker" value="enable"/>
+   <preference name="WebSecurity" value="disable"/>
 
-    <!-- OS X only preferences -->
-    <preference name="HideMousePointer" value="5"/>
-    <preference name="OSXLocalStoragePath" value="~/.myapp/database"/>
-    <preference name="WindowSize" value="800x400"/>
-    <preference name="EnableWebGL" value="true"/>
+   <!-- OS X only preferences -->
+   <preference name="HideMousePointer" value="5"/>
+   <preference name="OSXLocalStoragePath" value="~/.myapp/database"/>
+   <preference name="WindowSize" value="800x400"/>
+   <preference name="EnableWebGL" value="true"/>
+   ```
 
 ## feature
    If you use the CLI to build applications, you use the plugin command to enable device APIs. This does not modify the top-level config.xml file, so the <feature> element does not apply to your workflow. If you work directly in an SDK and using the platform-specific config.xml file as source, you use the <feature> tag to enable device-level APIs and external plugins. They often appear with custom values in platform-specific config.xml files. See the API Reference for details on how to specify each feature. See
@@ -358,22 +382,24 @@ platform. See [Customize icons topic](images.html) for more information.
 
    Examples:
 
-    <!-- Here is how to specify the Device API for Android projects -->
-    <feature name="Device">
-        <param name="android-package" value="org.apache.cordova.device.Device" />
-    </feature>
+   ```xml
+   <!-- Here is how to specify the Device API for Android projects -->
+   <feature name="Device">
+       <param name="android-package" value="org.apache.cordova.device.Device" />
+   </feature>
 
-    <!-- Here's how the element appears for iOS projects -->
-    <feature name="Device">
-        <param name="ios-package" value="CDVDevice" />
-        <param name="onload" value="true" />
-    </feature>
+   <!-- Here's how the element appears for iOS projects -->
+   <feature name="Device">
+       <param name="ios-package" value="CDVDevice" />
+       <param name="onload" value="true" />
+   </feature>
 
-    <!-- Here's how the element appears for OS X projects -->
-    <feature name="Device">
-        <param name="osx-package" value="CDVDevice" />
-        <param name="onload" value="true" />
-    </feature>
+   <!-- Here's how the element appears for OS X projects -->
+   <feature name="Device">
+       <param name="osx-package" value="CDVDevice" />
+       <param name="onload" value="true" />
+   </feature>
+   ```
 
 
 ## platform
@@ -385,9 +411,11 @@ platform. See [Customize icons topic](images.html) for more information.
 
    Examples:
 
-    <platform name="android">
-        <preference name="Fullscreen" value="true" />
-    </platform>
+   ```xml
+   <platform name="android">
+       <preference name="Fullscreen" value="true" />
+   </platform>
+   ```
 
 ## hook
    Represents your custom script which will be called by Cordova when
@@ -402,37 +430,40 @@ platform. See [Customize icons topic](images.html) for more information.
 
    Examples:
 
-    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
+   ```xml
+   <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
+   ```
 
 # Sample config.xml
   Below is a sample config.xml file:
 
-    <?xml version='1.0' encoding='utf-8'?>
-    <widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-        <name>HelloCordova</name>
-        <description>
-            A sample Apache Cordova application that responds to the deviceready event.
-        </description>
-        <author email="dev@cordova.apache.org" href="http://cordova.io">
-            Apache Cordova Team
-        </author>
-        <content src="index.html" />
-        <plugin name="cordova-plugin-whitelist" spec="1" />
-        <access origin="*" />
-        <allow-intent href="http://*/*" />
-        <allow-intent href="https://*/*" />
-        <allow-intent href="tel:*" />
-        <allow-intent href="sms:*" />
-        <allow-intent href="mailto:*" />
-        <allow-intent href="geo:*" />
-        <platform name="android">
-            <allow-intent href="market:*" />
-        </platform>
-        <platform name="ios">
-            <allow-intent href="itms:*" />
-            <allow-intent href="itms-apps:*" />
-        </platform>
-    </widget>
-
+  ```xml
+  <?xml version='1.0' encoding='utf-8'?>
+  <widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+      <name>HelloCordova</name>
+      <description>
+          A sample Apache Cordova application that responds to the deviceready event.
+      </description>
+      <author email="dev@cordova.apache.org" href="http://cordova.io">
+          Apache Cordova Team
+      </author>
+      <content src="index.html" />
+      <plugin name="cordova-plugin-whitelist" spec="1" />
+      <access origin="*" />
+      <allow-intent href="http://*/*" />
+      <allow-intent href="https://*/*" />
+      <allow-intent href="tel:*" />
+      <allow-intent href="sms:*" />
+      <allow-intent href="mailto:*" />
+      <allow-intent href="geo:*" />
+      <platform name="android">
+          <allow-intent href="market:*" />
+      </platform>
+      <platform name="ios">
+          <allow-intent href="itms:*" />
+          <allow-intent href="itms-apps:*" />
+      </platform>
+  </widget>
+  ```
 
 [uses-sdk]: http://developer.android.com/guide/topics/manifest/uses-sdk-element.html

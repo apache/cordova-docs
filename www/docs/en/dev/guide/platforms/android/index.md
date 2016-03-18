@@ -112,16 +112,22 @@ On a Mac or Linux, you can use a text editor to create or modify the
 `~/.bash_profile` file. To set an environment variable, add a line that
 uses `export` like so (substitute the path with your local installation):
 
-        export ANDROID_HOME=/Development/android-sdk/
+```bash
+export ANDROID_HOME=/Development/android-sdk/
+```
 
 To update your `PATH`, add a line resembling the following
 (substitute the paths with your local Android SDK installation's location):
 
-        export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
+```bash
+export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
+```
 
 Reload your terminal to see this change reflected or run the following command:
 
-        $ source ~/.bash_profile
+```bash
+$ source ~/.bash_profile
+```
 
 #### Windows
 
@@ -164,7 +170,9 @@ for configuring the emulator and setting up hardware acceleration.
 Once your AVD is configured correctly, you should be able to see it by running
 this command from within a Cordova project:
 
-    $ cordova run --list
+```bash
+$ cordova run --list
+```
 
 ### Configuring Gradle
 
@@ -192,14 +200,14 @@ You can set these properties in one of four ways:
 
   1. By setting environment variables like so:
 
-      ```
+      ```bash
       $ export ORG_GRADLE_PROJECT_cdvMinSdkVersion=20
       $ cordova build android
-  ```
+      ```
 
   2. By using the `--gradleArg` flag in your Cordova `build` or `run` commands:
 
-      ```
+      ```bash
       $ cordova run android -- --gradleArg=-PcdvMinSdkVersion=20
       ```
 
@@ -215,8 +223,8 @@ You can set these properties in one of four ways:
   4. By extending `build.gradle` via a [`build-extras.gradle` file](#extending-build-gradle)
     and setting the property like so:
 
-      ```
-      # In <your-project>/platforms/android/build-extras.gradle
+      ```groovy
+      // In <your-project>/platforms/android/build-extras.gradle
       ext.cdvMinSdkVersion = 20
       ```
 
@@ -238,19 +246,22 @@ recommended that you copy it over via a script attached to the `before_build`
 
 Here's an example:
 
-    # Example build-extras.gradle
-    # This file is included at the beginning of `build.gradle`
-    ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
+```groovy
+// Example build-extras.gradle
+// This file is included at the beginning of `build.gradle`
+ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
 
-    # When set, this function allows code to run at the end of `build.gradle`
-    ext.postBuildExtras = {
-        android.buildTypes.debug.applicationIdSuffix = '.debug'
-    }
+// When set, this function allows code to run at the end of `build.gradle`
+ext.postBuildExtras = {
+    android.buildTypes.debug.applicationIdSuffix = '.debug'
+}
+```
 
 Note that plugins can also include `build-extras.gradle` files via:
 
-    <framework src="some.gradle" custom="true" type="gradleReference" />
-
+```xml
+<framework src="some.gradle" custom="true" type="gradleReference" />
+```
 
 ### Setting the Version Code
 
@@ -309,24 +320,26 @@ Alternatively, you could specify them in a build configuration file (`build.json
 using the `--buildConfig` argument to the same commands. Here's a sample of a
 build configuration file:
 
-    {
-         "android": {
-             "debug": {
-                 "keystore": "../android.keystore",
-                 "storePassword": "android",
-                 "alias": "mykey1",
-                 "password" : "password",
-                 "keystoreType": ""
-             },
-             "release": {
-                 "keystore": "../android.keystore",
-                 "storePassword": "",
-                 "alias": "mykey2",
-                 "password" : "password",
-                 "keystoreType": ""
-             }
-         }
-     }
+```json
+{
+    "android": {
+        "debug": {
+            "keystore": "../android.keystore",
+            "storePassword": "android",
+            "alias": "mykey1",
+            "password" : "password",
+            "keystoreType": ""
+        },
+        "release": {
+            "keystore": "../android.keystore",
+            "storePassword": "",
+            "alias": "mykey2",
+            "password" : "password",
+            "keystoreType": ""
+        }
+    }
+}
+```
 
 For release signing, passwords can be excluded and the build system will issue a
 prompt asking for the password.
@@ -422,7 +435,9 @@ To get started, either download the cordova-android package from
 To create a project using this package, run the `create` script in the `bin`
 folder:
 
-    $ cordova-android/bin/create ...
+```bash
+$ cordova-android/bin/create ...
+```
 
 The created project will have a folder named `cordova` inside that contains
 scripts for the project-specific Cordova commands (e.g. `run`, `build`, etc.).
@@ -564,7 +579,7 @@ external activity made prior to the activity being destroyed.
 
 The payload for the `resume` event adheres to the following format:
 
-```
+```text
 {
     action: "resume",
     pendingResult: {

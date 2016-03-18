@@ -83,10 +83,12 @@ package.
    Optionally within the __Project Navigator__, move them under the
    __Frameworks__ group:
 
-        AssetsLibrary.framework
-        CoreLocation.framework
-        CoreGraphics.framework
-        MobileCoreServices.framework
+    ```
+    AssetsLibrary.framework
+    CoreLocation.framework
+    CoreGraphics.framework
+    MobileCoreServices.framework
+    ```
 
 1. Expand __Target Dependencies__, the top box with that label if
    there's more than one box.
@@ -107,10 +109,12 @@ package.
 1. Search for __Header Search Paths__. For that setting, add these
    three values below, including the quotes:
 
-        "$(TARGET_BUILD_DIR)/usr/local/lib/include"        
-        "$(OBJROOT)/UninstalledProducts/include"
-        "$(OBJROOT)/UninstalledProducts/$(PLATFORM_NAME)/include"
-        "$(BUILT_PRODUCTS_DIR)"
+    ```
+    "$(TARGET_BUILD_DIR)/usr/local/lib/include"
+    "$(OBJROOT)/UninstalledProducts/include"
+    "$(OBJROOT)/UninstalledProducts/$(PLATFORM_NAME)/include"
+    "$(BUILT_PRODUCTS_DIR)"
+    ```
 
     As of Cordova 2.1.0, `CordovaLib` has been upgraded to use
     __Automatic Reference Counting (ARC)__. You don't need to upgrade
@@ -124,38 +128,54 @@ package.
 
 1. Add the following header:
 
-        #import <Cordova/CDVViewController.h>
+    ```objective_c
+    #import <Cordova/CDVViewController.h>
+    ```
 
 1. Instantiate a new `CDVViewController` and retain it somewhere,
    e.g., to a class property:
 
-        CDVViewController* viewController = [CDVViewController new];
+    ```objective_c
+    CDVViewController* viewController = [CDVViewController new];
+    ```
 
 1. Optionally, set the `wwwFolderName` property, which defaults to `www`:
 
-        viewController.wwwFolderName = @"myfolder";
+    ```objective_c
+    viewController.wwwFolderName = @"myfolder";
+    ```
 
 1. Optionally, set the start page in the `config.xml` file's
    `<content>` tag, either a local file:
 
-        <content src="index.html" />
+    ```xml
+    <content src="index.html" />
+    ```
 
     ...or a remote site:
 
-        <content src="http://apache.org" />
+    ```xml
+    <content src="http://apache.org" />
+    ```
 
 1. Optionally, set the `useSplashScreen` property, which defaults to
    `NO`:
 
-        viewController.useSplashScreen = YES;
+    ```objective_c
+    viewController.useSplashScreen = YES;
+    ```
 
 1. Set the __view frame__. Always set this as the last property:
 
-        viewController.view.frame = CGRectMake(0, 0, 320, 480);
+    ```objective_c
+    viewController.view.frame = CGRectMake(0, 0, 320, 480);
+    ```
 
 1. Add Cleaver to the view:
 
-        [myView addSubview:viewController.view];
+    ```objective_c
+    [myView addSubview:viewController.view];
+    ```
 
 ## Adding HTML, CSS and JavaScript Assets
 
@@ -173,11 +193,13 @@ package.
    in the previous section) when instantiating the
    `CDVViewController`.
 
-        /*
-         if you created a folder called 'myfolder' and
-         you want the file 'mypage.html' in it to be
-         the startPage
-        */
-        viewController.wwwFolderName = @"myfolder";
-        viewController.startPage = @"mypage.html"
+    ```objective_c
+    /*
+        if you created a folder called 'myfolder' and
+        you want the file 'mypage.html' in it to be
+        the startPage
+    */
+    viewController.wwwFolderName = @"myfolder";
+    viewController.startPage = @"mypage.html"
+    ```
 

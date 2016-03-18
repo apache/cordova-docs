@@ -107,7 +107,7 @@ correctly for each platform.  Install `plugman` with the following
 
 You need an valid app source directory, such as the top-level `www`
 directory included in a default CLI-generated project as described in
-[Create your first app](../../cli/index.html) guide.  
+[Create your first app](../../cli/index.html) guide.
 
 Then run a command such as the following to test whether iOS
 dependencies load properly:
@@ -126,7 +126,7 @@ plugin's JavaScript however you like, but you need to call
 `cordova.exec` to communicate with the native platform, using the
 following syntax:
 
-```js
+```javascript
     cordova.exec(function(winParam) {},
                  function(error) {},
                  "service",
@@ -160,7 +160,7 @@ Here is how each parameter works:
 This example shows one way to implement the plugin's JavaScript
 interface:
 
-```js
+```javascript
     window.echo = function(str, callback) {
         cordova.exec(callback, function(err) {
             callback('Nothing to echo.');
@@ -171,7 +171,7 @@ interface:
 In this example, the plugin attaches itself to the `window` object as
 the `echo` function, which plugin users would call as follows:
 
-```js
+```javascript
     window.echo("echome", function(echoValue) {
         alert(echoValue == "echome"); // should alert true.
     });
@@ -202,29 +202,35 @@ listed below, and each builds on the simple Echo Plugin example above:
 
 ## Publishing Plugins
 
-You can publish your plugin to any `npmjs`-based registry, but the recommended one is the [NPM registry](https://www.npmjs.com). Other developers can install your plugin automatically using either `plugman` or the Cordova CLI.  
+You can publish your plugin to any `npmjs`-based registry, but the recommended one is the [NPM registry](https://www.npmjs.com). Other developers can install your plugin automatically using either `plugman` or the Cordova CLI.
 
 To publish a plugin to NPM registry you need to follow steps below:
   * install the `plugman` CLI:
-        
-        $ npm install -g plugman
- 
+
+    ```bash
+    $ npm install -g plugman
+    ```
+
   * create `package.json` file for your plugin:
 
-        $ plugman createpackagejson /path/to/your/plugin
+    ```bash
+    $ plugman createpackagejson /path/to/your/plugin
+    ```
 
   * publish it:
 
-        $ npm adduser # that is if you don't have an account yet
-        $ npm publish /path/to/your/plugin
+    ```bash
+    $ npm adduser # that is if you don't have an account yet
+    $ npm publish /path/to/your/plugin
+    ```
 
 For more details on npm usage refer to [publishing a npm package](https://docs.npmjs.com/getting-started/publishing-npm-packages) on the NPM documentation site.
 
 ## Integrating with Plugin Search
 
-To surface the plugin in [Cordova Plugin Search](/plugins/), add the `ecosystem:cordova` keyword to the `package.json` file of your plugin before publishing. 
+To surface the plugin in [Cordova Plugin Search](/plugins/), add the `ecosystem:cordova` keyword to the `package.json` file of your plugin before publishing.
 
-To indicate support for a particular platform add a keyword with the `<platformName>` as `**cordova-<platformName>**` to the list of keywords in package.json. 
+To indicate support for a particular platform add a keyword with the `<platformName>` as `**cordova-<platformName>**` to the list of keywords in package.json.
 Plugman's `createpackagejson` command does this for you, but if you did not use it to generate your `package.json`, you should manually edit it as shown below.
 
 For example, for a plugin that supports android, iOS & Windows, the keywords in package.json should include:

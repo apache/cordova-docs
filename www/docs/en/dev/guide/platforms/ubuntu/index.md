@@ -66,12 +66,16 @@ Add the Ubuntu Cordova
 [Personal Package Archive](https://launchpad.net/~cordova-ubuntu/+archive/ppa)
 to your Ubuntu system:
 
-    $ sudo add-apt-repository ppa:cordova-ubuntu/ppa
-    $ sudo apt-get update
+```bash
+$ sudo add-apt-repository ppa:cordova-ubuntu/ppa
+$ sudo apt-get update
+```
 
 Install cordova-cli package (and its dependencies):
 
-    $ sudo apt-get install cordova-cli
+```bash
+$ sudo apt-get install cordova-cli
+```
 
 ## Project Workflow
 
@@ -80,25 +84,36 @@ Install cordova-cli package (and its dependencies):
 Creates an app in a `hello` directory whose display name is
 `HelloWorld`:
 
-    $ cordova create hello com.example.hello HelloWorld
+```bash
+$ cordova create hello com.example.hello HelloWorld
+```
 
 ### Move into the Project Directory
 
-    $ cd hello
+```bash
+$ cd hello
+```
 
 ### Add the Ubuntu Platform
 
-    $ cordova platform add ubuntu
+```bash
+$ cordova platform add ubuntu
+```
 
 ### Build for Ubuntu
 
-    $ cordova build ubuntu
+```bash
+$ cordova build ubuntu
+```
 
 ### Run the App
 
-    $ cordova run ubuntu
+```bash
+$ cordova run ubuntu
+```
 
 ### Add the Camera Plugin
 
-    $ cordova plugin add cordova-plugin-camera
-
+```bash
+$ cordova plugin add cordova-plugin-camera
+``

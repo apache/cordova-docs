@@ -32,15 +32,17 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
   to display resources accessed via `window.open()` or by specifying a
   `_blank` anchor target. Specify `disable` to override this default
   behavior.
-
-        <preference name="ChildBrowser" value="disable"/>
+  ```xml
+  <preference name="ChildBrowser" value="disable"/>
+  ```
 
 - `PopupBlocker` (`enable` or the default `disable`): Enables the
   popup blocker, which prevents calls to `window.open()`. By default,
   popups display in a child browser window. Setting the preference to
   `enable` prevents it from displaying at all.
-
-        <preference name="PopupBlocker" value="enable"/>
+  ```xml
+  <preference name="PopupBlocker" value="enable"/>
+  ```
 
 - `WebSecurity` (`disable` or the default `enable`): Set to `disable`
   to override web security settings, allowing access to remote content
@@ -49,6 +51,6 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
   distribution.  For the released app, all URIs should be known and
   whitelisted using the `<access>` element, described in the Domain
   [Whitelist Guide](../../appdev/whitelist/index.html).
-
-        <preference name="WebSecurity" value="disable"/>
-
+  ```xml
+  <preference name="WebSecurity" value="disable"/>
+  ```

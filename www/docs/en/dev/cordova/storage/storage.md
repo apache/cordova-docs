@@ -29,7 +29,7 @@ examples.
 
 Each API offers advantages and disadvantages, which are summarized here. You
 should choose whichever best suits your needs. You can also use several
-different approaches within a single application for different purposes. 
+different approaches within a single application for different purposes.
 
 ## LocalStorage
 
@@ -40,12 +40,14 @@ platforms.
 ### Usage Summary
 
 Local storage can be accessed via `window.localStorage`. The following code
-snippet shows the most important methods exposed by the returned `Storage` object:  
+snippet shows the most important methods exposed by the returned `Storage` object:
 
-    var storage = window.localStorage;
-    var value = storage.getItem(key); // Pass a key name to get its value.
-    storage.setItem(key, value) // Pass a key name and its value to add or update that key.
-    storage.removeItem(key) // Pass a key name to remove that key from storage.
+```javascript
+var storage = window.localStorage;
+var value = storage.getItem(key); // Pass a key name to get its value.
+storage.setItem(key, value) // Pass a key name and its value to add or update that key.
+storage.removeItem(key) // Pass a key name to remove that key from storage.
+```
 
 For more information, see:
 
@@ -68,7 +70,7 @@ For more information, see:
     - Synchronous API means calls will lock up the user interface.
 - Limited total amount of storage (typically around 5MB).
 - iOS stores `localStorage` data in a location that may be cleaned out by
-  the OS when space is required. 
+  the OS when space is required.
 
 ## WebSQL
 
@@ -86,7 +88,9 @@ It is supported by the underlying WebView on the following Cordova platforms:
 
 The entry point into creating or opening a database is the `window.openDatabase()` method:
 
-    var db = window.openDatabase(name, version, displayName, estimatedSize);
+```javascript
+var db = window.openDatabase(name, version, displayName, estimatedSize);
+```
 
 - **name** (string): The unique name of the database, as it will be stored in disk.
 - **version** (string): The version of the database.
@@ -100,17 +104,19 @@ The entry point into creating or opening a database is the `window.openDatabase(
 The returned `Database` object provides a `transaction()` method (or `readTransaction()`
 to optimize read-only transactions) that let's you create a failure-safe transaction:
 
-    var db = window.openDatabase(name, version, displayName, estimatedSize);
-    db.transaction(function (tx) {
-        tx.executeSql(sqlStatement, valueArray, function (tx, result) {
-            console.log(result);
-        }, function (error) {
-            console.log(error);
-        });
+```javascript
+var db = window.openDatabase(name, version, displayName, estimatedSize);
+db.transaction(function (tx) {
+    tx.executeSql(sqlStatement, valueArray, function (tx, result) {
+        console.log(result);
+    }, function (error) {
+        console.log(error);
     });
+});
+```
 
 For more information, see:
- 
+
 - [W3C: Spec][WebSQLDatabaseSpecification]
 - [TutorialsPoint: WebSQL Guide][TutorialsPointWebSQL]
 
@@ -153,7 +159,7 @@ constraining the structure or needing to define it up front.
 
 IndexedDB provides a simple and easy to understand data model, much like LocalStorage.
 But unlike LocalStorage, you can create multiple databases, with multiple stores per
-database, and its asynchronous API and search indexes provide performance benefits.  
+database, and its asynchronous API and search indexes provide performance benefits.
 
 IndexedDB is supported by the underlying WebView on the following Cordova platforms:
 
@@ -161,7 +167,7 @@ IndexedDB is supported by the underlying WebView on the following Cordova platfo
 - Windows (with some limitations)
 - Android (4.4 and above)
 
-### Windows Limitations 
+### Windows Limitations
 
 Windows platform support for IndexedDB is incomplete. For example, it lacks
 the following features:
@@ -177,69 +183,71 @@ the following features:
   operation, then get notified of the result via a DOM event.
 - When you make a request, you get a request object, which provides `onerror`
   and `onsuccess` events, as well as properties such as `result`, `error`
-  and `readyState`. 
+  and `readyState`.
 
 The following code snippet demonstrates some simple usage of IndexedDB:
 
-    var db;
-    var databaseName = 'myDB';
-    var databaseVersion = 1;
-    var openRequest = window.indexedDB.open(databaseName, databaseVersion); 
-    openRequest.onerror = function (event) {
-        console.log(openRequest.errorCode);
-    };
-    openRequest.onsuccess = function (event) {
-        // Database is open and initialized - we're good to proceed.
-        db = openRequest.result;
-        displayData();
-    };
-    openRequest.onupgradeneeded = function (event) {
-        // This is either a newly created database, or a new version number
-        // has been submitted to the open() call.
-        var db = event.target.result;
-        db.onerror = function () {
-            console.log(db.errorCode);
-        };
-
-        // Create an object store and indexes. A key is a data value used to organize
-        // and retrieve values in the object store. The keyPath option identifies where
-        // the key is stored. If a key path is specified, the store can only contain
-        // JavaScript objects, and each object stored must have a property with the
-        // same name as the key path (unless the autoIncrement option is true).
-        var store = db.createObjectStore('customers', { keyPath: 'customerId' });
-
-        // Define the indexes we want to use. Objects we add to the store don't need
-        // to contain these properties, but they will only appear in the specified
-        // index of they do.
-        //
-        // syntax: store.createIndex(indexName, keyPath[, parameters]);
-        //
-        // All these values could have duplicates, so set unique to false
-        store.createIndex('firstName', 'firstName', { unique: false });
-        store.createIndex('lastName', 'lastName', { unique: false });
-        store.createIndex('street', 'street', { unique: false });
-        store.createIndex('city', 'city', { unique: false });
-        store.createIndex('zipCode', 'zipCode', { unique: false });
-        store.createIndex('country', 'country', { unique: false });
-
-        // Once the store is created, populate it
-        store.transaction.oncomplete = function (event) {
-            // The transaction method takes an array of the names of object stores
-            // and indexes that will be in the scope of the transaction (or a single
-            // string to access a single object store). The transaction will be
-            // read-only unless the optional 'readwrite' parameter is specified.
-            // It returns a transaction object, which provides an objectStore method
-            // to access one of the object stores that are in the scope of this
-            //transaction.
-            var customerStore = db.transaction('customers', 'readwrite').objectStore('customers');
-            customers.forEach(function (customer) {
-                customerStore.add(customer);
-            });
-        };
+```javascript
+var db;
+var databaseName = 'myDB';
+var databaseVersion = 1;
+var openRequest = window.indexedDB.open(databaseName, databaseVersion);
+openRequest.onerror = function (event) {
+    console.log(openRequest.errorCode);
+};
+openRequest.onsuccess = function (event) {
+    // Database is open and initialized - we're good to proceed.
+    db = openRequest.result;
+    displayData();
+};
+openRequest.onupgradeneeded = function (event) {
+    // This is either a newly created database, or a new version number
+    // has been submitted to the open() call.
+    var db = event.target.result;
+    db.onerror = function () {
+        console.log(db.errorCode);
     };
 
-    function displayData() {
-    }
+    // Create an object store and indexes. A key is a data value used to organize
+    // and retrieve values in the object store. The keyPath option identifies where
+    // the key is stored. If a key path is specified, the store can only contain
+    // JavaScript objects, and each object stored must have a property with the
+    // same name as the key path (unless the autoIncrement option is true).
+    var store = db.createObjectStore('customers', { keyPath: 'customerId' });
+
+    // Define the indexes we want to use. Objects we add to the store don't need
+    // to contain these properties, but they will only appear in the specified
+    // index of they do.
+    //
+    // syntax: store.createIndex(indexName, keyPath[, parameters]);
+    //
+    // All these values could have duplicates, so set unique to false
+    store.createIndex('firstName', 'firstName', { unique: false });
+    store.createIndex('lastName', 'lastName', { unique: false });
+    store.createIndex('street', 'street', { unique: false });
+    store.createIndex('city', 'city', { unique: false });
+    store.createIndex('zipCode', 'zipCode', { unique: false });
+    store.createIndex('country', 'country', { unique: false });
+
+    // Once the store is created, populate it
+    store.transaction.oncomplete = function (event) {
+        // The transaction method takes an array of the names of object stores
+        // and indexes that will be in the scope of the transaction (or a single
+        // string to access a single object store). The transaction will be
+        // read-only unless the optional 'readwrite' parameter is specified.
+        // It returns a transaction object, which provides an objectStore method
+        // to access one of the object stores that are in the scope of this
+        //transaction.
+        var customerStore = db.transaction('customers', 'readwrite').objectStore('customers');
+        customers.forEach(function (customer) {
+            customerStore.add(customer);
+        });
+    };
+};
+
+function displayData() {
+}
+```
 
 For more information, see:
 
@@ -286,7 +294,7 @@ It is available in the following variations:
 
 * **[cordova-sqlite-storage][SQLiteStorage]** - core version that relies
   on native SQLite implementation. As such, it is only available for iOS
-  and Android platforms. 
+  and Android platforms.
 * **[cordova-sqlite-ext][SQLiteExt]** - extended version with additional
   features including support for Windows and REGEXP support on Android and iOS.
 * **[cordova-sqlite-evfree][SQLiteEVFree]** - similar to *cordova-sqlite-ext*

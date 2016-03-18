@@ -22,7 +22,7 @@ title: Windows Plugins
 
 # Windows Plugins
 
-This section provides details for how to implement a plugin for use in 
+This section provides details for how to implement a plugin for use in
 a Windows Store app for Windows 8.1 phone and desktop, and Universal Windows Platform (Windows 10+). Before reading this, see [Create your fist plugin](../../hybrid/plugins/index.html) for an overview of the plugin's structure and its common JavaScript interface. This section continues to demonstrate the sample _echo_ plugin that communicates from the Cordova webview to the native platform and back.
 
 ## Creating a Windows Plugin in JavaScript
@@ -133,7 +133,7 @@ Platform::String^ EchoPluginRT::Echo(Platform::String^ input)
 
 Now in order for us to call the native code, we use the namespace, classname, and lowerCamelCase the method we are calling.
 
-```
+```js
 var res = EchoRuntimeComponent.EchoPluginRT.echo("boom");
 ```
 

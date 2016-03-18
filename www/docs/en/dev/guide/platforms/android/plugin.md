@@ -446,7 +446,7 @@ Instead, this replacement `CallbackContext` will return the result as part of th
 [`resume`][event-resume] event that is fired when the application resumes. The
 payload of the [`resume`][event-resume] event follows this structure:
 
-```json
+```text
 {
     action: "resume",
     pendingResult: {

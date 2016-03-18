@@ -35,7 +35,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   version(string) | *Required* <br/> A version number for the plugin. [Semver](http://semver.org/) syntax is supported.
 
   Example:
-  ```
+  ```xml
   <?xml version="1.0" encoding="UTF-8"?>
   <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
       xmlns:android="http://schemas.android.com/apk/res/android"
@@ -55,21 +55,21 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   platform(string) | **For custom frameworks only** <br/> *Required* <br/> The platforms your framework supports. You may use the wildcard `*` to say supported for all platforms, specify multiple with a pipe character like `android|ios|blackberry10` or just a single platform like `android`.
 
   Examples:
-  ```
+  ```xml
   <engines>
     <engine name="cordova-android" version="=1.8.0" />
   </engines>
   ```
 
   Engine elements may also specify fuzzy matches using '>', '>=' etc. to avoid repetition, and to reduce maintenance when the underlying platform is updated.
-  ```
+  ```xml
   <engines>
     <engine name="cordova-android" version=">=1.8.0" />
-  </engines>  
+  </engines>
   ```
 
   The `<engine>` tags also has default support for all of the main platforms Cordova exists on. Specifying the cordova engine tag means that all versions of Cordova on any platform must satisfy the engine version attribute. You may also list specific platforms and their versions in order to override the catch-all cordova engine:
-  ```
+  ```xml
   <engines>
     <engine name="cordova" version=">=1.7.0" />
     <engine name="cordova-android" version=">=1.8.0" />
@@ -78,7 +78,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   ```
 
   Custom frameworks example:
-  ```
+  ```xml
   <engines>
     <engine name="my_custom_framework" version="1.0.0" platform="android" scriptSrc="path_to_my_custom_framework_version"/>
     <engine name="another_framework" version=">0.2.0" platform="ios|android" scriptSrc="path_to_another_framework_version"/>
@@ -91,7 +91,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   The `name` element is used to specify the name of the plugin. This element does not (yet) handle localization.
 
   Example:
-  ```
+  ```xml
   <name>Foo</name>
   ```
 
@@ -100,7 +100,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   The `description` element is used to specify the description of the plugin. This element does not (yet) handle localization.
 
   Example:
-  ```
+  ```xml
   <description>Foo plugin description</description>
   ```
 
@@ -109,7 +109,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   The content of the `author` element contains the name of the plugin author.
 
   Example:
-  ```
+  ```xml
   <author>Foo plugin author</author>
   ```
 
@@ -118,7 +118,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   The content of the `keywords` element contains comma separated keywords to describe the plugin.
 
   Example:
-  ```
+  ```xml
   <keywords>foo,bar</keywords>
   ```
 
@@ -127,7 +127,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   This element is used to specify the license of the plugin.
 
   Example:
-  ```
+  ```xml
   <license>Apache 2.0 License</license>
   ```
 
@@ -140,8 +140,8 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   src(string) | *Required* <br/>  Where the file or directory is located in the plugin package, relative to the `plugin.xml` document. If a file does not exist at the specified src location, the CLI stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.
   target(string) | *Required* <br/> Where the file or directory should be located in the Cordova app, relative to the `www` directory. If a file already exists at the target location, the CLI stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.
 
-  Examples: 
-  ```
+  Examples:
+  ```xml
   <!-- a single file, to be copied in the root directory -->
   <asset src="www/foo.js" target="foo.js" />
   <!-- a directory, also to be copied in the root directory -->
@@ -149,7 +149,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   ```
 
   Assets can be targeted to subdirectories as well. This will create the `js/experimental` directory within the `www` directory, unless already present, and copy the `new-foo.js` file and renames it to `foo.js`.
-  ```
+  ```xml
   <asset src="www/new-foo.js" target="js/experimental/foo.js" />
   ```
 
@@ -165,7 +165,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   Example:
 
   When installing a plugin with the example below, socket.js is copied to `www/plugins/my-plugin-id/socket.js`, and added as an entry to `www/cordova_plugins.js`. At load time, code in `cordova.js` uses XHR to read each file and inject a `<script>` tag into HTML.
-  ```
+  ```xml
   <js-module src="socket.js" name="Socket">
   </js-module>
   ```
@@ -181,7 +181,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   target(string) | The namespace where module.exports gets inserted to.
 
   Example:
-  ```
+  ```xml
   <js-module src="socket.js" name="Socket">
     <clobbers target="chrome.socket" />
   </js-module>
@@ -197,7 +197,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   target(string) | The namespace which module.exports gets merged to.
 
   Example:
-  ```
+  ```xml
   <js-module src="socket.js" name="Socket">
     <merges target="chrome.socket" />
   </js-module>
@@ -209,7 +209,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   Allowed within `<js-module>` element. It implies that your code should be specified with `cordova.require`, but not installed on the `window` object. This is useful when initializing the module, attaching event handlers or otherwise. You can only have up to one `<runs/>` tag. Note that including a `<runs/>` with `<clobbers/>` or `<merges/>` is redundant, since they also `cordova.require` your module.
 
   Example:
-  ```
+  ```xml
   <js-module src="socket.js" name="Socket">
     <runs/>
   </js-module>
@@ -228,7 +228,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   version(string) | The version of the plugin depended on. Semver syntax is supported.
 
   Examples:
-  ```
+  ```xml
   <dependency id="cordova-plugin-someplugin" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" />
   <dependency id="cordova-plugin-someplugin" version="1.0.1">
   ```
@@ -242,7 +242,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   name(string) | *Required* <br/> Allowed values: ios, android, blackberry10, amazon-fireos, wp8, windows <br/> Identifies a platform as supported, associating the element's children with that platform.
 
   Example:
-  ```
+  ```xml
   <platform name="android">
     <!-- android-specific elements -->
   </platform>
@@ -260,7 +260,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   compiler-flags(string) | ==iOS== <br/> If set, assigns the specified compiler flags for the particular source file.
 
   Examples:
-  ```
+  ```xml
   <!-- android -->
   <source-file src="src/android/Foo.java" target-dir="src/com/alunny/foo" />
   <!-- ios -->
@@ -281,12 +281,12 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   Example:
 
   For iOS:
-  ```
+  ```xml
   <header-file src="CDVFoo.h" />
   ```
 
 ### resource-file
-  
+
   This is like `<source-file>` element, but specifically for platforms such as iOS and Android that distinguish between source files, headers, and resources.
 
   Attributes(type) | Description
@@ -300,12 +300,12 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   Examples:
 
   For Android:
-  ```
+  ```xml
   <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
   ```
 
   For Windows:
-  ```
+  ```xml
   <resource-file src="src/windows/win81/MobServices.pri" target="win81/MobServices.pri" device-target="windows" versions="8.1" arch="x64"/>
   ```
 
@@ -325,8 +325,8 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
   Examples:
 
-  For XML: 
-  ```
+  For XML:
+  ```xml
   <config-file target="AndroidManifest.xml" parent="/manifest/application">
       <activity android:name="com.foo.Foo" android:label="@string/app_name">
           <intent-filter>
@@ -335,8 +335,8 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   </config-file>
   ```
 
-  For `plist`: 
-  ```
+  For `plist`:
+  ```xml
   <config-file target="*-Info.plist" parent="CFBundleURLTypes">
       <array>
           <dict>
@@ -348,7 +348,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   ```
 
   For windows-specific attributes:
-  ```
+  ```xml
   <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="<8.1.0">
       <Capability Name="picturesLibrary" />
       <DeviceCapability Name="webcam" />
@@ -357,14 +357,14 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
       <DeviceCapability Name="webcam" />
   </config-file>
   ```
-  The above example will set pre-8.1 platforms (Windows 8, specifically) to require the `webcam` device capability and the `picturesLibrary` general capability, and apply the `webcam` device capability only to Windows 8.1 projects that build for Windows Phone.  Windows desktop 8.1 systems are unmodified. 
+  The above example will set pre-8.1 platforms (Windows 8, specifically) to require the `webcam` device capability and the `picturesLibrary` general capability, and apply the `webcam` device capability only to Windows 8.1 projects that build for Windows Phone.  Windows desktop 8.1 systems are unmodified.
 
 ### plugins-plist
 
-  Specifies a key and value to append to the correct `AppInfo.plist` file in an iOS Cordova project. This is _outdated_ as it only applies to cordova-ios 2.2.0 and below. Use the `<config-file>` tag for newer versions of Cordova. 
+  Specifies a key and value to append to the correct `AppInfo.plist` file in an iOS Cordova project. This is _outdated_ as it only applies to cordova-ios 2.2.0 and below. Use the `<config-file>` tag for newer versions of Cordova.
 
   Example:
-  ```
+  ```xml
   <plugins-plist key="Foo" string="CDVFoo" />
   ```
 
@@ -380,13 +380,13 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   versions(string) | ==windows== <br/> Indicates that the `<SDKReference>` should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
 
   Examples:
-  ```
+  ```xml
   <lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
   <lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" />
   ```
 
   For Windows:
-  ```
+  ```xml
   <lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" />
   <lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions=">=8.1" />
   <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" />
@@ -404,22 +404,22 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   weak(boolean) | *Default: false* <br/> Indicates whether the framework should be weakly linked.
   type(string) | Indicates the type of framework to add.
   parent(string) | *Default: .* <br/> Sets the relative path to the directory containing the sub-project to which to add the reference. The default, `.`, implies the application project.
-  arch(string) | ==windows== <br/> Allowed values: `x86`, `x64` or `ARM`. <br/> Indicates that the framework should only be included when building for the specified architecture. 
+  arch(string) | ==windows== <br/> Allowed values: `x86`, `x64` or `ARM`. <br/> Indicates that the framework should only be included when building for the specified architecture.
   device-target(string) | ==windows== <br/> Allowed values: `win` (or `windows`), `phone` or `all`. <br/>  Indicates that the framework should only be included when building for the specified target device type.
   versions(string) | ==windows== <br/> Indicates that the framework should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
   target-dir(string) | ==windows== <br/>  Indicates a subdirectory into which the framework should be copied. In practice, this is most important when plugin contains different framework versions for different chip architectures or device targets, but which have the same name. This allows you to specify different subfolders for each framework version so that they don't overlap each other.
 
   Examples:
 
-  For iOS: 
-  ```
+  For iOS:
+  ```xml
   <framework src="libsqlite3.dylib" />
   <framework src="social.framework" weak="true" />
   <framework src="relative/path/to/my.framework" custom="true" />
   ```
 
   On Android (as of cordova-android@4.0.0), framework tags are used to include Maven dependencies, or to include bundled library projects.
-  ```
+  ```xml
   <!-- Depend on latest version of GCM from play services -->
   <framework src="com.google.android.gms:play-services-gcm:+" />
   <!-- Depend on v21 of appcompat-v7 support library -->
@@ -429,17 +429,17 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   ```
 
   Framework can also be used to have custom .gradle files sub-included into the main project's .gradle file:
-  ```
+  ```xml
   <framework src="relative/path/rules.gradle" custom="true" type="gradleReference" />
   ```
 
   On Windows, using `custom='true'` and `type='projectReference'` will add a reference to the project which will be added to the compile+link steps of the cordova project.  This essentially is the only way currently that a 'custom' framework can target multiple architectures as they are explicitly built as a dependency by the referencing cordova application.
-  ```
+  ```xml
   <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
   ```
 
   Examples of using these Windows specific attributes:
-  ```  
+  ```xml
   <framework src="src/windows/example.dll" arch="x64" />
   <framework src="src/windows/example.dll" versions=">=8.0" />
   <framework src="src/windows/example.vcxproj" type="projectReference" target="win" />
@@ -452,7 +452,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   Additional information provided to users. This is useful when you require extra steps that can't be easily automated or are beyond the CLI's scope. The contents of this tag gets printed out when the CLI installs the plugin.
 
   Example:
-  ```
+  ```xml
   <info>
   You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
 
@@ -466,8 +466,8 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
   Represents your custom script which will be called by Cordova when certain action occurs (for example, after plugin is added or platform prepare logic is invoked). This is useful when you need to extend default Cordova functionality. See [Hooks Guide](../guide/appdev/hooks/index.html) for more information.
 
-  Example: 
-  ```
+  Example:
+  ```xml
   <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
   ```
 
@@ -475,13 +475,13 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
   In certain cases, a plugin may need to make configuration changes dependent on the target application. For example, to register for C2DM on Android, an app whose package id is `my-app-id` would require a permission such as:
 
-  ```
+  ```xml
   <uses-permission android:name="my-app-id.permission.C2D_MESSAGE"/>
   ```
 
   In such cases where the content inserted from the `plugin.xml` file is not known ahead of time, variables can be indicated by a dollar-sign followed by a series of capital letters, digits, or underscores. For the above example, the `plugin.xml` file would include this tag:
 
-  ```  
+  ```xml
   <uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
   ```
 
@@ -489,7 +489,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
   Plugman can request users to specify a plugin's required variables. For example, API keys for C2M and Google Maps can be specified as a command-line argument:
 
-  ```
+  ```bash
   plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
   ```
 
@@ -498,7 +498,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 ## preference
 
   As seen in the previous section, sometimes plugin might require user to specify values for their variables. To make those variable mandatory, the `<platform>` tag needs to contain
-  a `<preference>` tag. 
+  a `<preference>` tag.
   The CLI checks that these required preferences are passed in.  If not, it should warn the user how to pass the variable in and exit with a non-zero code.
 
   Attributes(type) | Description
@@ -507,6 +507,6 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
   default(string) | Default value of the variable. If present, its value will be used and no error will be emitted in case user does not enter any value.
 
   Example:
-  ```
+  ```xml
   <preference name="API_KEY" default="default-value" />
   ```
