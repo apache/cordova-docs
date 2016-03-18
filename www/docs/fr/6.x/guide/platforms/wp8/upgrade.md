@@ -29,7 +29,7 @@ Ce guide montre comment modifier des projets Windows Phone 8, mise à niveau d'a
 Pour les projets non-CLI, exécutez :
 
         bin/update path/to/project
-    
+
 
 Pour les projets de la CLI :
 
@@ -48,7 +48,7 @@ Pour les projets qui ont été créés avec le cordova CLI :
 Pour les projets ne créés pas avec la CLI de cordova, exécutez :
 
         bin\update < project_path >
-    
+
 
 ## Mise à niveau vers 3.1.0 de 3.0.0
 
@@ -61,7 +61,7 @@ Pour les projets qui ont été créés avec le cordova CLI :
 Pour les projets ne créés pas avec la CLI de cordova, exécutez :
 
         bin\update < project_path >
-    
+
 
 ## Mise à niveau à la CLI (3.0.0) de 2.9.0
 
@@ -88,7 +88,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 
 3.  Copier et remplacer n'importe quel écran de démarrage, ou des images de l'icône.
 
-4.  Copie sur les plug-ins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
+4.  Copie sur les plugins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
 
 5.  Générer et tester.
 

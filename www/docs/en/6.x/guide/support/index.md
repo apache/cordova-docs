@@ -49,7 +49,7 @@ CLI's shorthand names.
     <tr>
         <th><a href="../cli/index.html">cordova<br/>CLI</a></th>
         <td data-col="android"    class="y">Mac, Windows, Linux</td>
-        <td data-col="blackberry10" class="y">Mac, Windows</td>
+        <td data-col="blackberry10" class="y">Mac, Windows, Linux</td>
         <td data-col="ios"        class="y">Mac</td>
         <td data-col="ubuntu"        class="y">Ubuntu</td>
         <td data-col="winphone8"  class="y">Windows</td>
@@ -82,7 +82,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-device-motion/">Accelerometer</a></th>
+        <th><a href="../../reference/cordova-plugin-device-motion/">Accelerometer</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -92,7 +92,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-battery-status/">BatteryStatus</a></th>
+        <th><a href="../../reference/cordova-plugin-battery-status/">BatteryStatus</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -102,7 +102,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-camera/">Camera</a></th>
+        <th><a href="../../reference/cordova-plugin-camera/">Camera</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -112,7 +112,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-media-capture/">Capture</a></th>
+        <th><a href="../../reference/cordova-plugin-media-capture/">Capture</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -122,7 +122,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-device-orientation/">Compass</a></th>
+        <th><a href="../../reference/cordova-plugin-device-orientation/">Compass</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y">(3GS+)</td>
@@ -132,7 +132,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-network-information/">Connection</a></th>
+        <th><a href="../../reference/cordova-plugin-network-information/">Connection</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -142,7 +142,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-contacts/">Contacts</a></th>
+        <th><a href="../../reference/cordova-plugin-contacts/">Contacts</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -152,7 +152,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-device/">Device</a></th>
+        <th><a href="../../reference/cordova-plugin-device/">Device</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -172,7 +172,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-file">File</a></th>
+        <th><a href="../../reference/cordova-plugin-file">File</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -182,7 +182,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-file-transfer/">File Transfer</a></th>
+        <th><a href="../../reference/cordova-plugin-file-transfer/">File Transfer</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y">* Do not support onprogress nor abort</td>
         <td data-col="ios"        class="y"></td>
@@ -192,7 +192,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-geolocation/">Geolocation</a></th>
+        <th><a href="../../reference/cordova-plugin-geolocation/">Geolocation</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -202,7 +202,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-globalization/">Globalization</a></th>
+        <th><a href="../../reference/cordova-plugin-globalization/">Globalization</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -212,7 +212,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-inappbrowser/">InAppBrowser</a></th>
+        <th><a href="../../reference/cordova-plugin-inappbrowser/">InAppBrowser</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -222,7 +222,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-media/">Media</a></th>
+        <th><a href="../../reference/cordova-plugin-media/">Media</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -232,7 +232,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-dialogs/">Notification</a></th>
+        <th><a href="../../reference/cordova-plugin-dialogs/">Notification</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -242,7 +242,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-splashscreen/">Splashscreen</a></th>
+        <th><a href="../../reference/cordova-plugin-splashscreen/">Splashscreen</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
@@ -252,7 +252,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-statusbar/">Status Bar</a></th>
+        <th><a href="../../reference/cordova-plugin-statusbar/">Status Bar</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="y"></td>
@@ -272,7 +272,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../cordova-plugin-vibration/">Vibration</a></th>
+        <th><a href="../../reference/cordova-plugin-vibration/">Vibration</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>

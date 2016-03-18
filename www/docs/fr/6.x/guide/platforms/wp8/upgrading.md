@@ -35,7 +35,7 @@ Pour les projets qui ont été créés avec le cordova CLI :
 Pour les projets ne créés pas avec la CLI de cordova, exécutez :
 
         bin\update <project_path>
-    
+
 
 ## Mise à niveau vers 3.1.0 de 3.0.0
 
@@ -48,7 +48,7 @@ Pour les projets qui ont été créés avec le cordova CLI :
 Pour les projets ne créés pas avec la CLI de cordova, exécutez :
 
         bin\update <project_path>
-    
+
 
 ## Mise à niveau à la CLI (3.0.0) de 2.9.0
 
@@ -75,7 +75,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 
 3.  Copier et remplacer n'importe quel écran de démarrage, ou des images de l'icône.
 
-4.  Copie sur les plug-ins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
+4.  Copie sur les plugins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
 
 5.  Générer et tester.
 
@@ -93,7 +93,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 
 4.  Copier et remplacer n'importe quel écran de démarrage, ou des images de l'icône.
 
-5.  Copie sur les plug-ins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au fichier .csproj.
+5.  Copie sur les plugins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au fichier .csproj.
 
 6.  Générer et tester.
 
@@ -109,7 +109,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 
 4.  Copier et remplacer n'importe quel écran de démarrage, ou des images de l'icône.
 
-5.  Copie sur les plug-ins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
+5.  Copie sur les plugins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
 
 6.  Générer et tester.
 
@@ -125,7 +125,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 
 4.  Copier et remplacer n'importe quel écran de démarrage, ou des images de l'icône.
 
-5.  Copie sur les plug-ins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
+5.  Copie sur les plugins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
 
 6.  Générer et tester.
 
@@ -141,7 +141,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 
 4.  Copier et remplacer n'importe quel écran de démarrage, ou des images de l'icône.
 
-5.  Copie sur les plug-ins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
+5.  Copie sur les plugins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
 
 6.  Générer et tester.
 
@@ -157,7 +157,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 
 4.  Copier et remplacer n'importe quel écran de démarrage, ou des images de l'icône.
 
-5.  Copie sur les plug-ins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
+5.  Copie sur les plugins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
 
 6.  Générer et tester.
 
@@ -173,7 +173,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 
 4.  Copier et remplacer n'importe quel écran de démarrage, ou des images de l'icône.
 
-5.  Copie sur les plug-ins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
+5.  Copie sur les plugins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
 
 6.  Générer et tester.
 
@@ -189,7 +189,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 
 4.  Copier et remplacer n'importe quel écran de démarrage, ou des images de l'icône.
 
-5.  Copie sur les plug-ins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
+5.  Copie sur les plugins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
 
 6.  Générer et tester.
 
@@ -205,7 +205,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 
 4.  Copier et remplacer n'importe quel écran de démarrage, ou des images de l'icône.
 
-5.  Copie sur les plug-ins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
+5.  Copie sur les plugins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
 
 6.  Générer et tester.
 
@@ -221,7 +221,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 
 4.  Copier et remplacer n'importe quel écran de démarrage, ou des images de l'icône.
 
-5.  Copie sur les plug-ins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
+5.  Copie sur les plugins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
 
 6.  Générer et tester.
 
@@ -239,7 +239,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 
 4.  Copier et remplacer n'importe quel écran de démarrage, ou des images de l'icône.
 
-5.  Copie sur les plug-ins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
+5.  Copie sur les plugins de la `plugins` répertoire vers le nouveau projet et faire en sorte qu'ils sont également ajoutés au projet VS.
 
 6.  Générer et tester.
 
@@ -254,7 +254,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 3.  Avec le bouton droit sur **références** et sélectionnez **Ajouter une référence**.
 
 4.  Accédez à la nouvelle distribution et ajouter le `WP7CordovaClassLib.dll` fichier.
-    
+
     **Remarque**: vous pouvez visualiser la version de la DLL en faisant un clic droit sur la référence, puis sélectionnez **Propriétés**.
 
 5.  Copiez le nouveau `cordova-1.9.0.js` dans votre projet. (Assurez-vous qu'elle est marquée en tant que contenu.)
@@ -272,7 +272,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 3.  Avec le bouton droit sur **références** et sélectionnez **Ajouter une référence**.
 
 4.  Accédez à la nouvelle distribution et ajouter le `WP7CordovaClassLib.dll` fichier.
-    
+
     **Remarque**: vous pouvez visualiser la version de la DLL en faisant un clic droit sur la référence, puis sélectionnez **Propriétés**.
 
 5.  Copiez le nouveau `cordova-1.8.0.js` dans votre projet. (Assurez-vous qu'elle est marquée en tant que contenu.)
@@ -290,7 +290,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 3.  Avec le bouton droit sur **références** et sélectionnez **Ajouter une référence**.
 
 4.  Accédez à la nouvelle distribution et ajouter le `WP7CordovaClassLib.dll` fichier.
-    
+
     **Remarque**: vous pouvez visualiser la version de la DLL en faisant un clic droit sur la référence, puis sélectionnez **Propriétés**.
 
 5.  Copiez le nouveau `cordova-1.7.0.js` dans votre projet. (Assurez-vous qu'elle est marquée en tant que contenu.)
@@ -308,7 +308,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 3.  Avec le bouton droit sur **références** et sélectionnez **Ajouter une référence**.
 
 4.  Accédez à la nouvelle distribution et ajouter le `WP7CordovaClassLib.dll` fichier.
-    
+
     **Remarque**: vous pouvez visualiser la version de la DLL en faisant un clic droit sur la référence, puis sélectionnez **Propriétés**.
 
 5.  Copiez le nouveau `cordova-1.6.1.js` dans votre projet. (Assurez-vous qu'elle est marquée en tant que contenu.)
@@ -326,7 +326,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 3.  Avec le bouton droit sur **références** et sélectionnez **Ajouter une référence**.
 
 4.  Accédez à la nouvelle distribution et ajouter le `WP7CordovaClassLib.dll` fichier.
-    
+
     **Remarque**: vous pouvez visualiser la version de la DLL en faisant un clic droit sur la référence, puis sélectionnez **Propriétés**.
 
 5.  Copiez le nouveau `cordova-1.6.0.js` dans votre projet. (Assurez-vous qu'elle est marquée en tant que contenu.)
@@ -344,7 +344,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 3.  Avec le bouton droit sur **références** et sélectionnez **Ajouter une référence**.
 
 4.  Accédez à la nouvelle distribution et ajouter le `WP7CordovaClassLib.dll` fichier.
-    
+
     **Remarque**: vous pouvez visualiser la version de la DLL en faisant un clic droit sur la référence, puis sélectionnez **Propriétés**.
 
 5.  Copiez le nouveau `cordova-1.5.0.js` dans votre projet. (Assurez-vous qu'elle est marquée en tant que contenu.)
@@ -362,7 +362,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 3.  Avec le bouton droit sur **références** et sélectionnez **Ajouter une référence**.
 
 4.  Accédez à la nouvelle distribution et ajouter le `WP7CordovaClassLib.dll` fichier.
-    
+
     **Remarque**: vous pouvez visualiser la version de la DLL en faisant un clic droit sur la référence, puis sélectionnez **Propriétés**.
 
 5.  Copiez le nouveau `cordova-1.4.0.js` dans votre projet. (Assurez-vous qu'elle est marquée en tant que contenu.)
@@ -380,7 +380,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 3.  Avec le bouton droit sur **références** et sélectionnez **Ajouter une référence**.
 
 4.  Accédez à la nouvelle distribution et ajouter le `WP7CordovaClassLib.dll` fichier.
-    
+
     **Remarque**: vous pouvez visualiser la version de la DLL en faisant un clic droit sur la référence, puis sélectionnez **Propriétés**.
 
 5.  Copiez le nouveau `cordova-1.3.0.js` dans votre projet. (Assurez-vous qu'elle est marquée en tant que contenu.)
@@ -398,7 +398,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 3.  Avec le bouton droit sur **références** et sélectionnez **Ajouter une référence**.
 
 4.  Accédez à la nouvelle distribution et ajouter le `WP7CordovaClassLib.dll` fichier.
-    
+
     **Remarque**: vous pouvez visualiser la version de la DLL en faisant un clic droit sur la référence, puis sélectionnez **Propriétés**.
 
 5.  Copiez le nouveau `cordova-1.2.0.js` dans votre projet. (Assurez-vous qu'elle est marquée en tant que contenu.)
@@ -416,7 +416,7 @@ Dans la fenêtre de l'Explorateur de solutions de Visual Studio :
 3.  Avec le bouton droit sur **références** et sélectionnez **Ajouter une référence**.
 
 4.  Accédez à la nouvelle distribution et ajouter le `WP7CordovaClassLib.dll` fichier.
-    
+
     **Remarque**: vous pouvez visualiser la version de la DLL en faisant un clic droit sur la référence, puis sélectionnez **Propriétés**.
 
 5.  Copiez le nouveau `cordova-1.1.0.js` dans votre projet. (Assurez-vous qu'elle est marquée en tant que contenu.)

@@ -44,13 +44,12 @@ For each corresponding native interface, see the list at the end of
 this section.
 
 In addition to these instructions, when preparing to write a plugin it
-is best to look over
-[existing plugins](http://cordova.apache.org/contribute)
+is best to look over [existing plugins](http://cordova.apache.org/contribute)
 for guidance.
 
 ## Building a Plugin
 
-Application developers use the CLI's [plugin add command](../../../cordova-cli/index.html#cordova-plugin-add-command) to add a plugin to a project. The
+Application developers use the CLI's [plugin add command][cdv_plugin] to add a plugin to a project. The
 argument to that command is the URL for a _git_ repository containing
 the plugin code.  This example implements Cordova's Device API:
 
@@ -107,7 +106,7 @@ correctly for each platform.  Install `plugman` with the following
 
 You need an valid app source directory, such as the top-level `www`
 directory included in a default CLI-generated project as described in
-[Create your first app](../../cli/index.html) guide.  
+[Create your first app](../../cli/index.html) guide.
 
 Then run a command such as the following to test whether iOS
 dependencies load properly:
@@ -126,7 +125,7 @@ plugin's JavaScript however you like, but you need to call
 `cordova.exec` to communicate with the native platform, using the
 following syntax:
 
-```js
+```javascript
     cordova.exec(function(winParam) {},
                  function(error) {},
                  "service",
@@ -160,18 +159,22 @@ Here is how each parameter works:
 This example shows one way to implement the plugin's JavaScript
 interface:
 
-        window.echo = function(str, callback) {
-            cordova.exec(callback, function(err) {
-                callback('Nothing to echo.');
-            }, "Echo", "echo", [str]);
-        };
+```javascript
+    window.echo = function(str, callback) {
+        cordova.exec(callback, function(err) {
+            callback('Nothing to echo.');
+        }, "Echo", "echo", [str]);
+    };
+```
 
 In this example, the plugin attaches itself to the `window` object as
 the `echo` function, which plugin users would call as follows:
 
-        window.echo("echome", function(echoValue) {
-            alert(echoValue == "echome"); // should alert true.
-        });
+```javascript
+    window.echo("echome", function(echoValue) {
+        alert(echoValue == "echome"); // should alert true.
+    });
+```
 
 Look at the last three arguments to the `cordova.exec` function. The
 first calls the `Echo` _service_, a class name. The second requests
@@ -198,33 +201,48 @@ listed below, and each builds on the simple Echo Plugin example above:
 
 ## Publishing Plugins
 
-Once you develop your plugin, you may want to publish and share it
-with the community. You can publish your plugin to any `npmjs`-based
-registry, but the recommended one is the [NPM registry](https://www.npmjs.com).
-Please read our [publishing plugins to npm guide](http://plugins.cordova.io/npm/developers.html).
-
-
-__NOTE__: [Cordova plugin registry](https://plugins.cordova.io) is
-moving to a read-only state. `publish`/
-`unpublish` commands have been removed from `plugman`, so you'll need to
-use corresponding `npm` commands.
-
-Other developers can install your plugin automatically using either `plugman`
- or the Cordova CLI.  (For details on each development path, see
- [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html) and [The Command-Line Interface reference](../../../cordova-cli/index.html).)
+You can publish your plugin to any `npmjs`-based registry, but the recommended one is the [NPM registry](https://www.npmjs.com). Other developers can install your plugin automatically using either `plugman` or the Cordova CLI.
 
 To publish a plugin to NPM registry you need to follow steps below:
+  * install the `plugman` CLI:
+
+    ```bash
+    $ npm install -g plugman
+    ```
 
   * create `package.json` file for your plugin:
 
-        $ plugman createpackagejson /path/to/your/plugin
+    ```bash
+    $ plugman createpackagejson /path/to/your/plugin
+    ```
 
   * publish it:
 
-        $ npm adduser # that is if you don't have an account yet
-        $ npm publish /path/to/your/plugin
+    ```bash
+    $ npm adduser # that is if you don't have an account yet
+    $ npm publish /path/to/your/plugin
+    ```
 
-That is it!
+For more details on npm usage refer to [publishing a npm package](https://docs.npmjs.com/getting-started/publishing-npm-packages) on the NPM documentation site.
 
-Running `plugman --help` lists other available registry-based
-commands.
+## Integrating with Plugin Search
+
+To surface the plugin in [Cordova Plugin Search](/plugins/), add the `ecosystem:cordova` keyword to the `package.json` file of your plugin before publishing.
+
+To indicate support for a particular platform add a keyword with the `<platformName>` as `**cordova-<platformName>**` to the list of keywords in package.json.
+Plugman's `createpackagejson` command does this for you, but if you did not use it to generate your `package.json`, you should manually edit it as shown below.
+
+For example, for a plugin that supports android, iOS & Windows, the keywords in package.json should include:
+
+```json
+    "keywords": [
+      "ecosystem:cordova",
+      "cordova-android",
+      "cordova-ios",
+      "cordova-windows"
+    ]
+```
+
+For more detailed example of a package.json, review the [package.json file of cordova-plugin-device](https://github.com/apache/cordova-plugin-device/blob/master/package.json).
+
+[cdv_plugin]: ../../../reference/cordova-cli/index.html#cordova-plugin-command

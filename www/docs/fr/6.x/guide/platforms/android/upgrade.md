@@ -31,7 +31,7 @@ Il y a des mesures spécifiques de mise à niveau indispensable pour tirer parti
 Pour les projets non-CLI, exécutez :
 
         bin/update path/to/project
-    
+
 
 Pour les projets de la CLI :
 
@@ -44,13 +44,13 @@ Pour les projets de la CLI :
 Toutes les fonctionnalités de liste blanche sont maintenant implémentée via plugin. Sans un plugin, votre application n'est plus protégée par une liste blanche après mise à niveau vers 4.0.0. Cordova a deux plugins de liste blanche, qui offrent différents niveaux de protection.
 
 1.  Le plugin de `cordova-plugin-whitelist` *(recommandé)*
-    
+
     *   Ce plugin est fortement recommandé, car il est plus sûr et plus configurable que la liste blanche dans les versions précédentes
     *   Voir [cordova-plugin-whitelist][1] pour plus de détails sur les modifications de configuration requises
     *   Run : `cordova plugin ajouter cordova-plugin-crosswalk-webview`
 
 2.  Le plugin de `cordova-plugin-legacy-whitelist`
-    
+
     *   Ce greffon fournit le même comportement de la liste blanche que les versions précédentes. Voir [cordova-plugin-legacy-whitelist][2]
     *   Aucune modification de configuration est requise, mais il fournit une protection moindre que le plugin recommandé
     *   Run : `cordova plugin ajouter cordova-plugin-legacy-whitelist`
@@ -63,7 +63,7 @@ Toutes les fonctionnalités de liste blanche sont maintenant implémentée via p
 Par défaut, votre application continuera d'utiliser le système WebView fournie par l'appareil. Si vous souhaitez utiliser le tableau de concordance WebView au lieu de cela, il suffit d'ajouter le plugin de passage pour piétons :
 
     cordova plugin add cordova-plugin-crosswalk-webview
-    
+
 
 À ajouté le plugin, votre application obtient le passage pour piétons de WebView installé et configuré correctement.
 
@@ -72,14 +72,14 @@ Par défaut, votre application continuera d'utiliser le système WebView fournie
 Si votre application, utilisation d'un écran de démarrage, que la fonctionnalité a été transférée à un plugin. Les options de configuration pour les écrans de démarrage sont inchangées. La seule mise à niveau étape nécessaire consiste à ajouter le plugin :
 
     cordova plugin add cordova-plugin-splashscreen
-    
+
 
 ## Mise à niveau vers 3.7.1 de 3.6.0
 
 Pour les projets non-CLI, exécutez :
 
         bin/update path/to/project
-    
+
 
 Pour les projets de la CLI :
 
@@ -104,7 +104,7 @@ Pour les projets qui ont été créés avec le cordova CLI :
 Pour les projets ne créés pas avec la CLI de cordova, exécutez :
 
         bin/update <project_path>
-    
+
 
 **AVERTISSEMENT :** Sur Android 4.4 - 4.4.3 Android, création d'un fichier d'entrée élément avec type = « file » n'ouvrira pas la boîte de dialogue Sélecteur. Il s'agit d'une régression avec Chrome sur Android et le problème peut être reproduit dans le navigateur de Chrome autonome sur Android (voir http://code.google.com/p/android/issues/detail?id=62220) la solution de contournement suggérée est d'utiliser le transfert de fichiers et fichiers plugins pour Android 4.4. Vous pouvez écouter un événement onClick du input type = « file » et ensuite apparaître un sélecteur de fichier UI. Afin de relier les données du formulaire avec le téléchargement, vous pouvez utiliser JavaScript pour fixer des valeurs de formulaire à la requête POST plusieurs partie qui fait du transfert de fichiers.
 
@@ -119,7 +119,7 @@ Pour les projets qui ont été créés avec le cordova CLI :
 Pour les projets ne créés pas avec la CLI de cordova, exécutez :
 
         bin/update <project_path>
-    
+
 
 ## Mise à niveau à la CLI (3.0.0) de 2.9.0
 
@@ -141,12 +141,12 @@ Pour les projets ne créés pas avec la CLI de cordova, exécutez :
 
 3.  Copiez tout actif Android native du répertoire `res` au nouveau projet.
 
-4.  Copier les plug-ins que vous avez installé des `src` de sous-répertoires dans le nouveau projet.
+4.  Copier les plugins que vous avez installé des `src` de sous-répertoires dans le nouveau projet.
 
 5.  Veillez à mettre à niveau tout déconseillé `< plugin >` références de votre ancien fichier `config.xml` à la nouvelle `<feature>` spécification.
 
 6.  Mise à jour toutes les références à l'ensemble de `org.apache.cordova.api` pour être `org.apache.cordova`.
-    
+
     **NOTE** : toutes les principales API ont été supprimées et doit être installé comme plugins. S'il vous plaît voir les Plugman à l'aide à gérer les Plugins Guide pour plus de détails.
 
 ## Mise à niveau vers 2.9.0 de 2.8.0

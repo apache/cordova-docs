@@ -44,6 +44,9 @@ Cordova supports the following hook types:
 <!-- START HTML -->
 
 <table class="hooks" width="100%">
+    <col width="20%">
+    <col width="30%">
+    <col width="50%">
     <thead>
         <tr>
             <th>Hook Type</th>
@@ -54,7 +57,7 @@ Cordova supports the following hook types:
     <tbody>
         <tr>
             <th data-col="beforeplatformadd">before_platform_add</th>
-            <td data-col="code" rowspan="2"><code>cordova platform add</code></td>
+            <td data-col="code" rowspan="2" ><code>cordova platform add</code></td>
             <td rowspan="2" class="description" data-col="description">To be executed before and after adding a platform.</td>
         </tr>
         <tr>
@@ -78,7 +81,7 @@ Cordova supports the following hook types:
         </tr>
         <tr>
             <th data-col="beforeprepare">before_prepare</th>
-            <td data-col="code" rowspan="2"><code>cordova prepare</code><br/><code>cordova platform add</code><br/><code>cordova run</code></td>
+            <td data-col="code" rowspan="2"><code>cordova prepare</code><br/><code>cordova platform add</code><br/><code>cordova build</code><br/><code>cordova run</code></td>
             <td rowspan="2" data-col="description">To be executed before and after preparing your application.</td>
         </tr>
         <tr>
@@ -86,7 +89,7 @@ Cordova supports the following hook types:
         </tr>
         <tr>
             <th data-col="beforecompile">before_compile</th>
-            <td data-col="code" rowspan="2"><code>cordova compile</code><br/><code>cordova run</code></td>
+            <td data-col="code" rowspan="2"><code>cordova compile</code><br/><code>cordova build</code></td>
             <td rowspan="2" data-col="description">To be executed before and after compiling your application.</td>
         </tr>
         <tr>
@@ -94,7 +97,7 @@ Cordova supports the following hook types:
         </tr>
         <tr>
             <th data-col="beforebuild">before_build</th>
-            <td data-col="code" rowspan="2"><code>cordova build</code><br/><code>cordova run</code></td>
+            <td data-col="code" rowspan="2"><code>cordova build</code></td>
             <td rowspan="2" data-col="description">To be executed before and after building your application.</td>
         </tr>
         <tr>
@@ -193,36 +196,40 @@ Cordova supports the following hook types:
 
 Hooks could be defined in project's `config.xml` using `<hook>` elements, for example:
 
-    <hook type="before_build" src="scripts/appBeforeBuild.bat" />
-    <hook type="before_build" src="scripts/appBeforeBuild.js" />
-    <hook type="before_plugin_install" src="scripts/appBeforePluginInstall.js" />
+```xml
+<hook type="before_build" src="scripts/appBeforeBuild.bat" />
+<hook type="before_build" src="scripts/appBeforeBuild.js" />
+<hook type="before_plugin_install" src="scripts/appBeforePluginInstall.js" />
 
-    <platform name="android">
-        <hook type="before_build" src="scripts/wp8/appAndroidBeforeBuild.bat" />
-        <hook type="before_build" src="scripts/wp8/appAndroidBeforeBuild.js" />
-        <hook type="before_plugin_install" src="scripts/wp8/appWP8BeforePluginInstall.js" />
-        ...
-    </platform>
+<platform name="android">
+    <hook type="before_build" src="scripts/wp8/appAndroidBeforeBuild.bat" />
+    <hook type="before_build" src="scripts/wp8/appAndroidBeforeBuild.js" />
+    <hook type="before_plugin_install" src="scripts/wp8/appWP8BeforePluginInstall.js" />
+    ...
+</platform>
 
-    <platform name="windows">
-        <hook type="before_build" src="scripts/windows/appWinBeforeBuild.bat" />
-        <hook type="before_build" src="scripts/windows/appWinBeforeBuild.js" />
-        <hook type="before_plugin_install" src="scripts/windows/appWinBeforePluginInstall.js" />
-        ...
-    </platform>
+<platform name="windows">
+    <hook type="before_build" src="scripts/windows/appWinBeforeBuild.bat" />
+    <hook type="before_build" src="scripts/windows/appWinBeforeBuild.js" />
+    <hook type="before_plugin_install" src="scripts/windows/appWinBeforePluginInstall.js" />
+    ...
+</platform>
+```
 
 ### Plugin hooks (plugin.xml)
 
 As a plugin developer you can define hook scripts using `<hook>` elements in a `plugin.xml` like that:
 
-    <hook type="before_plugin_install" src="scripts/beforeInstall.js" />
-    <hook type="after_build" src="scripts/afterBuild.js" />
+```xml
+<hook type="before_plugin_install" src="scripts/beforeInstall.js" />
+<hook type="after_build" src="scripts/afterBuild.js" />
 
-    <platform name="android">
-        <hook type="before_plugin_install" src="scripts/androidBeforeInstall.js" />
-        <hook type="before_build" src="scripts/androidBeforeBuild.js" />
-        ...
-    </platform>
+<platform name="android">
+    <hook type="before_plugin_install" src="scripts/androidBeforeInstall.js" />
+    <hook type="before_build" src="scripts/androidBeforeBuild.js" />
+    ...
+</platform>
+```
 
 `before_plugin_install`, `after_plugin_install`, `before_plugin_uninstall` plugin hooks will be fired
 exclusively for the plugin being installed/uninstalled.
@@ -231,8 +238,10 @@ exclusively for the plugin being installed/uninstalled.
 
 To execute custom action when corresponding hook type is fired, use hook type as a name for a subfolder inside 'hooks' directory and place you script file here, for example:
 
-    # script file will be automatically executed after each build
-    hooks/after_build/after_build_custom_action.js
+```
+# script file will be automatically executed after each build
+hooks/after_build/after_build_custom_action.js
+```
 
 When using these hooks, they will always be run as executable files, not as loadable JavaScript modules.
 
@@ -261,30 +270,36 @@ If there are hooks associated with `before_platform_add`, `after_platform_add`, 
 `before_plugin_install` and `after_plugin_install` (and assuming you have one plugin installed on your project),
 adding a new platform will execute the hooks in the following order:
 
-    before_platform_add
-        before_prepare
-        after_prepare
-        before_plugin_install
-        after_plugin_install
-    after_platform_add
+```
+before_platform_add
+    before_prepare
+    after_prepare
+    before_plugin_install
+    after_plugin_install
+after_platform_add
+```
 
 ##### Example 2 (cordova build)
 If there are hooks associated with `before_prepare`, `after_prepare`, `before_compile`, `after_compile`, `before_build`
 and `after_build` - running a build command will execute the hooks in the following order:
 
-    before_build
-        before_prepare
-        after_prepare
-        before_compile
-        after_compile
-    after_build
+```
+before_build
+    before_prepare
+    after_prepare
+    before_compile
+    after_compile
+after_build
+```
 
 ## Script Interface
 ### Windows Quirks
 
 If you are working on Windows, and in case your hook (Javascript/Non-Javascript)scripts aren't bat files (which is recommended, if you want your scripts to work in non-Windows operating systems) Cordova CLI will expect a shebang line as the first line for it to know the interpreter it needs to use to launch the script. The shebang line should match the following example:
 
-    #!/usr/bin/env [name_of_interpreter_executable]
+```
+#!/usr/bin/env [name_of_interpreter_executable]
+```
 
 ### Javascript
 
@@ -373,35 +388,39 @@ size of generated .apk file for Android platform.
 Create blank Cordova app and add the following definition to `config.xml` to
 tell Cordova to run `afterBuild.js` script after each platform build.
 
-    <hook type="after_build" src="scripts/afterBuild.js" />
+```xml
+<hook type="after_build" src="scripts/afterBuild.js" />
+```
 
 Create `scripts/afterBuild.js` file and add the following implementation.
 We use async version of `fs.stat` method to demonstrate how async functionality
 could be done via hooks.
 
-    module.exports = function(ctx) {
-        // make sure android platform is part of build
-        if (ctx.opts.platforms.indexOf('android') < 0) {
-            return;
+```javascript
+module.exports = function(ctx) {
+    // make sure android platform is part of build
+    if (ctx.opts.platforms.indexOf('android') < 0) {
+        return;
+    }
+    var fs = ctx.requireCordovaModule('fs'),
+        path = ctx.requireCordovaModule('path'),
+        deferral = ctx.requireCordovaModule('q').defer();
+
+    var platformRoot = path.join(ctx.opts.projectRoot, 'platforms/android');
+    var apkFileLocation = path.join(platformRoot, 'build/outputs/apk/android-debug.apk');
+
+    fs.stat(apkFileLocation, function(err,stats) {
+        if (err) {
+                deferral.reject('Operation failed');
+        } else {
+            console.log('Size of ' + apkFileLocation + ' is ' + stats.size +' bytes');
+            deferral.resolve();
         }
-        var fs = ctx.requireCordovaModule('fs'),
-            path = ctx.requireCordovaModule('path'),
-            deferral = ctx.requireCordovaModule('q').defer();
+    });
 
-        var platformRoot = path.join(ctx.opts.projectRoot, 'platforms/android');
-        var apkFileLocation = path.join(platformRoot, 'build/outputs/apk/android-debug.apk');
-
-        fs.stat(apkFileLocation, function(err,stats) {
-            if (err) {
-                 deferral.reject('Operation failed');
-            } else {
-                console.log('Size of ' + apkFileLocation + ' is ' + stats.size +' bytes');
-                deferral.resolve();
-            }
-        });
-
-        return deferral.promise;
-    };
+    return deferral.promise;
+};
+```
 
 Parameter `ctx` in example above is passed by Cordova and represents execution
 context such as script full path, target platform, command-line arguments, etc and
@@ -410,11 +429,13 @@ for more details.
 
 You can now add android platform and execute build.
 
-    cordova platform add android
-    ..
-    cordova build
-    ..
-    Size of path\to\app\platforms\android\build\outputs\apk\android-debug.apk is 1821193 bytes
+```
+cordova platform add android
+..
+cordova build
+..
+Size of path\to\app\platforms\android\build\outputs\apk\android-debug.apk is 1821193 bytes
+```
 
 More good usage examples could be found in [Three Hooks Your Cordova Phone Gap Project needs][Devgirl_Hooks_Link]
 

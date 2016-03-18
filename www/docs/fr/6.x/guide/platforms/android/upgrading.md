@@ -41,7 +41,7 @@ Pour les projets qui ont été créés avec le cordova CLI :
 Pour les projets ne créés pas avec la CLI de cordova, exécutez :
 
         bin/update <project_path>
-    
+
 
 **Avertissement :** Commençant sur Android 4.4, création d'un élément du fichier d'entrée avec type = « file » n'ouvrira pas la boîte de dialogue Sélecteur. Il s'agit d'une régression avec Chrome sur Android et le problème peut être reproduit dans le navigateur de Chrome autonome sur Android (voir http://code.google.com/p/android/issues/detail?id=62220) la solution de contournement suggérée est d'utiliser le transfert de fichiers et fichiers plugins pour Android 4.4. Vous pouvez écouter un événement onClick du input type = « file » et ensuite apparaître un sélecteur de fichier UI. Afin de relier les données du formulaire avec le téléchargement, vous pouvez utiliser JavaScript pour fixer des valeurs de formulaire à la requête POST plusieurs partie qui fait du transfert de fichiers. Ce bug existe toujours à partir de Android 4.4.2
 
@@ -56,7 +56,7 @@ Pour les projets qui ont été créés avec le cordova CLI :
 Pour les projets ne créés pas avec la CLI de cordova, exécutez :
 
         bin/update <project_path>
-    
+
 
 ## Mise à niveau à la CLI (3.0.0) de 2.9.0
 
@@ -79,12 +79,12 @@ platform add android`.
 
 3.  Copier n'importe quel actif Android natif de votre `res` répertoire vers le nouveau projet.
 
-4.  Copie sur les plug-ins que vous avez installé de la `src` sous-répertoires dans le nouveau projet.
+4.  Copie sur les plugins que vous avez installé de la `src` sous-répertoires dans le nouveau projet.
 
 5.  Assurez-vous de mettre à niveau tout obsolète `<plugin>` les références de votre ancien `config.xml` fichier pour le nouveau `<feature>` spécification.
 
 6.  Mise à jour toutes les références à la `org.apache.cordova.api` paquet d'être`org.apache.cordova`.
-    
+
     **NOTE**: toutes les principales API ont été supprimées et doit être installé comme plugins. S'il vous plaît voir les Plugman à l'aide à gérer les Plugins Guide pour plus de détails.
 
 ## Mise à niveau vers 2.9.0 de 2.8.0

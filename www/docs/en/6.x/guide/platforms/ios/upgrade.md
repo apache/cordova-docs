@@ -35,8 +35,10 @@ Apple App Store, you should use the latest shipped version of the iOS SDK, which
 
 For non-CLI projects, run:
 
-        bin/update path/to/project
-        
+```
+bin/update path/to/project
+```
+
 For CLI projects:
 
 1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
@@ -48,8 +50,10 @@ For CLI projects:
 
 For non-CLI projects, run:
 
-        bin/update path/to/project
-        
+```
+bin/update path/to/project
+```
+
 For CLI projects:
 
 1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
@@ -60,8 +64,10 @@ For CLI projects:
 
 For non-CLI projects, run:
 
-        bin/update path/to/project
-        
+```
+bin/update path/to/project
+```
+
 For CLI projects:
 
 1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
@@ -72,27 +78,31 @@ For CLI projects:
 
 For non-CLI projects, run:
 
-        bin/update path/to/project
-        
+```
+bin/update path/to/project
+```
+
 For CLI projects:
 
 1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
 
 2. Run `cordova platform update ios`
-        
+
 
 ## Upgrading 3.0.0 Projects to 3.1.0
 
 For non-CLI projects, run:
 
-        bin/update path/to/project
-        
+```
+bin/update path/to/project
+```
+
 For CLI projects:
 
 1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
 
 2. Run `cordova platform update ios`
-        
+
 iOS 7 Issues:
 
 1. Remove `width=device-width, height=device-height` from the
@@ -190,23 +200,27 @@ yourself. See [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html
    deprecated. You can copy this information in the `config.xml` file
    for a new project. For example:
 
-        <plugins>
-            <plugin name="LocalStorage" value="CDVLocalStorage" />
-            <!-- other plugins -->
-        </plugins>
-        
-        <!-- change to: (note that a <feature> tag is on the same level as <plugins> -->
-        <feature name="LocalStorage">
-    	    <param name="ios-package" value="CDVLocalStorage" />
-    	</feature>
-    	<!-- other <feature> tags -->
-        
+    ```xml
+    <plugins>
+        <plugin name="LocalStorage" value="CDVLocalStorage" />
+        <!-- other plugins -->
+    </plugins>
+
+    <!-- change to: (note that a <feature> tag is on the same level as <plugins> -->
+    <feature name="LocalStorage">
+        <param name="ios-package" value="CDVLocalStorage" />
+    </feature>
+    <!-- other <feature> tags -->
+    ```
+
 8. Delete the `CordovaLib` directory, and copy the `CordovaLib` directory from the new project into your project's root directory.
 
 9. Add these two frameworks to your project:
-        
-        OpenAL
-        ImageIO
+
+    ```
+    OpenAL
+    ImageIO
+    ```
 
 10. Update your project's target __Build Settings__. Under __Linking &rarr; Other Linker Flags__, edit __"-Obj-C"__ to be __"-ObjC"__.
 
@@ -334,7 +348,9 @@ yourself. See [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html
 
 11. Add the InAppBrowser plugin to the `config.xml`, by adding this tag under `<cordova><plugins>`:
 
-        <plugin name="InAppBrowser" value="CDVInAppBrowser" />
+    ```xml
+    <plugin name="InAppBrowser" value="CDVInAppBrowser" />
+    ```
 
 12. Note that Objective-C plugins are _not_ whitelisted anymore. To whitelist your connections with the app whitelist, you need to set the `User-Agent` header of the connection to the same user-agent as the main Cordova WebView.
 You can get this by accessing the `userAgent` property off the main view-controller. The main view-controller (`CDVViewController`) also has a `URLisAllowed` method for you to check whether a URL passes the whitelist.
@@ -368,7 +384,9 @@ You can get this by accessing the `userAgent` property off the main view-control
     2. Go to the location where you installed Cordova (see Step 1), in the `bin` subdirectory
     3. Run the script below where the first parameter is the path to your project's `.xcodeproj` file:
 
-        `update_cordova_subproject path/to/your/project/xcodeproj`
+        ```
+        update_cordova_subproject path/to/your/project/xcodeproj
+        ```
 
 __NOTE__: In 2.2.0, the `bin/create` script copy in the `CordovaLib` sub-project into your project. To have the same kind of setup, just copy in the right `CordovaLib` into your project directory, and update the `CordovaLib` sub-project location (relative to the project) in the Xcode File Inspector.
 
@@ -404,7 +422,9 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
     2. Go to the location where you installed Cordova (see Step 1), in the `bin` subdirectory
     3. Run the script below where the first parameter is the path to your project's `.xcodeproj` file:
 
-        `update_cordova_subproject path/to/your/project/xcodeproj`
+        ```
+        update_cordova_subproject path/to/your/project/xcodeproj
+        ```
 
 ## Upgrading 1.9.0 Projects to 2.0.0
 
@@ -438,11 +458,15 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
 14. For the `#import` errors, change any quote-based imports in this style:
 
-        #import "CDV.h"
+    ```objective_c
+    #import "CDV.h"
+    ```
 
     to this brackets-based style:
 
-        #import <Cordova/CDV.h>
+    ```objective_c
+    #import <Cordova/CDV.h>
+    ```
 
     and remove any `#ifdef` wrappers around any Cordova imports, they are not needed anymore (the imports are now unified)
 
@@ -482,15 +506,19 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
 32. Search for __Header Search Paths__. For that setting, append these three values, including quotes:
 
-        "$(TARGET_BUILD_DIR)/usr/local/lib/include"
+    ```bash
+    "$(TARGET_BUILD_DIR)/usr/local/lib/include"
 
-        "$(OBJROOT)/UninstalledProducts/include"
+    "$(OBJROOT)/UninstalledProducts/include"
 
-        "$(BUILT_PRODUCTS_DIR)"
+    "$(BUILT_PRODUCTS_DIR)"
+    ```
 
 33. Search for __Other Linker Flags__. For that setting, append this value:
 
-        -weak_framework CoreFoundation
+    ```bash
+    -weak_framework CoreFoundation
+    ```
 
 34. Build your project, it should compile and link with __no issues__.
 
@@ -551,11 +579,13 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 4. Copy these files from the new project into your 1.5.0-based project directory on disk, replacing any old files (backup your files first from step 2 above):
 
-        AppDelegate.h
-        AppDelegate.m
-        MainViewController.h
-        MainViewController.m
-        Cordova.plist
+    ```
+    AppDelegate.h
+    AppDelegate.m
+    MainViewController.h
+    MainViewController.m
+    Cordova.plist
+    ```
 
 5. Add all the new `MainViewController` and `AppDelegate` files into your Xcode project.
 
@@ -618,7 +648,9 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 18. In the `AppDelegate.h`, `AppDelegate.m`, and `MainViewController.h` files, replace the whole `#ifdef PHONEGAP_FRAMEWORK` block with:
 
-        #import "CDVDeprecated.h"
+    ```objective_c
+    #import "CDVDeprecated.h"
+    ```
 
 19. Click on the __project icon__ in the Project Navigator, select your __Target__, then select the __Build Settings__ tab.
 
@@ -680,11 +712,13 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 4. Copy these files from the new project into your 1.3.0-based project directory on disk, replacing any old files (backup your files first from step 2 above):
 
-        AppDelegate.h
-        AppDelegate.m
-        MainViewController.h
-        MainViewController.m
-        MainViewController.xib
+    ```
+    AppDelegate.h
+    AppDelegate.m
+    MainViewController.h
+    MainViewController.m
+    MainViewController.xib
+    ```
 
 5. Add all the `MainViewController` files into your Xcode project.
 
@@ -707,11 +741,13 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 4. Copy these files from the new project into your 1.2.0-based project directory on disk, replacing any old files (backup your files first from step 2 above):
 
-        AppDelegate.h
-        AppDelegate.m
-        MainViewController.h
-        MainViewController.m
-        MainViewController.xib
+    ```
+    AppDelegate.h
+    AppDelegate.m
+    MainViewController.h
+    MainViewController.m
+    MainViewController.xib
+    ```
 
 5. Add all the `MainViewController` files into your Xcode project.
 
@@ -734,11 +770,13 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 4. Copy these files from the new project into your 1.1.0-based project directory on disk, replacing any old files (backup your files first from step 2 above):
 
-        AppDelegate.h
-        AppDelegate.m
-        MainViewController.h
-        MainViewController.m
-        MainViewController.xib
+    ```
+    AppDelegate.h
+    AppDelegate.m
+    MainViewController.h
+    MainViewController.m
+    MainViewController.xib
+    ```
 
 5. Add all the `MainViewController` files into your Xcode project.
 
@@ -761,11 +799,13 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 4. Copy these files from the new project into your 1.0.0-based project directory on disk, replacing any old files (backup your files first from step 2 above):
 
-        AppDelegate.h
-        AppDelegate.m
-        MainViewController.h
-        MainViewController.m
-        MainViewController.xib
+    ```
+    AppDelegate.h
+    AppDelegate.m
+    MainViewController.h
+    MainViewController.m
+    MainViewController.xib
+    ```
 
 5. Add all the `MainViewController` files into your Xcode project.
 
@@ -788,11 +828,13 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 4. Copy these files from the new project into your 0.9.6-based project directory on disk, replacing any old files (backup your files first from step 2 above):
 
-        AppDelegate.h
-        AppDelegate.m
-        MainViewController.h
-        MainViewController.m
-        MainViewController.xib
+    ```
+    AppDelegate.h
+    AppDelegate.m
+    MainViewController.h
+    MainViewController.m
+    MainViewController.xib
+    ```
 
 5. Add all the `MainViewController` files into your Xcode project.
 

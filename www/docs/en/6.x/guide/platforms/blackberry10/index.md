@@ -30,7 +30,7 @@ For BlackBerry 10, you need to install the SDK regardless of whether
 you want to use the cross-platform Cordova CLI for development, or a
 narrower set of platform-centered command-line tools.  For a
 comparison of the two development paths, see the [Overview](../../overview/index.html).  For
-details on each, see [Cordova CLI Reference] and the BlackBerry 10
+details on each, see [Cordova CLI Reference][cli] and the BlackBerry 10
 Shell Tool Guide.
 
 ## Requirements
@@ -75,46 +75,52 @@ On Windows:
 * Go to __My Computer &rarr; Properties &rarr; Advanced &rarr; Environment Variables__.
 
 * Append the Native SDK's install directory to the PATH, for example:
-
-        ;C:\bbndk\host_10_1_0_132\win32\x86\usr\bin\
+  ```
+  ;C:\bbndk\host_10_1_0_132\win32\x86\usr\bin\
+  ```
 
 On Mac and Linux:
 
 * Edit the `~/.bash_profile` file, adding a line such as the
   following, depending on where the Native SDK was installed:
+    ```bash
+    export PATH=${PATH}:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
 
-        $ export PATH=${PATH}:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
-
-  or for the 10.2 Native SDK:
-
-        $ export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
+    # or for the 10.2 Native SDK:
+    export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
+    ```
 
 * Run the following to apply the change in the current session:
-
-        $ source ~/.bash_profile
+    ```bash
+    $ source ~/.bash_profile
+    ```
 
 If you got any environmental problem, using the Native SDK from the command line, execute the appropriate file for your platform, located within the installation path:
 
 * On Windows &rarr; MS-DOS shell:
-
-        C:\> \bbndk\bbndk-env_xx_xx_xx_xxxx.bat
+  ```
+  C:\> \bbndk\bbndk-env_xx_xx_xx_xxxx.bat
+  ```
 
 * On Windows &rarr; git bash shell:
-
-        $ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
+  ```
+  $ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
+  ```
 
 * On Linux &rarr; Installed as root user:
-
-        $ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+  ```bash
+  $ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+  ```
 
 * On Linux &rarr; Installed as non-root user:
-
-        $ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+  ```bash
+  $ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+  ```
 
 * On Mac:
-
-        $ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-
+  ```bash
+  $ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+  ```
 
 ## Set up for Signing
 
@@ -132,17 +138,21 @@ download page.
 
 The final step is to generate a signing certificate:
 
-    $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
+```bash
+$ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
+```
 
 ## Create a Project
 
 Use the `cordova` utility to set up a new project, as described in
-[Cordova CLI Reference]. For example, in a source-code directory:
+[Cordova CLI Reference][cli]. For example, in a source-code directory:
 
-        $ cordova create hello com.example.hello
-        $ cd hello
-        $ cordova platform add blackberry10
-        $ cordova build
+```bash
+$ cordova create hello com.example.hello
+$ cd hello
+$ cordova platform add blackberry10
+$ cordova build
+```
 
 ## Deploy to Emulator
 
@@ -170,16 +180,19 @@ command, in this case invoked from the project top-level directory,
 associates a target named _emu_ with the IP address displayed above.
 
 * On Windows:
-
-        $ platforms\blackberry10\cordova\target.bat add emu 169.254.0.1 -t simulator
+  ```
+  $ platforms\blackberry10\cordova\target.bat add emu 169.254.0.1 -t simulator
+  ```
 
 * On Mac/Linux:
-
-        $ platforms/blackberry10/cordova/target add emu 169.254.0.1 -t simulator
+  ```bash
+  platforms/blackberry10/cordova/target add emu 169.254.0.1 -t simulator
+  ```
 
 Then, run the `emulate` command to view the app:
-
-        $ cordova emulate blackberry10
+```bash
+$ cordova emulate blackberry10
+```
 
 ## Deploy to Device
 
@@ -194,12 +207,14 @@ Run the target command-line utility to associate a name with an IP
 address, device password and PIN.
 
 * On Windows:
-
-        $ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
+  ```
+  $ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
+  ```
 
 * On Mac/Linux:
-
-        $ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
+  ```bash
+  $ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
+  ```
 
 where:
 
@@ -209,19 +224,23 @@ where:
 
 Then, run the `run` command to view the app:
 
-        $ cordova run blackberry10
+```bash
+$ cordova run blackberry10
+```
 
 If a debug token is not yet set up for the device, an error message
 prompts you to use the platform run script with the password you
 provided when registering for signing keys.
 
 * On Windows:
-
-        $ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
+  ```
+  $ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
+  ```
 
 * On Mac/Linux:
-
-        $ platforms/blackberry10/cordova/run --device --keystorepass mysecret
+  ```bash
+  $ platforms/blackberry10/cordova/run --device --keystorepass mysecret
+  ```
 
 ## Debugging with WebInspector
 
@@ -239,7 +258,9 @@ _.bar_ package file suitable for testing on a device or simulator.
 Use `--release` to create a release version suitable for distribution
 through BlackBerry World.
 
-    $ cordova build --release --keystorepass <signing password>
+```bash
+$ cordova build --release --keystorepass <signing password>
+```
 
 The `--keystorepass` option specifies the password you defined when
 configuring your computer to sign applications.
@@ -257,16 +278,20 @@ command, in this case invoked from the project top-level directory,
 associates a target named _emu_ with an IP address.
 
 * On Windows:
-
-        $ platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
+  ```
+  $ platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
+  ```
 
 * On Mac/Linux:
-
-        $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
+  ```bash
+  $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
+  ```
 
 Once the target is defined, you can provide it to the run command using
 `--target`:
 
-    $ cordova run blackberry10 --target=emu
+```bash
+$ cordova run blackberry10 --target=emu
+```
 
-[Cordova CLI Reference]: ../../../cordova-cli/index.html
+[cli]: ../../../reference/cordova-cli/index.html

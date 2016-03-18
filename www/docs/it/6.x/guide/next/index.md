@@ -35,7 +35,7 @@ Questa guida contiene i seguenti argomenti:
 *   Interfaccia utente
 *   Considerazioni speciali
 *   Tenere il passo
-*   Come ottenere aiuto 
+*   Come ottenere aiuto
 
 # Sviluppo di app migliore pratiche Cordova
 
@@ -106,14 +106,14 @@ Notare che gli eventi online e offline, così come l'API di connessione di rete 
 Se il progetto esistente è stato creato utilizzando Cordova 3. x, è possibile aggiornare il progetto inviando il seguente:
 
     Cordova piattaforma aggiornamento nome-piattaforma ios, android, ecc.
-    
+
 
 Se progetto esistente è stato creato con una versione precedente alla Cordova 3. x, probabilmente sarebbe meglio creare un nuovo progetto di Cordova 3. x e quindi copiare il codice e le attività del progetto esistente al nuovo progetto. Passaggi tipici:
 
 *   Creare un nuovo progetto di 3. x di Cordova (Cordoba creare...)
 *   Copiare la cartella www dal tuo vecchio progetto per il nuovo progetto
 *   Copiare le impostazioni di configurazione dal vecchio progetto per il nuovo progetto
-*   Aggiungi plug-in utilizzati nel vecchio progetto per il nuovo progetto
+*   Aggiungi plugin utilizzati nel vecchio progetto per il nuovo progetto
 *   Compilare il progetto
 *   Prova, prova, prova!
 
@@ -126,7 +126,7 @@ Nota: alcuni plugin potrebbero non essere compatibili con la nuova versione di C
 A partire da Cordova 3.4, non non c'è alcun meccanismo per l'aggiornamento del plugin modificato utilizzando un unico comando. Invece, rimuovere il plugin e aggiungere di nuovo al tuo progetto, e la nuova versione sarà installata:
 
     Cordova plugin rm com.some.plugin cordova plugin aggiungere com.some.plugin
-    
+
 
 Essere sicuri di controllare la documentazione del plugin aggiornato, come potrebbe essere necessario regolare il vostro codice di lavorare con la nuova versione. Inoltre, doppia controllare che la nuova versione del plugin funziona con la versione del progetto di Cordova.
 
@@ -142,7 +142,7 @@ Testing delle applicazioni è super importante. Il team di Cordova utilizza Jasm
 
 Non è raro utilizzare browser desktop e simulatori/emulatori durante lo sviluppo di un'applicazione di Cordova. Tuttavia, è incredibilmente importante provare l'app su dispositivi fisici come molti come si può eventualmente:
 
-*   Simulatori sono proprio questo: simulatori. Ad esempio, l'app può funzionare nel simulatore di iOS senza problemi, ma potrebbe non funzionare su un dispositivo reale (soprattutto in certe circostanze, ad esempio uno stato di memoria bassa). O, l'app potrebbe effettivamente non sul simulatore mentre funziona bene su un dispositivo reale. 
+*   Simulatori sono proprio questo: simulatori. Ad esempio, l'app può funzionare nel simulatore di iOS senza problemi, ma potrebbe non funzionare su un dispositivo reale (soprattutto in certe circostanze, ad esempio uno stato di memoria bassa). O, l'app potrebbe effettivamente non sul simulatore mentre funziona bene su un dispositivo reale.
 *   Gli emulatori sono proprio questo: gli emulatori. Non rappresentano quanto bene l'app verrà eseguito su un dispositivo fisico. Ad esempio, alcuni emulatori possono rendere l'app con un display incomprensibile, mentre un vero dispositivo non ha alcun problema. (Se si verifica questo problema, disattivare l'host GPU nell'emulatore).
 *   Simulatori sono generalmente più veloci di dispositivo fisico. Emulatori, d'altra parte, sono generalmente più lenti. Non giudicare le prestazioni dell'app di come si svolge in un simulatore o un emulatore. Giudicare le prestazioni dell'app di come funziona su una gamma di dispositivi reali.
 *   È impossibile ottenere una buona sensazione per come app risponde al tuo tocco utilizzando un simulatore o un emulatore. Invece, che esegue l'applicazione su un dispositivo reale può segnalare problemi con le dimensioni degli elementi dell'interfaccia utente, reattività, ecc.
@@ -199,8 +199,8 @@ Weinre crea un server locale che può ospitare un debug remoto client per le app
 Creazione di un'applicazione di Cordova che sembra piacevole su mobile può essere una sfida, soprattutto per gli sviluppatori. Molte persone hanno scelto di utilizzare un framework di interfaccia utente per rendere questo più facile. Ecco un breve elenco di opzioni che si possono prendere in considerazione.
 
 *   [jQuery Mobile][9] - jQuery Mobile aumenta automaticamente il layout per l'ottimizzazione mobile. Gestisce anche la creazione di una SPA per voi automaticamente.
-*   [ionico][20] -questo potente framework di interfaccia utente in realtà ha la propria CLI per gestire la creazione del progetto. 
-*   [Ratchet][21] - di chi ha creato il Bootstrap. 
+*   [ionico][20] -questo potente framework di interfaccia utente in realtà ha la propria CLI per gestire la creazione del progetto.
+*   [Ratchet][21] - di chi ha creato il Bootstrap.
 *   [Kendo UI][5] - Open source UI e ambito di applicazione da Telerik.
 *   [Topcoat][22]
 *   [ReactJS][7]

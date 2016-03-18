@@ -42,31 +42,41 @@ enable network access to specific domains. For projects that rely on
 the CLI workflow described in [The Command-Line Interface](../../cli/index.html), this file is
 located in the project's top-level directory. Otherwise for
 platform-specific development paths, locations are listed in the
-sections below. 
+sections below.
 
 The following examples demonstrate `<access>` whitelist syntax:
 
 * Access to [google.com][2]:
 
-        <access origin="http://google.com" />
+    ```xml
+    <access origin="http://google.com" />
+    ```
 
 * Access to the secure [google.com][3] (`https://`):
 
-        <access origin="https://google.com" />
+    ```xml
+    <access origin="https://google.com" />
+    ```
 
 * Access to the subdomain [maps.google.com][4]:
 
-        <access origin="http://maps.google.com" />
+    ```xml
+    <access origin="http://maps.google.com" />
+    ```
 
 * Access to all the subdomains on [google.com][2], for example
   [mail.google.com][5] and [docs.google.com][6]:
 
-        <access origin="http://*.google.com" />
+    ```xml
+    <access origin="http://*.google.com" />
+    ```
 
 * Access to _all_ domains, for example, [google.com][2] and
   [developer.mozilla.org][7]:
 
-        <access origin="*" />
+    ```xml
+    <access origin="*" />
+    ```
 
   This is the default value for newly created CLI projects.
 
@@ -88,7 +98,7 @@ prior to 4.0.0, see older versions of this documentation.
 
 ## iOS Whitelisting
 
-`Cordova-ios` version 4.0 and greater does **not** require the [cordova-plugin-whitelist][wlp] plugin to be installed, however it's configuration details apply to iOS too. The `<allow-intent>` and `<allow-navigation>` tags are _new_ for cordova-ios 4.x and greater, see the [cordova-plugin-whitelist][wlp] documentation for details on the usage of these tags. 
+`Cordova-ios` version 4.0 and greater does **not** require the [cordova-plugin-whitelist][wlp] plugin to be installed, however it's configuration details apply to iOS too. The `<allow-intent>` and `<allow-navigation>` tags are _new_ for cordova-ios 4.x and greater, see the [cordova-plugin-whitelist][wlp] documentation for details on the usage of these tags.
 
 For cordova-ios versions prior to 4.0.0, see the older versions of this documentation.
 
@@ -96,8 +106,8 @@ For cordova-ios versions prior to 4.0.0, see the older versions of this document
 
 The `<access>` and `<allow-navigation>` tags support these two new attributes below, which have their equivalents in ATS:
 
-    1. minimum-tls-version (String, defaults to 'TLSv1.2')
-    2. requires-forward-secrecy (Boolean, defaults to 'true')
+1. minimum-tls-version (String, defaults to 'TLSv1.2')
+2. requires-forward-secrecy (Boolean, defaults to 'true')
 
 See the [ATS Technote](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) for details.
 
@@ -113,33 +123,34 @@ ways:
   Alternatively, all web security may be disabled using the
   `WebSecurity` preference described in BlackBerry Configuration:
 
-        <preference name="websecurity" value="disable" />
+    ```xml
+    <preference name="websecurity" value="disable" />
+    ```
 
 * As an alternative to setting `*.domain`, set an additional
   `subdomains` attribute to `true`. It should be set to `false` by
-  default. For example, the following allows access to `google.com`,
-  `maps.google.com`, and `docs.google.com`:
+  default.
 
-        <access origin="http://google.com" subdomains="true" />
+    ```xml
+    <!-- Narrows access to google.com -->
+    <access origin="http://google.com" subdomains="false" />
 
-  The following narrows access to `google.com`:
+    <!-- Allows access to maps.google.com and docs.google.com -->
+    <access origin="http://google.com" subdomains="true" />
 
-        <access origin="http://google.com" subdomains="false" />
+    <!-- Allows access to all domains, including the local `file://` protocol -->
+    <access origin="*" subdomains="true" />
+    ```
 
-  Specify access to all domains, including the local `file://`
-  protocol:
-
-        <access origin="*" subdomains="true" />
-
-(For more information on support, see BlackBerry's documentation on the
-[access element][8].)
+For more information on support, see BlackBerry's documentation on the
+[access element][8].
 
 ## Windows Phone Whitelisting
 
 The whitelisting rules for Windows Phone 8 are found in the
 app's `config.xml` file.
 
-[wlp]: ../../../cordova-plugin-whitelist/
+[wlp]: ../../../reference/cordova-plugin-whitelist/
 [1]: http://www.w3.org/TR/widgets-access/
 [2]: http://google.com
 [3]: https://google.com

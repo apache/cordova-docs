@@ -41,7 +41,7 @@ Per i progetti creati con il cordova CLI:
 Per i progetti non creati con la CLI di cordova, eseguire:
 
         bin/update <project_path>
-    
+
 
 ## L'aggiornamento a 3.1.0 da 3.0.0
 
@@ -54,7 +54,7 @@ Per i progetti creati con il cordova CLI:
 Per i progetti non creati con la CLI di cordova, eseguire:
 
         bin/update <project_path>
-    
+
 
 ## Aggiornamento per il CLI (3.0.0) da 2.9.0
 
@@ -67,7 +67,7 @@ platform add android`.
 
 4.  Copiare qualsiasi attività nativo dal tuo vecchio progetto nella directory appropriate sotto `platforms/android` : è la directory dove esiste il tuo progetto di cordova-android nativo.
 
-5.  Utilizzare lo strumento CLI di cordova per installare il plug-in che è necessario. Si noti che il CLI gestisce tutti i core API come plugin, così che può essere necessario aggiungere. Solo 3.0.0 plugin sono compatibili con il CLI.
+5.  Utilizzare lo strumento CLI di cordova per installare il plugin che è necessario. Si noti che il CLI gestisce tutti i core API come plugin, così che può essere necessario aggiungere. Solo 3.0.0 plugin sono compatibili con il CLI.
 
 ## Aggiornamento a 3.0.0 da 2.9.0
 
@@ -82,7 +82,7 @@ platform add android`.
 5.  Assicurarsi di aggiornare qualsiasi deprecato `<plugin>` riferimenti dal vecchio `config.xml` file per il nuovo `<feature>` specifica.
 
 6.  Aggiornare tutti i riferimenti per il `org.apache.cordova.api` pacchetto di`org.apache.cordova`.
-    
+
     **Nota**: tutti i core API sono stati rimossi e devono essere installate come plugin. Per dettagli, vedere la Plugman usando per gestire guida Plugins.
 
 ## Aggiornamento a 2.9.0 da 2.8.0

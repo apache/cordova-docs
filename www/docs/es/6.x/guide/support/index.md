@@ -145,7 +145,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
 
       <tr>
         <th>
-          <a href="../hybrid/plugins/index.html">Plug-in<br />Interface</a>
+          <a href="../hybrid/plugins/index.html">Plugin<br />Interface</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">

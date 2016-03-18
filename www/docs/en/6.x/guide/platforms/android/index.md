@@ -28,8 +28,8 @@ command-line tools in your development workflow.  You need to install
 the Android SDK regardless of whether you want to use these
 platform-centered shell tools or cross-platform Cordova CLI for
 development. For a comparison of the two development paths, see the
-[Overview](../../overview/index.html#development-paths).  For details on the CLI, see [Cordova CLI Reference].
-
+[Overview](../../overview/index.html#development-paths). For details on
+the CLI, see [Cordova CLI Reference][cli_reference].
 
 ## Requirements and Support
 
@@ -112,16 +112,22 @@ On a Mac or Linux, you can use a text editor to create or modify the
 `~/.bash_profile` file. To set an environment variable, add a line that
 uses `export` like so (substitute the path with your local installation):
 
-        export ANDROID_HOME=/Development/android-sdk/
+```bash
+export ANDROID_HOME=/Development/android-sdk/
+```
 
 To update your `PATH`, add a line resembling the following
 (substitute the paths with your local Android SDK installation's location):
 
-        export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
+```bash
+export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
+```
 
 Reload your terminal to see this change reflected or run the following command:
 
-        $ source ~/.bash_profile
+```bash
+$ source ~/.bash_profile
+```
 
 #### Windows
 
@@ -150,7 +156,6 @@ reopen any command prompt windows after making changes to see them reflected
     C:\Development\android-sdk\tools
     ```
 
-
 ## Project Configuration
 
 ### Setting up an Emulator
@@ -164,7 +169,9 @@ for configuring the emulator and setting up hardware acceleration.
 Once your AVD is configured correctly, you should be able to see it by running
 this command from within a Cordova project:
 
-    $ cordova run --list
+```bash
+$ cordova run --list
+```
 
 ### Configuring Gradle
 
@@ -192,14 +199,14 @@ You can set these properties in one of four ways:
 
   1. By setting environment variables like so:
 
-      ```
+      ```bash
       $ export ORG_GRADLE_PROJECT_cdvMinSdkVersion=20
       $ cordova build android
-  ```
+      ```
 
   2. By using the `--gradleArg` flag in your Cordova `build` or `run` commands:
 
-      ```
+      ```bash
       $ cordova run android -- --gradleArg=-PcdvMinSdkVersion=20
       ```
 
@@ -215,8 +222,8 @@ You can set these properties in one of four ways:
   4. By extending `build.gradle` via a [`build-extras.gradle` file](#extending-build-gradle)
     and setting the property like so:
 
-      ```
-      # In <your-project>/platforms/android/build-extras.gradle
+      ```groovy
+      // In <your-project>/platforms/android/build-extras.gradle
       ext.cdvMinSdkVersion = 20
       ```
 
@@ -238,19 +245,50 @@ recommended that you copy it over via a script attached to the `before_build`
 
 Here's an example:
 
-    # Example build-extras.gradle
-    # This file is included at the beginning of `build.gradle`
-    ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
+```groovy
+// Example build-extras.gradle
+// This file is included at the beginning of `build.gradle`
+ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
 
-    # When set, this function allows code to run at the end of `build.gradle`
-    ext.postBuildExtras = {
-        android.buildTypes.debug.applicationIdSuffix = '.debug'
-    }
+// When set, this function allows code to run at the end of `build.gradle`
+ext.postBuildExtras = {
+    android.buildTypes.debug.applicationIdSuffix = '.debug'
+}
+```
 
 Note that plugins can also include `build-extras.gradle` files via:
 
-    <framework src="some.gradle" custom="true" type="gradleReference" />
+```xml
+<framework src="some.gradle" custom="true" type="gradleReference" />
+```
 
+### Setting the Version Code
+
+To change the [version code](http://developer.android.com/tools/publishing/versioning.html) for your app's generated apk,
+set the `android-versionCode` attribute in the widget element of your application's
+[config.xml file](../../../config_ref/index.html). If the `android-versionCode` is not set, the
+version code will be determined using the `version` attribute. For example,
+if the version is `MAJOR.MINOR.PATCH`:
+
+```
+versionCode = MAJOR * 10000 + MINOR * 100 + PATCH
+```
+
+If your application has enabled the `cdvBuildMultipleApks` Gradle property (see
+[Setting Gradle Properties](#setting-gradle-properties)), the version code of your app
+will also be multiplied by 10 so that the last digit of the code can be used
+to indicate the architecture the apk was built for. This multiplication will happen
+regardless of whether the version code is taken from the `android-versionCode`
+attribute or generated using the `version`. Be aware that some plugins added to your
+project (including cordova-plugin-crosswalk-webview) may set this Gradle property
+automatically.
+
+**Please Note:** When updating the `android-versionCode` property, it is unwise to
+increment the version code taken from built apks. Instead, you should increment
+the code based off the value in your `config.xml` file's `android-versionCode`
+attribute. This is because the `cdvBuildMultipleApks` property causes the version code
+to be multiplied by 10 in the built apks and thus using that value will cause your next
+version code to be 100 times the original, etc.
 
 ## Signing an App
 
@@ -269,7 +307,11 @@ To sign an app, you need the following parameters:
 | Type of the Keystore  | `--keystoreType`  | *Default: auto-detect based on file extension*<br>Either pkcs12 or jks
 
 These parameters can be specified using the command line arguments above to
-the [Cordova CLI](../../../cordova-cli/index.html) `build` or `run` commands.
+the [Cordova CLI][cli_reference] `build` or `run` commands.
+
+__Note__: You should use double `--` to indicate that these are platform-specific arguments, for example:
+
+`cordova run android --release -- --keystore=../my-release-key.keystore --storePassword=password --alias=alias_name --password=password`.
 
 ### Using build.json
 
@@ -277,24 +319,26 @@ Alternatively, you could specify them in a build configuration file (`build.json
 using the `--buildConfig` argument to the same commands. Here's a sample of a
 build configuration file:
 
-    {
-         "android": {
-             "debug": {
-                 "keystore": "..\android.keystore",
-                 "storePassword": "android",
-                 "alias": "mykey1",
-                 "password" : "password",
-                 "keystoreType": ""
-             },
-             "release": {
-                 "keystore": "..\android.keystore",
-                 "storePassword": "",
-                 "alias": "mykey2",
-                 "password" : "password",
-                 "keystoreType": ""
-             }
-         }
-     }
+```json
+{
+    "android": {
+        "debug": {
+            "keystore": "../android.keystore",
+            "storePassword": "android",
+            "alias": "mykey1",
+            "password" : "password",
+            "keystoreType": ""
+        },
+        "release": {
+            "keystore": "../android.keystore",
+            "storePassword": "",
+            "alias": "mykey2",
+            "password" : "password",
+            "keystoreType": ""
+        }
+    }
+}
+```
 
 For release signing, passwords can be excluded and the build system will issue a
 prompt asking for the password.
@@ -320,7 +364,6 @@ keyPassword=SECRET2
 
 `storePassword` and `keyPassword` are optional, and will be prompted for if omitted.
 
-
 ## Debugging
 
 For details on the debugging tools that come packaged with the Android SDK, see
@@ -328,7 +371,6 @@ For details on the debugging tools that come packaged with the Android SDK, see
 Additionally, Android's developer documentation for [debugging web apps](http://developer.android.com/guide/webapps/debugging.html)
 provides an introduction for debugging the portion of your app running in the
 Webview.
-
 
 ### Opening a Project in Android Studio
 
@@ -366,7 +408,6 @@ for more details.
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png)
 
-
 ## Platform Centered Workflow
 
 cordova-android includes a number of scripts that allow the platform to be used
@@ -378,7 +419,7 @@ development path, you must still configure the Android SDK environment
 as described in [Requirements and Support](#requirements-and-support)
 above.
 
-For each of the scripts discussed below, refer to [Cordova CLI Reference] for more information on their
+For each of the scripts discussed below, refer to [Cordova CLI Reference][cli_reference] for more information on their
 arguments and usage. Each script has a name that matches the corresponding CLI
 command. For example, `cordova-android/bin/create` is equivalent to
 `cordova create`.
@@ -390,7 +431,9 @@ To get started, either download the cordova-android package from
 To create a project using this package, run the `create` script in the `bin`
 folder:
 
-    $ cordova-android/bin/create ...
+```bash
+$ cordova-android/bin/create ...
+```
 
 The created project will have a folder named `cordova` inside that contains
 scripts for the project-specific Cordova commands (e.g. `run`, `build`, etc.).
@@ -404,7 +447,6 @@ To install plugins in this project, use the [Cordova Plugman Utility](../../../p
 
 Refer to [this](./upgrade.html) article for instructions to upgrade your
 `cordova-android` version.
-
 
 ## Lifecycle Guide
 
@@ -532,7 +574,7 @@ external activity made prior to the activity being destroyed.
 
 The payload for the `resume` event adheres to the following format:
 
-```
+```text
 {
     action: "resume",
     pendingResult: {
@@ -708,4 +750,4 @@ on your device or emulator to simulate low memory scenarios. You should always
 do some amount of testing with this setting enabled to make sure that your
 application is properly maintaining state.
 
-[Cordova CLI Reference]: ../../../cordova-cli/index.html
+[cli_reference]: ../../../reference/cordova-cli/index.html

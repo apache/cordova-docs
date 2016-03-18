@@ -35,7 +35,7 @@ Ce guide contient les rubriques suivantes :
 *   Interface utilisateur
 *   Considérations particulières
 *   Jonglant
-*   Obtention d'aide 
+*   Obtention d'aide
 
 # Développement d'application de meilleures pratiques Cordova
 
@@ -43,7 +43,7 @@ Ce guide contient les rubriques suivantes :
 
 Tout d'abord - vos applications Cordova devraient adopter la conception SPA (Single Page Application). Vaguement défini, un SPA est une application côté client qui s'exécute à partir d'une seule demande d'une page web. L'utilisateur charge un ensemble initial de ressources (HTML, CSS et JavaScript), et plus les mises à jour (montrant une nouvelle vue, chargement de données) se fait via AJAX. Stations thermales sont couramment utilisés pour des applications plus complexes de côté client. GMail est un bon exemple de cela. Après avoir chargé GMail, vues de courrier, l'édition et organisation sont tout fait en mettant à jour le DOM au lieu de laisser effectivement la page en cours pour charger un complètement nouveau.
 
-Utiliser un SPA peut vous aider à organiser votre application de manière plus efficace, mais il a aussi des avantages spécifiques pour des applications de Cordova. Une application de Cordova doit attendre pour l'événement [deviceready](../../cordova/events/events.deviceready.html) au feu avant les plug-ins peuvent être utilisés. Si vous n'utilisez pas un SPA, et votre utilisateur clique pour passer d'une page à l'autre, vous devrez attendre pour [deviceready](../../cordova/events/events.deviceready.html) au feu encore une fois avant de vous faire utiliser un plugin. C'est facile d'oublier que votre application s'agrandit.
+Utiliser un SPA peut vous aider à organiser votre application de manière plus efficace, mais il a aussi des avantages spécifiques pour des applications de Cordova. Une application de Cordova doit attendre pour l'événement [deviceready](../../cordova/events/events.deviceready.html) au feu avant les plugins peuvent être utilisés. Si vous n'utilisez pas un SPA, et votre utilisateur clique pour passer d'une page à l'autre, vous devrez attendre pour [deviceready](../../cordova/events/events.deviceready.html) au feu encore une fois avant de vous faire utiliser un plugin. C'est facile d'oublier que votre application s'agrandit.
 
 Même si vous choisissez de ne pas utiliser de Cordova, création d'une application mobile sans utiliser une architecture de page unique aura des implications graves performance. C'est parce que la navigation entre les pages exigera des scripts, actifs, etc., pour être rechargé. Même si ces biens sont mis en cache, il y aura toujours des problèmes de performances.
 
@@ -106,14 +106,14 @@ Notez que les événements en ligne et hors ligne, ainsi que l'API de connexion 
 Si votre projet existant a été créé à l'aide de Cordova 3.x, vous pouvez mettre à niveau le projet en émettant ce qui suit :
 
     Cordova plate-forme mise à jour-nom de la plate-forme ios, android, etc.
-    
+
 
 Si votre projet existant a été créé sous une version antérieure à Cordova 3.x, il serait probablement préférable de créer un nouveau projet de 3.x de Cordova et copiez code et les actifs de votre projet existant vers le nouveau projet. Étapes typiques :
 
 *   Créez un nouveau projet de 3.x Cordova (cordova créer...)
 *   Copiez le dossier www de votre ancien projet vers le nouveau projet
 *   Copier les paramètres de configuration de l'ancien projet vers le nouveau projet
-*   Ajouter les plug-ins utilisés dans l'ancien projet vers le nouveau projet
+*   Ajouter les plugins utilisés dans l'ancien projet vers le nouveau projet
 *   Générez votre projet
 *   Tester, tester, tester !
 
@@ -126,7 +126,7 @@ Remarque : certains plugins n'est peut-être pas compatibles avec la nouvelle ve
 À partir de Cordova 3.4, il n'y a aucun mécanisme pour la mise à niveau de plugins modifiées à l'aide d'une seule commande. Au lieu de cela, supprimez le plugin et ajouter de nouveau à votre projet, et la nouvelle version sera installée :
 
     Cordova plugin rm com.some.plugin cordova plugin ajouter com.some.plugin
-    
+
 
 N'oubliez pas de vérifier la documentation de la mise à jour du plugin, que vous devrez peut-être modifier votre code pour utiliser la nouvelle version. Aussi, le double de vérifier que la nouvelle version du plugin fonctionne avec la version de votre projet de Cordova.
 
@@ -142,7 +142,7 @@ Il est super important de tester vos applications. L'équipe de Cordova utilise 
 
 Il n'est pas rare d'utiliser les navigateurs de bureau et de simulateurs/émulateurs de périphérique lors du développement d'une application de Cordova. Toutefois, il est extrêmement important que vous testiez votre application sur les périphériques physiques autant que vous le pouvez :
 
-*   Les simulateurs sont exactement cela : simulateurs. Par exemple, votre application peut fonctionner dans le simulateur iOS sans problème, mais il peut échouer sur un périphérique réel (en particulier dans certaines circonstances, comme un état de manque de mémoire). Ou, votre application peut ne pas réellement sur le simulateur alors qu'il fonctionne très bien sur un périphérique réel. 
+*   Les simulateurs sont exactement cela : simulateurs. Par exemple, votre application peut fonctionner dans le simulateur iOS sans problème, mais il peut échouer sur un périphérique réel (en particulier dans certaines circonstances, comme un état de manque de mémoire). Ou, votre application peut ne pas réellement sur le simulateur alors qu'il fonctionne très bien sur un périphérique réel.
 *   Émulateurs sont que cela : émulateurs. Ils ne représentent pas bien votre application s'exécute sur un périphérique physique. Par exemple, certains émulateurs peuvent rendre votre application avec un affichage brouillé, alors qu'un véritable appareil n'a aucun problème. (Si vous ne rencontrez pas ce problème, désactivez l'hôte GPU dans l'émulateur.)
 *   Les simulateurs sont généralement plus rapides que votre périphérique physique. En revanche, les émulateurs, sont généralement plus lentes. Ne jugez pas les performances de votre application de comment il se comporte dans un simulateur ou un émulateur. Ne jugez pas les performances de votre application de comment il fonctionne sur un éventail de dispositifs réels.
 *   Il est impossible d'avoir une bonne idée de comment votre application répond à votre contact à l'aide d'un simulateur ou un émulateur. Au lieu de cela, l'application en cours d'exécution sur un périphérique réel peut signaler des problèmes avec les tailles des éléments d'interface utilisateur, réactivité, etc..
@@ -199,8 +199,8 @@ Weinre crée un serveur local qui peut héberger un client de débogage distant 
 Création d'une application de Cordoue qui est très joli sur mobile peut être un défi, surtout pour les développeurs. Beaucoup de gens ont choisi d'utiliser une infrastructure d'interface utilisateur pour faciliter cette opération. Voici une courte liste des options, que vous voudrez peut-être.
 
 *   [jQuery Mobile][9] - jQuery Mobile améliore automatiquement votre mise en page pour l'optimisation des mobile. Il gère également la création d'un SPA pour vous automatiquement.
-*   [ionique][20] -cette infrastructure d'interface utilisateur puissante a fait son propre indicateur composite avancé pour gérer la création d'un projet. 
-*   [Ratchet][21] - présentée par les personnes qui ont créé le Bootstrap. 
+*   [ionique][20] -cette infrastructure d'interface utilisateur puissante a fait son propre indicateur composite avancé pour gérer la création d'un projet.
+*   [Ratchet][21] - présentée par les personnes qui ont créé le Bootstrap.
 *   [Kendo UI][5] - interface Open source et applicative de Telerik.
 *   [Couche de finition][22]
 *   [ReactJS][7]

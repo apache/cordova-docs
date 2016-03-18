@@ -338,14 +338,16 @@ Updating just the `www` directory:
 6. Update the `www/plugins.xml` file. Two plugins changed their
    namespace/service label. Change the old entries for the Capture and
    Contact plugins from:
-
-        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+   ```xml
+   <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+   <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+   ```
 
    To:
-
-        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+   ```xml
+   <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+   <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+   ```
 
 Updating the sample directory (ie, updating using the ant tools):
 
@@ -366,14 +368,16 @@ Updating the sample directory (ie, updating using the ant tools):
 8. Open the `www` directory and update the `plugins.xml` file. Two plugins
    changed their namespace/service label. Change the old entries for the
    Capture and Contact plugins from:
-
-         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+   ```xml
+   <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+   <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+   ```
 
    To:
-
-         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+   ```xml
+   <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+   <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+   ```
 
 - To upgrade to 1.8.0, please go from 1.7.0
 
@@ -395,14 +399,16 @@ Updating just the `www` directory:
 6. Update the `www/plugins.xml` file. Two plugins changed their
    namespace/service label. Change the old entries for the Capture and
    Contact plugins from:
-
-        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+   ```xml
+   <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+   <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+   ```
 
    To:
-
-        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+   ```xml
+   <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+   <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+   ```
 
 Updating the sample directory (ie, updating using the ant tools):
 
@@ -423,12 +429,13 @@ Updating the sample directory (ie, updating using the ant tools):
 8. Open the `www` directory and update the `plugins.xml` file. Two plugins
    changed their namespace/service label. Change the old entries for the
    Capture and Contact plugins from:
-
-         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+   ```xml
+   <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+   <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+   ```
 
    To:
-
-         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
-
+   ```xml
+   <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+   <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+   ```

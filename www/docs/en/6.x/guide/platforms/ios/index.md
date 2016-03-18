@@ -29,7 +29,7 @@ development workflow. You need to install the SDK tools regardless of
 whether you want to use these platform-centered shell tools
 or cross-platform Cordova CLI for development. For a comparison of the two
 development paths, see the [Overview](../../overview/index.html#development-paths).
-For details on the CLI, see [Cordova CLI Reference].
+For details on the CLI, see [Cordova CLI Reference][cli].
 
 ## Requirements and Support
 
@@ -61,7 +61,9 @@ There are two ways to download Xcode:
 
 Once Xcode is installed, several command-line tools need to be enabled
 for Cordova to run. From the command line, run:
-``` xcode-select --install```
+```bash
+$ xcode-select --install
+```
 
 ### Deployment Tools
 
@@ -71,8 +73,10 @@ to launch iOS apps into the iOS Simulator and iOS Device from the command-line.
 
 To install them, run the following from command-line terminal:
 
-        $ npm install -g ios-sim
-        $ npm install -g ios-deploy
+```bash
+$ npm install -g ios-sim
+$ npm install -g ios-deploy
+```
 
 ## Project Configuration
 
@@ -160,25 +164,27 @@ Alternatively, you could specify them in a build configuration file (`build.json
 using the `--buildConfig` argument to the same commands. Here's a sample of a
 build configuration file:
 
-    {
-         "ios": {
-             "debug": {
-                 "codeSignIdentity": "iPhone Development",
-                 "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954"
-             },
-             "release": {
-                 "codeSignIdentity": "iPhone Distribution",
-                 "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306"
-             }
-         }
+```json
+{
+    "ios": {
+        "debug": {
+            "codeSignIdentity": "iPhone Development",
+            "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954"
+        },
+        "release": {
+            "codeSignIdentity": "iPhone Distribution",
+            "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306"
+        }
     }
+}
+```
 
 ### Using xcrun
 
 You can also sign from the command line using the following command:
 
-```
-    xcrun -sdk iphoneos PackageApplication -v /home/user/app/build/device/MyApp.app -o /home/user/app/build/device/MyApp.ipa --sign "iPhone Development" --embed "7151ab45-6085-4ea1-9bcd-022b5cebe44b"
+```bash
+xcrun -sdk iphoneos PackageApplication -v /home/user/app/build/device/MyApp.app -o /home/user/app/build/device/MyApp.ipa --sign "iPhone Development" --embed "7151ab45-6085-4ea1-9bcd-022b5cebe44b"
 ```
 
 ## Debugging
@@ -217,7 +223,7 @@ as described in [Requirements and Support](#link-requirements-and-support)
 above.
 
 For each of the scripts discussed below, refer to
- [Cordova CLI Reference] for more information on their
+ [Cordova CLI Reference][cli] for more information on their
 arguments and usage. Each script has a name that matches the corresponding CLI
 command. For example, `cordova-ios/bin/create` is equivalent to
 `cordova create`.
@@ -229,11 +235,15 @@ To get started, either download the cordova-ios package from
 To create a project using this package, run the `create` script in the `bin`
 folder:
 
-    $ cordova-ios/bin/create ...
+```bash
+$ cordova-ios/bin/create ...
+```
 
 To run the app, use the `run` script in the `bin` folder:
 
-    $ cordova-ios/bin/run
+```bash
+$ cordova-ios/bin/run
+```
 
 The created project will have a folder named `cordova` inside that contains
 scripts for the project-specific Cordova commands (e.g. `run`, `build`, etc.).
@@ -249,4 +259,4 @@ Refer to [this](./upgrade.html) article for instructions to upgrade your ```cord
 
 (Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)
 
-[Cordova CLI Reference]: ../../../cordova-cli/index.html
+[cli]: ../../../reference/cordova-cli/index.html

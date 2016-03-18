@@ -145,7 +145,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
 
       <tr>
         <th>
-          <a href="../hybrid/plugins/index.html">Plug-in<br />Interface</a>
+          <a href="../hybrid/plugins/index.html">Plugin<br />Interface</a>
         </th>
 
         <td data-col="amazon-fireos" class="y">

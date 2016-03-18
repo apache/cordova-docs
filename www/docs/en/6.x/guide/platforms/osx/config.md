@@ -40,41 +40,48 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
 ## Details
 
 ### HideMousePointer
-(integer, defaults to _disabled_)    
+(integer, defaults to _disabled_)
 Idle duration in seconds after which the mouse pointer should be hidden.
 Set it to `0` for immediate.
 
 Example: hide mouse pointer after 5 seconds:
 
-    <preference name="HideMousePointer" value="5"/>
+```xml
+<preference name="HideMousePointer" value="5"/>
+```
 
 ### OSXLocalStoragePath
-(string, defaults to `~/Library/Application Support/{bundle.id}`)    
+(string, defaults to `~/Library/Application Support/{bundle.id}`)
 Sets the directory for the local storage path.
 
 Example: use custom path:
 
-    <preference name="OSXLocalStoragePath" value="~/.myapp/database"/>
+```xml
+<preference name="OSXLocalStoragePath" value="~/.myapp/database"/>
+```
 
 ### WindowSize
-(string, defaults to `auto`)      
+(string, defaults to `auto`)
 Defines the size of the application window in the format `WxH` or the special values `auto` and
 `fullscreen`. The latter will open a borderless window spanning the entire desktop area. Please note,
 that this is different from the _normal_ OS X fullscreen mode, which would never span multiple displays.
 
 Example: set the window size to 800 x 400:
 
-    <preference name="WindowSize" value="800x400"/>
+```xml
+<preference name="WindowSize" value="800x400"/>
+```
 
 > **Note**: The global cordova `fullscreen` preference is not supported.
 
 ### EnableWebGL
-(boolean, defaults to `false`)    
-If set to `true` it enables WebGL on the webview. 
+(boolean, defaults to `false`)
+If set to `true` it enables WebGL on the webview.
 
 Example: enable WebGL
 
-    <preference name="EnableWebGL" value="true" />
-    
-    
+```xml
+<preference name="EnableWebGL" value="true" />
+```
+
 

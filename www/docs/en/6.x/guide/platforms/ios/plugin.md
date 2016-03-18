@@ -40,7 +40,9 @@ registered as a `<feature>` tag in the named application directory's
 The JavaScript portion of a plugin uses the `cordova.exec` method as
 follows:
 
-        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+```javascript
+exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+```
 
 This marshals a request from the `UIWebView` to the iOS native side,
 effectively calling the `action` method on the `service` class, with
@@ -50,9 +52,11 @@ Specify the plugin as a `<feature>` tag in your Cordova-iOS
 application's project's `config.xml` file, using the `plugin.xml` file
 to inject this markup automatically, as described in [Plugin Development Guide][plugin-dev]:
 
-        <feature name="LocalStorage">
-            <param name="ios-package" value="CDVLocalStorage" />
-        </feature>
+```xml
+<feature name="LocalStorage">
+    <param name="ios-package" value="CDVLocalStorage" />
+</feature>
+```
 
 The feature's `name` attribute should match what you specify as the
 JavaScript `exec` call's `service` parameter. The `value` attribute
@@ -68,16 +72,18 @@ One instance of a plugin object is created for the life of each
 referenced by a call from JavaScript, unless `<param>` with an `onload`
 `name` attribute is set to `"true"` in `config.xml`. For example,
 
-        <feature name="Echo">
-            <param name="ios-package" value="Echo" />
-            <param name="onload" value="true" />
-        </feature>
+```xml
+<feature name="Echo">
+    <param name="ios-package" value="Echo" />
+    <param name="onload" value="true" />
+</feature>
+```
 
 Plugins should use the `pluginInitialize` method for their startup logic.
 
 Plugins with long-running requests or background activities such as media
-playback, listeners, or that maintain internal state should implement 
-the `onReset` method to cancel those long-running requests or to clean up 
+playback, listeners, or that maintain internal state should implement
+the `onReset` method to cancel those long-running requests or to clean up
 after those activities.
 The method runs when the `UIWebView` navigates to a new page or refreshes, which
 reloads the JavaScript.
@@ -91,18 +97,20 @@ class look like?  Whatever is dispatched to the plugin with
 JavaScript's `exec` function is passed into the corresponding plugin
 class's `action` method. A plugin method has this signature:
 
-        - (void)myMethod:(CDVInvokedUrlCommand*)command
-        {
-            CDVPluginResult* pluginResult = nil;
-            NSString* myarg = [command.arguments objectAtIndex:0];
+```objective_c
+- (void)myMethod:(CDVInvokedUrlCommand*)command
+{
+    CDVPluginResult* pluginResult = nil;
+    NSString* myarg = [command.arguments objectAtIndex:0];
 
-            if (myarg != nil) {
-                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-            } else {
-                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
-            }
-            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-        }
+    if (myarg != nil) {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    } else {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
+    }
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+```
 
 For more details, see
  [CDVInvokedUrlCommand.h][CDVInvokedUrlCommand.h], [CDVPluginResult.h][CDVPluginResult.h],
@@ -113,7 +121,9 @@ and [CDVCommandDelegate.h][CDVCommandDelegate.h].
 You can use `CDVPluginResult` to return a variety of result types back to
 the JavaScript callbacks, using class methods that follow this pattern:
 
-        + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
+```objective_c
++ (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
+```
 
 You can create `String`, `Int`, `Double`, `Bool`, `Array`,
 `Dictionary`, `ArrayBuffer`, and `Multipart` types. You can also leave
@@ -139,50 +149,55 @@ To match the JavaScript interface's _echo_ feature described in
 Application Plugins, use the `plugin.xml` to inject a `feature`
 specification to the local platform's `config.xml` file:
 
-        <platform name="ios">
-            <config-file target="config.xml" parent="/*">
-                <feature name="Echo">
-                    <param name="ios-package" value="Echo" />
-                </feature>
-            </config-file>
-        </platform>
+```xml
+<platform name="ios">
+    <config-file target="config.xml" parent="/*">
+        <feature name="Echo">
+            <param name="ios-package" value="Echo" />
+        </feature>
+    </config-file>
+</platform>
+```
 
 
 Then we would add the following `Echo.h` and `Echo.m` files to the
 `Plugins` folder within the Cordova-iOS application directory:
 
-        /********* Echo.h Cordova Plugin Header *******/
 
-        #import <Cordova/CDVPlugin.h>
+```objective_c
+/********* Echo.h Cordova Plugin Header *******/
 
-        @interface Echo : CDVPlugin
+#import <Cordova/CDVPlugin.h>
 
-        - (void)echo:(CDVInvokedUrlCommand*)command;
+@interface Echo : CDVPlugin
 
-        @end
+- (void)echo:(CDVInvokedUrlCommand*)command;
 
-        /********* Echo.m Cordova Plugin Implementation *******/
+@end
 
-        #import "Echo.h"
-        #import <Cordova/CDVPlugin.h>
+/********* Echo.m Cordova Plugin Implementation *******/
 
-        @implementation Echo
+#import "Echo.h"
+#import <Cordova/CDVPlugin.h>
 
-        - (void)echo:(CDVInvokedUrlCommand*)command
-        {
-            CDVPluginResult* pluginResult = nil;
-            NSString* echo = [command.arguments objectAtIndex:0];
+@implementation Echo
 
-            if (echo != nil && [echo length] > 0) {
-                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
-            } else {
-                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
-            }
+- (void)echo:(CDVInvokedUrlCommand*)command
+{
+    CDVPluginResult* pluginResult = nil;
+    NSString* echo = [command.arguments objectAtIndex:0];
 
-            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-        }
+    if (echo != nil && [echo length] > 0) {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
+    } else {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+    }
 
-        @end
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+@end
+```
 
 The necessary imports at the top of the file extends the class from
 `CDVPlugin`.  In this case, the plugin only supports a single `echo`
@@ -214,17 +229,19 @@ interface. If your plugin requires a great deal of processing or
 requires a blocking call, you should use a background thread. For
 example:
 
-        - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
-        {
-            // Check command.arguments here.
-            [self.commandDelegate runInBackground:^{
-                NSString* payload = nil;
-                // Some blocking logic...
-                CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
-                // The sendPluginResult method is thread-safe.
-                [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-            }];
-        }
+```objective_c
+- (void)myPluginMethod:(CDVInvokedUrlCommand*)command
+{
+    // Check command.arguments here.
+    [self.commandDelegate runInBackground:^{
+        NSString* payload = nil;
+        // Some blocking logic...
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
+        // The sendPluginResult method is thread-safe.
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    }];
+}
+```
 
 ## Debugging iOS Plugins
 

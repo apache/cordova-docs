@@ -32,7 +32,7 @@ version of the CLI.
 The best way to upgrade to 5.X.X is to simply remove the Android platform from
 your project and re-add it with the new version. For example,
 
-```
+```bash
 cordova platform remove android
 cordova platform add android@5.X.X
 ```
@@ -44,7 +44,9 @@ discouraged).
 Alternatively, you may attempt to use the platform update script. For non-CLI
 projects, run:
 
-        bin/update path/to/project
+``
+bin/update path/to/project
+``
 
 For CLI projects:
 
@@ -78,7 +80,7 @@ For non-core plugins, you can verify if a plugin requests a
 `plugin.xml` file. If the plugin uses Android permissions, you will see entries
 in `plugin.xml` that declare them. For example:
 
-```       
+```xml
 <uses-permission android:name="android.permission.PERMISSION_NAME" />
 ```
 
@@ -86,7 +88,7 @@ Where `PERMISSION_NAME` is replaced with the name of an Android permission.
 The `plugin.xml` file can be found in the plugin's folder in your Cordova
 project (e.g. `plugins/example-plugin/plugin.xml`). Consult the documentation of
 any plugins using dangerous permissions to determine what steps need to be taken
-to ensure **cordova-android 5.0.0+** compatibility.  
+to ensure **cordova-android 5.0.0+** compatibility.
 
 ## Upgrading to 4.0.0
 
@@ -95,7 +97,9 @@ changes in 4.0.0.  First, the common upgrade steps are needed as below.
 
 For non-CLI projects, run:
 
-        bin/update path/to/project
+```
+bin/update path/to/project
+```
 
 For CLI projects:
 
@@ -127,7 +131,9 @@ By default, your app will continue to use the system WebView provided by the
 device.  If you wish to use the Crosswalk WebView instead, simply add the
 Crosswalk plugin:
 
-    cordova plugin add cordova-plugin-crosswalk-webview
+```bash
+cordova plugin add cordova-plugin-crosswalk-webview
+```
 
 Upon adding the plugin, your app will get the Crosswalk WebView installed and
 configured correctly.
@@ -137,13 +143,17 @@ If your app makes use of a splash screen, that functionality has been moved to
 a plugin.  The configuration options for splash screens are unchanged.  The only
 upgrade step required is to add the plugin:
 
-    cordova plugin add cordova-plugin-splashscreen
+```bash
+cordova plugin add cordova-plugin-splashscreen
+```
 
 ## Upgrading to 3.7.1 from 3.6.0
 
 For non-CLI projects, run:
 
-        bin/update path/to/project
+```
+bin/update path/to/project
+```
 
 For CLI projects:
 

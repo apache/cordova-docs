@@ -35,7 +35,7 @@ Per i progetti creati con il cordova CLI:
 Per i progetti non creati con la CLI di cordova, eseguire:
 
         bin\update <project_path>
-    
+
 
 ## Aggiornamento a 3.1.0 da 3.0.0
 
@@ -48,7 +48,7 @@ Per i progetti creati con il cordova CLI:
 Per i progetti non creati con la CLI di cordova, eseguire:
 
         bin\update <project_path>
-    
+
 
 ## Aggiornamento per il CLI (3.0.0) da 2.9.0
 
@@ -61,7 +61,7 @@ platform add wp7 wp8`.
 
 4.  Copiare o sovrascrivere qualsiasi attività nativo dal progetto originale ( `SplashScreen` , `ApplicationIcon` , ecc), rendendo sicuri di aggiungere nuovi file per il `.csproj` file. Windows build di progetto all'interno del telefono al `platforms\wp7` o `platforms\wp8` directory.
 
-5.  Utilizzare lo strumento CLI di cordova per installare il plug-in che è necessario. Si noti che il CLI gestisce tutti i core API come plugin, così che può essere necessario aggiungere. Solo 3.0.0 plugin sono compatibili con il CLI.
+5.  Utilizzare lo strumento CLI di cordova per installare il plugin che è necessario. Si noti che il CLI gestisce tutti i core API come plugin, così che può essere necessario aggiungere. Solo 3.0.0 plugin sono compatibili con il CLI.
 
 6.  Costruire e testare.
 
@@ -254,7 +254,7 @@ Nella finestra Esplora soluzioni di Visual Studio:
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
 4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
-    
+
     **Nota**: È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
 5.  Copiare il nuovo `cordova-1.9.0.js` nel vostro progetto. (Essere sicuri che è contrassegnato come contenuto).
@@ -272,7 +272,7 @@ Nella finestra Esplora soluzioni di Visual Studio:
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
 4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
-    
+
     **Nota**: È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
 5.  Copiare il nuovo `cordova-1.8.0.js` nel vostro progetto. (Essere sicuri che è contrassegnato come contenuto).
@@ -290,7 +290,7 @@ Nella finestra Esplora soluzioni di Visual Studio:
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
 4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
-    
+
     **Nota**: È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
 5.  Copiare il nuovo `cordova-1.7.0.js` nel vostro progetto. (Essere sicuri che è contrassegnato come contenuto).
@@ -308,7 +308,7 @@ Nella finestra Esplora soluzioni di Visual Studio:
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
 4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
-    
+
     **Nota**: È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
 5.  Copiare il nuovo `cordova-1.6.1.js` nel vostro progetto. (Essere sicuri che è contrassegnato come contenuto).
@@ -326,7 +326,7 @@ Nella finestra Esplora soluzioni di Visual Studio:
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
 4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
-    
+
     **Nota**: È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
 5.  Copiare il nuovo `cordova-1.6.0.js` nel vostro progetto. (Essere sicuri che è contrassegnato come contenuto).
@@ -344,7 +344,7 @@ Nella finestra Esplora soluzioni di Visual Studio:
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
 4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
-    
+
     **Nota**: È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
 5.  Copiare il nuovo `cordova-1.5.0.js` nel vostro progetto. (Essere sicuri che è contrassegnato come contenuto).
@@ -362,7 +362,7 @@ Nella finestra Esplora soluzioni di Visual Studio:
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
 4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
-    
+
     **Nota**: È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
 5.  Copiare il nuovo `cordova-1.4.0.js` nel vostro progetto. (Essere sicuri che è contrassegnato come contenuto).
@@ -380,7 +380,7 @@ Nella finestra Esplora soluzioni di Visual Studio:
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
 4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
-    
+
     **Nota**: È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
 5.  Copiare il nuovo `cordova-1.3.0.js` nel vostro progetto. (Essere sicuri che è contrassegnato come contenuto).
@@ -398,7 +398,7 @@ Nella finestra Esplora soluzioni di Visual Studio:
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
 4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
-    
+
     **Nota**: È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
 5.  Copiare il nuovo `cordova-1.2.0.js` nel vostro progetto. (Essere sicuri che è contrassegnato come contenuto).
@@ -416,7 +416,7 @@ Nella finestra Esplora soluzioni di Visual Studio:
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
 4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
-    
+
     **Nota**: è possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
 5.  Copiare il nuovo `cordova-1.1.0.js` nel vostro progetto. (Essere sicuri che è contrassegnato come contenuto).

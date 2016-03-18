@@ -35,7 +35,7 @@ Dieses Handbuch enthält die folgenden Themen:
 *   Benutzeroberfläche
 *   Besondere Überlegungen
 *   Halten
-*   Anfordern von Hilfe 
+*   Anfordern von Hilfe
 
 # Best Practices-Cordova-app-Entwicklung
 
@@ -43,7 +43,7 @@ Dieses Handbuch enthält die folgenden Themen:
 
 Zuallererst - sollten Ihre Cordova-Anwendungen das Design SPA (Single Seite Anwendung) annehmen. Lose definiert, ist ein SPA eine Client-Anwendung, die aus einer Anforderung einer Webseite ausgeführt wird. Der Benutzer lädt einen Anfangssatz von Ressourcen (HTML, CSS und JavaScript) und weitere Updates (zeigt eine neue Ansicht, Laden von Daten) erfolgt über AJAX. Thermen werden häufig für komplexere clientseitige Anwendungen verwendet. Google Mail ist ein gutes Beispiel dafür. Laden Sie Google Mail e-Mail-Ansichten, Bearbeitung und Organisation erfolgen alle durch Aktualisierung das DOM statt tatsächlich die aktuelle Seite zu verlassen um ein völlig neues laden.
 
-Mit einem SPA kann Ihnen helfen, Ihre Anwendung in effizienter Weise zu organisieren, aber es hat auch bestimmte Vorteile für Cordova Anwendungen. Eine Cordova-Anwendung muss warten, für das Deviceready-Ereignis ausgelöst, bevor alle Plug-ins verwendet werden kann. Wenn Sie keinen SPA verwenden und Ihre Benutzer klickt, um von einer Seite zur anderen zu gehen, müssen Sie warten für Deviceready erneut ausgelöst, bevor Sie machen über ein Plugin zu verwenden. Dies ist einfach zu vergessen, da Ihre Anwendung größer wird.
+Mit einem SPA kann Ihnen helfen, Ihre Anwendung in effizienter Weise zu organisieren, aber es hat auch bestimmte Vorteile für Cordova Anwendungen. Eine Cordova-Anwendung muss warten, für das Deviceready-Ereignis ausgelöst, bevor alle Plugins verwendet werden kann. Wenn Sie keinen SPA verwenden und Ihre Benutzer klickt, um von einer Seite zur anderen zu gehen, müssen Sie warten für Deviceready erneut ausgelöst, bevor Sie machen über ein Plugin zu verwenden. Dies ist einfach zu vergessen, da Ihre Anwendung größer wird.
 
 Selbst wenn Sie nicht mithilfe von Cordova, wird mobile Application erstellen, ohne die Verwendung einer einzelnen Seitenarchitektur Leistung auswirken. Dies ist denn Navigieren zwischen den Seiten erforderlich sein, Vermögenswerte, Skripte, etc. neu geladen werden. Auch wenn diese Vermögenswerte zwischengespeichert werden, wird es Sie noch Leistungsprobleme.
 
@@ -106,7 +106,7 @@ Beachten Sie, dass die Online- und offline-Veranstaltungen sowie die Netzwerk-Ve
 Wenn das vorhandene Projekt erstellt wurde, mithilfe von Cordova 3.x, können Sie das Projekt aktualisieren, indem Folgendes ausgeben:
 
     cordova platform update platform-name ios, android, etc.
-    
+
 
 Wenn das vorhandene Projekt, unter einer Version vor Cordova erstellt wurde 3.x, es wäre wohl am besten ein neues Cordova-3.x-Projekt erstellen und kopieren Sie dann des vorhandenen Projekts Code und Vermögenswerte in das neue Projekt. Typische Schritte:
 
@@ -126,7 +126,7 @@ Hinweis: einige Plugins kompatibel mit der neuen Version von Cordova möglicherw
 Ab Cordova 3.4 gibt es keinen Mechanismus für die Aktualisierung geänderte Plugins mithilfe eines einzelnen Befehls. Stattdessen entfernen Sie das Plugin zu, und fügen Sie sie zurück zu Ihrem Projekt und die neue Version installiert werden:
 
     Cordova Plugin Rm com.some.plugin Cordova Plugin hinzufügen com.some.plugin
-    
+
 
 Achten Sie darauf, das aktualisierte Plugin Dokumentation, zu kontrollieren, Sie benötigen, um Ihren Code zum Arbeiten mit der neuen Version anzupassen. Auch, doppelt überprüfen, die die neue Version des Plugins mit Ihrem Projekt Version von Cordova.
 
@@ -142,7 +142,7 @@ Testen Ihrer Anwendungen ist super wichtig. Das Cordova-Team nutzt Jasmin aber W
 
 Es ist nicht ungewöhnlich, dass desktop-Browsern und Gerät-Simulatoren/Emulatoren verwenden Sie beim Entwickeln einer Anwendung von Cordova. Allerdings ist es unglaublich wichtig, dass Sie Ihre Anwendung auf so viele physische Geräte testen wie du nur kannst:
 
-*   Simulatoren sind genau das: Simulatoren. Beispielsweise Ihre Anwendung in der iOS-Simulator ohne Probleme funktionieren, aber es möglicherweise nicht auf einem echten Gerät (vor allem in bestimmten Umständen, wie etwa einen Speichermangel-Zustand). Oder Ihre app versäumen tatsächlich auf dem Simulator, während es auf einem echten Gerät einwandfrei funktioniert. 
+*   Simulatoren sind genau das: Simulatoren. Beispielsweise Ihre Anwendung in der iOS-Simulator ohne Probleme funktionieren, aber es möglicherweise nicht auf einem echten Gerät (vor allem in bestimmten Umständen, wie etwa einen Speichermangel-Zustand). Oder Ihre app versäumen tatsächlich auf dem Simulator, während es auf einem echten Gerät einwandfrei funktioniert.
 *   Emulatoren sind genau das: Emulatoren. Sie repräsentieren nicht, wie gut Ihre app auf einem physischen Gerät ausgeführt werden. Einige Emulatoren können beispielsweise Ihre app mit einer verstümmelten Anzeige gerendert, während ein echtes Gerät kein Problem hat. (Wenn Sie dieses Problem auftritt, deaktivieren Sie den Host GPU im Emulator.)
 *   Simulatoren sind in der Regel schneller als Ihr physisches Gerät. Emulatoren sind auf der anderen Seite im allgemeinen langsamer. Beurteilen Sie die Leistung Ihrer Anwendung nicht, von wie es in einem Simulator oder einen Emulator durchführt. Beurteilen Sie die Leistung Ihrer Anwendung von wie es auf ein Spektrum an realen Geräten läuft.
 *   Es ist unmöglich, ein gutes Gefühl dafür, wie Ihre app auf Ihrem Touch reagiert, mit einem Simulator oder einen Emulator. Stattdessen kann die app auf einem echten Gerät ausgeführt Probleme mit den Größen der Elemente der Benutzeroberfläche, Reaktionsfähigkeit, usw. hinweisen.
@@ -199,8 +199,8 @@ Weinre erstellt einen lokalen Server, der einen remote-Debug-Client für Ihre Co
 Erstellen einer Anwendung Cordova sieht schön auf mobile eine Herausforderung sein kann, vor allem für Entwickler. Viele Menschen haben ein UI-Framework verwenden, um dies zu erleichtern. Hier ist eine kurze Liste der Optionen, die Sie betrachten möchten.
 
 *   [jQuery Mobile][9] - jQuery Mobile erhöht automatisch Ihre Layout für mobile Optimierung. Es behandelt auch einen SPA für Sie automatisch erstellen.
-*   [Ionische][20] -dieser leistungsstarke UI-Framework hat tatsächlich eigene CLI Projekterstellung zu behandeln. 
-*   [Ratsche][21] - geholt Ihnen durch die Menschen, die Bootstrap erstellt. 
+*   [Ionische][20] -dieser leistungsstarke UI-Framework hat tatsächlich eigene CLI Projekterstellung zu behandeln.
+*   [Ratsche][21] - geholt Ihnen durch die Menschen, die Bootstrap erstellt.
 *   [Kendo UI][5] - Open-Source-UI und Application Framework von Telerik.
 *   [DECKLACK][22]
 *   [ReactJS][7]

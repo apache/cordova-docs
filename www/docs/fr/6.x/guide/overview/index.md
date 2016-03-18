@@ -50,7 +50,7 @@ Une interface *plugin* est disponible pour Cordova et les composants natifs de c
 
  [3]: http://plugins.cordova.io
 
-**NOTE**: depuis la version 3.0, lorsque vous créez un projet de Cordova, il n'a pas les plug-ins présents. C'est le nouveau comportement par défaut. Les plug-ins que vous désirez, même les plugins de base, doivent être ajoutés explicitement.
+**NOTE**: depuis la version 3.0, lorsque vous créez un projet de Cordova, il n'a pas les plugins présents. C'est le nouveau comportement par défaut. Les plugins que vous désirez, même les plugins de base, doivent être ajoutés explicitement.
 
 Cordova ne fournit pas les widgets de l'interface utilisateur ou cadres de MV. Cordova fournit seulement le runtime dans lequel ceux qui peuvent s'exécuter. Si vous souhaitez utiliser les widgets de l'interface utilisateur et/ou un cadre MV *, vous devrez sélectionner celles et les inclure dans votre demande vous-même comme matériel de tierces parties.
 

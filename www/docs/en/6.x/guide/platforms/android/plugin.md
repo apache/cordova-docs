@@ -39,9 +39,9 @@ overrides one of its `execute` methods.
 
 The plugin's JavaScript interface uses the `cordova.exec` method as
 follows:
-
-        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
-
+```js
+exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+```
 This marshals a request from the WebView to the Android native side,
 effectively calling the `action` method on the `service` class, with
 additional arguments passed in the `args` array.
@@ -52,9 +52,11 @@ application's `res/xml/config.xml` file. See Application Plugins for
 more information on how to use the `plugin.xml` file to inject this
 `feature` element:
 
-        <feature name="<service_name>">
-            <param name="android-package" value="<full_name_including_namespace>" />
-        </feature>
+```xml
+<feature name="<service_name>">
+    <param name="android-package" value="<full_name_including_namespace>" />
+</feature>
+```
 
 The service name matches the one used in the JavaScript `exec` call.
 The value is the Java class's fully qualified namespace identifier.
@@ -67,18 +69,22 @@ One instance of a plugin object is created for the life of each
 referenced by a call from JavaScript, unless `<param>` with an `onload`
 `name` attribute is set to `"true"` in `config.xml`. For example,
 
-    <feature name="Echo">
-        <param name="android-package" value="<full_name_including_namespace>" />
-        <param name="onload" value="true" />
-    </feature>
+```xml
+<feature name="Echo">
+    <param name="android-package" value="<full_name_including_namespace>" />
+    <param name="onload" value="true" />
+</feature>
+```
 
 Plugins should use the `initialize` method for their start-up logic.
 
-    @Override
-    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-        super.initialize(cordova, webView);
-        // your init code here
-    }
+```java
+@Override
+public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+    super.initialize(cordova, webView);
+    // your init code here
+}
+```
 
 Plugins also have access to Android lifecycle events and can handle them
 by extending one of the provided methods (`onResume`, `onDestroy`, etc).
@@ -96,15 +102,17 @@ Whatever is dispatched to the plugin with JavaScript's `exec` function
 is passed into the plugin class's `execute` method. Most `execute`
 implementations look like this:
 
-        @Override
-        public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-            if ("beep".equals(action)) {
-                this.beep(args.getLong(0));
-                callbackContext.success();
-                return true;
-            }
-            return false;  // Returning false results in a "MethodNotFound" error.
-        }
+```java
+@Override
+public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+    if ("beep".equals(action)) {
+        this.beep(args.getLong(0));
+        callbackContext.success();
+        return true;
+    }
+    return false;  // Returning false results in a "MethodNotFound" error.
+}
+```
 
 The JavaScript `exec` function's `action` parameter corresponds to a
 private class method to dispatch with optional parameters.
@@ -121,40 +129,44 @@ does the `execute` method.  If you need to interact with the user
 interface, you should use the [Activity's `runOnUiThread`][ref-runonuithread]
 method like so:
 
-        @Override
-        public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-            if ("beep".equals(action)) {
-                final long duration = args.getLong(0);
-                cordova.getActivity().runOnUiThread(new Runnable() {
-                    public void run() {
-                        ...
-                        callbackContext.success(); // Thread-safe.
-                    }
-                });
-                return true;
+```java
+@Override
+public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+    if ("beep".equals(action)) {
+        final long duration = args.getLong(0);
+        cordova.getActivity().runOnUiThread(new Runnable() {
+            public void run() {
+                ...
+                callbackContext.success(); // Thread-safe.
             }
-            return false;
-        }
+        });
+        return true;
+    }
+    return false;
+}
+```
 
 If you do not need to run on the UI thread, but do not wish to block the
 `WebCore` thread either, you should execute your code using the Cordova
 [`ExecutorService`][ref-executor] obtained with `cordova.getThreadPool()` like
 so:
 
-        @Override
-        public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-            if ("beep".equals(action)) {
-                final long duration = args.getLong(0);
-                cordova.getThreadPool().execute(new Runnable() {
-                    public void run() {
-                        ...
-                        callbackContext.success(); // Thread-safe.
-                    }
-                });
-                return true;
+```java
+@Override
+public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+    if ("beep".equals(action)) {
+        final long duration = args.getLong(0);
+        cordova.getThreadPool().execute(new Runnable() {
+            public void run() {
+                ...
+                callbackContext.success(); // Thread-safe.
             }
-            return false;
-        }
+        });
+        return true;
+    }
+    return false;
+}
+```
 
 ## Adding Dependency Libraries
 
@@ -183,50 +195,54 @@ To match the JavaScript interface's _echo_ feature described in
 Application Plugins, use the `plugin.xml` to inject a `feature`
 specification to the local platform's `config.xml` file:
 
-        <platform name="android">
-            <config-file target="config.xml" parent="/*">
-                <feature name="Echo">
-                    <param name="android-package" value="org.apache.cordova.plugin.Echo"/>
-                </feature>
-            </config-file>
+```xml
+<platform name="android">
+    <config-file target="config.xml" parent="/*">
+        <feature name="Echo">
+            <param name="android-package" value="org.apache.cordova.plugin.Echo"/>
+        </feature>
+    </config-file>
 
-            <source-file src="src/android/Echo.java" target-dir="src/org/apache/cordova/plugin" />
-        </platform>
+    <source-file src="src/android/Echo.java" target-dir="src/org/apache/cordova/plugin" />
+</platform>
+```
 
 Then add the following to the `src/android/Echo.java` file:
 
-        package org.apache.cordova.plugin;
+```java
+package org.apache.cordova.plugin;
 
-        import org.apache.cordova.CordovaPlugin;
-        import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
 
-        import org.json.JSONArray;
-        import org.json.JSONException;
-        import org.json.JSONObject;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-        /**
-         * This class echoes a string called from JavaScript.
-         */
-        public class Echo extends CordovaPlugin {
+/**
+* This class echoes a string called from JavaScript.
+*/
+public class Echo extends CordovaPlugin {
 
-            @Override
-            public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-                if (action.equals("echo")) {
-                    String message = args.getString(0);
-                    this.echo(message, callbackContext);
-                    return true;
-                }
-                return false;
-            }
+@Override
+public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+    if (action.equals("echo")) {
+        String message = args.getString(0);
+        this.echo(message, callbackContext);
+        return true;
+    }
+    return false;
+}
 
-            private void echo(String message, CallbackContext callbackContext) {
-                if (message != null && message.length() > 0) {
-                    callbackContext.success(message);
-                } else {
-                    callbackContext.error("Expected one non-empty string argument.");
-                }
-            }
-        }
+private void echo(String message, CallbackContext callbackContext) {
+    if (message != null && message.length() > 0) {
+        callbackContext.success(message);
+    } else {
+        callbackContext.error("Expected one non-empty string argument.");
+    }
+}
+}
+```
 
 The necessary imports at the top of the file extends the class from
 `CordovaPlugin`, whose `execute()` method it overrides to receive
@@ -268,9 +284,11 @@ the permissions, and these permissions need to be added to the Android Manifest.
 accomplished by using the `config.xml` to inject these permissions in the `AndroidManifest.xml` file.
 The example below uses the Contacts permission.
 
-        <config-file target="AndroidManifest.xml" parent="/*">
-            <uses-permission android:name="android.permission.READ_CONTACTS" />
-        </config-file>
+```xml
+<config-file target="AndroidManifest.xml" parent="/*">
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+</config-file>
+```
 
 ### Runtime Permissions (Cordova-Android 5.0.0+)
 
@@ -284,72 +302,87 @@ documentation [here][permissions-guide].
 
 As far as a plugin is concerned, the permission can be requested by calling the permission method, which signature is as follows:
 
-        cordova.requestPermission(CordovaPlugin plugin, int requestCode, String permission);
+```java
+cordova.requestPermission(CordovaPlugin plugin, int requestCode, String permission);
+```
 
 To cut down on verbosity, it's standard practice to assign this to a local static variable:
 
-    public static final String READ = Manifest.permission.READ_CONTACTS;
+```java
+public static final String READ = Manifest.permission.READ_CONTACTS;
+```
 
 It is also standard practice to define the requestCode as follows:
 
-    public static final int SEARCH_REQ_CODE = 0;
+```java
+public static final int SEARCH_REQ_CODE = 0;
+```
 
 Then, in the exec method, the permission should be checked:
 
-            if(cordova.hasPermission(READ))
-            {
-                search(executeArgs);
-            }
-            else
-            {
-                getReadPermission(SEARCH_REQ_CODE);
-            }
+```java
+if(cordova.hasPermission(READ))
+{
+    search(executeArgs);
+}
+else
+{
+    getReadPermission(SEARCH_REQ_CODE);
+}
+```
 
 In this case, we just call requestPermission:
 
-    protected void getReadPermission(int requestCode)
-    {
-        cordova.requestPermission(this, requestCode, READ);
-    }
+```java
+protected void getReadPermission(int requestCode)
+{
+    cordova.requestPermission(this, requestCode, READ);
+}
+```
 
 This will call the activity and cause a prompt to appear asking for the permission.  Once the user has the permission, the result must be handled with the `onRequestPermissionResult` method, which
 every plugin should override.  An example of this can be found below:
 
-    public void onRequestPermissionResult(int requestCode, String[] permissions,
-                                             int[] grantResults) throws JSONException
+```java
+public void onRequestPermissionResult(int requestCode, String[] permissions,
+                                         int[] grantResults) throws JSONException
+{
+    for(int r:grantResults)
     {
-        for(int r:grantResults)
+        if(r == PackageManager.PERMISSION_DENIED)
         {
-            if(r == PackageManager.PERMISSION_DENIED)
-            {
-                this.callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, PERMISSION_DENIED_ERROR));
-                return;
-            }
-        }
-        switch(requestCode)
-        {
-            case SEARCH_REQ_CODE:
-                search(executeArgs);
-                break;
-            case SAVE_REQ_CODE:
-                save(executeArgs);
-                break;
-            case REMOVE_REQ_CODE:
-                remove(executeArgs);
-                break;
+            this.callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, PERMISSION_DENIED_ERROR));
+            return;
         }
     }
-
+    switch(requestCode)
+    {
+        case SEARCH_REQ_CODE:
+            search(executeArgs);
+            break;
+        case SAVE_REQ_CODE:
+            save(executeArgs);
+            break;
+        case REMOVE_REQ_CODE:
+            remove(executeArgs);
+            break;
+    }
+}
+```
 
 The switch statement above would return from the prompt and depending on the requestCode that was passed in, it would call the method.  It should be noted that permission prompts may stack if the execution is not handled correctly, and that this should be avoided.
 
 In addition to asking for permission for a single permission, it is also possible to request permissions for an entire group by defining the permissions array, as what is done with the Geolocation plugin:
 
-    String [] permissions = { Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION };
+```java
+String [] permissions = { Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION };
+```
 
 Then when requesting the permission, all that needs to be done is the following:
 
-    cordova.requestPermissions(this, 0, permissions);
+```java
+cordova.requestPermissions(this, 0, permissions);
+```
 
 This requests the permissions specified in the array.  It's a good idea to provide a publicly accessible permissions array since this can be used by plugins that use your plugin as a
 dependency, although this is not required.
@@ -413,7 +446,7 @@ Instead, this replacement `CallbackContext` will return the result as part of th
 [`resume`][event-resume] event that is fired when the application resumes. The
 payload of the [`resume`][event-resume] event follows this structure:
 
-```
+```text
 {
     action: "resume",
     pendingResult: {

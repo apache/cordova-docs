@@ -35,7 +35,7 @@ Per i progetti creati con il cordova CLI:
 Per i progetti non creati con la CLI di cordova, eseguire:
 
         bin/aggiornamento < project_path >
-    
+
 
 ## Aggiornamento a 3.1.0 da 3.0.0
 
@@ -50,7 +50,7 @@ platform add blackberry10`.
 
 5.  Copia il `config.xml` del file nella `www` directory e rimuovere eventuali definizioni di plugin. È necessario modificare le impostazioni qui piuttosto che all'interno della directory di piattaforma.
 
-6.  Utilizzare lo strumento CLI di cordova per installare il plug-in che è necessario. Si noti che il CLI gestisce tutti i core API come plugin, così che può essere necessario aggiungere. Solo plugin contrassegnato 3.0.0 e soprattutto sono compatibili con il CLI.
+6.  Utilizzare lo strumento CLI di cordova per installare il plugin che è necessario. Si noti che il CLI gestisce tutti i core API come plugin, così che può essere necessario aggiungere. Solo plugin contrassegnato 3.0.0 e soprattutto sono compatibili con il CLI.
 
 7.  Costruire e testare.
 
@@ -69,7 +69,7 @@ platform add blackberry10`.
 
 5.  Copia il `config.xml` del file nella `www` directory e rimuovere eventuali definizioni di plugin. È necessario modificare le impostazioni qui piuttosto che all'interno della directory di piattaforma.
 
-6.  Utilizzare lo strumento CLI di cordova per installare il plug-in che è necessario. Si noti che il CLI gestisce tutti i core API come plugin, così che può essere necessario aggiungere. Solo 3.0.0 plugin sono compatibili con il CLI.
+6.  Utilizzare lo strumento CLI di cordova per installare il plugin che è necessario. Si noti che il CLI gestisce tutti i core API come plugin, così che può essere necessario aggiungere. Solo 3.0.0 plugin sono compatibili con il CLI.
 
 7.  Costruire e testare.
 
@@ -240,7 +240,7 @@ Aggiornamento appena il `www` directory:
 3.  Aggiornare il contenuto del `ext-air/` directory.
 
 4.  Copiare il nuovo `cordova-2.4.0.js` nel vostro progetto.
-    
+
     *   Se playbook, quindi aggiornamento il js file nella `playbook/` directory.
     *   Se BlackBerry 10, quindi aggiornare il file. js nella `qnx/` directory.
 
@@ -275,7 +275,7 @@ Aggiornamento appena il `www` directory:
 3.  Aggiornare il contenuto del `ext-air/` directory.
 
 4.  Copiare il nuovo `cordova-2.3.0.js` nel vostro progetto.
-    
+
     *   Se playbook, quindi aggiornamento il js file nella `playbook/` directory.
     *   Se BlackBerry 10, quindi aggiornare il file. js nella `qnx/` directory.
 
@@ -310,7 +310,7 @@ Aggiornamento solo la directory www:
 3.  Aggiornare il contenuto del `ext-air/` directory.
 
 4.  Copiare il nuovo `cordova-2.2.0.js` nel vostro progetto.
-    
+
     *   Se playbook, quindi aggiornamento il js file nella `playbook/` directory.
     *   Se BlackBerry 10, quindi aggiornare il file. js nella `qnx/` directory.
 
@@ -345,7 +345,7 @@ Aggiornamento appena il `www` directory:
 3.  Aggiornare il contenuto del `ext-air/` directory.
 
 4.  Copiare il nuovo `cordova-2.1.0.js` nel vostro progetto.
-    
+
     *   Se playbook, quindi aggiornamento il js file nella `playbook/` directory.
 
 5.  Aggiorna il tuo HTML per utilizzare il nuovo `cordova-2.1.0.js` file.
@@ -377,19 +377,19 @@ Aggiornamento appena il `www` directory:
 3.  Aggiornare il contenuto del `ext-air/` directory.
 
 4.  Copiare il nuovo `cordova-2.0.0.js` nel vostro progetto.
-    
+
     *   Se playbook, quindi aggiornamento il js file nella `playbook/` directory.
 
 5.  Aggiorna il tuo HTML per utilizzare il nuovo `cordova-2.0.0.js` file.
 
 6.  Aggiornamento tuo `www/plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
-    
+
         < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
-        
+
     A:
-    
+
         < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >
-        
+
 
 Aggiornando la directory di esempio (cioè, aggiornamento usando gli strumenti della formica):
 
@@ -408,13 +408,13 @@ Aggiornando la directory di esempio (cioè, aggiornamento usando gli strumenti d
 7.  Aperto il `www/` directory e aggiorna il tuo HTML per utilizzare il nuovo `cordova-2.0.0.js` file.
 
 8.  Aperto il `www/` directory e aggiornamento del `plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
-    
+
          < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
-        
+
     A:
-    
+
          < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >
-        
+
 
 *   Per aggiornare a 1.8.0, si prega di andare da 1.7.0
 
@@ -429,19 +429,19 @@ Aggiornamento appena il `www` directory:
 3.  Aggiornare il contenuto del `ext-air/` directory.
 
 4.  Copiare il nuovo `cordova-1.8.0.js` nel vostro progetto.
-    
+
     *   Se playbook, quindi aggiornamento il js file nella `playbook/` directory.
 
 5.  Aggiorna il tuo HTML per utilizzare il nuovo `cordova-1.8.0.js` file.
 
 6.  Aggiornamento tuo `www/plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
-    
+
         < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
-        
+
     A:
-    
+
         < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >
-        
+
 
 Aggiornando la directory di esempio (cioè, aggiornamento usando gli strumenti della formica):
 
@@ -460,9 +460,9 @@ Aggiornando la directory di esempio (cioè, aggiornamento usando gli strumenti d
 7.  Aperto il `www/` directory e aggiorna il tuo HTML per utilizzare il nuovo `cordova-1.8.0.js` file.
 
 8.  Aperto il `www/` directory e aggiornamento del `plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
-    
+
          < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
-        
+
     A:
-    
+
          < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >
