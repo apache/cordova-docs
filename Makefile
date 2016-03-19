@@ -228,11 +228,11 @@ ifndef WINDOWS
 	touch $(DOCS_DIR)
 endif
 
-$(TOC_DIR)/%-$(LATEST_DOCS_VERSION_SLUG)-manual.yml: $(TOC_DIR)/%-dev-manual.yml
-	$(CP) $^ $@
+$(TOC_DIR)/%-$(LATEST_DOCS_VERSION_SLUG)-manual.yml: $(TOC_DIR)/%-dev-manual.yml $(DOCS_DIR)
+	$(CP) $< $@
 
-$(TOC_DIR)/%-$(NEXT_DOCS_VERSION_SLUG)-manual.yml: $(TOC_DIR)/%-dev-manual.yml
-	$(CP) $^ $@
+$(TOC_DIR)/%-$(NEXT_DOCS_VERSION_SLUG)-manual.yml: $(TOC_DIR)/%-dev-manual.yml $(DOCS_DIR)
+	$(CP) $< $@
 
 # NODE:
 #      $(@D) means "directory part of target"
