@@ -206,11 +206,4 @@ $(document).ready(function () {
             submitJiraSearchForm();
         }
     });
-
-    // add prettyprint class to code blocks for prettify.js
-    var all_code = $('pre');
-    all_code.attr('class', 'prettyprint');
-
-    // run syntax highlighter
-    prettyPrint();
 });
