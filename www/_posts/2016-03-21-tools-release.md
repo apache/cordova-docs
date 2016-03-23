@@ -13,9 +13,11 @@ New versions of cordova tools are now live!
 * [cordova@6.1.0](https://www.npmjs.org/package/cordova)
 * [plugman@1.2.0](https://www.npmjs.org/package/plugman)
 * [cordova-js@4.1.4](https://www.npmjs.org/package/cordova-js)
+* [cordova-common@1.1.1](https://www.npmjs.com/package/cordova-common)
 
 Release Highlights include:
-* [CB-10880](https://issues.apache.org/jira/browse/CB-10880) Removed plugin pinning. Instead we have implemented automatic plugin fetching based on engine requirements. You can read more about our new engine fetching prosal at [https://github.com/cordova/cordova-discuss/blob/master/proposals/plugin-version-fetching.md](https://github.com/cordova/cordova-discuss/blob/master/proposals/plugin-version-fetching.md). This implementation will grab the newest version of a plugin that your project supports when running `cordova plugin add`. 
+* [CB-10679](https://issues.apache.org/jira/browse/CB-10679) implemented new plugin fetching logic. We now allow community plugins to define cordova engine restrictions. Read about it in our [new plugin fetching blog post](http://cordova.apache.org/announcements/2016/03/22/new-plugin-fetching.html).
+* [CB-10880](https://issues.apache.org/jira/browse/CB-10880) Removed plugin pinning. Replaced by new plugin fetching logic. 
 
 To update your tools:
 
@@ -98,6 +100,15 @@ When adding these platforms to your project, the following versions are now used
 
 * [CB-10650](https://issues.apache.org/jira/browse/CB-10650) Non-index `content.src` causes Splashscreen to be not displayed on browser
 * [CB-10558](https://issues.apache.org/jira/browse/CB-10558) Update `cordova-js` according to **windows8** deprecation
+
+## cordova-common
+
+* CB-10694 Platform-specific configuration preferences don't override global settings
+* CB-9264 Duplicate entries in `config.xml`
+* CB-10791 Add `adjustLoggerLevel` to `cordova-common.CordovaLogger`
+* CB-10662 Add tests for `ConfigParser.getStaticResources`
+* CB-10622 fix target attribute being ignored for images in `config.xml`.
+* CB-10583 Protect plugin preferences from adding extra Array properties.
 
 ## Pinned Platform Versions for **Cordova CLI 6.1.0**
 
