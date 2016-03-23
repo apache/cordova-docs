@@ -1,0 +1,14 @@
+---
+analytics_id: UA-64283057-3
+---
+
+<!DOCTYPE html>
+<html lang="{% if page.language %}{{ page.language }}{% else %}{{ site.language }}{% endif %}">
+{% include head.html %}
+<body>
+    {{ content }}
+    {% include analytics.html %}
+    <script defer type="text/javascript" src="{{ site.baseurl }}/static/js/index.js"></script>
+    <script defer type="text/javascript" src="{{ site.baseurl }}/static/js/twitter.js"></script>
+</body>
+</html>

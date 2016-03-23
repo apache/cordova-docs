@@ -390,6 +390,11 @@ You could try a different method to install Ruby. Checkout [rbenv][rbenvgh]. Ins
 
 Please ask for help on the Slack channel. Join at [slack.cordova.io](http://slack.cordova.io/).
 
+Attributions
+============
+
+For attributions for used open-source work, please see the attributions page: `www/attributions.html`.
+
 [ruby_linux]: https://www.ruby-lang.org/en/documentation/installation/#package-management-systems
 [homebrew]: http://brew.sh/
 [linux_node]: https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories#installing-node-js-v0-12

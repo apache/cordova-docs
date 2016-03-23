@@ -257,6 +257,8 @@ gulp.task("watch", ["serve"], function () {
             //      watch all non-docs HTML, and only docs/en/dev HTML because
             //      versions other than dev usually don't change much; this is
             //      an optimization
+            path.join(SOURCE_DIR, "_layouts", "*.html"),
+            path.join(SOURCE_DIR, "_includes", "*.html"),
             path.join(SOURCE_DIR, "**", "*.html") + "!" + path.join(DOCS_DIR, "**"),
             path.join(SOURCE_DIR, "**", "*.md") + "!" + path.join(DOCS_DIR, "**") ,
             path.join(DOCS_DIR, "en", "dev", "**", "*.md") ,

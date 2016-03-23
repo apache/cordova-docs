@@ -263,8 +263,17 @@ img#logo_top {
     margin: auto;
     float:none;
     max-width: 700px;
-    h1 { color: $brand-gold; padding-bottom:0; }
-    h2 { color: white; font-size: 18px; font-weight:normal; padding:0; margin-top:0 }
+    h1 {
+        color: $brand-gold;
+        padding-bottom: 0;
+    }
+    h2 {
+        color: white;
+        font-size: 18px;
+        font-weight: normal;
+        padding: 0;
+        margin-top: 0;
+    }
     p, span { color: $gray-40; text-align: left; }
     padding-top: 4px;
     padding-bottom: 35px;

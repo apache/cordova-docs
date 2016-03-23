@@ -1,43 +1,15 @@
 .docs {
-    /* overriding h2 to correct value */
-    h2 {
-        font-size: 30px;
-    }
-
-    margin-bottom: 20px;
-
-    .this-page {
-        font-weight: bold;
-    }
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
 
     /* this is so that wide images don't stick out of their paragraphs */
     p {
         img {
             max-width: 100%;
         }
-    }
-
-    /*
-    * Anchor links on documentation headers
-    */
-    .header-link {
-        position: relative;
-        left: 0.5em;
-        opacity: 0;
-        font-size: 0.7em;
-
-        -webkit-transition: opacity 0.2s ease-in-out 0.1s;
-        -moz-transition: opacity 0.2s ease-in-out 0.1s;
-        -ms-transition: opacity 0.2s ease-in-out 0.1s;
-    }
-
-    h1:hover .header-link,
-    h2:hover .header-link,
-    h3:hover .header-link,
-    h4:hover .header-link,
-    h5:hover .header-link,
-    h6:hover .header-link {
-        opacity: 1;
     }
 
     pre {
@@ -48,13 +20,14 @@
             white-space: pre;
         }
     }
-
+    .row {
+        margin: 0px;
+    }
     mark {
         background-color: lightblue;
         padding: 0.1px 0.2px 0.1px 0.2px;
         margin-right: 7px;
     }
-
     .site-toc-title {
         font-weight: 300;
         font-size: 22px;
@@ -63,20 +36,125 @@
 
     /* outer ToC for the site */
     .site-toc-container {
+        position: fixed;
+        height: 100%;
+        overflow-y: scroll;
+        background: $gray-85;
+
         .site-toc {
-            padding: 0px;
+
+            /* NOTE: the bottom padding is special because it offsets the header */
+            padding-top: 35px;
+            padding-bottom: 80px;
+            padding-left: 55px;
+            padding-right: 10px;
+
+            li {
+                list-style: none;
+            }
+            > li {
+                font-size: 16px;
+                font-weight: 600;
+                padding-top: 0.05em;
+                line-height: 30px;
+                a {
+                    color: white;
+                    &.this-page {
+                        font-weight: bold;
+                    }
+                }
+                .entry-highlight {
+                    width: 200%;
+                    position: absolute;
+                    height: 31px;
+                    background-color: #d60c3f;
+                    opacity: 0.7;
+                    margin-left: -100%;
+                    z-index: -1;
+                }
+            }
+            .toc-section-heading {
+                font-size: 30px;
+                font-weight: 300;
+                margin: 0.3em 0em 0.3em 0em;
+                display: block;
+                color: $brand-primary;
+            }
+
+            /* NOTE: this is not a mistake; .site-toc gets nested inside itself */
             .site-toc {
                 padding-left: 15px;
+                padding-right: 0px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                .toc-section-heading {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
             }
         }
-        .site-toc li {
-            list-style: none;
-        }
-        .site-toc > li {
-            list-style: none;
-            font-size: 16px;
-            font-weight: 300;
-            padding-top: 0.05em;
+    }
+
+    /* non-IE scrollbar styling */
+    .site-toc-container::-webkit-scrollbar {
+        width: 13px;  /* for vertical scrollbars */
+        height: 13px; /* for horizontal scrollbars */
+    }
+    .site-toc-container::-webkit-scrollbar-track {
+        background-color: black;
+    }
+    .site-toc-container::-webkit-scrollbar-thumb {
+        background-color: $gray-70;
+    }
+
+    /* IE-only scrollbar styling */
+    .site-toc-container {
+        scrollbar-arrow-color: $gray-70;
+        scrollbar-face-color: $gray-70;
+        scrollbar-highlight-color: black;
+        scrollbar-shadow-color: $gray-70;
+    }
+
+    .page-content-container {
+        padding: 0px;
+        .page-content {
+            margin-bottom: 20px;
+            .header-link {
+                position: relative;
+                left: 0.5em;
+                opacity: 0;
+                font-size: 0.7em;
+
+                -webkit-transition: opacity 0.2s ease-in-out 0.1s;
+                -moz-transition: opacity 0.2s ease-in-out 0.1s;
+                -ms-transition: opacity 0.2s ease-in-out 0.1s;
+            }
+            h1:hover .header-link,
+            h2:hover .header-link,
+            h3:hover .header-link,
+            h4:hover .header-link,
+            h5:hover .header-link,
+            h6:hover .header-link {
+                opacity: 1;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                color: #2C7185;
+            }
+            h1 {
+                font-size: 48px;
+                font-weight: 300;
+            }
+            h2 {
+                color: #D60C3F;
+                font-size: 30px;
+                font-weight: 300;
+            }
+            h3 {
+                font-size: 22px;
+            }
+            h3, h4, h5, h6 {
+                font-weight: 600;
+            }
         }
     }
 
@@ -87,24 +165,15 @@
     .page-toc ul > li {
         padding: 0.05em 0em 0.05em 1em;
         font-size: 14px;
-        border-left: 0.5em solid rgba($brand-primary, 0.5);
+        font-weight: 300;
     }
     .page-toc ul > li.toc-active {
         font-weight: bold;
-        border-left: 0.5em solid $brand-primary;
     }
 
     /* Quick fix to remove redundant TOC entries */
     .page-toc li:first-of-type {
         display: none;
-    }
-    .page-toc li:nth-of-type(2) {
-        margin-top: 5px;
-    }
-    .toc-section-heading {
-        font-size: 18px;
-        padding-top: 5px;
-        display: block;
     }
 
     /* header above page content */
@@ -181,7 +250,6 @@
             border-color: white;
             padding:2px;
         }
-
         th {
             text-align: center;
         }
@@ -216,12 +284,10 @@
             text-align: left;
             vertical-align: middle;
         }
-
         td[rowspan="2"], th[colspan="3"], td[data-col="code"] {
             text-align: center;
             vertical-align: middle;
         }
-
         td[data-col="description"] {
             text-align: left;
             vertical-align: middle;
@@ -235,7 +301,6 @@
             padding-bottom: 20px;
             margin: 30px 0px;
         }
-
         h2 {
             font-weight: normal;
             margin: 0px 0px 10px 0px;
@@ -243,21 +308,17 @@
             display: block;
             font-size: 18px;
         }
-
         h2:after {
             content: '';
         }
-
         span {
             font-size: 14px;
         }
-
         ul {
             float:left;
             margin: 0px;
             padding: 0px;
         }
-
         ul li {
             float: left;
             list-style: none;

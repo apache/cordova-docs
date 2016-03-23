@@ -1,14 +1,7 @@
 ---
-analytics_id: UA-64283057-3
+layout: base
 ---
 
-<!DOCTYPE html>
-<html lang="{% if page.language %}{{ page.language }}{% else %}{{ site.language }}{% endif %}">
-{% include head.html %}
-<body>
-    {% include header.html %}
-    {{ content }}
-    {% include footer.html %}
-    {% include analytics.html %}
-</body>
-</html>
+{% include header.html %}
+{{ content }}
+{% include footer_site.html %}

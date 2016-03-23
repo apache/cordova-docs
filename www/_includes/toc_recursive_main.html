@@ -1,24 +1,18 @@
 <ul class="site-toc">
     {% for entry in include.entries %}
 
-    {% comment %}
-    Skip entries that have no URI and no children.
-    {% endcomment %}
-    {% unless entry.url %}
-        {% unless entry.children %}
-            {% continue %}
-        {% endunless %}
-    {% endunless %}
-
     <li>
-        {% if entry.url != null %}
-        <a class="{% if include.my_entry == entry.url %}this-page{% endif %}" href="{{ include.path_to_root }}{{ entry.url }}">
-            {{ entry.name }}
-        </a>
+        {% if entry.children %}
+            <span class="toc-section-heading">
+                {{ entry.name }}
+            </span>
         {% else %}
-        <span class="toc-section-heading">
-            {{ entry.name }}
-        </span>
+            <a class="{% if include.my_entry == entry.url %}this-page{% endif %}" href="{{ include.path_to_root }}{{ entry.url }}">
+                {{ entry.name }}
+            </a>
+            {% if include.my_entry == entry.url %}
+                <span class="entry-highlight"></span>
+            {% endif %}
         {% endif %}
 
         {% comment %}

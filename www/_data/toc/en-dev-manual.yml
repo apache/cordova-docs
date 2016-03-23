@@ -30,12 +30,12 @@
                     url: "guide/platforms/wp8/home.html"
         -   name: "Manage versions and platforms"
             url: "platform_plugin_versioning_ref/index.html"
-        -   name: "Debug and test"
-            url:
+#         -   name: "Debug and test"
+#             url:
         -   name: "Customize icons"
             url: "config_ref/images.html"
-        -   name: "Automate Tasks"
-            url:
+#         -   name: "Automate Tasks"
+#             url:
         -   name: "Store data"
             url: "cordova/storage/storage.html"
         -   name: "Manage privacy"
@@ -44,14 +44,14 @@
             url: "guide/appdev/security/index.html"
         -   name: "Whitelisting"
             url: "guide/appdev/whitelist/index.html"
-        -   name: "Publish"
-            url:
+#         -   name: "Publish"
+#             url:
 -   name: "Create plugins"
     children:
         -   name: "Create a plugin"
             url: "guide/hybrid/plugins/index.html"
-        -   name: "Register with NPM"
-            url:
+#         -   name: "Register with NPM"
+#             url:
         -   name: "Develop for platforms"
             children:
                 -   name: "Android"
@@ -66,14 +66,14 @@
                     url: "guide/platforms/wp8/plugin.html"
         -   name: "Use Plugman"
             url: "plugin_ref/plugman.html"
-        -   name: "Debug and test"
-            url:
+#         -   name: "Debug and test"
+#             url:
 -   name: "Advanced Topics"
     children:
         -   name: "Embed Cordova in native apps"
             url: "guide/hybrid/webviews/index.html"
-        -   name: "Pass data from Cordova app to host"
-            url:
+#         -   name: "Pass data from Cordova app to host"
+#             url:
         -   name: "Next Steps"
             url: "guide/next/index.html"
 -   name: "Reference"
@@ -136,5 +136,5 @@
 #     children:
 #         -   name: "Share your app in source control"
 #             url:
--   name: "Sample Apps"
-    url:
+# -   name: "Sample Apps"
+#     url:
