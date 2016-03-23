@@ -119,7 +119,7 @@ applications for building, or when plugins are re-installed.
 ###See Also
 - [Cordova platform command reference documentation][cdv_platform]
 
-##Install pre-requrisites for building
+##Install pre-requisites for building
 To build and run apps, you need to install SDKs for each platform you wish to target. Alternatively, if you are using browser for development you can use `browser` platform which does not require any platform SDKs.
 
 To check if you satisfy requirements for building the platform:
