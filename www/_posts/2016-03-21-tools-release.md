@@ -103,12 +103,12 @@ When adding these platforms to your project, the following versions are now used
 
 ## cordova-common
 
-* CB-10694 Platform-specific configuration preferences don't override global settings
-* CB-9264 Duplicate entries in `config.xml`
-* CB-10791 Add `adjustLoggerLevel` to `cordova-common.CordovaLogger`
-* CB-10662 Add tests for `ConfigParser.getStaticResources`
-* CB-10622 fix target attribute being ignored for images in `config.xml`.
-* CB-10583 Protect plugin preferences from adding extra Array properties.
+* [CB-10694](https://issues.apache.org/jira/browse/CB-10694) Platform-specific configuration preferences don't override global settings
+* [CB-9264](https://issues.apache.org/jira/browse/CB-9264) Duplicate entries in `config.xml`
+* [CB-10791](https://issues.apache.org/jira/browse/CB-10791) Add `adjustLoggerLevel` to `cordova-common.CordovaLogger`
+* [CB-10662](https://issues.apache.org/jira/browse/CB-10662) Add tests for `ConfigParser.getStaticResources`
+* [CB-10622](https://issues.apache.org/jira/browse/CB-10622) fix target attribute being ignored for images in `config.xml`.
+* [CB-10583](https://issues.apache.org/jira/browse/CB-10583) Protect plugin preferences from adding extra Array properties.
 
 ## Pinned Platform Versions for **Cordova CLI 6.1.0**
 
