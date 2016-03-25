@@ -184,6 +184,12 @@ code.prettyprint {
     border: none !important;
 }
 
+/* improving inline quotes styling */
+code {
+    background-color: #c9dddf;
+    color: #000000;
+}
+
 @import 'home';
 @import 'blog';
 @import 'plugins';
