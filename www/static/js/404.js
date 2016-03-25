@@ -5,7 +5,8 @@
     //      these patterns should NOT contain capturing groups (parentheses)
     //      because they might be combined with other regexes
     var DOCS_VERSION_PATTERN      = "(?:[\\d\\.]+x?|dev|latest)";
-    var DOCS_VERSION_PATH_PATTERN = "docs\\/..\\/" + DOCS_VERSION_PATTERN;
+    var DOCS_LANGUAGE_PATTERN     = "\\w\\w(?:-\\w\\w)?";
+    var DOCS_VERSION_PATH_PATTERN = "docs\\/" + DOCS_LANGUAGE_PATTERN + "\\/" + DOCS_VERSION_PATTERN;
 
     function splitDocsURL(url) {
         var splitPattern = new RegExp("(" + DOCS_VERSION_PATH_PATTERN + ")");
@@ -38,7 +39,7 @@
     }
 
     function getDevURL(url) {
-        var replaceWhat = new RegExp("docs\\/(..)\\/" + DOCS_VERSION_PATTERN);
+        var replaceWhat = new RegExp("docs\\/(" + DOCS_LANGUAGE_PATTERN + ")\\/" + DOCS_VERSION_PATTERN);
         var replaceWith = "docs/$1/dev";
         return url.replace(replaceWhat, replaceWith);
     }

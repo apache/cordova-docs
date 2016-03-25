@@ -17,30 +17,32 @@ RewriteEngine on
 #       301s are for PERMANENT redirects. These are used only for mapping old
 #       pages to new pages.
 
-# 302 (temp):
-#       docs     -> docs/en/latest/
-#       docs/    -> docs/en/latest/
-#       docs/XX  -> docs/XX/latest/
-#       docs/XX/ -> docs/XX/latest/
-#
 # NOTE:
-#       these can both apply, turning "/docs" into "/docs/en/latest/"
-RewriteRule ^.*docs/$ {{site.baseurl}}/docs/en/
-RewriteRule ^.*docs/(\w\w)/$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
+#      (\w\w(?:-\w\w)?) is the regex for versions
 
 # 302 (temp):
+#       docs/          -> docs/[default language]/latest/
+#       docs/XX        -> docs/XX/latest/
+#       docs/XX/       -> docs/XX/latest/
 #       docs/XX/latest -> docs/XX/latest/
-RewriteRule ^.*docs/(\w\w)/latest$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
+RewriteRule ^.*docs/$ {{site.baseurl}}/docs/{{site.language}}/latest/ [R=302,L]
+RewriteRule ^.*docs/(\w\w(?:-\w\w)?)$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
+RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
+RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/latest$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
 
 # 301 (perm):
-#       docs/XX/edge  -> docs/xx/edge/
-#       docs/XX/edge/ -> docs/xx/dev/
-RewriteRule ^.*docs/(\w\w)/edge$ {{site.baseurl}}/docs/$1/edge/
-RewriteRule ^.*docs/(\w\w)/edge/(.*)$ {{site.baseurl}}/docs/$1/dev/$2 [R=301,L]
+#       docs/XX/edge    -> docs/xx/edge/
+#       docs/XX/edge/YY -> docs/xx/dev/YY
+RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/edge$ {{site.baseurl}}/docs/$1/edge/
+RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/edge/(.*)$ {{site.baseurl}}/docs/$1/dev/$2 [R=301,L]
 
 # 301 (perm):
 #       docs version renames
-RewriteRule ^.*docs/(\w\w)/6.0.0/(.*)$ {{site.baseurl}}/docs/$1/6.x/$2 [R=301,L]
+RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/6.0.0/(.*)$ {{site.baseurl}}/docs/$1/6.x/$2 [R=301,L]
+
+# 302 (temp):
+#       docs language renames
+RewriteRule ^.*docs/zh/((?:\d+\.(?:\d+\.\d+|x))|dev|latest)/(.*)$ /docs/zh-tw/$1/$2 [R=302,L]
 
 # 301 (perm):
 #       old docs pages -> new docs pages (global)
@@ -50,12 +52,12 @@ RewriteRule ^.*docs/(\w\w)/6.0.0/(.*)$ {{site.baseurl}}/docs/$1/6.x/$2 [R=301,L]
 #       by site.baseurl. It is thrown away because there is no RewriteCond to
 #       control whether the rewrite happens to a URI or a local file path
 #       (when Apache is locating the local file to serve).
-{% for redirect in site.data.redirects.docs-global %}RewriteRule ^.*docs/(\w\w)/([^/]+)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/$2/{{redirect.new}} [NE,R=301,L]
+{% for redirect in site.data.redirects.docs-global %}RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/([^/]+)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/$2/{{redirect.new}} [NE,R=301,L]
 {% endfor %}
 
 # 301 (perm):
 #       old docs pages -> new docs pages (version-specific)
-{% for redirect in site.data.redirects.docs %}RewriteRule ^.*docs/(\w\w)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/{{redirect.new}} [NE,R=301,L]
+{% for redirect in site.data.redirects.docs %}RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/{{redirect.new}} [NE,R=301,L]
 {% endfor %}
 
 # 301 (perm):
@@ -75,4 +77,4 @@ RewriteRule ^.*docs/(\w\w)/6.0.0/(.*)$ {{site.baseurl}}/docs/$1/6.x/$2 [R=301,L]
 #       "/latest/" to be in the URI in order to activate. Placing this rule
 #       before them will rewrite "/latest/" to the latest version and redirects
 #       for "/latest/some/path.html" will never activate.
-RewriteRule ^.*docs/(\w\w)/latest/(.*)$ {{site.baseurl}}/docs/$1/{{site.latest_docs_version}}/$2 [L]
+RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/latest/(.*)$ {{site.baseurl}}/docs/$1/{{site.latest_docs_version}}/$2 [L]

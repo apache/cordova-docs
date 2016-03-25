@@ -35,7 +35,8 @@ var LANGUAGE_MAP = {
     "pl": "Polski",
     "ru": "Русский",
     "sl": "Slovene",
-    "zh": "汉语",
+    "zh-cn": "简体中文",
+    "zh-tw": "繁體中文",
 };
 
 function main () {
