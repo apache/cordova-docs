@@ -110,4 +110,4 @@
     image: evothings.png
     url: https://evothings.com/
     description: >
-        Evothings Studio provides developers with a rapid workflow and lots of examples for the industrial internet. Focus lies on IoT and related code, formats and protocols for hooking up phones to a world of connected things.
+        Evothings Studio provides Cordova developers with a rapid development workflow, tutorials and example apps for the Internet of Things. Support for Bluetooth Low Energy (BLE) and other IoT related technologies.
