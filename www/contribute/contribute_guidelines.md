@@ -12,7 +12,7 @@ Thanks for helping to improve Cordova! This page provides a general guide on mak
 Before contributing to Apache Cordova, please complete the following steps:
 
 1. Sign the [Individual Contributor License Agreement (ICLA)](http://www.apache.org/licenses/#clas) and [submit it to the ASF](http://www.apache.org/licenses/#submitting).
-    * You should receive an email confirming you submission within a day or so and your name will appear in the [list of committers and non-committers](https://people.apache.org/committer-index.html)
+    * You should receive an email confirming you submission within a day or so and your name will appear in the [list of contributors](https://people.apache.org/unlistedclas.html)
     * If you are submitting on behalf of a company, you may need to submit a CCLA as well
 2. Join the [mailing list](http://cordova.apache.org/contact/) and send a brief introduction of yourself
 3. Create an [Apache JIRA](https://issues.apache.org/jira/secure/Signup!default.jspa) account
