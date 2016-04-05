@@ -14,7 +14,7 @@ This release fixes a number of bugs including an issue when some of `config-file
 and the bug with omitted icons, specified using `target` attribute (see [icons guide](http://cordova.apache.org/docs/en/latest/config_ref/images.html#windows)
 for `target` attribute usage). See below for full list of changes.
 
-Cordova CLI 6.1.0 will automatically start using this version of **Cordova-Windows** when creating new projects.
+Cordova CLI 6.1.1 will automatically start using this version of **Cordova-Windows** when creating new projects.
 
 To upgrade:
 
