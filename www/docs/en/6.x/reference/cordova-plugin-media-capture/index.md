@@ -432,6 +432,8 @@ Each `MediaFile` object describes a captured media file.
 
 - `CaptureError.CAPTURE_NO_MEDIA_FILES`: The user exits the camera or audio capture application before capturing anything.
 
+- `CaptureError.CAPTURE_PERMISSION_DENIED`: The user denied a permission required to perform the given capture request.
+
 - `CaptureError.CAPTURE_NOT_SUPPORTED`: The requested capture operation is not supported.
 
 ## CaptureErrorCB

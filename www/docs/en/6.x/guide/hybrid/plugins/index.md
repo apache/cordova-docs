@@ -54,7 +54,7 @@ argument to that command is the URL for a _git_ repository containing
 the plugin code.  This example implements Cordova's Device API:
 
 ```bash
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
 ```
 
 The plugin repository must feature a top-level `plugin.xml` manifest
@@ -62,26 +62,26 @@ file. There are many ways to configure this file, details for which
 are available in the [Plugin Specification](../../../plugin_ref/spec.html). This abbreviated version of the `Device` plugin provides a simple example to use as a model:
 
 ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-            id="cordova-plugin-device" version="0.2.3">
-        <name>Device</name>
-        <description>Cordova Device Plugin</description>
-        <license>Apache 2.0</license>
-        <keywords>cordova,device</keywords>
-        <js-module src="www/device.js" name="device">
-            <clobbers target="device" />
-        </js-module>
-        <platform name="ios">
-            <config-file target="config.xml" parent="/*">
-                <feature name="Device">
-                    <param name="ios-package" value="CDVDevice"/>
-                </feature>
-            </config-file>
-            <header-file src="src/ios/CDVDevice.h" />
-            <source-file src="src/ios/CDVDevice.m" />
-        </platform>
-    </plugin>
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-device" version="0.2.3">
+    <name>Device</name>
+    <description>Cordova Device Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,device</keywords>
+    <js-module src="www/device.js" name="device">
+        <clobbers target="device" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Device">
+                <param name="ios-package" value="CDVDevice"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVDevice.h" />
+        <source-file src="src/ios/CDVDevice.m" />
+    </platform>
+</plugin>
 ```
 
 The top-level `plugin` tag's `id` attribute uses the same
@@ -101,7 +101,7 @@ correctly for each platform.  Install `plugman` with the following
 [node](http://nodejs.org/) command:
 
 ```bash
-    $ npm install -g plugman
+npm install -g plugman
 ```
 
 You need an valid app source directory, such as the top-level `www`
@@ -112,7 +112,7 @@ Then run a command such as the following to test whether iOS
 dependencies load properly:
 
 ```bash
-    $ plugman install --platform ios --project /path/to/my/project/www --plugin /path/to/my/plugin
+plugman install --platform ios --project /path/to/my/project/www --plugin /path/to/my/plugin
 ```
 
 For details on `plugman` options, see [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html). For information on how to actually _debug_ plugins, see each platform's native interface listed at the bottom of this page.
@@ -126,11 +126,11 @@ plugin's JavaScript however you like, but you need to call
 following syntax:
 
 ```javascript
-    cordova.exec(function(winParam) {},
-                 function(error) {},
-                 "service",
-                 "action",
-                 ["firstArgument", "secondArgument", 42, false]);
+cordova.exec(function(winParam) {},
+             function(error) {},
+             "service",
+             "action",
+             ["firstArgument", "secondArgument", 42, false]);
 ```
 
 Here is how each parameter works:
@@ -160,20 +160,20 @@ This example shows one way to implement the plugin's JavaScript
 interface:
 
 ```javascript
-    window.echo = function(str, callback) {
-        cordova.exec(callback, function(err) {
-            callback('Nothing to echo.');
-        }, "Echo", "echo", [str]);
-    };
+window.echo = function(str, callback) {
+    cordova.exec(callback, function(err) {
+        callback('Nothing to echo.');
+    }, "Echo", "echo", [str]);
+};
 ```
 
 In this example, the plugin attaches itself to the `window` object as
 the `echo` function, which plugin users would call as follows:
 
 ```javascript
-    window.echo("echome", function(echoValue) {
-        alert(echoValue == "echome"); // should alert true.
-    });
+window.echo("echome", function(echoValue) {
+    alert(echoValue == "echome"); // should alert true.
+});
 ```
 
 Look at the last three arguments to the `cordova.exec` function. The
@@ -204,6 +204,7 @@ listed below, and each builds on the simple Echo Plugin example above:
 You can publish your plugin to any `npmjs`-based registry, but the recommended one is the [NPM registry](https://www.npmjs.com). Other developers can install your plugin automatically using either `plugman` or the Cordova CLI.
 
 To publish a plugin to NPM registry you need to follow steps below:
+
   * install the `plugman` CLI:
 
     ```bash
@@ -235,12 +236,12 @@ Plugman's `createpackagejson` command does this for you, but if you did not use 
 For example, for a plugin that supports android, iOS & Windows, the keywords in package.json should include:
 
 ```json
-    "keywords": [
-      "ecosystem:cordova",
-      "cordova-android",
-      "cordova-ios",
-      "cordova-windows"
-    ]
+"keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-windows"
+]
 ```
 
 For more detailed example of a package.json, review the [package.json file of cordova-plugin-device](https://github.com/apache/cordova-plugin-device/blob/master/package.json).

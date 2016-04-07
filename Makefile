@@ -13,16 +13,12 @@ ifdef WINDOWS
 SHELL  = cmd
 JEKYLL = bundle.bat exec jekyll
 MKDIRP = mkdir
-CPR    = xcopy /e
-CP     = copy
 CAT    = type
 LS     = ls
 else
 SHELL  = sh
 JEKYLL = bundle exec jekyll
 MKDIRP = mkdir -p
-CPR    = cp -R
-CP     = cp
 CAT    = cat
 LS     = ls
 endif
@@ -217,22 +213,38 @@ $(MAIN_STYLE_FILE): $(SCSS_SRC)
 # pattern rules
 $(DOCS_DIR)/%/$(LATEST_DOCS_VERSION): $(DOCS_DIR)/%/dev
 	$(RM) -r $@
-	$(CPR) $^ $@
+ifdef WINDOWS
+	xcopy "$^" "$@" /E /I
+else
+	cp -r $^ $@
+endif
 ifndef WINDOWS
 	touch $(DOCS_DIR)
 endif
 
 $(DOCS_DIR)/%/$(NEXT_DOCS_VERSION): $(DOCS_DIR)/%/dev
-	$(CPR) $^ $@
+ifdef WINDOWS
+	xcopy "$^" "$@" /E /I
+else
+	cp -r $^ $@
+endif
 ifndef WINDOWS
 	touch $(DOCS_DIR)
 endif
 
 $(TOC_DIR)/%-$(LATEST_DOCS_VERSION_SLUG)-manual.yml: $(TOC_DIR)/%-dev-manual.yml $(DOCS_DIR)
-	$(CP) $< $@
+ifdef WINDOWS
+	copy $(subst /,\,"$<") $(subst /,\,"$@")
+else
+	cp $< $@
+endif
 
 $(TOC_DIR)/%-$(NEXT_DOCS_VERSION_SLUG)-manual.yml: $(TOC_DIR)/%-dev-manual.yml $(DOCS_DIR)
-	$(CP) $< $@
+ifdef WINDOWS
+	copy $(subst /,\,"$<") $(subst /,\,"$@")
+else
+	cp $< $@
+endif
 
 # NODE:
 #      $(@D) means "directory part of target"

@@ -3,12 +3,11 @@ build-*
 
 conf/_defaults.yml
 conf/_version.yml
-conf/fetched_docs.json
 
 www/_data/docs-versions.yml
 www/static/css
 www/static/js/plugins.js
-www/docs/en/dev/reference
+www/docs/*/dev/reference
 
 node_modules
 Gemfile.lock
