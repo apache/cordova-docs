@@ -14,6 +14,7 @@ docs:
     - {old: "dev/guide/platforms/ios/config.html", new: "dev/config_ref/index.html"}
     - {old: "dev/guide/platforms/win8/packaging.html", new: "dev/guide/platforms/win8/index.html#signing-an-app"}
     - {old: "dev/guide/platforms/win8/win10-support.html", new: "dev/guide/platforms/win8/index.html"}
+    - {old: "dev/cordova/plugins/pluginapis.html", new: "deprecated.html"}
 
     - {old: "latest/guide/platforms/android/tools.html", new: "latest/guide/platforms/android/index.html"}
     - {old: "latest/guide/platforms/android/lifecycle.html", new: "latest/guide/platforms/android/index.html#lifecycle-guide"}
@@ -24,6 +25,8 @@ docs:
     - {old: "latest/guide/platforms/win8/win10-support.html", new: "latest/guide/platforms/win8/index.html"}
     - {old: "latest/cordova/plugins/pluginapis.html", new: "deprecated.html"}
 
+    # NOTE:
+    #      these only need to be done for /latest, since they only existed in /latest and they don't exist anywhere anymore
     - {old: "latest/cordova-cli/index.html", new: "latest/reference/cordova-cli/index.html"}
     - {old: "latest/cordova-plugin-battery-status/index.html", new: "latest/reference/cordova-plugin-battery-status/index.html"}
     - {old: "latest/cordova-plugin-camera/index.html", new: "latest/reference/cordova-plugin-camera/index.html"}
