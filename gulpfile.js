@@ -81,7 +81,16 @@ gutil.env.prod   = gutil.env.prod || PROD_BY_DEFAULT;
 gutil.env.dev    = !gutil.env.prod;
 gutil.env.outDir = gutil.env.prod ? PROD_DIR : DEV_DIR;
 
+if (gutil.env.prod && gutil.env.nodocs) {
+    fatal("can't ignore docs when doing a production build");
+}
+
 // helpers
+function fatal(message) {
+    gutil.log(gutil.colors.red("ERROR") + ": " + message);
+    process.exit(1);
+}
+
 function execPiped(command, args, fileName) {
     console.log(command + " " + args.join(" "));
     var task = child_process.spawn(command, args);

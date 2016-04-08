@@ -17,6 +17,12 @@
 
 $(document).ready(function () {
 
+    var HEADER_OFFSET  = 56; // in pixels
+    var TOC_TOP_OFFSET = HEADER_OFFSET + 55;
+
+    // scroll the ToC to the current page's entry
+    $(".site-toc-container").scrollTop($(".this-page").first().offset().top - TOC_TOP_OFFSET);
+
     function slugifyLikeGitHub(originalText) {
 
         var text = originalText;

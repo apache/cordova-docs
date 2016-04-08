@@ -160,6 +160,7 @@ dev: JEKYLL_CONFIGS += $(DEV_CONFIG)
 dev: JEKYLL_FLAGS += --trace
 
 prod: JEKYLL_CONFIGS += $(PROD_CONFIG)
+prod: PROD = 1
 
 dev prod: build
 
@@ -169,6 +170,13 @@ endif
 
 build: JEKYLL_FLAGS += --config $(subst $(SPACE),$(COMMA),$(strip $(JEKYLL_CONFIGS)))
 build: $(JEKYLL_CONFIGS) fetch data styles plugins
+
+	ifdef NODOCS
+	ifdef PROD
+	$(error Cannot specify NODOCS while doing a prod build)
+	endif
+	endif
+
 	$(JEKYLL) build $(JEKYLL_FLAGS)
 
 install:
