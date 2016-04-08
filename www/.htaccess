@@ -3,6 +3,9 @@
 
 ErrorDocument 404 {{site.baseurl}}/404.html
 
+# turn off automatic directory indices
+Options -Indexes
+
 # turn on redirection
 Options +FollowSymLinks
 RewriteEngine on
