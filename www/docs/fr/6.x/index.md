@@ -152,12 +152,5 @@ title: Guides
 
       <span>Crochet dans les événements natifs via JavaScript.</span>
     </li>
-    <li>
-      <h2>
-        <a href="cordova/plugins/pluginapis.html">Plugin API</a>
-      </h2>
-
-      <span>Découvrez ce que les plugins Cordova peuvent être utilisés dans votre projet.</span>
-    </li>
   </ul>
 </div>

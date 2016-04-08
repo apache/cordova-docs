@@ -152,12 +152,5 @@ title: ガイド
 
       <span>Java スクリプトの設定をネイティブ イベントにフックします。</span>
     </li>
-    <li>
-      <h2>
-        <a href="cordova/plugins/pluginapis.html">プラグイン Api</a>
-      </h2>
-
-      <span>発見コルドバ プラグインは、プロジェクトで使用できます。</span>
-    </li>
   </ul>
 </div>

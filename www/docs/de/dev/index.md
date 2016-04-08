@@ -152,12 +152,5 @@ title: Reiseführer
 
       <span>Haken Sie in systemeigene Ereignisse durch JavaScript.</span>
     </li>
-    <li>
-      <h2>
-        <a href="cordova/plugins/pluginapis.html">Plugin APIs</a>
-      </h2>
-
-      <span>Entdecken Sie, welche Cordova-Plugins verwenden Sie in Ihrem Projekt verfügbar sind.</span>
-    </li>
   </ul>
 </div>

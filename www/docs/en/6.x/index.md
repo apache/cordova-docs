@@ -92,10 +92,6 @@ title: Guides
             <h2><a href="cordova/events/events.html">Events</a></h2>
             <span>Hook into native events through JavaScript.</span>
         </li>
-        <li>
-            <h2><a href="cordova/plugins/pluginapis.html">Plugin APIs</a></h2>
-            <span>Discover what Cordova plugins are available to use in your project.</span>
-        </li>
     </ul>
 
 </div>

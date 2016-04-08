@@ -152,12 +152,5 @@ title: Przewodniki
 
       <span>Hak do wydarzeń native poprzez JavaScript.</span>
     </li>
-    <li>
-      <h2>
-        <a href="cordova/plugins/pluginapis.html">Plugin API</a>
-      </h2>
-
-      <span>Odkryj, co wtyczek Cordova są dostępne do użycia w projekcie.</span>
-    </li>
   </ul>
 </div>

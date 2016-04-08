@@ -124,12 +124,5 @@ title: Vodila
 
       <span>Trnek v native dogodkov prek JavaScript.</span>
     </li>
-    <li>
-      <h2>
-        <a href="cordova/plugins/pluginapis.html">Plugin API</a>
-      </h2>
-
-      <span>Odkrijte, kaj plugins Cordova, ki so na voljo za uporabo v vašem projektu.</span>
-    </li>
   </ul>
 </div>

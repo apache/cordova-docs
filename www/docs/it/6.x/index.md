@@ -152,12 +152,5 @@ title: Guide
 
       <span>Gancio in nativo degli eventi tramite JavaScript.</span>
     </li>
-    <li>
-      <h2>
-        <a href="cordova/plugins/pluginapis.html">Plugin API</a>
-      </h2>
-
-      <span>Scopri quali Cordova plugin sono disponibili per utilizzare nel progetto.</span>
-    </li>
   </ul>
 </div>

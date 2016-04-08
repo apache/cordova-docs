@@ -152,12 +152,5 @@ title: Guías
 
       <span>Hooks a eventos nativos a través de JavaScript.</span>
     </li>
-    <li>
-      <h2>
-        <a href="cordova/plugins/pluginapis.html">Plugin APIs</a>
-      </h2>
-
-      <span>Descubra qué plugins Cordova están disponibles para usar en su proyecto.</span>
-    </li>
   </ul>
 </div>

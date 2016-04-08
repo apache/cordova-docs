@@ -148,12 +148,5 @@ title: Инструкции
 
       <span>Подключение к событиям платформы с использованием JavaScript.</span>
     </li>
-    <li>
-      <h2>
-        <a href="cordova/plugins/pluginapis.html">API плагинов</a>
-      </h2>
-
-      <span>Узнайте, какие плагины Cordova доступны для использования в вашем проекте.</span>
-    </li>
   </ul>
 </div>

@@ -133,8 +133,7 @@ help usage default:
 	@echo ""
 	@echo "Usage:"
 	@echo ""
-	@echo "    make dev:     build site with dev config"
-	@echo "    make prod:    build site with prod config"
+	@echo "    make build:   build site with dev config"
 	@echo "    make install: install dependencies"
 	@echo ""
 	@echo "    make data:    generate data files (Generated ToCs, $(DOCS_VERSION_DATA))"
@@ -148,6 +147,7 @@ help usage default:
 	@echo "Arguments:"
 	@echo ""
 	@echo "    NODOCS: (defined or undefined) - excludes docs from build"
+	@echo "    PROD:   (defined or undefined) - uses production config instead of dev config"
 	@echo ""
 
 data: $(TOC_FILES) $(DOCS_VERSION_DATA)
@@ -156,27 +156,25 @@ styles: $(STYLES)
 plugins: $(PLUGINS_APP)
 toc: $(TOC_FILES)
 
-dev: JEKYLL_CONFIGS += $(DEV_CONFIG)
-dev: JEKYLL_FLAGS += --trace
+ifdef PROD
 
-prod: JEKYLL_CONFIGS += $(PROD_CONFIG)
-prod: PROD = 1
-
-dev prod: build
-
+JEKYLL_CONFIGS += $(PROD_CONFIG)
 ifdef NODOCS
-build: JEKYLL_CONFIGS += $(DOCS_EXCLUDE_CONFIG)
+$(error Cannot ignore docs during a production build)
+endif
+
+else
+
+JEKYLL_CONFIGS += $(DEV_CONFIG)
+JEKYLL_FLAGS += --trace
+ifdef NODOCS
+JEKYLL_CONFIGS += $(DOCS_EXCLUDE_CONFIG)
+endif
+
 endif
 
 build: JEKYLL_FLAGS += --config $(subst $(SPACE),$(COMMA),$(strip $(JEKYLL_CONFIGS)))
 build: $(JEKYLL_CONFIGS) fetch data styles plugins
-
-	ifdef NODOCS
-	ifdef PROD
-	$(error Cannot specify NODOCS while doing a prod build)
-	endif
-	endif
-
 	$(JEKYLL) build $(JEKYLL_FLAGS)
 
 install:

@@ -152,12 +152,5 @@ title: 가이드
 
       <span>자바스크립트를 통해 내장 이벤트에 연결하기</span>
     </li>
-    <li>
-      <h2>
-        <a href="cordova/plugins/pluginapis.html">플러그인 Api</a>
-      </h2>
-
-      <span>어떤 코르 도우 바 플러그인 프로젝트에서 사용 하 여 사용할 수 있습니다 발견.</span>
-    </li>
   </ul>
 </div>

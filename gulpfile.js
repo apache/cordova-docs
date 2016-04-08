@@ -81,6 +81,7 @@ gutil.env.prod   = gutil.env.prod || PROD_BY_DEFAULT;
 gutil.env.dev    = !gutil.env.prod;
 gutil.env.outDir = gutil.env.prod ? PROD_DIR : DEV_DIR;
 
+// check for errors
 if (gutil.env.prod && gutil.env.nodocs) {
     fatal("can't ignore docs when doing a production build");
 }

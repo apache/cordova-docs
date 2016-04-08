@@ -152,12 +152,5 @@ title: 輔助線
 
       <span>掛接到本機事件通過 JavaScript。</span>
     </li>
-    <li>
-      <h2>
-        <a href="cordova/plugins/pluginapis.html">外掛程式的 Api</a>
-      </h2>
-
-      <span>發現什麼科爾多瓦外掛程式是可用來在您的專案中使用。</span>
-    </li>
   </ul>
 </div>
