@@ -1,6 +1,22 @@
 ---
 ---
 
+###############################################################################
+# WARNING
+###############################################################################
+# Only modify this file if you know what you're doing. This file has
+# the potential to make pages become PERMANENTLY UNREACHABLE. If in
+# doubt, refer to these links:
+#
+# RewriteRule       - http://httpd.apache.org/docs/current/mod/mod_rewrite.html
+# RewriteRule flags - http://httpd.apache.org/docs/current/rewrite/flags.html
+# .htaccess tester  - http://htaccess.madewithlove.be/
+#
+# And remember: three-oh-ONE (301) menas you get ONE chance to get it right;
+#               three-oh-TWO (302) means you get TWO chances.
+###############################################################################
+
+# set error pages
 ErrorDocument 404 {{site.baseurl}}/404.html
 
 # turn off automatic directory indices
@@ -11,65 +27,79 @@ Options +FollowSymLinks
 RewriteEngine on
 
 # NOTE:
-#       Some of the below redirects are 302s, and some are 301s. 302s are used
-#       for redirects whose targets change sometimes. For example:
-#           - /docs/          -> /docs/fr/, /docs/en/, etc.
-#           - /docs/en/       -> /docs/en/dev/, /docs/en/latest/, etc.
-#           - /docs/en/latest -> /docs/en/4.0.0/, /docs/en/5.0.0/, etc.
+#      Some of the below redirects are 302s, and some are 301s. 302s are used
+#      for redirects whose targets change sometimes. For example:
+#          - /docs/          -> /docs/fr/, /docs/en/, etc.
+#          - /docs/en/       -> /docs/en/dev/, /docs/en/latest/, etc.
+#          - /docs/en/latest -> /docs/en/4.0.0/, /docs/en/5.0.0/, etc.
 #
-#       301s are for PERMANENT redirects. These are used only for mapping old
-#       pages to new pages.
-
+#      301s are for PERMANENT redirects. These are used only for mapping old
+#      pages to new pages.
+#
 # NOTE:
-#      (\w\w(?:-\w\w)?) is the regex for versions
+#      (\w\w(?:-\w\w)?)                   - regex for languages
+#      (?:\d+\.(?:\d+\.\d+|x))|dev|latest - regex for versions
+#
+# NOTE:
+#      L  - terminal rule
+#      R  - redirect (followed by code)
+#      NE - no escaping special characters
 
-# 302 (temp):
-#       docs/          -> docs/[default language]/latest/
-#       docs/XX        -> docs/XX/latest/
-#       docs/XX/       -> docs/XX/latest/
-#       docs/XX/latest -> docs/XX/latest/
+# 302 (temporary):
+#
+#     docs/         -> docs/[default language]/latest/
+#     docs/*        -> docs/*/latest/
+#     docs/*/       -> docs/*/latest/
+#     docs/*/latest -> docs/*/latest/
+#
 RewriteRule ^.*docs/$ {{site.baseurl}}/docs/{{site.language}}/latest/ [R=302,L]
 RewriteRule ^.*docs/(\w\w(?:-\w\w)?)$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
 RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
 RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/latest$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
 
-# 301 (perm):
-#       docs/XX/edge    -> docs/xx/edge/
-#       docs/XX/edge/YY -> docs/xx/dev/YY
-RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/edge$ {{site.baseurl}}/docs/$1/edge/
-RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/edge/(.*)$ {{site.baseurl}}/docs/$1/dev/$2 [R=301,L]
+# 302 (temporary):
+#
+#     docs/*/XX/* -> docs/*/YY/*
+#
+{% for redirect in site.data.redirects.version-renames %}RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/{{redirect.old}}/(.*)$ {{site.baseurl}}/docs/$1/{{redirect.new}}/$2 [R=302,L]
+{% endfor %}
 
-# 301 (perm):
-#       docs version renames
-RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/6.0.0/(.*)$ {{site.baseurl}}/docs/$1/6.x/$2 [R=301,L]
+# 302 (temporary):
+#
+#     docs/XX/* -> docs/YY/*
+#
+{% for redirect in site.data.redirects.language-renames %}RewriteRule ^.*docs/{{redirect.old}}/((?:\d+\.(?:\d+\.\d+|x))|dev|latest)/(.*)$ {{site.baseurl}}/docs/{{redirect.new}}/$1/$2 [R=302,L]
+{% endfor %}
 
-# 302 (temp):
-#       docs language renames
-RewriteRule ^.*docs/zh/((?:\d+\.(?:\d+\.\d+|x))|dev|latest)/(.*)$ /docs/zh-tw/$1/$2 [R=302,L]
-
-# 301 (perm):
-#       old docs pages -> new docs pages (global)
+# 301 (PERMANENT):
+#
+#     old docs pages -> new docs pages (global)
 #
 # NOTE:
 #       The first part of the path (i.e. the ".*") is thrown away and replaced
 #       by site.baseurl. It is thrown away because there is no RewriteCond to
 #       control whether the rewrite happens to a URI or a local file path
 #       (when Apache is locating the local file to serve).
-{% for redirect in site.data.redirects.docs-global %}RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/([^/]+)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/$2/{{redirect.new}} [NE,R=301,L]
+{% for redirect in site.data.redirects.docs-global %}RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/((?:\d+\.(?:\d+\.\d+|x))|dev|latest)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/$2/{{redirect.new}} [NE,R=301,L]
 {% endfor %}
 
-# 301 (perm):
-#       old docs pages -> new docs pages (version-specific)
+# 301 (PERMANENT):
+#
+#     old docs pages -> new docs pages (version-specific)
+#
 {% for redirect in site.data.redirects.docs %}RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/{{redirect.new}} [NE,R=301,L]
 {% endfor %}
 
-# 301 (perm):
-#       old pages -> new pages
+# 301 (PERMANENT):
+#
+#     old pages -> new pages
+#
 {% for redirect in site.data.redirects.general %}RewriteRule ^.*/{{redirect.old}}$ {{site.baseurl}}/{{redirect.new}} [NE,R=301,L]
 {% endfor %}
 
 # rewrite only:
-#       /docs/XX/latest/* -> /docs/XX/Y.Y.Y/*
+#
+#     /docs/XX/latest/* -> /docs/XX/Y.Y.Y/*
 #
 # NOTE:
 #       This does NOT return a redirect. It returns the resource *as if* the

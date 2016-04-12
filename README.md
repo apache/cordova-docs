@@ -155,7 +155,7 @@ Alternatively, to dynamically rebuild the site and refresh the browser _when cha
 
     node_modules/.bin/gulp watch
 
-## Redirects
+## Docs Redirects
 
 Sometimes docs pages get removed, renamed, and added. There is [a file][redirects] that contains redirects for such occasions. It has three sections:
 
@@ -168,7 +168,7 @@ For non-docs URIs, there are no versioning considerations. Make redirects like s
     general:
         - {old: "old/uri/for/page.html", new: "its/new/uri.html"}
 
-**NOTE**: Review (and test, if possible) these redirects before making them live, since they're permanent (HTTP 302) redirects. Incorrect permanent redirects will make a URI very hard to bring back into browsers and search indices.
+**NOTE**: Review (and test, if possible) these redirects before making them live, since they're permanent (HTTP 301) redirects. Incorrect permanent redirects will make a URI almost impossible to bring back into browsers and search indices.
 
 There are five cases of changing URIs:
 

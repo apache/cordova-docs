@@ -1,28 +1,43 @@
 # WARNING:
-#         these are *string-only* redirects; regexes will NOT work
+#         these are *string-only* redirects; do NOT use regexes
 
-# redirects paths relative to /
+# 302 (temporary) renames of versions
+version-renames:
+    - {old: "edge", new: "dev"}
+    - {old: "6.0.0", new: "6.x"}
+
+# 302 (temporary) renames of languages
+language-renames:
+    - {old: "zh", new: "zh-tw"}
+
+# 301 (PERMANENT) redirect paths relative to /
 general:
     - {old: "plugins/authors.html", new: "docs/en/latest/guide/hybrid/plugins/index.html#publishing-plugins"}
 
-# redirects paths relative to /docs/XX/
+# 301 (PERMANENT) redirect paths relative to /docs/XX/
 docs:
     - {old: "dev/guide/platforms/android/tools.html", new: "dev/guide/platforms/android/index.html"}
-    - {old: "dev/guide/platforms/android/lifecycle.html", new: "dev/guide/platforms/android/index.html#lifecycle-guide"}
-    - {old: "dev/guide/platforms/android/config.html", new: "dev/config_ref/index.html"}
-    - {old: "dev/guide/platforms/ios/tools.html", new: "dev/guide/platforms/ios/index.html"}
-    - {old: "dev/guide/platforms/ios/config.html", new: "dev/config_ref/index.html"}
-    - {old: "dev/guide/platforms/win8/packaging.html", new: "dev/guide/platforms/win8/index.html#signing-an-app"}
-    - {old: "dev/guide/platforms/win8/win10-support.html", new: "dev/guide/platforms/win8/index.html"}
-    - {old: "dev/cordova/plugins/pluginapis.html", new: "deprecated.html"}
-
     - {old: "latest/guide/platforms/android/tools.html", new: "latest/guide/platforms/android/index.html"}
+
+    - {old: "dev/guide/platforms/android/lifecycle.html", new: "dev/guide/platforms/android/index.html#lifecycle-guide"}
     - {old: "latest/guide/platforms/android/lifecycle.html", new: "latest/guide/platforms/android/index.html#lifecycle-guide"}
+
+    - {old: "dev/guide/platforms/android/config.html", new: "dev/config_ref/index.html"}
     - {old: "latest/guide/platforms/android/config.html", new: "latest/config_ref/index.html"}
+
+    - {old: "dev/guide/platforms/ios/tools.html", new: "dev/guide/platforms/ios/index.html"}
     - {old: "latest/guide/platforms/ios/tools.html", new: "latest/guide/platforms/ios/index.html"}
+
+    - {old: "dev/guide/platforms/ios/config.html", new: "dev/config_ref/index.html"}
     - {old: "latest/guide/platforms/ios/config.html", new: "latest/config_ref/index.html"}
+
+    - {old: "dev/guide/platforms/win8/packaging.html", new: "dev/guide/platforms/win8/index.html#signing-an-app"}
     - {old: "latest/guide/platforms/win8/packaging.html", new: "latest/guide/platforms/win8/index.html#signing-an-app"}
+
+    - {old: "dev/guide/platforms/win8/win10-support.html", new: "dev/guide/platforms/win8/index.html"}
     - {old: "latest/guide/platforms/win8/win10-support.html", new: "latest/guide/platforms/win8/index.html"}
+
+    - {old: "dev/cordova/plugins/pluginapis.html", new: "deprecated.html"}
     - {old: "latest/cordova/plugins/pluginapis.html", new: "deprecated.html"}
 
     # NOTE:
@@ -50,7 +65,7 @@ docs:
     - {old: "latest/cordova-plugin-whitelist/index.html", new: "latest/reference/cordova-plugin-whitelist/index.html"}
     - {old: "latest/cordova-plugin-legacy-whitelist/index.html", new: "latest/reference/cordova-plugin-legacy-whitelist/index.html"}
 
-# redirects paths relative to /docs/XX/YYY/
+# 301 (PERMANENT) redirect paths relative to /docs/XX/YYY/
 docs-global:
     - {old: "config_ref_images.md.html", new: "config_ref/images.html"}
     - {old: "config_ref_index.md.html", new: "config_ref/index.html"}
