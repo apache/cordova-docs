@@ -20,7 +20,7 @@ license: >
 title: API Reference
 ---
 
-<div id="home">
+<div id="old-home">
     <h1>API Reference</h1>
     <ul>
         <li>

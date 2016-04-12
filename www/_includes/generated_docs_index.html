@@ -1,0 +1,39 @@
+{% assign toc_dir = site.data.toc %}
+{% assign tocfile = toc_dir.[page.tocfile] %}
+
+<div class="home">
+    {% for entry in tocfile %}
+        <h1>{{ entry.name }}</h1>
+        <ul>
+            {% for child in entry.children %}
+
+            {% comment %}
+            skip sub-sections; they'll get their own sections below
+            {% endcomment %}
+            {% if child.children %}{% continue %}{% endif %}
+
+            <li>
+                <h2><a href="{{ child.url }}">{{ child.name }}</a></h2>
+                {% if child.description %}<span class="summary">{{ child.description }}</span>{% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+
+        {% comment %}
+        add sections for sub-sections
+        {% endcomment %}
+        {% for child in entry.children %}
+            {% if child.children %}
+                <h2>{{ child.name }}</h2>
+                <ul>
+                {% for grandchild in child.children %}
+                <li>
+                    <h2><a href="{{ grandchild.url }}">{{ grandchild.name }}</a></h2>
+                    {% if grandchild.description %}<span class="summary">{{ grandchild.description }}</span>{% endif %}
+                </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</div>

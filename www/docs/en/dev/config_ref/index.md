@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Config.xml
+description: List of supported tags in the config.xml file.
 ---
 
 # Config.xml

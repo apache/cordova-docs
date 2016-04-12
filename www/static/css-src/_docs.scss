@@ -294,8 +294,37 @@
         }
     }
 
-    // Styling for the /docs/language/version/index.html pages
-    #home {
+    /* Styling for the /docs/language/version/index.html pages */
+    .home {
+        h1 {
+            border-bottom: 1px solid #919395;
+            font-size: 37px !important;
+        }
+        h2 {
+            padding: 0px;
+            display: block;
+            font-size: 27px !important;
+        }
+        .summary {
+            font-size: 14px;
+            height: 60px;
+            display: inline-block;
+        }
+        ul {
+            margin: 0px;
+            padding: 0px;
+        }
+        ul li {
+            display: inline-block;
+            vertical-align: top;
+            list-style: none;
+            margin: 0px 15px;
+            width: 250px;
+        }
+    }
+
+    /* Styling for old /docs/language/version/index.html pages */
+    #old-home {
         h1 {
             border-bottom: 1px solid #919395;
             padding-bottom: 20px;
@@ -307,6 +336,7 @@
             padding: 0px;
             display: block;
             font-size: 18px;
+            color: #266172;
         }
         h2:after {
             content: '';
@@ -315,7 +345,7 @@
             font-size: 14px;
         }
         ul {
-            float:left;
+            float: left;
             margin: 0px;
             padding: 0px;
         }
@@ -336,7 +366,10 @@
     }
 }
 
-// Workaround for the spacing on the Russian /docs/ru/version/index.html pages
-html[lang="ru"] .docs #home ul li {
+/* Workaround for the spacing on the Russian /docs/ru/version/index.html pages */
+html[lang="ru"] .docs .home .summary {
+    height: 100px;
+}
+html[lang="ru"] .docs #old-home ul li {
     height: 160px;
 }

@@ -19,6 +19,7 @@ license: >
 
 title: Architectural overview of Cordova platform
 toc_title: Overview
+description: Start here if you are new to Cordova. Includes installation and next steps.
 ---
 
 # Overview
@@ -27,7 +28,7 @@ Apache Cordova is an open-source mobile development framework. It allows you
 to use standard web technologies - HTML5, CSS3, and JavaScript
 for cross-platform development. Applications execute within wrappers targeted
 to each platform, and rely on standards-compliant API bindings to
-access each device's capabilities such as sensors, data, network status, etc. 
+access each device's capabilities such as sensors, data, network status, etc.
 
 Use Apache Cordova if you are:
 
@@ -45,9 +46,9 @@ Use Apache Cordova if you are:
 
 # Architecture
 
-There are several components to a cordova application. The following 
-diagram shows a high-level view of the cordova application architecture. 
-    
+There are several components to a cordova application. The following
+diagram shows a high-level view of the cordova application architecture.
+
 ![]({{ site.baseurl }}/static/img/guide/cordovaapparchitecture.png)
 
 ## WebView
@@ -55,39 +56,39 @@ diagram shows a high-level view of the cordova application architecture.
 The Cordova-enabled WebView may provide the application with its
 entire user interface. On some platforms, it can also be a component
 within a larger, hybrid application that mixes the WebView with native
-application components. 
+application components.
 (See [Embedding WebViews](../hybrid/webviews/index.html) for details.)
 
 ## Web App
 
-This is the part where your application code resides. The application itself is 
-implemented as a web page, by default a local file named _index.html_, that 
-references CSS, JavaScript, images, media files, or other resources 
-are necessary for it to run. The app executes in a _WebView_ within the native 
+This is the part where your application code resides. The application itself is
+implemented as a web page, by default a local file named _index.html_, that
+references CSS, JavaScript, images, media files, or other resources
+are necessary for it to run. The app executes in a _WebView_ within the native
 application wrapper, which you distribute to app stores.
 
-This container has a very crucial file - [config.xml](../../config_ref/index.html) 
+This container has a very crucial file - [config.xml](../../config_ref/index.html)
 file that provides information about the app and specifies parameters affecting how it
 works, such as whether it responds to orientation shifts.
 
 ## Plugins
 
-Plugins are an integral part of the cordova ecosystem. They provide 
-an interface for Cordova and native components to communicate with each 
-other and bindings to standard device APIs. This enables you to invoke native 
-code from JavaScript. 
+Plugins are an integral part of the cordova ecosystem. They provide
+an interface for Cordova and native components to communicate with each
+other and bindings to standard device APIs. This enables you to invoke native
+code from JavaScript.
 
-Apache Cordova project maintains a set of plugins called the 
-[Core Plugins](../support/index.html#core-plugin-apis). These core 
-plugins provide your application to access device capabilities such as 
+Apache Cordova project maintains a set of plugins called the
+[Core Plugins](../support/index.html#core-plugin-apis). These core
+plugins provide your application to access device capabilities such as
 battery, camera, contacts, etc.
 
-In addition to the core plugins, there are several third-party plugins which 
-provide additional bindings to features not necessarily available on all 
-platforms. You can search for Cordova plugins using [plugin search](/plugins/) or [npm](https://www.npmjs.com/search?q=ecosystem%3Acordova). You can also 
-develop your own plugins, as described in the 
-[Plugin Development Guide](../hybrid/plugins/index.html). Plugins may be 
-necessary, for example, to communicate between Cordova and custom native 
+In addition to the core plugins, there are several third-party plugins which
+provide additional bindings to features not necessarily available on all
+platforms. You can search for Cordova plugins using [plugin search](/plugins/) or [npm](https://www.npmjs.com/search?q=ecosystem%3Acordova). You can also
+develop your own plugins, as described in the
+[Plugin Development Guide](../hybrid/plugins/index.html). Plugins may be
+necessary, for example, to communicate between Cordova and custom native
 components.
 
 __NOTE__: When you create a Cordova project it does not have
@@ -108,33 +109,33 @@ task, they each offer advantages:
 - __Cross-platform (CLI) workflow__: Use this workflow if you want your app
   to run on as many different mobile operating systems as possible,
   with little need for platform-specific development. This workflow
-  centers around the `cordova` CLI. The CLI is a high-level tool that allows you to build projects 
-  for many platforms at once, abstracting away much of the functionality of 
+  centers around the `cordova` CLI. The CLI is a high-level tool that allows you to build projects
+  for many platforms at once, abstracting away much of the functionality of
   lower-level shell scripts. The CLI copies a common set of web assets into
   subdirectories for each mobile platform, makes any necessary
   configuration changes for each, runs build scripts to generate
   application binaries. The CLI also provides a common interface to
-  apply plugins to your app. To get started follow the steps in the 
+  apply plugins to your app. To get started follow the steps in the
   [Create your first app] guide. Unless you have a need for the platform-centered workflow, the cross-platform workflow is recommended.
 
 - __Platform-centered workflow__: Use this workflow if you want to
   focus on building an app for a single platform and need to be able
   to modify it at a lower level. You need to use this approach, for
   example, if you want your app to mix custom native components with
-  web-based Cordova components, as discussed in 
-  [Embedding WebViews](../hybrid/webviews/index.html). As a rule of thumb, use 
-  this workflow if you need to modify the project within the SDK. This 
-  workflow relies on a set of lower-level shell scripts that are tailored for 
-  each supported platform, and a separate Plugman utility that allows you to 
+  web-based Cordova components, as discussed in
+  [Embedding WebViews](../hybrid/webviews/index.html). As a rule of thumb, use
+  this workflow if you need to modify the project within the SDK. This
+  workflow relies on a set of lower-level shell scripts that are tailored for
+  each supported platform, and a separate Plugman utility that allows you to
   apply plugins. While you can use this workflow to build cross-platform
   apps, it is generally more difficult because the lack of a
   higher-level tool means separate build cycles and plugin
-  modifications for each platform. 
+  modifications for each platform.
 
 When first starting out, it may be easiest to use the cross-platform
 workflow to create an app, as described in [Create your first app] guide.
 You then have the option to switch to a platform-centered workflow if
-you need the greater control the SDK provides.  
+you need the greater control the SDK provides.
 
 > __NOTE__: Once you switch from the CLI-based workflow to one centered
 around the platform-specific SDKs and shell tools, you can't go back.
@@ -154,10 +155,10 @@ you choose:
 
   * Platform-centered workflow.
 
-After installing Cordova, it is recommended that you review the 
-```Develop for Platforms``` section for the mobile platforms that you 
-will be developing for. It is also recommended that you also review the 
-[Privacy Guide](../appdev/privacy/index.html) and 
+After installing Cordova, it is recommended that you review the
+```Develop for Platforms``` section for the mobile platforms that you
+will be developing for. It is also recommended that you also review the
+[Privacy Guide](../appdev/privacy/index.html) and
 [Security Guide](../appdev/security/index.html).
 
 [Create your first app]:../cli/index.html

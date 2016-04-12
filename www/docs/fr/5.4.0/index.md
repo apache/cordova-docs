@@ -20,7 +20,7 @@ license: >
 title: Guides
 ---
 
-<div id="home">
+<div id="old-home">
   <h1>
     Guides
   </h1>

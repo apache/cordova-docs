@@ -19,6 +19,7 @@ license: >
 
 title: Plugin Development Guide
 toc_title: Create a plugin
+description: Develop your own plugin.
 ---
 
 # Plugin Development Guide

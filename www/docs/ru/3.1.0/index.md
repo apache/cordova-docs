@@ -20,7 +20,7 @@ license: >
 title: Справочники
 ---
 
-<div id="home">
+<div id="old-home">
   <h1>
     Справочники
   </h1>

@@ -19,6 +19,7 @@ license: >
 
 title: Plugin.xml reference documentation
 toc_title: Plugin.xml
+description: List of supported tags in the plugin.xml file.
 ---
 
 # Plugin.xml

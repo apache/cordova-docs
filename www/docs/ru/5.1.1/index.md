@@ -20,7 +20,7 @@ license: >
 title: Инструкции
 ---
 
-<div id="home">
+<div id="old-home">
   <h1>
     Инструкции
   </h1>

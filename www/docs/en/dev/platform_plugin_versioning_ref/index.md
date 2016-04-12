@@ -19,6 +19,7 @@ license: >
 
 title: Platforms and Plugins Version Management
 toc_title: Manage versions and platforms
+description: How to manage platforms and Cordova CLI versions.
 ---
 
 # Platforms and Plugins Version Management

@@ -20,7 +20,7 @@ license: >
 title: 가이드
 ---
 
-<div id="home">
+<div id="old-home">
   <h1>
     가이드
   </h1>

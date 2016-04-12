@@ -20,7 +20,7 @@ license: >
 title: Przewodniki
 ---
 
-<div id="home">
+<div id="old-home">
   <h1>
     Przewodniki
   </h1>

@@ -20,7 +20,7 @@ license: >
 title: ガイド
 ---
 
-<div id="home">
+<div id="old-home">
   <h1>
     ガイド
   </h1>

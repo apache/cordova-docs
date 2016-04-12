@@ -20,7 +20,7 @@ license: >
 title: Reiseführer
 ---
 
-<div id="home">
+<div id="old-home">
   <h1>
     Reiseführer
   </h1>

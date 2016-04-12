@@ -20,7 +20,7 @@ license: >
 title: Vodila
 ---
 
-<div id="home">
+<div id="old-home">
   <h1>
     Vodila
   </h1>

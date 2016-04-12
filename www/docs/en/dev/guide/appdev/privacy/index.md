@@ -19,6 +19,7 @@ license: >
 
 title: Privacy Guide
 toc_title: Manage privacy
+description: Learn about important mobile privacy issues.
 ---
 
 # Privacy Guide

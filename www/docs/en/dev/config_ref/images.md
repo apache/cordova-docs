@@ -18,8 +18,8 @@ license: >
     under the License.
 
 title: Customize app icons
-description: Learn how to customize icons for your Cordova app
 toc_title: Customize icons
+description: Learn how to customize icons for your Cordova app.
 ---
 
 # Customize Icons

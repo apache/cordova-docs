@@ -20,7 +20,7 @@ license: >
 title: 輔助線
 ---
 
-<div id="home">
+<div id="old-home">
   <h1>
     輔助線
   </h1>

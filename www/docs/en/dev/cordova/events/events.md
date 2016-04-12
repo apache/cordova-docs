@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Events
+description: List of Cordova JavaScript run-time events.
 ---
 
 # Events

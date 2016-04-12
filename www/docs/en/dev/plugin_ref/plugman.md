@@ -19,6 +19,7 @@ license: >
 
 title: Using Plugman to Manage Plugins
 toc_title: Use Plugman
+description: Manage plugins without the CLI when using the platform-centered workflow.
 ---
 
 # Using Plugman to Manage Plugins
