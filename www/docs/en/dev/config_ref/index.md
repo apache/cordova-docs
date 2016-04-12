@@ -255,7 +255,7 @@ platform. See [Customize icons topic](images.html) for more information.
    EnableWebGL(boolean) | *Default: false* <br/>  ==OS X **4.0.0**== <br/> Set to true to enable WebGL on the web view.
    ErrorUrl(URL) | *Default: null* <br/> ==Android== <br/> If set, will display the referenced page upon an error in the application instead of a dialog with the title "Application Error".
    ErrorUrl(string) | ==iOS== <br/> If set, will display the referenced local page upon an error in the application.
-   FullScreen(boolean) | *Default: false* <br/> Allows you to hide the status bar at the top of the screen.
+   FullScreen(boolean) | *Default: false* <br/> ==Android== <br/> Allows you to hide the status bar at the top of the screen. <br/> __Note__: Recommended platform-agnostic way to achieve this is to use the [StatusBar plugin][statusbar_plugin].
    GapBetweenPages(float) | *Default: 0* <br/> ==iOS== <br/> The size of the gap, in points, between pages.
    HideKeyboardFormAccessoryBar(boolean) | *Default: false* <br/> ==BlackBerry== <br/> Set to true to hide the additional toolbar that appears above the keyboard, helping users navigate from one form input to another.
    HideMousePointer(integer) | *Default: -1* <br/> ==OS X **4.0.0**== <br/> Sets the timeout for hiding the mouse pointer. Set to 0 for immediate, set to -1 for never.
@@ -474,3 +474,4 @@ platform. See [Customize icons topic](images.html) for more information.
 [plugin_spec]:          ../reference/cordova-cli/index.html#plugin-spec
 [whitelist_navigation]: ../reference/cordova-plugin-whitelist/index.html#navigation-whitelist
 [whitelist_intent]:     ../reference/cordova-plugin-whitelist/index.html#intent-whitelist
+[statusbar_plugin]:     ../reference/cordova-plugin-statusbar/
