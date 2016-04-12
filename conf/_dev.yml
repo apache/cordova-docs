@@ -4,16 +4,12 @@ destination: build-dev
 exclude:
     - static/css-src
     - static/plugins
-    - docs/de
-    - docs/es
-    - docs/fr
-    - docs/it
-    - docs/ja
-    - docs/ko
-    - docs/pl
-    - docs/ru
-    - docs/sl
-    - docs/zh
+    - docs/de/3.1.0
+    - docs/de/3.4.0
+    - docs/de/3.5.0
+    - docs/de/5.4.0
+    - docs/de/6.x
+    - docs/de/dev
     - docs/en/1.5.0
     - docs/en/1.6.0
     - docs/en/1.6.1
@@ -44,3 +40,68 @@ exclude:
     - docs/en/5.4.0
     # - docs/en/6.x
     # - docs/en/dev
+    - docs/es/3.1.0
+    - docs/es/3.4.0
+    - docs/es/3.5.0
+    - docs/es/5.4.0
+    - docs/es/6.x
+    - docs/es/dev
+    - docs/fr/3.1.0
+    - docs/fr/3.4.0
+    - docs/fr/3.5.0
+    - docs/fr/5.4.0
+    # - docs/fr/6.x
+    # - docs/fr/dev
+    - docs/it/3.1.0
+    - docs/it/3.4.0
+    - docs/it/3.5.0
+    - docs/it/5.4.0
+    - docs/it/6.x
+    - docs/it/dev
+    - docs/ja/1.7.0
+    - docs/ja/1.8.1
+    - docs/ja/1.9.0
+    - docs/ja/2.0.0
+    - docs/ja/2.1.0
+    - docs/ja/2.2.0
+    - docs/ja/3.1.0
+    - docs/ja/3.4.0
+    - docs/ja/3.5.0
+    - docs/ja/5.4.0
+    - docs/ja/6.x
+    - docs/ja/dev
+    - docs/ko/2.0.0
+    - docs/ko/3.1.0
+    - docs/ko/3.4.0
+    - docs/ko/3.5.0
+    - docs/ko/5.4.0
+    - docs/ko/6.x
+    - docs/ko/dev
+    - docs/pl/5.4.0
+    - docs/pl/6.x
+    - docs/pl/dev
+    - docs/ru/3.1.0
+    - docs/ru/3.4.0
+    - docs/ru/3.5.0
+    - docs/ru/5.0.0
+    - docs/ru/5.1.1
+    - docs/ru/5.4.0
+    # - docs/ru/6.x
+    # - docs/ru/dev
+    - docs/sl/3.4.0
+    - docs/sl/3.5.0
+    - docs/sl/5.4.0
+    - docs/sl/6.x
+    - docs/sl/dev
+    - docs/zh-cn/3.1.0
+    - docs/zh-cn/3.4.0
+    - docs/zh-cn/3.5.0
+    - docs/zh-cn/5.4.0
+    - docs/zh-cn/6.x
+    - docs/zh-cn/dev
+    - docs/zh-tw/3.1.0
+    - docs/zh-tw/3.4.0
+    - docs/zh-tw/3.5.0
+    - docs/zh-tw/5.4.0
+    - docs/zh-tw/6.x
+    - docs/zh-tw/dev
