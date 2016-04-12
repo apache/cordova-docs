@@ -47,6 +47,10 @@ Example:
 
 The child elements of the `<engines>` element specify versions of Apache Cordova-based frameworks that this plugin supports. The CLI aborts with a non-zero code for any plugin whose target project does not meet the engine's constraints. If no <engine> tags are specified, the CLI attempts to install into the specified cordova project directory blindly.
 
+>NOTE: In **Cordova 6.1.0+**, the recommended place to specify platform, plugin, and CLI dependencies
+>is in a plugin's `package.json`. See [specifying Cordova dependencies](../guide/hybrid/plugins/index.html#specifying-cordova-dependencies)
+>for more information
+
 Attributes(type) | Description
 ---------------- | ------------
 name(string) | *Required* <br/> Name of the engine. Here are the default engines that are supported : <ul><li> `cordova` </li> <li> `cordova-plugman` </li> <li> `cordova-android` </li> <li> `cordova-ios` </li> <li> `cordova-blackberry10` </li> <li> `cordova-wp8` </li> <li> `cordova-windows` </li> <li> `cordova-osx` </li> <li> `windows-os` </li> <li> `android-sdk` (returns the highest Android api level installed) </li> <li> `windows-sdk` (returns the native windows SDK version) </li> <li> `apple-xcode` (returns the xcode version) </li> <li> `apple-ios` (returns the highest iOS version installed) </li> <li> `apple-osx` (returns the OSX version) </li> <li> `blackberry-ndk` (returns the native blackberry SDK version) </li> You can also specify a custom framework apart from the default ones.
