@@ -3,224 +3,224 @@
 
 # 302 (temporary) renames of versions
 version-renames:
-    - {old: "edge", new: "dev"}
-    - {old: "6.0.0", new: "6.x"}
+    "edge": "dev"
+    "6.0.0": "6.x"
 
 # 302 (temporary) renames of languages
 language-renames:
-    - {old: "zh", new: "zh-tw"}
+    "zh": "zh-tw"
 
 # 301 (PERMANENT) redirect paths relative to /
 general:
-    - {old: "plugins/authors.html", new: "docs/en/latest/guide/hybrid/plugins/index.html#publishing-plugins"}
+    "plugins/authors.html": "docs/en/latest/guide/hybrid/plugins/index.html#publishing-plugins"
 
 # 301 (PERMANENT) redirect paths relative to /docs/XX/
 docs:
-    - {old: "dev/guide/platforms/android/tools.html", new: "dev/guide/platforms/android/index.html"}
-    - {old: "latest/guide/platforms/android/tools.html", new: "latest/guide/platforms/android/index.html"}
+    "dev/guide/platforms/android/tools.html": "dev/guide/platforms/android/index.html"
+    "latest/guide/platforms/android/tools.html": "latest/guide/platforms/android/index.html"
 
-    - {old: "dev/guide/platforms/android/lifecycle.html", new: "dev/guide/platforms/android/index.html#lifecycle-guide"}
-    - {old: "latest/guide/platforms/android/lifecycle.html", new: "latest/guide/platforms/android/index.html#lifecycle-guide"}
+    "dev/guide/platforms/android/lifecycle.html": "dev/guide/platforms/android/index.html#lifecycle-guide"
+    "latest/guide/platforms/android/lifecycle.html": "latest/guide/platforms/android/index.html#lifecycle-guide"
 
-    - {old: "dev/guide/platforms/android/config.html", new: "dev/config_ref/index.html"}
-    - {old: "latest/guide/platforms/android/config.html", new: "latest/config_ref/index.html"}
+    "dev/guide/platforms/android/config.html": "dev/config_ref/index.html"
+    "latest/guide/platforms/android/config.html": "latest/config_ref/index.html"
 
-    - {old: "dev/guide/platforms/ios/tools.html", new: "dev/guide/platforms/ios/index.html"}
-    - {old: "latest/guide/platforms/ios/tools.html", new: "latest/guide/platforms/ios/index.html"}
+    "dev/guide/platforms/ios/tools.html": "dev/guide/platforms/ios/index.html"
+    "latest/guide/platforms/ios/tools.html": "latest/guide/platforms/ios/index.html"
 
-    - {old: "dev/guide/platforms/ios/config.html", new: "dev/config_ref/index.html"}
-    - {old: "latest/guide/platforms/ios/config.html", new: "latest/config_ref/index.html"}
+    "dev/guide/platforms/ios/config.html": "dev/config_ref/index.html"
+    "latest/guide/platforms/ios/config.html": "latest/config_ref/index.html"
 
-    - {old: "dev/guide/platforms/win8/packaging.html", new: "dev/guide/platforms/win8/index.html#signing-an-app"}
-    - {old: "latest/guide/platforms/win8/packaging.html", new: "latest/guide/platforms/win8/index.html#signing-an-app"}
+    "dev/guide/platforms/win8/packaging.html": "dev/guide/platforms/win8/index.html#signing-an-app"
+    "latest/guide/platforms/win8/packaging.html": "latest/guide/platforms/win8/index.html#signing-an-app"
 
-    - {old: "dev/guide/platforms/win8/win10-support.html", new: "dev/guide/platforms/win8/index.html"}
-    - {old: "latest/guide/platforms/win8/win10-support.html", new: "latest/guide/platforms/win8/index.html"}
+    "dev/guide/platforms/win8/win10-support.html": "dev/guide/platforms/win8/index.html"
+    "latest/guide/platforms/win8/win10-support.html": "latest/guide/platforms/win8/index.html"
 
-    - {old: "dev/cordova/plugins/pluginapis.html", new: "deprecated.html"}
-    - {old: "latest/cordova/plugins/pluginapis.html", new: "deprecated.html"}
+    "dev/cordova/plugins/pluginapis.html": "deprecated.html"
+    "latest/cordova/plugins/pluginapis.html": "deprecated.html"
 
     # NOTE:
     #      these only need to be done for /latest, since they only existed in /latest and they don't exist anywhere anymore
-    - {old: "latest/cordova-cli/index.html", new: "latest/reference/cordova-cli/index.html"}
-    - {old: "latest/cordova-plugin-battery-status/index.html", new: "latest/reference/cordova-plugin-battery-status/index.html"}
-    - {old: "latest/cordova-plugin-camera/index.html", new: "latest/reference/cordova-plugin-camera/index.html"}
-    - {old: "latest/cordova-plugin-console/index.html", new: "latest/reference/cordova-plugin-console/index.html"}
-    - {old: "latest/cordova-plugin-contacts/index.html", new: "latest/reference/cordova-plugin-contacts/index.html"}
-    - {old: "latest/cordova-plugin-device/index.html", new: "latest/reference/cordova-plugin-device/index.html"}
-    - {old: "latest/cordova-plugin-device-motion/index.html", new: "latest/reference/cordova-plugin-device-motion/index.html"}
-    - {old: "latest/cordova-plugin-device-orientation/index.html", new: "latest/reference/cordova-plugin-device-orientation/index.html"}
-    - {old: "latest/cordova-plugin-dialogs/index.html", new: "latest/reference/cordova-plugin-dialogs/index.html"}
-    - {old: "latest/cordova-plugin-file/index.html", new: "latest/reference/cordova-plugin-file/index.html"}
-    - {old: "latest/cordova-plugin-file-transfer/index.html", new: "latest/reference/cordova-plugin-file-transfer/index.html"}
-    - {old: "latest/cordova-plugin-geolocation/index.html", new: "latest/reference/cordova-plugin-geolocation/index.html"}
-    - {old: "latest/cordova-plugin-globalization/index.html", new: "latest/reference/cordova-plugin-globalization/index.html"}
-    - {old: "latest/cordova-plugin-inappbrowser/index.html", new: "latest/reference/cordova-plugin-inappbrowser/index.html"}
-    - {old: "latest/cordova-plugin-media/index.html", new: "latest/reference/cordova-plugin-media/index.html"}
-    - {old: "latest/cordova-plugin-media-capture/index.html", new: "latest/reference/cordova-plugin-media-capture/index.html"}
-    - {old: "latest/cordova-plugin-network-information/index.html", new: "latest/reference/cordova-plugin-network-information/index.html"}
-    - {old: "latest/cordova-plugin-splashscreen/index.html", new: "latest/reference/cordova-plugin-splashscreen/index.html"}
-    - {old: "latest/cordova-plugin-vibration/index.html", new: "latest/reference/cordova-plugin-vibration/index.html"}
-    - {old: "latest/cordova-plugin-statusbar/index.html", new: "latest/reference/cordova-plugin-statusbar/index.html"}
-    - {old: "latest/cordova-plugin-whitelist/index.html", new: "latest/reference/cordova-plugin-whitelist/index.html"}
-    - {old: "latest/cordova-plugin-legacy-whitelist/index.html", new: "latest/reference/cordova-plugin-legacy-whitelist/index.html"}
+    "latest/cordova-cli/index.html": "latest/reference/cordova-cli/index.html"
+    "latest/cordova-plugin-battery-status/index.html": "latest/reference/cordova-plugin-battery-status/index.html"
+    "latest/cordova-plugin-camera/index.html": "latest/reference/cordova-plugin-camera/index.html"
+    "latest/cordova-plugin-console/index.html": "latest/reference/cordova-plugin-console/index.html"
+    "latest/cordova-plugin-contacts/index.html": "latest/reference/cordova-plugin-contacts/index.html"
+    "latest/cordova-plugin-device/index.html": "latest/reference/cordova-plugin-device/index.html"
+    "latest/cordova-plugin-device-motion/index.html": "latest/reference/cordova-plugin-device-motion/index.html"
+    "latest/cordova-plugin-device-orientation/index.html": "latest/reference/cordova-plugin-device-orientation/index.html"
+    "latest/cordova-plugin-dialogs/index.html": "latest/reference/cordova-plugin-dialogs/index.html"
+    "latest/cordova-plugin-file/index.html": "latest/reference/cordova-plugin-file/index.html"
+    "latest/cordova-plugin-file-transfer/index.html": "latest/reference/cordova-plugin-file-transfer/index.html"
+    "latest/cordova-plugin-geolocation/index.html": "latest/reference/cordova-plugin-geolocation/index.html"
+    "latest/cordova-plugin-globalization/index.html": "latest/reference/cordova-plugin-globalization/index.html"
+    "latest/cordova-plugin-inappbrowser/index.html": "latest/reference/cordova-plugin-inappbrowser/index.html"
+    "latest/cordova-plugin-media/index.html": "latest/reference/cordova-plugin-media/index.html"
+    "latest/cordova-plugin-media-capture/index.html": "latest/reference/cordova-plugin-media-capture/index.html"
+    "latest/cordova-plugin-network-information/index.html": "latest/reference/cordova-plugin-network-information/index.html"
+    "latest/cordova-plugin-splashscreen/index.html": "latest/reference/cordova-plugin-splashscreen/index.html"
+    "latest/cordova-plugin-vibration/index.html": "latest/reference/cordova-plugin-vibration/index.html"
+    "latest/cordova-plugin-statusbar/index.html": "latest/reference/cordova-plugin-statusbar/index.html"
+    "latest/cordova-plugin-whitelist/index.html": "latest/reference/cordova-plugin-whitelist/index.html"
+    "latest/cordova-plugin-legacy-whitelist/index.html": "latest/reference/cordova-plugin-legacy-whitelist/index.html"
 
 # 301 (PERMANENT) redirect paths relative to /docs/XX/YYY/
 docs-global:
-    - {old: "config_ref_images.md.html", new: "config_ref/images.html"}
-    - {old: "config_ref_index.md.html", new: "config_ref/index.html"}
-    - {old: "cordova_accelerometer_accelerometer.md.html", new: "cordova/accelerometer/accelerometer.html"}
-    - {old: "cordova_camera_camera.cleanup.md.html", new: "cordova/camera/camera.cleanup.html"}
-    - {old: "cordova_camera_camera.md.html", new: "cordova/camera/camera.html"}
-    - {old: "cordova_compass_compass.md.html", new: "cordova/compass/compass.html"}
-    - {old: "cordova_connection_connection.md.html", new: "cordova/connection/connection.html"}
-    - {old: "cordova_contacts_contacts.md.html", new: "cordova/contacts/contacts.html"}
-    - {old: "cordova_device_device.md.html", new: "cordova/device/device.html"}
-    - {old: "cordova_device_device.model.md.html", new: "cordova/device/device.model.html"}
-    - {old: "cordova_events_events.md.html", new: "cordova/events/events.html"}
-    - {old: "cordova_file_file.md.html", new: "cordova/file/file.html"}
-    - {old: "cordova_geolocation_geolocation.md.html", new: "cordova/geolocation/geolocation.html"}
-    - {old: "cordova_globalization_globalization.md.html", new: "cordova/globalization/globalization.html"}
-    - {old: "cordova_inappbrowser_inappbrowser.md.html", new: "cordova/inappbrowser/inappbrowser.html"}
-    - {old: "cordova_media_capture_capture.md.html", new: "cordova/media/capture/capture.html"}
-    - {old: "cordova_media_media.md.html", new: "cordova/media/media.html"}
-    - {old: "cordova_notification_notification.md.html", new: "cordova/notification/notification.html"}
-    - {old: "cordova_splashscreen_splashscreen.md.html", new: "cordova/splashscreen/splashscreen.html"}
-    - {old: "cordova_storage_storage.md.html", new: "cordova/storage/storage.html"}
-    - {old: "guide_appdev_privacy_index.md.html", new: "guide/appdev/privacy/index.html"}
-    - {old: "guide_appdev_whitelist_index.md.html", new: "guide/appdev/whitelist/index.html"}
-    - {old: "guide_cli_index.md.html", new: "guide/cli/index.html"}
-    - {old: "guide_hybrid_plugins_index.md.html", new: "guide/hybrid/plugins/index.html"}
-    - {old: "guide_hybrid_webviews_index.md.html", new: "guide/hybrid/webviews/index.html"}
-    - {old: "guide_overview_index.md.html", new: "guide/overview/index.html"}
-    - {old: "guide_platforms_android_config.md.html", new: "guide/platforms/android/config.html"}
-    - {old: "guide_platforms_android_index.md.html", new: "guide/platforms/android/index.html"}
-    - {old: "guide_platforms_android_plugin.md.html", new: "guide/platforms/android/plugin.html"}
-    - {old: "guide_platforms_android_tools.md.html", new: "guide/platforms/android/tools.html"}
-    - {old: "guide_platforms_android_upgrading.md.html", new: "guide/platforms/android/upgrading.html"}
-    - {old: "guide_platforms_android_webview.md.html", new: "guide/platforms/android/webview.html"}
-    - {old: "guide_platforms_blackberry10_config.md.html", new: "guide/platforms/blackberry10/config.html"}
-    - {old: "guide_platforms_blackberry10_index.md.html", new: "guide/platforms/blackberry10/index.html"}
-    - {old: "guide_platforms_blackberry10_plugin.md.html", new: "guide/platforms/blackberry10/plugin.html"}
-    - {old: "guide_platforms_blackberry10_tools.md.html", new: "guide/platforms/blackberry10/tools.html"}
-    - {old: "guide_platforms_blackberry10_upgrading.md.html", new: "guide/platforms/blackberry10/upgrading.html"}
-    - {old: "guide_platforms_blackberry_config.md.html", new: "guide/platforms/blackberry/config.html"}
-    - {old: "guide_platforms_blackberry_index.md.html", new: "guide/platforms/blackberry/index.html"}
-    - {old: "guide_platforms_blackberry_plugin.md.html", new: "guide/platforms/blackberry/plugin.html"}
-    - {old: "guide_platforms_blackberry_tools.md.html", new: "guide/platforms/blackberry/tools.html"}
-    - {old: "guide_platforms_blackberry_upgrading.md.html", new: "guide/platforms/blackberry/upgrading.html"}
-    - {old: "guide_platforms_firefoxos_config.md.html", new: "guide/platforms/firefoxos/config.html"}
-    - {old: "guide_platforms_index.md.html", new: "guide/platforms/index.html"}
-    - {old: "guide_platforms_ios_config.md.html", new: "guide/platforms/ios/config.html"}
-    - {old: "guide_platforms_ios_index.md.html", new: "guide/platforms/ios/index.html"}
-    - {old: "guide_platforms_ios_plugin.md.html", new: "guide/platforms/ios/plugin.html"}
-    - {old: "guide_platforms_ios_tools.md.html", new: "guide/platforms/ios/tools.html"}
-    - {old: "guide_platforms_ios_upgrading.md.html", new: "guide/platforms/ios/upgrading.html"}
-    - {old: "guide_platforms_ios_webview.md.html", new: "guide/platforms/ios/webview.html"}
-    - {old: "guide_platforms_tizen_index.md.html", new: "guide/platforms/tizen/index.html"}
-    - {old: "guide_platforms_win8_index.md.html", new: "guide/platforms/win8/index.html"}
-    - {old: "guide_platforms_win8_tools.md.html", new: "guide/platforms/win8/tools.html"}
-    - {old: "guide_platforms_win8_upgrading.md.html", new: "guide/platforms/win8/upgrading.html"}
-    - {old: "guide_platforms_wp7_index.md.html", new: "guide/platforms/wp7/index.html"}
-    - {old: "guide_platforms_wp8_index.md.html", new: "guide/platforms/wp8/index.html"}
-    - {old: "guide_platforms_wp8_plugin.md.html", new: "guide/platforms/wp8/plugin.html"}
-    - {old: "guide_platforms_wp8_tools.md.html", new: "guide/platforms/wp8/tools.html"}
-    - {old: "guide_platforms_wp8_upgrading.md.html", new: "guide/platforms/wp8/upgrading.html"}
-    - {old: "plugin_ref_plugman.md.html", new: "plugin_ref/plugman.html"}
-    - {old: "plugin_ref_spec.md.html", new: "plugin_ref/spec.html"}
-    - {old: "cordova_plugins_pluginapis.md.html", new: "cordova/plugins/pluginapis.html"}
-    - {old: "cordova_storage_database_database.md.html", new: "cordova/storage/database/database.html"}
-    - {old: "cordova_storage_localstorage_localstorage.md.html", new: "cordova/storage/localstorage/localstorage.html"}
-    - {old: "cordova_storage_parameters_display_name.md.html", new: "cordova/storage/parameters/display_name.html"}
-    - {old: "cordova_storage_parameters_name.md.html", new: "cordova/storage/parameters/name.html"}
-    - {old: "cordova_storage_parameters_size.md.html", new: "cordova/storage/parameters/size.html"}
-    - {old: "cordova_storage_parameters_version.md.html", new: "cordova/storage/parameters/version.html"}
-    - {old: "cordova_storage_sqlerror_sqlerror.md.html", new: "cordova/storage/sqlerror/sqlerror.html"}
-    - {old: "cordova_storage_sqlresultset_sqlresultset.md.html", new: "cordova/storage/sqlresultset/sqlresultset.html"}
-    - {old: "cordova_storage_sqlresultsetrowlist_sqlresultsetrowlist.md.html", new: "cordova/storage/sqlresultsetrowlist/sqlresultsetrowlist.html"}
-    - {old: "cordova_storage_sqltransaction_sqltransaction.md.html", new: "cordova/storage/sqltransaction/sqltransaction.html"}
-    - {old: "cordova_storage_storage.opendatabase.md.html", new: "cordova/storage/storage.opendatabase.html"}
-    - {old: "guide_platforms_amazonfireos_config.md.html", new: "guide/platforms/amazonfireos/config.html"}
-    - {old: "guide_platforms_amazonfireos_index.md.html", new: "guide/platforms/amazonfireos/index.html"}
-    - {old: "guide_platforms_amazonfireos_plugin.md.html", new: "guide/platforms/amazonfireos/plugin.html"}
-    - {old: "guide_platforms_amazonfireos_webview.md.html", new: "guide/platforms/amazonfireos/webview.html"}
-    - {old: "guide_platforms_ubuntu_index.md.html", new: "guide/platforms/ubuntu/index.html"}
-    - {old: "guide_support_index.md.html", new: "guide/support/index.html"}
-    - {old: "guide_appdev_hooks_index.md.html", new: "guide/appdev/hooks/index.html"}
-    - {old: "guide_appdev_security_index.md.html", new: "guide/appdev/security/index.html"}
-    - {old: "guide_next_index.md.html", new: "guide/next/index.html"}
-    - {old: "guide_platforms_android_upgrade.md.html", new: "guide/platforms/android/upgrade.html"}
-    - {old: "guide_platforms_blackberry10_upgrade.md.html", new: "guide/platforms/blackberry10/upgrade.html"}
-    - {old: "guide_platforms_blackberry_upgrade.md.html", new: "guide/platforms/blackberry/upgrade.html"}
-    - {old: "guide_platforms_firefoxos_index.md.html", new: "guide/platforms/firefoxos/index.html"}
-    - {old: "guide_platforms_ios_upgrade.md.html", new: "guide/platforms/ios/upgrade.html"}
-    - {old: "guide_platforms_win8_packaging.md.html", new: "guide/platforms/win8/packaging.html"}
-    - {old: "guide_platforms_win8_plugin.md.html", new: "guide/platforms/win8/plugin.html"}
-    - {old: "guide_platforms_win8_upgrade.md.html", new: "guide/platforms/win8/upgrade.html"}
-    - {old: "guide_platforms_win8_win10-support.md.html", new: "guide/platforms/win8/win10-support.html"}
-    - {old: "guide_platforms_wp8_parallels.md.html", new: "guide/platforms/wp8/parallels.html"}
-    - {old: "guide_platforms_wp8_upgrade.md.html", new: "guide/platforms/wp8/upgrade.html"}
-    - {old: "guide_platforms_wp8_vmware.md.html", new: "guide/platforms/wp8/vmware.html"}
-    - {old: "guide_platforms_wp8_webview.md.html", new: "guide/platforms/wp8/webview.html"}
-    - {old: "platform_plugin_versioning_ref_index.md.html", new: "platform_plugin_versioning_ref/index.html"}
-    - {old: "guide_getting-started_android_index.md.html", new: "guide/getting-started/android/index.html"}
-    - {old: "guide_getting-started_blackberry_index.md.html", new: "guide/getting-started/blackberry/index.html"}
-    - {old: "guide_getting-started_index.md.html", new: "guide/getting-started/index.html"}
-    - {old: "guide_getting-started_ios_index.md.html", new: "guide/getting-started/ios/index.html"}
-    - {old: "guide_getting-started_symbian_index.md.html", new: "guide/getting-started/symbian/index.html"}
-    - {old: "guide_getting-started_webos_index.md.html", new: "guide/getting-started/webos/index.html"}
-    - {old: "guide_getting-started_windows-phone_index.md.html", new: "guide/getting-started/windows-phone/index.html"}
-    - {old: "guide_upgrading_blackberry_index.md.html", new: "guide/upgrading/blackberry/index.html"}
-    - {old: "guide_upgrading_webos_index.md.html", new: "guide/upgrading/webos/index.html"}
-    - {old: "phonegap_accelerometer_accelerometer.md.html", new: "phonegap/accelerometer/accelerometer.html"}
-    - {old: "phonegap_camera_camera.md.html", new: "phonegap/camera/camera.html"}
-    - {old: "phonegap_compass_compass.md.html", new: "phonegap/compass/compass.html"}
-    - {old: "phonegap_connection_connection.md.html", new: "phonegap/connection/connection.html"}
-    - {old: "phonegap_contacts_contacts.md.html", new: "phonegap/contacts/contacts.html"}
-    - {old: "phonegap_device_device.md.html", new: "phonegap/device/device.html"}
-    - {old: "phonegap_events_events.md.html", new: "phonegap/events/events.html"}
-    - {old: "phonegap_file_file.md.html", new: "phonegap/file/file.html"}
-    - {old: "phonegap_geolocation_geolocation.md.html", new: "phonegap/geolocation/geolocation.html"}
-    - {old: "phonegap_media_capture_capture.md.html", new: "phonegap/media/capture/capture.html"}
-    - {old: "phonegap_media_media.md.html", new: "phonegap/media/media.html"}
-    - {old: "phonegap_notification_notification.md.html", new: "phonegap/notification/notification.html"}
-    - {old: "phonegap_storage_storage.md.html", new: "phonegap/storage/storage.html"}
-    - {old: "guide_getting-started_bada_index.md.html", new: "guide/getting-started/bada/index.html"}
-    - {old: "guide_upgrading_android_index.md.html", new: "guide/upgrading/android/index.html"}
-    - {old: "guide_upgrading_bada_index.md.html", new: "guide/upgrading/bada/index.html"}
-    - {old: "guide_upgrading_index.md.html", new: "guide/upgrading/index.html"}
-    - {old: "guide_upgrading_ios_index.md.html", new: "guide/upgrading/ios/index.html"}
-    - {old: "guide_upgrading_symbian_index.md.html", new: "guide/upgrading/symbian/index.html"}
-    - {old: "guide_upgrading_windows-phone_index.md.html", new: "guide/upgrading/windows-phone/index.html"}
-    - {old: "guide_whitelist_index.md.html", new: "guide/whitelist/index.html"}
-    - {old: "guide_command-line_index.md.html", new: "guide/command-line/index.html"}
-    - {old: "guide_cordova-webview_android.md.html", new: "guide/cordova-webview/android.html"}
-    - {old: "guide_cordova-webview_index.md.html", new: "guide/cordova-webview/index.html"}
-    - {old: "guide_cordova-webview_ios.md.html", new: "guide/cordova-webview/ios.html"}
-    - {old: "guide_plugin-development_android_index.md.html", new: "guide/plugin-development/android/index.html"}
-    - {old: "guide_plugin-development_bada_index.md.html", new: "guide/plugin-development/bada/index.html"}
-    - {old: "guide_plugin-development_blackberry_index.md.html", new: "guide/plugin-development/blackberry/index.html"}
-    - {old: "guide_plugin-development_index.md.html", new: "guide/plugin-development/index.html"}
-    - {old: "guide_plugin-development_ios_index.md.html", new: "guide/plugin-development/ios/index.html"}
-    - {old: "guide_plugin-development_webos_index.md.html", new: "guide/plugin-development/webos/index.html"}
-    - {old: "guide_plugin-development_windows-phone_index.md.html", new: "guide/plugin-development/windows-phone/index.html"}
-    - {old: "guide_getting-started_tizen_index.md.html", new: "guide/getting-started/tizen/index.html"}
-    - {old: "guide_plugin-development_tizen_index.md.html", new: "guide/plugin-development/tizen/index.html"}
-    - {old: "guide_upgrading_tizen_index.md.html", new: "guide/upgrading/tizen/index.html"}
-    - {old: "guide_getting-started_windows-8_index.md.html", new: "guide/getting-started/windows-8/index.html"}
-    - {old: "guide_project-settings_index.md.html", new: "guide/project-settings/index.html"}
-    - {old: "guide_project-settings_ios_index.md.html", new: "guide/project-settings/ios/index.html"}
-    - {old: "guide_getting-started_windows-phone-7_index.md.html", new: "guide/getting-started/windows-phone-7/index.html"}
-    - {old: "guide_getting-started_windows-phone-8_index.md.html", new: "guide/getting-started/windows-phone-8/index.html"}
-    - {old: "guide_project-settings_android_index.md.html", new: "guide/project-settings/android/index.html"}
-    - {old: "guide_project-settings_bada_index.md.html", new: "guide/project-settings/bada/index.html"}
-    - {old: "guide_project-settings_blackberry_index.md.html", new: "guide/project-settings/blackberry/index.html"}
-    - {old: "guide_project-settings_firefoxos_index.md.html", new: "guide/project-settings/firefoxos/index.html"}
-    - {old: "guide_project-settings_webos_index.md.html", new: "guide/project-settings/webos/index.html"}
-    - {old: "guide_project-settings_windows8_index.md.html", new: "guide/project-settings/windows8/index.html"}
-    - {old: "guide_project-settings_wp7_index.md.html", new: "guide/project-settings/wp7/index.html"}
-    - {old: "guide_project-settings_wp8_index.md.html", new: "guide/project-settings/wp8/index.html"}
-    - {old: "guide_getting-started_blackberry10_index.md.html", new: "guide/getting-started/blackberry10/index.html"}
-    - {old: "guide_plugin-development_blackberry10_index.md.html", new: "guide/plugin-development/blackberry10/index.html"}
-    - {old: "guide_privacy_index.md.html", new: "guide/privacy/index.html"}
-    - {old: "guide_upgrading_windows-8_index.md.html", new: "guide/upgrading/windows-8/index.html"}
+    "config_ref_images.md.html": "config_ref/images.html"
+    "config_ref_index.md.html": "config_ref/index.html"
+    "cordova_accelerometer_accelerometer.md.html": "cordova/accelerometer/accelerometer.html"
+    "cordova_camera_camera.cleanup.md.html": "cordova/camera/camera.cleanup.html"
+    "cordova_camera_camera.md.html": "cordova/camera/camera.html"
+    "cordova_compass_compass.md.html": "cordova/compass/compass.html"
+    "cordova_connection_connection.md.html": "cordova/connection/connection.html"
+    "cordova_contacts_contacts.md.html": "cordova/contacts/contacts.html"
+    "cordova_device_device.md.html": "cordova/device/device.html"
+    "cordova_device_device.model.md.html": "cordova/device/device.model.html"
+    "cordova_events_events.md.html": "cordova/events/events.html"
+    "cordova_file_file.md.html": "cordova/file/file.html"
+    "cordova_geolocation_geolocation.md.html": "cordova/geolocation/geolocation.html"
+    "cordova_globalization_globalization.md.html": "cordova/globalization/globalization.html"
+    "cordova_inappbrowser_inappbrowser.md.html": "cordova/inappbrowser/inappbrowser.html"
+    "cordova_media_capture_capture.md.html": "cordova/media/capture/capture.html"
+    "cordova_media_media.md.html": "cordova/media/media.html"
+    "cordova_notification_notification.md.html": "cordova/notification/notification.html"
+    "cordova_splashscreen_splashscreen.md.html": "cordova/splashscreen/splashscreen.html"
+    "cordova_storage_storage.md.html": "cordova/storage/storage.html"
+    "guide_appdev_privacy_index.md.html": "guide/appdev/privacy/index.html"
+    "guide_appdev_whitelist_index.md.html": "guide/appdev/whitelist/index.html"
+    "guide_cli_index.md.html": "guide/cli/index.html"
+    "guide_hybrid_plugins_index.md.html": "guide/hybrid/plugins/index.html"
+    "guide_hybrid_webviews_index.md.html": "guide/hybrid/webviews/index.html"
+    "guide_overview_index.md.html": "guide/overview/index.html"
+    "guide_platforms_android_config.md.html": "guide/platforms/android/config.html"
+    "guide_platforms_android_index.md.html": "guide/platforms/android/index.html"
+    "guide_platforms_android_plugin.md.html": "guide/platforms/android/plugin.html"
+    "guide_platforms_android_tools.md.html": "guide/platforms/android/tools.html"
+    "guide_platforms_android_upgrading.md.html": "guide/platforms/android/upgrading.html"
+    "guide_platforms_android_webview.md.html": "guide/platforms/android/webview.html"
+    "guide_platforms_blackberry10_config.md.html": "guide/platforms/blackberry10/config.html"
+    "guide_platforms_blackberry10_index.md.html": "guide/platforms/blackberry10/index.html"
+    "guide_platforms_blackberry10_plugin.md.html": "guide/platforms/blackberry10/plugin.html"
+    "guide_platforms_blackberry10_tools.md.html": "guide/platforms/blackberry10/tools.html"
+    "guide_platforms_blackberry10_upgrading.md.html": "guide/platforms/blackberry10/upgrading.html"
+    "guide_platforms_blackberry_config.md.html": "guide/platforms/blackberry/config.html"
+    "guide_platforms_blackberry_index.md.html": "guide/platforms/blackberry/index.html"
+    "guide_platforms_blackberry_plugin.md.html": "guide/platforms/blackberry/plugin.html"
+    "guide_platforms_blackberry_tools.md.html": "guide/platforms/blackberry/tools.html"
+    "guide_platforms_blackberry_upgrading.md.html": "guide/platforms/blackberry/upgrading.html"
+    "guide_platforms_firefoxos_config.md.html": "guide/platforms/firefoxos/config.html"
+    "guide_platforms_index.md.html": "guide/platforms/index.html"
+    "guide_platforms_ios_config.md.html": "guide/platforms/ios/config.html"
+    "guide_platforms_ios_index.md.html": "guide/platforms/ios/index.html"
+    "guide_platforms_ios_plugin.md.html": "guide/platforms/ios/plugin.html"
+    "guide_platforms_ios_tools.md.html": "guide/platforms/ios/tools.html"
+    "guide_platforms_ios_upgrading.md.html": "guide/platforms/ios/upgrading.html"
+    "guide_platforms_ios_webview.md.html": "guide/platforms/ios/webview.html"
+    "guide_platforms_tizen_index.md.html": "guide/platforms/tizen/index.html"
+    "guide_platforms_win8_index.md.html": "guide/platforms/win8/index.html"
+    "guide_platforms_win8_tools.md.html": "guide/platforms/win8/tools.html"
+    "guide_platforms_win8_upgrading.md.html": "guide/platforms/win8/upgrading.html"
+    "guide_platforms_wp7_index.md.html": "guide/platforms/wp7/index.html"
+    "guide_platforms_wp8_index.md.html": "guide/platforms/wp8/index.html"
+    "guide_platforms_wp8_plugin.md.html": "guide/platforms/wp8/plugin.html"
+    "guide_platforms_wp8_tools.md.html": "guide/platforms/wp8/tools.html"
+    "guide_platforms_wp8_upgrading.md.html": "guide/platforms/wp8/upgrading.html"
+    "plugin_ref_plugman.md.html": "plugin_ref/plugman.html"
+    "plugin_ref_spec.md.html": "plugin_ref/spec.html"
+    "cordova_plugins_pluginapis.md.html": "cordova/plugins/pluginapis.html"
+    "cordova_storage_database_database.md.html": "cordova/storage/database/database.html"
+    "cordova_storage_localstorage_localstorage.md.html": "cordova/storage/localstorage/localstorage.html"
+    "cordova_storage_parameters_display_name.md.html": "cordova/storage/parameters/display_name.html"
+    "cordova_storage_parameters_name.md.html": "cordova/storage/parameters/name.html"
+    "cordova_storage_parameters_size.md.html": "cordova/storage/parameters/size.html"
+    "cordova_storage_parameters_version.md.html": "cordova/storage/parameters/version.html"
+    "cordova_storage_sqlerror_sqlerror.md.html": "cordova/storage/sqlerror/sqlerror.html"
+    "cordova_storage_sqlresultset_sqlresultset.md.html": "cordova/storage/sqlresultset/sqlresultset.html"
+    "cordova_storage_sqlresultsetrowlist_sqlresultsetrowlist.md.html": "cordova/storage/sqlresultsetrowlist/sqlresultsetrowlist.html"
+    "cordova_storage_sqltransaction_sqltransaction.md.html": "cordova/storage/sqltransaction/sqltransaction.html"
+    "cordova_storage_storage.opendatabase.md.html": "cordova/storage/storage.opendatabase.html"
+    "guide_platforms_amazonfireos_config.md.html": "guide/platforms/amazonfireos/config.html"
+    "guide_platforms_amazonfireos_index.md.html": "guide/platforms/amazonfireos/index.html"
+    "guide_platforms_amazonfireos_plugin.md.html": "guide/platforms/amazonfireos/plugin.html"
+    "guide_platforms_amazonfireos_webview.md.html": "guide/platforms/amazonfireos/webview.html"
+    "guide_platforms_ubuntu_index.md.html": "guide/platforms/ubuntu/index.html"
+    "guide_support_index.md.html": "guide/support/index.html"
+    "guide_appdev_hooks_index.md.html": "guide/appdev/hooks/index.html"
+    "guide_appdev_security_index.md.html": "guide/appdev/security/index.html"
+    "guide_next_index.md.html": "guide/next/index.html"
+    "guide_platforms_android_upgrade.md.html": "guide/platforms/android/upgrade.html"
+    "guide_platforms_blackberry10_upgrade.md.html": "guide/platforms/blackberry10/upgrade.html"
+    "guide_platforms_blackberry_upgrade.md.html": "guide/platforms/blackberry/upgrade.html"
+    "guide_platforms_firefoxos_index.md.html": "guide/platforms/firefoxos/index.html"
+    "guide_platforms_ios_upgrade.md.html": "guide/platforms/ios/upgrade.html"
+    "guide_platforms_win8_packaging.md.html": "guide/platforms/win8/packaging.html"
+    "guide_platforms_win8_plugin.md.html": "guide/platforms/win8/plugin.html"
+    "guide_platforms_win8_upgrade.md.html": "guide/platforms/win8/upgrade.html"
+    "guide_platforms_win8_win10-support.md.html": "guide/platforms/win8/win10-support.html"
+    "guide_platforms_wp8_parallels.md.html": "guide/platforms/wp8/parallels.html"
+    "guide_platforms_wp8_upgrade.md.html": "guide/platforms/wp8/upgrade.html"
+    "guide_platforms_wp8_vmware.md.html": "guide/platforms/wp8/vmware.html"
+    "guide_platforms_wp8_webview.md.html": "guide/platforms/wp8/webview.html"
+    "platform_plugin_versioning_ref_index.md.html": "platform_plugin_versioning_ref/index.html"
+    "guide_getting-started_android_index.md.html": "guide/getting-started/android/index.html"
+    "guide_getting-started_blackberry_index.md.html": "guide/getting-started/blackberry/index.html"
+    "guide_getting-started_index.md.html": "guide/getting-started/index.html"
+    "guide_getting-started_ios_index.md.html": "guide/getting-started/ios/index.html"
+    "guide_getting-started_symbian_index.md.html": "guide/getting-started/symbian/index.html"
+    "guide_getting-started_webos_index.md.html": "guide/getting-started/webos/index.html"
+    "guide_getting-started_windows-phone_index.md.html": "guide/getting-started/windows-phone/index.html"
+    "guide_upgrading_blackberry_index.md.html": "guide/upgrading/blackberry/index.html"
+    "guide_upgrading_webos_index.md.html": "guide/upgrading/webos/index.html"
+    "phonegap_accelerometer_accelerometer.md.html": "phonegap/accelerometer/accelerometer.html"
+    "phonegap_camera_camera.md.html": "phonegap/camera/camera.html"
+    "phonegap_compass_compass.md.html": "phonegap/compass/compass.html"
+    "phonegap_connection_connection.md.html": "phonegap/connection/connection.html"
+    "phonegap_contacts_contacts.md.html": "phonegap/contacts/contacts.html"
+    "phonegap_device_device.md.html": "phonegap/device/device.html"
+    "phonegap_events_events.md.html": "phonegap/events/events.html"
+    "phonegap_file_file.md.html": "phonegap/file/file.html"
+    "phonegap_geolocation_geolocation.md.html": "phonegap/geolocation/geolocation.html"
+    "phonegap_media_capture_capture.md.html": "phonegap/media/capture/capture.html"
+    "phonegap_media_media.md.html": "phonegap/media/media.html"
+    "phonegap_notification_notification.md.html": "phonegap/notification/notification.html"
+    "phonegap_storage_storage.md.html": "phonegap/storage/storage.html"
+    "guide_getting-started_bada_index.md.html": "guide/getting-started/bada/index.html"
+    "guide_upgrading_android_index.md.html": "guide/upgrading/android/index.html"
+    "guide_upgrading_bada_index.md.html": "guide/upgrading/bada/index.html"
+    "guide_upgrading_index.md.html": "guide/upgrading/index.html"
+    "guide_upgrading_ios_index.md.html": "guide/upgrading/ios/index.html"
+    "guide_upgrading_symbian_index.md.html": "guide/upgrading/symbian/index.html"
+    "guide_upgrading_windows-phone_index.md.html": "guide/upgrading/windows-phone/index.html"
+    "guide_whitelist_index.md.html": "guide/whitelist/index.html"
+    "guide_command-line_index.md.html": "guide/command-line/index.html"
+    "guide_cordova-webview_android.md.html": "guide/cordova-webview/android.html"
+    "guide_cordova-webview_index.md.html": "guide/cordova-webview/index.html"
+    "guide_cordova-webview_ios.md.html": "guide/cordova-webview/ios.html"
+    "guide_plugin-development_android_index.md.html": "guide/plugin-development/android/index.html"
+    "guide_plugin-development_bada_index.md.html": "guide/plugin-development/bada/index.html"
+    "guide_plugin-development_blackberry_index.md.html": "guide/plugin-development/blackberry/index.html"
+    "guide_plugin-development_index.md.html": "guide/plugin-development/index.html"
+    "guide_plugin-development_ios_index.md.html": "guide/plugin-development/ios/index.html"
+    "guide_plugin-development_webos_index.md.html": "guide/plugin-development/webos/index.html"
+    "guide_plugin-development_windows-phone_index.md.html": "guide/plugin-development/windows-phone/index.html"
+    "guide_getting-started_tizen_index.md.html": "guide/getting-started/tizen/index.html"
+    "guide_plugin-development_tizen_index.md.html": "guide/plugin-development/tizen/index.html"
+    "guide_upgrading_tizen_index.md.html": "guide/upgrading/tizen/index.html"
+    "guide_getting-started_windows-8_index.md.html": "guide/getting-started/windows-8/index.html"
+    "guide_project-settings_index.md.html": "guide/project-settings/index.html"
+    "guide_project-settings_ios_index.md.html": "guide/project-settings/ios/index.html"
+    "guide_getting-started_windows-phone-7_index.md.html": "guide/getting-started/windows-phone-7/index.html"
+    "guide_getting-started_windows-phone-8_index.md.html": "guide/getting-started/windows-phone-8/index.html"
+    "guide_project-settings_android_index.md.html": "guide/project-settings/android/index.html"
+    "guide_project-settings_bada_index.md.html": "guide/project-settings/bada/index.html"
+    "guide_project-settings_blackberry_index.md.html": "guide/project-settings/blackberry/index.html"
+    "guide_project-settings_firefoxos_index.md.html": "guide/project-settings/firefoxos/index.html"
+    "guide_project-settings_webos_index.md.html": "guide/project-settings/webos/index.html"
+    "guide_project-settings_windows8_index.md.html": "guide/project-settings/windows8/index.html"
+    "guide_project-settings_wp7_index.md.html": "guide/project-settings/wp7/index.html"
+    "guide_project-settings_wp8_index.md.html": "guide/project-settings/wp8/index.html"
+    "guide_getting-started_blackberry10_index.md.html": "guide/getting-started/blackberry10/index.html"
+    "guide_plugin-development_blackberry10_index.md.html": "guide/plugin-development/blackberry10/index.html"
+    "guide_privacy_index.md.html": "guide/privacy/index.html"
+    "guide_upgrading_windows-8_index.md.html": "guide/upgrading/windows-8/index.html"

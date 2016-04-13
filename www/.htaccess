@@ -41,7 +41,9 @@ RewriteEngine on
 #      (?:\d+\.(?:\d+\.\d+|x))|dev|latest - regex for versions
 #
 # NOTE:
-#      L  - terminal rule
+#      Meanings of some of the flags at the ends of rules:
+#
+#      L  - terminal rule; if it applies, no more rules are checked
 #      R  - redirect (followed by code)
 #      NE - no escaping special characters
 
@@ -61,14 +63,14 @@ RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/latest$ {{site.baseurl}}/docs/$1/latest/ [R
 #
 #     docs/*/XX/* -> docs/*/YY/*
 #
-{% for redirect in site.data.redirects.version-renames %}RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/{{redirect.old}}/(.*)$ {{site.baseurl}}/docs/$1/{{redirect.new}}/$2 [R=302,L]
+{% for redirect in site.data.redirects.version-renames %}RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/{{redirect[0]}}/(.*)$ {{site.baseurl}}/docs/$1/{{redirect[1]}}/$2 [R=302,L]
 {% endfor %}
 
 # 302 (temporary):
 #
 #     docs/XX/* -> docs/YY/*
 #
-{% for redirect in site.data.redirects.language-renames %}RewriteRule ^.*docs/{{redirect.old}}/((?:\d+\.(?:\d+\.\d+|x))|dev|latest)/(.*)$ {{site.baseurl}}/docs/{{redirect.new}}/$1/$2 [R=302,L]
+{% for redirect in site.data.redirects.language-renames %}RewriteRule ^.*docs/{{redirect[0]}}/((?:\d+\.(?:\d+\.\d+|x))|dev|latest)/(.*)$ {{site.baseurl}}/docs/{{redirect[1]}}/$1/$2 [R=302,L]
 {% endfor %}
 
 # 301 (PERMANENT):
@@ -80,21 +82,21 @@ RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/latest$ {{site.baseurl}}/docs/$1/latest/ [R
 #       by site.baseurl. It is thrown away because there is no RewriteCond to
 #       control whether the rewrite happens to a URI or a local file path
 #       (when Apache is locating the local file to serve).
-{% for redirect in site.data.redirects.docs-global %}RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/((?:\d+\.(?:\d+\.\d+|x))|dev|latest)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/$2/{{redirect.new}} [NE,R=301,L]
+{% for redirect in site.data.redirects.docs-global %}RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/((?:\d+\.(?:\d+\.\d+|x))|dev|latest)/{{redirect[0]}}$ {{site.baseurl}}/docs/$1/$2/{{redirect[1]}} [NE,R=301,L]
 {% endfor %}
 
 # 301 (PERMANENT):
 #
 #     old docs pages -> new docs pages (version-specific)
 #
-{% for redirect in site.data.redirects.docs %}RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/{{redirect.new}} [NE,R=301,L]
+{% for redirect in site.data.redirects.docs %}RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/{{redirect[0]}}$ {{site.baseurl}}/docs/$1/{{redirect[1]}} [NE,R=301,L]
 {% endfor %}
 
 # 301 (PERMANENT):
 #
 #     old pages -> new pages
 #
-{% for redirect in site.data.redirects.general %}RewriteRule ^.*/{{redirect.old}}$ {{site.baseurl}}/{{redirect.new}} [NE,R=301,L]
+{% for redirect in site.data.redirects.general %}RewriteRule ^.*/{{redirect[0]}}$ {{site.baseurl}}/{{redirect[1]}} [NE,R=301,L]
 {% endfor %}
 
 # rewrite only:
@@ -105,6 +107,7 @@ RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/latest$ {{site.baseurl}}/docs/$1/latest/ [R
 #       This does NOT return a redirect. It returns the resource *as if* the
 #       redirected URI was requested. That is, both URIs return the same
 #       resource, but the browser won't change the URI (no redirects followed).
+#
 # NOTE:
 #       This needs to be *after* the docs redirects because they might need the
 #       "/latest/" to be in the URI in order to activate. Placing this rule

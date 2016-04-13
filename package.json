@@ -54,9 +54,10 @@
   "devDependencies": {
     "colors": "^1.0.3",
     "diff": "^1.2.0",
+    "glob": "^7.0.3",
+    "gulp-htmllint": "^0.0.5",
     "jshint": "^2.5.8",
     "mocha": "^1.21.4",
-    "gulp-htmllint": "^0.0.5",
     "simplecrawler": "^0.5.2"
   },
   "repository": {

@@ -6,27 +6,30 @@ analytics_id: UA-64283057-1
 
 {% include header.html %}
 
-<!-- Use the manual ToC, and if it doesn't exist, use the generated one -->
-{% assign toc_dir = site.data.toc %}
-{% assign tocfile = toc_dir.[page.tocfile] %}
+{% comment %}
+set some constants
+{% endcomment %}
+{% assign ALL_PAGES = site.data.all-pages %}
+{% assign TOCFILE   = site.data.toc[page.tocfile] %}
 
-{% capture version_prefix %}/docs/{{ page.language }}/{{ page.version }}/{% endcapture %}
-{% assign my_entry = page.url | replace: version_prefix,"" %}
-{% assign my_entry_parts = my_entry | split: "/" %}
+{% capture VERSION_ROOT %}/docs/{{ page.language }}/{{ page.version }}/{% endcapture %}
+{% capture LANGUAGE_ROOT %}/docs/{{ page.language }}/{% endcapture %}
+
+{% assign MY_ENTRY = page.url | replace: VERSION_ROOT,"" %}
+{% assign my_entry_parts = MY_ENTRY | split: "/" %}
 
 {% comment %}
-    path_to_root: path from here to version root, replacing all parts except the last one with '../'
-
-    NOTE:
-         the capture is a single line because extraneous whitespace would screw up the URI it produces
+PATH_TO_ROOT: path from here to version root, replacing all parts except the last one with '../'
+NOTE:
+     the capture is a single line because extraneous whitespace would screw up the URI it produces
 {% endcomment %}
-{% capture path_to_root %}{% for item in my_entry_parts %}{% if forloop.rindex > 1 %}../{% endif %}{% endfor %}{% endcapture %}
+{% capture PATH_TO_ROOT %}{% for item in my_entry_parts %}{% if forloop.rindex > 1 %}../{% endif %}{% endfor %}{% endcapture %}
 
 <div class="docs container">
 
     <!-- Table of Contents -->
     <div class="hidden-xs hidden-sm col-md-4 col-lg-3 site-toc-container">
-        {% include toc_recursive_main.html entries=tocfile my_entry=my_entry path_to_root=path_to_root %}
+        {% include toc_recursive_main.html entries=TOCFILE my_entry=MY_ENTRY path_to_root=PATH_TO_ROOT %}
     </div>
 
     <!-- Page content -->
@@ -42,51 +45,69 @@ analytics_id: UA-64283057-1
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            {% include toc_recursive_dropdown.html entries=tocfile my_entry=my_entry path_to_root=path_to_root %}
+                            {% include toc_recursive_dropdown.html entries=TOCFILE my_entry=MY_ENTRY path_to_root=PATH_TO_ROOT %}
                         </ul>
                     </div>
 
                     {% comment %}
-                    Show a single edit link if the page has a specific edit link.
+                    Show a single edit-link if the page has a specific edit-link.
                     {% endcomment %}
                     {% if page.edit_link %}
                         <a class="edit" href="{{ page.edit_link }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> {{ page.edit_text }}</a>
 
                     {% comment %}
                     Otherwise, show editing and translating options.
+
+                    Edit-links obey the following rules:
+
+                    if page in /dev/ or /latest/:
+                        show edit link for /dev/ page in source language
+                        if page not in source language:
+                            show translation link for /dev/ page
+                    else:
+                        show edit link for the page in its version and language
+
                     {% endcomment %}
                     {% else %}
 
-                        {% capture edit_link %}{{ site.repo.uri }}/tree/{{ site.repo.branch }}/www/{{ page.path }}{% endcapture %}
-                        {% capture version_string %}/{{ page.version }}/{% endcapture %}
-                        {% capture language_string %}/{{ page.language }}/{% endcapture %}
-                        {% capture src_language_string %}/{{ site.src_language }}/{% endcapture %}
+                        {% capture base_edit_link %}https://github.com/apache/cordova-docs/tree/master/www/{{ page.path }}{% endcapture %}
+                        {% capture base_version %}/{{ page.version }}/{% endcapture %}
+                        {% capture base_language %}/{{ page.language }}/{% endcapture %}
+                        {% capture dev_version %}/dev/{% endcapture %}
+                        {% capture src_language %}/{{ site.src_language }}/{% endcapture %}
 
                         {% comment %}
-                        Compute related edit links (i.e. source language edit link and /dev/ edit link).
-                        {% endcomment %}
-                        {% assign dev_edit_link     = edit_link | replace:version_string,"/dev/" %}
-                        {% assign src_dev_edit_link = dev_edit_link | replace:language_string,src_language_string %}
-
-                        {% comment %}
+                        Edit-links for current pages in non-source languages
                         NOTE:
                              Pages that are under /dev/ or /latest/ (i.e. site.latest_docs_version) have page.current set to "true".
                         {% endcomment %}
-
-                        <!-- Links for editing -->
                         {% if page.language != site.src_language and page.current %}
 
+                            {% comment %}
+                            Compute crowdin link
+                            {% endcomment %}
                             {% capture page_path_prefix %}docs/{{ page.language }}/{{ page.version }}{% endcapture %}
                             {% assign page_path_end = page.path | split:"/" | last %}
-                            {% assign page_path     = page.path | replace:page_path_prefix,"docs/en/dev" | replace:page_path_end,"" %}
-                            {% capture crowdin_link %}https://crowdin.com/project/cordova/{{ page.language }}#/cordova-docs/{{ page_path }}{% endcapture %}
+                            {% assign crowdin_path  = page.path | replace:page_path_prefix,"docs/en/dev" | replace:page_path_end,"" %}
+                            {% capture crowdin_link %}https://crowdin.com/project/cordova/{{ page.language }}#/cordova-docs/{{ crowdin_path }}{% endcapture %}
 
-                            <a class="edit" href="{{ src_dev_edit_link }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> {{ page.edit_source_text }}</a>
+                            {% assign edit_link = base_edit_link | replace:base_language,src_language | replace:base_version,dev_version %}
+
+                            <a class="edit" href="{{ edit_link }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> {{ page.edit_source_text }}</a>
                             <a class="edit" href="{{ crowdin_link }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> {{ page.edit_translation_text }}</a>
 
+                        {% comment %}
+                        Edit-links for all other pages
+                        {% endcomment %}
                         {% else %}
+
+                            {% comment %}
+                            Edit-link for latest version points to dev instead
+                            {% endcomment %}
                             {% if page.version == site.latest_docs_version %}
-                                {% assign edit_link = dev_edit_link %}
+                                {% assign edit_link = base_edit_link | replace:base_version,dev_version %}
+                            {% else %}
+                                {% assign edit_link = base_edit_link %}
                             {% endif %}
 
                             <a class="edit" href="{{ edit_link }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> {{ page.edit_source_text }}</a>
@@ -96,46 +117,35 @@ analytics_id: UA-64283057-1
                     <!-- Language dropdown -->
                     <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            {{ site.data.docs-versions.[page.language].name }}
+                            {{ site.data.docs-versions[page.language].name }}
                             <span class="caret"></span>
                         </button>
 
                         <!-- List all languages -->
                         <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                            {% for language_entry in site.data.docs-versions %}
+                            {% for other_language_entry in site.data.docs-versions %}
 
-                            {% assign language_id = language_entry[0] %}
-                            {% assign language    = language_entry[1] %}
+                            {% assign other_language_id       = other_language_entry[0] %}
+                            {% assign other_language          = other_language_entry[1] %}
+                            {% assign other_language_versions = other_language.versions %}
+                            {% assign other_language_name     = other_language.name %}
 
-                            {% capture current_language_path %}/docs/{{ page.language }}/{% endcapture %}
-                            {% capture target_language_path %}/docs/{{ language_id }}/{% endcapture %}
+                            {% capture other_language_root %}/docs/{{ other_language_id }}/{% endcapture %}
 
                             {% comment %}
-                            <!--
-                            Replace only the language part of the URI, thereby
-                            redirecting to the same page in the other language.
-                            The page will exist because translations are clones
-                            of each other.
-                             -->
+                            Replace only the language part of the URI, thereby redirecting to the same page
+                            in the other language. The page will exist because translations are clones of each other.
                             {% endcomment %}
-                            {% assign target_language_url = page.url | replace:current_language_path,target_language_path %}
-
-                            {% capture missing_version_class %}
-                                {% if language.versions contains page.version %}
-                                {% else %}
-                                    missing-version
-                                {% endif %}
-                            {% endcapture %}
+                            {% assign other_language_url = page.url | replace:LANGUAGE_ROOT,other_language_root %}
 
                             <li>
-                                <a href="{{ site.baseurl }}{{ target_language_url }}" class="{{ missing_version_class }}"
-                                >
-                                    {% if page.language == language_id %}
+                                <a href="{{ site.baseurl }}{{ other_language_url }}" class="{% unless other_language_versions contains page.version %}missing-page{% endunless %}">
+                                    {% if page.language == other_language_id %}
                                         <span class="selected">
-                                            {{ language.name }}
+                                            {{ other_language_name }}
                                         </span>
                                     {% else %}
-                                        {{ language.name }}
+                                        {{ other_language_name }}
                                     {% endif %}
                                 </a>
                             </li>
@@ -155,42 +165,41 @@ analytics_id: UA-64283057-1
                         <ul class="dropdown-menu" aria-labelledby="versionDropdown">
 
                             <!-- List versions available in this language -->
-                            {% for version in site.data.docs-versions.[page.language].versions reversed %}
+                            {% for other_version in site.data.docs-versions[page.language].versions reversed %}
                             <li>
                                 {% comment %}
-                                Name the latest version as "latest" to take advantage of
-                                redirects for "/latest/".
+                                Name the latest version as "latest" to take advantage of redirects for "/latest/".
                                 {% endcomment %}
-                                {% if version == site.latest_docs_version %}
-                                    {% assign version_string = "latest" %}
+                                {% if other_version == site.latest_docs_version %}
+                                    {% assign other_version_string = "latest" %}
                                 {% else %}
-                                    {% assign version_string = version %}
+                                    {% assign other_version_string = other_version %}
                                 {% endif %}
 
-                                {% capture current_version_path %}/docs/{{ page.language }}/{{ page.version }}/{% endcapture %}
-                                {% capture target_version_path %}/docs/{{ page.language }}/{{ version_string }}/{% endcapture %}
-
                                 {% capture version_entry_string %}
-                                    {{ version }}
-                                    {% if version == site.latest_docs_version %}
+                                    {{ other_version }}
+                                    {% if other_version == site.latest_docs_version %}
                                         ({{ page.latest_text }})
                                     {% endif %}
                                 {% endcapture %}
 
                                 {% comment %}
-                                <!--
-                                Replace only the version part of the URI, thereby
-                                redirecting to the same page in the other version.
+                                Replace only the version part of the URI, thereby redirecting to
+                                the same page in the other version.
 
-                                WARNING:
-                                    this page might not exist in the target version
-                                    because page layouts change from version to version
-                                 -->
+                                NOTE:
+                                     This page might not exist in the target version because page
+                                     layouts change from version to version
                                 {% endcomment %}
-                                {% assign target_version_url = page.url | replace:current_version_path,target_version_path%}
+                                {% capture other_version_root %}/docs/{{ page.language }}/{{ other_version_string }}/{% endcapture %}
+                                {% assign other_version_url = page.url | replace:VERSION_ROOT,other_version_root %}
 
-                                <a href="{{ site.baseurl }}{{ target_version_url }}">
-                                    {% if page.version == version %}
+                                {% unless ALL_PAGES contains other_version_url %}
+                                    {% assign other_version_url = other_version_root %}
+                                {% endunless %}
+
+                                <a href="{{ site.baseurl }}{{ other_version_url }}" class="{% unless ALL_PAGES contains other_version_url %}missing-page{% endunless %}">
+                                    {% if page.version == other_version %}
                                         <span class="selected">
                                             {{ version_entry_string }}
                                         </span>
@@ -204,34 +213,47 @@ analytics_id: UA-64283057-1
                     </div>
                 </div>
 
-                <!-- Get URL for this page in the latest version -->
-                {% capture current_version_path %}/docs/{{ page.language }}/{{ page.version }}/{% endcapture %}
-                {% capture latest_version_path %}/docs/{{ page.language }}/latest/{% endcapture %}
-                {% assign latest_url = page.url | replace:current_version_path,latest_version_path %}
+                {% comment %}
+                Get URL for this page in the latest version
+                {% endcomment %}
+                {% capture latest_root %}/docs/{{ page.language }}/latest/{% endcapture %}
+                {% assign latest_url = page.url | replace:VERSION_ROOT,latest_root %}
 
-                <!-- Show warnings for special versions (i.e. non-latest, and dev) -->
-                {% if page.version == 'dev' or page.version != site.latest_docs_version %}
+                {% comment %}
+                If this page doesn't exist, just use root
+                {% endcomment %}
+                {% unless ALL_PAGES contains latest_url %}
+                    {% assign latest_url = latest_root %}
+                {% endunless %}
 
-                    {% if page.version == 'dev' %}
-                        {% assign alert_class = "alert-info" %}
-                        {% assign warning_text = page.in_development_text %}
-                    {% elsif page.version != site.latest_docs_version %}
-                        {% assign alert_class = "alert-danger" %}
-                        {% assign warning_text = page.outdated_text %}
-                    {% endif %}
-
-                    <div class="alert {{ alert_class }} docs-alert" role="alert">
+                <!-- Show warnings for special versions -->
+                <!-- dev warning -->
+                {% if page.version == 'dev' %}
+                    <div class="alert docs-alert alert-info" role="alert">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        {{ warning_text }}
+                        {{ page.in_development_text }}
                         <a href="{{ site.baseurl }}{{ latest_url }}">
                             {{ page.click_here_text }}
                         </a>
                     </div>
-
                 {% endif %}
 
+                <!-- outdated warning -->
+                {% if page.version != 'dev' and page.version != site.latest_docs_version %}
+                    <div class="alert docs-alert alert-danger" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        {{ page.outdated_text }}
+                        <a href="{{ site.baseurl }}{{ latest_url }}">
+                            {{ page.click_here_text }}
+                        </a>
+                    </div>
+                {% endif %}
+
+                <!-- plugin version warning -->
                 {% if page.plugin_name and page.plugin_version %}
                     <div class="alert alert-warning docs-alert" role="alert">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">

@@ -98,6 +98,7 @@ DEV_CONFIG          = $(CONFIG_DIR)/_dev.yml
 PROD_CONFIG         = $(CONFIG_DIR)/_prod.yml
 DOCS_EXCLUDE_CONFIG = $(CONFIG_DIR)/_nodocs.yml
 FETCH_CONFIG        = $(DATA_DIR)/fetched-files.yml
+REDIRECTS_FILE      = $(DATA_DIR)/redirects.yml
 PLUGINS_SRC         = $(PLUGINS_SRC_DIR)/app.js
 VERSION_FILE        = VERSION
 FETCH_SCRIPT        = $(BIN_DIR)/fetch_docs.js
@@ -128,13 +129,12 @@ DEV_DOCS_TOCS = $(addprefix $(TOC_DIR)/,$(addsuffix _dev-src.yml, $(LANGUAGES)))
 VERSION_CONFIG    = $(CONFIG_DIR)/_version.yml
 DEFAULTS_CONFIG   = $(CONFIG_DIR)/_defaults.yml
 DOCS_VERSION_DATA = $(DATA_DIR)/docs-versions.yml
+DOCS_PAGE_LIST    = $(DATA_DIR)/all-pages.yml
 PLUGINS_APP       = $(PLUGINS_DEST_DIR)/plugins.js
 MAIN_STYLE_FILE   = $(CSS_DEST_DIR)/main.css
 
 STYLES = $(MAIN_STYLE_FILE) $(addsuffix .css,$(basename $(subst $(CSS_SRC_DIR),$(CSS_DEST_DIR),$(STYLES_SRC))))
 
-# NOTE:
-#      docs slugs are lang/version pairs, with "/" and "." replaced by "-"
 DOCS_VERSION_DIRS  = $(filter-out %.md,$(wildcard $(DOCS_DIR)/**/*))
 DOCS_VERSION_SLUGS = $(call slugify,$(subst $(DOCS_DIR)/,,$(DOCS_VERSION_DIRS)))
 TOC_FILES          = $(addprefix $(TOC_DIR)/,$(addsuffix -gen.yml,$(DOCS_VERSION_SLUGS)))
@@ -151,6 +151,8 @@ NEXT_DOCS_TOCS = $(addprefix $(TOC_DIR)/,$(addsuffix _$(NEXT_DOCS_VERSION_SLUG)-
 JEKYLL_CONFIGS = $(MAIN_CONFIG) $(DEFAULTS_CONFIG) $(VERSION_CONFIG)
 JEKYLL_FLAGS   =
 
+BUILD_DATA = $(DOCS_VERSION_DATA) $(DOCS_PAGE_LIST) $(TOC_FILES)
+
 # convenience targets
 help usage default:
 	@echo ""
@@ -159,7 +161,7 @@ help usage default:
 	@echo "    make build:      build site with dev config"
 	@echo "    make install:    install dependencies"
 	@echo ""
-	@echo "    make data:       generate data files (Generated ToCs, $(DOCS_VERSION_DATA))"
+	@echo "    make data:       generate data files (Generated ToCs, $(DOCS_VERSION_DATA), $(DOCS_PAGE_LIST))"
 	@echo "    make configs:    generate Jekyll configs ($(DEFAULTS_CONFIG), $(VERSION_CONFIG))"
 	@echo "    make styles:     generate CSS"
 	@echo "    make plugins:    generate plugins app ($(PLUGINS_APP))"
@@ -177,9 +179,8 @@ help usage default:
 	@echo ""
 
 fetch: $(FETCHED_FILES)
-data: toc $(DOCS_VERSION_DATA)
-configs: fetch $(DEFAULTS_CONFIG) $(VERSION_CONFIG)
-reconfig: rmconfig configs
+data: $(BUILD_DATA)
+configs: $(DEFAULTS_CONFIG) $(VERSION_CONFIG)
 styles: $(STYLES)
 plugins: $(PLUGINS_APP)
 toc: $(TOC_FILES)
@@ -202,7 +203,7 @@ endif
 endif
 
 build: JEKYLL_FLAGS += --config $(subst $(SPACE),$(COMMA),$(strip $(JEKYLL_CONFIGS)))
-build: $(JEKYLL_CONFIGS) configs fetch data styles plugins
+build: $(JEKYLL_CONFIGS) $(FETCHED_FILES) $(BUILD_DATA) $(STYLES) $(PLUGINS_APP)
 	$(JEKYLL) build $(JEKYLL_FLAGS)
 
 install:
@@ -213,7 +214,7 @@ serve:
 	cd $(DEV_DIR) && python -m SimpleHTTPServer 8000
 
 # doing this in Make in a cross-platform way is pretty ugly
-snapshot: fetch
+snapshot: $(FETCHED_FILES)
 	$(GULP) snapshot
 
 newversion: $(NEXT_DOCS) $(NEXT_DOCS_TOCS)
@@ -233,6 +234,14 @@ $(PLUGINS_APP): $(PLUGINS_SRC)
 $(DOCS_VERSION_DATA): $(BIN_DIR)/gen_versions.js $(DOCS_DIR)
 	$(NODE) $(BIN_DIR)/gen_versions.js $(DOCS_DIR) > $@
 
+$(DOCS_PAGE_LIST): $(BIN_DIR)/gen_pages_dict.js $(FETCHED_FILES) $(REDIRECTS_FILE) $(SRC_DIR)
+	$(NODE) $(BIN_DIR)/gen_pages_dict.js \
+		--siteRoot $(SRC_DIR) \
+		--redirectsFile $(REDIRECTS_FILE) \
+		--latestVersion $(LATEST_DOCS_VERSION) \
+		--languages $(subst $(SPACE),$(COMMA),$(LANGUAGES)) \
+		> $@
+
 $(DEFAULTS_CONFIG): $(BIN_DIR)/gen_defaults.js $(VERSION_FILE) $(DOCS_DIR)
 	$(NODE) $(BIN_DIR)/gen_defaults.js $(DOCS_DIR) "$(LATEST_DOCS_VERSION)" > $@
 
@@ -248,11 +257,13 @@ ifndef WINDOWS
 	touch $(DOCS_DIR)
 endif
 
-$(TOC_DIR)/%-gen.yml: $(TOC_DIR)/%-src.yml $(BIN_DIR)/augment_toc.js fetch
-	$(NODE) $(BIN_DIR)/augment_toc.js --srcToc $< --srcRoot $(DOCS_DIR)/$(call slug2language,$*)/$(call slug2version,$*) > $@
-
 $(TOC_DIR)/%_$(NEXT_DOCS_VERSION_SLUG)-src.yml: $(TOC_DIR)/%_dev-src.yml $(DOCS_DIR)
 	$(call copyfile,$<,$@)
+
+$(TOC_DIR)/%_dev-gen.yml: $(FETCHED_FILES)
+
+$(TOC_DIR)/%-gen.yml: $(TOC_DIR)/%-src.yml $(BIN_DIR)/augment_toc.js $(DOCS_DIR)
+	$(NODE) $(BIN_DIR)/augment_toc.js --srcToc $< --srcRoot $(DOCS_DIR)/$(call slug2language,$*)/$(call slug2version,$*) > $@
 
 # NOTE:
 #      $(@D) means "directory part of target"
@@ -275,12 +286,11 @@ $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.css
 	$(call printfile,$<) >> $@
 
 # maintenance
-rmconfig:
+clean:
 	$(RM) $(VERSION_CONFIG)
 	$(RM) $(DEFAULTS_CONFIG)
+	$(RM) $(DOCS_PAGE_LIST)
 	$(RM) $(DOCS_VERSION_DATA)
-
-clean: rmconfig
 	$(RM) -r $(PROD_DIR) $(DEV_DIR)
 	$(RM) $(TOC_FILES)
 	$(RM) $(PLUGINS_APP)
@@ -291,4 +301,4 @@ nuke: clean
 	$(RM) -r node_modules
 	$(RM) Gemfile.lock
 
-.PHONY: clean usage help default build $(DEV_DOCS)
+.PHONY: clean usage help default build fetch $(DEV_DOCS)

@@ -15,9 +15,6 @@ description: >
     developer to access native device function from JavaScript.
 
 excerpt_separator: <!--more-->
-repo:
-    uri:    https://github.com/apache/cordova-docs
-    branch: master
 
 # the version to which /latest/ points
 # NOTE:

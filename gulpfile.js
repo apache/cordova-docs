@@ -55,10 +55,12 @@ var NODOCS_CONFIG_FILE   = path.join(CONFIG_DIR, "_nodocs.yml");
 
 var VERSION_FILE      = "VERSION";
 var DOCS_VERSION_FILE = path.join(DATA_DIR, "docs-versions.yml");
+var ALL_PAGES_FILE    = path.join(DATA_DIR, "all-pages.yml");
+var FETCH_CONFIG      = path.join(DATA_DIR, "fetched-files.yml");
+var REDIRECTS_FILE    = path.join(DATA_DIR, "redirects.yml");
 var PLUGINS_FILE_NAME = "plugins.js";
 var PLUGINS_FILE      = path.join(JS_DIR, PLUGINS_FILE_NAME);
 var PLUGINS_SRC_FILE  = path.join(PLUGINS_SRC_DIR, "app.js");
-var FETCH_CONFIG      = path.join(DATA_DIR, "fetched-files.yml");
 
 var BASE_CONFIGS = [CONFIG_FILE, DEFAULTS_CONFIG_FILE, VERSION_CONFIG_FILE];
 var DEV_CONFIGS  = [DEV_CONFIG_FILE];
@@ -217,6 +219,7 @@ gulp.task("help", function () {
     gutil.log("");
     gutil.log("    data          run all the below tasks");
     gutil.log("    docs-versions create " + DOCS_VERSION_FILE);
+    gutil.log("    pages-dict    create " + ALL_PAGES_FILE);
     gutil.log("    toc           create all generated ToC files in " + TOC_DIR);
     gutil.log("    fetch         download docs specified in " + FETCH_CONFIG);
     gutil.log("");
@@ -237,7 +240,7 @@ gulp.task("help", function () {
     gutil.log("");
 });
 
-gulp.task("data", ["toc", "docs-versions"])
+gulp.task("data", ["toc", "docs-versions", "pages-dict"])
 gulp.task("configs", ["defaults", "version"]);
 gulp.task("styles", ["less", "css", "sass"]);
 
@@ -326,6 +329,18 @@ gulp.task("reload", function () {
 gulp.task("docs-versions", function () {
     return execPiped("node", [bin("gen_versions.js"), DOCS_DIR], DOCS_VERSION_FILE)
         .pipe(gulp.dest(ROOT_DIR));
+});
+
+gulp.task("pages-dict", function () {
+    var args = [
+        bin("gen_pages_dict.js"),
+        '--siteRoot', SOURCE_DIR,
+        '--redirectsFile', REDIRECTS_FILE,
+        '--latestVersion', LATEST_DOCS_VERSION,
+        '--languages', LANGUAGES.join(","),
+    ];
+
+    return execPiped("node", args, ALL_PAGES_FILE).pipe(gulp.dest(ROOT_DIR));
 });
 
 gulp.task("version", function () {
@@ -473,6 +488,7 @@ gulp.task("clean", function () {
     remove(CSS_OUT_DIR);
     remove(PLUGINS_FILE);
     remove(DOCS_VERSION_FILE);
+    remove(ALL_PAGES_FILE);
     remove(DEFAULTS_CONFIG_FILE);
     remove(VERSION_CONFIG_FILE);
 });
