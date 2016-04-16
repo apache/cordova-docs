@@ -18,17 +18,17 @@ license: >
     under the License.
 
 title: Customize app icons
-description: Learn how to customize icons for your Cordova app
+description: Learn how to customize icons for your Cordova application
 ---
 
 # Customize Icons
 
-This section shows how to configure an app's icon for various platforms. Support for splash screen has moved to a Cordova plugin of its own. The configuration options can be found in the [Splashscreen plugin docs][splashscreen_plugin].
+This section shows how to configure an application's icon for various platforms. Documentation about splash screen images can be found in the Cordova-Plugin-Splashscreen documentation [Splashscreen plugin docs][splashscreen_plugin].
 
 ## Configuring Icons in the CLI
 
-When working in the CLI you can define app icon(s) via `<icon>` element (`config.xml`).
-If you do not specify an icon then the Apache Cordova logo is used.
+When working in the CLI you can define application icon(s) via the `<icon>` element (`config.xml`).
+If you do not specify an icon, the Apache Cordova logo is used.
 
 ```xml
     <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
@@ -44,12 +44,12 @@ density       | *Optional* <br/> ==Android== <br/> Specified icon density
 target        | *Optional* <br/> ==Windows== <br/> Destination filename for the image file and all its' MRT companions
 
 
-The following configuration can be used to define single default icon
+The following configuration can be used to define a single default icon
 which will be used for all platforms.
 ```xml
     <icon src="res/icon.png" />
 ```
-For each platform you can also define a pixel-perfect icons set to fit
+For each platform, you can also define a pixel-perfect icon set to fit
 different screen resolutions.
 
 ##Android
@@ -84,6 +84,9 @@ different screen resolutions.
 ```
 ###See Also
 - [BlackBerry's documentation][blackberry_icon] for targeting multiple sizes and locales.
+
+##Browser
+Icons are not applicable to the Browser platform.
 
 ##iOS
 ```xml
@@ -121,7 +124,7 @@ different screen resolutions.
 
 ##Windows
 
-For Windows the recommended approach to define app icons is to use `target` attribute.
+For Windows the recommended approach to define application icons is to use the `target` attribute.
 
 ```xml
     <platform name="windows">
@@ -136,15 +139,17 @@ For Windows the recommended approach to define app icons is to use `target` attr
     </platform>
 ```
 
-where `source` is the path to the icon which needs to be added.
+where `src` is the path to the icon which needs to be added.
 
-Please note that Windows platform handles MRT icons automatically, so if you specify `src="res/windows/storelogo.png"` the following files will be copied into app's `images` folder: `res/windows/storelogo.scale-100.png`, `res/windows/storelogo.scale-200.png`, etc.
+The Windows platform handles MRT icons automatically, so if you specify `src="res/windows/storelogo.png"` the following files will be copied into the application's `images` folder: `res/windows/storelogo.scale-100.png`, `res/windows/storelogo.scale-200.png`, etc.
 
-The `target` attribute specifies the base name for resultant icons. For every icon file destination filename is calculated as `target + '.' + MRT_qualifiers + extension(src)`. For the icons to display properly in resultant app every `target` value should be the one of icon filenames, defined in application's `.appxmanifest` file.
+TODO Define what MRT is.
 
-Summarizing the above, using `target` attribute it is possible to:
+The `target` attribute specifies the base name for the resultant icons. For every icon file, its destination filename is calculated as `target + '.' + MRT_qualifiers + extension(src)`. For the icons to display properly in the application, every `target` value should be one of the icon filenames defined in the application's `.appxmanifest` file.
 
-  * define a group of icons for different device scale factors using single `<icon ...>` element, for example:
+Summarizing the above... using the `target` attribute it is possible to:
+
+  * define a group of icons for different device scale factors using a single `<icon ...>` element, for example:
 ```xml
     <icon src="res/Windows/AppListIcon.png" target="Square44x44Logo" />
 ```
@@ -157,7 +162,7 @@ Summarizing the above, using `target` attribute it is possible to:
 ```
   * define icons with scale factors other than `scale-100` and `scale-240` (and any other MRT qualifiers)
 
-Though it is not recommended but is still possible to define icons using `width` and `height` attributes:
+Although it is not recommended, it is also possible to define icons using the `width` and `height` attributes:
 
 ```xml
     <platform name="windows">
