@@ -78,3 +78,5 @@ kramdown:
 # exclude these directories from the build
 exclude:
     - static/css-src
+
+algolia_api_key: "0a916ab198bd93d031aa70611271e42e"
