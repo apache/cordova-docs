@@ -194,6 +194,33 @@ code {
     color: #000000;
 }
 
+/* algolia search formatting */
+.algolia-docsearch-suggestion--category-header, .algolia-docsearch-suggestion {
+    font-family: "Raleway", Helvetica, Arial, sans-serif !important;
+}
+
+.algolia-docsearch-suggestion--category-header {
+    background-color: #262626   !important;
+    font-size: 16px             !important;
+    font-weight: bold           !important;
+    line-height: 30px           !important;
+}
+
+.algolia-docsearch-suggestion {
+    font-size: 14px     !important;
+    font-weight: 300    !important;
+}
+
+@media (max-width: $screen-xs-max) {
+    #header-search-form {
+        display: none;
+    }
+}
+
+#header-search-field {
+    border-radius: 4px !important;
+}
+
 @import 'home';
 @import 'blog';
 @import 'plugins';

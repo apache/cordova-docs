@@ -29,18 +29,19 @@
                         <li>
                             <a href="{{ site.baseurl }}/#getstarted">Get Started</a>
                         </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    {% if page.version %}
+                                        {% assign version = page.version %}
+                                    {% else %}
+                                        {% assign version = site.latest_docs_version %}
+                                    {% endif %}
+                                    <input id="header-search-field" type="text" placeholder="Search '{{ version }}' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
                     </ul>
-                    <form action="https://www.google.com/search" method="GET" class="navbar-form navbar-right" id="header-search-form" role="search">
-                        <div class="input-group">
-                            <input type="text" name="q" class="form-control hidden-sm" placeholder="Site-wide Search">
-                            <span class="input-group-btn">
-                                <button type="submit" class="btn search-button">
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                </button>
-                            </span>
-                        </div>
-                        <input type="hidden" name="q" value="site:cordova.apache.org">
-                    </form>
                 </div>
             </div><!--/.navbar-collapse -->
         </div>

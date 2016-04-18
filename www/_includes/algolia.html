@@ -1,0 +1,21 @@
+{% if page.version %}
+    {% assign version = page.version %}
+{% else %}
+    {% assign version = site.latest_docs_version %}
+{% endif %}
+
+{% if page.language %}
+    {% assign language = page.language %}
+{% else %}
+    {% assign language = site.language %}
+{% endif %}
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '{{ site.algolia_api_key }}',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  {{ version }}", "language: {{ language }}"] }
+    });
+</script>
