@@ -33,7 +33,9 @@ The following plugins were updated today:
 * cordova-plugin-wkwebview-engine: 1.0.3
 * cordova-plugin-compat: 1.0.0
 
-This release includes a new plugin named [cordova-plugin-compat](https://github.com/apache/cordova-plugin-compat). `cordova-plugin-compat` allows backwards compatibility for plugins that had to upgrade to the new permissions model for `cordova-android@5+`. Plugin authors can use and depend on `cordova-plugin-compat` to continue to support older versions (`<5`) of `cordova-android`. Checkout the [cordova-plugin-compat repo](https://github.com/apache/cordova-plugin-compat) for more information. Plugin authors can also use the new [engines element](http://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#engines-and-engine) to specify what versions of `cordova-android` your plugin supports. Read more about it in our [plugin fetching blog post](http://cordova.apache.org/announcements/2016/03/22/new-plugin-fetching.html).
+This release includes a new plugin named [cordova-plugin-compat](https://github.com/apache/cordova-plugin-compat). `cordova-plugin-compat` allows backwards compatibility for plugins that had to upgrade to the new permissions model for `cordova-android@5+`. Plugin authors can use and depend on `cordova-plugin-compat` to continue to support older versions (`<5`) of `cordova-android`. Checkout the [cordova-plugin-compat repo](https://github.com/apache/cordova-plugin-compat) for more information. Previously, we were packaging copies of `PermissionHelper.java` with the plugins that needed the permission updates, but have now decided that it would be better to store `PermissionHelper.java` in `cordova-plugin-compat`.
+
+Plugin authors can also use the new [engines element](http://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#engines-and-engine) to specify what versions of `cordova-android` your plugin supports. Read more about it in our [plugin fetching blog post](http://cordova.apache.org/announcements/2016/03/22/new-plugin-fetching.html).
 
 ----
 You can update any plugin by removing it, and then re-adding it.
