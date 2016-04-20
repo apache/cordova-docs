@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Platforma Ubuntu Guide
+toc_title: Ubuntu
 ---
 
 # Platforma Ubuntu Guide

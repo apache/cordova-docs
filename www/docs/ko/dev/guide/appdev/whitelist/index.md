@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 화이트 리스트 가이드
+toc_title: Whitelisting
 ---
 
 # 화이트 리스트 가이드

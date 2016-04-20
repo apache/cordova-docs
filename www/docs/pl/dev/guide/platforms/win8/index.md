@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Przewodnik platforma Windows
+toc_title: Windows
 ---
 
 # Przewodnik platforma Windows

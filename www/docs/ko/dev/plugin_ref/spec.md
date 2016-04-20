@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 플러그인 명세
+toc_title: Plugin.xml
 ---
 
 # 플러그인 명세

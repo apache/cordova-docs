@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Almacenamiento de información
+toc_title: Store data
 ---
 
 # Almacenamiento de información

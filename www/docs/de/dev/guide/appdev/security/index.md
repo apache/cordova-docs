@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Sicherheitshandbuch
+toc_title: Manage security
 ---
 
 # Sicherheitshandbuch

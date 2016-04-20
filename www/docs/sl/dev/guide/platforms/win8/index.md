@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Windows 8 platformi vodnik
+toc_title: Windows
 ---
 
 # Windows 8 platformi vodnik

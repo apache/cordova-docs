@@ -8,11 +8,7 @@ analytics_id: UA-64283057-1
 
 <!-- Use the manual ToC, and if it doesn't exist, use the generated one -->
 {% assign toc_dir = site.data.toc %}
-{% if toc_dir.[page.manual_toc] %}
-    {% assign tocfile = toc_dir.[page.manual_toc] %}
-{% else %}
-    {% assign tocfile = toc_dir.[page.generated_toc] %}
-{% endif %}
+{% assign tocfile = toc_dir.[page.tocfile] %}
 
 {% capture version_prefix %}/docs/{{ page.language }}/{{ page.version }}/{% endcapture %}
 {% assign my_entry = page.url | replace: version_prefix,"" %}

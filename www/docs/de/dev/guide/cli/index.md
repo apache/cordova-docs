@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Die Befehlszeilenschnittstelle
+toc_title: Create your first app
 ---
 
 # Die Befehlszeilenschnittstelle

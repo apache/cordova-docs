@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: OS X Platform Guide
+toc_title: OS X
 ---
 
 # OS X Platform Guide

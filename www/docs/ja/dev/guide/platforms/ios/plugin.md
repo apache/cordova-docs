@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: iOS のプラグイン
+toc_title: iOS
 ---
 
 # iOS のプラグイン

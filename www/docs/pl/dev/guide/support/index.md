@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Wspierane platformy
+toc_title: Platform support
 ---
 
 # Wspierane platformy

@@ -175,9 +175,9 @@ function copyDocsVersion(oldVersion, newVersion, cb) {
 
         // get files to copy
         var oldVersionDocs = path.join(DOCS_DIR, languageName, oldVersion);
-        var oldVersionToc  = path.join(TOC_DIR, util.manualTocfileName(languageName, oldVersion));
+        var oldVersionToc  = path.join(TOC_DIR, util.srcTocfileName(languageName, oldVersion));
         var newVersionDocs = path.join(DOCS_DIR, languageName, newVersion);
-        var newVersionToc  = path.join(TOC_DIR, util.manualTocfileName(languageName, newVersion));
+        var newVersionToc  = path.join(TOC_DIR, util.srcTocfileName(languageName, newVersion));
 
         var copyOptions = {
             stopOnErr: true
@@ -346,11 +346,7 @@ gulp.task("defaults", function () {
 });
 
 gulp.task("toc", ["fetch"], function (done) {
-    if (gutil.env.prod) {
-        exec("node", [bin("toc.js"), DOCS_DIR, DATA_DIR], done);
-    } else {
-        done();
-    }
+    exec("node", [bin("toc.js"), DOCS_DIR, TOC_DIR], done);
 });
 
 gulp.task("less", function () {
@@ -472,7 +468,7 @@ gulp.task("clean", function () {
     remove(DEV_DIR);
     remove(PROD_DIR);
     remove(FETCH_DIR);
-    remove(path.join(DATA_DIR, "toc", "*-generated.yml"));
+    remove(path.join(DATA_DIR, "toc", "*-gen.yml"));
     remove(CSS_OUT_DIR);
     remove(PLUGINS_FILE);
     remove(DOCS_VERSION_FILE);

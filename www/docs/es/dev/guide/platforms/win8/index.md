@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Guía de la plataforma Windows
+toc_title: Windows
 ---
 
 # Guía de la plataforma Windows

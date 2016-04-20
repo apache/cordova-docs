@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: iOS platformi vodnik
+toc_title: iOS
 ---
 
 # iOS platformi vodnik

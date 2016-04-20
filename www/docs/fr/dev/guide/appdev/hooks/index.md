@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Guide de crochets
+toc_title: Hooks
 ---
 
 # Guide de crochets

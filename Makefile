@@ -12,15 +12,42 @@ endif
 ifdef WINDOWS
 SHELL  = cmd
 JEKYLL = bundle.bat exec jekyll
-MKDIRP = mkdir
 CAT    = type
 LS     = ls
 else
 SHELL  = sh
 JEKYLL = bundle exec jekyll
-MKDIRP = mkdir -p
 CAT    = cat
 LS     = ls
+endif
+
+# macros
+slugify       = $(subst /,_,$(subst .,-,$(1)))
+slug2language = $(subst /,,$(dir $(subst _,/,$(1))))
+slug2version  = $(subst -,.,$(notdir $(subst _,/,$(1))))
+
+ifdef WINDOWS
+copydir = xcopy "$(subst /,\,$(1))" "$(subst /,\,$(2))" /E /I
+else
+copydir = cp -r $(1) $(2)
+endif
+
+ifdef WINDOWS
+copyfile = copy "$(subst /,\,$(1))" "$(subst /,\,$(2))"
+else
+copyfile = cp $(1) $(2)
+endif
+
+ifdef WINDOWS
+makedir = mkdir $(subst /,\,$(1))
+else
+makedir = mkdir -p $(1)
+endif
+
+ifdef WINDOWS
+printfile = type $(subst /,\,$(1))
+else
+printfile = cat $(1)
 endif
 
 # constants
@@ -80,8 +107,8 @@ FETCH_SCRIPT        = $(BIN_DIR)/fetch_docs.js
 #      which includes them on its own, and the SCSS compiler takes care of them;
 #      because of this, there is also no .scss -> .css pattern rule
 ifdef WINDOWS
-SCSS_SRC   = $(shell cd $(CSS_SRC_DIR) && dir *.scss /S /B)
-STYLES_SRC = $(shell cd $(CSS_SRC_DIR) && dir *.less *.css /S /B)
+SCSS_SRC   = $(subst $(PWD)/,,$(subst \,/,$(shell cd $(CSS_SRC_DIR) && dir *.scss /S /B)))
+STYLES_SRC = $(subst $(PWD)/,,$(subst \,/,$(shell cd $(CSS_SRC_DIR) && dir *.less *.css /S /B)))
 else
 SCSS_SRC   = $(shell find $(CSS_SRC_DIR) -name "*.scss")
 STYLES_SRC = $(shell find $(CSS_SRC_DIR) -name "*.less" -or -name "*.css")
@@ -89,14 +116,14 @@ endif
 
 LANGUAGES = $(shell $(LS) $(DOCS_DIR))
 
-LATEST_DOCS_VERSION = $(shell $(CAT) $(VERSION_FILE))
+LATEST_DOCS_VERSION = $(strip $(shell $(CAT) $(VERSION_FILE)))
 NEXT_DOCS_VERSION   = $(shell $(NODE) $(BIN_DIR)/nextversion.js $(LATEST_DOCS_VERSION))
 
-LATEST_DOCS_VERSION_SLUG = $(subst .,-,$(LATEST_DOCS_VERSION))
-NEXT_DOCS_VERSION_SLUG   = $(subst .,-,$(NEXT_DOCS_VERSION))
+LATEST_DOCS_VERSION_SLUG = $(call slugify,$(LATEST_DOCS_VERSION))
+NEXT_DOCS_VERSION_SLUG   = $(call slugify,$(NEXT_DOCS_VERSION))
 
 DEV_DOCS      = $(addprefix $(DOCS_DIR)/,$(addsuffix /dev,$(LANGUAGES)))
-DEV_DOCS_TOCS = $(addprefix $(TOC_DIR)/,$(addsuffix -dev-manual.yml, $(LANGUAGES)))
+DEV_DOCS_TOCS = $(addprefix $(TOC_DIR)/,$(addsuffix _dev-src.yml, $(LANGUAGES)))
 
 # generated files
 VERSION_CONFIG    = $(CONFIG_DIR)/_version.yml
@@ -110,17 +137,17 @@ STYLES = $(MAIN_STYLE_FILE) $(addsuffix .css,$(basename $(subst $(CSS_SRC_DIR),$
 # NOTE:
 #      docs slugs are lang/version pairs, with "/" and "." replaced by "-"
 DOCS_VERSION_DIRS  = $(filter-out %.md,$(wildcard $(DOCS_DIR)/**/*))
-DOCS_VERSION_SLUGS = $(subst /,-,$(subst .,-,$(subst $(DOCS_DIR)/,,$(DOCS_VERSION_DIRS))))
-TOC_FILES          = $(addprefix $(TOC_DIR)/,$(addsuffix -generated.yml,$(DOCS_VERSION_SLUGS)))
+DOCS_VERSION_SLUGS = $(call slugify,$(subst $(DOCS_DIR)/,,$(DOCS_VERSION_DIRS)))
+TOC_FILES          = $(addprefix $(TOC_DIR)/,$(addsuffix -gen.yml,$(DOCS_VERSION_SLUGS)))
 
 FETCH_FLAGS   = --config $(FETCH_CONFIG) --docsRoot $(DOCS_DIR)
 FETCHED_FILES = $(shell $(NODE) $(FETCH_SCRIPT) $(FETCH_FLAGS) --dump)
 
 LATEST_DOCS      = $(addprefix $(DOCS_DIR)/,$(addsuffix /$(LATEST_DOCS_VERSION),$(LANGUAGES)))
-LATEST_DOCS_TOCS = $(addprefix $(TOC_DIR)/,$(addsuffix -$(LATEST_DOCS_VERSION_SLUG)-manual.yml, $(LANGUAGES)))
+LATEST_DOCS_TOCS = $(addprefix $(TOC_DIR)/,$(addsuffix _$(LATEST_DOCS_VERSION_SLUG)-src.yml, $(LANGUAGES)))
 
 NEXT_DOCS      = $(addprefix $(DOCS_DIR)/,$(addsuffix /$(NEXT_DOCS_VERSION),$(LANGUAGES)))
-NEXT_DOCS_TOCS = $(addprefix $(TOC_DIR)/,$(addsuffix -$(NEXT_DOCS_VERSION_SLUG)-manual.yml, $(LANGUAGES)))
+NEXT_DOCS_TOCS = $(addprefix $(TOC_DIR)/,$(addsuffix _$(NEXT_DOCS_VERSION_SLUG)-src.yml, $(LANGUAGES)))
 
 # other variables
 # NOTE:
@@ -150,8 +177,10 @@ help usage default:
 	@echo "    PROD:   (defined or undefined) - uses production config instead of dev config"
 	@echo ""
 
-data: $(TOC_FILES) $(DOCS_VERSION_DATA)
-configs: $(DEFAULTS_CONFIG) $(VERSION_CONFIG)
+fetch: $(FETCHED_FILES)
+data: toc $(DOCS_VERSION_DATA)
+configs: fetch $(DEFAULTS_CONFIG) $(VERSION_CONFIG)
+reconfig: rmconfig configs
 styles: $(STYLES)
 plugins: $(PLUGINS_APP)
 toc: $(TOC_FILES)
@@ -174,7 +203,7 @@ endif
 endif
 
 build: JEKYLL_FLAGS += --config $(subst $(SPACE),$(COMMA),$(strip $(JEKYLL_CONFIGS)))
-build: $(JEKYLL_CONFIGS) fetch data styles plugins
+build: $(JEKYLL_CONFIGS) configs fetch data styles plugins
 	$(JEKYLL) build $(JEKYLL_FLAGS)
 
 install:
@@ -183,8 +212,6 @@ install:
 
 serve:
 	cd $(DEV_DIR) && python -m SimpleHTTPServer 8000
-
-fetch: $(FETCHED_FILES)
 
 snap: fetch $(LATEST_DOCS) $(LATEST_DOCS_TOCS)
 
@@ -211,87 +238,60 @@ $(DEFAULTS_CONFIG): $(BIN_DIR)/gen_defaults.js $(VERSION_FILE) $(DOCS_DIR)
 $(VERSION_CONFIG): $(VERSION_FILE)
 	sed -e "s/^/$(VERSION_VAR_NAME): /" < $< > $@
 
-$(TOC_FILES): $(BIN_DIR)/toc.js $(DOCS_DIR)
-	$(NODE) $(BIN_DIR)/toc.js $(DOCS_DIR) $(DATA_DIR)
-
 $(MAIN_STYLE_FILE): $(SCSS_SRC)
 
 # pattern rules
 $(DOCS_DIR)/%/$(LATEST_DOCS_VERSION): $(DOCS_DIR)/%/dev
 	$(RM) -r $@
-ifdef WINDOWS
-	xcopy "$^" "$@" /E /I
-else
-	cp -r $^ $@
-endif
+	$(call copydir,$^,$@)
 ifndef WINDOWS
 	touch $(DOCS_DIR)
 endif
 
 $(DOCS_DIR)/%/$(NEXT_DOCS_VERSION): $(DOCS_DIR)/%/dev
-ifdef WINDOWS
-	xcopy "$^" "$@" /E /I
-else
-	cp -r $^ $@
-endif
+	$(call copydir,$^,$@)
 ifndef WINDOWS
 	touch $(DOCS_DIR)
 endif
 
-$(TOC_DIR)/%-$(LATEST_DOCS_VERSION_SLUG)-manual.yml: $(TOC_DIR)/%-dev-manual.yml $(DOCS_DIR)
-ifdef WINDOWS
-	copy $(subst /,\,"$<") $(subst /,\,"$@")
-else
-	cp $< $@
-endif
+$(TOC_DIR)/%-gen.yml: $(TOC_DIR)/%-src.yml $(BIN_DIR)/augment_toc.js fetch
+	$(NODE) $(BIN_DIR)/augment_toc.js --srcToc $< --srcRoot $(DOCS_DIR)/$(call slug2language,$*)/$(call slug2version,$*) > $@
 
-$(TOC_DIR)/%-$(NEXT_DOCS_VERSION_SLUG)-manual.yml: $(TOC_DIR)/%-dev-manual.yml $(DOCS_DIR)
-ifdef WINDOWS
-	copy $(subst /,\,"$<") $(subst /,\,"$@")
-else
-	cp $< $@
-endif
+$(TOC_DIR)/%_$(LATEST_DOCS_VERSION_SLUG)-src.yml: $(TOC_DIR)/%_dev-src.yml $(DOCS_DIR)
+	$(call copyfile,$<,$@)
+
+$(TOC_DIR)/%_$(NEXT_DOCS_VERSION_SLUG)-src.yml: $(TOC_DIR)/%_dev-src.yml $(DOCS_DIR)
+	$(call copyfile,$<,$@)
 
 # NODE:
 #      $(@D) means "directory part of target"
 $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.less
-ifdef WINDOWS
-	-$(MKDIRP) $(subst /,\,$(@D))
-else
-	$(MKDIRP) $(@D)
-endif
+	-$(call makedir,$(@D))
 	echo ---> $@
 	echo --->> $@
 	$(LESSC) $< >> $@
 
 $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.scss
-ifdef WINDOWS
-	-$(MKDIRP) $(subst /,\,$(@D))
-else
-	$(MKDIRP) $(@D)
-endif
+	-$(call makedir,$(@D))
 	echo ---> $@
 	echo --->> $@
 	$(SASSC) $< >> $@
 
 $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.css
-ifdef WINDOWS
-	-$(MKDIRP) $(subst /,\,$(@D))
-else
-	$(MKDIRP) $(@D)
-endif
+	-$(call makedir,$(@D))
 	echo ---> $@
 	echo --->> $@
-	cat $< >> $@
+	$(call printfile,$<) >> $@
 
 # maintenance
-clean:
-
-	$(RM) -r $(PROD_DIR) $(DEV_DIR)
+rmconfig:
 	$(RM) $(VERSION_CONFIG)
 	$(RM) $(DEFAULTS_CONFIG)
-	$(RM) $(TOC_FILES)
 	$(RM) $(DOCS_VERSION_DATA)
+
+clean: rmconfig
+	$(RM) -r $(PROD_DIR) $(DEV_DIR)
+	$(RM) $(TOC_FILES)
 	$(RM) $(PLUGINS_APP)
 	$(RM) -r $(CSS_DEST_DIR)
 	$(RM) $(FETCHED_FILES)

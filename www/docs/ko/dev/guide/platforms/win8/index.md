@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Windows 플랫폼 가이드
+toc_title: Windows
 ---
 
 # Windows 플랫폼 가이드

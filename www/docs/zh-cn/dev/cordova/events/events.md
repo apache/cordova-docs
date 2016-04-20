@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 事件
+toc_title: Events
 ---
 
 # 事件

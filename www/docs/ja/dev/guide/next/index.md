@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 次のステップ
+toc_title: Next Steps
 ---
 
 # 次のステップ

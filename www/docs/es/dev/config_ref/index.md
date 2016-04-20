@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: El archivo config.xml
+toc_title: Config.xml
 ---
 
 # El archivo config.xml

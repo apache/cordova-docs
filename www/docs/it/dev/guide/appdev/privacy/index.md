@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Guida sulla privacy
+toc_title: Manage privacy
 ---
 
 # Guida sulla privacy

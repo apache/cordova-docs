@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Panoramica
+toc_title: Overview
 ---
 
 # Panoramica

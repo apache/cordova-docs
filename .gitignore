@@ -5,6 +5,7 @@ conf/_defaults.yml
 conf/_version.yml
 
 www/_data/docs-versions.yml
+www/_data/toc/*-gen.yml
 www/static/css
 www/static/js/plugins.js
 www/docs/*/dev/reference

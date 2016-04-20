@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Platforms and Plugins Version Management
+toc_title: Manage versions and platforms
 ---
 
 # Platforms and Plugins Version Management

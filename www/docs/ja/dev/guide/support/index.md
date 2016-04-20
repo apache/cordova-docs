@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: プラットフォームのサポート
+toc_title: Platform support
 ---
 
 # プラットフォームのサポート

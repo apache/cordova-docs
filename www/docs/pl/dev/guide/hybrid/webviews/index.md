@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Osadzanie WebViews
+toc_title: Embed Cordova in native apps
 ---
 
 # Osadzanie WebViews

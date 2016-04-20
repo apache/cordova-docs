@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Плагины для iOS
+toc_title: iOS
 ---
 
 # Плагины для iOS

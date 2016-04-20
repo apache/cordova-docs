@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Plugin di Windows
+toc_title: Windows
 ---
 
 # Plugin di Windows

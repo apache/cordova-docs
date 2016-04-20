@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Guida di whitelist
+toc_title: Whitelisting
 ---
 
 # Guida di whitelist

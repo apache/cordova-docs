@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Storage
+toc_title: Store data
 ---
 
 # Storage

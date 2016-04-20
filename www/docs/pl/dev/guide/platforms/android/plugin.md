@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Wtyczek Android
+toc_title: Android
 ---
 
 # Wtyczek Android

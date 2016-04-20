@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Il File config. Xml
+toc_title: Config.xml
 ---
 
 # Il File config. Xml

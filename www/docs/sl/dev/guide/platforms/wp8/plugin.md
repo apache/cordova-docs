@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Windows Phone Plugins
+toc_title: WP8
 ---
 
 # Windows Phone Plugins

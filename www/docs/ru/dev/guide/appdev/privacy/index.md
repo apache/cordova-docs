@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Руководство по конфиденциальности
+toc_title: Manage privacy
 ---
 
 # Руководство по конфиденциальности

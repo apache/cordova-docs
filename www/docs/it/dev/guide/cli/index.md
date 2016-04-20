@@ -17,7 +17,8 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: L'interfaccia della riga di comando
+title: "L'interfaccia della riga di comando"
+toc_title: Create your first app
 ---
 
 # L'interfaccia della riga di comando

@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Ubuntu プラットフォーム ガイド
+toc_title: Ubuntu
 ---
 
 # Ubuntu プラットフォーム ガイド

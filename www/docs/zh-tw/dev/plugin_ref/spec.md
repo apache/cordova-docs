@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 外掛程式規範
+toc_title: Plugin.xml
 ---
 
 # 外掛程式規範

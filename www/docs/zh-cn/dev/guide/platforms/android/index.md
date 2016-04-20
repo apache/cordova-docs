@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Android 平臺指南
+toc_title: Android
 ---
 
 # Android 平臺指南

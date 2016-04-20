@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 플랫폼 및 플러그인 버전 관리
+toc_title: Manage versions and platforms
 ---
 
 # 플랫폼 및 플러그인 버전 관리

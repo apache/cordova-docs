@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Symbole und Splash-Screens
+toc_title: Customize icons
 ---
 
 # Symbole und Splash-Screens

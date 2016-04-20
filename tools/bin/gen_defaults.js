@@ -24,8 +24,7 @@ var yaml = require("js-yaml");
 var util = require("./util");
 
 // constants
-var USAGE = "Usage: gen_defaults.js [docsRoot] [latestVersion]"
-
+var USAGE            = "Usage: gen_defaults.js [docsRoot] [latestVersion]"
 var DEV_VERSION_NAME = "dev";
 
 // constants for sitemap.xml
@@ -79,8 +78,7 @@ function main () {
         // set defaults for each version
         util.listdirsSync(langPath).forEach(function (versionName) {
 
-            var manualToc    = util.manualTocfileName(langName, versionName);
-            var generatedToc = util.generatedTocfileName(langName, versionName);
+            var tocfile = util.genTocfileName(langName, versionName);
 
             var changeFrequency = DEFAULT_CHANGE_FREQUENCY;
             var pagePriority    = DEFAULT_PAGE_PRIORITY;
@@ -105,8 +103,7 @@ function main () {
                 },
                 values: {
                     version:          versionName,
-                    manual_toc:       manualToc.replace(".yml", ""),
-                    generated_toc:    generatedToc.replace(".yml", ""),
+                    tocfile:          tocfile.replace(".yml", ""),
                     change_frequency: changeFrequency,
                     priority:         pagePriority,
                     current:          current
@@ -117,7 +114,8 @@ function main () {
         });
     });
 
-    console.log(yaml.dump(config));
+    console.log(util.generatedBy(__filename));
+    console.log(yaml.dump(config, {indent: 4}));
 }
 
 main();

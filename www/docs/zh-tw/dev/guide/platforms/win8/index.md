@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Windows 平臺指南
+toc_title: Windows
 ---
 
 # Windows 平臺指南

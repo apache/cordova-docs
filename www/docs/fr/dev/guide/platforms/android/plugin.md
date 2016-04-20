@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Plugins Android
+toc_title: Android
 ---
 
 # Plugins Android

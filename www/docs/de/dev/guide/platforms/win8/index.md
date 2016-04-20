@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Anleitung zur Windows Platform
+toc_title: Windows
 ---
 
 # Anleitung zur Windows Platform

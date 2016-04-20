@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Vdelava spletni pogledi
+toc_title: Embed Cordova in native apps
 ---
 
 # Vdelava spletni pogledi

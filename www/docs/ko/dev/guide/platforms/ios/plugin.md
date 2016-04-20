@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: iOS 플러그인
+toc_title: iOS
 ---
 
 # iOS 플러그인

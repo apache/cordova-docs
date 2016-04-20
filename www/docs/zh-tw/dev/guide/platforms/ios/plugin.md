@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: iOS 外掛程式
+toc_title: iOS
 ---
 
 # iOS 外掛程式

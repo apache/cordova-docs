@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Plugman를 사용 하 여 플러그인을 관리 하
+toc_title: Use Plugman
 ---
 
 # Plugman를 사용 하 여 플러그인을 관리 하

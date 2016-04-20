@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Ikone in brizg zaslon
+toc_title: Customize icons
 ---
 
 # Ikone in brizg zaslon

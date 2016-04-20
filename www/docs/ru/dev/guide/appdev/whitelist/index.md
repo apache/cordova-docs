@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Инструкция по доступу к внешним ресурсам
+toc_title: Whitelisting
 ---
 
 # Инструкция по доступу к внешним ресурсам

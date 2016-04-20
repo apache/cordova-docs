@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Android 外掛程式
+toc_title: Android
 ---
 
 # Android 外掛程式

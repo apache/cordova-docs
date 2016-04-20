@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Vodnik Ubuntu Platform
+toc_title: Ubuntu
 ---
 
 # Vodnik Ubuntu Platform

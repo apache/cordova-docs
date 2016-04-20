@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: iOS プラットフォーム ガイド
+toc_title: iOS
 ---
 
 # iOS プラットフォーム ガイド

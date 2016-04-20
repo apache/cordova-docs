@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Corodva support by platform
+toc_title: Platform support
 ---
 
 # Platform Support

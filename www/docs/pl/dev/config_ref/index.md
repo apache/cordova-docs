@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Plik config.xml
+toc_title: Config.xml
 ---
 
 # Plik config.xml

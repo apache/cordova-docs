@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Platforma podporo
+toc_title: Platform support
 ---
 
 # Platforma podporo

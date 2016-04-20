@@ -17,123 +17,57 @@
 
 "use strict";
 
-var fs   = require("fs");
-var path = require("path");
+var fs           = require("fs");
+var path         = require("path");
+var childProcess = require("child_process");
+
 var yaml = require("js-yaml");
-var walk = require("walk");
 var Q    = require("q");
 var argv = require("optimist").argv;
 
-var util = require("./util");
-
-function isUnderline(line) {
-    return /-+|=+|\*+/.test(line);
-}
-
-function getPageTitle(filePath) {
-    var file = fs.readFileSync(filePath, 'utf8');
-    var res  = /<h1>([^<]*)<\/h1>|#\ (.*)|(.*)[\n\f\r]+(?:={3}=+|-{3}-+)/.exec(file);
-    if (res) {
-        if (res[1]) {
-            return res[1].trim();
-        }
-        if (res[2]) {
-            return res[2].trim();
-        }
-        if (res[3]) {
-            return res[3].trim();
-        }
-    }
-    return null;
-}
-
-function generateToC(sourceDir) {
-
-    var deferred = Q.defer();
-    var toc      = [];
-
-    // go through each file in sourceDir
-    var walker = walk.walk(sourceDir);
-    walker.on("file", function (dirPrefix, fileStats, next) {
-
-        var fileName = fileStats.name;
-        var filePath = path.join(dirPrefix, fileName);
-
-        // get the page path
-        var pagePrefix = dirPrefix.replace(sourceDir, '');
-        var pagePath   = path.join(pagePrefix, fileName);
-        var pageURI    = pagePath.replace(".md", ".html").replace(/\\/g, "/");
-
-        // remove leading slash
-        if (pageURI[0] === "/") {
-            pageURI = pageURI.substr(1);
-        }
-
-        // get heading
-        var heading = getPageTitle(filePath);
-
-        // if the page has a heading, add it to the ToC
-        if (heading) {
-            toc.push({
-                name: heading,
-                url:  pageURI
-            });
-        }
-
-        next();
-    });
-
-    walker.on("errors", function (root, nodeStatsArray, next) {
-        console.error("ERROR while processing " + root);
-        next();
-    });
-
-    walker.on("end", function () {
-        deferred.resolve(toc);
-    });
-
-    return deferred.promise;
-}
+var augment = require("./augment_toc");
+var util    = require("./util");
 
 function main () {
 
     var docsRoot = argv._[0];
-    var dataRoot = argv._[1];
+    var tocRoot  = argv._[1];
 
     // validate args
-    if ((!docsRoot) || (!dataRoot)) {
+    if ((!docsRoot) || (!tocRoot)) {
         var scriptName = path.basename(process.argv[1]);
-        console.log("usage: " + scriptName + " docsRoot dataRoot");
+        console.log("usage: " + scriptName + " docsRoot tocRoot");
         console.log(scriptName + ": error: too few arguments");
         return 1;
     }
 
-    var tocRoot = path.join(dataRoot, 'toc');
-
     // go through all the languages
     util.listdirsSync(docsRoot).forEach(function (languageName) {
-
         var languagePath = path.join(docsRoot, languageName);
 
         // go through all the versions
         util.listdirsSync(languagePath).forEach(function (versionName) {
-
             var versionPath = path.join(languagePath, versionName);
-            var outputName  = util.generatedTocfileName(languageName, versionName);
-            var outputPath  = path.join(tocRoot, outputName);
 
-            // generate ToC
-            generateToC(versionPath).then(function (toc) {
+            var srcTocName  = util.srcTocfileName(languageName, versionName);
+            var destTocName = util.genTocfileName(languageName, versionName);
 
-                // sort the ToC
-                toc.sort(function (a, b) {
-                    return a.name.localeCompare(b.name, languageName);
+            var srcTocPath  = path.join(tocRoot, srcTocName);
+            var destTocPath = path.join(tocRoot, destTocName);
+
+            // read the input
+            fs.readFile(srcTocPath, function (error, data) {
+
+                // augment the ToC
+                var originalTocString  = data.toString();
+                var augmentedTocString = augment.augmentString(originalTocString, versionPath);
+                var warningComment     = util.generatedBy(__filename);
+                var output             = warningComment + "\n" + augmentedTocString;
+
+                // write the output
+                fs.writeFile(destTocPath, output, function (error, data) {
+                    console.log(srcTocPath + " -> " + destTocPath);
                 });
-
-                // save it to a file
-                var tocText = yaml.dump(toc);
-                console.log(outputPath);
-                fs.writeFileSync(outputPath, tocText, 'utf8');
             });
         });
     });

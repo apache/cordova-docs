@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Eventi
+toc_title: Events
 ---
 
 # Eventi

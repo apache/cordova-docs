@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Iconos y pantallas de Splash
+toc_title: Customize icons
 ---
 
 # Iconos y pantallas de Splash

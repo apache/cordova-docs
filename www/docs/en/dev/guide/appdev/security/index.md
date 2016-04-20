@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Security Guide
+toc_title: Manage security
 ---
 
 # Security Guide

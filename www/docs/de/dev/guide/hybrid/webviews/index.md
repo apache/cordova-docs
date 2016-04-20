@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Einbetten von Webansichten für
+toc_title: Embed Cordova in native apps
 ---
 
 # Einbetten von Webansichten für

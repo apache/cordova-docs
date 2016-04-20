@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Incorporamento visualizzazioni Web
+toc_title: Embed Cordova in native apps
 ---
 
 # Incorporamento visualizzazioni Web

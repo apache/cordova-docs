@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 플러그인 개발 가이드
+toc_title: Create a plugin
 ---
 
 # 플러그인 개발 가이드

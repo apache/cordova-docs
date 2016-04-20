@@ -19,6 +19,7 @@ license: >
 
 title: Creating your first Cordova app
 description: Learn how to create your first Cordova hybrid app using Cordova CLI.
+toc_title: Create your first app
 ---
 
 # Create your first Cordova app

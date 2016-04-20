@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 스토리지
+toc_title: Store data
 ---
 
 # 스토리지

@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Плагины Windows
+toc_title: Windows
 ---
 
 # Плагины Windows

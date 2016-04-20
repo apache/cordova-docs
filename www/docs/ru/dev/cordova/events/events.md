@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: События
+toc_title: Events
 ---
 
 # События

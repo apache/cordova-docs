@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Handbuch Ubuntu Plattform
+toc_title: Ubuntu
 ---
 
 # Handbuch Ubuntu Plattform

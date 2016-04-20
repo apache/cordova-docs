@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Управление версиями платформ и плагинов
+toc_title: Manage versions and platforms
 ---
 
 # Управление версиями платформ и плагинов

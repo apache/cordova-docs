@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: プラグイン仕様
+toc_title: Plugin.xml
 ---
 
 # プラグイン仕様

@@ -17,7 +17,8 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: L'Interface en ligne de commande
+title: "L'Interface en ligne de commande"
+toc_title: Create your first app
 ---
 
 # L'Interface en ligne de commande

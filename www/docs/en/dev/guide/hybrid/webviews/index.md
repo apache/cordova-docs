@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Embedding WebViews
+toc_title: Embed Cordova in native apps
 ---
 
 # Embedding WebViews

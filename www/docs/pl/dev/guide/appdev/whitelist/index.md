@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Przewodnik białej listy
+toc_title: Whitelisting
 ---
 
 # Przewodnik białej listy

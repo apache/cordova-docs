@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: ストレージ
+toc_title: Store data
 ---
 
 # ストレージ

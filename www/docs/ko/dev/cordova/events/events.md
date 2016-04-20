@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 이벤트
+toc_title: Events
 ---
 
 # 이벤트

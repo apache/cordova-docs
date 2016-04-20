@@ -135,8 +135,8 @@ function getFrontMatter(text) {
     return {};
 }
 
-function setFrontMatter(text, frontMatter) {
-    var frontMatterString = yaml.dump(frontMatter);
+function setFrontMatter(text, frontMatter, options) {
+    var frontMatterString = yaml.dump(frontMatter, options);
     return util.setFrontMatterString(text, frontMatterString);
 }
 

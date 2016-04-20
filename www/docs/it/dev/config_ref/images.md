@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Icone e Splash screen
+toc_title: Customize icons
 ---
 
 # Icone e Splash screen

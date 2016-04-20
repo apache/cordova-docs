@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Руководство по хукам
+toc_title: Hooks
 ---
 
 # Руководство по хукам

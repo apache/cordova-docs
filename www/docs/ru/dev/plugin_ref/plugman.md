@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Использование Plugman для управления расширениями
+toc_title: Use Plugman
 ---
 
 # Использование Plugman для управления расширениями

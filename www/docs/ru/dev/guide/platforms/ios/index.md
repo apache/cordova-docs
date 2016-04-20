@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Руководство для платформы iOS
+toc_title: iOS
 ---
 
 # Руководство для платформы iOS

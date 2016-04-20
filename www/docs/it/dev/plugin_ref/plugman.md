@@ -17,7 +17,8 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: L'utilizzo di Plugman per gestire i plugin
+title: "L'utilizzo di Plugman per gestire i plugin"
+toc_title: Use Plugman
 ---
 
 # L'utilizzo di Plugman per gestire i plugin

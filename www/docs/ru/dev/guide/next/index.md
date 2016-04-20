@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Последующие шаги
+toc_title: Next Steps
 ---
 
 # Последующие шаги

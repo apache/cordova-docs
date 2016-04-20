@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Plugin.xml reference documentation
+toc_title: Plugin.xml
 ---
 
 # Plugin.xml

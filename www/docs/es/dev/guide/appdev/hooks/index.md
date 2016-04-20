@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Ganchos de guía
+toc_title: Hooks
 ---
 
 # Ganchos de guía

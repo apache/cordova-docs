@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Uporaba Plugman za upravljanje Plugins
+toc_title: Use Plugman
 ---
 
 # Uporaba Plugman za upravljanje Plugins

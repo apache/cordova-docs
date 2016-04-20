@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Плагины Windows Phone 8
+toc_title: WP8
 ---
 
 # Плагины Windows Phone 8

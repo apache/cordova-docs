@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Plataformas y gestión de versiones de Plugins
+toc_title: Manage versions and platforms
 ---
 
 # Plataformas y gestión de versiones de Plugins

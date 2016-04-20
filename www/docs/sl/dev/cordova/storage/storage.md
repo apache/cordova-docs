@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Shranjevanje
+toc_title: Store data
 ---
 
 # Shranjevanje

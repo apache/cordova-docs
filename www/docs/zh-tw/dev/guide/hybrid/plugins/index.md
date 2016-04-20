@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 外掛程式開發指南
+toc_title: Create a plugin
 ---
 
 # 外掛程式開發指南

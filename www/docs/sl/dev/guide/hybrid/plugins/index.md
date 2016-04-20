@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Plugin razvoj vodnik
+toc_title: Create a plugin
 ---
 
 # Plugin razvoj vodnik

@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Die Datei config.xml
+toc_title: Config.xml
 ---
 
 # Die Datei config.xml

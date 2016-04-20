@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 플랫폼 지원
+toc_title: Platform support
 ---
 
 # 플랫폼 지원

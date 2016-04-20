@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Jeżyna 10 wtyczek
+toc_title: Blackberry 10
 ---
 
 # Jeżyna 10 wtyczek

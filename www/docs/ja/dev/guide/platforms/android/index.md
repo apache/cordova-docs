@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Android プラットフォーム ガイド
+toc_title: Android
 ---
 
 # Android プラットフォーム ガイド

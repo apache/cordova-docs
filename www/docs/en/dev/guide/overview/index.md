@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Architectural overview of Cordova platform
+toc_title: Overview
 ---
 
 # Overview

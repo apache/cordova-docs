@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Vmesnik ukazne vrstice
+toc_title: Create your first app
 ---
 
 # Vmesnik ukazne vrstice

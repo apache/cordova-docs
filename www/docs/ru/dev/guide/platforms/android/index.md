@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Руководство для платформы Android
+toc_title: Android
 ---
 
 # Руководство для платформы Android

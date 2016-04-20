@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Aide de Plugman pour gérer les Plugins
+toc_title: Use Plugman
 ---
 
 # Aide de Plugman pour gérer les Plugins

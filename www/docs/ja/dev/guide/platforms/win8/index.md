@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Windows プラットフォームのガイド
+toc_title: Windows
 ---
 
 # Windows プラットフォームのガイド
