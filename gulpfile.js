@@ -206,6 +206,9 @@ gulp.task("help", function () {
     gutil.log("    serve         build the site and open it in a browser");
     gutil.log("    reload        refresh the browser");
     gutil.log("");
+    gutil.log("    newversion    create " + NEXT_DOCS_VERSION + " docs from dev docs");
+    gutil.log("    snapshot      copy dev docs to " + LATEST_DOCS_VERSION + " docs");
+    gutil.log("");
     gutil.log("    plugins       build " + PLUGINS_FILE);
     gutil.log("");
     gutil.log("    configs       run all the below tasks");
@@ -223,9 +226,7 @@ gulp.task("help", function () {
     gutil.log("    css           copy over all .css files");
     gutil.log("");
     gutil.log("    watch         serve + then watch all source files and regenerate as necessary");
-    gutil.log("");
     gutil.log("    link-bugs     replace CB-XXXX references with nice links");
-    gutil.log("    newversion    create the next docs version from current dev version");
     gutil.log("");
     gutil.log("    help          show this text");
     gutil.log("    clean         remove all generated files and folders");
@@ -423,7 +424,7 @@ gulp.task("lint", function() {
         .pipe(htmllint());
 });
 
-gulp.task("newversion", function(done) {
+gulp.task("newversion", ["fetch"], function(done) {
 
     copyDocsVersion("dev", NEXT_DOCS_VERSION, function (error) {
 
@@ -438,7 +439,7 @@ gulp.task("newversion", function(done) {
     });
 });
 
-gulp.task("snap", function(done) {
+gulp.task("snapshot", ["fetch"], function(done) {
 
     // remove current version first
     LANGUAGES.forEach(function (languageName) {

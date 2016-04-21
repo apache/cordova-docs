@@ -91,6 +91,8 @@ module.exports = (function () {
 
     function mergeObjects(a, b) {
         var c = {};
+
+        // NOTE: b's properties override a's properties
         Object.keys(a).forEach(function (key) {
             c[key] = a[key];
         });

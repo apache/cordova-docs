@@ -119,7 +119,6 @@ LANGUAGES = $(shell $(LS) $(DOCS_DIR))
 LATEST_DOCS_VERSION = $(strip $(shell $(CAT) $(VERSION_FILE)))
 NEXT_DOCS_VERSION   = $(shell $(NODE) $(BIN_DIR)/nextversion.js $(LATEST_DOCS_VERSION))
 
-LATEST_DOCS_VERSION_SLUG = $(call slugify,$(LATEST_DOCS_VERSION))
 NEXT_DOCS_VERSION_SLUG   = $(call slugify,$(NEXT_DOCS_VERSION))
 
 DEV_DOCS      = $(addprefix $(DOCS_DIR)/,$(addsuffix /dev,$(LANGUAGES)))
@@ -143,9 +142,6 @@ TOC_FILES          = $(addprefix $(TOC_DIR)/,$(addsuffix -gen.yml,$(DOCS_VERSION
 FETCH_FLAGS   = --config $(FETCH_CONFIG) --docsRoot $(DOCS_DIR)
 FETCHED_FILES = $(shell $(NODE) $(FETCH_SCRIPT) $(FETCH_FLAGS) --dump)
 
-LATEST_DOCS      = $(addprefix $(DOCS_DIR)/,$(addsuffix /$(LATEST_DOCS_VERSION),$(LANGUAGES)))
-LATEST_DOCS_TOCS = $(addprefix $(TOC_DIR)/,$(addsuffix _$(LATEST_DOCS_VERSION_SLUG)-src.yml, $(LANGUAGES)))
-
 NEXT_DOCS      = $(addprefix $(DOCS_DIR)/,$(addsuffix /$(NEXT_DOCS_VERSION),$(LANGUAGES)))
 NEXT_DOCS_TOCS = $(addprefix $(TOC_DIR)/,$(addsuffix _$(NEXT_DOCS_VERSION_SLUG)-src.yml, $(LANGUAGES)))
 
@@ -160,16 +156,19 @@ help usage default:
 	@echo ""
 	@echo "Usage:"
 	@echo ""
-	@echo "    make build:   build site with dev config"
-	@echo "    make install: install dependencies"
+	@echo "    make build:      build site with dev config"
+	@echo "    make install:    install dependencies"
 	@echo ""
-	@echo "    make data:    generate data files (Generated ToCs, $(DOCS_VERSION_DATA))"
-	@echo "    make configs: generate Jekyll configs ($(DEFAULTS_CONFIG), $(VERSION_CONFIG))"
-	@echo "    make styles:  generate CSS"
-	@echo "    make plugins: generate plugins app ($(PLUGINS_APP))"
+	@echo "    make data:       generate data files (Generated ToCs, $(DOCS_VERSION_DATA))"
+	@echo "    make configs:    generate Jekyll configs ($(DEFAULTS_CONFIG), $(VERSION_CONFIG))"
+	@echo "    make styles:     generate CSS"
+	@echo "    make plugins:    generate plugins app ($(PLUGINS_APP))"
 	@echo ""
-	@echo "    make clean:   remove all generated output"
-	@echo "    make nuke:    run 'make clean' and remove all dependencies"
+	@echo "    make snapshot:   copy dev docs to $(LATEST_DOCS_VERSION) docs"
+	@echo "    make newversion: create $(NEXT_DOCS_VERSION) docs from dev docs"
+	@echo ""
+	@echo "    make clean:      remove all generated output"
+	@echo "    make nuke:       run 'make clean' and remove all dependencies"
 	@echo ""
 	@echo "Arguments:"
 	@echo ""
@@ -213,7 +212,9 @@ install:
 serve:
 	cd $(DEV_DIR) && python -m SimpleHTTPServer 8000
 
-snap: fetch $(LATEST_DOCS) $(LATEST_DOCS_TOCS)
+# doing this in Make in a cross-platform way is pretty ugly
+snapshot: fetch
+	$(GULP) snapshot
 
 newversion: $(NEXT_DOCS) $(NEXT_DOCS_TOCS)
 	echo $(NEXT_DOCS_VERSION) > $(VERSION_FILE)
@@ -241,13 +242,6 @@ $(VERSION_CONFIG): $(VERSION_FILE)
 $(MAIN_STYLE_FILE): $(SCSS_SRC)
 
 # pattern rules
-$(DOCS_DIR)/%/$(LATEST_DOCS_VERSION): $(DOCS_DIR)/%/dev
-	$(RM) -r $@
-	$(call copydir,$^,$@)
-ifndef WINDOWS
-	touch $(DOCS_DIR)
-endif
-
 $(DOCS_DIR)/%/$(NEXT_DOCS_VERSION): $(DOCS_DIR)/%/dev
 	$(call copydir,$^,$@)
 ifndef WINDOWS
@@ -257,13 +251,10 @@ endif
 $(TOC_DIR)/%-gen.yml: $(TOC_DIR)/%-src.yml $(BIN_DIR)/augment_toc.js fetch
 	$(NODE) $(BIN_DIR)/augment_toc.js --srcToc $< --srcRoot $(DOCS_DIR)/$(call slug2language,$*)/$(call slug2version,$*) > $@
 
-$(TOC_DIR)/%_$(LATEST_DOCS_VERSION_SLUG)-src.yml: $(TOC_DIR)/%_dev-src.yml $(DOCS_DIR)
-	$(call copyfile,$<,$@)
-
 $(TOC_DIR)/%_$(NEXT_DOCS_VERSION_SLUG)-src.yml: $(TOC_DIR)/%_dev-src.yml $(DOCS_DIR)
 	$(call copyfile,$<,$@)
 
-# NODE:
+# NOTE:
 #      $(@D) means "directory part of target"
 $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.less
 	-$(call makedir,$(@D))

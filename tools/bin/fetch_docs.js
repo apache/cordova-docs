@@ -209,8 +209,10 @@ function downloadEntries(downloadPrefix, entries) {
             // process the response when it finishes
             response.on('end', function () {
 
-                // merge new front matter and file's
-                // own front matter (if it had any)
+                // merge new front matter and file's own front matter (if it had any)
+                //
+                // NOTE:
+                //      fileFrontMatter's properties should override those of newFrontMatter
                 var newFrontMatter    = fetchedFileConfig.frontMatter;
                 var fileFrontMatter   = getFrontMatter(fileContents);
                 var mergedFrontMatter = util.mergeObjects(newFrontMatter, fileFrontMatter);
