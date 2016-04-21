@@ -20,8 +20,11 @@ $(document).ready(function () {
     var HEADER_OFFSET  = 56; // in pixels
     var TOC_TOP_OFFSET = HEADER_OFFSET + 55;
 
-    // scroll the ToC to the current page's entry
-    $(".site-toc-container").scrollTop($(".this-page").first().offset().top - TOC_TOP_OFFSET);
+    // if this page's ToC entry can be found, scroll the ToC to it
+    var thisPageEntry = $(".this-page");
+    if (thisPageEntry.length > 0) {
+        $(".site-toc-container").scrollTop(thisPageEntry.first().offset().top - TOC_TOP_OFFSET);
+    }
 
     function slugifyLikeGitHub(originalText) {
 
