@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: BlackBerry 10 Plugins
+toc_title: Blackberry 10
 ---
 
 # BlackBerry 10 Plugins

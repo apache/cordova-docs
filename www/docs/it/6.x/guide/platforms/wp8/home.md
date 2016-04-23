@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: WP8 Guides
+toc_title: WP8
 ---
 
 # WP8 Guides

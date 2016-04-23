@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: iOS 平臺指南
+toc_title: iOS
 ---
 
 # iOS 平臺指南

@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 블랙베리 10 플러그인
+toc_title: Blackberry 10
 ---
 
 # 블랙베리 10 플러그인

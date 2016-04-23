@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Руководство по платформе Windows
+toc_title: Windows
 ---
 
 # Руководство по платформе Windows

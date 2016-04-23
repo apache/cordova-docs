@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: ブラックベリー 10 プラグイン
+toc_title: Blackberry 10
 ---
 
 # ブラックベリー 10 プラグイン

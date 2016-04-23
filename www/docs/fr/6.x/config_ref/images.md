@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Icones et Splash Screen
+toc_title: Customize icons
 ---
 
 # Icones et Splash Screen

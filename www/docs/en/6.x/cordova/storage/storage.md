@@ -18,6 +18,8 @@ license: >
     under the License.
 
 title: Storage
+toc_title: Store data
+description: Storing data on the device.
 ---
 
 # Storage

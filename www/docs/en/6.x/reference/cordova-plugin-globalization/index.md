@@ -1,8 +1,9 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-globalization/blob/master/README.md'
-title: cordova-plugin-globalization
+title: Globalization
 plugin_name: cordova-plugin-globalization
 plugin_version: master
+description: Access locale data.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->

@@ -1,8 +1,9 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-file/blob/master/README.md'
-title: cordova-plugin-file
+title: File
 plugin_name: cordova-plugin-file
 plugin_version: master
+description: Read/write files on the device.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->

@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: iOS wtyczek
+toc_title: iOS
 ---
 
 # iOS wtyczek

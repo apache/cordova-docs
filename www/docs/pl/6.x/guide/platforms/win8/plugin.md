@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Wtyczki Windows
+toc_title: Windows
 ---
 
 # Wtyczki Windows

@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 概要
+toc_title: Overview
 ---
 
 # 概要

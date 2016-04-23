@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Przewodnik platformy Android
+toc_title: Android
 ---
 
 # Przewodnik platformy Android

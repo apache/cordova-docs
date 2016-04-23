@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Guía de lista blanca
+toc_title: Whitelisting
 ---
 
 # Guía de lista blanca

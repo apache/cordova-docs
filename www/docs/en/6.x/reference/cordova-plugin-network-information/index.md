@@ -1,8 +1,9 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-network-information/blob/master/README.md'
-title: cordova-plugin-network-information
+title: Network Information
 plugin_name: cordova-plugin-network-information
 plugin_version: master
+description: Get information about wireless connectivity.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->

@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: フック ガイド
+toc_title: Hooks
 ---
 
 # フック ガイド

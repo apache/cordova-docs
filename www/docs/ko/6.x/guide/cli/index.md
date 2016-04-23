@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 명령줄 인터페이스
+toc_title: Create your first app
 ---
 
 # 명령줄 인터페이스

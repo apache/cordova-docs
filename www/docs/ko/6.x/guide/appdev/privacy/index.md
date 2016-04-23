@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 개인 정보 보호 가이드
+toc_title: Manage privacy
 ---
 
 # 개인 정보 보호 가이드

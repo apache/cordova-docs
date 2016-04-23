@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Руководство по безопасности
+toc_title: Manage security
 ---
 
 # Руководство по безопасности

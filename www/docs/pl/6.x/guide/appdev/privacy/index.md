@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Prywatności Przewodnik
+toc_title: Manage privacy
 ---
 
 # Prywatności Przewodnik

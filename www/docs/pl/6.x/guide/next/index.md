@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Kolejne kroki
+toc_title: Next Steps
 ---
 
 # Kolejne kroki

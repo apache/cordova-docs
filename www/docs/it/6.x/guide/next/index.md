@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Prossimi passi
+toc_title: Next Steps
 ---
 
 # Prossimi passi

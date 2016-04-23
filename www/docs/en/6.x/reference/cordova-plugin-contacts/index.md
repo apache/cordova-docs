@@ -1,8 +1,9 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-contacts/blob/master/README.md'
-title: cordova-plugin-contacts
+title: Contacts
 plugin_name: cordova-plugin-contacts
 plugin_version: master
+description: Manage the contacts on the device.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->
@@ -363,6 +364,32 @@ for details.
     // remove the contact from the device
     contact.remove(onSuccess,onError);
 
+### Removing phone number(s) from a saved contact
+
+    // Example to create a contact with 3 phone numbers and then remove
+    // 2 phone numbers. This example is for illustrative purpose only
+    var myContact = navigator.contacts.create({"displayName": "Test User"});
+    var phoneNumbers = [];
+
+    phoneNumbers[0] = new ContactField('work', '768-555-1234', false);
+    phoneNumbers[1] = new ContactField('mobile', '999-555-5432', true); // preferred number
+    phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
+
+    myContact.phoneNumbers = phoneNumbers;
+    myContact.save(function (contact_obj) {
+        var contactObjToModify = contact_obj.clone();
+        contact_obj.remove(function(){
+            var phoneNumbers = [contactObjToModify.phoneNumbers[0]];
+            contactObjToModify.phoneNumbers = phoneNumbers;
+            contactObjToModify.save(function(c_obj){
+                console.log("All Done");
+            }, function(error){
+                console.log("Not able to save the cloned object: " + error);
+            });
+        }, function(contactError) {
+            console.log("Contact Remove Operation failed: " + contactError);
+        });
+    });
 
 ### Android 2.X Quirks
 

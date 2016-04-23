@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: コマンド ライン インターフェイス
+toc_title: Create your first app
 ---
 
 # コマンド ライン インターフェイス

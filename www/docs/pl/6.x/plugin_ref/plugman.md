@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Za pomocą Plugman do zarządzania wtyczki
+toc_title: Use Plugman
 ---
 
 # Za pomocą Plugman do zarządzania wtyczki

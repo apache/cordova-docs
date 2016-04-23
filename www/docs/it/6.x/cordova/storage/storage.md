@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Archiviazione
+toc_title: Store data
 ---
 
 # Archiviazione

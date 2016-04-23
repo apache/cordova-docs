@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Config.xml datoteke
+toc_title: Config.xml
 ---
 
 # Config.xml datoteke

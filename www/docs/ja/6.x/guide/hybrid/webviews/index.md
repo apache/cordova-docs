@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 埋め込み web 表示
+toc_title: Embed Cordova in native apps
 ---
 
 # 埋め込み web 表示

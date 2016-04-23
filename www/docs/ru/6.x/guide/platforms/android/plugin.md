@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Плагины для Android
+toc_title: Android
 ---
 
 # Плагины для Android

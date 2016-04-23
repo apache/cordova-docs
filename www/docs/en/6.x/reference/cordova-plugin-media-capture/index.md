@@ -1,8 +1,9 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-media-capture/blob/master/README.md'
-title: cordova-plugin-media-capture
+title: Media Capture
 plugin_name: cordova-plugin-media-capture
 plugin_version: master
+description: 'Capture audio, video, and images.'
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->

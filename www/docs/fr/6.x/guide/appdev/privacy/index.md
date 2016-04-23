@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Guide de la vie privée
+toc_title: Manage privacy
 ---
 
 # Guide de la vie privée

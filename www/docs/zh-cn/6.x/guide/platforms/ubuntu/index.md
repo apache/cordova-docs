@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Ubuntu 平臺指南
+toc_title: Ubuntu
 ---
 
 # Ubuntu 平臺指南

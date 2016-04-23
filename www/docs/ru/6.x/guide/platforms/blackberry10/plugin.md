@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Плагины для BlackBerry 10
+toc_title: Blackberry 10
 ---
 
 # Плагины для BlackBerry 10

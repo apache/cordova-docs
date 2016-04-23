@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Руководство для платформы Ubuntu
+toc_title: Ubuntu
 ---
 
 # Руководство для платформы Ubuntu

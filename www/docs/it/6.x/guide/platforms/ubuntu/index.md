@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Piattaforma ubuntu guida
+toc_title: Ubuntu
 ---
 
 # Piattaforma ubuntu guida

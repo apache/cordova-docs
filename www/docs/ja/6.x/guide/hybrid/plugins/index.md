@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: プラグイン開発ガイド
+toc_title: Create a plugin
 ---
 
 # プラグイン開発ガイド

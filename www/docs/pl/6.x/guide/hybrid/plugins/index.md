@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Plugin rozwoju Przewodnik
+toc_title: Create a plugin
 ---
 
 # Plugin rozwoju Przewodnik

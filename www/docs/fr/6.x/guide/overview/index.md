@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Présentation
+toc_title: Overview
 ---
 
 # Présentation

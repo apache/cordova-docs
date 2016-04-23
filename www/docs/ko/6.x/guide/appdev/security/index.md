@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 보안 가이드
+toc_title: Manage security
 ---
 
 # 보안 가이드

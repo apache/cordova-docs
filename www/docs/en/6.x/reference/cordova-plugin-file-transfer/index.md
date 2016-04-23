@@ -1,8 +1,9 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-file-transfer/blob/master/README.md'
-title: cordova-plugin-file-transfer
+title: File Transfer
 plugin_name: cordova-plugin-file-transfer
 plugin_version: master
+description: Upload and download files.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->

@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Vodnik o zasebnosti
+toc_title: Manage privacy
 ---
 
 # Vodnik o zasebnosti

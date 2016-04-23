@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 안 드 로이드 플러그인
+toc_title: Android
 ---
 
 # 안 드 로이드 플러그인

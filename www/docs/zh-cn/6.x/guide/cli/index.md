@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 命令列介面
+toc_title: Create your first app
 ---
 
 # 命令列介面

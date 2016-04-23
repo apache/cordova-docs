@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Windows 外掛程式
+toc_title: Windows
 ---
 
 # Windows 外掛程式

@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: iOS guida piattaforma
+toc_title: iOS
 ---
 
 # iOS guida piattaforma

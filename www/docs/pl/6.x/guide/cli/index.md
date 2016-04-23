@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Interfejs wiersza poleceń
+toc_title: Create your first app
 ---
 
 # Interfejs wiersza poleceń

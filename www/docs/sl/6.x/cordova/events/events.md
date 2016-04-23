@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Dogodki
+toc_title: Events
 ---
 
 # Dogodki

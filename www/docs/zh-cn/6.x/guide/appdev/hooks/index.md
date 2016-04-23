@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 鉤子指南
+toc_title: Hooks
 ---
 
 # 鉤子指南

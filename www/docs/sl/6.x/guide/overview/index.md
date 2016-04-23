@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Pregled
+toc_title: Overview
 ---
 
 # Pregled

@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: iOS Plugins
+toc_title: iOS
 ---
 
 # iOS Plugins

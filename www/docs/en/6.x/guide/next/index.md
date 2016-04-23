@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Next Steps
+description: A look at topics that new Cordova developers will encounter.
 ---
 
 # Next Steps
@@ -135,7 +136,7 @@ It’s not uncommon to use desktop browsers and device simulators/emulators when
 
 It is, of course, impossible to test on every possible device on the market. For this reason, it’s wise to recruit many testers who have different devices. Although they won’t catch every problem, chances are good that they will discover quirks and issues that you would never find alone.
 
-Tip: It is possible on Android Nexus devices to easily flash different versions of Android onto the device. This simple process will allow you to easily test your application on different levels of Android with a single device, without voiding your warranty or requiring you to “jailbreak” or “root” your device. Refer to the [Google Android factory images and instructions](https://developers.google.com/android/nexus/images#instructions). 
+Tip: It is possible on Android Nexus devices to easily flash different versions of Android onto the device. This simple process will allow you to easily test your application on different levels of Android with a single device, without voiding your warranty or requiring you to “jailbreak” or “root” your device. Refer to the [Google Android factory images and instructions](https://developers.google.com/android/nexus/images#instructions).
 
 # Debugging Cordova apps
 

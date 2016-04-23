@@ -18,6 +18,8 @@ license: >
     under the License.
 
 title: Plugin.xml reference documentation
+toc_title: Plugin.xml
+description: List of supported tags in the plugin.xml file.
 ---
 
 # Plugin.xml
@@ -46,6 +48,10 @@ Example:
 ## engines and engine
 
 The child elements of the `<engines>` element specify versions of Apache Cordova-based frameworks that this plugin supports. The CLI aborts with a non-zero code for any plugin whose target project does not meet the engine's constraints. If no <engine> tags are specified, the CLI attempts to install into the specified cordova project directory blindly.
+
+>NOTE: In **Cordova 6.1.0+**, the recommended place to specify platform, plugin, and CLI dependencies
+>is in a plugin's `package.json`. See [specifying Cordova dependencies](../guide/hybrid/plugins/index.html#specifying-cordova-dependencies)
+>for more information
 
 Attributes(type) | Description
 ---------------- | ------------

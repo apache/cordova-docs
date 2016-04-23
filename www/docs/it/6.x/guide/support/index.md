@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Supporto di piattaforma
+toc_title: Platform support
 ---
 
 # Supporto di piattaforma

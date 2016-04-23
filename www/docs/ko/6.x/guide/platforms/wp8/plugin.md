@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Windows Phone 8 플러그인
+toc_title: WP8
 ---
 
 # Windows Phone 8 플러그인

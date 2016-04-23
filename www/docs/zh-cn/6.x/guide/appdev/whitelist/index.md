@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 白名單指南
+toc_title: Whitelisting
 ---
 
 # 白名單指南

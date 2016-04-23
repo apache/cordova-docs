@@ -1,8 +1,9 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md'
-title: cordova-plugin-whitelist
+title: Whitelist
 plugin_name: cordova-plugin-whitelist
 plugin_version: master
+description: Whitelist external content accessible by your app.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->

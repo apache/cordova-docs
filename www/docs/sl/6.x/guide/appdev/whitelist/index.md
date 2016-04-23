@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Seznam dovoljenih vodnik
+toc_title: Whitelisting
 ---
 
 # Seznam dovoljenih vodnik

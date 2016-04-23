@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: プラットフォームとプラグインのバージョン管理
+toc_title: Manage versions and platforms
 ---
 
 # プラットフォームとプラグインのバージョン管理

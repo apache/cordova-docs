@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Android のプラグイン
+toc_title: Android
 ---
 
 # Android のプラグイン

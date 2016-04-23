@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 후크 가이드
+toc_title: Hooks
 ---
 
 # 후크 가이드

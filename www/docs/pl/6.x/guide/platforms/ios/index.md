@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Przewodnik platformy iOS
+toc_title: iOS
 ---
 
 # Przewodnik platformy iOS

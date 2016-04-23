@@ -18,6 +18,8 @@ license: >
     under the License.
 
 title: Plugin Development Guide
+toc_title: Create a plugin
+description: Develop your own plugin.
 ---
 
 # Plugin Development Guide
@@ -246,7 +248,7 @@ For example, for a plugin that supports android, iOS & Windows, the keywords in 
 
 For more detailed example of a package.json, review the [package.json file of cordova-plugin-device](https://github.com/apache/cordova-plugin-device/blob/master/package.json).
 
-### Specifying Cordova Dependencies
+## Specifying Cordova Dependencies
 
 **Cordova 6.1.0** added support for specifying the Cordova-related dependencies of a plugin
 as part of the plugin's `package.json` file. Plugins may list the dependencies for multiple
@@ -312,7 +314,7 @@ assumed to have the same dependencies as version 1.0.0 (a cordova-android
 version less than 3.0.0). This lets you only update your `cordovaDependencies`
 information when there are breaking changes.
 
-#### Upper Bounds
+### Upper Bounds
 
 In addition to a single version, a `PLUGIN_VERSION` in `cordovaDependencies`
 may also specify an upper bound to amend entries for older releases

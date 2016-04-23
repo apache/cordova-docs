@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Datenschutz-Guide
+toc_title: Manage privacy
 ---
 
 # Datenschutz-Guide

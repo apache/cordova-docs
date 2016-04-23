@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Przegląd
+toc_title: Overview
 ---
 
 # Przegląd

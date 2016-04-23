@@ -1,8 +1,9 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-battery-status/blob/master/README.md'
-title: cordova-plugin-battery-status
+title: Battery Status
 plugin_name: cordova-plugin-battery-status
 plugin_version: master
+description: Get events for device battery level.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->

@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 우분투 플랫폼 가이드
+toc_title: Ubuntu
 ---
 
 # 우분투 플랫폼 가이드

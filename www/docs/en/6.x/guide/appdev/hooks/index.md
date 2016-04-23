@@ -18,6 +18,8 @@ license: >
     under the License.
 
 title: Hooks Guide
+toc_title: Hooks
+description: List of hooks supported by the Cordova CLI.
 ---
 
 # Hooks

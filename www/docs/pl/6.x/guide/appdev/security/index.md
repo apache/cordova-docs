@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Przewodnik bezpieczeństwa
+toc_title: Manage security
 ---
 
 # Przewodnik bezpieczeństwa

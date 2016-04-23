@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Хранилище
+toc_title: Store data
 ---
 
 # Хранилище

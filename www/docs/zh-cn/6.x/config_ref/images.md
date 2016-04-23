@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 圖示和啟動畫面
+toc_title: Customize icons
 ---
 
 # 圖示和啟動畫面

@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Magazyn
+toc_title: Store data
 ---
 
 # Magazyn

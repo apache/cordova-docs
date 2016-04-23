@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: iOS 플랫폼 가이드
+toc_title: iOS
 ---
 
 # iOS 플랫폼 가이드

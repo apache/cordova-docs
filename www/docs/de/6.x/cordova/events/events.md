@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Veranstaltungen
+toc_title: Events
 ---
 
 # Veranstaltungen

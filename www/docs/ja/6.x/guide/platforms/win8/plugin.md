@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Windows のプラグイン
+toc_title: Windows
 ---
 
 # Windows のプラグイン

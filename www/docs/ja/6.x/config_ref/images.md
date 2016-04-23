@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: アイコンとスプラッシュ画面
+toc_title: Customize icons
 ---
 
 # アイコンとスプラッシュ画面

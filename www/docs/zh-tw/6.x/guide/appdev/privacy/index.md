@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 隱私指南
+toc_title: Manage privacy
 ---
 
 # 隱私指南

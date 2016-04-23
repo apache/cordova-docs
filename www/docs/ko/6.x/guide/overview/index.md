@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 개요
+toc_title: Overview
 ---
 
 # 개요

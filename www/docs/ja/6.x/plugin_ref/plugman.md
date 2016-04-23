@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Plugman を使用してプラグインを管理するには
+toc_title: Use Plugman
 ---
 
 # Plugman を使用してプラグインを管理するには

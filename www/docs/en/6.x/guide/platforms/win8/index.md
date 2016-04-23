@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Windows Platform Guide
+toc_title: Windows
 ---
 
 # Windows Platform Guide
@@ -212,6 +213,10 @@ to the CLI.
 ## Debugging
 
 Visual Studio provides powerful tools to debug your application. You can refer to [this](https://msdn.microsoft.com/en-us/library/7seh8d72.aspx) article to get started with it.
+
+**Note:** Resume and pause events are not triggered normally when debugging apps using Visual Studio. This is because Windows does not suspend your app when it is being debugged.
+The only way to change the application state is through the 'Lifecycle event' options inside Visual Studio. The events should work as expected when the app
+is run on a device/emulator without the debugger attached.
 
 ## Signing an App
 

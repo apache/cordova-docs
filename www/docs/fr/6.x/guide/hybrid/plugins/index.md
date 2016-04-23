@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Guide de développement de plugin
+toc_title: Create a plugin
 ---
 
 # Guide de développement de plugin

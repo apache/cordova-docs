@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Спецификация расширений
+toc_title: Plugin.xml
 ---
 
 # Спецификация расширений

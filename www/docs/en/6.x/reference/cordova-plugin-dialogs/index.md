@@ -1,8 +1,9 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-dialogs/blob/master/README.md'
-title: cordova-plugin-dialogs
+title: Dialogs
 plugin_name: cordova-plugin-dialogs
 plugin_version: master
+description: Use native dialog UI elements
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->

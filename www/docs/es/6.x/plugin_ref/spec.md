@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Especificación de plugin
+toc_title: Plugin.xml
 ---
 
 # Especificación de plugin

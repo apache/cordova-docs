@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Руководство по разработке плагинов
+toc_title: Create a plugin
 ---
 
 # Руководство по разработке плагинов

@@ -18,11 +18,13 @@ license: >
     under the License.
 
 title: Security Guide
+toc_title: Manage security
+description: Information and tips for building a secure application.
 ---
 
 # Security Guide
 
-The following guide includes some security best practices that you should consider when developing a Cordova application. Please be aware that security is a very complicated topic and therefore this guide is not exhaustive. If you believe you can contribute to this guide, please feel free to file an issue in Cordova's bug tracker under ["Documentation"](https://issues.apache.org/jira/browse/CB/component/12316407).  This guide is designed to be applicable to general Cordova development (all platforms) but special platform-specific considerations will be noted. 
+The following guide includes some security best practices that you should consider when developing a Cordova application. Please be aware that security is a very complicated topic and therefore this guide is not exhaustive. If you believe you can contribute to this guide, please feel free to file an issue in Cordova's bug tracker under ["Documentation"](https://issues.apache.org/jira/browse/CB/component/12316407).  This guide is designed to be applicable to general Cordova development (all platforms) but special platform-specific considerations will be noted.
 
 ## This guide discusses the following topics:
 * Whitelist
@@ -37,11 +39,11 @@ The following guide includes some security best practices that you should consid
 
 * Read and understand the [Whitelist Guide](../whitelist/index.html)
 
-* Domain whitelisting does not work on Android API 10 and below, and WP8 for iframes and XMLHttpRequest. This means an attacker can load any domain in an iframe and any script on that page within the iframe can directly access Cordova JavaScript objects and the corresponding native Java objects. You should take this into consideration when building applications for these platforms. In practice this means making sure you target an Android API higher than 10, and that if possible you do not use an iframe to load external content - use the inAppBrowser plugin or other third-party plugins. 
+* Domain whitelisting does not work on Android API 10 and below, and WP8 for iframes and XMLHttpRequest. This means an attacker can load any domain in an iframe and any script on that page within the iframe can directly access Cordova JavaScript objects and the corresponding native Java objects. You should take this into consideration when building applications for these platforms. In practice this means making sure you target an Android API higher than 10, and that if possible you do not use an iframe to load external content - use the inAppBrowser plugin or other third-party plugins.
 
 ## Iframes and the Callback Id Mechanism
 
-If content is served in an iframe from a whitelisted domain, that domain will have access to the native Cordova bridge. This means that if you whitelist a third-party advertising network and serve those ads through an iframe, it is possible that a malicious ad will be able to break out of the iframe and perform malicious actions. Because of this, you should generally not use iframes unless you control the server that hosts the iframe content.  Also note that there are third party plugins available to support advertising networks. Note that this statement is not true for iOS, which intercepts everything including iframe connections. 
+If content is served in an iframe from a whitelisted domain, that domain will have access to the native Cordova bridge. This means that if you whitelist a third-party advertising network and serve those ads through an iframe, it is possible that a malicious ad will be able to break out of the iframe and perform malicious actions. Because of this, you should generally not use iframes unless you control the server that hosts the iframe content.  Also note that there are third party plugins available to support advertising networks. Note that this statement is not true for iOS, which intercepts everything including iframe connections.
 
 ## Certificate Pinning
 
@@ -69,25 +71,25 @@ When running Cordova on Android, using `android:debuggable="true"` in the applic
 ## General Tips
 
 ### Do not use Android Gingerbread!
-* Set your min-target-sdk level higher than 10. API 10 is Gingerbread, and Gingerbread is no longer supported by Google or device manufacturers, and is therefore not recommend by the Cordova team. 
-* Gingerbread has been shown to be insecure and one of the most targeted mobile OSs [http://www.mobilemag.com/2012/11/06/andriod-2-3-gingerbread-security/](http://bgr.com/2012/11/06/android-security-gingerbread-malware/). 
-* The Whitelist on Android does not work with Gingerbread or lower. This means an attacker can load malicious code in an iframe that would then have access to all of the Cordova APIs and could use that access to steal personal data, send SMS messages to premium-rate numbers, and perform other malicious acts. 
+* Set your min-target-sdk level higher than 10. API 10 is Gingerbread, and Gingerbread is no longer supported by Google or device manufacturers, and is therefore not recommend by the Cordova team.
+* Gingerbread has been shown to be insecure and one of the most targeted mobile OSs [http://www.mobilemag.com/2012/11/06/andriod-2-3-gingerbread-security/](http://bgr.com/2012/11/06/android-security-gingerbread-malware/).
+* The Whitelist on Android does not work with Gingerbread or lower. This means an attacker can load malicious code in an iframe that would then have access to all of the Cordova APIs and could use that access to steal personal data, send SMS messages to premium-rate numbers, and perform other malicious acts.
 
 ### Use InAppBrowser for outside links
-* Use the InAppBrowser when opening links to any outside website. This is much safer than whitelisting a domain name and including the content directly in your application because the InAppBrowser will use the native browser's security features and will not give the website access to your Cordova environment. Even if you trust the third party website and include it directly in your application, that third party website could link to malicious web content. 
+* Use the InAppBrowser when opening links to any outside website. This is much safer than whitelisting a domain name and including the content directly in your application because the InAppBrowser will use the native browser's security features and will not give the website access to your Cordova environment. Even if you trust the third party website and include it directly in your application, that third party website could link to malicious web content.
 
 ### Validate all user input
-* Always validate any and all input that your application accepts. This includes usernames, passwords, dates, uploaded media, etc. Because an attacker could manipulate your HTML and JS assets (either by decompiling your application or using debugging tools like chrome://inspect), this validation should also be performed on your server, especially before handing the data off to any backend service. 
+* Always validate any and all input that your application accepts. This includes usernames, passwords, dates, uploaded media, etc. Because an attacker could manipulate your HTML and JS assets (either by decompiling your application or using debugging tools like chrome://inspect), this validation should also be performed on your server, especially before handing the data off to any backend service.
 * Other sources where data should be validated: user documents, contacts, push notifications
 
 ### Do not cache sensitive data
 * If usernames, password, geolocation information, and other sensitive data is cached, then it could potentially be retrieved later by an unauthorized user or application.
 
 ### Don't use eval() unless you know what you're doing
-* The JavaScript function eval() has a long history of being abused. Using it incorrectly can open your code up for injection attacks, debugging difficulties, and slower code execution. 
+* The JavaScript function eval() has a long history of being abused. Using it incorrectly can open your code up for injection attacks, debugging difficulties, and slower code execution.
 
 ### Do not assume that your source code is secure
-* Since a Cordova application is built from HTML and JavaScript assets that get packaged in a native container, you should not consider your code to be secure. It is possible to reverse engineer a Cordova application. 
+* Since a Cordova application is built from HTML and JavaScript assets that get packaged in a native container, you should not consider your code to be secure. It is possible to reverse engineer a Cordova application.
 
 ## Recommended Articles and Other Resources
 

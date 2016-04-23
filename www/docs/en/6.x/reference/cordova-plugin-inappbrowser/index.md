@@ -1,8 +1,9 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-inappbrowser/blob/master/README.md'
-title: cordova-plugin-inappbrowser
+title: Inappbrowser
 plugin_name: cordova-plugin-inappbrowser
 plugin_version: master
+description: Open an in-app browser window.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->

@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Vodnik za platformo Android
+toc_title: Android
 ---
 
 # Vodnik za platformo Android

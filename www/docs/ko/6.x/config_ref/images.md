@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 아이콘 및 시작 화면
+toc_title: Customize icons
 ---
 
 # 아이콘 및 시작 화면

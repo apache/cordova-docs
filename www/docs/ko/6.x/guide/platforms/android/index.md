@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 안 드 로이드 플랫폼 가이드
+toc_title: Android
 ---
 
 # 안 드 로이드 플랫폼 가이드

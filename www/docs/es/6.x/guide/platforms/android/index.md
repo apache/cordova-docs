@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Guía de la plataforma Android
+toc_title: Android
 ---
 
 # Guía de la plataforma Android

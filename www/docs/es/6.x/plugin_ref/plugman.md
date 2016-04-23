@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Utilizando Plugman para administrar Plugins
+toc_title: Use Plugman
 ---
 
 # Utilizando Plugman para administrar Plugins

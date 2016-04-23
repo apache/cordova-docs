@@ -1,8 +1,9 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-media/blob/master/README.md'
-title: cordova-plugin-media
+title: Media
 plugin_name: cordova-plugin-media
 plugin_version: master
+description: Record and play audio on the device.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->

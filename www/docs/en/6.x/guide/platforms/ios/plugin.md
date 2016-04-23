@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: iOS Plugin Development Guide
+toc_title: iOS
 ---
 
 # iOS Plugin Development Guide

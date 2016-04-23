@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Ikony i ekrany powitalne w aplikacjach
+toc_title: Customize icons
 ---
 
 # Ikony i ekrany powitalne w aplikacjach

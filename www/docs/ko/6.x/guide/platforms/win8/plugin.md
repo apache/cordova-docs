@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 윈도우 플러그인
+toc_title: Windows
 ---
 
 # 윈도우 플러그인

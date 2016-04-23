@@ -18,6 +18,8 @@ license: >
     under the License.
 
 title: Cordova support by platform
+toc_title: Platform support
+description: Compatibility table for all major plugins and features.
 ---
 
 # Platform Support

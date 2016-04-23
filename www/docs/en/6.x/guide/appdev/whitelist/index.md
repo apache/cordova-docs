@@ -18,6 +18,8 @@ license: >
     under the License.
 
 title: Whitelist Guide
+toc_title: Whitelisting
+description: Securely grant an application access to external resources.
 ---
 
 # Whitelist Guide

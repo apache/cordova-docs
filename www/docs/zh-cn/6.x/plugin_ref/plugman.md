@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: 使用 Plugman 來管理外掛程式
+toc_title: Use Plugman
 ---
 
 # 使用 Plugman 來管理外掛程式

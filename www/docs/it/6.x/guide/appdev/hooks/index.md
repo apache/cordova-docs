@@ -18,6 +18,7 @@ license: >
     under the License.
 
 title: Guida di ganci
+toc_title: Hooks
 ---
 
 # Guida di ganci

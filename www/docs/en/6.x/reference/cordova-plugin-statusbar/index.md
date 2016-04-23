@@ -1,8 +1,9 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-statusbar/blob/master/README.md'
-title: cordova-plugin-statusbar
+title: Statusbar
 plugin_name: cordova-plugin-statusbar
 plugin_version: master
+description: Control the device status bar.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->
