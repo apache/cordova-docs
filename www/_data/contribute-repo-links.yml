@@ -70,6 +70,10 @@
         apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-camera.git;a=summary
         mirror: https://github.com/apache/cordova-plugin-camera
 
+    -   project: Compatibility
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-compat.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-compat
+
     -   project: Console
         apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-console.git;a=summary
         mirror: https://github.com/apache/cordova-plugin-console
@@ -167,6 +171,10 @@
     -   project: Cordova Medic (Test Automation)
         apache: https://git-wip-us.apache.org/repos/asf?p=cordova-medic.git;a=summary
         mirror: https://github.com/apache/cordova-medic
+
+    -   project: Cordova Paramedic (Test Automation)
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-paramedic.git;a=summary
+        mirror: https://github.com/apache/cordova-paramedic
 
     -   project: Weinre (Web Inspector Remote)
         apache: https://git-wip-us.apache.org/repos/asf?p=cordova-weinre.git;a=summary
