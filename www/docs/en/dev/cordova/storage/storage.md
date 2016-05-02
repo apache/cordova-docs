@@ -324,6 +324,6 @@ alternative storage options.
 [Html5RocksFileSystemTutorial]: http://www.html5rocks.com/en/tutorials/file/filesystem/
 [FileAPI]: https://github.com/apache/cordova-plugin-file/blob/master/README.md
 [SQLiteStorage]: https://github.com/litehelpers/Cordova-sqlite-storage/blob/core-master/README.md
-[SQLiteExt]: https://github.com/litehelpers/cordova-sqlite-ext/blob/ext-master/README.md
+[SQLiteExt]: https://github.com/litehelpers/cordova-sqlite-ext/blob/cordova-sqlite-ext-master/README.md
 [SQLiteEVFree]: https://github.com/litehelpers/Cordova-sqlite-enterprise-free/blob/evfree-ext-rc/README.md
 [CordovaPlugins]: {{ site.baseurl }}/plugins
