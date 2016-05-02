@@ -19,7 +19,21 @@
     </title>
 
     <link rel="SHORTCUT ICON" href="{{ site.baseurl }}/favicon.ico"/>
-    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
+
+    {% capture canonical_link %}{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}{% endcapture %}
+
+    {% comment %}
+    Canonical link for docs pages should point to the latest version of the page
+    {% endcomment %}
+    {% if page.version %}
+        {% capture latest_url %}{{ page.url | replace_first: page.version, 'latest' }}{% endcapture %}
+
+        {% if site.data.all-pages contains latest_url %}
+            {% capture canonical_link %}{{ canonical_link | replace_first: page.version, 'latest' }}{% endcapture %}
+        {% endif %}
+    {% endif %}
+
+    <link rel="canonical" href="{{ canonical_link }}">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/main.css">
