@@ -12,7 +12,9 @@ var SupportedPlatforms = React.createClass({
             {present:false, icon: "ubuntu", alt:"Ubuntu"},
             {present:false, icon: "firefox", alt:"FirefoxOS"},
             {present:false, icon: "webos", alt:"webOS"},
-            {present:false, icon: "fireos", alt:"FireOS"}
+            {present:false, icon: "fireos", alt:"FireOS"},
+            {present:false, icon: "osx", alt:"OS X"},
+            {present:false, icon: "browser", alt:"Browser"}
         ];
 
         var platformsSupported = [];
@@ -48,11 +50,12 @@ var SupportedPlatforms = React.createClass({
                 case 'cordova-amazon-fireos':
                     sortedPlatforms[7].present = true;
                     break;
-
-                // case 'cordova-wp8':
-                //     break;
-                // case 'cordova-browser':
-                //     break;
+                case 'cordova-osx':
+                    sortedPlatforms[8].present = true;
+                    break;
+                case 'cordova-browser':
+                    sortedPlatforms[9].present = true;
+                    break;
             }
         });
 
