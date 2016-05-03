@@ -402,19 +402,33 @@ help identify them in Markdown.
 ## XML References
 
 * Each element has it's own section with the following structure:
-  
+
   * Element Name
   * General Description
   * Attributes Table
   * Examples
 
 * If an element has a sub-element, follow a nested structure. The parent element becomes a H1 heading, child becomes H2 and so on.
-    
+
+* If an attribute is specific to a set of platforms:
+
+  * Supported platforms should be listed below the attribute name in the same table column
+  * Only list platforms if the attribute is platform-specific. Do not list any if it is supported by all platforms.
+  * Use the syntax `==platform-name==` when giving a platform. This will be converted on the website into a logo for that platform. Valid `platform-name` values are:
+    * android
+    * browser
+    * firefoxos
+    * fireos
+    * ios
+    * osx
+    * ubuntu
+    * webos
+    * windows
+
 * Attribute description should include the following in order:
 
   * Default: Use *italics* formatting to provide default value of the attribute
   * Required: Use *italics* formatting to provide if the attribute value is required
-  * Platforms supported: Use ==platform-name== to specify different platforms. This gets custom highlighted on the website. Default is supported in all platforms.
   * Textual Description.
 
 * Below is an example documentation for 'platform' element for plugin.xml. 'source-file' is a sub-element of the 'platform' element.
@@ -422,7 +436,7 @@ help identify them in Markdown.
   ### platform
     Identifies platforms that have associated native code or require modifications to their configuration files. Tools using this specification can identify supported platforms and install the code into Cordova projects. Plugins without <platform> tags are assumed to be JavaScript-only, and therefore installable on any and all platforms.
 
-    Attributes(type) | Description
+    Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
     ---------------- | ------------
     name(string) | *Required* <br/> Allowed values: ios, android, blackberry10, amazon-fireos, wp8, windows <br/> Identifies a platform as supported, associating the element's children with that platform.
 
@@ -436,12 +450,12 @@ help identify them in Markdown.
   #### source-file
     Identifies executable source code that should be installed into a project.
 
-    Attributes (type) | Description
+    Attributes (type) <br/> <span class="sub-header">Only for platform:</span> | Description
     ----------------- | ------------
     src(string) | *Required* <br/> Location of the file relative to plugin.xml. If the src file can't be found, plugman stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
     target-dir(string) | A directory into which the files should be copied, relative to the root of the Cordova project. In practice, this is most important for Java-based platforms, where a file in the com.alunny.foo package must be located within the com/alunny/foo directory. For platforms where the source directory is not important, this attribute should be omitted.
-    framework(boolean) | *Default: false* <br/> ==iOS== <br/> If set to true, also adds the specified file as a framework to the project.
-    compiler-flags(string) | ==iOS== <br/> If set, assigns the specified compiler flags for the particular source file.
+    framework(boolean) <br/> ==ios== | *Default: false* <br/> If set to true, also adds the specified file as a framework to the project.
+    compiler-flags(string) <br/> ==ios== | If set, assigns the specified compiler flags for the particular source file.
 
     Examples:
     ```

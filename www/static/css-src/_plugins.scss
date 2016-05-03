@@ -189,13 +189,15 @@ hr.results-divider-line {
                 width:50px;
                 height:50px;
                 display:inline-block;
-                background-size: 400px 50px;
+                background-size: 550px 50px;
 }
-.android { background-position: 0 }
-.ios { background-position: 14.3%; }
-.windows { background-position: 28.6%; }
-.blackberry { background-position: 42.9%; }
-.ubuntu { background-position: 57.1%; }
-.firefox { background-position: 71.4%; }
-.webos { background-position: 85.7%; }
-.fireos { background-position: 100%; }
+.android    { background-position: 0 }
+.ios        { background-position: 10%; }
+.windows    { background-position: 20%; }
+.blackberry { background-position: 30%; }
+.ubuntu     { background-position: 40%; }
+.firefox    { background-position: 50%; }
+.webos      { background-position: 60%; }
+.fireos     { background-position: 70%; }
+.osx        { background-position: 80.8%; }
+.browser    { background-position: 92.2%; }

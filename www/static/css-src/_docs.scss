@@ -23,11 +23,43 @@
     .row {
         margin: 0px;
     }
+
+    /*
+     * Used to style the platform logos in xml references. Uses the mark element
+     * because we hijack the markdown highlight syntax using js (e.g. ==android==).
+     * See www/static/js/docs.js
+     */
     mark {
-        background-color: lightblue;
-        padding: 0.1px 0.2px 0.1px 0.2px;
-        margin-right: 7px;
+        display: inline-block;
+        height:30px;
+        background-color: #ffffff;
     }
+
+    mark.logo {
+        background-image:url('{{ site.baseurl }}/static/img/platform-logos-all-sprite.svg');
+        width:35px;
+        background-size: 385px 35px;
+    }
+
+    mark.android    { background-position: 0 }
+    mark.ios        { background-position: 10%; }
+    mark.windows    { background-position: 20%; }
+    mark.blackberry { background-position: 30%; }
+    mark.ubuntu     { background-position: 40%; }
+    mark.firefox    { background-position: 50%; }
+    mark.webos      { background-position: 60%; }
+    mark.fireos     { background-position: 70%; }
+    mark.osx        { background-position: 80.8%; }
+    mark.browser    { background-position: 92.2%; }
+
+    .sub-header {
+        color: #6d6d6d;
+        font-size: 9pt;
+        display: block;
+        min-width: 120px;
+        font-weight: 300;
+    }
+
     .site-toc-title {
         font-weight: 300;
         font-size: 22px;

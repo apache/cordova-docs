@@ -15,6 +15,21 @@
 // specific language governing permissions and limitations
 // under the License.
 
+// Platforms we have logos for and their formatted titles. Used for
+// converting "mark" elements to logos
+var platforms = {
+    'android': 'Android',
+    'ios': 'iOS',
+    'windows': 'Windows',
+    'ubuntu': 'Ubuntu',
+    'blackberry': 'Blackberry',
+    'fireos': 'FireOS',
+    'firefoxos': 'FirefoxOS',
+    'webos': 'webOS',
+    'osx': 'OS X',
+    'browser': 'Browser'
+};
+
 $(document).ready(function () {
 
     var HEADER_OFFSET  = 56; // in pixels
@@ -111,6 +126,17 @@ $(document).ready(function () {
 
             // don't assign any special classes to the toc entry itself
             return '';
+        }
+    });
+
+    $('mark').each(function(index, element) {
+        var platform = element.innerText.toLowerCase();
+        platform = platform.replace(/ /g, '');
+        if (platforms[platform]) {
+            $(element).addClass('logo');
+            $(element).addClass(platform);
+            $(element).attr('title', platforms[platform]);
+            element.innerText = '';
         }
     });
 });
