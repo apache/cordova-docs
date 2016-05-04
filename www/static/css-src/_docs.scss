@@ -38,18 +38,18 @@
     mark.logo {
         background-image:url('{{ site.baseurl }}/static/img/platform-logos-all-sprite.svg');
         width:35px;
-        background-size: 315px 35px;
+        background-size: 385px 35px;
     }
 
     mark.android    { background-position: 0 }
-    mark.osx        { background-position: 10%; }
+    mark.ios        { background-position: 10%; }
     mark.windows    { background-position: 20%; }
     mark.blackberry { background-position: 30%; }
     mark.ubuntu     { background-position: 40%; }
     mark.firefox    { background-position: 50%; }
     mark.webos      { background-position: 60%; }
     mark.fireos     { background-position: 70%; }
-    mark.ios        { background-position: 80.8%; }
+    mark.osx        { background-position: 80.8%; }
     mark.browser    { background-position: 92.2%; }
 
     .sub-header {
