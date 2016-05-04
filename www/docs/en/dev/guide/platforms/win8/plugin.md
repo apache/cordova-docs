@@ -70,7 +70,7 @@ cordova.commandProxy.add("Echo",{
 
 The `echoplugin.js` file will forward the `echo` function call to this proxy through the `cordova.exec` command and execute this implementation.
 
-The plugin.xml file will have the settings required for our plugin. In this case, we want to add our `echoplugin.js` file in the `www` directory and the `echopluginProxy.js` file inside the `windows` source code of our application. Details of these elements can be found in the [Plugin.xml](../../plugin_ref/spec.html) reference.
+The plugin.xml file will have the settings required for our plugin. In this case, we want to add our `echoplugin.js` file in the `www` directory and the `echopluginProxy.js` file inside the `windows` source code of our application. Details of these elements can be found in the [Plugin.xml](../../../plugin_ref/spec.html) reference.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
