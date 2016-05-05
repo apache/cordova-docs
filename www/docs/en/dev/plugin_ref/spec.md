@@ -506,13 +506,21 @@ Certain variable names should be reserved, like `$PACKAGE_NAME`. This is the rev
 As seen in the previous section, sometimes plugin might require user to specify values for their variables. To make those variable mandatory, the `<platform>` tag needs to contain
 a `<preference>` tag.
 The CLI checks that these required preferences are passed in.  If not, it should warn the user how to pass the variable in and exit with a non-zero code.
+Preferences can be referenced elsewhere in `plugin.xml` using the syntax `$PREFERENCE_NAME`.
 
 Attributes(type) | Description
 ---------------- | ------------
-name(string) | *Required* <br/> Name of the variable.
+name(string) | *Required* <br/> Name of the variable. Can only contain capital letters, digits, and underscores.
 default(string) | Default value of the variable. If present, its value will be used and no error will be emitted in case user does not enter any value.
 
 Example:
 ```xml
-<preference name="API_KEY" default="default-value" />
+<preference name="MY_CUSTOM_STRING" default="default-value" />
+
+<!--
+    The preference may be referenced elsewhere in plugin.xml like so:
+-->
+<config-file target="./res/values/strings.xml" parent="/resources">
+    <string name="custom">$MY_CUSTOM_STRING</string>
+</config-file>
 ```

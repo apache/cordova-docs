@@ -234,6 +234,23 @@ platform. See [Customize icons topic](images.html) for more information.
    <plugin name="cordova-plugin-device" spec="https://github.com/apache/cordova-plugin-device.git#1.0.0" />
    ```
 
+### variable
+   Persists the value of a CLI variable to be used when restoring a plugin during a prepare. See the [preference element][plugin_preference]
+   of `plugin.xml` for more details.
+
+   Attributes(type) | Description
+   ----------------- | ------------
+   name(string) | *Required* <br/> Name of the CLI variable. Can only contain capital letters, digits, and underscores.
+   value(string) | *Required* <br/> Value of the CLI variable to be used when restoring the parent plugin during a prepare.
+
+   Examples:
+
+   ```xml
+   <plugin name="cordova-plugin-device" spec="^1.1.0">
+        <variable name="MY_VARIABLE" value="my_variable_value" />
+   </plugin>
+   ```
+
 ## preference
    Sets various options as pairs of name/value attributes. Each preference's name is case-insensitive. Many preferences are unique to specific platforms,
    and will be indicated as such.
@@ -472,6 +489,7 @@ platform. See [Customize icons topic](images.html) for more information.
 
 [uses-sdk]:             http://developer.android.com/guide/topics/manifest/uses-sdk-element.html
 [platform_spec]:        ../reference/cordova-cli/index.html#platform-spec
+[plugin_preference]:    ../plugin_ref/spec.html#preference
 [plugin_spec]:          ../reference/cordova-cli/index.html#plugin-spec
 [whitelist_navigation]: ../reference/cordova-plugin-whitelist/index.html#navigation-whitelist
 [whitelist_intent]:     ../reference/cordova-plugin-whitelist/index.html#intent-whitelist
