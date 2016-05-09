@@ -77,7 +77,7 @@ listed on the Platform guides page.
 Once you have installed Plugman and have created a Cordova project, you can start adding plugins to the platform with:
 
 ```bash
-$ plugman --platform <ios|android|blackberry10|wp8> --project <directory> --plugin <name|url|path> [--plugins_dir <directory>] [--www <directory>] [--variable <name>=<value> [--variable <name>=<value> ...]]
+$ plugman install --platform <ios|android|blackberry10|wp8> --project <directory> --plugin <name|url|path> [--plugins_dir <directory>] [--www <directory>] [--variable <name>=<value> [--variable <name>=<value> ...]]
 ```
 
 Using minimum parameters, this command installs a plugin into a cordova project. You must specify a platform and cordova project location for that platform. You also must specify a plugin, with the different `--plugin` parameter forms being:
@@ -94,10 +94,10 @@ Other parameters:
 
 ## Remove a Plugin
 
-To uninstall a plugin, you simply pass the `--uninstall` flag and provide the plugin ID.
+To uninstall a plugin, you simply pass the `uninstall` command and provide the plugin ID.
 
 ```bash
-$ plugman --uninstall --platform <ios|android|blackberry10|wp8> --project <directory> --plugin <id> [--www <directory>] [--plugins_dir <directory>]
+$ plugman uninstall --platform <ios|android|blackberry10|wp8> --project <directory> --plugin <id> [--www <directory>] [--plugins_dir <directory>]
 ```
 
 
