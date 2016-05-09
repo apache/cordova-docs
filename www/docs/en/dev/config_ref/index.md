@@ -220,7 +220,10 @@ platform. See [Customize icons topic](images.html) for more information.
    ```
 
 ## plugin
-   Specifies details about what plugin to restore during a prepare.
+   Specifies details about what plugin to restore during a prepare. This element
+   is automatically added to a project's `config.xml` when a plugin is added using
+   the `--save` flag. See the [CLI reference][plugin_cli] for more information on
+   adding plugins.
 
    Attributes(type) | Description
    ----------------- | ------------
@@ -235,8 +238,16 @@ platform. See [Customize icons topic](images.html) for more information.
    ```
 
 ### variable
-   Persists the value of a CLI variable to be used when restoring a plugin during a prepare. See the [preference element][plugin_preference]
-   of `plugin.xml` for more details.
+   Persists the value of a CLI variable to be used when restoring a plugin during a
+   prepare. This element is added to `config.xml` when a plugin that uses CLI variables
+   is added using the `--save` flag. See the [CLI reference][plugin_cli] for more
+   information on adding plugins.
+
+   Note that this value is only used when the plugin is restored to the project during a
+   prepare, changing it will *not* change the value used by the plugin in the current
+   project. In order for changes to this value to take effect, remove the plugin from the
+   project and restore it by running `cordova prepare`. See the
+   [preference element][plugin_preference] of `plugin.xml` for more details on CLI variables.
 
    Attributes(type) | Description
    ----------------- | ------------
@@ -491,6 +502,7 @@ platform. See [Customize icons topic](images.html) for more information.
 [platform_spec]:        ../reference/cordova-cli/index.html#platform-spec
 [plugin_preference]:    ../plugin_ref/spec.html#preference
 [plugin_spec]:          ../reference/cordova-cli/index.html#plugin-spec
+[plugin_cli]:           ../reference/cordova-cli/index.html#cordova-plugin-command
 [whitelist_navigation]: ../reference/cordova-plugin-whitelist/index.html#navigation-whitelist
 [whitelist_intent]:     ../reference/cordova-plugin-whitelist/index.html#intent-whitelist
 [statusbar_plugin]:     ../reference/cordova-plugin-statusbar/
