@@ -295,10 +295,9 @@ The main differences are:
 It is available in the following variations:
 
 * **[cordova-sqlite-storage][SQLiteStorage]** - core version that relies
-  on native SQLite implementation. As such, it is only available for iOS
-  and Android platforms.
+  on native SQLite implementation. As such, it supports iOS, Android & Windows platforms.
 * **[cordova-sqlite-ext][SQLiteExt]** - extended version with additional
-  features including support for Windows and REGEXP support on Android and iOS.
+  features including REGEXP support on Android and iOS.
 * **[cordova-sqlite-evfree][SQLiteEVFree]** - similar to *cordova-sqlite-ext*
   but with improved memory handling. Available under GPL v3 or commercial license.
 
