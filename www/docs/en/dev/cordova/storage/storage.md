@@ -294,11 +294,9 @@ The main differences are:
 
 It is available in the following variations:
 
-* **[cordova-sqlite-storage][SQLiteStorage]** - core version that relies
-  on native SQLite implementation. As such, it is only available for iOS
-  and Android platforms.
+* **[cordova-sqlite-storage][SQLiteStorage]** - core version that includes its own sqlite3 implementation. It supports iOS, Android & Windows platforms.
 * **[cordova-sqlite-ext][SQLiteExt]** - extended version with additional
-  features including support for Windows and REGEXP support on Android and iOS.
+  features including REGEXP support on Android and iOS.
 * **[cordova-sqlite-evfree][SQLiteEVFree]** - similar to *cordova-sqlite-ext*
   but with improved memory handling. Available under GPL v3 or commercial license.
 
@@ -323,7 +321,7 @@ alternative storage options.
 [StructuredCloneAlgorithm]: http://w3c.github.io/html/infrastructure.html#safe-passing-of-structured-data
 [Html5RocksFileSystemTutorial]: http://www.html5rocks.com/en/tutorials/file/filesystem/
 [FileAPI]: https://github.com/apache/cordova-plugin-file/blob/master/README.md
-[SQLiteStorage]: https://github.com/litehelpers/Cordova-sqlite-storage/blob/core-master/README.md
-[SQLiteExt]: https://github.com/litehelpers/cordova-sqlite-ext/blob/cordova-sqlite-ext-master/README.md
-[SQLiteEVFree]: https://github.com/litehelpers/Cordova-sqlite-enterprise-free/blob/evfree-ext-rc/README.md
+[SQLiteStorage]: https://github.com/litehelpers/Cordova-sqlite-storage#readme
+[SQLiteExt]: https://github.com/litehelpers/cordova-sqlite-ext#readme
+[SQLiteEVFree]: https://github.com/litehelpers/Cordova-sqlite-enterprise-free#readme
 [CordovaPlugins]: {{ site.baseurl }}/plugins
