@@ -1,5 +1,5 @@
 <url>
-    <loc>{{ include.url }}</loc>{% if include.change_frequency %}
+    <loc>{{ site.url }}{{ include.url }}</loc>{% if include.change_frequency %}
     <changefreq>{{ include.change_frequency }}</changefreq>{% endif %}{% if include.priority %}
     <priority>{{ include.priority }}</priority>{% endif %}
 </url>
