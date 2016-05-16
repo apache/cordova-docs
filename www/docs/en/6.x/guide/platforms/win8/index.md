@@ -80,11 +80,9 @@ Install any edition of
 [Visual Studio](http://www.visualstudio.com/downloads) matching the version
 requirements listed above.
 
-<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png" /></p><br/>
+The tools and SDKs for the target Windows platforms (UWP, 8.1, etc.) must also be selected in the installer. They can be found under the "Windows and Web Development" heading.
 
-For Windows 10, the Visual Studio installer has an option to install tools to
-build Universal Windows Apps.  You must ensure that this option is selected
-when installing to install the required SDK.
+<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/win8/win8_installTools.png" /></p><br/>
 
 ## Project Configuration
 
