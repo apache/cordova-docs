@@ -643,3 +643,41 @@ Supports the following `MediaFileData` properties:
 - __width__: Supported: image and video files only.
 
 - __duration__: Supported: audio and video files only.
+
+## Android Lifecycle Quirks
+
+When capturing audio, video, or images on the Android platform, there is a chance that the
+application will get destroyed after the Cordova Webview is pushed to the background by
+the native capture application. See the [Android Lifecycle Guide][android-lifecycle] for
+a full description of the issue. In this case, the success and failure callbacks passed
+to the capture method will not be fired and instead the results of the call will be
+delivered via a document event that fires after the Cordova [resume event][resume-event].
+
+In your app, you should subscribe to the two possible events like so:
+
+```javascript
+function onDeviceReady() {
+    // pendingcaptureresult is fired if the capture call is successful
+    document.addEventListener('pendingcaptureresult', function(mediaFiles) {
+        // Do something with result
+    });
+
+    // pendingcaptureerror is fired if the capture call is unsuccessful
+    document.addEventListener('pendingcaptureerror', function(error) {
+        // Handle error case
+    });
+}
+
+// Only subscribe to events after deviceready fires
+document.addEventListener('deviceready', onDeviceReady);
+```
+
+It is up you to track what part of your code these results are coming from. Be sure to
+save and restore your app's state as part of the [pause][pause-event] and
+[resume][resume-event] events as appropriate. Please note that these events will only
+fire on the Android platform and only when the Webview was destroyed during a capture
+operation.
+
+[android-lifecycle]: http://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#lifecycle-guide
+[pause-event]: http://cordova.apache.org/docs/en/latest/cordova/events/events.html#pause
+[resume-event]: http://cordova.apache.org/docs/en/latest/cordova/events/events.html#resume

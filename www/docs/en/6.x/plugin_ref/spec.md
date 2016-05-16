@@ -30,7 +30,7 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
 The `plugin` element is the plugin manifest's top-level element.
 
-Attributes(type) | Description
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
 xmlns(string) | *Required* <br/> The plugin namespace, `http://apache.org/cordova/ns/plugins/1.0`. If the document contains XML from other namespaces, such as tags to be added to the `AndroidManifest.xml` file in the case of Android, those namespaces should also be included in the <plugin> element.
 id(string) | *Required* <br/> A npm-style identifier for the plugin.
@@ -53,7 +53,7 @@ The child elements of the `<engines>` element specify versions of Apache Cordova
 >is in a plugin's `package.json`. See [specifying Cordova dependencies](../guide/hybrid/plugins/index.html#specifying-cordova-dependencies)
 >for more information
 
-Attributes(type) | Description
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
 name(string) | *Required* <br/> Name of the engine. Here are the default engines that are supported : <ul><li> `cordova` </li> <li> `cordova-plugman` </li> <li> `cordova-android` </li> <li> `cordova-ios` </li> <li> `cordova-blackberry10` </li> <li> `cordova-wp8` </li> <li> `cordova-windows` </li> <li> `cordova-osx` </li> <li> `windows-os` </li> <li> `android-sdk` (returns the highest Android api level installed) </li> <li> `windows-sdk` (returns the native windows SDK version) </li> <li> `apple-xcode` (returns the xcode version) </li> <li> `apple-ios` (returns the highest iOS version installed) </li> <li> `apple-osx` (returns the OSX version) </li> <li> `blackberry-ndk` (returns the native blackberry SDK version) </li> You can also specify a custom framework apart from the default ones.
 version(string) | *Required* <br/> The version that your framework must have in order to install. Semver syntax is supported.
@@ -70,16 +70,16 @@ Examples:
 Engine elements may also specify fuzzy matches using '>', '>=' etc. to avoid repetition, and to reduce maintenance when the underlying platform is updated.
 ```xml
 <engines>
-  <engine name="cordova-android" version=">=1.8.0" />
+  <engine name="cordova-android" version="&gt;=1.8.0" />
 </engines>
 ```
 
 The `<engine>` tags also has default support for all of the main platforms Cordova exists on. Specifying the cordova engine tag means that all versions of Cordova on any platform must satisfy the engine version attribute. You may also list specific platforms and their versions in order to override the catch-all cordova engine:
 ```xml
 <engines>
-  <engine name="cordova" version=">=1.7.0" />
-  <engine name="cordova-android" version=">=1.8.0" />
-  <engine name="cordova-ios" version=">=1.7.1" />
+  <engine name="cordova" version="&gt;=1.7.0" />
+  <engine name="cordova-android" version="&gt;=1.8.0" />
+  <engine name="cordova-ios" version="&gt;=1.7.1" />
 </engines>
 ```
 
@@ -87,8 +87,8 @@ Custom frameworks example:
 ```xml
 <engines>
   <engine name="my_custom_framework" version="1.0.0" platform="android" scriptSrc="path_to_my_custom_framework_version"/>
-  <engine name="another_framework" version=">0.2.0" platform="ios|android" scriptSrc="path_to_another_framework_version"/>
-  <engine name="even_more_framework" version=">=2.2.0" platform="*" scriptSrc="path_to_even_more_framework_version"/>
+  <engine name="another_framework" version="&gt;0.2.0" platform="ios|android" scriptSrc="path_to_another_framework_version"/>
+  <engine name="even_more_framework" version="&gt;=2.2.0" platform="*" scriptSrc="path_to_even_more_framework_version"/>
 </engines>
 ```
 
@@ -141,7 +141,7 @@ Example:
 
 This element is used to list the files or directories to be copied into a Cordova app's `www` directory. Any `<asset>` elements that are nested within `<platform>` elements specify platform-specific web assets.
 
-Attributes(type) | Description
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
 src(string) | *Required* <br/>  Where the file or directory is located in the plugin package, relative to the `plugin.xml` document. If a file does not exist at the specified src location, the CLI stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.
 target(string) | *Required* <br/> Where the file or directory should be located in the Cordova app, relative to the `www` directory. If a file already exists at the target location, the CLI stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.
@@ -163,7 +163,7 @@ Assets can be targeted to subdirectories as well. This will create the `js/exper
 
 Most plugins include one or more JavaScript files.  Each `<js-module>` tag corresponds to a JavaScript file, and prevents the plugin's users from having to add a `<script>` tag for each file. Do not wrap the file with cordova.define, as it is added automatically. The module is wrapped in a closure, with module, exports, and require in scope, as is normal for AMD modules. Nesting `<js-module>` elements within `<platform>` declares platform-specific JavaScript module bindings.
 
-Attributes(type) | Description
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
 src(string) | References a file in the plugin directory relative to the `plugin.xml` file. If src does not resolve to an existing file, the CLI stops and reverses the installation, issues a notification of the problem, and exits with a non-zero code.
 name(string) | Provides the last part of the module name. It can generally be whatever you like, and it only matters if you want to use cordova.require to import other parts of your plugins in your JavaScript code. The module name for a `<js-module>` is your plugin's id followed by the value of name.
@@ -182,7 +182,7 @@ Also for this example, with a plugin id of `chrome-socket`, the module name will
 Allowed within `<js-module>` element. Used to specify the namespace under `window` object where module.exports gets inserted. You can have as many `<clobbers>` as you
 like. Any object not available on `window` is created.
 
-Attributes(type) | Description
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
 target(string) | The namespace where module.exports gets inserted to.
 
@@ -198,7 +198,7 @@ Here module.exports gets inserted into the `window` object as `window.chrome.soc
 
 Allowed within `<js-module>` element. Used to specify the namespace under `window` object where module.exports gets merged with any existing value. If any key already exists, the module's version overrides the original. You can have as many `<merges>` as you like. Any object not available on `window` is created.
 
-Attributes(type) | Description
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
 target(string) | The namespace which module.exports gets merged to.
 
@@ -225,7 +225,7 @@ Example:
 
 The `<dependency>` tag allows you to specify other plugins on which the current plugin depends. The plugins are referenced by their unique npm ids or by github url.
 
-Attributes(type) | Description
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
 id(string) | Provides the ID of the plugin.
 url(string) | A URL for the plugin. This should reference a git repository, which the CLI attempts to clone.
@@ -243,7 +243,7 @@ Examples:
 
 Identifies platforms that have associated native code or require modifications to their configuration files. Tools using this specification can identify supported platforms and install the code into Cordova projects. Plugins without `<platform>` tags are assumed to be JavaScript-only, and therefore installable on any and all platforms.
 
-Attributes(type) | Description
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
 name(string) | *Required* <br/> Allowed values: ios, android, blackberry10, amazon-fireos, wp8, windows <br/> Identifies a platform as supported, associating the element's children with that platform.
 
@@ -258,12 +258,12 @@ Example:
 
 Identifies executable source code that should be installed into a project.
 
-Attributes(type) | Description
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
 src(string) | *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
 target-dir(string) | A directory into which the files should be copied, relative to the root of the Cordova project. In practice, this is most important for Java-based platforms, where a file in the `com.alunny.foo` package must be located within the `com/alunny/foo` directory. For platforms where the source directory is not important, this attribute should be omitted.
-framework(boolean) | *Default: false* <br/> ==iOS== <br/> If set to true, also adds the specified file as a framework to the project.
-compiler-flags(string) | ==iOS== <br/> If set, assigns the specified compiler flags for the particular source file.
+framework(boolean) <br/> ==iOS== | *Default: false* <br/>  If set to true, also adds the specified file as a framework to the project.
+compiler-flags(string) <br/> ==iOS== | If set, assigns the specified compiler flags for the particular source file.
 
 Examples:
 ```xml
@@ -279,7 +279,7 @@ Examples:
 
 This is like `<source-file>` element but specifically for platforms such as iOS and Android that distinguish between source files, headers, and resources. This is not supported by Windows.
 
-Attributes(type) | Description
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
 src(string) | *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
 target(string) | Path to where the file will be copied in your directory.
@@ -295,13 +295,13 @@ For iOS:
 
 This is like `<source-file>` element, but specifically for platforms such as iOS and Android that distinguish between source files, headers, and resources.
 
-Attributes(type) | Description
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
 src(string) | *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
 target(string) | Path to where the file will be copied in your directory.
-arch(string) | ==windows== <br/> Allowed values: `x86`, `x64` or `ARM`. <br/> Indicates that the file should only be included when building for the specified architecture.
-device-target | ==windows== <br/> Allowed values: `win` (or `windows`), `phone` or `all`. <br/> Indicates that the file should only be included when building for the specified target device type.
-versions | ==windows== <br/> Indicates that the file should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
+arch(string) <br/> ==windows== | Allowed values: `x86`, `x64` or `ARM`. <br/> Indicates that the file should only be included when building for the specified architecture.
+device-target <br/> ==windows== | Allowed values: `win` (or `windows`), `phone` or `all`. <br/> Indicates that the file should only be included when building for the specified target device type.
+versions <br/> ==windows== | Indicates that the file should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
 
 Examples:
 
@@ -321,13 +321,13 @@ Identifies an XML-based configuration file to be modified, where in that documen
 Two file types that have been tested for modification with this element are `xml` and `plist` files.
 The `config-file` element only allows you to append new children to an XML document tree. The children are XML literals to be inserted in the target document.
 
-Attributes(type) | Description
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
 target(string) | The file to be modified, and the path relative to the root of the Cordova project. If the specified file does not exist, the tool ignores the configuration change and continues installation. <br/> The target can include wildcard (`*`) elements. In this case, the CLI recursively searches through the project directory structure and uses the first match. <br/> On iOS, the location of configuration files relative to the project directory root is not known, so specifying a target of `config.xml` resolves to `cordova-ios-project/MyAppName/config.xml`.
 parent(string) | An XPath selector referencing the parent of the elements to be added to the config file. If you use absolute selectors, you can use a wildcard (`*`) to specify the root element, e.g., `/*/plugins`. If the selector does not resolve to a child of the specified document, the tool stops and reverses the installation process, issues a warning, and exits with a non-zero code. <br/> For `plist` files, the `parent` determines under what parent key the specified XML should be inserted.
 after(string) | A prioritized list of accepted siblings after which to add the XML snippet. Useful for specifying changes in files which require strict ordering of XML elements like [this](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement).
-device-target(string) | ==windows== <br/> Allowed values: `win`, `phone`, `all`. <br/> Applicable when affecting the meta-name `package.appxmanifest`, this attribute indicates that the file should only be modified when building for the specified target device type.
-versions(string) | ==windows== <br/> Applicable when affecting the meta-name `package.appxmanifest`, this attribute indicates that app manifests for specific Windows versions should only be altered for versions that match the specified version string. Value can be any valid node semantic version range string.
+device-target(string) <br/> ==windows== | Allowed values: `win`, `phone`, `all`. <br/> Applicable when affecting the meta-name `package.appxmanifest`, this attribute indicates that the file should only be modified when building for the specified target device type.
+versions(string) <br/> ==windows== | Applicable when affecting the meta-name `package.appxmanifest`, this attribute indicates that app manifests for specific Windows versions should only be altered for versions that match the specified version string. Value can be any valid node semantic version range string.
 
 Examples:
 
@@ -355,11 +355,11 @@ For `plist`:
 
 For windows-specific attributes:
 ```xml
-<config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="<8.1.0">
+<config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="&lt;8.1.0">
     <Capability Name="picturesLibrary" />
     <DeviceCapability Name="webcam" />
 </config-file>
-<config-file target="package.appxmanifest" parent="/Package/Capabilities" versions=">=8.1.0" device-target="phone">
+<config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="&gt;=8.1.0" device-target="phone">
     <DeviceCapability Name="webcam" />
 </config-file>
 ```
@@ -378,12 +378,12 @@ Example:
 
 Like source, resource, and header files, but specifically for platforms such as BlackBerry 10 that use user-generated libraries. For the Windows platform, the `<lib-file>` element allows the inclusion of an `<SDKReference>` in the generated Windows project files.
 
-Attributes(type) | Description
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
 src(string) | *Required* <br/> The location of the file relative to `plugin.xml`. If `src` can't be found, the CLI stops and reverses the installation, issues a warning about the problem, and exits with a non-zero code. <br/> For Windows, it indicates the name of the SDK to include (which will be used as value of the `Include` attribute of the generated `<SDKReference>` element).
 arch(string) | The architecture for which the `.so` file has been built, either `device` or `simulator`. <br/> For Windows, it indicates that the `<SDKReference>` should only be included when building for the specified architecture. Supported values are `x86`, `x64` or `ARM`.
-device-target(string) | ==windows== <br/> Allowed values: `win` (or `windows`), `phone` or `all`. <br/> Indicates that the `<SDKReference>` should only be included when building for the specified target device type.
-versions(string) | ==windows== <br/> Indicates that the `<SDKReference>` should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
+device-target(string) <br/> ==windows== | Allowed values: `win` (or `windows`), `phone` or `all`. <br/> Indicates that the `<SDKReference>` should only be included when building for the specified target device type.
+versions(string) <br/> ==windows== | Indicates that the `<SDKReference>` should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
 
 Examples:
 ```xml
@@ -394,7 +394,7 @@ Examples:
 For Windows:
 ```xml
 <lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" />
-<lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions=">=8.1" />
+<lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions="&gt;=8.1" />
 <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" />
 <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="win" versions="8.0" arch="x86" />
 ```
@@ -403,17 +403,17 @@ For Windows:
 
 Identifies a framework (usually part of the OS/platform) on which the plugin depends.
 
-Attributes(type) | Description
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
 src(string) | *Required* <br/> The name of the system framework or the relative path to one which is included as part of your plugin files.
 custom(boolean) | Indicates whether the framework is included as part of your plugin files.
 weak(boolean) | *Default: false* <br/> Indicates whether the framework should be weakly linked.
 type(string) | Indicates the type of framework to add.
 parent(string) | *Default: .* <br/> Sets the relative path to the directory containing the sub-project to which to add the reference. The default, `.`, implies the application project.
-arch(string) | ==windows== <br/> Allowed values: `x86`, `x64` or `ARM`. <br/> Indicates that the framework should only be included when building for the specified architecture.
-device-target(string) | ==windows== <br/> Allowed values: `win` (or `windows`), `phone` or `all`. <br/>  Indicates that the framework should only be included when building for the specified target device type.
-versions(string) | ==windows== <br/> Indicates that the framework should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
-target-dir(string) | ==windows== <br/>  Indicates a subdirectory into which the framework should be copied. In practice, this is most important when plugin contains different framework versions for different chip architectures or device targets, but which have the same name. This allows you to specify different subfolders for each framework version so that they don't overlap each other.
+arch(string) <br/> ==windows== | Allowed values: `x86`, `x64` or `ARM`. <br/> Indicates that the framework should only be included when building for the specified architecture.
+device-target(string) <br/> ==windows== | Allowed values: `win` (or `windows`), `phone` or `all`. <br/>  Indicates that the framework should only be included when building for the specified target device type.
+versions(string) <br/> ==windows== | Indicates that the framework should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
+target-dir(string) <br/> ==windows== | Indicates a subdirectory into which the framework should be copied. In practice, this is most important when plugin contains different framework versions for different chip architectures or device targets, but which have the same name. This allows you to specify different subfolders for each framework version so that they don't overlap each other.
 
 Examples:
 
@@ -447,7 +447,7 @@ On Windows, using `custom='true'` and `type='projectReference'` will add a refer
 Examples of using these Windows specific attributes:
 ```xml
 <framework src="src/windows/example.dll" arch="x64" />
-<framework src="src/windows/example.dll" versions=">=8.0" />
+<framework src="src/windows/example.dll" versions="&gt;=8.0" />
 <framework src="src/windows/example.vcxproj" type="projectReference" target="win" />
 <framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" />
 <framework src="src/windows/example.dll" target-dir="bin/x64" arch="x64" custom="true"/>
@@ -506,13 +506,21 @@ Certain variable names should be reserved, like `$PACKAGE_NAME`. This is the rev
 As seen in the previous section, sometimes plugin might require user to specify values for their variables. To make those variable mandatory, the `<platform>` tag needs to contain
 a `<preference>` tag.
 The CLI checks that these required preferences are passed in.  If not, it should warn the user how to pass the variable in and exit with a non-zero code.
+Preferences can be referenced elsewhere in `plugin.xml` using the syntax `$PREFERENCE_NAME`.
 
-Attributes(type) | Description
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
-name(string) | *Required* <br/> Name of the variable.
+name(string) | *Required* <br/> Name of the variable. Can only contain capital letters, digits, and underscores.
 default(string) | Default value of the variable. If present, its value will be used and no error will be emitted in case user does not enter any value.
 
 Example:
 ```xml
-<preference name="API_KEY" default="default-value" />
+<preference name="MY_CUSTOM_STRING" default="default-value" />
+
+<!--
+    The preference may be referenced elsewhere in plugin.xml like so:
+-->
+<config-file target="./res/values/strings.xml" parent="/resources">
+    <string name="custom">$MY_CUSTOM_STRING</string>
+</config-file>
 ```

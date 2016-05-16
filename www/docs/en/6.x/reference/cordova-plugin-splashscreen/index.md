@@ -50,9 +50,10 @@ Report issues with this plugin on the [Apache Cordova issue tracker][Apache Cord
 - BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
-- Windows 8
-- Windows
+- Windows (`cordova-windows` version >= 4.4.0 is required)
 - Browser
+
+__Note__: Extended splashscreen does not require the plugin on Windows (as opposed to Android and iOS) in case you don't use the plugin API, i.e. programmatic hide/show.
 
 ## Example Configuration
 In the top-level `config.xml` file (not the one in `platforms`), add configuration elements like those specified here.
@@ -124,17 +125,26 @@ projectRoot
 
 #### config.xml
 
--  __AutoHideSplashScreen__ (boolean, default to `true`). Indicates whether to hide splash screen automatically or not. Splash screen hidden after amount of time specified in the `SplashScreenDelay` preference.
+- `AutoHideSplashScreen` (boolean, default to `true`). Indicates whether to hide splash screen automatically or not. Splash screen hidden after amount of time specified in the `SplashScreenDelay` preference.
 
 ```xml
     <preference name="AutoHideSplashScreen" value="true" />
 ```
 
--  __SplashScreenDelay__ (number, default to 3000). Amount of time in milliseconds to wait before automatically hide splash screen.
+- `SplashScreenDelay` (number, default to 3000). Amount of time in milliseconds to wait before automatically hide splash screen.
 
 ```xml
     <preference name="SplashScreenDelay" value="3000" />
 ```
+
+Note also that this value used to be seconds, and not milliseconds, so values less than 30 will still be treated as seconds. ( Consider this a deprecated patch that will disapear in some future version. )
+
+To disable the splashscreen add the following preference to `config.xml`: 
+```xml
+<preference name="SplashScreenDelay" value="0"/>
+```
+
+**iOS Quirk**: to disable the splashscreen on `ios` platform you should also add `<preference name="FadeSplashScreenDuration" value="0"/>` to `config.xml`.
 
 - `FadeSplashScreen` (boolean, defaults to `true`): Set to `false` to
   prevent the splash screen from fading in and out when its display
@@ -144,14 +154,12 @@ projectRoot
     <preference name="FadeSplashScreen" value="false"/>
 ```
 
-- `FadeSplashScreenDuration` (float, defaults to `3000`): Specifies the
+- `FadeSplashScreenDuration` (float, defaults to `500`): Specifies the
   number of milliseconds for the splash screen fade effect to execute.
 
 ```xml
-    <preference name="FadeSplashScreenDuration" value="3000"/>
+    <preference name="FadeSplashScreenDuration" value="750"/>
 ```
-
-Note also that this value used to be seconds, and not milliseconds, so values less than 30 will still be treated as seconds. ( Consider this a deprecated patch that will disapear in some future version. )
 
 _Note_: `FadeSplashScreenDuration` is included into `SplashScreenDelay`, for example if you have `<preference name="SplashScreenDelay" value="3000" />` and `<preference name="FadeSplashScreenDuration" value="1000"/>` defined in `config.xml`:
 
@@ -179,15 +187,12 @@ window.setTimeout(function () {
 
 ### Android Quirks
 
-In your `config.xml`, you need to add the following preferences:
+In your `config.xml`, you can add the following preferences:
 
 ```xml
-<preference name="SplashScreenDelay" value="3000" />
 <preference name="SplashMaintainAspectRatio" value="true|false" />
 <preference name="SplashShowOnlyFirstTime" value="true|false" />
 ```
-
-The first parameter represents how long the splashscreen will appear in milliseconds. It defaults to 3000 ms.
 
 "SplashMaintainAspectRatio" preference is optional. If set to true, splash screen drawable is not stretched to fit screen, but instead simply "covers" the screen, like CSS "background-size:cover". This is very useful when splash screen images cannot be distorted in any way, for example when they contain scenery or text. This setting works best with images that have large margins (safe areas) that can be safely cropped on screens with different aspect ratios.
 
@@ -220,14 +225,17 @@ __Note__: `SplashScreen` value should be absolute in order to work in a sub-page
 
 - `SplashScreenSpinnerColor` (string, defaults to system accent color): hash, rgb notation or CSS color name.
 
-        <preference name="SplashScreenSpinnerColor" value="#242424"/>
-        <preference name="SplashScreenSpinnerColor" value="DarkRed"/>
-        <preference name="SplashScreenSpinnerColor" value="rgb(50,128,128)"/>
+```xml
+<preference name="SplashScreenSpinnerColor" value="#242424"/>
+<preference name="SplashScreenSpinnerColor" value="DarkRed"/>
+<preference name="SplashScreenSpinnerColor" value="rgb(50,128,128)"/>
+```
 
 - `SplashScreenBackgroundColor` (string, defaults to #464646): hex notation.
 
-        <preference name="SplashScreenBackgroundColor" value="0xFFFFFFFF"/>
-
+```xml
+<preference name="SplashScreenBackgroundColor" value="0xFFFFFFFF"/>
+```
 
 ## Methods
 

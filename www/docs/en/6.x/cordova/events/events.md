@@ -324,6 +324,24 @@ function onBackKeyDown() {
 }
 ```
 
+### Windows Quirks
+
+Throw an error in a `backbutton` callback to force the default behavior, which is an app exit:
+
+```javascript
+document.addEventListener('backbutton', function (evt) {
+    if (cordova.platformId !== 'windows') {
+        return;
+    }
+
+    if (window.location.href !== firstPageUrl) {
+        window.history.back();
+    } else {
+        throw new Error('Exit'); // This will suspend the app
+    }
+}, false);
+```
+
 ## menubutton
 
 The event fires when the user presses the menu button. Applying an event handler
