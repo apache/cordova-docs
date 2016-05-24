@@ -8,7 +8,7 @@ categories: news
 tags: release tools
 ---
 
-New updates of `cordova-cli`, `cordova`, `plugman` and `cordova-common` are now live! We have also released the first version of `cordova-fetch`, a module used by `cordova-lib` to fetch plugins and platforms via `npm install`. 
+New updates of `cordova`, `cordova-lib`, `plugman` and `cordova-common` are now live! We have also released the first version of `cordova-fetch`, a module used by `cordova-lib` to fetch plugins and platforms via `npm install`. 
 
 * [cordova-lib@6.2.0](https://www.npmjs.org/package/cordova-lib)
 * [cordova@6.2.0](https://www.npmjs.org/package/cordova)
@@ -19,15 +19,16 @@ New updates of `cordova-cli`, `cordova`, `plugman` and `cordova-common` are now 
 Release Highlights:
 
 * [CB-9858](https://issues.apache.org/jira/browse/CB-9858) added `--fetch` option
-* [Telemetry](https://github.com/apache/cordova-cli/pull/247) Added telemetry to cordova-cli to collect data for data driven development. Goal is use data to help guide the development of cordova. It is auto opt-out. Type `cordova telemetry -h` for more info. 
+* [Telemetry](https://github.com/apache/cordova-cli/pull/247) Added telemetry to `cordova` to collect data for data driven development. Goal is use data to help guide the development of `cordova`. `cordova` will issue a prompt on first use providing an option for the user to disable it. Type `cordova telemetry -h` for more info. 
 * [CB-11194](https://issues.apache.org/jira/browse/CB-11194) Improve cordova load time
-* Added support for node 6 via [CB-11200](https://issues.apache.org/jira/browse/CB-11200) Bump `node-xcode` dependency and update tests to pass.
+* Added support for **node 6** via [CB-11200](https://issues.apache.org/jira/browse/CB-11200) Bump `node-xcode` dependency and update tests to past.
 
-The new `cordova-fetch` feature is behind the `--fetch` flag. Use it when adding and removing plugins.
+The new `cordova-fetch` feature is behind the `--fetch` flag. Use it when adding and removing plugins and platforms.
 
-    cordova plugin add cordova-plugin-device --fetch 
+    cordova plugin add/rm PLUGINID --fetch
+    cordova platform add/rm PLATFORM --fetch
 
-This will fetch the `cordova-plugin-device` plugin and `npm install` it to your application. You should see a new `node_modules` directory. This is the first step towards us eventually supporting a `package.json` in your cordova applications. 
+This will fetch the plugin/platform and `npm install` it to your application. You should see a new `node_modules` directory. This is the first step towards us eventually supporting a `package.json` in your cordova applications. 
 
 To update your tools:
 
@@ -38,6 +39,9 @@ To update your tools:
   * If you have `plugman` installed:
 
         npm install -g plugman@latest
+
+
+Make sure to report any issues you find at [issues.cordova.io](http://issues.cordova.io/)!
 
 <!--more-->
 # Changes include:
