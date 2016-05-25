@@ -34,7 +34,7 @@ NFC communication, or to tailor calendar interfaces. You can search for availabl
 on [Cordova Plugin Search page](/plugins/).
 
 Plugins comprise a single JavaScript interface along with
-corresponding native code libraries for each supported platform.  In to essence
+corresponding native code libraries for each supported platform.  In essence
 this hides the various native code implementations behind a common
 JavaScript interface.
 
