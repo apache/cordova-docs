@@ -158,7 +158,7 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="p">*on desktop only</td>
+        <td data-col="ubuntu"        class="p">desktop only</td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="p">partially</td>
         <td data-col="osx"       class="n"></td>
