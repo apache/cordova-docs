@@ -27,9 +27,9 @@ This guide shows how to set up a development environment for creating Cordova ap
 
 You will need an Ubuntu system for building applications, either running natively or in a virtual machine. You will also need an Ubuntu phone for testing your application, though an emulator can be used for basic verifications.
 
-## Development platform requirements
+## Development Platform Requirements
 
-### Minimum and recommended requirements
+### Minimum and Recommended Versions
 
 Developing Cordova apps requires a system running Ubuntu.
 
@@ -46,7 +46,7 @@ The cordova-ubuntu platform support code requires at least cordova-cli 4.3.1. Th
 For the latest information on Cordova app support for Ubuntu runtime platforms,
 see [wiki.ubuntu.com/Cordova](http://wiki.ubuntu.com/Cordova).
 
-## Installing the development environment
+## Installing the Development Environment
 
 ### Installing Ubuntu
 
@@ -165,7 +165,7 @@ $ cordova platform add ubuntu
 
 ```bash
 $ cordova plugin add cordova-plugin-camera
-``
+```
 
 ### Build for Ubuntu devices
 
