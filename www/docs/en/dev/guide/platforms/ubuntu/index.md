@@ -41,14 +41,12 @@ The target environment is an Ubuntu phone, supporting at least the ubuntu-sdk-ap
 
 The cordova-ubuntu platform support code requires at least cordova-cli 4.3.1. This is the minimum and recommended version at the time of this writing. cordova-ubuntu 4.3.x releases are all compatible with that tool release.
 
-### Latest Information
-
 For the latest information on Cordova app support for Ubuntu runtime platforms,
 see [wiki.ubuntu.com/Cordova](http://wiki.ubuntu.com/Cordova).
 
 ## Installing the Development Environment
 
-### Installing Ubuntu
+### Install Ubuntu
 
 Installation images of Ubuntu 16.04 LTS are available at http://www.ubuntu.com/download
 
@@ -98,7 +96,7 @@ $ sudo apt-get update
 $ sudo apt-get install cordova-cli
 ```
 
-### Adding an Ubuntu "click chroot"
+### Add an Ubuntu "click chroot"
 
 The build environment needs to be separated from the developer's environment, to prevent unwanted side effects and provide a clean, repeatable process.
 
@@ -147,19 +145,11 @@ Creates an app in a `hello` directory whose display name is
 
 ```bash
 $ cordova create helloworld helloworld.ubuntudeveloper HelloWorld
-```
-
-### Move into the Project Directory
-
-```bash
 $ cd hello
-```
-
-### Add the Ubuntu Platform
-
-```bash
 $ cordova platform add ubuntu
 ```
+
+Note that Ubuntu applications use a pair <appname>.<username> as a naming convention.
 
 ### Add a Plugin
 
@@ -170,11 +160,73 @@ $ cordova plugin add cordova-plugin-camera
 ### Build for Ubuntu devices
 
 ```bash
-$ cordova build ubuntu --device
+$ cordova build --device
 ```
+
+You can see detailed build logs with the following options:
+```bash
+$ cordova -d build --device -- --verbose
+```
+
+You can build your app for a different target framework by specifying the option below:
+```bash
+$ cordova -d build --device -- --framework=ubuntu-sdk-16.04
+```
+
+Note that for the latter to work, you will need to have a corresponding click chroot installed on your build system.
 
 ### Run the App on an Ubuntu device
 
 ```bash
-$ cordova run ubuntu --device
+$ cordova run --device
 ```
+
+This will:
+1. build the app for the device target
+1. package it using the click packaging system
+1. transfer the app on the device
+1. stop the app if it was already running
+1. install the app
+1. start the app
+
+
+## Debugging
+
+You can enable chrome devtools support to debug your app, by adding the --debug flag:
+
+```bash
+$ cordova run --device --debug
+```
+
+Then simply connect to the URL mentioned in the logs.
+
+## Publishing your app
+
+Once you have finished developing and testing your app, you can publish it on the Ubuntu App Store.
+
+### Generate and verify the package
+
+Your app is already packaged in a format compatible with the app store. Just find the .click package generate by the cordova-ubuntu build system:
+
+```bash
+$ cordova build --device
+$ find -name "*.click"
+```
+
+You can manually verify that the package passes all verification steps enforced by the Ubuntu App Store system, by using the click-reviewer-tools:
+
+```bash
+$ click review -v <click file>
+```
+
+Note: this step is done automatically by the build system as well.
+
+### Sign up and upload to the app store
+
+You need to first create a free developer account on the Ubuntu App Store.
+
+Then you will be able to upload your package to the store and make it available to all users of Ubuntu devices.
+
+The full process is documented online at https://developer.ubuntu.com/en/publish/
+
+
