@@ -144,18 +144,15 @@ $ cordova plugin save
 ```
 
 
-### Updating / Removing plugins
-It is also possible to update/delete from config.xml during the commands 'cordova plugin update' and 'cordova plugin remove' :
+### Removing plugins
+It is also possible to delete from config.xml during the command 'cordova plugin remove' :
 
 ```bash
-$ cordova plugin update <plugin[@<version>] | directory | git_url> --save
+
 $ cordova plugin remove <plugin> --save
 ```
-Some examples :
+For example:
 
-  * **'cordova plugin update cordova-plugin-console --save'** => In addition to updating the console plugin to the pinned version, update config.xml entry
-  * **'cordova plugin update cordova-plugin-console@0.2.13 --save'** => In addition to updating the android plugin to version 3.8.0, update config.xml entry
-  * **'cordova plugin update /path/to/console/plugin --save'** => In addition to updating the console plugin to version in the folder, update config.xml entry
   * **'cordova plugin remove cordova-plugin-console --save'** => Removes the console plugin from the project and deletes its entry from config.xml.
 
 
