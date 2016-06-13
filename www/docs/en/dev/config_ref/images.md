@@ -131,12 +131,12 @@ For Windows the recommended approach to define application icons is to use the `
     <platform name="windows">
         <icon src="res/windows/storelogo.png" target="StoreLogo" />
         <icon src="res/windows/smalllogo.png" target="Square30x30Logo" />
-        <icon src="res/Windows/Square44x44Logo.png" target="Square44x44Logo" />
-        <icon src="res/Windows/Square70x70Logo.png" target="Square70x70Logo" />
-        <icon src="res/Windows/Square71x71Logo.png" target="Square71x71Logo" />
-        <icon src="res/Windows/Square150x150Logo.png" target="Square150x150Logo" />
-        <icon src="res/Windows/Square310x310Logo.png" target="Square310x310Logo" />
-        <icon src="res/Windows/Wide310x150Logo.png" target="Wide310x150Logo" />
+        <icon src="res/windows/Square44x44Logo.png" target="Square44x44Logo" />
+        <icon src="res/windows/Square70x70Logo.png" target="Square70x70Logo" />
+        <icon src="res/windows/Square71x71Logo.png" target="Square71x71Logo" />
+        <icon src="res/windows/Square150x150Logo.png" target="Square150x150Logo" />
+        <icon src="res/windows/Square310x310Logo.png" target="Square310x310Logo" />
+        <icon src="res/windows/Wide310x150Logo.png" target="Wide310x150Logo" />
     </platform>
 ```
 
@@ -152,14 +152,14 @@ Summarizing the above... using the `target` attribute it is possible to:
 
   * define a group of icons for different device scale factors using a single `<icon ...>` element, for example:
 ```xml
-    <icon src="res/Windows/AppListIcon.png" target="Square44x44Logo" />
+    <icon src="res/windows/AppListIcon.png" target="Square44x44Logo" />
 ```
   which is equivalent to the following lines:
 ```xml
-    <icon src="res/Windows/Square44x44Logo.scale-100.png" width="44" height="44" />
-    <icon src="res/Windows/Square44x44Logo.scale-150.png" width="66" height="66" />
-    <icon src="res/Windows/Square44x44Logo.scale-200.png" width="88" height="88" />
-    <icon src="res/Windows/Square44x44Logo.scale-240.png" width="106" height="106" />
+    <icon src="res/windows/Square44x44Logo.scale-100.png" width="44" height="44" />
+    <icon src="res/windows/Square44x44Logo.scale-150.png" width="66" height="66" />
+    <icon src="res/windows/Square44x44Logo.scale-200.png" width="88" height="88" />
+    <icon src="res/windows/Square44x44Logo.scale-240.png" width="106" height="106" />
 ```
   * define icons with scale factors other than `scale-100` and `scale-240` (and any other MRT qualifiers)
 
@@ -170,15 +170,15 @@ Although it is not recommended, it is also possible to define icons using the `w
         <icon src="res/windows/logo.png" width="150" height="150" />
         <icon src="res/windows/smalllogo.png" width="30" height="30" />
         <icon src="res/windows/storelogo.png" width="50" height="50" />
-        <icon src="res/Windows/Square44x44Logo.scale-100.png" width="44" height="44" />
-        <icon src="res/Windows/Square44x44Logo.scale-240.png" width="106" height="106" />
-        <icon src="res/Windows/Square70x70Logo.scale-100.png" width="70" height="70" />
-        <icon src="res/Windows/Square71x71Logo.scale-100.png" width="71" height="71" />
-        <icon src="res/Windows/Square71x71Logo.scale-240.png" width="170" height="170" />
-        <icon src="res/Windows/Square150x150Logo.scale-240.png" width="360" height="360" />
-        <icon src="res/Windows/Square310x310Logo.scale-100.png" width="310" height="310" />
-        <icon src="res/Windows/Wide310x150Logo.scale-100.png" width="310" height="150" />
-        <icon src="res/Windows/Wide310x150Logo.scale-240.png" width="744" height="360" />
+        <icon src="res/windows/Square44x44Logo.scale-100.png" width="44" height="44" />
+        <icon src="res/windows/Square44x44Logo.scale-240.png" width="106" height="106" />
+        <icon src="res/windows/Square70x70Logo.scale-100.png" width="70" height="70" />
+        <icon src="res/windows/Square71x71Logo.scale-100.png" width="71" height="71" />
+        <icon src="res/windows/Square71x71Logo.scale-240.png" width="170" height="170" />
+        <icon src="res/windows/Square150x150Logo.scale-240.png" width="360" height="360" />
+        <icon src="res/windows/Square310x310Logo.scale-100.png" width="310" height="310" />
+        <icon src="res/windows/Wide310x150Logo.scale-100.png" width="310" height="150" />
+        <icon src="res/windows/Wide310x150Logo.scale-240.png" width="744" height="360" />
     </platform>
 ```
 
