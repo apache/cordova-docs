@@ -6,6 +6,7 @@
     name: Create apps
     children:
         - url: guide/cli/index.html
+        - url: guide/cli/template.html
         - url: guide/support/index.html
         -
             name: Develop for platforms

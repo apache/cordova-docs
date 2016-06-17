@@ -85,6 +85,7 @@ This creates the required directory structure for your cordova app. By default, 
 ###See Also
 - [Cordova create command reference documentation][cdv_create]
 - [Cordova project directory structure][cdv_dir]
+- [Cordova project templates][cdv_template]
 
 ## Add Platforms
 
@@ -319,6 +320,7 @@ $ cordova platform update ios --save
 [DeviceReadyEvent]: ../../cordova/events/events.html#deviceready
 [BackButtonEvent]:  ../../cordova/events/events.html#backbutton
 [Core Plugin APIs]: ../../guide/support/index.html#core-plugin-apis
+[cdv_template]:     ../../guide/cli/template.html#
 
 [CLI reference]: ../../reference/cordova-cli/index.html
 [cdv_create]:    ../../reference/cordova-cli/index.html#cordova-create-command
