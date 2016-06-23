@@ -365,6 +365,112 @@ For windows-specific attributes:
 ```
 The above example will set pre-8.1 platforms (Windows 8, specifically) to require the `webcam` device capability and the `picturesLibrary` general capability, and apply the `webcam` device capability only to Windows 8.1 projects that build for Windows Phone.  Windows desktop 8.1 systems are unmodified.
 
+### edit-config
+Similar to `config-file`, `edit-config` identifies an XML-based configuration file to be modified, where in that document the modification should take place, and what should be modified. Instead of appending new children to an XML document tree, `edit-config` makes modifications to attributes of XML elements. There are two modes which will determine what type of attribute modification will be made, `merge` or `overwrite`. `edit-config` has one child and that child will contain the attributes to be added.
+
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+---------------- | ------------
+file(string) | The file to be modified, and the path relative to the root of the Cordova project. If the specified file does not exist, the tool ignores the configuration change and continues installation. <br/> The target can include wildcard (`*`) elements. In this case, the CLI recursively searches through the project directory structure and uses the first match. <br/> On iOS, the location of configuration files relative to the project directory root is not known, so specifying a target of `config.xml` resolves to `cordova-ios-project/MyAppName/config.xml`.
+target(string) | An XPath selector referencing the target element to make attribute modifications to. If you use absolute selectors, you can use a wildcard (`*`) to specify the root element, e.g., `/*/plugins`. If the selector does not resolve to a child of the specified document, the tool stops and reverses the installation process, issues a warning, and exits with a non-zero code.
+mode(string) | The mode that determines what type of attribute modifications will be made. <br/> `merge` - Adds the specified attributes to the target element. Will replace the attribute values if the specified attributes already exist in the target element. <br/> `overwrite` - Replaces all attributes in the target element with the attributes specified.
+
+Example:
+
+```xml
+<!-- plugin-1 -->
+<edit-config file="AndroidManifest.xml" target="/manifest/uses-sdk" mode="merge">
+    <uses-sdk android:minSdkVersion="16" android:maxSdkVersion="23" />
+</edit-config>
+<edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='MainActivity']" mode="overwrite">
+    <activity android:name="MainActivity" android:label="NewLabel" android:configChanges="orientation|keyboardHidden" />
+</edit-config>
+```
+
+AndroidManifest.xml before adding plugin-1:
+```xml
+<manifest android:hardwareAccelerated="true" android:versionCode="1" android:versionName="0.0.1" package="io.cordova.hellocordova" xmlns:android="http://schemas.android.com/apk/res/android">
+    ...
+        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name="MainActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:windowSoftInputMode="adjustResize">
+            ...
+        </activity>
+    ...
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23" />
+</manifest>
+```
+
+AndroidManifest.xml after adding plugin-1:
+```xml
+<manifest android:hardwareAccelerated="true" android:versionCode="1" android:versionName="0.0.1" package="io.cordova.hellocordova" xmlns:android="http://schemas.android.com/apk/res/android">
+    ...
+        <activity android:configChanges="orientation|keyboardHidden" android:label="NewLabel" android:name="MainActivity">
+            ...
+        </activity>
+    ...
+    <uses-sdk android:maxSdkVersion="23" android:minSdkVersion="16" android:targetSdkVersion="23" />
+</manifest>
+```
+#### Managing edit-config conflicts
+
+Multiple plugins can not modify the same attributes because it may cause problems with the application. An error will be thrown and plugin install will fail. The conflicting `edit-config` tags must be resolved before the plugin can be added. Make modifications to conflicting tags to resolve the conflict, then remove and re-add the updated plugins.
+
+There is an option for those who are certain that the plugin should be installed despite the conflicts. The `--force` flag can be used with `cordova plugin add`. Force adding the plugin will revert conflicting changes of other plugins so that it can be added without issues. `--force` should be used with caution as reverting changes of other plugins may cause the application to not work as expected.
+
+If the plugins ever get in a weird state, remove all plugins and re-add them.
+
+Example:
+
+Assume plugin-1 from above is already installed. Trying to install plugin-2 below will cause an error because plugin-1 has modified `uses-sdk` element in AndroidManifest.xml already.
+
+```xml
+<!-- plugin-2 -->
+<edit-config file="AndroidManifest.xml" target="/manifest/uses-sdk" mode="merge">
+    <uses-sdk android:minSdkVersion="15" />
+</edit-config>
+```
+
+There are a couple ways plugin-2 can be added:
+
+One possible resolution of the conflict is to remove the `edit-config` tag from plugin-2 and merge it into plugin-1's `edit-config` tag (assuming plugin-1 has no issue with this change). Remove both plugins and re-add them with these changes. plugin-2 should be added cleanly this time.
+
+Removing `edit-config` from plugin-2 and merging it into plugin-1:
+```xml
+<!-- plugin-1 -->
+<edit-config file="AndroidManifest.xml" target="/manifest/uses-sdk" mode="merge">
+    <uses-sdk android:minSdkVersion="15" android:maxSdkVersion="23" />
+</edit-config>
+<edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='MainActivity']" mode="overwrite">
+    <activity android:name="MainActivity" android:label="NewLabel" android:configChanges="orientation|keyboardHidden" />
+</edit-config>
+```
+
+The resulting AndroidManifest.xml after removing and re-adding both plugins:
+```xml
+<manifest android:hardwareAccelerated="true" android:versionCode="1" android:versionName="0.0.1" package="io.cordova.hellocordova" xmlns:android="http://schemas.android.com/apk/res/android">
+    ...
+        <activity android:configChanges="orientation|keyboardHidden" android:label="NewLabel" android:name="MainActivity">
+            ...
+        </activity>
+    ...
+    <uses-sdk android:maxSdkVersion="23" android:minSdkVersion="15" android:targetSdkVersion="23" />
+</manifest>
+```
+
+The second way to add plugin-2 involves adding the plugin with `--force`. The conflicting `edit-config` change from plugin-1 will be reverted and plugin-2's change will be applied. The resulting AndroidManifest.xml will have the `uses-sdk` change from plugin-2 and the `activity` change from plugin-1. Notice only the `uses-sdk` change from plugin-1 is gone since it was the only conflicting change.
+
+The resulting AndroidManifest.xml after force adding plugin-2:
+```xml
+<manifest android:hardwareAccelerated="true" android:versionCode="1" android:versionName="0.0.1" package="io.cordova.hellocordova" xmlns:android="http://schemas.android.com/apk/res/android">
+    ...
+        <activity android:configChanges="orientation|keyboardHidden" android:label="NewLabel" android:name="MainActivity">
+            ...
+        </activity>
+    ...
+    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23" />
+</manifest>
+```
+
+Note: Reverted changes from `--force` are gone for good. They will not reappear after removing the plugin that was force added. If the reverted changes are needed, all associated plugins should be removed and re-added.
+
 ### plugins-plist
 
 Specifies a key and value to append to the correct `AppInfo.plist` file in an iOS Cordova project. This is _outdated_ as it only applies to cordova-ios 2.2.0 and below. Use the `<config-file>` tag for newer versions of Cordova.
