@@ -98,6 +98,11 @@ Cordova supports the following hook types:
             <th data-col="aftercompile">after_compile</th>
         </tr>
         <tr>
+            <th data-col="beforedeploy">before_deploy</th>
+            <td data-col="code"><code>cordova emulate</code><br/><code>cordova run</code></td>
+            <td data-col="description">To be executed before deploying your application.</td>
+        </tr>
+        <tr>
             <th data-col="beforebuild">before_build</th>
             <td data-col="code" rowspan="2"><code>cordova build</code></td>
             <td rowspan="2" data-col="description">To be executed before and after building your application.</td>
