@@ -160,11 +160,11 @@ Examples:
 
 ```xml
 <widget ...>
-   <access origin="*"></content>
+   <access origin="*"></access>
 </widget>
 
 <widget ...>
-   <access origin="http://google.com"></content>
+   <access origin="http://google.com"></access>
 </widget>
 ```
 
