@@ -29,3 +29,5 @@ To add it explicitly:
 
 * [CB-9489](https://issues.apache.org/jira/browse/CB-9489) Fixed "endless waiting for emulator" issue
 * [CB-11481](https://issues.apache.org/jira/browse/CB-11481) android-library is deprecated use com.android.library instead
+
+You can also take a look at the changes included in the previous release of `Android` platform - `cordova-android 5.2.0` - [here](http://cordova.apache.org/announcements/2016/07/02/android-5.2.0.html).
