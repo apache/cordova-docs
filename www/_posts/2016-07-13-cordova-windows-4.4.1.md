@@ -10,8 +10,8 @@ tags: news releases
 
 We are happy to announce that `Cordova Windows 4.4.1` has been released!
 
-In this release we have fixed a number of issues, related to apllication resuming, splash screen functionality and others.
-Also we have added an abiity to specify location of `msbuild` executable to build project.
+In this release we have fixed a number of issues, related to application resuming, splash screen functionality and others.
+Also we have added an ability to specify location of `msbuild` executable to build project.
 
 The next Cordova CLI version will automatically start using this version of **Cordova-Windows** when creating new projects.
 
