@@ -74,7 +74,7 @@ Examples:
 
 ```xml
 <!-- Android -->
-<widget id="io.cordova.hellocordova" version="0.0.1" android-versionCode="0.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="io.cordova.hellocordova" version="0.0.1" android-versionCode="13" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
 </widget>
 
 <!-- iOS -->
