@@ -114,3 +114,12 @@
         workflow, tutorials and example apps for the Internet of Things.
         Support for Bluetooth Low Energy (BLE) and other IoT related
         technologies.
+
+-   name: NSB/AppStudio
+    image: appstudio.png
+    url: https://www.nsbasic.com/
+    description: >
+        NSB/AppStudio is an IDE for webapps/native apps. One step install
+        includes complete PhoneGap integration, plus Bootstrap, jQuery Mobile
+        and jqWidgets. Drag and Drop Designer. Easy programming in JavaScript
+        or BASIC. Windows and MacOS.
