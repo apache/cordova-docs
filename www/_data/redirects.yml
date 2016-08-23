@@ -348,7 +348,6 @@ docs-global:
     "guide_appdev_privacy_index.md.html": "guide/appdev/privacy/index.html"
     "guide_appdev_whitelist_index.md.html": "guide/appdev/whitelist/index.html"
     "guide_cli_index.md.html": "guide/cli/index.html"
-    "guide_cli_template.md.html": "guide/cli/template.html"
     "guide_hybrid_plugins_index.md.html": "guide/hybrid/plugins/index.html"
     "guide_hybrid_webviews_index.md.html": "guide/hybrid/webviews/index.html"
     "guide_overview_index.md.html": "guide/overview/index.html"
