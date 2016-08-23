@@ -10,7 +10,11 @@ tags: news releases
 
 We are happy to announce patch releases for`Cordova Android 5.2.2` & `Cordova iOS 4.2.1` have been released! We have also updated and released `Cordova Common 1.4.1`.
 
-These release fixes issues with the upcoming `edit-config` functionality coming to `plugin.xml`. 
+These release fixes issues with the upcoming `edit-config` functionality coming to `plugin.xml`.
+
+**Note:** When updating **iOS**, make sure to save your plugins as current unsaved plugins may not be reinstalled otherwise. Run the following command in your project to save your currently installed plugins into `config.xml`:
+
+    cordova plugin save
 
 To upgrade:
 
@@ -27,7 +31,7 @@ To add it explicitly:
 <!--more-->
 ## What's new in Android
 
-* [CB-11615](https://issues.apache.org/jira/browse/CB-11615) updated `cordoova-common` to `1.4.0`
+* [CB-11615](https://issues.apache.org/jira/browse/CB-11615) updated `cordova-common` to `1.4.0`
 
 ## What's new in iOS
 
