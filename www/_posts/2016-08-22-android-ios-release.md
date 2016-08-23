@@ -31,7 +31,7 @@ To add it explicitly:
 <!--more-->
 ## What's new in Android
 
-* [CB-11615](https://issues.apache.org/jira/browse/CB-11615) updated `cordova-common` to `1.4.0`
+* [CB-11615](https://issues.apache.org/jira/browse/CB-11615) updated `cordova-common` to `^1.4.0`
 
 ## What's new in iOS
 
