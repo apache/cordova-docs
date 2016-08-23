@@ -1,9 +1,8 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-media/blob/master/README.md'
-title: Media
+title: cordova-plugin-media
 plugin_name: cordova-plugin-media
 plugin_version: master
-description: Record and play audio on the device.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->
@@ -102,8 +101,6 @@ The following constants are reported as the only parameter to the
 
 ### Methods
 
-- `media.getCurrentAmplitude`: Returns the current position within an audio file.
-
 - `media.getCurrentPosition`: Returns the current position within an audio file.
 
 - `media.getDuration`: Returns the duration of an audio file.
@@ -112,11 +109,7 @@ The following constants are reported as the only parameter to the
 
 - `media.pause`: Pause playback of an audio file.
 
-- `media.pauseRecord`: Pause recording of an audio file.
-
 - `media.release`: Releases the underlying operating system's audio resources.
-
-- `media.resumeRecord`: Resume recording of an audio file.
 
 - `media.seekTo`: Moves the position within the audio file.
 
@@ -134,47 +127,6 @@ The following constants are reported as the only parameter to the
     - Not automatically updated during play; call `getCurrentPosition` to update.
 
 - __duration__: The duration of the media, in seconds.
-
-
-## media.getCurrentAmplitude
-
-Returns the current amplitude of the current recording.
-
-    media.getCurrentAmplitude(mediaSuccess, [mediaError]);
-
-### Supported Platforms
-
-- Android
-- iOS
-
-### Parameters
-
-- __mediaSuccess__: The callback that is passed the current amplitude (0.0 - 1.0).
-
-- __mediaError__: (Optional) The callback to execute if an error occurs.
-
-### Quick Example
-
-    // Audio player
-    //
-    var my_media = new Media(src, onSuccess, onError);
-
-    // Record audio
-    my_media.startRecord();
-
-    mediaTimer = setInterval(function () {
-        // get media amplitude
-        my_media.getCurrentAmplitude(
-            // success callback
-            function (amp) {
-                console.log(amp + "%");
-            },
-            // error callback
-            function (e) {
-                console.log("Error getting amp=" + e);
-            }
-        );
-    }, 1000);
 
 
 ## media.getCurrentPosition
@@ -271,44 +223,6 @@ Pauses playing an audio file.
     }
 
 
-## media.pauseRecord
-
-Pauses recording an audio file.
-
-    media.pauseRecord();
-
-
-### Supported Platforms
-
-- iOS
-
-
-### Quick Example
-
-    // Record audio
-    //
-    function recordAudio() {
-        var src = "myrecording.mp3";
-        var mediaRec = new Media(src,
-            // success callback
-            function() {
-                console.log("recordAudio():Audio Success");
-            },
-
-            // error callback
-            function(err) {
-                console.log("recordAudio():Audio Error: "+ err.code);
-            });
-
-        // Record audio
-        mediaRec.startRecord();
-
-        // Pause Recording after 5 seconds
-        setTimeout(function() {
-            my_media.pauseRecord();
-        }, 5000);
-    }
-
 ## media.play
 
 Starts or resumes playing an audio file.
@@ -379,50 +293,6 @@ function for any `Media` resource that is no longer needed.
     my_media.play();
     my_media.stop();
     my_media.release();
-
-
-## media.resumeRecord
-
-Resume recording an audio file.
-
-    media.resumeRecord();
-
-
-### Supported Platforms
-
-- iOS
-
-
-### Quick Example
-
-    // Record audio
-    //
-    function recordAudio() {
-        var src = "myrecording.mp3";
-        var mediaRec = new Media(src,
-            // success callback
-            function() {
-                console.log("recordAudio():Audio Success");
-            },
-
-            // error callback
-            function(err) {
-                console.log("recordAudio():Audio Error: "+ err.code);
-            });
-
-        // Record audio
-        mediaRec.startRecord();
-
-        // Pause Recording after 5 seconds
-        setTimeout(function() {
-            my_media.pauseRecord();
-        }, 5000);
-
-        // Resume Recording after 10 seconds
-        setTimeout(function() {
-            my_media.resumeRecord();
-        }, 10000);
-    }
 
 
 ## media.seekTo

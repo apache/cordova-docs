@@ -1,9 +1,8 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-device/blob/master/README.md'
-title: Device
+title: cordova-plugin-device
 plugin_name: cordova-plugin-device
 plugin_version: master
-description: Get device information.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->

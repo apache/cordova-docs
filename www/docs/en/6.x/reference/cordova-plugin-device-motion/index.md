@@ -1,9 +1,8 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-device-motion/blob/master/README.md'
-title: Device Motion
+title: cordova-plugin-device-motion
 plugin_name: cordova-plugin-device-motion
 plugin_version: master
-description: Access accelerometer data.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->
@@ -130,7 +129,7 @@ accelerometer.
                                                            accelerometerOptions);
 
 - __accelerometerOptions__: An object with the following optional keys:
-  - __frequency__: requested frequency of calls to accelerometerSuccess with acceleration data in Milliseconds. _(Number)_ (Default: 10000)
+  - __period__: requested period of calls to accelerometerSuccess with acceleration data in Milliseconds. _(Number)_ (Default: 10000)
 
 
 ###  Example

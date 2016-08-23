@@ -1,9 +1,8 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-vibration/blob/master/README.md'
-title: Vibration
+title: cordova-plugin-vibration
 plugin_name: cordova-plugin-vibration
 plugin_version: master
-description: Vibrate the device.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->

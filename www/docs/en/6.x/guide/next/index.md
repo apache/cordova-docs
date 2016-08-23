@@ -153,6 +153,8 @@ With Safari's web inspector you can debug the webview and js code in your Cordov
 ## Chrome Remote Debugging
 Virtually the same as the Safari version, this works with Android only but can be used from any desktop operating system. It requires a minimum of Android 4.4 (KitKat), minimum API level of 19, and Chrome 30+ (on the desktop). Once connected, you get the same Chrome Dev Tools experience for your mobile applications as you do with your desktop applications. Even better, the Chrome Dev Tools have a mirror option that shows your app running on the mobile device. This is more than just a view - you can scroll and click from dev tools and it updates on the mobile device. More details on Chrome Remote Debugging may be found here: [https://developers.google.com/chrome/mobile/docs/debugging](https://developers.google.com/chrome/mobile/docs/debugging)
 
+If you can see your device in the inspect devices section, but you can't see the Cordova webview you may need to add `android:debuggable="true"` in the `<application>` node of your `AndroidManifest.xml`.
+
 It is possible to use Chrome Dev Tools to inspect iOS apps, through a WebKit proxy: [https://github.com/google/ios-webkit-debug-proxy/](https://github.com/google/ios-webkit-debug-proxy/)
 
 ## Ripple

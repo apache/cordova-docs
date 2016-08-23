@@ -87,8 +87,8 @@ are available in the [Plugin Specification](../../../plugin_ref/spec.html). This
 ```
 
 The top-level `plugin` tag's `id` attribute uses the same
-reverse-domain format to identify the plugin package as the apps to
-they're added.  The `js-module` tag specifies the path to the common
+reverse domain format to identify the plugin package as the apps
+they're added to.  The `js-module` tag specifies the path to the common
 JavaScript interface.  The `platform` tag specifies a corresponding
 set of native code, for the `ios` platform in this case.  The
 `config-file` tag encapsulates a `feature` tag that is injected into
@@ -106,8 +106,8 @@ correctly for each platform.  Install `plugman` with the following
 npm install -g plugman
 ```
 
-You need an valid app source directory, such as the top-level `www`
-directory included in a default CLI-generated project as described in
+You need a valid app source directory, such as the top-level `www`
+directory included in a default CLI-generated project, as described in the
 [Create your first app](../../cli/index.html) guide.
 
 Then run a command such as the following to test whether iOS
@@ -121,7 +121,7 @@ For details on `plugman` options, see [Using Plugman to Manage Plugins](../../..
 
 ## The JavaScript Interface
 
-The JavaScript provides the front-facing interface, making it perhaps
+The JavaScript interface provides the front-facing interface, making it perhaps
 the most important part of the plugin.  You can structure your
 plugin's JavaScript however you like, but you need to call
 `cordova.exec` to communicate with the native platform, using the
@@ -178,14 +178,14 @@ window.echo("echome", function(echoValue) {
 });
 ```
 
-Look at the last three arguments to the `cordova.exec` function. The
+Look at the last three arguments passed to the `cordova.exec` function. The
 first calls the `Echo` _service_, a class name. The second requests
 the `echo` _action_, a method within that class. The third is an array
 of arguments containing the echo string, which is the `window.echo`
-function's the first parameter.
+function's first parameter.
 
 The success callback passed into `exec` is simply a reference to the
-callback function `window.echo` takes. If the native platform fires
+callback function of `window.echo`. If the native platform fires
 the error callback, it simply calls the success callback and passes it
 a default string.
 
@@ -203,9 +203,9 @@ listed below, and each builds on the simple Echo Plugin example above:
 
 ## Publishing Plugins
 
-You can publish your plugin to any `npmjs`-based registry, but the recommended one is the [NPM registry](https://www.npmjs.com). Other developers can install your plugin automatically using either `plugman` or the Cordova CLI.
+You can publish your plugin to any `npmjs`-based registry, but the recommended one is the [npm registry](https://www.npmjs.com). Other developers can install your plugin automatically using either `plugman` or the Cordova CLI.
 
-To publish a plugin to NPM registry you need to follow steps below:
+To publish a plugin to npm you need to follow these steps:
 
   * install the `plugman` CLI:
 
@@ -213,7 +213,7 @@ To publish a plugin to NPM registry you need to follow steps below:
     $ npm install -g plugman
     ```
 
-  * create `package.json` file for your plugin:
+  * create a `package.json` file for your plugin:
 
     ```bash
     $ plugman createpackagejson /path/to/your/plugin
@@ -226,16 +226,16 @@ To publish a plugin to NPM registry you need to follow steps below:
     $ npm publish /path/to/your/plugin
     ```
 
-For more details on npm usage refer to [publishing a npm package](https://docs.npmjs.com/getting-started/publishing-npm-packages) on the NPM documentation site.
+For more details on npm usage, refer to [Publishing npm Packages](https://docs.npmjs.com/getting-started/publishing-npm-packages) on the npm documentation site.
 
 ## Integrating with Plugin Search
 
 To surface the plugin in [Cordova Plugin Search](/plugins/), add the `ecosystem:cordova` keyword to the `package.json` file of your plugin before publishing.
 
-To indicate support for a particular platform add a keyword with the `<platformName>` as `**cordova-<platformName>**` to the list of keywords in package.json.
+To indicate support for a particular platform, add a keyword in the format `**cordova-<platformName>**` to the list of keywords in package.json.
 Plugman's `createpackagejson` command does this for you, but if you did not use it to generate your `package.json`, you should manually edit it as shown below.
 
-For example, for a plugin that supports android, iOS & Windows, the keywords in package.json should include:
+For example, for a plugin that supports Android, iOS & Windows, the keywords in `package.json` should include:
 
 ```json
 "keywords": [
@@ -246,13 +246,13 @@ For example, for a plugin that supports android, iOS & Windows, the keywords in 
 ]
 ```
 
-For more detailed example of a package.json, review the [package.json file of cordova-plugin-device](https://github.com/apache/cordova-plugin-device/blob/master/package.json).
+For a more detailed example of a package.json, review the [package.json file of cordova-plugin-device](https://github.com/apache/cordova-plugin-device/blob/master/package.json).
 
 ## Specifying Cordova Dependencies
 
 **Cordova 6.1.0** added support for specifying the Cordova-related dependencies of a plugin
 as part of the plugin's `package.json` file. Plugins may list the dependencies for multiple
-releases so as to provide guidance to the Cordova CLI when it is selecting the version of a
+releases to provide guidance to the Cordova CLI when it is selecting the version of a
 plugin to fetch from npm. The CLI will choose the latest release of a plugin that is
 compatible with the local project's installed platforms and plugins as well as the
 the local Cordova CLI version. If no releases of the plugin are compatible, the CLI will warn
@@ -268,7 +268,7 @@ allows your plugin to respond to breaking changes without fear of confusing devl
 are building against old platforms and plugins.
 
 To specify Cordova-related dependencies for a plugin, alter the `engines` element in
-`package.json` to include a `cordovaDependencies` object using the following
+`package.json` to include a `cordovaDependencies` object with the following
 structure:
 
 ```javascript
@@ -284,18 +284,18 @@ engines: {
 }
 ```
 
-* `PLUGIN_VERSION` specifies a version of your plugin. It should adhere the syntax for a single version as defined by [npm's semver package][npm-semver] or an upper bound (see [below](#upper-bounds))
+* `PLUGIN_VERSION` specifies the version of your plugin. It should adhere to the syntax for a single version as defined by [npm's semver package][npm-semver] or an upper bound (see [below](#upper-bounds))
 * `DEPENDENCY` may be one of the following:
-    * The Cordova CLI, `"cordova"`
-    * A Cordova platform (e.g. `"cordova-android"`, `"cordova-ios"`, `"cordova-windows"`, etc.)
-    * Another Cordova plugin (e.g. `"cordova-plugin-camera"`, etc.)
+    * The Cordova CLI: `"cordova"`
+    * A Cordova platform: `"cordova-android"`, `"cordova-ios"`, `"cordova-windows"`, etc.
+    * Another Cordova plugin: `"cordova-plugin-camera"`, etc.
 * `SEMVER_RANGE` should adhere to the syntax for a range as defined by [npm's semver package][npm-semver]
 
 **NOTE:** A Cordova platform `DEPENDENCY` refers to the Cordova platform and not
-the OS (i.e. `cordova-android` rather than the Android OS)
+the OS, i.e. `cordova-android` rather than the Android OS.
 
 Your `cordovaDependencies` may list any number of `PLUGIN_VERSION` requirements
-and any number of `DEPENDENCY` constraints within them. Versions of your plugin
+and any number of `DEPENDENCY` constraints. Versions of your plugin
 that do not have their dependencies listed will be assumed to have the same
 dependency information as the highest `PLUGIN_VERSION` listed below them. For
 example, consider the following entry:
@@ -320,7 +320,7 @@ In addition to a single version, a `PLUGIN_VERSION` in `cordovaDependencies`
 may also specify an upper bound to amend entries for older releases
 of your plugin. This is useful when a breaking change occurs in a `DEPENDENCY`
 and a new constraint must be added for all older versions of a plugin that do
-not support it. These bounds should be written as, a `<` followed by a single
+not support it. These bounds should be written as a `<` followed by a single
 [semver][npm-semver] version (**Not an arbitrary range!**). This will apply
 whatever `DEPENDENCY` values are given to all versions of the plugin below the
 specified version. For example, consider the following entry:

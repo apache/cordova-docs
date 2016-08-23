@@ -1,9 +1,8 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-device-orientation/blob/master/README.md'
-title: Device Orientation
+title: cordova-plugin-device-orientation
 plugin_name: cordova-plugin-device-orientation
 plugin_version: master
-description: Access compass data.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->
@@ -206,6 +205,8 @@ A `CompassHeading` object is returned to the `compassSuccess` callback function.
 ### iOS Quirks
 
 - The `trueHeading` property is only returned for location services enabled via `navigator.geolocation.watchLocation()`.
+
+- For iOS 4 devices and above, heading factors in the device's current orientation, and does not reference its absolute position, for apps that supports that orientation.
 
 ## CompassError
 

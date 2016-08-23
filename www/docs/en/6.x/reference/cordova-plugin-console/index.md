@@ -1,9 +1,8 @@
 ---
 edit_link: 'https://github.com/apache/cordova-plugin-console/blob/master/README.md'
-title: Console
+title: cordova-plugin-console
 plugin_name: cordova-plugin-console
 plugin_version: master
-description: Get JavaScript logs in your native logs.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->

@@ -185,6 +185,15 @@ The following table lists the cordova events and the supported platforms:
         <td data-col="winphone8"  class="n"></td>
         <td data-col="win"       class="n"></td>
     </tr>
+
+    <tr>
+        <th><a href="#activated">activated</a></th>
+        <td data-col="android"    class="n"></td>
+        <td data-col="blackberry10" class="n"></td>
+        <td data-col="ios"        class="n"></td>
+        <td data-col="winphone8"  class="n"></td>
+        <td data-col="win"       class="y"></td>
+    </tr>
 </tbody>
 </table>
 
@@ -433,5 +442,35 @@ function onVolumeUpKeyDown() {
 }
 ```
 
+## activated
+
+The event fires when Windows Runtime activation has occurred. See [MSDN docs][MSDNActivatedEvent] for further details and activation types.
+
+### Quick Example
+
+```javascript
+document.addEventListener("activated", activated, false);
+
+function activated(args) {
+    if (args && args.kind === Windows.ApplicationModel.Activation.ActivationKind.file) {
+       // Using args.raw to get the native StorageFile object
+        Windows.Storage.FileIO.readTextAsync(args.raw.detail[0].files[0]).done(function (text) {
+            console.log(text);
+        }, function (err) {
+            console.error(err);
+        });
+    }
+}
+```
+
+### Windows Quirks
+
+* Original activated event args are available in `args.raw.detail[0]` property and can be used to get a type information or invoke methods of one of the activation arguments,
+
+* Original activated event args are also cloned to `args.detail[0]` and can be used as a fallback in case an inner args property has been lost.  
+See https://issues.apache.org/jira/browse/CB-10653 for details.
+
+
 [UIApplicationExitsOnSuspend]: http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html
 [AndroidLifeCycleGuide]: ../../guide/platforms/android/lifecycle.html
+[MSDNActivatedEvent]: https://msdn.microsoft.com/en-us/library/windows/apps/br212679.aspx
