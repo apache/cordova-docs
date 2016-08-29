@@ -46,7 +46,7 @@ After succesfully using a template to create your project, you'll want to indica
 
 ## Create a Template
 
-Begin by creating a cordova app that will become the basis for your template. Then you'll take the contents of your app and put them into the following structure. When your template is used, all of the contents within `template_src` will be used to create the new project, so be sure to include any necessary files in that folder. Reference [this example](https://github.com/carynbear/cordova-template) for details.
+Begin by creating a cordova app that will become the basis for your template. Then you'll take the contents of your app and put them into the following structure. When your template is used, all of the contents within `template_src` will be used to create the new project, so be sure to include any necessary files in that folder. Reference [this example](https://github.com/apache/cordova-template-reference) for details.
 
 ```
 template_package/
