@@ -24,7 +24,7 @@ toc_title: Windows
 # Windows Plugins
 
 This section provides details for how to implement a plugin for use in
-a Windows Store app for Windows 8.1 phone and desktop, and Universal Windows Platform (Windows 10+). Before reading this, see [Create your fist plugin](../../hybrid/plugins/index.html) for an overview of the plugin's structure and its common JavaScript interface. This section continues to demonstrate the sample _echo_ plugin that communicates from the Cordova webview to the native platform and back.
+a Windows Store app for Windows 8.1 phone and desktop, and Universal Windows Platform (Windows 10+). Before reading this, see [Create your first plugin](../../hybrid/plugins/index.html) for an overview of the plugin's structure and its common JavaScript interface. This section continues to demonstrate the sample _echo_ plugin that communicates from the Cordova webview to the native platform and back.
 
 ## Creating a Windows Plugin in JavaScript
 
