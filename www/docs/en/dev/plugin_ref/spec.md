@@ -70,16 +70,16 @@ Examples:
 Engine elements may also specify fuzzy matches using '>', '>=' etc. to avoid repetition, and to reduce maintenance when the underlying platform is updated.
 ```xml
 <engines>
-  <engine name="cordova-android" version="&gt;=1.8.0" />
+  <engine name="cordova-android" version=">=1.8.0" />
 </engines>
 ```
 
 The `<engine>` tags also has default support for all of the main platforms Cordova exists on. Specifying the cordova engine tag means that all versions of Cordova on any platform must satisfy the engine version attribute. You may also list specific platforms and their versions in order to override the catch-all cordova engine:
 ```xml
 <engines>
-  <engine name="cordova" version="&gt;=1.7.0" />
-  <engine name="cordova-android" version="&gt;=1.8.0" />
-  <engine name="cordova-ios" version="&gt;=1.7.1" />
+  <engine name="cordova" version=">=1.7.0" />
+  <engine name="cordova-android" version=">=1.8.0" />
+  <engine name="cordova-ios" version=">=1.7.1" />
 </engines>
 ```
 
@@ -87,8 +87,8 @@ Custom frameworks example:
 ```xml
 <engines>
   <engine name="my_custom_framework" version="1.0.0" platform="android" scriptSrc="path_to_my_custom_framework_version"/>
-  <engine name="another_framework" version="&gt;0.2.0" platform="ios|android" scriptSrc="path_to_another_framework_version"/>
-  <engine name="even_more_framework" version="&gt;=2.2.0" platform="*" scriptSrc="path_to_even_more_framework_version"/>
+  <engine name="another_framework" version=">0.2.0" platform="ios|android" scriptSrc="path_to_another_framework_version"/>
+  <engine name="even_more_framework" version=">=2.2.0" platform="*" scriptSrc="path_to_even_more_framework_version"/>
 </engines>
 ```
 
@@ -359,7 +359,7 @@ For windows-specific attributes:
     <Capability Name="picturesLibrary" />
     <DeviceCapability Name="webcam" />
 </config-file>
-<config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="&gt;=8.1.0" device-target="phone">
+<config-file target="package.appxmanifest" parent="/Package/Capabilities" versions=">=8.1.0" device-target="phone">
     <DeviceCapability Name="webcam" />
 </config-file>
 ```
@@ -500,7 +500,7 @@ Examples:
 For Windows:
 ```xml
 <lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" />
-<lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions="&gt;=8.1" />
+<lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions=">=8.1" />
 <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" />
 <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="win" versions="8.0" arch="x86" />
 ```
@@ -553,7 +553,7 @@ On Windows, using `custom='true'` and `type='projectReference'` will add a refer
 Examples of using these Windows specific attributes:
 ```xml
 <framework src="src/windows/example.dll" arch="x64" />
-<framework src="src/windows/example.dll" versions="&gt;=8.0" />
+<framework src="src/windows/example.dll" versions=">=8.0" />
 <framework src="src/windows/example.vcxproj" type="projectReference" target="win" />
 <framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" />
 <framework src="src/windows/example.dll" target-dir="bin/x64" arch="x64" custom="true"/>
