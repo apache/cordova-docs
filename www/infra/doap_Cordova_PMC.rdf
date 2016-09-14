@@ -24,7 +24,7 @@
     <asfext:name>Apache Cordova</asfext:name>
     <foaf:homepage rdf:resource="http://cordova.apache.org/"/>
     <asfext:charter>
-Apache Cordova is a set of device APIs that allow a mobile app developer to access native device function such as the camera or accelerometer from JavaScript. Combined with a UI framework such as jQuery Mobile or Dojo Mobile or Sencha Touch, this allows a smartphone app to be developed with just HTML, CSS, and JavaScript.
+Apache Cordova is a set of device APIs that allow a mobile app developer to access native device functions such as the camera or accelerometer from JavaScript. Combined with an UI framework, this allows a smartphone app to be developed with just HTML, CSS, and JavaScript.
     </asfext:charter>
     <asfext:chair><foaf:Person><foaf:name>Shazron Abdullah</foaf:name></foaf:Person></asfext:chair>
   </asfext:pmc>

@@ -29,7 +29,7 @@
     <!-- see the comment at the top of pmc_list.xml that explains asfext:pmc rdf:resource -->
     <asfext:pmc rdf:resource="http://svn.apache.org/repos/asf/cordova/site/public/infra/doap_Cordova_PMC.rdf" />
     <shortdesc>A platform for building native mobile applications using HTML, CSS and JavaScript.</shortdesc>
-    <description>Apache Cordova is a set of device APIs that allow a mobile app developer to access native device function such as the camera or accelerometer from JavaScript. Combined with a UI framework such as jQuery Mobile or Dojo Mobile or Sencha Touch, this allows a smartphone app to be developed with just HTML, CSS, and JavaScript.</description>
+    <description>Apache Cordova is a set of device APIs that allow a mobile app developer to access native device function such as the camera or accelerometer from JavaScript. Combined with an UI framework, this allows a smartphone app to be developed with just HTML, CSS, and JavaScript.</description>
     <bug-database rdf:resource="https://issues.apache.org/jira/browse/CB" />
     <mailing-list rdf:resource="http://cordova.apache.org/#mailing-list" />
     <download-page rdf:resource="http://cordova.apache.org/#download" />
