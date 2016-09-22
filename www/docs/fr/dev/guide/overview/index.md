@@ -31,7 +31,7 @@ Apache Cordova a obtenu son diplôme en octobre 2012 comme un projet de niveau s
 
 Utilisez Apache Cordova, si vous êtes :
 
-*   un développeur mobile et que vous voulez étendre une application à plusieurs plates-formes sans avoir à réimplémenter celle-ci dans chacun des langages et avec chacun des outils propres aux différentes plates-formes.
+*   un développeur mobile et que vous voulez porter une application sur plusieurs plates-formes sans avoir à réimplémenter celle-ci dans chacun des langages et avec chacun des outils propres aux différentes plates-formes.
 
 *   un développeur Web et que vous souhaitez déployer une application Web prête à être distribuée dans divers portails de vente d'applications.
 
@@ -39,7 +39,7 @@ Utilisez Apache Cordova, si vous êtes :
 
 ## Composants de base
 
-Apache Cordova applications s'appuient sur un commun `config.xml` fichier qui fournit des informations sur l'application et spécifie les paramètres qui affectent comment ça marche, comme si elle répond à l'orientation se déplace. Ce fichier respecte [Emballés Web App][2]ou *widget*, spécification de la W3C.
+Les applications Apache Cordova s'appuient sur le fichier `config.xml` qui fournit des informations sur l'application et qui spécifie des paramètres qui affectent leurs fonctionnements, comme par exemple la rotation automatique de l'écran. Ce fichier respecte la [spécification de la W3C sur les widgets][2].
 
  [2]: http://www.w3.org/TR/widgets/
 
