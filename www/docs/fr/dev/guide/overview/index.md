@@ -43,7 +43,7 @@ Les applications Apache Cordova s'appuient sur le fichier `config.xml` qui fourn
 
  [2]: http://www.w3.org/TR/widgets/
 
-L'application elle-même est implémentée comme une page web, par défaut, un fichier local nommé *index.html*, qui fait référence à quelque CSS, JavaScript, images, fichiers multimédias ou autres ressources sont nécessaires pour son exécution. L'application s'exécute sous une *WebView* dans le wrapper de l'application native, qui vous distribuez à l'app store.
+L'application elle-même est implémentée comme une page web, par défaut, un fichier local nommé *index.html*, qui fait référence à quelque CSS, JavaScript, images, fichiers multimédias ou autres ressources sont nécessaires pour son exécution. L'application s'exécute sous une *WebView* dans le wrapper de l'application native, que vous distribuez à l'app store.
 
 Le WebView Cordova-activé peut prévoir l'application grâce à son interface utilisateur entière. Sur certaines plateformes, il peut aussi être un composant dans une application hybride plus grande, qui mêle le mode Web avec des composants de l'application native. (Voir intégration WebViews pour plus de détails.)
 
