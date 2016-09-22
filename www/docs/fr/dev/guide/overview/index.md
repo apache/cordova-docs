@@ -29,7 +29,7 @@ Apache Cordova a obtenu son diplôme en octobre 2012 comme un projet de niveau s
 
  [1]: http://cordova.apache.org
 
-Utiliser Apache Cordova, si vous êtes :
+Utilisez Apache Cordova, si vous êtes :
 
 *   un développeur mobile et que vous voulez étendre une application à plusieurs plates-formes sans avoir à réimplémenter celle-ci dans chacun des langages et avec chacun des outils propres aux différentes plates-formes.
 
