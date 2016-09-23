@@ -5,7 +5,9 @@ title: Apache Cordova Nightly Builds
 
 # Nightly builds
 
-Cordova community provides Cordova nightly builds as a way to test new features and bugfixes not yet included into the latest official release. Nightly builds are performed by [Apache Jenkins](https://builds.apache.org/view/A-D/view/Cordova/job/cordova-nightly/) every day approximately at 3PM UTC and are being published to NPM under `@nightly` dist tag.
+**These are not official releases.**
+
+Cordova community provides Cordova nightly builds as a way to test new features and bug-fixes not yet included into the latest official release. Nightly builds are performed by [Apache Jenkins](https://builds.apache.org/view/A-D/view/Cordova/job/cordova-nightly/) every day approximately at 3PM UTC and are being published to NPM under the `@nightly` dist tag.
 
 The following NPM packages are being released as a part of the nightly builds:
 - cordova
@@ -16,7 +18,7 @@ The following NPM packages are being released as a part of the nightly builds:
 
 ## Notice
 
-The nightly builds are untested and may contain known and unknown defects, undeclared features and any other issues. They are intended to be used for testing purposes by developers, early adopters, and others who want to help with resolving bugs.
+The nightly builds are untested and may contain known and unknown defects, undeclared features, and perhaps other issues. They are intended to be used for testing purposes by developers, and others who want to help with resolving bugs.
 
 ## Installation
 
