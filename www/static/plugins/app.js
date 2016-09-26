@@ -474,7 +474,7 @@ var App = React.createClass({
                                 {createPlatformButton("Blackberry", "cordova-blackberry10", this.state)}
                                 {createPlatformButton("Ubuntu", "cordova-ubuntu", this.state)}
                                 {createPlatformButton("Firefox OS", "cordova-firefoxos", this.state)}
-                                {createPlatformButton("OSX", "cordova-osx", this.state)}
+                                {createPlatformButton("macOS", "cordova-osx", this.state)}
                                 {createPlatformButton("WP8", "cordova-wp8", this.state)}
                                 {createPlatformButton("Browser", "cordova-browser", this.state)}
                             </div>
