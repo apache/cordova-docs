@@ -9,20 +9,18 @@ Thanks for helping to improve Cordova! This page provides a general guide on mak
 
 ## Prerequisites
 
-Before contributing to Apache Cordova, please complete the following steps:
+Before contributing to Apache Cordova, it is recommended that you complete the following steps:
 
-1. Sign the [Individual Contributor License Agreement (ICLA)](http://www.apache.org/licenses/#clas) and [submit it to the ASF](http://www.apache.org/licenses/#submitting).
-    * You should receive an email confirming you submission within a day or so and your name will appear in the [list of contributors](https://people.apache.org/unlistedclas.html)
-    * If you are submitting on behalf of a company, you may need to submit a CCLA as well
-2. Join the [mailing list](http://cordova.apache.org/contact/) and send a brief introduction of yourself
-3. Create an [Apache JIRA](https://issues.apache.org/jira/secure/Signup!default.jspa) account
+1. Join the [mailing list](http://cordova.apache.org/contact/) and send a brief introduction of yourself (optional)
+2. Create an [Apache JIRA](https://issues.apache.org/jira/secure/Signup!default.jspa) account
 
 ## Working with JIRA
 
 Issues for Apache Cordova are hosted in the Apache JIRA. All code contributions made to Cordova should have a corresponding JIRA issue. When reporting issues, please follow [these guidelines](./issues.html).
 
 #### Claiming Issues
-If you find a JIRA issue that you would like to work on, you can ask to claim it; please leave a comment indicating your intention and a committer will assign it to you. Some issues in JIRA are auto-assigned to certain contributors. If it is clear that an issue is not being worked on, feel free to work on it yourself (but please comment first to let the asignee know). If you are looking for a place to start, try searching the [issues labelled easyfix](https://issues.apache.org/jira/issues?jql=project%20%3D%20CB%20AND%20resolution%20%3D%20Unresolved%20AND%20labels%20%3D%20%22easyfix%22%20ORDER%20BY%20createdDate%20DESC).
+
+If you find a JIRA issue that you would like to work on, you can ask to claim it; please leave a comment indicating your intention and a committer will assign it to you. Some issues in JIRA are auto-assigned to certain contributors. If it is clear that an issue is not being worked on, feel free to work on it yourself (but please comment first to let the assignee know). If you are looking for a place to start, try searching the [issues labelled easyfix](https://issues.apache.org/jira/issues?jql=project%20%3D%20CB%20AND%20resolution%20%3D%20Unresolved%20AND%20labels%20%3D%20%22easyfix%22%20ORDER%20BY%20createdDate%20DESC).
 
 
 ## Submitting Code
@@ -60,8 +58,8 @@ When we say "run the test suites" this includes:
 * Manual tests in cordova-mobilespec that might be affected by the change
 * `npm test` for JS linting
 * Any platform-specific unit tests
-    * `cordova-android/test`
-    * `cordova-ios/CordovaLibTests`
+    * `cordova-android: npm run test-build`
+    * `cordova-ios:  npm test`
     * `cordova-js: jake test`
     * `cordova-plugman: npm test`
 
