@@ -282,7 +282,7 @@ This is like `<source-file>` element but specifically for platforms such as iOS 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
 src(string) | *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
-target(string) | Path to where the file will be copied in your directory.
+target-dir(string) | A directory into which the files should be copied, relative to the root of the Cordova project.
 
 Example:
 
