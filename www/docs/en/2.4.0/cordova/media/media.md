@@ -135,8 +135,10 @@ Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en
 ### Tizen
 
     No permissions are required.
-
-
+    (set permission manually on IOS10)
+        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+            <string>This app requires microphone access to function properly.</string>
+        </config-file>
 ### Windows Phone Quirks
 
     Only one media file can be played back at a time.
