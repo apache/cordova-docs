@@ -188,14 +188,6 @@ build configuration file:
 }
 ```
 
-### Using xcrun
-
-You can also sign from the command line using the following command:
-
-```bash
-xcrun -sdk iphoneos PackageApplication -v /home/user/app/build/device/MyApp.app -o /home/user/app/build/device/MyApp.ipa --sign "iPhone Development" --embed "7151ab45-6085-4ea1-9bcd-022b5cebe44b"
-```
-
 ## Debugging
 
 For details on the debugging tools that come with Xcode, see this [article](https://developer.apple.com/support/debugging)
