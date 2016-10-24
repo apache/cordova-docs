@@ -70,14 +70,12 @@ $ xcode-select --install
 
 ### Deployment Tools
 
-The [ios-sim](https://www.npmjs.org/package/ios-sim) and
-[ios-deploy](https://www.npmjs.org/package/ios-deploy) tools - allows you
-to launch iOS apps into the iOS Simulator and iOS Device from the command-line.
+The [ios-deploy](https://www.npmjs.org/package/ios-deploy) tools - allows you
+to launch iOS apps into an iOS Device from the command-line.
 
-To install them, run the following from command-line terminal:
+To install it, run the following from command-line terminal:
 
 ```bash
-$ npm install -g ios-sim
 $ npm install -g ios-deploy
 ```
 
