@@ -43,10 +43,10 @@ Changes For Third-Party `WebView` Developers:
 
 
 #### Curated Changes from the Git Commit Logs, check release notes for a more complete list ####
-* [CB-11083](https://issues.apache.org/jira/browse/CB-11083): Fix to deal with custom frameworks with their own `Gradle` configuration
-* [CB-8722](https://issues.apache.org/jira/browse/CB-8722): Move icons from drawable to `mipmap`
-* [CB-11964](https://issues.apache.org/jira/browse/CB-11964): Call clean after plugin install and mock it in tests
+* [CB-11083](https://issues.apache.org/jira/browse/CB-11083): Fix to deal with custom frameworks with their own Gradle configuration
+* [CB-8722](https://issues.apache.org/jira/browse/CB-8722): Move icons from drawable to mipmap
+* [CB-11964](https://issues.apache.org/jira/browse/CB-11964):  Call clean after plugin install and mock it in tests
 * [CB-11935](https://issues.apache.org/jira/browse/CB-11935): Does a best-effort attempt to pause any processing that can be paused safely, such as animations and geolocation.
-* [CB-11640](https://issues.apache.org/jira/browse/CB-11640):  Changing requirements check to ask for **Java 8**
-* [CB-11907](https://issues.apahce.org/jira/browse/CB-11907): Bumping Gradle to work with **Android Studio 2.2** and the **Android Gradle Plugin**
-* [CB-11078](https://issues.apahce.org/jira/browse/CB-11907): Empty string for `BackgroundColor` preference crashes application.
+* [CB-11640](https://issues.apache.org/jira/browse/CB-11640):  Changing requirements check to ask for Java 8
+* [CB-11907](https://issues.apahce.org/jira/browse/CB-11907): Bumping Gradle to work with Android Studio 2.2 and the Android Gradle Plugin
+* [CB-11078](https://issues.apahce.org/jira/browse/CB-11907): Empty string for BackgroundColor preference crashes application This closes #316
