@@ -11,7 +11,8 @@
     "test": "npm run jshint && npm run mocha",
     "mocha": "./node_modules/.bin/mocha --recursive ./spec",
     "serve": "gulp serve --prod",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "update-docs": "gulp snapshot"
   },
   "author": "Apache Software Foundation",
   "license": "Apache Version 2.0",
