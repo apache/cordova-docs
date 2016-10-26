@@ -1,8 +1,10 @@
 ---
-edit_link: 'https://github.com/apache/cordova-plugin-device-orientation/blob/master/README.md'
-title: cordova-plugin-device-orientation
+edit_link: >-
+  https://github.com/apache/cordova-plugin-device-orientation/blob/master/README.md
+title: Device Orientation
 plugin_name: cordova-plugin-device-orientation
 plugin_version: master
+description: Access compass data.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->
@@ -26,7 +28,9 @@ plugin_version: master
 #         under the License.
 -->
 
-[![Build Status](https://travis-ci.org/apache/cordova-plugin-device-orientation.svg?branch=master)](https://travis-ci.org/apache/cordova-plugin-device-orientation)
+|Android|iOS| Windows 8.1 Store | Windows 8.1 Phone | Windows 10 Store | Travis CI |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-device-orientation)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-device-orientation/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-device-orientation)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-device-orientation/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-device-orientation)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-device-orientation/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-device-orientation)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-device-orientation/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-device-orientation)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-device-orientation/)|[![Build Status](https://travis-ci.org/apache/cordova-plugin-device-orientation.svg?branch=master)](https://travis-ci.org/apache/cordova-plugin-device-orientation)|
 
 # cordova-plugin-device-orientation
 
@@ -205,8 +209,6 @@ A `CompassHeading` object is returned to the `compassSuccess` callback function.
 ### iOS Quirks
 
 - The `trueHeading` property is only returned for location services enabled via `navigator.geolocation.watchLocation()`.
-
-- For iOS 4 devices and above, heading factors in the device's current orientation, and does not reference its absolute position, for apps that supports that orientation.
 
 ## CompassError
 

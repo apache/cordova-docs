@@ -43,6 +43,7 @@ These commands are available at all times.
 |----------|--------------
 | create | Create a project
 | help <command> | Get help for a command
+| telemetry | Turn telemetry collection on or off
 
 ## Project Command List
 
@@ -70,6 +71,7 @@ These options apply to all cordova-cli commands.
 | -v or --version      | Print out the version of your `cordova-cli` install.
 | --no-update-notifier | Will disable updates check. Alternatively set `"optOut": true` in `~/.config/configstore/update-notifier-cordova.json` or set `NO_UPDATE_NOTIFIER` environment variable with any value (see details in [update-notifier docs](https://www.npmjs.com/package/update-notifier#user-settings)).
 |--nohooks             | Suppress executing hooks (taking RegExp hook patterns as parameters)
+| --no-telemetry       | Disable telemetry collection for the current command.
 
 ## Platform-specific options
 
@@ -83,8 +85,12 @@ Certain commands have options (`platformOpts`) that are specific to a particular
         cd myApp
         # Add camera plugin to the project and remember that in config.xml
         cordova plugin add cordova-plugin-camera --save
+        # Add camera plugin to the project and remember that in config.xml. Use npm install to fetch.
+        cordova plugin add cordova-plugin-camera --save --fetch
         # Add android platform to the project and remember that in config.xml
         cordova platform add android --save
+        # Add android platform to the project and remember that in config.xml. Use npm install to fetch.
+        cordova platform add android --save --fetch
         # Check to see if your system is configured for building android platform.
         cordova requirements android
         # Build the android and emit verbose logs.
@@ -109,7 +115,7 @@ cordova create path [id [name [config]]] [options]
 | Value | Description   |
 |-------|---------------|
 | path  |  Directory which should not already exist. Cordova will create this directory. For more details on the directory structure, see below. |
-| id    | _Default_: `io.cordova.hellocordova` <br/>  Reverse domain-style identifier that maps to `id` attirbute of `widget` element in `config.xml`. This can be changed but there may be code generated using this value, such as Java package names. It is recommended that you select an appropriate value.  |
+| id    | _Default_: `io.cordova.hellocordova` <br/>  Reverse domain-style identifier that maps to `id` attribute of `widget` element in `config.xml`. This can be changed but there may be code generated using this value, such as Java package names. It is recommended that you select an appropriate value.  |
 | name  | _Default_: `HelloCordova` <br/> Application's display title that maps `name` element in `config.xml` file. This can be changed but there may be code generated using this value, such as Java class names. The default value is `HelloCordova`, but it is recommended that you select an appropriate value. |
 | config | JSON string whose key/values will be included in `<path>`/.cordova/config.json |
 
@@ -123,7 +129,7 @@ cordova create path [id [name [config]]] [options]
 
 ### Directory structure
 
-A Cordova application created with `cordova-cli` will have the following directory structure:
+Cordova CLI works with the following directory structure:
 
 ```
 myapp/
@@ -207,11 +213,12 @@ Manage cordova platforms - allowing you to add, remove, update, list and check f
 
 ```bash
 cordova {platform | platforms} [
-    add <platform-spec> [...] {--save | link=<path> } |
-    {remove | rm}  platform [...] |
+    add <platform-spec> [...] {--save | link=<path> | --fetch } |
+    {remove | rm}  platform [...] {--save | --fetch}|
     {list | ls}  |
     check |
-    save ]
+    save |
+    update ]
 ```
 
 | Sub-command           | Option | Description |
@@ -219,10 +226,13 @@ cordova {platform | platforms} [
 | add `<platform-spec>` [...] |  | Add specified platforms |
 |     | --save                   | Save `<platform-spec>` into `config.xml` after installing them using `<engine>` tag |
 |     | --link=`<path>`          | When `<platform-spec>` is a local path, links the platform library directly instead of making a copy of it (support varies by platform; useful for platform development)
+|     | --fetch                  | Fetches the platform using `npm install` and stores it into the apps `node_modules` directory |
 | remove `<platform>` [...] |    | Remove specified platforms |
 |     | --save                   | Delete specified platforms from `config.xml` after removing them |
+|     | --fetch                  | Removes the platform using `npm uninstall` and removes it from the apps `node_modules` directory |
 | update `platform` [...] |      | Update specified platforms |
 |     | --save                   | Updates the version specified in `config.xml` |
+|     | --fetch                  | Fetches the platform using `npm install` and stores it into the apps `node_modules` directory |
 | list |                         | List all installed and available platforms |
 | check |                        | List platforms which can be updated by `cordova-cli platform update` |
 | save  |                        | Save `<platform-spec>` of all platforms added to config.xml |
@@ -265,6 +275,11 @@ There are a number of ways to specify a platform:
 
         cordova platform add android ios --save
 
+- Add pinned version of the `android` and `ios` platform and save the downloaded version to `config.xml`. Install
+to the project using `npm install` and store it in the apps `node_modules` directory:
+
+        cordova platform add android ios --save --fetch
+
 - Add `android` platform with [semver](http://semver.org/) version ^5.0.0 and save it to `config.xml`:
 
         cordova platform add android@^5.0.0 --save
@@ -285,6 +300,11 @@ There are a number of ways to specify a platform:
 
         cordova platform rm android --save
 
+- Remove `android` platform from the project and from `config.xml`. Run `npm uninstall` to remove it
+from the `node_modules` directory.
+
+        cordova platform rm android --save --fetch
+
 - List available and installed platforms with version numbers. This is useful to find version numbers when reporting issues:
 
         cordova platform ls
@@ -303,8 +323,8 @@ Manage project plugins
 
 ```bash
 cordova {plugin | plugins} [
-    add <plugin-spec> [..] {--searchpath=<directory> | --noregistry | --link | --save | --browserify | --force} |
-    {remove | rm} {<pluginid> | <name>} --save |
+    add <plugin-spec> [..] {--searchpath=<directory> | --noregistry | --link | --save | --browserify | --force | --fetch} |
+    {remove | rm} {<pluginid> | <name>} --save --fetch |
     {list | ls} |
     search [<keyword>] |
     save |
@@ -314,14 +334,16 @@ cordova {plugin | plugins} [
 | Sub-command | Option | Description
 |------------------------|-------------|------
 | add `<plugin-spec>` [...] |     | Add specified plugins
-|       |--searchpath `<directory>` | When looking up plugins by ID, look in this directory and each of its subdirectories before hitting the registry. Multiple search paths can be specified. Use ':' as a separator in *nix based systems and ';' for Windows.
+|       |--searchpath `<directory>` | When looking up plugins by ID, look in this directory and each of its subdirectories before hitting the registry. Multiple search paths can be specified. Use ':' as a separator in `*nix` based systems and ';' for Windows.
 |       |--noregistry             | Don't search the registry for plugins.
 |       |--link                   | When installing from a local path, creates a symbolic link instead of copying files. The extent to which files are linked varies by platform. Useful for plugin development.
 |       |--save                   | Save the `<plugin-spec>` as part of the `plugin` element  into `config.xml`.
 |       |--browserify             | Compile plugin JS at build time using browserify instead of runtime.
 |       |--force                  | _Introduced in version 6.1._ Forces copying source files from the plugin even if the same file already exists in the target directory.
+|       |--fetch                 | Fetches the plugin using `npm install` and stores it into the apps `node_modules` directory |
 | remove `<pluginid>|<name>` [...]| | Remove plugins with the given IDs/name.
 |       |--save                    | Remove the specified plugin from config.xml
+|       |--fetch                  | Removes the plugin using `npm uninstall` and removes it from the apps `node_modules` directory |
 |list                           |  | List currently installed plugins
 |search `[<keyword>]` [...]     |  | Search http://plugins.cordova.io for plugins matching the keywords
 |save                           |  | Save `<plugin-spec>` of all plugins currently added to the project
@@ -330,16 +352,17 @@ cordova {plugin | plugins} [
 
 There are a number of ways to specify a plugin:
 
-    <plugin-spec> : pluginID[@version]|directory|url[#commit-ish][:subdir]
+    <plugin-spec> : [@scope/]pluginID[@version]|directory|url[#commit-ish][:subdir]
 
 | Value       | Description
 |-------------|--------------------
+| scope       | Scope of plugin published as a [scoped npm package]
 | plugin      | Plugin id (id of plugin in npm registry or in --searchPath)
 | version     | Major.minor.patch version specifier using semver
 | directory   | Directory containing plugin.xml
 | url         | Url to a git repository containing a plugin.xml
 | commit-ish  | Commit/tag/branch reference. If none is specified, 'master' is used
-| subdir      | Sub-directory to find plugin.xml for the specified plugin.
+| subdir      | Sub-directory to find plugin.xml for the specified plugin. (Doesn't work with `--fetch` option)
 
 ### Algorithm for resolving plugins
 
@@ -361,6 +384,10 @@ based on the following criteria (listed in order of precedence):
 
         cordova plugin add cordova-plugin-camera@^2.0.0 --save
 
+- Add `cordova-plugin-camera` with [semver](http://semver.org/) version ^2.0.0 and `npm install` it. It will be stored in the `node_modules` directory:
+
+        cordova plugin add cordova-plugin-camera@^2.0.0 --fetch
+
 - Clone the specified git repo, checkout to tag `2.1.0`, look for plugin.xml in the `plugin` directory, and add it to the project. Save the `plugin-spec` to `config.xml`:
 
         cordova plugin add https://github.com/apache/cordova-plugin-camera.git#2.1.0:plugin --save
@@ -377,9 +404,20 @@ based on the following criteria (listed in order of precedence):
 
         cordova plugin rm camera --save
 
+- Remove the plugin from the project and `npm uninstall` it. Removes it from the `node_modules` directory:
+
+        cordova plugin rm camera --fetch
+
 - List all plugins installed in the project:
 
         cordova plugin ls
+
+### Conflicting plugins
+Conflicting plugins may occur when adding plugins that use `edit-config` tags in their plugin.xml file. `edit-config` allows plugins to add or replace attributes of XML elements.  
+
+This feature can cause issues with the application if more than one plugin tries to modify the same XML element. Conflict detection has been implemented to prevent plugins from being added so one plugin doesn't try to overwrite another plugin's `edit-config` changes. An error will be thrown when a conflict in `edit-config` has been found and the plugin won't be added. The error message will mention that all conflicts must be resolved before the plugin can be added. One option to resolving the `edit-config` conflict is to make changes to the affected plugins' plugin.xml so that they do not modify the same XML element. The other option is to use the `--force` flag to force add the plugin. This option should be used with caution as it ignores the conflict detection and will overwrite all conflicts it has with other plugins, thus may leave the other plugins in a bad state.
+
+Refer to the [plugin.xml guide](https://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#edit-config) for managing `edit-config`, resolving conflicts, and examples.
 
 ## cordova prepare command
 
@@ -392,7 +430,7 @@ copies plugin files for specified platforms so that the project is ready to buil
 
 ```
 cordova prepare [<platform> [..]]
-     [--browserify]
+     [--browserify | --fetch]
 ```
 
 ###Options
@@ -401,6 +439,8 @@ cordova prepare [<platform> [..]]
 |------------|------------------
 | `<platform> [..]` | Platform name(s) to prepare. If not specified, all platforms are built.
 |--browserify | Compile plugin JS at build time using browserify instead of runtime.
+|--fetch | When restoring plugins or platforms, fetch will `npm install` the missing modules.
+
 
 ## cordova compile command
 
@@ -467,29 +507,31 @@ cordova build [<platform> [...]]
 
 ### Synopsis
 
-Prepares, builds (unless `--nobuild` is specified) and deploys app on specified platform devices/emulators. If a device is connected it will be used, unless an eligible emulator is already running.
+Prepares, builds, and deploys app on specified platform devices/emulators. If a device is connected it will be used, unless an eligible emulator is already running.
 
 ###Syntax
 
 ```bash
 cordova run [<platform> [...]]
-    [--list | --nobuild ]
+    [--list | --debug | --release]
+    [--noprepare] [--nobuild]
     [--device|--emulator|--target=<targetName>]
     [--buildConfig=<configfile>]
     [--browserify]
     [-- <platformOpts>]
 ```
 
-| Option     | Description
-|------------|------------------
+| Option      | Description
+|-------------|------------------
 | `<platform> [..]` | Platform name(s) to run. If not specified, all platforms are run.
-|--nobuild   | Skip building
-|--debug     | Deploy a debug build. This is the default behavior unless `--release` is specified.
-|--release   | Deploy a release build
-|--device    | Deploy to a device
-|--emulator  | Deploy to an emulator
-|--target    | Deploy to a specific target emulator/device. Use `--list` to display target options
-| --list     | Lists available targets. Displays both device and emulator deployment targets unless specified
+| --list      | Lists available targets. Displays both device and emulator deployment targets unless specified
+| --debug     | Deploy a debug build. This is the default behavior unless `--release` is specified.
+| --release   | Deploy a release build
+| --noprepare | Skip preparing (available in Cordova v6.2 or later)
+| --nobuild   | Skip building
+| --device    | Deploy to a device
+| --emulator  | Deploy to an emulator
+| --target    | Deploy to a specific target emulator/device. Use `--list` to display target options
 | --buildConfig=`<configFile>` | Default: build.json in cordova root directory. <br/> Use the specified build configuration file. `build.json` file is used to specify paramaters to customize the app build process esecially related to signing the package.
 | --browserify | Compile plugin JS at build time using browserify instead of runtime
 | `<platformOpts>` | To provide platform specific options, you must include them after `--` separator. Review platform guide docs for more details.
@@ -581,6 +623,38 @@ Run a local web server for www/ assets using specified `port` or default of 8000
 cordova serve [port]
 ```
 
+## cordova telemetry command
+
+### Synopsis
+
+Turns telemetry collection on or off.
+
+### Syntax
+
+```
+cordova telemetry [STATE]
+```
+
+| Option      | Description
+|-------------|------------------
+| on          | Turn telemetry collection on.
+| off         | Turn telemetry collection off.
+
+### Details
+ A timed prompt asking the user to opt-in or out is displayed the first time cordova is run.
+ It lasts for 30 seconds, after which the user is automatically opted-out if he doesn't provide any answer.
+ In CI environments, the `CI` environment variable can be set, which will prevent the prompt from showing up.
+ Telemetry collection can also be turned off on a single command by using the `--no-telemetry` flag.
+
+### Examples
+```
+cordova telemetry on
+cordova telemetry off
+cordova build --no-telemetry
+```
+
+For details, see our privacy notice: https://cordova.apache.org/privacy
+
 ## cordova help command
 
 ### Synopsis
@@ -598,3 +672,4 @@ cordova -h [command]
 [Hooks guide]: http://cordova.apache.org/docs/en/latest/guide_appdev_hooks_index.md.html
 [config.xml ref]: http://cordova.apache.org/docs/en/latest/config_ref/index.html
 [Cordova dependencies]: http://cordova.apache.org/docs/en/latest/guide/hybrid/plugins/index.html#specifying-project-requirements
+[scoped npm package]: https://docs.npmjs.com/misc/scope

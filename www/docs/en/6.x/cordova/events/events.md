@@ -470,6 +470,8 @@ function activated(args) {
 * Original activated event args are also cloned to `args.detail[0]` and can be used as a fallback in case an inner args property has been lost.  
 See https://issues.apache.org/jira/browse/CB-10653 for details.
 
+* `activated` event might be fired before `deviceready` so you should save the activation flag and args to the app context in case you need them - for example in the [Share target case](https://issues.apache.org/jira/browse/CB-11924).
+The subscription to the `activated` event should be done before `deviceready` handler (in `app.bindEvents` in terms of the Cordova template).
 
 [UIApplicationExitsOnSuspend]: http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html
 [AndroidLifeCycleGuide]: ../../guide/platforms/android/lifecycle.html
