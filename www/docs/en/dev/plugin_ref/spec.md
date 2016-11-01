@@ -312,8 +312,9 @@ For Android:
 
 For Windows:
 ```xml
-<resource-file src="src/windows/win81/MobServices.pri" target="win81/MobServices.pri" device-target="windows" versions="8.1" arch="x64"/>
+<resource-file src="src/windows/win81/MobServices.pri" target="win81\MobServices.pri" device-target="windows" versions="8.1" arch="x64"/>
 ```
+__NOTE__: `target` should use backslashes to avoid DEP2100 deploy error in Visual Studio.
 
 ## config-file
 
