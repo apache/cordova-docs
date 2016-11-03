@@ -155,7 +155,7 @@ To sign an app, you need the following parameters:
 
 | Parameter                | Flag                     | Description
 |--------------------------|--------------------------|-----------------------------------
-| Code Sign Identity       | `--codeSignIdentity`     | Code signing identity to use for signing. It can be created with Xcode and added to your keychain.
+| Code Sign Identity       | `--codeSignIdentity`     | Code signing identity to use for signing. It can be created with Xcode and added to your keychain. Starting with Xcode 8 you should use `--codeSignIdentity="iPhone Developer"` both for `debug` and `release`.
 | Provisioning Profile     | `--provisioningProfile`  | GUID of the provisioning profile to be used for signing. It is copied here on your Mac: ```~/Library/MobileDevice/Provisioning\ Profiles/```. Opening it in a text editor, you can find the GUID which needs to be specified here.
 | Code Sign Resource Rules | `--codesignResourceRules`| (Optional) Used to control which files in a bundle should be sealed by a code signature. For more details, read [The OS X Code Signing In Depth article](https://developer.apple.com/library/mac/technotes/tn2206/_index.html#//apple_ref/doc/uid/DTS40007919-CH1-TNTAG206)
 | Development Team         | `--developmentTeam`      | This is new for Xcode 8. The development team ([Team ID](https://developer.apple.com/account/#/membership/)) to use for code signing. You would use this setting and a simplified Code Sign Identity (i.e. just 'iPhone Developer') to sign your apps, you do not need to provide a Provisioning Profile.
@@ -166,6 +166,27 @@ To sign an app, you need the following parameters:
 Alternatively, you could specify them in a build configuration file (`build.json`)
 using the `--buildConfig` argument to the same commands. Here's a sample of a
 build configuration file:
+
+Xcode 8 and iOS 10:
+
+```json
+{
+    "ios": {
+        "debug": {
+            "codeSignIdentity": "iPhone Developer",
+            "developmentTeam": "FG35JLLMXX4A",
+            "packageType": "development"
+        },
+        "release": {
+            "codeSignIdentity": "iPhone Developer",
+            "developmentTeam": "FG35JLLMXX4A",
+            "packageType": "app-store"
+        }
+    }
+}
+```
+
+Earlier versions:
 
 ```json
 {
