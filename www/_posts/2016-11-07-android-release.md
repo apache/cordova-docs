@@ -8,7 +8,7 @@ categories: announcements
 tags: news releases
 ---
 
-We are happy to announce that`Cordova Android 6.1.0` has been released! 
+We are happy to announce that `Cordova Android 6.1.0` has been released! 
 
 Run the following command in your project to save your currently installed plugins into `config.xml`:
 
