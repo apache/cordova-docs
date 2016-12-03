@@ -27,7 +27,8 @@ To upgrade:
 
     npm install -g cordova
     cd my_project
-    cordova platform update ios@4.3.0
+    cordova platform rm ios
+    cordova platform add ios@4.3.0
 
 To add it explicitly:
 
