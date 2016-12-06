@@ -72,6 +72,9 @@ different screen resolutions.
         <icon src="res/android/xxxhdpi.png" density="xxxhdpi" />
     </platform>
 ```
+
+Unofficial note (Dec 6 2016): The default installed cordova-android (6.0.0) has a bug (http://stackoverflow.com/a/40809089) which causes the icons to be the default cordova ones.
+
 ###See Also
 - [Android icon guide](https://www.google.com/design/spec/style/icons.html)
 - [Android - Supporting multiple screens](http://developer.android.com/guide/practices/screens_support.html)
