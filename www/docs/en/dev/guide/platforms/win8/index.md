@@ -287,6 +287,37 @@ powershell -Command " & {dir -path cert:\LocalMachine\My | where { $_.Subject -l
 
 Once these final values are provided. Cordova should successfully package and sign the app.
 
+## MSBuild build flags
+
+Similar to other platforms ([`--gradleArg` on Android](../android/index.html#setting-gradle-properties), [`--buildFlag` on iOS](../ios/index.html#xcode-build-flags)) you can pass custom flags to MSBuild. To do this you have two options:
+
+- add one or more `--buildFlag` options to `cordova build windows` or `cordova run windows` commands:
+
+      ```
+      cordova build windows -- --buildFlag /clp:Verbosity=normal --buildFlag /p:myCustomProperty=Value
+      cordova run windows -- --buildFlag /clp:Verbosity=minimal
+      ```
+
+- add `buildFlag` option to `build.json` file:
+
+      ```json
+      {
+        "windows": {
+          "debug": {
+            "buildFlag": [
+                "/clp:Verbosity=normal",
+                "/p:myCustomProperty=Value"
+            ]
+          }
+        }
+      }
+      ```
+
+
+Note that `cordova-windows` appends build flags from `build.json` and CLI arguments in specific order. In particular, flags from `build.json` are being appended _before_ build flags from CLI, which basically means that CLI flags _override_ ones from `build.json` in case of any conflicts.
+
+For the list of MSBuild's available command-line options please refer to [official MSBuild command-line reference](https://msdn.microsoft.com/library/ms164311.aspx).
+
 ## Platform Centered Workflow
 
 If you want to use Cordova's Windows-centered shell tools in conjunction with the SDK, you have two basic options:
