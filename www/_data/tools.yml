@@ -123,3 +123,12 @@
         includes complete PhoneGap integration, plus Bootstrap, jQuery Mobile
         and jqWidgets. Drag and Drop Designer. Easy programming in JavaScript
         or BASIC. Windows and MacOS.
+        
+-   name: Mobiscroll
+    image: mobiscroll.png
+    url: https://mobiscroll.com
+    description: >
+        Mobiscroll is a collection of cross platform UI
+        controls for delivering polished iOS, Android & Windows Phone apps. 
+        Framework agnostic, use it with plain Javascript, 
+        jQuery, Angular, React or Knockout.
