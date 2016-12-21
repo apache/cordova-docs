@@ -521,6 +521,7 @@ arch(string) <br/> ==windows== | Allowed values: `x86`, `x64` or `ARM`. <br/> In
 device-target(string) <br/> ==windows== | Allowed values: `win` (or `windows`), `phone` or `all`. <br/>  Indicates that the framework should only be included when building for the specified target device type.
 versions(string) <br/> ==windows== | Indicates that the framework should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
 target-dir(string) <br/> ==windows== | Indicates a subdirectory into which the framework should be copied. In practice, this is most important when plugin contains different framework versions for different chip architectures or device targets, but which have the same name. This allows you to specify different subfolders for each framework version so that they don't overlap each other.
+implementation(string) <br/> ==windows== | Sets the relative path to `.dll` file that contains implementation for WinMD component, written in C++.
 spec(string) <br/> ==ios== | Paired with `type="podspec"`, this is the spec string for the CocoaPod you want to install (static library only). CocoaPod support only exists in `cordova-ios 4.3.0` and `cordova-cli 6.4.0`. For your plugin, make sure  you add the appropriate `<engine>` tags and `package.json` [dependencies](../guide/hybrid/plugins/index.html#specifying-cordova-dependencies) to ensure backwards-compatible support.
 
 Examples:
@@ -560,6 +561,17 @@ Examples of using these Windows specific attributes:
 <framework src="src/windows/example.vcxproj" type="projectReference" target="win" />
 <framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" />
 <framework src="src/windows/example.dll" target-dir="bin/x64" arch="x64" custom="true"/>
+```
+
+Another example of using Windows-specific attributes to add a reference to WinMD components, written in C# and C++, whose API will be available at runtime:
+
+```xml
+<!-- C# component that consists of one .winmd file -->
+<framework src="lib\windows\component.winmd" versions="<10.0" />
+<!-- C++ component with separated metadata and implementation-->
+<framework src="lib\windows\x86\cppcomponent.winmd"
+           implementation="lib\windows\x86\cppcomponent.dll"
+           target-dir="component\x86" arch="x86" versions=">=10.0" />
 ```
 
 ## info
