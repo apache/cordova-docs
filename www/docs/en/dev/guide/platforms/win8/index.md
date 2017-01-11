@@ -235,6 +235,20 @@ In Windows project, identity details are kept in a file named package.appxmanife
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/win8/packaging.png)
 
+*Name* and *Version* can also be set as platform-specific preferences in **config.xml** in the following way:
+
+```xml
+<widget windows-packageVersion="2.0.0" ...> <!-- windows-packageVersion overrides version -->
+<preference name="WindowsStoreIdentityName" value="12345FakeCorp.CoolApp"/> <!-- WindowsStoreIdentityName overrides widget.id -->
+```
+
+*PublisherDisplayName* and *DisplayName* can also be overriden:
+
+```xml
+<preference name="WindowsStorePublisherName" value="FakeCorp"/> <!-- WindowsStorePublisherName overrides author -->
+<preference name="WindowsStoreDisplayName" value="CoolApp"/> <!-- WindowsStorePublisherName overrides name -->
+```
+
 A signing certificate can be provided from either CLI or through build.json file. The certificate related CLI flags are:
 
 | Parameter             | Flag              | Description
@@ -244,7 +258,7 @@ A signing certificate can be provided from either CLI or through build.json file
 
 Example:
 ```
-cordova build -- --packageCertificateKeyFile="platforms\windows\CordovaApp_TemporaryKey.pfx" --packageThumbprint="ABCABCABCABC123123123123"`
+cordova build -- --packageCertificateKeyFile="platforms\windows\CordovaApp_TemporaryKey.pfx" --packageThumbprint="ABCABCABCABC123123123123"
 ```
 
 Alternatively, these values could be specified using a build configuration file (build.json) using CLI (--buildConfig). A sample build configuration file:
@@ -282,7 +296,7 @@ Where:
 Once installed, next step is to add packageThumbprint and packageCertificateKeyFile to build.json. In order to find the packageThumbprint, search for the CommonName you've associated with the certificate:
 
 ```powershell
-powershell -Command " & {dir -path cert:\LocalMachine\My | where { $_.Subject -like \"*FakeCorp.com*\" }}"
+powershell -Command " & {dir -path cert:\CurrentUser\My | where { $_.Subject -like \"*FakeCorp.com*\" }}"
 ```
 
 Once these final values are provided. Cordova should successfully package and sign the app.
