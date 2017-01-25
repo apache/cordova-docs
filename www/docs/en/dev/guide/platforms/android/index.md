@@ -43,6 +43,7 @@ be found in this table:
 
 cordova-android Version | Supported Android API-Levels
 ------------------------|-----------------------------
+6.X.X                   | 16 - 24
 5.X.X                   | 14 - 23
 4.1.X                   | 14 - 22
 4.0.X                   | 10 - 22
