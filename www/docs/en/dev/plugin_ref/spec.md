@@ -302,6 +302,7 @@ target(string) | Path to where the file will be copied in your directory.
 arch(string) <br/> ==windows== | Allowed values: `x86`, `x64` or `ARM`. <br/> Indicates that the file should only be included when building for the specified architecture.
 device-target <br/> ==windows== | Allowed values: `win` (or `windows`), `phone` or `all`. <br/> Indicates that the file should only be included when building for the specified target device type.
 versions <br/> ==windows== | Indicates that the file should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
+reference <br/> ==windows== | Indicates that the file should be referenced from the src rather than copied to the target destination. The file will appear in Visual Studio with the file name specified by target, however will point to the respective src, depending on the architecture.
 
 Examples:
 
@@ -313,6 +314,10 @@ For Android:
 For Windows:
 ```xml
 <resource-file src="src/windows/win81/MobServices.pri" target="win81\MobServices.pri" device-target="windows" versions="8.1" arch="x64"/>
+
+<!-- Example of referencing  -->
+<resource-file src="x86/foo.dll" target="foo.dll" arch="x86" reference="true" />
+<resource-file src="x64/foo.dll" target="foo.dll" arch="x64" reference="true" />
 ```
 __NOTE__: `target` should use backslashes to avoid DEP2100 deploy error in Visual Studio.
 
