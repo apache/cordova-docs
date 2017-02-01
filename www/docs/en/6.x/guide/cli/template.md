@@ -46,7 +46,7 @@ After succesfully using a template to create your project, you'll want to indica
 
 ## Create a Template
 
-Begin by creating a cordova app that will become the basis for your template. Then you'll take the contents of your app and put them into the following structure. When your template is used, all of the contents within `template_src` will be used to create the new project, so be sure to include any necessary files in that folder. Reference [this example](https://github.com/carynbear/cordova-template) for details.
+Begin by creating a cordova app that will become the basis for your template. Then you'll take the contents of your app and put them into the following structure. When your template is used, all of the contents within `template_src` will be used to create the new project, so be sure to include any necessary files in that folder. Reference [this example](https://github.com/apache/cordova-template-reference) for details.
 
 ```
 template_package/
@@ -55,7 +55,7 @@ template_package/
 └── template_src/ 	(required)
 	└── CONTENTS OF APP TEMPLATE
 ```
-> __NOTE__: `index.js` should export a reference to `template_src` and `package.json` should reference `index.js`. See [the example](https://github.com/apache/cordova-template-reference) for details on how that is done.
+> __NOTE__: `index.js` should export a reference to `template_src` and `package.json` should reference `index.js`. See [the example](https://github.com/carynbear/cordova-template) for details on how that is done.
 
 To finish off your template, edit `package.json` to contain the keyword `"cordova:template"`.
 ```javascript

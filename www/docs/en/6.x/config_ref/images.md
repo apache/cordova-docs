@@ -102,10 +102,10 @@ Icons are not applicable to the Browser platform.
         <!-- iPad -->
         <icon src="res/ios/icon-76.png" width="76" height="76" />
         <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
-        <!-- iOS 6.1 -->
         <!-- Spotlight Icon -->
         <icon src="res/ios/icon-40.png" width="40" height="40" />
         <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+        <!-- iOS 6.1 -->
         <!-- iPhone / iPod Touch -->
         <icon src="res/ios/icon.png" width="57" height="57" />
         <icon src="res/ios/icon@2x.png" width="114" height="114" />
@@ -118,10 +118,12 @@ Icons are not applicable to the Browser platform.
         <!-- iPad Spotlight and Settings Icon -->
         <icon src="res/ios/icon-50.png" width="50" height="50" />
         <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+        <!-- iPad Pro -->
+        <icon src="res/ios/icon-83.5@2x.png" width="167" height="167" />
     </platform>
 ```
 ###See Also
-- [App icon and image size guidelines](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html)
+- [App Icons on iPad and iPhone](https://developer.apple.com/library/content/qa/qa1686/_index.html)
 
 ##Windows
 

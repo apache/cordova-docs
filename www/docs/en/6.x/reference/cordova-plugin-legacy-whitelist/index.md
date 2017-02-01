@@ -1,8 +1,10 @@
 ---
-edit_link: 'https://github.com/apache/cordova-plugin-legacy-whitelist/blob/master/README.md'
-title: cordova-plugin-legacy-whitelist
+edit_link: >-
+  https://github.com/apache/cordova-plugin-legacy-whitelist/blob/master/README.md
+title: Legacy Whitelist
 plugin_name: cordova-plugin-legacy-whitelist
 plugin_version: master
+description: Legacy implementation of the whitelist plugin.
 ---
 
 <!-- WARNING: This file is generated. See fetch_docs.js. -->

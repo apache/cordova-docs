@@ -123,7 +123,7 @@ Icons are not applicable to the Browser platform.
     </platform>
 ```
 ###See Also
-- [App icon and image size guidelines](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html)
+- [App Icons on iPad and iPhone](https://developer.apple.com/library/content/qa/qa1686/_index.html)
 
 ##Windows
 

@@ -303,7 +303,7 @@ To sign an app, you need the following parameters:
 |-----------------------|-------------------|-----------------------------------
 | Keystore              | `--keystore`      | Path to a binary file which can hold a set of keys
 | Keystore Password     | `--storePassword` | Password to the keystore
-| Alias                 | `--alias`         | The id specifying the private key used for singing
+| Alias                 | `--alias`         | The id specifying the private key used for signing
 | Password              | `--password`      | Password for the private key specified
 | Type of the Keystore  | `--keystoreType`  | *Default: auto-detect based on file extension*<br>Either pkcs12 or jks
 

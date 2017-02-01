@@ -272,8 +272,8 @@ To specify Cordova-related dependencies for a plugin, alter the `engines` elemen
 structure:
 
 ```javascript
-engines: {
-    cordovaDependencies: {
+"engines": {
+    "cordovaDependencies": {
         PLUGIN_VERSION: {
             DEPENDENCY: SEMVER_RANGE,
             DEPENDENCY: SEMVER_RANGE,
@@ -301,8 +301,8 @@ dependency information as the highest `PLUGIN_VERSION` listed below them. For
 example, consider the following entry:
 
 ```javascript
-engines: {
-    cordovaDependencies: {
+"engines": {
+    "cordovaDependencies": {
         "1.0.0": { "cordova-android": "<3.0.0"},
         "2.1.0": { "cordova-android": ">4.0.0"}
     }
@@ -326,8 +326,8 @@ whatever `DEPENDENCY` values are given to all versions of the plugin below the
 specified version. For example, consider the following entry:
 
 ```javascript
-engines: {
-    cordovaDependencies: {
+"engines": {
+    "cordovaDependencies": {
         "0.0.1":  { "cordova-ios": ">1.0.0" },
         "<1.0.0": { "cordova-ios": "<2.0.0" },
         "<2.0.0": { "cordova-ios": "<5.0.0" }

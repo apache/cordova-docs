@@ -106,12 +106,31 @@ For cordova-ios versions prior to 4.0.0, see the older versions of this document
 
 [Application Transport Security (ATS)](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) is new in iOS 9 (Xcode 7). This new feature acts as a whitelist for your app. The cordova cli will automatically convert `<access>` and `<allow-navigation>` tags to the appropriate ATS directives.
 
-The `<access>` and `<allow-navigation>` tags support these two new attributes below, which have their equivalents in ATS:
+The `<access>` and `<allow-navigation>` tags support these three attributes below, which have their equivalents in ATS:
 
 1. minimum-tls-version (String, defaults to 'TLSv1.2')
 2. requires-forward-secrecy (Boolean, defaults to 'true')
+3. requires-certificate-transparency (Boolean, defaults to 'false', new in iOS 10)
 
-See the [ATS Technote](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) for details.
+* example:
+
+    ```xml
+    <access origin='https://cordova.apache.org' minimum-tls-version='TLSv1.1' requires-forward-secrecy='false' requires-certificate-transparency='true' />
+    ```
+    
+In iOS 10 and above, the `<access>` tag supports these three attributes below, when paired with the origin wildcard `*`. These attributes also have their equivalents in ATS:
+
+1. allows-arbitrary-loads-in-media (Boolean, defaults to 'false', new in iOS 10)
+2. allows-arbitrary-loads-in-web-content (Boolean, defaults to 'false', new in iOS 10)
+3. allows-local-networking (Boolean, defaults to 'false', new in iOS 10)
+
+* example:
+
+    ```xml
+    <access origin='*' allows-arbitrary-loads-in-media='true' allows-arbitrary-loads-in-web-content='true' allows-local-networking='true' />
+    ```
+
+See the [ATS Technote](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) for more details.
 
 ## BlackBerry 10 Whitelisting
 

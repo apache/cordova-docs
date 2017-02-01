@@ -72,7 +72,7 @@ package.
 1. Select the __project icon__ in the __Project Navigator__, select
    the __Target__, then select the __Build Settings__ tab.
 
-1. Add `-force_load` and `-Obj-C` for the __Other Linker Flags__ value.
+1. Add `-force_load` and `-ObjC` for the __Other Linker Flags__ value.
 
 1. Click on the __project icon__ in the Project Navigator, select the
    __Target__, then select the __Build Phases__ tab.

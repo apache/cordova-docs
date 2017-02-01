@@ -21,7 +21,8 @@ To upgrade:
     npm install -g cordova
     cd my_project
     cordova platform update android@5.2.2
-    cordova platform update ios@4.2.1
+    cordova platform rm ios
+    cordova platform add ios@4.2.1
 
 To add it explicitly:
 
