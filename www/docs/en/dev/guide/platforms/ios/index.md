@@ -35,9 +35,9 @@ For details on the CLI, see [Cordova CLI Reference][cli].
 ## Requirements and Support
 
 Apple® tools required to build iOS applications only run on the OS X
-operating system on Intel-based Macs. Xcode® 6.0 (the minimum required
-version) runs only on OS X version 10.9 (Mavericks) or greater, and
-includes the iOS 8 SDK (Software Development Kit).  To submit apps to
+operating system on Intel-based Macs. Xcode® 7.0 (the minimum required
+version) runs only on OS X version 10.10.4 (Yosemite) or greater, and
+includes the iOS 9 SDK (Software Development Kit).  To submit apps to
 the Apple App Store℠ requires the latest versions of the Apple tools.
 
 You can test many of the Cordova features using the iOS simulator
@@ -45,9 +45,9 @@ installed with the iOS SDK and Xcode, but you need an actual device to
 fully test all of the app's device features before submitting to the
 App Store.  The device must have at least iOS 8 installed, the
 minimum iOS version supported as of Cordova 4.0.0. Supported devices
-include iPhone 4S, iPhone 5, iPhone 5C, iPhone 5S, iPhone 6, 
-iPhone 6 Plus, iPhone 6S, iPhone 6S Plus, iPhone SE, iPad 2, 
-iPad 3, iPad 4, iPad Air, iPad Air 2, iPad Pro, iPad Mini, 
+include iPhone 4S, iPhone 5, iPhone 5C, iPhone 5S, iPhone 6,
+iPhone 6 Plus, iPhone 6S, iPhone 6S Plus, iPhone SE, iPad 2,
+iPad 3, iPad 4, iPad Air, iPad Air 2, iPad Pro, iPad Mini,
 iPad Mini 2, iPad Mini 3, iPod Touch 5th gen and iPod Touch 6th gen or later.
 
 ## Installing the Requirements
@@ -70,8 +70,8 @@ $ xcode-select --install
 
 ### Deployment Tools
 
-The [ios-deploy](https://www.npmjs.org/package/ios-deploy) tools - allows you
-to launch iOS apps into an iOS Device from the command-line.
+The [ios-deploy](https://www.npmjs.org/package/ios-deploy) tools allow you
+to launch iOS apps on an iOS Device from the command-line.
 
 To install it, run the following from command-line terminal:
 
@@ -89,17 +89,21 @@ For more details on installing and using the CLI, refer to [Create your first ap
 
 To preview the app in the iOS simulator:
 
-1. Open the project file from Xcode and make sure the _.xcodeproj_ file is selected in the left panel.
+1. Open the workspace file (`platforms/ios/HelloWorld.xcworkspace`) from Xcode, _or_ from the command line:
 
-2. Select the __hello__ app in the panel immediately to the right.
+    ```bash
+    $ open ./platforms/ios/HelloWorld.xcworkspace/
+    ```
 
-3. Select the intended device from the toolbar's __Scheme__ menu, such
-   as the iPhone 6.0 Simulator as highlighted here:
+2. Make sure the `HelloWorld` project is selected in the left panel (1).
 
    ![]({{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png)
 
-4. Press the __Run__ button that appears in the same toolbar to the
-   left of the __Scheme__. That builds, deploys and runs the
+3. Select the intended device from the toolbar's __Scheme__ menu, such
+   as the iPhone 7 Plus Simulator as highlighted in (2)
+
+4. Press the __Run__ button (3) in the same toolbar to the
+   left of the __Scheme__. That builds, deploys, and runs the
    application in the simulator. A separate simulator application opens
    to display the app:
 
@@ -111,7 +115,7 @@ To preview the app in the iOS simulator:
 
 Xcode comes bundled with simulators for the latest versions of iPhone
 and iPad. Older versions may be available from the __Xcode &rarr;
-Preferences &rarr; Downloads &rarr; Components__ panel.
+Preferences... &rarr; Components__ panel.
 
 ### Deploying to Device
 
@@ -177,8 +181,8 @@ Xcode 8 and iOS 10:
             "developmentTeam": "FG35JLLMXX4A",
             "packageType": "development",
             "buildFlag": [
-                "EMBEDDED_CONTENT_CONTAINS_SWIFT = YES", 
-                "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES=NO", 
+                "EMBEDDED_CONTENT_CONTAINS_SWIFT = YES",
+                "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES=NO",
                 "LD_RUNPATH_SEARCH_PATHS = \"@executable_path/Frameworks\""
             ]
         },
@@ -187,8 +191,8 @@ Xcode 8 and iOS 10:
             "developmentTeam": "FG35JLLMXX4A",
             "packageType": "app-store",
             "buildFlag": [
-                "EMBEDDED_CONTENT_CONTAINS_SWIFT = YES", 
-                "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES=NO", 
+                "EMBEDDED_CONTENT_CONTAINS_SWIFT = YES",
+                "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES=NO",
                 "LD_RUNPATH_SEARCH_PATHS = \"@executable_path/Frameworks\""
             ]
         }
@@ -243,8 +247,14 @@ plugin to the project via cordova plugin add. This will link the files so that c
 platforms folder are reflected in your plugin's source folder (and vice versa).
 
 Once the ios platform is added to your project and built using ```cordova build```, you can open it from
-within Xcode. Double-click to open the `${PROJECT_NAME}/platforms/ios/${PROJECT_NAME}.xcodeproj`
-file. The screen should look like this:
+within Xcode. Double-click to open the `${PROJECT_NAME}/platforms/ios/${PROJECT_NAME}.xcworkspace`
+file or open Xcode from your terminal:
+
+```bash
+$ open platforms/ios/HelloWorld.xcworkspace/
+```
+
+The screen should look like this:
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png)
 
