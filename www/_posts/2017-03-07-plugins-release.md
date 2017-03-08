@@ -35,10 +35,10 @@ The following plugins were updated today:
 
 Release Highlights:
 
-* **CAMERA:** [CB-12005](https://issues.apache.org/jira/browse/CB-12005) Changing the `getOrientation` method to return the defined enumerated `EXIF` instead of orientation in degrees for Consistency
-* **In App Browser:** [CB-9148](https://issues.apache.org/jira/browse/CB-9148) **Android:** Add Support for `input[type=file]` File Chooser
-* **MEDIA:** Make the output file of **Android** an `acc` file. Major version bump to `3.0.0`. Media plugin now requires `cordova-android >= 6.1.0`
-* **WK Webview Engine:** [CB-12297](https://issues.apache.org/jira/browse/CB-12297) Support `WKProcessPool` for cookie sharing
+* **Camera:** [CB-12005](https://issues.apache.org/jira/browse/CB-12005) Changing the `getOrientation` method to return the defined enumerated `EXIF` instead of orientation in degrees for consistency
+* **InAppBrowser:** [CB-9148](https://issues.apache.org/jira/browse/CB-9148) **Android:** Add Support for `input[type=file]` File Chooser
+* **Media:** Make the output file of **Android** an `acc` file. Major version bump to `3.0.0`. Media plugin now requires `cordova-android >= 6.1.0`
+* **WKWebview Engine:** [CB-12297](https://issues.apache.org/jira/browse/CB-12297) Support `WKProcessPool` for cookie sharing
 
 ----
 You can update any plugin by removing it, and then re-adding it.
@@ -58,7 +58,7 @@ cordova-plugin-battery-status@1.2.3
 cordova-plugin-camera@2.4.0
 * [CB-12501](https://issues.apache.org/jira/browse/CB-12501) **Android**: Appium tests don't use `XPath` selectors anymore
 * [CB-12469](https://issues.apache.org/jira/browse/CB-12469) Appium tests can now run on **iOS 10**
-* [CB-12005](https://issues.apache.org/jira/browse/CB-12005) Changing the `getOrientation` method to return the defined enumerated `EXIF` instead of orientation in degrees for Consistency
+* [CB-12005](https://issues.apache.org/jira/browse/CB-12005) Changing the `getOrientation` method to return the defined enumerated `EXIF` instead of orientation in degrees for consistency
 * [CB-12368](https://issues.apache.org/jira/browse/CB-12368) Fix permission check on **Android**
 * [CB-12353](https://issues.apache.org/jira/browse/CB-12353) Corrected merges usage in `plugin.xml`
 * [CB-12369](https://issues.apache.org/jira/browse/CB-12369) Add plugin typings from `DefinitelyTyped`
@@ -190,10 +190,10 @@ cordova-plugin-whitelist@1.3.2
 
 cordova-plugin-wkwebview-engine@1.1.2
 * [CB-12497](https://issues.apache.org/jira/browse/CB-12497) `location.href` links are silently disallowed
-* [CB-12490](https://issues.apache.org/jira/browse/CB-12490) - Updated experimental plugin link
+* [CB-12490](https://issues.apache.org/jira/browse/CB-12490) Updated experimental plugin link
 * Allow to configure navigation by gestures
 * [CB-12297](https://issues.apache.org/jira/browse/CB-12297) Support `WKProcessPool` for cookie sharing
 * [CB-12414](https://issues.apache.org/jira/browse/CB-12414) **iOS:** Forward error from provisional load error to standard load error
 
 cordova-plugin-test-framework@1.1.5
-* [CB-12236](https://issues.apache.org/jira/browse/CB-12236) - Fixed `RELEASENOTES` for `cordova-plugin-test-framework`
+* [CB-12236](https://issues.apache.org/jira/browse/CB-12236) Fixed `RELEASENOTES` for `cordova-plugin-test-framework`
