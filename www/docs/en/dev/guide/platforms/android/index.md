@@ -37,12 +37,13 @@ the CLI, see [Cordova CLI Reference][cli_reference].
 Cordova for Android requires the Android SDK which can be installed
 on OS X, Linux or Windows. See the Android SDK's
 [System Requirements](http://developer.android.com/sdk/index.html#Requirements).
-Cordova's latest Android package supports up to Android [API-Level](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels) 23.
-The supported Android API-Levels for the past few cordova-android releases can
+Cordova's latest Android package supports up to Android [API Level](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels) 25.
+The supported Android API Levels for the past few cordova-android releases can
 be found in this table:
 
 cordova-android Version | Supported Android API-Levels
 ------------------------|-----------------------------
+6.X.X                   | 14 - 25
 5.X.X                   | 14 - 23
 4.1.X                   | 14 - 22
 4.0.X                   | 10 - 22
@@ -62,7 +63,7 @@ they dip below 5% on Google's
 
 ### Java Development Kit (JDK)
 
-Install [Java Development Kit (JDK) 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+Install [Java Development Kit (JDK) 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 or later.
 
 When installing on Windows you also need to set `JAVA_HOME` Environment Variable
@@ -70,11 +71,12 @@ according to your JDK installation path (see [Setting Environment Variables](#se
 
 #### Android SDK
 
-Install the [Android Stand-alone SDK Tools](http://developer.android.com/sdk/installing/index.html?pkg=tools) or [Android Studio](http://developer.android.com/sdk/installing/index.html?pkg=studio).
-Proceed with Android Studio if you plan on
-developing new Cordova for Android plugins or using native tools to
-run and debug the Android platform. Otherwise, the Android Stand-alone SDK Tools
-are enough to build and deploy Android applications.
+Install [Android Studio](reference/cordova-plugin-camera/index.html) or the
+[Android Stand-alone SDK Tools](https://developer.android.com/studio/index.html)
+(scroll down a bit). Proceed with Android Studio if you plan on developing new
+Cordova for Android plugins or using native tools to run and debug the Android
+platform. Otherwise, the Android Stand-alone SDK Tools are enough to build and
+deploy Android applications.
 
 Detailed installation instructions are available as part of installation
 links above.
@@ -84,16 +86,16 @@ links above.
 After installing the Android SDK, you must also install the packages for
 whatever [API level](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
 you wish to target. It is recommended that you install the highest SDK version
-that your version of cordova-android supports (see above).
+that your version of cordova-android supports (see [Requirements and Support](#requirements-and-support)).
 
-Open Android SDK Manager (for example, run `android` from the terminal) and make
-sure the following are installed:
+Open the Android SDK Manager (run `android` or `sdkmanager` from the terminal)
+and make sure the following are installed:
 
 1. Android Platform SDK for your targeted version of Android
 1. Android SDK build-tools version 19.1.0 or higher
 1. Android Support Repository (found under "Extras")
 
-See Android's documentation on [Installing SDK Packages](http://developer.android.com/sdk/installing/adding-packages.html)
+See Android's documentation on [Installing SDK Packages](https://developer.android.com/studio/intro/update.html)
 for more details.
 
 ### Setting environment variables
@@ -103,22 +105,25 @@ function correctly. The CLI will attempt to set these variables for you, but
 in certain cases you may need to set them manually. The following variables
 should be updated:
 
-1. Set the `JAVA_HOME` environment variable to the location of your JDK installation
-2. Set the `ANDROID_HOME` environment variable to the location of your Android SDK installation
-3. It is also recommended that you add the Android SDK's `tools` and `platform-tools` directories to your `PATH`
+1. Set the `JAVA_HOME` environment variable to the location of your JDK
+   installation
+2. Set the `ANDROID_HOME` environment variable to the location of your Android
+   SDK installation
+3. It is also recommended that you add the Android SDK's `tools`, `tools/bin`,
+   and `platform-tools` directories to your `PATH`
 
 #### OS X and Linux
 
 On a Mac or Linux, you can use a text editor to create or modify the
-`~/.bash_profile` file. To set an environment variable, add a line that
-uses `export` like so (substitute the path with your local installation):
+`~/.bash_profile` file. To set an environment variable, add a line that uses
+`export` like so (substitute the path with your local installation):
 
 ```bash
 export ANDROID_HOME=/Development/android-sdk/
 ```
 
-To update your `PATH`, add a line resembling the following
-(substitute the paths with your local Android SDK installation's location):
+To update your `PATH`, add a line resembling the following (substitute the paths
+with your local Android SDK installation's location):
 
 ```bash
 export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
@@ -133,11 +138,12 @@ $ source ~/.bash_profile
 #### Windows
 
 These steps may vary depending on your installed version of Windows. Close and
-reopen any command prompt windows after making changes to see them reflected
+reopen any command prompt windows after making changes to see them reflected.
 
 1. Click on the __Start__ menu in the lower-left corner of the desktop
 
-1. In the search bar, search for __Environment Variables__ and select __Edit the system Environment Variables__ from the options that appear
+1. In the search bar, search for __Environment Variables__ and select __Edit the
+   system Environment Variables__ from the options that appear
 
 1. In the window that appears, click the __Environment Variables__ button
 
@@ -163,22 +169,23 @@ reopen any command prompt windows after making changes to see them reflected
 
 If you wish to run your Cordova app on an Android emulator, you will first need
 to create an Android Virtual Device (AVD). See the Android documentation for
-[managing AVDs](http://developer.android.com/tools/devices/managing-avds.html)
-and the [instructions](http://developer.android.com/tools/devices/emulator.html)
-for configuring the emulator and setting up hardware acceleration.
+[managing AVDs](https://developer.android.com/studio/run/managing-avds.html),
+[configuring the emulator](https://developer.android.com/studio/run/emulator.html#about),
+and [setting up hardware acceleration](https://developer.android.com/studio/run/emulator-acceleration.html).
 
-Once your AVD is configured correctly, you should be able to see it by running
-this command from within a Cordova project:
+Once your AVD is configured correctly, you should be able to deploy you Cordova
+application to the emulator by running:
 
 ```bash
-$ cordova run --list
+$ cordova run --emulator
 ```
 
 ### Configuring Gradle
 
 As of **cordova-android@4.0.0**, Cordova for Android projects are built using
 [Gradle](http://www.gradle.org/). For instructions on building with Ant, refer
-to older versions of the documentation.
+to older versions of the documentation. Please note that Ant builds are
+deprecated as of the Android SDK Tools 25.3.0.
 
 #### Setting Gradle Properties
 
@@ -265,35 +272,36 @@ Note that plugins can also include `build-extras.gradle` files via:
 
 ### Setting the Version Code
 
-To change the [version code](http://developer.android.com/tools/publishing/versioning.html) for your app's generated apk,
-set the `android-versionCode` attribute in the widget element of your application's
-[config.xml file](../../../config_ref/index.html). If the `android-versionCode` is not set, the
-version code will be determined using the `version` attribute. For example,
-if the version is `MAJOR.MINOR.PATCH`:
+To change the [version code](https://developer.android.com/studio/publish/versioning.html)
+for your app's generated apk, set the `android-versionCode` attribute in the widget
+element of your application's [config.xml file](../../../config_ref/index.html).
+If the `android-versionCode` is not set, the version code will be determined
+using the `version` attribute. For example, if the version is `MAJOR.MINOR.PATCH`:
 
 ```
 versionCode = MAJOR * 10000 + MINOR * 100 + PATCH
 ```
 
 If your application has enabled the `cdvBuildMultipleApks` Gradle property (see
-[Setting Gradle Properties](#setting-gradle-properties)), the version code of your app
-will also be multiplied by 10 so that the last digit of the code can be used
-to indicate the architecture the apk was built for. This multiplication will happen
-regardless of whether the version code is taken from the `android-versionCode`
-attribute or generated using the `version`. Be aware that some plugins added to your
-project (including cordova-plugin-crosswalk-webview) may set this Gradle property
-automatically.
+[Setting Gradle Properties](#setting-gradle-properties)), the version code of
+your app will also be multiplied by 10 so that the last digit of the code can be
+used to indicate the architecture the apk was built for. This multiplication
+will happen regardless of whether the version code is taken from the
+`android-versionCode` attribute or generated using the `version`. Be aware that
+some plugins added to your project (including cordova-plugin-crosswalk-webview)
+may set this Gradle property automatically.
 
-**Please Note:** When updating the `android-versionCode` property, it is unwise to
-increment the version code taken from built apks. Instead, you should increment
-the code based off the value in your `config.xml` file's `android-versionCode`
-attribute. This is because the `cdvBuildMultipleApks` property causes the version code
-to be multiplied by 10 in the built apks and thus using that value will cause your next
-version code to be 100 times the original, etc.
+**Please Note:** When updating the `android-versionCode` property, it is unwise
+to increment the version code taken from built apks. Instead, you should
+increment the code based off the value in your `config.xml` file's
+`android-versionCode` attribute. This is because the `cdvBuildMultipleApks`
+property causes the version code to be multiplied by 10 in the built apks and
+thus using that value will cause your next version code to be 100 times the
+original, etc.
 
 ## Signing an App
 
-First, you should read the [Android app signing requirements](http://developer.android.com/tools/publishing/app-signing.html).
+First, you should read the [Android app signing requirements](https://developer.android.com/studio/publish/app-signing.html).
 
 ### Using Flags
 
@@ -368,14 +376,15 @@ keyPassword=SECRET2
 ## Debugging
 
 For details on the debugging tools that come packaged with the Android SDK, see
-[Android's developer documentation for debugging](http://developer.android.com/tools/debugging/index.html).
+[Android's developer documentation for debugging](https://developer.android.com/studio/debug/index.html).
 Additionally, Android's developer documentation for [debugging web apps](http://developer.android.com/guide/webapps/debugging.html)
 provides an introduction for debugging the portion of your app running in the
 Webview.
 
 ### Opening a Project in Android Studio
 
-Cordova for Android projects can be opened in the Android IDE, [Android Studio](http://developer.android.com/sdk/installing/index.html?pkg=studio).
+Cordova for Android projects can be opened in the Android IDE,
+[Android Studio](reference/cordova-plugin-camera/index.html).
 This can be useful if you wish to use Android Studio's built in Android
 debugging/profiling tools or if you are developing Android plugins. Please note
 that when opening your project in Android studio, it is recommended that you do
@@ -403,8 +412,8 @@ To open a Cordova for Android project in Android Studio:
   1. For the `Gradle Sync` question you can simply answer __Yes__.
 
 Once it finishes importing, you should be able to build and run the app directly
-from __Android Studio__. See [Android Studio Overview](http://developer.android.com/tools/studio/index.html)
-and [Building and Running from Android Studio](http://developer.android.com/tools/building/building-studio.html)
+from __Android Studio__. See [Android Studio Overview](https://developer.android.com/studio/intro/index.html)
+and [Building and Running from Android Studio](https://developer.android.com/studio/run/index.html)
 for more details.
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png)
@@ -413,17 +422,16 @@ for more details.
 
 cordova-android includes a number of scripts that allow the platform to be used
 without the full Cordova CLI. This development path may offer you a greater
-range of development options in certain situations than the cross-platform cordova CLI.
-For example, you need to use shell tools when deploying a custom
-Cordova WebView alongside native components. Before using this
-development path, you must still configure the Android SDK environment
-as described in [Requirements and Support](#requirements-and-support)
-above.
+range of development options in certain situations than the cross-platform
+cordova CLI. For example, you need to use shell tools when deploying a custom
+Cordova WebView alongside native components. Before using this development path,
+you must still configure the Android SDK environment as described in
+[Requirements and Support](#requirements-and-support) above.
 
-For each of the scripts discussed below, refer to [Cordova CLI Reference][cli_reference] for more information on their
-arguments and usage. Each script has a name that matches the corresponding CLI
-command. For example, `cordova-android/bin/create` is equivalent to
-`cordova create`.
+For each of the scripts discussed below, refer to [Cordova CLI Reference][cli_reference]
+for more information on their arguments and usage. Each script has a name that
+matches the corresponding CLI command. For example, `cordova-android/bin/create`
+is equivalent to `cordova create`.
 
 To get started, either download the cordova-android package from
 [npm](https://www.npmjs.com/package/cordova-android) or
@@ -433,12 +441,12 @@ To create a project using this package, run the `create` script in the `bin`
 folder:
 
 ```bash
-$ cordova-android/bin/create ...
+$ cordova-android/bin/create
 ```
 
 The created project will have a folder named `cordova` inside that contains
 scripts for the project-specific Cordova commands (e.g. `run`, `build`, etc.).
-Additionally, The project will feature a structure different from that of a
+Additionally, the project will feature a structure different from that of a
 normal Cordova project. Notably, `/www` is moved to `/assets/www`.
 
 To install plugins in this project, use the [Cordova Plugman Utility](../../../plugin_ref/plugman.html).
@@ -479,17 +487,16 @@ native Activity lifecycle.
 
 ### What makes Android different?
 
-In Android, the OS can choose to kill activities in the background in
-order to free up resources if the device running the application is low on
-memory. Unfortunately, when the activity holding your application is killed,
-the Webview in which your application lives will be destroyed as well. Any state
-that your application is maintaining will be lost in this case. When the user
-navigates back to your application, the Activity and Webview will be
-recreated by the OS, but state will not be automatically restored for your
-Cordova app. For this reason, it is imperative that your application be aware of
-the lifecycle events that are fired and maintain whatever state is appropriate
-to make sure a user's context in your app is not lost when they leave the
-application.
+In Android, the OS can choose to kill activities in the background in order to
+free up resources if the device is low on memory. Unfortunately, when the
+activity holding your application is killed, the Webview in which your
+application lives will be destroyed as well. Any state that your application is
+maintaining will be lost in this case. When the user navigates back to your
+application, the Activity and Webview will be recreated by the OS, but state
+will not be automatically restored for your Cordova app. For this reason, it is
+imperative that your application be aware of the lifecycle events that are fired
+and maintain whatever state is appropriate to make sure a user's context in your
+app is not lost when they leave the application.
 
 ### When can this happen?
 
@@ -504,12 +511,12 @@ single activity that contains the Webview. However, there are instances in which
 other activities may be launched by plugins and temporarily push the Cordova
 activity to the background. These other Activities are typically launched in
 order to perform a specific task using a native application installed on the
-device. For example, the Apache camera plugin launches whatever camera activity
-is natively installed on the device in order to take a photo. Reusing the
-installed camera application in this way makes your application feel much more
-like a native app when the user tries to take a photo. Unfortunately, when the
-native Activity pushes your app to the background there is a chance the OS
-will kill it.
+device. For example, the [Cordova camera plugin](../../../reference/cordova-plugin-camera/index.html)
+launches whatever camera activity is natively installed on the device in order
+to take a photo. Reusing the installed camera application in this way makes your
+application feel much more like a native app when the user tries to take a
+photo. Unfortunately, when the native Activity pushes your app to the background
+there is a chance the OS will kill it.
 
 For a clearer understanding of this second case, let's walk through an example
 using the camera plugin. Imagine you have an application that requires the user
