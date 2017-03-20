@@ -71,15 +71,8 @@ according to your JDK installation path (see [Setting Environment Variables](#se
 
 #### Android SDK
 
-Install [Android Studio](reference/cordova-plugin-camera/index.html) or the
-[Android Stand-alone SDK Tools](https://developer.android.com/studio/index.html)
-(scroll down a bit). Proceed with Android Studio if you plan on developing new
-Cordova for Android plugins or using native tools to run and debug the Android
-platform. Otherwise, the Android Stand-alone SDK Tools are enough to build and
-deploy Android applications.
-
-Detailed installation instructions are available as part of installation
-links above.
+Install [Android Studio][android_studio].
+Detailed installation instructions are on Android's developer site.
 
 #### Adding SDK Packages
 
@@ -173,7 +166,7 @@ to create an Android Virtual Device (AVD). See the Android documentation for
 [configuring the emulator](https://developer.android.com/studio/run/emulator.html#about),
 and [setting up hardware acceleration](https://developer.android.com/studio/run/emulator-acceleration.html).
 
-Once your AVD is configured correctly, you should be able to deploy you Cordova
+Once your AVD is configured correctly, you should be able to deploy your Cordova
 application to the emulator by running:
 
 ```bash
@@ -384,7 +377,7 @@ Webview.
 ### Opening a Project in Android Studio
 
 Cordova for Android projects can be opened in the Android IDE,
-[Android Studio](reference/cordova-plugin-camera/index.html).
+[Android Studio][android_studio].
 This can be useful if you wish to use Android Studio's built in Android
 debugging/profiling tools or if you are developing Android plugins. Please note
 that when opening your project in Android studio, it is recommended that you do
@@ -759,3 +752,4 @@ do some amount of testing with this setting enabled to make sure that your
 application is properly maintaining state.
 
 [cli_reference]: ../../../reference/cordova-cli/index.html
+[android_studio]: https://developer.android.com/studio/index.html
