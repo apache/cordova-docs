@@ -9,6 +9,11 @@ www/_data/all-pages.yml
 www/_data/toc/*-gen.yml
 www/static/css
 www/static/js/plugins.js
+
+# Note if you need to make changes to the following folder, it should be
+# done else where as these files are pulled from other sources
+# see fetch_docs.js for more details.
+# www/_data/fetched-files.yml contains an informative list of src/dest pairs
 www/docs/*/dev/reference
 
 node_modules
