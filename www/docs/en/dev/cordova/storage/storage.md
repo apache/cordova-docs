@@ -300,6 +300,16 @@ It is available in the following variations:
 * **[cordova-sqlite-evfree][SQLiteEVFree]** - similar to *cordova-sqlite-ext*
   but with improved memory handling. Available under GPL v3 or commercial license.
 
+### Key/Value Pair Storage Plugin
+The **[cordova-plugin-nativestorage][NativeStorage]** plugin offers native storage of key/value pairs.
+
+#### Advantage over LocalStorage
+
+- Stores complex data structures (NOTE: only data that can be serialized can be stored).
+- Asynchronous API means calls will not lock up the user interface.
+- iOS stores `localStorage` data in a location that may be cleaned out by
+  the OS when space is required. This problem is elimanted with `NativeStorage`.
+
 ### Other Plugins
 
 Search [Cordova plugins][CordovaPlugins] for other plugins that provide
@@ -324,4 +334,5 @@ alternative storage options.
 [SQLiteStorage]: https://github.com/litehelpers/Cordova-sqlite-storage#readme
 [SQLiteExt]: https://github.com/litehelpers/cordova-sqlite-ext#readme
 [SQLiteEVFree]: https://github.com/litehelpers/Cordova-sqlite-enterprise-free#readme
+[NativeStorage]: https://github.com/TheCocoaProject/cordova-plugin-nativestorage#readme
 [CordovaPlugins]: {{ site.baseurl }}/plugins
