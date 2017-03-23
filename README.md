@@ -236,6 +236,8 @@ Working on the Documentation
 
 Refer to this [README.md](doc/README/en/README.md) for information about writing documentation.
 
+> Note: many changes to the overall documentation come from other repos and are simply pulled together by a build.  tools/bin/fetch_docs.js has more details and www/_data/fetched-files.yml contains an informative list of src/dest pairs.  Most auto-generated files have a comment tag at the top of the file to indicate that they come from elsewhere.
+
 Adding a Tool or a Showcase App
 ===============================
 
