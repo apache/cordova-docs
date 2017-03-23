@@ -497,6 +497,8 @@ arch(string) | The architecture for which the `.so` file has been built, either 
 device-target(string) <br/> ==windows== | Allowed values: `win` (or `windows`), `phone` or `all`. <br/> Indicates that the `<SDKReference>` should only be included when building for the specified target device type.
 versions(string) <br/> ==windows== | Indicates that the `<SDKReference>` should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
 
+For Android, the `<lib-file>` element is used for installing **.jar** files in the project's **libs directory**. It supports only the `src` attribute which contains the relative path to the .jar file.
+
 Examples:
 ```xml
 <lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
