@@ -96,11 +96,11 @@ or any subdirectories:
 $ cd hello
 ```
 
-Add the platforms that you want to target your app. We will add the 'ios' and 'android' platform and ensure they get saved to `config.xml`:
+Add the platforms that you want to target your app. We will add the 'ios' and 'android' platform and ensure they get saved to `config.xml` and `package.json`:
 
 ```bash
-$ cordova platform add ios --save
-$ cordova platform add android --save
+$ cordova platform add ios
+$ cordova platform add android
 ```
 
 To check your current set of platforms:
@@ -212,7 +212,7 @@ npm and you can search for them on the [plugin search page](/plugins/). Some key
 $ cordova plugin search camera
 ```
 
-To add the camera plugin, we will specify the npm package name for the camera plugin:
+To add and save the camera plugin to `config.xml` and `package.json`, we will specify the npm package name for the camera plugin:
 
 ```
 $ cordova plugin add cordova-plugin-camera
