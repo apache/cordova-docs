@@ -112,6 +112,8 @@ Icons are not applicable to the Browser platform.
         <!-- iPad -->
         <icon src="res/ios/icon-72.png" width="72" height="72" />
         <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+        <!-- iPad Pro -->
+        <icon src="res/ios/icon-167.png" width="167" height="167" />
         <!-- iPhone Spotlight and Settings Icon -->
         <icon src="res/ios/icon-small.png" width="29" height="29" />
         <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
