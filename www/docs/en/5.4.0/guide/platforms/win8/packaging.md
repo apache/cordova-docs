@@ -35,7 +35,7 @@ In Windows project, identity details are kept in a file named package.appxmanife
 - Publisher
 - Version
 
-*Name* and *Version* can be set from **config.xml**. *Publisher* can be provided as a build parameter or can be set on **build.json** file.
+*Name* and *Version* can be set from **config.xml**. *Publisher* can be provided by a signing certificate `.pfx` as a build parameter or can be set on **build.json** file.
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/win8/packaging.png)
 
@@ -53,8 +53,7 @@ Alternatively, these values could be specified using a build configuration file 
             },
             "release": {
                 "packageCertificateKeyFile": "c:\\path-to-key\\keycert.pfx",
-                "packageThumbprint": "ABCABCABCABC123123123123",
-                "publisherId": "CN=FakeCorp.com, L=Redmond, S=Washington, C=US"
+                "packageThumbprint": "ABCABCABCABC123123123123"
             }
         }
     }
