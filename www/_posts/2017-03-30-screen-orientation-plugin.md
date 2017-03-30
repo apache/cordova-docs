@@ -7,10 +7,11 @@ title:  "Screen Orientation Plugin"
 categories: news
 tags: cordova screen orientation
 ---
+Originally posted at this [PhoneGap blog](https://blog.phonegap.com/cordova-screen-orientation-plugin-fabeba30a4c4)
 
 ## Cordova Screen Orientation Plugin
 
-The new version(2.0.0) of the cordova screen orientation plugin was released recently. The purpose of the plugin is to set/lock the screen orientation in a common way for all the major platforms. This new version conforms with the specifications mentioned in the [W3C Screen Orientation API ], currently in open draft.
+The new version(2.0.0) of the cordova screen orientation plugin was released recently. The purpose of the plugin is to set/lock the screen orientation in a common way for all the major platforms. This new version conforms with the specifications mentioned in the [W3C Screen Orientation API](https://www.w3.org/TR/screen-orientation/), currently in open draft.
 
 The plugin incorporates these major updates:
 
