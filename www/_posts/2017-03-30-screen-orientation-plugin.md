@@ -64,5 +64,6 @@ screen.orientation.addEventListener(‘change’, function(){
  console.log(screen.orientation.type);
 });
 ```
-The Demo Application
-The demo application is included on the github repository. Once the plugin has been added to it, the demo application allows the user to test the orientation types with the screen.orientation.lock() method. The demo applications is explained in detail in this [Demo App](https://www.youtube.com/watch?v=P4Ulb9SQllA&t=5s)
+### The Demo Application
+
+The demo application is included on the github repository. Once the plugin has been added to it, the demo application allows the user to test the orientation types with the screen.orientation.lock() method. The demo application is explained in detail [here](https://www.youtube.com/watch?v=P4Ulb9SQllA&t=5s).
