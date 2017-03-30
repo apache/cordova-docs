@@ -60,7 +60,7 @@ screen.orientation.onchange = function(){
 ```
 
 The ‘change’ event can also be added to the screen.orientation object :
-```
+```js
 screen.orientation.addEventListener(‘change’, function(){
  console.log(screen.orientation.type);
 });
