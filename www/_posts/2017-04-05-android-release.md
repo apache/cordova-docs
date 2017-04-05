@@ -28,7 +28,7 @@ This release will have to be explicitly added until the upcoming `cordova@7` rel
 
 <!--more-->
 ## What's new in Android
-* [CB-12621](https://issues.apache.org/jira/browse/CB-12621) reverted elementtree dep to 0.1.6
+* [CB-12621](https://issues.apache.org/jira/browse/CB-12621) reverted `elementtree` dep to `0.1.6`
 * [CB-12614](https://issues.apache.org/jira/browse/CB-12614) Adding headers to tests
 * [CB-8978](https://issues.apache.org/jira/browse/CB-8978) Prepare copy `resource-files` from `config.xml`
 * [CB-12605](https://issues.apache.org/jira/browse/CB-12605) Fix a requirements check failure on **Windows**
