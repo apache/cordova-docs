@@ -100,7 +100,7 @@ prior to 4.0.0, see older versions of this documentation.
 
 ## iOS Whitelisting
 
-`Cordova-ios` version 4.0 and greater does **not** require the [cordova-plugin-whitelist][wlp] plugin to be installed, however it's configuration details apply to iOS too. The `<allow-intent>` and `<allow-navigation>` tags are _new_ for cordova-ios 4.x and greater, see the [cordova-plugin-whitelist][wlp] documentation for details on the usage of these tags.
+`Cordova-ios` version 4.0 and greater does **not** require the [cordova-plugin-whitelist][wlp] plugin to be installed, however its configuration details apply to iOS too. The `<allow-intent>` and `<allow-navigation>` tags are _new_ for cordova-ios 4.x and greater, see the [cordova-plugin-whitelist][wlp] documentation for details on the usage of these tags.
 
 For cordova-ios versions prior to 4.0.0, see the older versions of this documentation.
 
