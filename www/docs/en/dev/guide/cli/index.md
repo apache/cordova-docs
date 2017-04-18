@@ -255,7 +255,7 @@ Instead, the top-level `merges` directory offers a place to specify
 assets to deploy on specific platforms. Each platform-specific
 subdirectory within `merges` mirrors the directory structure of the
 `www` source tree, allowing you to override or add files as needed.
-For example, here is how you might uses `merges` to boost the default
+For example, here is how you might use `merges` to boost the default
 font size for Android devices:
 
 * Edit the `www/index.html` file, adding a link to an additional CSS
