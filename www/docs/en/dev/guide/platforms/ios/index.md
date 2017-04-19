@@ -251,7 +251,7 @@ within Xcode. Double-click to open the `${PROJECT_NAME}/platforms/ios/${PROJECT_
 file or open Xcode from your terminal:
 
 ```bash
-$ open platforms/ios/HelloWorld.xcworkspace/
+$ open -a Xcode platforms/ios
 ```
 
 The screen should look like this:
