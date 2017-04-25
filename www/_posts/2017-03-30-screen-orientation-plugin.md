@@ -25,16 +25,16 @@ The plugin incorporates these major updates:
 The screen orientation can be locked to a particular orientation, say, for example, landscape, using :
 
 ```js
-screen.orientation.lock(‘landscape’).then(function success() {
-console.log(“Successfully locked the orientation”);
+screen.orientation.lock('landscape').then(function success() {
+console.log("Successfully locked the orientation");
 },function error(errMsg) {
-console.log(“Error locking the orientation :: “ + errMsg);
+console.log("Error locking the orientation :: " + errMsg);
 });
 ```
 
 The code above sets the screen orientation device to any landscape mode
 ( landscape-primary or landscape-secondary) depending upon the rotation.
-The screen.orientation.lock(OrientationLockType); method returns a promise.On successfully setting the orientation, it resolves a promise. If the screen is not locked successfully, the promise rejects with ‘NotSupportedError’ .
+The screen.orientation.lock(OrientationLockType); method returns a promise.On successfully setting the orientation, it resolves a promise. If the screen is not locked successfully, the promise rejects with 'NotSupportedError' .
 The screen orientation can be unlocked by using:
 
 ```js
@@ -47,11 +47,11 @@ The code above makes the screen adapt to the default orientation of the device. 
 
 The current screen orientation can be accessed as :
 ```js
-console.log(‘Orientation is’ + screen.orientation.type);
+console.log('Orientation is' + screen.orientation.type);
 ```
 
-### Addition of ‘onchange’ attribute to the screen.orientation object
-An example usage of the ‘onchange’ event handler:
+### Addition of 'onchange' attribute to the screen.orientation object
+An example usage of the 'onchange' event handler:
 
 ```js
 screen.orientation.onchange = function(){
@@ -59,9 +59,9 @@ screen.orientation.onchange = function(){
 };
 ```
 
-The ‘change’ event can also be added to the screen.orientation object :
+The 'change' event can also be added to the screen.orientation object :
 ```js
-screen.orientation.addEventListener(‘change’, function(){
+screen.orientation.addEventListener('change', function(){
  console.log(screen.orientation.type);
 });
 ```
