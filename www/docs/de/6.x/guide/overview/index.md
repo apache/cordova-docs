@@ -23,19 +23,19 @@ toc_title: Overview
 
 # Übersicht
 
-Apache Cordova ist ein Open-Source-mobile-Entwicklung-Framework. Sie können standard-Web-Technologien wie HTML5, CSS3 und JavaScript für Cross-Plattform-Entwicklung, Vermeidung jeder mobilen Plattformen native Entwicklung der Sprache zu verwenden. Anwendungen werden in Verpackungen, die gezielt auf jede Plattform und verlassen sich auf standardkonforme API Anbindungen an jedes Gerät Sensoren, Daten und Netzwerkstatus zugreifen.
+Apache Cordova ist ein Open-Source-Framework für die mobile Software-Entwicklung. Es ermöglicht, unter der Verwendung von Standard-Web-Technologien wie HTML5, CSS3 und JavaScript, die Entwicklung von Cross-Plattform-Anwendungen, ohne dabei native Entwicklungssprachen  der mobilen Plattformen nutzen zu müssen. Anwendungen werden in sogenannte Wrapper verschalt, die gezielt auf die jeweilige Plattform angepasst sind und somit den Zugriff auf Sensoren, Daten und den Netzwerkstatus eines Gerätes durch standardkonforme Schnittstellen erlauben.
 
-Apache Cordova graduierte Oktober 2012 als Top-Level-Projekt innerhalb der Apache Software Foundation (ASF). Durch die ASF wird künftige Cordova offene Leitung des Projekts sichergestellt. Es bleibt immer kostenlos und open Source unter der Apache License, Version 2.0. Besuchen Sie [cordova.apache.org][1] für weitere Informationen.
+Apache Cordova erreichte im Oktober 2012 den Top-Level-Projektstatus innerhalb der Apache Software Foundation (ASF). Durch die ASF wird die künftige Entwicklung offene Leitung des Projekts sichergestellt. Dabei bleibt Cordova kostenlos und untersteht als Opensource Porjekt der Apache License, Version 2.0. Besuchen Sie [cordova.apache.org][1] für weitere Informationen.
 
  [1]: http://cordova.apache.org
 
-Verwenden Sie Apache Cordova, falls Sie sind:
+Verwenden Sie Apache Cordova, wenn Sie:
 
-*   mobile Entwickler und wollen eine Anwendung über mehrere Plattformen hinweg zu erweitern, ohne es erneut mit Sprache und Tool jede Plattform implementieren festgelegt.
+*   ein mobiler Anwendungsentwickler sind und eine Anwendung über mehrere Plattformen hinweg verbreiten möchten, ohne für jede Plattform  eine separate Anwendungsversion in nativer Sprache implementieren müssen.
 
-*   Speichern Portale, Webentwickler und wollen eine Webanwendung bereitstellen, die für den Vertrieb in verschiedenen app gepackt ist.
+*   ein Webentwickler sind und eine Webanwendung bereitstellen wollen, die unter verschiedenen App-Portalen verfügbar gemacht werden soll.
 
-*   mobile Entwickler interessiert mischen systemeigene Anwendungskomponenten mit einer *WebView* (spezielle Browser-Fenster), die auf Geräteebene APIs, zugreifen kann oder wollen Sie eine Plugin-Schnittstelle zwischen systemeigenen und WebView Komponenten entwickeln.
+*   mobile Anwendungsentwickler sind, welcher interessiert ist am Verknüpfen von systemeigenen Anwendungskomponenten mit den Vorteilen einer *WebView* (spezielle Browser-Fenster), welches den Zugriff auf Schnittstellen auf Geräteebene ermöglicht; Oder Sie Plugin-Schnittstellen zwischen systemeigenen und WebView Komponenten entwickeln.
 
 ## Basiskomponenten
 
