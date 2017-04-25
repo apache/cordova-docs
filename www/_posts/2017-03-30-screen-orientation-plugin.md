@@ -17,7 +17,7 @@ The plugin incorporates these major updates:
 
 1. Locking/unlocking the screen orientation.
 2. Accessing the current screen orientation.
-3. Addition of ‘onchange’ event handler to the screen.orientation object.
+3. Addition of 'onchange' event handler to the screen.orientation object.
 4. A Demo App.
 
 ### Locking/unlocking the screen orientation
@@ -26,9 +26,9 @@ The screen orientation can be locked to a particular orientation, say, for examp
 
 ```js
 screen.orientation.lock('landscape').then(function success() {
-console.log("Successfully locked the orientation");
-},function error(errMsg) {
-console.log("Error locking the orientation :: " + errMsg);
+    console.log("Successfully locked the orientation");
+}, function error(errMsg) {
+    console.log("Error locking the orientation :: " + errMsg);
 });
 ```
 
@@ -55,14 +55,14 @@ An example usage of the 'onchange' event handler:
 
 ```js
 screen.orientation.onchange = function(){
- console.log(screen.orientation.type);
+ 	console.log(screen.orientation.type);
 };
 ```
 
 The 'change' event can also be added to the screen.orientation object :
 ```js
 screen.orientation.addEventListener('change', function(){
- console.log(screen.orientation.type);
+ 	console.log(screen.orientation.type);
 });
 ```
 ### The Demo Application
