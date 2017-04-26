@@ -476,7 +476,7 @@ This tag installs resource files into your platform, and is similar to the same 
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
-src(string) <br/> ==iOS== ==Android==| *Required* <br/> Location of the file relative to `config.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
+src(string) <br/> ==iOS== ==Android==| *Required* <br/> Location of the file relative to `config.xml`.
 target(string) | Path to where the file will be copied in your directory.
 
 Examples:
