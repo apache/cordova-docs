@@ -178,7 +178,7 @@ cordova-plugin-splashscreen@4.0.1
 * [CB-9287](https://issues.apache.org/jira/browse/CB-9287) Not enough Icons and Splashscreens for Windows 8.1 and Windows Phone 8.1
 * [CB-11917](https://issues.apache.org/jira/browse/CB-11917) - Remove pull request template checklist item: "iCLA has been submitted…"
 * [CB-11830](https://issues.apache.org/jira/browse/CB-11830) (iOS) Fix doc typos in PR#114
-* [CB-11829](https://issues.apache.org/jira/browse/CB-11829) (iOS) Support for CB-9762; docs (CB-11830)
+* [CB-11829](https://issues.apache.org/jira/browse/CB-11829) (iOS) Support for [CB-9762](https://issues.apache.org/jira/browse/CB-9762); docs (CB-11830)
 * [CB-11832](https://issues.apache.org/jira/browse/CB-11832) Incremented plugin version.
 
 cordova-plugin-statusbar@2.2.1

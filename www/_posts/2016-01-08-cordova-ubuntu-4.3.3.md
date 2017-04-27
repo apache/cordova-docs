@@ -25,7 +25,7 @@ To add it explicitly:
 <!--more-->
 ## What's new in Cordova Ubuntu
 
-* [CB-10470] Fix reliance on deprecated Oxide's onLoadingChanged signal
+* [CB-10470](https://issues.apache.org/jira/browse/CB-10470) Fix reliance on deprecated Oxide's onLoadingChanged signal
 * Fix debugging enabled flag & remove webkit specific bit
 
 

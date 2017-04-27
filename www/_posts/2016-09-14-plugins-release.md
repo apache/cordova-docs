@@ -152,7 +152,7 @@ cordova-plugin-dialogs@1.3.0
 * [CB-11795](https://issues.apache.org/jira/browse/CB-11795) Add 'protective' entry to cordovaDependencies
 * [CB-8773](https://issues.apache.org/jira/browse/CB-8773) Fix for **iOS 8** keyboard not appearing on prompt
 * [CB-11677](https://issues.apache.org/jira/browse/CB-11677) **Android**: made text, entered to prompt dialog visible
-* CB-8947:(**ios**) Fix crash. Convert non-string messages to strings. Added tests.
+* [CB-8947](https://issues.apache.org/jira/browse/CB-8947):(**ios**) Fix crash. Convert non-string messages to strings. Added tests.
 * Add badges for paramedic builds on Jenkins
 * Add pull request template.
 * [CB-11218](https://issues.apache.org/jira/browse/CB-11218) Convert button list to appropriate type
