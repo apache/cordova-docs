@@ -13,7 +13,7 @@ We are happy to announce a minor version of `Cordova iOS 4.4.0` has been release
 Three new features were added:
 1. [&lt;resource-file&gt;](https://cordova.apache.org/docs/en/latest/config_ref/index.html#resource-file) tag support in config.xml
 2. [Carthage support](https://cordova.apache.org/docs/en/latest/guide/platforms/ios/webview.html)
-3. Dynamic framework support through the ["embed" attribute](https://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#framework) of the &lt;framework&gt; tag in plugin.xml (needs cordova-cli@7.0.0, which is coming soon)
+3. Dynamic framework support through the ["embed" attribute](https://cordova.apache.org/docs/en/dev/plugin_ref/spec.html#framework) of the &lt;framework&gt; tag in plugin.xml (needs cordova-cli@7.0.0, which is coming soon)
 
 Other notable issues:
 
