@@ -43,7 +43,9 @@ distribution. Download it from
 package.
 
 You have two methods for adding Cordova to your project. The first is using [Carthage](https://github.com/Carthage/Carthage), and the 
-second is to manually add Cordova. After using either of these two methods, continue with the **"Using CDVViewController"** section.
+second is to manually add Cordova. Note that Carthage support is only in cordova-ios version 4.4.0 or greater. 
+
+After using either of these two methods, continue with the **"Using CDVViewController"** section.
 
 ## 1. Add Cordova.framework to the Xcode Project using Carthage
 

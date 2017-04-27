@@ -31,7 +31,7 @@ Support for WebViews for iOS started with Cordova version 1.4, using a
 implementation.  Cordova 2.0 and later versions only support the
 subproject-based Cleaver implementation.
 
-These instructions require at least Cordova 3.x and Xcode 6.0, along
+These instructions require at least Cordova 4.x and Xcode 8.0, along
 with a `config.xml` file from a newly created iOS project. You can use
 the procedure in [The Command-Line Interface](../../cli/index.html) to create a new project,
 then obtain the `config.xml` file from within the named application's
@@ -42,7 +42,26 @@ distribution. Download it from
 [cordova.apache.org](http://cordova.apache.org) and unzip its iOS
 package.
 
-## Adding Cleaver to the Xcode Project (CordovaLib Sub-Project)
+You have two methods for adding Cordova to your project. The first is using [Carthage](https://github.com/Carthage/Carthage), and the 
+second is to manually add Cordova. Note that Carthage support is only in cordova-ios version 4.4.0 or greater. 
+
+After using either of these two methods, continue with the **"Using CDVViewController"** section.
+
+## 1. Add Cordova.framework to the Xcode Project using Carthage
+
+1. Install [Carthage](https://github.com/Carthage/Carthage)
+
+1. In your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile), add (substitute &lt;version_or_tag&gt; for the appropriate version):
+
+        git "git://git.apache.org/cordova-ios.git" "<version_or_tag>" # Apache
+
+1. Run 
+
+        carthage update
+
+1. Add `Carthage/Build/iOS/Cordova.framework` into your Xcode project.
+
+## 2. Adding Cleaver to the Xcode Project (CordovaLib Sub-Project)
 
 1. Quit Xcode if it is running.
 
