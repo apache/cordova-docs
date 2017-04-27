@@ -468,6 +468,23 @@ Examples:
 <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
 ```
 
+## resource-file
+
+This tag installs resource files into your platform, and is similar to the same tag in plugin.xml. This tag is currently only supported on `cordova-ios@4.4.0` or greater and `cordova-android@6.2.1` or greater.
+
+Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+---------------- | ------------
+src(string) <br/> ==iOS== ==Android==| *Required* <br/> Location of the file relative to `config.xml`.
+target(string) | Path to where the file will be copied in your directory.
+
+Examples:
+
+For Android:
+```xml
+<resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
+```
+
+
 # Sample config.xml
 Below is a sample config.xml file:
 
