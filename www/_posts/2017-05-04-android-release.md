@@ -27,7 +27,5 @@ This release will have to be explicitly added until the upcoming `cordova@7` rel
 <!--more-->
 ## What's new in Android
 
-* [CB-12640](https://issues.apache.org/jira/browse/CB-12640) better handling of unrecognized commands on **windows**.
-* [CB-12640](https://issues.apache.org/jira/browse/CB-12640) flipped avd parsing logic so that it always tries to use `avdmanager` to retrieve avds first, then falls back to `android` command if `avdmanager` cannot be found.
-* [CB-12640](https://issues.apache.org/jira/browse/CB-12640) support for `android sdk tools 26.0.1`.
+* [CB-12640](https://issues.apache.org/jira/browse/CB-12640) Support for Android SDK Tools v26 and newer. Flipped AVD parsing logic so that it always tries to use `avdmanager` to retrieve AVDs first, then falls back to `android` command if `avdmanager` cannot be found. Improve handling of SDK tools commands on Windows.
 
