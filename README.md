@@ -8,11 +8,13 @@ Installing
 
 ## Ruby
 
+Ruby 1.8, 1.9 and 2.4 are confirmed _not_ to work. Please make sure you are running ruby 2.0.
+
 ### Mac OS X
 
 Install Homebrew from [this site][homebrew], and then run:
 
-    brew install ruby
+    brew install ruby@2.0
 
 ### Windows
 
