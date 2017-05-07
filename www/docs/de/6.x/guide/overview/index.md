@@ -23,15 +23,15 @@ toc_title: Overview
 
 # Übersicht
 
-Apache Cordova ist ein Open-Source-Framework für die mobile Software-Entwicklung. Es ermöglicht, unter der Verwendung von Standard-Web-Technologien wie HTML5, CSS3 und JavaScript, die Entwicklung von Cross-Plattform-Anwendungen, ohne dabei native Entwicklungssprachen  der mobilen Plattformen nutzen zu müssen. Anwendungen werden in sogenannte Wrapper verschalt, die gezielt auf die jeweilige Plattform angepasst sind und somit den Zugriff auf Sensoren, Daten und den Netzwerkstatus eines Gerätes durch standardkonforme Schnittstellen erlauben.
+Apache Cordova ist ein Open-Source-Framework für die mobile Software-Entwicklung. Es ermöglicht, unter der Verwendung von Standard-Web-Technologien wie HTML5, CSS3 und JavaScript, die Entwicklung von Cross-Plattform-Anwendungen, ohne dabei native Entwicklungssprachen  der mobilen Plattformen nutzen zu müssen. Anwendungen werden in sogenannte Wrapper verpackt, die gezielt auf die jeweilige Plattform angepasst sind und somit den Zugriff auf Sensoren, Daten und den Netzwerkstatus eines Gerätes durch standardkonforme Schnittstellen erlauben.
 
-Apache Cordova erreichte im Oktober 2012 den Top-Level-Projektstatus innerhalb der Apache Software Foundation (ASF). Durch die ASF wird die künftige Entwicklung offene Leitung des Projekts sichergestellt. Dabei bleibt Cordova kostenlos und untersteht als Opensource Porjekt der Apache License, Version 2.0. Besuchen Sie [cordova.apache.org][1] für weitere Informationen.
+Apache Cordova erreichte im Oktober 2012 den Top-Level-Projektstatus innerhalb der Apache Software Foundation (ASF). Durch die ASF wird die künftige Entwicklung und Leitung des Projekts sichergestellt. Dabei bleibt Cordova kostenlos und untersteht als Open Source Projekt der Apache Lizens, Version 2.0. Besuchen Sie [cordova.apache.org][1] für weitere Informationen.
 
  [1]: http://cordova.apache.org
 
 Verwenden Sie Apache Cordova, wenn Sie:
 
-*   ein mobiler Anwendungsentwickler sind und eine Anwendung über mehrere Plattformen hinweg verbreiten möchten, ohne für jede Plattform  eine separate Anwendungsversion in nativer Sprache implementieren müssen.
+*   ein mobiler Anwendungsentwickler sind und eine Anwendung über mehrere Plattformen hinweg verbreiten möchten, ohne für jede Plattform  eine separate Anwendungsversion in nativer Sprache implementieren zu müssen.
 
 *   ein Webentwickler sind und eine Webanwendung bereitstellen wollen, die unter verschiedenen App-Portalen verfügbar gemacht werden soll.
 
