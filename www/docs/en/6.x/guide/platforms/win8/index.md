@@ -371,3 +371,4 @@ The Enterprise Authentication and Shared User Certificates capabilities are spec
 
 [1]: https://msdn.microsoft.com/en-us/library/hh446593(v=vs.85).aspx
 [2]: https://technet.microsoft.com/en-us/library/ee624045(v=ws.10).aspx
+
