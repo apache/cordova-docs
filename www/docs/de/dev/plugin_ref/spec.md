@@ -21,49 +21,38 @@ title: Plugin-Spezifikation
 toc_title: Plugin.xml
 ---
 
-# Plugin-Spezifikation
+# plugin.xml - Spezifikation
 
-Die `plugin.xml` Datei ist ein XML‑Dokument in den `plugins` Namespace: `http://apache.org/cordova/ns/plugins/1.0` . Es enthält eine Top-Level- `plugin` Element, das das Plugin definiert, und Kinder, die die Struktur des Plugins zu definieren.
+Die `plugin.xml` definiert die Struktur, Einstellungen und Vorgaben für dein Plugin. Sie hat mehrere Elemente um die jeweiligen Details über dein Plugin anzugeben. Sie ist ein XML‑Dokument im `plugins`-Namespace: `http://apache.org/cordova/ns/plugins/1.0`, enthält ein Top-Level- `plugin`-Element, dass das Plugin definiert, und dessen Kinder, die die Struktur des Plugins definieren.
 
-Ein Beispiel-Plugin-Element:
+Beispiel:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.alunny.foo"
+    version="1.0.2">
+```
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.alunny.foo"
-        version="1.0.2">
-    
+Attribute (Typ) <br/> <span class="sub-header">Nur für Plattform:</span> | Beschreibung
+---------------- | ------------
+`xmlns`(string) | *erforderlich* <br/> der Plugin-Namespace `http://apache.org/cordova/ns/plugins/1.0`. Enthält das Dokument XML-Strukturen aus anderen Namespaces, z. B. Tags die über die `AndroidManifest.xml`-Datei hinzugefügt werden, müssen die Namespaces auch in diesem Element enthalten sein.
+`id`(string) | *erforderlich* <br/> eine Reverse-Domain-Style-Bezeichnung für das Plugin, wie`com.alunny.foo`.
+`version`(string) | *erforderlich* <br/> eine Versionsnummer für das Plugin. [Semver](http://semver.org/)-Syntax oder Major-Minor-Patch-Stils ^\d+[.]\d+[.]\d+$.
 
-## *Plugin* Element
 
-Das `plugin` Element ist das Plugin Manifest Element der obersten Ebene. Es verfügt über die folgenden Attribute:
-
-*   `xmlns`(erforderlich): die Plugin-Namespace `http://apache.org/cordova/ns/plugins/1.0` . Enthält das Dokument XML aus anderen Namespaces, z. B. Tags hinzugefügt werden die `AndroidManifest.xml` -Datei, diese Namespaces sollten auch in Element der obersten Ebene enthalten sein.
-
-*   `id`(erforderlich): eine Reverse-Domain style Bezeichner für das Plugin, wie`com.alunny.foo`
-
-*   `version`(erforderlich): eine Versionsnummer für das Plugin, das den folgende reguläre Ausdruck der Major-Minor-Patch Stil entspricht:
-    
-        ^\d+[.]\d+[.]\d+$
-        
 
 ## *Motoren* und *Motor* -Elemente
 
-Die untergeordneten Elemente der `<engines>` Element angeben Versionen von Apache-Cordova-basierten Frameworks, die dieses Plugin unterstützt. Ein Beispiel:
+Die untergeordneten Elemente des `<engines>`-Tags geben die Apache Cordova Versionen an, die von diesem Plugin unterstützt werden. Ein Beispiel:
 
     <engines>
         <engine name="cordova" version="1.7.0" />
         <engine name="cordova" version="1.8.1" />
         <engine name="worklight" version="1.0.0" platform="android" scriptSrc="worklight_version"/>
     </engines>
-    
-
-Ähnlich wie die `<plugin>` des Elements `version` Attribut, die angegebenen Versionszeichenfolge sollte eine Major-Minor-Patch-Zeichenfolge, die dem regulären Ausdruck entsprechen entsprechen:
-
-        ^\d+[.]\d+[.]\d+$
-    
-
-Motor-Elemente können auch angeben, fuzzy-Treffer um Wiederholung zu vermeiden und Wartung zu verringern, wenn die zugrunde liegende Plattform aktualisiert wird. Supporttools sollte mindestens `>` , `>=` , `<` und `<=` , zum Beispiel:
+    
+`engine`-Elemente können auch mit Versionsparametern angeben werden, um Aktualisierungen bei neuen Versionen zu vermeiden. Unterstützt werden `>` , `>=` , `<` und `<=` und geben jeweils die niedrigste unterstützte Version an, zum Beispiel:
 
     <engines>
         <engine name="cordova" version=">=1.7.0" />
@@ -71,7 +60,7 @@ Motor-Elemente können auch angeben, fuzzy-Treffer um Wiederholung zu vermeiden 
     </engines>
     
 
-Die `<engine>` Markierungen hat auch Standardunterstützung für alle die Hauptplattformen Cordova ist vorhanden. Angabe der `cordova` Motor Tag bedeutet, dass alle Versionen von Cordova auf jeder Plattform das Motor-Version-Attribut genügen müssen. Sie können auch eine Liste bestimmte Plattformen und ihre Versionen um die CatchAll-überschreiben `cordova` Motor:
+Die Angabe der `<engine>` von `cordova` kann auch eine Mindestversion der Plattform angeben und der durch eine weitere Angabe der jeweiligen Plattform überschrieben werden:
 
     <engines>
         <engine name="cordova" version=">=1.7.0" />
