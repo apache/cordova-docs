@@ -65,7 +65,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/apache/cordova-website.git"
+    "url": "https://github.com/apache/cordova-docs"
   },
   "bugs": {
     "url": "https://github.com/apache/cordova-website/issues"
