@@ -47,14 +47,6 @@
         Popular IDE for building cross-platform apps for Android, iOS, and
         Windows. Complete with advanced build and debugging support.
 
--   name: TACO
-    image: TACO_105px.png
-    url: http://taco.tools
-    description: >
-        Tools for Apache Cordova is a command line utility designed to make
-        building hybrid apps easy and fun.  Faster setup. Friendlier command
-        line. Validated quality at run-time.
-
 -   name: Telerik
     image: telerik.png
     url: http://www.telerik.com/
