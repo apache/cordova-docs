@@ -204,6 +204,9 @@ Examples:
 <allow-intent href="tel:*" />
 <allow-intent href="sms:*" />
 ```
+## edit-config
+
+See [<edit-config> docs][edit_config] for plugin.xml.
 
 ## engine
 Specifies details about what platform to restore during a prepare.
@@ -527,3 +530,4 @@ Below is a sample config.xml file:
 [whitelist_navigation]: ../reference/cordova-plugin-whitelist/index.html#navigation-whitelist
 [whitelist_intent]:     ../reference/cordova-plugin-whitelist/index.html#intent-whitelist
 [statusbar_plugin]:     ../reference/cordova-plugin-statusbar/
+[edit_config]:          ../plugin_ref/spec.html#edit-config
