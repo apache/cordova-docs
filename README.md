@@ -101,9 +101,9 @@ Verify the installation by running:
 Once Ruby and JavaScript are installed, install Ruby dependencies by running:
 
     gem install bundle
-    bundle install
+    bundle install --path ./ruby_modules
 
-On some systems, the above commands need to be prefixed with `sudo`. Similarly on Windows, the `cmd` window in which those commands are to be run might need to have been "Run as Administrator."
+This will install the required Ruby Gems locally into a subfolder called `ruby_modules` in your repo folder. On some systems, the above commands need to be prefixed with `sudo`. Similarly on Windows, the `cmd` window in which those commands are to be run might need to have been "Run as Administrator."
 
 Finally, install JavaScript dependencies by running:
 
