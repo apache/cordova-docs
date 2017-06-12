@@ -17,4 +17,7 @@ www/static/js/plugins.js
 www/docs/*/dev/reference
 
 node_modules
+ruby_modules
+.bundle
+.DS_Store
 Gemfile.lock
