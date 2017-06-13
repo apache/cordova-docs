@@ -38,9 +38,9 @@ CLI's shorthand names.
     <tr>
         <th></td>
         <th>android</th>
-        <th>blackberry10 (depricated)</th>
+        <th>blackberry10 (deprecated)</th>
         <th>ios</th>
-        <th>Ubuntu (depricated)</th>
+        <th>Ubuntu (deprecated)</th>
         <th>windows<br/>(8.1, 10,<br/>Phone 8.1)</th>
         <th>OS X</th>
     </tr>
