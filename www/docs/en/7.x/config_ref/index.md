@@ -64,6 +64,9 @@ id(string) | *Required* <br/> Specifies the app's reverse-domain identifier, and
 version(string) | *Required* <br/> Full version number expressed in major/minor/patch notation.
 android-versionCode(string) <br/> ==Android== | Alternative version for Android. Sets the [version code](http://developer.android.com/tools/publishing/versioning.html) for the application. See [the Android guide](../guide/platforms/android/index.html#setting-the-version-code) for information on how this attribute may be modified.
 defaultlocale <br /> ==iOS== | Specified the default language of the app, as an IANA language code.
+android-packageName(string) <br/> ==Android== | Alternative package name for Android, overrides `id`.
+android-activityName(string) <br/> ==Android== | Set the activity name for your app in AndroidManifest.xml. Note that this is only set once after the Android platform is first added.
+ios-CFBundleIdentifier(string)  <br/> ==iOS== | Alternative bundle id for iOS. Overrides `id`.
 ios-CFBundleVersion(string) <br/> ==iOS== | Alternative version for iOS. For further details, see [iOS versioning](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
 osx-CFBundleVersion(string) <br/> ==OS X== | Alternative version for OS X. For further details, see [OS X versioning](https://developer.apple.com/library/prerelease/mac/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
 windows-packageVersion(string) <br/> ==Windows== | Alternative version for Windows. For futher details, see [Windows versioning](https://msdn.microsoft.com/en-us/library/windows/apps/br211441.aspx)
