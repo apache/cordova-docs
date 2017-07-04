@@ -38,16 +38,16 @@ Cordova for Android requires the Android SDK which can be installed
 on OS X, Linux or Windows. See the Android SDK's
 [System Requirements](http://developer.android.com/sdk/index.html#Requirements).
 Cordova's latest Android package supports up to Android [API Level](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels) 25.
-The supported Android API Levels for the past few cordova-android releases can
-be found in this table:
+The supported Android API Levels and Android Versions for the past 
+few cordova-android releases can be found in this table:
 
-cordova-android Version | Supported Android API-Levels
-------------------------|-----------------------------
-6.X.X                   | 16 - 25
-5.X.X                   | 14 - 23
-4.1.X                   | 14 - 22
-4.0.X                   | 10 - 22
-3.7.X                   | 10 - 21
+cordova-android Version | Supported Android API-Levels | Equivalent Android Version
+------------------------|------------------------------|-----------------------------
+6.X.X                   | 16 - 25                      | 4.1 - 7.1.1
+5.X.X                   | 14 - 23                      | 4.0 - 6.0.1
+4.1.X                   | 14 - 22                      | 4.0 - 5.1
+4.0.X                   | 10 - 22                      | 2.3.3 - 5.1
+3.7.X                   | 10 - 21                      | 2.3.3 - 5.0.2
 
 Please note that the versions listed here are for Cordova's Android package,
 [cordova-android](https://github.com/apache/cordova-android), and not for the
