@@ -119,7 +119,7 @@ any internal debugging messages as they are emitted and may help you track down 
 
 ```bash
 # Adding Android battery-status plugin to "myProject":
-plugman -d --platform android --project myProject --plugin cordova-plugin-battery-status
+plugman -d install --platform android --project myProject --plugin cordova-plugin-battery-status
 ```
 
 Finally, you can use the `--version|-v` flag to see which version of Plugman you are using.
