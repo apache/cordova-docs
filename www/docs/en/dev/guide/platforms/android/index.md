@@ -220,7 +220,7 @@ You can set these properties in one of four ways:
       cdvMinSdkVersion=20
       ```
 
-  4. By extending `build.gradle` via a [`build-extras.gradle` file](#extending-build-gradle)
+  4. By extending `build.gradle` via a [`build-extras.gradle` file](#extending-buildgradle)
     and setting the property like so:
 
       ```groovy
