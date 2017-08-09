@@ -132,17 +132,6 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../reference/cordova-plugin-device-orientation/">Compass</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="blackberry10" class="y"></td>
-        <td data-col="ios"        class="y">(3GS+)</td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y"></td>
-        <td data-col="osx"       class="n"></td>
-    </tr>
-
-    <tr>
         <th><a href="../../reference/cordova-plugin-network-information/">Connection</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
