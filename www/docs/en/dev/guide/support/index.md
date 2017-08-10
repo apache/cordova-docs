@@ -88,17 +88,6 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="../../reference/cordova-plugin-device-motion/">Accelerometer</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="blackberry10" class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y"></td>
-        <td data-col="osx"       class="n"></td>
-    </tr>
-
-    <tr>
         <th><a href="../../reference/cordova-plugin-battery-status/">BatteryStatus</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>

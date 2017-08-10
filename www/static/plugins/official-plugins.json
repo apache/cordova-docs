@@ -5,7 +5,6 @@
         "cordova-plugin-console",
         "cordova-plugin-contacts",
         "cordova-plugin-device",
-        "cordova-plugin-device-motion",
         "cordova-plugin-dialogs",
         "cordova-plugin-file",
         "cordova-plugin-file-transfer",
