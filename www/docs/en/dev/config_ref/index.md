@@ -60,7 +60,7 @@ Root element of the config.xml document.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
-id(string) | *Required* <br/> Specifies the app's reverse-domain identifier, and the `version` its full version number expressed in major/minor/patch notation.
+id(string) | *Required* <br/> Specifies the app's reverse-domain identifier.
 version(string) | *Required* <br/> Full version number expressed in major/minor/patch notation.
 android-versionCode(string) <br/> ==Android== | Alternative version for Android. Sets the [version code](http://developer.android.com/tools/publishing/versioning.html) for the application. See [the Android guide](../guide/platforms/android/index.html#setting-the-version-code) for information on how this attribute may be modified.
 defaultlocale <br /> ==iOS== | Specified the default language of the app, as an IANA language code.
