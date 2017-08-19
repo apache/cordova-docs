@@ -312,7 +312,7 @@ the [Cordova CLI][cli_reference] `build` or `run` commands.
 
 __Note__: You should use double `--` to indicate that these are platform-specific arguments, for example:
 
-`cordova run android --release -- --keystore=../my-release-key.keystore --storePassword=password --alias=alias_name --password=password`.
+`cordova run android --release --keystore=../my-release-key.keystore --storePassword=password --alias=alias_name --password=password`.
 
 ### Using build.json
 
