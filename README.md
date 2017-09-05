@@ -216,12 +216,17 @@ This section requires basic knowledge of SVN. If you do not know how to use SVN,
 
 To build the full website (possibly excluding docs by adding `--nodocs`), run:
 
-    gulp build --prod
+    npm run serve
 
 A folder called `build-prod` will be created, and will contain the built website. Then, in a directory *outside* of the `cordova-docs` repository, check out the SVN repository that contains the currently deployed website by running the following command (committer access required):
 
     cd ..
     svn checkout https://svn.apache.org/repos/asf/cordova/site cordova-website
+(Make sure to `svn checkout` on the same level that `cordova-docs` repo exists on.)
+
+From the `cordova-website` repo, run the following command:
+    
+    svn up
 
 Copy the `cordova-docs/build-prod/` directory to the `public` directory in SVN like so:
 
