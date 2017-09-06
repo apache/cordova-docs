@@ -120,7 +120,7 @@ The `<access>` and `<allow-navigation>` tags support these three attributes belo
     
 In iOS 10 and above, the `<access>` tag supports these three attributes below, when paired with the origin wildcard `*`. These attributes also have their equivalents in ATS:
 
-1. allows-arbitrary-loads-in-media (Boolean, defaults to 'false', new in iOS 10)
+1. allows-arbitrary-loads-for-media (Boolean, defaults to 'false', new in iOS 10. New in cordova-ios@4.5.0, fixed to use the proper attribute name). The old attribute `allows-arbitrary-loads-in-media` is now deprecated.
 2. allows-arbitrary-loads-in-web-content (Boolean, defaults to 'false', new in iOS 10)
 3. allows-local-networking (Boolean, defaults to 'false', new in iOS 10)
 
