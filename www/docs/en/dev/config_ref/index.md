@@ -105,6 +105,17 @@ Examples:
 </widget>
 ```
 
+### short name
+Specifies an optional display name for the app. Sometimes the app name should be displayed differently on device's home screen than on informational and app-store interfaces due to limited space.
+
+Examples:
+
+```xml
+<widget ...>
+   <name short="HiCdv">HelloCordova</name>
+</widget>
+```
+
 ## description
 Specifies metadata that may appear within app-store listings.
 
