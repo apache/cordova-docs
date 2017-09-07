@@ -214,7 +214,7 @@ Deploying
 
 This section requires basic knowledge of SVN. If you do not know how to use SVN, refer to [this tutorial][svn].
 
-To build the full website (possibly excluding docs by adding `--nodocs`), run:
+To build the full website and preview it in your browser, run:
 
     npm run serve
 
