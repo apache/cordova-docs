@@ -15,7 +15,7 @@ Three new features were added:
 2. [CB-13164](https://issues.apache.org/jira/browse/CB-13164) - Integrated cordova-plugin-console to build in support for window.console. 
 3. [CB-10916](https://issues.apache.org/jira/browse/CB-10916) - Support [display name](/docs/en/dev/config_ref/index.html#name) for **iOS**
 
-Note that for [CB-13164](https://issues.apache.org/jira/browse/CB-13164) if you already included `cordova-plugin-console` in your project, you must **remove** that plugin if not your project will not build.
+**Important!** If you have included `cordova-plugin-console` in your project, you must **remove** it, otherwise your project will not build.
 
 If you ever needed to disable the built in console plugin, comment out or remove the `Console` `<feature>` tag in your platform specific `config.xml`, and/or call this right after the `deviceready` event:
 
