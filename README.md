@@ -236,6 +236,11 @@ Finally, go into the `cordova-website` directory and commit *all* the changes in
 
     svn status | grep "?"
 
+Once you are satisfied that you have added the required changes, commit with a message:
+
+    svn commit -m "Updated docs"
+
+
 The commit might take a while (up to 1 hour), depending on the number of files changed.
 
 Working on the Documentation
