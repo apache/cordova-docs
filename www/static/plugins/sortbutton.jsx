@@ -1,9 +1,10 @@
-var React = require('react');
+var Preact = require('preact'),
+    h = require('preact').h,
+    createClass = require('preact-compat').createClass;
 
-var SortButton = React.createClass({
+var SortButton = createClass({
     onClick: function() {
-        var appInstance = React.render(<App />, document.getElementById('pluginsAppContainer'));
-        appInstance.setSort(this.props.criteria);
+        this.props.setSort(this.props.criteria);
     },
     render: function() {
         return (

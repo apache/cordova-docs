@@ -1,13 +1,15 @@
-var React = require('react');
+var Preact = require('preact');
+var h = require('preact').h;
+var createClass = require('preact-compat').createClass;
 var SortButton = require('./sortbutton.jsx');
 var SortCriteria = require('./SortCriteria');
 
-var SortDropdown = React.createClass({
+var SortDropdown = createClass({
     render: function() {
         var downloadsButton;
 
         if(this.props.downloadsEnabled) {
-            downloadsButton = <SortButton criteria={SortCriteria.Downloads}/>;
+            downloadsButton = <SortButton setSort={this.props.setSort} criteria={SortCriteria.Downloads}/>;
         }
         return (
             <div className="dropdown plugins-sort-dropdown">
@@ -16,8 +18,8 @@ var SortDropdown = React.createClass({
                     <span className="caret"></span>
                 </button>
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <SortButton criteria={SortCriteria.Quality}/>
-                    <SortButton criteria={SortCriteria.RecentlyUpdated}/>
+                    <SortButton setSort={this.props.setSort} criteria={SortCriteria.Quality}/>
+                    <SortButton setSort={this.props.setSort} criteria={SortCriteria.RecentlyUpdated}/>
                     {downloadsButton}
                 </ul>
             </div>
