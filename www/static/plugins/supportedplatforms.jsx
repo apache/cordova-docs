@@ -1,7 +1,9 @@
-var React = require('react'),
-    PlatformButton = require('./platformbutton.jsx')
+var Preact = require('preact'),
+    h = require('preact').h,
+    createClass = require('preact-compat').createClass,
+    PlatformButton = require('./platformbutton.jsx');
 
-var SupportedPlatforms = React.createClass({
+var SupportedPlatforms = createClass({
     render: function() {
         var keywords = this.props.keywords;
         var sortedPlatforms = [

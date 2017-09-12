@@ -1,11 +1,13 @@
-var React           = window.React = require('react'), // assign it to window for react chrome extension
+var Preact          = window.Preact = require('preact'),
+    h               = require('preact').h,
+    createClass     = require('preact-compat').createClass,
     SearchBar       = require('./searchbar.jsx'),
     PluginList      = require('./pluginlist.jsx'),
     PlatformButton  = require('./platformbutton.jsx')
     App             = {},
-    SortDropdown = require('./sortdropdown.jsx'),
-    SortCriteria = require('./SortCriteria'),
-    ZeroClipboard = require("../js/lib/ZeroClipboard.js");
+    SortDropdown    = require('./sortdropdown.jsx'),
+    SortCriteria    = require('./SortCriteria'),
+    ZeroClipboard   = require("../js/lib/ZeroClipboard.js");
 
 var INPUT_DELAY = 500; // in milliseconds
 
@@ -21,7 +23,7 @@ var UrlParameters = {
     Platfroms: 'platforms',
 }
 
-var App = React.createClass({
+var App = createClass({
     getInitialState: function() {
         var staticFilters = [];
         staticFilters['platforms'] = [];
@@ -71,6 +73,7 @@ var App = React.createClass({
         }
     },
     toggleCondition: function(keyword, condition) {
+        var state = this.state;
         this.setState(function(previousState, currentProps) {
             var conditionIndex = previousState.staticFilters[keyword].indexOf(condition);
             if(conditionIndex > -1) {
@@ -85,11 +88,12 @@ var App = React.createClass({
             return {
                 staticFilters: previousState.staticFilters,
                 plugins: previousState.plugins,
-                searchResults: App.filterPlugins(previousState.plugins, this.state.filterText, this.state.staticFilters)
+                searchResults: App.filterPlugins(previousState.plugins, state.filterText, state.staticFilters)
             };
         });
     },
     setSort: function(sort) {
+        var state = this.state;
         this.setState(function(previousState, currentProps) {
             App.sortPlugins(previousState.plugins, sort)
              delay(function(){
@@ -97,7 +101,7 @@ var App = React.createClass({
             }, INPUT_DELAY);
             return {
                 plugins: previousState.plugins,
-                searchResults: App.filterPlugins(previousState.plugins, this.state.filterText, this.state.staticFilters),
+                searchResults: App.filterPlugins(previousState.plugins, state.filterText, state.staticFilters),
                 sortCriteria: sort
             }
         });
@@ -424,10 +428,11 @@ var App = React.createClass({
         }
     },
     render: function() {
+        var toggleCondition = this.toggleCondition;
         var createPlatformButton = function(platform, keyword, state) {
             var active = state.staticFilters["platforms"].indexOf(keyword) > -1;
             return (
-                <PlatformButton platform={platform} keyword={keyword} initiallyActive={active}/>
+                <PlatformButton platform={platform} keyword={keyword} initiallyActive={active} toggleCondition={toggleCondition}/>
             );
         }
 
@@ -481,7 +486,7 @@ var App = React.createClass({
                         </div>
                         <div className="col-sm-3">
                             <div className="plugin-results-number">{this.state.searchResults.length} result(s) found</div>
-                            <SortDropdown selected={this.state.sortCriteria} downloadsEnabled={this.state.downloadsReceived}/>
+                            <SortDropdown setSort={this.setSort} selected={this.state.sortCriteria} downloadsEnabled={this.state.downloadsReceived}/>
                         </div>
                     </div>
                 </div>
@@ -495,7 +500,7 @@ var App = React.createClass({
 });
 
 App.start = function() {
-    React.render(<App />, document.getElementById('pluginsAppContainer'));
+    Preact.render(<App />, document.getElementById('pluginsAppContainer'));
 };
 
 function delay(callback, ms){

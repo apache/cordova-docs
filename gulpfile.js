@@ -19,7 +19,7 @@ var vstream     = require("vinyl-source-stream");
 var buffer      = require("vinyl-buffer");
 
 var browserify = require("browserify");
-var reactify   = require("reactify");
+var babelify   = require("babelify");
 var uglify     = require("gulp-uglify");
 var envify     = require("envify");
 var htmllint   = require("gulp-htmllint");
@@ -400,7 +400,12 @@ gulp.task("plugins", function() {
     }
 
     var stream = browserify(PLUGINS_SRC_FILE, {debug: !gutil.env.prod})
-        .transform(reactify)
+        .transform(babelify, {
+            presets: ["react"],
+            plugins: [
+                ["transform-react-jsx", {"pragma": "h"}]
+            ]
+        })
         .transform(envify)
         .bundle()
         .on("error", gutil.log)

@@ -1,10 +1,18 @@
+var Preact = require('preact');
+var h = require('preact').h;
+var findDOMNode = require('preact-compat').findDOMNode;
+var createClass = require('preact-compat').createClass;
 var Bacon = require('baconjs').Bacon;
 
-var SearchBar = React.createClass({
-    propTypes: {
-        initialValue: React.PropTypes.string.isRequired,
-        placeHolderText: React.PropTypes.string.isRequired,
-        onUserInput: React.PropTypes.func.isRequired
+var SearchBar = createClass({
+
+    // polyfill of sorts for string refs
+    linkRef: function(component, name) {
+        let cache = component._linkedRefs || (component._linkedRefs = {});
+        if (!component.refs) component.refs = {};
+        return cache[name] || (cache[name] = c => {
+            component.refs[name] = c;
+        });
     },
 
     getInitialState: function() {
@@ -18,7 +26,7 @@ var SearchBar = React.createClass({
     componentDidMount: function() {
         var self = this,
             delay = 200, // in ms
-            inputElem = React.findDOMNode(this.refs.filterTextInput);
+            inputElem = findDOMNode(this.refs.filterTextInput);
 
         // Convert input events to stream
         var text = Bacon.fromEvent(inputElem, 'input')
@@ -49,9 +57,9 @@ var SearchBar = React.createClass({
                     autoComplete="off"
                     placeholder={this.props.placeHolderText}
                     value={this.state.textValue}
-                    onChange={this.handleChange}
-                    ref="filterTextInput"
-                    />
+                    onInput={this.handleChange}
+                    ref={this.linkRef(this, "filterTextInput")}
+                />
             </div>
         );
     }

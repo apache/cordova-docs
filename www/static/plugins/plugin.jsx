@@ -1,9 +1,11 @@
-var React = require('react'),
+var Preact = require('preact'),
+    h = require('preact').h,
+    createClass = require('preact-compat').createClass,
     SupportedPlatforms = require('./supportedplatforms.jsx'),
     classNames      = require('classnames'),
     ZeroClipboard = require('../js/lib/ZeroClipboard.js');
 
-var Plugin = React.createClass({
+var Plugin = createClass({
     shouldComponentUpdate: function(nextProps, nextState) {
         return this.props.plugin !== nextProps.plugin;
     },
