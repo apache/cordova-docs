@@ -214,7 +214,7 @@ Deploying
 
 This section requires basic knowledge of SVN. If you do not know how to use SVN, refer to [this tutorial][svn].
 
-To build the full website and preview it in your browser, run:
+To build the full website, run:
 
     node_modules/.bin/gulp build --prod
 
