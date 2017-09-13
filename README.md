@@ -214,34 +214,35 @@ Deploying
 
 This section requires basic knowledge of SVN. If you do not know how to use SVN, refer to [this tutorial][svn].
 
-To build the full website and preview it in your browser, run:
+To build the full website, run:
 
-    npm run serve
+    node_modules/.bin/gulp build --prod
 
-A folder called `build-prod` will be created, and will contain the built website. Then, in a directory *outside* of the `cordova-docs` repository, check out the SVN repository that contains the currently deployed website by running the following command (committer access required):
+A folder called `build-prod` will be created, and will contain the built website. Then, in a directory *one level above* the `cordova-docs` repository, check out the SVN repository that contains the currently deployed website by running the following command (committer access required):
 
     cd ..
     svn checkout https://svn.apache.org/repos/asf/cordova/site cordova-website
-(Make sure to `svn checkout` on the same level that `cordova-docs` repo exists on.)
 
-From the `cordova-website` repo, run the following command:
-    
-    svn up
+Then, move into the `cordova-website` repository and synchronise it with the SVN server:
+
+    cd cordova-website
+    svn update
 
 Copy the `cordova-docs/build-prod/` directory to the `public` directory in SVN like so:
 
+    cd ..
     cp -R cordova-docs/build-prod/. cordova-website/public/
 
-Finally, go into the `cordova-website` directory and commit *all* the changes introduced by the newly copied files. Some files will be new (`?` in SVN, and need to be `svn add`ed) and some files will be changed (`M` in SVN; no action required). To see just the `?` changes, run:
+Some files will be new (`?` in SVN, and need to be `svn add`ed) and some files will be changed (`M` in SVN; no action required). To see just the `?` changes, run:
 
+    cd cordova-website
     svn status | grep "?"
 
 Once you are satisfied that you have added the required changes, commit with a message:
 
     svn commit -m "Updated docs"
 
-
-The commit might take a while (up to 1 hour), depending on the number of files changed.
+**NOTE**: The commit might take a while (up to 1 hour), depending on the number of files changed.
 
 Working on the Documentation
 ============================
