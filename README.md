@@ -1,7 +1,7 @@
 Introduction
 ============
 
-This repository contains the source code behind [cordova.io](http://cordova.io) and some of its subdomains (namely, [docs.cordova.io](http://docs.cordova.io) and [plugins.cordova.io](http://plugins.cordova.io)).
+This repository contains the source code for the Cordova website. This covers [cordova.io](http://cordova.io) (= [cordova.apache.org](http://cordova.apache.org/)) and its subdomains [docs.cordova.io](http://docs.cordova.io) (= [cordova.apache.org/docs](http://cordova.apache.org/docs)) and [plugins.cordova.io](http://plugins.cordova.io) (= [cordova.apache.org/plugins](http://cordova.apache.org/plugins)).
 
 Installing
 ==========
