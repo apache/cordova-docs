@@ -8,7 +8,7 @@ Installing
 
 ## Ruby
 
-Ruby 1.8, 1.9 and 2.4 are confirmed _not_ to work. Please make sure you are running ruby 2.0.
+Ruby 2.0 is required to build the docs. NOTE: *The docs will not build with Ruby 1.8, 1.9 or 2.4.*
 
 ### Mac OS X
 
@@ -41,9 +41,9 @@ Follow these steps:
 
 Run the commands from [this site][ruby_linux] that apply to your Linux distribution.
 
-***
+### Verify Ruby
 
-Verify the installation by running:
+Verify your Ruby installation by running:
 
     ruby --version
 
@@ -71,15 +71,15 @@ Follow these steps:
 
 The latest version of CentOS, Fedora, Redhat Enterprise (RHEL) and Ubuntu come with Python 2.7 pre-installed. Else, follow the steps from [this site][python_linux].
 
-***
+### Verify Python
 
-Verify the installation by running:
+Verify your Python installation by running:
 
     python --version
 
 The version must be 2.7.x.
 
-## JavaScript
+## Node.js
 
 ### Mac OS X &amp; Windows
 
@@ -89,23 +89,23 @@ Go to [this site][nodejs], and click the "Install" button. Then run the download
 
 Linux, follow the instructions on [this site][linux_node].
 
-***
+### Verify Node.js
 
-Verify the installation by running:
+Verify your Node.js installation by running:
 
     node --version
     npm --version
 
 ## Dependencies
 
-Once Ruby and JavaScript are installed, install Ruby dependencies by running:
+Once Ruby and Node.js are installed, install Ruby dependencies by running:
 
     gem install bundler
     bundle install --path ./ruby_modules
 
 This will install the required Ruby Gems locally into a subfolder called `ruby_modules` in your repo folder. On some systems, the above commands need to be prefixed with `sudo`. Similarly on Windows, the `cmd` window in which those commands are to be run might need to have been "Run as Administrator."
 
-Finally, install JavaScript dependencies by running:
+Finally, install Node.js and JavaScript dependencies by running:
 
     npm install
 
@@ -127,9 +127,9 @@ Make comes with the Xcode Command Line Tools. To install them, run:
 
 Make is installed by default on Linux.
 
-***
+### Verify make
 
-Verify the installation by running:
+Verify your make installation by running:
 
     make --version
 
