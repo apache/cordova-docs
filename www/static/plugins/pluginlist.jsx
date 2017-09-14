@@ -1,4 +1,6 @@
-var React = require('react'),
+var Preact = require('preact'),
+    h = require('preact').h,
+    createClass = require('preact-compat').createClass,
     Plugin = require('./plugin.jsx');
 
 var InitialPageLength = 10;
@@ -7,7 +9,7 @@ var PageExtensionLength = 20;
 /*
     States site loaded
  */
-var PluginList = React.createClass({
+var PluginList = createClass({
     getInitialState: function() {
         return { bootstrapped: false }
     },

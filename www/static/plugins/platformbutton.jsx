@@ -1,14 +1,15 @@
-var React = require('react');
+var Preact = require('preact');
+var h = require('preact').h;
+var createClass = require('preact-compat').createClass;
 
-var PlatformButton = React.createClass({
+var PlatformButton = createClass({
     getInitialState: function() {
         return {
             isActive: this.props.initiallyActive
         };
     },
     onClick: function() {
-        var appInstance = React.render(<App />, document.getElementById('pluginsAppContainer'));
-        appInstance.toggleCondition('platforms', this.props.keyword);
+        this.props.toggleCondition('platforms', this.props.keyword);
         this.setState(function(prevState, currentProps) {
             return {
                 isActive: !prevState.isActive
