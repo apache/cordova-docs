@@ -1,22 +1,22 @@
-Introduction
-============
+# Cordova Docs
+
+## Introduction
 
 This repository contains the source code for the Cordova website. This covers [cordova.io](http://cordova.io) (= [cordova.apache.org](http://cordova.apache.org/)) and its subdomains [docs.cordova.io](http://docs.cordova.io) (= [cordova.apache.org/docs](http://cordova.apache.org/docs)) and [plugins.cordova.io](http://plugins.cordova.io) (= [cordova.apache.org/plugins](http://cordova.apache.org/plugins)).
 
-Installing
-==========
+## Installing
 
-## Ruby
+### Ruby
 
 Ruby 2.0 is required to build the docs. NOTE: *The docs will not build with Ruby 1.8, 1.9 or 2.4.*
 
-### Mac OS X
+#### Mac OS X
 
 Install Homebrew from [this site][homebrew], and then run:
 
     brew install ruby@2.0
 
-### Windows
+#### Windows
 
 Follow these steps:
 
@@ -37,28 +37,28 @@ Follow these steps:
             ruby dk.rb install
     1. Close `cmd.exe`.
 
-### Linux
+#### Linux
 
 Run the commands from [this site][ruby_linux] that apply to your Linux distribution.
 
-### Verify Ruby
+#### Verify Ruby
 
 Verify your Ruby installation by running:
 
     ruby --version
 
-## Python
+### Python
 
 Python 2.7 is also required to build the docs. NOTE: *The docs will not build with Python 3.0 or greater.*
 
-### Mac OS X
+#### Mac OS X
 
 Mac OS X comes with Python 2.7 pre-installed. Else, follow these steps:
 
 1. Download [this installer][python_installer_mac] from [this page][python_downloads].
 2. Run the downloaded file.
 
-### Windows
+#### Windows
 
 Follow these steps:
 
@@ -67,11 +67,11 @@ Follow these steps:
    1. Use the default installation path
    1. Make sure the **'add executable to path'** option is checked.
 
-### Linux
+#### Linux
 
 The latest version of CentOS, Fedora, Redhat Enterprise (RHEL) and Ubuntu come with Python 2.7 pre-installed. Else, follow the steps from [this site][python_linux].
 
-### Verify Python
+#### Verify Python
 
 Verify your Python installation by running:
 
@@ -79,24 +79,26 @@ Verify your Python installation by running:
 
 The version must be 2.7.x.
 
-## Node.js
+### Node.js
 
-### Mac OS X &amp; Windows
+#### Mac OS X &amp; Windows
 
 Go to [this site][nodejs], and click the "Install" button. Then run the downloaded file and follow the on-screen instructions. Make sure that the option to **install NPM** is enabled, if you see one.
 
-### Linux
+#### Linux
 
 Linux, follow the instructions on [this site][linux_node].
 
-### Verify Node.js
+#### Verify Node.js
 
 Verify your Node.js installation by running:
 
     node --version
     npm --version
 
-## Dependencies
+### Dependencies
+
+#### Ruby
 
 Once Ruby and Node.js are installed, install Ruby dependencies by running:
 
@@ -105,36 +107,37 @@ Once Ruby and Node.js are installed, install Ruby dependencies by running:
 
 This will install the required Ruby Gems locally into a subfolder called `ruby_modules` in your repo folder. On some systems, the above commands need to be prefixed with `sudo`. Similarly on Windows, the `cmd` window in which those commands are to be run might need to have been "Run as Administrator."
 
+#### JavaScript
+
 Finally, install Node.js and JavaScript dependencies by running:
 
     npm install
 
-## Make (optional)
+### Make (optional)
 
 The website can be built with Gulp or Make. The Gulp workflow is enabled by just installing all the JavaScript dependencies. The Make workflow usually allows for faster builds, but requires installation of the `make` tool.
 
-### Windows
+#### Windows
 
 Make can be installed on Windows from [this page][make_page] by downloading the [setup tool][make_setup] and running it.
 
-### OS X
+#### Mac OS X
 
 Make comes with the Xcode Command Line Tools. To install them, run:
 
     xcode-select --install
 
-### Linux
+#### Linux
 
 Make is installed by default on Linux.
 
-### Verify make
+#### Verify make
 
 Verify your make installation by running:
 
     make --version
 
-Building
-========
+## Building
 
 To build the whole website, run:
 
@@ -142,8 +145,7 @@ To build the whole website, run:
 
 The built website will be in a folder called `build-prod`.
 
-Developing
-==========
+## Developing
 
 To work on the website and see changes live as you save, run:
 
@@ -157,7 +159,7 @@ Alternatively, to dynamically rebuild the site and refresh the browser _when cha
 
     node_modules/.bin/gulp watch
 
-## Docs Redirects
+### Docs Redirects
 
 Sometimes docs pages get removed, renamed, and added. There is [a file][redirects] that contains redirects for such occasions. It has three sections:
 
@@ -180,11 +182,11 @@ There are five cases of changing URIs:
 4. Renaming an existing URI across all versions,
 5. Removing an existing URI across all versions.
 
-### Case 1: Adding a URI starting at a version
+#### Case 1: Adding a URI starting at a version
 
 Do nothing. Going back in time for new docs is unsupported.
 
-### Cases 2 &amp; 3: Removing or renaming a URI starting at a version
+#### Cases 2 &amp; 3: Removing or renaming a URI starting at a version
 
 If the URI is removed, mark it as deprecated in `latest/` like so:
 
@@ -198,19 +200,18 @@ If the URI is moved, point it to its new location in `latest/` like so:
 
 These will handle the case where the "this content is outdated" link is clicked. The case where a user jumps to a specific version is not yet supported.
 
-### Case 4: Renaming a URI across all versions
+#### Case 4: Renaming a URI across all versions
 
 Add the redirect (in the `docs-global` section this time) like so:
 
     docs-global:
         - {old: "old/uri/for/page.html", new: "its/new/uri.html"}
 
-### Case 5: Removing a URI across all versions
+#### Case 5: Removing a URI across all versions
 
 Do nothing. It is now an un-URI. It never existed. Mentioning it is thoughtcrime.
 
-Deploying
-=========
+## Deploying
 
 This section requires basic knowledge of SVN. If you do not know how to use SVN, refer to [this tutorial][svn].
 
@@ -244,19 +245,17 @@ Once you are satisfied that you have added the required changes, commit with a m
 
 **NOTE**: The commit might take a while (up to 1 hour), depending on the number of files changed.
 
-Working on the Documentation
-============================
+## Working on the Documentation
 
 Refer to this [README.md](doc/README/en/README.md) for information about writing documentation.
 
 > Note: many changes to the overall documentation come from other repos and are simply pulled together by a build.  tools/bin/fetch_docs.js has more details and www/_data/fetched-files.yml contains an informative list of src/dest pairs.  Most auto-generated files have a comment tag at the top of the file to indicate that they come from elsewhere.
 
-Adding a Tool or a Showcase App
-===============================
+## Adding a Tool or a Showcase App
 
 Items on the **Codorva Tools** or the **Cordova App Showcase** sections on the main page are modifiable by the public. Below are the guidelines and process to do so.
 
-## Guidelines
+### Guidelines
 
 The display _image_ shall:
 
@@ -284,7 +283,7 @@ Furthermore, descriptions are stripped of HTML and are truncated to fit as follo
 - down to 255 characters for tools and,
 - down to 200 characters for showcase apps.
 
-## Process
+### Process
 
 1. Change the section's YAML file:
     - [www/_data/tools.yml](www/_data/tools.yml) for Cordova Tools, or
@@ -296,8 +295,7 @@ Furthermore, descriptions are stripped of HTML and are truncated to fit as follo
     1. In the YAML file, set the `image` field to the file's *name*.
 1. Submit a [GitHub pull request][pr] with the changes.
 
-Writing a Blog Post
-===================
+## Writing a Blog Post
 
 1. Pull down the latest website codebase for the current posts
 
@@ -326,7 +324,7 @@ Writing a Blog Post
 
 8. Raise a Pull Request with the changes
 
-**Types of Posts**
+### Types of Posts
 
 _Announcements_ - releases, call for translators, etc
 
@@ -334,7 +332,7 @@ _Core Content_ - If the content has to do with cordova-core, or publishing guide
 
 _Linked Posts_ - If the content was written by a contributor and is worth curating for the whole community, but is not really core ie. non-core plugins, dev tips, research, opinion-pieces, statistics, etc., post a short description, perhaps adding a document-snippet, but then link to the externally hosted content, making it clearly not written by the organization.
 
-**Post guidelines:**
+### Post guidelines
 
 * Use the post title as the first header.
 * Including a header as well makes the snippet on the front page look bad.
@@ -348,7 +346,7 @@ _Linked Posts_ - If the content was written by a contributor and is worth curati
 * Review your post yourself before asking for a review. This includes spell-check :).
 * Ask for a review by raising a pull request
 
-***Creating "last week" Posts:***
+### Creating "last week" Posts
 
 To get a summary of changes (and count the changes):
 
@@ -358,7 +356,7 @@ To get the number of authors:
 
     for l in cordova-*; do ( cd $l ; git log --format="%an" --no-merges --since='1 week ago' ) ; done | sort | uniq | wc -l
 
-***Creating Release Announcement Posts***
+### Creating Release Announcement Posts
 
 Create a copy of a previous post and update it.
 
@@ -369,22 +367,21 @@ To print the list of plugin versions tested:
 
         for d in *-plugin-*; do ( cd $d && echo "* $(basename $PWD): $(grep version plugin.xml|grep -v encoding|cut -d'"' -f2)" ) ; done | grep '^\*'
 
-Troubleshooting
-===============
+## Troubleshooting
 
-## Error: EMF, too many open files
+### Error: EMF, too many open files
 
 Increase the maximum number of open files on the system:
 
     ulimit -n 10480
 
-## Error: spawn ENOENT
+### Error: spawn ENOENT
 
 Run:
 
     gulp clean
 
-## Permission issues during Ruby install
+### Permission issues during Ruby install
 
 You could try a different method to install Ruby. Checkout [rbenv][rbenvgh]. Instructions:
 
@@ -401,14 +398,14 @@ You could try a different method to install Ruby. Checkout [rbenv][rbenvgh]. Ins
         rbenv install 2.0.0-p647
         rbenv local 2.0.0-p647
 
-## Other Problems
+### Other Problems
 
 Please ask for help on the Slack channel. Join at [slack.cordova.io](http://slack.cordova.io/).
 
-Attributions
-============
+## Attributions
 
 For attributions for used open-source work, please see the attributions page: `www/attributions.html`.
+
 
 [ruby_linux]: https://www.ruby-lang.org/en/documentation/installation/#package-management-systems
 [homebrew]: http://brew.sh/
