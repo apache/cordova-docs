@@ -333,6 +333,9 @@ var App = React.createClass({
             var packageNames = "";
             var downloadCountRequests = [];
             for(var index = 0; index < plugins.length; index++) {
+                if (/^@.*\//.test(plugins[index].name)) {
+                    continue;
+                }
                 packageNames += plugins[index].name + ",";
 
                 if(index % Constants.DownloadCountBatch === 0 || index === plugins.length - 1) {
