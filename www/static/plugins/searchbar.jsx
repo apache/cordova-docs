@@ -8,9 +8,9 @@ var SearchBar = createClass({
 
     // polyfill of sorts for string refs
     linkRef: function(component, name) {
-        let cache = component._linkedRefs || (component._linkedRefs = {});
+        var cache = component._linkedRefs || (component._linkedRefs = {});
         if (!component.refs) component.refs = {};
-        return cache[name] || (cache[name] = c => {
+        return cache[name] || (cache[name] = function(c) {
             component.refs[name] = c;
         });
     },
