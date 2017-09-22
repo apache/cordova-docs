@@ -11,7 +11,7 @@ var SearchBar = createClass({
         var cache = component._linkedRefs || (component._linkedRefs = {});
         if (!component.refs) component.refs = {};
         return cache[name] || (cache[name] = function(c) {
-            component.refs[name] = c;
+            return component.refs[name] = c;
         });
     },
 
