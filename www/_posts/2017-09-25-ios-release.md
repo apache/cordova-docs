@@ -12,6 +12,19 @@ We are happy to announce a minor version of `Cordova iOS 4.5.1` has been release
 
 This version provides updates for the latest iOS 11 and Xcode 9. You can now create builds for this new version and properly deploy to either the emulator or device.
 
+Things to note:
+
+* iPhone X new screen size, must use Launch Storyboards to take full advantage
+* Current Splash Screen images will result in letterboxing
+
+Apple has also made some changes that could effect your current apps, specifically around the viewport. Here are a few resources that could help with your transition to iOS 11:
+
+1. https://webkit.org/blog/7929/designing-websites-for-iphone-x/
+2. https://ayogo.com/blog/ios11-viewport/
+3. http://stephenradford.me/removing-the-white-bars-in-safari-on-iphone-x/
+
+We are also aware that there are specific issues related to the Status Bar plugin. The team is working resolve these for the next release of the plugin.
+
 **Note:** When updating **iOS**, make sure to save your plugins as current unsaved plugins may not be reinstalled otherwise. Run the following command in your project to save your currently installed plugins into `config.xml`:
 
     cordova plugin save
