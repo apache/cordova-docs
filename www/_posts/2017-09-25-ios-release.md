@@ -14,16 +14,16 @@ This version provides updates for the latest iOS 11 and Xcode 9. You can now cre
 
 Things to note:
 
-* iPhone X new screen size, must use Launch Storyboards to take full advantage
+* For iPhone X's new screen size, you must use Launch Storyboards to take full advantage of it
 * Current Splash Screen images will result in letterboxing
 
 Apple has also made some changes that could effect your current apps, specifically around the viewport. Here are a few resources that could help with your transition to iOS 11:
 
-1. https://webkit.org/blog/7929/designing-websites-for-iphone-x/
-2. https://ayogo.com/blog/ios11-viewport/
-3. http://stephenradford.me/removing-the-white-bars-in-safari-on-iphone-x/
+1. [Designing Websites for iPhone X](https://webkit.org/blog/7929/designing-websites-for-iphone-x/)
+2. [Understanding the WebView Viewport in iOS 11](https://ayogo.com/blog/ios11-viewport/)
+3. [Removing the White Bars in Safari on iPhone X](http://stephenradford.me/removing-the-white-bars-in-safari-on-iphone-x/)
 
-We are also aware that there are specific issues related to the Status Bar plugin. The team is working resolve these for the next release of the plugin.
+We are also aware that there are specific issues related to the Status Bar plugin. The team is working to resolve these for the next release of the plugin.
 
 **Note:** When updating **iOS**, make sure to save your plugins as current unsaved plugins may not be reinstalled otherwise. Run the following command in your project to save your currently installed plugins into `config.xml`:
 
