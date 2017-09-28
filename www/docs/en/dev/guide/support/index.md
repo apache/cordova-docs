@@ -25,10 +25,9 @@ description: Compatibility table for all major plugins and features.
 # Platform Support
 
 The following shows the set of development tools and device APIs
-available for each mobile platform. The device APIs listed here are provided by
+available for each platform. The device APIs listed here are provided by
 the core plugins, additional APIs are available via
-[third-party plugins](http://plugins.cordova.io). Column headers display the
-CLI's shorthand names.
+[third-party plugins](http://plugins.cordova.io).
 
 <!-- START HTML -->
 
@@ -36,50 +35,42 @@ CLI's shorthand names.
 
 <thead>
     <tr>
-        <th></td>
+        <th>Platform:</th>
+        <th><a href="../android/index.html">Android</a></th>
+        <th><a href="../blackberry10/home.html">Blackberry 10</a></th>
+        <th><a href="../ios/index.html">iOS</a></th>
+        <th><a href="../osx/index.html">OS X</a></th>
+        <th><a href="../ubuntu/index.html">Ubuntu</a></th>
+        <th><a href="../win8/index.html">Windows 8.1, 10, Phone 8.1</a></th>
+        <th><a href="../wp8/home.html">Windows Phone 8</a></th>
+    </tr>
+    <tr>
+        <th>CLI shorthand:</th>
         <th>android</th>
         <th>blackberry10</th>
         <th>ios</th>
-        <th>Ubuntu</th>
-        <th>wp8<br/>(Windows Phone 8)</th>
-        <th>windows<br/>(8.1, 10,<br/>Phone 8.1)</th>
-        <th>OS X</th>
+        <th>osx</th>
+        <th>ubuntu</th>
+        <th>windows</th>
+        <th>wp8</th>
     </tr>
 
 </thead>
 
 <tbody>
     <tr>
-        <th><a href="../cli/index.html">cordova<br/>CLI</a></th>
+        <th></th>
+        <th colspan="20"><h2>Development Platform</h2></th>
+    </tr>
+    <tr>
+        <th><a href="../cli/index.html">Cordova<br/>CLI</a></th>
         <td data-col="android"    class="y">Mac, Windows, Linux</td>
         <td data-col="blackberry10" class="y">Mac, Windows, Linux</td>
         <td data-col="ios"        class="y">Mac</td>
-        <td data-col="ubuntu"        class="y">Ubuntu</td>
-        <td data-col="winphone8"  class="y">Windows</td>
-        <td data-col="win8"       class="y"></td>
         <td data-col="osx"       class="y">Mac</td>
-    </tr>
-
-    <tr>
-        <th><a href="../hybrid/webviews/index.html">Embedded<br/>WebView</a></th>
-        <td data-col="android"    class="y"><a href="../platforms/android/webview.html">(see details)</a></td>
-        <td data-col="blackberry10" class="n"></td>
-        <td data-col="ios"        class="y"><a href="../platforms/ios/webview.html">(see details)</a></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="n"></td>
-        <td data-col="win8"       class="n"></td>
-        <td data-col="osx"       class="y"></td>
-    </tr>
-
-    <tr>
-        <th><a href="../hybrid/plugins/index.html">Plugin<br/>Interface</a></th>
-        <td data-col="android"    class="y"><a href="../platforms/android/plugin.html">(see details)</a></td>
-        <td data-col="blackberry10" class="y"><a href="../platforms/blackberry10/plugin.html">(see details)</a></td>
-        <td data-col="ios"        class="y"><a href="../platforms/ios/plugin.html">(see details)</a></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"><a href="../platforms/wp8/plugin.html">(see details)</a></td>
-        <td data-col="win8"       class="y"></td>
-        <td data-col="osx"       class="y"></td>
+        <td data-col="ubuntu"        class="y">Ubuntu</td>
+        <td data-col="win8"       class="y">Windows</td>
+        <td data-col="wp8"  class="y">Windows</td>
     </tr>
 
     <tr>
@@ -92,10 +83,10 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y">* Windows Phone 8.1 only</td>
         <td data-col="osx"       class="n"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="y">Windows Phone 8.1 only</td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
     <tr>
@@ -103,10 +94,10 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y"></td>
         <td data-col="osx"       class="n"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="y"></td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
     <tr>
@@ -114,10 +105,10 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y"></td>
         <td data-col="osx"       class="n"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="y"></td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
     <tr>
@@ -125,10 +116,10 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y"></td>
         <td data-col="osx"       class="n"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="y"></td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
     <tr>
@@ -136,10 +127,10 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="p">desktop only</td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="p">partially</td>
         <td data-col="osx"       class="n"></td>
+        <td data-col="ubuntu"        class="p">desktop only</td>
+        <td data-col="win8"       class="p">partially</td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
     <tr>
@@ -147,10 +138,10 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y"></td>
         <td data-col="osx"       class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="y"></td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
     <tr>
@@ -158,10 +149,10 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y"></td>
         <td data-col="osx"       class="n"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="y"></td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
     <tr>
@@ -169,21 +160,21 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y"></td>
         <td data-col="osx"       class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="y"></td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
     <tr>
         <th><a href="../../reference/cordova-plugin-file-transfer/">File Transfer</a></th>
         <td data-col="android"    class="y"></td>
-        <td data-col="blackberry10" class="y">* Do not support onprogress nor abort</td>
+        <td data-col="blackberry10" class="y">Does not support onprogress nor abort</td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="n"></td>
-        <td data-col="winphone8"  class="y">* Do not support onprogress nor abort</td>
-        <td data-col="win8"       class="y">* Do not support onprogress nor abort</td>
         <td data-col="osx"       class="n"></td>
+        <td data-col="ubuntu"        class="n"></td>
+        <td data-col="win8"       class="y">Does not support onprogress nor abort</td>
+        <td data-col="wp8"  class="y">Does not support onprogress nor abort</td>
     </tr>
 
     <tr>
@@ -191,10 +182,10 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y"></td>
         <td data-col="osx"       class="n"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="y"></td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
     <tr>
@@ -202,10 +193,10 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y"></td>
         <td data-col="osx"       class="n"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="y"></td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
     <tr>
@@ -213,10 +204,10 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="p">uses iframe</td>
         <td data-col="osx"       class="n"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="p">uses iframe</td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
     <tr>
@@ -224,9 +215,10 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="osx"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
     <tr>
@@ -234,10 +226,10 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y"></td>
         <td data-col="osx"       class="n"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="y"></td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
     <tr>
@@ -245,10 +237,10 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y"></td>
         <td data-col="osx"       class="n"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="y"></td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
     <tr>
@@ -256,10 +248,10 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="n"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y">Windows Phone 8.1 only</td>
         <td data-col="osx"       class="n"></td>
+        <td data-col="ubuntu"        class="n"></td>
+        <td data-col="win8"       class="y">Windows Phone 8.1 only</td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
     <tr>
@@ -267,10 +259,10 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y">localStorage &amp; indexedDB</td>
-        <td data-col="win8"       class="y">localStorage &amp; indexedDB</td>
         <td data-col="osx"       class="n"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="y">localStorage &amp; indexedDB</td>
+        <td data-col="wp8"  class="y">localStorage &amp; indexedDB</td>
     </tr>
 
     <tr>
@@ -278,12 +270,36 @@ CLI's shorthand names.
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y">* Windows Phone 8.1 only</td>
         <td data-col="osx"       class="n"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="y">Windows Phone 8.1 only</td>
+        <td data-col="wp8"  class="y"></td>
     </tr>
 
+    <tr>
+        <th></th>
+        <th colspan="20"><h2>Platform Features</h2></th>
+    </tr>
+    <tr>
+        <th><a href="../hybrid/plugins/index.html">Plugin<br/>Interface</a></th>
+        <td data-col="android"    class="y"><a href="../platforms/android/plugin.html">(see details)</a></td>
+        <td data-col="blackberry10" class="y"><a href="../platforms/blackberry10/plugin.html">(see details)</a></td>
+        <td data-col="ios"        class="y"><a href="../platforms/ios/plugin.html">(see details)</a></td>
+        <td data-col="osx"       class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="y"></td>
+        <td data-col="wp8"  class="y"><a href="../platforms/wp8/plugin.html">(see details)</a></td>
+    </tr>
+    <tr>
+        <th><a href="../hybrid/webviews/index.html">Embedded<br/>WebView</a></th>
+        <td data-col="android"    class="y"><a href="../platforms/android/webview.html">(see details)</a></td>
+        <td data-col="blackberry10" class="n"></td>
+        <td data-col="ios"        class="y"><a href="../platforms/ios/webview.html">(see details)</a></td>
+        <td data-col="osx"       class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
+        <td data-col="win8"       class="n"></td>
+        <td data-col="wp8"  class="n"></td>
+    </tr>
 </tbody>
 </table>
 
