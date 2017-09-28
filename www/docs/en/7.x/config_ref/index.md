@@ -60,7 +60,7 @@ Root element of the config.xml document.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
-id(string) | *Required* <br/> Specifies the app's reverse-domain identifier, and the `version` its full version number expressed in major/minor/patch notation.
+id(string) | *Required* <br/> Specifies the app's reverse-domain identifier.
 version(string) | *Required* <br/> Full version number expressed in major/minor/patch notation.
 android-versionCode(string) <br/> ==Android== | Alternative version for Android. Sets the [version code](http://developer.android.com/tools/publishing/versioning.html) for the application. See [the Android guide](../guide/platforms/android/index.html#setting-the-version-code) for information on how this attribute may be modified.
 defaultlocale <br /> ==iOS== | Specified the default language of the app, as an IANA language code.
@@ -102,6 +102,17 @@ Examples:
 ```xml
 <widget ...>
    <name>HelloCordova</name>
+</widget>
+```
+
+### short name
+Specifies an optional display name for the app. Sometimes the app name should be displayed differently on device's home screen than on informational and app-store interfaces due to limited space.
+
+Examples:
+
+```xml
+<widget ...>
+   <name short="HiCdv">HelloCordova</name>
 </widget>
 ```
 
@@ -275,7 +286,7 @@ and will be indicated as such.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
-AllowInlineMediaPlayback(boolean) <br/> ==iOS== | *Default: false* <br/>  Set to true to allow HTML5 media playback to appear inline within the screen layout, using browser-supplied controls rather than native controls. For this to work, add the webkit-playsinline attribute to any ```<video>``` elements.
+AllowInlineMediaPlayback(boolean) <br/> ==iOS== | *Default: false* <br/>  Set to true to allow HTML5 media playback to appear inline within the screen layout, using browser-supplied controls rather than native controls. For this to work, add the ```playsinline``` attribute to any ```<video>``` elements. *NOTE*: Prior to iOS 10, ```<video>``` elements need to use the ```webkit-playsinline``` attribute name instead.
 AndroidLaunchMode(string) <br/> ==Android== | *Default: singleTop* <br/> Allowed values: standard, singleTop, singleTask, singleInstance <br/>  Sets the Activity android:launchMode attribute. This changes what happens when the app is launched from app icon or intent and is already running.
 android-maxSdkVersion(integer) <br/> ==Android== | *Default: Not Specified* <br/>  Sets the `maxSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
 android-minSdkVersion(integer) <br/> ==Android== | *Default: Dependent on cordova-android Version* <br/>  Sets the `minSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
