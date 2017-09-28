@@ -18,11 +18,11 @@ To upgrade:
 
     npm install -g cordova
     cd my_project
-    cordova platform update android@6.2.1
+    cordova platform update android@6.3.0
 
 To add it explicitly:
 
-    cordova platform add android@6.2.1
+    cordova platform add android@6.3.0
 
 <!--more-->
 ## What's new in Android
