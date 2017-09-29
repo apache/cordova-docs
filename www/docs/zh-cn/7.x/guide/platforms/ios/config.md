@@ -101,11 +101,11 @@ title: iOS 配置
         <preference name="ErrorUrl" value="myErrorPage.html"/>
 
 
-*   `OverrideUserAgent`(字串，預設情況下未設置): 如果設置，此值將替換舊webview原来的UserAgent。 它有利於從應用程式或瀏覽器請求時請求遠端頁面，識別。 使用持謹慎態度，這可能導致與 web 伺服器的 compitiable 問題。 對於大多數情況下，改用 AppendUserAgent。
+*   `OverrideUserAgent`(字串，預設情況下未設置): 如果设置，此值将替换webview原来的UserAgent。 它有利於從應用程式或瀏覽器請求時請求遠端頁面，識別。 使用持謹慎態度，這可能導致與 web 伺服器的 compitiable 問題。 對於大多數情況下，改用 AppendUserAgent。
 
         <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
 
 
-*   `AppendUserAgent`(字串，預設情況下未設置): 如果設置，此值將附加到 webview原来的UserAgent的末端。 當使用 OverrideUserAgent，此值將被忽略。
+*   `AppendUserAgent`(字串，預設情況下未設置): 如果设置，此值将附加到webview原来的UserAgent的末端。 當使用 OverrideUserAgent，此值將被忽略。
 
         <preference name="AppendUserAgent" value="My Browser" />
