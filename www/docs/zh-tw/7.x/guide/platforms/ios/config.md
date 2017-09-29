@@ -41,17 +41,17 @@ title: iOS 配置
         <preference name="MediaPlaybackAllowsAirPlay" value="false"/>
 
 
-*   `MediaPlaybackRequiresUserAction`(預設為`false`的布林值): 設置為`true`以防止自動播放`自動播放`屬性或通過 JavaScript HTML5 視頻或音訊。
+*   `MediaPlaybackRequiresUserAction`(預設為`false`的布林值): 設置為`true`以防止自動播放`autoplay`屬性或通過 JavaScript HTML5 視頻或音訊。
 
         <preference name="MediaPlaybackRequiresUserAction" value="true"/>
 
 
-*   `AllowInlineMediaPlayback`(預設為`false`的布林值): 設置為`true` ，允許 HTML5 媒體重播顯示*內聯*在螢幕佈局，使用瀏覽器提供的控制項，而不是本機控制項內。 這項工作，將添加到任何`< video >`元素的`webkit playsinline`屬性。
+*   `AllowInlineMediaPlayback`(預設為`false`的布林值): 設置為`true` ，允許 HTML5 媒體重播顯示*內聯*在螢幕佈局，使用瀏覽器提供的控制項，而不是本機控制項內。要使此項起作用，要將`webkit-playsinline`屬性添加到`< video >`元素。
 
         <preference name="AllowInlineMediaPlayback" value="true"/>
 
 
-*   `BackupWebStorage`(字串，要麼`none`，`local`，或預設`雲`): 設置為`cloud`以允許通過 iCloud 備份 web 存儲資料。 設置為`local`以允許只有本地備份通過 iTunes 同步。 設置為`none`防止 web 存儲備份。
+*   `BackupWebStorage`(字串，要麼`none`，`local`，或預設`cloud`): 設置為`cloud`以允許通過 iCloud 備份 web 存儲資料。 設置為`local`以允許只有本地備份通過 iTunes 同步。 設置為`none`防止 web 存儲備份。
 
         <preference name="BackupWebStorage" value="local"/>
 
@@ -71,17 +71,17 @@ title: iOS 配置
         <preference name="SuppressesIncrementalRendering" value="true"/>
 
 
-*   `GapBetweenPages`(浮動，預設值為``): 的大小，以磅為單位，頁面之間的差距。
+*   `GapBetweenPages`(float類型，預設值為`0`): 的大小，以磅為單位，頁面之間的差距。
 
         <preference name="GapBetweenPages" value="0"/>
 
 
-*   `PageLength`(浮動，預設值為``): 每個頁面，在頁面流的方向點的大小。 當 PaginationMode 是從右至左或從左至右，此屬性工作表示每個頁面的寬度。 當 PaginationMode 是 topToBottom 或 bottomToTop 時，此屬性工作表示每個頁面的高度。 預設值為 0，這意味著佈局使用視區的大小來確定頁面的大小。
+*   `PageLength`(float類型，預設值為`0`): 每個頁面，在頁面流的方向點的大小。 當 PaginationMode 是從右至左或從左至右，此屬性工作表示每個頁面的寬度。 當 PaginationMode 是 topToBottom 或 bottomToTop 時，此屬性工作表示每個頁面的高度。 預設值為 0，這意味著佈局使用視區的大小來確定頁面的大小。
 
         <preference name="PageLength" value="0"/>
 
 
-*   `PaginationBreakingMode`(字串，預設為`頁面`): 有效值為`頁`和`列`。在列或頁破發生的方式。 此屬性確定是否某些 CSS 屬性關於列和頁破是榮幸還是忽略。 當此屬性設置為`列`時，內容方面與到位的頁破斷列相關的 CSS 屬性。
+*   `PaginationBreakingMode`(字串，預設為`page`): 有效值為`page`和`column`。在列或頁破發生的方式。 此屬性確定是否某些 CSS 屬性關於列和頁破是榮幸還是忽略。 當此屬性設置為`column`時，內容方面與到位的頁破斷列相關的 CSS 屬性。
 
         <preference name="PaginationBreakingMode" value="page"/>
 
@@ -101,11 +101,11 @@ title: iOS 配置
         <preference name="ErrorUrl" value="myErrorPage.html"/>
 
 
-*   `OverrideUserAgent`(字串，預設情況下未設置): 如果設置，值將替換舊使用者代理的 web 視圖。 它有利於從應用程式或瀏覽器請求時請求遠端頁面，識別。 使用持謹慎態度，這可能導致與 web 伺服器的 compitiable 問題。 對於大多數情況下，改用 AppendUserAgent。
+*   `OverrideUserAgent`(字串，預設情況下未設置): 如果設置，此值將替換webview原來的UserAgent。 它有利於從應用程式或瀏覽器請求時請求遠端頁面，識別。 使用持謹慎態度，這可能導致與 web 伺服器的 compitiable 問題。 對於大多數情況下，改用 AppendUserAgent。
 
         <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
 
 
-*   `AppendUserAgent`(字串，預設情況下未設置): 如果設置，值將附加到年底老使用者代理的 web 視圖。 當使用 OverrideUserAgent，此值將被忽略。
+*   `AppendUserAgent`(字串，預設情況下未設置): 如果設置，此值將附加到 webview原來的UserAgent的末端。 當使用 OverrideUserAgent，此值將被忽略。
 
         <preference name="AppendUserAgent" value="My Browser" />
