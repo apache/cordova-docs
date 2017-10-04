@@ -114,7 +114,7 @@ Examples:
 ```
 
 ## author
-Specifies contact information that may appear within app-store lisitngs.
+Specifies contact information that may appear within app-store listings.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
