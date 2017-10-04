@@ -552,7 +552,7 @@ On Android (as of cordova-android@4.0.0), framework tags are used to include Mav
 <framework src="relative/path/FeedbackLib" custom="true" />
 ```
 
-Framework can also be used to have custom .gradle files sub-included into the main project's .gradle file:
+Framework can also be used to have custom `.gradle` files sub-included into the main project's `build.gradle` file:
 ```xml
 <framework src="relative/path/rules.gradle" custom="true" type="gradleReference" />
 ```
