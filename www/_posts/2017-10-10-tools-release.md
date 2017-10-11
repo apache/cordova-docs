@@ -27,7 +27,7 @@ We just released a small update to our tools!
 * [CB-12787](https://issues.apache.org/jira/browse/CB-12787) Fix plugin installation with `--link` option.
 * [CB-13056](https://issues.apache.org/jira/browse/CB-13056) added deprecation notice for **WebOS**
 * [CB-13057](https://issues.apache.org/jira/browse/CB-13057) added deprecation warning for `cordova platform save`
-* [CB-12901](https://issues.apache.org/jira/browse/CB-12901) Deprecated `.raw` from `cordova-lib` API calls. If you consume `cordova-lib` as a node module, please update your API calls! You can see an example of the change at https://github.com/apache/cordova-cli/commit/0a42092971dc8fe2f483bd42c3b9de26fdec677c. 
+* [CB-12901](https://issues.apache.org/jira/browse/CB-12901) Deprecated `.raw` from `cordova-lib` API calls. If you consume `cordova-lib` as a node module, please update your API calls! You can see an example of the change at [https://github.com/apache/cordova-cli/commit/0a42092971dc8fe2f483bd42c3b9de26fdec677c](https://github.com/apache/cordova-cli/commit/0a42092971dc8fe2f483bd42c3b9de26fdec677c). 
 
 To update your cordova CLI:
 
