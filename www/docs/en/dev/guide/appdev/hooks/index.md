@@ -35,7 +35,7 @@ would like to run this tool before every build. In such a case, you could use a
 'before_build' hook and instruct the cordova run time to run the custom tool to be invoked
 before every build.
 
-Hooks might be related to your application activities such as such as `before_build`,
+Hooks might be related to your application activities such as `before_build`,
 `after_build`, etc. Or, they might be related to the plugins of your application. For example,
 hooks such as `before_plugin_add`, `after_plugin_add`, etc applies to plugin related
 activities. These hooks can be associated with all plugins within your application or
