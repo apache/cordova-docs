@@ -38,4 +38,4 @@ To add it explicitly:
 * [CB-13417](https://issues.apache.org/jira/browse/CB-13417) Updated checked in node_modules
 * [CB-12896](https://issues.apache.org/jira/browse/CB-12896) (ios) Update icon mapping (#341)
 * [CB-12895](https://issues.apache.org/jira/browse/CB-12895) - ignoring cordova.js file (#339)
-* [CB-12895](https://issues.apache.org/jira/browse/CB-12895) - (ios) fixed bug building for ios using Xcode 9 (#338)
+* [CB-13315](https://issues.apache.org/jira/browse/CB-13315) - (ios) fixed bug building for ios using Xcode 9 (#338)
