@@ -29,8 +29,8 @@ Cette section indique comment configurer une icône et un écran de démarrage f
 
 Quand travaillant dans la CLI, vous pouvez définir des app icônes via `<icon>` élément ( `config.xml` ). Si vous ne spécifiez pas une icône, puis le logo Apache Cordova est utilisé.
 
-        <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
-    
+        <icon src="res/ios/icon.png" platform="ios" width="57" height="57" qualifier="mdpi" />
+
 
 SRC: (obligatoire) spécifie l'emplacement du fichier image, par rapport à votre répertoire de projet
 
@@ -45,29 +45,29 @@ densité : android (facultatif) spécifique, spécifie la densité de l'icône
 La configuration suivante peut être utilisée pour définir l'icône par défaut unique qui sera utilisé pour toutes les plates-formes.
 
         <icon src="res/icon.png" />
-    
+
 
 Pour chaque plate-forme, vous pouvez également définir un set pour s'adapter à des résolutions d'écran différentes d'icônes de pixellisés.
 
 Amazon Fire OS
 
          <platform name="amazon-fireos">
-                  <icon src="res/android/ldpi.png" density="ldpi" />
-                  <icon src="res/android/mdpi.png" density="mdpi" />
-                  <icon src="res/android/hdpi.png" density="hdpi" />
-                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+                  <icon src="res/android/ldpi.png" qualifier="ldpi" />
+                  <icon src="res/android/mdpi.png" qualifier="mdpi" />
+                  <icon src="res/android/hdpi.png" qualifier="hdpi" />
+                  <icon src="res/android/xhdpi.png" qualifier="xhdpi" />
          </platform>
-    
+
 
 Android
 
          <platform name="android">
-                  <icon src="res/android/ldpi.png" density="ldpi" />
-                  <icon src="res/android/mdpi.png" density="mdpi" />
-                  <icon src="res/android/hdpi.png" density="hdpi" />
-                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+                  <icon src="res/android/ldpi.png" qualifier="ldpi" />
+                  <icon src="res/android/mdpi.png" qualifier="mdpi" />
+                  <icon src="res/android/hdpi.png" qualifier="hdpi" />
+                  <icon src="res/android/xhdpi.png" qualifier="xhdpi" />
          </platform>
-    
+
 
 BlackBerry10
 
@@ -75,7 +75,7 @@ BlackBerry10
                   <icon src="res/bb10/icon-86.png" />
                   <icon src="res/bb10/icon-150.png" />
          </platform>
-    
+
 
 Voir la documentation de BlackBerry pour le ciblage de plusieurs tailles et paramètres régionaux. [http://developer.blackberry.com/html5/documentation/icon_element.html]
 
@@ -84,19 +84,19 @@ Firefox OS
          <platform name="firefoxos">
                   <icon src="res/ff/logo.png" width="60" height="60" />
          </platform>
-    
+
 
 iOS
 
          < nom de plate-forme = "ios" ><!--iOS 8.0 +--> <!--iPhone Plus 6--> < icône src = "res/ios/icon-60@3x.png" width = "180" height = "180" / ><!--iOS 7.0 +--> <!--iPhone / iPod Touch--> < icône src="res/ios/icon-60.png" largeur = "60" height = "60" / >< icône src = "res/ios/icon-60@2x.png" width = "120" height = "120" / ><!--iPad--> < icône src="res/ios/icon-76.png" largeur = hauteur "76" = "76" / >< icône src = "res/ios/icon-76@2x.png" width = "152" height = "152" /><!--iOS 6.1--> <!--icône Spotlight--> < icône src="res/ios/icon-40.png" largeur = "40" height = "40" / >< icône src = "res/ios/icon-40@2x.png" width = "80" height = "80" / ><!--iPhone / iPod Touch--> < icône src="res/ios/icon.png" largeur = "57" height = "57" / >< icône src = "res/ios/icon@2x.png" width = "114" height = "114" / ><!--iPad--> < icône src="res/ios/icon-72.png" largeur = hauteur "72" = "72" / >< icône src = "res/ios/icon-72@2x.png" width = "144" hauteur = "144" / ><!--iPhone Spotlight et icône Paramètres--> < icône src="res/ios/icon-small.png" largeur = "29" height = "29" / >< icône src = "res/ios/icon-small@2x.png" width = height "58" = "58" / ><!--iPad Spotlight et icône Paramètres--> < icône src="res/ios/icon-50.png" largeur = "50" height = "50" / >< icône src = "res/ios/icon-50@2x.png" width = "100" height = "100" / >< / plate-forme >
-    
+
 
 Paciarelli
 
          <platform name="tizen">
                   <icon src="res/tizen/icon-128.png" width="128" height="128" />
          </platform>
-    
+
 
 Windows Phone8
 
@@ -105,7 +105,7 @@ Windows Phone8
                   <!-- tile image -->
                   <icon src="res/wp/Background.png" width="159" height="159" />
          </platform>
-    
+
 
 Windows8
 
@@ -114,7 +114,7 @@ Windows8
                   <icon src="res/windows8/smalllogo.png" width="30" height="30" />
                   <icon src="res/windows8/storelogo.png" width="50" height="50" />
          </platform>
-    
+
 
 ## Configuration du Splashscreen dans la CLI
 
@@ -125,37 +125,37 @@ Dans le premier niveau `config.xml` fichier (pas celui de `platforms` ), ajouter
 Veuillez noter que la valeur de l'attribut « src » est relatif au répertoire de projet et de ne pas le répertoire www. Vous pouvez nommer l'image source, ce qui vous plait. Le nom interne de l'application sont déterminées par Cordova.
 
     <platform name="android">
-        <!-- you can use any density that exists in the Android project -->
-        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
-        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
-        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
-        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
-    
-        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
-        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
-        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
-        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+        <!-- you can use any qualifier that exists in the Android project -->
+        <splash src="res/screen/android/splash-land-hdpi.png" qualifier="land-hdpi"/>
+        <splash src="res/screen/android/splash-land-ldpi.png" qualifier="land-ldpi"/>
+        <splash src="res/screen/android/splash-land-mdpi.png" qualifier="land-mdpi"/>
+        <splash src="res/screen/android/splash-land-xhdpi.png" qualifier="land-xhdpi"/>
+
+        <splash src="res/screen/android/splash-port-hdpi.png" qualifier="port-hdpi"/>
+        <splash src="res/screen/android/splash-port-ldpi.png" qualifier="port-ldpi"/>
+        <splash src="res/screen/android/splash-port-mdpi.png" qualifier="port-mdpi"/>
+        <splash src="res/screen/android/splash-port-xhdpi.png" qualifier="port-xhdpi"/>
     </platform>
-    
+
     <platform name="ios">
         <!-- images are determined by width and height. Suivants sont pris en charge--> < éclabousser src="res/screen/ios/Default~iphone.png" largeur = "320" height = "480" / >< éclabousser src="res/screen/ios/Default@2x~iphone.png" largeur = "640" height = "960" / >< éclabousser src="res/screen/ios/Default-Portrait~ipad.png" largeur = "768" hauteur = "1024" / >< éclabousser src="res/screen/ios/Default-Portrait@2x~ipad.png" largeur = "1536" height = "2048" / >< éclabousser src="res/screen/ios/Default-Landscape~ipad.png" largeur = "1024" height = "768" / >< éclabousser src="res/screen/ios/Default-Landscape@2x~ipad.png" largeur = "2048" hauteur = "1536" / >< éclabousser src="res/screen/ios/Default-568h@2x~iphone.png" largeur = "640" height = "1136" / >< éclabousser src="res/screen/ios/Default-667h.png" largeur = "750" height = "1334" / >< éclabousser src="res/screen/ios/Default-736h.png" largeur = "1242" height = "2208" / >< éclabousser src="res/screen/ios/Default-Landscape-736h.png" largeur = "2208" height = "1242" / >< / plateforme >< nom de plate-forme = "at 8" ><!--images sont déterminées par la largeur et la hauteur. The following are supported -->
         <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
     </platform>
-    
+
     <platform name="windows8">
         <!-- images are determined by width and height. The following are supported -->
         <splash src="res/screen/windows8/splashscreen.png" width="620" height="300"/>
     </platform>
-    
+
     <platform name="blackberry10">
         <!-- Add a rim:splash element for each resolution and locale you wish -->
         <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
         <rim:splash src="res/screen/windows8/splashscreen.png"/>
     </platform>
-    
-    
+
+
     <preference name="SplashScreenDelay" value="10000" />
-    
+
 
 # Plates-formes prises en charge
 
@@ -166,7 +166,7 @@ A partir de maintenant (Cordova 3.5.0 juillet 2014) les plates-formes suivants p
     wp8
     windows8
     blackberry10
-    
+
 
 # SplashScreen Plugin
 

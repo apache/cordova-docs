@@ -32,7 +32,7 @@ When working in the CLI you can define application icon(s) via the `<icon>` elem
 If you do not specify an icon, the Apache Cordova logo is used.
 
 ```xml
-    <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
+    <icon src="res/ios/icon.png" platform="ios" width="57" height="57" qualifier="mdpi" />
 ```
 
 Attributes    | Description
@@ -41,7 +41,7 @@ src           | *Required* <br/> Location of the image file, relative to your pr
 platform      | *Optional* <br/> Target platform
 width         | *Optional* <br/> Icon width in pixels
 height        | *Optional* <br/> Icon height in pixels
-density       | *Optional* <br/> ==Android== <br/> Specified icon density
+qualifier       | *Optional* <br/> ==Android== <br/> Specified icon qualifier
 target        | *Optional* <br/> ==Windows== <br/> Destination filename for the image file and all its' MRT companions
 
 
@@ -64,12 +64,12 @@ different screen resolutions.
             xxhdpi  : 144x144 px
             xxxhdpi : 192x192 px
         -->
-        <icon src="res/android/ldpi.png" density="ldpi" />
-        <icon src="res/android/mdpi.png" density="mdpi" />
-        <icon src="res/android/hdpi.png" density="hdpi" />
-        <icon src="res/android/xhdpi.png" density="xhdpi" />
-        <icon src="res/android/xxhdpi.png" density="xxhdpi" />
-        <icon src="res/android/xxxhdpi.png" density="xxxhdpi" />
+        <icon src="res/android/ldpi.png" qualifier="ldpi" />
+        <icon src="res/android/mdpi.png" qualifier="mdpi" />
+        <icon src="res/android/hdpi.png" qualifier="hdpi" />
+        <icon src="res/android/xhdpi.png" qualifier="xhdpi" />
+        <icon src="res/android/xxhdpi.png" qualifier="xxhdpi" />
+        <icon src="res/android/xxxhdpi.png" qualifier="xxxhdpi" />
     </platform>
 ```
 ###See Also

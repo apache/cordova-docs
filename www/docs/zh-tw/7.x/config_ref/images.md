@@ -29,8 +29,8 @@ toc_title: Customize icons
 
 當工作在 CLI 中你可以定義應用程式圖示通過 `<icon>` 元素 （ `config.xml` ）。如果你不指定一個圖示然後使用 Apache 科爾多瓦徽標。
 
-        <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
-    
+        <icon src="res/ios/icon.png" platform="ios" width="57" height="57" qualifier="mdpi" />
+
 
 src： （必填） 指定的影像檔，與您的專案目錄的位置
 
@@ -45,29 +45,29 @@ src： （必填） 指定的影像檔，與您的專案目錄的位置
 下面的配置可以用於定義單個預設圖示，將用於所有平臺。
 
         <icon src="res/icon.png" />
-    
+
 
 為每個平臺還可以定義設置以適合不同的螢幕解析度圖元完美圖示。
 
 亞馬遜火 OS
 
          <platform name="amazon-fireos">
-                  <icon src="res/android/ldpi.png" density="ldpi" />
-                  <icon src="res/android/mdpi.png" density="mdpi" />
-                  <icon src="res/android/hdpi.png" density="hdpi" />
-                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+                  <icon src="res/android/ldpi.png" qualifier="ldpi" />
+                  <icon src="res/android/mdpi.png" qualifier="mdpi" />
+                  <icon src="res/android/hdpi.png" qualifier="hdpi" />
+                  <icon src="res/android/xhdpi.png" qualifier="xhdpi" />
          </platform>
-    
+
 
 Android 系統
 
          <platform name="android">
-                  <icon src="res/android/ldpi.png" density="ldpi" />
-                  <icon src="res/android/mdpi.png" density="mdpi" />
-                  <icon src="res/android/hdpi.png" density="hdpi" />
-                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+                  <icon src="res/android/ldpi.png" qualifier="ldpi" />
+                  <icon src="res/android/mdpi.png" qualifier="mdpi" />
+                  <icon src="res/android/hdpi.png" qualifier="hdpi" />
+                  <icon src="res/android/xhdpi.png" qualifier="xhdpi" />
          </platform>
-    
+
 
 BlackBerry10
 
@@ -75,7 +75,7 @@ BlackBerry10
                   <icon src="res/bb10/icon-86.png" />
                   <icon src="res/bb10/icon-150.png" />
          </platform>
-    
+
 
 請參閱針對多個大小和地區設定黑莓的文檔。[] HTTP://developer.blackberry.com/html5/documentation/icon_element.html
 
@@ -84,7 +84,7 @@ BlackBerry10
          <platform name="firefoxos">
                   <icon src="res/ff/logo.png" width="60" height="60" />
          </platform>
-    
+
 
 iOS
 
@@ -116,14 +116,14 @@ iOS
                   <icon src="res/ios/icon-50.png" width="50" height="50" />
                   <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
          </platform>
-    
+
 
 Tizen
 
          <platform name="tizen">
                   <icon src="res/tizen/icon-128.png" width="128" height="128" />
          </platform>
-    
+
 
 Windows Phone8
 
@@ -132,7 +132,7 @@ Windows Phone8
                   <!-- tile image -->
                   <icon src="res/wp/Background.png" width="159" height="159" />
          </platform>
-    
+
 
 Windows8
 
@@ -141,7 +141,7 @@ Windows8
                   <icon src="res/windows8/smalllogo.png" width="30" height="30" />
                   <icon src="res/windows8/storelogo.png" width="50" height="50" />
          </platform>
-    
+
 
 ## 在 CLI 中配置初始螢幕
 
@@ -152,18 +152,18 @@ Windows8
 請注意"src"屬性的值是相對於專案目錄而不是 www 目錄。 你可以命名源映射任何你喜歡的。 在應用程式中的內部名稱取決於科爾多瓦。
 
     <platform name="android">
-        <!-- you can use any density that exists in the Android project -->
-        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
-        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
-        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
-        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
-    
-        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
-        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
-        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
-        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+        <!-- you can use any qualifier that exists in the Android project -->
+        <splash src="res/screen/android/splash-land-hdpi.png" qualifier="land-hdpi"/>
+        <splash src="res/screen/android/splash-land-ldpi.png" qualifier="land-ldpi"/>
+        <splash src="res/screen/android/splash-land-mdpi.png" qualifier="land-mdpi"/>
+        <splash src="res/screen/android/splash-land-xhdpi.png" qualifier="land-xhdpi"/>
+
+        <splash src="res/screen/android/splash-port-hdpi.png" qualifier="port-hdpi"/>
+        <splash src="res/screen/android/splash-port-ldpi.png" qualifier="port-ldpi"/>
+        <splash src="res/screen/android/splash-port-mdpi.png" qualifier="port-mdpi"/>
+        <splash src="res/screen/android/splash-port-xhdpi.png" qualifier="port-xhdpi"/>
     </platform>
-    
+
     <platform name="ios">
         <!-- images are determined by width and height. The following are supported -->
         <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
@@ -177,26 +177,26 @@ Windows8
         <splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/>
         <splash src="res/screen/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
     </platform>
-    
+
     <platform name="wp8">
         <!-- images are determined by width and height. The following are supported -->
         <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
     </platform>
-    
+
     <platform name="windows8">
         <!-- images are determined by width and height. The following are supported -->
         <splash src="res/screen/windows8/splashscreen.png" width="620" height="300"/>
     </platform>
-    
+
     <platform name="blackberry10">
         <!-- Add a rim:splash element for each resolution and locale you wish -->
         <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
         <rim:splash src="res/screen/windows8/splashscreen.png"/>
     </platform>
-    
-    
+
+
     <preference name="SplashScreenDelay" value="10000" />
-    
+
 
 # 支援的平臺
 
@@ -207,7 +207,7 @@ Windows8
     wp8
     windows8
     blackberry10
-    
+
 
 # 閃屏外掛程式
 
