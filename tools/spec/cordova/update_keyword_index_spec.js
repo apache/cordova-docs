@@ -16,28 +16,28 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-/*global describe, it, beforeEach, afterEach, after, before */
+/* jslint node: true */
+/* global describe, it, beforeEach, afterEach, after, before */ // eslint-disable-line no-unused-vars
 (function () {
     'use strict';
-    var assert = require("assert"),
-        path = require('path'),
-        fs = require('fs'),
-        cheerio = require('cheerio'),
-        UpdateKeywordIndex = require("../../lib/cordova/post/updatekeywordindex"),
-        SpecHelpers = require("../spec_helpers");
+    var assert = require('assert');
+    var path = require('path');
+    var fs = require('fs');
+    var cheerio = require('cheerio');
+    var UpdateKeywordIndex = require('../../lib/cordova/post/updatekeywordindex');
+    var SpecHelpers = require('../spec_helpers');
 
     describe('UpdateKeywordIndex', function () {
         var sut,
             file;
-        
+
         beforeEach(function (done) {
             var tmp_directory = SpecHelpers.create_tmp_directory_assets(module.filename);
             sut = new UpdateKeywordIndex();
             file = path.join(tmp_directory, '_index.html');
             done();
         });
-        
+
         afterEach(function (done) {
             SpecHelpers.remove_tmp_directory();
             done();
@@ -87,7 +87,7 @@
         });
 
         it('should update references from index.md.html to index.html', function () {
-            var fileToSearch = "index.md.html";
+            var fileToSearch = 'index.md.html';
             assert.notStrictEqual(-1, fs.readFileSync(file).toString().indexOf(fileToSearch));
             sut.run(file);
             assert.strictEqual(-1, fs.readFileSync(file).toString().indexOf(fileToSearch));

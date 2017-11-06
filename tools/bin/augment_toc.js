@@ -15,25 +15,25 @@
 // specific language governing permissions and limitations
 // under the License.
 
-"use strict";
+'use strict';
 
-var fs   = require("fs");
-var path = require("path");
+var fs = require('fs');
+var path = require('path');
 
-var yaml     = require("js-yaml");
-var optimist = require("optimist");
+var yaml = require('js-yaml');
+var optimist = require('optimist');
 
-var util = require("./util");
+var util = require('./util');
 
 // constants
-var DEFAULT_PREFIX     = "";
+var DEFAULT_PREFIX = '';
 var VERBOSE_BY_DEFAULT = false;
 
 // globals
 var verbose = VERBOSE_BY_DEFAULT;
 
 // helpers
-function augmentEntry(originalEntry, prefix) {
+function augmentEntry (originalEntry, prefix) {
     var augmentedEntry = {};
 
     // skip entries that have no URI
@@ -46,17 +46,17 @@ function augmentEntry(originalEntry, prefix) {
 
     // skip entries that don't point to a valid file
     if (!fs.existsSync(filePath)) {
-        console.warn("WARNING! Possible 404 in ToC: \"" + filePath + "\"");
+        console.warn('WARNING! Possible 404 in ToC: "' + filePath + '"');
         return originalEntry;
     }
 
     // read in the referenced file and get its front matter
-    var fileContents      = fs.readFileSync(filePath).toString();
+    var fileContents = fs.readFileSync(filePath).toString();
     var frontMatterString = util.getFrontMatterString(fileContents);
-    var frontMatter       = yaml.load(frontMatterString);
+    var frontMatter = yaml.load(frontMatterString);
 
     augmentedEntry.name = decideOnName(originalEntry, frontMatter);
-    augmentedEntry.url  = originalEntry.url;
+    augmentedEntry.url = originalEntry.url;
 
     if (frontMatter.description) {
         augmentedEntry.description = frontMatter.description;
@@ -65,7 +65,7 @@ function augmentEntry(originalEntry, prefix) {
     return augmentedEntry;
 }
 
-function decideOnName(originalEntry, frontMatter) {
+function decideOnName (originalEntry, frontMatter) {
 
     // raise a warning for old-style ToC entry names
     if (originalEntry.name && verbose === true) {
@@ -82,28 +82,28 @@ function decideOnName(originalEntry, frontMatter) {
 }
 
 // public API
-function augmentToc(originalToc, prefix) {
+function augmentToc (originalToc, prefix) {
 
     var augmentedToc = [];
 
-    if (typeof prefix === "undefined") {
-        throw new Error("missing prefix for ToC");
+    if (typeof prefix === 'undefined') {
+        throw new Error('missing prefix for ToC');
     }
 
     // go through all original entries
     for (var i = 0; i < originalToc.length; i++) {
-        var originalEntry  = originalToc[i];
+        var originalEntry = originalToc[i];
         var augmentedEntry = {};
 
         // recurse for entries with children, replacing their children with
         // their augmented equivalents
         if (originalEntry.children) {
 
-            if (typeof originalEntry.name === "undefined") {
-                throw new Error("entries with children must have a name");
+            if (typeof originalEntry.name === 'undefined') {
+                throw new Error('entries with children must have a name');
             }
 
-            augmentedEntry.name     = originalEntry.name;
+            augmentedEntry.name = originalEntry.name;
             augmentedEntry.children = augmentToc(originalEntry.children, prefix);
 
         // replace regular entries with their augmented equivalents
@@ -117,9 +117,9 @@ function augmentToc(originalToc, prefix) {
     return augmentedToc;
 }
 
-function augmentString(srcTocString, prefix) {
-    var srcToc             = yaml.load(srcTocString);
-    var augmentedToc       = augmentToc(srcToc, prefix);
+function augmentString (srcTocString, prefix) {
+    var srcToc = yaml.load(srcTocString);
+    var augmentedToc = augmentToc(srcToc, prefix);
     var augmentedTocString = yaml.dump(augmentedToc, {indent: 4});
 
     return augmentedTocString;
@@ -129,21 +129,21 @@ function main () {
 
     // get args
     var argv = optimist
-        .usage("Usage: $0 [options]")
-        .demand("srcToc").describe("srcToc", "the source ToC for the given directory")
-        .demand("srcRoot").describe("srcRoot", "the directory containing files described by the ToC")
-        .boolean("verbose").describe("verbose", "if true, print more helpful information").default("verbose", VERBOSE_BY_DEFAULT)
-        .alias("v", "verbose")
+        .usage('Usage: $0 [options]')
+        .demand('srcToc').describe('srcToc', 'the source ToC for the given directory')
+        .demand('srcRoot').describe('srcRoot', 'the directory containing files described by the ToC')
+        .boolean('verbose').describe('verbose', 'if true, print more helpful information').default('verbose', VERBOSE_BY_DEFAULT)
+        .alias('v', 'verbose')
         .argv;
 
-    var srcTocPath  = argv.srcToc;
+    var srcTocPath = argv.srcToc;
     var srcRootPath = argv.srcRoot;
 
     // set globals
     verbose = argv.verbose;
 
     // get augmented ToC
-    var srcTocString       = fs.readFileSync(srcTocPath);
+    var srcTocString = fs.readFileSync(srcTocPath);
     var augmentedTocString = augmentString(srcTocString, srcRootPath);
 
     console.log(util.generatedBy(__filename));
@@ -155,6 +155,6 @@ if (require.main === module) {
 }
 
 module.exports = {
-    augmentToc:    augmentToc,
-    augmentString: augmentString,
+    augmentToc: augmentToc,
+    augmentString: augmentString
 };

@@ -16,26 +16,25 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true, continue:true */
-/*global setImmediate*/
-var fs = require("fs-extra");
-var path = require("path");
-var JoDoc = require("./cordova/jodoc");
-var FileHelpers = require("./file_helpers");
+/* jslint node: true, continue:true */
+/* global setImmediate */
+var fs = require('fs-extra');
+var path = require('path');
+var FileHelpers = require('./file_helpers');
 var cheerio = require('cheerio');
-var jsdiff = require('diff'),
-    yaml = require("js-yaml"),
-    dir = require("node-dir");
+var jsdiff = require('diff');
+var yaml = require('js-yaml'); // eslint-disable-line no-unused-vars
+var dir = require('node-dir');
 require('colors');
 
 var DocsValidator = (function () {
     'use strict';
 
-    function processEachFileSync(source_path, fileCallback, directoryCallback) {
+    function processEachFileSync (source_path, fileCallback, directoryCallback) { // eslint-disable-line no-unused-vars
         var directoryEntries = fs.readdirSync(source_path);
         directoryEntries.forEach(function (dirEntry) {
-            var fullPath = path.join(source_path, dirEntry),
-                stat;
+            var fullPath = path.join(source_path, dirEntry);
+            var stat;
             if (!fs.existsSync(fullPath)) {
                 return;
             }
@@ -51,12 +50,11 @@ var DocsValidator = (function () {
                     processEachFileSync(fullPath, fileCallback, directoryCallback);
                 }
 
-                return;
             }
         });
     }
 
-    function processEachFile(source_path, fileCallback, directoryCallback, errorCallback) {
+    function processEachFile (source_path, fileCallback, directoryCallback, errorCallback) { // eslint-disable-line no-unused-vars
         fs.readdirSync(source_path, function (err, directoryEntries) {
             if (err) {
                 errorCallback(err);
@@ -86,7 +84,6 @@ var DocsValidator = (function () {
                                 processEachFile(fullPath, fileCallback, directoryCallback, errorCallback);
                             }
 
-                            return;
                         }
                     });
                 });
@@ -98,8 +95,8 @@ var DocsValidator = (function () {
     * Creates a new instance of DocsValidator
     * @param inputDirectory Directory which contains files which has to be processed.
     */
-    function DocsValidator(originalDirectory) {
-        this.original_directory = originalDirectory || path.join(FileHelpers.getRootDirectory(), "docs");
+    function DocsValidator (originalDirectory) {
+        this.original_directory = originalDirectory || path.join(FileHelpers.getRootDirectory(), 'docs');
     }
 
     /**
@@ -109,13 +106,13 @@ var DocsValidator = (function () {
     * @param verbose_mode Verbosity level.
     */
     DocsValidator.prototype.validate = function (language, version, verbose_mode) {
-        var self = this,
-            ignore_list = ['.', '..', '.DS_Store', 'test'];
+        var self = this;
+        var ignore_list = ['.', '..', '.DS_Store', 'test'];
 
         verbose_mode = verbose_mode || 0;
         if (verbose_mode > 0) {
-            console.log("Comparing docs for lang " + language + " and version " + version);
-            console.log("Clearing output directory");
+            console.log('Comparing docs for lang ' + language + ' and version ' + version);
+            console.log('Clearing output directory');
         }
 
         fs.readdirSync(this.original_directory).forEach(function (language_dir) {
@@ -138,14 +135,14 @@ var DocsValidator = (function () {
                     return;
                 }
 
-                var input_path = path.join(self.original_directory, language_dir, version_dir),
-                    options = {
-                        lang: language_dir,
-                        version: version_dir,
-                        verbose: verbose_mode
-                    };
+                var input_path = path.join(self.original_directory, language_dir, version_dir);
+                var options = {
+                    lang: language_dir,
+                    version: version_dir,
+                    verbose: verbose_mode
+                };
 
-                console.log(" => Validating the Cordova Documentation for " + version_dir + "-" + language_dir + "...");
+                console.log(' => Validating the Cordova Documentation for ' + version_dir + '-' + language_dir + '...');
                 self.process(input_path, options);
             });
         });
@@ -159,14 +156,14 @@ var DocsValidator = (function () {
     * @param verbose_mode Verbosity level.
     */
     DocsValidator.prototype.validateTranslation = function (docsDirectory, language, version, verbose_mode) {
-        var self = this,
-            outputDirectory = path.resolve(docsDirectory || FileHelpers.getDefaultOutputDirectory()),
-            ignore_list = ['.', '..', '.DS_Store', 'test'];
-        
+        var self = this;
+        var outputDirectory = path.resolve(docsDirectory || FileHelpers.getDefaultOutputDirectory());
+        var ignore_list = ['.', '..', '.DS_Store', 'test'];
+
         verbose_mode = verbose_mode || 0;
         if (verbose_mode > 0) {
-            console.log("Comparing docs for lang " + language + " and version " + version);
-            console.log("Clearing output directory");
+            console.log('Comparing docs for lang ' + language + ' and version ' + version);
+            console.log('Clearing output directory');
         }
 
         fs.readdirSync(outputDirectory).forEach(function (language_dir) {
@@ -189,25 +186,25 @@ var DocsValidator = (function () {
                     return;
                 }
 
-                var input_path = path.join(outputDirectory, language_dir, version_dir),
-                    source_path = path.join(outputDirectory, "en", version_dir),
-                    options = {
-                        lang: language_dir,
-                        version: version_dir,
-                        verbose: verbose_mode
-                    };
+                var input_path = path.join(outputDirectory, language_dir, version_dir);
+                var source_path = path.join(outputDirectory, 'en', version_dir);
+                var options = {
+                    lang: language_dir,
+                    version: version_dir,
+                    verbose: verbose_mode
+                };
 
-                console.log(" => Validating translation for version " + version_dir + " on language " + language_dir + "...");
+                console.log(' => Validating translation for version ' + version_dir + ' on language ' + language_dir + '...');
                 self.doValidateTranslation(source_path, input_path, options);
             });
         });
     };
     DocsValidator.prototype.doValidateTranslation = function (original_directory, comparing_directory, options) {
-        var self = this,
-            compareFiles,
-            completed;
-        console.log("Comparing " + original_directory);
-        console.log("with " + comparing_directory);
+        var self = this;
+        var compareFiles; // eslint-disable-line no-unused-vars
+        var completed;
+        console.log('Comparing ' + original_directory);
+        console.log('with ' + comparing_directory);
         completed = false;
         dir.readFiles(original_directory,
             { match: /\.html/ },
@@ -216,16 +213,16 @@ var DocsValidator = (function () {
                     throw err;
                 }
 
-                var relativePath = path.relative(original_directory, filename),
-                    alternativeFile = path.join(comparing_directory, relativePath),
-                    $ = cheerio.load(alternativeFile);
+                var relativePath = path.relative(original_directory, filename);
+                var alternativeFile = path.join(comparing_directory, relativePath);
+                var $ = cheerio.load(alternativeFile); // eslint-disable-line no-unused-vars
                 fs.readFile(alternativeFile, function (err, data) {
                     if (err) {
                         throw err;
                     }
 
-                    var target = cheerio.load(data),
-                        source = cheerio.load(content);
+                    var target = cheerio.load(data);
+                    var source = cheerio.load(content);
 
                     self.validateLinksStructure(relativePath, source, target, options);
                     self.validateDomStructure(relativePath, source, target, options);
@@ -239,7 +236,7 @@ var DocsValidator = (function () {
 
                 completed = true;
             });
-        function waitCompletition() {
+        function waitCompletition () {
             if (!completed) {
                 setImmediate(waitCompletition);
             }
@@ -248,10 +245,10 @@ var DocsValidator = (function () {
         setImmediate(waitCompletition);
     };
     DocsValidator.prototype.process = function (original_directory, options) {
-        var self = this,
-            compareFiles,
-            completed;
-        console.log("Processing " + original_directory);
+        var self = this;
+        var compareFiles; // eslint-disable-line no-unused-vars
+        var completed;
+        console.log('Processing ' + original_directory);
         compareFiles = function (fileName) {
             self.validateYaml(fileName, options);
         };
@@ -273,7 +270,7 @@ var DocsValidator = (function () {
 
                 completed = true;
             });
-        function waitCompletition() {
+        function waitCompletition () {
             if (!completed) {
                 setImmediate(waitCompletition);
             }
@@ -283,17 +280,17 @@ var DocsValidator = (function () {
     };
 
     DocsValidator.prototype.validateDomStructure = function (relativePath, source, target, options) {
-        var sourceDom = source("#content"),
-            targetDom = target("#content"),
-            sourceDomList = "",
-            targetDomList = "",
-            sourceDomHtmlList = [],
-            targetDomHtmlList = [],
-            changes,
-            changed = false;
-        function convertSource(element, initial, offset) {
-            var i,
-                child;
+        var sourceDom = source('#content');
+        var targetDom = target('#content');
+        var sourceDomList = '';
+        var targetDomList = '';
+        var sourceDomHtmlList = [];
+        var targetDomHtmlList = [];
+        var changes;
+        var changed = false; // eslint-disable-line no-unused-vars
+        function convertSource (element, initial, offset) {
+            var i;
+            var child;
             if (element.children === undefined) {
                 console.log(element);
             }
@@ -304,15 +301,15 @@ var DocsValidator = (function () {
                     continue;
                 }
 
-                initial += offset + child.name + "\r\n";
+                initial += offset + child.name + '\r\n';
                 initial = convertSource(child, initial, ' ' + offset);
             }
 
             return initial;
         }
-        function convertSourceHtml(element, initial, offset) {
-            var i,
-                child;
+        function convertSourceHtml (element, initial, offset) {
+            var i;
+            var child;
             if (element.children === undefined) {
                 console.log(element);
             }
@@ -323,8 +320,8 @@ var DocsValidator = (function () {
                     continue;
                 }
 
-                initial += offset + child.name + "(" + cheerio(child).html() + ")" + "\r\n";
-                //console.log(cheerio(child).html());
+                initial += offset + child.name + '(' + cheerio(child).html() + ')' + '\r\n';
+                // console.log(cheerio(child).html());
                 initial = convertSourceHtml(child, initial, ' ' + offset);
             }
 
@@ -332,12 +329,12 @@ var DocsValidator = (function () {
         }
         sourceDomList = convertSource(sourceDom[0], '', '');
         targetDomList = convertSource(targetDom[0], '', '');
-        sourceDomHtmlList = convertSourceHtml(sourceDom[0], '', '').split("\r\n") || [];
-        targetDomHtmlList = convertSourceHtml(targetDom[0], '', '').split("\r\n") || [];
+        sourceDomHtmlList = convertSourceHtml(sourceDom[0], '', '').split('\r\n') || [];
+        targetDomHtmlList = convertSourceHtml(targetDom[0], '', '').split('\r\n') || [];
         if (sourceDomList !== targetDomList) {
-            console.error("Path " + relativePath + " has different dom structure.");
+            console.error('Path ' + relativePath + ' has different dom structure.');
             if (options.verbose > 0) {
-                //console.log(jsdiff.createPatch(relativePath, sourceDomList, targetDomList, '', ''));
+                // console.log(jsdiff.createPatch(relativePath, sourceDomList, targetDomList, '', ''));
                 changes = jsdiff.diffLines(sourceDomList, targetDomList);
                 if (options.verbose > 0) {
                     var sourceLinesCounter = 0;
@@ -347,19 +344,19 @@ var DocsValidator = (function () {
                         // grey for common parts
                         var color = part.added ? 'green' : (part.removed ? 'red' : 'grey');
                         var value = part.value;
-                        //process.stderr.write(value[color]);
+                        // process.stderr.write(value[color]);
                         if (part.added) {
-                            value = targetDomHtmlList.slice(targetLinesCounter, targetLinesCounter + part.count).join("\r\n") + "\r\n";
+                            value = targetDomHtmlList.slice(targetLinesCounter, targetLinesCounter + part.count).join('\r\n') + '\r\n';
                             targetLinesCounter += part.count;
                         } else if (part.removed) {
-                            value = sourceDomHtmlList.slice(sourceLinesCounter, sourceLinesCounter + part.count).join("\r\n") + "\r\n";
+                            value = sourceDomHtmlList.slice(sourceLinesCounter, sourceLinesCounter + part.count).join('\r\n') + '\r\n';
                             sourceLinesCounter += part.count;
                         } else {
                             sourceLinesCounter += part.count;
                             targetLinesCounter += part.count;
                             var contextLength = 3;
                             if (part.count > contextLength * 2 + 1) {
-                                value = part.value.split("\r\n").slice(0, contextLength).concat(["...\r\n"], part.value.split("\r\n").slice(part.count - contextLength, part.count)).join("\r\n") + "\r\n";
+                                value = part.value.split('\r\n').slice(0, contextLength).concat(['...\r\n'], part.value.split('\r\n').slice(part.count - contextLength, part.count)).join('\r\n') + '\r\n';
                             } else {
                                 value = part.value;
                             }
@@ -377,28 +374,28 @@ var DocsValidator = (function () {
         // Skip _index.html since it will have links in the different
         // order, not as in the original docs, since each word
         // will be translated to different languages.
-        if (relativePath === "_index.html") {
+        if (relativePath === '_index.html') {
             return;
         }
 
-        var sourceLinks = source("#content a"),
-            targetLinks = target("#content a"),
-            sourceLinksList = "",
-            targetLinksList = "",
-            changes,
-            changed = false;
+        var sourceLinks = source('#content a');
+        var targetLinks = target('#content a');
+        var sourceLinksList = '';
+        var targetLinksList = '';
+        var changes;
+        var changed = false;
         sourceLinks.each(function (i, a) {
-            var link = a.attribs.href || "";
+            var link = a.attribs.href || '';
             link = link.split('#')[0];
             if (link) {
-                sourceLinksList += link + "\n";
+                sourceLinksList += link + '\n';
             }
         });
         targetLinks.each(function (i, a) {
-            var link = a.attribs.href || "";
+            var link = a.attribs.href || '';
             link = link.split('#')[0];
             if (link) {
-                targetLinksList += link + "\n";
+                targetLinksList += link + '\n';
             }
         });
         changes = jsdiff.diffLines(sourceLinksList, targetLinksList);
@@ -406,7 +403,7 @@ var DocsValidator = (function () {
             changed = part.added || part.removed;
         });
         if (changed) {
-            console.error("Path " + relativePath + " has different links.");
+            console.error('Path ' + relativePath + ' has different links.');
             if (options.verbose > 0) {
                 changes.forEach(function (part) {
                     // green for additions, red for deletions
@@ -419,21 +416,21 @@ var DocsValidator = (function () {
             }
         }
     };
-    
+
     DocsValidator.prototype.validateYaml = function (sourceFile, content, options) {
         if (options.verbose > 0) {
-            console.log("Validate " + sourceFile);
+            console.log('Validate ' + sourceFile);
         }
 
-        var yamlRegexStripper = /^(---\s*\n[\s\S]*?\n?)^(---\s*$\n?)/m,
-            match = yamlRegexStripper.exec(content);
+        var yamlRegexStripper = /^(---\s*\n[\s\S]*?\n?)^(---\s*$\n?)/m;
+        var match = yamlRegexStripper.exec(content);
 
         if (!match) {
-            console.log("File " + sourceFile + " miss the YAML license header");
+            console.log('File ' + sourceFile + ' miss the YAML license header');
             return 1;
         } else {
-            if (match[1].indexOf("license:") === -1) {
-                console.log("File " + sourceFile + " has invalid YAML license header");
+            if (match[1].indexOf('license:') === -1) {
+                console.log('File ' + sourceFile + ' has invalid YAML license header');
                 return 2;
             }
         }
@@ -449,14 +446,14 @@ var DocsValidator = (function () {
     * @param verbose_mode Verbosity level.
     */
     DocsValidator.prototype.fixYamlHeader = function (docsDirectory, language, version, verbose_mode) {
-        var self = this,
-            outputDirectory = path.resolve(docsDirectory || FileHelpers.getDefaultInputDirectory()),
-            ignore_list = ['.', '..', '.DS_Store', 'test'];
+        var self = this;
+        var outputDirectory = path.resolve(docsDirectory || FileHelpers.getDefaultInputDirectory());
+        var ignore_list = ['.', '..', '.DS_Store', 'test'];
 
         verbose_mode = verbose_mode || 0;
         if (verbose_mode > 0) {
-            console.log("Fixing YAML headers for lang " + language + " and version " + version);
-            console.log("Clearing output directory");
+            console.log('Fixing YAML headers for lang ' + language + ' and version ' + version);
+            console.log('Clearing output directory');
         }
 
         fs.readdirSync(outputDirectory).forEach(function (language_dir) {
@@ -479,23 +476,23 @@ var DocsValidator = (function () {
                     return;
                 }
 
-                var input_path = path.join(outputDirectory, language_dir, version_dir),
-                    options = {
-                        lang: language_dir,
-                        version: version_dir,
-                        verbose: verbose_mode
-                    };
+                var input_path = path.join(outputDirectory, language_dir, version_dir);
+                var options = {
+                    lang: language_dir,
+                    version: version_dir,
+                    verbose: verbose_mode
+                };
 
-                console.log(" => Fix YAML header for version " + version_dir + " on language " + language_dir + "...");
+                console.log(' => Fix YAML header for version ' + version_dir + ' on language ' + language_dir + '...');
                 self.doFixYamlHeader(input_path, options);
             });
         });
     };
     DocsValidator.prototype.doFixYamlHeader = function (lang_directory, options) {
-        var self = this,
-            compareFiles,
-            completed;
-        console.log("Fixing " + lang_directory);
+        var self = this;
+        var compareFiles; // eslint-disable-line no-unused-vars
+        var completed;
+        console.log('Fixing ' + lang_directory);
         completed = false;
         dir.readFiles(lang_directory,
             { match: /\.md/ },
@@ -504,39 +501,39 @@ var DocsValidator = (function () {
                     throw err;
                 }
 
-                var relativePath = path.relative(lang_directory, filename);
+                var relativePath = path.relative(lang_directory, filename); // eslint-disable-line no-unused-vars
                 fs.readFile(filename, 'utf8', function (err, data) {
                     if (err) {
                         throw err;
                     }
 
-                    var target = data,
-                        validationResult = self.validateYaml(filename, content, options),
-                        yamlReplaceRegex1,
-                        yamlReplaceRegex2,
-                        eol = require('os').type() === 'win32' ? "\r\n" : "\n",
-                        prefix = "         ",
-                        correctLicense = '---' + eol +
-                            "license: Licensed to the Apache Software Foundation (ASF) under one" + eol +
-                            prefix + "or more contributor license agreements.  See the NOTICE file" + eol +
-                            prefix + "distributed with this work for additional information" + eol +
-                            prefix + "regarding copyright ownership.  The ASF licenses this file" + eol +
-                            prefix + "to you under the Apache License, Version 2.0 (the" + eol +
-                            prefix + "\"License\"); you may not use this file except in compliance" + eol +
-                            prefix + "with the License.  You may obtain a copy of the License at" + eol +
-                            eol +
-                            prefix + "  http://www.apache.org/licenses/LICENSE-2.0" + eol +
-                            eol +
-                            prefix + "Unless required by applicable law or agreed to in writing," + eol +
-                            prefix + "software distributed under the License is distributed on an" + eol +
-                            prefix + "\"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY" + eol +
-                            prefix + "KIND, either express or implied.  See the License for the" + eol +
-                            prefix + "specific language governing permissions and limitations" + eol +
-                            prefix + "under the License." + eol +
-                            '---' + eol + eol;
+                    var target = data; // eslint-disable-line no-unused-vars
+                    var validationResult = self.validateYaml(filename, content, options);
+                    var yamlReplaceRegex1;
+                    var yamlReplaceRegex2;
+                    var eol = require('os').type() === 'win32' ? '\r\n' : '\n';
+                    var prefix = '         ';
+                    var correctLicense = '---' + eol +
+                        'license: Licensed to the Apache Software Foundation (ASF) under one' + eol +
+                        prefix + 'or more contributor license agreements.  See the NOTICE file' + eol +
+                        prefix + 'distributed with this work for additional information' + eol +
+                        prefix + 'regarding copyright ownership.  The ASF licenses this file' + eol +
+                        prefix + 'to you under the Apache License, Version 2.0 (the' + eol +
+                        prefix + '"License"); you may not use this file except in compliance' + eol +
+                        prefix + 'with the License.  You may obtain a copy of the License at' + eol +
+                        eol +
+                        prefix + '  http://www.apache.org/licenses/LICENSE-2.0' + eol +
+                        eol +
+                        prefix + 'Unless required by applicable law or agreed to in writing,' + eol +
+                        prefix + 'software distributed under the License is distributed on an' + eol +
+                        prefix + '"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY' + eol +
+                        prefix + 'KIND, either express or implied.  See the License for the' + eol +
+                        prefix + 'specific language governing permissions and limitations' + eol +
+                        prefix + 'under the License.' + eol +
+                        '---' + eol + eol;
 
                     if (validationResult !== 0) {
-                        yamlReplaceRegex1 = /^(\* \* \*\s*\n[\s\S]*?\n?)^(\#\# (under the License\.|unter der Lizenz\.|по лицензии\.|aux termes de la licence\.|con la licenza\.|ライセンス。|라이센스\.|根據許可證。)\s*$\n?)/m;
+                        yamlReplaceRegex1 = /^(\* \* \*\s*\n[\s\S]*?\n?)^(\#\# (under the License\.|unter der Lizenz\.|по лицензии\.|aux termes de la licence\.|con la licenza\.|ライセンス。|라이센스\.|根據許可證。)\s*$\n?)/m; // eslint-disable-line no-useless-escape
                         if (yamlReplaceRegex1.exec(content)) {
                             content = correctLicense + content.replace(yamlReplaceRegex1, '');
                         } else {
@@ -565,7 +562,7 @@ var DocsValidator = (function () {
 
                 completed = true;
             });
-        function waitCompletition() {
+        function waitCompletition () {
             if (!completed) {
                 setImmediate(waitCompletition);
             }

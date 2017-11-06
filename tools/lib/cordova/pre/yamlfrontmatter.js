@@ -16,10 +16,9 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-var fs = require("fs-extra"),
-    path = require("path"),
-    yaml = require("js-yaml");
+/* jslint node: true */
+var fs = require('fs-extra');
+var yaml = require('js-yaml');
 
 var YamlFrontMatter = (function () {
     'use strict';
@@ -28,20 +27,20 @@ var YamlFrontMatter = (function () {
     * Creates a new instance of FileMerger
     * @param options Options for the generation process.
     */
-    function YamlFrontMatter(options) {
+    function YamlFrontMatter (options) {
         this.options = options || { verbose: 0 };
-        this.stage = "Starting YAML stripping";
+        this.stage = 'Starting YAML stripping';
     }
 
     YamlFrontMatter.prototype.run = function (file) {
         if (this.options.verbose > 1) {
-            console.log("String YAML from file " + file);
+            console.log('String YAML from file ' + file);
         }
 
-        var content = fs.readFileSync(file, "utf8"),
-            yamlRegexStripper = /^(---\s*\n[\s\S]*?\n?)^(---\s*$\n?)/m,
-            match = yamlRegexStripper.exec(content),
-            yamlData;
+        var content = fs.readFileSync(file, 'utf8');
+        var yamlRegexStripper = /^(---\s*\n[\s\S]*?\n?)^(---\s*$\n?)/m;
+        var match = yamlRegexStripper.exec(content);
+        var yamlData;
         if (match === null) {
             return {};
         }
@@ -49,9 +48,9 @@ var YamlFrontMatter = (function () {
         try {
             yamlData = yaml.safeLoad(match[1]);
         } catch (yamle) {
-            console.error("File: " + file);
+            console.error('File: ' + file);
             if (this.options.verbose > 1) {
-                console.error("YAML Exception during processing following content:\n" + content);
+                console.error('YAML Exception during processing following content:\n' + content);
             }
 
             throw yamle;

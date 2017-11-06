@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/apache/cordova-docs.svg?branch=master)](https://travis-ci.org/apache/cordova-docs)
+
 # Cordova Docs
 
 ## Introduction

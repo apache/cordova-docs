@@ -15,34 +15,34 @@
 // specific language governing permissions and limitations
 // under the License.
 
-"use strict";
+'use strict';
 
-function getNextVersion(previousVersion) {
+function getNextVersion (previousVersion) {
 
     // get previous version number
     // NOTE:
     //      only versions of the form N.x are accepted
     var previousVersionMatch = previousVersion.match(/^(\d+)\.x$/);
     if (!previousVersionMatch) {
-        throw "invalid version";
+        throw 'invalid version';
     }
 
     // get next major version
     var previousMajor = previousVersionMatch[1];
-    var nextMajor     = parseInt(previousMajor) + 1;
+    var nextMajor = parseInt(previousMajor) + 1;
 
     // create next version
-    var nextVersion = nextMajor + ".x";
+    var nextVersion = nextMajor + '.x';
 
     return nextVersion;
 }
 
-function main() {
+function main () {
 
     // get arg
     var previousVersion = process.argv[2];
     if (!previousVersion) {
-        console.error("no version specified");
+        console.error('no version specified');
         process.exit(1);
     }
 

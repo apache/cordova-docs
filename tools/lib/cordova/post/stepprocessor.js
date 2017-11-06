@@ -16,16 +16,16 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-var fs = require("fs-extra");
-var path = require("path");
+/* jslint node: true */
+var fs = require('fs-extra');
+var path = require('path');
 var cheerio = require('cheerio');
-var AddTitle = require("./addtitle"),
-    TableOfContents = require("./tableofcontents"),
-    VersionMenu = require("./versionmenu"),
-    NavigationMenu = require("./navigationmenu"),
-    Prettify = require("./prettify"),
-    NoIndex = require("./noindex");
+var AddTitle = require('./addtitle');
+var TableOfContents = require('./tableofcontents');
+var VersionMenu = require('./versionmenu');
+var NavigationMenu = require('./navigationmenu');
+var Prettify = require('./prettify');
+var NoIndex = require('./noindex');
 
 /**
 * Preprocessor which updates top stripe with header or the page.
@@ -37,13 +37,13 @@ var StepProcessor = (function () {
     * Creates a new instance of StepProcessor
     * @param options Options for the generation process.
     */
-    function StepProcessor(options) {
+    function StepProcessor (options) {
         var self = this;
         this.options = options || { verbose: 0, timing: -1 };
-        this.stage = "Step 1";
-        this.processors = [AddTitle,  TableOfContents, VersionMenu, NavigationMenu, Prettify, NoIndex].map(function (StepConstructor) {
+        this.stage = 'Step 1';
+        this.processors = [AddTitle, TableOfContents, VersionMenu, NavigationMenu, Prettify, NoIndex].map(function (StepConstructor) {
             var stepObject;
-            self.captureExecutionTime(" Substep init " + StepConstructor, 2, function () {
+            self.captureExecutionTime(' Substep init ' + StepConstructor, 2, function () {
                 stepObject = new StepConstructor(self.options);
             });
             return stepObject;
@@ -51,28 +51,27 @@ var StepProcessor = (function () {
     }
 
     StepProcessor.prototype.run = function (file) {
-        var self = this,
-            $,
-            steps;
-        if (path.extname(file) !== ".html") {
+        var self = this;
+        var $;
+        if (path.extname(file) !== '.html') {
             return;
         }
 
         $ = cheerio.load(fs.readFileSync(file));
         this.processors.forEach(function (stepObject) {
-            self.captureExecutionTime(" Substep run: " + stepObject.stage, 2, function () {
+            self.captureExecutionTime(' Substep run: ' + stepObject.stage, 2, function () {
                 stepObject.run(file, $);
             });
         });
         // Save all content to file
         fs.writeFileSync(file, $.html());
     };
-    
+
     StepProcessor.prototype.captureExecutionTime = function (step_name, level, callback) {
-        var startDate,
-            finishDate,
-            timingLevel = -1,
-            secondsPassed;
+        var startDate;
+        var finishDate;
+        var timingLevel = -1;
+        var secondsPassed;
         if (this.options.timing) {
             if (this.options.timing === true) {
                 timingLevel = 0;
@@ -80,23 +79,23 @@ var StepProcessor = (function () {
                 timingLevel = this.options.timing;
             }
         }
-        
+
         if (timingLevel >= level) {
             startDate = new Date();
             if (this.options.verbose > 0) {
-                console.log(startDate, "Start " + step_name);
+                console.log(startDate, 'Start ' + step_name);
             }
         }
-        
+
         callback.apply(this);
         if (timingLevel >= level) {
             finishDate = new Date();
             if (this.options.verbose > 0) {
-                console.log(finishDate, "Finish " + step_name);
+                console.log(finishDate, 'Finish ' + step_name);
             }
-            
+
             secondsPassed = (finishDate.valueOf() - startDate.valueOf()) / 1000;
-            console.log(step_name + ". Total time: ", secondsPassed);
+            console.log(step_name + '. Total time: ', secondsPassed);
         }
     };
 

@@ -16,9 +16,9 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-var fs = require("fs-extra");
-var path = require("path");
+/* jslint node: true */
+var fs = require('fs-extra');
+var path = require('path');
 var cheerio = require('cheerio');
 
 /**
@@ -26,33 +26,33 @@ var cheerio = require('cheerio');
 */
 var VersionMenu = (function () {
     'use strict';
-    var languages = null,
-        versions = null;
+    var languages = null;
+    var versions = null;
 
     /**
     * Creates a new instance of FileMerger
     * @param options Options for the generation process.
     */
-    function VersionMenu(options) {
+    function VersionMenu (options) {
         this.options = options || { verbose: 0 };
-        this.stage = "Populate version menu";
+        this.stage = 'Populate version menu';
         if (languages === null) {
             languages = [];
             versions = {};
             this.buildVersionsData();
         }
-        
+
         this.generatedMenu = this.generateMenu();
         this.generatedLanguageMenu = this.generateLanguageMenu();
     }
 
     VersionMenu.prototype.run = function (file, $) {
-        if (path.extname(file) !== ".html") {
+        if (path.extname(file) !== '.html') {
             return;
         }
 
         if (this.options.verbose > 1) {
-            console.info("Building version menu for file " + file);
+            console.info('Building version menu for file ' + file);
         }
 
         var element,
@@ -61,32 +61,32 @@ var VersionMenu = (function () {
 
         element = $('#header small select#language').first();
         this.generatedLanguageMenu.forEach(function (optionGroup) {
-            element.append(optionGroup).append("\n");
+            element.append(optionGroup).append('\n');
         });
         element = $('head').first();
         currentPageSettings = {
             lang: this.options.lang,
             version: this.options.version
         };
-        scriptTag = cheerio("<script></script>")
-        scriptTag.text("var settings = " + JSON.stringify(currentPageSettings) + ";");
+        scriptTag = cheerio('<script></script>');
+        scriptTag.text('var settings = ' + JSON.stringify(currentPageSettings) + ';');
         element.append(scriptTag);
     };
 
     VersionMenu.prototype.buildVersionsData = function () {
-        var docs_path = path.resolve(path.join(module.filename, '..', '..', '..', '..', 'docs')),
-            lang_dirs,
-            lang_labels = [];
+        var docs_path = path.resolve(path.join(module.filename, '..', '..', '..', '..', 'docs'));
+        var lang_dirs;
+        var lang_labels = [];
 
         lang_dirs = fs.readdirSync(docs_path);
         lang_dirs.forEach(function (lang) {
             versions[lang] = [];
-            var lang_dir = path.join(docs_path, lang),
-                version_dirs;
+            var lang_dir = path.join(docs_path, lang);
+            var version_dirs;
             version_dirs = fs.readdirSync(lang_dir);
             version_dirs.forEach(function (version) {
-                var configFile = path.join(lang_dir, version, "config.json"),
-                    configData = JSON.parse(fs.readFileSync(configFile));
+                var configFile = path.join(lang_dir, version, 'config.json');
+                var configData = JSON.parse(fs.readFileSync(configFile));
                 versions[lang].push(version);
                 lang_labels[lang] = configData.language;
             });
@@ -107,15 +107,15 @@ var VersionMenu = (function () {
     };
 
     VersionMenu.prototype.generateMenu = function () {
-        var result = [],
-            langGroup,
-            versionData,
-            versionOption,
-            lang,
-            versionIndex,
-            version,
-            mapper,
-            key;
+        var result = [];
+        var langGroup;
+        var versionData;
+        var versionOption;
+        var lang;
+        var versionIndex;
+        var version;
+        var mapper;
+        var key;
 
         mapper = function (item) {
             return item;
@@ -124,22 +124,22 @@ var VersionMenu = (function () {
         for (key in languages) {
             if (languages.hasOwnProperty(key)) {
                 lang = languages[key].lang;
-                langGroup = cheerio("<optgroup></optgroup>");
-                langGroup.append("\n");
+                langGroup = cheerio('<optgroup></optgroup>');
+                langGroup.append('\n');
                 langGroup.attr('label', languages[key].label);
                 langGroup.attr('value', lang);
 
                 versionData = versions[lang].map(mapper).reverse();
                 for (versionIndex = 0; versionIndex < versionData.length; versionIndex = versionIndex + 1) {
                     version = versionData[versionIndex];
-                    versionOption = cheerio("<option></option>");
+                    versionOption = cheerio('<option></option>');
                     if (this.options.version === version && this.options.lang === lang) {
                         versionOption.attr('selected', 'selected');
                     }
 
                     versionOption.attr('value', version);
                     versionOption.text(version);
-                    langGroup.append(versionOption).append("\n");
+                    langGroup.append(versionOption).append('\n');
                 }
 
                 result.push(langGroup);
@@ -150,11 +150,11 @@ var VersionMenu = (function () {
     };
 
     VersionMenu.prototype.generateLanguageMenu = function () {
-        var result = [],
-            langGroup,
-            lang,
-            mapper,
-            key;
+        var result = [];
+        var langGroup;
+        var lang;
+        var mapper; // eslint-disable-line
+        var key;
 
         mapper = function (item) {
             return item;
@@ -163,8 +163,8 @@ var VersionMenu = (function () {
         for (key in languages) {
             if (languages.hasOwnProperty(key)) {
                 lang = languages[key].lang;
-                langGroup = cheerio("<option></option>");
-                langGroup.append("\n");
+                langGroup = cheerio('<option></option>');
+                langGroup.append('\n');
                 langGroup.attr('label', languages[key].label);
                 langGroup.attr('value', lang);
 

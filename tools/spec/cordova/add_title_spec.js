@@ -16,21 +16,21 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-/*global describe, it, beforeEach, afterEach, after, before */
+/* jslint node: true */
+/* global describe, it, beforeEach, afterEach, after, before */
 (function () {
     'use strict';
-    var assert = require("assert"),
-        path = require('path'),
-        fs = require('fs'),
-        cheerio = require('cheerio'),
-        AddTitle = require("../../lib/cordova/post/addtitle"),
-        SpecHelpers = require("../spec_helpers");
+    var AddTitle = require('../../lib/cordova/post/addtitle');
+    var assert = require('assert');
+    var path = require('path');
+    var fs = require('fs');
+    var cheerio = require('cheerio');
+    var SpecHelpers = require('../spec_helpers');
 
     describe('AddTitle', function () {
-        var sut,
-            files;
-        
+        var sut;
+        var files;
+
         before(function (done) {
             var tmp_directory = SpecHelpers.create_tmp_directory_assets(module.filename);
             sut = new AddTitle();
@@ -41,29 +41,29 @@
             };
             done();
         });
-        
+
         after(function (done) {
             SpecHelpers.remove_tmp_directory();
             done();
         });
 
         it('should set the title', function () {
-            var testing_file = files.normal,
-                dom = cheerio.load(fs.readFileSync(testing_file)),
-                result = sut.run(testing_file, dom);
+            var testing_file = files.normal;
+            var dom = cheerio.load(fs.readFileSync(testing_file));
+            var result = sut.run(testing_file, dom);
             assert.strictEqual('Accelerometer', result);
             assert.strictEqual('Accelerometer', dom('#subheader > h1').first().html());
         });
 
         it('should skip files with no source title', function () {
-            var dom = cheerio.load(fs.readFileSync(files.no_source)),
-                result = sut.run(files.no_source, dom);
+            var dom = cheerio.load(fs.readFileSync(files.no_source));
+            var result = sut.run(files.no_source, dom);
             assert.strictEqual(null, result);
         });
 
         it('should skip files with no target title', function () {
-            var dom = cheerio.load(fs.readFileSync(files.no_target)),
-                result = sut.run(files.no_target, dom);
+            var dom = cheerio.load(fs.readFileSync(files.no_target));
+            var result = sut.run(files.no_target, dom);
             assert.strictEqual(null, result);
         });
     });

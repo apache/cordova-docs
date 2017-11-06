@@ -16,21 +16,21 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-var fs = require("fs-extra");
-var path = require("path");
-var FileHelpers = require("../lib/file_helpers");
+/* jslint node: true */
+var fs = require('fs-extra');
+var path = require('path');
+var FileHelpers = require('../lib/file_helpers');
 
 var SpecHelpers = (function () {
     'use strict';
-    
+
     /**
     * Creates a new instance of SpecHelpers
     * @param options Options for the generation process.
     */
-    function SpecHelpers() {
+    function SpecHelpers () {
     }
-    
+
     SpecHelpers.create_tmp_directory_assets = function (reference_filename) {
         var directories;
         if (reference_filename === null || reference_filename === undefined) {
@@ -48,53 +48,53 @@ var SpecHelpers = (function () {
 
         return directories.destination;
     };
-    
+
     SpecHelpers.find_test_directories = function (filename) {
-        var extension = path.extname(filename),
-            source_directory = filename.replace(extension, ''),
-            destination_directory = path.join(SpecHelpers.tmp_directory(), path.basename(source_directory));
-    
+        var extension = path.extname(filename);
+        var source_directory = filename.replace(extension, '');
+        var destination_directory = path.join(SpecHelpers.tmp_directory(), path.basename(source_directory));
+
         if (!fs.existsSync(source_directory)) {
-            console.warn("The directory " + source_directory + " not present");
+            console.warn('The directory ' + source_directory + ' not present');
             return null;
         }
-        
+
         return {
             source: source_directory,
             destination: destination_directory
         };
     };
-    
+
     SpecHelpers.tmp_public_directory = function () {
         return path.join(SpecHelpers.tmp_directory(), 'public');
     };
-    
+
     SpecHelpers.docs_directory = function () {
         return FileHelpers.getDefaultInputDirectory();
     };
-    
+
     SpecHelpers.tmp_docs_directory = function () {
         return path.join(SpecHelpers.tmp_directory(), 'docs');
     };
-    
+
     /**
     * Gets temporary directory for running specs.
     */
     SpecHelpers.tmp_directory = function () {
         return path.resolve(path.join(SpecHelpers.root_directory(), '..', 'tmp_spec'));
     };
-    
+
     /**
     * Root directory for the project.
     */
     SpecHelpers.root_directory = function () {
         return path.resolve(path.dirname(module.filename));
     };
-    
+
     SpecHelpers.remove_tmp_directory = function () {
         fs.removeSync(SpecHelpers.tmp_directory());
     };
-    
+
     return SpecHelpers;
 }());
 module.exports = SpecHelpers;

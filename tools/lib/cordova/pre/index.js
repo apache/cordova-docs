@@ -16,7 +16,7 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-var FileMerger = require("./filemerger"),
-    YamlFrontMatter = require("./yamlfrontmatter");
+/* jslint node: true */
+var FileMerger = require('./filemerger');
+var YamlFrontMatter = require('./yamlfrontmatter');
 module.exports = [YamlFrontMatter, FileMerger];

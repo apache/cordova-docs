@@ -16,21 +16,21 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-/*global describe, it, beforeEach, afterEach, after, before */
+/* jslint node: true */
+/* global describe, it, beforeEach, afterEach, after, before */ // eslint-disable-line no-unused-vars
 (function () {
     'use strict';
-    var assert = require("assert"),
-        path = require('path'),
-        fs = require('fs'),
-        cheerio = require('cheerio'),
-        UpdateIndex = require("../../lib/cordova/post/updateindex"),
-        SpecHelpers = require("../spec_helpers");
+    var assert = require('assert');
+    var path = require('path');
+    var fs = require('fs');
+    var cheerio = require('cheerio');
+    var UpdateIndex = require('../../lib/cordova/post/updateindex');
+    var SpecHelpers = require('../spec_helpers');
 
     describe('UpdateIndex', function () {
-        var sut,
-            files;
-        
+        var sut;
+        var files;
+
         beforeEach(function (done) {
             var tmp_directory = SpecHelpers.create_tmp_directory_assets(module.filename);
             sut = new UpdateIndex();
@@ -40,7 +40,7 @@
             };
             done();
         });
-        
+
         afterEach(function (done) {
             SpecHelpers.remove_tmp_directory();
             done();
@@ -53,10 +53,9 @@
         });
 
         it('should rename the title', function () {
-            var testing_file = files.normal,
-                dom,
-                initial_title,
-                new_title;
+            var dom;
+            var initial_title;
+            var new_title;
             dom = cheerio.load(fs.readFileSync(files.input));
             initial_title = dom('#subheader > h1').first().html();
             assert.notStrictEqual(sut.header_title, initial_title);
@@ -69,7 +68,7 @@
         it('should rename the file', function () {
             assert.strictEqual(true, fs.existsSync(files.input));
             assert.strictEqual(false, fs.existsSync(files.output));
-            var result = sut.run(files.input);
+            var result = sut.run(files.input); // eslint-disable-line no-unused-vars
             assert.strictEqual(false, fs.existsSync(files.input));
             assert.strictEqual(true, fs.existsSync(files.output));
         });

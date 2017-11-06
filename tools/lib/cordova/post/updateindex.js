@@ -16,9 +16,9 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-var fs = require("fs-extra");
-var path = require("path");
+/* jslint node: true */
+var fs = require('fs-extra');
+var path = require('path');
 var cheerio = require('cheerio');
 
 /**
@@ -26,29 +26,29 @@ var cheerio = require('cheerio');
 */
 var UpdateIndex = (function () {
     'use strict';
-    var header_title  = 'Home';
+    var header_title = 'Home';
 
     /**
     * Creates a new instance of FileMerger
     * @param options Options for the generation process.
     */
-    function UpdateIndex(options) {
+    function UpdateIndex (options) {
         this.options = options || { verbose: 0 };
-        this.stage = "Update index";
+        this.stage = 'Update index';
         this.header_title = header_title;
     }
 
     UpdateIndex.prototype.run = function (file) {
-        if (path.basename(file) !== "index.md.html") {
+        if (path.basename(file) !== 'index.md.html') {
             return false;
         }
 
         if (this.options.verbose > 1) {
-            console.info("Update index");
+            console.info('Update index');
         }
 
-        var $ = cheerio.load(fs.readFileSync(file)),
-            title_target;
+        var $ = cheerio.load(fs.readFileSync(file));
+        var title_target;
         title_target = $('#subheader > h1');
         if (title_target.length !== 0) {
             title_target = $(title_target[0]);
@@ -56,7 +56,7 @@ var UpdateIndex = (function () {
         }
 
         fs.writeFileSync(file, $.html());
-        fs.renameSync(file, path.join(path.dirname(file), "index.html"));
+        fs.renameSync(file, path.join(path.dirname(file), 'index.html'));
         return true;
     };
 

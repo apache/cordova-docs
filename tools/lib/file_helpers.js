@@ -16,9 +16,8 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-var fs = require("fs-extra");
-var path = require("path");
+/* jslint node: true */
+var path = require('path');
 
 var FileHelpers = (function () {
     'use strict';
@@ -29,7 +28,7 @@ var FileHelpers = (function () {
     * Gets default directory for source files.
     */
     FileHelpers.getDefaultInputDirectory = function () {
-        return path.join(FileHelpers.getRootDirectory(), "docs");
+        return path.join(FileHelpers.getRootDirectory(), 'docs');
     };
 
     /**
@@ -37,21 +36,21 @@ var FileHelpers = (function () {
     * @remarks Right now used non default folder, to not mix with Ruby implementation.
     */
     FileHelpers.getDefaultOutputDirectory = function () {
-        return path.join(FileHelpers.getRootDirectory(), "public");
+        return path.join(FileHelpers.getRootDirectory(), 'public');
     };
 
     /**
     * Gets temporary directory, where files will be processed.
     */
     FileHelpers.getTmpDirectory = function () {
-        return path.join(FileHelpers.getRootDirectory(), "tmp");
+        return path.join(FileHelpers.getRootDirectory(), 'tmp');
     };
 
     /**
     * Gets absolute path for the Cordova Docs root directory
     */
     FileHelpers.getRootDirectory = function () {
-        return path.resolve(path.join(path.dirname(module.filename), ".."));
+        return path.resolve(path.join(path.dirname(module.filename), '..'));
     };
 
     return FileHelpers;

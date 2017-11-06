@@ -15,29 +15,29 @@
 // specific language governing permissions and limitations
 // under the License.
 
-"use strict";
+'use strict';
 
-var fs           = require("fs");
-var path         = require("path");
-var childProcess = require("child_process");
+var fs = require('fs');
+var path = require('path');
+var childProcess = require('child_process');
 
-var yaml = require("js-yaml");
-var Q    = require("q");
-var argv = require("optimist").argv;
+var yaml = require('js-yaml');
+var Q = require('q');
+var argv = require('optimist').argv;
 
-var augment = require("./augment_toc");
-var util    = require("./util");
+var augment = require('./augment_toc');
+var util = require('./util');
 
 function main () {
 
     var docsRoot = argv._[0];
-    var tocRoot  = argv._[1];
+    var tocRoot = argv._[1];
 
     // validate args
     if ((!docsRoot) || (!tocRoot)) {
         var scriptName = path.basename(process.argv[1]);
-        console.log("usage: " + scriptName + " docsRoot tocRoot");
-        console.log(scriptName + ": error: too few arguments");
+        console.log('usage: ' + scriptName + ' docsRoot tocRoot');
+        console.log(scriptName + ': error: too few arguments');
         return 1;
     }
 
@@ -49,24 +49,24 @@ function main () {
         util.listdirsSync(languagePath).forEach(function (versionName) {
             var versionPath = path.join(languagePath, versionName);
 
-            var srcTocName  = util.srcTocfileName(languageName, versionName);
+            var srcTocName = util.srcTocfileName(languageName, versionName);
             var destTocName = util.genTocfileName(languageName, versionName);
 
-            var srcTocPath  = path.join(tocRoot, srcTocName);
+            var srcTocPath = path.join(tocRoot, srcTocName);
             var destTocPath = path.join(tocRoot, destTocName);
 
             // read the input
             fs.readFile(srcTocPath, function (error, data) {
 
                 // augment the ToC
-                var originalTocString  = data.toString();
+                var originalTocString = data.toString();
                 var augmentedTocString = augment.augmentString(originalTocString, versionPath);
-                var warningComment     = util.generatedBy(__filename);
-                var output             = warningComment + "\n" + augmentedTocString;
+                var warningComment = util.generatedBy(__filename);
+                var output = warningComment + '\n' + augmentedTocString;
 
                 // write the output
                 fs.writeFile(destTocPath, output, function (error, data) {
-                    console.log(srcTocPath + " -> " + destTocPath);
+                    console.log(srcTocPath + ' -> ' + destTocPath);
                 });
             });
         });

@@ -7,12 +7,14 @@
     "doc": "doc"
   },
   "scripts": {
-    "jshint": "node node_modules/jshint/bin/jshint lib spec",
-    "test": "npm run jshint && npm run mocha",
-    "mocha": "./node_modules/.bin/mocha --recursive ./spec",
+    "jshint": "jshint tools/lib tools/spec",
+    "test": "npm run eslint && npm run mocha",
+    "mocha": "mocha --recursive tools/spec",
     "serve": "gulp serve --prod",
     "clean": "gulp clean",
-    "update-docs": "gulp snapshot"
+    "update-docs": "gulp snapshot",
+    "build": "gulp build --prod",
+    "eslint": "eslint tools/lib tools/spec"
   },
   "author": "Apache Software Foundation",
   "license": "Apache Version 2.0",
@@ -59,6 +61,13 @@
     "babelify": "^7.3.0",
     "colors": "^1.0.3",
     "diff": "^1.2.0",
+    "eslint": "^4.10.0",
+    "eslint-config-semistandard": "^11.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
     "glob": "^7.0.3",
     "gulp-htmllint": "^0.0.5",
     "jshint": "^2.5.8",

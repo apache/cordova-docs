@@ -15,28 +15,28 @@
 // specific language governing permissions and limitations
 // under the License.
 
-"use strict";
+'use strict';
 
-var fs   = require("fs");
-var path = require("path");
-var yaml = require("js-yaml");
+var fs = require('fs');
+var path = require('path');
+var yaml = require('js-yaml');
 
-var util = require("./util");
+var util = require('./util');
 
 // constants
 var LANGUAGE_MAP = {
-    "de": "Deutsch",
-    "en": "English",
-    "es": "Español",
-    "fr": "Français",
-    "it": "Italiano",
-    "ja": "日本語",
-    "ko": "한국어",
-    "pl": "Polski",
-    "ru": "Русский",
-    "sl": "Slovene",
-    "zh-cn": "简体中文",
-    "zh-tw": "繁體中文",
+    'de': 'Deutsch',
+    'en': 'English',
+    'es': 'Español',
+    'fr': 'Français',
+    'it': 'Italiano',
+    'ja': '日本語',
+    'ko': '한국어',
+    'pl': 'Polski',
+    'ru': 'Русский',
+    'sl': 'Slovene',
+    'zh-cn': '简体中文',
+    'zh-tw': '繁體中文'
 };
 
 function main () {
@@ -46,14 +46,14 @@ function main () {
     var config = {};
 
     if (!rootDir) {
-        console.error("Please specify a directory from which to generate.");
+        console.error('Please specify a directory from which to generate.');
         process.exit(1);
     }
 
     // go through directory that contains all languages
     util.listdirsSync(rootDir).forEach(function (langId) {
 
-        var langPath     = path.join(rootDir, langId);
+        var langPath = path.join(rootDir, langId);
         var versionNames = util.listdirsSync(langPath);
 
         // get language ID
@@ -61,13 +61,13 @@ function main () {
         if (langId in LANGUAGE_MAP) {
             langName = LANGUAGE_MAP[langId];
         } else {
-            console.error("Language identifier '" + langId + "' doesn't have an associated name. Please fix that by changing " + scriptName + ".");
+            console.error("Language identifier '" + langId + "' doesn't have an associated name. Please fix that by changing " + scriptName + '.');
             process.exit(1);
         }
 
         // set the language name and the versions it has
         config[langId] = {
-            'name':     LANGUAGE_MAP[langId],
+            'name': LANGUAGE_MAP[langId],
             'versions': versionNames
         };
     });

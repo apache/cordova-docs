@@ -16,11 +16,11 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-var fs = require("fs-extra");
-var path = require("path");
-var cheerio = require('cheerio'),
-    FileHelpers = require("../../file_helpers");
+/* jslint node: true */
+var fs = require('fs-extra');
+var path = require('path');
+var cheerio = require('cheerio');
+var FileHelpers = require('../../file_helpers');
 
 /**
 * Preprocessor which updates top stripe with header or the page.
@@ -32,35 +32,35 @@ var NavigationMenu = (function () {
     * Creates a new instance of FileMerger
     * @param options Options for the generation process.
     */
-    function NavigationMenu(options) {
+    function NavigationMenu (options) {
         this.options = options || { verbose: 0 };
-        this.stage = "Building navigation menu";
+        this.stage = 'Building navigation menu';
         this.sections = [];
 
-        var filename = path.join(FileHelpers.getTmpDirectory(), 'jodoc', 'index.md.html'),
-            $,
-            h1_set,
-            ul_set,
-            count,
-            i,
-            links,
-            appendLink;
+        var filename = path.join(FileHelpers.getTmpDirectory(), 'jodoc', 'index.md.html');
+        var $;
+        var h1_set;
+        var ul_set;
+        var count;
+        var i;
+        var links;
+        var appendLink;
         if (!fs.existsSync(filename)) {
-            throw new Error("index.md.html was not generated in " + FileHelpers.getTmpDirectory() + "/jodoc");
+            throw new Error('index.md.html was not generated in ' + FileHelpers.getTmpDirectory() + '/jodoc');
         }
         $ = cheerio.load(fs.readFileSync(filename));
-        h1_set   = $('#home > h1');
-        ul_set   = $('#home > ul');
-        count    = h1_set.length;
+        h1_set = $('#home > h1');
+        ul_set = $('#home > ul');
+        count = h1_set.length;
 
-        function getAppender(links) {
-            function appendLink(index, element) {
+        function getAppender (links) {
+            function appendLink (index, element) {
                 links.push(element);
             }
 
             return appendLink;
         }
-        
+
         for (i = 0; i < count; i += 1) {
             links = [];
             appendLink = getAppender(links);
@@ -77,12 +77,12 @@ var NavigationMenu = (function () {
     NavigationMenu.prototype.run = function (file, $) {
         var i,
             section;
-        if (path.extname(file) !== ".html") {
+        if (path.extname(file) !== '.html') {
             return;
         }
 
         if (this.options.verbose > 1) {
-            console.log("Appending file to nav menu " + file);
+            console.log('Appending file to nav menu ' + file);
         }
 
         for (i = 0; i < this.sections.length; i += 1) {
@@ -93,26 +93,26 @@ var NavigationMenu = (function () {
     };
 
     NavigationMenu.prototype.insertTitle = function (title, $) {
-        var element = cheerio("<h1></h1>");
+        var element = cheerio('<h1></h1>');
         element.text(title);
-        $('#sidebar').first().append(element).append("\n");
+        $('#sidebar').first().append(element).append('\n');
     };
 
     NavigationMenu.prototype.insertLinks = function (links, $) {
-        var ul = cheerio("<ul></ul>"),
-            li,
-            i,
-            link;
+        var ul = cheerio('<ul></ul>');
+        var li;
+        var i;
+        var link;
 
-        ul.append("\n");
+        ul.append('\n');
         for (i = 0; i < links.length; i += 1) {
             link = links[i];
-            li = cheerio("<li></li>");
+            li = cheerio('<li></li>');
             li.append(link);
-            ul.append(li).append("\n");
+            ul.append(li).append('\n');
         }
 
-        $('#sidebar').first().append(ul).append("\n");
+        $('#sidebar').first().append(ul).append('\n');
     };
 
     return NavigationMenu;

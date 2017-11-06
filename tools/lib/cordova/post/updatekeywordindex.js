@@ -16,9 +16,9 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-var fs = require("fs-extra");
-var path = require("path");
+/* jslint node: true */
+var fs = require('fs-extra');
+var path = require('path');
 var cheerio = require('cheerio');
 
 /**
@@ -26,32 +26,32 @@ var cheerio = require('cheerio');
 */
 var UpdateKeywordIndex = (function () {
     'use strict';
-    var header_title  = 'Keyword Index',
-        content_title = 'Keyword Index';
+    var header_title = 'Keyword Index';
+    var content_title = 'Keyword Index';
 
     /**
     * Creates a new instance of FileMerger
     * @param options Options for the generation process.
     */
-    function UpdateKeywordIndex(options) {
+    function UpdateKeywordIndex (options) {
         this.options = options || { verbose: 0 };
-        this.stage = "Update keywork index";
+        this.stage = 'Update keywork index';
         this.header_title = header_title;
         this.content_title = content_title;
     }
 
     UpdateKeywordIndex.prototype.run = function (file) {
-        if (path.basename(file) !== "_index.html") {
+        if (path.basename(file) !== '_index.html') {
             return false;
         }
 
         if (this.options.verbose > 1) {
-            console.info("Update keyword index");
+            console.info('Update keyword index');
         }
 
-        var $ = cheerio.load(fs.readFileSync(file)),
-            element,
-            content;
+        var $ = cheerio.load(fs.readFileSync(file));
+        var element;
+        var content;
         element = $('#subheader > h1');
         if (element.length !== 0) {
             element = $(element[0]);

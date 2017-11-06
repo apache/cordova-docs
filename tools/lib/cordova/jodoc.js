@@ -16,18 +16,18 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-/*global which, exec */
-var fs = require("fs-extra");
-var path = require("path");
+/* jslint node: true */
+/* global which, exec */
+var fs = require('fs-extra');
+var path = require('path');
 require('shelljs/global');
 
 var JoDoc = (function () {
     'use strict';
 
-    var JO_DOC_CLI = "jodoc",
-        TEMPLATE_PATH = path.resolve(path.join(path.dirname(module.filename), '..', '..', 'template', 'docs')),
-        useLocalJoDoc = true;
+    var JO_DOC_CLI = 'jodoc';
+    var TEMPLATE_PATH = path.resolve(path.join(path.dirname(module.filename), '..', '..', 'template', 'docs'));
+    var useLocalJoDoc = true;
 
     /**
     * Creates a new instance of JoDoc
@@ -35,12 +35,12 @@ var JoDoc = (function () {
     * @param outputDirectory Directory to which store generated files.
     * @param options Options for the generation process.
     */
-    function JoDoc(inputDirectory, outputDirectory, options) {
+    function JoDoc (inputDirectory, outputDirectory, options) {
         this.input_directory = inputDirectory;
         this.output_directory = outputDirectory;
         this.options = options;
 
-        this.template_directories = [ path.join(TEMPLATE_PATH, "default") ];
+        this.template_directories = [ path.join(TEMPLATE_PATH, 'default') ];
         if (options.lang) {
             this.template_directories.push(path.join(TEMPLATE_PATH, options.lang));
         }
@@ -56,31 +56,31 @@ var JoDoc = (function () {
 
         [this.input_directory, this.template_directories[0]].forEach(function (dir) {
             if (!fs.existsSync(dir)) {
-                console.error("The directory " + dir + " has to be present");
+                console.error('The directory ' + dir + ' has to be present');
                 process.exit(1);
             }
 
             var stat = fs.lstatSync(dir);
             if (!stat.isDirectory()) {
-                console.error("The path " + dir + " is not directory.");
+                console.error('The path ' + dir + ' is not directory.');
                 process.exit(1);
             }
         });
     };
 
     JoDoc.prototype.run = function () {
-        var self = this,
-            currentDirectory = process.cwd(),
-            nullDevice = "/dev/null",
-            templateFile = path.join(this.output_directory, "index.html"),
-            commandLine,
-            child,
-            executableName;
+        var self = this;
+        var currentDirectory = process.cwd();
+        var nullDevice = '/dev/null';
+        var templateFile = path.join(this.output_directory, 'index.html');
+        var commandLine;
+        var child;
+        var executableName;
         // Copy HTML template assets
         this.template_directories.forEach(function (templateDir) {
             if (!fs.existsSync(templateDir)) {
                 if (self.options.verbose > 0) {
-                    console.log("Template folder " + templateDir + " not exists, skipping");
+                    console.log('Template folder ' + templateDir + ' not exists, skipping');
                 }
 
                 return;
@@ -98,27 +98,27 @@ var JoDoc = (function () {
 
         executableName = JO_DOC_CLI;
         if (useLocalJoDoc) {
-            executableName = path.join(module.filename, "../../../node_modules/.bin/jodoc");
+            executableName = path.join(module.filename, '../../../node_modules/.bin/jodoc');
         }
 
-        commandLine = executableName + " --output \"" + this.output_directory + "\" --title \"Cordova API Documentation\" --template \"" + templateFile + "\" ./";
+        commandLine = executableName + ' --output "' + this.output_directory + '" --title "Cordova API Documentation" --template "' + templateFile + '" ./';
         if (self.options.verbose > 0) {
-            console.log("Running joDoc-js with command line:");
+            console.log('Running joDoc-js with command line:');
             console.log(commandLine);
         }
 
         if (this.options.verbose < 2) {
-            commandLine = commandLine + " > " + nullDevice + " 2> " + nullDevice;
+            commandLine = commandLine + ' > ' + nullDevice + ' 2> ' + nullDevice;
         }
 
         if (this.options.verbose > 1) {
-            console.info("Running jodoc from " + this.input_directory + " directory");
+            console.info('Running jodoc from ' + this.input_directory + ' directory');
             console.info(commandLine);
         }
 
         child = exec(commandLine);
         if (child.code !== 0) {
-            console.error("Error during execution of jodoc. Error code is: " + child.code);
+            console.error('Error during execution of jodoc. Error code is: ' + child.code);
             process.exit(child.code);
         }
 

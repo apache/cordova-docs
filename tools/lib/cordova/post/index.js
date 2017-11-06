@@ -16,14 +16,14 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-var AddTitle = require("./addtitle"),
-    UpdateIndex = require("./updateindex"),
-    UpdateKeywordIndex = require("./updatekeywordindex"),
-    TableOfContents = require("./tableofcontents"),
-    VersionMenu = require("./versionmenu"),
-    NavigationMenu = require("./navigationmenu"),
-    Prettify = require("./prettify"),
-    NoIndex = require("./noindex"),
-    StepProcessor = require("./stepprocessor");
-module.exports = [StepProcessor, /*AddTitle,*/ UpdateIndex, UpdateKeywordIndex/*, TableOfContents, VersionMenu, NavigationMenu, Prettify, NoIndex*/];
+/* eslint-disable */
+var AddTitle = require('./addtitle');
+var UpdateIndex = require('./updateindex');
+var UpdateKeywordIndex = require('./updatekeywordindex');
+var TableOfContents = require('./tableofcontents');
+var VersionMenu = require('./versionmenu');
+var NavigationMenu = require('./navigationmenu');
+var Prettify = require('./prettify');
+var NoIndex = require('./noindex');
+var StepProcessor = require('./stepprocessor');
+module.exports = [ StepProcessor, /* AddTitle, */ UpdateIndex, UpdateKeywordIndex /*, TableOfContents, VersionMenu, NavigationMenu, Prettify, NoIndex */ ];

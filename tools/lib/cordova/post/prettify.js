@@ -16,8 +16,8 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-var path = require("path");
+/* jslint node: true */
+var path = require('path');
 
 /**
 * Preprocessor which updates top stripe with header or the page.
@@ -29,18 +29,18 @@ var Prettify = (function () {
     * Creates a new instance of FileMerger
     * @param options Options for the generation process.
     */
-    function Prettify(options) {
+    function Prettify (options) {
         this.options = options || { verbose: 0 };
-        this.stage = "Prettify";
+        this.stage = 'Prettify';
     }
 
     Prettify.prototype.run = function (file, $) {
-        if (path.extname(file) !== ".html") {
+        if (path.extname(file) !== '.html') {
             return;
         }
 
         if (this.options.verbose > 1) {
-            console.log("Prettify file " + file);
+            console.log('Prettify file ' + file);
         }
 
         var element;

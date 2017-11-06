@@ -16,21 +16,20 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-/*global describe, it, beforeEach, afterEach, after, before */
+/* jslint node: true */
+/* global describe, it, beforeEach, afterEach, after, before */ // eslint-disable-line no-unused-vars
 (function () {
     'use strict';
-    var assert = require("assert"),
-        path = require('path'),
-        fs = require('fs'),
-        cheerio = require('cheerio'),
-        YamlFrontMatter = require("../../lib/cordova/pre/yamlfrontmatter"),
-        SpecHelpers = require("../spec_helpers");
+    var assert = require('assert');
+    var path = require('path');
+    var fs = require('fs');
+    var YamlFrontMatter = require('../../lib/cordova/pre/yamlfrontmatter');
+    var SpecHelpers = require('../spec_helpers');
 
     describe('YamlFrontMatter', function () {
         var sut,
             files;
-        
+
         beforeEach(function (done) {
             var tmp_directory = SpecHelpers.create_tmp_directory_assets(module.filename);
             sut = new YamlFrontMatter();
@@ -40,19 +39,19 @@
             };
             done();
         });
-        
+
         afterEach(function (done) {
             SpecHelpers.remove_tmp_directory();
             done();
         });
 
         it('should skip files with no YAML Front Matter', function () {
-            var expected_data = fs.readFileSync(files.no_yaml, "utf8"),
-                data,
-                actual_data;
+            var expected_data = fs.readFileSync(files.no_yaml, 'utf8');
+            var data;
+            var actual_data;
             data = sut.run(files.no_yaml);
             assert.deepEqual({}, data);
-            actual_data = fs.readFileSync(files.no_yaml, "utf8");
+            actual_data = fs.readFileSync(files.no_yaml, 'utf8');
             assert.strictEqual(expected_data, actual_data);
         });
 

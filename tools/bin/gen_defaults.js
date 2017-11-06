@@ -15,49 +15,49 @@
 // specific language governing permissions and limitations
 // under the License.
 
-"use strict";
+'use strict';
 
-var fs   = require("fs");
-var path = require("path");
-var yaml = require("js-yaml");
+var fs = require('fs');
+var path = require('path');
+var yaml = require('js-yaml');
 
-var util = require("./util");
+var util = require('./util');
 
 // constants
-var USAGE            = "Usage: gen_defaults.js [docsRoot] [latestVersion]"
-var DEV_VERSION_NAME = "dev";
+var USAGE = 'Usage: gen_defaults.js [docsRoot] [latestVersion]';
+var DEV_VERSION_NAME = 'dev';
 
 // constants for sitemap.xml
 // reference:
 //      http://www.sitemaps.org/protocol.html#xmlTagDefinitions
-var LATEST_CHANGE_FREQUENCY = "monthly";
-var LATEST_PAGE_PRIORITY    = 0.8;
+var LATEST_CHANGE_FREQUENCY = 'monthly';
+var LATEST_PAGE_PRIORITY = 0.8;
 
-var DEFAULT_CHANGE_FREQUENCY = "monthly";
-var DEFAULT_PAGE_PRIORITY    = LATEST_PAGE_PRIORITY / 2;
+var DEFAULT_CHANGE_FREQUENCY = 'monthly';
+var DEFAULT_PAGE_PRIORITY = LATEST_PAGE_PRIORITY / 2;
 
-var DEV_CHANGE_FREQUENCY = "daily";
-var DEV_PAGE_PRIORITY    = LATEST_PAGE_PRIORITY / 4;
+var DEV_CHANGE_FREQUENCY = 'daily';
+var DEV_PAGE_PRIORITY = LATEST_PAGE_PRIORITY / 4;
 
 function main () {
 
-    var rootDir           = process.argv[2];
+    var rootDir = process.argv[2];
     var latestVersionName = process.argv[3];
 
     if (!rootDir) {
         console.error(USAGE);
-        console.error("Please specify the docs root directory from which to generate defaults.");
+        console.error('Please specify the docs root directory from which to generate defaults.');
         process.exit(1);
     }
 
     if (!latestVersionName) {
         console.error(USAGE);
-        console.error("Please specify the latest version of the docs.");
+        console.error('Please specify the latest version of the docs.');
         process.exit(1);
     }
 
     // create defaults config
-    var config = {"defaults": []};
+    var config = {'defaults': []};
 
     // set defaults for each language
     util.listdirsSync(rootDir).forEach(function (langName) {
@@ -65,11 +65,11 @@ function main () {
         var langPath = path.join(rootDir, langName);
         var languageDefaults = {
             scope: {
-                path: "docs/" + langName
+                path: 'docs/' + langName
             },
             values: {
                 language: langName,
-                layout:   "docs-" + langName
+                layout: 'docs-' + langName
             }
         };
 
@@ -81,15 +81,15 @@ function main () {
             var tocfile = util.genTocfileName(langName, versionName);
 
             var changeFrequency = DEFAULT_CHANGE_FREQUENCY;
-            var pagePriority    = DEFAULT_PAGE_PRIORITY;
+            var pagePriority = DEFAULT_PAGE_PRIORITY;
 
             // adjust priority and frequency based on version
             if (versionName === latestVersionName) {
                 changeFrequency = LATEST_CHANGE_FREQUENCY;
-                pagePriority    = LATEST_PAGE_PRIORITY;
+                pagePriority = LATEST_PAGE_PRIORITY;
             } else if (versionName === DEV_VERSION_NAME) {
                 changeFrequency = DEV_CHANGE_FREQUENCY;
-                pagePriority    = DEV_PAGE_PRIORITY;
+                pagePriority = DEV_PAGE_PRIORITY;
             }
 
             var current = false;
@@ -99,14 +99,14 @@ function main () {
 
             var versionDefaults = {
                 scope: {
-                    path: "docs/" + langName + "/" + versionName
+                    path: 'docs/' + langName + '/' + versionName
                 },
                 values: {
-                    version:          versionName,
-                    tocfile:          tocfile.replace(".yml", ""),
+                    version: versionName,
+                    tocfile: tocfile.replace('.yml', ''),
                     change_frequency: changeFrequency,
-                    priority:         pagePriority,
-                    current:          current
+                    priority: pagePriority,
+                    current: current
                 }
             };
 

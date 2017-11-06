@@ -15,39 +15,39 @@
 // specific language governing permissions and limitations
 // under the License.
 
-"use strict";
+'use strict';
 
-var fs       = require("fs");
-var path     = require("path");
-var yaml     = require("js-yaml");
-var walk     = require("walk");
-var glob     = require("glob");
-var Q        = require("q");
-var optimist = require("optimist");
+var fs = require('fs');
+var path = require('path');
+var yaml = require('js-yaml');
+var walk = require('walk');
+var glob = require('glob');
+var Q = require('q');
+var optimist = require('optimist');
 
-var util = require("./util");
+var util = require('./util');
 
 // constants
-var LATEST_ALIAS_URI = "/latest/";
+var LATEST_ALIAS_URI = '/latest/';
 
 // helpers
-function pathToURI(filePath, rootPath) {
+function pathToURI (filePath, rootPath) {
     return filePath
-        .replace(new RegExp("^" + rootPath), "")
-        .replace(new RegExp("\\.md$"), ".html");
+        .replace(new RegExp('^' + rootPath), '')
+        .replace(new RegExp('\\.md$'), '.html');
 }
 
-function pagesFromRedirects(redirects, languages) {
+function pagesFromRedirects (redirects, languages) {
     var pages = {};
 
     // add docs redirects
-    if (typeof redirects.docs !== "undefined") {
+    if (typeof redirects.docs !== 'undefined') {
         for (var redirectSource in redirects.docs) {
 
             // add an entry for the redirect's source, once for each language
             for (var i = 0; i < languages.length; i++) {
                 var language = languages[i];
-                var pagePath = "/docs/" + language + "/" + redirectSource;
+                var pagePath = '/docs/' + language + '/' + redirectSource;
 
                 pages[pagePath] = true;
             }
@@ -57,8 +57,8 @@ function pagesFromRedirects(redirects, languages) {
     return pages;
 }
 
-function isInLatestDocs(uri, latestVersion) {
-    return uri.indexOf("/" + latestVersion + "/") !== (-1);
+function isInLatestDocs (uri, latestVersion) {
+    return uri.indexOf('/' + latestVersion + '/') !== (-1);
 }
 
 // main
@@ -66,17 +66,17 @@ function main () {
 
     // get args
     var argv = optimist
-        .usage("Usage: $0 [options]")
-        .demand("languages").describe("languages", "comma-separated list of docs languages")
-        .demand("latestVersion").describe("latestVersion", "the current latest docs version")
-        .demand("siteRoot").describe("siteRoot", "the source ToC for the given directory")
-        .string("redirectsFile").describe("redirectsFile", "file containing redirects for the website").default("redirectsFile", null)
+        .usage('Usage: $0 [options]')
+        .demand('languages').describe('languages', 'comma-separated list of docs languages')
+        .demand('latestVersion').describe('latestVersion', 'the current latest docs version')
+        .demand('siteRoot').describe('siteRoot', 'the source ToC for the given directory')
+        .string('redirectsFile').describe('redirectsFile', 'file containing redirects for the website').default('redirectsFile', null)
         .argv;
 
-    var siteRootPath      = argv.siteRoot;
+    var siteRootPath = argv.siteRoot;
     var redirectsFilePath = argv.redirectsFile;
-    var latestVersion     = argv.latestVersion;
-    var languages         = argv.languages.split(",");
+    var latestVersion = argv.latestVersion;
+    var languages = argv.languages.split(',');
 
     // pages to return
     var pages = {};
@@ -85,25 +85,25 @@ function main () {
     if (redirectsFilePath !== null) {
 
         var redirectsString = fs.readFileSync(redirectsFilePath);
-        var redirects       = yaml.load(redirectsString);
-        var redirectsPages  = pagesFromRedirects(redirects, languages);
+        var redirects = yaml.load(redirectsString);
+        var redirectsPages = pagesFromRedirects(redirects, languages);
 
         pages = redirectsPages;
     }
 
     // add entries for all Markdown files in the site root
-    var allMarkdownFiles = path.join(siteRootPath, "**/*.md");
+    var allMarkdownFiles = path.join(siteRootPath, '**/*.md');
     glob(allMarkdownFiles, function (error, filePaths) {
         for (var i = 0; i < filePaths.length; i++) {
             var filePath = filePaths[i];
-            var fileURI  = pathToURI(filePath, siteRootPath);
+            var fileURI = pathToURI(filePath, siteRootPath);
 
             // add the page
             pages[fileURI] = true;
 
             // also add /latest/ version for pages in latest docs
             if (isInLatestDocs(fileURI, latestVersion)) {
-                var latestURI = fileURI.replace("/" + latestVersion + "/", LATEST_ALIAS_URI);
+                var latestURI = fileURI.replace('/' + latestVersion + '/', LATEST_ALIAS_URI);
 
                 pages[latestURI] = true;
             }
