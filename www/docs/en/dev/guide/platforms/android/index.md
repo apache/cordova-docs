@@ -43,7 +43,7 @@ few cordova-android releases can be found in this table:
 
 cordova-android Version | Supported Android API-Levels | Equivalent Android Version
 ------------------------|------------------------------|-----------------------------
-6.X.X                   | 16 - 25                      | 4.1 - 7.1.1
+6.X.X                   | 16 - 26                      | 4.1 - 8.0.0
 5.X.X                   | 14 - 23                      | 4.0 - 6.0.1
 4.1.X                   | 14 - 22                      | 4.0 - 5.1
 4.0.X                   | 10 - 22                      | 2.3.3 - 5.1
@@ -68,6 +68,12 @@ or later.
 
 When installing on Windows you also need to set `JAVA_HOME` Environment Variable
 according to your JDK installation path (see [Setting Environment Variables](#setting-environment-variables))
+
+### Gradle
+
+As of Cordova-Android 6.4.0, [Gradle](https://gradle.org/install/) is now required to be installed to build Android.
+
+When installing on Windows, you need to add Gradle to your path, (see [Setting Environment Variables](#setting-environment-variables))
 
 #### Android SDK
 
