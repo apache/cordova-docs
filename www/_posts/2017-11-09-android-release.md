@@ -10,7 +10,7 @@ tags: news releases
 
 We would like to announce that `Cordova Android 6.4.0` has been released! 
 
-This release now uses the latest Android Gradle plugin that was released when Android Studio 3.0 was released.  **Google** has changed the Gradle DSL used and currently support for the Crosswalk WebView is broken in this version of Cordova as a result.  Unfortunately, since Crosswalk is no longer supported by the Crosswalk Project, we don't know if this will be fixed.  If you require support for Crosswalk, we recommend that you remain using cordova-android 6.3.0 at this time.
+This release now uses the latest Android Gradle plugin that was released when Android Studio 3.0 was released.  **Google** has changed the Gradle DSL used and currently support for the Crosswalk WebView is broken in this version of Cordova as a result.  Unfortunately, since Crosswalk is no longer supported by the Crosswalk Project, we don't know if this will be fixed.  If you require support for Crosswalk, we recommend that you continue using cordova-android 6.3.0 at this time and avoid using your project with Android Studio.
 
 In addition to the above, because of recent changes **Google** made to Android Studio, Cordova Android now requires that Gradle be installed as a dependency for Android development on all platforms. We will be removing the code that uses Android Studio as a dependency in the near future.
 
