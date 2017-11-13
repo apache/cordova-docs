@@ -14,4 +14,8 @@ Alternatively, to dynamically rebuild the site and refresh the browser _when cha
 
 ### Next steps
 
-When you are done with developing you can [build](building-the-website.md) and [deploy](deploying-the-website.md).
+When you are done with developing you can [build](building-the-website.md) and [deploy](deploying-the-website.md) manually.
+
+OR
+
+You can [build and deploy](building-and-deploying-the-website.md) using the automated steps.
