@@ -13,9 +13,13 @@ Alternatively, to dynamically rebuild the site and refresh the browser _when cha
     node_modules/.bin/gulp watch
 
 ### Next steps
+When you are done with developing, you can [build and deploy](building-and-deploying-the-website.md) using the automated steps.
 
-When you are done with developing you can [build](building-the-website.md) and [deploy](deploying-the-website.md) manually.
+You can also [build](building-the-website.md) and [deploy](deploying-the-website.md) manually. In case Travis build breaks, you may want to build and deploy manually. 
 
-OR
+### Not covered by automated build and deploy
+* Travis doesn't auto pull in translation changes. Read more [here](translate.md).
+* Travis doesn't update latest (7.x) from dev version of docs. You will need to do this manually using `gulp snapshot`. Read more [here](https://github.com/apache/cordova-docs/blob/master/gulpfile.js#L212).
+* Travis doesn't create a new version of the docs (future 8.x). Read more [here](https://github.com/apache/cordova-docs/tree/master/doc/README/en#generating-a-version-release).
 
-You can [build and deploy](building-and-deploying-the-website.md) using the automated steps.
+Of course, you could do all three of the above as commits. After you commit them, then Travis will do the deploy.

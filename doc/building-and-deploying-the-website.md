@@ -10,9 +10,7 @@ After you are finished developing and making your changes, make sure to test the
 
 ### Travis 
 
-[Travis] automatically builds and publishes the website on every change. Travis will build the full website for you by running `gulp build --prod` under the hood. Travis also uses [SVN] to update, copy, add, and commit the new changes over to the website. Committing to svn can only occur once the commit has been merged to master. 
-
-Lastly, Travis also runs `npm test` and will notify you if any of your `eslint` or `mocha` tests are failing. When Travis is done building and deploying, send a pull request and ask for a review.
+[Travis] automatically builds and publishes the website on every change. In [travis.yml](../.travis.yml), Travis  installs required dependencies and runs the build script. Travis will build the full website for you by running `gulp build --prod` under the hood. Travis also uses [SVN] to update, copy, add, and commit the new changes over to the website. Committing to svn can only occur once the commit has been merged to master. You can read more about is happening under the hood with SVN [here](deploying-the-website.md). Travis also runs `npm test` and will notify you if any of your `eslint` or `mocha` tests are failing. When Travis is done building and deploying, send a pull request and ask for a review.
 
 **NOTE**: Committing to Travis might take a while (up to 1 hour), depending on the number of files changed.
 
