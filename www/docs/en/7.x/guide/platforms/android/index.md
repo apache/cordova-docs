@@ -311,7 +311,7 @@ To sign an app, you need the following parameters:
 These parameters can be specified using the command line arguments above to
 the [Cordova CLI][cli_reference] `build` or `run` commands.
 
-__Note__: You should use double `--` to indicate that these are platform-specific arguments, for example:
+__Note__: You should use double `--` (`--` followed by a space) to indicate that these are platform-specific arguments, for example:
 
 `cordova run android --release -- --keystore=../my-release-key.keystore --storePassword=password --alias=alias_name --password=password`.
 
