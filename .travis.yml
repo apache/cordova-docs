@@ -7,7 +7,7 @@ before_install:
 install:
 - npm install
 script:
-- 'if [ $svn_pass ]; then
+- 'if [ $TRAVIS_BRANCH === "master" && $svn_pass ]; then
     travis_wait 30 npm run-script build;
     cd ..;
     svn checkout --non-interactive --no-auth-cache --username=$svn_username --password=$svn_pass https://svn.apache.org/repos/asf/cordova/site cordova-website;
