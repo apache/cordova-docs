@@ -11,7 +11,6 @@
         "cordova-plugin-geolocation",
         "cordova-plugin-globalization",
         "cordova-plugin-inappbrowser",
-        "cordova-plugin-legacy-whitelist",
         "cordova-plugin-media",
         "cordova-plugin-media-capture",
         "cordova-plugin-ms-appinsights",
