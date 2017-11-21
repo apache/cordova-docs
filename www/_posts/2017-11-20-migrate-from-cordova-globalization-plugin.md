@@ -10,7 +10,7 @@ tags: cordova globalization
 
 ## Migrating from the Cordova Globalization Plugin
 
-The Cordova Globalization Plugin was created to obtain information and perform operations based on a user’s locale, language and timezone when most mobile platforms could not make a distinction between these settings. With the new API arrivals in the browser, we can now use the [ECMA Internationalization API](https://www.ecma-international.org/ecma-402/1.0/) for achieving this goal on iOS, Android,Windows devices and desktop browsers. Hence, this cordova plugin is not needed any more and will be sunset soon.
+The Cordova Globalization Plugin was created to obtain information and perform operations based on a user’s locale, language and timezone when most mobile platforms could not make a distinction between these settings. With the new API arrivals in the browser, we can now use the [ECMA Internationalization API](https://www.ecma-international.org/ecma-402/1.0/) for achieving this goal on iOS, Android, Windows devices and desktop browsers. Hence, this cordova plugin is not needed any more and will be sunset soon.
 
 ### Migrating from the plugin to the Internationalization API
 
@@ -43,18 +43,19 @@ if (window.Intl && typeof window.Intl === 'object') {
 }
 ```
 
-The preferred language can be found out from the browser by using the `navigator` object:
+The preferred language tag can be found out from the browser by using the `navigator` object:
 
 ```js
 console.log(navigator.language);
 ```
 
-The locale name can be found out using the `Intl.getCanonicalLocales(locales)` method as shown below:
+The locale name can be found out using the `Intl.getCanonicalLocales(locales)` method. `locales` is a string value or an array of string values that has the language tag(s). The locale name can then be obtained as shown below:
 
 ```js
 Intl.getCanonicalLocales('EN-US'); // ["en-US"]
 Intl.getCanonicalLocales(['EN-US', 'Fr']); // ["en-US", "fr"]
 ```
+
 Another instance of migrating from the cordova globalization plugin can be seen in this example: the navigator.globalization.dateToString method. This method is used in the cordova plugin as shown below:
 
 ```js
