@@ -123,17 +123,6 @@ the core plugins, additional APIs are available via
     </tr>
 
     <tr>
-        <th><a href="../../reference/cordova-plugin-contacts/">Contacts</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="blackberry10" class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="n"></td>
-        <td data-col="ubuntu"        class="p">desktop only</td>
-        <td data-col="win8"       class="p">partially</td>
-        <td data-col="wp8"  class="y"></td>
-    </tr>
-
-    <tr>
         <th><a href="../../reference/cordova-plugin-device/">Device</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
