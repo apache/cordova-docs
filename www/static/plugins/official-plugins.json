@@ -3,7 +3,6 @@
         "cordova-plugin-battery-status",
         "cordova-plugin-camera",
         "cordova-plugin-console",
-        "cordova-plugin-contacts",
         "cordova-plugin-device",
         "cordova-plugin-dialogs",
         "cordova-plugin-file",
