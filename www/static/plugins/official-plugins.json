@@ -7,7 +7,6 @@
         "cordova-plugin-device",
         "cordova-plugin-dialogs",
         "cordova-plugin-file",
-        "cordova-plugin-file-transfer",
         "cordova-plugin-geolocation",
         "cordova-plugin-globalization",
         "cordova-plugin-inappbrowser",

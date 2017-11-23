@@ -167,17 +167,6 @@ the core plugins, additional APIs are available via
     </tr>
 
     <tr>
-        <th><a href="../../reference/cordova-plugin-file-transfer/">File Transfer</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="blackberry10" class="y">Does not support onprogress nor abort</td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="n"></td>
-        <td data-col="ubuntu"        class="n"></td>
-        <td data-col="win8"       class="y">Does not support onprogress nor abort</td>
-        <td data-col="wp8"  class="y">Does not support onprogress nor abort</td>
-    </tr>
-
-    <tr>
         <th><a href="../../reference/cordova-plugin-geolocation/">Geolocation</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
