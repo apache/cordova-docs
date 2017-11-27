@@ -10,13 +10,13 @@ tags: news releases
 
 We are happy to announce a minor version of `Cordova iOS 4.5.4` has been released!
 
-This version continues to add updates for the latest iOS 11 but also some fixes for the iPhone X.
+This version continues to add updates for the latest iOS 11 and also includes some fixes for the iPhone X.
 
 Things to note:
 
-* Add flag for Xcode-managed provisioning
-* Fix compile error when compile source as objective-c++
-* Adjust storyboard constraints
+* Added flag for Xcode-managed provisioning
+* Fixed compile error when compile source as objective-c++
+* Adjusted storyboard constraints
 
 **Note:** When updating **iOS**, make sure to save your plugins as current unsaved plugins may not be reinstalled otherwise. Run the following command in your project to save your currently installed plugins into `config.xml`:
 
