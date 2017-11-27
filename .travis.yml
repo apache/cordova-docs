@@ -1,3 +1,4 @@
+#!/bin/bash
 language: node_js
 sudo: false
 node_js:
@@ -7,17 +8,7 @@ before_install:
 install:
 - npm install
 script:
-- 'if [ $TRAVIS_BRANCH === "master" && $svn_pass ]; then
-    travis_wait 30 npm run-script build;
-    cd ..;
-    svn checkout --non-interactive --no-auth-cache --username=$svn_username --password=$svn_pass https://svn.apache.org/repos/asf/cordova/site cordova-website;
-    cp -R cordova-docs/build-prod/. cordova-website/public/;
-    cd cordova-website;
-    svn status | grep "?";
-    svn add --force .;
-    svn --non-interactive --no-auth-cache --username=$svn_username --password=$svn_pass commit -m "Updated docs";
-    cd ../cordova-docs;
-    npm test;
-  else
-    npm test;
-  fi'
+  # - travis_wait 30 npm run-script build
+  - travis_wait 30 ./first.sh
+  - chmod 755 first.sh
+  - ./first.sh
