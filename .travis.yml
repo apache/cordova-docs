@@ -8,7 +8,7 @@ before_install:
 install:
 - npm install
 script:
-  # - travis_wait 30 npm run-script build
   - travis_wait 30 ./first.sh
   - chmod 755 first.sh
   - ./first.sh
+  
