@@ -1,6 +1,5 @@
 #!/bin/sh
-# This is a comment!
-echo Hello World        # This is a comment, too!
+echo Hello World
 echo $TRAVIS_BRANCH
 echo $svn_username
 echo $svn_pass
