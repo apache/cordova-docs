@@ -21,7 +21,7 @@ Component       | The [part of Cordova](https://issues.apache.org/jira/browse/CB
 Affects Version | The version of the component that this issue pertains to
 Environment     | Some extra context about the environment in which a bug was found (e.g. the version of Android you are running, your version of the Cordova CLI, your development platform, etc.)
 Description     | A thorough description of the issue. For bugs, please provide code (using github) or steps for reproduction as well as any device logs or stack traces you might have.
-Labels          | Please label your issue with the platforms it affects (e.g. ios, windows, android, etc.) and nothing else
+Labels          | Please label your issue with the platform it affects (e.g. ios, windows, android, etc.). Include other relevant labels such as regression, easyfix, bug, dev, staging, production, discussion, question, security, legal, enhancement, production, and/or feature.
 Priority        | The impact of the issue (see below)
 
 ## Issue Priority
