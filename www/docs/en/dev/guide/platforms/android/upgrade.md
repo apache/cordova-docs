@@ -63,9 +63,9 @@ discouraged).
 Alternatively, you may attempt to use the platform update script. For non-CLI
 projects, run:
 
-``
+```
 bin/update path/to/project
-``
+```
 
 
 
