@@ -30,7 +30,7 @@ version of the CLI.
 
 ## Upgrading to 7.X.X
 
-The best way to upgrade to 5.X.X is to simply remove the Android platform from
+The best way to upgrade to 7.X.X is to simply remove the Android platform from
 your project and re-add it with the new version. For example,
 
 ```bash
