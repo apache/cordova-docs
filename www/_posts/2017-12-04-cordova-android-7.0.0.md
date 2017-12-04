@@ -10,9 +10,10 @@ tags: news releases
 
 We are happy to announce that `Cordova Android 7.0.0` has been released! 
 
-With this release, we have changed the default project structure for Android projects.  People who currently use the CLI and treat everything in the platforms directory as a 
-build artifact should not notice a difference, however this a major breaking change for people creating standalone Cordova Android projects.  This also means that the locations
-of files have changed and have been brought in line to the structure used by Android Studio.  This may affect plugin.xml files and config.xml files that use edit-config, and make it so plugins that use edit-config will not be able to be compatible with both Andorid 6.x and Android 7.x.  To fix this issue, please do the following in your XML files: 
+With this release, we have changed the default project structure for Android projects.  People who currently use the CLI and treat everything in the platforms directory as a build artifact should not notice a difference. 
+
+However this a major breaking change for people creating standalone Cordova Android projects.  This also means that the locations of files have changed and have been brought in line to the structure used by Android Studio.  
+This may affect plugin.xml files and config.xml files that use edit-config, and make it so plugins that use edit-config will not be able to be compatible with both Android 6.x and Android 7.x.  To fix this issue, please do the following in your XML files: 
 
 ```
 <!-- An existing config.xml -->
