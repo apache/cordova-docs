@@ -54,5 +54,5 @@ To add it explicitly:
 * [CB-11244](https://issues.apache.org/jira/browse/CB-11244) Found bug in Api.js where xml/strings.xml is used instead of values/strings.xml
 * [CB-11244](https://issues.apache.org/jira/browse/CB-11244) Setup Api.js to support multiple builders based on project structure
 * [CB-11244](https://issues.apache.org/jira/browse/CB-11244) Changing directory creation, will most likely hide this behind a flag for the next release of `cordova-android`, and then make it default in the next major pending feedback
-* Adding the Studio Builder to build a project based on **Android** Studio, and deleting Ant, since Google does not support Ant Builds anymore. Sorry guys!
+* Adding the Studio Builder to build a project based on **Android** Studio, and deleting Ant, since Google does not support Ant Builds anymore. Sorry!
 
