@@ -27,6 +27,48 @@ Most of these instructions apply to projects created with an older set
 of command-line tools that precede the `cordova` CLI utility. See [The Command-Line Interface](../../cli/index.html) for information how to update the
 version of the CLI.
 
+
+## Upgrading to 7.X.X
+
+The best way to upgrade to 7.X.X is to simply remove the Android platform from
+your project and re-add it with the new version. For example,
+
+```bash
+cordova platform remove android
+cordova platform add android@7.X.X
+```
+
+If you use the above method, be aware that any changes you made to the android
+platform folder will be lost (editing the contents of this folder is
+discouraged).
+
+Unfortunately, due to the update in file structure, non-CLI projects will have 
+to be updated manually, or a new Cordova project will have to be created, and the
+files transferred to the new project.  This is due to the migration to Android Studio.
+
+## Upgrading to 6.X.X
+
+The best way to upgrade to 6.X.X is to simply remove the Android platform from
+your project and re-add it with the new version. For example,
+
+```bash
+cordova platform remove android
+cordova platform add android@6.X.X
+```
+
+If you use the above method, be aware that any changes you made to the android
+platform folder will be lost (editing the contents of this folder is
+discouraged).
+
+Alternatively, you may attempt to use the platform update script. For non-CLI
+projects, run:
+
+```
+bin/update path/to/project
+```
+
+
+
 ## Upgrading to 5.X.X
 
 The best way to upgrade to 5.X.X is to simply remove the Android platform from
