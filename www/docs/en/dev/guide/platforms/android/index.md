@@ -43,6 +43,7 @@ few cordova-android releases can be found in this table:
 
 cordova-android Version | Supported Android API-Levels | Equivalent Android Version
 ------------------------|------------------------------|-----------------------------
+7.X.X                   | 19 - 27                      | 4.4 - 8.1
 6.X.X                   | 16 - 26                      | 4.1 - 8.0.0
 5.X.X                   | 14 - 23                      | 4.0 - 6.0.1
 4.1.X                   | 14 - 22                      | 4.0 - 5.1
