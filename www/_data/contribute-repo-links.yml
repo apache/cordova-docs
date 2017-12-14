@@ -70,29 +70,9 @@
         apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-camera.git;a=summary
         mirror: https://github.com/apache/cordova-plugin-camera
 
-    -   project: Compatibility
-        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-compat.git;a=summary
-        mirror: https://github.com/apache/cordova-plugin-compat
-
-    -   project: Console
-        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-console.git;a=summary
-        mirror: https://github.com/apache/cordova-plugin-console
-
-    -   project: Contacts
-        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-contacts.git;a=summary
-        mirror: https://github.com/apache/cordova-plugin-contacts
-
     -   project: Device
         apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-device.git;a=summary
         mirror: https://github.com/apache/cordova-plugin-device
-
-    -   project: Device Motion
-        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-device-motion.git;a=summary
-        mirror: https://github.com/apache/cordova-plugin-device-motion
-
-    -   project: Device Orientation
-        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-device-orientation.git;a=summary
-        mirror: https://github.com/apache/cordova-plugin-device-orientation
 
     -   project: Dialogs
         apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-dialogs.git;a=summary
@@ -102,17 +82,9 @@
         apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-file.git;a=summary
         mirror: https://github.com/apache/cordova-plugin-file
 
-    -   project: File Transfer
-        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-file-transfer.git;a=summary
-        mirror: https://github.com/apache/cordova-plugin-file-transfer
-
     -   project: Geolocation
         apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-geolocation.git;a=summary
         mirror: https://github.com/apache/cordova-plugin-geolocation
-
-    -   project: Globalization
-        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-globalization.git;a=summary
-        mirror: https://github.com/apache/cordova-plugin-globalization
 
     -   project: In-App Browser
         apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-inappbrowser.git;a=summary
