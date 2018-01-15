@@ -298,7 +298,7 @@ Quick [Example](../storage/storage.opendatabase.html)
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
-        ref.executeSript({file: "myscript.js"});
+        ref.executeScript({file: "myscript.js"});
     });
 
 Full [Example](../storage/storage.opendatabase.html)
