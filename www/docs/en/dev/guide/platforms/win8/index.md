@@ -45,7 +45,7 @@ on how to support IE along with comparable WebKit browsers.
 
 To develop apps for Windows 10:
 
-- Windows 8.1 or Windows 10, 32- or 64-bit, along with
+- Windows 10 (or Windows 8.1), 32- or 64-bit, along with
   [Visual Studio 2015](http://www.visualstudio.com/downloads) or higher.
   
 To develop apps for Windows 8.1 you need:
@@ -77,6 +77,7 @@ requirements listed above.
 The tools and SDKs for the target Windows platforms (UWP, 8.1, etc.) must also be selected in the installer. They can be found under the "Windows and Web Development" heading.
 
 <br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/win8/win8_installTools.png" /></p><br/>
+TODO Replace or add Visual Studio 2017 screenshot
 
 ## Project Configuration
 
@@ -94,7 +95,7 @@ If you want to build Windows 8.1 and Windows Phone 8.1 packages by default, you 
 <preference name="windows-target-version" value="8.1" />
 ```
 
-Once you add this setting the `build` command will start producing Windows 8.1 and Windows Phone 8.1 packages.
+Once you add this setting, the `build` command will start producing Windows 8.1 and Windows Phone 8.1 packages.
 
 #### Overriding configuration with the --appx parameter
 
@@ -106,7 +107,7 @@ cordova build windows -- --appx=8.1-phone
 
 The build system will ignore the preference set in config.xml for the target Windows version and strictly build a package for Windows Phone 8.1.
 
-Valid values for the `--appx` flag are `8.1-win`, `8.1-phone`, and `uap` (for Windows 10 Universal Apps).  These options also apply to the `cordova run` command.
+Valid values for the `--appx` flag are `8.1-win`, `8.1-phone`, and `uwp` or `uap` (for Windows 10 Universal Apps / Universal Windows Apps).  These options also apply to the `cordova run` command.
 
 #### Considerations for target Windows version
 
@@ -139,17 +140,30 @@ This allows you to run the application on a specific device or emulator, in this
 cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone
 ```
 
+#### Architecture option
+
+TODO
+- `--archs`
+- Specific chip architectures (`anycpu`, `arm`, `x86`, `x64`)
+
+#### Bundle option
+
+TODO
+- `--bundle`
+- Generates an .appxbundle. Not valid if anycpu AND chip-specific architectures are used (at the same time)
+
 You can also use __cordova run --help__ to see additional build and run options.
 
 #### Deploy options when targetting Windows (Phone) 8.1
 
 With Windows (Phone) 8.1 packages you have more options for deployment.
 
+##### `--phone` and `--win`
+
 To deploy Windows 8.1 package:
 
 ```
 cordova run windows -- --win  # explicitly specify Windows as deployment target
-cordova run windows # `run` uses Windows package by default
 ```
 
 To deploy Windows Phone 8.1 package:
@@ -158,6 +172,12 @@ To deploy Windows Phone 8.1 package:
 cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
 cordova run windows --device -- --phone  # deploy app to connected device
 ```
+
+##### `--win10tools`
+
+TODO
+- `--win10tools`
+- Uses Windows 10 deployment tools (used for a Windows 8.1 app when) being deployed to a Windows 10 device
 
 ### Using Visual Studio to deploy the app
 
