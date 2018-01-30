@@ -16,8 +16,6 @@ The following plugins were updated today:
 * cordova-plugin-media@5.0.2
 * cordova-plugin-splashscreen@5.0.2
 
-Our last plugin release had an issue which made it impossible to install from npm. These point releases of the plugins fix the bug allowing you to install from npm as well as git url.
-
 ----
 You can update any plugin by removing it, and then re-adding it.
 
