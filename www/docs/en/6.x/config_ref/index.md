@@ -209,6 +209,10 @@ Examples:
 
 See [<edit-config> docs][edit_config] for plugin.xml.
 
+## config-file
+
+See [<config-file> docs][config_file] for plugin.xml.
+
 ## engine
 Specifies details about what platform to restore during a prepare.
 
@@ -530,3 +534,4 @@ Below is a sample config.xml file:
 [whitelist_intent]:     ../reference/cordova-plugin-whitelist/index.html#intent-whitelist
 [statusbar_plugin]:     ../reference/cordova-plugin-statusbar/
 [edit_config]:          ../plugin_ref/spec.html#edit-config
+[config_file]:          ../plugin_ref/spec.html#config-file
