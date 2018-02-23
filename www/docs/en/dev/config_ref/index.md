@@ -69,7 +69,7 @@ windows-packageVersion(string) <br/> ==Windows== | Alternative version for Windo
 android-packageName(string) <br/> ==Android== | Alternative package name for Android, overrides `id`.
 ios-CFBundleIdentifier(string)  <br/> ==iOS== | Alternative bundle id for iOS. Overrides `id`.
 packageName(string) <br/> ==Windows== | *Default: Cordova.Example* <br/>  Package name for Windows.
-defaultlocale <br /> ==iOS== | Specified the default language of the app, as an IANA language code.
+defaultlocale <br /> ==iOS== ==Windows== | Specified the default language of the app, as an IANA language code.
 android-activityName(string) <br/> ==Android== | Set the activity name for your app in AndroidManifest.xml. Note that this is only set once after the Android platform is first added.
 xmlns(string) | *Required* <br/> Namespace for the config.xml document.
 xmlns:cdv(string) | *Required* <br/> Namespace prefix.
