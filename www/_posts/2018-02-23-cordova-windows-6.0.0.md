@@ -10,26 +10,26 @@ tags: news releases
 
 We are happy to announce the release of `cordova-windows 6.0.0`. 
 
-This is a major release, that changes functionality you might rely on, so please make sure to read the following list of changes:
+This is a major release that changes functionality you might rely on, so please make sure to read the following list of changes:
 
 ## Changes
 
-- Windows 10 / UWP builds are now the default, meaning `cordova build windows` will now build a Windows 10 UWP app by default. 
-    * Windows 8.1 is still there, just use `cordova build windows -- --appx=8.1-win`, `cordova build windows -- --appx=8.1-phone` or an equivalent configuration option.
-- A current installation of Visual Studio 2017 (`15.5.x` at the time of writing) can be used to build apps without any additional need configuration or hacks (like the ENV var `VSINSTALLDIR` that was required for 5.0.0).
-    * Note: [VS2017 doesn't support Windows 8.1 apps any more](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs2017-compatibility-vs#windows-store-and-windows-phone-apps), so you can only build these apps with VS15 installed.
-- New ENV variable `MSBUILDDIR` to directly configure the MSBuild Tools to be used to build the app. `VSINSTALLDIR` always has been a hack that accidentally also worked to switch between different MSBuildTools versions. Now we made this explicit. Just set the ENV var to a your desired MSBuild folder (e.g. `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin` or `C:\Program Files (x86)\MSBuild\14.0\bin\`) and it will be used to build your project. 
-    * If you have VS17 and VS15 installed, the normal logic would choose MSBuild 15 - and fail on Win 8.1 project. If you set it to MSBuild 14, it can successfully build your 8.1 apps. (If the supplied path is invalid or doesn't contain a working MSBuild, the normal MSBuild selection logic will be triggered)
+- **Windows 10 / UWP** builds are now default, meaning `cordova build windows` will now build a Windows 10 UWP app by default. Windows (Phone) 8.1 is still supported of course, just use `cordova build windows -- --appx=8.1-win`, `cordova build windows -- --appx=8.1-phone` or an equivalent configuration option.
+- You can now build apps with a current installation of **Visual Studio 2017** (`15.5.x` at the time of writing) without any additional configuration or hacks (like the environment variable `VSINSTALLDIR` that was required for 5.0.0).
+    * Note: [Visual Studio 2017 doesn't support Windows 8.1 apps any more](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs2017-compatibility-vs#windows-store-and-windows-phone-apps), so you can only build these apps with Visual Studio 2015 installed.
+- New **ENV variable `MSBUILDDIR`** allows to directly configure the MSBuild Tools to be used to build the app. While `VSINSTALLDIR` always has been a hack that accidentally also worked to switch between different MSBuildTools versions, we now we this functionality explicit:  Just set the ENV var to a your desired MSBuild folder (e.g. `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin` or `C:\Program Files (x86)\MSBuild\14.0\bin\`) and it will be used to build your project. 
+    * If you have Visual Studio 2017 and Visual Studio 2015 installed at the same time, the normal logic would always choose Visual Studio 2017's MSBuild 15 - and fail on a Windows (Phone) 8.1 project. If you set the environment variable MSBuild 14, it can successfully build your 8.1 apps.
+    * If the supplied path is invalid or doesn't contain a working MSBuild, the normal MSBuild selection logic will be triggered
 - Fixes several bugs
 
 ## Installation
 
-As usual this new version will be added as the default `cordova-windows` version only with the next release of Cordova CLI. Until then, please use these command to remove and readd the `windows` platform:
+As usual this new version will be added as the default `cordova-windows` version only with the next release of Cordova CLI. Until then, please use these commands to remove and re-add the `windows` platform:
 
 ```
 cordova platform rm windows
 cordova platform add windows@6.0.0
-```    
+```
 
 ### Known limitations
 
@@ -37,7 +37,7 @@ As it's often the case, the 6.0.0 release of cordova-windows is not perfect and 
 
 - If you only have Visual Studio 2017 installed on your machine, you can not build Windows (Phone) 8.1 apps.
 - "Windows 10 Phone emulator is currently not supported. If you want to deploy to emulator, use Visual Studio instead."
-- [Some `build` error messages are a bit misleading](https://github.com/apache/cordova-windows/issues/266)
+- [Some `build`](https://github.com/apache/cordova-windows/issues/266) and [requirements error messages](https://github.com/apache/cordova-windows/issues/267) are a bit misleading
 
 ## Feedback
 
@@ -47,8 +47,11 @@ If you encounter problems with this new version, you can use the [GitHub issues 
 
 Working on this update showed how much code is there to support other platform variants beside Windows 10 desktop.
 
+TODO refine 
+
 - Is Windows 8.1 support still needed or would it make sense to get rid of _really_ much code and do a 7.0.0 release that drops support for that?
 - Windows 10 Phone? Still relevant?
+- Where should the project move? What is missing? What should be supported? What do you need?
 
 Please help us decide how to further develop `cordova-windows` by answering these questions below in the comments. Thanks!
 
@@ -70,7 +73,7 @@ Please help us decide how to further develop `cordova-windows` by answering thes
 * [CB-13799](https://issues.apache.org/jira/browse/CB-13799) updated npm test for `cordova-windows`
 * [CB-13812](https://issues.apache.org/jira/browse/CB-13812) run tests on AppVeyor with VS 2017 as well
 * [CB-13641](https://issues.apache.org/jira/browse/CB-13641) support transparent splash screen background color. (#245)
-* [CB-13175](https://issues.apache.org/jira/browse/CB-13175) fixing **Windows**8.1 crash on startup
+* [CB-13175](https://issues.apache.org/jira/browse/CB-13175) fixing Windows8.1 crash on startup
 * [CB-13422](https://issues.apache.org/jira/browse/CB-13422) (windows) Fix typo in build error message
 * [CB-12895](https://issues.apache.org/jira/browse/CB-12895) ignoring cordova.js for eslint & removing comments and references to jshint
 * [CB-13237](https://issues.apache.org/jira/browse/CB-13237) Default to UAP
