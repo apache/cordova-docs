@@ -1,6 +1,7 @@
 #!/bin/sh
-if [ $svn_pass ] && [ $TRAVIS_BRANCH = "master" ]
+if [ $svn_pass ] && [ $BRANCH = "master" ]
 then
+    echo "### build, deploy, test: (branch = $BRANCH)"
     npm run-script build;
     cd ..;
     svn checkout --non-interactive --no-auth-cache --username=$svn_username --password=$svn_pass https://svn.apache.org/repos/asf/cordova/site cordova-website;
@@ -12,5 +13,6 @@ then
     cd ../cordova-docs || return;
     npm test;
 else
+    echo "### test only: (branch = $BRANCH)"
     npm test;
 fi
