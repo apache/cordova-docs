@@ -1,67 +1,88 @@
 ---
 layout: post
 author:
-    name: Joe Bowser
-    url: https://twitter.com/infil00p
-title:  "Cordova Android 7.0.0 Released!"
+    name: Jan Piotrowski
+    url: https://twitter.com/sujan
+title:  "Cordova Windows 6.0.0 Released!"
 categories: announcements
 tags: news releases
 ---
 
-We are happy to announce that `Cordova Android 7.0.0` has been released! 
+We are happy to announce the release of `cordova-windows 6.0.0`. 
 
-With this release, we have changed the default project structure for Android projects.  People who currently use the CLI and treat everything in the platforms directory as a build artifact should not notice a difference. 
+This is a major release, that changes functionality you might rely on, so please make sure to read the following list of changes:
 
-However this a major breaking change for people creating standalone Cordova Android projects.  This also means that the locations of files have changed and have been brought in line to the structure used by Android Studio.  
-This may affect plugin.xml files and config.xml files that use edit-config, and make it so plugins that use edit-config will not be able to be compatible with both Android 6.x and Android 7.x.  To fix this issue, please do the following in your XML files: 
+## Changes
+
+- Windows 10 / UWP builds are now the default, meaning `cordova build windows` will now build a Windows 10 UWP app by default. 
+    * Windows 8.1 is still there, just use `cordova build windows -- --appx=8.1-win`, `cordova build windows -- --appx=8.1-phone` or an equivalent configuration option.
+- A current installation of Visual Studio 2017 (`15.5.x` at the time of writing) can be used to build apps without any additional need configuration or hacks (like the ENV var `VSINSTALLDIR` that was required for 5.0.0).
+    * Note: [VS2017 doesn't support Windows 8.1 apps any more](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs2017-compatibility-vs#windows-store-and-windows-phone-apps), so you can only build these apps with VS15 installed.
+- New ENV variable `MSBUILDDIR` to directly configure the MSBuild Tools to be used to build the app. `VSINSTALLDIR` always has been a hack that accidentally also worked to switch between different MSBuildTools versions. Now we made this explicit. Just set the ENV var to a your desired MSBuild folder (e.g. `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin` or `C:\Program Files (x86)\MSBuild\14.0\bin\`) and it will be used to build your project. 
+    * If you have VS17 and VS15 installed, the normal logic would choose MSBuild 15 - and fail on Win 8.1 project. If you set it to MSBuild 14, it can successfully build your 8.1 apps. (If the supplied path is invalid or doesn't contain a working MSBuild, the normal MSBuild selection logic will be triggered)
+- Fixes several bugs
+
+## Installation
+
+As usual this new version will be added as the default `cordova-windows` version only with the next release of Cordova CLI. Until then, please use these command to remove and readd the `windows` platform:
 
 ```
-<!-- An existing config.xml -->
-<edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+cordova platform rm windows
+cordova platform add windows@6.0.0
+```    
 
-<!-- needs to change to -->
-<edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application" mode="merge">
-```
+### Known limitations
 
-## Major Changes include:
- * Support for Java 1.8 language features in Cordova Plugins
- * CordovaInterface now has a Context getter so that contexts can be retrieved without an Activity
- * Cordova can now build for x86_64, arm64 and armeabi architecture when building plugins that use the NDK
- * The minimum Android API version supported is now API Level 19
- * Due to the directory structure change, we no longer support in-line upgrading, bringing us in line with iOS
- * ANT builds are no longer supported and the functionality has been removed.
+As it's often the case, the 6.0.0 release of cordova-windows is not perfect and has some known limitations:
 
-To upgrade:
+- If you only have Visual Studio 2017 installed on your machine, you can not build Windows (Phone) 8.1 apps.
+- "Windows 10 Phone emulator is currently not supported. If you want to deploy to emulator, use Visual Studio instead."
+- [Some `build` error messages are a bit misleading](https://github.com/apache/cordova-windows/issues/266)
 
-    npm install -g cordova
-    cd my_project
-    cordova platform remove android
-    cordova platform add android@7.0.0
+## Feedback
 
-To add it explicitly:
+If you encounter problems with this new version, you can use the [GitHub issues of the `cordova-windows` repository](https://github.com/apache/cordova-windows/issues) to do so now. (`cordova-windows` is the first Apache Cordova repository on GitHub that enabled issue tracking. Yay!)
 
-    cordova platform add android@7.0.0
+## Open questions
+
+Working on this update showed how much code is there to support other platform variants beside Windows 10 desktop.
+
+- Is Windows 8.1 support still needed or would it make sense to get rid of _really_ much code and do a 7.0.0 release that drops support for that?
+- Windows 10 Phone? Still relevant?
+
+Please help us decide how to further develop `cordova-windows` by answering these questions below in the comments. Thanks!
 
 <!--more-->
 ## Curated Changelog
-* [CB-13612](https://issues.apache.org/jira/browse/CB-13612) Fix the remapper so that XML files copy over and the Camera works again.
-* [CB-13741](https://issues.apache.org/jira/browse/CB-13741) Bump `package.json` so we can install plugins
-* [CB-13610](https://issues.apache.org/jira/browse/CB-13610) Compress the default app assets
-* [CB-12835](https://issues.apache.org/jira/browse/CB-12835) add a Context getter in CordovaInterface
-* [CB-8976](https://issues.apache.org/jira/browse/CB-8976) Added the `cdvVersionCodeForceAbiDigit` flag to the template build.gradle that appends 0 to the versionCode when `cdvBuildMultipleApks` is not set
-* [CB-12291](https://issues.apache.org/jira/browse/CB-12291) (android) Add x86_64, arm64 and armeabi architecture flavors
-* [CB-13602](https://issues.apache.org/jira/browse/CB-13602) We were setting the path wrong, this is hacky but it works
-* [CB-13601](https://issues.apache.org/jira/browse/CB-13601) Fixing the standalone run scripts to make sure this works without using the CLI
-* [CB-13580](https://issues.apache.org/jira/browse/CB-13580) fix build for multiple apks (different product flavors)
-* [CB-13558](https://issues.apache.org/jira/browse/CB-13558) Upgrading the gradle so we can upload the AAR
-* [CB-13297](https://issues.apache.org/jira/browse/CB-13297) This just works once you bump the project structure.  Java 1.8 compatibility baked-in
-* [CB-11244](https://issues.apache.org/jira/browse/CB-11244) **Android** Studio 3 work, things have changed with how the platform is built
-* [CB-11244](https://issues.apache.org/jira/browse/CB-11244) Found bug where the gradle subproject changes weren't actually getting written to the correct gradle file
-* [CB-13470](https://issues.apache.org/jira/browse/CB-13470) Fix Clean so that it cleans the **Android** Studio structure
-* [CB-11244](https://issues.apache.org/jira/browse/CB-11244) Adding specs for resource files inside an **Android** Studio Project
-* [CB-11244](https://issues.apache.org/jira/browse/CB-11244) Added remapping for drawables
-* [CB-11244](https://issues.apache.org/jira/browse/CB-11244) Found bug in Api.js where xml/strings.xml is used instead of values/strings.xml
-* [CB-11244](https://issues.apache.org/jira/browse/CB-11244) Setup Api.js to support multiple builders based on project structure
-* [CB-11244](https://issues.apache.org/jira/browse/CB-11244) Changing directory creation, will most likely hide this behind a flag for the next release of `cordova-android`, and then make it default in the next major pending feedback
-* Adding the Studio Builder to build a project based on **Android** Studio, and deleting Ant, since Google does not support Ant Builds anymore. Sorry!
 
+* [CB-13889](https://issues.apache.org/jira/browse/CB-13889) Allow test failures for Visual Studio 2017 environments (#263)
+* [CB-13878](https://issues.apache.org/jira/browse/CB-13878) MSBUILDDIR env variable (#262)
+* [CB-13883](https://issues.apache.org/jira/browse/CB-13883) Visual Studio 2017 support (#261)
+* [CB-13877](https://issues.apache.org/jira/browse/CB-13877) Clean up MSBuildTools.js (#259)
+* [CB-13870](https://issues.apache.org/jira/browse/CB-13870) Improve check_reqs (#258)
+* [CB-13877](https://issues.apache.org/jira/browse/CB-13877) more env information about msbuild and visual studio on appveyor (#257)
+* [CB-13877](https://issues.apache.org/jira/browse/CB-13877) First MSBuildTools.js work: Debug output, move misplaced method, comments (#255)
+* [CB-13875](https://issues.apache.org/jira/browse/CB-13875) add `prepare` script that can be called in e2e tests (#254)
+* [CB-13817](https://issues.apache.org/jira/browse/CB-13817) Add new alias `uwp` for `--appx` param including tests (#251)
+* [CB-13870](https://issues.apache.org/jira/browse/CB-13870) change default from UAP to 10.0 (#253)
+* [CB-13829](https://issues.apache.org/jira/browse/CB-13829) Fix tests that were broken since [CB-13237](https://issues.apache.org/jira/browse/CB-13237) (#246)
+* [CB-11968](https://issues.apache.org/jira/browse/CB-11968) Add support for config-file in `config.xml` (#235)
+* [CB-13799](https://issues.apache.org/jira/browse/CB-13799) updated npm test for `cordova-windows`
+* [CB-13812](https://issues.apache.org/jira/browse/CB-13812) run tests on AppVeyor with VS 2017 as well
+* [CB-13641](https://issues.apache.org/jira/browse/CB-13641) support transparent splash screen background color. (#245)
+* [CB-13175](https://issues.apache.org/jira/browse/CB-13175) fixing **Windows**8.1 crash on startup
+* [CB-13422](https://issues.apache.org/jira/browse/CB-13422) (windows) Fix typo in build error message
+* [CB-12895](https://issues.apache.org/jira/browse/CB-12895) ignoring cordova.js for eslint & removing comments and references to jshint
+* [CB-13237](https://issues.apache.org/jira/browse/CB-13237) Default to UAP
+* [CB-13155](https://issues.apache.org/jira/browse/CB-13155) Improved target parsing
+* [CB-13022](https://issues.apache.org/jira/browse/CB-13022) Correct a VS installation warning during check_reqs
+* [CB-12636](https://issues.apache.org/jira/browse/CB-12636) Fix check_reqs to properly find VS 2017
+* [CB-12895](https://issues.apache.org/jira/browse/CB-12895) setup eslint and removed jshint
+* Allow build when using --bundle and multiple architectures. This closes #175
+* README: Fix broken Markdown headings
+* [CB-12617](https://issues.apache.org/jira/browse/CB-12617) Removed node 0.x from CI
+* [CB-12847](https://issues.apache.org/jira/browse/CB-12847) fixed `bugs` entry in `package.json`
+* [CB-12784](https://issues.apache.org/jira/browse/CB-12784) Fixed a crash on Windows 10 Creators Update
+* Add support for uap3.
+* [CB-12018](https://issues.apache.org/jira/browse/CB-12018) updated tests to work with jasmine instead of jasmine-node
+* [CB-12499](https://issues.apache.org/jira/browse/CB-12499) UWP: Dependent external libraries specified as resource-file not being referenced in Release mode
