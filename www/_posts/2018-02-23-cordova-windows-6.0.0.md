@@ -24,7 +24,7 @@ This is a major release that changes functionality you might rely on, so please 
 
 ## Installation
 
-As usual this new version will be added as the default `cordova-windows` version only with the next release of Cordova CLI. Until then, please use these commands to remove and re-add the `windows` platform:
+As usual this new version will be added as the default `cordova-windows` version for `cordova plattform add windows` only with the next release of Cordova CLI. Until then, please use these commands to remove and re-add the `windows` platform:
 
 ```
 cordova platform rm windows
@@ -33,27 +33,26 @@ cordova platform add windows@6.0.0
 
 ### Known limitations
 
-As it's often the case, the 6.0.0 release of cordova-windows is not perfect and has some known limitations:
+As it's often the case, the `6.0.0` release of cordova-windows is not perfect and has some known limitations:
 
 - If you only have Visual Studio 2017 installed on your machine, you can not build Windows (Phone) 8.1 apps.
-- "Windows 10 Phone emulator is currently not supported. If you want to deploy to emulator, use Visual Studio instead."
-- [Some `build`](https://github.com/apache/cordova-windows/issues/266) and [requirements error messages](https://github.com/apache/cordova-windows/issues/267) are a bit misleading
+- As with earlier versions, Windows 10 Mobile emulators are not supported by the CLI but require Visual Studio to be used to build the app
+- Some [`build`](https://github.com/apache/cordova-windows/issues/266) and [requirements error messages](https://github.com/apache/cordova-windows/issues/267) are not optimal
 
 ## Feedback
 
-If you encounter problems with this new version, you can use the [GitHub issues of the `cordova-windows` repository](https://github.com/apache/cordova-windows/issues) to do so now. (`cordova-windows` is the first Apache Cordova repository on GitHub that enabled issue tracking. Yay!)
+If you encounter problems with this new version, you can use the [GitHub issues of the `cordova-windows` repository](https://github.com/apache/cordova-windows/issues) to do so now. (`cordova-windows` is the first Apache Cordova repository on GitHub that uses issues on GitHub instead of [JIRA issues](http://issues.cordova.io/)!)
 
-## Open questions
+## The future of `cordova-windows`
 
-Working on this update showed how much code is there to support other platform variants beside Windows 10 desktop.
+Working on this update reminded us how much code there is to support other platform variants beside Windows 10 Desktop / UWP, specifically Windows 8.1 and Windows Phone 8.1 but also Windows 10 Mobile. 
 
-TODO refine 
+As Microsoft recently ended mainstream support for all **Windows 8.1** variants, total market share recedes below 6% and Visual Studio 2017 doesn't support 8.1 development any more, we don't expect any future changes that would require updates to `cordova-windows`'s 8.1 support. Same for **Windows 10 Mobile**, which is not under active development by Microsoft any more and will not receive any other updates than security fixes.
 
-- Is Windows 8.1 support still needed or would it make sense to get rid of _really_ much code and do a 7.0.0 release that drops support for that?
-- Windows 10 Phone? Still relevant?
-- Where should the project move? What is missing? What should be supported? What do you need?
+Because of that, we decided to **depracte all "mobile" and "phone" build targets of `cordova-windows`**. In the near future we will release a `7.0.0` version that will remove support for those platform variants and focus on Windows 10 UWP - which will greatly reduce complexity and simplify future maintenance.  
+`cordova-windows 6.0.0` with support for these platforms of course will stay available and receive bugfixes if necessary (Similar to how `cordova-windows@4` was the last version to support Windows 8.0).
 
-Please help us decide how to further develop `cordova-windows` by answering these questions below in the comments. Thanks!
+Please tell us in the comments to this blog post if you have any objections or comments to these plans.
 
 <!--more-->
 ## Curated Changelog
