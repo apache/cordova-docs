@@ -43,12 +43,12 @@ on how to support IE along with comparable WebKit browsers.
 
 ## Requirements and Support
 
-To develop apps for Windows 10:
+To develop apps for Windows 10 you need:
 
 - Windows 10 (or Windows 8.1), 32- or 64-bit, along with
   [Visual Studio 2015](http://www.visualstudio.com/downloads) or higher.
   
-To develop apps for Windows 8.1 you need:
+To develop apps for Windows 8.1:
 
 - Windows 8.1, 32 or 64-bit, along with [Visual Studio 2015](http://www.visualstudio.com/downloads)
   or Visual Studio 2013.
