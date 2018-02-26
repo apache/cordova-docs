@@ -25,11 +25,11 @@ To add it explicitly:
 ## Curated Changelog
 * [CB-13879](https://issues.apache.org/jira/browse/CB-13879) updated gradle tools dependency to 3.0.1 for project template
 * [CB-13831](https://issues.apache.org/jira/browse/CB-13831) Update `android-versions` to 1.3.0 to support SDK 27.
-* [CB-13800](https://issues.apache.org/jira/browse/CB-13800) Drop pre-KitKat specific code
+* [CB-13800](https://issues.apache.org/jira/browse/CB-13800) Drop pre-4.4. (KitKat) specific code
 * [CB-13724](https://issues.apache.org/jira/browse/CB-13724) Updated the **Android** Tooling required for the latest version on both the test project, and the template
-* [CB-13724](https://issues.apache.org/jira/browse/CB-13724) Bump Target SDK to API 27
+* [CB-13724](https://issues.apache.org/jira/browse/CB-13724) Bump Target SDK to API 27 (Android 8.1)
 * [CB-13646](https://issues.apache.org/jira/browse/CB-13646) Using the deprecated `NDK` by default breaks the build.  Crosswalk users need to specify the Gradle parameters to keep it working.
 * [CB-12218](https://issues.apache.org/jira/browse/CB-12218) Fix consistency of null result message
 * [CB-13571](https://issues.apache.org/jira/browse/CB-13571) Prevent crash with unrecognized **Android** version
 * [CB-13721](https://issues.apache.org/jira/browse/CB-13721) Fix build apps that use `cdvHelpers.getConfigPreference`
-* [CB-13621](https://issues.apache.org/jira/browse/CB-13621) Wrote similar warning to [CB-12948](https://issues.apache.org/jira/browse/CB-12948) on **iOS**. We no longer support `cordova update` command.
+* [CB-13621](https://issues.apache.org/jira/browse/CB-13621) We no longer support `cordova update` command.
