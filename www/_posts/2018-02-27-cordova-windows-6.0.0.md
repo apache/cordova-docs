@@ -14,11 +14,11 @@ This is a major release that changes functionality you might rely on, so please 
 
 ## Changes
 
-- **Windows 10 / UWP** builds are now default, meaning `cordova build windows` will now build a Windows 10 UWP app by default. Windows (Phone) 8.1 is still supported, of course, just use `cordova build windows -- --appx=8.1-win`, `cordova build windows -- --appx=8.1-phone` or an equivalent configuration option.
-- You can now build apps with a current installation of **Visual Studio 2017** (`15.5.x` at the time of writing) without any additional configuration or hacks (like the environment variable `VSINSTALLDIR` that was required for 5.0.0).
-    - Note: [Visual Studio 2017 doesn't support Windows 8.1 apps anymore](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs2017-compatibility-vs#windows-store-and-windows-phone-apps), so you can only build these apps with Visual Studio 2015 installed.
+- **Windows 10 / UWP** builds are now default, meaning `cordova build windows` will now build a Windows 10 UWP app by default.  
+  Windows (Phone) 8.1 is still supported, of course, just use `cordova build windows -- --appx=8.1-win`, `cordova build windows -- --appx=8.1-phone` or an equivalent configuration option.
+- You can now build apps with a current installation of **Visual Studio 2017** (`15.5.x` at the time of writing) without any additional configuration or hacks (like the environment variable `VSINSTALLDIR` that was required for 5.0.0). (Note: [Visual Studio 2017 doesn't support Windows 8.1 apps anymore](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs2017-compatibility-vs#windows-store-and-windows-phone-apps), so you can only build these apps with Visual Studio 2015 installed.)
 - New **ENV variable `MSBUILDDIR`** allows to directly configure the MSBuild Tools to be used to build the app. While `VSINSTALLDIR` always has been a hack that accidentally also worked to switch between different MSBuildTools versions, we now we this functionality explicit:  Just set the ENV var to a your desired MSBuild folder (e.g. `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin` or `C:\Program Files (x86)\MSBuild\14.0\bin\`) and it will be used to build your project. 
-    - If you have Visual Studio 2017 and Visual Studio 2015 installed at the same time, the normal logic would always choose Visual Studio 2017's MSBuild 15 - and fail on a Windows (Phone) 8.1 project. If you set the environment variable MSBuild 14, it can successfully build your 8.1 apps.
+    - If you have Visual Studio 2017 and Visual Studio 2015 installed at the same time, the normal logic would always choose Visual Studio 2017's MSBuild 15 - and fail on a Windows (Phone) 8.1 project. If you set the environment variable to MSBuild 14, it can successfully build your 8.1 apps.
     - If the supplied path is invalid or doesn't contain a working MSBuild, the normal MSBuild selection logic will be triggered
 - Fixes several bugs
 
@@ -31,17 +31,17 @@ cordova platform rm windows
 cordova platform add windows@6.0.0
 ```
 
-### Known limitations
+## Known limitations
 
 As it's often the case, the `6.0.0` release of cordova-windows is not perfect and has some known limitations:
 
 - If you only have Visual Studio 2017 installed on your machine, you can not build Windows (Phone) 8.1 apps.
 - As with earlier versions, Windows 10 Mobile emulators are not supported by the CLI but require Visual Studio to be used to build the app
-- Some [`build`](https://github.com/apache/cordova-windows/issues/266) and [requirements error messages](https://github.com/apache/cordova-windows/issues/267) are not optimal
+- Some [build](https://github.com/apache/cordova-windows/issues/266) and [requirements error messages](https://github.com/apache/cordova-windows/issues/267) are not optimal
 
 ## Feedback
 
-If you encounter problems with this new version, you can use the [GitHub issues of the `cordova-windows` repository](https://github.com/apache/cordova-windows/issues) to do so now. (`cordova-windows` is the first Apache Cordova repository on GitHub that uses issues on GitHub instead of [JIRA issues](http://issues.cordova.io/)!)
+If you encounter problems with this new version, you can use the [GitHub issues of the `cordova-windows` repository](https://github.com/apache/cordova-windows/issues) to do so now.
 
 ## The future of `cordova-windows`
 
