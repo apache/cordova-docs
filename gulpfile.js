@@ -313,13 +313,16 @@ gulp.task("regen", ["jekyll"], function () {
 });
 
 gulp.task("fetch", function (done) {
-    if (!fs.existsSync(FETCH_DIR)) {
-        exec("node", [bin("fetch_docs.js"), "--config", FETCH_CONFIG, '--docsRoot', DOCS_DIR], done);
-    } else {
+
+    // skip fetching if --nofetch was passed
+    if (gutil.env.nofetch) {
         gutil.log(gutil.colors.yellow(
-            "Skipping fetching external docs. Run 'gulp clean' first to initiate another fetch."));
+            "Skipping fetching external docs."));
         done();
+        return;
     }
+
+    exec("node", [bin("fetch_docs.js"), "--config", FETCH_CONFIG, '--docsRoot', DOCS_DIR], done);
 });
 
 gulp.task("reload", function () {

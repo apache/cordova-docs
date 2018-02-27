@@ -22,6 +22,7 @@ var path = require('path');
 
 var yaml = require('js-yaml');
 var optimist = require('optimist');
+var chalk = require('chalk');
 
 var util = require('./util');
 
@@ -46,7 +47,7 @@ function augmentEntry (originalEntry, prefix) {
 
     // skip entries that don't point to a valid file
     if (!fs.existsSync(filePath)) {
-        console.warn('WARNING! Possible 404 in ToC: "' + filePath + '"');
+        console.warn(chalk.red('WARNING! Possible 404 in ToC: "' + filePath + '"; create the file to fix'));
         return originalEntry;
     }
 
