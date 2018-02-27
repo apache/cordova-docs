@@ -24,6 +24,7 @@ The site is built using a [gulp script](gulpfile.js) that is run by Node.JS (`np
 - [Testing](doc/testing-the-website.md)
 - [Building](doc/building-the-website.md)
 - [Deploying](doc/deploying-the-website.md)
+- [Automated Build and Deployment](building-and-deploying-the-website.md) of the website on commits/merges to `master`
 - [Troubleshooting](doc/troubleshooting.md)
 
 ### Common Tasks
