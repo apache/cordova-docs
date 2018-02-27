@@ -131,10 +131,6 @@ Verify your make installation by running:
 
     make --version
 
-### Next steps
-
-Now you have everything installed you can [develop](developing-the-website.md), [build](building-the-website.md) and [deploy](deploying-the-website.md).
-
 [ruby_linux]: https://www.ruby-lang.org/en/documentation/installation/#package-management-systems
 [homebrew]: http://brew.sh/
 [linux_node]: https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories#installing-node-js-v0-12
