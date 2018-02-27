@@ -19,16 +19,21 @@ The site is built using a [gulp script](gulpfile.js) that is run by Node.JS (`np
 ## Instructions
 
 - [Installing](doc/installing-a-development-environment.md)
-- [Building](doc/building-the-website.md)
 - [Developing](doc/developing-the-website.md)
   * [Docs Redirects](doc/redirects.md)
+- [Testing](doc/testing-the-website.md)
+- [Building](doc/building-the-website.md)
 - [Deploying](doc/deploying-the-website.md)
+- [Troubleshooting](doc/troubleshooting.md)
+
+### Common Tasks
+
+- [Writing a Blog Post](doc/blogpost.md)
+- [Adding a Tool or a Showcase App](doc/tool-or-showcase-app.md)
 - [Working on the Documentation](doc/README/en/README.md) 
   > Note: many changes to the overall documentation come from other repos and are simply pulled together by a build. `tools/bin/fetch_docs.js` has more details and `www/_data/fetched-files.yml` contains an informative list of src/dest pairs.  Most auto-generated files have a comment tag at the top of the file to indicate that they come from elsewhere.
-- [Adding a Tool or a Showcase App](doc/tool-or-showcase-app.md)
-- [Writing a Blog Post](doc/blogpost.md)
 - [Translating](doc/translate.md)
-- [Troubleshooting](doc/troubleshooting.md)
+
 
 ## Attributions
 
