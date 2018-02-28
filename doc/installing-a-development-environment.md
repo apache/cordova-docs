@@ -90,11 +90,15 @@ Verify your Node.js installation by running:
     node --version
     npm --version
 
+### Local repo setup
+
+Clone the [cordova-docs] github repo to the local folder
+
 ### Dependencies
 
 #### Ruby
 
-Once Ruby and Node.js are installed, install Ruby dependencies by running:
+Once Ruby and Node.js are installed, navigate to local repo folder and install Ruby dependencies by running:
 
     gem install bundler
     bundle install --path ./ruby_modules
@@ -131,6 +135,31 @@ Verify your make installation by running:
 
     make --version
 
+
+### Troubleshooting
+
+##### SSL certificate issue while executing 'gem install bundler' command in Windows
+
+Try copying the certificate from [GlobalSignRootCerficateAuthority] into `C:\Ruby22\lib\ruby\2.2.0\rubygems\ssl_certs` folder
+
+#### Permission issues during Ruby install
+
+You could try a different method to install Ruby. Checkout [rbenv](https://github.com/sstephenson/rbenv). Instructions:
+
+1. Install rbenv
+
+        brew install rbenv ruby-build
+
+2. Add `eval "$(rbenv init -)"` to the end of your `.bash_profile`:
+
+        echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+
+3. Install a version of `ruby` and set it to your local version:
+
+        rbenv install 2.0.0-p647
+        rbenv local 2.0.0-p647
+
+
 [ruby_linux]: https://www.ruby-lang.org/en/documentation/installation/#package-management-systems
 [homebrew]: http://brew.sh/
 [linux_node]: https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories#installing-node-js-v0-12
@@ -144,3 +173,5 @@ Verify your make installation by running:
 [python_linux]: http://docs.python-guide.org/en/latest/starting/install/linux/
 [make_page]: http://gnuwin32.sourceforge.net/packages/make.htm
 [make_setup]: http://gnuwin32.sourceforge.net/downlinks/make.php
+[cordova-docs]: https://github.com/apache/cordova-docs
+[GlobalSignRootCerficateAuthority]: https://raw.githubusercontent.com/rubygems/rubygems/master/lib/rubygems/ssl_certs/index.rubygems.org/GlobalSignRootCA.pem
