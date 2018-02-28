@@ -138,7 +138,7 @@ Verify your make installation by running:
 
 ### Troubleshooting
 
-#### SSL certificate issue while executing 'gem install bundler' command in Windows
+#### SSL certificate issue while executing `gem install bundler` on Windows
 
 Try copying the certificate from [GlobalSignRootCerficateAuthority] into `C:\Ruby22\lib\ruby\2.2.0\rubygems\ssl_certs` folder
 
