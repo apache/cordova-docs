@@ -92,7 +92,7 @@ Verify your Node.js installation by running:
 
 ### Local repo setup
 
-Clone the [cordova-docs] github repo to the local folder
+Clone the [cordova-docs] GitHub repo to a local folder.
 
 ### Dependencies
 
