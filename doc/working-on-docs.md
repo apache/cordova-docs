@@ -1,8 +1,11 @@
-# Working on `/docs`
+# Working on `www/docs`
 
 ## Pull in documentation from other repos
 
-Many changes to the overall documentation come from other repos and are simply pulled together by a build. `tools/bin/fetch_docs.js` has more details and `www/_data/fetched-files.yml` contains an informative list of src/dest pairs. Most auto-generated files have a comment tag at the top of the file to indicate that they come from elsewhere.
+* Many files of the documentation come from other repos (mainly plugin READMEs) and are simply pulled together by a build script.
+* `tools/bin/fetch_docs.js` (execute via `node ./tools/bin/fetch_docs.js`) has more details and `www/_data/fetched-files.yml` contains an informative list of src/dest pairs.
+* This can also be executed via `gulpfile.js` task `fetch`, by running `gulp fetch` which pulls in the files to `dev/en/{file dest}`.
+* Most auto-generated files have a comment tag at the top of the file to indicate that they come from elsewhere.
 
 ## Update latest (x.y) from `dev`
 
