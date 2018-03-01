@@ -22,8 +22,7 @@ The site is built using a [gulp script](gulpfile.js) that is run by Node.JS (`np
 - [Developing](doc/developing-the-website.md)
   * [Docs Redirects](doc/redirects.md)
 - [Testing](doc/testing-the-website.md)
-- [Building](doc/building-the-website.md)
-- [Deploying](doc/deploying-the-website.md)
+- Manual [Build](doc/building-the-website.md) and [Deployment](doc/deploying-the-website.md)
 - [Automated Build and Deployment](doc/building-and-deploying-the-website.md) of the website on commits/merges to `master`
 - [Troubleshooting](doc/troubleshooting.md)
 
