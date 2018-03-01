@@ -13,8 +13,8 @@
             children:
                 - url: guide/platforms/android/index.html
                 - url: guide/platforms/ios/index.html
+                - url: guide/platforms/windows/index.html
                 - url: guide/platforms/osx/index.html
-                - url: guide/platforms/win8/index.html
         - url: platform_plugin_versioning_ref/index.html
         - url: config_ref/images.html
         - url: cordova/storage/storage.html
@@ -30,7 +30,7 @@
             children:
                 - url: guide/platforms/android/plugin.html
                 - url: guide/platforms/ios/plugin.html
-                - url: guide/platforms/win8/plugin.html
+                - url: guide/platforms/windows/plugin.html
         - url: plugin_ref/plugman.html
 -
     name: Advanced Topics

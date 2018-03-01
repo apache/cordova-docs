@@ -40,6 +40,14 @@ docs:
     "dev/cordova/plugins/pluginapis.html": "deprecated.html"
     "latest/cordova/plugins/pluginapis.html": "deprecated.html"
 
+    # Rename `cordova-windows` URLs from `win8` to `windows`
+    "dev/guide/platforms/win8/index.html": "dev/guide/platforms/windows/index.html"
+    "latest/guide/platforms/win8/index.html": "latest/guide/platforms/windows/index.html"
+    "dev/guide/platforms/win8/plugin.html": "dev/guide/platforms/windows/index.html"
+    "latest/guide/platforms/win8/plugin.html": "latest/guide/platforms/windows/index.html"
+    "dev/guide/platforms/win8/upgrade.html": "dev/guide/platforms/windows/index.html"
+    "latest/guide/platforms/win8/upgrade.html": "latest/guide/platforms/windows/index.html"
+
     # Removing deprecated platforms and plugins
     "dev/guide/platforms/blackberry10/home.html": "deprecated.html"
     "latest/guide/platforms/blackberry10/home.html": "deprecated.html"
