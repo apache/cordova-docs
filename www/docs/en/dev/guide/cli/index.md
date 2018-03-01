@@ -140,10 +140,10 @@ Cordova tooling for iOS requires Apple OS X
 Error: Some of requirements check failed
 ```
 
-###See Also
+### See Also
 - [Android platform requirements](../../guide/platforms/android/index.html#requirements-and-support)
 - [iOS platform requirements](../../guide/platforms/ios/index.html#requirements-and-support)
-- [Windows platform requirements](../../guide/platforms/win8/index.html#requirements-and-support)
+- [Windows platform requirements](../../guide/platforms/windows/index.html#requirements-and-support)
 
 ## Build the App
 
