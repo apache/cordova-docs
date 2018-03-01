@@ -9,7 +9,7 @@ Sometimes (docs) pages get removed, renamed, and added. There is [a redirects fi
 For non-docs URIs, there are no versioning considerations. Make redirects like so:
 
     general:
-        - {old: "old/uri/for/page.html", new: "its/new/uri.html"}
+        - "old/uri/for/page.html": "its/new/uri.html"
 
 **NOTE**: Review (and test, if possible) these redirects before making them live, since they're permanent (HTTP 301) redirects. Incorrect permanent redirects will make a URI almost impossible to bring back into browsers and search indices.
 
@@ -32,12 +32,12 @@ Do nothing. Going back in time for new docs is unsupported.
 If the URI is removed, mark it as deprecated in `latest/` like so:
 
     docs:
-        - {old: "latest/old/uri/for/page.html", new: "deprecated.html"}
+        - "latest/old/uri/for/page.html": "deprecated.html"
 
 If the URI is moved, point it to its new location in `latest/` like so:
 
     docs:
-        - {old: "latest/old/uri/for/page.html", new: "latest/its/new/uri.html"}
+        - "latest/old/uri/for/page.html": "latest/its/new/uri.html"
 
 These will handle the case where the "this content is outdated" link is clicked. The case where a user jumps to a specific version is not yet supported.
 
@@ -46,8 +46,8 @@ These will handle the case where the "this content is outdated" link is clicked.
 Add the redirect (in the `docs-global` section this time) like so:
 
     docs-global:
-        - {old: "old/uri/for/page.html", new: "its/new/uri.html"}
+        - "old/uri/for/page.html": "its/new/uri.html"
 
 ### Case 5: Removing a URI across all versions
 
-Do nothing. It is now an un-URI. It never existed. Mentioning it is thoughtcrime.
+Do nothing. It is now an un-URI. It never existed.
