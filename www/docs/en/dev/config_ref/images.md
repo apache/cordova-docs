@@ -76,16 +76,6 @@ different screen resolutions.
 - [Android icon guide](https://www.google.com/design/spec/style/icons.html)
 - [Android - Supporting multiple screens](http://developer.android.com/guide/practices/screens_support.html)
 
-##BlackBerry10
-```xml
-    <platform name="blackberry10">
-        <icon src="res/bb10/icon-86.png" />
-        <icon src="res/bb10/icon-150.png" />
-    </platform>
-```
-###See Also
-- [BlackBerry's documentation][blackberry_icon] for targeting multiple sizes and locales.
-
 ##Browser
 Icons are not applicable to the Browser platform.
 
@@ -190,14 +180,4 @@ Although it is not recommended, it is also possible to define icons using the `w
 - [Windows 10 platform guidelines for icons](https://msdn.microsoft.com/en-us/library/windows/apps/mt412102.aspx).
 - [Windows 8.1 tiles and icons sizes](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh781198.aspx)
 
-##Windows Phone 8 (WP8 Platform)
-```xml
-    <platform name="wp8">
-        <icon src="res/wp/ApplicationIcon.png" width="99" height="99" />
-        <!-- tile image -->
-        <icon src="res/wp/Background.png" width="159" height="159" />
-    </platform>
-```
-
-[blackberry_icon]: http://developer.blackberry.com/html5/documentation/icon_element.html
 [splashscreen_plugin]: ../reference/cordova-plugin-splashscreen/

@@ -31,39 +31,11 @@
         path: "reference/cordova-plugin-camera/index.md"
 -
     src:
-        repoName: "apache/cordova-plugin-console"
-        packageName: "cordova-plugin-console"
-        commit: "master"
-    dest:
-        path: "reference/cordova-plugin-console/index.md"
--
-    src:
-        repoName: "apache/cordova-plugin-contacts"
-        packageName: "cordova-plugin-contacts"
-        commit: "master"
-    dest:
-        path: "reference/cordova-plugin-contacts/index.md"
--
-    src:
         repoName: "apache/cordova-plugin-device"
         packageName: "cordova-plugin-device"
         commit: "master"
     dest:
         path: "reference/cordova-plugin-device/index.md"
--
-    src:
-        repoName: "apache/cordova-plugin-device-motion"
-        packageName: "cordova-plugin-device-motion"
-        commit: "master"
-    dest:
-        path: "reference/cordova-plugin-device-motion/index.md"
--
-    src:
-        repoName: "apache/cordova-plugin-device-orientation"
-        packageName: "cordova-plugin-device-orientation"
-        commit: "master"
-    dest:
-        path: "reference/cordova-plugin-device-orientation/index.md"
 -
     src:
         repoName: "apache/cordova-plugin-dialogs"
@@ -80,25 +52,11 @@
         path: "reference/cordova-plugin-file/index.md"
 -
     src:
-        repoName: "apache/cordova-plugin-file-transfer"
-        packageName: "cordova-plugin-file-transfer"
-        commit: "master"
-    dest:
-        path: "reference/cordova-plugin-file-transfer/index.md"
--
-    src:
         repoName: "apache/cordova-plugin-geolocation"
         packageName: "cordova-plugin-geolocation"
         commit: "master"
     dest:
         path: "reference/cordova-plugin-geolocation/index.md"
--
-    src:
-        repoName: "apache/cordova-plugin-globalization"
-        packageName: "cordova-plugin-globalization"
-        commit: "master"
-    dest:
-        path: "reference/cordova-plugin-globalization/index.md"
 -
     src:
         repoName: "apache/cordova-plugin-inappbrowser"
@@ -157,8 +115,8 @@
         path: "reference/cordova-plugin-whitelist/index.md"
 -
     src:
-        repoName: "apache/cordova-plugin-legacy-whitelist"
-        packageName: "cordova-plugin-legacy-whitelist"
+        repoName: "apache/cordova-plugin-screen-orientation"
+        packageName: "cordova-plugin-screen-orientation"
         commit: "master"
     dest:
-        path: "reference/cordova-plugin-legacy-whitelist/index.md"
+        path: "reference/cordova-plugin-screen-orientation/index.md"

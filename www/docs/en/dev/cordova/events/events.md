@@ -88,9 +88,7 @@ The following table lists the cordova events and the supported platforms:
     <tr>
         <th>Supported Platforms/<br/>Events</td>
         <th>android</th>
-        <th>blackberry10</th>
         <th>ios</th>
-        <th>Windows Phone 8</th>
         <th>Windows</th>
     </tr>
 </thead>
@@ -99,99 +97,77 @@ The following table lists the cordova events and the supported platforms:
     <tr>
         <th><a href="#deviceready">deviceready</a></th>
         <td data-col="android"    class="y"></td>
-        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
         <td data-col="win"       class="y"></td>
     </tr>
 
     <tr>
         <th><a href="#pause">pause</a></th>
         <td data-col="android"    class="y"></td>
-        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
         <td data-col="win"       class="y"></td>
     </tr>
 
     <tr>
         <th><a href="#resume">resume</a></th>
         <td data-col="android"    class="y"></td>
-        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
         <td data-col="win"       class="y"></td>
     </tr>
 
     <tr>
         <th><a href="#backbutton">backbutton</a></th>
         <td data-col="android"    class="y"></td>
-        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
-        <td data-col="winphone8"  class="n"></td>
         <td data-col="win"       class="y"></td>
     </tr>
 
     <tr>
         <th><a href="#menubutton">menubutton</a></th>
         <td data-col="android"    class="y"></td>
-        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
-        <td data-col="winphone8"  class="n"></td>
         <td data-col="win"       class="n"></td>
     </tr>
 
     <tr>
         <th><a href="#searchbutton">searchbutton</a></th>
         <td data-col="android"    class="y"></td>
-        <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="n"></td>
-        <td data-col="winphone8"  class="n"></td>
         <td data-col="win"       class="n"></td>
     </tr>
 
     <tr>
         <th><a href="#startcallbutton">startcallbutton</a></th>
         <td data-col="android"    class="n"></td>
-        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
-        <td data-col="winphone8"  class="n"></td>
         <td data-col="win"       class="n"></td>
     </tr>
 
     <tr>
         <th><a href="#endcallbutton">endcallbutton</a></th>
         <td data-col="android"    class="n"></td>
-        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
-        <td data-col="winphone8"  class="n"></td>
         <td data-col="win"       class="n"></td>
     </tr>
 
     <tr>
         <th><a href="#volumedownbutton">volumedownbutton</a></th>
         <td data-col="android"    class="y"></td>
-        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
-        <td data-col="winphone8"  class="n"></td>
         <td data-col="win"       class="n"></td>
     </tr>
 
     <tr>
         <th><a href="#volumeupbutton">volumeupbutton</a></th>
         <td data-col="android"    class="y"></td>
-        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="n"></td>
-        <td data-col="winphone8"  class="n"></td>
         <td data-col="win"       class="n"></td>
     </tr>
 
     <tr>
         <th><a href="#activated">activated</a></th>
         <td data-col="android"    class="n"></td>
-        <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="n"></td>
-        <td data-col="winphone8"  class="n"></td>
         <td data-col="win"       class="y"></td>
     </tr>
 </tbody>

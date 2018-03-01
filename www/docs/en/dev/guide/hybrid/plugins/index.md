@@ -197,8 +197,6 @@ listed below, and each builds on the simple Echo Plugin example above:
 
 - [Android Plugins](../../platforms/android/plugin.html)
 - [iOS Plugins](../../platforms/ios/plugin.html)
-- [BlackBerry 10 Plugins](../../platforms/blackberry10/plugin.html)
-- [Windows Phone 8 Plugins](../../platforms/wp8/plugin.html)
 - [Windows Plugins](../../platforms/win8/plugin.html)
 
 ## Publishing Plugins
