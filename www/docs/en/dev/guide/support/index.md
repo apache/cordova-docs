@@ -36,10 +36,10 @@ the core plugins, additional APIs are available via
 <thead>
     <tr>
         <th>Platform:</th>
-        <th><a href="../android/index.html">Android</a></th>
-        <th><a href="../ios/index.html">iOS</a></th>
-        <th><a href="../osx/index.html">OS X</a></th>
-        <th><a href="../windows/index.html">Windows<br>8.1, Phone 8.1, 10</a></th>
+        <th><a href="../platforms/android/index.html">Android</a></th>
+        <th><a href="../platforms/ios/index.html">iOS</a></th>
+        <th><a href="../platforms/osx/index.html">OS X</a></th>
+        <th><a href="../platforms/windows/index.html">Windows<br>8.1, Phone 8.1, 10</a></th>
     </tr>
     <tr>
         <th>CLI shorthand:</th>
