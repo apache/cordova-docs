@@ -6,7 +6,7 @@ Files present after checkout:
 
 - `_config.yml` is the main Jekyll config file
 - `_version.yml` defines the latest version of the docs
-- `_dev.yml` is used for normal builds
+- `_dev.yml` is used for default builds
 - `_prod.yml` is used when the `--prod` option is used for the build
 - `_nodocs.yml` is used when the `--nodocs` option is used for the build
 
