@@ -39,7 +39,7 @@ the core plugins, additional APIs are available via
         <th><a href="../android/index.html">Android</a></th>
         <th><a href="../ios/index.html">iOS</a></th>
         <th><a href="../osx/index.html">OS X</a></th>
-        <th><a href="../win8/index.html">Windows 8.1, 10, Phone 8.1</a></th>
+        <th><a href="../windows/index.html">Windows<br>8.1, Phone 8.1, 10</a></th>
     </tr>
     <tr>
         <th>CLI shorthand:</th>
@@ -58,10 +58,10 @@ the core plugins, additional APIs are available via
     </tr>
     <tr>
         <th><a href="../cli/index.html">Cordova<br/>CLI</a></th>
-        <td data-col="android"    class="y">Mac, Windows, Linux</td>
-        <td data-col="ios"        class="y">Mac</td>
-        <td data-col="osx"       class="y">Mac</td>
-        <td data-col="win8"       class="y">Windows</td>
+        <td data-col="android" class="y">Mac, Windows, Linux</td>
+        <td data-col="ios"     class="y">Mac</td>
+        <td data-col="osx"     class="y">Mac</td>
+        <td data-col="windows" class="y">Windows</td>
     </tr>
 
     <tr>
@@ -71,130 +71,130 @@ the core plugins, additional APIs are available via
 
     <tr>
         <th><a href="../../reference/cordova-plugin-battery-status/">BatteryStatus</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="n"></td>
-        <td data-col="win8"       class="y">Windows Phone 8.1 only</td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="n"></td>
+        <td data-col="windows" class="y">Windows Phone 8.1 only</td>
     </tr>
 
     <tr>
         <th><a href="../../reference/cordova-plugin-camera/">Camera</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="n"></td>
-        <td data-col="win8"       class="y"></td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="n"></td>
+        <td data-col="windows" class="y"></td>
     </tr>
 
     <tr>
         <th><a href="../../reference/cordova-plugin-media-capture/">Capture</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="n"></td>
-        <td data-col="win8"       class="y"></td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="n"></td>
+        <td data-col="windows" class="y"></td>
     </tr>
 
     <tr>
         <th><a href="../../reference/cordova-plugin-network-information/">Connection</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="n"></td>
-        <td data-col="win8"       class="y"></td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="n"></td>
+        <td data-col="windows" class="y"></td>
     </tr>
 
     <tr>
         <th><a href="../../reference/cordova-plugin-device/">Device</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="y"></td>
-        <td data-col="win8"       class="y"></td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="y"></td>
+        <td data-col="windows" class="y"></td>
     </tr>
 
     <tr>
         <th><a href="../../cordova/events/events.html">Events</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="n"></td>
-        <td data-col="win8"       class="y"></td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="n"></td>
+        <td data-col="windows" class="y"></td>
     </tr>
 
     <tr>
         <th><a href="../../reference/cordova-plugin-file">File</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="y"></td>
-        <td data-col="win8"       class="y"></td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="y"></td>
+        <td data-col="windows" class="y"></td>
     </tr>
 
     <tr>
         <th><a href="../../reference/cordova-plugin-geolocation/">Geolocation</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="n"></td>
-        <td data-col="win8"       class="y"></td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="n"></td>
+        <td data-col="windows" class="y"></td>
     </tr>
 
     <tr>
         <th><a href="../../reference/cordova-plugin-globalization/">Globalization</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="n"></td>
-        <td data-col="win8"       class="y"></td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="n"></td>
+        <td data-col="windows" class="y"></td>
     </tr>
 
     <tr>
         <th><a href="../../reference/cordova-plugin-inappbrowser/">InAppBrowser</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="n"></td>
-        <td data-col="win8"       class="p">uses iframe</td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="n"></td>
+        <td data-col="windows" class="p">uses iframe</td>
     </tr>
 
     <tr>
         <th><a href="../../reference/cordova-plugin-media/">Media</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
         <td data-col="osx"></td>
-        <td data-col="win8"       class="y"></td>
+        <td data-col="windows" class="y"></td>
     </tr>
 
     <tr>
         <th><a href="../../reference/cordova-plugin-dialogs/">Notification</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="n"></td>
-        <td data-col="win8"       class="y"></td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="n"></td>
+        <td data-col="windows" class="y"></td>
     </tr>
 
     <tr>
         <th><a href="../../reference/cordova-plugin-splashscreen/">Splashscreen</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="n"></td>
-        <td data-col="win8"       class="y"></td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="n"></td>
+        <td data-col="windows" class="y"></td>
     </tr>
 
     <tr>
         <th><a href="../../reference/cordova-plugin-statusbar/">Status Bar</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="n"></td>
-        <td data-col="win8"       class="y">Windows Phone 8.1 only</td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="n"></td>
+        <td data-col="windows" class="y">Windows Phone 8.1 only</td>
     </tr>
 
     <tr>
         <th><a href="../../cordova/storage/storage.html">Storage</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="n"></td>
-        <td data-col="win8"       class="y">localStorage &amp; indexedDB</td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="n"></td>
+        <td data-col="windows" class="y">localStorage &amp; indexedDB</td>
     </tr>
 
     <tr>
         <th><a href="../../reference/cordova-plugin-vibration/">Vibration</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="osx"       class="n"></td>
-        <td data-col="win8"       class="y">Windows Phone 8.1 only</td>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="n"></td>
+        <td data-col="windows" class="y">Windows Phone 8.1 only</td>
     </tr>
 
     <tr>
@@ -203,17 +203,17 @@ the core plugins, additional APIs are available via
     </tr>
     <tr>
         <th><a href="../hybrid/plugins/index.html">Plugin<br/>Interface</a></th>
-        <td data-col="android"    class="y"><a href="../platforms/android/plugin.html">(see details)</a></td>
-        <td data-col="ios"        class="y"><a href="../platforms/ios/plugin.html">(see details)</a></td>
-        <td data-col="osx"       class="y"></td>
-        <td data-col="win8"       class="y"></td>
+        <td data-col="android" class="y"><a href="../platforms/android/plugin.html">(see details)</a></td>
+        <td data-col="ios"     class="y"><a href="../platforms/ios/plugin.html">(see details)</a></td>
+        <td data-col="osx"     class="y"></td>
+        <td data-col="windows" class="y"></td>
     </tr>
     <tr>
         <th><a href="../hybrid/webviews/index.html">Embedded<br/>WebView</a></th>
-        <td data-col="android"    class="y"><a href="../platforms/android/webview.html">(see details)</a></td>
-        <td data-col="ios"        class="y"><a href="../platforms/ios/webview.html">(see details)</a></td>
-        <td data-col="osx"       class="y"></td>
-        <td data-col="win8"       class="n"></td>
+        <td data-col="android" class="y"><a href="../platforms/android/webview.html">(see details)</a></td>
+        <td data-col="ios"     class="y"><a href="../platforms/ios/webview.html">(see details)</a></td>
+        <td data-col="osx"     class="y"></td>
+        <td data-col="windows" class="n"></td>
     </tr>
 </tbody>
 </table>

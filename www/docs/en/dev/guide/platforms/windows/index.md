@@ -82,7 +82,7 @@ requirements listed above.
 
 The tools and SDKs for the target Windows platforms (UWP, 8.1, etc.) must also be selected in the installer. They can be found under the "Windows and Web Development" heading.
 
-<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/win8/win8_installTools.png" /></p><br/>
+<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/win8_installTools.png" /></p><br/>
 
 ## Project Configuration
 
@@ -160,24 +160,24 @@ Visual Studio. The various `build` commands generate a Visual Studio
 Solution (_.sln_) file. Open the file in the File Explorer to modify
 the project within Visual Studio:
 
-<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png" /></p><br/>
+<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/win8_sdk_openSLN.png" /></p><br/>
 
 The `CordovaApp` component displays within the solution, and its `www`
 directory contains the web-based source code, including the
 `index.html` home page:
 
-<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png" /></p><br/>
+<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/win8_sdk.png" /></p><br/>
 
 The projects for different Windows versions are displayed separately in the solution explorer. You can choose the deploy target version by right clicking the 'solution' (topmost entry in the solution explorer) and then going into 'Properties'. Here you can update the 'Single start up' field. The controls below Visual Studio's main menu allow you to test or
 deploy the app:
 
-<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png" /></p><br/>
+<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/win8_sdk_deploy.png" /></p><br/>
 
 With __Local Machine__ selected, press the green arrow to install the
 app on the same machine running Visual Studio. Once you do so, the app
 appears in Windows' app listings:
 
-<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png" /></p><br/>
+<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/win8_sdk_runApp.png" /></p><br/>
 
 Each time you rebuild the app, the version available in the interface
 is refreshed.
@@ -185,18 +185,18 @@ is refreshed.
 Once available in the app listings, holding down the __CTRL__ key
 while selecting the app allows you to pin it to the main screen:
 
-<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png" /></p><br/>
+<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/win8_sdk_runHome.png" /></p><br/>
 
 Note that if you open the app within a virtual machine environment,
 you may need to click in the corners or along the sides of the windows
 to switch apps or access additional functionality:
 
-<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png" /></p><br/>
+<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/win8_sdk_run.png" /></p><br/>
 
 Alternately, choose the __Simulator__ deployment option to view the
 app as if it were running on a tablet device:
 
-<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png" /></p><br/>
+<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/win8_sdk_sim.png" /></p><br/>
 
 Unlike desktop deployment, this option allows you to simulate the
 tablet's orientation, location, and vary its network settings.
@@ -233,7 +233,7 @@ In Windows project, identity details are kept in a file named package.appxmanife
 
 *Name* and *Version* can be set from **config.xml**. *Publisher* can be provided as a build parameter or can be set on **build.json** file.
 
-![]({{ site.baseurl }}/static/img/guide/platforms/win8/packaging.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/windows/packaging.png)
 
 *Name* and *Version* can also be set as platform-specific preferences in **config.xml** in the following way:
 
