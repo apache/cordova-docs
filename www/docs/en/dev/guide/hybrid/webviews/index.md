@@ -37,4 +37,3 @@ supported platforms:
 
 - [Android WebViews](../../platforms/android/webview.html)
 - [iOS WebViews](../../platforms/ios/webview.html)
-- [Windows Phone 8.0 WebViews](../../platforms/wp8/webview.html)
