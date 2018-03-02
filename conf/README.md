@@ -1,6 +1,6 @@
 # Jekyll Configuration
 
-This folder contains different configuration files for the Jekyll build which is triggered via `gulp build` and similar commands (`gulp serve` etc.).
+This folder contains different configuration files for the Jekyll build, which is triggered via `gulp build` and similar commands (`gulp serve` etc.).
 
 Files present after checkout:
 
