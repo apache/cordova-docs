@@ -108,8 +108,9 @@ FETCH_SCRIPT        = $(BIN_DIR)/fetch_docs.js
 #      which includes them on its own, and the SCSS compiler takes care of them;
 #      because of this, there is also no .scss -> .css pattern rule
 ifdef WINDOWS
-SCSS_SRC   = $(subst $(dir $(realpath $(firstword $(MAKEFILE_LIST)))),,$(subst \,/,$(shell cd $(CSS_SRC_DIR) && dir *.scss /S /B)))
-STYLES_SRC = $(subst $(dir $(realpath $(firstword $(MAKEFILE_LIST)))),,$(subst \,/,$(shell cd $(CSS_SRC_DIR) && dir *.less *.css /S /B)))
+PWD = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
+SCSS_SRC   = $(subst $(PWD),,$(subst \,/,$(shell cd $(CSS_SRC_DIR) && dir *.scss /S /B)))
+STYLES_SRC = $(subst $(PWD),,$(subst \,/,$(shell cd $(CSS_SRC_DIR) && dir *.less *.css /S /B)))
 else
 SCSS_SRC   = $(shell find $(CSS_SRC_DIR) -name "*.scss")
 STYLES_SRC = $(shell find $(CSS_SRC_DIR) -name "*.less" -or -name "*.css")
