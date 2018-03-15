@@ -14,8 +14,6 @@ SHELL  = cmd
 JEKYLL = bundle.bat exec jekyll
 CAT    = type
 LS     = ls
-RM = cmd /C del /Q /F
-RMDIR = cmd /C rmdir /S /Q
 else
 SHELL  = sh
 JEKYLL = bundle exec jekyll
@@ -50,6 +48,11 @@ ifdef WINDOWS
 printfile = type $(subst /,\,$(1))
 else
 printfile = cat $(1)
+endif
+
+ifdef WINDOWS
+RM = cmd /C del /Q /F $(subst /,\,$(1))
+RMDIR  = cmd /C rmdir /S /Q $(subst /,\,$(1))
 endif
 
 # constants
@@ -154,18 +157,7 @@ NEXT_DOCS_TOCS = $(addprefix $(TOC_DIR)/,$(addsuffix _$(NEXT_DOCS_VERSION_SLUG)-
 JEKYLL_CONFIGS = $(MAIN_CONFIG) $(DEFAULTS_CONFIG) $(VERSION_CONFIG)
 JEKYLL_FLAGS   =
 
-BUILD_DATA = $(DOCS_VERSION_DATA) $(DOCS_PAGE_LIST) $(TOC_FILES)
-
-ifdef WINDOWS
-	VERSION_CONFIG       := $(subst /,\,$(VERSION_CONFIG))
-	DEFAULTS_CONFIG      := $(subst /,\,$(DEFAULTS_CONFIG))
-	DOCS_PAGE_LIST       := $(subst /,\,$(DOCS_PAGE_LIST))
-	DOCS_VERSION_DATA    := $(subst /,\,$(DOCS_VERSION_DATA))
-	TOC_FILES            := $(subst /,\,$(TOC_FILES))
-	PLUGINS_APP          := $(subst /,\,$(PLUGINS_APP))
-	CSS_DEST_DIR         := $(subst /,\,$(CSS_DEST_DIR))
-	FETCHED_FILES        := $(subst /,\,$(FETCHED_FILES))
-endif
+BUILD_DATA = $(TOC_FILES) $(DOCS_VERSION_DATA) $(DOCS_PAGE_LIST)
 
 # convenience targets
 help usage default:
@@ -302,16 +294,16 @@ $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.css
 # maintenance
 ifdef WINDOWS
 clean:
-	$(RM) $(VERSION_CONFIG)
-	$(RM) $(DEFAULTS_CONFIG)
-	$(RM) $(DOCS_PAGE_LIST)
-	$(RM) $(DOCS_VERSION_DATA)
-	$(RM) $(TOC_FILES)
-	$(RM) $(PLUGINS_APP)
-	$(RM) $(FETCHED_FILES)
-	IF EXIST "$(CSS_DEST_DIR)" $(RMDIR) $(CSS_DEST_DIR)
-	IF EXIST "$(PROD_DIR)" $(RMDIR) $(PROD_DIR)
-	IF EXIST "$(DEV_DIR)" $(RMDIR) $(DEV_DIR)
+	$(call RM, $(VERSION_CONFIG))
+	$(call RM, $(DEFAULTS_CONFIG))
+	$(call RM, $(DOCS_PAGE_LIST))
+	$(call RM, $(DOCS_VERSION_DATA))
+	$(call RM, $(TOC_FILES))
+	$(call RM, $(PLUGINS_APP))
+	$(call RM, $(FETCHED_FILES))
+	-$(call RMDIR, $(CSS_DEST_DIR))
+	-$(call RMDIR, $(PROD_DIR))
+	-$(call RMDIR, $(DEV_DIR))
 else
 clean:
 	$(RM) $(VERSION_CONFIG)
