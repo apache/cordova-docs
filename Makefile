@@ -14,6 +14,8 @@ SHELL  = cmd
 JEKYLL = bundle.bat exec jekyll
 CAT    = type
 LS     = ls
+RM = cmd /C del /Q /F
+RMDIR = cmd /C rmdir /S /Q
 else
 SHELL  = sh
 JEKYLL = bundle exec jekyll
@@ -154,6 +156,17 @@ JEKYLL_FLAGS   =
 
 BUILD_DATA = $(DOCS_VERSION_DATA) $(DOCS_PAGE_LIST) $(TOC_FILES)
 
+ifdef WINDOWS
+	VERSION_CONFIG       := $(subst /,\,$(VERSION_CONFIG))
+	DEFAULTS_CONFIG      := $(subst /,\,$(DEFAULTS_CONFIG))
+	DOCS_PAGE_LIST       := $(subst /,\,$(DOCS_PAGE_LIST))
+	DOCS_VERSION_DATA    := $(subst /,\,$(DOCS_VERSION_DATA))
+	TOC_FILES            := $(subst /,\,$(TOC_FILES))
+	PLUGINS_APP          := $(subst /,\,$(PLUGINS_APP))
+	CSS_DEST_DIR         := $(subst /,\,$(CSS_DEST_DIR))
+	FETCHED_FILES        := $(subst /,\,$(FETCHED_FILES))
+endif
+
 # convenience targets
 help usage default:
 	@echo ""
@@ -287,6 +300,19 @@ $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.css
 	$(call printfile,$<) >> $@
 
 # maintenance
+ifdef WINDOWS
+clean:
+	$(RM) $(VERSION_CONFIG)
+	$(RM) $(DEFAULTS_CONFIG)
+	$(RM) $(DOCS_PAGE_LIST)
+	$(RM) $(DOCS_VERSION_DATA)
+	$(RM) $(TOC_FILES)
+	$(RM) $(PLUGINS_APP)
+	$(RM) $(FETCHED_FILES)
+	IF EXIST "$(CSS_DEST_DIR)" $(RMDIR) $(CSS_DEST_DIR)
+	IF EXIST "$(PROD_DIR)" $(RMDIR) $(PROD_DIR)
+	IF EXIST "$(DEV_DIR)" $(RMDIR) $(DEV_DIR)
+else
 clean:
 	$(RM) $(VERSION_CONFIG)
 	$(RM) $(DEFAULTS_CONFIG)
@@ -297,6 +323,7 @@ clean:
 	$(RM) $(PLUGINS_APP)
 	$(RM) -r $(CSS_DEST_DIR)
 	$(RM) $(FETCHED_FILES)
+endif
 
 nuke: clean
 	$(RM) -r node_modules
