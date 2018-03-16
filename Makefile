@@ -53,6 +53,9 @@ endif
 ifdef WINDOWS
 RM = cmd /C del /Q /F $(subst /,\,$(1))
 RMDIR  = cmd /C rmdir /S /Q $(subst /,\,$(1))
+else
+RM = rm -f $(1)
+RMDIR = rm -rf $(1)
 endif
 
 # constants
@@ -292,7 +295,6 @@ $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.css
 	$(call printfile,$<) >> $@
 
 # maintenance
-ifdef WINDOWS
 clean:
 	$(call RM, $(VERSION_CONFIG))
 	$(call RM, $(DEFAULTS_CONFIG))
@@ -304,18 +306,6 @@ clean:
 	-$(call RMDIR, $(CSS_DEST_DIR))
 	-$(call RMDIR, $(PROD_DIR))
 	-$(call RMDIR, $(DEV_DIR))
-else
-clean:
-	$(RM) $(VERSION_CONFIG)
-	$(RM) $(DEFAULTS_CONFIG)
-	$(RM) $(DOCS_PAGE_LIST)
-	$(RM) $(DOCS_VERSION_DATA)
-	$(RM) -r $(PROD_DIR) $(DEV_DIR)
-	$(RM) $(TOC_FILES)
-	$(RM) $(PLUGINS_APP)
-	$(RM) -r $(CSS_DEST_DIR)
-	$(RM) $(FETCHED_FILES)
-endif
 
 nuke: clean
 	$(RM) -r node_modules
