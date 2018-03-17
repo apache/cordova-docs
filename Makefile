@@ -308,7 +308,7 @@ clean:
 	-$(call RMDIR, $(DEV_DIR))
 
 nuke: clean
-	$(RM) -r node_modules
-	$(RM) Gemfile.lock
+	$(call RMDIR, node_modules)
+	$(call RM, Gemfile.lock)
 
 .PHONY: clean usage help default build fetch $(DEV_DOCS)
