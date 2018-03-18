@@ -63,8 +63,7 @@ they dip below 5% on Google's
 
 ### Java Development Kit (JDK)
 
-Install [Java Development Kit (JDK) 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-or later.
+Install [Java Development Kit (JDK) 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 When installing on Windows you also need to set `JAVA_HOME` Environment Variable
 according to your JDK installation path (see [Setting Environment Variables](#setting-environment-variables))
