@@ -50,6 +50,14 @@ else
 printfile = cat $(1)
 endif
 
+ifdef WINDOWS
+RM = cmd /C del /Q /F $(subst /,\,$(1))
+RMDIR  = cmd /C rmdir /S /Q $(subst /,\,$(1))
+else
+RM = rm -f $(1)
+RMDIR = rm -rf $(1)
+endif
+
 # constants
 EMPTY =
 SPACE = $(EMPTY) $(EMPTY)
@@ -152,7 +160,7 @@ NEXT_DOCS_TOCS = $(addprefix $(TOC_DIR)/,$(addsuffix _$(NEXT_DOCS_VERSION_SLUG)-
 JEKYLL_CONFIGS = $(MAIN_CONFIG) $(DEFAULTS_CONFIG) $(VERSION_CONFIG)
 JEKYLL_FLAGS   =
 
-BUILD_DATA = $(DOCS_VERSION_DATA) $(DOCS_PAGE_LIST) $(TOC_FILES)
+BUILD_DATA = $(TOC_FILES) $(DOCS_VERSION_DATA) $(DOCS_PAGE_LIST)
 
 # convenience targets
 help usage default:
@@ -288,18 +296,19 @@ $(CSS_DEST_DIR)/%.css: $(CSS_SRC_DIR)/%.css
 
 # maintenance
 clean:
-	$(RM) $(VERSION_CONFIG)
-	$(RM) $(DEFAULTS_CONFIG)
-	$(RM) $(DOCS_PAGE_LIST)
-	$(RM) $(DOCS_VERSION_DATA)
-	$(RM) -r $(PROD_DIR) $(DEV_DIR)
-	$(RM) $(TOC_FILES)
-	$(RM) $(PLUGINS_APP)
-	$(RM) -r $(CSS_DEST_DIR)
-	$(RM) $(FETCHED_FILES)
+	$(call RM, $(VERSION_CONFIG))
+	$(call RM, $(DEFAULTS_CONFIG))
+	$(call RM, $(DOCS_PAGE_LIST))
+	$(call RM, $(DOCS_VERSION_DATA))
+	$(call RM, $(TOC_FILES))
+	$(call RM, $(PLUGINS_APP))
+	$(call RM, $(FETCHED_FILES))
+	-$(call RMDIR, $(CSS_DEST_DIR))
+	-$(call RMDIR, $(PROD_DIR))
+	-$(call RMDIR, $(DEV_DIR))
 
 nuke: clean
-	$(RM) -r node_modules
-	$(RM) Gemfile.lock
+	$(call RMDIR, node_modules)
+	$(call RM, Gemfile.lock)
 
 .PHONY: clean usage help default build fetch $(DEV_DOCS)
