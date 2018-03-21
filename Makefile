@@ -238,7 +238,7 @@ $(FETCHED_FILES): $(FETCH_CONFIG) $(FETCH_SCRIPT)
 $(PLUGINS_APP): $(PLUGINS_SRC)
 	echo ---> $@
 	echo --->> $@
-	$(BROWSERIFY) -t reactify -t envify $< | $(UGLIFY) >> $@
+	$(BROWSERIFY) -t [ babelify --presets [ react ] --plugins [ transform-h-jsx ] ] -t envify $< | $(UGLIFY) >> $@
 
 $(DOCS_VERSION_DATA): $(BIN_DIR)/gen_versions.js $(DOCS_DIR)
 	$(NODE) $(BIN_DIR)/gen_versions.js $(DOCS_DIR) > $@
