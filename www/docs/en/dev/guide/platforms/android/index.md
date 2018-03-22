@@ -158,8 +158,8 @@ reopen any command prompt windows after making changes to see them reflected.
 (substitute the paths with your local Android SDK installation's location):
 
     ```
-    C:\Development\android-sdk\platform-tools
-    C:\Development\android-sdk\tools
+    C:\Users\[your user]\AppData\Local\Android\Sdk\platform-tools
+    C:\Users\[your user]\AppData\Local\Android\Sdk\tools
     ```
 
 ## Project Configuration
