@@ -1,5 +1,17 @@
 ## Installing
 
+### Introduction to Installation
+
+The development environment setup requires installation of following softwares:
+
+1. Ruby - Needs to be installed in order to install and use Jekyll. Jekyll helps in tranforming plain texts into static websites.
+
+2. Python - Needs to be installed in order to invoke simple HTTP server from Makefile.
+
+3. Node.js - Needs to be installed in order to install all the required development and javascript dependencies.
+
+4. Make - Needs to be installed in order to build cordova website using Makefile. This installation is optional.
+
 ### Mac OS X
 
 #### Ruby
