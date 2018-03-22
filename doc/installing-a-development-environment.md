@@ -5,9 +5,9 @@
 The development environment setup requires installation of following softwares:
 
 1. Ruby - Needs to be installed in order to install and use Jekyll. Jekyll helps in tranforming plain texts into static websites.
-2. Node.js - Needs to be installed in order to install all the required development and javascript dependencies.
-3. Make - Can to be installed in order to build cordova website using Makefile. This installation is optional.
-4. Python - Can to be installed in order to invoke simple HTTP server from Makefile. This installation is optional.
+1. Node.js - Needs to be installed in order to install all the required development and javascript dependencies.
+1. Make - Can to be installed in order to build cordova website using Makefile. This installation is optional.
+1. Python - Can to be installed in order to invoke simple HTTP server from Makefile. This installation is optional.
 
 ### Mac OS X
 
@@ -16,13 +16,6 @@ The development environment setup requires installation of following softwares:
 Install Homebrew from [this site][homebrew], and then run:
 
     brew install ruby@2.0
-
-#### Python
-
-Mac OS X comes with Python 2.7 pre-installed. Else, follow these steps:
-
-1. Download [this installer][python_installer_mac] from [this page][python_downloads].
-2. Run the downloaded file.
 
 #### Node.js
 
@@ -33,6 +26,13 @@ Go to [this site][nodejs], and click the "Install" button. Then run the download
 Make comes with the Xcode Command Line Tools. To install them, run:
 
     xcode-select --install
+
+#### Python (optional)
+
+Mac OS X comes with Python 2.7 pre-installed. Else, follow these steps:
+
+1. Download [this installer][python_installer_mac] from [this page][python_downloads].
+2. Run the downloaded file.
 
 
 ### Windows
@@ -58,17 +58,6 @@ Follow these steps:
             ruby dk.rb install
     1. Close `cmd.exe`.
 
-#### Python
-
-Python 2.7 is also required to build the docs. NOTE: *The docs will not build with Python 3.0 or greater.*
-
-Follow these steps:
-
-1. Download [this installer][python_installer_windows] from [this page][python_downloads].
-2. Run the downloaded file.
-   1. Use the default installation path
-   1. Make sure the **'add executable to path'** option is checked.
-
 #### Node.js
 
 Go to [this site][nodejs], and click the "Install" button. Then run the downloaded file and follow the on-screen instructions. Make sure that the option to **install NPM** is enabled, if you see one.
@@ -77,16 +66,21 @@ Go to [this site][nodejs], and click the "Install" button. Then run the download
 
 Make can be installed on Windows from [this page][make_page] by downloading the [setup tool][make_setup] and running it.
 
+#### Python (optional)
+
+Follow these steps:
+
+1. Download [this installer][python_installer_windows] from [this page][python_downloads].
+2. Run the downloaded file.
+   1. Use the default installation path
+   1. Make sure the **'add executable to path'** option is checked.
+
 
 ### Linux
 
 #### Ruby
 
 Run the commands from [this site][ruby_linux] that apply to your Linux distribution.
-
-#### Python
-
-The latest version of CentOS, Fedora, Redhat Enterprise (RHEL) and Ubuntu come with Python 2.7 pre-installed. Else, follow the steps from [this site][python_linux].
 
 #### Node.js
 
@@ -95,6 +89,10 @@ Follow the instructions on [this site][linux_node].
 #### Make
 
 Make is installed by default on Linux.
+
+#### Python
+
+The latest version of CentOS, Fedora, Redhat Enterprise (RHEL) and Ubuntu come with Python 2.7 pre-installed. Else, follow the steps from [this site][python_linux].
 
 
 ### Check Installations
@@ -106,16 +104,6 @@ Ruby 2.0 is required to build the docs. NOTE: *The docs will not build with Ruby
 Verify your Ruby installation by running:
 
     ruby --version
-
-#### Verify Python
-
-Python 2.7 is also required to build the docs. NOTE: *The docs will not build with Python 3.0 or greater.*
-
-Verify your Python installation by running:
-
-    python --version
-
-The version must be 2.7.x.
 
 #### Verify Node.js
 
@@ -129,6 +117,16 @@ Verify your Node.js installation by running:
 Verify your make installation by running:
 
     make --version
+
+#### Verify Python
+
+Python 2.7 is also required to build the docs. NOTE: *The docs will not build with Python 3.0 or greater.*
+
+Verify your Python installation by running:
+
+    python --version
+
+The version must be 2.7.x.
 
 
 ### Local repo setup
