@@ -2,12 +2,12 @@
 
 ### Introduction to Installation
 
-The development environment setup requires installation of following softwares:
+The development environment setup requires installation of the following software:
 
-1. Ruby - Needs to be installed in order to install and use Jekyll. Jekyll helps in tranforming plain texts into static websites.
+1. Ruby - Needed by Jekyll. Jekyll is the static site generator that generates the website and docs.
 1. Node.js - Needs to be installed in order to install all the required development and javascript dependencies.
-1. Make - Can to be installed in order to build cordova website using Makefile. This installation is optional.
-1. Python - Can to be installed in order to invoke simple HTTP server from Makefile. This installation is optional.
+1. Make - Can be installed in order to build cordova website using Makefile. This installation is optional.
+1. Python - Can be installed in order to invoke simple HTTP server from Makefile. This installation is optional.
 
 ### Mac OS X
 
@@ -33,7 +33,6 @@ Mac OS X comes with Python 2.7 pre-installed. Else, follow these steps:
 
 1. Download [this installer][python_installer_mac] from [this page][python_downloads].
 2. Run the downloaded file.
-
 
 ### Windows
 
@@ -75,7 +74,6 @@ Follow these steps:
    1. Use the default installation path
    1. Make sure the **'add executable to path'** option is checked.
 
-
 ### Linux
 
 #### Ruby
@@ -93,7 +91,6 @@ Make is installed by default on Linux.
 #### Python
 
 The latest version of CentOS, Fedora, Redhat Enterprise (RHEL) and Ubuntu come with Python 2.7 pre-installed. Else, follow the steps from [this site][python_linux].
-
 
 ### Check Installations
 
@@ -128,7 +125,6 @@ Verify your Python installation by running:
 
 The version must be 2.7.x.
 
-
 ### Local repo setup
 
 Clone the [cordova-docs] GitHub repo to a local folder.
@@ -149,7 +145,6 @@ This will install the required Ruby Gems locally into a subfolder called `ruby_m
 Finally, install Node.js and JavaScript dependencies by running:
 
     npm install
-
 
 ### Troubleshooting
 
