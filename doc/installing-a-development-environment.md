@@ -1,7 +1,5 @@
 ## Installing
 
-### Introduction to Installation
-
 The development environment setup requires installation of the following software:
 
 1. Ruby - Needed by Jekyll. Jekyll is the static site generator that generates the website and docs.
