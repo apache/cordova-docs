@@ -3,9 +3,9 @@
 The development environment setup requires installation of the following software:
 
 1. Ruby - Needed by Jekyll. Jekyll is the static site generator that generates the website and docs.
-1. Node.js - Needs to be installed in order to install all the required development and javascript dependencies.
-1. Make - Can be installed in order to build cordova website using Makefile. This installation is optional.
-1. Python - Can be installed in order to invoke simple HTTP server from Makefile. This installation is optional.
+1. Node.js - Needs to be installed in order to install all the required development and JavaScript dependencies.
+1. Make - Can be installed in order to build Cordova website using Make. This installation is optional.
+1. Python - Can be installed in order to invoke simple HTTP server from Make. This installation is optional.
 
 ### Mac OS X
 
@@ -86,7 +86,7 @@ Follow the instructions on [this site][linux_node].
 
 Make is installed by default on Linux.
 
-#### Python
+#### Python (optional)
 
 The latest version of CentOS, Fedora, Redhat Enterprise (RHEL) and Ubuntu come with Python 2.7 pre-installed. Else, follow the steps from [this site][python_linux].
 
