@@ -1,5 +1,12 @@
 ## Installing
 
+The development environment setup requires installation of the following software:
+
+1. Ruby - Needed by Jekyll. Jekyll is the static site generator that generates the website and docs.
+1. Node.js - Needs to be installed in order to install all the required development and JavaScript dependencies.
+1. Make - Can be installed in order to build Cordova website using Make. This installation is optional.
+1. Python - Can be installed in order to invoke simple HTTP server from Make. This installation is optional.
+
 ### Mac OS X
 
 #### Ruby
@@ -7,13 +14,6 @@
 Install Homebrew from [this site][homebrew], and then run:
 
     brew install ruby@2.0
-
-#### Python
-
-Mac OS X comes with Python 2.7 pre-installed. Else, follow these steps:
-
-1. Download [this installer][python_installer_mac] from [this page][python_downloads].
-2. Run the downloaded file.
 
 #### Node.js
 
@@ -25,6 +25,12 @@ Make comes with the Xcode Command Line Tools. To install them, run:
 
     xcode-select --install
 
+#### Python (optional)
+
+Mac OS X comes with Python 2.7 pre-installed. Else, follow these steps:
+
+1. Download [this installer][python_installer_mac] from [this page][python_downloads].
+2. Run the downloaded file.
 
 ### Windows
 
@@ -49,17 +55,6 @@ Follow these steps:
             ruby dk.rb install
     1. Close `cmd.exe`.
 
-#### Python
-
-Python 2.7 is also required to build the docs. NOTE: *The docs will not build with Python 3.0 or greater.*
-
-Follow these steps:
-
-1. Download [this installer][python_installer_windows] from [this page][python_downloads].
-2. Run the downloaded file.
-   1. Use the default installation path
-   1. Make sure the **'add executable to path'** option is checked.
-
 #### Node.js
 
 Go to [this site][nodejs], and click the "Install" button. Then run the downloaded file and follow the on-screen instructions. Make sure that the option to **install NPM** is enabled, if you see one.
@@ -68,16 +63,20 @@ Go to [this site][nodejs], and click the "Install" button. Then run the download
 
 Make can be installed on Windows from [this page][make_page] by downloading the [setup tool][make_setup] and running it.
 
+#### Python (optional)
+
+Follow these steps:
+
+1. Download [this installer][python_installer_windows] from [this page][python_downloads].
+2. Run the downloaded file.
+   1. Use the default installation path
+   1. Make sure the **'add executable to path'** option is checked.
 
 ### Linux
 
 #### Ruby
 
 Run the commands from [this site][ruby_linux] that apply to your Linux distribution.
-
-#### Python
-
-The latest version of CentOS, Fedora, Redhat Enterprise (RHEL) and Ubuntu come with Python 2.7 pre-installed. Else, follow the steps from [this site][python_linux].
 
 #### Node.js
 
@@ -87,6 +86,9 @@ Follow the instructions on [this site][linux_node].
 
 Make is installed by default on Linux.
 
+#### Python (optional)
+
+The latest version of CentOS, Fedora, Redhat Enterprise (RHEL) and Ubuntu come with Python 2.7 pre-installed. Else, follow the steps from [this site][python_linux].
 
 ### Check Installations
 
@@ -97,16 +99,6 @@ Ruby 2.0 is required to build the docs. NOTE: *The docs will not build with Ruby
 Verify your Ruby installation by running:
 
     ruby --version
-
-#### Verify Python
-
-Python 2.7 is also required to build the docs. NOTE: *The docs will not build with Python 3.0 or greater.*
-
-Verify your Python installation by running:
-
-    python --version
-
-The version must be 2.7.x.
 
 #### Verify Node.js
 
@@ -121,6 +113,15 @@ Verify your make installation by running:
 
     make --version
 
+#### Verify Python
+
+Python 2.7 is also required to build the docs. NOTE: *The docs will not build with Python 3.0 or greater.*
+
+Verify your Python installation by running:
+
+    python --version
+
+The version must be 2.7.x.
 
 ### Local repo setup
 
@@ -142,7 +143,6 @@ This will install the required Ruby Gems locally into a subfolder called `ruby_m
 Finally, install Node.js and JavaScript dependencies by running:
 
     npm install
-
 
 ### Troubleshooting
 
