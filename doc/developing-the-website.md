@@ -24,4 +24,4 @@ To start the website, run:
 
     make serve
 
-That command will start a local server at port `8000`.
+That command will start a local server on port `8000`.
