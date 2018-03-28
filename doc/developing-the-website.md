@@ -1,5 +1,7 @@
 ## Developing
 
+### Using Gulp
+
 To work on the website and see changes live as you save, run:
 
     node_modules/.bin/gulp serve
@@ -11,3 +13,15 @@ That command will build the site and start a local server. To work on only the w
 Alternatively, to dynamically rebuild the site and refresh the browser _when changes happen_ (again, optionally with the `--nodocs` flag), run:
 
     node_modules/.bin/gulp watch
+
+### Using Make
+
+To build the website, run:
+
+    make build
+
+To start the website, run:
+
+    make serve
+
+That command will start a local server at port `8000`.
