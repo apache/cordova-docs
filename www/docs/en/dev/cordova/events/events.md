@@ -450,5 +450,5 @@ See https://issues.apache.org/jira/browse/CB-10653 for details.
 The subscription to the `activated` event should be done before `deviceready` handler (in `app.bindEvents` in terms of the Cordova template).
 
 [UIApplicationExitsOnSuspend]: http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html
-[AndroidLifeCycleGuide]: ../../guide/platforms/android/lifecycle.html
+[AndroidLifeCycleGuide]: ../../guide/platforms/android/index.html#lifecycle-guide
 [MSDNActivatedEvent]: https://msdn.microsoft.com/en-us/library/windows/apps/br212679.aspx
