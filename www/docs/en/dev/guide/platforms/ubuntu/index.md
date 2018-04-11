@@ -68,11 +68,11 @@ Once you have a basic Ubuntu VM set up, you can install the rest of the required
 
 ### Node and NPM
 
-Ubuntu 16.04 LTS comes with the required versions of both NodeJS and NPM. To install simlpy do:
+Ubuntu 16.04 LTS comes with the required versions of both NodeJS and NPM. To install simply do:
 
 ```bash
 $ sudo apt-get install nodejs npm
-$ node -v
+$ nodejs -v
 v.4.2.6
 $ npm -v
 2.15.6
@@ -145,7 +145,7 @@ Creates an app in a `hello` directory whose display name is
 
 ```bash
 $ cordova create helloworld helloworld.ubuntudeveloper HelloWorld
-$ cd hello
+$ cd helloworld
 $ cordova platform add ubuntu
 ```
 
