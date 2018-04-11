@@ -132,45 +132,6 @@ In iOS 10 and above, the `<access>` tag supports these three attributes below, w
 
 See the [ATS Technote](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) for more details.
 
-## BlackBerry 10 Whitelisting
-
-The whitelisting rules are found in `www/config.xml`.
-
-BlackBerry 10's use of wildcards differs from other platforms in two
-ways:
-
-* Any content accessed by `XMLHttpRequest` must be declared
-  explicitly. Setting `origin="*"` does not work in this case.
-  Alternatively, all web security may be disabled using the
-  `WebSecurity` preference described in BlackBerry Configuration:
-
-    ```xml
-    <preference name="websecurity" value="disable" />
-    ```
-
-* As an alternative to setting `*.domain`, set an additional
-  `subdomains` attribute to `true`. It should be set to `false` by
-  default.
-
-    ```xml
-    <!-- Narrows access to google.com -->
-    <access origin="http://google.com" subdomains="false" />
-
-    <!-- Allows access to maps.google.com and docs.google.com -->
-    <access origin="http://google.com" subdomains="true" />
-
-    <!-- Allows access to all domains, including the local `file://` protocol -->
-    <access origin="*" subdomains="true" />
-    ```
-
-For more information on support, see BlackBerry's documentation on the
-[access element][8].
-
-## Windows Phone Whitelisting
-
-The whitelisting rules for Windows Phone 8 are found in the
-app's `config.xml` file.
-
 [wlp]: ../../../reference/cordova-plugin-whitelist/
 [1]: http://www.w3.org/TR/widgets-access/
 [2]: http://google.com
@@ -179,4 +140,3 @@ app's `config.xml` file.
 [5]: http://mail.google.com
 [6]: http://docs.google.com
 [7]: http://developer.mozilla.org
-[8]: https://developer.blackberry.com/html5/documentation/v1_0/access_element_834677_11.html

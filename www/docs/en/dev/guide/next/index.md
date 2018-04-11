@@ -165,7 +165,6 @@ Weinre creates a local server that can host a remote debug client for your Cordo
 
 ## Other Options
 
-* BlackBerry 10 supports debugging as well: [Documentation]( https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html)
 * For more examples and explanation of the above debugging tips, see: [http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/](http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/)
 
 # User Interface

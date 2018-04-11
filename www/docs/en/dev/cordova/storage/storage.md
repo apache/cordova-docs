@@ -83,7 +83,6 @@ As such, it provides all the power (and complexity) of SQL.
 It is supported by the underlying WebView on the following Cordova platforms:
 
 - Android
-- BlackBerry 10
 - iOS
 
 ### Usage Summary
@@ -165,7 +164,6 @@ database, and its asynchronous API and search indexes provide performance benefi
 
 IndexedDB is supported by the underlying WebView on the following Cordova platforms:
 
-- BlackBerry 10
 - Windows (with some limitations)
 - Android (4.4 and above)
 
