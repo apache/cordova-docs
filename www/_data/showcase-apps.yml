@@ -69,13 +69,6 @@
         be your new best friend. Rebuild, pull and monitor your apps, unlock
         and change signing keys.
 
--   name: ReactEurope - React.js Europe Conference
-    image: ReactEurope.png
-    url: http://www.thinkmill.com.au/react-europe
-    description: >
-        ReactEurope is the occasion to meet the core team and other awesome members
-        of the community to learn, socialize and have fun in the beautiful city of Paris
-
 -   name: Graded
     image: Graded.png
     url: http://www.graded.us
@@ -88,3 +81,11 @@
     description: >
         One Verse BIBLE is a beautifully crafted Bible app to focus more on
         each Bible Verse and to compare easily with various Bible Versions
+
+-   name: SparkChess
+    image: SparkChess.png
+    url: https://www.sparkchess.com
+    description: > 
+        Finally, a game of chess everyone can enjoy. Play chess against the computer or 
+        challenge your friends in online multiplayer. SparkChess is available on the 
+        App Store, on Google Play and online. 
