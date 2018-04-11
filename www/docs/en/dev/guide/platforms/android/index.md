@@ -87,7 +87,7 @@ whatever [API level](http://developer.android.com/guide/topics/manifest/uses-sdk
 you wish to target. It is recommended that you install the highest SDK version
 that your version of cordova-android supports (see [Requirements and Support](#requirements-and-support)).
 
-Open the Android SDK Manager (run `android` or `sdkmanager` from the terminal)
+Open the Android SDK Manager (run `sdkmanager` from the terminal)
 and make sure the following are installed:
 
 1. Android Platform SDK for your targeted version of Android
