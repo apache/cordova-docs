@@ -4,8 +4,7 @@ The development environment setup requires installation of the following softwar
 
 1. Ruby - Needed by Jekyll. Jekyll is the static site generator that generates the website and docs.
 1. Node.js - Needs to be installed in order to install all the required development and JavaScript dependencies.
-1. Make - Can be installed in order to build Cordova website using Make. This installation is optional.
-1. Python - Can be installed in order to invoke simple HTTP server from Make. This installation is optional.
+1. Python - Neeeded by Jekyll dependencies like Pygments.
 
 ### Mac OS X
 
@@ -19,13 +18,7 @@ Install Homebrew from [this site][homebrew], and then run:
 
 Go to [this site][nodejs], and click the "Install" button. Then run the downloaded file and follow the on-screen instructions. Make sure that the option to **install NPM** is enabled, if you see one.
 
-#### Make (optional)
-
-Make comes with the Xcode Command Line Tools. To install them, run:
-
-    xcode-select --install
-
-#### Python (optional)
+#### Python
 
 Mac OS X comes with Python 2.7 pre-installed. Else, follow these steps:
 
@@ -59,11 +52,7 @@ Follow these steps:
 
 Go to [this site][nodejs], and click the "Install" button. Then run the downloaded file and follow the on-screen instructions. Make sure that the option to **install NPM** is enabled, if you see one.
 
-#### Make (optional)
-
-Make can be installed on Windows from [this page][make_page] by downloading the [setup tool][make_setup] and running it.
-
-#### Python (optional)
+#### Python
 
 Follow these steps:
 
@@ -82,11 +71,7 @@ Run the commands from [this site][ruby_linux] that apply to your Linux distribut
 
 Follow the instructions on [this site][linux_node].
 
-#### Make
-
-Make is installed by default on Linux.
-
-#### Python (optional)
+#### Python
 
 The latest version of CentOS, Fedora, Redhat Enterprise (RHEL) and Ubuntu come with Python 2.7 pre-installed. Else, follow the steps from [this site][python_linux].
 
@@ -106,12 +91,6 @@ Verify your Node.js installation by running:
 
     node --version
     npm --version
-
-#### Verify make
-
-Verify your make installation by running:
-
-    make --version
 
 #### Verify Python
 
@@ -179,7 +158,5 @@ You could try a different method to install Ruby. Checkout [rbenv](https://githu
 [python_installer_mac]: https://www.python.org/ftp/python/2.7.11/python-2.7.11-macosx10.6.pkg
 [python_installer_windows]: https://www.python.org/ftp/python/2.7.11/python-2.7.11.amd64.msi
 [python_linux]: http://docs.python-guide.org/en/latest/starting/install/linux/
-[make_page]: http://gnuwin32.sourceforge.net/packages/make.htm
-[make_setup]: http://gnuwin32.sourceforge.net/downlinks/make.php
 [cordova-docs]: https://github.com/apache/cordova-docs
 [GlobalSignRootCerficateAuthority]: https://raw.githubusercontent.com/rubygems/rubygems/master/lib/rubygems/ssl_certs/index.rubygems.org/GlobalSignRootCA.pem
