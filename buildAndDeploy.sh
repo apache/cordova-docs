@@ -13,6 +13,6 @@ then
     cd ../cordova-docs || return;
     npm test;
 else
-    echo "### test only: (branch = $BRANCH)"
-    npm test;
+    echo "### Build: (branch = $BRANCH)"
+    npm run build;
 fi
