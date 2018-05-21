@@ -1,6 +1,6 @@
 # Adding a Tool or a Showcase App
 
-Items on the **Codorva Tools** or the **Cordova App Showcase** sections on the main page are modifiable by the public. Below are the guidelines and process to do so.
+Items on the **Cordova Tools** or the **Cordova App Showcase** sections on the main page are modifiable by the public. Below are the guidelines and process to do so.
 
 ## Guidelines
 
