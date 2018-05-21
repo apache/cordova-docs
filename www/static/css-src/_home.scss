@@ -53,14 +53,6 @@ html {
                 img {
                     margin-right: 15px;
                 }
-                .platforms_more {
-                    font-size: 12px;
-                    font-weight: bold;
-                    white-space: nowrap;
-                    display: inline-block;
-                    margin-top: 10px;
-                    padding-left: 5px;
-                }
             }
             .hero_buttons {
                 .btn {
@@ -290,6 +282,7 @@ img#logo_top {
     padding-left:0;
     padding-top: 20px;
     padding-bottom: 20px;
+    text-align: center;
 }
 .card_gallery {
     color:white;
