@@ -42,28 +42,10 @@
 
 -   name: Visual Studio
     image: visual_studio_white.png
-    url: http://aka.ms/cordova
+    url: https://www.visualstudio.com/vs/features/cordova/
     description: >
         Popular IDE for building cross-platform apps for Android, iOS, and
         Windows. Complete with advanced build and debugging support.
-
--   name: Telerik
-    image: telerik.png
-    url: http://www.telerik.com/
-    description: >
-        Telerik Platform is a complete mobile app development platform for
-        developing hybrid and native apps with JavaScript. Use our free and
-        open source Kendo UI framework with Telerik Platform to address every
-        stage of your application lifecycle - from idea to deployment.
-
--   name: GapDebug
-    image: gapdebug-logo100.png
-    url: https://www.genuitec.com/products/gapdebug/
-    description: >
-        GapDebug is a free tool for debugging and managing hybrid-mobile
-        Android and iOS apps. With Drag and drop App Installation, Instant
-        debugging, and full cross-platform support, GapDebug changes how you
-        view debugging for good.
 
 -   name: App Builder
     image: appbuilder.png
@@ -107,12 +89,12 @@
         includes complete PhoneGap integration, plus Bootstrap, jQuery Mobile
         and jqWidgets. Drag and Drop Designer. Easy programming in JavaScript
         or BASIC. Windows and MacOS.
-        
+
 -   name: Mobiscroll
     image: mobiscroll.png
     url: https://mobiscroll.com
     description: >
         Mobiscroll is a collection of cross platform UI
-        controls for delivering polished iOS, Android & Windows Phone apps. 
-        Framework agnostic, use it with plain Javascript, 
+        controls for delivering polished iOS, Android & Windows Phone apps.
+        Framework agnostic, use it with plain Javascript,
         jQuery, Angular, React or Knockout.
