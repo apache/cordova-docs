@@ -17,6 +17,5 @@ Thanks!
 
 
 ### Checklist
-- [ ] [Reported an issue](http://cordova.apache.org/contribute/issues.html) in the JIRA database
-- [ ] Commit message follows the format: "CB-3232: (android) Fix bug with resolving file paths", where CB-xxxx is the JIRA ID & "android" is the platform affected.
+- [ ] Commit message follows the format: "GH-3232: (android) Fix bug with resolving file paths", where GH-xxxx is the GitHub issue ID & "android" is the platform affected.
 - [ ] Added automated test coverage as appropriate for this change.
