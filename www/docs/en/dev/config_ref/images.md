@@ -37,11 +37,10 @@ If you do not specify an icon, the Apache Cordova logo is used.
 
 Attributes    | Description
 --------------|--------------------------------------------------------------------------------
-src           | *Required* <br/> Location of the image file, relative to your project directory
+src           | *Required* <br/> Location of the image file, relative to your project directory.
 platform      | *Optional* <br/> Target platform
 width         | *Optional* <br/> Icon width in pixels
 height        | *Optional* <br/> Icon height in pixels
-density       | *Optional* <br/> ==Android== <br/> Specified icon density
 target        | *Optional* <br/> ==Windows== <br/> Destination filename for the image file and all its' MRT companions
 
 
@@ -53,7 +52,74 @@ which will be used for all platforms.
 For each platform, you can also define a pixel-perfect icon set to fit
 different screen resolutions.
 
-##Android
+## Android
+
+On Android, instead of using a single image for an icon, you can use two images (background and foreground) to create an **Adaptive Icon**.
+
+Attributes    | Description
+--------------|--------------------------------------------------------------------------------
+background    | *Required for Adaptive* <br/> Location of the image (png or vector) relative to your project directory, or color reference
+foreground    | *Required for Adaptive* <br/> Location of the image (png or vector) relative to your project directory, or color reference
+density       | *Optional* <br/> Specified icon density
+
+### Adaptive Icons
+
+To use the adaptive icons the `background` and `foreground` attributes must be defined in place of the `src` attribute. The `src` attribute is not used for adaptive icons.
+
+#### Adaptive Icon with Images:
+```xml
+<platform name="android">
+  <icon background="res/icon/android/ldpi-background.png" density="ldpi" foreground="res/icon/android/ldpi-foreground.png" />
+  <icon background="res/icon/android/mdpi-background.png" density="mdpi" foreground="res/icon/android/mdpi-foreground.png" />
+  <icon background="res/icon/android/hdpi-background.png" density="hdpi" foreground="res/icon/android/hdpi-foreground.png" />
+  <icon background="res/icon/android/xhdpi-background.png" density="xhdpi" foreground="res/icon/android/xhdpi-foreground.png" />
+  <icon background="res/icon/android/xxhdpi-background.png" density="xxhdpi" foreground="res/icon/android/xxhdpi-foreground.png" />
+  <icon background="res/icon/android/xxxhdpi-background.png" density="xxxhdpi" foreground="res/icon/android/xxxhdpi-foreground.png" />
+</platform>
+```
+
+**Note:** In this example, the foreground image will also be used as the fallback icon for Android devices that do not support the adaptive icons. The fallback icon can be overridden by setting the src attribute.
+
+#### Adaptive Icon with Vectors:
+```xml
+<platform name="android">
+  <icon background="res/icon/android/ldpi-background.xml" density="ldpi" foreground="res/icon/android/ldpi-foreground.xml" src="res/android/ldpi.png" />
+  <icon background="res/icon/android/mdpi-background.xml" density="mdpi" foreground="res/icon/android/mdpi-foreground.xml" src="res/android/mdpi.png" />
+  <icon background="res/icon/android/hdpi-background.xml" density="hdpi" foreground="res/icon/android/hdpi-foreground.xml" src="res/android/hdpi.png" />
+  <icon background="res/icon/android/xhdpi-background.xml" density="xhdpi" foreground="res/icon/android/xhdpi-foreground.xml" src="res/android/xhdpi.png" />
+  <icon background="res/icon/android/xxhdpi-background.xml" density="xxhdpi" foreground="res/icon/android/xxhdpi-foreground.xml" src="res/android/xxhdpi.png" />
+  <icon background="res/icon/android/xxxhdpi-background.xml" density="xxxhdpi" foreground="res/icon/android/xxxhdpi-foreground.xml" src="res/android/xxxhdpi.png" />
+</platform>
+```
+
+**Note:** In this example, the src attribute must be defined when then foreground attribute is defined with a vector or color.
+
+#### Adaptive Icon with Colors:
+Create a `res/values/colors.xml` resource file in your project directory to store the app's color definitions.
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FF0000</color>
+</resources>
+```
+
+In the `config.xml`, we will add `resource-file` to copy the `colors.xml` into the approprate location so that the colors are available during build time.
+
+```xml
+<platform name="android">
+  <resource-file src="res/values/colors.xml" target="/app/src/main/res/values/colors.xml" />
+
+  <icon background="@color/background" density="ldpi" foreground="res/icon/android/ldpi-foreground.png" />
+  <icon background="@color/background" density="mdpi" foreground="res/icon/android/mdpi-foreground.png" />
+  <icon background="@color/background" density="hdpi" foreground="res/icon/android/hdpi-foreground.png" />
+  <icon background="@color/background" density="xhdpi" foreground="res/icon/android/xhdpi-foreground.png" />
+  <icon background="@color/background" density="xxhdpi" foreground="res/icon/android/xxhdpi-foreground.png" />
+  <icon background="@color/background" density="xxxhdpi" foreground="res/icon/android/xxxhdpi-foreground.png" />
+</platform>
+```
+
+### Standard Icons
+
 ```xml
     <platform name="android">
         <!--
@@ -72,14 +138,15 @@ different screen resolutions.
         <icon src="res/android/xxxhdpi.png" density="xxxhdpi" />
     </platform>
 ```
-###See Also
+
+### See Also
 - [Android icon guide](https://www.google.com/design/spec/style/icons.html)
 - [Android - Supporting multiple screens](http://developer.android.com/guide/practices/screens_support.html)
 
-##Browser
+## Browser
 Icons are not applicable to the Browser platform.
 
-##iOS
+## iOS
 ```xml
     <platform name="ios">
         <!-- iOS 8.0+ -->
@@ -114,10 +181,10 @@ Icons are not applicable to the Browser platform.
         <icon src="res/ios/icon-83.5@2x.png" width="167" height="167" />
     </platform>
 ```
-###See Also
+### See Also
 - [App Icons on iPad and iPhone](https://developer.apple.com/library/content/qa/qa1686/_index.html)
 
-##Windows
+## Windows
 
 For Windows the recommended approach to define application icons is to use the `target` attribute.
 
@@ -176,7 +243,7 @@ Although it is not recommended, it is also possible to define icons using the `w
     </platform>
 ```
 
-###See Also:
+### See Also:
 - [Windows 10 platform guidelines for icons](https://msdn.microsoft.com/en-us/library/windows/apps/mt412102.aspx).
 - [Windows 8.1 tiles and icons sizes](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh781198.aspx)
 
