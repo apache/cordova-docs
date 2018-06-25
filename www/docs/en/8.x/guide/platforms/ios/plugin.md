@@ -265,3 +265,4 @@ For JavaScript, you can attach Safari to the app running within the iOS Simulato
 [CDVPlugin.m]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPlugin.m
 [ResumeEvent]: ../../../cordova/events/events.html#resume
 [PauseEvent]: ../../../cordova/events/events.html#pause
+[plugin-dev]: ../../hybrid/plugins/index.html
