@@ -32,13 +32,13 @@ var platforms = {
 
 $(document).ready(function () {
 
-    var HEADER_OFFSET  = 56; // in pixels
-    var TOC_TOP_OFFSET = HEADER_OFFSET + 55;
+    var HEADER_OFFSET  = 50; // in pixels
+    var TOC_TOP_OFFSET = HEADER_OFFSET + 40;
 
     // if this page's ToC entry can be found, scroll the ToC to it
-    var thisPageEntry = $(".this-page");
+    var thisPageEntry = $(".site-toc-container .this-page");
     if (thisPageEntry.length > 0) {
-        $(".site-toc-container").scrollTop(thisPageEntry.first().offset().top - TOC_TOP_OFFSET);
+        $(".site-toc-container").scrollTop(thisPageEntry.first().position().top - TOC_TOP_OFFSET);
     }
 
     function slugifyLikeGitHub(originalText) {

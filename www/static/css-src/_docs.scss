@@ -1,18 +1,30 @@
 .docs {
+    $toc-width: 320px;
+
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: "Raleway", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
 
-    /* this is so that wide images don't stick out of their paragraphs */
+    @media (max-width: 991px) {
+        font-size: 16px;
+    }
+
     p {
+        margin-bottom: .8em;
+
         img {
             max-width: 100%;
         }
     }
 
     pre {
+        margin: 15px 0;
         word-wrap: normal;
 
         code {
@@ -69,45 +81,41 @@
     /* outer ToC for the site */
     .site-toc-container {
         position: fixed;
-        height: 100%;
+        top: 50px;
+        left: 0;
+        height: calc(100% - 50px);
+        width: $toc-width;
         overflow-y: scroll;
+        overflow-x: hidden;
         background: $gray-85;
 
         .site-toc {
-
-            /* NOTE: the bottom padding is special because it offsets the header */
-            padding-top: 35px;
-            padding-bottom: 80px;
-            padding-left: 55px;
-            padding-right: 10px;
+            padding: 10px 15px;
 
             li {
                 list-style: none;
             }
+
             > li {
                 font-size: 16px;
-                font-weight: 600;
                 padding-top: 0.05em;
                 line-height: 30px;
                 a {
                     color: white;
+                    display: block;
+                    padding: 0 50%;
+                    margin: 0 -50%;
+
                     &.this-page {
                         font-weight: bold;
+                        background-color: $brand-primary-darker;
                     }
-                }
-                .entry-highlight {
-                    width: 200%;
-                    position: absolute;
-                    height: 31px;
-                    background-color: #d60c3f;
-                    opacity: 0.7;
-                    margin-left: -100%;
-                    z-index: -1;
                 }
             }
             .toc-section-heading {
-                font-size: 30px;
-                font-weight: 300;
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: uppercase;
                 margin: 0.3em 0em 0.3em 0em;
                 display: block;
                 color: $brand-primary;
@@ -115,51 +123,50 @@
 
             /* NOTE: this is not a mistake; .site-toc gets nested inside itself */
             .site-toc {
-                padding-left: 15px;
-                padding-right: 0px;
-                padding-top: 0px;
-                padding-bottom: 0px;
+                padding: 0 0 0 10px;
+
                 .toc-section-heading {
                     font-size: 16px;
                     font-weight: 600;
+                    text-transform: none;
                 }
+            }
+        }
+
+        // Only the top level table of contents
+        > .site-toc {
+            > li {
+                margin-bottom: 1rem;
             }
         }
     }
 
-    /* non-IE scrollbar styling */
-    .site-toc-container::-webkit-scrollbar {
-        width: 13px;  /* for vertical scrollbars */
-        height: 13px; /* for horizontal scrollbars */
-    }
-    .site-toc-container::-webkit-scrollbar-track {
-        background-color: black;
-    }
-    .site-toc-container::-webkit-scrollbar-thumb {
-        background-color: $gray-70;
-    }
-
-    /* IE-only scrollbar styling */
-    .site-toc-container {
-        scrollbar-arrow-color: $gray-70;
-        scrollbar-face-color: $gray-70;
-        scrollbar-highlight-color: black;
-        scrollbar-shadow-color: $gray-70;
-    }
-
     .page-content-container {
-        padding: 0px;
+        margin-left: $toc-width;
+        width: calc(100% - #{$toc-width});
+
+        @media (max-width: 991px) {
+            margin-left: 0;
+            width: 100%;
+        }
+
         .page-content {
-            margin-bottom: 20px;
+            width: 960px;
+            max-width: 100%;
+            margin: 0 auto 50px;
+            padding: 0 50px;
+
+            @media (max-width: 991px) {
+                padding: 0 15px;
+            }
+
             .header-link {
                 position: relative;
                 left: 0.5em;
                 opacity: 0;
                 font-size: 0.7em;
 
-                -webkit-transition: opacity 0.2s ease-in-out 0.1s;
-                -moz-transition: opacity 0.2s ease-in-out 0.1s;
-                -ms-transition: opacity 0.2s ease-in-out 0.1s;
+                transition: opacity 0.2s ease-in-out 0.1s;
             }
             h1:hover .header-link,
             h2:hover .header-link,
@@ -173,7 +180,7 @@
                 color: #2C7185;
             }
             h1 {
-                font-size: 48px;
+                font-size: 42px;
                 font-weight: 300;
             }
             h2 {
@@ -186,6 +193,12 @@
             }
             h3, h4, h5, h6 {
                 font-weight: 600;
+            }
+            h4 {
+                margin-top: 20px;
+            }
+            h5 {
+                margin-top: 16px;
             }
         }
     }
@@ -267,6 +280,7 @@
     table {
         @extend .table;
         @extend .table-bordered;
+        margin: 20px 0;
     }
 
     .docs-alert {
@@ -389,6 +403,10 @@
             width: 240px;
             height: 120px;
         }
+    }
+
+    footer {
+        font-size: 14px;
     }
 }
 
