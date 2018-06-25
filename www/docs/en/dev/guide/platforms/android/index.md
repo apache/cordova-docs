@@ -37,8 +37,8 @@ the CLI, see [Cordova CLI Reference][cli_reference].
 Cordova for Android requires the Android SDK which can be installed
 on OS X, Linux or Windows. See the Android SDK's
 [System Requirements](http://developer.android.com/sdk/index.html#Requirements).
-Cordova's latest Android package supports up to Android [API Level](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels) 25.
-The supported Android API Levels and Android Versions for the past 
+Cordova's latest Android package supports up to Android [API Level](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels) 27.
+The supported Android API Levels and Android Versions for the past
 few cordova-android releases can be found in this table:
 
 cordova-android Version | Supported Android API-Levels | Equivalent Android Version
@@ -75,10 +75,10 @@ As of Cordova-Android 6.4.0, [Gradle](https://gradle.org/install/) is now requir
 
 When installing on Windows, you need to add Gradle to your path, (see [Setting Environment Variables](#setting-environment-variables))
 
-#### Android SDK
+### Android SDK
 
-Install [Android Studio][android_studio].
-Detailed installation instructions are on Android's developer site.
+Install [Android Studio][android_studio]. Follow the instructions at the linked Android Developer site to get started.
+Opening Android Studio for the first time will guide you through the process of installing the Android SDK.
 
 #### Adding SDK Packages
 
@@ -87,14 +87,14 @@ whatever [API level](http://developer.android.com/guide/topics/manifest/uses-sdk
 you wish to target. It is recommended that you install the highest SDK version
 that your version of cordova-android supports (see [Requirements and Support](#requirements-and-support)).
 
-Open the Android SDK Manager (run `sdkmanager` from the terminal)
+Open the Android SDK Manager (`Tools > SDK Manager` in Android Studio, or `sdkmanager` on the command line),
 and make sure the following are installed:
 
 1. Android Platform SDK for your targeted version of Android
 1. Android SDK build-tools version 19.1.0 or higher
-1. Android Support Repository (found under "Extras")
+1. Android Support Repository (found under the "SDK Tools" tab)
 
-See Android's documentation on [Installing SDK Packages](https://developer.android.com/studio/intro/update.html)
+See Android's documentation on [Installing SDK Packages](https://developer.android.com/studio/intro/update)
 for more details.
 
 ### Setting environment variables
