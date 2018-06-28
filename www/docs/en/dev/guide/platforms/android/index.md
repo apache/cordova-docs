@@ -241,6 +241,16 @@ Instead, these two files should be copied from another location into that folder
 as part of the build command by using the `before_build`
 [hook](../../appdev/hooks/index.html).
 
+#### Configuring Gradle's JVM memory settings
+It is possible to adjust the Gradle's JVM memory by
+[configuring](https://docs.gradle.org/current/userguide/build_environment.html#sec:configuring_jvm_memory) the JVM settings that Cordova exposes.
+
+Cordova's default flag is`-Xmx2048m`. You can change this property by using the `--jvmargs` flag in your Cordova `build` or `run` commands:
+
+```bash
+$ cordova run android -- --jvmargs=-Xmx1024m
+```
+
 #### Extending build.gradle
 
 If you need to customize `build.gradle`, rather than edit it directly, you
