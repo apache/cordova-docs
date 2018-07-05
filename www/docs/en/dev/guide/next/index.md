@@ -160,9 +160,6 @@ It is possible to use Chrome Dev Tools to inspect iOS apps, through a WebKit pro
 ## Ripple
 Ripple is a desktop based emulator for Cordova projects. Essentially it lets you run a Cordova application in your desktop application and fake various Cordova features. For example, it lets you simulate the accelerometer to test shake events. It fakes the camera API by letting you select a picture from your hard drive. Ripple lets you focus more on your custom code rather than worrying about Cordova plugins. You can find out more about Ripple here: [http://ripple.incubator.apache.org/](http://ripple.incubator.apache.org/)
 
-## Weinre
-Weinre creates a local server that can host a remote debug client for your Cordova applications. After you've installed and started it up, you copy a line of code into your Cordova application and then restart it. You can then open a dev tool panel on your desktop to work with the application. Weinre is not quite as fancy as Chrome and Safari Remote debugging but has the benefit of working with a much greater range of operating systems and platforms. More information may be found here: [http://people.apache.org/~pmuellr/weinre/docs/latest/](http://people.apache.org/~pmuellr/weinre/docs/latest/)
-
 ## Other Options
 
 * For more examples and explanation of the above debugging tips, see: [http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/](http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/)
