@@ -22,7 +22,7 @@
 
         -   label: Browse online
             text: Dev Mailing List Archive
-            href: http://callback.markmail.org/search/?q=#query:%20list%3Aorg.apache.incubator.callback-dev+page:1+state:facets
+            href: https://lists.apache.org/list.html?dev@cordova.apache.org
     description: >
         The Dev mailing list is a place for discussion about developing Apache Cordova.
         <br/>If you are a Cordova user looking for help, use the <a href="http://stackoverflow.com/questions/tagged/cordova">cordova tag on Stack Overflow</a>.
@@ -51,7 +51,7 @@
 
         -   label: Browse online
             text: Commits Mailing List Archive
-            href: http://callback.markmail.org/search/?q=#query:%20list%3Aorg.apache.incubator.callback-commits+page:1+state:facets
+            href: https://lists.apache.org/list.html?commits@cordova.apache.org
     description: >
         The Commits mailing list tracks commit logs for Apache Cordova repos.
 
@@ -79,6 +79,6 @@
 
         -   label: Browse online
             text: Issues Mailing List Archive
-            href: http://apache.markmail.org/search/?q=#query:%20list%3Aorg.apache.cordova.issues%20order%3Adate-backward+page:1+state:facets
+            href: https://lists.apache.org/list.html?issues@cordova.apache.org
     description: >
         The Issues mailing list tracks comments and updates to <a href="http://issues.apache.org/jira/browse/CB">Jira items</a> regarding Apache Cordova.
