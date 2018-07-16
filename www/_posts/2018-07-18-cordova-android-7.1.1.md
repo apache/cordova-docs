@@ -25,9 +25,9 @@ To add it explicitly:
 
 ## Curated Changelog
 
-* Fix unsafe property access in run.js (#445)
-* Emit log event instead of logging directly (#452)
-* [CB-14101](https://issues.apache.org/jira/browse/CB-14101) Fix Java version check for Java >= 9 (#446)
+* [CB-14101](https://issues.apache.org/jira/browse/CB-14101) Fix Java version check for Java >= 9 ([GH-446](https://github.com/apache/cordova-android/pull/446))
+* [GH-445](https://github.com/apache/cordova-android/pull/445): Fix unsafe property access in run.js
+* [GH-452](https://github.com/apache/cordova-android/pull/452): Emit log event instead of logging directly
 * [CB-14127](https://issues.apache.org/jira/browse/CB-14127) (android) Move google maven repo ahead of jcenter
 * [CB-13923](https://issues.apache.org/jira/browse/CB-13923) (android) fix -1 length for compressed files
 * [CB-14145](https://issues.apache.org/jira/browse/CB-14145) use cordova-common@2.2.5 and update other dependencies to resolve `npm audit` warnings
