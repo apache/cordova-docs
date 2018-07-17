@@ -114,3 +114,18 @@ RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/latest$ {{site.baseurl}}/docs/$1/latest/ [R
 #       before them will rewrite "/latest/" to the latest version and redirects
 #       for "/latest/some/path.html" will never activate.
 RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/latest/(.*)$ {{site.baseurl}}/docs/$1/{{site.latest_docs_version}}/$2 [L]
+
+# Redirect http to https
+# From Cordova PMC Member raphinesse 
+# https://s.apache.org/An8s
+
+# If we receive a forwarded http request from a proxy...
+RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
+
+# ...or just a plain old http request directly from the client
+RewriteCond %{HTTP:X-Forwarded-Proto} =""
+RewriteCond %{HTTPS} !=on
+
+# Redirect to https version
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
