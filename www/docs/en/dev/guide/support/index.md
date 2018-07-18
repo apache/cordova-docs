@@ -54,14 +54,28 @@ the core plugins, additional APIs are available via
 <tbody>
     <tr>
         <th></th>
-        <th colspan="20"><h2>Development Platform</h2></th>
+        <th colspan="20"><h2><a href="../cli/index.html">Cordova CLI</a> Development Platform</h2></th>
     </tr>
     <tr>
-        <th><a href="../cli/index.html">Cordova<br/>CLI</a></th>
-        <td data-col="android" class="y">Mac, Windows, Linux</td>
-        <td data-col="ios"     class="y">Mac</td>
-        <td data-col="osx"     class="y">Mac</td>
-        <td data-col="windows" class="y">Windows</td>
+        <th>Mac</th>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="y"></td>
+        <td data-col="osx"     class="y"></td>
+        <td data-col="windows" class="n"></td>
+    </tr>
+        <tr>
+        <th>Windows</th>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="n"></td>
+        <td data-col="osx"     class="n"></td>
+        <td data-col="windows" class="y"></td>
+    </tr>
+        <tr>
+        <th>Linux</th>
+        <td data-col="android" class="y"></td>
+        <td data-col="ios"     class="n"></td>
+        <td data-col="osx"     class="n"></td>
+        <td data-col="windows" class="n"></td>
     </tr>
 
     <tr>
@@ -178,7 +192,7 @@ the core plugins, additional APIs are available via
         <td data-col="android" class="y"></td>
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
-        <td data-col="windows" class="y">Windows Phone 8.1 only</td>
+        <td data-col="windows" class="y">WP 8.1 only</td>
     </tr>
 
     <tr>
@@ -186,7 +200,7 @@ the core plugins, additional APIs are available via
         <td data-col="android" class="y"></td>
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
-        <td data-col="windows" class="y">localStorage &amp; indexedDB</td>
+        <td data-col="windows" class="y">localStorage &amp;<br> indexedDB</td>
     </tr>
 
     <tr>
@@ -194,7 +208,7 @@ the core plugins, additional APIs are available via
         <td data-col="android" class="y"></td>
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
-        <td data-col="windows" class="y">Windows Phone 8.1 only</td>
+        <td data-col="windows" class="y">WP 8.1 only</td>
     </tr>
 
     <tr>
