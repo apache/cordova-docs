@@ -22,7 +22,7 @@ toc_title: Create a plugin
 description: Develop your own plugin.
 ---
 
-# Plugin Development Guide
+# Plugin Development Guides
 
 A _plugin_ is a package of injected code that allows the Cordova webview within
 which the app renders to communicate with the native platform on
