@@ -476,15 +476,11 @@ var App = createClass({
                         <div className="col-sm-9">
                             <div className="filter-by-platform-label"><span>Must Support Platform(s):</span></div>
                             <div className="filter-by-platform-filters">
-                                {createPlatformButton("Android", "cordova-android", this.state)}
-                                {createPlatformButton("iOS", "cordova-ios", this.state)}
-                                {createPlatformButton("Windows", "cordova-windows", this.state)}
-                                {createPlatformButton("Blackberry", "cordova-blackberry10", this.state)}
-                                {createPlatformButton("Ubuntu", "cordova-ubuntu", this.state)}
-                                {createPlatformButton("Firefox OS", "cordova-firefoxos", this.state)}
-                                {createPlatformButton("macOS", "cordova-osx", this.state)}
-                                {createPlatformButton("WP8", "cordova-wp8", this.state)}
-                                {createPlatformButton("Browser", "cordova-browser", this.state)}
+                                {createPlatformButton('Android', 'cordova-android', this.state)}
+                                {createPlatformButton('iOS', 'cordova-ios', this.state)}
+                                {createPlatformButton('Windows', 'cordova-windows', this.state)}
+                                {createPlatformButton('macOS', 'cordova-osx', this.state)}
+                                {createPlatformButton('Browser', 'cordova-browser', this.state)}
                             </div>
                         </div>
                         <div className="col-sm-3">

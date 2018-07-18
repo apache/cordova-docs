@@ -3,77 +3,36 @@ var Preact = require('preact'),
     createClass = require('preact-compat').createClass,
     PlatformButton = require('./platformbutton.jsx');
 
-var SupportedPlatforms = createClass({
-    render: function() {
-        var keywords = this.props.keywords;
-        var sortedPlatforms = [
-            {present:false, icon: "android", alt:"Android"},
-            {present:false, icon: "ios", alt:"iOS"},
-            {present:false, icon: "windows", alt:"Windows"},
-            {present:false, icon: "blackberry", alt:"Blackberry"},
-            {present:false, icon: "ubuntu", alt:"Ubuntu"},
-            {present:false, icon: "firefox", alt:"FirefoxOS"},
-            {present:false, icon: "webos", alt:"webOS"},
-            {present:false, icon: "fireos", alt:"FireOS"},
-            {present:false, icon: "osx", alt:"OS X"},
-            {present:false, icon: "browser", alt:"Browser"}
+let SupportedPlatforms = createClass({
+    render: function () {
+        let keywords = this.props.keywords;
+        let sortedPlatforms = [
+            {present: false, icon: 'android', alt: 'Android'},
+            {present: false, icon: 'ios', alt: 'iOS'},
+            {present: false, icon: 'windows', alt: 'Windows'},
+            {present: false, icon: 'osx', alt: 'macOS'},
+            {present: false, icon: 'browser', alt: 'Browser'}
         ];
 
-        var platformsSupported = [];
+        let platformsSupported = [];
 
-        // remove windows8 & windows dupe
-        if (keywords.indexOf('cordova-windows') > -1 && keywords.indexOf('cordova-windows8') > -1) {
-            keywords.splice(keywords.indexOf('cordova-windows8'), 1);
-        }
-        keywords.forEach(function(keyword) {
-            switch (keyword) {
-                case 'cordova-android':
-                    sortedPlatforms[0].present = true;
-                    break;
-                case 'cordova-ios':
-                    sortedPlatforms[1].present = true;
-                    break;
-                case 'cordova-windows8':
-                case 'cordova-windows':
-                    sortedPlatforms[2].present = true;
-                    break;
-                case 'cordova-blackberry10':
-                    sortedPlatforms[3].present = true;
-                    break;
-                case 'cordova-ubuntu':
-                    sortedPlatforms[4].present = true;
-                    break;
-                case 'cordova-firefoxos':
-                    sortedPlatforms[5].present = true;
-                    break;
-                case 'cordova-webos':
-                    sortedPlatforms[6].present = true;
-                    break;
-                case 'cordova-amazon-fireos':
-                    sortedPlatforms[7].present = true;
-                    break;
-                case 'cordova-osx':
-                    sortedPlatforms[8].present = true;
-                    break;
-                case 'cordova-browser':
-                    sortedPlatforms[9].present = true;
-                    break;
-            }
+        keywords.forEach((keyword) => {
+            let target = sortedPlatforms.findIndex(platform => keyword.includes(platform.icon));
+            if (target > -1) sortedPlatforms[target].present = true;
         });
 
-        var that = this;
-
-        sortedPlatforms.forEach(function(platform) {
-            if(platform.present) {
+        sortedPlatforms.forEach((platform) => {
+            if (platform.present) {
                 // Becuase these images are taken from a sprite sheet, we have
                 // to use title rather than alt-text
                 platformsSupported.push(
-                    <li key={that.props.plugin + "-" + platform.alt}>
+                    <li key={this.props.plugin + '-' + platform.alt}>
                         <div className={platform.icon} title={platform.alt}></div>
                     </li>
                 );
             }
         });
+
         return (
             <ul className="results-supported-platforms">
                 {platformsSupported}
