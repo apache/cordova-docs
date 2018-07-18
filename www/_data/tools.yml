@@ -98,3 +98,12 @@
         controls for delivering polished iOS, Android & Windows Phone apps.
         Framework agnostic, use it with plain Javascript,
         jQuery, Angular, React or Knockout.
+
+-   name: Instabug
+    image: instabug.png
+    url: https://instabug.com/platforms/cordova
+    description: >
+        Instabug provides Cordova developers with a bug reporting and in-app
+        feedback solution. With a one minute install guide,
+         it enables users to seamlessly report bugs while automatically attaching
+        details such as network logs, repro-steps, etc.
