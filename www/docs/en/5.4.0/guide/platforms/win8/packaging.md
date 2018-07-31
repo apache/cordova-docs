@@ -61,7 +61,7 @@ Alternatively, these values could be specified using a build configuration file 
 There is also support to mix and match command line arguments and parameters in build.json file. Values from the command line arguments will get precedence.
 
 # How to create a certificate key and sign Cordova windows Apps
-Signing is required for distributing and installing Windows Store apps. This process is normally handled by Visual Studio when you deploy a package for release. To do tmhis without Visual Studio we need to create our own certificates.
+Signing is required for distributing and installing Windows Store apps. This process is normally handled by Visual Studio when you deploy a package for release. To do this without Visual Studio we need to create our own certificates.
 
 For creating certificates we need to use [makecert.exe][2] util. This tool ships with Windows SDK and can be found under `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` or `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
 
