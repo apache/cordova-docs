@@ -50,6 +50,10 @@ iPhone 6 Plus, iPhone 6S, iPhone 6S Plus, iPhone SE, iPad 2,
 iPad 3, iPad 4, iPad Air, iPad Air 2, iPad Pro, iPad Mini,
 iPad Mini 2, iPad Mini 3, iPod Touch 5th gen and iPod Touch 6th gen or later.
 
+NOTICE: Xcode 10 (in beta as of this writing) is currently not supported,
+with known issue ([CB-14192](https://issues.apache.org/jira/browse/CB-14192)).
+
+
 ## Installing the Requirements
 
 ### Xcode
