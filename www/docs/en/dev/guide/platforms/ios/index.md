@@ -35,9 +35,9 @@ For details on the CLI, see [Cordova CLI Reference][cli].
 ## Requirements and Support
 
 Apple® tools required to build iOS applications only run on the OS X
-operating system on Intel-based Macs. Xcode® 7.0 (the minimum required
-version) runs only on OS X version 10.10.4 (Yosemite) or greater, and
-includes the iOS 9 SDK (Software Development Kit).  To submit apps to
+operating system on Intel-based Macs. Xcode® 8.0 (the minimum required
+version) runs only on OS X version 10.11.5 (El Capitan) or greater, and
+includes the iOS 10 SDK (Software Development Kit).  To submit apps to
 the Apple App Store℠ requires the latest versions of the Apple tools.
 
 You can test many of the Cordova features using the iOS simulator
