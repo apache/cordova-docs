@@ -22,6 +22,8 @@ Starting with Cordova iOS version 5, which is a planned upcoming release, we wil
 
 ![Figure 2]({{ site.baseurl }}/static/img/blog/2018/bridge-webview-engine.png)
 
+<!--more-->
+
 ## Migration and Transition using the Bridge WebView Plugin
 
 The developer can switch the webview used by setting a preference, that will be read at runtime when the app starts. Developers can transition users to the new WKWebView by user choice, in their app settings -- or randomly perhaps as an A/B test. This will give the developer and their users a chance to try out the new component, and they can back out and use UIWebView if there are any problems, without needing a new app release. This is intended to be used for testing and migration purposes only -- developers should aim to support only WKWebView functionality going forward.
@@ -31,10 +33,11 @@ The developer can switch the webview used by setting a preference, that will be 
 When UIWebView support has been removed in a future iOS SDK, we will aim to release Cordova iOS version 6, which will remove UIWebView support, and WKWebView will then be the default webview engine.
 
 | Cordova iOS 4 >>> | Cordova iOS 5 >>> | Cordova iOS 6 |
-|-------------------|--------------------------------------------------|-------------------------------|
+|-------------------|-------------------|---------------|
 |  | UIWebView deprecated | UIWebView removed |
 |  | WKWebView Engine Plugin Integrated Into Platform | WKWebView Engine Plugin only |
 |  | Bridge WebView Plugin Added | Bridge WebView Plugin Removed |
+
 
 ## Limitations of WKWebView
 
