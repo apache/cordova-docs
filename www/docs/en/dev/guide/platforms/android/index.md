@@ -255,9 +255,23 @@ Here's an example:
 ```groovy
 // Example build-extras.gradle
 // This file is included at the beginning of `build.gradle`
+
+// special properties (see `build.gradle`) can be set and overwrite the defaults
 ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
 
-// When set, this function allows code to run at the end of `build.gradle`
+// normal `build.gradle` configuration can happen
+android {
+  defaultConfig {
+    testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+  }
+}
+dependencies {
+  androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2', {
+    exclude group: 'com.android.support', module: 'support-annotations'
+  }
+}
+
+// When set, this function `ext.postBuildExtras` allows code to run at the end of `build.gradle`
 ext.postBuildExtras = {
     android.buildTypes.debug.applicationIdSuffix = '.debug'
 }
