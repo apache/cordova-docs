@@ -28,11 +28,11 @@ Starting with Cordova iOS version 5, which is a planned upcoming release, we wil
 
 The developer can switch the webview used by setting a preference, that will be read at runtime when the app starts. Developers can transition users to the new WKWebView by user choice, in their app settings -- or randomly perhaps as an A/B test. This will give the developer and their users a chance to try out the new component, and they can back out and use UIWebView if there are any problems, without needing a new app release. This is intended to be used for testing and migration purposes only -- developers should aim to support only WKWebView functionality going forward.
 
-## Cordova iOS 6, WKWebView only
+## Cordova iOS Future Release, WKWebView only
 
-When UIWebView support has been removed in a future iOS SDK, we will aim to release Cordova iOS version 6, which will remove UIWebView support, and WKWebView will then be the default webview engine.
+When UIWebView support has been removed in a future iOS SDK, we will aim to release a future Cordova iOS version, which will remove UIWebView support, and WKWebView will then be the default webview engine.
 
-| Cordova iOS 4 >>> | Cordova iOS 5 >>> | Cordova iOS 6 |
+| Cordova iOS 4 >>> | Cordova iOS 5 >>> | Cordova iOS Future Release |
 |-------------------|-------------------|---------------|
 |  | UIWebView deprecated | UIWebView removed |
 |  | WKWebView Engine Plugin Integrated Into Platform | WKWebView Engine Plugin only |
