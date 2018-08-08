@@ -246,9 +246,9 @@ as part of the build command by using the `before_build`
 If you need to customize `build.gradle`, rather than edit it directly, you
 should create a sibling file named `build-extras.gradle`. This file will be
 included by the main `build.gradle` when present. This file must be placed in
-the android platform directory under app subfolder (`<your-project>/platforms/android/app`), so it is
-recommended that you copy it over via a script attached to the `before_build`
-[hook](../../appdev/hooks/index.html).
+the `app` folder of the Android platform directory (`<your-project>/platforms/android/app`), 
+so it is recommended that you copy it over via a script attached to the 
+`before_build` [hook](../../appdev/hooks/index.html).
 
 Here's an example:
 
