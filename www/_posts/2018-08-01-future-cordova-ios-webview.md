@@ -3,7 +3,7 @@ layout: post
 author:
     name: Shazron Abdullah
     url: https://twitter.com/shazron
-title:  "The Future of the iOS WebView in Apache Cordova"
+title:  "Breaking changes coming to the iOS WebView in Apache Cordova"
 categories: news
 tags: cordova-ios uiwebview wkwebview webview roadmap
 ---
@@ -57,6 +57,8 @@ Sharing issue (CORS). There is a workaround plugin created by Oracle
 [CB-10143](https://issues.apache.org/jira/browse/CB-10143)
 5. Migration of localStorage from UIWebView. There is a migration
 plugin available. See [CB-11974](https://issues.apache.org/jira/browse/CB-11974)
+6. iframes will not be supported any longer (they are now CORS restricted in WKWebView), and may be partially or completely broken. This may lead to incompatibilities with the same code in other Cordova platforms.
+7. Known issues with WKWebView on iOS pre-11 which will be deprecated and dropped in a future Cordova release
 
 There are several bugs that need to be resolved as well. The full list
 here: [https://s.apache.org/QfsF](https://s.apache.org/QfsF)
