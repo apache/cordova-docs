@@ -283,12 +283,14 @@ Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Desc
 ---------------- | ------------
 src(string) | *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
 target-dir(string) | A directory into which the files should be copied, relative to the root of the Cordova project.
+type(string) <br/> ==iOS== | If this value is `BridgingHeader`, the file is imported in the `Bridging-Header.h` and can be called from swift program.
 
 Example:
 
 For iOS:
 ```xml
 <header-file src="CDVFoo.h" />
+<header-file src="CDVSomeHeader.h" type="BridgingHeader" />
 ```
 
 ## resource-file
