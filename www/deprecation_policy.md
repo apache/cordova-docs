@@ -33,12 +33,12 @@ When we deprecate something it means no more work will be done on it. We make th
 
 ## Archiving Policy
 
-A deprecated repository might also be archived when we won't provide support of any kind (Issues, Pull Requests, any releases) for this piece of software any more. Again the decision is made on our [dev mailing list](/contact/).
+A deprecated repository might also be archived if we won't provide support of any kind (Issues, Pull Requests, any releases) for this piece of software any more. Again the decision is made on our [dev mailing list](/contact/).
 
 A repository can be deprecated and archived at the same time.
 
 ### Meaning of Archiving
 
-Additionally to the points listed in [Meaning of Deprecation](#meaning-of-deprecation), an archived repository is "read only" in any way. This is achieved by using GitHub's [archive repositories](https://help.github.com/articles/about-archiving-repositories/) feature:
+Additionally to the points listed in [Meaning of Deprecation](#meaning-of-deprecation), an archived repository is "read only". This is achieved by using GitHub's [archive repositories](https://help.github.com/articles/about-archiving-repositories/) feature:
 
 > When a repository is archived, its issues, pull requests, code, labels, milestones, projects, wiki, releases, commits, tags, branches, reactions, and comments become read-only. To make changes in an archived repository, you must unarchive the repository first.
