@@ -13,7 +13,7 @@ When a piece of Apache Cordova stops being useful or necessary we vote on deprec
 
 ### Reasons for Deprecation
 
-Common reasons for deprecation of a piece of Apache Cordova are:
+Some common reasons for deprecation of a piece of Apache Cordova are:
 
 - General availability of a web standard that achieves the same thing
 - A better replacement is available somewhere else
