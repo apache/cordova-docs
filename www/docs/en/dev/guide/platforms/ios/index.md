@@ -43,12 +43,8 @@ the Apple App Store℠ requires the latest versions of the Apple tools.
 You can test many of the Cordova features using the iOS simulator
 installed with the iOS SDK and Xcode, but you need an actual device to
 fully test all of the app's device features before submitting to the
-App Store.  The device must have at least iOS 8 installed, the
-minimum iOS version supported as of Cordova 4.0.0. Supported devices
-include iPhone 4S, iPhone 5, iPhone 5C, iPhone 5S, iPhone 6,
-iPhone 6 Plus, iPhone 6S, iPhone 6S Plus, iPhone SE, iPad 2,
-iPad 3, iPad 4, iPad Air, iPad Air 2, iPad Pro, iPad Mini,
-iPad Mini 2, iPad Mini 3, iPod Touch 5th gen and iPod Touch 6th gen or later.
+App Store. The device must have at least iOS 9 installed, the
+minimum iOS version supported since the release of cordova-ios v4.4.0.
 
 ## Installing the Requirements
 
