@@ -69,7 +69,7 @@ legacy `CordovaActivity` component that pre-dates the 1.9 release.
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.main);
                 cwv = (CordovaWebView) findViewById(R.id.tutorialView);
-                Config.init(this);
+                android.util.Config.init(this);
                 cwv.loadUrl(Config.getStartUrl());
             }
 
