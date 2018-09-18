@@ -19,7 +19,7 @@ The purpose of this release is to resolve `npm audit` issues, use recent release
 * [CB-14148](https://issues.apache.org/jira/browse/CB-14148) remove nonsense "www" platform from Cordova listing ([GH-620](https://github.com/apache/cordova-lib/pull/620))
 * [CB-14243](https://issues.apache.org/jira/browse/CB-14243) change dash to underscore for save-exact key reference ([GH-631](https://github.com/apache/cordova-lib/pull/631))
 * [GH-630](https://github.com/apache/cordova-lib/pull/630) Improve plugman/uninstall.js messages
-* ([GH-628](https://github.com/apache/cordova-lib/pull/621)) Fix promise handling when removing multiple plugins
+* [GH-628](https://github.com/apache/cordova-lib/pull/621) Fix promise handling when removing multiple plugins
 * [CB-14033](https://issues.apache.org/jira/browse/CB-14033) Support symbolic dir links on **Windows** ([GH-621](https://github.com/apache/cordova-lib/pull/621))
 * [CB-13055](https://issues.apache.org/jira/browse/CB-13055) Fold all fetch options to `true` ([GH-624](https://github.com/apache/cordova-lib/pull/624))
 * [GH-617](https://github.com/apache/cordova-lib/pull/617) Set the fetch option to true in plugman
