@@ -395,7 +395,7 @@ or AngularJS directly in your code, without any changes.  To do so, it removes y
 capabilities when certifying your app in the Windows Store.  The removal of these capabilities usually doesn't
 prevent accessing certain functionality, but it might require the use of a different combination of APIs or tactics.
 
-## Effect of Remote Mode on capabilities
+### Effect of Remote Mode on capabilities
 The following capabilities are unavailable when deploying your Remote Mode application to the Windows Store:
 
 - Enterprise Authentication (`enterpriseAuthentication`)
@@ -413,6 +413,9 @@ Each of the library restrictions may be worked around by requesting that the use
 The network-related restrictions must be worked around by either using an API that doesn't use capability checks or by brokering communication via standard internet communication channels, such as `XMLHttpRequest` or Web Sockets.
 
 The Enterprise Authentication and Shared User Certificates capabilities are specifically targeted at Enterprise scenarios.  These capabilities are supported for private/enterprise-enabled App Stores, so if you are building apps which are going to be deployed to an internal deployment mechanism, you can still support these.  However, they are not supported for Remote Mode apps in the public Windows Store.  When you build targeting Windows 10, if one of these capabilities is detected in your app manifest, a warning will be displayed.
+
+### Scrolling in Local Mode
+While scrolling of the WebView is enabled by default in "Remote mode" and on the other platforms, in "Local Mode" this is not the case. If scrolling is required in "Local Mode", it can be enabled using the CSS `overflow` property.
 
 [1]: https://msdn.microsoft.com/en-us/library/hh446593(v=vs.85).aspx
 [2]: https://technet.microsoft.com/en-us/library/ee624045(v=ws.10).aspx
