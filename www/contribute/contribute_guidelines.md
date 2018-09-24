@@ -9,44 +9,36 @@ Thanks for helping to improve Cordova! This page provides a general guide on mak
 
 ## Prerequisites
 
-Before contributing to Apache Cordova, it is recommended that you complete the following steps:
-
-1. Join the [mailing list](http://cordova.apache.org/contact/) and send a brief introduction of yourself (optional)
-2. Create an [Apache JIRA](https://issues.apache.org/jira/secure/Signup!default.jspa) account
+Before contributing to Apache Cordova, it is recommended that you join the [mailing list](http://cordova.apache.org/contact/) and send a brief introduction of yourself.
 
 ## Working with Issues
-Issues for most Apache Cordova components are hosted in the [Apache JIRA](https://issues.apache.org/jira/browse/CB). However, some components instead have their issues on GitHub. If a repository has an _Issues_ tab on GitHub, issues should be reported there instead of JIRA. All code contributions made to Cordova should have a corresponding JIRA or GitHub issue. When reporting issues, please follow [these guidelines](./issues.html).
+Issues for all Apache Cordova components are on [GitHub](https://github.com/apache/cordova). When reporting issues, please follow [these guidelines](./issues.html).
 
 #### Claiming Issues
 
-If you find an issue that you would like to work on, you can ask to claim it; please leave a comment indicating your intention and a committer will assign it to you. Some issues in JIRA are auto-assigned to certain contributors. If it is clear that an issue is not being worked on, feel free to work on it yourself (but please comment first to let the assignee know). If you are looking for a place to start, try searching the [issues labelled easyfix in JIRA](https://issues.apache.org/jira/issues?jql=project%20%3D%20CB%20AND%20resolution%20%3D%20Unresolved%20AND%20labels%20%3D%20%22easyfix%22%20ORDER%20BY%20createdDate%20DESC).
-
+If you find an issue that you would like to work on, you can ask to claim it; please leave a comment indicating your intention and a committer will assign it to you. If it is clear that an issue is not being worked on, feel free to work on it yourself (but please comment first to let the assignee know).
 
 ## Submitting Code
 
-You can submit code using one of the following methods:
-
-* Submit a pull request at one of the Apache Github mirrors at `github.com/apache/<repo name>` (**Strongly Preferred**)
-* Upload patches created with `git format-patch` to the JIRA issue
-* Paste a diff to JIRA (you won't get authorship if you do this)
+You can submit code by submitting a pull request at one of the Apache Github mirrors at `github.com/apache/<repo name>`.
 
 #### Making Pull requests
 
 The workflow for creating pull requests on Github generally follows these steps:
 
-1. [Open an issue](./issues.html) if one has not already been created (optional if the repository's issues are on GitHub instead of JIRA)
-2. [Create a local fork](https://help.github.com/articles/fork-a-repo/) of the appropriate Apache repository
+1. [Open an issue](./issues.html) if one has not already been created (optional)
+2. [Create a local fork](https://help.github.com/articles/fork-a-repo/) of the appropriate Cordova repository
 3. In your local fork, create a branch dedicated to the issue you are working on
 4. Push your commits to this branch
 5. [Squash](http://www.git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Squashing-Commits) these commits into one single commit (see the section below regarding commit messages)
-6. [Create a pull request](https://help.github.com/articles/using-pull-requests/) on the Apache repository
+6. [Create a pull request](https://help.github.com/articles/using-pull-requests/) on the Cordova repository
 7. Ask for code review
 
-Please include the issue id in the title of any pull requests made to Github. The Apache Git bot will link a PR and the JIRA issue automatically if it finds a JIRA issue ID in the commit message. For more help on Git, see the [Git documentation](http://git-scm.com/doc).
+Please include the issue ID in the title of any pull requests made to Github. For more help on Git, see the [Git documentation](http://git-scm.com/doc).
 
 #### Code review
 
-However you submit code, you should always call out a reviewer to look at and merge your code. A good place to find a reviewer is [the component list on JIRA](https://issues.apache.org/jira/browse/CB/?selectedTab=com.atlassian.jira.jira-projects-plugin:components-panel) or you can send a mail out to the [dev mailing list](http://cordova.apache.org/contact) with a link to the pull request.
+However you submit code, you should always call out a reviewer to look at and merge your code. GitHub helpfully suggests possible reviewers whom you can add, or you can send a mail out to the [dev mailing list](http://cordova.apache.org/contact) with a link to the pull request.
 
 ## Testing your code
 
@@ -70,13 +62,8 @@ If possible, please include tests that validate your changes and catch any futur
 
 ## Git Commit Messages
 
-When contributing, please have your commit messages begin with the the issue id (if there is one) and relevant platform (if appropriate) followed by a description of the commit. Here are two examples for JIRA tickets:
-```
-CB-2345 android: Improved exec bridge by using strings instead of JSON
-CB-3456 all: Fixed plugin loading paths that start with /
-```
+When contributing, please start your commit messages with the the issue ID (if there is one) and relevant platform (if appropriate) followed by a description of the commit. Issue IDs on GitHub should be prefixed with `GH-`, which will allow GitHub to automatically link issues and PRs.
 
-If you created an issue on GitHub, the issue number starts with `GH` instead of `CB`:
 ```
 GH-2345 android: Improved exec bridge by using strings instead of JSON
 GH-3456 all: Fixed plugin loading paths that start with /
@@ -85,7 +72,7 @@ GH-3456 all: Fixed plugin loading paths that start with /
 You are highly encouraged to describe your git commit with enough detail for someone else to understand it. In doing so, your commit message can consist of multiple lines. However, it also is highly encouraged that the first line of your commit message not exceed 50 characters. This is because some of the tooling that sits on top of git (such as the httpd apps that let you browse the repos) assumes that the first line is top-level summary that is 50 characters or less. Thus there will be highlighting and truncating of the commit message using these assumptions and it will look weird if these assumptions are not kept. There should also be a blank line between the summary and any further description. For example, here is a good commit message:
 
 ```
-CB-1234 Fixed the whizbang widget
+GH-1234 Fixed the whizbang widget
 
 - added more sanity checking in the build script.
 - fixed the API to return the correct value in the scenario where there
