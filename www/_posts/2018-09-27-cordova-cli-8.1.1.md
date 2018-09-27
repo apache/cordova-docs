@@ -12,10 +12,10 @@ We are happy to announce that Cordova CLI `8.1.1` hotfix was released in Septemb
 
 ## Release Highlights
 
-This hotfix release includes a couple bug fixes, to resolve a couple issues that were introduced in the Cordova CLI `8.1.0` release:
+The purpose of this hotfix release is to resolve a couple items that were broken in the Cordova CLI `8.1.0` release:
 
-* [GH-342](https://github.com/apache/cordova-cli/issues/339) Fix bin/cordova on Node.js 4
-* [GH-342](https://github.com/apache/cordova-cli/issues/337) Revert messing with transitive dependencies in `npm-shrinkwrap.json` (re-introduces a _low-severity_ `npm audit` warning)
+* [GH-339](https://github.com/apache/cordova-cli/issues/339) Fix bin/cordova on Node.js 4
+* [GH-337](https://github.com/apache/cordova-cli/issues/337) Revert messing with transitive dependencies in `npm-shrinkwrap.json` (re-introduces a _low-severity_ `npm audit` warning)
 
 ## Deprecation Note
 
