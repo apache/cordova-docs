@@ -35,7 +35,7 @@ addressing some the most significant issues. It outlines some broadly
 accepted best practices and provides references to other more detailed
 guides and references.
 
-* __Privacy Policy__: You app should include a privacy policy that
+* __Privacy Policy__: Your app should include a privacy policy that
   addresses topics such as what kind of information the app collects
   from or about your users, how that information is used, with whom it
   is shared, and how users can make privacy-related choices within the
