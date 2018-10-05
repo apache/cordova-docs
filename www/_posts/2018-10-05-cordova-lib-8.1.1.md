@@ -8,7 +8,7 @@ categories: news
 tags: release tools
 ---
 
-We are happy to announce that `cordova-lib 8.1.1` was released in September 2018.
+We are happy to announce that `cordova-lib 8.1.1` was released in October 2018.
 
 ## Release Highlights
 
