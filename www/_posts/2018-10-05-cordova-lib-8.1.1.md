@@ -14,13 +14,8 @@ We are happy to announce that `cordova-lib 8.1.1` was released in September 2018
 
 The purpose of this release is to resolve possible dependency breakage that was introduced in version `8.1.0`, as reported in [GH-706](https://github.com/apache/cordova-lib/issues/706). Here are the important changes:
 
-* [GH-706](https://github.com/apache/cordova-lib/issues/706) reintroduce `xcode` dependency to to avoid breaking plugins such as `branch-cordova-sdk` before next major release
-* [GH-708](https://github.com/apache/cordova-lib/pull/708) reintroduce other dependencies that were dropped in version `8.1.0` to better ensure that any other plugins or applications using `requireCordovaModule` would not be broken by a minor release upgrade:
-  - `dependency-ls@1`
-  - `request@2`
-  - `unorm@1`
-  - `underscore@1`
-  - `valid-identifier@0.0.1`
+* [GH-708](https://github.com/apache/cordova-lib/pull/708) reintroduce `xcode` dependency to to avoid breaking plugins such as `branch-cordova-sdk` before next major release
+* [GH-708](https://github.com/apache/cordova-lib/pull/708) reintroduce other dependencies that were dropped in version `8.1.0` to better ensure that any other plugins or applications using `requireCordovaModule` would not be broken by a minor release upgrade
 
 ## Deprecation Note
 
