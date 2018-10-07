@@ -3,12 +3,12 @@ layout: post
 author:
     name: Chris Brody
     url: https://twitter.com/brodybits
-title:  "Cordova-CLI Hotfix Release"
+title:  "Cordova-CLI 8.1.2 Patch Release"
 categories: news
 tags: release tools
 ---
 
-We are happy to announce that Cordova CLI `8.1.2` hotfix was released in October 2018.
+We are happy to announce that Cordova CLI `8.1.2` patch version was released in October 2018.
 
 ## Release Highlights
 
