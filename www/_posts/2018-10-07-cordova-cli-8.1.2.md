@@ -12,7 +12,7 @@ We are happy to announce that Cordova CLI `8.1.2` hotfix was released in October
 
 ## Release Highlights
 
-The purpose of this patch release is to include bugfix update from `cordova-lib@8.1.1` as follows:
+The purpose of this patch release is to include `cordova-lib@8.1.1` bufix update as follows:
 
 * Updated `cordova-lib@8.1.1` dependency to reintroduce `xcode` and other dependencies that were removed in `cordova-lib@8.1.0` minor release ([GH-706](https://github.com/apache/cordova-lib/issues/706))
 
