@@ -46,8 +46,8 @@ Use Apache Cordova if you are:
 
 # Architecture
 
-There are several components to a cordova application. The following
-diagram shows a high-level view of the cordova application architecture.
+There are several components to a Cordova application. The following
+diagram shows a high-level view of the Cordova application architecture.
 
 ![]({{ site.baseurl }}/static/img/guide/cordovaapparchitecture.png)
 
@@ -73,7 +73,7 @@ works, such as whether it responds to orientation shifts.
 
 ## Plugins
 
-Plugins are an integral part of the cordova ecosystem. They provide
+Plugins are an integral part of the Cordova ecosystem. They provide
 an interface for Cordova and native components to communicate with each
 other and bindings to standard device APIs. This enables you to invoke native
 code from JavaScript.
