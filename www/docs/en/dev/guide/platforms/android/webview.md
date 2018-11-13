@@ -69,7 +69,7 @@ public class TestActivity extends CordovaActivity {
 @Override
 public void onCreate(Bundle savedInstanceState) {
      super.onCreate(savedInstanceState);
-     setContentView(R.layout.activity_test); //this is the layout file for your activity
+     setContentView(R.layout.activity_test); // layout file for your activity
      super.init();
      loadUrl(launchUrl);
 }
