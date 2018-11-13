@@ -76,7 +76,7 @@ public void onCreate(Bundle savedInstanceState) {
 
 @Override
 protected CordovaWebView makeWebView() {
-    SystemWebView appView = (SystemWebView) findViewById(R.id.cordovaWebView);  //this is the id for the SystemWebView in step 4
+    SystemWebView appView = (SystemWebView) findViewById(R.id.cordovaWebView);  // id for the SystemWebView in previous step
     return new CordovaWebViewImpl(new SystemWebViewEngine(appView));
 }
 
