@@ -41,10 +41,9 @@ legacy `CordovaActivity` component that pre-dates the 1.9 release.
 1. Follow the instructions here to build your first cordova app [CreateYourFirstApp](https://cordova.apache.org/docs/en/8.x/guide/cli/index.html)
 
 1. Copy Cordova framework files
-```
-platforms/android/CordovaLib/src/.* to <AndroidAppRoot>/app/main/java
-platforms/android/src/** to <AndroidAppRoot>/app/main/java
-```
+
+* `platforms/android/CordovaLib/src/.*` to `<AndroidAppRoot>/app/main/java/`
+* `platforms/android/src/*` to `<AndroidAppRoot>/app/main/java/`
 
 1. Modify the layout file of the activity that shall host the Cordova view e.g.
 ```
@@ -58,14 +57,14 @@ platforms/android/src/** to <AndroidAppRoot>/app/main/java
                 android:layout_height="match_parent" />
 </LinearLayout
 ```
-1. Modify your activity so that the class extends CordovaActivity (found at app/main/java/org/apache/....CordovaActivity.java)
+1. Modify your activity so that the class extends CordovaActivity (found at app/main/java/org/apache/cordova/CordovaActivity.java)
 ```
 public class TestActivity extends CordovaActivity {
     
 }
 ```
    
-1. Override onCreate, makeWebView and createViews to use your defined layout
+1. Override `onCreate`, `makeWebView` and `createViews` to use your defined layout
 ```
 @Override
 public void onCreate(Bundle savedInstanceState) {
