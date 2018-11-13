@@ -38,53 +38,57 @@ legacy `CordovaActivity` component that pre-dates the 1.9 release.
    [cordova.apache.org](https://cordova.apache.org) and unzip its
    Android package.
 
-2. Follow the instructions here to build your first cordova app [CreateYourFirstApp](https://cordova.apache.org/docs/en/8.x/guide/cli/index.html)
+1. Follow the instructions here to build your first cordova app [CreateYourFirstApp](https://cordova.apache.org/docs/en/8.x/guide/cli/index.html)
 
-3. Copy Cordova framework files **from platforms/android/CordovaLib/src/** to your android application directory at **/app/main/java**. Also copy additional Cordova framework files **from platforms/android/src/** to your android application directory at **/app/main/java**.
-
-4. Modify the layout file of the activity that shall host the Cordova view e.g.
+1. Copy Cordova framework files
 ```
- <LinearLayout android:layout_width="fill_parent"
+platforms/android/CordovaLib/src/.* to <AndroidAppRoot>/app/main/java
+platforms/android/src/** to <AndroidAppRoot>/app/main/java
+```
+
+1. Modify the layout file of the activity that shall host the Cordova view e.g.
+```
+<LinearLayout android:layout_width="fill_parent"
               android:layout_height="fill_parent"
               android:orientation="vertical"
               xmlns:android="http://schemas.android.com/apk/res/android">
-   <org.apache.cordova.engine.SystemWebView
-            android:id="@+id/cordovaWebView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-   </LinearLayout
+    <org.apache.cordova.engine.SystemWebView
+                android:id="@+id/cordovaWebView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+</LinearLayout
 ```
-5. Modify your activity so that the class extends CordovaActivity (found at app/main/java/org/apache/....CordovaActivity.java)
+1. Modify your activity so that the class extends CordovaActivity (found at app/main/java/org/apache/....CordovaActivity.java)
 ```
-   public class TestActivity extends CordovaActivity {
+public class TestActivity extends CordovaActivity {
     
-   }
+}
 ```
    
-6. Override onCreate, makeWebView and createViews to use your defined layout
+1. Override onCreate, makeWebView and createViews to use your defined layout
 ```
-   @Override
-   public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test); //this is the layout file for your activity
-        super.init();
-        loadUrl(launchUrl);
-    }
+@Override
+public void onCreate(Bundle savedInstanceState) {
+     super.onCreate(savedInstanceState);
+     setContentView(R.layout.activity_test); //this is the layout file for your activity
+     super.init();
+     loadUrl(launchUrl);
+}
 
-    @Override
-    protected CordovaWebView makeWebView() {
-        SystemWebView appView = (SystemWebView) findViewById(R.id.cordovaWebView);  //this is the id for the SystemWebView in step 4
-        return new CordovaWebViewImpl(new SystemWebViewEngine(appView));
-    }
+@Override
+protected CordovaWebView makeWebView() {
+    SystemWebView appView = (SystemWebView) findViewById(R.id.cordovaWebView);  //this is the id for the SystemWebView in step 4
+    return new CordovaWebViewImpl(new SystemWebViewEngine(appView));
+}
 
-    @Override
-    protected void createViews() {
-        // leave empty so the layout is used
-    }
+@Override
+protected void createViews() {
+    // leave empty so the layout is used
+}
 ```
 
-7. Copy the application's HTML and JavaScript files to the Android
+1. Copy the application's HTML and JavaScript files to the Android
    project's `/assets/www` directory.
 
-8. Copy the `config.xml` file from `/res/xml` to the
+1. Copy the `config.xml` file from `/res/xml` to the
    project's `/res/xml` directory.
