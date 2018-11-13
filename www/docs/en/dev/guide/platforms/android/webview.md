@@ -38,97 +38,53 @@ legacy `CordovaActivity` component that pre-dates the 1.9 release.
    [cordova.apache.org](http://cordova.apache.org) and unzip its
    Android package.
 
-1. Navigate to the Android package's `/framework` directory and run
-   `ant jar`. It creates the Cordova `.jar` file, formed as
-   `/framework/cordova-x.x.x.jar`.
+2. Follow the instructions here to build your first cordova app [CreateYourFirstApp](https://cordova.apache.org/docs/en/8.x/guide/cli/index.html)
 
-1. Copy the `.jar` file into the Android project's `/libs` directory.
+3. Copy Cordova framework files **from platforms/android/CordovaLib/src/** to your android application directory at **/app/main/java**. Also copy additional Cordova framework files **from platforms/android/src/** to your android application directory at **/app/main/java**.
 
-1. Add the following to the application's `/res/xml/main.xml` file,
-   with the `layout_height`, `layout_width` and `id` modified to suit
-   the application:
-
-        <org.apache.cordova.CordovaWebView
-            android:id="@+id/tutorialView"
+4. Modify the layout file of the activity that shall host the Cordova view e.g.
+```
+ <LinearLayout android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+   <org.apache.cordova.engine.SystemWebView
+            android:id="@+id/cordovaWebView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+   </LinearLayout
+```
+5. Modify your activity so that the class extends CordovaActivity (found at app/main/java/org/apache/....CordovaActivity.java)
+```
+   public class TestActivity extends CordovaActivity {
+    
+   }
+```
+   
+6. Override onCreate, makeWebView and createViews to use your defined layout
+```
+   @Override
+   public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_test); //this is the layout file for your activity
+        super.init();
+        loadUrl(launchUrl);
+    }
 
-1. Modify the activity so that it implements the `CordovaInterface`.
-   It should implement the included methods.  You may wish to copy
-   them from `/framework/src/org/apache/cordova/CordovaActivity.java`,
-   or else implement them on your own.  The following code fragment
-   shows a basic application that relies on the interface. Note how
-   the referenced view id matches the `id` attribute specified in the
-   XML fragment shown above:
+    @Override
+    protected CordovaWebView makeWebView() {
+        SystemWebView appView = (SystemWebView) findViewById(R.id.cordovaWebView);  //this is the id for the SystemWebView in step 4
+        return new CordovaWebViewImpl(new SystemWebViewEngine(appView));
+    }
 
-        public class CordovaViewTestActivity extends Activity implements CordovaInterface {
-            CordovaWebView cwv;
-            /* Called when the activity is first created. */
-            @Override
-            public void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-                setContentView(R.layout.main);
-                cwv = (CordovaWebView) findViewById(R.id.tutorialView);
-                Config.init(this);
-                cwv.loadUrl(Config.getStartUrl());
-            }
+    @Override
+    protected void createViews() {
+        // leave empty so the layout is used
+    }
+```
 
-1. If the application needs to use the camera, implement the
-   following:
-
-        @Override
-        public void setActivityResultCallback(CordovaPlugin plugin) {
-            this.activityResultCallback = plugin;
-        }
-        /**
-         * Launch an activity for which you would like a result when it finished. When this activity exits,
-         * your onActivityResult() method is called.
-         *
-         * @param command           The command object
-         * @param intent            The intent to start
-         * @param requestCode       The request code that is passed to callback to identify the activity
-         */
-        public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
-            this.activityResultCallback = command;
-            this.activityResultKeepRunning = this.keepRunning;
-
-            // If multitasking turned on, then disable it for activities that return results
-            if (command != null) {
-                this.keepRunning = false;
-            }
-
-            // Start activity
-            super.startActivityForResult(intent, requestCode);
-        }
-
-        @Override
-        /**
-         * Called when an activity you launched exits, giving you the requestCode you started it with,
-         * the resultCode it returned, and any additional data from it.
-         *
-         * @param requestCode       The request code originally supplied to startActivityForResult(),
-         *                          allowing you to identify who this result came from.
-         * @param resultCode        The integer result code returned by the child activity through its setResult().
-         * @param data              An Intent, which can return result data to the caller (various data can be attached to Intent "extras").
-         */
-        protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-            super.onActivityResult(requestCode, resultCode, intent);
-            CordovaPlugin callback = this.activityResultCallback;
-            if (callback != null) {
-                callback.onActivityResult(requestCode, resultCode, intent);
-            }
-        }
-
-1. Finally, remember to add the thread pool, otherwise plugins
-   have no threads on which to run:
-
-        @Override
-        public ExecutorService getThreadPool() {
-            return threadPool;
-        }
-
-1. Copy the application's HTML and JavaScript files to the Android
+7. Copy the application's HTML and JavaScript files to the Android
    project's `/assets/www` directory.
 
-1. Copy the `config.xml` file from `/framework/res/xml` to the
+8. Copy the `config.xml` file from `/res/xml` to the
    project's `/res/xml` directory.
