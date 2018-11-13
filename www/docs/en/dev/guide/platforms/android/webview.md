@@ -57,7 +57,7 @@ legacy `CordovaActivity` component that pre-dates the 1.9 release.
                 android:layout_height="match_parent" />
 </LinearLayout
 ```
-1. Modify your activity so that the class extends CordovaActivity (found at app/main/java/org/apache/cordova/CordovaActivity.java)
+1. Modify your activity so that the class extends `CordovaActivity` (found at `app/main/java/org/apache/cordova/CordovaActivity.java`)
 ```
 public class TestActivity extends CordovaActivity {
     
