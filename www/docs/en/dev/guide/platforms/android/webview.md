@@ -38,7 +38,7 @@ legacy `CordovaActivity` component that pre-dates the 1.9 release.
    [cordova.apache.org](https://cordova.apache.org) and unzip its
    Android package.
 
-1. Follow the instructions here to build your first cordova app [CreateYourFirstApp](https://cordova.apache.org/docs/en/8.x/guide/cli/index.html)
+1. Follow [these instructions](https://cordova.apache.org/docs/en/latest/guide/cli/index.html) to build your first Cordova app
 
 1. Copy Cordova framework files
 
