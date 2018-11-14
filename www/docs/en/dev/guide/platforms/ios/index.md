@@ -293,8 +293,6 @@ $ cordova-ios/bin/run
 
 The created project will have a folder named `cordova` inside that contains
 scripts for the project-specific Cordova commands (e.g. `run`, `build`, etc.).
-Additionally, The project will feature a structure different from that of a
-normal Cordova project. Notably, `/www` is moved to `/assets/www`.
 
 To install plugins in this project, use the [Cordova Plugman Utility](../../../plugin_ref/plugman.html).
 
