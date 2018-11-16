@@ -345,7 +345,7 @@ build configuration file:
 {
     "android": {
         "debug": {
-            "keystore": "../android.keystore",
+            "keystore": "~/android.keystore",
             "storePassword": "android",
             "alias": "mykey1",
             "password" : "password",
@@ -361,6 +361,7 @@ build configuration file:
     }
 }
 ```
+`~` is relate to `HOME` path enviroment variable.
 
 For release signing, passwords can be excluded and the build system will issue a
 prompt asking for the password.
