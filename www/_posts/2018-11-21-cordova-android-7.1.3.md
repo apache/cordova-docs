@@ -27,10 +27,10 @@ To add it explicitly:
 
 ## Curated Changelog
 
-* [GH-495](https://github.com/apache/cordova-android/pull/495) Incorrect default sdk version issue fix
-* [GH-496](https://github.com/apache/cordova-android/pull/496) update comments in `build.gradle`
-* [GH-539](https://github.com/apache/cordova-android/pull/539) Fix dest overwrite, in case of of plugin `source-file` element with `target-dir` that does not need remapping
-* [GH-540](https://github.com/apache/cordova-android/issues/540) support plugin `source-file` element with any app `target-dir` value
-* [GH-547](https://github.com/apache/cordova-android/issues/547) Compatibility of old plugins with non-Java `source-file` entries (individual files)
-* [GH-551](https://github.com/apache/cordova-android/pull/551) add missing cast for cdvMinSdkVersion to `build.gradle`
-* [GH-552](https://github.com/apache/cordova-android/issues/552) check for `build-extras.gradle` in the parent app directory
+* Incorrect default sdk version issue fix ([#495](https://github.com/apache/cordova-android/pull/495))
+* Update comments in `build.gradle` ([#496](https://github.com/apache/cordova-android/pull/496))
+* Fix dest overwrite, in case of of plugin `source-file` element with `target-dir` that does not need remapping ([#539](https://github.com/apache/cordova-android/pull/539))
+* Support plugin `source-file` element with any app `target-dir` value [#542](https://github.com/apache/cordova-android/pull/542)
+* Compatibility of old plugins with non-Java `source-file` entries (individual files) ([#550](https://github.com/apache/cordova-android/pull/550))
+* add missing cast for cdvMinSdkVersion to `build.gradle` ([#551](https://github.com/apache/cordova-android/pull/551))
+* Check for `build-extras.gradle` in the parent app directory ([#553](https://github.com/apache/cordova-android/pull/553))
