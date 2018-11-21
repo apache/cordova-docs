@@ -30,7 +30,7 @@ To add it explicitly:
 * Incorrect default sdk version issue fix ([#495](https://github.com/apache/cordova-android/pull/495))
 * Update comments in `build.gradle` ([#496](https://github.com/apache/cordova-android/pull/496))
 * Fix dest overwrite, in case of of plugin `source-file` element with `target-dir` that does not need remapping ([#539](https://github.com/apache/cordova-android/pull/539))
-* Support plugin `source-file` element with any app `target-dir` value [#542](https://github.com/apache/cordova-android/pull/542)
+* Support plugin `source-file` element with any app `target-dir` value ([#542](https://github.com/apache/cordova-android/pull/542))
 * Compatibility of old plugins with non-Java `source-file` entries (individual files) ([#550](https://github.com/apache/cordova-android/pull/550))
 * add missing cast for cdvMinSdkVersion to `build.gradle` ([#551](https://github.com/apache/cordova-android/pull/551))
 * Check for `build-extras.gradle` in the parent app directory ([#553](https://github.com/apache/cordova-android/pull/553))
