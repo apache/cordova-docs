@@ -28,6 +28,5 @@ To add it explicitly:
 ## Curated Changelog
 
 * Update android-versions to `1.4.0`, with added support for Android Pie ([#573](https://github.com/apache/cordova-android/pull/573))
-* Some other minor dependencies updates ([#573](https://github.com/apache/cordova-android/pull/573))
 * Output current package name if package name can't be validated ([#567](https://github.com/apache/cordova-android/pull/567))
 * Resolve issue with plugin `target-dir="*app*"` subdirs ([#572](https://github.com/apache/cordova-android/pull/572))
