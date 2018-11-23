@@ -21,3 +21,5 @@ ruby_modules
 .bundle
 .DS_Store
 Gemfile.lock
+
+.*.swp
