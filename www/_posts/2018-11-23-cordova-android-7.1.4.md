@@ -8,9 +8,9 @@ categories: announcements
 tags: news releases
 ---
 
-We are happy to announce that `Cordova Android 7.1.4` has been released! This fixes a bug we unfortunately introduced with our 7.1.3 release a few days ago. Thanks for the quick reports on GitHub issues and the help in identifying the problem.
+We are happy to announce that Cordova Android `7.1.4` has been released! This resolves an issue that was introduced in the recent `7.1.3` release. Thanks to the user community for the quick reports on GitHub issues and the help in identifying the problem.
 
-If you have been staying on Cordova Android 6.x due to compatibility issues with 3rd party plugins, we strongly encourage you to try an update to Cordova Android 7.1.4. Please [file issues](https://github.com/apache/cordova-android/issues) if you run into any plugin compatibility issues with this new release.
+If you have been staying on Cordova Android 6.x due to compatibility issues with 3rd party plugins, we strongly encourage you to try an update to Cordova Android `7.1.4`. Please [file issues](https://github.com/apache/cordova-android/issues) if you run into any plugin compatibility issues with this new release.
 
 To upgrade:
 
