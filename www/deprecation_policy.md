@@ -13,7 +13,7 @@ When a piece of Apache Cordova stops being useful or necessary we vote on deprec
 
 ### Reasons for Deprecation
 
-Some common reasons for deprecation of a piece of Apache Cordova are:
+Some common reasons for deprecation of a component of Apache Cordova are:
 
 - General availability of a web standard that achieves the same thing
 - A better replacement is available somewhere else
@@ -22,16 +22,16 @@ Some common reasons for deprecation of a piece of Apache Cordova are:
 
 ### Meaning of Deprecation
 
-When we deprecate something it means no more work will be done on it. We make the deprecation clearly visible in the project's `README.md` (via a "Deprecation Notice" which might also include a reason and links to alternatives if available) and repository description.
+When we deprecate a component it means no more work will be done on it. We make the deprecation clearly visible in the project's `README.md` (via a "Deprecation Notice") and repository description.
 
-**Users can still use the software** as before, we just put them on notice that the software might break in the future - e.g. with new operating system releases or bugs might be found - and we won't fix this any more.
+**Users can still use the component** as before, we just put them on notice that the software might go away or break in the future - e.g. with new operating system releases or bugs might be found - and we won't fix this any more.
 
 **Users can also still fork the repository** and create their own bug fixes and even new features. The forks will be discoverable with the GitHub "Network" and "Forks" features. There you can see all forks available and easily spot extra commits people have done in an easy and visual way.
 
 
 ## Archiving Policy
 
-A deprecated repository might also be archived if we won't provide support of any kind (Issues, Pull Requests, any releases) for this piece of software any more. Again the decision is made on our [dev mailing list](/contact/).
+A deprecated repository might also be archived if we don't intend to provide support of any kind (Issues, Pull Requests, Releases) for this component any more. This decision is also made on our [dev mailing list](/contact/).
 
 A repository can be deprecated and archived at the same time.
 
