@@ -19,7 +19,6 @@ Some common reasons for deprecation of a piece of Apache Cordova are:
 - A better replacement is available somewhere else
 - Usage of a platform declined to a non relevant level
 - A platform was deprecated itself by its producer
-- ...
 
 ### Meaning of Deprecation
 
