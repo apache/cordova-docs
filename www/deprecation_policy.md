@@ -1,6 +1,6 @@
 ---
 layout: contribute
-title: Apache Cordova Deprecation Policy
+title: Apache Cordova Deprecation and Archiving Policy
 ---
 
 # Deprecation and Archiving Policy
