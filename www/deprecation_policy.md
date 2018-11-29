@@ -28,7 +28,6 @@ When we deprecate something it means no more work will be done on it. We make th
 
 **Users can also still fork the repository** and create their own bug fixes and even new features. The forks will be discoverable with the GitHub "Network" and "Forks" features. There you can see all forks available and easily spot extra commits people have done in an easy and visual way.
 
-**Apache Cordova _might_ still accept bug fixes via Pull Request** on the original repository and create a patch release.
 
 ## Archiving Policy
 
