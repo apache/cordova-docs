@@ -37,6 +37,6 @@ A repository can be deprecated and archived at the same time.
 
 ### Meaning of Archiving
 
-Additionally to the points listed in [Meaning of Deprecation](#meaning-of-deprecation), an archived repository is "read only". This is achieved by using GitHub's [archive repositories](https://help.github.com/articles/about-archiving-repositories/) feature:
+As well as the points listed in [Meaning of Deprecation](#meaning-of-deprecation), an archived repository is "read only". This is achieved by using GitHub's [archive repositories](https://help.github.com/articles/about-archiving-repositories/) feature:
 
 > When a repository is archived, its issues, pull requests, code, labels, milestones, projects, wiki, releases, commits, tags, branches, reactions, and comments become read-only. To make changes in an archived repository, you must unarchive the repository first.
