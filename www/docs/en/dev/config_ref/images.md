@@ -174,6 +174,7 @@ Icons are not applicable to the Browser platform.
         <!-- iPhone Spotlight and Settings Icon -->
         <icon src="res/ios/icon-small.png" width="29" height="29" />
         <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+        <icon src="res/ios/icon-small@3x.png" width="87" height="87" />
         <!-- iPad Spotlight and Settings Icon -->
         <icon src="res/ios/icon-50.png" width="50" height="50" />
         <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
