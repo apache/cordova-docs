@@ -1,22 +1,30 @@
-<!--
-Please have a look at the issue templates you get when you click "New issue" in the GitHub UI.
-We very much prefer issues created by using one of these templates.
--->
+---
+name: 🐛 Bug Report
+about: If something isn't working as expected.
 
-### Issue Type
-<!-- Please check the boxes by putting an x in the [ ] like so: [x] -->
+---
 
-- [ ] Bug Report
-- [ ] Feature Request
-- [ ] Support Question
+# Bug Report
 
-## Description
+## Problem
+
+### What is expected to happen?
+
+
+
+### What does actually happen?
+
+
 
 ## Information
 <!-- Include all relevant information that might help understand and reproduce the problem -->
 
+
+
 ### Command or Code
 <!-- What command or code is needed to reproduce the problem? -->
+
+
 
 ### Environment, Platform, Device
 <!-- In what environment, on what platform or on which device are you experiencing the issue? -->
@@ -35,8 +43,8 @@ Operating System, Android Studio, Xcode etc.
 
 
 ## Checklist
-<!-- Please check the boxes by putting an `x` in the `[ ]` like so: `[x]` -->
+<!-- Please check the boxes by putting an x in the [ ] like so: [x] -->
 
-- [ ] I searched for already existing GitHub issues about this
-- [ ] I updated all Cordova tooling to their most recent version
+- [ ] I searched for existing GitHub issues
+- [ ] I updated all Cordova tooling to most recent version
 - [ ] I included all the necessary information above
