@@ -143,11 +143,6 @@ Cordova supports the following hook types:
             <th data-col="afterclean">after_clean</th>
         </tr>
         <tr>
-            <th data-col="prepackage">pre_package</td>
-            <td data-col="code">N/A</td>
-            <td data-col="description">Applicable to Windows 8 and Windows Phone only. This hook is deprecated.</td>
-        </tr>
-        <tr>
             <th data-col="beforepluginadd">before_plugin_add</th>
             <td data-col="code" rowspan="2"><code>cordova plugin add</code></td>
             <td rowspan="2" data-col="description">To be executed before and after adding a plugin.</td>
