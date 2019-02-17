@@ -204,9 +204,9 @@ Hooks could be defined in project's `config.xml` using `<hook>` elements, for ex
 <hook type="before_plugin_install" src="scripts/appBeforePluginInstall.js" />
 
 <platform name="android">
-    <hook type="before_build" src="scripts/wp8/appAndroidBeforeBuild.bat" />
-    <hook type="before_build" src="scripts/wp8/appAndroidBeforeBuild.js" />
-    <hook type="before_plugin_install" src="scripts/wp8/appWP8BeforePluginInstall.js" />
+    <hook type="before_build" src="scripts/android/appAndroidBeforeBuild.bat" />
+    <hook type="before_build" src="scripts/android/appAndroidBeforeBuild.js" />
+    <hook type="before_plugin_install" src="scripts/android/appAndroidBeforePluginInstall.js" />
     ...
 </platform>
 
@@ -295,6 +295,7 @@ after_build
 ```
 
 ## Script Interface
+
 ### Windows Quirks
 
 If you are working on Windows, and in case your hook (Javascript/Non-Javascript)scripts aren't bat files (which is recommended, if you want your scripts to work in non-Windows operating systems) Cordova CLI will expect a shebang line as the first line for it to know the interpreter it needs to use to launch the script. The shebang line should match the following example:
