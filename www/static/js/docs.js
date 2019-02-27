@@ -27,7 +27,8 @@ var platforms = {
     'firefoxos': 'FirefoxOS',
     'webos': 'webOS',
     'osx': 'OS X',
-    'browser': 'Browser'
+    'browser': 'Browser',
+    'electron': 'Electron'
 };
 
 $(document).ready(function () {

@@ -40,6 +40,7 @@ the core plugins, additional APIs are available via
         <th><a href="../platforms/ios/index.html">iOS</a></th>
         <th><a href="../platforms/osx/index.html">OS X</a></th>
         <th><a href="../platforms/windows/index.html">Windows<br>8.1, Phone 8.1, 10</a></th>
+        <th><a href="../platforms/electron/index.html">Electron</a></th>
     </tr>
     <tr>
         <th>CLI shorthand:</th>
@@ -47,6 +48,7 @@ the core plugins, additional APIs are available via
         <th>ios</th>
         <th>osx</th>
         <th>windows</th>
+        <th>electron</th>
     </tr>
 
 </thead>
@@ -62,6 +64,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="y"></td>
         <td data-col="windows" class="n"></td>
+        <td data-col="electron" class="y"></td>
     </tr>
         <tr>
         <th>Windows</th>
@@ -69,6 +72,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="n"></td>
         <td data-col="osx"     class="n"></td>
         <td data-col="windows" class="y"></td>
+        <td data-col="electron" class="y"></td>
     </tr>
         <tr>
         <th>Linux</th>
@@ -76,6 +80,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="n"></td>
         <td data-col="osx"     class="n"></td>
         <td data-col="windows" class="n"></td>
+        <td data-col="electron" class="y"></td>
     </tr>
 
     <tr>
@@ -89,6 +94,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
         <td data-col="windows" class="y">Windows Phone 8.1 only</td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
 
     <tr>
@@ -97,6 +103,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
         <td data-col="windows" class="y"></td>
+        <td data-col="electron" class="y"></td>
     </tr>
 
     <tr>
@@ -105,6 +112,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
         <td data-col="windows" class="y"></td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
 
     <tr>
@@ -113,6 +121,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
         <td data-col="windows" class="y"></td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
 
     <tr>
@@ -121,6 +130,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="y"></td>
         <td data-col="windows" class="y"></td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
 
     <tr>
@@ -129,6 +139,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
         <td data-col="windows" class="y"></td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
 
     <tr>
@@ -137,6 +148,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="y"></td>
         <td data-col="windows" class="y"></td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
 
     <tr>
@@ -145,6 +157,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
         <td data-col="windows" class="y"></td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
 
     <tr>
@@ -153,6 +166,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
         <td data-col="windows" class="y"></td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
 
     <tr>
@@ -161,6 +175,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
         <td data-col="windows" class="p">uses iframe</td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
 
     <tr>
@@ -169,6 +184,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"></td>
         <td data-col="windows" class="y"></td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
 
     <tr>
@@ -177,6 +193,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
         <td data-col="windows" class="y"></td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
 
     <tr>
@@ -185,6 +202,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
         <td data-col="windows" class="y"></td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
 
     <tr>
@@ -193,6 +211,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
         <td data-col="windows" class="y">WP 8.1 only</td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
 
     <tr>
@@ -201,6 +220,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
         <td data-col="windows" class="y">localStorage &amp;<br> indexedDB</td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
 
     <tr>
@@ -209,6 +229,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"></td>
         <td data-col="osx"     class="n"></td>
         <td data-col="windows" class="y">WP 8.1 only</td>
+        <td data-col="electron" class="n"></td>
     </tr>
 
     <tr>
@@ -221,6 +242,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"><a href="../platforms/ios/plugin.html">(see details)</a></td>
         <td data-col="osx"     class="y"></td>
         <td data-col="windows" class="y"></td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
     <tr>
         <th><a href="../hybrid/webviews/index.html">Embedded<br/>WebView</a></th>
@@ -228,6 +250,7 @@ the core plugins, additional APIs are available via
         <td data-col="ios"     class="y"><a href="../platforms/ios/webview.html">(see details)</a></td>
         <td data-col="osx"     class="y"></td>
         <td data-col="windows" class="n"></td>
+        <td data-col="electron" class="p">Tests Pending</td>
     </tr>
 </tbody>
 </table>
