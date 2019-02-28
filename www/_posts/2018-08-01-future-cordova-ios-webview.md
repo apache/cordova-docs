@@ -16,9 +16,9 @@ Cordova iOS, starting with version 4, has anticipated this by moving the webview
 
 ![Figure 1]({{ site.baseurl }}/static/img/blog/2018/arch-webview-engine.png)
 
-## Cordova iOS 5 with WKWebView
+## Future Cordova iOS with WKWebView
 
-Starting with Cordova iOS version 5, which is a planned upcoming release, we will ship both webview plugins with the cordova-ios platform, to enable developers to test and transition users to the new WKWebView component. Cordova iOS 5 will ship with a bridge webview plugin that can switch usage of the webview plugin used at runtime. Previously, you could only choose which webview you would use at build time.
+Starting with a future Cordova iOS release, we will ship both webview plugins with the cordova-ios platform, to enable developers to test and transition users to the new WKWebView component. This future Cordova iOS version will ship with a bridge webview plugin that can switch usage of the webview plugin used at runtime. Previously, you could only choose which webview you would use at build time.
 
 ![Figure 2]({{ site.baseurl }}/static/img/blog/2018/bridge-webview-engine.png)
 
@@ -32,7 +32,7 @@ The developer can switch the webview used by setting a preference, that will be 
 
 When UIWebView support has been removed in a future iOS SDK, we will aim to release a future Cordova iOS version, which will remove UIWebView support, and WKWebView will then be the default webview engine.
 
-| Cordova iOS 4 >>> | Cordova iOS 5 >>> | Cordova iOS Future Release |
+| Cordova iOS 4 >>> | Future Cordova iOS >>> | "More Future" Cordova iOS |
 |-------------------|-------------------|---------------|
 |  | UIWebView deprecated | UIWebView removed |
 |  | WKWebView Engine Plugin Integrated Into Platform | WKWebView Engine Plugin only |
@@ -67,6 +67,8 @@ As you can see, WKWebView is not a direct drop-in replacement for UIWebView, you
 
 Hopefully with more testing, and filing of bug reports with Apple for missing features, the WKWebView can be a full replacement for Cordova users.
 
+---
+**UPDATE 2019-02-16**: This blog post has been updated to remove references to these changes going to be included in Cordova iOS 5, as [Cordova iOS 5 was released](https://cordova.apache.org/announcements/2019/02/09/cordova-ios-release-5.0.0.html) without them and the planned implementation has been moved to a future release of Cordova iOS.
 
 
 
