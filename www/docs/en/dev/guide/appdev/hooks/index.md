@@ -143,11 +143,6 @@ Cordova supports the following hook types:
             <th data-col="afterclean">after_clean</th>
         </tr>
         <tr>
-            <th data-col="prepackage">pre_package</td>
-            <td data-col="code">N/A</td>
-            <td data-col="description">Applicable to Windows 8 and Windows Phone only. This hook is deprecated.</td>
-        </tr>
-        <tr>
             <th data-col="beforepluginadd">before_plugin_add</th>
             <td data-col="code" rowspan="2"><code>cordova plugin add</code></td>
             <td rowspan="2" data-col="description">To be executed before and after adding a plugin.</td>
@@ -209,9 +204,9 @@ Hooks could be defined in project's `config.xml` using `<hook>` elements, for ex
 <hook type="before_plugin_install" src="scripts/appBeforePluginInstall.js" />
 
 <platform name="android">
-    <hook type="before_build" src="scripts/wp8/appAndroidBeforeBuild.bat" />
-    <hook type="before_build" src="scripts/wp8/appAndroidBeforeBuild.js" />
-    <hook type="before_plugin_install" src="scripts/wp8/appWP8BeforePluginInstall.js" />
+    <hook type="before_build" src="scripts/android/appAndroidBeforeBuild.bat" />
+    <hook type="before_build" src="scripts/android/appAndroidBeforeBuild.js" />
+    <hook type="before_plugin_install" src="scripts/android/appAndroidBeforePluginInstall.js" />
     ...
 </platform>
 
@@ -300,6 +295,7 @@ after_build
 ```
 
 ## Script Interface
+
 ### Windows Quirks
 
 If you are working on Windows, and in case your hook (Javascript/Non-Javascript)scripts aren't bat files (which is recommended, if you want your scripts to work in non-Windows operating systems) Cordova CLI will expect a shebang line as the first line for it to know the interpreter it needs to use to launch the script. The shebang line should match the following example:
