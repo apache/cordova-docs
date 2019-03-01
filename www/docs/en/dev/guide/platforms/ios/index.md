@@ -222,10 +222,12 @@ For manual signing, specifying the provisioning profiles by UUID:
 
 ## Xcode Build Flags
 
-If you have a custom situation where you need to pass additional build flags to Xcode -- you would use one or more `--buildFlag` options to pass these flags to `xcodebuild`. If you use an `xcodebuild` built-in flag, it will show a warning. You can also specify a `buildFlag` option in `build.json` above (the value for the `buildFlag` key is a string or an array of strings).
+If you have a custom situation where you need to pass additional build flags to Xcode you would use one or more `--buildFlag` options to pass these flags to `xcodebuild`. If you use an `xcodebuild` built-in flag, it will show a warning.
 
     cordova build --device --buildFlag="MYSETTING=myvalue" --buildFlag="MY_OTHER_SETTING=othervalue"
     cordova run --device --buildFlag="DEVELOPMENT_TEAM=FG35JLLMXX4A" --buildFlag="-scheme TestSchemeFlag"
+
+You can also specify a `buildFlag` option in [`build.json` above](#using-buildjson) (the value for the `buildFlag` key is a string or an array of strings).
 
 ## Debugging
 
