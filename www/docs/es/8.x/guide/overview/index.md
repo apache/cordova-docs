@@ -23,37 +23,37 @@ toc_title: Overview
 
 # Resumen
 
-Apache Cordova es un marco de desarrollo móvil de código abierto. Permite utilizar las tecnologías estándar web como HTML5, CSS3 y JavaScript para desarrollo multiplataforma, evitando el lenguaje de desarrollo nativo cada plataformas móviles. Aplicaciones ejecutan dentro de envolturas para cada plataforma y dependen de enlaces estándares API para acceder a de cada dispositivo sensores, datos y estado de la red.
+Apache Cordova es un framework de desarrollo móvil de código abierto. Permite utilizar las tecnologías estándar web como HTML5, CSS3 y JavaScript para desarrollar en multiplataforma, evitando lenguajes de desarrollo nativo para cada una de las plataformas móviles. Las aplicaciones se ejecutan dentro de envolturas para cada plataforma y dependen de enlaces estándares API para acceder en cada dispositivo a sensores, datos, estado de la red, etc.
 
 Apache Cordova se graduó en octubre de 2012 como un proyecto de nivel superior dentro de la Apache Software Foundation (ASF). A través del ASF, futuro desarrollo Cordova asegurará administración abierta del proyecto. Siempre permanecerá libre y de código abierto bajo la licencia Apache, versión 2.0. Visite [cordova.apache.org][1] para obtener más información.
 
  [1]: http://cordova.apache.org
 
-Usar Apache Cordova si eres:
+Usar Apache Cordova si tu eres:
 
-*   establecen un móvil desarrollador y desea extender una aplicación a través de más de una plataforma, sin tener que reimplementarlo con herramienta y lenguaje de cada plataforma.
+*   Un desarrollador de aplicaciones móvil que desea extender una aplicación a través de más de una plataforma, sin tener que reimplementarlo con herramienta y lenguaje de cada plataforma.
 
-*   un desarrollador web y desea implementar una aplicación web que se envasa para su distribución en varias app store portales.
+*   Un desarrollador de aplicaciones web que desea implementar una aplicación web que se enpaquete para distribuir como app en varios store portales.
 
-*   un móvil desarrollador interesado en que se mezclan los componentes de la aplicación nativa con un *WebView* (ventana del navegador especial) que puede tener acceso a las API de nivel de dispositivo, o si quiere desarrollar una interfaz plugin entre componentes WebView y nativos.
+*   Un desarrollador de aplicaciones móvil interesado en mezclar los componentes de una aplicación nativa con un *WebView* (ventana del navegador especial) que puede tener acceso a las API de nivel de dispositivo, o si quiere desarrollar una interfaz plugin entre componentes WebView y nativos.
 
 ## Componentes básicos
 
-Apache Cordova aplicaciones se basan en un común `config.xml` archivo que proporciona información acerca de la aplicación y especifica los parámetros que afectan a cómo funciona, como si responde a la orientación cambia de puesto. Este archivo se adhiere a la especificación de [Empaquetado de la aplicación Web][2], *widget*, o de la W3C.
+Las aplicaciones de Apache Cordova se basan en un archivo común `config.xml`, archivo que proporciona información acerca de la aplicación y especifica los parámetros que afectan a cómo funciona, como responde si la orientación cambia. Este archivo se adhiere a la especificación de [Empaquetado de la aplicación Web][2], *widget*, o de la W3C.
 
  [2]: http://www.w3.org/TR/widgets/
 
-La misma aplicación se implementa como una página web, un archivo local llamado *index.html*, que hace referencia a cualquier CSS, JavaScript, imágenes, archivos multimedia u otros recursos son necesarios para que se ejecute de forma predeterminada. La aplicación se ejecuta como un *WebView* dentro de la envoltura de la aplicación nativa, que distribuye a tiendas de aplicaciones.
+La misma aplicación se implementa como una página web, un archivo local llamado *index.html*, que hace referencia a cualquier CSS, JavaScript, imágenes, archivos multimedia u otros recursos necesarios para que se ejecute de forma predeterminada. La aplicación se ejecuta como un *WebView* dentro de la envoltura de la aplicación nativa, que distribuye a tiendas de aplicaciones.
 
 El WebView Cordova-habilitado puede proporcionar la aplicación con su interfaz de usuario completa. En algunas plataformas, también puede ser un componente dentro de una aplicación híbrida más grande, que mezcla la vista Web con componentes de la aplicación nativa. (Véase WebViews incrustación para más detalles).
 
-Una interfaz *plugin* está disponible para Cordova y componentes nativos para comunicarse con los demás. Esto te permite invocar un código de JavaScript. Idealmente, las API de JavaScript para ese código nativo son consistentes a través de múltiples plataformas de dispositivos. A partir de la versión 3.0, las extensiones proporcionan enlaces a APIs estándar. Plugins de terceros proporcionan enlaces adicionales a funciones no necesariamente disponibles en todas las plataformas. Puede encontrar estos plugins de terceros en el [registro de plugin][3] y utilizarlos en su aplicación. También puedes desarrollar tus propios plugins, como se describe en la guía de desarrollo de Plugin. Plugins puede ser necesario, por ejemplo, para comunicarse entre Córdoba y componentes personalizados de nativos.
+Una interfaz *plugin* está disponible para Cordova y componentes nativos para comunicarse con los demás. Esto te permite invocar un código de JavaScript. Idealmente, las API de JavaScript para ese código nativo son consistentes a través de múltiples plataformas de dispositivos. A partir de la versión 3.0, las extensiones proporcionan enlaces a APIs estándar. Plugins de terceros proporcionan enlaces adicionales a funciones no necesariamente disponibles en todas las plataformas. Puede encontrar estos plugins de terceros en el [registro de plugin][3] y utilizarlos en su aplicación. También puedes desarrollar tus propios plugins, como se describe en la guía de desarrollo de Plugin. Los plugins puede ser necesario, por ejemplo, para comunicarse entre Córdoba y componentes personalizados de nativos.
 
  [3]: http://plugins.cordova.io
 
-**Nota**: desde la versión 3.0, cuando se crea un proyecto de Córdoba no tiene presente algún plugin. Este es el nuevo comportamiento predeterminado. Algún plugin que desee, incluso los plugins del núcleo, debe agregarse explícitamente.
+**Nota**: desde la versión 3.0, cuando se crea un proyecto de Córdoba no se tiene presente algunos plugin. Este es el nuevo comportamiento predeterminado. Algunos plugin que desee, incluso los plugins del core, debe agregarse explícitamente.
 
-Córdova no proporciona ninguna widgets UI o MV * Marcos. Cordova proporciona solamente el tiempo de ejecución en el cual los pueden ejecutar. Si usted desea utilizar widgets UI o un marco MV *, usted necesitará seleccionar aquellos e incluirlos en su solicitud usted mismo como material de terceros.
+Córdova no proporciona ningún widgets para UI o MV* frameworks. Cordova los proporciona solamente en tiempo de ejecución en el cual los pueden ejecutar. Si usted desea utilizar widgets UI o un frameworks MV*, usted necesitará seleccionar aquellos que desee incluir en su solicitud como material de terceros.
 
 ## Vías de desarrollo
 
