@@ -16,6 +16,9 @@
     -   project: Browser
         mirror: https://github.com/apache/cordova-browser
 
+    -   project: Electron
+        mirror: https://github.com/apache/cordova-electron
+
 -   title: Plugins
     projects:
     -   project: Battery Status

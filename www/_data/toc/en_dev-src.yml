@@ -15,6 +15,7 @@
                 - url: guide/platforms/ios/index.html
                 - url: guide/platforms/windows/index.html
                 - url: guide/platforms/osx/index.html
+                - url: guide/platforms/electron/index.html
         - url: platform_plugin_versioning_ref/index.html
         - url: config_ref/images.html
         - url: cordova/storage/storage.html
