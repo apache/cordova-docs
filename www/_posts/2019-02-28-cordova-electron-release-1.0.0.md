@@ -15,12 +15,7 @@ We are happy to announce that we have just released `Cordova Electron 1.0.0`!  T
 
 **To install:**
 
-Pre-Cordova 9
-```
-cordova platform add cordova-electron@1.0.0
-```
-
-Cordova 9 (Not Released as of 2018/02/28)
+Cordova CLI 9.x
 ```
 cordova platform add electron@1.0.0
 ```
@@ -60,3 +55,6 @@ Please report any issues you find at [issues.cordova.io](http://issues.cordova.i
 * [GH-1](https://github.com/apache/cordova-electron/pull/1) First Draft Release
 * Added NPM Install Step
 * Added Run Command Support
+
+---
+**UPDATE 2019-03-06**: This blog post has been updated to remove **pre-Cordova 9.x** reference.
