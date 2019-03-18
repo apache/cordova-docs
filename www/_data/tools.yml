@@ -15,7 +15,7 @@
         desktop</a> and <a href="http://docs.phonegap.com/references/developer-app/">
         developer</a> apps.
 
--   name: Ionic
+-   name: Ionic Framework
     image: ionic.png
     url: http://ionicframework.com/
     description: >
@@ -55,14 +55,6 @@
         create HTML5 and native apps without programming knowledge. Offers
         dozens of controls and actions ready to be used in your apps and
         lot of app samples to learn it.
-
--   name: Cocoon
-    image: cocoon.png
-    url: http://cocoon.io/
-    description: >
-        Cocoon is a Cordova based cloud service for building native HTML5 apps
-        and games. Cocoon is focused on providing the best webview engines and
-        features like Canvas+, JS encryption or a custom Developer App.
 
 -   name: Framework7
     image: framework7.png
