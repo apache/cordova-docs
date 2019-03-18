@@ -13,6 +13,8 @@ We are happy to announce that we have just released `cordova-lib 9.0.0`!
 
 ## Release Highlights
 
+In addition to various improvements and fixes, this release has removed the `--browserify` flag.
+
 As NodeJS 4.x support has been dropped by the NodeJS team on April 30th, 2018, we have raised the minimum required NodeJS version for this release to 6.x.
 
 Please report any issues you find at [issues.cordova.io](http://issues.cordova.io/)!
