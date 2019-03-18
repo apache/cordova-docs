@@ -212,30 +212,30 @@ The configuration example below will generate `tar.gz`, `dmg` and `zip` packages
 | Package Type | Linux              | macOS              | Windows                               |
 | ------------ | :----------------: | :----------------: | :-----------------------------------: |
 | default      | -                  | `dmg`<br />`zip`   | -                                     |
-| dmg          | -                  | :white_check_mark: | -                                     |
-| mas          | -                  | :white_check_mark: | -                                     |
-| mas-dev      | :white_check_mark: | -                  | -                                     |
-| pkg          | -                  | :white_check_mark: | -                                     |
-| 7z           | :white_check_mark: | :white_check_mark: | :white_check_mark:                    |
-| zip          | :white_check_mark: | :white_check_mark: | :white_check_mark:                    |
-| tar.xz       | :white_check_mark: | :white_check_mark: | :white_check_mark:                    |
-| tar.lz       | :white_check_mark: | :white_check_mark: | :white_check_mark:                    |
-| tar.gz       | :white_check_mark: | :white_check_mark: | :white_check_mark:                    |
-| tar.bz2      | :white_check_mark: | :white_check_mark: | :white_check_mark:                    |
-| dir          | :white_check_mark: | :white_check_mark: | :white_check_mark:                    |
-| nsis         | -                  | -                  | :white_check_mark:                    |
-| nsis-web     | -                  | -                  | :white_check_mark:                    |
-| portable     | -                  | -                  | :white_check_mark:                    |
-| appx         | -                  | -                  | :white_check_mark: <sup>**[1]**</sup> |
-| msi          | -                  | -                  | :white_check_mark:                    |
-| AppImage     | :white_check_mark: | -                  | -                                     |
-| snap         | :white_check_mark: | -                  | -                                     |
-| deb          | :white_check_mark: | -                  | -                                     |
-| rpm          | :white_check_mark: | -                  | -                                     |
-| freebsd      | :white_check_mark: | -                  | -                                     |
-| pacman       | :white_check_mark: | -                  | -                                     |
-| p5p          | :white_check_mark: | -                  | -                                     |
-| apk          | :white_check_mark: | -                  | -                                     |
+| dmg          | -                  | &#10004;           | -                                     |
+| mas          | -                  | &#10004;           | -                                     |
+| mas-dev      | &#10004;           | -                  | -                                     |
+| pkg          | -                  | &#10004;           | -                                     |
+| 7z           | &#10004;           | &#10004;           | &#10004;                              |
+| zip          | &#10004;           | &#10004;           | &#10004;                              |
+| tar.xz       | &#10004;           | &#10004;           | &#10004;                              |
+| tar.lz       | &#10004;           | &#10004;           | &#10004;                              |
+| tar.gz       | &#10004;           | &#10004;           | &#10004;                              |
+| tar.bz2      | &#10004;           | &#10004;           | &#10004;                              |
+| dir          | &#10004;           | &#10004;           | &#10004;                              |
+| nsis         | -                  | -                  | &#10004;                              |
+| nsis-web     | -                  | -                  | &#10004;                              |
+| portable     | -                  | -                  | &#10004;                              |
+| appx         | -                  | -                  | &#10004; <sup>**[1]**</sup>           |
+| msi          | -                  | -                  | &#10004;                              |
+| AppImage     | &#10004;           | -                  | -                                     |
+| snap         | &#10004;           | -                  | -                                     |
+| deb          | &#10004;           | -                  | -                                     |
+| rpm          | &#10004;           | -                  | -                                     |
+| freebsd      | &#10004;           | -                  | -                                     |
+| pacman       | &#10004;           | -                  | -                                     |
+| p5p          | &#10004;           | -                  | -                                     |
+| apk          | &#10004;           | -                  | -                                     |
 
 * **[1]** Only Window 10 can build AppX packages.
 
@@ -243,7 +243,7 @@ The configuration example below will generate `tar.gz`, `dmg` and `zip` packages
 
 The `arch` property is an array list of architectures that each package is built for. When the property is defined, the default arch is not used unless added.
 
-> :warning:  Not all architectures are available for every operating system. Please review the [Electron Releases](https://github.com/electron/electron/releases/) to identify valid combinations. For example, macOS (Darwin) only supports x64.
+> &#10071;  Not all architectures are available for every operating system. Please review the [Electron Releases](https://github.com/electron/electron/releases/) to identify valid combinations. For example, macOS (Darwin) only supports x64.
 
 **Available Arch**
 * ia32
@@ -269,7 +269,7 @@ The example above will generate a `x64` `dmg` package.
 
 ### Multi-Platform Build Support
 
-> :warning: Not all platforms support this feature and may have limitations.
+> &#10071; Not all platforms support this feature and may have limitations.
 
 Building for multiple platforms on a single operating system may possible but has limitations. It is recommended that the builder's operating system (host OS) matches with the platform that is being built.
 
@@ -277,9 +277,9 @@ The matrix below shows each host OS and for which platforms they are capable of 
 
 | Host <sup>**[1]**</sup> | Linux              | Mac                | Window                       |
 | ----------------------- | :----------------: | :----------------: | :--------------------------: |
-| Linux                   | :white_check_mark: |                    | :warning: <sup>**[2]**</sup> |
-| Mac <sup>**[3]**</sup>  | :white_check_mark: | :white_check_mark: | :warning: <sup>**[2]**</sup> |
-| Window                  |                    |                    | :white_check_mark:           |
+| Linux                   | &#10004;           | -                  | &#10071; <sup>**[2]**</sup>  |
+| Mac <sup>**[3]**</sup>  | &#10004;           | &#10004;           | &#10071; <sup>**[2]**</sup>  |
+| Window                  | -                  | -                  | &#10004;                     |
 
 **Limitations:**
 * **[1]** If the app contains native dependency, it can only be compiled on the targeted platform.
@@ -310,7 +310,7 @@ There are three types of signing targets. (`debug`, `release`, and `store`). Eac
 | entitlements                                                                                                                                        | String path value to entitlements file.                                                                                           |
 | entitlementsInherit                                                                                                                                 | String path value to the entitlements file which inherits the security settings.                                                  |
 | identity                                                                                                                                            | String value of the name of the certificate.                                                                                      |
-| [requirements](https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/RequirementLang/RequirementLang.html) | String path value of requirements file. <br /><br />:warning: This is not available for the `mas` (store) signing configurations. |
+| [requirements](https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/RequirementLang/RequirementLang.html) | String path value of requirements file. <br /><br />&#10071; This is not available for the `mas` (store) signing configurations. |
 | provisioningProfile                                                                                                                                 | String path value of the provisioning profile.                                                                                    |
 
 **Example Config:**
@@ -350,7 +350,7 @@ The command above will:
 * Generate a `dmg` build and `mas-dev` build using the `debug` signing configurations.
 * Ignore the `mas` target package.
 
-*Use Case 2:*
+**Use Case 2:**
 
 ```
 $ cordova build electron --release
@@ -370,9 +370,9 @@ The signing information is comprised of two types. (`debug`, `release`). Each se
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | certificateFile           | String path to the certificate file.                                                                                                                 |
 | certificatePassword       | String value of the certificate file's password.<br /><br />**Alternative**: The password can be set on the environment variable `CSC_KEY_PASSWORD`. |
-| certificateSubjectName    | String value of the signing certificate's subject.<br /><br />:warning: Required for EV Code Signing and requires Windows                            |
-| certificateSha1           | String value of the SHA1 hash of the signing certificate.<br /><br />:warning: Requires Windows                                                      |
-| signingHashAlgorithms     | Collection of singing algorithms to be used. (`sha1`, `sha256`)<br /><br />:warning: AppX builds only support `sha256`                               |
+| certificateSubjectName    | String value of the signing certificate's subject.<br /><br />&#10071; Required for EV Code Signing and requires Windows                             |
+| certificateSha1           | String value of the SHA1 hash of the signing certificate.<br /><br />&#10071; Requires Windows                                                       |
+| signingHashAlgorithms     | Collection of singing algorithms to be used. (`sha1`, `sha256`)<br /><br />&#10071; AppX builds only support `sha256`                                |
 | additionalCertificateFile | String path to the additional certificate files.                                                                                                     |
 
 **Example Config:**
