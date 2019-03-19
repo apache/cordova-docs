@@ -268,7 +268,7 @@ For more information, see:
 
 ### Disadvantages
 
-- Not supported on iOS.
+- Only fully supported on iOS as of iOS 10.3.
 - Complex API with nested callbacks.
 - Limited total amount of storage (typically around 5MB).
 
