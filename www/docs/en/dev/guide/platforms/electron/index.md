@@ -29,11 +29,13 @@ Electron is a framework that uses web technologies (HTML, CSS, and JS) to build 
 
 ### Linux
 
-**@todo Add Linux Requirements here.**
+* **Python** version 2.7.x. it is recommended to check your Python version, since some distributions like CentOS 6.x still use Python 2.6.x, 
 
 ### Mac
 
-* **Xcode**, the IDE for macOS, comes bundled with necessary software development tools to code signing and compiling native code for macOS.
+* **Python** version 2.7.x with support for TLS 1.2.
+
+* **Xcode**, the IDE for macOS, comes bundled with necessary software development tools to code signing and compiling native code for macOS. Version 8.2.1 or higher.
 
 * **RedHat Build Support**
   * **Homebrew**, one of the available macOS package manager, is used for installing additional tools and dependencies. Homebrew will be needed to install RPM packaging dependencies. [**Brew Install Step**](https://brew.sh/)
@@ -46,9 +48,12 @@ Electron is a framework that uses web technologies (HTML, CSS, and JS) to build 
 
 ### Windows
 
-**@todo Review and Update Windows Requirements.**
+* **Python** version 2.7.10 or higher.
 
 * **PowerShell**, for Windows 7 users, must be at version 3.0 or greater for [app signing](https://www.electron.build/code-signing#windows).
+
+* **Debugging Tools** for Windows of Windows SDK 10.0.15063.468, if you plan on creating a full distribution.
+
 
 ## Quick Start
 
