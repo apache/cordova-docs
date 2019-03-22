@@ -58,7 +58,6 @@ Please report any issues you find at [issues.cordova.io](http://issues.cordova.i
     * `eslint@^5.15.2`
   * Fix `logger[level]` spy in Jasmine
 * [GH-397](https://github.com/apache/cordova-cli/pull/397) Update Node.js Deprecation Notice Message
-* Add or update GitHub pull request and issue template
 * [GH-395](https://github.com/apache/cordova-cli/pull/395) Fix typo: "esecially" to especially
 * [GH-364](https://github.com/apache/cordova-cli/pull/364) Fix spec label for build tests
 * [GH-344](https://github.com/apache/cordova-cli/pull/344) Check that `bin/cordova` works on Travis CI
