@@ -29,11 +29,13 @@ Electron is a framework that uses web technologies (HTML, CSS, and JS) to build 
 
 ### Linux
 
-**@todo Add Linux Requirements here.**
+* **Python** version 2.7.x. It is recommended to check your Python version since some distributions like CentOS 6.x still use Python 2.6.x.
 
 ### Mac
 
-* **Xcode**, the IDE for macOS, comes bundled with necessary software development tools to code signing and compiling native code for macOS.
+* **Python** version 2.7.x with support for TLS 1.2.
+
+* **Xcode**, the IDE for macOS, comes bundled with necessary software development tools to code signing and compiling native code for macOS. Version 8.2.1 or higher.
 
 * **RedHat Build Support**
   * **Homebrew**, one of the available macOS package manager, is used for installing additional tools and dependencies. Homebrew will be needed to install RPM packaging dependencies. [**Brew Install Step**](https://brew.sh/)
@@ -46,9 +48,12 @@ Electron is a framework that uses web technologies (HTML, CSS, and JS) to build 
 
 ### Windows
 
-**@todo Review and Update Windows Requirements.**
+* **Python** version 2.7.10 or higher.
 
 * **PowerShell**, for Windows 7 users, must be at version 3.0 or greater for [app signing](https://www.electron.build/code-signing#windows).
+
+* **Debugging Tools** for Windows of Windows SDK 10.0.15063.468, if you plan on creating a full distribution.
+
 
 ## Quick Start
 
@@ -63,10 +68,10 @@ $ cordova platform add electron
 
 ### Preview a Project
 
-It is not necessary to build the Electron application for previewing. Since the building process can be slow, it is recommended to pass in the `--no-build` flag to disable the build process when previewing.
+It is not necessary to build the Electron application for previewing. Since the building process can be slow, it is recommended to pass in the `--nobuild` flag to disable the build process when previewing.
 
 ```
-$ cordova run electron --no-build
+$ cordova run electron --nobuild
 ```
 
 ### Build a Project
@@ -84,48 +89,98 @@ $ cordova build electron --debug
 $ cordova build electron --release
 ```
 
-## Customizing the Application's Main Process
+## Customizing the Application's Window Process
 
-In the `{PROJECT_ROOT_DIR}/platform/electron/platform_www/` directory, the file `main.js` defines the application's main process. We can customize the application's window appearance as well as defining or enabling additional features in this file.
+Electron provides many options to manipulate the [`BrowserWindow`](https://electronjs.org/docs/api/browser-window). This section will cover how to configure a few basic options. For a full list of options, please see the [Electron's Docs - BrowserWindow Options](https://electronjs.org/docs/api/browser-window#new-browserwindowoptions).
 
-### Window Appearance (BrowserWindow)
+Working with a Cordova project, it is recommended to create an Electron settings file within the project's root directory, and set its the relative path in the preference option `ElectronSettingsFilePath`, in the `config.xml` file.
 
-Electron provides many options to manipulate the BrowserWindow. This section covers only a few basic options. For a full list of options, please see the [Electron's Docs - BrowserWindow Options](https://electronjs.org/docs/api/browser-window#new-browserwindowoptions).
-
-Electron provides many optional options that can manipulate the BrowserWindow. This section will cover a few of these options that many uses. A full list of these options can be found on the 
-
-#### How to set the window default size?
-
-Using the `width` and `height` option, you can define starting default window size.
-
-```
-mainWindow = new BrowserWindow({
-  width: 800,
-  height: 600
-});
+**Example `config.xml`:**
+```xml
+<platform name="electron">
+    <preference name="ElectronSettingsFilePath" value="res/electron/settings.json" />
+</platform>
 ```
 
-#### How to make the window not resizable?
+To override or set any BrowserWindow options, in this file the options are added to the  `browserWindow` property.
 
-Using the `resizable` flag option, you can disable the user's ability to resize your application's window.
+**Example `res/electron/settings.json`:**
 
+```json
+{
+  "browserWindow": { ... }
+}
 ```
-mainWindow = new BrowserWindow({ resizable: false });
+
+### How to set the window's default size?
+
+By default, the `width` is set to **800** and the `height` set to **600**. This can be overridden by setting the `width` and `height` property.
+
+**Example:**
+
+ ```json
+{
+    "browserWindow": {
+        "width": 1024,
+        "height": 768
+    }
+}
+```
+
+### How to make the window not resizable?
+
+ Setting the `resizable` flag property, you can disable the user's ability to resize your application's window.
+
+ **Example:**
+
+ ```json
+{
+    "browserWindow": {
+        "resizable": false
+    }
+}
 ```
 
 #### How to make my window fullscreen?
 
-Using the `fullscreen` flag option, you can force the application to launch in fullscreen.
+Using the `fullscreen` flag property, you can force the application to launch in fullscreen.
 
+**Example:**
+```json
+{
+    "browserWindow": {
+        "fullscreen": true
+    }
+}
 ```
-mainWindow = new BrowserWindow({ fullscreen: true });
+
+### How to support Node.js and Electron APIs?
+
+ Set the `nodeIntegration` flag property to true.  By default, this property flag is set to false to support popular libraries that insert symbols with the same names that Node.js and Electron already uses.
+
+ > You can read more about this at Electron docs: [I can not use jQuery/RequireJS/Meteor/AngularJS in Electron](https://electronjs.org/docs/faq#i-can-not-use-jqueryrequirejsmeteorangularjs-in-electron).
+ 
+ **Example:**
+
+ ```json
+{
+    "browserWindow": {
+        "nodeIntegration": true
+    }
+}
 ```
+
+## Customizing the Electron's Main Process
+
+If it is necessary to customize the Electron's main process beyond the scope of the Electron's configuration settings, chances can be added directly to the `cdv-electron-main.js` file located in `{PROJECT_ROOT_DIR}/platform/electron/platform_www/`. This is the application's main process.
+
+ > &#10071; However, it is not recommended to modify this file as the upgrade process for `cordova-electron` is to remove the old platform before adding the new version.
 
 ### DevTools
 
 The `--release` and `--debug` flags control the visibility of the DevTools. DevTools are shown by default on **Debug Builds** (`without a flag` or with `--debug`). If you want to hide the DevTools pass in the `--release` flag when building or running the application.
 
-_Note: DevTools still can be closed or opened manually._
+> Note: DevTools can be closed or opened manually with the debug build.
 
 ## Build Configurations
 
@@ -252,7 +307,7 @@ The `arch` property is an array list of architectures that each package is built
 * arm64
 
 
-The example above will generate a `x64` `dmg` package.
+The example above will generate an `x64` `dmg` package.
 
 ```
 {
@@ -403,7 +458,6 @@ There are not signing requirements for Linux builds.
 
 All browser-based plugins are usable with the Electron platform.
 
-When adding a plugin, if the plugin supports both the `electron` and `browser` platform, the `electron` portion will be used. If the plugin misses `electron`, but contains the `browser` implementation, it will fall back on the `browser` implementation.
+When adding a plugin, if the plugin supports both the `electron` and `browser` platform, the `electron` portion will be used. If the plugin misses `electron` but contains the `browser` implementation, it will fall back on the `browser` implementation.
 
-Internally, Electron is using Chromium (Chrome) as its web view. Some plugins may have conditions written specifically for each different browser. In this case, it may affect the behavior from what is intended. Since Electron may support feature that the browser does not, these plugins would possibly need to be updated for the `electron` platform.
-
+Internally, Electron is using Chromium (Chrome) as its web view. Some plugins may have conditions written specifically for each different browser. In this case, it may affect the behavior of what is intended. Since Electron may support feature that the browser does not, these plugins would possibly need to be updated for the `electron` platform.
