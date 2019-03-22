@@ -43,7 +43,6 @@ Please report any issues you find at [issues.cordova.io](http://issues.cordova.i
     * `eslint-config-semistandard@^13.0.0`
     * `eslint@^5.15.3`
   * Update to support nopt@^4.0.1
-* Add or update GitHub pull request and issue template
 * [GH-96](https://github.com/apache/cordova-plugman/pull/96) Remove `fetch` option
 * [GH-95](https://github.com/apache/cordova-plugman/pull/95) Remove `browserify` option
 * [GH-94](https://github.com/apache/cordova-plugman/pull/94) [CB-14164](https://issues.apache.org/jira/browse/CB-14164) Use native Promises instead of `Q`
