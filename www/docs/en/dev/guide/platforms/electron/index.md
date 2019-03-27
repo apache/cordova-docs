@@ -38,7 +38,7 @@ Electron is a framework that uses web technologies (HTML, CSS, and JS) to build 
 * **Xcode**, the IDE for macOS, comes bundled with necessary software development tools to code signing and compiling native code for macOS. Version 8.2.1 or higher.
 
 * **RedHat Build Support**
-  * **Homebrew**, one of the available macOS package manager, is used for installing additional tools and dependencies. Homebrew will be needed to install RPM packaging dependencies. [**Brew Install Step**](https://brew.sh/)
+  * **Homebrew**, one of the available macOS package managers, is used for installing additional tools and dependencies. Homebrew will be needed to install RPM packaging dependencies. [**Brew Install Step**](https://brew.sh/)
 
   * **RPM**, a standard package manager for multiple Linux distributions, is the tool used for creating the Linux RPM package. To install this tool, use the following [**Homebrew**](https://brew.sh/) command:
 
@@ -52,7 +52,7 @@ Electron is a framework that uses web technologies (HTML, CSS, and JS) to build 
 
 * **PowerShell**, for Windows 7 users, must be at version 3.0 or greater for [app signing](https://www.electron.build/code-signing#windows).
 
-* **Debugging Tools** for Windows of Windows SDK 10.0.15063.468, if you plan on creating a full distribution.
+* **Debugging Tools for Windows**, of Windows SDK 10.0.15063.468, if you plan on creating a full distribution.
 
 
 ## Quick Start
@@ -144,7 +144,7 @@ By default, the `width` is set to **800** and the `height` set to **600**. This 
 #### How to make my window fullscreen?
 
 Using the `fullscreen` flag property, you can force the application to launch in fullscreen.
-1
+
 **Example:**
 ```json
 {
@@ -339,7 +339,7 @@ The matrix below shows each host OS and for which platforms they are capable of 
 **Limitations:**
 * **[1]** If the app contains native dependency, it can only be compiled on the targeted platform.
 * **[2]** Linux and macOS are unable to build Windows Appx packages for Windows Store.
-* **[3]** [All required system dependencies, except rpm, will be downloaded automatically on demand. RPM can be installed with brew. (macOS Sierra 10.12+)](https://www.electron.build/multi-platform-build#macos)
+* **[3]** [All required system dependencies, except rpm, will be downloaded automatically on demand. RPM can be installed using brew. (macOS Sierra 10.12+)](https://www.electron.build/multi-platform-build#macos)
 
 The example below enables multi-platform build for all OS and uses the default build configurations.
 
