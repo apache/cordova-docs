@@ -89,7 +89,7 @@ $ cordova build electron --debug
 $ cordova build electron --release
 ```
 
-## Customizing the Application's Window Process
+## Customizing Application Window
 
 Electron provides many options to manipulate the [`BrowserWindow`](https://electronjs.org/docs/api/browser-window). This section will cover how to configure a few basic options. For a full list of options, please see the [Electron's Docs - BrowserWindow Options](https://electronjs.org/docs/api/browser-window#new-browserwindowoptions).
 
@@ -112,7 +112,7 @@ To override or set any BrowserWindow options, in this file the options are added
 }
 ```
 
-### How to set the window's default size?
+### How to set the default window size?
 
 By default, the `width` is set to **800** and the `height` set to **600**. This can be overridden by setting the `width` and `height` property.
 
@@ -144,7 +144,7 @@ By default, the `width` is set to **800** and the `height` set to **600**. This 
 #### How to make my window fullscreen?
 
 Using the `fullscreen` flag property, you can force the application to launch in fullscreen.
-
+1
 **Example:**
 ```json
 {
@@ -170,7 +170,7 @@ Using the `fullscreen` flag property, you can force the application to launch in
 }
 ```
 
-## Customizing the Electron's Main Process
+## Customizing Main Process
 
 If it is necessary to customize the Electron's main process beyond the scope of the Electron's configuration settings, chances can be added directly to the `cdv-electron-main.js` file located in `{PROJECT_ROOT_DIR}/platform/electron/platform_www/`. This is the application's main process.
 
