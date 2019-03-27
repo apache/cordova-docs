@@ -167,14 +167,6 @@ Cordova supports the following hook types:
             <th data-col="afterpluginls">after_plugin_ls</th>
         </tr>
         <tr>
-            <th data-col="beforepluginsearch">before_plugin_search</th>
-            <td data-col="code" rowspan="2"><code>cordova plugin search</code></td>
-            <td rowspan="2" data-col="description">To be executed before and after a plugin search.</td>
-        </tr>
-        <tr>
-            <th data-col="afterpluginsearch">after_plugin_search</th>
-        </tr>
-        <tr>
             <th data-col="beforeplugininstall">before_plugin_install</th>
             <td data-col="code" rowspan="2"><code>cordova plugin add</code></td>
             <td rowspan="2" data-col="description">To be executed before and after installing a plugin (to the platforms). Plugin hooks in plugin.xml are executed for a plugin being installed only</td>
