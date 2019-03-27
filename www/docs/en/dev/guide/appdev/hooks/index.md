@@ -346,23 +346,21 @@ module.exports = function(context) {
 You can also require additional Cordova modules in your script using `context.requireCordovaModule` in the following way:
 
 ```javascript
-var Q = context.requireCordovaModule('q');
+const cordovaCommon = context.requireCordovaModule('cordova-common');
 ```
 
-You can make your scipts async using Q:
+You can make your scripts asynchronous using Promises.
+Here is an example that just waits for a second and then prints the amount of milliseconds spent waiting:
 
 ```javascript
-module.exports = function(context) {
-    var Q = context.requireCordovaModule('q');
-    var deferral = new Q.defer();
-
-    setTimeout(function(){
-      console.log('hook.js>> end');
-    deferral.resolve();
-    }, 1000);
-
-    return deferral.promise;
-}
+module.exports = context => {
+    return new Promise(resolve => {
+        const start = Date.now();
+        setTimeout(() => resolve(Date.now() - start), 1000);
+    }).then(msWaited => {
+        console.log(`${context.scriptLocation} waited ${msWaited} ms`);
+    });
+};
 ```
 > __Note__:  new module loader script interface is used for the `.js` files defined via `config.xml` or `plugin.xml` only.
 For compatibility reasons hook files specified via `/hooks` folders are run via Node child_process spawn, see 'Non-javascript' section below.
@@ -396,32 +394,24 @@ tell Cordova to run `afterBuild.js` script after each platform build.
 ```
 
 Create `scripts/afterBuild.js` file and add the following implementation.
-We use async version of `fs.stat` method to demonstrate how async functionality
-could be done via hooks.
+We use async version of `fs.stat` method to demonstrate how async functions
+can be used in hooks.
 
 ```javascript
+const fs = require('fs');
+const util = require('util');
+const stat = util.promisify(fs.stat);
+
 module.exports = function(ctx) {
-    // make sure android platform is part of build
-    if (ctx.opts.platforms.indexOf('android') < 0) {
-        return;
-    }
-    var fs = ctx.requireCordovaModule('fs'),
-        path = ctx.requireCordovaModule('path'),
-        deferral = ctx.requireCordovaModule('q').defer();
+    // Make sure android platform is part of build
+    if (!ctx.opts.platforms.includes('android')) return;
 
-    var platformRoot = path.join(ctx.opts.projectRoot, 'platforms/android');
-    var apkFileLocation = path.join(platformRoot, 'build/outputs/apk/android-debug.apk');
+    const platformRoot = path.join(ctx.opts.projectRoot, 'platforms/android');
+    const apkFileLocation = path.join(platformRoot, 'build/outputs/apk/android-debug.apk');
 
-    fs.stat(apkFileLocation, function(err,stats) {
-        if (err) {
-                deferral.reject('Operation failed');
-        } else {
-            console.log('Size of ' + apkFileLocation + ' is ' + stats.size +' bytes');
-            deferral.resolve();
-        }
+    return stat(apkFileLocation).then(stats => {
+      console.log(`Size of ${apkFileLocation} is ${stats.size} bytes`);
     });
-
-    return deferral.promise;
 };
 ```
 
