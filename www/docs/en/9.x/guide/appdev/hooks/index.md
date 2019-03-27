@@ -314,34 +314,46 @@ module.exports = function(context) {
 }
 ```
 
-`context` object contains hook type, executed script full path, hook options, command-line arguments passed to Cordova and top-level "cordova" object of the following format:
+Here is an example that showcases the contents of the `context` object:
 
-```json
+```javascript
 {
-  "hook": "before_plugin_install",
-  "scriptLocation": "c:\\script\\full\\path\\appBeforePluginInstall.js",
-  "cmdLine": "The\\exact\\command\\cordova\\run\\with arguments",
-  "opts": {
-    "projectRoot":"C:\\path\\to\\the\\project",
-    "cordova": {
-      "platforms": ["android"],
-      "plugins": ["plugin-withhooks"],
-      "version": "0.21.7-dev"
+  // The type of hook being run
+  hook: 'before_plugin_install',
+
+  // Absolute path to the hook script that is currently executing
+  scriptLocation: '/foo/scripts/appBeforePluginInstall.js',
+
+  // The CLI command that lead to this hook being executed
+  cmdLine: 'cordova plugin add plugin-withhooks',
+
+  // The options associated with the current operation.
+  // WARNING: The contents of this object vary among the different
+  // operations and are currently not documented anywhere.
+  opts: {
+    projectRoot: '/foo',
+
+    cordova: {
+      platforms: ['android'],
+      plugins: ['plugin-withhooks'],
+      version: '0.21.7-dev'
     },
-    "plugin": {
-      "id": "plugin-withhooks",
-      "pluginInfo": {
-        ...
-      },
-      "platform": "android",
-      "dir": "C:\\path\\to\\the\\project\\plugins\\plugin-withhooks"
+
+    // Information about the plugin currently operated on.
+    // This object will only be passed to plugin hooks scripts.
+    plugin: {
+      id: 'plugin-withhooks',
+      pluginInfo: { /* ... */ },
+      platform: 'android',
+      dir: '/foo/plugins/plugin-withhooks'
     }
   },
-  "cordova": {...}
+
+  // A reference to Cordova's API
+  cordova: { /* ... */ }
 }
 
 ```
-`context.opts.plugin` object will only be passed to plugin hooks scripts.
 
 You can also require additional Cordova modules in your script using `context.requireCordovaModule` in the following way:
 
