@@ -288,14 +288,6 @@ after_build
 
 ## Script Interface
 
-### Windows Quirks
-
-If you are working on Windows, and in case your hook (Javascript/Non-Javascript)scripts aren't bat files (which is recommended, if you want your scripts to work in non-Windows operating systems) Cordova CLI will expect a shebang line as the first line for it to know the interpreter it needs to use to launch the script. The shebang line should match the following example:
-
-```
-#!/usr/bin/env [name_of_interpreter_executable]
-```
-
 ### Javascript
 
 If you are writing hooks using Node.js you should use the following module definition:
@@ -371,7 +363,7 @@ For compatibility reasons hook files specified via `/hooks` folders are run via 
 
 ### Non-javascript
 
-Non-javascript scripts are run via Node child_process spawn from the project's root directory and have the root directory passes as the first argument. All other options are passed to the script using environment variables:
+Non-javascript scripts are run via Node child_process spawn from the project's root directory and have the root directory passed as the first argument. All other options are passed to the script using environment variables:
 
 Environment Variable Name     | Description
 ------------------------------|--------------------------------------------
@@ -384,6 +376,15 @@ CORDOVA_CMDLINE               | The exact command-line arguments passed to cordo
 If a script returns a non-zero exit code, then the parent cordova command will be aborted.
 
 > __Note__: we highly recommend writing your hooks using Node.js so that they are cross-platform, see [Javascript](#link-javascript) section above.
+
+#### Windows Quirks
+
+If you are working on Windows, and your hook scripts aren't `*.bat` files, Cordova CLI will expect a shebang line as the first line of the script. This way it knows the interpreter it needs to use to launch the script. A shebang line for a Python script could look like this:
+
+```
+#!/usr/bin/env python
+```
+
 
 ## Sample Usage
 
