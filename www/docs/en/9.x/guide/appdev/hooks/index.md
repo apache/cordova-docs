@@ -167,14 +167,6 @@ Cordova supports the following hook types:
             <th data-col="afterpluginls">after_plugin_ls</th>
         </tr>
         <tr>
-            <th data-col="beforepluginsearch">before_plugin_search</th>
-            <td data-col="code" rowspan="2"><code>cordova plugin search</code></td>
-            <td rowspan="2" data-col="description">To be executed before and after a plugin search.</td>
-        </tr>
-        <tr>
-            <th data-col="afterpluginsearch">after_plugin_search</th>
-        </tr>
-        <tr>
             <th data-col="beforeplugininstall">before_plugin_install</th>
             <td data-col="code" rowspan="2"><code>cordova plugin add</code></td>
             <td rowspan="2" data-col="description">To be executed before and after installing a plugin (to the platforms). Plugin hooks in plugin.xml are executed for a plugin being installed only</td>
@@ -296,14 +288,6 @@ after_build
 
 ## Script Interface
 
-### Windows Quirks
-
-If you are working on Windows, and in case your hook (Javascript/Non-Javascript)scripts aren't bat files (which is recommended, if you want your scripts to work in non-Windows operating systems) Cordova CLI will expect a shebang line as the first line for it to know the interpreter it needs to use to launch the script. The shebang line should match the following example:
-
-```
-#!/usr/bin/env [name_of_interpreter_executable]
-```
-
 ### Javascript
 
 If you are writing hooks using Node.js you should use the following module definition:
@@ -314,62 +298,72 @@ module.exports = function(context) {
 }
 ```
 
-`context` object contains hook type, executed script full path, hook options, command-line arguments passed to Cordova and top-level "cordova" object of the following format:
+Here is an example that showcases the contents of the `context` object:
 
-```json
+```javascript
 {
-  "hook": "before_plugin_install",
-  "scriptLocation": "c:\\script\\full\\path\\appBeforePluginInstall.js",
-  "cmdLine": "The\\exact\\command\\cordova\\run\\with arguments",
-  "opts": {
-    "projectRoot":"C:\\path\\to\\the\\project",
-    "cordova": {
-      "platforms": ["android"],
-      "plugins": ["plugin-withhooks"],
-      "version": "0.21.7-dev"
+  // The type of hook being run
+  hook: 'before_plugin_install',
+
+  // Absolute path to the hook script that is currently executing
+  scriptLocation: '/foo/scripts/appBeforePluginInstall.js',
+
+  // The CLI command that lead to this hook being executed
+  cmdLine: 'cordova plugin add plugin-withhooks',
+
+  // The options associated with the current operation.
+  // WARNING: The contents of this object vary among the different
+  // operations and are currently not documented anywhere.
+  opts: {
+    projectRoot: '/foo',
+
+    cordova: {
+      platforms: ['android'],
+      plugins: ['plugin-withhooks'],
+      version: '0.21.7-dev'
     },
-    "plugin": {
-      "id": "plugin-withhooks",
-      "pluginInfo": {
-        ...
-      },
-      "platform": "android",
-      "dir": "C:\\path\\to\\the\\project\\plugins\\plugin-withhooks"
+
+    // Information about the plugin currently operated on.
+    // This object will only be passed to plugin hooks scripts.
+    plugin: {
+      id: 'plugin-withhooks',
+      pluginInfo: { /* ... */ },
+      platform: 'android',
+      dir: '/foo/plugins/plugin-withhooks'
     }
   },
-  "cordova": {...}
+
+  // A reference to Cordova's API
+  cordova: { /* ... */ }
 }
 
 ```
-`context.opts.plugin` object will only be passed to plugin hooks scripts.
 
 You can also require additional Cordova modules in your script using `context.requireCordovaModule` in the following way:
 
 ```javascript
-var Q = context.requireCordovaModule('q');
+const cordovaCommon = context.requireCordovaModule('cordova-common');
 ```
 
-You can make your scipts async using Q:
+You can make your scripts asynchronous using Promises.
+Here is an example that just waits for a second and then prints the amount of milliseconds spent waiting:
 
 ```javascript
-module.exports = function(context) {
-    var Q = context.requireCordovaModule('q');
-    var deferral = new Q.defer();
-
-    setTimeout(function(){
-      console.log('hook.js>> end');
-    deferral.resolve();
-    }, 1000);
-
-    return deferral.promise;
-}
+module.exports = context => {
+    return new Promise(resolve => {
+        const start = Date.now();
+        setTimeout(() => resolve(Date.now() - start), 1000);
+    }).then(msWaited => {
+        console.log(`${context.scriptLocation} waited ${msWaited} ms`);
+    });
+};
 ```
 > __Note__:  new module loader script interface is used for the `.js` files defined via `config.xml` or `plugin.xml` only.
 For compatibility reasons hook files specified via `/hooks` folders are run via Node child_process spawn, see 'Non-javascript' section below.
 
 ### Non-javascript
 
-Non-javascript scripts are run via Node child_process spawn from the project's root directory and have the root directory passes as the first argument. All other options are passed to the script using environment variables:
+Non-javascript scripts are run via Node child_process spawn from the project's root directory and have the root directory passed as the first argument. All other options are passed to the script using environment variables:
 
 Environment Variable Name     | Description
 ------------------------------|--------------------------------------------
@@ -382,6 +376,15 @@ CORDOVA_CMDLINE               | The exact command-line arguments passed to cordo
 If a script returns a non-zero exit code, then the parent cordova command will be aborted.
 
 > __Note__: we highly recommend writing your hooks using Node.js so that they are cross-platform, see [Javascript](#link-javascript) section above.
+
+#### Windows Quirks
+
+If you are working on Windows, and your hook scripts aren't `*.bat` files, Cordova CLI will expect a shebang line as the first line of the script. This way it knows the interpreter it needs to use to launch the script. A shebang line for a Python script could look like this:
+
+```
+#!/usr/bin/env python
+```
+
 
 ## Sample Usage
 
@@ -396,32 +399,24 @@ tell Cordova to run `afterBuild.js` script after each platform build.
 ```
 
 Create `scripts/afterBuild.js` file and add the following implementation.
-We use async version of `fs.stat` method to demonstrate how async functionality
-could be done via hooks.
+We use async version of `fs.stat` method to demonstrate how async functions
+can be used in hooks.
 
 ```javascript
+const fs = require('fs');
+const util = require('util');
+const stat = util.promisify(fs.stat);
+
 module.exports = function(ctx) {
-    // make sure android platform is part of build
-    if (ctx.opts.platforms.indexOf('android') < 0) {
-        return;
-    }
-    var fs = ctx.requireCordovaModule('fs'),
-        path = ctx.requireCordovaModule('path'),
-        deferral = ctx.requireCordovaModule('q').defer();
+    // Make sure android platform is part of build
+    if (!ctx.opts.platforms.includes('android')) return;
 
-    var platformRoot = path.join(ctx.opts.projectRoot, 'platforms/android');
-    var apkFileLocation = path.join(platformRoot, 'build/outputs/apk/android-debug.apk');
+    const platformRoot = path.join(ctx.opts.projectRoot, 'platforms/android');
+    const apkFileLocation = path.join(platformRoot, 'build/outputs/apk/android-debug.apk');
 
-    fs.stat(apkFileLocation, function(err,stats) {
-        if (err) {
-                deferral.reject('Operation failed');
-        } else {
-            console.log('Size of ' + apkFileLocation + ' is ' + stats.size +' bytes');
-            deferral.resolve();
-        }
+    return stat(apkFileLocation).then(stats => {
+      console.log(`Size of ${apkFileLocation} is ${stats.size} bytes`);
     });
-
-    return deferral.promise;
 };
 ```
 
