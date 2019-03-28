@@ -52,7 +52,7 @@ Electron is a framework that uses web technologies (HTML, CSS, and JS) to build 
 
 * **PowerShell**, for Windows 7 users, must be at version 3.0 or greater for [app signing](https://www.electron.build/code-signing#windows).
 
-* **Debugging Tools for Windows**, of Windows SDK 10.0.15063.468, if you plan on creating a full distribution.
+* **[Debugging Tools for Windows](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/)** is a toolkit for enhancing debug capabilities. It is recommended to install with the **Windows SDK 10.0.15063.468**.
 
 
 ## Quick Start
