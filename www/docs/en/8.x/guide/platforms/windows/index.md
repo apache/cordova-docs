@@ -233,7 +233,7 @@ In Windows project, identity details are kept in a file named package.appxmanife
 
 *Name* and *Version* can be set from **config.xml**. *Publisher* can be provided as a build parameter or can be set on **build.json** file.
 
-![]({{ site.baseurl }}/static/img/guide/platforms/windows/packaging.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/windows/vs2015_packaging.png)
 
 *Name* and *Version* can also be set as platform-specific preferences in **config.xml** in the following way:
 
