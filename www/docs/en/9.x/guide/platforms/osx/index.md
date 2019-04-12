@@ -96,7 +96,7 @@ Once osx platform is added to your project, you can open it from
 within Xcode. Double-click to open the `hello/platforms/osx/HelloWorld.xcodeproj`
 file. The screen should look like this:
 
-![]({{ site.baseurl }}/static/img/guide/platforms/osx/helloworld_project.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/osx/xcode10-review-project.png)
 
 > **TIP**
 > You can also use the `open` command to open the XCode project directly
@@ -123,7 +123,7 @@ via Xcode preferences:
 2. In the __Derived Data__ section, press the __Advanced__ button and
    select __Unique__ as the __Build Location__ as shown here:
 
-   ![]({{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png)
+   ![]({{ site.baseurl }}/static/img/guide/platforms/osx/xcode10-build-location.png)
 
 This is the default setting for a new Xcode install, but it may be set
 differently following an upgrade from an older version of Xcode.
