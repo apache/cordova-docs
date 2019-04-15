@@ -93,17 +93,17 @@ To preview the app in the iOS simulator:
 
 2. Make sure the `HelloWorld` project is selected in the left panel (1).
 
-   ![]({{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png)
+   ![]({{ site.baseurl }}/static/img/guide/platforms/ios/xcode10-run-project.png)
 
 3. Select the intended device from the toolbar's __Scheme__ menu, such
-   as the iPhone 7 Plus Simulator as highlighted in (2)
+   as the iPhone XR Simulator as highlighted in (2)
 
 4. Press the __Run__ button (3) in the same toolbar to the
    left of the __Scheme__. That builds, deploys, and runs the
    application in the simulator. A separate simulator application opens
    to display the app:
 
-   ![]({{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png)
+   ![]({{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorld-running-xr.png)
 
    Only one simulator may run at a time, so if you want to test the app
    in a different simulator, you need to quit the simulator application
@@ -257,7 +257,7 @@ $ open -a Xcode platforms/ios
 
 The screen should look like this:
 
-![]({{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/ios/xcode10-review-settings.png)
 
 ## Platform Centered Workflow
 
