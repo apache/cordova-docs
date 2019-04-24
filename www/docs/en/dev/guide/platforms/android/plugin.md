@@ -24,15 +24,17 @@ toc_title: Android
 # Android Plugin Development Guide
 
 This section provides details for how to implement native plugin code
-on the Android platform. Before reading this, see the [Plugin Development Guide][plugin-dev]
+on the Android platform. Android plugins are based on Cordova-Android, 
+which is built from an Android WebView with a native bridge. 
+
+Before reading this, see the [Plugin Development Guide][plugin-dev]
 for an overview of the plugin's structure and its common JavaScript
 interface. This section continues to demonstrate the sample _echo_
 plugin that communicates from the Cordova webview to the native
 platform and back.  For another sample, see also the comments in
 [CordovaPlugin.java][cordova-plugin].
 
-Android plugins are based on Cordova-Android, which is built from an
-Android WebView with a native bridge. The native portion of an Android plugin
+The native portion of an Android plugin
 consists of at least one Java class that extends the `CordovaPlugin` class and
 overrides one of its `execute` methods.
 
@@ -225,23 +227,23 @@ import org.json.JSONObject;
 */
 public class Echo extends CordovaPlugin {
 
-@Override
-public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-    if (action.equals("echo")) {
-        String message = args.getString(0);
-        this.echo(message, callbackContext);
-        return true;
+    @Override
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        if (action.equals("echo")) {
+            String message = args.getString(0);
+            this.echo(message, callbackContext);
+            return true;
+        }
+        return false;
     }
-    return false;
-}
 
-private void echo(String message, CallbackContext callbackContext) {
-    if (message != null && message.length() > 0) {
-        callbackContext.success(message);
-    } else {
-        callbackContext.error("Expected one non-empty string argument.");
+    private void echo(String message, CallbackContext callbackContext) {
+        if (message != null && message.length() > 0) {
+            callbackContext.success(message);
+        } else {
+            callbackContext.error("Expected one non-empty string argument.");
+        }
     }
-}
 }
 ```
 
@@ -371,9 +373,9 @@ public void onRequestPermissionResult(int requestCode, String[] permissions,
 }
 ```
 
-The switch statement above would return from the prompt and, depending on the requestCode that was passed in, would call the respective method.  It should be noted that permission prompts may stack if the execution is not handled correctly, and that this should be avoided.
+The switch statement above would return from the prompt and, depending on the `requestCode` that was passed in, would call the respective method.  It should be noted that permission prompts may stack if the execution is not handled correctly, and that this should be avoided.
 
-In addition to asking for permission for a single permission, it is also possible to request permissions for an entire group by defining the permissions array, as what is done with the Geolocation plugin:
+In addition to asking for permission for a single permission, it is also possible to request permissions for an entire group by defining the `permissions` array, as what is done with the Geolocation plugin:
 
 ```java
 String [] permissions = { Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION };
@@ -385,13 +387,13 @@ Then when requesting the permission, all that needs to be done is the following:
 cordova.requestPermissions(this, 0, permissions);
 ```
 
-This requests the permissions specified in the array.  It's a good idea to provide a publicly accessible permissions array since this can be used by plugins that use your plugin as a
+This requests the permissions specified in the array.  It's a good idea to provide a publicly accessible `permissions` array since this can be used by plugins that use your plugin as a
 dependency, although this is not required.
 
 ## Debugging Android Plugins
 
 Android debugging can be done with either Eclipse or Android Studio, although Android
-studio is recommended.  Since Cordova-Android is currently used as a library project,
+Studio is recommended.  Since Cordova-Android is currently used as a library project,
 and plugins are supported as source code, it is possible to debug the Java code inside
 a Cordova application just like a native Android application.
 
