@@ -24,8 +24,7 @@ toc_title: Android
 # Android Plugin Development Guide
 
 This section provides details for how to implement native plugin code
-on the Android platform. Android plugins are based on Cordova-Android, 
-which is built from an Android WebView with a native bridge. 
+on the Android platform.  
 
 Before reading this, see the [Plugin Development Guide][plugin-dev]
 for an overview of the plugin's structure and its common JavaScript
@@ -34,6 +33,8 @@ plugin that communicates from the Cordova webview to the native
 platform and back.  For another sample, see also the comments in
 [CordovaPlugin.java][cordova-plugin].
 
+Android plugins are based on Cordova-Android, 
+which is built from an Android WebView with a native bridge.
 The native portion of an Android plugin
 consists of at least one Java class that extends the `CordovaPlugin` class and
 overrides one of its `execute` methods.
