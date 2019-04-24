@@ -24,7 +24,9 @@ toc_title: iOS
 # iOS Plugin Development Guide
 
 This section provides details for how to implement native plugin code
-on the iOS platform. Before reading this, see [Plugin Development Guide][plugin-dev] for
+on the iOS platform. 
+
+Before reading this, see [Plugin Development Guide][plugin-dev] for
 an overview of the plugin's structure and its common JavaScript
 interface. This section continues to demonstrate the sample _echo_
 plugin that communicates from the Cordova webview to the native
@@ -258,6 +260,7 @@ For JavaScript, you can attach Safari to the app running within the iOS Simulato
   described in Domain [Whitelist Guide](../../appdev/whitelist/index.html). If you forget, an error is
   logged in the Xcode console.
 
+[plugin-dev]: ../../hybrid/plugins/index.html
 [CDVInvokedUrlCommand.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVInvokedUrlCommand.h
 [CDVPluginResult.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPluginResult.h
 [CDVCommandDelegate.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVCommandDelegate.h
