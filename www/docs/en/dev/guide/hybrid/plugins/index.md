@@ -52,16 +52,24 @@ for guidance.
 ## Building a Plugin
 
 Application developers use the CLI's [plugin add command][cdv_plugin] to add a plugin to a project. The
-argument to that command is the URL for a _git_ repository containing
-the plugin code.  This example implements Cordova's Device API:
+command takes the URL for a _git_ repository containing
+the plugin code as an argument.  This example implements Cordova's Device API:
 
 ```bash
-cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+cordova plugin add https://github.com/apache/cordova-plugin-device
+```
+
+If the plugin is published to _npm_, the command can also receive the package name as the argument:
+
+```bash
+cordova plugin add cordova-plugin-device
 ```
 
 The plugin repository must feature a top-level `plugin.xml` manifest
 file. There are many ways to configure this file, details for which
-are available in the [Plugin Specification](../../../plugin_ref/spec.html). This abbreviated version of the `Device` plugin provides a simple example to use as a model:
+are available in the [Plugin Specification](../../../plugin_ref/spec.html). 
+
+This abbreviated version of the `Device` plugin provides a simple example to use as a model:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -86,38 +94,16 @@ are available in the [Plugin Specification](../../../plugin_ref/spec.html). This
 </plugin>
 ```
 
-The top-level `plugin` tag's `id` attribute uses the same
-reverse domain format to identify the plugin package as the apps
-they're added to.  The `js-module` tag specifies the path to the common
-JavaScript interface.  The `platform` tag specifies a corresponding
-set of native code, for the `ios` platform in this case.  The
-`config-file` tag encapsulates a `feature` tag that is injected into
+- The top-level `plugin` tag's `id` attribute usually follows the `cordova-plugin-{plugin name}` schema and matches the plugin's npm package name.
+- The `js-module` tag specifies the path to the [common
+JavaScript interface](#the-javascript-interface).
+- The `platform` tag specifies a corresponding
+set of native code, for the `ios` platform in this case.
+- The `config-file` tag encapsulates a `feature` tag that is injected into
 the platform-specific `config.xml` file to make the platform aware of
-the additional code library.  The `header-file` and `source-file` tags
+the additional code library. 
+- The `header-file` and `source-file` tags
 specify the path to the library's component files.
-
-## Validating a Plugin using Plugman
-
-You can use the `plugman` utility to check whether the plugin installs
-correctly for each platform.  Install `plugman` with the following
-[node](http://nodejs.org/) command:
-
-```bash
-npm install -g plugman
-```
-
-You need a valid app source directory, such as the top-level `www`
-directory included in a default CLI-generated project, as described in the
-[Create your first app](../../cli/index.html) guide.
-
-Then run a command such as the following to test whether iOS
-dependencies load properly:
-
-```bash
-plugman install --platform ios --project /path/to/my/project/www --plugin /path/to/my/plugin
-```
-
-For details on `plugman` options, see [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html). For information on how to actually _debug_ plugins, see each platform's native interface listed at the bottom of this page.
 
 ## The JavaScript Interface
 
@@ -199,6 +185,29 @@ listed below, and each builds on the simple Echo Plugin example above:
 - [iOS Plugins](../../platforms/ios/plugin.html)
 - [Windows Plugins](../../platforms/windows/plugin.html)
 
+## Validating a Plugin using Plugman
+
+You can use the `plugman` utility to check whether the plugin installs
+correctly for each platform.  Install `plugman` with the following
+[node](http://nodejs.org/) command:
+
+```bash
+npm install -g plugman
+```
+
+You need a valid app source directory, such as the top-level `www`
+directory included in a default CLI-generated project, as described in the
+[Create your first app](../../cli/index.html) guide.
+
+Then run a command such as the following to test whether iOS
+dependencies load properly:
+
+```bash
+plugman install --platform ios --project /path/to/my/project/www --plugin /path/to/my/plugin
+```
+
+For details on `plugman` options, see [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html). For information on how to actually _debug_ plugins, see [each platform's native interface listed above](#native-interfaces).
+
 ## Publishing Plugins
 
 You can publish your plugin to any `npmjs`-based registry, but the recommended one is the [npm registry](https://www.npmjs.com). Other developers can install your plugin automatically using either `plugman` or the Cordova CLI.
@@ -230,7 +239,7 @@ For more details on npm usage, refer to [Publishing npm Packages](https://docs.n
 
 To surface the plugin in [Cordova Plugin Search](/plugins/), add the `ecosystem:cordova` keyword to the `package.json` file of your plugin before publishing.
 
-To indicate support for a particular platform, add a keyword in the format `**cordova-<platformName>**` to the list of keywords in package.json.
+To indicate support for a particular platform, add a keyword in the format `cordova-<platformName>` to the list of keywords in `package.json`.
 Plugman's `createpackagejson` command does this for you, but if you did not use it to generate your `package.json`, you should manually edit it as shown below.
 
 For example, for a plugin that supports Android, iOS & Windows, the keywords in `package.json` should include:
