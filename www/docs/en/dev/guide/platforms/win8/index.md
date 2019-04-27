@@ -77,7 +77,6 @@ requirements listed above.
 The tools and SDKs for the target Windows platforms (UWP, 8.1, etc.) must also be selected in the installer. They can be found under the "Windows and Web Development" heading.
 
 <br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/win8/win8_installTools.png" /></p><br/>
-TODO Replace or add Visual Studio 2017 screenshot
 
 ## Project Configuration
 
@@ -142,13 +141,11 @@ cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone
 
 #### Architecture option
 
-TODO
 - `--archs`
 - Specific chip architectures (`anycpu`, `arm`, `x86`, `x64`)
 
 #### Bundle option
 
-TODO
 - `--bundle`
 - Generates an .appxbundle. Not valid if anycpu AND chip-specific architectures are used (at the same time)
 
@@ -175,7 +172,6 @@ cordova run windows --device -- --phone  # deploy app to connected device
 
 ##### `--win10tools`
 
-TODO
 - `--win10tools`
 - Uses Windows 10 deployment tools (used for a Windows 8.1 app when) being deployed to a Windows 10 device
 
