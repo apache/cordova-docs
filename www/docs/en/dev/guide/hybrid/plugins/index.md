@@ -185,6 +185,18 @@ listed below, and each builds on the simple Echo Plugin example above:
 - [iOS Plugins](../../platforms/ios/plugin.html)
 - [Windows Plugins](../../platforms/windows/plugin.html)
 
+## Testing a Plugin during development
+
+The simplest way to manually test a plugin during development is to create a 
+Cordova app as usual and add the plugin with the `--link` option:
+
+```bash
+cordova plugin add ../path/to/my/plugin/relative/to/project --link
+```
+
+This creates a symbolic link instead of copying the plugin files, which enables you 
+to work on your plugin and then simply rebuild the app to use your changes.
+
 ## Validating a Plugin using Plugman
 
 You can use the `plugman` utility to check whether the plugin installs
