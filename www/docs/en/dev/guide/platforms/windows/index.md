@@ -24,15 +24,15 @@ toc_title: Windows
 # Windows Platform Guide
 
 This guide shows how to set up your SDK development environment to build
-and deploy Cordova apps for Windows 8.1, Windows Phone 8.1, and
-Windows 10 Universal App Platform.  It shows how to use either shell tools
+and deploy Cordova apps Windows 10 (Universal Windows Platform [= UWP], formerly known as Universal App Platform [= UAP]), 
+Windows 8.1 and Windows Phone 8.1.  It shows how to use either shell tools
 to generate and build apps, or the cross-platform Cordova CLI. (See the [Overview](../../overview/index.html#development-paths) for a comparison of these
 development options.) This section also shows how to modify Cordova apps
 within Visual Studio. Regardless of [which](../../overview/index.html#development-paths) approach you take, you need to
 install the Visual Studio SDK, as described below.
 
-Developers wishing to target Windows Phone 8 should use the wp8 platform,
-see [Windows Phone 8 Platform Guide](../wp8/index.html) for details (Warning, the wp8 platform is deprecated).
+Note: Developers wishing to target Windows Phone 8 (instead of 8.1!) should use the `wp8` platform,
+see [Windows Phone 8 Platform Guide](../wp8/index.html) for details (Warning, the `wp8` platform is deprecated).
 
 Cordova WebViews running on Windows rely on Internet Explorer 11 (Windows 8.1 and Windows Phone 8.1) as
 their rendering engine, so as a practical matter you can use IE's
@@ -43,21 +43,17 @@ on how to support IE along with comparable WebKit browsers.
 
 ## Requirements and Support
 
-To develop apps for Windows platform you need:
+To develop apps for Windows 10 you need:
 
-- A Windows 8.1, 32 or 64-bit machine (_Home_, _Pro_, or _Enterprise_ editions)
-  with minimum 4 GB of RAM along with [Visual Studio 2015](http://www.visualstudio.com/downloads)
-  or Visual Studio 2013.  An evaluation version of Windows 8.1 Enterprise is
-  available from the
-  [Microsoft Developer Network](https://technet.microsoft.com/evalcenter/hh699156.aspx).
-
-- For the Windows Phone emulators, Windows 8.1 (x64) Professional edition or higher,
-and a processor that supports <a href='https://msdn.microsoft.com/en-us/library/windows/apps/ff626524(v=vs.105).aspx#hyperv'>Client Hyper-V and Second Level Address Translation (SLAT)</a>.
-
-To develop apps for Windows 10:
-
-- Windows 8.1 or Windows 10, 32- or 64-bit, along with
+- Windows 10 (or Windows 8.1), 32- or 64-bit, along with
   [Visual Studio 2015](http://www.visualstudio.com/downloads) or higher.
+  
+To develop apps for Windows 8.1:
+
+- Windows 8.1, 32 or 64-bit, along with [Visual Studio 2015](http://www.visualstudio.com/downloads)
+  or Visual Studio 2013.
+- For the Windows Phone emulators, Windows 8.1 (x64) Professional edition or higher,
+and a processor that supports [Client Hyper-V and Second Level Address Translation (SLAT)](https://msdn.microsoft.com/en-us/library/windows/apps/ff626524(v=vs.105).aspx#hyperv)
 
 App compatibility is determined by the OS that the app targeted.  Apps are forwardly-compatible
 but not backwardly-compatible, so an app targeting Windows 10 cannot run on 8.1, but
@@ -65,13 +61,11 @@ an app built for 8.1 can run on 10.
 
 Cordova apps targeting Windows can be developed on a Mac, either by running a
 virtual machine environment or by using Boot Camp to dual-boot a
-Windows 8.1 partition. Consult these resources to set up the required
+Windows partition. Consult these resources to set up the required
 Windows development environment on a Mac:
 
 - [VMWare Fusion](http://msdn.microsoft.com/en-US/library/windows/apps/jj945426)
-
 - [Parallels Desktop](http://msdn.microsoft.com/en-US/library/windows/apps/jj945424)
-
 - [Boot Camp](http://msdn.microsoft.com/en-US/library/windows/apps/jj945423)
 
 ## Installing the Requirements
@@ -90,17 +84,31 @@ The tools and SDKs for the target Windows platforms (UWP, 8.1, etc.) must also b
 
 After installation, you should be ready to develop apps targetting Windows platform. Refer to [Create your first app](../../cli/index.html) guide for details.
 
-By default the `cordova build` command produces two packages: Windows 8.1 and Windows Phone 8.1.
-To upgrade Windows package to version 10 the following configuration setting must be
-added to configuration file (`config.xml`).
+By default the `cordova build` command produces one package for Windows 10.
+
+#### Target version configuration
+
+If you want to build Windows 8.1 and Windows Phone 8.1 packages by default, you have to target `8.1` and the following configuration setting must be added to configuration file (`config.xml`).
 
 ```xml
-<preference name="windows-target-version" value="10.0" />
+<preference name="windows-target-version" value="8.1" />
 ```
 
-Once you add this setting `build` command will start producing Windows 10 packages.
+Once you add this setting, the `build` command will start producing Windows 8.1 and Windows Phone 8.1 packages.
 
-### Considerations for target Windows version
+#### Overriding configuration with the --appx parameter
+
+You may decide that you want to build a particular version of your application targeting a particular OS (for example, you might have set that you want to target Windows 10, but you want to build for Windows Phone 8.1).  To do this, you can use the `--appx` parameter:
+
+```
+cordova build windows -- --appx=8.1-phone
+```
+
+The build system will ignore the preference set in config.xml for the target Windows version and strictly build a package for Windows Phone 8.1.
+
+Valid values for the `--appx` flag are `8.1-win`, `8.1-phone`, and `uwp` or `uap` (for Windows 10 Universal Apps / Universal Windows Apps).  These options also apply to the `cordova run` command.
+
+#### Considerations for target Windows version
 
 Windows 10 supports a new "Remote" mode for Cordova apps (and HTML apps in general). This mode enables
 apps to have much more freedom with respect to use of DOM manipulation and common web patterns such as the use
@@ -111,32 +119,12 @@ the [Understanding Remote Mode vs Local Mode](#understanding-remote-mode-vs-loca
 When using Remote Mode, developers are encouraged to apply a Content Security Policy (CSP) to their application
 to prevent script injection attacks.
 
-### The --appx parameter
-
-You may decide that you want to build a particular version of your application targeting a particular OS (for example, you might have set that you want to target Windows 10, but you want to build for Windows Phone 8.1).  To do this, you can use the `--appx` parameter:
-
-```
-cordova build windows -- --appx=8.1-phone
-```
-
-The build system will ignore the preference set in config.xml for the target Windows version and strictly build a package for Windows Phone 8.1.
-
-Valid values for the `--appx` flag are `8.1-win`, `8.1-phone`, and `uap` (for Windows 10 Universal Apps).  These options also apply to the `cordova run` command.
-
 ### Deploy options
 
 To deploy Windows package:
 
 ```
-cordova run windows -- --win  # explicitly specify Windows as deployment target
-cordova run windows # `run` uses Windows package by default
-```
-
-To deploy Windows Phone package:
-
-```
-cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
-cordova run windows --device -- --phone  # deploy app to connected device
+cordova run windows
 ```
 
 This command will give you the list of all available targets:
@@ -151,7 +139,41 @@ This allows you to run the application on a specific device or emulator, in this
 cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone
 ```
 
+#### Architecture option
+
+- `--archs`
+- Specific chip architectures (`anycpu`, `arm`, `x86`, `x64`)
+
+#### Bundle option
+
+- `--bundle`
+- Generates an .appxbundle. Not valid if anycpu AND chip-specific architectures are used (at the same time)
+
 You can also use __cordova run --help__ to see additional build and run options.
+
+#### Deploy options when targetting Windows (Phone) 8.1
+
+With Windows (Phone) 8.1 packages you have more options for deployment.
+
+##### `--phone` and `--win`
+
+To deploy Windows 8.1 package:
+
+```
+cordova run windows -- --win  # explicitly specify Windows as deployment target
+```
+
+To deploy Windows Phone 8.1 package:
+
+```
+cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
+cordova run windows --device -- --phone  # deploy app to connected device
+```
+
+##### `--win10tools`
+
+- `--win10tools`
+- Uses Windows 10 deployment tools (used for a Windows 8.1 app when) being deployed to a Windows 10 device
 
 ### Using Visual Studio to deploy the app
 
@@ -281,6 +303,7 @@ Alternatively, these values could be specified using a build configuration file 
 There is also support to mix and match command line arguments and parameters in build.json file. Values from the command line arguments will get precedence.
 
 ### Creating a certificate key
+
 Signing is required for distributing and installing Windows Store apps. This process is normally handled by Visual Studio when you deploy a package for release. To do this without Visual Studio we need to create our own certificates. [This](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx) article has instructions on how to do that.
 
 Once you have the pfx file created and provided to build.json file, you might get the following error: "The key file may be password protected. To correct this, try to import the certificate manually into the current user's personal certificate  store.". In order to import it you have to use [certutil][2] from an admin prompt:
@@ -415,7 +438,9 @@ The network-related restrictions must be worked around by either using an API th
 The Enterprise Authentication and Shared User Certificates capabilities are specifically targeted at Enterprise scenarios.  These capabilities are supported for private/enterprise-enabled App Stores, so if you are building apps which are going to be deployed to an internal deployment mechanism, you can still support these.  However, they are not supported for Remote Mode apps in the public Windows Store.  When you build targeting Windows 10, if one of these capabilities is detected in your app manifest, a warning will be displayed.
 
 ### Scrolling in Local Mode
+
 While scrolling of the WebView is enabled by default in "Remote mode" and on the other platforms, in "Local Mode" this is not the case. If scrolling is required in "Local Mode", it can be enabled using the CSS `overflow` property.
+
 
 [1]: https://msdn.microsoft.com/en-us/library/hh446593(v=vs.85).aspx
 [2]: https://technet.microsoft.com/en-us/library/ee624045(v=ws.10).aspx
