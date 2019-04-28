@@ -17,9 +17,9 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Architectural overview of Cordova platform
-toc_title: Overview
-description: Start here if you are new to Cordova. Includes installation and next steps.
+title: Project Structure of a Cordova Project
+toc_title: Project Structure
+description: 
 ---
 
 # Project Structure
