@@ -37,6 +37,7 @@ myapp/
 | | |-- android/
 | | |-- windows/
 | | |-- ios/
+|-- node_modules/
 |-- www/
 |-- platforms/
 | |-- android/
@@ -44,7 +45,10 @@ myapp/
 | |-- ios/
 |-- plugins/
   |--cordova-plugin-camera/
+  
 ```
+TODO resort properly
+
 
 ### `package.json`
 
@@ -57,6 +61,12 @@ Configures your application and allows you to customize the behavior of your pro
 ### `www/`
 
 Contains the project's web artifacts, such as .html, .css and .js files. As a cordova application developer, most of your code and assets will go here. They will be copied on a `cordova prepare` to each platform's www directory. The www source directory is reproduced within each platform's subdirectory, appearing for example in `platforms/ios/www` or `platforms/android/assets/www`. Because the CLI constantly copies over files from the source www folder, you should only edit these files and not the ones located under the platforms subdirectories. If you use version control software, you should add this source www folder, along with the merges folder, to your version control system.
+
+### `node_modules/`
+
+TODO
+Dependencies inistalled via NPM. 
+Base for `platforms` and `plugins`
 
 ### `platforms/`
 
