@@ -68,6 +68,21 @@ cordova.commandProxy.add("Echo",{
         }
     }
 });
+
+// or alternative syntax
+
+module.exports = {
+    echo: function(successCallback, errorCallback, strInput) {
+        if(!strInput || !strInput.length) {
+            errorCallback("Error, something was wrong with the input string. =>" + strInput);
+        }
+        else {
+            successCallback(strInput + "echo");
+        }
+    }
+};
+
+require('cordova/exec/proxy').add('Echo', module.exports);
 ```
 
 The `www/echoplugin.js` file will forward the `echo` function call to this proxy through the `cordova.exec` command and execute this implementation in `src/windows/echopluginProxy.js`.
