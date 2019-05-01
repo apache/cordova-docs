@@ -31,11 +31,11 @@ Cordova Windows on Windows 8.1 and Windows Phone 8.1 rely on Internet Explorer 1
 
 To develop apps for Windows 10 you need:
 
-- Windows 10 (or Windows 8.1), 32- or 64-bit, along with [Visual Studio 2015](http://www.visualstudio.com/downloads) or higher.
+- Windows 10 (or Windows 8.1), 32- or 64-bit, along with [Visual Studio](http://www.visualstudio.com/downloads) 2015 or Visual Studio 2017. (Cordova Windows is not supported by Visual Studio 2019.)
   
 To develop apps for Windows 8.1:
 
-- Windows 8.1, 32 or 64-bit, along with [Visual Studio 2015](http://www.visualstudio.com/downloads) or Visual Studio 2013.
+- Windows 8.1, 32 or 64-bit, along with [Visual Studio](http://www.visualstudio.com/downloads) 2015 or Visual Studio 2013.
 - For the Windows Phone emulators, Windows 8.1 (x64) Professional edition or higher, and a processor that supports [Client Hyper-V and Second Level Address Translation (SLAT)](https://msdn.microsoft.com/en-us/library/windows/apps/ff626524(v=vs.105).aspx#hyperv)
 
 
