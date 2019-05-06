@@ -54,9 +54,11 @@ requirements listed above.
 
 ### Visual Studio 2017
 
-You also need to install the Workload "Universal Windows Platform development" and the "Windows 10 SDK (10.0.10240.0)" as individual components.
+You also need to install the Workload "Universal Windows Platform development" and the "Windows 10 SDK (10.0.10240.0)" as individual component.
 
 <br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/vs17_workload.png" /></p><br/>
+
+See [here if you get error messages regarding `MSBuild v4.0`](#user-content-visual-studio-2017-and-msbuild-v40-is-not-supported-aborting). 
 
 ### Visual Studio 2015
 
@@ -415,6 +417,25 @@ The Enterprise Authentication and Shared User Certificates capabilities are spec
 ### Scrolling in Local Mode
 
 While scrolling of the WebView is enabled by default in "Remote mode" and on the other platforms, in "Local Mode" this is not the case. If scrolling is required in "Local Mode", it can be enabled using the CSS `overflow` property.
+
+
+## Common Problems and Workarounds
+
+### Visual Studio 2017 and `MSBuild v4.0 is not supported, aborting.`
+
+The support for Visual Studio 2017 in Cordova Windows unfortunately is not very stable and Cordova Windows sometime can not find MSBuild, Visual Studio's command line build tools. If this affects you, when trying to build a Cordova Windows project you will get an error message simlar to this:
+
+```
+MSBuild v4.0 is not supported, aborting.
+```
+
+To work around this problem, we implemented two environment variables that you can set to tell Cordova Windows where to look. 
+- The first is `VSINSTALLDIR `and should be set to the installation directory of your Visual Studio (e.g. `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community`). 
+- If this doesn't work, the second one is called `MSBUILDDIR` and describes the path of your MSBuild `bin` directory (which is most often found at `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin`).
+
+You can either set the environment variable on demand manually by executing `set KEY=VALUE` (e.g. `set MSBUILDDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin`) or [set it permanently via the "System Properties"](https://www.computerhope.com/issues/ch000549.htm).
+
+
 
 
 [1]: https://msdn.microsoft.com/en-us/library/hh446593(v=vs.85).aspx
