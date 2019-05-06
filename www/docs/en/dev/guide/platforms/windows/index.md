@@ -38,8 +38,6 @@ To develop apps for Windows 8.1:
 - Windows 8.1, 32 or 64-bit, along with [Visual Studio](http://www.visualstudio.com/downloads) 2015 or Visual Studio 2013.
 - For the Windows Phone emulators, Windows 8.1 (x64) Professional edition or higher, and a processor that supports [Client Hyper-V and Second Level Address Translation (SLAT)](https://msdn.microsoft.com/en-us/library/windows/apps/ff626524(v=vs.105).aspx#hyperv)
 
-
-
 Cordova apps targeting Windows can be developed on a Mac, either by running a
 virtual machine environment or by using Boot Camp to dual-boot a
 Windows partition. Consult these resources to set up the required
@@ -51,9 +49,16 @@ Windows development environment on a Mac:
 
 ## Installing the Requirements
 
-Install any edition of
-[Visual Studio](http://www.visualstudio.com/downloads) matching the version
+Install any edition of [Visual Studio](http://www.visualstudio.com/downloads) matching the version
 requirements listed above.
+
+### Visual Studio 2017
+
+You also need to install the Workload "Universal Windows Platform development" and the "Windows 10 SDK (10.0.10240.0)" as individual components.
+
+<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/vs17_workload.png" /></p><br/>
+
+### Visual Studio 2015
 
 The tools and SDKs for the target Windows platforms (UWP, 8.1, etc.) must also be selected in the installer. They can be found under the "Windows and Web Development" heading.
 
