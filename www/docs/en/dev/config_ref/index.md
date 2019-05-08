@@ -23,7 +23,7 @@ description: List of supported tags in the config.xml file.
 
 # Config.xml
 
-Config.xml is a global configuration file that controls many aspects
+`config.xml` is a global configuration file that controls many aspects
 of a cordova application's behavior. This
 platform-agnostic XML file is arranged based on the W3C's [Packaged
 Web Apps (Widgets)](http://www.w3.org/TR/widgets/) specification, and
