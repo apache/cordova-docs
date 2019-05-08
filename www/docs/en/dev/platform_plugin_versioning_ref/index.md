@@ -22,7 +22,7 @@ toc_title: Manage versions and platforms
 description: How to manage platforms and Cordova CLI versions.
 ---
 
-## Platforms and Plugins Version Management
+# Platforms and Plugins Version Management
 
 From version 4.3.0 onwards, Cordova provides the ability to save and restore platforms and plugins.
 
@@ -175,7 +175,7 @@ When `prepare` is executed, the version from `package.json` has higher priority 
 
 The plugin commands are a mirror of the platform commands
 
-### Saving plugins
+### Saving Plugins
 
 To save a plugin, you issue the following command:
 
