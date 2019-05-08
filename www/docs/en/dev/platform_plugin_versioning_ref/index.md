@@ -28,9 +28,9 @@ From version 4.3.0 onwards, Cordova provides the ability to save and restore pla
 
 This feature allows developers to save and restore their app to a known state without having to check in all of the platform and plugin source code.
 
-When adding a platform or plugin, details about the app's platform and plugin versions are automatically saved in config.xml and package.json. It is possible to add a platform or plugin by editing package.json or config.xml directly, assuming you know the right tags + syntax. It is not possible to remove plugins or platforms in this manner. The recommended method of adding and removing plugins and platforms is with the command line cordova commands `cordova plugin add|remove ...` and `cordova platform add|remove ...` to avoid any out of sync issues.
+When adding a platform or plugin, details about the app's platform and plugin versions are automatically saved to the `package.json` file. It is also possible to add a platform or plugin by editing the `package.json` file directly, assuming you know the right tags and syntax. It is not possible to remove plugins or platforms in this manner. The recommended method of adding and removing plugins and platforms is with the Cordova CLI commands `cordova plugin add|remove ...` and `cordova platform add|remove ...` to avoid any out of sync issues.
 
-The 'restore' step happens automatically when a **`cordova prepare`** is issued, making use of information previously saved in the config.xml and package.json files.
+The **restore** step happens automatically when a **`cordova prepare`** is issued, making use of information previously saved in the `package.json` and `config.xml` files.
 
 One scenario where save/restore capabilities come in handy is in large teams that work on an app, with each team member focusing on a platform or plugin. This feature makes it easier to share the project and reduce the amount of redundant code that is checked in the repository.
 
@@ -67,15 +67,15 @@ Some Examples:
 
 * **`cordova platform add android`** 
 
-  Retrieves the pinned version of `cordova-android` platform from NPM, adds it to the project and updates the `package.json` file.
+  Retrieves the pinned version of `cordova-android` platform from npm, adds it to the project and updates the `package.json` file.
 
 * **`cordova platform add android@7.1.4`**
 
-  Retrieves the `cordova-android` platform version `7.1.4` from NPM, adds it to the project and updates the `package.json` file.
+  Retrieves the `cordova-android` platform version `7.1.4` from npm, adds it to the project and updates the `package.json` file.
 
 * **`cordova platform add https://github.com/apache/cordova-android.git`**
 
-  NPM retrieves the `cordova-android` platform from the git repository, adds it to the project and updates the `package.json`.
+  npm retrieves the `cordova-android` platform from the git repository, adds it to the project and updates the `package.json`.
   
 * **`cordova platform add C:/path/to/android/platform`**
 
@@ -83,7 +83,7 @@ Some Examples:
 
 * **`cordova platform add android --nosave`**
 
-  Retrieves the pinned version of `cordova-android` platform from NPM, adds it to the project, but does not add it to the `package.json` file.
+  Retrieves the pinned version of `cordova-android` platform from npm, adds it to the project, but does not add it to the `package.json` file.
 
 ### Updating or Removing Platforms
 
@@ -122,7 +122,7 @@ Some Examples:
 
 Platforms are automatically restored from the `package.json` and `config.xml` when executing the the **`cordova prepare`** command.
 
-If a platfrom is defined in both files, the information defined in `package.json` is used as the soruce of truth.
+If a platfrom is defined in both files, the information defined in `package.json` is used as the source of truth.
 
 After `prepare`, if a platform was restored from `config.xml`, the `package.json` file will updated to reflect the restored platform and will have identical vales from `config.xml`.
 
@@ -206,15 +206,15 @@ Some Examples:
 
 * **`cordova plugin add cordova-plugin-device`**
 
-  Retrieves the pinned version of the `cordova-plugin-device` plugin from NPM, adds it to the project and updates the `package.json` file.
+  Retrieves the pinned version of the `cordova-plugin-device` plugin from npm, adds it to the project and updates the `package.json` file.
 
 * **`cordova plugin add cordova-plugin-device@2.0.1`**
 
-  Retrieves the `cordova-plugin-device` plugin at version `2.0.1` from NPM, adds it to the project and updates the `package.json` file.
+  Retrieves the `cordova-plugin-device` plugin at version `2.0.1` from npm, adds it to the project and updates the `package.json` file.
 
 * **`cordova plugin add https://github.com/apache/cordova-plugin-device.git`**
 
-  NPM retrieves the `cordova-plugin-device` plugin from the git repository, adds it to the project and updates the `package.json`.
+  npm retrieves the `cordova-plugin-device` plugin from the git repository, adds it to the project and updates the `package.json`.
 
 * **`cordova plugin add C:/path/to/console/plugin`**
 
@@ -246,10 +246,9 @@ For Example:
 
 ### Restoring Plugins
 
+Plugins are automatically restored from `package.json` and `config.xml` when executing the the **`cordova prepare`** command.
 
-Plugins are automatically restored from the `package.json` and `config.xml` when executing the the **`cordova prepare`** command.
-
-If a plugin is defined in both files, the information defined in `package.json` is used as the soruce of truth.
+If a plugin is defined in both files, the information defined in `package.json` is used as the source of truth.
 
 After `prepare`, if a plugin was restored from `config.xml`, the `package.json` file will updated to reflect the restored plugin and will have identical vales from `config.xml`.
 
