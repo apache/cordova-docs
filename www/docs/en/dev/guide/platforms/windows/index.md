@@ -58,7 +58,7 @@ You also need to install the Workload "Universal Windows Platform development" a
 
 <br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/vs17_workload.png" /></p><br/>
 
-See [here if you get error messages regarding `MSBuild v4.0`](#user-content-visual-studio-2017-and-msbuild-v40-is-not-supported-aborting). 
+See [here if you get error messages regarding `MSBuild v4.0`](#visual-studio-2017-and-msbuild-v40-is-not-supported-aborting). 
 
 ### Visual Studio 2015
 
