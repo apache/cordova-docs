@@ -23,62 +23,44 @@ toc_title: Windows
 
 # Windows Platform Guide
 
-This guide shows how to set up your SDK development environment to build
-and deploy Cordova apps for Windows 8.1, Windows Phone 8.1, and
-Windows 10 Universal App Platform.  It shows how to use either shell tools
-to generate and build apps, or the cross-platform Cordova CLI. (See the [Overview](../../overview/index.html#development-paths) for a comparison of these
-development options.) This section also shows how to modify Cordova apps
-within Visual Studio. Regardless of [which](../../overview/index.html#development-paths) approach you take, you need to
-install the Visual Studio SDK, as described below.
+This guide shows how to set up your SDK development environment to build and deploy Cordova apps Windows 10 (Universal Windows Platform [= UWP], formerly known as Universal App Platform [= UAP]), Windows 8.1 and Windows Phone 8.1.  It shows how to use either shell tools to generate and build apps, or the cross-platform Cordova CLI. (See the [Overview](../../overview/index.html#development-paths) for a comparison of these development options.) This section also shows how to modify Cordova apps within Visual Studio. Regardless of [which approach](../../overview/index.html#development-paths) you take, you need to install the Visual Studio SDK, as described below.
 
-Developers wishing to target Windows Phone 8 should use the wp8 platform,
-see [Windows Phone 8 Platform Guide](../wp8/index.html) for details (Warning, the wp8 platform is deprecated).
-
-Cordova WebViews running on Windows rely on Internet Explorer 11 (Windows 8.1 and Windows Phone 8.1) as
-their rendering engine, so as a practical matter you can use IE's
-powerful debugger to test any web content that doesn't invoke Cordova
-APIs.  The Windows Phone Developer Blog provides
-[helpful guidance](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
-on how to support IE along with comparable WebKit browsers.
+Cordova Windows on Windows 8.1 and Windows Phone 8.1 rely on Internet Explorer 11 as their rendering engine, so as a practical matter you can use IE's powerful debugger to test any web content that doesn't invoke Cordova APIs.  The Windows Phone Developer Blog provides [helpful guidance](https://blogs.windows.com/buildingapps/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10/#qYPwLJDbYKToOveG.97) on how to support IE along with comparable WebKit browsers.
 
 ## Requirements and Support
 
-To develop apps for Windows platform you need:
+To develop apps for Windows 10 you need:
 
-- A Windows 8.1, 32 or 64-bit machine (_Home_, _Pro_, or _Enterprise_ editions)
-  with minimum 4 GB of RAM along with [Visual Studio 2015](http://www.visualstudio.com/downloads)
-  or Visual Studio 2013.  An evaluation version of Windows 8.1 Enterprise is
-  available from the
-  [Microsoft Developer Network](https://technet.microsoft.com/evalcenter/hh699156.aspx).
+- Windows 10 (or Windows 8.1), 32- or 64-bit, along with [Visual Studio](http://www.visualstudio.com/downloads) 2015 or Visual Studio 2017. (Cordova Windows is not supported by Visual Studio 2019.)
+  
+To develop apps for Windows 8.1:
 
-- For the Windows Phone emulators, Windows 8.1 (x64) Professional edition or higher,
-and a processor that supports <a href='https://msdn.microsoft.com/en-us/library/windows/apps/ff626524(v=vs.105).aspx#hyperv'>Client Hyper-V and Second Level Address Translation (SLAT)</a>.
-
-To develop apps for Windows 10:
-
-- Windows 8.1 or Windows 10, 32- or 64-bit, along with
-  [Visual Studio 2015](http://www.visualstudio.com/downloads) or higher.
-
-App compatibility is determined by the OS that the app targeted.  Apps are forwardly-compatible
-but not backwardly-compatible, so an app targeting Windows 10 cannot run on 8.1, but
-an app built for 8.1 can run on 10.
+- Windows 8.1, 32 or 64-bit, along with [Visual Studio](http://www.visualstudio.com/downloads) 2015 or Visual Studio 2013.
+- For the Windows Phone emulators, Windows 8.1 (x64) Professional edition or higher, and a processor that supports [Client Hyper-V and Second Level Address Translation (SLAT)](https://msdn.microsoft.com/en-us/library/windows/apps/ff626524(v=vs.105).aspx#hyperv)
 
 Cordova apps targeting Windows can be developed on a Mac, either by running a
 virtual machine environment or by using Boot Camp to dual-boot a
-Windows 8.1 partition. Consult these resources to set up the required
+Windows partition. Consult these resources to set up the required
 Windows development environment on a Mac:
 
 - [VMWare Fusion](http://msdn.microsoft.com/en-US/library/windows/apps/jj945426)
-
 - [Parallels Desktop](http://msdn.microsoft.com/en-US/library/windows/apps/jj945424)
-
 - [Boot Camp](http://msdn.microsoft.com/en-US/library/windows/apps/jj945423)
 
 ## Installing the Requirements
 
-Install any edition of
-[Visual Studio](http://www.visualstudio.com/downloads) matching the version
+Install any edition of [Visual Studio](http://www.visualstudio.com/downloads) matching the version
 requirements listed above.
+
+### Visual Studio 2017
+
+You also need to install the Workload "Universal Windows Platform development" and the "Windows 10 SDK (10.0.10240.0)" as individual component.
+
+<br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/vs17_workload.png" /></p><br/>
+
+See [here if you get error messages regarding `MSBuild v4.0`](#user-content-visual-studio-2017-and-msbuild-v40-is-not-supported-aborting). 
+
+### Visual Studio 2015
 
 The tools and SDKs for the target Windows platforms (UWP, 8.1, etc.) must also be selected in the installer. They can be found under the "Windows and Web Development" heading.
 
@@ -86,21 +68,37 @@ The tools and SDKs for the target Windows platforms (UWP, 8.1, etc.) must also b
 
 ## Project Configuration
 
-### Target Windows version
-
 After installation, you should be ready to develop apps targetting Windows platform. Refer to [Create your first app](../../cli/index.html) guide for details.
 
-By default the `cordova build` command produces two packages: Windows 8.1 and Windows Phone 8.1.
-To upgrade Windows package to version 10 the following configuration setting must be
-added to configuration file (`config.xml`).
+### Target Windows version
+
+By default the `cordova build` command produces one package for Windows 10.
+
+App compatibility is determined by the OS that the app targeted.  Apps are forwardly-compatible but not backwardly-compatible, so an app targeting Windows 10 cannot run on 8.1, but an app built for 8.1 can run on 10.
+
+#### Target version configuration
+
+If you want to build Windows 8.1 and Windows Phone 8.1 packages by default, you have to target `8.1` and the following configuration setting must be added to configuration file (`config.xml`).
 
 ```xml
-<preference name="windows-target-version" value="10.0" />
+<preference name="windows-target-version" value="8.1" />
 ```
 
-Once you add this setting `build` command will start producing Windows 10 packages.
+Once you add this setting, the `build` command will start producing Windows 8.1 and Windows Phone 8.1 packages.
 
-### Considerations for target Windows version
+#### Overriding configuration with the --appx parameter
+
+You may decide that you want to build a particular version of your application targeting a particular OS (for example, you might have set that you want to target Windows 10, but you want to build for Windows Phone 8.1).  To do this, you can use the `--appx` parameter:
+
+```
+cordova build windows -- --appx=8.1-phone
+```
+
+The build system will ignore the preference set in `config.xml` for the target Windows version and strictly build a package for Windows Phone 8.1.
+
+Valid values for the `--appx` flag are `8.1-win`, `8.1-phone`, and `uwp` or `uap` (for Windows 10 Universal Apps / Universal Windows Apps).  These options also apply to the `cordova run` command.
+
+#### Considerations for target Windows version
 
 Windows 10 supports a new "Remote" mode for Cordova apps (and HTML apps in general). This mode enables
 apps to have much more freedom with respect to use of DOM manipulation and common web patterns such as the use
@@ -111,32 +109,12 @@ the [Understanding Remote Mode vs Local Mode](#understanding-remote-mode-vs-loca
 When using Remote Mode, developers are encouraged to apply a Content Security Policy (CSP) to their application
 to prevent script injection attacks.
 
-### The --appx parameter
-
-You may decide that you want to build a particular version of your application targeting a particular OS (for example, you might have set that you want to target Windows 10, but you want to build for Windows Phone 8.1).  To do this, you can use the `--appx` parameter:
-
-```
-cordova build windows -- --appx=8.1-phone
-```
-
-The build system will ignore the preference set in config.xml for the target Windows version and strictly build a package for Windows Phone 8.1.
-
-Valid values for the `--appx` flag are `8.1-win`, `8.1-phone`, and `uap` (for Windows 10 Universal Apps).  These options also apply to the `cordova run` command.
-
 ### Deploy options
 
 To deploy Windows package:
 
 ```
-cordova run windows -- --win  # explicitly specify Windows as deployment target
-cordova run windows # `run` uses Windows package by default
-```
-
-To deploy Windows Phone package:
-
-```
-cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
-cordova run windows --device -- --phone  # deploy app to connected device
+cordova run windows
 ```
 
 This command will give you the list of all available targets:
@@ -151,55 +129,76 @@ This allows you to run the application on a specific device or emulator, in this
 cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone
 ```
 
+#### Architecture option
+
+- `--archs`
+- Specific chip architectures (`anycpu`, `arm`, `x86`, `x64`)
+
+#### Bundle option
+
+- `--bundle`
+- Generates an .appxbundle. Not valid if anycpu AND chip-specific architectures are used (at the same time)
+
 You can also use __cordova run --help__ to see additional build and run options.
+
+#### Deploy options when targetting Windows (Phone) 8.1
+
+With Windows (Phone) 8.1 packages you have more options for deployment.
+
+##### `--phone` and `--win`
+
+To deploy Windows 8.1 package:
+
+```
+cordova run windows -- --win  # explicitly specify Windows as deployment target
+```
+
+To deploy Windows Phone 8.1 package:
+
+```
+cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
+cordova run windows --device -- --phone  # deploy app to connected device
+```
+
+##### `--win10tools`
+
+- `--win10tools`
+- Uses Windows 10 deployment tools (used for a Windows 8.1 app when) being deployed to a Windows 10 device
 
 ### Using Visual Studio to deploy the app
 
-Once you build a Cordova app, you can open it with
-Visual Studio. The various `build` commands generate a Visual Studio
-Solution (_.sln_) file. Open the file in the File Explorer to modify
-the project within Visual Studio:
+Once you build a Cordova app, you can open it with Visual Studio. The various `build` commands generate a Visual Studio
+Solution (_.sln_) file. Open the file in the File Explorer to modify the project within Visual Studio:
 
 <br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/win8_sdk_openSLN.png" /></p><br/>
 
-The `CordovaApp` component displays within the solution, and its `www`
-directory contains the web-based source code, including the
-`index.html` home page:
+The `CordovaApp` component displays within the solution, and its `www` directory contains the web-based source code, including the `index.html` home page:
 
 <br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/win8_sdk.png" /></p><br/>
 
-The projects for different Windows versions are displayed separately in the solution explorer. You can choose the deploy target version by right clicking the 'solution' (topmost entry in the solution explorer) and then going into 'Properties'. Here you can update the 'Single start up' field. The controls below Visual Studio's main menu allow you to test or
-deploy the app:
+The projects for different Windows versions are displayed separately in the solution explorer. You can choose the deploy target version by right clicking the 'solution' (topmost entry in the solution explorer) and then going into 'Properties'. Here you can update the 'Single start up' field. The controls below Visual Studio's main menu allow you to test or deploy the app:
 
 <br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/win8_sdk_deploy.png" /></p><br/>
 
-With __Local Machine__ selected, press the green arrow to install the
-app on the same machine running Visual Studio. Once you do so, the app
-appears in Windows' app listings:
+With __Local Machine__ selected, press the green arrow to install the app on the same machine running Visual Studio. Once you do so, the app appears in Windows' app listings:
 
 <br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/win8_sdk_runApp.png" /></p><br/>
 
-Each time you rebuild the app, the version available in the interface
-is refreshed.
+Each time you rebuild the app, the version available in the interface is refreshed.
 
-Once available in the app listings, holding down the __CTRL__ key
-while selecting the app allows you to pin it to the main screen:
+Once available in the app listings, holding down the __CTRL__ key while selecting the app allows you to pin it to the main screen:
 
 <br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/win8_sdk_runHome.png" /></p><br/>
 
-Note that if you open the app within a virtual machine environment,
-you may need to click in the corners or along the sides of the windows
-to switch apps or access additional functionality:
+Note that if you open the app within a virtual machine environment, you may need to click in the corners or along the sides of the windows to switch apps or access additional functionality:
 
 <br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/win8_sdk_run.png" /></p><br/>
 
-Alternately, choose the __Simulator__ deployment option to view the
-app as if it were running on a tablet device:
+Alternately, choose the __Simulator__ deployment option to view the app as if it were running on a tablet device:
 
 <br/><p align="center"><img src="{{ site.baseurl }}/static/img/guide/platforms/windows/win8_sdk_sim.png" /></p><br/>
 
-Unlike desktop deployment, this option allows you to simulate the
-tablet's orientation, location, and vary its network settings.
+Unlike desktop deployment, this option allows you to simulate the tablet's orientation, location, and vary its network settings.
 
 __NOTE__: Consult the [Overview](../../overview/index.html) for advice on how to use Cordova's
 command-line tools or the SDK in your workflow. The Cordova CLI relies
@@ -210,11 +209,9 @@ to the CLI.
 
 ## Debugging
 
-Visual Studio provides powerful tools to debug your application. You can refer to [this](https://msdn.microsoft.com/en-us/library/7seh8d72.aspx) article to get started with it.
+Visual Studio provides powerful tools to debug your application. You can refer to [this article](https://msdn.microsoft.com/en-us/library/7seh8d72.aspx) to get started with it.
 
-**Note:** Resume and pause events are not triggered normally when debugging apps using Visual Studio. This is because Windows does not suspend your app when it is being debugged.
-The only way to change the application state is through the 'Lifecycle event' options inside Visual Studio. The events should work as expected when the app
-is run on a device/emulator without the debugger attached.
+**Note:** Resume and pause events are not triggered normally when debugging apps using Visual Studio. This is because Windows does not suspend your app when it is being debugged. The only way to change the application state is through the 'Lifecycle event' options inside Visual Studio. The events should work as expected when the app is run on a device/emulator without the debugger attached.
 
 ## Signing an App
 
@@ -225,13 +222,13 @@ To be able to correctly package and sign Windows apps there are few things requi
 - A signing certificate
 - Identity details matching the provided signing certificate
 
-In Windows project, identity details are kept in a file named package.appxmanifest. This file is automatically populated every time a Cordova app is built. Identity holds 3 important fields.
+In Windows project, identity details are kept in a file named `package.appxmanifest`. This file is automatically populated every time a Cordova app is built. Identity holds 3 important fields.
 
 - Name
 - Publisher
 - Version
 
-*Name* and *Version* can be set from **config.xml**. *Publisher* can be provided as a build parameter or can be set on **build.json** file.
+*Name* and *Version* can be set from `config.xml`. *Publisher* can be provided as a build parameter or can be set on `build.json` file.
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/windows/vs2015_packaging.png)
 
@@ -249,7 +246,7 @@ In Windows project, identity details are kept in a file named package.appxmanife
 <preference name="WindowsStoreDisplayName" value="CoolApp"/> <!-- WindowsStorePublisherName overrides name -->
 ```
 
-A signing certificate can be provided from either CLI or through build.json file. The certificate related CLI flags are:
+A signing certificate can be provided from either CLI or through `build.json` file. The certificate related CLI flags are:
 
 | Parameter             | Flag              | Description
 |-----------------------|-------------------|-----------------------------------
@@ -261,7 +258,7 @@ Example:
 cordova build -- --packageCertificateKeyFile="platforms\windows\CordovaApp_TemporaryKey.pfx" --packageThumbprint="ABCABCABCABC123123123123"
 ```
 
-Alternatively, these values could be specified using a build configuration file (build.json) using CLI (--buildConfig). A sample build configuration file:
+Alternatively, these values could be specified using a build configuration file (`build.json`) using CLI (`--buildConfig`). A sample build configuration file:
 
 ```json
 {
@@ -278,12 +275,13 @@ Alternatively, these values could be specified using a build configuration file 
 }
 ```
 
-There is also support to mix and match command line arguments and parameters in build.json file. Values from the command line arguments will get precedence.
+There is also support to mix and match command line arguments and parameters in `build.json` file. Values from the command line arguments will get precedence.
 
 ### Creating a certificate key
-Signing is required for distributing and installing Windows Store apps. This process is normally handled by Visual Studio when you deploy a package for release. To do this without Visual Studio we need to create our own certificates. [This](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx) article has instructions on how to do that.
 
-Once you have the pfx file created and provided to build.json file, you might get the following error: "The key file may be password protected. To correct this, try to import the certificate manually into the current user's personal certificate  store.". In order to import it you have to use [certutil][2] from an admin prompt:
+Signing is required for distributing and installing Windows Store apps. This process is normally handled by Visual Studio when you deploy a package for release. To do this without Visual Studio we need to create our own certificates. [This article](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx) has instructions on how to do that.
+
+Once you have the `.pfx` file created and provided to `build.json` file, you might get the following error: "The key file may be password protected. To correct this, try to import the certificate manually into the current user's personal certificate  store.". In order to import it you have to use [certutil][2] from an admin prompt:
 
 `certutil -user -p PASSWORD -importPFX FakeCorp.com.pfx`
 
@@ -291,7 +289,7 @@ Where:
 
 - user : Specifies "current user" personal store
 - p : Password for pfx file
-- importPfx : Name of pfx file
+- importPFX : Name of pfx file
 
 Once installed, next step is to add packageThumbprint and packageCertificateKeyFile to build.json. In order to find the packageThumbprint, search for the CommonName you've associated with the certificate:
 
@@ -383,6 +381,7 @@ should do the work necessary to configure the appearance of the
 displayed notifications.
 
 ## Understanding Remote Mode vs Local Mode
+
 Windows 10 introduces a new feature called "Remote mode" for HTML applications. Prior to it, Windows 8.1 apps
 worked on what is now termed as "Local Mode" in Windows 10, in which HTML Applications have full access to the native
 Windows API surface and capabilities. Local Mode disallows inline script in order to prevent script injection attacks,
@@ -396,6 +395,7 @@ capabilities when certifying your app in the Windows Store.  The removal of thes
 prevent accessing certain functionality, but it might require the use of a different combination of APIs or tactics.
 
 ### Effect of Remote Mode on capabilities
+
 The following capabilities are unavailable when deploying your Remote Mode application to the Windows Store:
 
 - Enterprise Authentication (`enterpriseAuthentication`)
@@ -415,7 +415,28 @@ The network-related restrictions must be worked around by either using an API th
 The Enterprise Authentication and Shared User Certificates capabilities are specifically targeted at Enterprise scenarios.  These capabilities are supported for private/enterprise-enabled App Stores, so if you are building apps which are going to be deployed to an internal deployment mechanism, you can still support these.  However, they are not supported for Remote Mode apps in the public Windows Store.  When you build targeting Windows 10, if one of these capabilities is detected in your app manifest, a warning will be displayed.
 
 ### Scrolling in Local Mode
+
 While scrolling of the WebView is enabled by default in "Remote mode" and on the other platforms, in "Local Mode" this is not the case. If scrolling is required in "Local Mode", it can be enabled using the CSS `overflow` property.
+
+
+## Common Problems and Workarounds
+
+### Visual Studio 2017 and `MSBuild v4.0 is not supported, aborting.`
+
+The support for Visual Studio 2017 in Cordova Windows unfortunately is not very stable and Cordova Windows sometime can not find MSBuild, Visual Studio's command line build tools. If this affects you, when trying to build a Cordova Windows project you will get an error message simlar to this:
+
+```
+MSBuild v4.0 is not supported, aborting.
+```
+
+To work around this problem, we implemented two environment variables that you can set to tell Cordova Windows where to look. 
+- The first is `VSINSTALLDIR `and should be set to the installation directory of your Visual Studio (e.g. `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community`). 
+- If this doesn't work, the second one is called `MSBUILDDIR` and describes the path of your MSBuild `bin` directory (which is most often found at `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin`).
+
+You can either set the environment variable on demand manually by executing `set KEY=VALUE` (e.g. `set MSBUILDDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin`) or [set it permanently via the "System Properties"](https://www.computerhope.com/issues/ch000549.htm).
+
+
+
 
 [1]: https://msdn.microsoft.com/en-us/library/hh446593(v=vs.85).aspx
 [2]: https://technet.microsoft.com/en-us/library/ee624045(v=ws.10).aspx
