@@ -91,7 +91,7 @@ Some Examples:
 
 ### Updating or Removing Platforms
 
-It is also possible to update or delete from `config.xml` and `package.json` during the commands 'cordova platform update' and 'cordova platform remove' :
+It is also possible to update or delete from `config.xml` and `package.json` during the commands `cordova platform update` and `cordova platform remove`:
 
 ```bash
 cordova platform update <platform[@<version>] | directory | git_url> --save
@@ -114,9 +114,9 @@ Some Examples:
 
 * **`cordova platform remove android`**
 
-  Removes the `cordova-android` platform from the project and removes from the `package.json` file.
+  Removes the `cordova-android` platform from the project and removes it from the `package.json` file.
   
-  _Note: If the platform definiton existed in `config.xml` from a previous version of Cordova-CLI, it will also be removed from `config.xml`._
+  _Note: If the platform definiton existed in `config.xml` from a previous version of Cordova CLI, it will also be removed from `config.xml`._
 
 * **`cordova platform remove android --nosave`**
 
@@ -124,11 +124,11 @@ Some Examples:
 
 ### Restoring Platforms
 
-Platforms are automatically restored from the `package.json` and `config.xml` when executing the the **`cordova prepare`** command.
+Platforms are automatically restored from the `package.json` (and `config.xml`) when executing the the **`cordova prepare`** command.
 
-If a platfrom is defined in both files, the information defined in `package.json` is used as the source of truth.
+If a platform is defined in both files, the information defined in `package.json` is used as the source of truth.
 
-After `prepare`, if a platform was restored from `config.xml`, the `package.json` file will updated to reflect the restored platform and will have identical vales from `config.xml`.
+After `prepare`, if a platform was restored from `config.xml`, the `package.json` file will be updated to reflect the restored platform and will have identical values from `config.xml`.
 
 If you add a platform without specifying a `<version | folder | git_url>`, the version that will be installed is taken from `package.json` or `config.xml`.
 
@@ -171,13 +171,13 @@ Suppose you have defined in `config.xml` and `package.json` a platform and versi
 }
 ```
 
-When `prepare` is executed, the version from `package.json` has higher priority over  `config.xml` and version `^8.0.0` will be installed.
+When `prepare` is executed, the version from `package.json` has higher priority over `config.xml` and version `^8.0.0` will be installed.
 
 ---
 
 ## Plugin Versioning
 
-The plugin commands are a mirror of the platform commands
+The plugin commands are a mirror of the platform commands:
 
 ### Saving Plugins
 
@@ -250,7 +250,7 @@ For Example:
 
   Removes the `cordova-plugin-device` plugin from the project and deletes its entry from `package.json`.
 
-  _Note: If the plugin definiton existed in `config.xml` from a previous version of Cordova-CLI, it will also be removed from `config.xml`._
+  _Note: If the plugin definiton existed in `config.xml` from a previous version of Cordova CLI, it will also be removed from `config.xml`._
 
 ### Restoring Plugins
 
@@ -301,4 +301,4 @@ Suppose you have defined in `config.xml` and `package.json` a plugin and version
 }
 ```
 
-When `prepare` is executed, the version from `package.json` has higher priority over  `config.xml` and version `1.0.0` will be installed.
+When `prepare` is executed, the version from `package.json` has higher priority over `config.xml` and version `1.0.0` will be installed.
