@@ -73,7 +73,11 @@ Some Examples:
 
   Retrieves the `cordova-android` platform version `7.1.4` from npm, adds it to the project and updates the `package.json` file.
 
-* **`cordova platform add https://github.com/apache/cordova-android.git`**, **`cordova platform add https://github.com/apache/cordova-android`** or **`cordova platform add github:apache/cordova-android`**
+* **`cordova platform add https://github.com/apache/cordova-android.git`**
+  
+  **`cordova platform add https://github.com/apache/cordova-android`**
+  
+  **`cordova platform add github:apache/cordova-android`**
 
   npm retrieves the `cordova-android` platform from the git repository, adds it to the project and updates the `package.json`.
   
@@ -213,6 +217,10 @@ Some Examples:
   Retrieves the `cordova-plugin-device` plugin at version `2.0.1` from npm, adds it to the project and updates the `package.json` file.
 
 * **`cordova plugin add https://github.com/apache/cordova-plugin-device.git`**
+  
+  **`cordova plugin add https://github.com/apache/cordova-plugin-device`**
+  
+  **`cordova plugin add github:apache/cordova-plugin-device`**
 
   npm retrieves the `cordova-plugin-device` plugin from the git repository, adds it to the project and updates the `package.json`.
 
@@ -230,7 +238,7 @@ cordova plugin save
 
 ### Removing Plugins
 
-It is also possible to delete from config.xml and package.json during the command `cordova plugin remove`:
+It is also possible to delete from `config.xml` and `package.json` during the command `cordova plugin remove`:
 
 ```bash
 cordova plugin remove <plugin>
