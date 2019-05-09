@@ -12,7 +12,7 @@
     "clean": "gulp clean",
     "update-docs": "gulp snapshot",
     "build": "gulp build --prod",
-    "eslint": "eslint tools/lib tools/spec"
+    "eslint": "eslint tools *.js"
   },
   "author": "Apache Software Foundation",
   "license": "Apache-2.0",
