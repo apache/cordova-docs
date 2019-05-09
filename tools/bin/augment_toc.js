@@ -120,7 +120,7 @@ function augmentToc (originalToc, prefix) {
 function augmentString (srcTocString, prefix) {
     var srcToc = yaml.load(srcTocString);
     var augmentedToc = augmentToc(srcToc, prefix);
-    var augmentedTocString = yaml.dump(augmentedToc, {indent: 4});
+    var augmentedTocString = yaml.dump(augmentedToc, { indent: 4 });
 
     return augmentedTocString;
 }

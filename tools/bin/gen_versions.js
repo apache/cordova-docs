@@ -70,7 +70,7 @@ function main () {
     });
 
     console.log(util.generatedBy(__filename));
-    console.log(yaml.dump(config, {indent: 4}));
+    console.log(yaml.dump(config, { indent: 4 }));
 }
 
 main();

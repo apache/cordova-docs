@@ -102,7 +102,7 @@ function execPiped (command, args, fileName) {
 
 function exec (command, args, cb) {
     console.log(command + ' ' + args.join(' '));
-    var task = child_process.spawn(command, args, {stdio: 'inherit'});
+    var task = child_process.spawn(command, args, { stdio: 'inherit' });
     task.on('exit', cb);
 }
 
@@ -249,7 +249,7 @@ gulp.task('watch', ['serve'], function () {
         [
             path.join(CSS_SRC_DIR, '**', '*')
         ],
-        {interval: WATCH_INTERVAL},
+        { interval: WATCH_INTERVAL },
         ['styles']
     );
     gulp.watch(
@@ -258,7 +258,7 @@ gulp.task('watch', ['serve'], function () {
             path.join(PLUGINS_SRC_DIR, '**', '*.jsx'),
             path.join(PLUGINS_SRC_DIR, '**', '*.json')
         ],
-        {interval: WATCH_INTERVAL},
+        { interval: WATCH_INTERVAL },
         ['plugins']
     );
     gulp.watch(
@@ -278,7 +278,7 @@ gulp.task('watch', ['serve'], function () {
             path.join(DOCS_DIR, 'en', 'dev', '**', '*.md'),
             path.join(DOCS_DIR, 'en', 'dev', '**', '*.html')
         ],
-        {interval: WATCH_INTERVAL},
+        { interval: WATCH_INTERVAL },
         ['regen']
     );
 });
@@ -375,7 +375,7 @@ gulp.task('less', function () {
         .pipe(header(YAML_FRONT_MATTER))
         .pipe(gulp.dest(CSS_OUT_DIR))
         .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
-        .pipe(browsersync.reload({stream: true}));
+        .pipe(browsersync.reload({ stream: true }));
 });
 
 gulp.task('css', function () {
@@ -384,7 +384,7 @@ gulp.task('css', function () {
         .pipe(header(YAML_FRONT_MATTER))
         .pipe(gulp.dest(CSS_OUT_DIR))
         .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
-        .pipe(browsersync.reload({stream: true}));
+        .pipe(browsersync.reload({ stream: true }));
 });
 
 gulp.task('sass', function () {
@@ -394,7 +394,7 @@ gulp.task('sass', function () {
         .pipe(header(YAML_FRONT_MATTER))
         .pipe(gulp.dest(CSS_OUT_DIR))
         .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
-        .pipe(browsersync.reload({stream: true}));
+        .pipe(browsersync.reload({ stream: true }));
 });
 
 gulp.task('plugins', function () {
@@ -402,11 +402,11 @@ gulp.task('plugins', function () {
         process.env.NODE_ENV = 'production';
     }
 
-    var stream = browserify(PLUGINS_SRC_FILE, {debug: !gutil.env.prod})
+    var stream = browserify(PLUGINS_SRC_FILE, { debug: !gutil.env.prod })
         .transform(babelify, {
             presets: ['react'],
             plugins: [
-                ['transform-react-jsx', {'pragma': 'h'}]
+                ['transform-react-jsx', { 'pragma': 'h' }]
             ]
         })
         .transform(envify)
@@ -423,7 +423,7 @@ gulp.task('plugins', function () {
 
     return stream
         .pipe(gulp.dest(JS_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
-        .pipe(browsersync.reload({stream: true}))
+        .pipe(browsersync.reload({ stream: true }))
 
         // NOTE:
         //      adding YAML front matter after doing everything
