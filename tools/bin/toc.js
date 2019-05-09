@@ -19,10 +19,7 @@
 
 var fs = require('fs');
 var path = require('path');
-var childProcess = require('child_process');
 
-var yaml = require('js-yaml');
-var Q = require('q');
 var argv = require('optimist').argv;
 
 var augment = require('./augment_toc');

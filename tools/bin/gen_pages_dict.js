@@ -20,9 +20,7 @@
 var fs = require('fs');
 var path = require('path');
 var yaml = require('js-yaml');
-var walk = require('walk');
 var glob = require('glob');
-var Q = require('q');
 var optimist = require('optimist');
 
 var util = require('./util');
