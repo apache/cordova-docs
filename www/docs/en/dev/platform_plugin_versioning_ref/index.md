@@ -24,7 +24,7 @@ description: How to manage platforms and Cordova CLI versions.
 
 # Platforms and Plugins Version Management
 
-From version 4.3.0 onwards, Cordova provides the ability to save and restore platforms and plugins.
+Cordova provides the ability to save and restore platforms and plugins.
 
 This feature allows developers to save and restore their app to a known state without having to check in all of the platform and plugin source code.
 
