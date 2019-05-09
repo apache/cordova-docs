@@ -73,7 +73,7 @@ Some Examples:
 
   Retrieves the `cordova-android` platform version `7.1.4` from npm, adds it to the project and updates the `package.json` file.
 
-* **`cordova platform add https://github.com/apache/cordova-android.git`**
+* **`cordova platform add https://github.com/apache/cordova-android.git`**, **`cordova platform add https://github.com/apache/cordova-android`** or **`cordova platform add github:apache/cordova-android`**
 
   npm retrieves the `cordova-android` platform from the git repository, adds it to the project and updates the `package.json`.
   
@@ -87,7 +87,7 @@ Some Examples:
 
 ### Updating or Removing Platforms
 
-It is also possible to update or delete from config.xml and `package.json` during the commands 'cordova platform update' and 'cordova platform remove' :
+It is also possible to update or delete from `config.xml` and `package.json` during the commands 'cordova platform update' and 'cordova platform remove' :
 
 ```bash
 cordova platform update <platform[@<version>] | directory | git_url> --save
@@ -144,7 +144,7 @@ Suppose your `config.xml` file contains the following entry:
 
 If you run the command **`cordova platform add android`** with no `<version | folder | git_url>` specified, the platform `android@7.1.4` will be retrieved and installed.
 
-**Example Order of Priorty for Restoring Platforms:**
+**Example Order of Priority for Restoring Platforms:**
 
 Suppose you have defined in `config.xml` and `package.json` a platform and version as follows:
 
@@ -270,7 +270,7 @@ Suppose your `config.xml` file contains the following entry:
 
 If you run the command **`cordova plugin add cordova-plugin-device`** with no `<version | folder | git_url>` specified, the platform `cordova-plugin-device@2.0.1` will be retrieved and installed.
 
-**Example Order of Priorty for Restoring Plugins:**
+**Example Order of Priority for Restoring Plugins:**
 
 Suppose you have defined in `config.xml` and `package.json` a plugin and version as follows:
 
