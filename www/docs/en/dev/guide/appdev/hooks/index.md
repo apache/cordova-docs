@@ -427,10 +427,10 @@ for more details.
 
 You can now add android platform and execute build.
 
-```
-cordova platform add android
+```bash 
+$ npx cordova platform add android
 ..
-cordova build
+$ npx cordova build
 ..
 Size of path\to\app\platforms\android\build\outputs\apk\android-debug.apk is 1821193 bytes
 ```

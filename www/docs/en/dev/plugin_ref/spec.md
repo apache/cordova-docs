@@ -627,7 +627,7 @@ options | Pod options declared in raw format. If declared, the other Pod options
 
 Examples:
 
-```
+```xml
     <podspec>
       <config>
         <source url="https://github.com/brightcove/BrightcoveSpecs.git" />
@@ -710,7 +710,7 @@ The CLI replaces variable references with the specified value, or the empty stri
 Plugman can request users to specify a plugin's required variables. For example, API keys for C2M and Google Maps can be specified as a command-line argument:
 
 ```bash
-plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
+$ plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
 ```
 
 Certain variable names should be reserved, like `$PACKAGE_NAME`. This is the reverse-domain style unique identifier for the package, corresponding to the `CFBundleIdentifier` on iOS or the `package` attribute of the top-level `manifest` element in an `AndroidManifest.xml` file.

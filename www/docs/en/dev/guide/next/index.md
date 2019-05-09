@@ -78,9 +78,9 @@ Note that the online and offline events, as well as the Network Connection API, 
 
 There is no upgrade command for Cordova projects. Instead, remove the platform from your project, and re-add it to get the latest version:
 
-```
-cordova platform rm android
-cordova platform add android
+```bash
+$ npx cordova platform rm android
+$ npx cordova platform add android
 ```
 
 It is absolutely critical that you read up on what was changed in the updated version, as the update may break your code. The best place to find this information will be in the release notes published both in the repositories and on the Cordova blog. You will want to test your app thoroughly in order to verify that it is working correctly after you perform the update.
@@ -90,9 +90,9 @@ Note: some plugins may not be compatible with the new version of Cordova. If a p
 ## Plugin Upgrades
 Upgrading plugins involves the same process as platforms - remove it, then re-add it.
 
-```
-cordova plugin rm some-plugin
-cordova plugin add some-plugin
+```bash
+$ npx cordova plugin rm some-plugin
+$ npx cordova plugin add some-plugin
 ```
 Refer to [Manage versions and platforms](../../platform_plugin_versioning_ref/index.html) for more details.
 

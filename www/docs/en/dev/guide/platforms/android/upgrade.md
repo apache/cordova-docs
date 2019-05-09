@@ -34,8 +34,8 @@ The best way to upgrade to 7.X.X is to simply remove the Android platform from
 your project and re-add it with the new version. For example,
 
 ```bash
-cordova platform remove android
-cordova platform add android@7.X.X
+$ npx cordova platform remove android
+$ npx cordova platform add android@7.X.X
 ```
 
 If you use the above method, be aware that any changes you made to the android
@@ -52,8 +52,8 @@ The best way to upgrade to 6.X.X is to simply remove the Android platform from
 your project and re-add it with the new version. For example,
 
 ```bash
-cordova platform remove android
-cordova platform add android@6.X.X
+$ npx cordova platform remove android
+$ npx cordova platform add android@6.X.X
 ```
 
 If you use the above method, be aware that any changes you made to the android
@@ -75,8 +75,8 @@ The best way to upgrade to 5.X.X is to simply remove the Android platform from
 your project and re-add it with the new version. For example,
 
 ```bash
-cordova platform remove android
-cordova platform add android@5.X.X
+$ npx cordova platform remove android
+$ npx cordova platform add android@5.X.X
 ```
 
 If you use the above method, be aware that any changes you made to the android
@@ -94,7 +94,7 @@ For CLI projects:
 
 1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
 
-2. Run `cordova platform update android@5.0.0` in your existing projects.
+2. Run `npx cordova platform update android@5.0.0` in your existing projects.
 
 ### Upgrading Plugins for Android Marshmallow
 
@@ -147,7 +147,7 @@ For CLI projects:
 
 1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
 
-2. Run `cordova platform update android@4.0.0` in your existing projects.
+2. Run `npx cordova platform update android@4.0.0` in your existing projects.
 
 ### Upgrading the Whitelist
 All whitelist functionality is now implemented via plugin.  Without a plugin,
@@ -174,7 +174,7 @@ device.  If you wish to use the Crosswalk WebView instead, simply add the
 Crosswalk plugin:
 
 ```bash
-cordova plugin add cordova-plugin-crosswalk-webview
+$ npx cordova plugin add cordova-plugin-crosswalk-webview
 ```
 
 Upon adding the plugin, your app will get the Crosswalk WebView installed and
@@ -186,7 +186,7 @@ a plugin.  The configuration options for splash screens are unchanged.  The only
 upgrade step required is to add the plugin:
 
 ```bash
-cordova plugin add cordova-plugin-splashscreen
+$ npx cordova plugin add cordova-plugin-splashscreen
 ```
 
 ## Upgrading to 3.7.1 from 3.6.0
@@ -201,7 +201,7 @@ For CLI projects:
 
 1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
 
-2. Run `cordova platform update android` in your existing projects.
+2. Run `npx cordova platform update android` in your existing projects.
 
 
 ## Upgrading to 3.3.0 from 3.2.0
@@ -219,11 +219,13 @@ For projects that were created with the cordova CLI:
 
 1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
 
-2. Run `cordova platform update android`
+2. Run `npx cordova platform update android`
 
 For projects not created with the cordova CLI, run:
 
-        bin/update <project_path>
+```
+bin/update <project_path>
+```
 
 **WARNING:**  On Android 4.4 - Android 4.4.3, creating a file input element with type="file" will not open the file picker dialog.
 This is a regression with Chromium on Android and the problem can be reproduced in the standalone Chrome browser on Android (see http://code.google.com/p/android/issues/detail?id=62220)  The suggested workaround is to use the FileTransfer and File plugins for Android 4.4. You can listen for an onClick event from the input type="file" and then pop up a file picker UI. In order to tie the form data with the upload, you can use JavaScript to attach form values to the multi-part POST request that FileTransfer makes.
@@ -235,18 +237,20 @@ For projects that were created with the cordova CLI:
 
 1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
 
-2. Run `cordova platform update android`
+2. Run `npx cordova platform update android`
 
 For projects not created with the cordova CLI, run:
 
-        bin/update <project_path>
+```
+bin/update <project_path>
+```
 
 ## Upgrade to the CLI (3.0.0) from 2.9.0
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
    described in [The Command-Line Interface](../../cli/index.html).
 
-2. Add your platforms the cordova project, for example: `cordova
+2. Add your platforms the cordova project, for example: `npx cordova
    platform add android`.
 
 3. Copy the contents of your project's `www` directory to the `www` directory

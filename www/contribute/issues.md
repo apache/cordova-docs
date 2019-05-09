@@ -32,15 +32,27 @@ If you aren't sure about the priority, leave the default (major) selected. Pleas
 
 You can quickly find out versions of platforms/plugins you're using by running:
 
-    cordova platform ls
+```bash
+$ npx cordova platform ls
+```
 
 or
 
-    cordova plugin ls
+```bash
+$ npx cordova plugin ls
+```
 
 in your project respectively. You can find out the version of the Cordova CLI you're using by running:
 
-    cordova --version
+```bash
+$ npx cordova --version
+```
+
+If you have installed `cordova` globally (which is an alternative way to use Cordova), you just invoke the same commands without `npx`:
+
+```bash
+$ cordova --version
+```
 
 # Generating CLI logs
 

@@ -35,59 +35,22 @@ The Cordova command-line tool is distributed as an npm package.
 To install the `cordova` command-line tool, follow these steps:
 
 1. Download and install [Node.js](https://nodejs.org/en/download/). On
-   installation you should be able to invoke `node` and `npm` on your
+   installation you should be able to invoke `node`, `npm` and `npx` on your
    command line.
 
 1. (Optional) Download and install a [git client](http://git-scm.com/downloads), if you don't
    already have one. Following installation, you should be able to invoke `git`
    on your command line. The CLI uses it to download assets when they are referenced using a url to a git repo.
 
-1. Install the `cordova` module using `npm` utility of Node.js. The `cordova`
-   module will automatically be downloaded by the `npm` utility.
-
-   * on OS X and Linux:
-       ```bash
-       $ sudo npm install -g cordova
-       ```
-
-       On OS X and Linux, prefixing the `npm` command with
-       `sudo` may be necessary to install this development utility in
-       otherwise restricted directories such as
-       `/usr/local/share`. If you are using the optional
-       nvm/nave tool or have write access to the install directory,
-       you may be able to omit the `sudo` prefix. There are
-       [more tips](http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears)
-       available on using `npm` without `sudo`, if you desire to do that.
-
-   * on Windows:
-       ```
-       C:\>npm install -g cordova
-       ```
-
-   The `-g` flag above tells `npm` to install `cordova` globally. Otherwise
-   it will be installed in the `node_modules` subdirectory of the current
-   working directory.
-
-   Following installation, you should be able to run
-   `cordova` on the command line with no arguments and it should
-   print help text.
-
 ## Create the App
 
 Go to the directory where you maintain your source code, and create a cordova project:
 
 ```bash
-$ cordova create hello com.example.hello HelloWorld
+$ npx cordova create hello com.example.hello HelloWorld
 ```
 
 This creates the required directory structure for your cordova app. By default, the `cordova create` script generates a skeletal web-based application whose home page is the project's `www/index.html` file.
-
-###See Also
-- [Cordova create command reference documentation][cdv_create]
-- [Cordova project directory structure][cdv_dir]
-- [Cordova project templates][cdv_template]
-
-## Add Platforms
 
 All subsequent commands need to be run within the project's directory,
 or any subdirectories:
@@ -96,17 +59,30 @@ or any subdirectories:
 $ cd hello
 ```
 
+Until necessary adjustments have been made to Cordova to do this for your automatically, you're going to want to install the current version of Cordova into your new project:
+
+```bash
+$ npm --save-dev cordova
+```
+
+###See Also
+- [Cordova create command reference documentation][cdv_create]
+- [Cordova project directory structure][cdv_dir]
+- [Cordova project templates][cdv_template]
+
+## Add Platforms
+
 Add the platforms that you want to target your app. We will add the 'ios' and 'android' platform and ensure they get saved to `config.xml` and `package.json`:
 
 ```bash
-$ cordova platform add ios
-$ cordova platform add android
+$ npx cordova platform add ios
+$ npx cordova platform add android
 ```
 
 To check your current set of platforms:
 
 ```bash
-$ cordova platform ls
+$ npx cordova platform ls
 ```
 
 Running commands to add or remove platforms affects the contents of
@@ -126,8 +102,8 @@ To build and run apps, you need to install SDKs for each platform you wish to ta
 
 To check if you satisfy requirements for building the platform:
 
-```
-$ cordova requirements
+```bash
+$ npx cordova requirements
 Requirements check results for android:
 Java JDK: installed .
 Android SDK: installed
@@ -147,19 +123,19 @@ Error: Some of requirements check failed
 
 ## Build the App
 
-By default, `cordova create` script generates a skeletal web-based application whose start page is the project's `www/index.html` file. Any
+By default, the `cordova create` script generates a skeletal web-based application whose start page is the project's `www/index.html` file. Any
 initialization should be specified as part of the [deviceready][DeviceReadyEvent] event handler defined in `www/js/index.js`.
 
 Run the following command to build the project for _all_ platforms:
 
 ```bash
-$ cordova build
+$ npx cordova build
 ```
 
 You can optionally limit the scope of each build to specific platforms - 'ios' in this case:
 
 ```bash
-$ cordova build ios
+$ npx cordova build ios
 ```
 
 ###See Also
@@ -174,12 +150,12 @@ command such as the following to rebuild the app and view it within a
 specific platform's emulator:
 
 ```bash
-$ cordova emulate android
+$ npx cordova emulate android
 ```
 
 ![]({{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png)
 
-Following up with the `cordova emulate` command refreshes the emulator
+Following up with the `npx cordova emulate` command refreshes the emulator
 image to display the latest application, which is now available for
 launch from the home screen:
 
@@ -189,7 +165,7 @@ Alternately, you can plug the handset into your computer and test the
 app directly:
 
 ```bash
-$ cordova run android
+$ npx cordova run android
 ```
 
 Before running this command, you need to set up the device for
@@ -209,13 +185,13 @@ A _plugin_ exposes a Javascript API for native SDK functionality. Plugins are ty
 npm and you can search for them on the [plugin search page](/plugins/). Some key APIs are provided by the Apache Cordova open source project and these are referred to as [Core Plugin APIs]. You can also use the CLI to launch the search page:
 
 ```bash
-$ cordova plugin search camera
+$ npx cordova plugin search camera
 ```
 
 To add and save the camera plugin to `config.xml` and `package.json`, we will specify the npm package name for the camera plugin:
 
 ```
-$ cordova plugin add cordova-plugin-camera
+$ npx cordova plugin add cordova-plugin-camera
 Fetching plugin "cordova-plugin-camera@~2.1.0" via npm
 Installing "cordova-plugin-camera" for android
 Installing "cordova-plugin-camera" for ios
@@ -232,8 +208,8 @@ add plugins separately for each platform. (For more information, see
 Use `plugin ls` (or `plugin list`, or `plugin` by itself) to view
 currently installed plugins. Each displays by its identifier:
 
-```
-$ cordova plugin ls
+```bash
+$ npx cordova plugin ls
 cordova-plugin-camera 2.1.0 "Camera"
 cordova-plugin-whitelist 1.2.1 "Whitelist"
 ```
@@ -294,16 +270,16 @@ After installing the `cordova` utility, you can always update it to
 the latest version by running the following command:
 
 ```bash
-$ sudo npm update -g cordova
+$ npm update cordova
 ```
 
 Use this syntax to install a specific version:
 
 ```bash
-$ sudo npm install -g cordova@3.1.0-0.2.0
+$ npm install cordova@3.1.0-0.2.0
 ```
 
-Run `cordova -v` to see which version is currently running. To find the latest released cordova version, you can run:
+Run `npx cordova -v` to see which version is currently running. To find the latest released cordova version, you can run:
 
 ```bash
 $ npm info cordova version
@@ -312,8 +288,8 @@ $ npm info cordova version
 To update platform that you're targeting:
 
 ```bash
-$ cordova platform update android --save
-$ cordova platform update ios --save
+$ npx cordova platform update android --save
+$ npx cordova platform update ios --save
 ...etc.
 ```
 

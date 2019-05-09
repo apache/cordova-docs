@@ -15,7 +15,7 @@ To start using plugins from npm, Cordova CLI version 5.0.0 or higher is required
 
 ## How do I install plugins from npm?
 
-Cordova team decided to change official plugin IDs from org.apache.cordova.* to cordova-plugin-* to better fit within the npm ecosystem. Developers can install a plugin using the command `cordova plugin add [PLUGIN ID]`.
+Cordova team decided to change official plugin IDs from org.apache.cordova.* to cordova-plugin-* to better fit within the npm ecosystem. Developers can install a plugin using the command `npx cordova plugin add [PLUGIN ID]`.
 
 ## How do I know which platforms are supported for a plugin?
 

@@ -56,7 +56,7 @@ argument to that command is the URL for a _git_ repository containing
 the plugin code.  This example implements Cordova's Device API:
 
 ```bash
-cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+$ npx cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
 ```
 
 The plugin repository must feature a top-level `plugin.xml` manifest

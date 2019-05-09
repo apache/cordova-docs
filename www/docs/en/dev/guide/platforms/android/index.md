@@ -54,7 +54,7 @@ cordova-android Version | Supported Android API-Levels | Equivalent Android Vers
 Please note that the versions listed here are for Cordova's Android package,
 [cordova-android](https://github.com/apache/cordova-android), and not for the
 Cordova CLI. To determine what version of Cordova's Android package is installed
-in your Cordova project, run the command `cordova platform ls` in the directory
+in your Cordova project, run the command `npx cordova platform ls` in the directory
 that holds your project.
 
 As a general rule, Android versions become unsupported by Cordova as
@@ -177,7 +177,7 @@ Once your AVD is configured correctly, you should be able to deploy your Cordova
 application to the emulator by running:
 
 ```bash
-$ cordova run --emulator
+$ npx cordova run --emulator
 ```
 
 ### Configuring Gradle
@@ -209,13 +209,13 @@ You can set these properties in one of four ways:
 
       ```bash
       $ export ORG_GRADLE_PROJECT_cdvMinSdkVersion=20
-      $ cordova build android
+      $ npx cordova build android
       ```
 
   2. By using the `--gradleArg` flag in your Cordova `build` or `run` commands:
 
       ```bash
-      $ cordova run android -- --gradleArg=-PcdvMinSdkVersion=20
+      $ npx cordova run android -- --gradleArg=-PcdvMinSdkVersion=20
       ```
 
   3. By placing a file called `gradle.properties` in your Android platform
@@ -334,7 +334,9 @@ the [Cordova CLI][cli_reference] `build` or `run` commands.
 
 __Note__: You should use double `--` to indicate that these are platform-specific arguments, for example:
 
-`cordova run android --release -- --keystore=../my-release-key.keystore --storePassword=password --alias=alias_name --password=password`.
+```bash
+$ npx cordova run android --release -- --keystore=../my-release-key.keystore --storePassword=password --alias=alias_name --password=password
+```
 
 ### Using build.json
 
@@ -404,10 +406,10 @@ debugging/profiling tools or if you are developing Android plugins. Please note
 that when opening your project in Android studio, it is recommended that you do
 NOT edit your code in the IDE. This will edit the code in the `platforms` folder
 of your project (not `www`), and changes are liable to be overwritten. Instead,
-edit the `www` folder and copy over your changes by running `cordova build`.
+edit the `www` folder and copy over your changes by running `npx cordova build`.
 
 Plugin developers wishing to edit their native code in the IDE should use the
-`--link` flag when adding their plugin to the project via `cordova plugin add`.
+`--link` flag when adding their plugin to the project via `npx cordova plugin add`.
 This will link the files so that changes to the plugin files in the `platforms`
 folder are reflected in your plugin's source folder (and vice versa).
 
@@ -445,7 +447,7 @@ you must still configure the Android SDK environment as described in
 For each of the scripts discussed below, refer to [Cordova CLI Reference][cli_reference]
 for more information on their arguments and usage. Each script has a name that
 matches the corresponding CLI command. For example, `cordova-android/bin/create`
-is equivalent to `cordova create`.
+is equivalent to `npx cordova create`.
 
 To get started, either download the cordova-android package from
 [npm](https://www.npmjs.com/package/cordova-android) or

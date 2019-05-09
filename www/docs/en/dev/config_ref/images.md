@@ -260,7 +260,7 @@ One icon can be used for the application and installer, but this icon should be 
 
 _Notice: If a customized icon is not provided, the Apache Cordova default icons are used._
 
-_Notice: macOS does not display custom icons when using `cordova run`. It defaults to the Electron's icon._
+_Notice: macOS does not display custom icons when using `npx cordova run`. It defaults to the Electron's icon._
 
 ```xml
 <platform name="electron">

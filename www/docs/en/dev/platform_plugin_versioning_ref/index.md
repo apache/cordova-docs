@@ -37,13 +37,13 @@ One scenario where save/restore capabilities come in handy is in large teams tha
 ## Platform Versioning
 
 ### Saving platforms
-To save a platform, you issue the following command :
+To save a platform, you issue the following command:
 
 ```bash
-$ cordova platform add <platform[@<version>] | directory | git_url>
+$ npx cordova platform add <platform[@<version>] | directory | git_url>
 ```
 
-After running the above command, the resulting config.xml looks like :
+After running the above command, the resulting config.xml looks like:
 
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
@@ -52,18 +52,18 @@ After running the above command, the resulting config.xml looks like :
     ...
 </xml>
 ```
-After running the above command, the resulting package.json looks like :
+After running the above command, the resulting package.json looks like:
 
-```bash
+```json
 "cordova": {"platforms": ["android"]},"dependencies": {"cordova-android": "^4.0.0"}
 ```
-The '--nosave' flag prevents adding and deleting specified platforms from config.xml and package.json. To prevent saving a platform, you issue the following command :
+The '--nosave' flag prevents adding and deleting specified platforms from config.xml and package.json. To prevent saving a platform, you issue the following command:
 
 ```bash
-$ cordova platform add <platform[@<version>] | directory | git_url> --nosave
+$ npx cordova platform add <platform[@<version>] | directory | git_url> --nosave
 ```
 
-Some examples :
+Some examples:
 
   * **'cordova platform add android'** => retrieves the pinned version of the android platform, adds it to the project and then updates config.xml and package.json.
   * **'cordova platform add android@3.7.0'** => retrieves the android platform, version 3.7.0 from npm, adds it to the project and then updates config.xml and package.json.
@@ -73,21 +73,21 @@ Some examples :
   * **'cordova platform remove android --nosave'** =>  removes the android platform from the project, but does not remove it from config.xml or package.json.  
 
 ### Mass saving platforms on an existing project
-If you have a pre-existing project and you want to save all the currently added platforms in your project, you can use :
+If you have a pre-existing project and you want to save all the currently added platforms in your project, you can use:
 
 ```bash
-$ cordova platform save
+$ npx cordova platform save
 ```
 
 ### Updating / Removing platforms
-It is also possible to update/delete from config.xml and package.json during the commands 'cordova platform update' and 'cordova platform remove' :
+It is also possible to update/delete from config.xml and package.json during the commands 'cordova platform update' and 'cordova platform remove':
 
 ```bash
-$ cordova platform update <platform[@<version>] | directory | git_url> --save
-$ cordova platform remove <platform>
+$ npx cordova platform update <platform[@<version>] | directory | git_url> --save
+$ npx cordova platform remove <platform>
 ```
 
-Some examples :
+Some examples:
 
   * **'cordova platform update android --save'** => In addition to updating the android platform to the pinned version, update config.xml entry
   * **'cordova platform update android@3.8.0 --save'** => In addition to updating the android platform to version 3.8.0, update config.xml entry
@@ -113,30 +113,30 @@ Suppose your config.xml file contains the following entry:
 </xml>
 ```
 
-If you run the command **'cordova platform add android'** (no version/folder/git_url specified), the platform 'android@3.7.0' (as retrieved from config.xml) will be installed.
+If you run the command **'npx cordova platform add android'** (no version/folder/git_url specified), the platform 'android@3.7.0' (as retrieved from config.xml) will be installed.
 
 **Example for order of precedence for restoring platforms:**
 
 Suppose your config.xml has this platform and version:
-```bash
+```xml
 <engine name="android" spec=“1.0.0” />
 ```
 
 Suppose your package.json has this platform and version:
 
-```bash
+```json
 "cordova": {"platforms": ["android"]},"dependencies": {"cordova-android": "4.0.0"}
 ```
 
 When prepare is run, package.json’s contents are giving precedence and both config.xml and package.json are updated so that they have identical platforms and variables. Notice how package.json's version (4.0.0) has **replaced** config.xml's version (1.0.0).
 
-After running **'cordova prepare'** , the resulting config.xml looks like :
-```bash
+After running **'cordova prepare'** , the resulting config.xml looks like:
+```xml
 <engine name="android" spec=“4.0.0” />
 ```
 
-After running **'cordova prepare'** , the resulting package.json looks like :
-```bash
+After running **'cordova prepare'** , the resulting package.json looks like:
+```json
 "cordova": {"platforms": ["android",]},"dependencies": {"cordova-android": "4.0.0"}
 ```
 ---
@@ -145,13 +145,13 @@ After running **'cordova prepare'** , the resulting package.json looks like :
 _(The plugin commands are a mirror of the platform commands)_
 
 ### Saving plugins
-To save a plugin, you issue the following command :
+To save a plugin, you issue the following command:
 
 ```bash
-$ cordova plugin add <plugin[@<version>] | directory | git_url>
+$ npx cordova plugin add <plugin[@<version>] | directory | git_url>
 ```
 
-After running the above command, the resulting config.xml looks like :
+After running the above command, the resulting config.xml looks like:
 
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
@@ -161,19 +161,19 @@ After running the above command, the resulting config.xml looks like :
 </xml>
 ```
 
-After running the above command, the resulting package.json looks like :
+After running the above command, the resulting package.json looks like:
 
-```bash
+```json
 "cordova": {"plugins": ["cordova-plugin-console"]},"dependencies": {"cordova-plugin-console": "^1.0.0"}
 ```
 
-The '--nosave' flag prevents adding and deleting specified plugins from config.xml and package.json. To prevent saving a plugin, you issue the following command :
+The '--nosave' flag prevents adding and deleting specified plugins from config.xml and package.json. To prevent saving a plugin, you issue the following command:
 
 ```bash
-$ cordova plugin add <plugin[@<version>] | directory | git_url> --nosave
+$ npx cordova plugin add <plugin[@<version>] | directory | git_url> --nosave
 ```
 
-Some examples :
+Some examples:
 
   * **'cordova plugin add cordova-plugin-console'** => retrieves the pinned version of the console plugin, adds it to the project and then updates config.xml and package.json.
   * **'cordova plugin add cordova-plugin-console@0.2.13'** => retrieves the android plugin, version 0.2.13 from npm, adds it to the project and then updates config.xml and package.json.
@@ -181,18 +181,18 @@ Some examples :
   * **'cordova plugin add C:/path/to/console/plugin'** => retrieves the console plugin from the specified directory, adds it to the project, then updates config.xml and package.json and points to the directory.
 
 ### Mass saving plugins on an existing project
-If you have a pre-existing project and you want to save all currently added plugins in the project, you can use :
+If you have a pre-existing project and you want to save all currently added plugins in the project, you can use:
 
 ```bash
-$ cordova plugin save
+$ npx cordova plugin save
 ```
 
 
 ### Removing plugins
-It is also possible to delete from config.xml and package.json during the command 'cordova plugin remove' :
+It is also possible to delete from config.xml and package.json during the command 'cordova plugin remove':
 
 ```bash
-$ cordova plugin remove <plugin>
+$ npx cordova plugin remove <plugin>
 ```
 For example:
 
@@ -223,24 +223,24 @@ If you run the command **'cordova plugin add cordova-plugin-console'** (no versi
 
 Supposed your config.xml has this plugin and version:
 
-```bash
+```xml
 <plugin name="cordova-plugin-splashscreen"/>
 ```
 Suppose your package.json has this plugin and version:
 
-```bash
+```json
 "cordova": {"plugins": {"cordova-plugin-splashscreen" : {} } },"dependencies": {"cordova-plugin-splashscreen": "1.0.0"}
 ```
 When prepare is run, package.json’s contents are giving precedence and both config.xml and package.json are updated so that they have identical plugins and variables. Notice how package.json's version (1.0.0) is now in config.xml.
 
-After running **'cordova prepare'** , the resulting config.xml looks like :
+After running **'cordova prepare'** , the resulting config.xml looks like:
 
-```bash
+```xml
 <plugin name="cordova-plugin-splashscreen" spec="1.0.0"/>
 ```
 
-After running **'cordova prepare'** , the resulting package.json looks like :
+After running **'cordova prepare'** , the resulting package.json looks like:
 
-```bash
+```json
 "cordova": {"plugins": {"cordova-plugin-splashscreen" : {} } },"dependencies": {"cordova-plugin-splashscreen": "1.0.0"}
 ```

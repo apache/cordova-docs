@@ -106,8 +106,8 @@ Plugman features a global help command which may help you if you get stuck or ar
 a list of all available Plugman commands and their syntax:
 
 ```bash
-plugman -help
-plugman  # same as above
+$ plugman -help
+$ plugman  # same as above
 ```
 
 **NOTE**: `plugman -help` may show some additional registry-related commands. These commands are for plugin developers and may not be implemented on third-party plugin registries.
@@ -118,13 +118,13 @@ any internal debugging messages as they are emitted and may help you track down 
 
 ```bash
 # Adding Android battery-status plugin to "myProject":
-plugman -d install --platform android --project myProject --plugin cordova-plugin-battery-status
+$ plugman -d install --platform android --project myProject --plugin cordova-plugin-battery-status
 ```
 
 Finally, you can use the `--version|-v` flag to see which version of Plugman you are using.
 
 ```bash
-plugman -v
+$ plugman -v
 ```
 
 ## Registry Actions
@@ -138,7 +138,7 @@ third-party plugin registries.
 You can use Plugman to search the [Plugin registry](http://plugins.cordova.io) for plugin id's that match the given space separated list of keywords.
 
 ```bash
-plugman search <plugin keywords>
+$ plugman search <plugin keywords>
 ```
 
 ### Changing the Plugin Registry
@@ -146,8 +146,8 @@ plugman search <plugin keywords>
 You can get or set the URL of the current plugin registry that plugman is using. Generally you should leave this set at http://registry.cordova.io unless you want to use a third party plugin registry.
 
 ```bash
-plugman config set registry <url-to-registry>
-plugman config get registry
+$ plugman config set registry <url-to-registry>
+$ plugman config get registry
 ```
 
 ### Get Plugin Information
@@ -155,7 +155,7 @@ plugman config get registry
 You can get information about any specific plugin stored in the plugin repository with:
 
 ```bash
-plugman info <id>
+$ plugman info <id>
 ```
 
 This will contact the plugin registry and fetch information such as the plugin's version number.
@@ -170,107 +170,107 @@ platform, and reference the platform's project directory.
 * cordova-plugin-battery-status
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-battery-status
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-battery-status
     ```
 
 * cordova-plugin-camera
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-camera
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-camera
     ```
 
 * cordova-plugin-console
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-console
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-console
     ```
 
 * cordova-plugin-contacts
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-contacts
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-contacts
     ```
 
 * cordova-plugin-device
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-device
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-device
     ```
 
 * cordova-plugin-device-motion (accelerometer)
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-device-motion
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-device-motion
     ```
 
 * cordova-plugin-device-orientation (compass)
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-device-orientation
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-device-orientation
     ```
 
 * cordova-plugin-dialogs
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-dialogs
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-dialogs
     ```
 
 * cordova-plugin-file
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-file
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-file
     ```
 
 * cordova-plugin-file-transfer
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-file-transfer
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-file-transfer
     ```
 
 * cordova-plugin-geolocation
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-geolocation
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-geolocation
     ```
 
 * cordova-plugin-globalization
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-globalization
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-globalization
     ```
 
 * cordova-plugin-inappbrowser
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-inappbrowser
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-inappbrowser
     ```
 
 * cordova-plugin-media
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-media
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-media
     ```
 
 * cordova-plugin-media-capture
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-media-capture
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-media-capture
     ```
 
 * cordova-plugin-network-information
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-network-information
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-network-information
     ```
 
 * cordova-plugin-splashscreen
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-splashscreen
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-splashscreen
     ```
 
 * cordova-plugin-vibration
 
     ```bash
-    plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-vibration
+    $ plugman install --platform <ios|android> --project <directory> --plugin cordova-plugin-vibration
     ```

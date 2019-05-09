@@ -36,10 +36,10 @@ Find a template to create your app from by seaching for the keyword `cordova:tem
 After locating a template you wish to use. Create your project using that template, by specifying the `--template` flag during the `create` command, followed by your template source.
 
 Creating a cordova project from an NPM package, Git repository, or local path:
-```
-$ cordova create hello com.example.hello HelloWorld --template <npm-package-name>
-$ cordova create hello com.example.hello HelloWorld --template <git-remote-url>
-$ cordova create hello com.example.hello HelloWorld --template <path-to-template>
+```bash
+$ npx cordova create hello com.example.hello HelloWorld --template <npm-package-name>
+$ npx cordova create hello com.example.hello HelloWorld --template <git-remote-url>
+$ npx cordova create hello com.example.hello HelloWorld --template <path-to-template>
 ```
 
 After succesfully using a template to create your project, you'll want to indicate the platforms that you intend to target with your app. Go into your project folder and [add platforms](http://cordova.apache.org/docs/en/latest/guide/cli/index.html#add-platforms).
