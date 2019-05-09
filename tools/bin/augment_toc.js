@@ -27,7 +27,6 @@ var chalk = require('chalk');
 var util = require('./util');
 
 // constants
-var DEFAULT_PREFIX = '';
 var VERBOSE_BY_DEFAULT = false;
 
 // globals
