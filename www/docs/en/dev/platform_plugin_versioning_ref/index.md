@@ -23,224 +23,291 @@ description: How to manage platforms and Cordova CLI versions.
 ---
 
 # Platforms and Plugins Version Management
-From version 4.3.0 onwards, Cordova provides the ability to save and restore platforms and plugins.
+
+Cordova provides the ability to save and restore platforms and plugins.
 
 This feature allows developers to save and restore their app to a known state without having to check in all of the platform and plugin source code.
 
-When adding a platform or plugin, details about the app's platform and plugin versions are automatically saved in config.xml and package.json. It is possible to add a platform or plugin by editing package.json or config.xml directly, assuming you know the right tags + syntax. It is not possible to remove plugins or platforms in this manner. The recommended method of adding and removing plugins and platforms is with the command line cordova commands `cordova plugin add|remove ...` and `cordova platform add|remove ...` to avoid any out of sync issues.
+When adding a platform or plugin, details about the app's platform and plugin versions are automatically saved to the `package.json` file. It is also possible to add a platform or plugin by editing the `package.json` file directly, assuming you know the right tags and syntax. It is not possible to remove plugins or platforms in this manner. The recommended method of adding and removing plugins and platforms is with the Cordova CLI commands `cordova plugin add|remove ...` and `cordova platform add|remove ...` to avoid any out of sync issues.
 
-The 'restore' step happens automatically when a **'cordova prepare'** is issued, making use of information previously saved in the config.xml and package.json files.
+The **restore** step happens automatically when a **`cordova prepare`** is issued, making use of information previously saved in the `package.json` and `config.xml` files.
 
 One scenario where save/restore capabilities come in handy is in large teams that work on an app, with each team member focusing on a platform or plugin. This feature makes it easier to share the project and reduce the amount of redundant code that is checked in the repository.
 
-
 ## Platform Versioning
 
-### Saving platforms
-To save a platform, you issue the following command :
+### Saving Platforms
+
+To save a platform, issue the following command:
 
 ```bash
-$ cordova platform add <platform[@<version>] | directory | git_url>
+cordova platform add <platform[@<version>] | directory | git_url>
 ```
 
-After running the above command, the resulting config.xml looks like :
+After running the above command, the **`package.json`** should contain something as seen below:
 
-```xml
-<?xml version='1.0' encoding='utf-8'?>
-    ...
-    <engine name="android" spec="~4.0.0" />
-    ...
-</xml>
+```json
+"cordova": {
+  "platforms": [
+    "android"
+  ]
+},
+"dependencies": {
+  "cordova-android": "^8.0.0",
+}
 ```
-After running the above command, the resulting package.json looks like :
+
+The `--nosave` flag prevents adding and deleting specified platforms to the `package.json` file. To prevent saving a platform, issue the following command:
 
 ```bash
-"cordova": {"platforms": ["android"]},"dependencies": {"cordova-android": "^4.0.0"}
+cordova platform add <platform[@<version>] | directory | git_url> --nosave
 ```
-The '--nosave' flag prevents adding and deleting specified platforms from config.xml and package.json. To prevent saving a platform, you issue the following command :
+
+Some Examples:
+
+* **`cordova platform add android`** 
+
+  Retrieves the pinned version of `cordova-android` platform from npm, adds it to the project and updates the `package.json` file.
+
+* **`cordova platform add android@7.1.4`**
+
+  Retrieves the `cordova-android` platform version `7.1.4` from npm, adds it to the project and updates the `package.json` file.
+
+* **`cordova platform add https://github.com/apache/cordova-android.git`**
+  
+  **`cordova platform add https://github.com/apache/cordova-android`**
+  
+  **`cordova platform add github:apache/cordova-android`**
+
+  npm retrieves the `cordova-android` platform from the git repository, adds it to the project and updates the `package.json`.
+  
+* **`cordova platform add C:/path/to/android/platform`**
+
+  Retrieves the Android platform from the specified directory, adds it to the project, and updates the `package.json` file.
+
+* **`cordova platform add android --nosave`**
+
+  Retrieves the pinned version of `cordova-android` platform from npm, adds it to the project, but does not add it to the `package.json` file.
+
+### Updating or Removing Platforms
+
+It is possible to update and delete a platform from `config.xml` and `package.json`.
+
+To update a platform, execute the following command:
 
 ```bash
-$ cordova platform add <platform[@<version>] | directory | git_url> --nosave
+cordova platform update <platform[@<version>] | directory | git_url>
 ```
 
-Some examples :
-
-  * **'cordova platform add android'** => retrieves the pinned version of the android platform, adds it to the project and then updates config.xml and package.json.
-  * **'cordova platform add android@3.7.0'** => retrieves the android platform, version 3.7.0 from npm, adds it to the project and then updates config.xml and package.json.
-  * **'cordova platform add https://github.com/apache/cordova-android.git'** => npm installs the specified cordova-android from the git repository, adds the android platform to the project, then updates config.xml and package.json and points its version to the specified git-url.
-  * **'cordova platform add C:/path/to/android/platform'** => retrieves the android platform from the specified directory, adds it to the project, then updates config.xml and package.json and points to the directory.
-  * **'cordova platform add android --nosave'** => retrieves the pinned version of the android platform, adds it to the project, but does not add it to config.xml or package.json.
-  * **'cordova platform remove android --nosave'** =>  removes the android platform from the project, but does not remove it from config.xml or package.json.  
-
-### Mass saving platforms on an existing project
-If you have a pre-existing project and you want to save all the currently added platforms in your project, you can use :
+To remove a platform, execute one of the following commands:
 
 ```bash
-$ cordova platform save
+cordova platform remove <platform>
+cordova platform rm <platform>
 ```
 
-### Updating / Removing platforms
-It is also possible to update/delete from config.xml and package.json during the commands 'cordova platform update' and 'cordova platform remove' :
+Some Examples:
 
-```bash
-$ cordova platform update <platform[@<version>] | directory | git_url> --save
-$ cordova platform remove <platform>
-```
+* **`cordova platform update android`**
 
-Some examples :
+  In addition to updating the `cordova-android` platform to the pinned version, it updates the `package.json` file.
 
-  * **'cordova platform update android --save'** => In addition to updating the android platform to the pinned version, update config.xml entry
-  * **'cordova platform update android@3.8.0 --save'** => In addition to updating the android platform to version 3.8.0, update config.xml entry
-  * **'cordova platform update /path/to/android/platform --save'** => In addition to updating the android platform to version in the folder, update config.xml entry
-  * **'cordova platform remove android'** => Removes the android platform from the project and deletes its entry from config.xml and package.json.
+* **`cordova platform update android@3.8.0`**
 
+  In addition to updating the `cordova-android` platform to version `3.8.0` it updates the `package.json` file.
 
-### Restoring platforms
+* **`cordova platform update /path/to/android/platform`**
 
-Platforms are automatically restored from package.json and config.xml when the **'cordova prepare'** command is run. After prepare is run, package.json and config.xml should contain identical platforms and versions.
+  In addition to updating the `cordova-android` platform to version found in the provided folder, it updates the `package.json` file.
 
-If you add a platform without specifying a version/folder/git_url, the version to install is taken from package.json or config.xml, **if found**. In case of conflicts, package.json is given precedence over config.xml.
+* **`cordova platform remove android`**
+
+  Removes the `cordova-android` platform from the project and removes it from the `package.json` file.
+  
+  _Note: If the platform definition existed in `config.xml` from a previous version of Cordova CLI, it will also be removed from `config.xml`._
+
+* **`cordova platform remove android --nosave`**
+
+  Removes the `cordova-android` platform from the project, but does not remove it from the `package.json` file.
+
+### Restoring Platforms
+
+Platforms are automatically restored from the `package.json` (and `config.xml`) when executing the **`cordova prepare`** command.
+
+If a platform is defined in both files, the information defined in `package.json` is used as the source of truth.
+
+After `prepare`, any platforms restored from `config.xml` will update the `package.json` file to reflect the values taken from `config.xml`.
+
+If you add a platform without specifying a `<version | folder | git_url>`, the version that will be installed is taken from `package.json` or `config.xml`.
+
+**If discovered** in both files, `package.json` is given higher priority over `config.xml`.
 
 Example:
 
-Suppose your config.xml file contains the following entry:
+Suppose your `config.xml` file contains the following entry:
 
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
     ...
-    <engine name="android" spec="3.7.0" />
+    <engine name="android" spec="7.1.4" />
     ...
 </xml>
 ```
 
-If you run the command **'cordova platform add android'** (no version/folder/git_url specified), the platform 'android@3.7.0' (as retrieved from config.xml) will be installed.
+If you run the command **`cordova platform add android`** with no `<version | folder | git_url>` specified, the platform `android@7.1.4` will be retrieved and installed.
 
-**Example for order of precedence for restoring platforms:**
+**Example Order of Priority for Restoring Platforms:**
 
-Suppose your config.xml has this platform and version:
-```bash
-<engine name="android" spec=“1.0.0” />
+Suppose you have defined in `config.xml` and `package.json` a platform and version as follows:
+
+**`config.xml`**:
+
+```xml
+<engine name="android" spec=“7.4.1” />
 ```
 
-Suppose your package.json has this platform and version:
+**`package.json`**:
 
-```bash
-"cordova": {"platforms": ["android"]},"dependencies": {"cordova-android": "4.0.0"}
+```json
+"cordova": {
+  "platforms": [
+    "android"
+  ]
+},
+"dependencies": {
+  "cordova-android": "^8.0.0"
+}
 ```
 
-When prepare is run, package.json’s contents are giving precedence and both config.xml and package.json are updated so that they have identical platforms and variables. Notice how package.json's version (4.0.0) has **replaced** config.xml's version (1.0.0).
+When `prepare` is executed, the version from `package.json` has higher priority over `config.xml` and version `^8.0.0` will be installed.
 
-After running **'cordova prepare'** , the resulting config.xml looks like :
-```bash
-<engine name="android" spec=“4.0.0” />
-```
-
-After running **'cordova prepare'** , the resulting package.json looks like :
-```bash
-"cordova": {"platforms": ["android",]},"dependencies": {"cordova-android": "4.0.0"}
-```
 ---
 
 ## Plugin Versioning
-_(The plugin commands are a mirror of the platform commands)_
 
-### Saving plugins
-To save a plugin, you issue the following command :
+The plugin commands are a mirror of the platform commands:
 
-```bash
-$ cordova plugin add <plugin[@<version>] | directory | git_url>
-```
+### Saving Plugins
 
-After running the above command, the resulting config.xml looks like :
-
-```xml
-<?xml version='1.0' encoding='utf-8'?>
-    ...
-    <plugin name="cordova-plugin-console" spec="~1.0.0" />
-    ...
-</xml>
-```
-
-After running the above command, the resulting package.json looks like :
+To save a plugin, you issue the following command:
 
 ```bash
-"cordova": {"plugins": ["cordova-plugin-console"]},"dependencies": {"cordova-plugin-console": "^1.0.0"}
+cordova plugin add <plugin[@<version>] | directory | git_url>
 ```
 
-The '--nosave' flag prevents adding and deleting specified plugins from config.xml and package.json. To prevent saving a plugin, you issue the following command :
+After running the above command, the **`package.json`** should contain something as seen below:
+
+```json
+"cordova": {
+  "plugins": [
+    "cordova-plugin-device"
+  ]
+},
+"devDependencies": {
+  "cordova-plugin-device": "^1.0.0"
+}
+```
+
+The `--nosave` flag prevents adding and deleting specified plugins from `package.json`. To prevent saving a plugin, you issue the following command:
 
 ```bash
-$ cordova plugin add <plugin[@<version>] | directory | git_url> --nosave
+cordova plugin add <plugin[@<version>] | directory | git_url> --nosave
 ```
 
-Some examples :
+Some Examples:
 
-  * **'cordova plugin add cordova-plugin-console'** => retrieves the pinned version of the console plugin, adds it to the project and then updates config.xml and package.json.
-  * **'cordova plugin add cordova-plugin-console@0.2.13'** => retrieves the android plugin, version 0.2.13 from npm, adds it to the project and then updates config.xml and package.json.
-  * **'cordova plugin add https://github.com/apache/cordova-plugin-console.git'** => npm installs specified console plugin from the git repository, adds the console plugin to the project, then updates config.xml and and package.json and points its version to the specified git-url.
-  * **'cordova plugin add C:/path/to/console/plugin'** => retrieves the console plugin from the specified directory, adds it to the project, then updates config.xml and package.json and points to the directory.
+* **`cordova plugin add cordova-plugin-device`**
 
-### Mass saving plugins on an existing project
-If you have a pre-existing project and you want to save all currently added plugins in the project, you can use :
+  Retrieves the pinned version of the `cordova-plugin-device` plugin from npm, adds it to the project and updates the `package.json` file.
+
+* **`cordova plugin add cordova-plugin-device@2.0.1`**
+
+  Retrieves the `cordova-plugin-device` plugin at version `2.0.1` from npm, adds it to the project and updates the `package.json` file.
+
+* **`cordova plugin add https://github.com/apache/cordova-plugin-device.git`**
+  
+  **`cordova plugin add https://github.com/apache/cordova-plugin-device`**
+  
+  **`cordova plugin add github:apache/cordova-plugin-device`**
+
+  npm retrieves the `cordova-plugin-device` plugin from the git repository, adds it to the project and updates the `package.json`.
+
+* **`cordova plugin add C:/path/to/console/plugin`**
+
+  Retrieves the `cordova-plugin-device` plugin from the specified directory, adds it to the project, and updates the `package.json` file.
+
+### Mass Saving of Plugins on an Existing Project
+
+If you have a pre-existing project and you want to save all currently added plugins in the project, you can use:
 
 ```bash
-$ cordova plugin save
+cordova plugin save
 ```
 
+### Removing Plugins
 
-### Removing plugins
-It is also possible to delete from config.xml and package.json during the command 'cordova plugin remove' :
+It is possible to delete a plugin from `config.xml` and `package.json` with one of the following commands:
 
 ```bash
-$ cordova plugin remove <plugin>
+cordova plugin remove <plugin>
+cordova plugin rm <plugin>
 ```
-For example:
 
-  * **'cordova plugin remove cordova-plugin-console'** => Removes the console plugin from the project and deletes its entry from config.xml and package.json.
+For Example:
 
+* **`cordova plugin remove cordova-plugin-device`**
 
-### Restoring plugins
+  Removes the `cordova-plugin-device` plugin from the project and deletes its entry from `package.json`.
 
-Plugins are automatically restored from package.json and config.xml when the **'cordova prepare'** command is run. After prepare is run, package.json and config.xml should contain identical plugins and versions.
+  _Note: If the plugin definition existed in `config.xml` from a previous version of Cordova CLI, it will also be removed from `config.xml`._
 
-If you add a plugin without specifying a version/folder/git_url, the version to install is taken from package.json or config.xml, **if found**. In case of conflicts, package.json is given precedence over config.xml.
+### Restoring Plugins
+
+Plugins are automatically restored from `package.json` and `config.xml` when executing the **`cordova prepare`** command.
+
+If a plugin is defined in both files, the information defined in `package.json` is used as the source of truth.
+
+After `prepare`, any plugins restored from `config.xml` will update the `package.json` file to reflect the values taken from `config.xml`.
+
+If you add a plugin without specifying a `<version | folder | git_url>`, the version that will be installed is taken from `package.json` or `config.xml`.
+
+**If discovered** in both files, `package.json` is given higher priority over `config.xml`.
 
 Example:
 
-Suppose your config.xml file contains the following entry:
+Suppose your `config.xml` file contains the following entry:
 
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
     ...
-    <plugin name="cordova-plugin-console" spec="0.2.11" />
+    <plugin name="cordova-plugin-device" spec="2.0.1" />
     ...
 </ xml>
 ```
 
-If you run the command **'cordova plugin add cordova-plugin-console'** (no version/folder/git_url specified), the plugin 'cordova-plugin-console@0.2.11' (as retrieved from config.xml) will be installed.
+If you run the command **`cordova plugin add cordova-plugin-device`** with no `<version | folder | git_url>` specified, the platform `cordova-plugin-device@2.0.1` will be retrieved and installed.
 
-**Example for order of precedence for restoring plugins:**
+**Example Order of Priority for Restoring Plugins:**
 
-Supposed your config.xml has this plugin and version:
+Suppose you have defined in `config.xml` and `package.json` a plugin and version as follows:
 
-```bash
+**`config.xml`**:
+
+```xml
 <plugin name="cordova-plugin-splashscreen"/>
 ```
-Suppose your package.json has this plugin and version:
 
-```bash
-"cordova": {"plugins": {"cordova-plugin-splashscreen" : {} } },"dependencies": {"cordova-plugin-splashscreen": "1.0.0"}
+**`package.json`**:
+
+```json
+"cordova": {
+  "plugins": [
+    "cordova-plugin-splashscreen"
+  ]
+},
+"devDependencies": {
+  "cordova-plugin-splashscreen": "1.0.0"
+}
 ```
-When prepare is run, package.json’s contents are giving precedence and both config.xml and package.json are updated so that they have identical plugins and variables. Notice how package.json's version (1.0.0) is now in config.xml.
 
-After running **'cordova prepare'** , the resulting config.xml looks like :
-
-```bash
-<plugin name="cordova-plugin-splashscreen" spec="1.0.0"/>
-```
-
-After running **'cordova prepare'** , the resulting package.json looks like :
-
-```bash
-"cordova": {"plugins": {"cordova-plugin-splashscreen" : {} } },"dependencies": {"cordova-plugin-splashscreen": "1.0.0"}
-```
+When `prepare` is executed, the version from `package.json` has higher priority over `config.xml` and version `1.0.0` will be installed.
