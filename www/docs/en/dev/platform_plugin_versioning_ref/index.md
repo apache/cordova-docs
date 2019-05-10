@@ -91,11 +91,19 @@ Some Examples:
 
 ### Updating or Removing Platforms
 
-It is also possible to update or delete from `config.xml` and `package.json` during the commands `cordova platform update` and `cordova platform remove`:
+It is possible to update and delete a platform from `config.xml` and `package.json`.
+
+To update a platform, execute the following command:
 
 ```bash
 cordova platform update <platform[@<version>] | directory | git_url> --save
+```
+
+To remove a platform, execute one of the following commands:
+
+```bash
 cordova platform remove <platform>
+cordova platform rm <platform>
 ```
 
 Some Examples:
@@ -110,13 +118,13 @@ Some Examples:
 
 * **`cordova platform update /path/to/android/platform --save`**
 
-  In addition to updating the `cordova-android` platform to version in the folder it updates the `package.json` file.
+  In addition to updating the `cordova-android` platform to version found in the provided folder, it updates the `package.json` file.
 
 * **`cordova platform remove android`**
 
   Removes the `cordova-android` platform from the project and removes it from the `package.json` file.
   
-  _Note: If the platform definiton existed in `config.xml` from a previous version of Cordova CLI, it will also be removed from `config.xml`._
+  _Note: If the platform definition existed in `config.xml` from a previous version of Cordova CLI, it will also be removed from `config.xml`._
 
 * **`cordova platform remove android --nosave`**
 
@@ -124,11 +132,11 @@ Some Examples:
 
 ### Restoring Platforms
 
-Platforms are automatically restored from the `package.json` (and `config.xml`) when executing the the **`cordova prepare`** command.
+Platforms are automatically restored from the `package.json` (and `config.xml`) when executing the **`cordova prepare`** command.
 
 If a platform is defined in both files, the information defined in `package.json` is used as the source of truth.
 
-After `prepare`, if a platform was restored from `config.xml`, the `package.json` file will be updated to reflect the restored platform and will have identical values from `config.xml`.
+After `prepare`, any platforms restored from `config.xml` will update the `package.json` file to reflect the values taken from `config.xml`.
 
 If you add a platform without specifying a `<version | folder | git_url>`, the version that will be installed is taken from `package.json` or `config.xml`.
 
@@ -238,10 +246,11 @@ cordova plugin save
 
 ### Removing Plugins
 
-It is also possible to delete from `config.xml` and `package.json` during the command `cordova plugin remove`:
+It is possible to delete a plugin from `config.xml` and `package.json` with one of the following commands:
 
 ```bash
 cordova plugin remove <plugin>
+cordova plugin rm <plugin>
 ```
 
 For Example:
@@ -250,15 +259,15 @@ For Example:
 
   Removes the `cordova-plugin-device` plugin from the project and deletes its entry from `package.json`.
 
-  _Note: If the plugin definiton existed in `config.xml` from a previous version of Cordova CLI, it will also be removed from `config.xml`._
+  _Note: If the plugin definition existed in `config.xml` from a previous version of Cordova CLI, it will also be removed from `config.xml`._
 
 ### Restoring Plugins
 
-Plugins are automatically restored from `package.json` and `config.xml` when executing the the **`cordova prepare`** command.
+Plugins are automatically restored from `package.json` and `config.xml` when executing the **`cordova prepare`** command.
 
 If a plugin is defined in both files, the information defined in `package.json` is used as the source of truth.
 
-After `prepare`, if a plugin was restored from `config.xml`, the `package.json` file will updated to reflect the restored plugin and will have identical vales from `config.xml`.
+After `prepare`, any plugins restored from `config.xml` will update the `package.json` file to reflect the values taken from `config.xml`.
 
 If you add a plugin without specifying a `<version | folder | git_url>`, the version that will be installed is taken from `package.json` or `config.xml`.
 
