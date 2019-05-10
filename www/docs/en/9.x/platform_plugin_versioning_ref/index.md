@@ -96,7 +96,7 @@ It is possible to update and delete a platform from `config.xml` and `package.js
 To update a platform, execute the following command:
 
 ```bash
-cordova platform update <platform[@<version>] | directory | git_url> --save
+cordova platform update <platform[@<version>] | directory | git_url>
 ```
 
 To remove a platform, execute one of the following commands:
@@ -108,15 +108,15 @@ cordova platform rm <platform>
 
 Some Examples:
 
-* **`cordova platform update android --save`**
+* **`cordova platform update android`**
 
   In addition to updating the `cordova-android` platform to the pinned version, it updates the `package.json` file.
 
-* **`cordova platform update android@3.8.0 --save`**
+* **`cordova platform update android@3.8.0`**
 
   In addition to updating the `cordova-android` platform to version `3.8.0` it updates the `package.json` file.
 
-* **`cordova platform update /path/to/android/platform --save`**
+* **`cordova platform update /path/to/android/platform`**
 
   In addition to updating the `cordova-android` platform to version found in the provided folder, it updates the `package.json` file.
 
