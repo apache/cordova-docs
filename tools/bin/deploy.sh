@@ -4,7 +4,7 @@ set -e
 
 svn_url=https://svn.apache.org/repos/asf/cordova/site
 
-svn_q() { svn --quiet "$@" }
+svn_q() { svn --quiet "$@"; }
 
 svn_with_auth() {
     [ $svn_username ] && [ $svn_pass ] || {
