@@ -7,7 +7,7 @@
     "doc": "doc"
   },
   "scripts": {
-    "test": "npm run eslint && npm run mocha",
+    "test": "npm run eslint && npm run mocha && gulp build",
     "mocha": "mocha --recursive tools/spec",
     "serve": "gulp serve --prod",
     "clean": "gulp clean",

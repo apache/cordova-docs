@@ -1,12 +1,20 @@
 language: node_js
+node_js: 8
 sudo: false
-node_js:
-- '8'
-before_install:
-- bundle install
+
 install:
-- npm install
+  - npm install
+  - bundle install
+
 script:
-  - export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
-  - chmod 755 buildAndDeploy.sh
-  - travis_wait 30 sleep infinity & ./buildAndDeploy.sh
+  - npm test
+
+before_deploy:
+  - travis_wait 30 npm run build
+
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: bash tools/bin/deploy.sh
+  on:
+    branch: master
