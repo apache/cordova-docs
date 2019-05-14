@@ -7,8 +7,7 @@
     "doc": "doc"
   },
   "scripts": {
-    "test": "npm run eslint && npm run mocha && gulp build",
-    "mocha": "mocha --recursive tools/spec",
+    "test": "npm run eslint && gulp build",
     "serve": "gulp serve --prod",
     "clean": "gulp clean",
     "update-docs": "gulp snapshot",
@@ -22,7 +21,6 @@
     "browser-sync": "^2.8.0",
     "browserify": "^10.2.4",
     "chalk": "^2.3.1",
-    "cheerio": "^0.17.0",
     "classnames": "^2.1.2",
     "envify": "^3.4.0",
     "fs-extra": "^0.11.1",
@@ -35,17 +33,13 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.5",
-    "jodoc": "git+https://github.com/kant2002/jodoc-js.git",
     "js-yaml": "^3.2.2",
     "ncp": "^2.0.0",
     "optimist": "^0.6.1",
     "preact": "^8.2.5",
     "preact-compat": "^3.17.0",
-    "q": "^1.4.1",
-    "shelljs": "^0.3.0",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "walk": "^2.3.9"
+    "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
     "babel-plugin-transform-react-jsx": "^6.24.1",
@@ -61,7 +55,6 @@
     "eslint-plugin-standard": "^3.0.1",
     "glob": "^7.0.3",
     "gulp-htmllint": "^0.0.5",
-    "mocha": "^1.21.4",
     "simplecrawler": "^0.5.2"
   },
   "repository": {
