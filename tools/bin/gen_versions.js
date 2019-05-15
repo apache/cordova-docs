@@ -56,23 +56,21 @@ function main () {
         var versionNames = util.listdirsSync(langPath);
 
         // get language ID
-        var langName;
-        if (langId in LANGUAGE_MAP) {
-            langName = LANGUAGE_MAP[langId];
-        } else {
+        var langName = LANGUAGE_MAP[langId];
+        if (!langName) {
             console.error("Language identifier '" + langId + "' doesn't have an associated name. Please fix that by changing " + scriptName + '.');
             process.exit(1);
         }
 
         // set the language name and the versions it has
         config[langId] = {
-            'name': LANGUAGE_MAP[langId],
+            'name': langName,
             'versions': versionNames
         };
     });
 
     console.log(util.generatedBy(__filename));
-    console.log(yaml.dump(config, {indent: 4}));
+    console.log(yaml.dump(config, { indent: 4 }));
 }
 
 main();

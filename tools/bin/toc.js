@@ -54,6 +54,7 @@ function main () {
 
             // read the input
             fs.readFile(srcTocPath, function (error, data) {
+                if (error) throw error;
 
                 // augment the ToC
                 var originalTocString = data.toString();
@@ -63,6 +64,7 @@ function main () {
 
                 // write the output
                 fs.writeFile(destTocPath, output, function (error, data) {
+                    if (error) throw error;
                     console.log(srcTocPath + ' -> ' + destTocPath);
                 });
             });

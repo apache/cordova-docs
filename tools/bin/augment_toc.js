@@ -27,7 +27,6 @@ var chalk = require('chalk');
 var util = require('./util');
 
 // constants
-var DEFAULT_PREFIX = '';
 var VERBOSE_BY_DEFAULT = false;
 
 // globals
@@ -121,7 +120,7 @@ function augmentToc (originalToc, prefix) {
 function augmentString (srcTocString, prefix) {
     var srcToc = yaml.load(srcTocString);
     var augmentedToc = augmentToc(srcToc, prefix);
-    var augmentedTocString = yaml.dump(augmentedToc, {indent: 4});
+    var augmentedTocString = yaml.dump(augmentedToc, { indent: 4 });
 
     return augmentedTocString;
 }

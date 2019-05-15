@@ -54,10 +54,7 @@ function getLatestRelease (packageName) {
 }
 
 function packageNameFromRepoName (repoName) {
-    var repoSplit = repoName.split('/');
-    var repoOwner = repoSplit[0];
-    var actualRepoName = repoSplit[1];
-    return actualRepoName;
+    return repoName.split('/')[1];
 }
 
 function getFetchedFileConfig (entry) {
@@ -192,7 +189,7 @@ function downloadEntries (downloadPrefix, entries) {
         var outFile = fs.createWriteStream(outFilePath);
 
         // open an HTTP request for the file
-        var request = https.get(fetchURI, function (response) {
+        https.get(fetchURI, function (response) {
 
             if (response.statusCode !== 200) {
                 console.error('Failed to download ' + fetchURI + ': got ' + response.statusCode);

@@ -56,7 +56,7 @@ function main () {
     }
 
     // create defaults config
-    var config = {'defaults': []};
+    var config = { 'defaults': [] };
 
     // set defaults for each language
     util.listdirsSync(rootDir).forEach(function (langName) {
@@ -114,7 +114,7 @@ function main () {
     });
 
     console.log(util.generatedBy(__filename));
-    console.log(yaml.dump(config, {indent: 4}));
+    console.log(yaml.dump(config, { indent: 4 }));
 }
 
 main();

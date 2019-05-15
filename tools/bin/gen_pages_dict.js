@@ -92,6 +92,8 @@ function main () {
     // add entries for all Markdown files in the site root
     var allMarkdownFiles = path.join(siteRootPath, '**/*.md');
     glob(allMarkdownFiles, function (error, filePaths) {
+        if (error) throw error;
+
         for (var i = 0; i < filePaths.length; i++) {
             var filePath = filePaths[i];
             var fileURI = pathToURI(filePath, siteRootPath);
