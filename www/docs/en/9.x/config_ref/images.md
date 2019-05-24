@@ -264,7 +264,7 @@ _Notice: macOS does not display custom icons when using `cordova run`. It defaul
 
 ```xml
 <platform name="electron">
-  <icon src="res/electron/icon.png" />
+    <icon src="res/electron/icon.png" />
 </platform>
 ```
 
@@ -272,8 +272,8 @@ You can supply unique icons for the application and installer by setting the `ta
 
 ```xml
 <platform name="electron">
-  <icon src="res/electron/app.png" target="app" />
-  <icon src="res/electron/installer.png" target="installer" />
+    <icon src="res/electron/app.png" target="app" />
+    <icon src="res/electron/installer.png" target="installer" />
 </platform>
 ```
 
@@ -281,16 +281,16 @@ For devices that support high-DPI resolutions, such as Apple's Retina display, y
 
 For example, if the base image's filename `icon.png` and is the standard resolution, then `icon@2x.png` will be treated as a high-resolution image that with a DPI doubled from the base.
 
-* icon.png (256px x 256px)
-* icon@2x.png (512px x 512px)
+- icon.png (256px x 256px)
+- icon@2x.png (512px x 512px)
 
 If you want to support displays with different DPI densities at the same time, you can put images with different sizes in the same folder and use the filename without DPI suffixes. For example:
 
 ```xml
 <platform name="electron">
-  <icon src="res/electron/icon.png" />
-  <icon src="res/electron/icon@1.5x.png" />
-  <icon src="res/electron/icon@2x.png" />
-  <icon src="res/electron/icon@4x.png" target="installer" />
+    <icon src="res/electron/icon.png" />
+    <icon src="res/electron/icon@1.5x.png" />
+    <icon src="res/electron/icon@2x.png" />
+    <icon src="res/electron/icon@4x.png" target="installer" />
 </platform>
 ```
