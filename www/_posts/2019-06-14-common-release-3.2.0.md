@@ -12,7 +12,7 @@ We are happy to announce that `cordova-common 3.2.0` was released in June 2019. 
 
 ## Release Highlights
 
-* (ios) plist document not indented with tabs ([#69](https://github.com/apache/cordova-common/pull/69))
+* (ios) `plist` document not indented with tabs ([#69](https://github.com/apache/cordova-common/pull/69))
 * Update `fs-extra` to v8 ([#70](https://github.com/apache/cordova-common/pull/70))
 * Add example usage of podspec declarations ([#67](https://github.com/apache/cordova-common/pull/67))
 * implement `setPreference` and `setPlatformPreference` ([#63](https://github.com/apache/cordova-common/pull/63))
