@@ -236,7 +236,7 @@ version(string) | The version of the plugin depended on. Semver syntax is suppor
 Examples:
 ```xml
 <dependency id="cordova-plugin-someplugin" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" />
-<dependency id="cordova-plugin-someplugin" version="1.0.1">
+<dependency id="cordova-plugin-someplugin" version="1.0.1" />
 ```
 
 ## platform
