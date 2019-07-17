@@ -162,11 +162,15 @@ To sign an app, you need the following parameters:
 | Code Sign Resource Rules | `--codesignResourceRules`| (Optional) Used to control which files in a bundle should be sealed by a code signature. For more details, read [The OS X Code Signing In Depth article](https://developer.apple.com/library/mac/technotes/tn2206/_index.html#//apple_ref/doc/uid/DTS40007919-CH1-TNTAG206)
 | Automatic Provisioning   | `--automaticProvisioning`| (Optional) Enable to allow Xcode to automatically manage provisioning profiles. Valid options are `false` (the default) and `true`.
 
+These parameters can be specified using the command line arguments above to the Cordova CLI `build` or `run` commands.
+
+**Note**: You should use double `--` to indicate that these are platform-specific arguments, for example:
+
+`cordova run ios --release -- --codeSignIdentity="iPhone Developer" --developmentTeam=FG35JLLMXX4A --packageType=development`.
+
 ### Using build.json
 
-Alternatively, you could specify them in a build configuration file (`build.json`)
-using the `--buildConfig` argument to the same commands. Here's a sample of a
-build configuration file:
+Alternatively, you could specify these flags in a build configuration file (default: `build.json` or add the `--buildConfig` flag to the same commands, e.g. `cordova build ios --buildConfig=..build.json`). Here's a sample of a build configuration file:
 
 For automatic signing, where provisioning profiles are managed automatically by Xcode (recommended):
 
