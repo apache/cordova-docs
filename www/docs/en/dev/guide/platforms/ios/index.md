@@ -170,7 +170,7 @@ These parameters can be specified using the command line arguments above to the 
 
 ### Using build.json
 
-Alternatively, you could specify these flags in a build configuration file (default: `build.json` or add the `--buildConfig` flag to the same commands, e.g. `cordova build ios --buildConfig=..build.json`). Here's a sample of a build configuration file:
+Alternatively, you could specify these flags in a build configuration file (default: `build.json` or add the `--buildConfig` flag to the same commands, so you can also use other file names e.g. `cordova build ios --buildConfig=../customBuild.json`). Here's a sample of a build configuration file:
 
 For automatic signing, where provisioning profiles are managed automatically by Xcode (recommended):
 
