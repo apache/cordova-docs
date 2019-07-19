@@ -24,7 +24,7 @@ description: Cordova CLI pinned platform versions.
 
 ## Platform Pinning
 
-Cordova CLI manages a list of pinned Apache Cordova maintained platforms. When there is a major release of Cordova CLI, the platform's pinned version is updated to the latest major released version. Typically, the updating of this pin is made only on a major release of CLI. This is because the pinned versions are pinned with a caret `^` allowing CLI to continue to fetch new minor and patch releases of any given pinned platform.
+Cordova CLI manages a list of pinned Apache Cordova maintained platforms. When there is a major release of Cordova CLI, the platform's pinned version is updated to the latest released version. Typically, the updating of this pin is made only on a major release of CLI. This is because the pinned versions are pinned with a caret `^` allowing CLI to continue to fetch new minor and patch releases of any given pinned platform.
 
 To see the pinned platforms for your CLI version, execute the command `cordova platform list`  in a brand new project directory.
 
