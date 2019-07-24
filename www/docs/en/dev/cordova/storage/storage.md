@@ -166,6 +166,7 @@ IndexedDB is supported by the underlying WebView on the following Cordova platfo
 
 - Windows (with some limitations)
 - Android (4.4 and above)
+- iOS (with Safari 10 and above)
 
 ### Windows Limitations
 
@@ -268,7 +269,6 @@ For more information, see:
 
 ### Disadvantages
 
-- Not supported on iOS.
 - Complex API with nested callbacks.
 - Limited total amount of storage (typically around 5MB).
 
