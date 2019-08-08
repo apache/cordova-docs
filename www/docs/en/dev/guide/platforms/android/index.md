@@ -328,13 +328,14 @@ To sign an app, you need the following parameters:
 | Alias                 | `--alias`         | The id specifying the private key used for signing
 | Password              | `--password`      | Password for the private key specified
 | Type of the Keystore  | `--keystoreType`  | *Default: auto-detect based on file extension*<br>Either pkcs12 or jks
+| Package Type          | `--packageType`   | *Default: apk*<br>Specify whether to build an APK or an [Android App Bundle] (https://developer.android.com/guide/app-bundle) (.aab) file.<br>Accepts either `apk` or `bundle`
 
 These parameters can be specified using the command line arguments above to
 the [Cordova CLI][cli_reference] `build` or `run` commands.
 
 __Note__: You should use double `--` to indicate that these are platform-specific arguments, for example:
 
-`cordova run android --release -- --keystore=../my-release-key.keystore --storePassword=password --alias=alias_name --password=password`.
+`cordova run android --release -- --keystore=../my-release-key.keystore --storePassword=password --alias=alias_name --password=password --packageType=bundle`.
 
 ### Using build.json
 
@@ -350,14 +351,16 @@ build configuration file:
             "storePassword": "android",
             "alias": "mykey1",
             "password" : "password",
-            "keystoreType": ""
+            "keystoreType": "",
+            "packageType": "apk"
         },
         "release": {
             "keystore": "../android.keystore",
             "storePassword": "",
             "alias": "mykey2",
             "password" : "password",
-            "keystoreType": ""
+            "keystoreType": "",
+            "packageType": "bundle"
         }
     }
 }
