@@ -54,7 +54,7 @@ different screen resolutions.
 
 ## Android
 
-On Android, instead of using a single image for an icon, you can use two images (background and foreground) to create an **Adaptive Icon**. In order to support adaptive icons, you need to have at least version 9.0.0 of **cordova** installed and have at least version 8.0.0 of **cordova-android** installed.
+On Android, instead of using a single image for an icon, you can use two images (background and foreground) to create an **Adaptive Icon**. To use Adaptive Icons, you need to have installed at least version 9.0.0 of **Cordova** and version 8.0.0 of **Cordova-Android**.
 
 Attributes    | Description
 --------------|--------------------------------------------------------------------------------
