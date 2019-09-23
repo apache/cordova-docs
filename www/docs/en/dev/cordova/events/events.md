@@ -73,7 +73,10 @@ function onMenuKeyDown() {
     // Handle the menubutton event
 }
 
-// Add similar event handlers for other events
+// listen for uncaught cordova callback errors
+window.addEventListener("cordovacallbackerror", function (event) {
+    // event.error contains the original error object
+});
 ```
 
 **Note**: Applications typically should use `document.addEventListener` to attach an event listener once the [deviceready](#deviceready)
@@ -168,6 +171,13 @@ The following table lists the cordova events and the supported platforms:
         <th><a href="#activated">activated</a></th>
         <td data-col="android"    class="n"></td>
         <td data-col="ios"        class="n"></td>
+        <td data-col="win"       class="y"></td>
+    </tr>
+
+    <tr>
+        <th><a href="#cordovacallbackerror">cordovacallbackerror</a></th>
+        <td data-col="android"    class="y"></td>
+        <td data-col="ios"        class="y"></td>
         <td data-col="win"       class="y"></td>
     </tr>
 </tbody>
@@ -452,3 +462,22 @@ The subscription to the `activated` event should be done before `deviceready` ha
 [UIApplicationExitsOnSuspend]: http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html
 [AndroidLifeCycleGuide]: ../../guide/platforms/android/index.html#lifecycle-guide
 [MSDNActivatedEvent]: https://msdn.microsoft.com/en-us/library/windows/apps/br212679.aspx
+
+## cordovacallbackerror
+
+This event fires when a native callback (success or error) throws an uncaught error.
+
+This does not stop propagation of the error.  (eg. window.onerror event will also fire.)
+
+It is slightly different from the other events.  You must listen on the `window` object, not the `document` object.
+
+The `event` object has the following properties:
+- `error`: The original `Error` thrown in the callback.
+
+### Quick Example
+
+```javascript
+window.addEventListener("cordovacallbackerror", function (event) {
+    // event.error contains the original error object
+});
+```
