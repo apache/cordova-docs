@@ -228,32 +228,11 @@ As a plugin developer you can define hook scripts using `<hook>` elements in a `
 `before_plugin_install`, `after_plugin_install`, `before_plugin_uninstall` plugin hooks will be fired
 exclusively for the plugin being installed/uninstalled.
 
-### Via `/hooks` directory (Deprecated)
-
-To execute custom action when corresponding hook type is fired, use hook type as a name for a subfolder inside 'hooks' directory and place you script file here, for example:
-
-```
-# script file will be automatically executed after each build
-hooks/after_build/after_build_custom_action.js
-```
-
-When using these hooks, they will always be run as executable files, not as loadable JavaScript modules.
-
-__Remember__: Make your scripts executable in this case.
-
-__Note__: this method is considered deprecated in favor of the hook elements in config.xml and plugin.xml.
-
 ### Order of Hooks execution
 
 #### Based on Hooks Definition
 
-Hook scripts could be defined by adding them to the special predefined folder
-(`/hooks`) or via configuration files (`config.xml` and `plugin.xml`) and run
-serially in the following order:
-
-* Application hooks from `/hooks`;
-* Application hooks from `config.xml`;
-* Plugin hooks from `plugins/.../plugin.xml`.
+Hook scripts for one given hook run serially in the order of appearance in their file with application hooks from `config.xml` running before plugin hooks from `plugins/.../plugin.xml`.
 
 #### Based on the Internal order of execution
 
@@ -358,8 +337,6 @@ module.exports = context => {
     });
 };
 ```
-> __Note__:  new module loader script interface is used for the `.js` files defined via `config.xml` or `plugin.xml` only.
-For compatibility reasons hook files specified via `/hooks` folders are run via Node child_process spawn, see 'Non-javascript' section below.
 
 ### Non-javascript
 
