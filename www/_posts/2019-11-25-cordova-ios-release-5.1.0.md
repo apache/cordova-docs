@@ -7,7 +7,7 @@ categories: announcements
 tags: news releases
 ---
 
-We are happy to announce that we have just released `Cordova iOS 5.1.0`!  This is one of Cordova's supported platforms for building iOS mobile applications.
+We are happy to announce that we have just released `Cordova iOS 5.1.0`! This is Cordova's official platform for building iOS mobile applications.
 
 * [cordova-ios@5.1.0](https://www.npmjs.com/package/cordova-ios)
 
