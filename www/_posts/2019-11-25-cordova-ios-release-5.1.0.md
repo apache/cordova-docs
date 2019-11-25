@@ -20,7 +20,7 @@ cordova platform remove ios
 cordova platform add ios@5.1.0
 ```
 
-The most notable improvement in this minor release are:
+The most notable improvements in this minor release are:
 
 * The ability to disable `UIWebView` during the compile-time.
 * Avoid locking when adding platforms on a non-synced pods repo. (CocoaPods >=1.8.0)
