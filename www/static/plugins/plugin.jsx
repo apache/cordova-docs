@@ -8,23 +8,21 @@ var Plugin = createClass({
     shouldComponentUpdate: function(nextProps, nextState) {
         return this.props.plugin !== nextProps.plugin;
     },
-    copyTextWithoutFlash: function() {
-        if(!this.props.flashEnabled) {
-            var range = document.createRange();
-            range.selectNode(this.getDOMNode().getElementsByClassName("cordova-add-command")[0]);
+    copyText: function() {
+        var range = document.createRange();
+        range.selectNode(this.getDOMNode().getElementsByClassName("cordova-add-command")[0]);
 
-            var select = window.getSelection();
-            select.removeAllRanges();
-            select.addRange(range);
+        var select = window.getSelection();
+        select.removeAllRanges();
+        select.addRange(range);
 
-            try {
-                document.execCommand("copy");
-            } catch(e) {
-                // Silently fail for now
-            }
-
-            select.removeAllRanges();
+        try {
+            document.execCommand("copy");
+        } catch(e) {
+            // Silently fail for now
         }
+
+        select.removeAllRanges();
     },
     render: function() {
         if(!this.props.plugin) {
@@ -62,7 +60,7 @@ var Plugin = createClass({
                         title="Copy cordova plugin add command to clipboard"
                         data-toggle="tooltip"
                         data-placement="auto"
-                        onClick={this.copyTextWithoutFlash} />
+                        onClick={this.copyText} />
             );
         }
 

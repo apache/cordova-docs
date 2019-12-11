@@ -62,7 +62,6 @@ var App = createClass({
             searchResults: [],
             staticFilters: staticFilters,
             sortCriteria: sortBy,
-            flashEnabled: true,
             downloadsReceived: false
         }
 
@@ -449,7 +448,7 @@ var App = createClass({
             );
         }
 
-        var listContent = <PluginList plugins={this.state.searchResults} flashEnabled={this.state.flashEnabled}/>;
+        var listContent = <PluginList plugins={this.state.searchResults}/>;
 
         return (
             <div>
