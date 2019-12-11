@@ -2,22 +2,11 @@ var Preact = require('preact'),
     h = require('preact').h,
     createClass = require('preact-compat').createClass,
     SupportedPlatforms = require('./supportedplatforms.jsx'),
-    classNames      = require('classnames'),
-    ZeroClipboard = require('../js/lib/ZeroClipboard.js');
+    classNames      = require('classnames');
 
 var Plugin = createClass({
     shouldComponentUpdate: function(nextProps, nextState) {
         return this.props.plugin !== nextProps.plugin;
-    },
-    setClipboardText: function() {
-        if(this.props.plugin && this.props.flashEnabled) {
-            var client = new ZeroClipboard(document.getElementById("copy-" + this.props.plugin.name));
-            var copyText = "cordova plugin add " + this.props.plugin.name;
-            client.off();
-            client.on("copy", function(event) {
-                event.clipboardData.setData("text/plain", copyText);
-            });
-        }
     },
     copyTextWithoutFlash: function() {
         if(!this.props.flashEnabled) {
