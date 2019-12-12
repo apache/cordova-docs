@@ -109,39 +109,27 @@ $(document).ready(function () {
         document.getElementById("new_blog_count").innerHTML = new_blog_count;
     }
 
-    // code for click-to-copy functionality
-    var client = new ZeroClipboard();
-    client.on("ready", function(e) {
-        var copyButtons = document.getElementsByClassName("btn-copy");
-        for(var i = 0; i < copyButtons.length; i++) {
-            client.clip(copyButtons[i]);
-        }
-    });
+    var copyButtons = document.getElementsByClassName("btn-copy");
+    for (var i = 0; i < copyButtons.length; i++) {
+        copyButtons[i].addEventListener("click", function (clickEvent) {
+            var id = clickEvent.target.getAttribute("data-clipboard-target");
 
-    // In the case that flash is disabled, fall back to browser API
-    client.on("error", function(e) {
-        var copyButtons = document.getElementsByClassName("btn-copy");
-        for(var i = 0; i < copyButtons.length; i++) {
-            copyButtons[i].addEventListener("click", function(clickEvent) {
-                var id = clickEvent.target.getAttribute("data-clipboard-target");
+            var range = document.createRange();
+            range.selectNode(document.getElementById(id));
 
-                var range = document.createRange();
-                range.selectNode(document.getElementById(id));
+            var select = window.getSelection();
+            select.removeAllRanges();
+            select.addRange(range);
 
-                var select = window.getSelection();
-                select.removeAllRanges();
-                select.addRange(range);
+            try {
+                document.execCommand("copy");
+            } catch (e) {
+                // Silently fail for now
+            }
 
-                try {
-                    document.execCommand("copy");
-                } catch(e) {
-                    // Silently fail for now
-                }
-
-                select.removeAllRanges();
-            });
-        }
-    });
+            select.removeAllRanges();
+        });
+    }
 
     // Smooth scroll to anchor links
     $("a[href^='#']").on('click', function(e) {

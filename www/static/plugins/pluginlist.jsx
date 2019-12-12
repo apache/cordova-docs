@@ -55,7 +55,7 @@ var PluginList = createClass({
             } else {
                 for (var i = 0; i < InitialPageLength + this.state.searchPage * PageExtensionLength; i++) {
                     if (plugins[i]) {
-                        visiblePlugins.push(<Plugin plugin={plugins[i]} key={i} flashEnabled={this.props.flashEnabled}/>);
+                        visiblePlugins.push(<Plugin plugin={plugins[i]} key={i}/>);
                     } else {
                         break;
                     }

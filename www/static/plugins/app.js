@@ -25,8 +25,7 @@ var Preact          = window.Preact = require('preact'),
     PlatformButton  = require('./platformbutton.jsx')
     App             = {},
     SortDropdown    = require('./sortdropdown.jsx'),
-    SortCriteria    = require('./SortCriteria'),
-    ZeroClipboard   = require("../js/lib/ZeroClipboard.js");
+    SortCriteria    = require('./SortCriteria');
 
 var INPUT_DELAY = 500; // in milliseconds
 
@@ -63,7 +62,6 @@ var App = createClass({
             searchResults: [],
             staticFilters: staticFilters,
             sortCriteria: sortBy,
-            flashEnabled: true,
             downloadsReceived: false
         }
 
@@ -318,14 +316,6 @@ var App = createClass({
             ga('send', 'pageview', '/index.html' + query);
         },
     },
-    componentWillMount: function() {
-        var that = this;
-        ZeroClipboard.config({swfPath: "{{ site.baseurl }}/static/js/lib/ZeroClipboard.swf"});
-        ZeroClipboard.on({
-            "ready": function(event) {that.setState({ flashEnabled: true });},
-            "error": function(event) {that.setState({ flashEnabled: false });}
-        });
-    },
     componentDidMount: function() {
         var plugins = [],
             officialPlugins = require('./official-plugins.json').plugins,
@@ -458,7 +448,7 @@ var App = createClass({
             );
         }
 
-        var listContent = <PluginList plugins={this.state.searchResults} flashEnabled={this.state.flashEnabled}/>;
+        var listContent = <PluginList plugins={this.state.searchResults}/>;
 
         return (
             <div>
