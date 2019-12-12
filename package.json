@@ -24,7 +24,7 @@
     "classnames": "^2.1.2",
     "envify": "^3.4.0",
     "fs-extra": "^0.11.1",
-    "gulp": "^3.9.0",
+    "gulp": "^4",
     "gulp-footer": "^1.0.5",
     "gulp-header": "1.2.2",
     "gulp-less": "^3.0.3",
