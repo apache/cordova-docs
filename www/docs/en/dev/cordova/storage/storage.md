@@ -270,7 +270,7 @@ For more information, see:
 
 - Not supported on iOS.
 - Complex API with nested callbacks.
-- Limited total amount of storage (typically around 5MB).
+- Limited total amount of storage (typically around 5MB) and possible eviction [as described on MDN][MDNIndexedDBLimitsAndEviction].
 
 ## Plugin-Based Options
 
@@ -316,6 +316,7 @@ alternative storage options.
 [MDNIndexedDBAPI]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
 [MDNIndexedDBBasicConcepts]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 [MDNUsingIndexedDB]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB
+[MDNIndexedDBLimitsAndEviction]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 [StructuredCloneAlgorithm]: http://w3c.github.io/html/infrastructure.html#safe-passing-of-structured-data
 [Html5RocksFileSystemTutorial]: http://www.html5rocks.com/en/tutorials/file/filesystem/
 [FileAPI]: https://github.com/apache/cordova-plugin-file/blob/master/README.md
