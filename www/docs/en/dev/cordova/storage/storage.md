@@ -162,10 +162,12 @@ IndexedDB provides a simple and easy to understand data model, much like LocalSt
 But unlike LocalStorage, you can create multiple databases, with multiple stores per
 database, and its asynchronous API and search indexes provide performance benefits.
 
-IndexedDB is supported by the underlying WebView on the following Cordova platforms:
+IndexedDB is supported by the underlying WebView on all platforms,
+with known limitations on web browser and Windows.
 
-- Windows (with some limitations)
-- Android (4.4 and above)
+### Web browser limitations
+
+The actual behavior may depend on which browser is used. There may be differences on Edge and Firefox browsers, for example.
 
 ### Windows Limitations
 
@@ -268,7 +270,6 @@ For more information, see:
 
 ### Disadvantages
 
-- Not supported on iOS.
 - Complex API with nested callbacks.
 - Limited total amount of storage (typically around 5MB).
 
