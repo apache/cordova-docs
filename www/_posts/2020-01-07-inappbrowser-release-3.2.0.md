@@ -25,7 +25,5 @@ Please report any issues you find at [issues.cordova.io](http://issues.cordova.i
 
 * [GH-503](https://github.com/apache/cordova-plugin-inappbrowser/pull/503) Defensive code to prevent NULL reference exceptions for async
 * [GH-584](https://github.com/apache/cordova-plugin-inappbrowser/pull/584) Add compile-time decision for disabling UIWebView
-* [GH-524](https://github.com/apache/cordova-plugin-inappbrowser/pull/524) Replace "beforeload" with BEFORELOAD
-* [GH-568](https://github.com/apache/cordova-plugin-inappbrowser/pull/568) Update missing closed brace to the insert.CSS
 * [GH-401](https://github.com/apache/cordova-plugin-inappbrowser/pull/401) Move createIframeBridge to injectDeferredObject
 * [GH-534](https://github.com/apache/cordova-plugin-inappbrowser/pull/534) Fix `InAppBrowser` not opening on **iOS** 13
