@@ -766,6 +766,22 @@ The corresponding html:
     </body>
 </html>
 ```
+### Android Quirks
+The default API level in the Cordova Android platform has been upgraded. On an Android 9 device, clear text communication is now disabled by default.
+
+Indicates whether the app intends to use cleartext network traffic, such as cleartext HTTP. The default value for apps that target API level 27 or lower is "true". Apps that target API level 28 or higher default to "false".
+When the attribute is set to "false", platform components (for example, HTTP and FTP stacks, DownloadManager, and MediaPlayer) will refuse the app’s requests to use cleartext traffic. Third-party libraries are strongly encouraged to honor this setting as well. The key reason for avoiding cleartext traffic is the lack of confidentiality, authenticity, and protections against tampering; a network attacker can eavesdrop on transmitted data and also modify it without being detected.
+
+To allow clear text communication again, set the `android:usesCleartextTraffic` on your application tag to true in `config.xml` file:
+`<platform name="android">
+  <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+      <application android:usesCleartextTraffic="true" />
+  </edit-config>
+</platform>`
+
+And also you need to add Android XML namespace `xmlns:android="http://schemas.android.com/apk/res/android"` to your widget tag in the same `config.xml`, like so:
+`<widget id="io.cordova.hellocordova" version="0.0.1" android-versionCode="13" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+</widget>`
 
 ### Testing the Activity Lifecycle
 
