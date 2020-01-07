@@ -782,6 +782,10 @@ And also you need to add Android XML namespace `xmlns:android="http://schemas.an
 `<widget id="io.cordova.hellocordova" version="0.0.1" android-versionCode="13" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
 </widget>`
 
+### Android Manifest Information
+
+You can learn more about the Android manifest information in the [documentation for Android developers](https://developer.android.com/guide/topics/manifest/manifest-intro).
+
 ### Testing the Activity Lifecycle
 
 Android provides a developer setting for testing Activity destruction on low
