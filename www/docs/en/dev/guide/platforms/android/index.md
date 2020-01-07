@@ -769,7 +769,7 @@ The corresponding html:
 ### Android Quirks
 The default API level in the Cordova Android platform has been upgraded. On an Android 9 device, clear text communication is now disabled by default.
 
-By default HTTP and FTP etc. will refuse the apps requests to use cleartext traffic. The key reason for avoiding cleartext traffic is the lack of confidentiality, authenticity, and protections against tampering; a network attacker can eavesdrop on transmitted data and also modify it without being detected. You can learn more about the `android:usesCleartextTraffic` setting in the [documentation for Android developers](https://developer.android.com/guide/topics/manifest/application-element).
+By default HTTP and FTP etc. will refuse the apps requests to use cleartext traffic. The key reason for avoiding cleartext traffic is the lack of confidentiality, authenticity, and protections against tampering; a network attacker can eavesdrop on transmitted data and also modify it without being detected. You can learn more about the `android:usesCleartextTraffic` or any other android application elements setting in the [documentation for Android developers](https://developer.android.com/guide/topics/manifest/application-element).
 
 To allow clear text communication again, set the `android:usesCleartextTraffic` on your application tag to true in `config.xml` file:
 `<platform name="android">
