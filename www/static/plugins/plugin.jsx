@@ -10,19 +10,22 @@ var Plugin = createClass({
     },
     copyText: function() {
         var range = document.createRange();
-        range.selectNode(this.getDOMNode().getElementsByClassName("cordova-add-command")[0]);
+        var elements = this.getDOMNode().getElementsByClassName("cordova-add-command");
+        if(elements.length > 0) {
+            range.selectNode(elements[0]);
 
-        var select = window.getSelection();
-        select.removeAllRanges();
-        select.addRange(range);
+            var select = window.getSelection();
+            select.removeAllRanges();
+            select.addRange(range);
 
-        try {
-            document.execCommand("copy");
-        } catch(e) {
-            // Silently fail for now
+            try {
+                document.execCommand("copy");
+            } catch(e) {
+                // Silently fail for now
+            }
+
+            select.removeAllRanges();
         }
-
-        select.removeAllRanges();
     },
     render: function() {
         if(!this.props.plugin) {
