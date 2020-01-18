@@ -102,13 +102,13 @@ var Plugin = createClass({
         )
     },
     componentDidMount: function() {
-        this.setClipboardText();
+        this.copyText();
         if(this.props.plugin) {
             $(this.getDOMNode()).find(".plugins-copy-to-clipboard").tooltip();
         }
     },
     componentDidUpdate: function() {
-        this.setClipboardText();
+        this.copyText();
     }
 });
 
