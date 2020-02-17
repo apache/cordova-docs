@@ -270,7 +270,7 @@ For more information, see:
 
 - Not supported on iOS.
 - Complex API with nested callbacks.
-- Limited total amount of storage (typically around 5MB) and possible eviction [as described on MDN][MDNIndexedDBLimitsAndEviction].
+- Limited total amount of storage and possible eviction [as described on MDN][MDNIndexedDBLimitsAndEviction].
 
 ## Plugin-Based Options
 
