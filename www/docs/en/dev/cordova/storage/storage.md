@@ -170,7 +170,9 @@ with known limitations on the following platforms:
 
 ### Web browser limitations
 
-The actual behavior may depend on which browser is used. There may be differences on Edge and Firefox browsers, for example.
+The actual behavior may depend on which browser is used.
+There could be differences between the behavior on the Safari and Firefox browsers,
+for example.
 
 ### Windows Limitations
 
