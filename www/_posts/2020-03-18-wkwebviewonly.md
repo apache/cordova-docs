@@ -8,26 +8,26 @@ categories: howto
 tags: ios
 ---
 
-Apple started to reject apps with UIWebView references. The next major version of cordova-ios will contain no usage of UIWebView. You might need to update your app to fix this before the next version is released and this post sums up the required steps.
+Apple started to reject apps with `UIWebView` references. You will need to update your app to fix this and this post sums up the required steps.
 
 This should solve the warning after uploading the app to App Store connect:
 
 > ITMS-90809: Deprecated API Usage - Apple will stop accepting submissions of apps that use UIWebView APIs.
 
-A new so called build flag `WKWebViewOnly` was introduced some versions ago to remove all UIWebView references from Cordovas code at build time.
+A new `preference` flag `WKWebViewOnly` was introduced to remove all `UIWebView` references from Cordova's code during compile-time. It is recommended to upgrade the `cordova-ios` platform to version `5.1.1`.
 
 <!--more-->
 
 ## Use a WKWebView plugin.
 
-The following example uses the cordova-plugin-wkwebview-engine plugin:
+The following example uses the `[cordova-plugin-wkwebview-engine](https://github.com/apache/cordova-plugin-wkwebview-engine)` plugin:
 
-* Add plugin cordova-plugin-wkwebview-engine, preferably the latest version 1.2.1
-* Add preference attribute CordovaWebViewEngine to the config.xml.
-* Add feature attribute CDVWKWebViewEngine to the config.xml.
-* Add preference `WKWebViewOnly` to the config.xml.
+* Add plugin `cordova-plugin-wkwebview-engine`, preferably the latest version **1.2.1**
+* Add `preference` attribute `CordovaWebViewEngine` to the `config.xml`.
+* Add `feature` attribute `CDVWKWebViewEngine` to the `config.xml`.
+* Add `preference` `WKWebViewOnly` to the `config.xml`.
 
-Example config.xml with cordova-plugin-wkwebview-engine plugin
+**Example `config.xml` with `cordova-plugin-wkwebview-engine` plugin**
 
 ```xml
 <platform name="ios">
@@ -42,11 +42,15 @@ Example config.xml with cordova-plugin-wkwebview-engine plugin
 ```
 
 ## Still getting the warning?
-If you are still getting the warning, most likely a plugin that you are using still references UIWebView. You will need to identify which plugin and contact the plugin developers on their support channel (plugin's repo) and request them to fix it. They can either remove the references or make use of this flag to wrap the references.
+
+If you are still getting the warning, it is most likely one or more plugins in your project are still references `UIWebView`. You will need to identify which plugins and contact those plugin's developers through their support channel (plugin's repo). They will need to fix their plugins by either remove the references or wrap them with the new flag.
 
 ## Using other WKWebView plugin
 
-There are alternatives to the official WKWebView plugin from the examples above. Make sure they are updated and you use the latest version. If you have any issue or usage questions with these plugins. Read their docs and request help from their support channels.
+There are alternatives to the official WKWebView plugin from the examples above. Make sure they have been updated and use the latest version. If you have any issues or usage questions with their plugins, please read their docs and request help through their support channels.
 
+## Future Roadmap
+
+The next major release of `cordova-ios` will remove all references of `UIWebView` from code. The flag will also be removed in the next major release as `WKWebView` will be Cordova's default webview. There is currently *no ETA* for the next major release.
 
 
