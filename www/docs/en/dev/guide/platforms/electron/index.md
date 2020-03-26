@@ -310,7 +310,7 @@ The `arch` property is an array list of architectures that each package is built
 
 - ia32
 - x64
-- armv71
+- armv7l
 - arm64
 
 The example above will generate an `x64` `dmg` package.
