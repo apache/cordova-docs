@@ -96,7 +96,7 @@ and make sure the following are installed:
 1. Android Support Repository (found under the "SDK Tools" tab)
 
 See Android's documentation on [Installing SDK Packages](https://developer.android.com/studio/intro/update)
-for more details.
+for more details. It may be necessary to click on "hide obsolete packages" to see the option for SDK tools. 
 
 ### Setting environment variables
 
