@@ -107,7 +107,7 @@ should be updated:
 
 1. Set the `JAVA_HOME` environment variable to the location of your JDK
    installation
-2. Set the `ANDROID_HOME` environment variable to the location of your Android
+2. Set the `ANDROID_SDK_ROOT` environment variable to the location of your Android
    SDK installation
 3. It is also recommended that you add the Android SDK's `tools`, `tools/bin`,
    and `platform-tools` directories to your `PATH`
@@ -119,7 +119,7 @@ On a Mac or Linux, you can use a text editor to create or modify the
 `export` like so (substitute the path with your local installation):
 
 ```bash
-export ANDROID_HOME=/Development/android-sdk/
+export ANDROID_SDK_ROOT=/Development/android-sdk/
 ```
 
 To update your `PATH`, add a line resembling the following (substitute the paths
