@@ -284,6 +284,24 @@ Note that plugins can also include `build-extras.gradle` files via:
 <framework src="some.gradle" custom="true" type="gradleReference" />
 ```
 
+#### Configuring Gradle JVM Args
+
+To change the Gradle JVM args, the `--jvmargs` flag can be used with both cordova build and run commands. This is mostly useful for controlling how much memory gradle is allowed to use during the build process. It is recommended to allow at least 2048 MB.
+
+By default, JVM args has a value of `-Xmx2048m`. To increase the max allowed memory, use the `-Xmx` JVM arg. Example given below:
+
+```
+cordova build android -- --jvmargs='-Xmx4g'
+```
+
+The following units are supported:
+
+| unit      | value     | example
+|-----------|:---------:|---------
+| kilobyte  |k          |`-Xmx2097152k`
+| megabyte  |m          |`-Xmx2048m`
+| gigabyte  |g          |`-Xmx2g`
+
 ### Setting the Version Code
 
 To change the [version code](https://developer.android.com/studio/publish/versioning.html)
