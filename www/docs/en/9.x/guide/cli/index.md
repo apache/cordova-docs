@@ -212,7 +212,7 @@ npm and you can search for them on the [plugin search page](/plugins/). Some key
 $ cordova plugin search camera
 ```
 
-To add and save the camera plugin to `config.xml` and `package.json`, we will specify the npm package name for the camera plugin:
+To add and save the camera plugin to `package.json`, we will specify the npm package name for the camera plugin:
 
 ```
 $ cordova plugin add cordova-plugin-camera
