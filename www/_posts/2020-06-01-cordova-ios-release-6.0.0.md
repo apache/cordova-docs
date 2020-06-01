@@ -13,7 +13,6 @@ We are happy to announce that we have just released `Cordova iOS 6.0.0`! This is
 
 ## Release Highlights
 
-
 **To upgrade:**
 
 ```bash
@@ -23,30 +22,33 @@ cordova platform add ios@6.0.0
 
 The most notable changes in this major release are:
 
-* [GH-790](https://github.com/apache/cordova-ios/pull/790) breaking feature: Integrate & replace SplashScreens w/ Launch Storyboard (CB-13143)
-* [GH-849](https://github.com/apache/cordova-ios/pull/849) breaking(`pod`): remove unused API & bump minimum version requirements to `1.8.0`
-* [GH-820](https://github.com/apache/cordova-ios/pull/820) Only set `bundleid` to main app target
-* [GH-801](https://github.com/apache/cordova-ios/pull/801) breaking (`UserAgent`): Drop `CDVUserAgentUtil` and Implement for WKWebView
-* [GH-781](https://github.com/apache/cordova-ios/pull/781) breaking: Use `WKURLSchemeHandler` for serving app content
-* [GH-780](https://github.com/apache/cordova-ios/pull/780) breaking: upgrade xcode compatible to 11.0
-* [GH-779](https://github.com/apache/cordova-ios/pull/779) breaking: bump `deployment-target` to `11.0`
-* [GH-773](https://github.com/apache/cordova-ios/pull/773) refactor: drop `uiwebview` & add `wkwebview`
+* Added Xcode 11 compatibility and bumped minimum iOS version to 11.0
 
-We have removed the `UIWebView` webview from our core platform and integrated `WKWebView` as its default. This change makes the `cordova-plugin-wkwebview-engine` plugin obsolete.
+    As of April 2020, Apple requires all app store submissions to be built with Xcode 11 and target the iOS 13 SDK.
 
-To resolve some of the known `WKWebView` issues, such as CORS, the `WKURLSchemeHandler` has been implemented. The `WKURLSchemeHandler` is necessary to serve your app content on custom scheme. By default, Cordova iOS will continue to server on the `file` scheme. You are able to change the scheme by setting the preference options `scheme` and `hostname` in the `config.xml` file.
+* Moved `WKWebView` support into Cordova-iOS and removed `UIWebView` code
 
-E.g.
+    Due to this change, the `cordova-plugin-wkwebview-engine` plugin is obsolete and will not work with this release. If you have this plugin installed, it is safe to remove with `cordova plugin remove cordova-plugin-wkwebview-engine`.
 
-```xml
-<preference name="scheme" value="app" />
-<preference name="hostname" value="localhost" />
-```
+    Additionaly, `WKURLSchemeHandler` support has been introduced with this release. Using a custom scheme to serve your app content through fixes CORS issues that exist because of the strict security policies that `WKWebView` has applied to the `file` scheme. You can easily configure your Cordova project to use a custom scheme by setting the preference options `scheme` and `hostname` in the `config.xml` file.
 
-In order to support `WKURLSchemeHandler`, the `deployment-target` was bumped to `11.0`.
+    ```xml
+    <preference name="scheme" value="app" />
+    <preference name="hostname" value="localhost" />
+    ```
 
-Additonaly, The SplashScreen plugin has been integrated into Cordova iOS as a core feature. The legacy launch screen images has been removed and can no longer be set.
+    It is important to know that with the introduction of `WKURLSchemeHandler`, iOS 10 support has been dropped.
 
+* Integrated `SplashScreen` plugin code & replaced Launch Images with Launch Storyboards
+
+    If you're migrating from launch images, details on how to set up images for Launch Storyboards can be found in [the SplashScreen documentation](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/index.html#launch-storyboard-images).
+
+* Fixed overwriting the bundle identifier when there are multiple Xcode build targets
+* Bumped minimum CocoaPods version requirements to 1.8.0
+
+    Since CocoaPods 1.7.0, CDN support was introduced. It was later finalized in 1.7.2 but was not configured as the default until 1.8.0. Using CDN to fetch podspecs over the traditional GitHub repo provides a huge performance enhancement. With CDN, Cordova users no longer need to wait for the CocoaPod's GH repo to be synced. Building a project with pods and a fresh CocoaPods installation takes under a minute now.
+
+    You can take a look at their [demonstration video here](http://blog.cocoapods.org/CocoaPods-1.8.0-beta/) to see how fast CocoaPods has become with CDN.
 
 Please report any issues you find at [issues.cordova.io](http://issues.cordova.io/)!
 
@@ -84,7 +86,7 @@ Please report any issues you find at [issues.cordova.io](http://issues.cordova.i
 * [GH-822](https://github.com/apache/cordova-ios/pull/822) chore: remove deprecated `orientation` methods
 * [GH-810](https://github.com/apache/cordova-ios/pull/810) Remove dead link to wiki from `README`
 * [GH-543](https://github.com/apache/cordova-ios/pull/543) feat: Add `Podspec` for Cordova library
-* [GH-801](https://github.com/apache/cordova-ios/pull/801) breaking (`UserAgent`): Drop `CDVUserAgentUtil` and Implement for WKWebView
+* [GH-801](https://github.com/apache/cordova-ios/pull/801) breaking (`UserAgent`): Drop `CDVUserAgentUtil` and Implement for `WKWebView`
 * [GH-803](https://github.com/apache/cordova-ios/pull/803) feature: add `CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED`
 * [GH-802](https://github.com/apache/cordova-ios/pull/802) refactor: applied various xcode recommended update
 * [GH-800](https://github.com/apache/cordova-ios/pull/800) tests: change comment values for `MediaTypesRequiringUserActionForPlayback`
