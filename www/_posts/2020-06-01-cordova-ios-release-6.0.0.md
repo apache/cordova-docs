@@ -26,6 +26,13 @@ The most notable changes in this major release are:
 
     As of April 2020, Apple requires all app store submissions to be built with Xcode 11 and target the iOS 13 SDK.
 
+    Apple has deprecated the `mediaPlaybackRequiresUserAction` property in iOS 8.0–9.0 and replaced it with `mediaTypesRequiringUserActionForPlayback`.
+    Apple has also deprecated the `mediaPlaybackAllowsAirPlay` property in iOS iOS 8.0-9.0 and replaced it with `allowsAirPlayForMediaPlayback`.
+
+    If you have configured any of these properties in your project's `config.xml` file, it is recommended that you update with the new preferences options `MediaTypesRequiringUserActionForPlayback` or `AllowsAirPlayForMediaPlayback`.
+
+    Additionally, the values for `MediaTypesRequiringUserActionForPlayback` has changed. It use to be a `boolean` value but is now a `string` value of either `all`, `audio`, `video`, or `none`.
+
 * Moved `WKWebView` support into Cordova-iOS and removed `UIWebView` code
 
     Due to this change, the `cordova-plugin-wkwebview-engine` plugin is obsolete and will not work with this release. If you have this plugin installed, it is safe to remove with `cordova plugin remove cordova-plugin-wkwebview-engine`.
