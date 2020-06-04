@@ -2,7 +2,7 @@
 layout: post
 author:
     name: Bryan Ellis
-title:  "Cordova Create, Common, and XCode Released!"
+title:  "Cordova Create, Common, and Xcode Released!"
 categories: news
 tags: release tools
 ---
