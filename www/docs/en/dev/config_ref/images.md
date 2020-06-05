@@ -180,6 +180,8 @@ Icons are not applicable to the Browser platform.
         <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
         <!-- iPad Pro -->
         <icon src="res/ios/icon-83.5@2x.png" width="167" height="167" />
+        <!-- iTunes Marketing Image -->
+        <icon src="res/ios/icon-1024.png" width="1024" height="1024" />
     </platform>
 ```
 ### See Also
