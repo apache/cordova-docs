@@ -16,9 +16,9 @@ We are happy to announce that we have just released an update to some plugins!
 
 ### InAppBrowser
 
-### cordova-common
+### Splash Screen
 
-Cordova-iOS Platform 6.x will have splash screen integrated and no longer needs the plugin. This releas prevents the plugin from being added to the iOS 6.x platform.
+In the Cordova-iOS 6.x platform, the splash screen feature has been integrated into its core and no longer needs this plugin. This release prevents the plugin from being added to the iOS 6.x platform.
 
 * [GH-261](https://github.com/apache/cordova-plugin-splashscreen/pull/261) chore: add `cordova-ios` requirement <6.0.0
 
