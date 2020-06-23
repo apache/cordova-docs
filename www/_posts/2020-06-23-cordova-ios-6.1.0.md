@@ -23,30 +23,30 @@ cordova platform add ios@6.1.0
 
 This release contains primarily fixes for issues with the 6.0.0 release.
 
-* **Resolve Cocoapods publishing issues** *(since 6.0.0)*
+* **Resolve CocoaPods publishing issues** *(since 6.0.0)*
 
-    The Cordova iOS 6.0.0 release was unable to be published to Cocoapods due to issues with the Pod spec. These have been addressed and Cordova iOS 6.1.0 is available.
+    The Cordova iOS 6.0.0 release was unable to be published to CocoaPods due to issues with the Pod spec. These have been addressed and Cordova iOS 6.1.0 is available.
 
 
 * **Fix landscape orientation defaults** *(since 6.0.0)*
 
-    A change made in Cordova iOS 6.0.0 had the side effect of disabling landscape orientation for any apps that didn't specify an `Orientation` preference in config.xml. We've reverted that change and new apps will match Xcode defaults (allowing both portrait and landscape orientations).
+    A change made in Cordova iOS 6.0.0 had the side effect of disabling landscape orientation for any apps that didn't specify an `Orientation` preference in `config.xml`. We've reverted that change and new apps will match Xcode defaults (allowing both portrait and landscape orientations).
 
     To ensure your app properly supports the orientations you want, we encourage setting [the `Orientation` preference][prefs].
 
 
 * **Fix invisible SplashScreen bugs** *(since 6.0.0)*
 
-    A bug in Cordova iOS 6.0.0 would cause the splashscreen to be invisible unless a `BackgroundColor` preference was set in config.xml. This was not the intended behaviour, and caused a lot of confusion about not being able to interact with the webview behind the splashscreen.
+    A bug in Cordova iOS 6.0.0 would cause the splashscreen to be invisible unless a `BackgroundColor` preference was set in `config.xml`. This was not the intended behaviour, and caused a lot of confusion about not being able to interact with the webview behind the splashscreen.
 
     In Cordova iOS 6.1.0, we've fixed the splashscreen so that it will always have a background colour (defaulting to the system background colour) and so that the launch storyboard image should remain visible.
 
-    To customize the background colour of your app and its splashscreen, use [the `BackgroundColor` preference][prefs] in config.xml.
+    To customize the background colour of your app and its splashscreen, use [the `BackgroundColor` preference][prefs] in `config.xml`.
 
 
 * **Add support for dark mode splashscreens** *(New Feature)*
 
-    It is now possible to use optionally different splashscreen images when your app is running in dark mode. You can configure these images in config.xml with the `~dark` suffix (and `~light` is also supported).
+    It is now possible to use optionally different splashscreen images when your app is running in dark mode. You can configure these images in `config.xml` with the `~dark` suffix (and `~light` is also supported).
 
     ```xml
     <!-- Default image to be used for all modes -->
@@ -62,12 +62,12 @@ This release contains primarily fixes for issues with the 6.0.0 release.
 
 * **Add preference for iPad desktop layout behaviour** *(New Feature)*
 
-    iPadOS 13 defaults to using a desktop layout in webviews rather than a mobile layout. You can now control this behaviour in your apps with [the `PreferredContentMode` preference][prefs] in config.xml. Valid options are `mobile` and `desktop`.
+    iPadOS 13 defaults to using a desktop layout in webviews rather than a mobile layout. You can now control this behaviour in your apps with [the `PreferredContentMode` preference][prefs] in `config.xml`. Valid options are `mobile` and `desktop`.
 
 
 * **Add preference for webview window handling** *(New Feature)*
 
-    Historically, Cordova iOS has not supported the creation of new webview windows with APIs like `window.open` or links with `target="_blank"`. The default behaviour was inconsistent, with some links opening externally in Safari and some links being unclickable. There is now [an `AllowNewWindows` preference][prefs] in config.xml to control the behaviour of new windows within the application.
+    Historically, Cordova iOS has not supported the creation of new webview windows with APIs like `window.open` or links with `target="_blank"`. The default behaviour was inconsistent, with some links opening externally in Safari and some links being unclickable. There is now [an `AllowNewWindows` preference][prefs] in `config.xml` to control the behaviour of new windows within the application.
 
     * When **false**, links that would open a new window are instead opened in the same webview as if they had not requested a new window.
 
