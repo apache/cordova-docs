@@ -69,7 +69,7 @@ This release contains primarily fixes for issues with the 6.0.0 release.
 
     Historically, Cordova iOS has not supported the creation of new webview windows with APIs like `window.open` or links with `target="_blank"`. The default behaviour was inconsistent, with some links opening externally in Safari and some links being unclickable. There is now [an `AllowNewWindows` preference][prefs] in `config.xml` to control the behaviour of new windows within the application.
 
-    * When **false**, links that would open a new window are instead opened in the same webview as if they had not requested a new window.
+    * When **false** (the default behaviour), links that would open a new window are instead opened in the same webview as if they had not requested a new window.
 
     * When **true**, links that would open a new window will create a new webview overtop of the app. This new webview provides no controls, so you must include a way to dismiss it with `window.close()`.
 
