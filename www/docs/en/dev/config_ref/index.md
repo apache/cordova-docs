@@ -292,6 +292,7 @@ Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Desc
 AllowInlineMediaPlayback(boolean) <br/> ==iOS== | *Default: false* <br/>  Set to true to allow HTML5 media playback to appear inline within the screen layout, using browser-supplied controls rather than native controls. For this to work, add the ```playsinline``` attribute to any ```<video>``` elements. *NOTE*: Prior to iOS 10, ```<video>``` elements need to use the ```webkit-playsinline``` attribute name instead.
 AllowNewWindows(boolean) <br/> ==iOS== | *Default: false* <br/> Set to true to allow JavaScript `window.open` and HTML `target="\_blank"` links to open a new view overlaying the web view.
 AndroidLaunchMode(string) <br/> ==Android== | *Default: singleTop* <br/> Allowed values: standard, singleTop, singleTask, singleInstance <br/>  Sets the Activity android:launchMode attribute. This changes what happens when the app is launched from app icon or intent and is already running.
+AndroidXEnabled(string) <br/> ==Android== | *Default: false* <br/>  Sets to true to use AndroidX Support Libraries.
 android-maxSdkVersion(integer) <br/> ==Android== | *Default: Not Specified* <br/>  Sets the `maxSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
 android-minSdkVersion(integer) <br/> ==Android== | *Default: Dependent on cordova-android Version* <br/>  Sets the `minSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
 android-targetSdkVersion(integer) <br/> ==Android== | *Default: Dependent on cordova-android Version* <br/>  Sets the `targetSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
@@ -310,6 +311,11 @@ ForegroundText(string) <br/> ==Windows== | *Default: "light"* <br/>   Works for 
 FullScreen(boolean) <br/> ==Android== | *Default: false* <br/>  Allows you to hide the status bar at the top of the screen. <br/> __Note__: Recommended platform-agnostic way to achieve this is to use the [StatusBar plugin][statusbar_plugin].
 GapBetweenPages(float) <br/> ==iOS== | *Default: 0* <br/>  The size of the gap, in points, between pages.
 HideMousePointer(integer) <br/> ==OS X== | *Default: -1* <br/> **(OS X 4.0.0+)** Sets the timeout for hiding the mouse pointer. Set to 0 for immediate, set to -1 for never.
+GradlePluginGoogleServicesEnabled (boolean) <br/> ==Android== | *Default: false* <br/>  Set to true to enable the Google Services Gradle plugin.
+GradlePluginGoogleServicesEnabled (semver) <br/> ==Android== | *Default: 4.2.0* <br/>  Set version of Google Services Gradle plugin to be used.
+GradlePluginKotlinEnabled (boolean) <br/> ==Android== | *Default: false* <br/>  Set to true to allow Kotlin files to be built.
+GradlePluginKotlinCodeStyle (string) <br/> ==Android== | *Default: official* <br/> Allowed values: official, obsolete<br/>  Sets how the Kotlin code is formatting for readability.
+GradlePluginKotlinVersion (semver) <br/> ==Android== | *Default: 1.3.50* <br/> Set the version of the Kotlin Gradle plugin to be used.
 InAppBrowserStorageEnabled (boolean) <br/> ==Android== | *Default: true* <br/>  Controls whether pages opened within an InAppBrowser can access the same localStorage and WebSQL storage as pages opened with the default browser.
 KeepRunning(boolean) <br/> ==Android== | *Default: true* <br/>  Determines whether the application stays running in the background even after a [pause](../../../cordova/events/events.pause.html) event fires. Setting this to false does not kill the app after a [pause](../../../cordova/events/events.pause.html) event, but simply halts execution of code within the cordova webview while the app is in the background.
 KeyboardDisplayRequiresUserAction(boolean) <br/> ==iOS== | *Default: true* <br/>  Set to false to allow the keyboard to appear when calling focus() on form inputs.
@@ -391,6 +397,12 @@ Examples:
 <preference name="DefaultVolumeStream" value="call" />
 <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
 <preference name="AppendUserAgent" value="My Browser" />
+<preference name="AndroidXEnabled" value="true" />
+<preference name="GradlePluginGoogleServicesEnabled" value="true" />
+<preference name="GradlePluginGoogleServicesVersion" value="4.2.0" />
+<preference name="GradlePluginKotlinEnabled" value="true" />
+<preference name="GradlePluginKotlinCodeStyle" value="official" />
+<preference name="GradlePluginKotlinVersion" value="1.3.50" />
 
 <!-- Windows only preferences -->
 <preference name="windows-target-version" value="8.1" />
