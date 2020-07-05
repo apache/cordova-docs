@@ -177,7 +177,7 @@ Set the `nodeIntegration` flag property to `true`.  By default, this property fl
 
 ## Customizing the Electron's Main Process
 
-If it is necessary to customize the Electron's main process beyond the scope of the Electron's configuration settings, chances can be added directly to the `cdv-electron-main.js` file located in `{PROJECT_ROOT_DIR}/platform/electron/platform_www/`. This is the application's main process.
+If it is necessary to customize the Electron's main process beyond the scope of the Electron's configuration settings, changes can be added directly to the `cdv-electron-main.js` file located in `{PROJECT_ROOT_DIR}/platform/electron/platform_www/`. This is the application's main process.
 
 > &#10071; However, it is not recommended to modify this file as the upgrade process for `cordova-electron` is to remove the old platform before adding the new version.
 
