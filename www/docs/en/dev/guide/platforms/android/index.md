@@ -94,7 +94,6 @@ and make sure the following are installed:
 
 1. Android Platform SDK for your targeted version of Android
 1. Android SDK build-tools version 28.0.3 or higher
-1. Android Support Repository (found under the "SDK Tools" tab)
 
 See Android's documentation on [Installing SDK Packages](https://developer.android.com/studio/intro/update)
 for more details.
