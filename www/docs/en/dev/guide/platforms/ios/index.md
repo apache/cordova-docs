@@ -77,7 +77,7 @@ $ npm install -g ios-deploy
 
 ### CocoaPods
 
-The [CocoaPods](https://cocoapods.org/) tools is needed to build iOS apps.
+The [CocoaPods](https://cocoapods.org/#install) tools is needed to build iOS apps.
 
 To install it, run the following from command-line terminal:
 
