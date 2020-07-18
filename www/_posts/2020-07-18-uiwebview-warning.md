@@ -41,4 +41,4 @@ The official Apache WKWebView plugin is no longer needed with these `cordova-ios
 
 ## CORS issues
 
-If you experience any CORS issues Cordova PMC member Norman Breau published a [post on his](https://breautek.com/2020/07/14/enabling-cors/) with a good explanation of CORS.
+If you experience any CORS issues Cordova PMC member Norman Breau published a [post on his blog](https://breautek.com/2020/07/14/enabling-cors/) with a good explanation of CORS.
