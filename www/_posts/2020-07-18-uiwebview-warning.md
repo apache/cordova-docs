@@ -38,3 +38,7 @@ If you are still getting the warning, it is most likely one or more plugins in y
 ## Using other WKWebView plugin
 
 The official Apache WKWebView plugin is no longer needed with these `cordova-ios` versions since `WKWebView` has been integrated and `UIWebView` is removed. There are other WKWebView plugins that can be used. Make sure they have been updated and use the latest version. If you have any issues or usage questions with their plugins, please read their docs and request help through their support channels.
+
+## CORS issues
+
+If you experience any CORS issues Cordova PMC member Norman Breau published a [post on his](https://breautek.com/2020/07/14/enabling-cors/) with a good explanation of CORS.
