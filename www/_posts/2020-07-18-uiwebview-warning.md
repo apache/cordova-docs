@@ -20,9 +20,9 @@ Some things have changed and new versions of cordova-ios have been released sinc
 
 ## Update cordova-ios to version 6.0.0 or newer
 
-Please update to the latest cordova-ios version to get the best compatibility with recent iOS changes. As of this writing the current version is 6.1.0. Version 6.0.0 of cordova-ios moved `WKWebView` support into cordova-iOS and removed `UIWebView` code. Due to this change, the `cordova-plugin-wkwebview-engine` plugin is obsolete and will not work with this release. If you have this plugin installed, it is safe to remove with `cordova plugin remove cordova-plugin-wkwebview-engine`.
+Please update to the latest `cordova-ios` version to get the best compatibility with recent iOS changes. As of this writing the current version is 6.1.0. Version 6.0.0 of cordova-ios moved `WKWebView` support into `cordova-ios` and removed `UIWebView` code. Due to this change, the `cordova-plugin-wkwebview-engine` plugin is obsolete and will not work with this release. If you have this plugin installed, it is safe to remove with `cordova plugin remove cordova-plugin-wkwebview-engine`.
 
-Additionaly, `WKURLSchemeHandler` support has been introduced with this release. Using a custom scheme to serve your app content through fixes CORS issues that exist because of the strict security policies that `WKWebView` has applied to the `file` scheme. You can easily configure your Cordova project to use a custom scheme by setting the preference options `scheme` and `hostname` in the `config.xml` file.
+Additionaly, `WKURLSchemeHandler` support has been introduced with this release. Serving your app content through a custom scheme fixes CORS issues that exist because of the strict security policies that `WKWebView` has applied to the `file` scheme. You can easily configure your Cordova project to use a custom scheme by setting the preference options `scheme` and `hostname` in the `config.xml` file.
 
 ```xml
 <preference name="scheme" value="app" />
@@ -33,10 +33,9 @@ It is important to know that with the introduction of `WKURLSchemeHandler`, iOS 
 
 ## Still getting the warning?
 
-If you are still getting the warning, it is most likely one or more plugins in your project are still references `UIWebView`. You will need to identify which plugins and contact those plugin's developers through their support channel (plugin's repo). They will need to fix their plugins by either remove the references or wrap them with the new flag.
+If you are still getting the warning, it is most likely one or more plugins in your project still references `UIWebView`. You will need to identify which plugins contain `UIWebView` code and contact those plugin's developers through their support channel (for instance their plugin's repo). They will need to fix their plugins by either removing the references or wrap them with the new flag.
 
 ## Using other WKWebView plugin
 
-The official Apache WKWebView plugin is no longer need with these cordova-ios versions since WKWebView has been integrated and UIWebView is removed. There are other WKWebView plugins that can be used. Make sure they have been updated and use the latest version. If you have any issues or usage questions with their plugins, please read their docs and request help through their support channels.
-
+The official Apache WKWebView plugin is no longer needed with these `cordova-ios` versions since `WKWebView` has been integrated and `UIWebView` is removed. There are other WKWebView plugins that can be used. Make sure they have been updated and use the latest version. If you have any issues or usage questions with their plugins, please read their docs and request help through their support channels.
 
