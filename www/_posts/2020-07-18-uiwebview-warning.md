@@ -42,3 +42,10 @@ The official Apache WKWebView plugin is no longer needed with these `cordova-ios
 ## CORS issues
 
 If you experience any CORS issues Cordova PMC member Norman Breau published a [post on his blog](https://breautek.com/2020/07/14/enabling-cors/) with a good explanation of CORS.
+
+## Weview issues
+
+If using a custom scheme, the WebView won't allow to load file urls in img/video tags (nor fetch them, nor anything).
+cordova-ios added a helper method to convert file urls to urls that have the scheme and the WebView can understand.
+
+window.WkWebView.convertFilePath('your/file/path');
