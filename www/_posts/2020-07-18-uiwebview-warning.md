@@ -45,7 +45,6 @@ If you experience any CORS issues Cordova PMC member Norman Breau published a [p
 
 ## Weview issues
 
-If using a custom scheme, the WebView won't allow to load file urls in img/video tags (nor fetch them, nor anything).
-cordova-ios added a helper method to convert file urls to urls that have the scheme and the WebView can understand.
+If using a custom scheme, `WKWebView` won't allow to load file urls in img/video tags (nor fetch them, nor anything). `cordova-ios` added a helper method to convert file URLs to URLs that have the scheme and `WKWebView` can understand.
 
 window.WkWebView.convertFilePath('your/file/path');
