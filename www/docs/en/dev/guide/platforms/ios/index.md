@@ -75,6 +75,16 @@ Install ios-deploy via [Homebrew](https://brew.sh/) by running:
 $ brew install ios-deploy
 ```
 
+### CocoaPods
+
+The [CocoaPods](https://cocoapods.org/#install) tools is needed to build iOS apps. A minimum version of 1.8.0 is required but the latest release is always recommended.
+
+To install CocoaPods, run the following from command-line terminal:
+
+```bash
+$ sudo gem install cocoapods
+```
+
 ## Project Configuration
 
 Installing Xcode will mostly set everything needed to get started with the native side of things.
