@@ -69,10 +69,10 @@ $ xcode-select --install
 The [ios-deploy](https://www.npmjs.org/package/ios-deploy) tools allow you
 to launch iOS apps on an iOS Device from the command-line.
 
-To install it, run the following from command-line terminal:
+Install ios-deploy via [Homebrew](https://brew.sh/) by running:
 
 ```bash
-$ npm install -g ios-deploy
+$ brew install ios-deploy
 ```
 
 ## Project Configuration
