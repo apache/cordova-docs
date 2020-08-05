@@ -95,7 +95,7 @@ and make sure the following are installed:
 1. Android SDK build-tools version 19.1.0 or higher
 1. Android Support Repository (found under the "SDK Tools" tab)
 
-#### Android SDK Tools: 
+#### Android SDK Tools:
 In Android Studio 3.6 or later, you need to manually add the old version of the Android SDK Tools. To do this:
 
 1. Open the Android Studio SDK Manager
