@@ -93,7 +93,7 @@ Open the Android SDK Manager (`Tools > SDK Manager` in Android Studio, or `sdkma
 and make sure the following are installed:
 
 1. Android Platform SDK for your targeted version of Android
-1. Android SDK build-tools version 28.0.3 or higher
+1. Android SDK build-tools version 29.0.2 or higher
 
 See Android's documentation on [Installing SDK Packages](https://developer.android.com/studio/intro/update)
 for more details.
