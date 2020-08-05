@@ -6,10 +6,10 @@ var fs = require('fs');
 var fse = require('fs-extra');
 var child_process = require('child_process');
 
-var gulp = require('gulp');
+// var gulp = require('gulp');
 var gutil = require('gulp-util');
-var less = require('gulp-less');
-var sass = require('gulp-sass');
+var Less = require('gulp-less');
+var Sass = require('gulp-sass');
 var replace = require('gulp-replace');
 var header = require('gulp-header');
 var footer = require('gulp-footer');
@@ -28,6 +28,7 @@ var ncp = require('ncp');
 
 var nextversion = require('./tools/bin/nextversion');
 var util = require('./tools/bin/util');
+const gulp = require('gulp');
 
 // constants
 var ROOT_DIR = '.';
@@ -196,9 +197,8 @@ function copyDocsVersion (oldVersion, newVersion, cb) {
 }
 
 // tasks
-gulp.task('default', ['help']);
 
-gulp.task('help', function () {
+module.exports.help = module.exports.default = function help () {
     gutil.log('');
     gutil.log('Tasks:');
     gutil.log('');
@@ -238,13 +238,162 @@ gulp.task('help', function () {
     gutil.log("    --nodocs      don't generate docs");
     gutil.log('    --prod        build for production; without it, will build dev instead');
     gutil.log('');
+};
+
+let fetch = module.exports.fetch = function fetch (done) {
+    // skip fetching if --nofetch was passed
+    if (gutil.env.nofetch) {
+        gutil.log(gutil.colors.yellow(
+            'Skipping fetching external docs.'));
+        done();
+        return;
+    }
+
+    exec('node', [bin('fetch_docs.js'), '--config', FETCH_CONFIG, '--docsRoot', DOCS_DIR], done);
+};
+
+let toc = module.exports.toc = gulp.series(fetch, function toc (done) {
+    exec('node', [bin('toc.js'), DOCS_DIR, TOC_DIR], done);
 });
 
-gulp.task('data', ['toc', 'docs-versions', 'pages-dict']);
-gulp.task('configs', ['defaults', 'version']);
-gulp.task('styles', ['less', 'css', 'sass']);
+let version = module.exports.version = function version () {
+    // this code is stupid; it's basically the line:
+    //      cat VERSION | sed -e 's/^/VERSION_VAR_NAME: /' > _version.yml
+    // however we're in Gulp, and we need to support Windows...
+    // so we contort it into a monster
+    return gulp.src(VERSION_FILE)
+        .pipe(header(VERSION_VAR_NAME + ': '))
+        .pipe(footer('\n'))
+        .pipe(rename(VERSION_CONFIG_FILE))
+        .pipe(gulp.dest('.'));
+};
 
-gulp.task('watch', ['serve'], function () {
+let defaults = module.exports.defaults = function defaults () {
+    return execPiped('node', [bin('gen_defaults.js'), DOCS_DIR, LATEST_DOCS_VERSION], DEFAULTS_CONFIG_FILE)
+        .pipe(gulp.dest(ROOT_DIR));
+};
+
+let docsVersion = module.exports['docs-version'] = function docsVersion () {
+    return execPiped('node', [bin('gen_versions.js'), DOCS_DIR], DOCS_VERSION_FILE)
+        .pipe(gulp.dest(ROOT_DIR));
+};
+
+let pagesDict = module.exports['pages-dict'] = function pagesDict () {
+    var args = [
+        bin('gen_pages_dict.js'),
+        '--siteRoot', SOURCE_DIR,
+        '--redirectsFile', REDIRECTS_FILE,
+        '--latestVersion', LATEST_DOCS_VERSION,
+        '--languages', LANGUAGES.join(',')
+    ];
+
+    return execPiped('node', args, ALL_PAGES_FILE).pipe(gulp.dest(ROOT_DIR));
+};
+
+module.exports.reload = function reload () {
+    browsersync.reload();
+};
+
+let jekyll = module.exports.jekyll = function jekyll (done) {
+    jekyllBuild(done);
+};
+
+module.exports.regen = gulp.series(jekyll, function regen () {
+    browsersync.reload();
+});
+
+let less = module.exports.less = function less () {
+    return gulp.src(path.join(CSS_SRC_DIR, '**', '*.less'))
+        .pipe(Less())
+        .pipe(header(YAML_FRONT_MATTER))
+        .pipe(gulp.dest(CSS_OUT_DIR))
+        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
+        .pipe(browsersync.reload({ stream: true }));
+};
+
+let css = module.exports.css = function css () {
+    return gulp.src(path.join(CSS_SRC_DIR, '**', '*.css'))
+        .pipe(header(YAML_FRONT_MATTER))
+        .pipe(gulp.dest(CSS_OUT_DIR))
+        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
+        .pipe(browsersync.reload({ stream: true }));
+};
+
+let sass = module.exports.sass = function sass () {
+    return gulp.src(path.join(CSS_SRC_DIR, '**', '*.scss'))
+        .pipe(Sass().on('error', Sass.logError))
+        .pipe(header(YAML_FRONT_MATTER))
+        .pipe(gulp.dest(CSS_OUT_DIR))
+        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
+        .pipe(browsersync.reload({ stream: true }));
+};
+
+let styles = module.exports.styles = gulp.series(less, css, sass);
+let data = module.exports.data = gulp.series(toc, docsVersion, pagesDict);
+let configs = module.exports.configs = gulp.series(defaults, version);
+
+let plugins = module.exports.plugins = function plugins () {
+    if (gutil.env.prod) {
+        process.env.NODE_ENV = 'production';
+    }
+
+    var stream = browserify(PLUGINS_SRC_FILE, { debug: !gutil.env.prod })
+        .transform(babelify, {
+            presets: ['react'],
+            plugins: [
+                ['transform-react-jsx', { 'pragma': 'h' }]
+            ]
+        })
+        .transform(envify)
+        .bundle()
+        .on('error', gutil.log)
+        .pipe(vstream(PLUGINS_FILE_NAME))
+        .pipe(buffer());
+
+    if (gutil.env.prod) {
+        stream = stream
+            .pipe(uglify())
+            .on('error', gutil.log);
+    }
+
+    return stream
+        .pipe(gulp.dest(JS_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
+        .pipe(browsersync.reload({ stream: true }))
+
+        // NOTE:
+        //      adding YAML front matter after doing everything
+        //      else so that uglify doesn't screw it up
+        .pipe(header(YAML_FRONT_MATTER))
+
+        // WORKAROUND:
+        //           minified JS has some things that look like
+        //           Liquid tags, so we replace them manually
+        .pipe(replace('){{', '){ {'))
+        .pipe(gulp.dest(JS_DIR));
+};
+
+let build = module.exports.build = gulp.series(configs, data, styles, plugins, function build (done) {
+    jekyllBuild(done);
+});
+
+let serve = module.exports.serve = gulp.series(build, function serve () {
+    var route = {};
+
+    // set site root for browsersync
+    if (gutil.env.prod) {
+        route[BASE_URL] = gutil.env.outDir;
+    }
+
+    browsersync({
+        notify: true,
+        server: {
+            baseDir: gutil.env.outDir,
+            routes: route
+        }
+    });
+});
+
+module.exports.watch = gulp.series(serve, function watch () {
     gulp.watch(
         [
             path.join(CSS_SRC_DIR, '**', '*')
@@ -283,174 +432,19 @@ gulp.task('watch', ['serve'], function () {
     );
 });
 
-gulp.task('serve', ['build'], function () {
-    var route = {};
-
-    // set site root for browsersync
-    if (gutil.env.prod) {
-        route[BASE_URL] = gutil.env.outDir;
-    }
-
-    browsersync({
-        notify: true,
-        server: {
-            baseDir: gutil.env.outDir,
-            routes: route
-        }
-    });
-});
-
-gulp.task('build', ['configs', 'data', 'styles', 'plugins'], function (done) {
-    jekyllBuild(done);
-});
-
-gulp.task('jekyll', function (done) {
-    jekyllBuild(done);
-});
-
-gulp.task('regen', ['jekyll'], function () {
-    browsersync.reload();
-});
-
-gulp.task('fetch', function (done) {
-
-    // skip fetching if --nofetch was passed
-    if (gutil.env.nofetch) {
-        gutil.log(gutil.colors.yellow(
-            'Skipping fetching external docs.'));
-        done();
-        return;
-    }
-
-    exec('node', [bin('fetch_docs.js'), '--config', FETCH_CONFIG, '--docsRoot', DOCS_DIR], done);
-});
-
-gulp.task('reload', function () {
-    browsersync.reload();
-});
-
-gulp.task('docs-versions', function () {
-    return execPiped('node', [bin('gen_versions.js'), DOCS_DIR], DOCS_VERSION_FILE)
-        .pipe(gulp.dest(ROOT_DIR));
-});
-
-gulp.task('pages-dict', function () {
-    var args = [
-        bin('gen_pages_dict.js'),
-        '--siteRoot', SOURCE_DIR,
-        '--redirectsFile', REDIRECTS_FILE,
-        '--latestVersion', LATEST_DOCS_VERSION,
-        '--languages', LANGUAGES.join(',')
-    ];
-
-    return execPiped('node', args, ALL_PAGES_FILE).pipe(gulp.dest(ROOT_DIR));
-});
-
-gulp.task('version', function () {
-    // this code is stupid; it's basically the line:
-    //      cat VERSION | sed -e 's/^/VERSION_VAR_NAME: /' > _version.yml
-    // however we're in Gulp, and we need to support Windows...
-    // so we contort it into a monster
-    return gulp
-        .src(VERSION_FILE)
-        .pipe(header(VERSION_VAR_NAME + ': '))
-        .pipe(footer('\n'))
-        .pipe(rename(VERSION_CONFIG_FILE))
-        .pipe(gulp.dest('.'));
-});
-
-gulp.task('defaults', function () {
-    return execPiped('node', [bin('gen_defaults.js'), DOCS_DIR, LATEST_DOCS_VERSION], DEFAULTS_CONFIG_FILE)
-        .pipe(gulp.dest(ROOT_DIR));
-});
-
-gulp.task('toc', ['fetch'], function (done) {
-    exec('node', [bin('toc.js'), DOCS_DIR, TOC_DIR], done);
-});
-
-gulp.task('less', function () {
-    return gulp
-        .src(path.join(CSS_SRC_DIR, '**', '*.less'))
-        .pipe(less())
-        .pipe(header(YAML_FRONT_MATTER))
-        .pipe(gulp.dest(CSS_OUT_DIR))
-        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
-        .pipe(browsersync.reload({ stream: true }));
-});
-
-gulp.task('css', function () {
-    return gulp
-        .src(path.join(CSS_SRC_DIR, '**', '*.css'))
-        .pipe(header(YAML_FRONT_MATTER))
-        .pipe(gulp.dest(CSS_OUT_DIR))
-        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
-        .pipe(browsersync.reload({ stream: true }));
-});
-
-gulp.task('sass', function () {
-    return gulp
-        .src(path.join(CSS_SRC_DIR, '**', '*.scss'))
-        .pipe(sass().on('error', sass.logError))
-        .pipe(header(YAML_FRONT_MATTER))
-        .pipe(gulp.dest(CSS_OUT_DIR))
-        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
-        .pipe(browsersync.reload({ stream: true }));
-});
-
-gulp.task('plugins', function () {
-    if (gutil.env.prod) {
-        process.env.NODE_ENV = 'production';
-    }
-
-    var stream = browserify(PLUGINS_SRC_FILE, { debug: !gutil.env.prod })
-        .transform(babelify, {
-            presets: ['react'],
-            plugins: [
-                ['transform-react-jsx', { 'pragma': 'h' }]
-            ]
-        })
-        .transform(envify)
-        .bundle()
-        .on('error', gutil.log)
-        .pipe(vstream(PLUGINS_FILE_NAME))
-        .pipe(buffer());
-
-    if (gutil.env.prod) {
-        stream = stream
-            .pipe(uglify())
-            .on('error', gutil.log);
-    }
-
-    return stream
-        .pipe(gulp.dest(JS_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
-        .pipe(browsersync.reload({ stream: true }))
-
-        // NOTE:
-        //      adding YAML front matter after doing everything
-        //      else so that uglify doesn't screw it up
-        .pipe(header(YAML_FRONT_MATTER))
-
-        // WORKAROUND:
-        //           minified JS has some things that look like
-        //           Liquid tags, so we replace them manually
-        .pipe(replace('){{', '){ {'))
-        .pipe(gulp.dest(JS_DIR));
-});
-
 // convenience tasks
-gulp.task('link-bugs', function (done) {
-    exec(bin('linkify-bugs.sh'), [path.join(SOURCE_DIR, '_posts')], done);
-});
 
-gulp.task('lint', function () {
+module.exports['link-bugs'] = function linkBugs (done) {
+    exec(bin('linkify-bugs.sh'), [path.join(SOURCE_DIR, '_posts')], done);
+};
+
+module.exports['lint'] = function lint () {
     return gulp.src(path.join('./', '**', '*.html'))
         .pipe(htmllint());
-});
+};
 
-gulp.task('newversion', ['fetch'], function (done) {
-
+module.exports.newversion = gulp.series(fetch, function newVersion (done) {
     copyDocsVersion('dev', NEXT_DOCS_VERSION, function (error) {
-
         if (error) {
             console.error(error);
             done();
@@ -462,8 +456,7 @@ gulp.task('newversion', ['fetch'], function (done) {
     });
 });
 
-gulp.task('snapshot', ['fetch'], function (done) {
-
+module.exports.snapshot = gulp.series(fetch, function snapshot (done) {
     // remove current version first
     LANGUAGES.forEach(function (languageName) {
         var languageLatestDocs = path.join(DOCS_DIR, languageName, LATEST_DOCS_VERSION);
@@ -473,7 +466,7 @@ gulp.task('snapshot', ['fetch'], function (done) {
     copyDocsVersion('dev', LATEST_DOCS_VERSION, done);
 });
 
-gulp.task('checklinks', function (done) {
+module.exports.checklinks = function checkLinks (done) {
     crawler
         .crawl('http://localhost:3000/')
         .on('fetch404', function (queueItem, response) {
@@ -486,9 +479,9 @@ gulp.task('checklinks', function (done) {
         .on('complete', function (queueItem) {
             done();
         });
-});
+};
 
-gulp.task('clean', function () {
+module.exports.clean = function clean (done) {
     remove(DEV_DIR);
     remove(PROD_DIR);
     remove(FETCH_DIR);
@@ -499,4 +492,5 @@ gulp.task('clean', function () {
     remove(ALL_PAGES_FILE);
     remove(DEFAULTS_CONFIG_FILE);
     remove(VERSION_CONFIG_FILE);
-});
+    done();
+};
