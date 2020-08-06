@@ -55,9 +55,9 @@ There are also plugins that can do true certificate pinning for some platforms, 
 
 ## Using TLS/SSL
 
-If your app communicates to an external server, it should be communicating using modern encryption standards. Use `https` protocol whenever is possible.
+If your app communicates to an external server, it should be communicating using modern encryption standards. Use `https` protocol whenever possible.
 
-[Let's Encrypt](https://letsencrypt.org/) is a free, automated, and open certificate authority provided by the nonprofit [Internet Security Research Group](https://www.abetterinternet.org/). Let's Encrypt will offer free standard certificates, which will be sufficient for most developers. Enterprise organizations may still want to use a traditional certificate authority that offers more advanced features such as [Extended Validation](https://en.wikipedia.org/wiki/Extended_Validation_Certificate) or [Organization Validation](https://en.wikipedia.org/wiki/Public_key_certificate#Organization_validation) certificates.
+[Let's Encrypt](https://letsencrypt.org/) is a free, automated, and open certificate authority provided by the nonprofit [Internet Security Research Group](https://www.abetterinternet.org/). Let's Encrypt will offer free standard certificates, which will be sufficient for most developers. Enterprise organizations may still want to use a traditional certificate authority that offers more advanced features such as [Organization Validation](https://en.wikipedia.org/wiki/Public_key_certificate#Organization_validation) certificates.
 
 It is also important to keep up to date with security standards as they change over time. What might be acceptable SSL/TLS configuration today may not be acceptable years in the future. Using tools to test your certificate and SSL/TLS configuration should be done regularly. [SSL Labs](https://www.ssllabs.com/ssltest/) is a free online service provided by Qualys, Inc to test your server's SSL/TLS configuration and encryption strength, in addition to supported platforms.
 
