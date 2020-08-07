@@ -31,12 +31,17 @@ Cordova Windows on Windows 8.1 and Windows Phone 8.1 rely on Internet Explorer 1
 
 To develop apps for Windows 10 you need:
 
-- Windows 10 (or Windows 8.1), 32- or 64-bit, along with [Visual Studio](http://www.visualstudio.com/downloads) 2015 or Visual Studio 2017. (Cordova Windows is not supported by Visual Studio 2019, see [apache/cordova-windows#327](https://github.com/apache/cordova-windows/issues/327).)
-  
+- [Windows](Windows) 10 or 8.1
+- [Visual Studio](VisualStudio) 2017 or 2015
+
+> &#10071; Visual Studio 2019 does not support Cordova-Windows. See [apache/cordova-windows#327](https://github.com/apache/cordova-windows/issues/327)
+
 To develop apps for Windows 8.1:
 
-- Windows 8.1, 32 or 64-bit, along with [Visual Studio](http://www.visualstudio.com/downloads) 2015 or Visual Studio 2013.
-- For the Windows Phone emulators, Windows 8.1 (x64) Professional edition or higher, and a processor that supports [Client Hyper-V and Second Level Address Translation (SLAT)](https://msdn.microsoft.com/en-us/library/windows/apps/ff626524(v=vs.105).aspx#hyperv)
+- [Windows](Windows) 8.1
+- [Visual Studio](VisualStudio) 2015 or 2013
+
+> &#10071; Windows Phone 8 Emulator requires Windows 8.1 (x64) Professional edition or higher, and a processor that supports [Client Hyper-V and Second Level Address Translation (SLAT)](https://msdn.microsoft.com/en-us/library/windows/apps/ff626524(v=vs.105).aspx#hyperv)
 
 Cordova apps targeting Windows can be developed on a Mac, either by running a
 virtual machine environment or by using Boot Camp to dual-boot a
@@ -440,3 +445,5 @@ You can either set the environment variable on demand manually by executing `set
 
 [1]: https://msdn.microsoft.com/en-us/library/hh446593(v=vs.85).aspx
 [2]: https://technet.microsoft.com/en-us/library/ee624045(v=ws.10).aspx
+[VisualStudio]: https://visualstudio.microsoft.com/downloads/
+[Windows]: https://www.microsoft.com/windows
