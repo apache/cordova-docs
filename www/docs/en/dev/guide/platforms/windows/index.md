@@ -440,10 +440,7 @@ To work around this problem, we implemented two environment variables that you c
 
 You can either set the environment variable on demand manually by executing `set KEY=VALUE` (e.g. `set MSBUILDDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin`) or [set it permanently via the "System Properties"](https://www.computerhope.com/issues/ch000549.htm).
 
-
-
-
 [1]: https://msdn.microsoft.com/en-us/library/hh446593(v=vs.85).aspx
 [2]: https://technet.microsoft.com/en-us/library/ee624045(v=ws.10).aspx
-[VisualStudio]: https://visualstudio.microsoft.com/downloads/
+[VisualStudio]: https://visualstudio.microsoft.com/vs/older-downloads/
 [Windows]: https://www.microsoft.com/windows
