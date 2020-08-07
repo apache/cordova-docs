@@ -95,6 +95,13 @@ and make sure the following are installed:
 1. Android Platform SDK for your targeted version of Android
 1. Android SDK build-tools version 29.0.2 or higher
 
+#### Android SDK Tools:
+In Android Studio 3.6 or later, you need to manually add the old version of the Android SDK Tools. To do this:
+
+1. Open the Android Studio **SDK Manager**
+2. In the Android **SDK Tools** tab, uncheck `Hide Obsolete Packages`
+3. Check `Android SDK Tools (Obsolete)`
+
 See Android's documentation on [Installing SDK Packages](https://developer.android.com/studio/intro/update)
 for more details.
 
