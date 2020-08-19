@@ -104,8 +104,7 @@
     image: voltbuilder.png
     url: https://volt.build
     description: >
-        Modern replacement for PhoneGap. Zip project and certificates, then upload. 
-        Returns debug builds or store ready executables. 
-        Uses the latest version of Cordova.
-        Nothing to download: just sign up and submit.
+        Modern replacement for PhoneGap. Upload project and certificates,
+        then download debug or store ready builds, made using the latest 
+        Cordova. There's nothing to install: just sign up and submit.
 
