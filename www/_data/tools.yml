@@ -99,3 +99,13 @@
         feedback solution. With a one minute install guide,
          it enables users to seamlessly report bugs while automatically attaching
         details such as network logs, repro-steps, etc.
+
+-   name: VoltBuilder
+    image: voltbuilder.png
+    url: https://volt.build
+    description: >
+        Modern replacement for PhoneGap. Zip project and certificates, then upload. 
+        Returns debug builds or store ready executables. 
+        Uses the latest version of Cordova.
+        Nothing to download: just sign up and submit.
+
