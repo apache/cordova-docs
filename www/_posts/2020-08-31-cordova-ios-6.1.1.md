@@ -38,7 +38,7 @@ This release contains primarily a fix for deploying to devices, as well as an up
 
 * **Append `startURL` to the initial URL when using custom schemes** *(since 6.0.0)*
 
-    When using a custom scheme in Cordova iOS 6.0.0 and an `config.xml` `content` path that pointed to a subfolder of `www`, that subfolder would be treated as the root of the custom scheme.  While this is not a common situation, it turns out that is how the [mobilespec](https://github.com/apache/cordova-mobile-spec) test suite is implemented.
+    When using a custom scheme in Cordova iOS 6.0.0 and a `config.xml` `content` path that pointed to a subfolder of `www`, that subfolder would be treated as the root of the custom scheme.  While this is not a common situation, it turns out that is how the [mobilespec](https://github.com/apache/cordova-mobile-spec) test suite is implemented.
 
     The fix here is that the root of the custom scheme will always map to the `www` folder. More details can be found in the [pull request](https://github.com/apache/cordova-ios/pull/973).
 
