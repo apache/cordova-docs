@@ -18,7 +18,7 @@ license: >
     under the License.
 
 title: OS X Platform Guide
-toc_title: OS X
+toc_title: OS X (deprecated)
 ---
 
 # OS X Platform Guide
