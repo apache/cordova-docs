@@ -18,10 +18,12 @@ license: >
     under the License.
 
 title: Windows Platform Guide
-toc_title: Windows
+toc_title: Windows (deprecated)
 ---
 
 # Windows Platform Guide
+
+**NOTICE:** The Windows platform is now deprecated and may be removed from a future version of Cordova.
 
 This guide shows how to set up your SDK development environment to build and deploy Cordova apps Windows 10 (Universal Windows Platform [= UWP], formerly known as Universal App Platform [= UAP]), Windows 8.1 and Windows Phone 8.1.  It shows how to use either shell tools to generate and build apps, or the cross-platform Cordova CLI. (See the [Overview](../../overview/index.html#development-paths) for a comparison of these development options.) This section also shows how to modify Cordova apps within Visual Studio. Regardless of [which approach](../../overview/index.html#development-paths) you take, you need to install the Visual Studio SDK, as described below.
 
