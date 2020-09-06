@@ -6,7 +6,6 @@ title: Team
 <!-- REMOVE THIS LINK BEFORE PUBLISHING.  This is just for IntelliSense while coding -->
 <!-- <link rel="stylesheet" type="text/css" href="static/css/lib/bootstrap.css"/> -->
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="row">
     <div class="col-sm-12 text-center">
         <h1>Team</h1>
@@ -14,23 +13,29 @@ title: Team
     </div>
 </div>
 
+{% for member in site.members %}
 <div class="row">
     <div class="col-sm-8 col-xs-8">
         <span>
-            <h2>Niklas Merz</h2>
-            <p><strong>PMC Member</strong> since Dec. 2019 and plugin author</p>
+            <h2>{{ member.name }}</h2>
+            <p>{{ member.subtitle }}</p>
         </span>
     </div>
 </div>
 <div class="row">
     <div class="col-sm-8">
         <p>
-        At his day job he works on a Cordova app that became very complex over years. Contributes to Apache and develops plugins mostly in his free time.
-        Started contributing patches and became active in Cordova development after hitting the limits and finding OS bugs. 
-        Niklas mostly worked on the InAppBrowser plugin and cordova-ios but tries to help everywhere he can.
-    </p>
+            {{ member.content }}
+        </p>
     </div>
     <div class="col-sm-3 col-sm-offset-1">
-        <img src="https://avatars1.githubusercontent.com/u/3585860?s=460&v=4"><img>
+        <img src="{{ member.imageurl }}"><img>
+        {% if member.twitter %}
+            <a href="{{ member.twitter }}">Twitter</a>
+        {% endif %}
+        {% if member.homepage %}
+            <a href="{{ member.homepage }}">Homepage</a>
+        {% endif %}
     </div>
 </div>
+{% endfor %}
