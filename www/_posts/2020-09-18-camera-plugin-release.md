@@ -18,7 +18,7 @@ In this major release, we have:
 * removed the `DestinationType` of `NATIVE_URI` that was used only in the iOS and Windows platform. For iOS, the `NATIVE_URI` returned an `ALAssetsLibrary` that had been deprecated and does not work with the `WKWevView`.
 * removed the `CordovaUri` class helper that used fuzzy logic to guess the image path from the content URL. This process was not necessary as we know the file path beforehand.
 * bumped the project requirement definition. This plugin version requires Cordova CLI >= 9.0.0. If building for Android, this plugin version will also require the Cordova Android platform >= 9.0.0.
-* changed the location where temporary images are saved in. They are now saved in the cache directory. This allows the system to manage the cache cleanup and prevent using up all of the removable storage devices.
+* changed the location of the temporary saved images from external to internal cache.
 
 <!--more-->
 # Changes include:
