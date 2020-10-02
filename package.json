@@ -58,8 +58,6 @@
     "simplecrawler": "^0.5.2"
   },
   "repository": "github:apache/cordova-docs",
-  "bugs": {
-    "url": "https://github.com/apache/cordova-docs/issues"
-  },
+  "bugs": "https://github.com/apache/cordova-docs/issues",
   "homepage": "https://cordova.apache.org"
 }
