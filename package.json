@@ -57,10 +57,7 @@
     "gulp-htmllint": "^0.0.5",
     "simplecrawler": "^0.5.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/apache/cordova-docs"
-  },
+  "repository": "github:apache/cordova-docs",
   "bugs": {
     "url": "https://github.com/apache/cordova-docs/issues"
   },
