@@ -64,15 +64,6 @@
         developing hybrid mobile apps or web apps with iOS & Android
         native look and feel.
 
--   name: Evothings Studio
-    image: evothings.png
-    url: https://evothings.com/
-    description: >
-        Evothings Studio provides Cordova developers with a rapid development
-        workflow, tutorials and example apps for the Internet of Things.
-        Support for Bluetooth Low Energy (BLE) and other IoT related
-        technologies.
-
 -   name: NSB/AppStudio
     image: appstudio.png
     url: https://www.nsbasic.com/
