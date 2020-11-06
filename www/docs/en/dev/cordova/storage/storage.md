@@ -276,7 +276,7 @@ For more information, see:
 ### Disadvantages
 
 - Complex API with nested callbacks.
-- Limited total amount of storage (typically around 5MB).
+- Total amount of storage may be limited, depending on the platform and web view implementation.
 
 ## Plugin-Based Options
 
