@@ -37,12 +37,13 @@ the CLI, see [Cordova CLI Reference][cli_reference].
 Cordova for Android requires the Android SDK which can be installed
 on OS X, Linux or Windows. See the Android SDK's
 [System Requirements](http://developer.android.com/sdk/index.html#Requirements).
-Cordova's latest Android package supports up to Android [API Level](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels) 28.
+Cordova's latest Android package supports up to Android [API Level](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels) 29.
 The supported Android API Levels and Android Versions for the past
 few cordova-android releases can be found in this table:
 
 cordova-android Version | Supported Android API-Levels | Equivalent Android Version
 ------------------------|------------------------------|-----------------------------
+9.X.X                   | 22 - 29                      | 5.1 - 10.0.0
 8.X.X                   | 19 - 28                      | 4.4 - 9.0.0
 7.X.X                   | 19 - 27                      | 4.4 - 8.1
 6.X.X                   | 16 - 26                      | 4.1 - 8.0.0
@@ -92,8 +93,14 @@ Open the Android SDK Manager (`Tools > SDK Manager` in Android Studio, or `sdkma
 and make sure the following are installed:
 
 1. Android Platform SDK for your targeted version of Android
-1. Android SDK build-tools version 19.1.0 or higher
-1. Android Support Repository (found under the "SDK Tools" tab)
+1. Android SDK build-tools version 29.0.2 or higher
+
+#### Android SDK Tools:
+In Android Studio 3.6 or later, you need to manually add the old version of the Android SDK Tools. To do this:
+
+1. Open the Android Studio **SDK Manager**
+2. In the Android **SDK Tools** tab, uncheck `Hide Obsolete Packages`
+3. Check `Android SDK Tools (Obsolete)`
 
 See Android's documentation on [Installing SDK Packages](https://developer.android.com/studio/intro/update)
 for more details.
@@ -107,7 +114,7 @@ should be updated:
 
 1. Set the `JAVA_HOME` environment variable to the location of your JDK
    installation
-2. Set the `ANDROID_HOME` environment variable to the location of your Android
+2. Set the `ANDROID_SDK_ROOT` environment variable to the location of your Android
    SDK installation
 3. It is also recommended that you add the Android SDK's `tools`, `tools/bin`,
    and `platform-tools` directories to your `PATH`
@@ -119,7 +126,7 @@ On a Mac or Linux, you can use a text editor to create or modify the
 `export` like so (substitute the path with your local installation):
 
 ```bash
-export ANDROID_HOME=/Development/android-sdk/
+export ANDROID_SDK_ROOT=/Development/android-sdk/
 ```
 
 To update your `PATH`, add a line resembling the following (substitute the paths
@@ -283,6 +290,24 @@ Note that plugins can also include `build-extras.gradle` files via:
 ```xml
 <framework src="some.gradle" custom="true" type="gradleReference" />
 ```
+
+#### Configuring Gradle JVM Args
+
+To change the Gradle JVM args, the `--jvmargs` flag can be used with both cordova build and run commands. This is mostly useful for controlling how much memory gradle is allowed to use during the build process. It is recommended to allow at least 2048 MB.
+
+By default, JVM args has a value of `-Xmx2048m`. To increase the max allowed memory, use the `-Xmx` JVM arg. Example given below:
+
+```
+cordova build android -- --jvmargs='-Xmx4g'
+```
+
+The following units are supported:
+
+| unit      | value     | example
+|-----------|:---------:|---------
+| kilobyte  |k          |`-Xmx2097152k`
+| megabyte  |m          |`-Xmx2048m`
+| gigabyte  |g          |`-Xmx2g`
 
 ### Setting the Version Code
 
@@ -766,6 +791,27 @@ The corresponding html:
     </body>
 </html>
 ```
+### Android Quirks
+The default API level in the Cordova Android platform has been upgraded. On an Android 9 device, clear text communication is now disabled by default.
+
+By default HTTP and FTP etc. will refuse the apps requests to use cleartext traffic. The key reason for avoiding cleartext traffic is the lack of confidentiality, authenticity, and protections against tampering; a network attacker can eavesdrop on transmitted data and also modify it without being detected. You can learn more about the `android:usesCleartextTraffic` or any other android application elements setting in the [documentation for Android developers](https://developer.android.com/guide/topics/manifest/application-element).
+
+To allow clear text communication again, set the `android:usesCleartextTraffic` on your application tag to true in `config.xml` file:
+```xml
+<platform name="android">
+  <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+      <application android:usesCleartextTraffic="true" />
+  </edit-config>
+</platform>
+```
+
+And also you need to add Android XML namespace `xmlns:android="http://schemas.android.com/apk/res/android"` to your widget tag in the same `config.xml`, like so:
+`<widget id="io.cordova.hellocordova" version="0.0.1" android-versionCode="13" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+</widget>`
+
+### Android Manifest Information
+
+You can learn more about the Android manifest information in the [documentation for Android developers](https://developer.android.com/guide/topics/manifest/manifest-intro).
 
 ### Testing the Activity Lifecycle
 

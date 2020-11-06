@@ -21,9 +21,9 @@ title: Android 平臺指南
 toc_title: Android
 ---
 
-# Android 平臺指南
+# Android 平台指南
 
-本指南演示如何設置您的 SDK 環境部署科爾多瓦的 Android 設備的應用程式以及如何在您的開發工作流中 （可選） 使用 Android 居中的命令列工具。 您需要安裝 Android SDK 無論是否你想要使用這些平臺為中心的外殼工具或跨平臺 Cordova CLI 的發展。 兩條發展路徑的比較，請參見概述。 CLI 的詳細資訊，請參閱命令列介面。
+本指南介绍了如何设置在 Android 设备上开发 Cordova 应用的 SDK 环境，以及如何在开发工作流中有选择的使用以 Android 为中心的命令行工具。无论你是否想使用 platform-centered 命令行工具或者通过 Cordova 的 cross-platform 命令行去开发，你都必须安装Android SDK。两种开发方式的对比你可以参考概述。CLI 的详细信息，请参考 Cordova CLI Reference。
 
 ## 要求和支援
 

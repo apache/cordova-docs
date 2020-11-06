@@ -59,7 +59,7 @@ Root element of the config.xml document.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
-id(string) | *Required* <br/> Specifies the app's reverse-domain identifier.
+id(string) | *Required* <br/> Specifies the app's identifier. The `id` should be in a [reverse-DNS format](https://en.wikipedia.org/wiki/Reverse_domain_name_notation#Examples) however, only alphanumeric and dot characters are allowed. e.g: `com.example.myapp`
 version(string) | *Required* <br/> Full version number expressed in major/minor/patch notation.
 android-versionCode(string) <br/> ==Android== | Alternative version for Android. Sets the [version code](http://developer.android.com/tools/publishing/versioning.html) for the application. See [the Android guide](../guide/platforms/android/index.html#setting-the-version-code) for information on how this attribute may be modified.
 ios-CFBundleVersion(string) <br/> ==iOS== | Alternative version for iOS. For further details, see [iOS versioning](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
@@ -290,7 +290,9 @@ and will be indicated as such.
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
 AllowInlineMediaPlayback(boolean) <br/> ==iOS== | *Default: false* <br/>  Set to true to allow HTML5 media playback to appear inline within the screen layout, using browser-supplied controls rather than native controls. For this to work, add the ```playsinline``` attribute to any ```<video>``` elements. *NOTE*: Prior to iOS 10, ```<video>``` elements need to use the ```webkit-playsinline``` attribute name instead.
+AllowNewWindows(boolean) <br/> ==iOS== | *Default: false* <br/> Set to true to allow JavaScript `window.open` and HTML `target="\_blank"` links to open a new view overlaying the web view.
 AndroidLaunchMode(string) <br/> ==Android== | *Default: singleTop* <br/> Allowed values: standard, singleTop, singleTask, singleInstance <br/>  Sets the Activity android:launchMode attribute. This changes what happens when the app is launched from app icon or intent and is already running.
+AndroidXEnabled(string) <br/> ==Android== | *Default: false* <br/>  Sets to true to use AndroidX Support Libraries.
 android-maxSdkVersion(integer) <br/> ==Android== | *Default: Not Specified* <br/>  Sets the `maxSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
 android-minSdkVersion(integer) <br/> ==Android== | *Default: Dependent on cordova-android Version* <br/>  Sets the `minSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
 android-targetSdkVersion(integer) <br/> ==Android== | *Default: Dependent on cordova-android Version* <br/>  Sets the `targetSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
@@ -309,6 +311,11 @@ ForegroundText(string) <br/> ==Windows== | *Default: "light"* <br/>   Works for 
 FullScreen(boolean) <br/> ==Android== | *Default: false* <br/>  Allows you to hide the status bar at the top of the screen. <br/> __Note__: Recommended platform-agnostic way to achieve this is to use the [StatusBar plugin][statusbar_plugin].
 GapBetweenPages(float) <br/> ==iOS== | *Default: 0* <br/>  The size of the gap, in points, between pages.
 HideMousePointer(integer) <br/> ==OS X== | *Default: -1* <br/> **(OS X 4.0.0+)** Sets the timeout for hiding the mouse pointer. Set to 0 for immediate, set to -1 for never.
+GradlePluginGoogleServicesEnabled (boolean) <br/> ==Android== | *Default: false* <br/>  Set to true to enable the Google Services Gradle plugin.
+GradlePluginGoogleServicesEnabled (semver) <br/> ==Android== | *Default: 4.2.0* <br/>  Set version of Google Services Gradle plugin to be used.
+GradlePluginKotlinEnabled (boolean) <br/> ==Android== | *Default: false* <br/>  Set to true to allow Kotlin files to be built.
+GradlePluginKotlinCodeStyle (string) <br/> ==Android== | *Default: official* <br/> Allowed values: official, obsolete<br/>  Sets how the Kotlin code is formatting for readability.
+GradlePluginKotlinVersion (semver) <br/> ==Android== | *Default: 1.3.50* <br/> Set the version of the Kotlin Gradle plugin to be used.
 InAppBrowserStorageEnabled (boolean) <br/> ==Android== | *Default: true* <br/>  Controls whether pages opened within an InAppBrowser can access the same localStorage and WebSQL storage as pages opened with the default browser.
 KeepRunning(boolean) <br/> ==Android== | *Default: true* <br/>  Determines whether the application stays running in the background even after a [pause](../../../cordova/events/events.pause.html) event fires. Setting this to false does not kill the app after a [pause](../../../cordova/events/events.pause.html) event, but simply halts execution of code within the cordova webview while the app is in the background.
 KeyboardDisplayRequiresUserAction(boolean) <br/> ==iOS== | *Default: true* <br/>  Set to false to allow the keyboard to appear when calling focus() on form inputs.
@@ -324,6 +331,8 @@ OverrideUserAgent(string) <br/> ==Android== ==iOS== | If set, the value will rep
 PageLength(float) <br/> ==iOS== | *Default: 0* <br/>  The size of each page, in points, in the direction that the pages flow. When PaginationMode is right to left or left to right, this property represents the width of each page. When PaginationMode is topToBottom or bottomToTop, this property represents the height of each page. The default value is 0, which means the layout uses the size of the viewport to determine the dimensions of the page.
 PaginationBreakingMode(string) <br/> ==iOS== | *Default: page* <br/> Allowed values: page, column <br/>  Valid values are page and column.The manner in which column- or page-breaking occurs. This property determines whether certain CSS properties regarding column- and page-breaking are honored or ignored. When this property is set to column, the content respects the CSS properties related to column-breaking in place of page-breaking.
 PaginationMode(string) <br/> ==iOS== | *Default: unpaginated* <br/> Allowed values: unpaginated, leftToRight, topToBottom, bottomToTop, rightToLeft <br/>  This property determines whether content in the web view is broken up into pages that fill the view one screen at a time,or shown as one long scrolling view. If set to a paginated form, this property toggles a paginated layout on the content, causing the web view to use the values of PageLength and GapBetweenPages to relayout its content.
+PreferredContentMode(string) <br/> ==iOS== | *Default: auto* <br/>  Sets the content mode (user agent) for the WebView and InAppBrowsers WebView on iPads. Valid values are: `mobile` and `desktop`.
+InAppBrowserStatusBarStyle(string) <br/> ==iOS== | *Default: default* <br/>  Set text color style of the StatusBar for InAppBrowser for iOS. Valid values are: `lightcontent` and `default`.
 SetFullscreen(boolean) <br/> ==Android== | *Default: false* <br/>  Same as the Fullscreen parameter in the global configuration of this xml file. This Android-specific element is deprecated in favor of the global Fullscreen element, and will be removed in a future version.
 ShowTitle(boolean) <br/> ==Android== | *Default: false* <br/>  Show the title at the top of the screen.
 SplashScreenBackgroundColor <br/> ==Windows== | *Default: #464646* <br/>  Sets the splashscreen background color. Supports a CSS color name or a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. <br/> The alpha channel is ignored although `transparent` value will cause black/white background color in case of Dark/Light theme accordingly.
@@ -389,6 +398,12 @@ Examples:
 <preference name="DefaultVolumeStream" value="call" />
 <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
 <preference name="AppendUserAgent" value="My Browser" />
+<preference name="AndroidXEnabled" value="true" />
+<preference name="GradlePluginGoogleServicesEnabled" value="true" />
+<preference name="GradlePluginGoogleServicesVersion" value="4.2.0" />
+<preference name="GradlePluginKotlinEnabled" value="true" />
+<preference name="GradlePluginKotlinCodeStyle" value="official" />
+<preference name="GradlePluginKotlinVersion" value="1.3.50" />
 
 <!-- Windows only preferences -->
 <preference name="windows-target-version" value="8.1" />
