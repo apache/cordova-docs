@@ -162,8 +162,7 @@ IndexedDB provides a simple and easy to understand data model, much like LocalSt
 But unlike LocalStorage, you can create multiple databases, with multiple stores per
 database, and its asynchronous API and search indexes provide performance benefits.
 
-IndexedDB is supported by the underlying WebView on all platforms,
-with known limitations on the following platforms:
+IndexedDB is supported by the underlying WebView on all platforms, with known limitations on the following platforms:
 
 - browser
 - Windows
