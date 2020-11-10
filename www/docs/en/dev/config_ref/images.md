@@ -60,7 +60,7 @@ Attributes    | Description
 --------------|--------------------------------------------------------------------------------
 background    | *Required for Adaptive* <br/> Location of the image (png or vector) relative to your project directory, or color reference
 foreground    | *Required for Adaptive* <br/> Location of the image (png or vector) relative to your project directory, or color reference
-density       | *Optional* <br/> Specified icon density
+density       | *Required* <br/> Specified icon density
 
 ### Adaptive Icons
 
