@@ -1,0 +1,38 @@
+---
+layout: team
+title: Team
+---
+
+<div class="row">
+    <div class="col-sm-12 text-center">
+        <h1>Team</h1>
+        <p>These are some of people behind Apache Cordova</p>
+    </div>
+</div>
+
+{% for member in site.members %}
+<div class="row">
+    <div class="col-sm-8 col-xs-8">
+        <span>
+            <h2>{{ member.name }}</h2>
+            <p>{{ member.subtitle }}</p>
+        </span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-8">
+        <p>
+            {{ member.content }}
+        </p>
+    </div>
+    <div class="col-sm-3 col-sm-offset-1">
+        <img src="{{ member.imageurl }}"><img>
+        {% if member.twitter %}
+            <a href="{{ member.twitter }}">Twitter</a>
+        {% endif %}
+        {% if member.homepage %}
+            <a href="{{ member.homepage }}">Homepage</a>
+        {% endif %}
+    </div>
+</div>
+{% endfor %}
