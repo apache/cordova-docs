@@ -73,3 +73,11 @@
         feedback solution. With a one minute install guide,
          it enables users to seamlessly report bugs while automatically attaching
         details such as network logs, repro-steps, etc.
+-   name: Quasar
+    image: https://cdn.quasar.dev/logo/svg/quasar-logo.svg
+    url: https://quasar.dev
+    description: >
+        Write code once and simultaneously deploy it as a website, 
+        Mobile / Electron App or Browser Extension. Yes, one codebase for all of them, 
+        helping you develop an app in record time by using a state-of-the-art CLI
+        and backed by best-practice, blazing fast Quasar web components using Vue.js.
