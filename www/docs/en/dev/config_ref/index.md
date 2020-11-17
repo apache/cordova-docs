@@ -381,7 +381,7 @@ Examples:
 <preference name="target-device" value="universal" />
 <preference name="deployment-target" value="7.0" />
 <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
-<preference name="CordovaDefaultWebViewEngine" value="CDVWKWebViewEngine" />
+<preference name="CordovaDefaultWebViewEngine" value="CDVWebViewEngine" />
 <preference name="SuppressesLongPressGesture" value="true" />
 <preference name="Suppresses3DTouchGesture" value="true" />
 
