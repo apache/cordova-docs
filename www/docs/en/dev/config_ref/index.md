@@ -380,7 +380,7 @@ Examples:
 <preference name="AppendUserAgent" value="My Browser" />
 <preference name="target-device" value="universal" />
 <preference name="deployment-target" value="7.0" />
-<preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+<preference name="CordovaWebViewEngine" value="CDVWebViewEngine" />
 <preference name="CordovaDefaultWebViewEngine" value="CDVWebViewEngine" />
 <preference name="SuppressesLongPressGesture" value="true" />
 <preference name="Suppresses3DTouchGesture" value="true" />
