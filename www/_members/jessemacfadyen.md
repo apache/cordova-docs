@@ -2,7 +2,7 @@
 name: Jesse MacFadyen
 subtitle:  "<strong>PMC Member</strong> since forever."
 imageurl: https://avatars3.githubusercontent.com/u/46134?s=400&&v=4
-twitter: https:twitter.com/purplecabbage
+twitter: https://twitter.com/purplecabbage
 homepage: https://github.com/purplecabbage
 ---
 
