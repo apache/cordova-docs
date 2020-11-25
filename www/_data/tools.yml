@@ -74,7 +74,7 @@
          it enables users to seamlessly report bugs while automatically attaching
         details such as network logs, repro-steps, etc.
 -   name: Quasar
-    image: https://cdn.quasar.dev/logo/svg/quasar-logo.svg
+    image: quasar-logo.svg
     url: https://quasar.dev
     description: >
         Write code once and simultaneously deploy it as a website, 
