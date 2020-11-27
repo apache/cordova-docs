@@ -13,7 +13,6 @@
         "cordova-plugin-screen-orientation",
         "cordova-plugin-splashscreen",
         "cordova-plugin-statusbar",
-        "cordova-plugin-vibration",
-        "cordova-plugin-whitelist"
+        "cordova-plugin-vibration"
     ]
 }

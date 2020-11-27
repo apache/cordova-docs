@@ -87,6 +87,7 @@ docs:
     "latest/reference/cordova-plugin-file-transfer/index.html": "deprecated.html"
     "latest/reference/cordova-plugin-globalization/index.html": "deprecated.html"
     "latest/reference/cordova-plugin-legacy-whitelist/index.html": "deprecated.html"
+    "latest/reference/cordova-plugin-whitelist/index.html": "latest/guide/appdev/allowlist/index.html"
 
     # Old plugin API docs need to be redirected to latest where we pull in the READMEs
     "latest/cordova/accelerometer/acceleration/acceleration.html": "latest/reference/cordova-plugin-device-motion/index.html"
@@ -368,7 +369,7 @@ docs:
     "latest/cordova-plugin-splashscreen/index.html": "latest/reference/cordova-plugin-splashscreen/index.html"
     "latest/cordova-plugin-vibration/index.html": "latest/reference/cordova-plugin-vibration/index.html"
     "latest/cordova-plugin-statusbar/index.html": "latest/reference/cordova-plugin-statusbar/index.html"
-    "latest/cordova-plugin-whitelist/index.html": "latest/reference/cordova-plugin-whitelist/index.html"
+    "latest/cordova-plugin-whitelist/index.html": "latest/guide/appdev/allowlist/index.html"
     "latest/cordova-plugin-legacy-whitelist/index.html": "latest/reference/cordova-plugin-legacy-whitelist/index.html"
 
 # 301 (PERMANENT) redirect paths relative to /docs/XX/YYY/
@@ -394,7 +395,7 @@ docs-global:
     "cordova_splashscreen_splashscreen.md.html": "cordova/splashscreen/splashscreen.html"
     "cordova_storage_storage.md.html": "cordova/storage/storage.html"
     "guide_appdev_privacy_index.md.html": "guide/appdev/privacy/index.html"
-    "guide_appdev_whitelist_index.md.html": "guide/appdev/whitelist/index.html"
+    "guide_appdev_whitelist_index.md.html": "guide/appdev/allowlist/index.html"
     "guide_cli_index.md.html": "guide/cli/index.html"
     "guide_cli_template.md.html": "guide/cli/template.html"
     "guide_hybrid_plugins_index.md.html": "guide/hybrid/plugins/index.html"
@@ -499,7 +500,7 @@ docs-global:
     "guide_upgrading_ios_index.md.html": "guide/upgrading/ios/index.html"
     "guide_upgrading_symbian_index.md.html": "guide/upgrading/symbian/index.html"
     "guide_upgrading_windows-phone_index.md.html": "guide/upgrading/windows-phone/index.html"
-    "guide_whitelist_index.md.html": "guide/whitelist/index.html"
+    "guide_whitelist_index.md.html": "guide/appdev/allowlist/index.html"
     "guide_command-line_index.md.html": "guide/command-line/index.html"
     "guide_cordova-webview_android.md.html": "guide/cordova-webview/android.html"
     "guide_cordova-webview_index.md.html": "guide/cordova-webview/index.html"

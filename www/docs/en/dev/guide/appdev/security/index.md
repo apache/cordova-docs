@@ -27,7 +27,8 @@ description: Information and tips for building a secure application.
 The following guide includes some security best practices that you should consider when developing a Cordova application. Please be aware that security is a very complicated topic and therefore this guide is not exhaustive. If you believe you can contribute to this guide, please feel free to file an issue in Cordova's bug tracker under ["Documentation"](https://issues.apache.org/jira/browse/CB/component/12316407).  This guide is designed to be applicable to general Cordova development (all platforms) but special platform-specific considerations will be noted.
 
 ## This guide discusses the following topics:
-* Whitelist
+
+* Allow List
 * Iframes and the Callback Id Mechanism
 * Certificate Pinning
 * Self-signed Certificates
@@ -35,11 +36,9 @@ The following guide includes some security best practices that you should consid
 * General Tips
 * Recommended Articles and Other Resources
 
-## Whitelist
+## Allow List
 
-* Read and understand the [Whitelist Guide](../whitelist/index.html)
-
-* Domain whitelisting does not work on Android API 10 and below, and WP8 for iframes and XMLHttpRequest. This means an attacker can load any domain in an iframe and any script on that page within the iframe can directly access Cordova JavaScript objects and the corresponding native Java objects. You should take this into consideration when building applications for these platforms. In practice this means making sure you target an Android API higher than 10, and that if possible you do not use an iframe to load external content - use the inAppBrowser plugin or other third-party plugins.
+By default the app's navigation is unrestricted. It's recommended to restrict the navigation only to trusted domains. Learn more by reading the [Allow List Guide](../allowlist/index.html)
 
 ## Iframes and the Callback Id Mechanism
 
