@@ -139,7 +139,7 @@ This allow list applies only to the main Cordova webview, and does not apply to 
 
 Note: `allow-navigation` takes precedence over `allow-intent`. Allowing navigation to all URLs with `<allow-navigation href="*" />` for example has the side effect of "capturing" all intents, so the webview navigates to them instead of triggering e.g. external apps.
 
-### Content Security Policy (CSP)
+## Content Security Policy (CSP)
 
 Controls which network requests (images, XHRs, etc) are allowed to be made (via webview directly).
 
@@ -175,7 +175,7 @@ Here are some example CSP declarations for your `.html` pages:
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://cordova.apache.org">
 ```
 
-### Other Notes
+## Other Notes
 
 [Application Transport Security (ATS)](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) is new in iOS 9 (Xcode 7). This new feature acts as an allow list for your app. Cordova CLI will automatically convert the `<access>` and `<allow-navigation>` tags to the appropriate ATS directives.
 
