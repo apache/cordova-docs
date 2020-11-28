@@ -145,8 +145,6 @@ Controls which network requests (images, XHRs, etc) are allowed to be made (via 
 
 On Android and iOS, the network request allow list (see above) is not able to filter all types of requests (e.g. `<video>` & WebSockets are not blocked). So, in addition to the allow list, you should use a [Content Security Policy](http://content-security-policy.com/) `<meta>` tag on all of your pages.
 
-On Android, support for CSP within the system webview starts with KitKat (but is available on all versions using Crosswalk WebView).
-
 Here are some example CSP declarations for your `.html` pages:
 
 ```html
