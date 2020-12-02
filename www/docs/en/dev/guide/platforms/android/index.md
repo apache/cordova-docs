@@ -391,9 +391,6 @@ build configuration file:
 }
 ```
 
-For release signing, passwords can be excluded and the build system will issue a
-prompt asking for the password.
-
 There is also support to mix and match command line arguments and parameters in
 `build.json`. Values from the command line arguments will get precedence.
 This can be useful for specifying passwords on the command line.
@@ -413,7 +410,7 @@ keyAlias=DebugSigningKey
 keyPassword=SECRET2
 ```
 
-`storePassword` and `keyPassword` are optional, and will be prompted for if omitted.
+`storePassword` and `keyPassword` are required for automated signing.
 
 ## Debugging
 
