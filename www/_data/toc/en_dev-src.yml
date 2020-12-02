@@ -22,7 +22,7 @@
         - url: cordova/storage/storage.html
         - url: guide/appdev/privacy/index.html
         - url: guide/appdev/security/index.html
-        - url: guide/appdev/whitelist/index.html
+        - url: guide/appdev/allowlist/index.html
 -
     name: Create plugins
     children:
@@ -64,4 +64,3 @@
                 - url: reference/cordova-plugin-splashscreen/index.html
                 - url: reference/cordova-plugin-statusbar/index.html
                 - url: reference/cordova-plugin-vibration/index.html
-                - url: reference/cordova-plugin-whitelist/index.html

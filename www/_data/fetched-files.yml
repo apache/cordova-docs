@@ -108,13 +108,6 @@
         path: "reference/cordova-plugin-statusbar/index.md"
 -
     src:
-        repoName: "apache/cordova-plugin-whitelist"
-        packageName: "cordova-plugin-whitelist"
-        commit: "master"
-    dest:
-        path: "reference/cordova-plugin-whitelist/index.md"
--
-    src:
         repoName: "apache/cordova-plugin-screen-orientation"
         packageName: "cordova-plugin-screen-orientation"
         commit: "master"
