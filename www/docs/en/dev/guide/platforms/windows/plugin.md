@@ -31,7 +31,7 @@ a Windows Store app for Windows 8.1 phone and desktop, and Universal Windows Pla
 Windows Cordova plugins are essentially a thin wrapper around existing WinJS provided functions, but assuming you will want to define your JS common interface for multiple devices, you will typically have one JS file that provides the API:
 
 ```js
-// inside file echoplugin.js
+// inside file www/echoplugin.js
 var EchoPlugin = {
     // the echo function calls successCallback with the provided text in strInput
     // if strInput is empty, it will call the errorCallback
@@ -43,10 +43,12 @@ var EchoPlugin = {
 
 The `cordova.exec` function is defined differently on every platform, this is because each platform has it's own way of communicating between the application js code, and the native wrapper code. But in the case of Windows, there is no native wrapper, so the exec call is there for consistency. So even though you could write the Windows specific code as a part of plugin's common JS code directly, this is not recommended and plugin authors should use the same exec API for Windows as for other platforms. This way the plugin API becomes consistent and you can also take advantage of any parameter checking, or other common code provided by developers who were working on other platforms.
 
-On Windows, cordova provides a proxy that you can use to register an object that will handle all cordova.exec calls to an API. So in our case, we will assume that the code in `echoplugin.js` is handling cross platform relevant JavaScript, and we can simply write a proxy for Windows.
+### Plugin Exec Proxy
+
+On Windows, Cordova provides a proxy that you can use to register an object that will handle all `cordova.exec` calls to an API. So in our case, we will assume that the code in `echoplugin.js` is handling cross platform relevant JavaScript, and we can simply write a proxy for Windows.
 
 ```js
-// in file echoplugin.js
+// in file www/echoplugin.js
 window.echo = function(str, callback) {
     cordova.exec(callback, function(err) {
         callback('Nothing to echo.');
@@ -55,7 +57,7 @@ window.echo = function(str, callback) {
 ```
 
 ```js
-// in file echopluginProxy.js
+// in file src/windows/echopluginProxy.js
 cordova.commandProxy.add("Echo",{
     echo:function(successCallback,errorCallback,strInput) {
         if(!strInput || !strInput.length) {
@@ -66,11 +68,26 @@ cordova.commandProxy.add("Echo",{
         }
     }
 });
+
+// or alternative syntax
+
+module.exports = {
+    echo: function(successCallback, errorCallback, strInput) {
+        if(!strInput || !strInput.length) {
+            errorCallback("Error, something was wrong with the input string. =>" + strInput);
+        }
+        else {
+            successCallback(strInput + "echo");
+        }
+    }
+};
+
+require('cordova/exec/proxy').add('Echo', module.exports);
 ```
 
-The `echoplugin.js` file will forward the `echo` function call to this proxy through the `cordova.exec` command and execute this implementation.
+The `www/echoplugin.js` file will forward the `echo` function call to this proxy through the `cordova.exec` command and execute this implementation in `src/windows/echopluginProxy.js`.
 
-The plugin.xml file will have the settings required for our plugin. In this case, we want to add our `echoplugin.js` file in the `www` directory and the `echopluginProxy.js` file inside the `windows` source code of our application. Details of these elements can be found in the [Plugin.xml](../../../plugin_ref/spec.html) reference.
+The `plugin.xml` file will have the settings required for our plugin. In this case, we want to add our `echoplugin.js` file in the `www` directory and the `echopluginProxy.js` file inside the `windows` source code of our application. Details of these elements can be found in the [Plugin.xml](../../../plugin_ref/spec.html) reference.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -94,7 +111,8 @@ The plugin.xml file will have the settings required for our plugin. In this case
 </plugin>
 ```
 
-This gives us a working Windows JavaScript plugin that uses a common file ( echoplugin.js ) and uses a proxy to provide the Windows only portion of implementation ( echopluginProxy.js ). So how do we add native/managed code to this? Well we are going to start the same, the only difference will be what we do inside in echopluginProxy methods.
+
+This gives us a working Windows JavaScript plugin that uses a common file (`www/echoplugin.js`) and uses a proxy to provide the Windows only portion of implementation (`src/windows/echopluginProxy.js`). So how do we add native/managed code to this? Well we are going to start the same, the only difference will be what we do inside in echopluginProxy methods.
 
 ## Creating a Windows Plugin in C++ or managed code.
 
