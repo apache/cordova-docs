@@ -28,8 +28,7 @@ created with an older set of command-line tools that precede the
 `cordova` CLI utility. See [The Command-Line Interface](../../cli/index.html) for information
 how to update the version of the CLI.
 
-__NOTE__: Xcode 8 is required. Currently, to submit to the
-Apple App Store, you should use the latest shipped version of the iOS SDK, which is iOS 10 and this is included only with Xcode 8.
+__NOTE__: You should use the latest shipped version of the iOS SDK, which is included with the latest version of Xcode.
 
 ## Upgrading 4.x projects
 
