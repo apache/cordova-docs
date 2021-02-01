@@ -225,6 +225,12 @@ terminate and `handleOpenURL` events. See the
 [CDVPlugin.h][CDVPlugin.h] and [CDVPlugin.m][CDVPlugin.m]
 classes for guidance.
 
+### WKURLSchemeTask Hook
+
+The [WKURLSchemeTask](https://developer.apple.com/documentation/webkit/wkurlschemetask) is an interface Cordovas main WKWebView uses to load files from your apps bundle. 
+
+
+
 ## Threading
 
 Plugin methods ordinarily execute in the same thread as the main
