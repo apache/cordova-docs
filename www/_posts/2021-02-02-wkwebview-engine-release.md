@@ -7,7 +7,7 @@ categories: news
 tags: release plugins
 ---
 
-We are happy to announce that we have just released an update to our WKWebview Engine plugin!
+We are happy to announce that we have just released an update to our WKWebView Engine plugin!
 
 * [cordova-plugin-wkwebview-engine@1.2.2](https://www.npmjs.org/package/cordova-plugin-wkwebview-engine)
 
