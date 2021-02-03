@@ -18,8 +18,8 @@ We are happy to announce that `cordova-fetch@3.0.1` was released in February 202
 Because `cordova-fetch` is a dependency of the `cordova` command-line tool, you'll need to reinstall the `cordova` package to update:
 
 ```bash
-npm uninstall cordova
-npm install cordova
+npm uninstall -g cordova
+npm install -g cordova
 ```
 
 ## Release Highlights
