@@ -25,8 +25,8 @@ title: Team
             {{ member.content }}
         </p>
     </div>
-    <div class="col-sm-3 col-sm-offset-1">
-        <img src="{{ member.imageurl }}"><img>
+    <div class="col-sm-3 col-sm-offset-1 team-member-profile">
+        <img height="256" width="256" src="{{ member.imageurl }}"><img>
         {% if member.twitter %}
             <a href="{{ member.twitter }}">Twitter</a>
         {% endif %}
