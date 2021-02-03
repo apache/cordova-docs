@@ -14,7 +14,7 @@ We are happy to announce that we have just released `Cordova iOS 6.2.0`! This is
 
 ## Release Highlights
 
-This release contains small bug fixes, dependency updates and resolves some splashscreen issues. Plugin developers can now hook into the `WKURLSchemeHandler ([see more](https://github.com/apache/cordova-ios/pull/1030)).
+This release contains small bug fixes, dependency updates and resolves some splashscreen issues. Plugin developers can now hook into the `WKURLSchemeHandler` ([learn more](https://github.com/apache/cordova-ios/pull/1030)).
 
 **To upgrade:**
 
