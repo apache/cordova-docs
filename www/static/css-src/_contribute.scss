@@ -152,3 +152,10 @@
         @extend .table-bordered;
     }
 }
+
+.team-member-profile a + a:before {
+    content: '\2022';
+    color: initial;
+    display: inline-block;
+    padding: 0 0.5em 0 0.25em;
+}
