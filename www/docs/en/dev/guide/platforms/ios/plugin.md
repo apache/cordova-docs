@@ -227,7 +227,7 @@ classes for guidance.
 
 ### WKURLSchemeTask Hook
 
-The [WKURLSchemeTask](https://developer.apple.com/documentation/webkit/wkurlschemetask) is an interface Cordovas main WKWebView uses to load files from your apps bundle. You can create your own custom schemes or custom loading code for the webview by implementing the `- (BOOL) overrideSchemeTask: (id <WKURLSchemeTask>)urlSchemeTask` method in a plugin.
+The [WKURLSchemeTask](https://developer.apple.com/documentation/webkit/wkurlschemetask) is an interface Cordova's main WKWebView uses to load files from your app's bundle. You can create your own custom schemes or custom loading code for the webview by implementing the `- (BOOL) overrideSchemeTask: (id <WKURLSchemeTask>)urlSchemeTask` method in a plugin.
 
 ## Threading
 
