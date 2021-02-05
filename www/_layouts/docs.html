@@ -40,7 +40,7 @@ NOTE:
                 <!-- ToC Dropdown (for XS and SM sizes only) -->
                 <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
                     <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        {{ page.toc_text }}
+                        {{ layout.toc_text }}
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
@@ -157,7 +157,7 @@ NOTE:
                     <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         {{ page.version }}
                         {% if page.version == site.latest_docs_version %}
-                            ({{ page.latest_text }})
+                            ({{ layout.latest_text }})
                         {% endif %}
                         <span class="caret"></span>
                     </button>
@@ -178,7 +178,7 @@ NOTE:
                             {% capture version_entry_string %}
                                 {{ other_version }}
                                 {% if other_version == site.latest_docs_version %}
-                                    ({{ page.latest_text }})
+                                    ({{ layout.latest_text }})
                                 {% endif %}
                             {% endcapture %}
 
@@ -232,9 +232,9 @@ NOTE:
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    {{ page.in_development_text }}
+                    {{ layout.in_development_text }}
                     <a href="{{ site.baseurl }}{{ latest_url }}">
-                        {{ page.click_here_text }}
+                        {{ layout.click_here_text }}
                     </a>
                 </div>
             {% endif %}
@@ -245,9 +245,9 @@ NOTE:
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    {{ page.outdated_text }}
+                    {{ layout.outdated_text }}
                     <a href="{{ site.baseurl }}{{ latest_url }}">
-                        {{ page.click_here_text }}
+                        {{ layout.click_here_text }}
                     </a>
                 </div>
             {% endif %}
