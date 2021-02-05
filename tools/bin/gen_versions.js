@@ -19,7 +19,7 @@
 
 var path = require('path');
 var yaml = require('js-yaml');
-var semver = require('semver');
+const semver = require('semver');
 var util = require('./util');
 
 // constants
