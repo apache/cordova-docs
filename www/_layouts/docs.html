@@ -23,7 +23,7 @@ PATH_TO_ROOT: path from here to version root, replacing all parts except the las
 NOTE:
      the capture is a single line because extraneous whitespace would screw up the URI it produces
 {% endcomment %}
-{% capture PATH_TO_ROOT %}{% for item in my_entry_parts %}{% if forloop.rindex > 1 %}../{% endif %}{% endfor %}{% endcapture %}
+{% capture PATH_TO_ROOT %}{{ VERSION_ROOT }}{% endcapture %}
 
 <div class="docs">
 
