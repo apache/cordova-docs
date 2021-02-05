@@ -19,7 +19,7 @@
 
 var path = require('path');
 var yaml = require('js-yaml');
-
+var semver = require('semver');
 var util = require('./util');
 
 // constants
@@ -54,6 +54,26 @@ function main () {
 
         var langPath = path.join(rootDir, langId);
         var versionNames = util.listdirsSync(langPath);
+
+        // Remove dev version for semver sort. We'll add it back later.
+        versionNames.splice(versionNames.indexOf('dev'), 1);
+
+        // semver doesn't like a value of 10.x, so we'll coerce the values into proper 10.0.0,
+        // and store a map to easily convert map our sorted away back to our desired text.
+        let coercionMap = {};
+        versionNames = versionNames.map((v) => {
+            let coerced = semver.coerce(v).toString();
+            coercionMap[coerced] = v;
+            return coerced;
+        });
+
+        versionNames = semver.sort(versionNames);
+
+        // Now we can restore our desired labelling
+        versionNames = versionNames.map((v) => coercionMap[v]);
+
+        // Finally, don't forget to restore our dev version
+        versionNames.push('dev');
 
         // get language ID
         var langName = LANGUAGE_MAP[langId];
