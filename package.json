@@ -41,8 +41,8 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "devDependencies": {
-    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-plugin-transform-h-jsx": "^1.0.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babelify": "^7.3.0",
     "eslint": "^5.16.0",
@@ -54,6 +54,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "glob": "^7.0.3",
     "gulp-htmllint": "^0.0.5",
+    "semver": "^7.3.4",
     "simplecrawler": "^0.5.2"
   },
   "repository": "github:apache/cordova-docs",
