@@ -5,16 +5,6 @@
 #         A description that can
 #         span multiple lines.
 
--   name: Adobe PhoneGap
-    image: phonegap.svg
-    url: http://phonegap.com/
-    description: >
-        PhoneGap is the original and most popular distribution of Apache
-        Cordova. Turn your HTML, CSS and JavaScript into an app on your
-        device in minutes using our simple <a href="http://docs.phonegap.com/getting-started/1-install-phonegap/desktop/">
-        desktop</a> and <a href="http://docs.phonegap.com/references/developer-app/">
-        developer</a> apps.
-
 -   name: Ionic Framework
     image: ionic.png
     url: http://ionicframework.com/
@@ -40,13 +30,6 @@
         professionally designed multiplatform apps without acquiring additional
         skillset.
 
--   name: Visual Studio
-    image: visual_studio_white.png
-    url: https://www.visualstudio.com/vs/features/cordova/
-    description: >
-        Popular IDE for building cross-platform apps for Android, iOS, and
-        Windows. Complete with advanced build and debugging support.
-
 -   name: App Builder
     image: appbuilder.png
     url: http://www.getappbuilder.com/
@@ -63,15 +46,6 @@
         Framework7 is a free and open source mobile HTML framework for
         developing hybrid mobile apps or web apps with iOS & Android
         native look and feel.
-
--   name: Evothings Studio
-    image: evothings.png
-    url: https://evothings.com/
-    description: >
-        Evothings Studio provides Cordova developers with a rapid development
-        workflow, tutorials and example apps for the Internet of Things.
-        Support for Bluetooth Low Energy (BLE) and other IoT related
-        technologies.
 
 -   name: NSB/AppStudio
     image: appstudio.png
@@ -100,6 +74,15 @@
          it enables users to seamlessly report bugs while automatically attaching
         details such as network logs, repro-steps, etc.
 
+-   name: Quasar
+    image: quasar-logo.svg
+    url: https://quasar.dev
+    description: >
+        Write code once and simultaneously deploy it as a website, 
+        Mobile / Electron App or Browser Extension. Yes, one codebase for all of them, 
+        helping you develop an app in record time by using a state-of-the-art CLI
+        and backed by best-practice, blazing fast Quasar web components using Vue.js.
+        
 -   name: VoltBuilder
     image: voltbuilder.png
     url: https://volt.build
@@ -107,4 +90,3 @@
         Modern replacement for PhoneGap Build. Upload project and certificates,
         then download builds (or upload to store). Uses latest 
         Apache Cordova and SDKs. There's nothing to install: just sign up and submit.
-

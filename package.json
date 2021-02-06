@@ -2,7 +2,6 @@
   "name": "cordova-website",
   "version": "0.0.1",
   "description": "website for cordova.apache.org",
-  "main": "echo \"not specified\" && exit 1",
   "directories": {
     "doc": "doc"
   },
@@ -42,8 +41,8 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "devDependencies": {
-    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-plugin-transform-h-jsx": "^1.0.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babelify": "^7.3.0",
     "eslint": "^5.16.0",
@@ -55,14 +54,10 @@
     "eslint-plugin-standard": "^4.0.0",
     "glob": "^7.0.3",
     "gulp-htmllint": "^0.0.5",
+    "semver": "^7.3.4",
     "simplecrawler": "^0.5.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/apache/cordova-docs"
-  },
-  "bugs": {
-    "url": "https://github.com/apache/cordova-docs/issues"
-  },
+  "repository": "github:apache/cordova-docs",
+  "bugs": "https://github.com/apache/cordova-docs/issues",
   "homepage": "https://cordova.apache.org"
 }
