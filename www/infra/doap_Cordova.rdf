@@ -39,8 +39,8 @@
     <programming-language>C++</programming-language>
     <programming-language>C#</programming-language>
     <programming-language>node.js</programming-language>
-    <category rdf:resource="http://projects.apache.org/category/mobile" />
-    <category rdf:resource="http://projects.apache.org/category/library" />
+    <category rdf:resource="https://projects.apache.org/projects.html?category#mobile" />
+    <category rdf:resource="https://projects.apache.org/projects.html?category#library" />
     <release>
        <Version>
            <name>Latest Stable</name>
