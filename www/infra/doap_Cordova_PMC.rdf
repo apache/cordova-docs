@@ -24,6 +24,6 @@
     <asfext:name>Apache Cordova</asfext:name>
     <foaf:homepage rdf:resource="http://cordova.apache.org/"/>
     <asfext:charter>Apache Cordova is a tool to create cross-platform apps from standard web technologies (HTML, CSS, and JavaScript). Its primary purpose is to provide a bridge for native device API access and to bundle for distribution.</asfext:charter>
-    <asfext:chair><foaf:Person><foaf:name>Shazron Abdullah</foaf:name></foaf:Person></asfext:chair>
+    <asfext:chair><foaf:Person><foaf:name>Jesse MacFadyen</foaf:name></foaf:Person></asfext:chair>
   </asfext:pmc>
 </rdf:RDF>
