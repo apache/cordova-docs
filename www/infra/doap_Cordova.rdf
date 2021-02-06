@@ -48,9 +48,6 @@
            <revision>10.0.0</revision>
        </Version>
    </release>
-    <!-- at some point we should list the W3C standards we support.
-         See http://projects.apache.org/docs/standards.html
-         and the projects listed in the "Standards" index as example users of standards. -->
     <repository>
       <SVNRepository>
         <location rdf:resource="https://cordova.apache.org/contribute/"/>
