@@ -23,7 +23,7 @@
 -->
   <Project rdf:about="http://cordova.apache.org/">
     <created>2013-01-11</created>
-    <license rdf:resource="http://usefulinc.com/doap/licenses/asl20" />
+    <license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0.txt" />
     <name>Apache Cordova</name>
     <homepage rdf:resource="http://cordova.apache.org" />
     <!-- see the comment at the top of pmc_list.xml that explains asfext:pmc rdf:resource -->
