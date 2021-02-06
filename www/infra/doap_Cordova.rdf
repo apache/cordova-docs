@@ -44,8 +44,8 @@
     <release>
        <Version>
            <name>Latest Stable</name>
-           <created>2016-08-12</created>
-           <revision>6.3.1</revision>
+           <created>2020-08-04</created>
+           <revision>10.0.0</revision>
        </Version>
    </release>
     <!-- at some point we should list the W3C standards we support.
