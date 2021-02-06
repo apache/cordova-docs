@@ -31,7 +31,7 @@
     <shortdesc>A tool to create cross-platform apps from standard web technologies (HTML, CSS, and JavaScript).</shortdesc>
     <description>Apache Cordova is a tool to create cross-platform apps from standard web technologies (HTML, CSS, and JavaScript). Its primary purpose is to provide a bridge for native device API access and to bundle for distribution.</description>
     <bug-database rdf:resource="https://github.com/apache/cordova" />
-    <mailing-list rdf:resource="http://cordova.apache.org/#mailing-list" />
+    <mailing-list rdf:resource="https://cordova.apache.org/contact/" />
     <download-page rdf:resource="http://cordova.apache.org/#download" />
     <programming-language>JavaScript</programming-language>
     <programming-language>Java</programming-language>
