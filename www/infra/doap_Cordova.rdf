@@ -53,8 +53,8 @@
          and the projects listed in the "Standards" index as example users of standards. -->
     <repository>
       <SVNRepository>
-        <location rdf:resource="http://cordova.apache.org/#contribute"/>
-        <browse rdf:resource="http://cordova.apache.org/#contribute"/>
+        <location rdf:resource="https://cordova.apache.org/contribute/"/>
+        <browse rdf:resource="https://cordova.apache.org/contribute/"/>
       </SVNRepository>
     </repository>
   </Project>
