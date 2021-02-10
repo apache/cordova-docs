@@ -17,12 +17,12 @@
 -->
 <rdf:RDF xml:lang="en"
          xmlns="http://usefulinc.com/ns/doap#"
-         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:asfext="http://projects.apache.org/ns/asfext#"
+         xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:asfext="https://projects.apache.org/ns/asfext#"
          xmlns:foaf="http://xmlns.com/foaf/0.1/">
   <asfext:pmc rdf:about="cordova">
     <asfext:name>Apache Cordova</asfext:name>
-    <foaf:homepage rdf:resource="http://cordova.apache.org/"/>
+    <foaf:homepage rdf:resource="https://cordova.apache.org/"/>
     <asfext:charter>Apache Cordova is a tool to create cross-platform apps from standard web technologies (HTML, CSS, and JavaScript). Its primary purpose is to provide a bridge for native device API access and to bundle for distribution.</asfext:charter>
     <asfext:chair><foaf:Person><foaf:name>Jesse MacFadyen</foaf:name></foaf:Person></asfext:chair>
   </asfext:pmc>

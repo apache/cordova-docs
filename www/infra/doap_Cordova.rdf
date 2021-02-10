@@ -2,8 +2,8 @@
 <?xml-stylesheet type="text/xsl"?>
 <rdf:RDF xml:lang="en"
          xmlns="http://usefulinc.com/ns/doap#"
-         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:asfext="http://projects.apache.org/ns/asfext#"
+         xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:asfext="https://projects.apache.org/ns/asfext#"
          xmlns:foaf="http://xmlns.com/foaf/0.1/">
 <!--
     Licensed to the Apache Software Foundation (ASF) under one or more
@@ -21,13 +21,13 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-  <Project rdf:about="http://cordova.apache.org/">
+  <Project rdf:about="https://cordova.apache.org/">
     <created>2013-01-11</created>
     <license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0.txt" />
     <name>Apache Cordova</name>
-    <homepage rdf:resource="http://cordova.apache.org" />
+    <homepage rdf:resource="https://cordova.apache.org" />
     <!-- see the comment at the top of pmc_list.xml that explains asfext:pmc rdf:resource -->
-    <asfext:pmc rdf:resource="http://svn.apache.org/repos/asf/cordova/site/public/infra/doap_Cordova_PMC.rdf" />
+    <asfext:pmc rdf:resource="https://svn.apache.org/repos/asf/cordova/site/public/infra/doap_Cordova_PMC.rdf" />
     <shortdesc>A tool to create cross-platform apps from standard web technologies (HTML, CSS, and JavaScript).</shortdesc>
     <description>Apache Cordova is a tool to create cross-platform apps from standard web technologies (HTML, CSS, and JavaScript). Its primary purpose is to provide a bridge for native device API access and to bundle for distribution.</description>
     <bug-database rdf:resource="https://github.com/apache/cordova" />
