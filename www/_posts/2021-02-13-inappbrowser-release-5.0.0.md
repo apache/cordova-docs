@@ -14,6 +14,8 @@ We are happy to announce that we have just released an update to `cordova-plugin
 
 ## Release Highlights
 
+This is a new major version with breaking changes which requires at least `cordova-android@9.0.0` and `cordova-ios@6.0.0`. Make sure to check and update your platforms.
+
 The most notable improvements in this major release are:
 
 * The InAppBrowser and main webview now share web resources again (like cookies, sessions etc.).
