@@ -312,10 +312,10 @@ FullScreen(boolean) <br/> ==Android== | *Default: false* <br/>  Allows you to hi
 GapBetweenPages(float) <br/> ==iOS== | *Default: 0* <br/>  The size of the gap, in points, between pages.
 HideMousePointer(integer) <br/> ==OS X== | *Default: -1* <br/> **(OS X 4.0.0+)** Sets the timeout for hiding the mouse pointer. Set to 0 for immediate, set to -1 for never.
 GradlePluginGoogleServicesEnabled (boolean) <br/> ==Android== | *Default: false* <br/>  Set to true to enable the Google Services Gradle plugin.
-GradlePluginGoogleServicesEnabled (semver) <br/> ==Android== | *Default: 4.2.0* <br/>  Set version of Google Services Gradle plugin to be used.
+GradlePluginGoogleServicesEnabled (semver) <br/> ==Android== | *Default: 4.3.5* <br/>  Set version of Google Services Gradle plugin to be used.
 GradlePluginKotlinEnabled (boolean) <br/> ==Android== | *Default: false* <br/>  Set to true to allow Kotlin files to be built.
 GradlePluginKotlinCodeStyle (string) <br/> ==Android== | *Default: official* <br/> Allowed values: official, obsolete<br/>  Sets how the Kotlin code is formatting for readability.
-GradlePluginKotlinVersion (semver) <br/> ==Android== | *Default: 1.3.50* <br/> Set the version of the Kotlin Gradle plugin to be used.
+GradlePluginKotlinVersion (semver) <br/> ==Android== | *Default: 1.4.32* <br/> Set the version of the Kotlin Gradle plugin to be used.
 InAppBrowserStorageEnabled (boolean) <br/> ==Android== | *Default: true* <br/>  Controls whether pages opened within an InAppBrowser can access the same localStorage and WebSQL storage as pages opened with the default browser.
 KeepRunning(boolean) <br/> ==Android== | *Default: true* <br/>  Determines whether the application stays running in the background even after a [pause](../../../cordova/events/events.pause.html) event fires. Setting this to false does not kill the app after a [pause](../../../cordova/events/events.pause.html) event, but simply halts execution of code within the cordova webview while the app is in the background.
 KeyboardDisplayRequiresUserAction(boolean) <br/> ==iOS== | *Default: true* <br/>  Set to false to allow the keyboard to appear when calling focus() on form inputs.
