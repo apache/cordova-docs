@@ -55,9 +55,7 @@ To install the `cordova` command-line tool, follow these steps:
        otherwise restricted directories such as
        `/usr/local/share`. If you are using the optional
        nvm/nave tool or have write access to the install directory,
-       you may be able to omit the `sudo` prefix. There are
-       [more tips](http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears)
-       available on using `npm` without `sudo`, if you desire to do that.
+       you may be able to omit the `sudo` prefix.
 
    * on Windows:
        ```
