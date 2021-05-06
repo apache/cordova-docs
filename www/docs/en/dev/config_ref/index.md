@@ -292,7 +292,6 @@ Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Desc
 AllowInlineMediaPlayback(boolean) <br/> ==iOS== | *Default: false* <br/>  Set to true to allow HTML5 media playback to appear inline within the screen layout, using browser-supplied controls rather than native controls. For this to work, add the ```playsinline``` attribute to any ```<video>``` elements. *NOTE*: Prior to iOS 10, ```<video>``` elements need to use the ```webkit-playsinline``` attribute name instead.
 AllowNewWindows(boolean) <br/> ==iOS== | *Default: false* <br/> Set to true to allow JavaScript `window.open` and HTML `target="\_blank"` links to open a new view overlaying the web view.
 AndroidLaunchMode(string) <br/> ==Android== | *Default: singleTop* <br/> Allowed values: standard, singleTop, singleTask, singleInstance <br/>  Sets the Activity android:launchMode attribute. This changes what happens when the app is launched from app icon or intent and is already running.
-AndroidXEnabled(string) <br/> ==Android== | *Default: false* <br/>  Sets to true to use AndroidX Support Libraries.
 AndroidInsecureFileModeEnabled(boolean) <br/> ==Android== | *Default: false* <br/>  If set to `true` accessing `file:///` URLs is allowed. __Note__: Enabling this setting allows malicious scripts loaded in a file:// context to launch cross-site scripting attacks, either accessing arbitrary local files including WebView cookies, app private data or even credentials used on arbitrary web sites.
 android-maxSdkVersion(integer) <br/> ==Android== | *Default: Not Specified* <br/>  Sets the `maxSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
 android-minSdkVersion(integer) <br/> ==Android== | *Default: Dependent on cordova-android Version* <br/>  Sets the `minSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
@@ -399,7 +398,6 @@ Examples:
 <preference name="DefaultVolumeStream" value="call" />
 <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
 <preference name="AppendUserAgent" value="My Browser" />
-<preference name="AndroidXEnabled" value="true" />
 <preference name="GradlePluginGoogleServicesEnabled" value="true" />
 <preference name="GradlePluginGoogleServicesVersion" value="4.2.0" />
 <preference name="GradlePluginKotlinEnabled" value="true" />
