@@ -16,7 +16,7 @@ We are happy to announce that we have just released an update to our Network Inf
 ### Network Information
 
 The 3.0.0 major release fixes behaviour on Android.
-The connection event was running at unexpected times.
+The `online` event was running at unexpected times.
 
 All references of the deprecated `navigator.network` are removed.
 
