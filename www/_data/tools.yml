@@ -90,3 +90,12 @@
         Modern replacement for PhoneGap Build. Upload project and certificates,
         then download builds (or upload to store). Uses latest 
         Apache Cordova and SDKs. There's nothing to install: just sign up and submit.
+        
+-   name: VoltSigner
+    image: voltsigner.png
+    url: https://voltsigner.com
+    description: >
+        Free service to create Android and iOS signing certificates.
+        Run completely in your local browser - nothing gets uploaded.
+        Compatible with all build tools.
+        Notably, it can produce iOS certificates on Windows.
