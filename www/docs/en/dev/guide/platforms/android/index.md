@@ -118,7 +118,7 @@ should be updated:
    SDK installation
 3. It is also recommended that you add the Android SDK's `tools`, `tools/bin`, `emulator`
    and `platform-tools` directories to your `PATH`
-4. For apksigner and zipalign, the Android SDK's `build-tools` must also be added to `PATH`
+4. For apksigner and zipalign, the Android SDK's `build-tools` must also be added to your `PATH`
 
 #### OS X and Linux
 
