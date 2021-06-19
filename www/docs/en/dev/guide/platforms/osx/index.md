@@ -18,10 +18,12 @@ license: >
     under the License.
 
 title: OS X Platform Guide
-toc_title: OS X
+toc_title: OS X (deprecated)
 ---
 
 # OS X Platform Guide
+
+**NOTICE:** The OS X platform is now deprecated and may be removed from a future version of Cordova.
 
 This guide shows how to set up your SDK development environment to
 deploy Cordova apps for OS X computers. See the
