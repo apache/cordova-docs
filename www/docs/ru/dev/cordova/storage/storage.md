@@ -35,19 +35,6 @@ toc_title: Store data
 
  [2]: http://www.w3.org/TR/webstorage/
 
-## WebSQL
-
-Этот API-интерфейс доступен в нижеуказанных реализациях WebView. [Спецификация базы данных Web SQL][3] предлагает более полнофункциональные таблицы базы данных с доступом к ним через SQL-запросы.
-
- [3]: http://dev.w3.org/html5/webdatabase/
-
-Следующие платформы поддерживают WebSQL:
-
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Tizen
-
 ## IndexedDB
 
 Этот API-интерфейс доступен в нижеуказанных WebView. [Indexed DB][4] предоставляет больше возможностей, чем LocalStorage, но меньше, чем WebSQL.

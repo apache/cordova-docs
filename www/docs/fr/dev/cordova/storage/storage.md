@@ -35,19 +35,6 @@ Aussi connu comme *stockage web*, *stockage simple*, ou par son interface de rec
 
  [2]: http://www.w3.org/TR/webstorage/
 
-## WebSQL
-
-Cette API est disponible dans le mode Web sous-jacent. La [Spécification de base de données SQL Web][3] propose plusieurs tables de base de données complète accessible via des requêtes SQL.
-
- [3]: http://dev.w3.org/html5/webdatabase/
-
-Les plates-formes suivantes prennent en charge les WebSQL :
-
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Paciarelli
-
 ## IndexedDB
 
 Cette API est disponible dans le mode Web sous-jacent. [Indexed DB][4] offre plus de fonctionnalités que LocalStorage, mais moins de WebSQL.

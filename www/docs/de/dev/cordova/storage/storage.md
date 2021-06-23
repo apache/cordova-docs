@@ -35,19 +35,6 @@ Auch bekannt als *web-Speicher*, *einfache Lagerung*, oder durch seine Alternati
 
  [2]: http://www.w3.org/TR/webstorage/
 
-## WebSQL
-
-Diese API ist verfügbar in den zugrunde liegenden WebView. Der [Web SQL Database-Spezifikation][3] bietet Zugriff auf weitere vollwertige Datenbanktabellen über SQL-Abfragen.
-
- [3]: http://dev.w3.org/html5/webdatabase/
-
-Die folgenden Plattformen unterstützen WebSQL:
-
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Tizen
-
 ## IndexedDB
 
 Diese API ist verfügbar in den zugrunde liegenden WebView. [Indiziert DB][4] bietet mehr Funktionen als LocalStorage aber weniger als WebSQL.

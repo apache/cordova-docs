@@ -37,19 +37,6 @@ Znana tudi kot *spletno shranjevanje*, *enostavno skladiščenje*, ali njegov na
 
 **Windows Phone 7 ovinka**: s pikami je *ni* na voljo, zato se prepričajte, da uporabite `setItem` ali `getItem` namesto dostop ključe, neposredno iz shranjevanje predmeta, kot v`window.localStorage.someKey`.
 
-## WebSQL
-
-Ta API je na voljo v osnovni spletni pogled. [Spletne zbirke podatkov SQL specifikaciji][3] ponuja več poln-izrazit časovno določljiv normalna žlička dostopate preko SQL poizvedb.
-
- [3]: http://dev.w3.org/html5/webdatabase/
-
-Tem platformam podpira WebSQL:
-
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Tizen
-
 ## IndexedDB
 
 Ta API je na voljo v osnovni spletni pogled. [Indeksirane DB][4] ponuja več funkcij, kot LocalStorage, vendar manj kot WebSQL.

@@ -35,19 +35,6 @@ toc_title: Store data
 
  [2]: http://www.w3.org/TR/webstorage/
 
-## WebSQL
-
-この API は、基になる web ビューで利用可能です。 [Web の SQL データベースの仕様][3]を利用してより多くのフル機能を備えたデータベース テーブル アクセス SQL クエリ。
-
- [3]: http://dev.w3.org/html5/webdatabase/
-
-次のプラットフォームをサポートして WebSQL：
-
-*   アンドロイド
-*   ブラックベリー 10
-*   iOS
-*   Tizen
-
 ## IndexedDB
 
 この API は、基になる web ビューで利用可能です。[Indexeddb][4]は LocalStorage より多くの機能よりも少ない WebSQL を提供しています。
