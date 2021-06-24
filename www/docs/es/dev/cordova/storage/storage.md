@@ -35,19 +35,6 @@ También conocido como *web storage*, *almacenamiento de información simple*, o
 
  [2]: http://www.w3.org/TR/webstorage/
 
-## WebSQL
-
-Esta API está disponible en la vista Web subyacente. La [Especificación de base de datos de SQL Web][3] ofrece más tablas de base de datos completa accede a través de consultas SQL.
-
- [3]: http://dev.w3.org/html5/webdatabase/
-
-WebSQL de la ayuda de las siguientes plataformas:
-
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Tizen
-
 ## IndexedDB
 
 Esta API está disponible en la vista Web subyacente. [Indexadas DB][4] ofrece más funciones que LocalStorage pero menos de WebSQL.

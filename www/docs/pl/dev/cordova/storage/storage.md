@@ -35,19 +35,6 @@ Znany również jako *Sieć pamięci masowej*, *zwykłe magazynowanie*, lub jego
 
  [2]: http://www.w3.org/TR/webstorage/
 
-## WebSQL
-
-Ten interfejs API jest dostępny w podstawowej widoku sieci Web. [Web SQL bazy danych specyfikacji][3] oferuje więcej tabel bazy danych w pełni funkcjonalny dostęp za pomocą zapytań SQL.
-
- [3]: http://dev.w3.org/html5/webdatabase/
-
-Następujących platformach wsparcie WebSQL:
-
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Tizen
-
 ## IndexedDB
 
 Ten interfejs API jest dostępny w podstawowej widoku sieci Web. [Indeksowane DB][4] oferuje więcej funkcji niż LocalStorage, ale mniej niż WebSQL.

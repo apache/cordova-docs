@@ -35,19 +35,6 @@ toc_title: Store data
 
  [2]: http://www.w3.org/TR/webstorage/
 
-## WebSQL
-
-此 API 是在底層 web 視圖中可用。 [Web SQL 資料庫規範][3]提供了更多的功能全面的資料庫表可以通過 SQL 查詢訪問。
-
- [3]: http://dev.w3.org/html5/webdatabase/
-
-以下平臺支援 WebSQL：
-
-*   Android 系統
-*   黑莓 10
-*   iOS
-*   Tizen
-
 ## IndexedDB
 
 此 API 是在底層 web 視圖中可用。[索引 DB][4]提供更多的功能比 LocalStorage 但較少比 WebSQL。

@@ -74,82 +74,6 @@ For more information, see:
 - iOS stores `localStorage` data in a location that may be cleaned out by
   the OS when space is required.
 
-## WebSQL
-
-WebSQL provides an API for storing data in a structured database that can
-be queried using a standard SQL syntax (specifically, [SQLite][SQLite]).
-As such, it provides all the power (and complexity) of SQL.
-
-It is supported by the underlying WebView on the following Cordova platforms:
-
-- Android
-- iOS
-
-### Usage Summary
-
-The entry point into creating or opening a database is the `window.openDatabase()` method:
-
-```javascript
-var db = window.openDatabase(name, version, displayName, estimatedSize);
-```
-
-- **name** (string): The unique name of the database, as it will be stored in disk.
-- **version** (string): The version of the database.
-- **displayName** (string): A human friendly name for the database, which
-  the system will use if it needs to describe your database to the user
-  (for example, when requesting permission to increase the size of the database).
-- **estimatedSize** (number): The expected maximum size of the database, in bytes.
-  As the database increases in size, the user may be prompted for permission. If
-  you make a reasonable first guess, the user is likely to be prompted less often.
-
-The returned `Database` object provides a `transaction()` method (or `readTransaction()`
-to optimize read-only transactions) that let's you create a failure-safe transaction:
-
-```javascript
-var db = window.openDatabase(name, version, displayName, estimatedSize);
-db.transaction(function (tx) {
-    tx.executeSql(sqlStatement, valueArray, function (tx, result) {
-        console.log(result);
-    }, function (error) {
-        console.log(error);
-    });
-});
-```
-
-For more information, see:
-
-- [W3C: Spec][WebSQLDatabaseSpecification]
-- [TutorialsPoint: WebSQL Guide][TutorialsPointWebSQL]
-
-For a good introduction to the SQL language, see:
-
-- [w3schools: Introduction to SQL][w3schoolsSQL]
-
-### Working with database versions
-
-When opening an existing database, if the specified version does not match
-the version of the database, an exception will be thrown and the database
-will not open. However, if you specify an empty string for the version, the
-database will open regardless of its current version (and you can query the
-current version via `db.version`). Be wary, however - if the database is
-being created, it will be created with its version set to an empty string.
-
-### Advantages
-
-- Good performance - data can be indexed to provide fast searches, and
-  asynchronous API means it doesn't lock up the user interface.
-- Robustness from using a transactional database model.
-- Support for versioning.
-
-### Disadvantages
-
-- Not supported by all Cordova platforms.
-- More complex to work with than *LocalStorage* or *IndexedDB*.
-- The API is deprecated. It is unlikely to ever be supported on platforms
-  that don't currently support it, and it may be removed from platforms that do.
-- Imposes a rigid structure that must be defined up-front.
-- Limited total amount of storage (typically around 5MB).
-
 ## IndexedDB
 
 The goal of the IndexedDB API is to combine the strengths of the LocalStorage
@@ -313,8 +237,6 @@ alternative storage options.
 [W3CSpecStorage]: https://html.spec.whatwg.org/multipage/webstorage.html
 [MDNStorage]: https://developer.mozilla.org/en-US/docs/Web/API/Storage
 [MDNStorageGuide]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
-[WebSQLDatabaseSpecification]: http://dev.w3.org/html5/webdatabase/
-[TutorialsPointWebSQL]: http://www.tutorialspoint.com/html5/html5_web_sql.htm
 [w3schoolsSQL]: http://www.w3schools.com/sql/sql_intro.asp
 [SQLite]: https://www.sqlite.org/
 [W3CIndexedDB]: http://www.w3.org/TR/IndexedDB/
