@@ -13,7 +13,7 @@ We are happy to announce that we have just released an update to our Whitelist p
 
 ## Release Highlights
 
-### Network Information
+### Whitelist
 
 The 1.3.5 patches release is the final release of the Whitelist plugin.
 The Whitelist plugin will be moved to the `cordova-android` repo.
