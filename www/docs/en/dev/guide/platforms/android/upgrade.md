@@ -27,6 +27,30 @@ Most of these instructions apply to projects created with an older set
 of command-line tools that precede the `cordova` CLI utility. See [The Command-Line Interface](../../cli/index.html) for information how to update the
 version of the CLI.
 
+## Upgrading to 10.x.x
+
+The best way to upgrade to 10.X.X is to simply remove the Android platform from
+your project and re-add it with the new version. For example,
+
+```bash
+cordova platform remove android
+cordova platform add android@10.X.X
+```
+
+If you use the above method, be aware that any changes you made to the android
+platform folder will be lost (editing the contents of this folder is
+discouraged).
+
+### Breaking changes
+
+Version 10.0.0 introduces a signinificant change how URLs are loaded within the app.
+Prior versions load the apps web files like `index.html` via the file protocol.
+Which means the app starts with the URL `file:///android_asset/www/index.html`. Loading `file:///` URLs is considered insecure
+and [Android has deprecated support](https://developer.android.com/reference/android/webkit/WebSettings#setAllowUniversalAccessFromFileURLs(boolean)).
+Cordova Android 10.0.0 now uses an Android API called `WebViewAssetLoader` to load web content via the HTTP(S) scheme (`https://localhost`) by default.
+Therefore the app now starts with the URL `https://localhost/` instead of `file:///android_asset/www/index.html`. Because this is a new origin you might encouter data loss and you need to migrate your web data (Localstorage, IndexedDB etc).
+
+You can use the `config.xml` preference `<preference name="AndroidInsecureFileModeEnabled" value="true" />` to opt-out of the new WebViewAssetLoader and switch back to file URLs.
 
 ## Upgrading to 7.X.X
 
