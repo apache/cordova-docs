@@ -69,7 +69,7 @@ cordova platform add android@10.0.0
 
 * **Java 11 Support**
 
-    With the current release of Android Studio 4.2, the Android tooling can now support running on JAVA 11. Please note that this does not mean you can start compiling JAVA 11 source code.
+    With the current release of Android Studio 4.2, the Android tooling can now support running on Java 11. Please note that this does not mean you can start compiling Java 11 source code.
 
 Please report any issues you find at [issues.cordova.io](http://issues.cordova.io/)!
 
