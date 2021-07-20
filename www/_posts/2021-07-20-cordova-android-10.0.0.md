@@ -9,7 +9,7 @@ tags: news releases
 
 We are happy to announce that we have just released `Cordova Android 10.0.0`!  This is one of Cordova's supported platforms for building Android mobile applications.
 
-* [cordova-android@9.1.0](https://www.npmjs.com/package/cordova-android)
+* [cordova-android@10.0.0](https://www.npmjs.com/package/cordova-android)
 
 **To upgrade:**
 
