@@ -24,9 +24,7 @@ In this patch release, we had fixed three reported issues that caused build issu
 
 * **Fixed `GradlePluginGoogleServicesEnabled` Invalid Version Error**
 
-    Projects that set the `GradlePluginGoogleServicesEnabled` config flag to `true` saw an invalid version error. The error was caused by the build process reading a bad variable reference. 
-
-    We corrected the variable reference and fixed this issue.
+    Projects that set the `GradlePluginGoogleServicesEnabled` config flag to `true` saw an invalid version error. The error was caused by the build process reading a bad variable reference.
 
 * **Fixed Incorrect Fetching of Latest Build Tools**
 
@@ -34,11 +32,11 @@ In this patch release, we had fixed three reported issues that caused build issu
 
     By default, Cordova-Android 10.x tries to fetch the latest installed build tools, but it should be only selecting within the supported major release range.
 
-    For example, Cordova-Android 10.x supports SDK build tools 30.0.3. If a newer version of build tools within 30.x was released and installed, Cordova should fetch and use it. If the environment has 31.x or higher, those should be ignored. 
+    For example, Cordova-Android 10.x supports SDK build tools 30.0.3. If a newer version of build tools within 30.x was released and installed, Cordova should fetch and use it. If the environment has 31.x or higher, those should be ignored.
 
     Newer major release versions are not tested and may not be compatible with Cordova.
 
-    We corrected this by ensuring that only within the supported major range was being discovered and used.
+    Only within the supported major range are now being discovered and used.
 
 * **Fixed Building with Pinned Build Tools**
 
@@ -48,7 +46,7 @@ In this patch release, we had fixed three reported issues that caused build issu
 
     Because of the above issue **Fixed Incorrect Fetching of Latest Build Tools**, the provided pinned version was being ignored.
 
-    We have corrected this issue where pinned versions take higher priority over the fetched the latest version functionality.
+    Pinned versions now take higher priority over the fetched the latest version functionality.
 
 Please report any issues you find at [issues.cordova.io](http://issues.cordova.io/)!
 
