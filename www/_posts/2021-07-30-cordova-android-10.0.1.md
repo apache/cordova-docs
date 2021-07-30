@@ -7,7 +7,7 @@ categories: announcements
 tags: news releases
 ---
 
-We are happy to announce that we have just released `Cordova Android 10.0.1`!  This is one of Cordova's supported platforms for building Android mobile applications.
+We are happy to announce that we have just released a bugfix update for `Cordova Android (10.0.1)`!  This is one of Cordova's supported platforms for building Android mobile applications.
 
 * [cordova-android@10.0.1](https://www.npmjs.com/package/cordova-android)
 
