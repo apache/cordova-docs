@@ -28,7 +28,7 @@ In this patch release, we had fixed three reported issues that caused build issu
 
     We corrected the variable reference and fixed this issue.
 
-* **Fixed Incorrect Fetching of Latest Build Tools:**
+* **Fixed Incorrect Fetching of Latest Build Tools**
 
     Users who have installed build tools 31.x noticed Cordova attempting to use the newer build tools by default.
 
@@ -40,7 +40,7 @@ In this patch release, we had fixed three reported issues that caused build issu
 
     We corrected this by ensuring that only within the supported major range was being discovered and used.
 
-* **Fixed Issue with Pinning Build Tools:**
+* **Fixed Issue with Pinning Build Tools**
 
     This issue was also noticed by users who have installed the latest Android build tools SDK 31.
 
