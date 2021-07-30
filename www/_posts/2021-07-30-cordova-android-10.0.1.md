@@ -24,31 +24,31 @@ In this patch release, we had fixed three reported issues that caused build issu
 
 * **Fixed `GradlePluginGoogleServicesEnabled` Invalid Version Error**
 
-Projects that set the `GradlePluginGoogleServicesEnabled` config flag to `true` saw an invalid version error. The error was caused by the build process reading a bad variable reference. 
+    Projects that set the `GradlePluginGoogleServicesEnabled` config flag to `true` saw an invalid version error. The error was caused by the build process reading a bad variable reference. 
 
-We corrected the variable reference and fixed this issue.
+    We corrected the variable reference and fixed this issue.
 
 * **Fixed Incorrect Fetching of Latest Build Tools:**
 
-Users who have installed build tools 31.x noticed Cordova attempting to use the newer build tools by default.
+    Users who have installed build tools 31.x noticed Cordova attempting to use the newer build tools by default.
 
-By default, Cordova-Android 10.x tries to fetch the latest installed build tools, but it should be only selecting within the supported major release range.
+    By default, Cordova-Android 10.x tries to fetch the latest installed build tools, but it should be only selecting within the supported major release range.
 
-For example, Cordova-Android 10.x supports SDK build tools 30.0.3. If a newer version of build tools within 30.x was released and installed, Cordova should fetch and use it. If the environment has 31.x or higher, those should be ignored. 
+    For example, Cordova-Android 10.x supports SDK build tools 30.0.3. If a newer version of build tools within 30.x was released and installed, Cordova should fetch and use it. If the environment has 31.x or higher, those should be ignored. 
 
-Newer major release versions are not tested and may not be compatible with Cordova.
+    Newer major release versions are not tested and may not be compatible with Cordova.
 
-We corrected this by ensuring that only within the supported major range was being discovered and used.
+    We corrected this by ensuring that only within the supported major range was being discovered and used.
 
 * **Fixed Issue with Pinning Build Tools:**
 
-This issue was also noticed by users who have installed the latest Android build tools SDK 31.
+    This issue was also noticed by users who have installed the latest Android build tools SDK 31.
 
-Since SDK 31 contains breaking that makes it incompatible with Cordova, users tried to pin the build tools version to 30.0.3.
+    Since SDK 31 contains breaking that makes it incompatible with Cordova, users tried to pin the build tools version to 30.0.3.
 
-Because of the above issue **Fixed Incorrect Fetching of Latest Build Tools**, the provided pinned version was being ignored.
+    Because of the above issue **Fixed Incorrect Fetching of Latest Build Tools**, the provided pinned version was being ignored.
 
-We have corrected this issue where pinned versions take higher priority over the fetched the latest version functionality.
+    We have corrected this issue where pinned versions take higher priority over the fetched the latest version functionality.
 
 Please report any issues you find at [issues.cordova.io](http://issues.cordova.io/)!
 
