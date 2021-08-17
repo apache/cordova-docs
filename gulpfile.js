@@ -332,6 +332,11 @@ let styles = module.exports.styles = gulp.series(less, css, sass);
 let data = module.exports.data = gulp.series(toc, docsVersion, pagesDict);
 let configs = module.exports.configs = gulp.series(defaults, version);
 
+let asf = module.exports.asf = function asf () {
+    return gulp.src(path.join(ROOT_DIR, '.asf.yaml'))
+        .pipe(gulp.dest(path.join(PROD_DIR)));
+};
+
 let plugins = module.exports.plugins = function plugins () {
     if (gutil.env.prod) {
         process.env.NODE_ENV = 'production';
@@ -374,7 +379,7 @@ let plugins = module.exports.plugins = function plugins () {
 
 let build = module.exports.build = gulp.series(configs, data, styles, plugins, function build (done) {
     jekyllBuild(done);
-});
+}, asf);
 
 let serve = module.exports.serve = gulp.series(build, function serve () {
     var route = {};
