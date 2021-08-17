@@ -36,6 +36,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@5dc1d5a192aeb5ab5b7d5a77b7d36aea4a7f5c92
         with:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: asf-site
           FOLDER: build-prod
