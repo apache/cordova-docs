@@ -45,3 +45,6 @@ notifications:
   issues:               issues@cordova.apache.org
   pullrequests_status:  issues@cordova.apache.org
   pullrequests_comment: issues@cordova.apache.org
+
+publish:
+  whoami:  asf-site
