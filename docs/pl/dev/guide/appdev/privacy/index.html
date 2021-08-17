@@ -1,0 +1,2175 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Prywatności Przewodnik - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/pl/dev/guide/appdev/privacy/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search 'dev' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/platforms/blackberry10/home.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/platforms/osx/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/appdev/whitelist/index.html">
+                Whitelisting
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/platforms/blackberry10/plugin.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-cli/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-battery-status/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-camera/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-console/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-contacts/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-device/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-device-motion/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-device-orientation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-dialogs/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-file/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-file-transfer/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-geolocation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-globalization/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-inappbrowser/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-media/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-media-capture/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-network-information/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-splashscreen/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-vibration/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-statusbar/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/dev/reference/cordova-plugin-legacy-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Spis treści
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/platforms/blackberry10/home.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/platforms/osx/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/appdev/whitelist/index.html">
+        Whitelisting
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/platforms/blackberry10/plugin.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-cli/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-battery-status/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-camera/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-console/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-contacts/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-device/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-device-motion/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-device-orientation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-dialogs/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-file/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-file-transfer/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-geolocation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-globalization/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-inappbrowser/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-media/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-media-capture/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-network-information/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-splashscreen/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-vibration/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-statusbar/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/dev/reference/cordova-plugin-legacy-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+                        
+                        
+                        
+
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/dev/guide/appdev/privacy/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                        <a class="edit" href="https://crowdin.com/project/cordova/pl#/cordova-docs/docs/en/dev/guide/appdev/privacy/"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+
+                    
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Polski
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/dev/guide/appdev/privacy/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/dev/guide/appdev/privacy/" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/dev/guide/appdev/privacy/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/dev/guide/appdev/privacy/" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/dev/guide/appdev/privacy/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/dev/guide/appdev/privacy/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/dev/guide/appdev/privacy/" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/dev/guide/appdev/privacy/" class="">
+                                
+                                    <span class="selected">
+                                        Polski
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/dev/guide/appdev/privacy/" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/dev/guide/appdev/privacy/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/dev/guide/appdev/privacy/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/dev/guide/appdev/privacy/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        dev
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/pl/dev/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                dev
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/pl/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/pl/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/pl/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/pl/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/pl/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/pl/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+                <div class="alert docs-alert alert-info" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is under development!
+                    <a href="/docs/pl/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- outdated warning -->
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Prywatności Przewodnik</h1>
+
+<p>Mobilne prywatności jest że każdy deweloper aplikacji musi zająć się problemem. Użytkownicy oczekują, że ich prywatne informacje będą gromadzone i zagospodarowywane przez aplikację. Również istnieje coraz większa liczba jurysdykcji, które teraz mają wymagania prawne dotyczące prywatności mobilnych.</p>
+
+<p>Ten przewodnik na mobilnych aplikacji prywatności należy uznać za <em>podkład</em> kilka najbardziej istotnych kwestii. Przedstawia niektóre powszechnie akceptowanym najlepszych praktyk i zawiera odniesienia do innych bardziej szczegółowych przewodników i referencje.</p>
+
+<ul>
+<li><p><strong>Polityka prywatności</strong>: ci aplikacja powinna zawierać Polityka prywatności, który usuwa tematy jakie informacje aplikacja zbiera od lub o użytkowników, jak te informacje jest używany, z którymi jest wspólne i jak użytkownicy mogą dokonywać wyborów prywatnością w aplikacji. Aby ułatwić zrozumienie, należy użyć prostym językiem, a uniknąć technicznego żargonu. Należy udostępnić politykę prywatności dla użytkowników do przeglądu przed pobrania, takie jak w opisie aplikacji w marketplace aplikacji. Ponadto należy politykę prywatności dostępne w samej aplikacji. Ograniczony rozmiar urządzenia wyświetla tworzy wyzwania dla wyświetlania polityki prywatności użytkowników. Należy wziąć pod uwagę rozwój <em>w skrócie</em> zasadę, która zawiera najważniejsze informacje, a następnie podać link do polityki &quot;długi formularz&quot; dla osób zainteresowanych w więcej szczegółów. Kilka grup są próby opracowania ikona oparty standardów ochrony prywatności, które warto rozważyć po starsze standardy komunikacji.</p></li>
+<li><p><strong>Zbiór informacji wrażliwych</strong>: kolekcja aplikacji wrażliwych danych osobowych podnosi ważne prywatności. Przykłady poufnych informacji osobistych informacji finansowych, zdrowia oraz informacji od lub o dzieci. Zawiera również informacje zebrane z niektórych baz danych, zwykle znajduje się na urządzeń przenośnych i tabletów, geolokalizacja informacje, Kontakty/Książka telefoniczna, mikrofon/kamery i zdjęć przechowywanych i czujników. Zobacz następujące dokumentacja strony aby uzyskać więcej informacji: <a href="cordova_camera_camera.md.html">aparat</a>, <a href="cordova_media_capture_capture.md.html">uchwycić</a>, <a href="cordova_contacts_contacts.md.html">kontakty</a>i <a href="cordova_geolocation_geolocation.md.html">geolokalizacji</a>. Ogólnie rzecz biorąc należy uzyskać zgody użytkownika przed gromadzenia poufnych informacji i, jeśli to możliwe, podać mechanizm kontroli, który pozwala użytkownik wobec łatwo zmienić uprawnienia. Systemy operacyjne aplikacji może pomóc w niektórych przypadkach poprzez przedstawienie just-in czas oknach dialogowych, które zapytać o zgodę użytkownika przed kolekcja. W takich przypadkach należy skorzystać z wszelkich możliwości, aby dostosować okno dialogowe pole tekst do wyjaśnienia, jak aplikacja używa i, w stosownych przypadkach, informacje takie akcje.</p></li>
+<li><p><strong>Unikanie użytkownika niespodzianka</strong>: Jeśli aplikacja zbiera i wykorzystuje informacje w sposób, który może być zaskakujące dla użytkowników w świetle podstawowym celem aplikacji (na przykład, odtwarzacz muzyczny uzyskuje dostęp do przechowywanych obrazów), należy podjąć podobne kroki, podobnie jak w przypadku zbierania poufnych informacji osobistych. Oznacza to, że zdecydowanie zaleca się stosowanie tylko w czas okna dialogowe informuje użytkownika o kolekcji lub korzystania z informacji i, w stosownych przypadkach, zapewnienia odpowiedniej kontroli prywatności.</p></li>
+<li><p><strong>Kolekcja danych stron trzecich lub udostępnianie</strong>: Jeśli ci aplikacja zbiera informacje, które jest dostarczone do innej firmy - platforma sieci społecznej lub sieci reklamowej (na przykład, jeśli Twoja aplikacja wyświetla reklamy) - należy poinformować użytkowników o tej kolekcji i dzielenie. Co najmniej, politykę prywatności należy opisać na gromadzenie informacji i udostępniania i, w stosownych przypadkach, oferują użytkownikom możliwość kontroli lub zrezygnować z takiej kolekcji lub udostępnianie.</p></li>
+<li><p><strong>Kolekcja ograniczenia i bezpieczeństwa</strong>: użytkownicy powierzają swoją aplikację z ich informacje i oczekują, że będzie podjąć odpowiednie środki ostrożności w celu ochrony. Jednym z najlepszych sposobów, aby uniknąć kompromisów bezpieczeństwa danych osobowych nie jest na pierwszym miejscu gromadzenia informacji, chyba że aplikacja ma szczególnych i uzasadnionych powodów kolekcja. Dla informacji, które muszą być zebrane upewnij się, aby zapewnić kontrole bezpieczeństwa do ochrony informacji, czy jest on przechowywany w urządzeniu lub na serwerach zaplecza. Należy również opracować zasady przechowywania danych, który jest realizowany w ramach aplikacji i na serwerach zaplecza.</p></li>
+</ul>
+
+<p>Oto niektóre dodatkowe pomocne prywatności mobilnych przewodników dla programistów:</p>
+
+<ul>
+<li><p>California prokurator generalny, <a href="http://oag.ca.gov/sites/all/files/pdfs/privacy/privacy_on_the_go.pdf">prywatności w podróży: zalecenia dla ekosystemu mobilnych</a></p></li>
+<li><p>Centrum dla demokracji i technologii, przyszłości prywatności Forum, <a href="http://www.futureofprivacy.org/wp-content/uploads/Best-Practices-for-Mobile-App-Developers_Final.pdf">najlepszych praktyk dla programistów aplikacji mobilnych</a></p></li>
+<li><p>CTIA Stowarzyszenie bezprzewodowej, <a href="http://www.ctia.org/business_resources/wic/index.cfm/AID/11300">najlepszych praktyk i wytyczne dla lokalizacji usług opartych</a></p></li>
+<li><p>Federalną Komisję handlu, <a href="http://www.ftc.gov/os/2013/02/130201mobileprivacyreport.pdf">mobilnych prywatności informacji: budowanie zaufania dzięki przejrzystości</a></p></li>
+<li><p>Przyszłości prywatności Forum, <a href="http://www.applicationprivacy.org">aplikacji prywatności</a> strony internetowej</p></li>
+</ul>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  dev", "language: pl"] }
+    });
+</script>
+
+</body>
+</html>

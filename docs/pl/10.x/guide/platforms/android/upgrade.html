@@ -1,0 +1,2532 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Aktualizacja - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/pl/latest/guide/platforms/android/upgrade.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '10.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/platforms/blackberry10/home.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/platforms/osx/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/appdev/whitelist/index.html">
+                Whitelisting
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/platforms/blackberry10/plugin.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-cli/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-battery-status/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-camera/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-console/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-contacts/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-device/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-device-motion/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-device-orientation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-dialogs/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-file/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-file-transfer/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-geolocation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-globalization/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-inappbrowser/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-media/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-media-capture/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-network-information/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-splashscreen/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-vibration/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-statusbar/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/pl/10.x/reference/cordova-plugin-legacy-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Spis treści
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/platforms/blackberry10/home.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/platforms/osx/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/appdev/whitelist/index.html">
+        Whitelisting
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/platforms/blackberry10/plugin.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-cli/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-battery-status/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-camera/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-console/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-contacts/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-device/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-device-motion/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-device-orientation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-dialogs/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-file/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-file-transfer/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-geolocation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-globalization/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-inappbrowser/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-media/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-media-capture/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-network-information/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-splashscreen/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-vibration/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-statusbar/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/pl/10.x/reference/cordova-plugin-legacy-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+                        
+                        
+                        
+
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/dev/guide/platforms/android/upgrade.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                        <a class="edit" href="https://crowdin.com/project/cordova/pl#/cordova-docs/docs/en/dev/guide/platforms/android/"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+
+                    
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Polski
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/10.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/10.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/10.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/10.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/10.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/10.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/10.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/10.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    <span class="selected">
+                                        Polski
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/10.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/10.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/10.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/10.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        10.x
+                        
+                            (Latest)
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/pl/dev/guide/platforms/android/upgrade.html" class="">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/pl/latest/guide/platforms/android/upgrade.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/pl/9.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/pl/8.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/pl/7.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/pl/6.x/guide/platforms/android/upgrade.html" class="">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/pl/5.4.0/guide/platforms/android/upgrade.html" class="">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Aktualizacja</h1>
+
+<p>Ten poradnik pokazuje jak zmodyfikować Android projektów do uaktualnienia ze starszych wersji Cordova. Większość tych instrukcji ma zastosowanie do projektów utworzonych w starszych zestaw narzędzi wiersza polecenia, które poprzedzają <code>cordova</code> Narzędzia CLI. Zobacz interfejs wiersza poleceń do informacji jak zaktualizować do wersji CLI.</p>
+
+<h2>Uaktualnienie do 4.0.0</h2>
+
+<p>Istnieją konkretne kroki uaktualnienia wymagane do skorzystania z istotnych zmian w 4.0.0. Po pierwsze wspólne kroki uaktualnienia są potrzebne jak poniżej.</p>
+
+<p>Projekty-CLI, uruchom:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    bin/update path/to/project
+</code></pre></div>
+<p>Dla projektów CLI:</p>
+
+<ol>
+<li><p>Aktualizacja <code>cordova</code> wersji CLI. Zobacz interfejs wiersza poleceń.</p></li>
+<li><p>Uruchom <code>cordova platform update android</code> w istniejących projektach.</p></li>
+</ol>
+
+<h3>Uaktualnianie biała</h3>
+
+<p>Wszystkie funkcje Biała jest teraz realizowane za pośrednictwem wtyczki. Bez wtyczki Twoja aplikacja jest już chronione przez Biała po uaktualnieniu do 4.0.0. Cordova ma dwie wtyczki białej listy, które zapewniają różne poziomy ochrony.</p>
+
+<ol>
+<li> Plugin <code>cordova-plugin-whitelist</code> <em>(zalecane)</em></li>
+</ol>
+<div class="highlight"><pre><code class="language-" data-lang="">*   Ten plugin jest wysoce zalecane, ponieważ jest bardziej bezpieczne i konfigurowalne niż biała w poprzednich wersjach
+*   Zobacz [cordova-plugin-whitelist][1] szczegóły na zmiany konfiguracja wymagane
+*   Run: `cordova plugin add cordova-plugin-crosswalk-webview`
+</code></pre></div>
+<ol>
+<li> Plugin <code>cordova-plugin-legacy-whitelist</code></li>
+</ol>
+<div class="highlight"><pre><code class="language-" data-lang="">*   Plugin daje takie samo zachowanie białej jak poprzednie wersje. Zobacz [cordova-plugin-legacy-whitelist][2]
+*   Wymagane są żadne zmiany konfiguracji, ale zapewnia mniejszą ochronę niż zalecane plugin
+*   Run: `cordova plugin add cordova-plugin-legacy-whitelist`
+</code></pre></div>
+<h3>Za pomocą widoku sieci Web przejście dla pieszych</h3>
+
+<p>Domyślnie aplikacja będzie nadal korzystać WebView oferowanego przez urządzenie. Czy chcesz zamiast tego użyj widoku sieci Web przejście dla pieszych, po prostu dodać plugin przejście dla pieszych:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add cordova-plugin-crosswalk-webview
+</code></pre></div>
+<p>Po dodaniu wtyczki, aplikacji dostanie WebView pieszych są zainstalowane i skonfigurowane poprawnie.</p>
+
+<h3>Aktualizacja wtyczki ekranu powitalnego</h3>
+
+<p>Jeśli Twoja aplikacja sprawia, że korzystanie z ekranu powitalnego, że funkcjonalność została przeniesiona do pluginu. Opcje konfiguracja dla ekrany powitalne w aplikacjach są niezmienione. Krok tylko uaktualnienia, wymagane jest aby dodać plugin:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add cordova-plugin-splashscreen
+</code></pre></div>
+<h2>Uaktualnienie do 3.7.1 od 3.6.0</h2>
+
+<p>Projekty-CLI, uruchom:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    bin/update path/to/project
+</code></pre></div>
+<p>Dla projektów CLI:</p>
+
+<ol>
+<li><p>Aktualizacja <code>cordova</code> wersji CLI. Zobacz interfejs wiersza poleceń.</p></li>
+<li><p>Uruchomić <code>cordova platform update android</code> w istniejących projektach.</p></li>
+</ol>
+
+<h2>Uaktualnienie do 3.3.0 od 3.2.0</h2>
+
+<p>Wykonaj te same instrukcje co <code>3.2.0</code>.</p>
+
+<p>Począwszy od 3.3.0, Cordova runtime jest teraz skompilowany jako bibliotekę Android w miejsce przepisów Jar. Będzie to miało żadnego wpływu na sposób użycia wiersza polecenia, ale IDE użytkownicy będą musieli importować nowo dodane projektu <code>MyProject-CordovaLib</code> do ich obszaru roboczego.</p>
+
+<h2>Ulepszanie wobec 3.2.0 od 3.1.0</h2>
+
+<p>Dla projektów, które zostały utworzone z cordova CLI:</p>
+
+<ol>
+<li><p>Aktualizacja <code>cordova</code> wersji CLI. Zobacz interfejs wiersza poleceń.</p></li>
+<li><p>Run <code>cordova platform update android</code></p></li>
+</ol>
+
+<p>Dla projektów nie stworzony z cordova CLI Uruchom:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    bin/update &lt;project_path&gt;
+</code></pre></div>
+<p><strong>Ostrzeżenie:</strong> Na Android 4.4 - Android 4.4.3, tworząc plik wprowadzania elementu typu=&quot;file&quot; nie zostanie otwarte okno wyboru pliku. To jest regresja z chromu na Android i problem może być odtworzone w standalone Chrom przeglądarka na Androidzie (patrz http://code.google.com/p/android/issues/detail?id=62220) sugeruje workaround jest wobec używać FileTransfer i plik wtyczki dla Android 4.4. Można posłuchać na zdarzenie onClick, z typem danych type = &quot;file&quot; a następnie pojawiają się wyboru plików interfejsu użytkownika. Aby powiązać z przesyłanie danych formularza, można użyć JavaScript aby dołączyć wartości formularza do wieloczęściowego żądanie POST, który sprawia, że FileTransfer.</p>
+
+<h2>Uaktualnienie do 3.1.0 od 3.0.0</h2>
+
+<p>Dla projektów, które zostały utworzone z cordova CLI:</p>
+
+<ol>
+<li><p>Aktualizacja <code>cordova</code> wersji CLI. Zobacz interfejs wiersza poleceń.</p></li>
+<li><p>Run <code>cordova platform update android</code></p></li>
+</ol>
+
+<p>Dla projektów nie stworzony z cordova CLI Uruchom:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    bin/update &lt;project_path&gt;
+</code></pre></div>
+<h2>Uaktualnienia do consoli (3.0.0) z 2.9.0</h2>
+
+<ol>
+<li><p>Tworzenie nowego projektu Apache Cordova 3.0.0 za pomocą CLI, cordova, zgodnie z opisem w interfejs wiersza poleceń.</p></li>
+<li><p>Dodać platform cordova projektu, na przykład: <code>dodać cordova platformy android</code>.</p></li>
+<li><p>Skopiuj zawartość katalogu <code>www</code> projektu do katalogu <code>www</code> w katalogu głównym projektu cordova, który właśnie utworzyłeś.</p></li>
+<li><p>Skopiuj rodzimych aktywów od starego projektu do odpowiednich katalogów na <code>platformach lub android</code>: jest to katalog, gdzie istnieje projektu cordova-android rodzimych.</p></li>
+<li><p>Użyj narzędzia CLI cordova instalowac pluginy, czego potrzebujesz. Należy zauważyć, że CLI obsługuje wszystkie podstawowe API jako wtyczek, dzięki czemu mogą one potrzebować do dodania. Tylko 3.0.0 wtyczki są kompatybilne z CLI.</p></li>
+</ol>
+
+<h2>Uaktualnienie do 3.0.0 z 2.9.0</h2>
+
+<ol>
+<li><p>Tworzenie nowego projektu Apache Cordova Android.</p></li>
+<li><p>Skopiuj zawartość katalogu <code>www</code> do nowego projektu.</p></li>
+<li><p>Skopiuj rodzimych aktywów Android z katalogu <code>res</code> do nowego projektu.</p></li>
+<li><p>Kopiujemy jakieś pluginy, instalowanego z podkatalogów <code>src</code> do nowego projektu.</p></li>
+<li><p>Upewnij się, że wszelki uaktualnić przestarzałe odniesienia <code>&lt; plugin &gt;</code> z pliku <code>config.xml</code> starych nowych specyfikacji <code>&lt;feature&gt;</code> .</p></li>
+<li><p>Zaktualizować wszelkie odniesienia do pakietu <code>org.apache.cordova.api</code> do <code>org.apache.cordova</code>.</p>
+
+<p><strong>Uwaga</strong>: wszystkie podstawowe API zostały usunięte i musi być zainstalowany jako wtyczki. Aby uzyskać szczegółowe informacje, zapoznaj się z za pomocą Plugman do zarządzania Plugins przewodnik.</p></li>
+</ol>
+
+<h2>Upgrade do 2.9.0 od 2.8.0</h2>
+
+<ol>
+<li> Run <code>bin/update &lt;project_path&gt;</code>.</li>
+</ol>
+
+<h2>Uaktualnienie do 2.8.0 od 2.7.0</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-2.7.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-2.8.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+</ol>
+
+<!-- SS Eclipse -->
+
+<ol>
+<li><p>Skopiuj nowe <code>cordova.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML używać nowy plik <code>cordova.js</code> .</p></li>
+<li><p>Skopiuj plik <code>res/xml/config.xml</code> do <code>framework/res/xml/config.xml</code>.</p></li>
+<li><p>Aktualizacja <code>framework/res/xml/config.xml</code> mają podobne ustawienia, jak to miało miejsce wcześniej.</p></li>
+<li><p>Skopiuj pliki z <code>bin/templates/cordova</code> do projektu <code>cordova</code> katalogu.</p></li>
+</ol>
+
+<h2>Uaktualnić do 2.7.0 2.6.0</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-2.6.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-2.7.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-2.7.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML za pomocą nowego pliku <code>cordova-2.7.0.js</code> .</p></li>
+<li><p>Kopiowanie <code>res/xml/config.xml</code> do meczu<code>framework/res/xml/config.xml</code>.</p></li>
+<li><p>Aktualizacja <code>framework/res/xml/config.xml</code> mają podobne ustawienia, jak to miało miejsce wcześniej.</p></li>
+<li><p>Skopiuj pliki z <code>bin/templates/cordova</code> do projektu <code>cordova</code> katalogu.</p></li>
+</ol>
+
+<h2>Uaktualnienie do 2.6.0 z 2.5.0</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-2.5.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-2.6.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-2.6.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML do używania nowych <code>cordova-2.6.0.js</code> pliku.</p></li>
+<li><p>Kopiowanie <code>res/xml/config.xml</code> do meczu<code>framework/res/xml/config.xml</code>.</p></li>
+<li><p>Aktualizacja <code>framework/res/xml/config.xml</code> mają podobne ustawienia, jak to miało miejsce wcześniej.</p></li>
+<li><p>Skopiuj pliki z <code>bin/templates/cordova</code> do projektu <code>cordova</code> katalogu.</p></li>
+</ol>
+
+<p>Uruchom <code>bin/update &lt;project&gt;</code> ścieżka projektu wymienione w katalogu źródłowym Cordova.</p>
+
+<h2>Uaktualnienie do 2.5.0 od 2.4.0</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-2.4.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-2.5.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-2.5.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML do używania nowych <code>cordova-2.5.0.js</code> pliku.</p></li>
+<li><p>Kopiowanie <code>res/xml/config.xml</code> do meczu<code>framework/res/xml/config.xml</code>.</p></li>
+<li><p>Aktualizacja <code>framework/res/xml/config.xml</code> mają podobne ustawienia, jak to miało miejsce wcześniej.</p></li>
+<li><p>Skopiuj pliki z <code>bin/templates/cordova</code> do projektu <code>cordova</code> katalogu.</p></li>
+</ol>
+
+<h2>Uaktualnienie do 2.4.0 od 2.3.0</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-2.3.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-2.4.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-2.4.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML do używania nowych <code>cordova-2.4.0.js</code> pliku.</p></li>
+<li><p>Kopiowanie <code>res/xml/config.xml</code> do meczu<code>framework/res/xml/config.xml</code>.</p></li>
+<li><p>Skopiuj pliki z <code>bin/templates/cordova</code> do projektu <code>cordova</code> katalogu.</p></li>
+</ol>
+
+<h2>Uaktualnienie do 2.3.0 od 2.2.0</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-2.2.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-2.3.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-2.3.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML do używania nowych <code>cordova-2.3.0.js</code> pliku.</p></li>
+<li><p>Kopiowanie <code>res/xml/config.xml</code> do meczu<code>framework/res/xml/config.xml</code>.</p></li>
+<li><p>Skopiuj pliki z <code>bin/templates/cordova</code> do projektu <code>cordova</code> katalogu.</p></li>
+</ol>
+
+<h2>Uaktualnienie do 2.2.0 z 2.1.0</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-2.1.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-2.2.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-2.2.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML do używania nowych <code>cordova-2.2.0.js</code> pliku.</p></li>
+<li><p>Kopiowanie <code>res/xml/config.xml</code> do meczu<code>framework/res/xml/config.xml</code>.</p></li>
+<li><p>Skopiuj pliki z <code>bin/templates/cordova</code> do projektu <code>cordova</code> katalogu.</p></li>
+</ol>
+
+<h2>Uaktualnienie do 2.1.0 z 2.0.0</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-2.0.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-2.1.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-2.1.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML do używania nowych <code>cordova-2.1.0.js</code> pliku.</p></li>
+<li><p>Kopiowanie <code>res/xml/config.xml</code> do meczu<code>framework/res/xml/config.xml</code>.</p></li>
+<li><p>Skopiuj pliki z <code>bin/templates/cordova</code> do projektu <code>cordova</code> katalogu.</p></li>
+</ol>
+
+<h2>Uaktualnienie do 2.0.0 od 1.9.0</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-1.9.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-2.0.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-2.0.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML do używania nowych <code>cordova-2.0.0.js</code> pliku.</p></li>
+<li><p>Kopiowanie <code>res/xml/config.xml</code> do meczu<code>framework/res/xml/config.xml</code>.</p></li>
+</ol>
+
+<p>W 2.0.0 wersji pliku <code>config.xml</code> łączy i zastępuje <code>cordova.xml</code> i <code>plugins.xml</code>. Stare pliki są przestarzałe i chociaż nadal pracują w 2.0.0, przestanie działać w przyszłym wydaniu.</p>
+
+<h2>Uaktualnić do 1.9.0 1.8.1</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-1.8.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-1.9.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-1.9.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML za pomocą nowego pliku <code>cordova-1.9.0.js</code> .</p></li>
+<li><p>Aktualizacja <code>res/xml/plugins.xml</code> do meczu<code>framework/res/xml/plugins.xml</code>.</p></li>
+</ol>
+
+<p>Ze względu na wprowadzenie <code>CordovaWebView</code> w 1.9.0 wydania, wtyczki innych firm mogą nie działać. Te pluginy musiał uzyskać kontekstu z <code>CordovaInterface</code> za pomocą <code>getContext()</code> lub <code>getActivity()</code>. Jeśli nie jesteś doświadczony programista Android, prosimy o kontakt z opiekunem plugin i dodać ten zadanie do ich zgłaszania błędów.</p>
+
+<h2>Uaktualnienie do 1.8.0 z 1.8.0</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-1.8.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-1.8.1.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-1.8.1.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML za pomocą nowego pliku <code>cordova-1.8.1.js</code> .</p></li>
+<li><p>Aktualizacja <code>res/xml/plugins.xml</code> do meczu<code>framework/res/xml/plugins.xml</code>.</p></li>
+</ol>
+
+<h2>Uaktualnienie do 1.8.0 z 1.7.0</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-1.7.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-1.8.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-1.8.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML do używania nowych <code>cordova-1.8.0.js</code> pliku.</p></li>
+<li><p>Aktualizacja <code>res/xml/plugins.xml</code> do meczu<code>framework/res/xml/plugins.xml</code>.</p></li>
+</ol>
+
+<h2>Uaktualnienie do 1.8.0 z 1.7.0</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-1.7.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-1.8.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-1.8.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML do używania nowych <code>cordova-1.8.0.js</code> pliku.</p></li>
+<li><p>Aktualizacja <code>res/xml/plugins.xml</code> do meczu<code>framework/res/xml/plugins.xml</code>.</p></li>
+</ol>
+
+<h2>Uaktualnić do 1.7.0 1.6.1</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-1.6.1.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-1.7.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-1.7.0.js</code> do projektu.</p></li>
+<li><p>Aktualizacja <code>res/xml/plugins.xml</code> do meczu<code>framework/res/xml/plugins.xml</code>.</p></li>
+</ol>
+
+<h2>Uaktualnić do 1.6.1 1.6.0</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-1.6.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-1.6.1.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-1.6.1.js</code> do projektu.</p></li>
+<li><p>Aktualizacja <code>res/xml/plugins.xml</code> do meczu<code>framework/res/xml/plugins.xml</code>.</p></li>
+</ol>
+
+<h2>Uaktualnić do 1.6.0 1.5.0</h2>
+
+<ol>
+<li><p>Usunąć <code>cordova-1.5.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-1.6.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-1.6.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML za pomocą nowego pliku <code>cordova-1.6.0.js</code> .</p></li>
+<li><p>Aktualizacja <code>res/xml/plugins.xml</code> do meczu<code>framework/res/xml/plugins.xml</code>.</p></li>
+<li><p>Zastąpić <code>res/xml/phonegap.xml</code> z <code>res/xml/cordova.xml</code> do <code>framework/res/xml/cordova.xml</code>.</p></li>
+</ol>
+
+<h2>Uaktualnienie do 1.5.0 od 1.4.0</h2>
+
+<ol>
+<li><p>Usunąć <code>telefon 1.4.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>cordova-1.5.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowe <code>cordova-1.5.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML za pomocą nowego pliku <code>cordova-1.5.0.js</code> .</p></li>
+<li><p>Aktualizacja <code>res/xml/plugins.xml</code> do meczu<code>framework/res/xml/plugins.xml</code>.</p></li>
+<li><p>Zastąpić <code>res/xml/phonegap.xml</code> z <code>res/xml/cordova.xml</code> do <code>framework/res/xml/cordova.xml</code>.</p></li>
+</ol>
+
+<h2>Uaktualnić do 1.4.0 1.3.0</h2>
+
+<ol>
+<li><p>Usunąć <code>telefon 1.3.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>phonegap-1.4.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowy <code>phonegap-1.4.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML, aby użyć pliku nowy <code>phonegap-1.4.0.js</code> .</p></li>
+<li><p>Aktualizacja <code>res/xml/plugins.xml</code> do meczu<code>framework/res/xml/plugins.xml</code>.</p></li>
+<li><p>Aktualizacja <code>res/xml/phonegap.xml</code> do meczu<code>framework/res/xml/phonegap.xml</code>.</p></li>
+</ol>
+
+<h2>Uaktualnienie do wersji 1.3.0 z 1.2.0</h2>
+
+<ol>
+<li><p>Usunąć <code>phonegap-1.2.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>phonegap-1.3.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowy <code>phonegap-1.3.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML, aby użyć pliku nowy <code>phonegap-1.2.0.js</code> .</p></li>
+<li><p>Aktualizacja <code>res/xml/plugins.xml</code> do meczu<code>framework/res/xml/plugins.xml</code>.</p></li>
+<li><p>Aktualizacja <code>res/xml/phonegap.xml</code> do meczu<code>framework/res/xml/phonegap.xml</code>.</p></li>
+</ol>
+
+<h2>Uaktualnienie do 1.2.0 z 1.1.0</h2>
+
+<ol>
+<li><p>Usunąć <code>phonegap-1.1.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>phonegap-1.2.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowy <code>phonegap-1.2.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML, aby użyć pliku nowy <code>phonegap-1.2.0.js</code> .</p></li>
+<li><p>Aktualizacja <code>res/xml/plugins.xml</code> do meczu<code>framework/res/xml/plugins.xml</code>.</p></li>
+<li><p>Aktualizacja <code>res/xml/phonegap.xml</code> do meczu<code>framework/res/xml/phonegap.xml</code>.</p></li>
+</ol>
+
+<h2>Uaktualnić do 1.1.0 1.0.0</h2>
+
+<ol>
+<li><p>Usunąć <code>phonegap-1.0.0.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>phonegap-1.1.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowy <code>phonegap-1.1.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML, aby użyć pliku nowy <code>phonegap-.1.0.js</code> .</p></li>
+<li><p>Aktualizacja <code>res/xml/plugins.xml</code> do meczu<code>framework/res/xml/plugins.xml</code>.</p></li>
+</ol>
+
+<h2>Uaktualnić do 1.0.0 0.9.6</h2>
+
+<ol>
+<li><p>Usunąć <code>phonegap-0.9.6.jar</code> z projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Dodać <code>phonegap-1.0.0.jar</code> do projektu w katalogu <code>libs</code> .</p></li>
+<li><p>Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.</p></li>
+<li><p>Skopiuj nowy <code>phonegap-1.0.0.js</code> do projektu.</p></li>
+<li><p>Uaktualnić twój HTML, aby użyć pliku nowy <code>phonegap-1.0.0.js</code> .</p></li>
+<li><p>Dodaj <code>res/xml/plugins.xml</code> do <code>framework/res/xml/plugins.xml</code>.</p></li>
+</ol>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  10.x", "language: pl"] }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2588 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Actualizar BlackBerry 10 - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/es/latest/guide/platforms/blackberry10/upgrade.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '10.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/platforms/blackberry10/home.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/platforms/osx/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/appdev/whitelist/index.html">
+                Whitelisting
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/platforms/blackberry10/plugin.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-cli/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-battery-status/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-camera/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-console/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-contacts/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-device/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-device-motion/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-device-orientation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-dialogs/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-file/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-file-transfer/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-geolocation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-globalization/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-inappbrowser/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-media/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-media-capture/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-network-information/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-splashscreen/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-vibration/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-statusbar/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/10.x/reference/cordova-plugin-legacy-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Tabla de Contenidos
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/platforms/blackberry10/home.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/platforms/osx/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/appdev/whitelist/index.html">
+        Whitelisting
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/platforms/blackberry10/plugin.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-cli/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-battery-status/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-camera/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-console/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-contacts/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-device/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-device-motion/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-device-orientation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-dialogs/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-file/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-file-transfer/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-geolocation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-globalization/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-inappbrowser/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-media/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-media-capture/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-network-information/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-splashscreen/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-vibration/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-statusbar/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/10.x/reference/cordova-plugin-legacy-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+                        
+                        
+                        
+
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/dev/guide/platforms/blackberry10/upgrade.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                        <a class="edit" href="https://crowdin.com/project/cordova/es#/cordova-docs/docs/en/dev/guide/platforms/blackberry10/"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+
+                    
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Español
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/10.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/10.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/10.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    <span class="selected">
+                                        Español
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/10.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/10.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/10.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/10.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/10.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/10.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/10.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/10.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/10.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        10.x
+                        
+                            (Ultima)
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/dev/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/latest/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                10.x
+                                
+                                    (Ultima)
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/9.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/8.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/7.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/6.x/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/5.4.0/guide/platforms/blackberry10/upgrade.html" class="">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Actualizar BlackBerry 10</h1>
+
+<p>Esta guía le muestra cómo modificar proyectos de BlackBerry para actualizar desde versiones anteriores de Córdoba. La mayoría de estas instrucciones se aplica a proyectos creados con un conjunto mayor de herramientas de línea de comandos que preceden a la utilidad de la CLI de <code>cordova</code>. Vea la interfaz de línea de comandos para información de cómo actualizar la versión de la CLI.</p>
+
+<h2>Proyectos de modernización 3.6.0 a 4.0.0</h2>
+
+<p>Para proyectos no-CLI, ejecute:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    bin/ruta/a/proyecto de actualización
+</code></pre></div>
+<p>Para los proyectos de CLI:</p>
+
+<ol>
+<li><p>Actualización de la <code>cordova</code> versión CLI. Vea la interfaz de línea de comandos.</p></li>
+<li><p>Ejecute <code>cordova platform update blackberry</code> en tus proyectos ya existentes.</p></li>
+</ol>
+
+<h2>Actualización a 3.2.0 de 3.1.0</h2>
+
+<p>Para los proyectos que se crearon con el cordova CLI:</p>
+
+<ol>
+<li><p>Actualización de la <code>cordova</code> versión CLI. Vea la interfaz de línea de comandos.</p></li>
+<li><p>Ejecutar<code>cordova platform update blackberry</code></p></li>
+</ol>
+
+<p>Para proyectos no creados con el cordova CLI, ejecute:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    bin/update &lt;project_path&gt;
+</code></pre></div>
+<h2>Actualizar a 3.1.0 desde 3.0.0</h2>
+
+<ol>
+<li><p>Crear un nuevo proyecto de Apache Cordova 3.1.0 usando el cordova CLI, tal como se describe en la interfaz de línea de comandos.</p></li>
+<li><p>Agregue sus plataformas al proyecto cordova, por ejemplo: <code>cordova platform add blackberry10</code>.</p></li>
+<li><p>Copiar el contenido del proyecto original <code>www</code> Directorio del <code>www</code> Directorio en la raíz del proyecto cordova que acaba de crear.</p></li>
+<li><p>Copiar o sobrescribir ningún activo nativo de su proyecto original ( <code>Resources</code> , etc..)</p></li>
+<li><p>Copia del <code>config.xml</code> de archivos a la <code>www</code> Directorio y quite cualquier plugin definiciones. Tienes que modificar la configuración aquí más que en el directorio de plataforma.</p></li>
+<li><p>Utilice la herramienta CLI cordova instalar algún plugin que necesita. Tenga en cuenta que la CLI maneja todo núcleo APIs como plugins, así pueden necesitar ser agregado. Solo plugins marcó 3.0.0 y encima son compatibles con la CLI.</p></li>
+<li><p>Construir y probar.</p></li>
+</ol>
+
+<p>Por favor tenga en cuenta que el CLI compatible con la plataforma BlackBerry10 exclusivamente. Para el libro de jugadas y BBOS, ver Cordova versión 2.9.0 magnetohidrodinámica y por debajo.</p>
+
+<h2>Actualícese a la CLI (3.0.0) de 2.9.0 magnetohidrodinámica</h2>
+
+<ol>
+<li><p>Crear un nuevo proyecto de Apache Cordova 3.0.0 usando el cordova CLI, tal como se describe en la interfaz de línea de comandos.</p></li>
+<li><p>Agregue sus plataformas al proyecto cordova, por ejemplo:<code>cordova
+platform add blackberry10</code>.</p></li>
+<li><p>Copiar el contenido del proyecto original <code>www</code> Directorio del <code>www</code> Directorio en la raíz del proyecto cordova que acaba de crear.</p></li>
+<li><p>Copiar o sobrescribir ningún activo nativo de su proyecto original ( <code>Resources</code> , etc..)</p></li>
+<li><p>Copia del <code>config.xml</code> de archivos a la <code>www</code> Directorio y quite cualquier plugin definiciones. Tienes que modificar la configuración aquí más que en el directorio de plataforma.</p></li>
+<li><p>Utilice la herramienta CLI cordova instalar algún plugin que necesita. Tenga en cuenta que la CLI maneja todo núcleo APIs como plugins, así pueden necesitar ser agregado. Sólo 3.0.0 plugins son compatibles con la CLI.</p></li>
+<li><p>Construir y probar.</p></li>
+</ol>
+
+<h2>Proyectos de modernización 2.8.0 a 2.9.0 magnetohidrodinámica</h2>
+
+<p>Para BlackBerry 10:</p>
+
+<ol>
+<li><p>Descargue y extraiga la fuente Cordova 2.9.0 magnetohidrodinámica a una ubicación de directorio permanente en tu disco duro, por ejemplo a<code>~/Cordova-2.9.0</code>.</p></li>
+<li><p>Dejar cualquier corriente SDK Herramientas: Eclipse, Momentics y similares.</p></li>
+<li><p>Desplácese hasta el directorio donde pusiste la fuente descargada anteriormente, utilizando un unix como terminal: Terminal.app Cygwin, Bash, etc..</p></li>
+<li><p>Crear un nuevo proyecto, como se describe en la guía de herramientas de Shell de BlackBerry. Esto se convierte en la página de inicio de tu proyecto actualizado.</p></li>
+<li><p>Copie su fuente de proyectos desde el viejo proyecto <code>/www</code> del proyecto nuevo directorio <code>/www</code> Directorio.</p></li>
+<li><p>Actualizar la referencia de script Cordova en el <code>www/index.html</code> archivo (y otros archivos que contienen la referencia de comandos) para que apunte a la nueva <code>cordova.js</code> archivo.</p></li>
+</ol>
+
+<p>Para BlackBerryOS/Playbook:</p>
+
+<ol>
+<li><p>Descargue y extraiga la fuente Cordova 2.9.0 magnetohidrodinámica a una ubicación de directorio permanente en tu disco duro, por ejemplo a<code>~/Cordova-2.9.0</code>.</p></li>
+<li><p>Dejar cualquier corriente SDK Herramientas: Eclipse, Momentics y similares.</p></li>
+<li><p>Desplácese hasta el directorio donde pusiste la fuente descargada anteriormente, utilizando un unix como terminal: Terminal.app Cygwin, Bash, etc..</p></li>
+<li><p>Crear un nuevo proyecto, como se describe en la guía de herramientas de Shell de BlackBerry. Necesita los activos de este nuevo proyecto.</p></li>
+<li><p>Copia el <code>www/cordova.js</code> archivo del nuevo proyecto en el <code>www</code> Directorio y eliminar el <code>www/cordova.js</code> archivo.</p></li>
+<li><p>Actualizar la referencia de script Cordova en el <code>www/index.html</code> archivo (y otros archivos que contienen la referencia de comandos) para que apunte a la nueva <code>cordova.js</code> archivo.</p></li>
+<li><p>Copia el <code>native</code> directorio desde el nuevo proyecto en el proyecto existente, sobrescribiendo el viejo <code>native</code> Directorio.</p></li>
+<li><p>Copia el <code>lib</code> directorio desde el nuevo proyecto en el proyecto existente, sobrescribiendo el viejo <code>lib</code> Directorio.</p></li>
+<li><p>Copia el <code>cordova</code> directorio desde el nuevo proyecto en el proyecto existente, sobrescribiendo el viejo <code>cordova</code> Directorio.</p></li>
+</ol>
+
+<h2>Proyectos de modernización 2.7.0 a 2.8.0</h2>
+
+<p>BlackBerry 10 utiliza las nuevas herramientas de CLI y gestiona núcleo APIs como plugins. Las instrucciones de migran su proyecto a un nuevo proyecto, en lugar de actualizar un proyecto existente, debido a la complejidad de un proyecto de actualización. También nota que el js cordova de la escritura de archivos ahora se llama &#39;cordova.js&#39; y ya no contiene una cadena de versión.</p>
+
+<ol>
+<li><p>Descargue y extraiga la fuente Cordova 2.8.0 a una ubicación de directorio permanente en tu disco duro, por ejemplo a<code>~/Cordova-2.8.0</code>.</p></li>
+<li><p>Dejar cualquier corriente SDK Herramientas: Eclipse, Momentics y similares.</p></li>
+<li><p>Desplácese hasta el directorio donde pusiste la fuente descargada anteriormente, utilizando un unix como terminal: Terminal.app Cygwin, Bash, etc..</p></li>
+<li><p>Crear un nuevo proyecto, como se describe en la guía de herramientas de Shell de BlackBerry. Esto se convierte en la página de inicio de tu proyecto actualizado.</p></li>
+<li><p>Copie su fuente de proyectos desde el viejo proyecto <code>/www</code> del proyecto nuevo directorio <code>/www</code> Directorio.</p></li>
+<li><p>Actualizar la referencia de script Cordova en el <code>www/index.html</code> archivo (y otros archivos que contienen la referencia de comandos) para que apunte a la nueva <code>cordova.js</code> archivo.</p></li>
+</ol>
+
+<p>Para BlackBerryOS/Playbook:</p>
+
+<ol>
+<li><p>Descargue y extraiga la fuente Cordova 2.8.0 a una ubicación de directorio permanente en tu disco duro, por ejemplo a<code>~/Cordova-2.8.0</code>.</p></li>
+<li><p>Dejar cualquier corriente SDK Herramientas: Eclipse, Momentics y similares.</p></li>
+<li><p>Desplácese hasta el directorio donde pusiste la fuente descargada anteriormente, utilizando un unix como terminal: Terminal.app Cygwin, Bash, etc..</p></li>
+<li><p>Crear un nuevo proyecto, como se describe en la guía de herramientas de Shell de BlackBerry. Necesita los activos de este nuevo proyecto.</p></li>
+<li><p>Copia el <code>www/cordova.js</code> archivo del nuevo proyecto en el <code>www</code> Directorio y eliminar el <code>www/cordova.js</code> archivo.</p></li>
+<li><p>Actualizar la referencia de script Cordova en el <code>www/index.html</code> archivo (y otros archivos que contienen la referencia de comandos) para que apunte a la nueva <code>cordova.js</code> archivo.</p></li>
+<li><p>Copia el <code>native</code> directorio desde el nuevo proyecto en el proyecto existente, sobrescribiendo el viejo <code>native</code> Directorio.</p></li>
+<li><p>Copia el <code>lib</code> directorio desde el nuevo proyecto en el proyecto existente, sobrescribiendo el viejo <code>lib</code> Directorio.</p></li>
+<li><p>Copia el <code>cordova</code> directorio desde el nuevo proyecto en el proyecto existente, sobrescribiendo el viejo <code>cordova</code> Directorio.</p></li>
+</ol>
+
+<h2>Proyectos de modernización 2.6.0 a 2.7.0</h2>
+
+<ol>
+<li><p>Descargue y extraiga la fuente Cordova 2.7.0 a una ubicación de directorio permanente en tu disco duro, por ejemplo a<code>~/Cordova-2.7.0</code>.</p></li>
+<li><p>Dejar cualquier corriente SDK Herramientas: Eclipse, Momentics y similares.</p></li>
+<li><p>Desplácese hasta el directorio donde pusiste la fuente descargada anteriormente, utilizando un unix como terminal: Terminal.app Cygwin, Bash, etc..</p></li>
+<li><p>Crear un nuevo proyecto, como se describe en la guía de herramientas de Shell de BlackBerry. Necesitas los activos de este nuevo proyecto.</p></li>
+<li><p>Copia el <code>www/cordova-2.7.0.js</code> archivo del nuevo proyecto en el <code>www</code> Directorio y eliminar el <code>www/cordova-2.6.0.js</code> archivo.</p></li>
+<li><p>Actualizar la referencia de script Cordova en el <code>www/index.html</code> archivo (y otros archivos que contienen la referencia de comandos) para que apunte a la nueva <code>cordova-2.7.0.js</code> archivo.</p></li>
+<li><p>Copia el <code>native</code> directorio desde el nuevo proyecto en el proyecto existente, sobrescribiendo el viejo <code>native</code> Directorio.</p></li>
+<li><p>Copia el <code>lib</code> directorio desde el nuevo proyecto en el proyecto existente, sobrescribiendo el viejo <code>lib</code> Directorio.</p></li>
+<li><p>Copia el <code>cordova</code> directorio desde el nuevo proyecto en el proyecto existente, sobrescribiendo el viejo <code>cordova</code> Directorio.</p></li>
+</ol>
+
+<h2>Actualizar a 2.6.0 desde 2.5.0</h2>
+
+<p>Actualizar el directorio de descarga PhoneGap:</p>
+
+<p>Se recomienda que usted descargar una copia nueva de todo el directorio.</p>
+
+<p>Sin embargo, aquí están las nuevas piezas necesarias para la actualización gradual:</p>
+
+<ol>
+<li><p>Actualizar el archivo cordova.blackberry.js en la <code>Phonegap-2.6.0/lib/blackberry/javascript</code> Directorio.</p></li>
+<li><p>Actualización de la <code>ext</code> , <code>ext-air</code> , y <code>ext-qnx</code> en el <code>Phonegap-2.6.0/lib/blackberry/framework</code> Directorio.</p></li>
+<li><p>Actualización de la <code>build.xml</code> de los archivos en el <code>Phonegap-2.6.0/lib/blackberry</code> Directorio.</p></li>
+<li><p>Actualización del <code>Phonegap-2.6.0/lib/blackberry/bin</code> Directorio.</p></li>
+<li><p>Actualización de la <code>VERSION</code> de los archivos en el <code>Phonegap-2.6.0/lib/blackberry</code> Directorio.</p></li>
+</ol>
+
+<p>Actualizando el ejemplo / proyecto de directorio o migrar existente:</p>
+
+<ol>
+<li><p>Abierta la <code>www</code> directorio que contiene la aplicación.</p></li>
+<li><p>Quitar y actualizar el archivo .jar en la <code>ext/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>ext-air/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>ext-qnx/</code> Directorio.</p></li>
+<li><p>Copie el nuevo <code>cordova-2.6.0.js</code> en su proyecto.</p></li>
+<li><p>Actualizar el código HTML para usar el nuevo <code>cordova-2.6.0.js</code> archivo.</p></li>
+</ol>
+
+<h2>Actualizar a 2.5.0 desde 2.4.0</h2>
+
+<p>Actualizar el directorio de descarga PhoneGap:</p>
+
+<p>Se recomienda que usted descargar una copia nueva de todo el directorio.</p>
+
+<p>Sin embargo, aquí están las nuevas piezas necesarias para la actualización gradual:</p>
+
+<ol>
+<li><p>Actualizar el archivo cordova.blackberry.js en la <code>Phonegap-2.5.0/lib/blackberry/javascript</code> Directorio.</p></li>
+<li><p>Actualización de la <code>ext</code> , <code>ext-air</code> , y <code>ext-qnx</code> en el <code>Phonegap-2.5.0/lib/blackberry/framework</code> Directorio.</p></li>
+<li><p>Actualización de la <code>build.xml</code> de los archivos en el <code>Phonegap-2.5.0/lib/blackberry</code> Directorio.</p></li>
+<li><p>Actualización del <code>Phonegap-2.5.0/lib/blackberry/bin</code> Directorio.</p></li>
+<li><p>Actualización de la <code>VERSION</code> de los archivos en el <code>Phonegap-2.5.0/lib/blackberry</code> Directorio.</p></li>
+</ol>
+
+<p>Actualizando el ejemplo / proyecto de directorio o migrar existente:</p>
+
+<ol>
+<li><p>Abierta la <code>www</code> directorio que contiene la aplicación.</p></li>
+<li><p>Quitar y actualizar el archivo .jar en la <code>ext/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>ext-air/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>ext-qnx/</code> Directorio.</p></li>
+<li><p>Copie el nuevo <code>cordova-2.5.0.js</code> en su proyecto.</p></li>
+<li><p>Actualizar el código HTML para usar el nuevo <code>cordova-2.5.0.js</code> archivo.</p></li>
+</ol>
+
+<h2>Actualizar a 2.4.0 desde 2.3.0</h2>
+
+<p>Actualizar el <code>www</code> Directorio:</p>
+
+<ol>
+<li><p>Abierta la <code>www</code> directorio que contiene la aplicación.</p></li>
+<li><p>Quitar y actualizar el archivo .jar en la <code>ext/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>ext-air/</code> Directorio.</p></li>
+<li><p>Copie el nuevo <code>cordova-2.4.0.js</code> en su proyecto.</p></li>
+</ol>
+<div class="highlight"><pre><code class="language-" data-lang="">*   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
+*   Si BlackBerry 10, luego actualizar el archivo .js en el `qnx/` Directorio.
+</code></pre></div>
+<ol>
+<li> Actualizar el código HTML para usar el nuevo <code>cordova-2.4.0.js</code> archivo.</li>
+</ol>
+
+<p>Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):</p>
+
+<ol>
+<li><p>Abierta la <code>sample/lib/</code> Directorio.</p></li>
+<li><p>Actualizar el archivo .jar en la <code>cordova.2.3.0/ext/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>cordova.2.3.0/ext-air/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>cordova.2.3.0/ext-qnx/</code> Directorio.</p></li>
+<li><p>Actualizar el archivo .js en el <code>cordova.2.3.0/javascript/</code> Directorio.</p></li>
+<li><p>Abierta la <code>sample/lib/</code> Directorio y renombrar el <code>cordova.2.3.0/</code> Directorio<code>cordova.2.4.0/</code>.</p></li>
+<li><p>Tipo <code>ant blackberry build</code> o <code>ant playbook build</code> para actualizar el <code>www</code> Directorio con Cordova actualizado.</p></li>
+<li><p>Abierta la <code>www</code> Directorio y actualizar el código HTML para usar el nuevo <code>cordova-2.4.0.js</code> archivo.</p></li>
+</ol>
+
+<h2>Actualizar a 2.3.0 desde 2.2.0</h2>
+
+<p>Actualizar el <code>www</code> Directorio:</p>
+
+<ol>
+<li><p>Abierta la <code>www</code> directorio que contiene la aplicación.</p></li>
+<li><p>Quitar y actualizar el archivo .jar en la <code>ext/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>ext-air/</code> Directorio.</p></li>
+<li><p>Copie el nuevo <code>cordova-2.3.0.js</code> en su proyecto.</p></li>
+</ol>
+<div class="highlight"><pre><code class="language-" data-lang="">*   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
+*   Si BlackBerry 10, luego actualizar el archivo .js en el `qnx/` Directorio.
+</code></pre></div>
+<ol>
+<li> Actualizar el código HTML para usar el nuevo <code>cordova-2.3.0.js</code> archivo.</li>
+</ol>
+
+<p>Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):</p>
+
+<ol>
+<li><p>Abierta la <code>sample/lib/</code> Directorio.</p></li>
+<li><p>Actualizar el archivo .jar en la <code>cordova.2.2.0/ext/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>cordova.2.2.0/ext-air/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>cordova.2.2.0/ext-qnx/</code> Directorio.</p></li>
+<li><p>Actualizar el archivo .js en el <code>cordova.2.2.0/javascript/</code> Directorio.</p></li>
+<li><p>Abierta la <code>sample/lib/</code> Directorio y renombrar el <code>cordova.2.2.0/</code> Directorio<code>cordova.2.3.0/</code>.</p></li>
+<li><p>Tipo <code>ant blackberry build</code> o <code>ant playbook build</code> para actualizar el <code>www</code> Directorio con Cordova actualizado.</p></li>
+<li><p>Abierta la <code>www</code> Directorio y actualizar el código HTML para usar el nuevo <code>cordova-2.3.0.js</code> archivo.</p></li>
+</ol>
+
+<h2>Actualizar a 2.2.0 desde 2.1.0</h2>
+
+<p>Actualizar sólo el directorio www:</p>
+
+<ol>
+<li><p>Abierta la <code>www</code> directorio que contiene la aplicación.</p></li>
+<li><p>Quitar y actualizar el archivo .jar en la <code>ext/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>ext-air/</code> Directorio.</p></li>
+<li><p>Copie el nuevo <code>cordova-2.2.0.js</code> en su proyecto.</p></li>
+</ol>
+<div class="highlight"><pre><code class="language-" data-lang="">*   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
+*   Si BlackBerry 10, luego actualizar el archivo .js en el `qnx/` Directorio.
+</code></pre></div>
+<ol>
+<li> Actualizar el código HTML para usar el nuevo <code>cordova-2.2.0.js</code> archivo.</li>
+</ol>
+
+<p>Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):</p>
+
+<ol>
+<li><p>Abierta la <code>sample/lib/</code> Directorio.</p></li>
+<li><p>Actualizar el archivo .jar en la <code>cordova.2.1.0/ext/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>cordova.2.1.0/ext-air/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>cordova.2.1.0/ext-qnx/</code> Directorio.</p></li>
+<li><p>Actualizar el archivo .js en el <code>cordova.2.1.0/javascript/</code> Directorio.</p></li>
+<li><p>Abierta la <code>sample/lib/</code> Directorio y renombrar el <code>cordova.2.1.0/</code> Directorio<code>cordova.2.2.0/</code>.</p></li>
+<li><p>Tipo <code>ant blackberry build</code> o <code>ant playbook build</code> para actualizar el <code>www</code> Directorio con Cordova actualizado.</p></li>
+<li><p>Abierta la <code>www</code> Directorio y actualizar el código HTML para usar el nuevo <code>cordova-2.2.0.js</code> archivo.</p></li>
+</ol>
+
+<h2>Actualizar a 2.1.0 desde 2.0.0</h2>
+
+<p>Actualizar el <code>www</code> Directorio:</p>
+
+<ol>
+<li><p>Abierta la <code>www</code> directorio que contiene la aplicación.</p></li>
+<li><p>Quitar y actualizar el archivo .jar en la <code>ext/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>ext-air/</code> Directorio.</p></li>
+<li><p>Copie el nuevo <code>cordova-2.1.0.js</code> en su proyecto.</p></li>
+</ol>
+<div class="highlight"><pre><code class="language-" data-lang="">*   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
+</code></pre></div>
+<ol>
+<li> Actualizar el código HTML para usar el nuevo <code>cordova-2.1.0.js</code> archivo.</li>
+</ol>
+
+<p>Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):</p>
+
+<ol>
+<li><p>Abierta la <code>sample/lib/</code> Directorio.</p></li>
+<li><p>Actualizar el archivo .jar en la <code>cordova.2.0.0/ext/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>cordova.2.0.0/ext-air/</code> Directorio.</p></li>
+<li><p>Actualizar el archivo .js en el <code>cordova.2.0.0/javascript/</code> Directorio.</p></li>
+<li><p>Abierta la <code>sample/lib/</code> Directorio y renombrar el <code>cordova.2.0.0/</code> Directorio<code>cordova.2.1.0/</code>.</p></li>
+<li><p>Tipo <code>ant blackberry build</code> o <code>ant playbook build</code> para actualizar el <code>www</code> Directorio con Cordova actualizado.</p></li>
+<li><p>Abierta la <code>www</code> Directorio y actualizar el código HTML para usar el nuevo <code>cordova-2.1.0.js</code> archivo.</p></li>
+</ol>
+
+<h2>Actualizar a 2.0.0 desde 1.9.0</h2>
+
+<p>Actualizar el <code>www</code> Directorio:</p>
+
+<ol>
+<li><p>Abierta la <code>www</code> directorio que contiene la aplicación.</p></li>
+<li><p>Quitar y actualizar el archivo .jar en la <code>ext/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>ext-air/</code> Directorio.</p></li>
+<li><p>Copie el nuevo <code>cordova-2.0.0.js</code> en su proyecto.</p></li>
+</ol>
+<div class="highlight"><pre><code class="language-" data-lang="">*   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
+</code></pre></div>
+<ol>
+<li><p>Actualizar el código HTML para usar el nuevo <code>cordova-2.0.0.js</code> archivo.</p></li>
+<li><p>Actualización de la <code>www/plugins.xml</code> archivo. Dos plugins cambió su etiqueta de servicio de nombres. Cambiar las entradas viejas para los plugins de captura y contacto:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt; nombre del plugin = "Capturar" value="org.apache.cordova.media.MediaCapture"/ &gt;&lt; nombre del plugin = "Contacto" value="org.apache.cordova.pim.Contact"/ &gt;
+</code></pre></div>
+<p>Para:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt; nombre del plugin = "Capturar" value="org.apache.cordova.capture.MediaCapture"/ &gt;&lt; nombre del plugin "Contactos" value="org.apache.cordova.pim.Contact"/ = &gt;
+</code></pre></div></li>
+</ol>
+
+<p>Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):</p>
+
+<ol>
+<li><p>Abierta la <code>sample/lib/</code> Directorio.</p></li>
+<li><p>Actualizar el archivo .jar en la <code>cordova.1.9.0/ext/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>cordova.1.9.0/ext-air/</code> Directorio.</p></li>
+<li><p>Actualizar el archivo .js en el <code>cordova.1.9.0/javascript/</code> Directorio.</p></li>
+<li><p>Abierta la <code>sample/lib/</code> Directorio y renombrar el <code>cordova.1.9.0/</code> Directorio<code>cordova.2.0.0/</code>.</p></li>
+<li><p>Tipo <code>ant blackberry build</code> o <code>ant playbook build</code> para actualizar el <code>www</code> Directorio con Cordova actualizado.</p></li>
+<li><p>Abierta la <code>www</code> Directorio y actualizar el código HTML para usar el nuevo <code>cordova-2.0.0.js</code> archivo.</p></li>
+<li><p>Abierta la <code>www</code> Directorio y actualizar el <code>plugins.xml</code> archivo. Dos plugins cambió su etiqueta de servicio de nombres. Cambiar las entradas viejas para los plugins de captura y contacto:</p>
+<div class="highlight"><pre><code class="language-" data-lang=""> &lt; nombre del plugin = "Capturar" value="org.apache.cordova.media.MediaCapture"/ &gt;&lt; nombre del plugin = "Contacto" value="org.apache.cordova.pim.Contact"/ &gt;
+</code></pre></div>
+<p>Para:</p>
+<div class="highlight"><pre><code class="language-" data-lang=""> &lt; nombre del plugin = "Capturar" value="org.apache.cordova.capture.MediaCapture"/ &gt;&lt; nombre del plugin "Contactos" value="org.apache.cordova.pim.Contact"/ = &gt;
+</code></pre></div></li>
+</ol>
+
+<ul>
+<li>  Para actualizar a 1.8.0, por favor ir de 1.7.0</li>
+</ul>
+
+<h2>Actualizar a 1.8.0 de 1.7.0</h2>
+
+<p>Actualizar el <code>www</code> Directorio:</p>
+
+<ol>
+<li><p>Abierta la <code>www</code> directorio que contiene la aplicación.</p></li>
+<li><p>Quitar y actualizar el archivo .jar en la <code>ext/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>ext-air/</code> Directorio.</p></li>
+<li><p>Copie el nuevo <code>cordova-1.8.0.js</code> en su proyecto.</p></li>
+</ol>
+<div class="highlight"><pre><code class="language-" data-lang="">*   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
+</code></pre></div>
+<ol>
+<li><p>Actualizar el código HTML para usar el nuevo <code>cordova-1.8.0.js</code> archivo.</p></li>
+<li><p>Actualización de la <code>www/plugins.xml</code> archivo. Dos plugins cambió su etiqueta de servicio de nombres. Cambiar las entradas viejas para los plugins de captura y contacto:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt; nombre del plugin = "Capturar" value="org.apache.cordova.media.MediaCapture"/ &gt;&lt; nombre del plugin = "Contacto" value="org.apache.cordova.pim.Contact"/ &gt;
+</code></pre></div>
+<p>Para:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt; nombre del plugin = "Capturar" value="org.apache.cordova.capture.MediaCapture"/ &gt;&lt; nombre del plugin "Contactos" value="org.apache.cordova.pim.Contact"/ = &gt;
+</code></pre></div></li>
+</ol>
+
+<p>Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):</p>
+
+<ol>
+<li><p>Abierta la <code>sample/lib/</code> Directorio.</p></li>
+<li><p>Actualizar el archivo .jar en la <code>cordova.1.7.0/ext/</code> Directorio.</p></li>
+<li><p>Actualizar el contenido de la <code>cordova.1.7.0/ext-air/</code> Directorio.</p></li>
+<li><p>Actualizar el archivo .js en el <code>cordova.1.7.0/javascript/</code> Directorio.</p></li>
+<li><p>Abierta la <code>sample/lib/</code> Directorio y renombrar el <code>cordova.1.7.0/</code> Directorio<code>cordova.1.8.0/</code>.</p></li>
+<li><p>Tipo <code>ant blackberry build</code> o <code>ant playbook build</code> para actualizar el <code>www</code> Directorio con Cordova actualizado.</p></li>
+<li><p>Abierta la <code>www</code> Directorio y actualizar el código HTML para usar el nuevo <code>cordova-1.8.0.js</code> archivo.</p></li>
+<li><p>Abierta la <code>www</code> Directorio y actualizar el <code>plugins.xml</code> archivo. Dos plugins cambió su etiqueta de servicio de nombres. Cambiar las entradas viejas para los plugins de captura y contacto:</p>
+<div class="highlight"><pre><code class="language-" data-lang=""> &lt; nombre del plugin = "Capturar" value="org.apache.cordova.media.MediaCapture"/ &gt;&lt; nombre del plugin = "Contacto" value="org.apache.cordova.pim.Contact"/ &gt;
+</code></pre></div>
+<p>Para:</p>
+<div class="highlight"><pre><code class="language-" data-lang=""> &lt; nombre del plugin = "Capturar" value="org.apache.cordova.capture.MediaCapture"/ &gt;&lt; nombre del plugin "Contactos" value="org.apache.cordova.pim.Contact"/ = &gt;
+</code></pre></div></li>
+</ol>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  10.x", "language: es"] }
+    });
+</script>
+
+</body>
+</html>

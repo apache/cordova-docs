@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="The following plugins were updated today:cordova-plugin-battery-status: 1.1.2cordova-plugin-camera: 2.2.0cordova-plugin-console: 1.0.3cordova-plugin-contacts...">
+
+    <title>
+        
+            
+                Plugins Release - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/news/2016/04/20/plugins-release.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '10.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Plugins Release</div>
+        <div class="author">By:
+            
+              <a href="https://twitter.com/stevesgill">Steve Gill</a>
+            
+        </div>
+        <div class="date">20 Apr 2016</div>
+    </header>
+    <section>
+        <div>
+            <p>The following plugins were updated today:</p>
+
+<ul>
+<li>cordova-plugin-battery-status: 1.1.2</li>
+<li>cordova-plugin-camera: 2.2.0</li>
+<li>cordova-plugin-console: 1.0.3</li>
+<li>cordova-plugin-contacts: 2.1.0</li>
+<li>cordova-plugin-device: 1.1.2</li>
+<li>cordova-plugin-device-motion: 1.2.1</li>
+<li>cordova-plugin-device-orientation:</li>
+<li>cordova-plugin-dialogs: 1.2.1</li>
+<li>cordova-plugin-file: 4.2.0</li>
+<li>cordova-plugin-file-transfer: 1.5.1</li>
+<li>cordova-plugin-geolocation: 2.2.0</li>
+<li>cordova-plugin-inappbrowser: 1.4.0</li>
+<li>cordova-plugin-media: 2.3.0</li>
+<li>cordova-plugin-media-capture: 1.3.0</li>
+<li>cordova-plugin-network-information: 1.2.1</li>
+<li>cordova-plugin-splashscreen: 3.2.2</li>
+<li>cordova-plugin-statusbar: 2.1.3</li>
+<li>cordova-plugin-test-framework: 1.1.2</li>
+<li>cordova-plugin-vibration: 2.1.1</li>
+<li>cordova-plugin-whitelist: 1.2.2</li>
+<li>cordova-plugin-wkwebview-engine: 1.0.3</li>
+<li>cordova-plugin-compat: 1.0.0</li>
+</ul>
+
+<p>This release includes a new plugin named <a href="https://github.com/apache/cordova-plugin-compat">cordova-plugin-compat</a>. <code>cordova-plugin-compat</code> allows backwards compatibility for plugins that had to upgrade to the new permissions model for <code>cordova-android@5+</code>. Plugin authors can use and depend on <code>cordova-plugin-compat</code> to continue to support older versions (<code>&lt;5</code>) of <code>cordova-android</code>. Checkout the <a href="https://github.com/apache/cordova-plugin-compat">cordova-plugin-compat repo</a> for more information. Previously, we were packaging copies of <code>PermissionHelper.java</code> with the plugins that needed the permission updates, but have now decided that it would be better to store <code>PermissionHelper.java</code> in <code>cordova-plugin-compat</code>.</p>
+
+<p>Plugin authors can also use the new <a href="http://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#engines-and-engine">engines element</a> to specify what versions of <code>cordova-android</code> your plugin supports. Read more about it in our <a href="http://cordova.apache.org/announcements/2016/03/22/new-plugin-fetching.html">plugin fetching blog post</a>.</p>
+
+<hr>
+
+<p>You can update any plugin by removing it, and then re-adding it.</p>
+
+<p>E.g. To update your camera plugin:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm cordova-plugin-camera --save
+cordova plugin add cordova-plugin-camera@latest --save
+</code></pre></div>
+<p>Changes include:</p>
+
+<!--more-->
+
+<p>cordova-plugin-battery-status@1.1.2</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-10720">CB-10720</a> Reorganizing and rewording docs.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add JSHint for plugins</li>
+</ul>
+
+<p>cordova-plugin-camera@2.2.0</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-10873">CB-10873</a> Avoid crash due to usage of uninitialized variable when writing geolocation data to image destination. Properly handle &#39;CameraUsesGeolocation&#39; option by properly setting geolocation data in EXIF header in all cases</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11073">CB-11073</a> Appium tests stability improvements</li>
+<li>Replace <code>PermissionHelper.java</code> with <code>cordova-plugin-compat</code></li>
+<li>Making focus handler work only for <strong>windows 10</strong> phone</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10865">CB-10865</a> Run <strong>ios</strong> native tests on <strong>Travis</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10120">CB-10120</a> Fixing use of constants and <code>PermissionHelper</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10120">CB-10120</a> Fix missing CAMERA permission for <strong>Android M</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10756">CB-10756</a> Adding sterner warnings about <code>DATA_URL</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10460">CB-10460</a> <code>getRealPath</code> return null in some cases</li>
+</ul>
+
+<p>cordova-plugin-compat@1.0.0</p>
+
+<ul>
+<li>Initial release</li>
+<li>Moved <code>PermissionHelper.java</code> into <code>src</code></li>
+</ul>
+
+<p>cordova-plugin-console@1.0.3</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-10720">CB-10720</a> Minor spelling/formatting changes.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+</ul>
+
+<p>cordova-plugin-contacts@2.1.0</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-11043">CB-11043</a> <strong>Android</strong> app crashes while trying to save contact with phone numbers array with deleted values</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10985">CB-10985</a> Android sets type to <code>-1</code> for ims Added a corresponding test</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11048">CB-11048</a> Fix spec27&#39;s inadvertent breakage that happened during logging rollback</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11041">CB-11041</a> <code>cordova-plugin-contacts</code> readme must be updated to include instructions on removing phone number from a contact</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11033">CB-11033</a> Appium tests: Increased the timeout for updating the contact</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10399">CB-10399</a> Added Appium tests</li>
+<li>Replace <code>PermissionHelper.java</code> with <code>cordova-plugin-compat</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8115">CB-8115</a> incorrect birthday saved to phonebook using Contacts Plugin</li>
+<li>Changes to stop using global object - remove all created contacts from the emulator</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10881">CB-10881</a> Increase timeout for Spec22</li>
+<li>Fix for the specs 26&amp;27 to use the newly created contacts for removal test</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10881">CB-10881</a> Remove test dependency on global object</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10632">CB-10632</a> Fixing jasmine test contact removal</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+</ul>
+
+<p>cordova-plugin-device@1.1.2</p>
+
+<ul>
+<li>Use passed device, follow create policy for <code>CFUUIDCreate</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10631">CB-10631</a> Fix for <code>device.uuid</code> in <strong>iOS 5.1.1</strong></li>
+<li>Updating the comment to exclude URL</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+<li>Refactored <code>deviceInfo</code> on <strong>iOS</strong> for better readability.</li>
+</ul>
+
+<p>cordova-plugin-device-motion@1.2.1</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+</ul>
+
+<p>cordova-plugin-device-orientation@1.0.3</p>
+
+<ul>
+<li>Remove <code>warning</code> emoji, as it doesn&#39;t correctly display in the docs website: http://cordova.apache.org/docs/en/dev/cordova-plugin-device-orientation/index.html</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+</ul>
+
+<p>cordova-plugin-dialogs@1.2.1</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-10097">CB-10097</a> dialog doesn&#39;t show on <strong>iOS</strong> when called from a select list <code>onChange</code> event</li>
+<li>Remove <code>warning</code> emoji, as it doesn&#39;t correctly display in the docs website: http://cordova.apache.org/docs/en/dev/cordova-plugin-dialogs/index.html</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10727">CB-10727</a> Dialogs plugin has warnings on <strong>iOS</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+</ul>
+
+<p>cordova-plugin-file@4.2.0</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-10960">CB-10960</a> Uncaught <code>#&lt;FileError&gt;</code> in <code>write()</code> when <code>readyState != WRITING ?</code></li>
+<li>Replace <code>PermissionHelper.java</code> with <code>cordova-plugin-compat</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10977">CB-10977</a> <strong>Android</strong> Removing global state used for permission requests</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10798">CB-10798</a>, <a href="https://issues.apache.org/jira/browse/CB-10384">CB-10384</a> Fixing permissions for <strong>Marshmallow</strong>.</li>
+<li>Fix test failure on <strong>WP 8.1</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10577">CB-10577</a> <strong>Windows</strong> <code>resolveLocalFileSystemURL</code> should omit trailing slash for file</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7862">CB-7862</a> <code>FileReader</code> reads large files in chunks with progress.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10577">CB-10577</a> <strong>Android</strong> <code>resolveLocalFileSystemURL</code> should detect directory vs file.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9753">CB-9753</a> index out of bounds on <code>requestFileSystem</code>.</li>
+<li>Remove <code>warning</code> emoji, as it doesn&#39;t correctly display in the docs website: cordova.apache.org/docs/en/dev/cordova-plugin-file/index.html. This closes #166</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10411">CB-10411</a> Error in <code>file.spec.129</code> of <code>cordova-plugin-file</code></li>
+</ul>
+
+<p>cordova-plugin-file-transfer@1.5.1</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-10536">CB-10536</a> Removing flaky test assertions about abort callback latency</li>
+<li>Removing the expectation in <code>spec.34</code> for the transfer method to be called.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10978">CB-10978</a> Fix <code>file-transfer.tests</code> JSHint issues</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10782">CB-10782</a> Occasional failure in file transfer tests causing mobilespec crash</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10771">CB-10771</a> Fixing failure when empty string passed as a value for option parameter in upload function</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+</ul>
+
+<p>cordova-plugin-geolocation@2.2.0</p>
+
+<ul>
+<li>Replace <code>PermissionHelper.java</code> with <code>cordova-plugin-compat</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10691">CB-10691</a> Check the context to avoid null errors</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+<li>Using a fallback epsilon in case <code>Number.EPSILON</code> is not defined.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10574">CB-10574</a> MobileSpec can&#39;t get results for <strong>WP8.1</strong> Builds</li>
+</ul>
+
+<p>cordova-plugin-inappbrowser@1.4.0</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-7679">CB-7679</a> add fix for <strong>iOS</strong> upload.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10944">CB-10944</a> <code>NoSuchMethodError</code> in <code>InAppBrowser</code> plugin</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10937">CB-10937</a> fix stretched icons</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10760">CB-10760</a> Fixing README for display on Cordova website</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+</ul>
+
+<p>cordova-plugin-media@2.3.0</p>
+
+<ul>
+<li>Request audio focus when playing; Pause audio when audio focus is lost; resume playing when audio focus is granted again.</li>
+<li>Replace <code>PermissionHelper.java</code> with <code>cordova-plugin-compat</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10783">CB-10783</a> Modify expected position to be in a proper range.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9487">CB-9487</a> Support getting amplitude for recording</li>
+<li><strong>iOS</strong> audio should handle naked local file sources</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10720">CB-10720</a> Fixing README for display on Cordova website</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10535">CB-10535</a> Fix CI crash caused by media plugin</li>
+</ul>
+
+<p>cordova-plugin-media-capture@1.3.0</p>
+
+<ul>
+<li>Replace <code>PermissionHelper.java</code> with <code>cordova-plugin-compat</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10670">CB-10670</a>, <a href="https://issues.apache.org/jira/browse/CB-10994">CB-10994</a> <strong>Android</strong>, Marshmallow permissions</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10720">CB-10720</a>: Fixing README for display on Cordova website</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10690">CB-10690</a> <strong>windows</strong>, fix crash when user cancels/closes photo app</li>
+</ul>
+
+<p>cordova-plugin-network-information@1.2.1</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-10763">CB-10763</a>: Remove emoji in <code>cordova-plugin-network-information</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+</ul>
+
+<p>cordova-plugin-splashscreen@3.2.2</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-10979">CB-10979</a> Fix splashscreen <strong>iOS</strong> native tests. Added <code>jshintignore</code> for tests/ios</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10895">CB-10895</a> Transparent Splashscreen view sometimes remains</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10562">CB-10562</a> <code>hide()</code> not working in latest splashscreen plugin 3.1.0 in <strong>iOS</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10688">CB-10688</a> Plugin Splashscreen Readme must have examples.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10864">CB-10864</a> Run <strong>iOS</strong> native tests on Travis</li>
+</ul>
+
+<p>cordova-plugin-statusbar@2.1.3</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-11018">CB-11018</a> Fix statusbar with <code>inappbrowser</code> causing incorrect orientation on <strong>iOS8</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10884">CB-10884</a> <code>Inappbrowser</code> breaks UI while Screen orientation changes from landscape to portrait on <strong>iOS</strong></li>
+</ul>
+
+<p>cordova-plugin-test-framework@1.1.2</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-10876">CB-10876</a> Enable inertia scrolling in test framework</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+</ul>
+
+<p>cordova-plugin-vibration@2.1.1</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+</ul>
+
+<p>cordova-plugin-whitelist@1.2.2</p>
+
+<ul>
+<li>add note about redirects</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10624">CB-10624</a> remove error message from <code>whitelist.js</code>, which leaves it empty</li>
+</ul>
+
+<p>cordova-plugin-wkwebview-engine@1.0.3</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add <code>JSHint</code> for plugins</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2016/04/05/cordova-windows-4.3.2.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2016/04/05/cordova-windows-4.3.2.html">Apache Cordova Windows 4.3.2</a>
+                    <div class="date"> 05 Apr 2016 - By Vladimir Kotikov </div>
+                    <p class="content">
+                        We are happy to announce that Cordova Windows 4.3.2 has been released!...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2016/04/27/security.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2016/04/27/security.html">CVE announcements for Cordova iOS</a>
+                    <div class="date"> 27 Apr 2016 - By Tony Homer </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        CVE-2015-5207 - Bypass of Access Restrictions in Apache Cordova iOS Severity: High...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cordovablogs';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  10.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

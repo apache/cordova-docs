@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                iOS Platform Guide - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/3.6.0/guide/platforms/ios/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '3.6.0' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/guide/support/index.html">
+                Platform Support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/guide/cli/index.html">
+                The Command-Line Interface
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/guide/platforms/index.html">
+                Platform Guides
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/plugin_ref/plugman.html">
+                Using Plugman to Manage Plugins
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/config_ref/index.html">
+                The config.xml File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/config_ref/images.html">
+                Icons and Splash Screens
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/guide/hybrid/webviews/index.html">
+                Embedding WebViews
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/guide/hybrid/plugins/index.html">
+                Plugin Development Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/guide/appdev/privacy/index.html">
+                Privacy Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/guide/appdev/security/index.html">
+                Security Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/guide/appdev/whitelist/index.html">
+                Whitelist Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/cordova/storage/storage.html">
+                Storage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.6.0/cordova/plugins/pluginapis.html">
+                Plugin APIs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/en/3.6.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/guide/support/index.html">
+        Platform Support
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/guide/cli/index.html">
+        The Command-Line Interface
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/guide/platforms/index.html">
+        Platform Guides
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/plugin_ref/plugman.html">
+        Using Plugman to Manage Plugins
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/config_ref/index.html">
+        The config.xml File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/config_ref/images.html">
+        Icons and Splash Screens
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/guide/hybrid/webviews/index.html">
+        Embedding WebViews
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/guide/hybrid/plugins/index.html">
+        Plugin Development Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/guide/appdev/privacy/index.html">
+        Privacy Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/guide/appdev/security/index.html">
+        Security Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/guide/appdev/whitelist/index.html">
+        Whitelist Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/cordova/storage/storage.html">
+        Storage
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.6.0/cordova/plugins/pluginapis.html">
+        Plugin APIs
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/3.6.0/guide/platforms/ios/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        English
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/3.6.0/guide/platforms/ios/" class="missing-page">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/3.6.0/guide/platforms/ios/" class="">
+                                
+                                    <span class="selected">
+                                        English
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/3.6.0/guide/platforms/ios/" class="missing-page">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/3.6.0/guide/platforms/ios/" class="missing-page">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/3.6.0/guide/platforms/ios/" class="missing-page">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/3.6.0/guide/platforms/ios/" class="missing-page">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/3.6.0/guide/platforms/ios/" class="missing-page">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/3.6.0/guide/platforms/ios/" class="missing-page">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/3.6.0/guide/platforms/ios/" class="missing-page">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/3.6.0/guide/platforms/ios/" class="missing-page">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/3.6.0/guide/platforms/ios/" class="missing-page">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/3.6.0/guide/platforms/ios/" class="missing-page">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        3.6.0
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/" class="missing-page">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/" class="missing-page">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                3.6.0
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/" class="missing-page">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/" class="missing-page">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/" class="missing-page">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is outdated!
+                    <a href="/docs/en/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>iOS Platform Guide</h1>
+
+<p>This guide shows how to set up your SDK development environment to
+deploy Cordova apps for iOS devices such as iPhone and iPad. See the
+following for more detailed platform-specific information:</p>
+
+<ul>
+<li><a href="config.html">iOS Configuration</a></li>
+<li><a href="upgrade.html">Upgrading iOS</a></li>
+<li><a href="webview.html">iOS WebViews</a></li>
+<li><a href="plugin.html">iOS Plugins</a></li>
+<li>iOS Command-line Tools</li>
+</ul>
+
+<p>The command-line tools above refer to versions prior to Cordova 3.0.
+See <a href="../../cli/index.html">The Command-Line Interface</a> for information about the
+current interface.</p>
+
+<h2>Requirements and Support</h2>
+
+<p>Apple® tools required to build iOS applications run only on the OS X
+operating system on Intel-based Macs. Xcode® 4.5 (the minimum required
+version) runs only on OS X version 10.7 (Lion) or greater, and
+includes the iOS 6 SDK (Software Development Kit).  To submit apps to
+the Apple App Store℠ requires the latest versions of the Apple tools.</p>
+
+<p>You can test many of the Cordova features using the iOS emulator
+installed with the iOS SDK and Xcode, but you need an actual device to
+fully test all of the app&#39;s device features before submitting to the
+App Store.  The device must have at least iOS 5.x installed, the
+minimum iOS version supported as of Cordova 2.3.  Supporting devices
+include all iPad® models, iPhone® 3GS and above, and iPod® Touch 3rd
+Generation or later. To install apps onto a device, you must also be a
+member of Apple&#39;s
+<a href="https://developer.apple.com/programs/ios/">iOS Developer Program</a>,
+which costs $99 per year. This guide shows how to deploy apps to the
+iOS emulator, for which you don&#39;t need to register with the developer
+program.</p>
+
+<h2>Install the SDK</h2>
+
+<p>There are two ways to download Xcode:</p>
+
+<ul>
+<li><p>from the <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">App Store</a>,
+available by searching for &quot;Xcode&quot; in the <strong>App Store</strong> application.</p></li>
+<li><p>from <a href="https://developer.apple.com/downloads/index.action">Apple Developer Downloads</a>,
+which requires registration as an Apple Developer.</p></li>
+</ul>
+
+<p>Once Xcode is installed, several command-line tools need to be enabled
+for Cordova to run. From the <strong>Xcode</strong> menu, select <strong>Preferences</strong>,
+then the <strong>Downloads</strong> tab. From the <strong>Components</strong> panel, press the
+<strong>Install</strong> button next to the <strong>Command Line Tools</strong> listing.</p>
+
+<h2>Open a Project in the SDK</h2>
+
+<p>Use the <code>cordova</code> utility to set up a new project, as described in The
+Cordova <a href="../../cli/index.html">The Command-Line Interface</a>. For example, in a source-code directory:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova create hello com.example.hello "HelloWorld"
+    $ cd hello
+    $ cordova platform add ios
+    $ cordova prepare              # or "cordova build"
+</code></pre></div>
+<p>Once created, you can open it from within Xcode. Double-click to open
+the <code>hello/platforms/ios/hello.xcodeproj</code> file.  The screen should
+look like this:</p>
+
+<p><img src="/static/img/guide/platforms/ios/helloworld_project.png" alt=""></p>
+
+<h2>Deploy to Emulator</h2>
+
+<p>To preview the app in the iOS emulator:</p>
+
+<ol>
+<li><p>Make sure the <em>.xcodeproj</em> file is selected in the left panel.</p></li>
+<li><p>Select the <strong>hello</strong> app in the panel immediately to the right.</p></li>
+<li><p>Select the intended device from the toolbar&#39;s <strong>Scheme</strong> menu, such
+as the iPhone 6.0 Simulator as highlighted here:</p></li>
+</ol>
+
+<p><img src="/static/img/guide/platforms/ios/select_xcode_scheme.png" alt=""></p>
+
+<ol>
+<li>Press the <strong>Run</strong> button that appears in the same toolbar to the
+left of the <strong>Scheme</strong>. That builds, deploys and runs the
+application in the emulator. A separate emulator application opens
+to display the app:</li>
+</ol>
+
+<p><img src="/static/img/guide/platforms/ios/HelloWorldStandard.png" alt=""></p>
+
+<p>Only one emulator may run at a time, so if you want to test the app
+   in a different emulator, you need to quit the emulator application
+   and run a different target within Xcode.</p>
+
+<p>Xcode comes bundled with emulators for the latest versions of iPhone
+and iPad. Older versions may be available from the <strong>Xcode &rarr;
+Preferences &rarr; Downloads &rarr; Components</strong> panel.</p>
+
+<h2>Deploy to Device</h2>
+
+<p>For details about various requirements to deploy to a device, refer
+to the <em>Configuring Development and Distribution Assets</em> section of
+Apple&#39;s
+<a href="http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959">Tools Workflow Guide for iOS</a>.
+Briefly, you need to do the following before deploying:</p>
+
+<ol>
+<li><p>Join the Apple iOS Developer Program.</p></li>
+<li><p>Create a <em>Provisioning Profile</em> within the
+<a href="https://developer.apple.com/ios/manage/overview/index.action">iOS Provisioning Portal</a>.
+You can use its <em>Development Provisioning Assistant</em> to create and
+install the profile and certificate Xcode requires.</p></li>
+<li><p>Verify that the <em>Code Signing</em> section&#39;s <em>Code Signing Identity</em>
+within the project settings is set to your provisioning profile
+name.</p></li>
+</ol>
+
+<p>To deploy to the device:</p>
+
+<ol>
+<li><p>Use the USB cable to plug the device into your Mac.</p></li>
+<li><p>Select the name of the project in the Xcode window&#39;s <strong>Scheme</strong>
+drop-down list.</p></li>
+<li><p>Select your device from the <strong>Device</strong> drop-down list. If it is
+plugged in via USB but still does not appear, press the
+<strong>Organizer</strong> button to resolve any errors.</p></li>
+<li><p>Press the <strong>Run</strong> button to build, deploy and run the application
+on your device.</p></li>
+</ol>
+
+<h2>Common Problems</h2>
+
+<p><strong>Deprecation Warnings</strong>: When an application programming interface
+(API) is changed or replaced by another API, it is marked as
+<em>deprecated</em>.  The API still works in the near term, but is eventually
+removed.  Some of these deprecated interfaces are reflected in Apache
+Cordova, and Xcode issues warnings about them when you build and
+deploy an application.</p>
+
+<p>Xcode&#39;s warning about the <code>invokeString</code> method concerns functionality
+that launches an app from a custom URL. While the mechanism to load
+from a custom URL has changed, this code is still present to provide
+backwards functionality for apps created with older versions of
+Cordova.  The sample app does not use this functionality, so these
+warnings can be ignored.  To prevent these warnings from appearing,
+remove the code that references the deprecated invokeString API:</p>
+
+<ul>
+<li><p>Edit the <em>Classes/MainViewController.m</em> file, surround the following
+block of code with <code>/*</code> and <code>*/</code> comments as shown below, then type
+<strong>Command-s</strong> to save the file:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">(void)webViewDidFinishLoad:(UIWebView*)theWebView
+{
+// only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
+/*
+if (self.invokeString) {
+  // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
+  NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
+  NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
+  [theWebView stringByEvaluatingJavaScriptFromString:jsString];
+}
+*/
+// Black base color for background matches the native apps
+theWebView.backgroundColor = [UIColor blackColor];
+
+return [super webViewDidFinishLoad:theWebView];
+}
+</code></pre></div></li>
+<li><p>Edit the <em>Classes/AppViewDelegate.m</em> file, comment out the following
+line by inserting a double slash as shown below, then type
+<strong>Command-s</strong> to save the file:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">//self.viewController.invokeString = invokeString;
+</code></pre></div></li>
+<li><p>Press <strong>Command-b</strong> to rebuild the project and eliminate the warnings.</p></li>
+</ul>
+
+<!-- Does this fix only last until the next "cordova prepare"? -->
+
+<p><strong>Missing Headers</strong>: Compilation errors relating to missing headers
+result from problems with the build location, and can be fixed 
+via Xcode preferences:</p>
+
+<ol>
+<li><p>Select <strong>Xcode &rarr; Preferences &rarr; Locations</strong>.</p></li>
+<li><p>In the <strong>Derived Data</strong> section, press the <strong>Advanced</strong> button and
+select <strong>Unique</strong> as the <strong>Build Location</strong> as shown here:</p></li>
+</ol>
+
+<p><img src="/static/img/guide/platforms/ios/xcode_build_location.png" alt=""></p>
+
+<p>This is the default setting for a new Xcode install, but it may be set
+differently following an upgrade from an older version of Xcode.</p>
+
+<p>For further information, consult Apple&#39;s documentation:</p>
+
+<ul>
+<li><p><a href="http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343">Start Developing iOS Apps Today</a> provides a quick overview of steps for developing iOS Apps.</p></li>
+<li><p><a href="https://developer.apple.com/membercenter/index.action">Member Center home page</a>
+provides links to several iOS technical resources including
+technical resources, the provisioning portal, distribution guides
+and community forums.</p></li>
+<li><p><a href="http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959">Tools Workflow Guide for iOS</a></p></li>
+<li><p><a href="http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215">Xcode 4 User Guide</a></p></li>
+<li><p><a href="https://developer.apple.com/videos/wwdc/2012/">Session Videos</a> from
+the Apple World Wide Developer Conference 2012 (WWDC2012)</p></li>
+<li><p>The <a href="http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html">xcode-select command</a>,
+which helps specify the correct version of Xcode if more than one is installed.</p></li>
+</ul>
+
+<p>(Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)</p>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  3.6.0", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

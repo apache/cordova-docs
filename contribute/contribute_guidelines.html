@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Apache Cordova Contribute Guidelines - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/contribute/contribute_guidelines.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li class="active">
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '10.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="contribute-help">
+    <h1>Contributor Guidelines</h1>
+
+<p>Thanks for helping to improve Cordova! This page provides a general guide on making contributions to Cordova. If you can&#39;t find something on this page, please feel free to contact the <a href="http://cordova.apache.org/contact">dev mailing list</a> or ask questions on the <a href="http://slack.cordova.io/">Cordova Slack</a>.</p>
+
+<h2>Prerequisites</h2>
+
+<p>Before contributing to Apache Cordova, it is recommended that you join the <a href="http://cordova.apache.org/contact/">mailing list</a> and send a brief introduction of yourself.</p>
+
+<h2>Working with Issues</h2>
+
+<p>Issues for all Apache Cordova components are on <a href="https://github.com/apache/cordova">GitHub</a>. When reporting issues, please follow <a href="./issues.html">these guidelines</a>.</p>
+
+<h4>Claiming Issues</h4>
+
+<p>If you find an issue that you would like to work on, you can ask to claim it; please leave a comment indicating your intention and a committer will assign it to you. If it is clear that an issue is not being worked on, feel free to work on it yourself (but please comment first to let the assignee know).</p>
+
+<h2>Submitting Code</h2>
+
+<p>You can submit code by submitting a pull request at one of the Apache Github mirrors at <code>github.com/apache/&lt;repo name&gt;</code>.</p>
+
+<h4>Making Pull requests</h4>
+
+<p>The workflow for creating pull requests on Github generally follows these steps:</p>
+
+<ol>
+<li><a href="./issues.html">Open an issue</a> if one has not already been created (optional)</li>
+<li><a href="https://help.github.com/articles/fork-a-repo/">Create a local fork</a> of the appropriate Cordova repository</li>
+<li>In your local fork, create a branch dedicated to the issue you are working on</li>
+<li>Push your commits to this branch</li>
+<li><a href="http://www.git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Squashing-Commits">Squash</a> these commits into one single commit (see the section below regarding commit messages)</li>
+<li><a href="https://help.github.com/articles/using-pull-requests/">Create a pull request</a> on the Cordova repository</li>
+<li>Ask for code review</li>
+</ol>
+
+<p>Please include the issue ID in the title of any pull requests made to Github. For more help on Git, see the <a href="http://git-scm.com/doc">Git documentation</a>.</p>
+
+<h4>Code review</h4>
+
+<p>However you submit code, you should always call out a reviewer to look at and merge your code. GitHub helpfully suggests possible reviewers whom you can add, or you can send a mail out to the <a href="http://cordova.apache.org/contact">dev mailing list</a> with a link to the pull request.</p>
+
+<h2>Testing your code</h2>
+
+<p>You are responsible for testing your changes and correcting any problems before submitting a pull request. Testing includes both verifying the functionality added/touched, and running the test suites to verify there are no regressions.</p>
+
+<p>When we say &quot;run the test suites&quot; this includes:</p>
+
+<ul>
+<li>All automated tests in cordova-mobilespec</li>
+<li>Manual tests in cordova-mobilespec that might be affected by the change</li>
+<li><code>npm test</code> for JS linting</li>
+<li>Any platform-specific unit tests
+
+<ul>
+<li><code>cordova-android: npm run test-build</code></li>
+<li><code>cordova-ios:  npm test</code></li>
+<li><code>cordova-js: jake test</code></li>
+<li><code>cordova-plugman: npm test</code></li>
+</ul></li>
+</ul>
+
+<p>Please add a comment in the issue about what testing you did with your change so a committer can understand what testing was done before they merge it in.</p>
+
+<h4>Adding tests</h4>
+
+<p>If possible, please include tests that validate your changes and catch any future regressions. Most repositories have a <code>tests/</code> directory that includes the tests for that component.</p>
+
+<h2>Git Commit Messages</h2>
+
+<p>When contributing, please start your commit messages with the the issue ID (if there is one) and relevant platform (if appropriate) followed by a description of the commit. Issue IDs on GitHub should be prefixed with <code>GH-</code>, which will allow GitHub to automatically link issues and PRs.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">GH-2345 android: Improved exec bridge by using strings instead of JSON
+GH-3456 all: Fixed plugin loading paths that start with /
+</code></pre></div>
+<p>You are highly encouraged to describe your git commit with enough detail for someone else to understand it. In doing so, your commit message can consist of multiple lines. However, it also is highly encouraged that the first line of your commit message not exceed 50 characters. This is because some of the tooling that sits on top of git (such as the httpd apps that let you browse the repos) assumes that the first line is top-level summary that is 50 characters or less. Thus there will be highlighting and truncating of the commit message using these assumptions and it will look weird if these assumptions are not kept. There should also be a blank line between the summary and any further description. For example, here is a good commit message:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">GH-1234 Fixed the whizbang widget
+
+- added more sanity checking in the build script.
+- fixed the API to return the correct value in the scenario where there
+  aren't any whizbangs present.
+- corrected the documentation.
+</code></pre></div>
+<p>As an alternate to a bullet list, you could put long text here in paragraph form, with each line wrapped at 72 chars and blank lines between paragraphs.</p>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  10.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

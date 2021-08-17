@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="With the announcement of the iOS 12 beta SDK at Apple’s WWDC 2018, came the news that UIWebView, the webview originally bundled with the first iOS SDK, has b...">
+
+    <title>
+        
+            
+                Breaking changes coming to the iOS WebView in Apache Cordova - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/news/2018/08/01/future-cordova-ios-webview.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '10.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Breaking changes coming to the iOS WebView in Apache Cordova</div>
+        <div class="author">By:
+            
+              <a href="https://twitter.com/shazron">Shazron Abdullah</a>
+            
+        </div>
+        <div class="date">01 Aug 2018</div>
+    </header>
+    <section>
+        <div>
+            <p>With the announcement of the iOS 12 beta SDK at Apple’s WWDC 2018, came the news that UIWebView, the webview originally bundled with the first iOS SDK, has been <a href="https://developer.apple.com/documentation/uikit/uiwebview">deprecated</a>. What this means for iOS developers is that sometime in the future, Apple will remove UIWebView from their SDK, and developers should migrate to using the WKWebView component starting right now.</p>
+
+<h2>WebView Engine Plugins</h2>
+
+<p>Cordova iOS, starting with version 4, has anticipated this by moving the webview that is used by the platform into a plugin. The default webview that is used is still UIWebView, but you had the option to use WKWebView instead, with the <a href="https://github.com/apache/cordova-plugin-wkwebview-engine">cordova-plugin-wkwebview-engine</a> plugin. Both the UIWebView and WKWebView webviews are plugins themselves, with the former included in the cordova-ios platform.</p>
+
+<p><img src="/static/img/blog/2018/arch-webview-engine.png" alt="Figure 1"></p>
+
+<h2>Future Cordova iOS with WKWebView</h2>
+
+<p>Starting with a future Cordova iOS release, we will ship both webview plugins with the cordova-ios platform, to enable developers to test and transition users to the new WKWebView component. This future Cordova iOS version will ship with a bridge webview plugin that can switch usage of the webview plugin used at runtime. Previously, you could only choose which webview you would use at build time.</p>
+
+<p><img src="/static/img/blog/2018/bridge-webview-engine.png" alt="Figure 2"></p>
+
+<!--more-->
+
+<h2>Migration and Transition using the Bridge WebView Plugin</h2>
+
+<p>The developer can switch the webview used by setting a preference, that will be read at runtime when the app starts. Developers can transition users to the new WKWebView by user choice, in their app settings -- or randomly perhaps as an A/B test. This will give the developer and their users a chance to try out the new component, and they can back out and use UIWebView if there are any problems, without needing a new app release. This is intended to be used for testing and migration purposes only -- developers should aim to support only WKWebView functionality going forward.</p>
+
+<h2>Cordova iOS Future Release, WKWebView only</h2>
+
+<p>When UIWebView support has been removed in a future iOS SDK, we will aim to release a future Cordova iOS version, which will remove UIWebView support, and WKWebView will then be the default webview engine.</p>
+
+<table><thead>
+<tr>
+<th>Cordova iOS 4 &gt;&gt;&gt;</th>
+<th>Future Cordova iOS &gt;&gt;&gt;</th>
+<th>&quot;More Future&quot; Cordova iOS</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td>UIWebView deprecated</td>
+<td>UIWebView removed</td>
+</tr>
+<tr>
+<td></td>
+<td>WKWebView Engine Plugin Integrated Into Platform</td>
+<td>WKWebView Engine Plugin only</td>
+</tr>
+<tr>
+<td></td>
+<td>Bridge WebView Plugin Added</td>
+<td>Bridge WebView Plugin Removed</td>
+</tr>
+</tbody></table>
+
+<h2>Limitations of WKWebView</h2>
+
+<p>There are <a href="https://mjtsai.com/blog/2018/06/20/webview-and-uiwebview-deprecated-in-favor-of-wkwebview/">many limitations</a> of WKWebview, especially if you were using UIWebView previously. The limitations are:</p>
+
+<ol>
+<li>Cookies don&#39;t persist. This is a WebKit bug, but someone has
+created a plugin for a workaround. See
+<a href="https://issues.apache.org/jira/browse/CB-12074">CB-12074</a></li>
+<li>Can&#39;t delete cookies. This is/was a WebKit bug (2015), we need to test
+for the iOS 11/12. See <a href="https://issues.apache.org/jira/browse/CB-11297">CB-11297</a></li>
+<li>Can&#39;t execute JavaScript code in the background. There are several
+issues related to this. See
+<a href="https://issues.apache.org/jira/browse/CB-12815">CB-12815</a></li>
+<li>XmlHttpRequests don&#39;t work, because of Cross-Origin Resource
+Sharing issue (CORS). There is a workaround plugin created by Oracle
+(UPL licensed, which is Apache-2.0 compatible). See
+<a href="https://issues.apache.org/jira/browse/CB-10143">CB-10143</a></li>
+<li>Migration of localStorage from UIWebView. There is a migration
+plugin available. See <a href="https://issues.apache.org/jira/browse/CB-11974">CB-11974</a></li>
+<li>iframes will not be supported any longer (they are now CORS restricted in WKWebView), and may be partially or completely broken. This may lead to incompatibilities with the same code in other Cordova platforms.</li>
+<li>Known issues with WKWebView on iOS pre-11 which will be deprecated and dropped in a future Cordova release</li>
+</ol>
+
+<p>There are several bugs that need to be resolved as well. The full list
+here: <a href="https://s.apache.org/QfsF">https://s.apache.org/QfsF</a></p>
+
+<p>As you can see, WKWebView is not a direct drop-in replacement for UIWebView, you will need several plugins to patch functionality that is missing. There is also the <a href="https://github.com/apache/cordova-plugins/tree/wkwebview-engine-localhost">local-webserver experimental plugin option</a>, which will not be graduated to a full plugin -- we will concentrate our efforts on supporting the main WKWebView engine plugin. </p>
+
+<p>Hopefully with more testing, and filing of bug reports with Apple for missing features, the WKWebView can be a full replacement for Cordova users.</p>
+
+<hr>
+
+<p><strong>UPDATE 2019-02-16</strong>: This blog post has been updated to remove references to these changes going to be included in Cordova iOS 5, as <a href="https://cordova.apache.org/announcements/2019/02/09/cordova-ios-release-5.0.0.html">Cordova iOS 5 was released</a> without them and the planned implementation has been moved to a future release of Cordova iOS.</p>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2018/07/26/cordova-ios-4.5.5.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2018/07/26/cordova-ios-4.5.5.html">Cordova iOS 4.5.5 Released!</a>
+                    <div class="date"> 26 Jul 2018 - By Chris Brody </div>
+                    <p class="content">
+                        We are happy to announce that Cordova iOS 4.5.5 has been released!...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2018/08/10/cordova-browser-5.0.4.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2018/08/10/cordova-browser-5.0.4.html">Cordova browser 5.0.4 Released!</a>
+                    <div class="date"> 10 Aug 2018 - By Chris Brody </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        We are happy to announce that Cordova browser 5.0.4 has been released!...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cordovablogs';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  10.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

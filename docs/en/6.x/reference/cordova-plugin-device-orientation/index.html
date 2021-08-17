@@ -1,0 +1,3006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="Access compass data. ">
+
+    <title>
+        
+            
+                Device Orientation - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/6.x/reference/cordova-plugin-device-orientation/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '6.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/cli/template.html">
+                Templates for apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/blackberry10/home.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/osx/index.html">
+                OS X
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/appdev/whitelist/index.html">
+                Whitelisting
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/blackberry10/plugin.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-cli/index.html">
+                CLI Reference
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-battery-status/index.html">
+                Battery Status
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-camera/index.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-console/index.html">
+                Console
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-contacts/index.html">
+                Contacts
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-device/index.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-device-motion/index.html">
+                Device Motion
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-device-orientation/index.html">
+                Device Orientation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-dialogs/index.html">
+                Dialogs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-file/index.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-file-transfer/index.html">
+                File Transfer
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-geolocation/index.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-globalization/index.html">
+                Globalization
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-inappbrowser/index.html">
+                Inappbrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-media/index.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-media-capture/index.html">
+                Media Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-network-information/index.html">
+                Network Information
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-splashscreen/index.html">
+                Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-vibration/index.html">
+                Vibration
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-statusbar/index.html">
+                Statusbar
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-whitelist/index.html">
+                Whitelist
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-legacy-whitelist/index.html">
+                Legacy Whitelist
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/cli/template.html">
+        Templates for apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/blackberry10/home.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/osx/index.html">
+        OS X
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/appdev/whitelist/index.html">
+        Whitelisting
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/blackberry10/plugin.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-cli/index.html">
+        CLI Reference
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-battery-status/index.html">
+        Battery Status
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-camera/index.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-console/index.html">
+        Console
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-contacts/index.html">
+        Contacts
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-device/index.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-device-motion/index.html">
+        Device Motion
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-device-orientation/index.html">
+        Device Orientation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-dialogs/index.html">
+        Dialogs
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-file/index.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-file-transfer/index.html">
+        File Transfer
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-geolocation/index.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-globalization/index.html">
+        Globalization
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-inappbrowser/index.html">
+        Inappbrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-media/index.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-media-capture/index.html">
+        Media Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-network-information/index.html">
+        Network Information
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-splashscreen/index.html">
+        Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-vibration/index.html">
+        Vibration
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-statusbar/index.html">
+        Statusbar
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-whitelist/index.html">
+        Whitelist
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-legacy-whitelist/index.html">
+        Legacy Whitelist
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+                    <a class="edit hidden-xs hidden-sm" href="https://github.com/apache/cordova-plugin-device-orientation/blob/master/README.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+
+                
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        English
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/6.x/reference/cordova-plugin-device-orientation/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/6.x/reference/cordova-plugin-device-orientation/" class="">
+                                
+                                    <span class="selected">
+                                        English
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/6.x/reference/cordova-plugin-device-orientation/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/6.x/reference/cordova-plugin-device-orientation/" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/6.x/reference/cordova-plugin-device-orientation/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/6.x/reference/cordova-plugin-device-orientation/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/6.x/reference/cordova-plugin-device-orientation/" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/6.x/reference/cordova-plugin-device-orientation/" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/6.x/reference/cordova-plugin-device-orientation/" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/6.x/reference/cordova-plugin-device-orientation/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/6.x/reference/cordova-plugin-device-orientation/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/6.x/reference/cordova-plugin-device-orientation/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        6.x
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                6.x
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/" class="missing-page">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/" class="missing-page">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/" class="missing-page">
+                                
+                                    
+                                3.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/" class="missing-page">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/" class="missing-page">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/" class="missing-page">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is outdated!
+                    <a href="/docs/en/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+                <div class="alert alert-warning docs-alert" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                     master.
+                    <a href="https://github.com/apache/cordova-plugin-device-orientation/releases">
+                        
+                    </a>
+                </div>
+            
+
+            <div id="page-toc-source">
+                <!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!---
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<table><thead>
+<tr>
+<th style="text-align: center">Android</th>
+<th style="text-align: center">iOS</th>
+<th style="text-align: center">Windows 8.1 Store</th>
+<th style="text-align: center">Windows 8.1 Phone</th>
+<th style="text-align: center">Windows 10 Store</th>
+<th style="text-align: center">Travis CI</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-device-orientation/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-device-orientation" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-device-orientation/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-device-orientation" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-device-orientation/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-device-orientation" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-device-orientation/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-device-orientation" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-device-orientation/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-device-orientation" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-device-orientation"><img src="https://travis-ci.org/apache/cordova-plugin-device-orientation.svg?branch=master" alt="Build Status"></a></td>
+</tr>
+</tbody></table>
+
+<h1>cordova-plugin-device-orientation</h1>
+
+<p>This plugin provides access to the device&#39;s compass. The compass is a sensor
+that detects the direction or heading that the device is pointed, typically
+from the top of the device.  It measures the heading in degrees from 0 to
+359.99, where 0 is north.</p>
+
+<p>Access is via a global <code>navigator.compass</code> object.</p>
+
+<p>Although the object is attached to the global scoped <code>navigator</code>, it is not available until after the <code>deviceready</code> event.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(navigator.compass);
+}
+</code></pre></div>
+<p>Report issues on the <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20Device%20Orientation%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC">Apache Cordova issue tracker</a></p>
+
+<h2>Installation</h2>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add cordova-plugin-device-orientation
+</code></pre></div>
+<h2>Supported Platforms</h2>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>Browser</li>
+<li>Firefox OS</li>
+<li>iOS</li>
+<li>Tizen</li>
+<li>Windows Phone 7 and 8 (if available in hardware)</li>
+<li>Windows 8</li>
+</ul>
+
+<h2>Methods</h2>
+
+<ul>
+<li>navigator.compass.getCurrentHeading</li>
+<li>navigator.compass.watchHeading</li>
+<li>navigator.compass.clearWatch</li>
+</ul>
+
+<h2>navigator.compass.getCurrentHeading</h2>
+
+<p>Get the current compass heading. The compass heading is returned via a <code>CompassHeading</code>
+object using the <code>compassSuccess</code> callback function.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">navigator.compass.getCurrentHeading(compassSuccess, compassError);
+</code></pre></div>
+<h3>Example</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">function onSuccess(heading) {
+    alert('Heading: ' + heading.magneticHeading);
+};
+
+function onError(error) {
+    alert('CompassError: ' + error.code);
+};
+
+navigator.compass.getCurrentHeading(onSuccess, onError);
+</code></pre></div>
+<h2>navigator.compass.watchHeading</h2>
+
+<p>Gets the device&#39;s current heading at a regular interval. Each time the heading
+is retrieved, the <code>headingSuccess</code> callback function is executed.</p>
+
+<p>The returned watch ID references the compass watch interval. The watch
+ID can be used with <code>navigator.compass.clearWatch</code> to stop watching the navigator.compass.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
+</code></pre></div>
+<p><code>compassOptions</code> may contain the following keys:</p>
+
+<ul>
+<li><strong>frequency</strong>: How often to retrieve the compass heading in milliseconds. <em>(Number)</em> (Default: 100)</li>
+<li><strong>filter</strong>: The change in degrees required to initiate a watchHeading success callback. When this value is set, <strong>frequency</strong> is ignored. <em>(Number)</em></li>
+</ul>
+
+<h3>Example</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">function onSuccess(heading) {
+    var element = document.getElementById('heading');
+    element.innerHTML = 'Heading: ' + heading.magneticHeading;
+};
+
+function onError(compassError) {
+    alert('Compass error: ' + compassError.code);
+};
+
+var options = {
+    frequency: 3000
+}; // Update every 3 seconds
+
+var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+</code></pre></div>
+<h3>Browser Quirks</h3>
+
+<p>Values for current heading are randomly generated in order to simulate the compass.</p>
+
+<h3>iOS Quirks</h3>
+
+<p>Only one <code>watchHeading</code> can be in effect at one time in iOS.  If a
+<code>watchHeading</code> uses a filter, calling <code>getCurrentHeading</code> or
+<code>watchHeading</code> uses the existing filter value to specify heading
+changes. Watching heading changes with a filter is more efficient than
+with time intervals.</p>
+
+<h3>Amazon Fire OS Quirks</h3>
+
+<ul>
+<li><code>filter</code> is not supported.</li>
+</ul>
+
+<h3>Android Quirks</h3>
+
+<ul>
+<li>No support for <code>filter</code>.</li>
+</ul>
+
+<h3>Firefox OS Quirks</h3>
+
+<ul>
+<li>No support for <code>filter</code>.</li>
+</ul>
+
+<h3>Tizen Quirks</h3>
+
+<ul>
+<li>No support for <code>filter</code>.</li>
+</ul>
+
+<h3>Windows Phone 7 and 8 Quirks</h3>
+
+<ul>
+<li>No support for <code>filter</code>.</li>
+</ul>
+
+<h2>navigator.compass.clearWatch</h2>
+
+<p>Stop watching the compass referenced by the watch ID parameter.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">navigator.compass.clearWatch(watchID);
+</code></pre></div>
+<ul>
+<li><strong>watchID</strong>: The ID returned by <code>navigator.compass.watchHeading</code>.</li>
+</ul>
+
+<h3>Example</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+
+// ... later on ...
+
+navigator.compass.clearWatch(watchID);
+</code></pre></div>
+<h2>CompassHeading</h2>
+
+<p>A <code>CompassHeading</code> object is returned to the <code>compassSuccess</code> callback function.</p>
+
+<h3>Properties</h3>
+
+<ul>
+<li><p><strong>magneticHeading</strong>: The heading in degrees from 0-359.99 at a single moment in time. <em>(Number)</em></p></li>
+<li><p><strong>trueHeading</strong>: The heading relative to the geographic North Pole in degrees 0-359.99 at a single moment in time. A negative value indicates that the true heading can&#39;t be determined.  <em>(Number)</em></p></li>
+<li><p><strong>headingAccuracy</strong>: The deviation in degrees between the reported heading and the true heading. <em>(Number)</em></p></li>
+<li><p><strong>timestamp</strong>: The time at which this heading was determined.  <em>(DOMTimeStamp)</em></p></li>
+</ul>
+
+<h3>Amazon Fire OS Quirks</h3>
+
+<ul>
+<li><p><code>trueHeading</code> is not supported, but reports the same value as <code>magneticHeading</code></p></li>
+<li><p><code>headingAccuracy</code> is always 0 because there is no difference between the <code>magneticHeading</code> and <code>trueHeading</code></p></li>
+</ul>
+
+<h3>Android Quirks</h3>
+
+<ul>
+<li><p>The <code>trueHeading</code> property is not supported, but reports the same value as <code>magneticHeading</code>.</p></li>
+<li><p>The <code>headingAccuracy</code> property is always 0 because there is no difference between the <code>magneticHeading</code> and <code>trueHeading</code>.</p></li>
+</ul>
+
+<h3>Firefox OS Quirks</h3>
+
+<ul>
+<li><p>The <code>trueHeading</code> property is not supported, but reports the same value as <code>magneticHeading</code>.</p></li>
+<li><p>The <code>headingAccuracy</code> property is always 0 because there is no difference between the <code>magneticHeading</code> and <code>trueHeading</code>.</p></li>
+</ul>
+
+<h3>iOS Quirks</h3>
+
+<ul>
+<li>The <code>trueHeading</code> property is only returned for location services enabled via <code>navigator.geolocation.watchLocation()</code>.</li>
+</ul>
+
+<h2>CompassError</h2>
+
+<p>A <code>CompassError</code> object is returned to the <code>compassError</code> callback function when an error occurs.</p>
+
+<h3>Properties</h3>
+
+<ul>
+<li><strong>code</strong>: One of the predefined error codes listed below.</li>
+</ul>
+
+<h3>Constants</h3>
+
+<ul>
+<li><code>CompassError.COMPASS_INTERNAL_ERR</code></li>
+<li><code>CompassError.COMPASS_NOT_SUPPORTED</code></li>
+</ul>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  6.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

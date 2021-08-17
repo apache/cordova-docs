@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Icons and Splash Screens - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/latest/config_ref/images.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '3.4.0' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.4.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.4.0/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.4.0/guide/support/index.html">
+                Platform Support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.4.0/guide/cli/index.html">
+                The Command-Line Interface
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.4.0/guide/platforms/index.html">
+                Platform Guides
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.4.0/plugin_ref/plugman.html">
+                Using Plugman to Manage Plugins
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.4.0/config_ref/index.html">
+                The config.xml File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="this-page" href="/docs/en/3.4.0/config_ref/images.html">
+                Icons and Splash Screens
+            </a>
+            
+                <span class="entry-highlight"></span>
+            
+        
+
+        
+        <div id="page-toc" class="page-toc"></div>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.4.0/guide/hybrid/webviews/index.html">
+                Embedding WebViews
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.4.0/guide/hybrid/plugins/index.html">
+                Plugin Development Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.4.0/guide/appdev/privacy/index.html">
+                Privacy Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.4.0/guide/appdev/whitelist/index.html">
+                Whitelist Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.4.0/cordova/storage/storage.html">
+                Storage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.4.0/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/3.4.0/cordova/plugins/pluginapis.html">
+                Plugin APIs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/en/3.4.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.4.0/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.4.0/guide/support/index.html">
+        Platform Support
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.4.0/guide/cli/index.html">
+        The Command-Line Interface
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.4.0/guide/platforms/index.html">
+        Platform Guides
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.4.0/plugin_ref/plugman.html">
+        Using Plugman to Manage Plugins
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.4.0/config_ref/index.html">
+        The config.xml File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="this-page" href="/docs/en/3.4.0/config_ref/images.html">
+        Icons and Splash Screens
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.4.0/guide/hybrid/webviews/index.html">
+        Embedding WebViews
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.4.0/guide/hybrid/plugins/index.html">
+        Plugin Development Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.4.0/guide/appdev/privacy/index.html">
+        Privacy Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.4.0/guide/appdev/whitelist/index.html">
+        Whitelist Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.4.0/cordova/storage/storage.html">
+        Storage
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.4.0/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/3.4.0/cordova/plugins/pluginapis.html">
+        Plugin APIs
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/3.4.0/config_ref/images.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        English
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/3.4.0/config_ref/images.html" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/3.4.0/config_ref/images.html" class="">
+                                
+                                    <span class="selected">
+                                        English
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/3.4.0/config_ref/images.html" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/3.4.0/config_ref/images.html" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/3.4.0/config_ref/images.html" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/3.4.0/config_ref/images.html" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/3.4.0/config_ref/images.html" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/3.4.0/config_ref/images.html" class="missing-page">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/3.4.0/config_ref/images.html" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/3.4.0/config_ref/images.html" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/3.4.0/config_ref/images.html" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/3.4.0/config_ref/images.html" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        3.4.0
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/config_ref/images.html" class="">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/config_ref/images.html" class="">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/config_ref/images.html" class="">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/config_ref/images.html" class="">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/config_ref/images.html" class="">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/config_ref/images.html" class="">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/config_ref/images.html" class="">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/config_ref/images.html" class="">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/config_ref/images.html" class="">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/config_ref/images.html" class="">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/config_ref/images.html" class="">
+                                
+                                    
+                                3.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/config_ref/images.html" class="">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/config_ref/images.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                3.4.0
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/config_ref/images.html" class="">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/config_ref/images.html" class="">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/" class="missing-page">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is outdated!
+                    <a href="/docs/en/latest/config_ref/images.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Icons and Splash Screens</h1>
+
+<p>This section shows how to configure an app&#39;s icon and optional splash
+screen for various platforms, both when working in the Cordova CLI
+(described in The Command-Line Interface) or using platform-specific
+SDK tools (detailed in the Platform Guides).</p>
+
+<h2>Configuring Icons in the CLI</h2>
+
+<p>When working in the CLI, icon source files are located within various
+platform-specific subdirectories within the project&#39;s <code>www/res/icons</code>
+directory. Newly created projects come with a default set of Cordova
+icons for you to replace for the platforms you wish to target.</p>
+
+<p>Android specifies icons for low, medium, high, and extra-high resolutions:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    android/icon-36-ldpi.png
+    android/icon-48-mdpi.png
+    android/icon-72-hdpi.png
+    android/icon-96-xhdpi.png
+</code></pre></div>
+<p>The iOS platform specifies 72-pixel-square icons for iPads, and
+57-pixel icons for iPhones and iPods, with high-resolution <em>2x</em>
+variants for retina displays:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    ios/icon-57-2x.png
+    ios/icon-57.png
+    ios/icon-72-2x.png
+    ios/icon-72.png
+</code></pre></div>
+<p>Windows Phone specifies a default 48-pixel icon, along with various
+devices&#39; background tiling images used when representing applications:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    windows-phone/icon-48.png
+    windows-phone/icon-62-tile.png
+    windows-phone/icon-173-tile.png
+</code></pre></div>
+<p>BlackBerry 10 requires an icon element in config.xml:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    &lt;icon src="blackberry10/icon-86.png" /&gt;
+</code></pre></div>
+<p>See BlackBerry&#39;s documentation for targeting multiple sizes and locales.</p>
+
+<p>[http://developer.blackberry.com/html5/documentation/icon_element.html]</p>
+
+<p>Tizen requires an 128-pixel icon:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    tizen/icon-128.png
+</code></pre></div>
+<h2>Configuring Splash Screens in the CLI</h2>
+
+<p>Use the Splashscreen API to enable display of an app&#39;s introductory
+splash screen on many platforms.  When working in the CLI, splash
+screen source files are located within the project&#39;s <code>www/res/screens</code>
+subdirectory.</p>
+
+<p>Android specifies both portrait- and landscape-oriented splash screen
+images for low, medium, high, and extra-high resolutions:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    android/screen-hdpi-landscape.png
+    android/screen-hdpi-portrait.png
+    android/screen-ldpi-landscape.png
+    android/screen-ldpi-portrait.png
+    android/screen-mdpi-landscape.png
+    android/screen-mdpi-portrait.png
+    android/screen-xhdpi-landscape.png
+    android/screen-xhdpi-portrait.png
+</code></pre></div>
+<p>The iOS platform specifies variants for iPhone/iPod and iPad, with
+variants for retina displays and different orientations. The <em>568h</em>
+file applies to the iPhone 5&#39;s taller screen:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    ios/screen-ipad-landscape-2x.png
+    ios/screen-ipad-landscape.png
+    ios/screen-ipad-portrait-2x.png
+    ios/screen-ipad-portrait.png
+    ios/screen-iphone-landscape-2x.png
+    ios/screen-iphone-landscape.png
+    ios/screen-iphone-portrait-2x.png
+    ios/screen-iphone-portrait.png
+    ios/screen-iphone-portrait-568h-2x.png
+</code></pre></div>
+<p>Windows Phone specifies a single splash screen image:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    windows-phone/screen-portrait.jpg
+</code></pre></div>
+<p>The following sections detail how to set up splash screens when
+working with SDKs and related command-line tools described in Platform
+Guides.</p>
+
+<p>Don&#39;t forget to install the SplashScreen plugin before trying to use the
+<code>navigator.splashscreen.hide()</code> or <code>navigator.splashscreen.show()</code> methods.</p>
+
+<h2>Splash Screens for the Android Platform</h2>
+
+<p>Place <a href="https://developer.android.com/tools/help/draw9patch.html">9-patch image</a>
+files in the Android project&#39;s <code>platforms/android/res/drawable*</code> directories.</p>
+
+<p>The size for each should be:</p>
+
+<ul>
+<li>xlarge (xhdpi): at least 960 &times; 720</li>
+<li>large (hdpi): at least 640 &times; 480</li>
+<li>medium (mdpi): at least 470 &times; 320</li>
+<li>small (ldpi): at least 426 &times; 320</li>
+</ul>
+
+<p>When creating a new Android project, the default splash screen images
+provided in the Cordova sample app should already be present in the
+<code>platforms/android/res/drawable*</code> directories. Feel free to replace these
+with your own images.
+When providing your own splash screen images, you do not need to 
+provide the same permutation of 8 as the Cordova default ones
+here.  More or less optimization can be used. 
+The <code>drawable</code> directory names must follow the Android conventions for
+supporting
+<a href="http://developer.android.com/guide/practices/screens_support.html">screen sizes</a> and
+<a href="http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources">alternate resources</a>.</p>
+
+<p>In the top-level <code>config.xml</code> file (not the one in <code>platforms</code>), add the
+following preferences:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="SplashScreen" value="screen" /&gt;
+&lt;preference name="SplashScreenDelay" value="10000" /&gt;
+</code></pre></div>
+<p>The first line sets the image to display as the splash screen. This is the
+file name of the png in the <code>drawable*</code> directories, minus the <code>.png</code>
+extension. The default value for SplashScreen is <code>screen</code> (for the file
+<code>platforms/android/res/drawable*/screen.png</code>), so if you
+name the image anything other than <code>screen.png</code> in the <code>drawable*</code> directories,
+you need to add/modify this line.</p>
+
+<p>The second line sets the default delay of how long the splashscreen appears in
+milliseconds. This should be the worst-case expected start time.
+The default value for SplashScreenDelay is 3000 ms.</p>
+
+<p>Finally, as a best practice, the splash screen should be present only as long
+as necessary. When your app has started and the webview has loaded, your app
+should hide the splash screen so that your main view is visible as soon as it
+is ready. Because the app start time will vary quite a bit due to a number of
+factors such as CPU speed and network, it is recommended that your app
+explicitly invoke <code>navigator.splashscreen.hide()</code> in the JavaScript
+method that responds to the <code>[deviceready](../cordova/events/events.deviceready.html)</code> event. Otherwise the splash screen
+will be visible for the SplashScreenDelay value that you configured above,
+which is likely longer than necessary.
+This event-driven approach is highly recommended versus having the splash
+screen visible for always a fixed duration.</p>
+
+<h2>Splash Screens for the iOS Platform</h2>
+
+<p>Copy splash screen images into the iOS project&#39;s <code>Resources/splash</code>
+directory. Only add those images for the devices you want to support,
+such as iPad or iPhone. The size of each image should be:</p>
+
+<ul>
+<li>Default-568h@2x~iphone.png (640x1136 pixels)</li>
+<li>Default-Landscape@2x~ipad.png (2048x1496 pixels)</li>
+<li>Default-Landscape~ipad.png (1024x748 pixels)</li>
+<li>Default-Portrait@2x~ipad.png (1536x2008 pixels)</li>
+<li>Default-Portrait~ipad.png (768x1004 pixels)</li>
+<li>Default@2x~iphone.png (640x960 pixels)</li>
+<li>Default~iphone.png (320x480 pixels)</li>
+</ul>
+
+<h2>Splash Screens for the BlackBerry 10 Platform</h2>
+
+<p>Add a rim:splash element to config.xml for each resolution and locale you wish
+to support:</p>
+
+<p><a href="http://developer.blackberry.com/html5/documentation/rim_splash_element.html">http://developer.blackberry.com/html5/documentation/rim_splash_element.html</a></p>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  3.4.0", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

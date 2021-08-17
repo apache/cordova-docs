@@ -1,0 +1,3994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="Read/write files on the device. ">
+
+    <title>
+        
+            
+                File - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/7.x/reference/cordova-plugin-file/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '7.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/cli/template.html">
+                Templates for apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/blackberry10/home.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/osx/index.html">
+                OS X
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/appdev/whitelist/index.html">
+                Whitelisting
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/blackberry10/plugin.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-cli/index.html">
+                CLI Reference
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-battery-status/index.html">
+                Battery Status
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-camera/index.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-console/index.html">
+                Console
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-contacts/index.html">
+                Contacts
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-device/index.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-device-motion/index.html">
+                Device Motion
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-device-orientation/index.html">
+                Device Orientation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-dialogs/index.html">
+                Dialogs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-file/index.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-file-transfer/index.html">
+                File Transfer
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-geolocation/index.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-globalization/index.html">
+                Globalization
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-inappbrowser/index.html">
+                Inappbrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-media/index.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-media-capture/index.html">
+                Media Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-network-information/index.html">
+                Network Information
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-splashscreen/index.html">
+                Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-vibration/index.html">
+                Vibration
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-statusbar/index.html">
+                Statusbar
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-whitelist/index.html">
+                Whitelist
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-legacy-whitelist/index.html">
+                Legacy Whitelist
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/cli/template.html">
+        Templates for apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/blackberry10/home.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/osx/index.html">
+        OS X
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/appdev/whitelist/index.html">
+        Whitelisting
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/blackberry10/plugin.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-cli/index.html">
+        CLI Reference
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-battery-status/index.html">
+        Battery Status
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-camera/index.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-console/index.html">
+        Console
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-contacts/index.html">
+        Contacts
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-device/index.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-device-motion/index.html">
+        Device Motion
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-device-orientation/index.html">
+        Device Orientation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-dialogs/index.html">
+        Dialogs
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-file/index.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-file-transfer/index.html">
+        File Transfer
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-geolocation/index.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-globalization/index.html">
+        Globalization
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-inappbrowser/index.html">
+        Inappbrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-media/index.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-media-capture/index.html">
+        Media Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-network-information/index.html">
+        Network Information
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-splashscreen/index.html">
+        Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-vibration/index.html">
+        Vibration
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-statusbar/index.html">
+        Statusbar
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-whitelist/index.html">
+        Whitelist
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-legacy-whitelist/index.html">
+        Legacy Whitelist
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+                    <a class="edit hidden-xs hidden-sm" href="https://github.com/apache/cordova-plugin-file/blob/master/README.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+
+                
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        English
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/7.x/reference/cordova-plugin-file/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/7.x/reference/cordova-plugin-file/" class="">
+                                
+                                    <span class="selected">
+                                        English
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/7.x/reference/cordova-plugin-file/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/7.x/reference/cordova-plugin-file/" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/7.x/reference/cordova-plugin-file/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/7.x/reference/cordova-plugin-file/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/7.x/reference/cordova-plugin-file/" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/7.x/reference/cordova-plugin-file/" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/7.x/reference/cordova-plugin-file/" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/7.x/reference/cordova-plugin-file/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/7.x/reference/cordova-plugin-file/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/7.x/reference/cordova-plugin-file/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        7.x
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                7.x
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/" class="missing-page">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/" class="missing-page">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/" class="missing-page">
+                                
+                                    
+                                3.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/" class="missing-page">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/" class="missing-page">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/" class="missing-page">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is outdated!
+                    <a href="/docs/en/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+                <div class="alert alert-warning docs-alert" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                     master.
+                    <a href="https://github.com/apache/cordova-plugin-file/releases">
+                        
+                    </a>
+                </div>
+            
+
+            <div id="page-toc-source">
+                <!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<table><thead>
+<tr>
+<th style="text-align: center">Android 4.4</th>
+<th style="text-align: center">Android 5.1</th>
+<th style="text-align: center">Android 6.0</th>
+<th style="text-align: center">iOS 9.3</th>
+<th style="text-align: center">iOS 10.0</th>
+<th style="text-align: center">Windows 10 Store</th>
+<th style="text-align: center">Travis CI</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android-4.4,PLUGIN=cordova-plugin-file/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android-4.4,PLUGIN=cordova-plugin-file" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android-5.1,PLUGIN=cordova-plugin-file/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android-5.1,PLUGIN=cordova-plugin-file" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android-6.0,PLUGIN=cordova-plugin-file/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android-6.0,PLUGIN=cordova-plugin-file" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios-9.3,PLUGIN=cordova-plugin-file/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios-9.3,PLUGIN=cordova-plugin-file" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios-10.0,PLUGIN=cordova-plugin-file/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios-10.0,PLUGIN=cordova-plugin-file" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-file/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-file" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-file"><img src="https://travis-ci.org/apache/cordova-plugin-file.svg?branch=master" alt="Build Status"></a></td>
+</tr>
+</tbody></table>
+
+<h1>cordova-plugin-file</h1>
+
+<p>This plugin implements a File API allowing read/write access to files residing on the device.</p>
+
+<p>This plugin is based on several specs, including :
+The HTML5 File API
+<a href="http://www.w3.org/TR/FileAPI/">http://www.w3.org/TR/FileAPI/</a></p>
+
+<p>The Directories and System extensions
+Latest:
+<a href="http://www.w3.org/TR/2012/WD-file-system-api-20120417/">http://www.w3.org/TR/2012/WD-file-system-api-20120417/</a>
+Although most of the plugin code was written when an earlier spec was current:
+<a href="http://www.w3.org/TR/2011/WD-file-system-api-20110419/">http://www.w3.org/TR/2011/WD-file-system-api-20110419/</a></p>
+
+<p>It also implements the FileWriter spec :
+<a href="http://dev.w3.org/2009/dap/file-system/file-writer.html">http://dev.w3.org/2009/dap/file-system/file-writer.html</a></p>
+
+<blockquote>
+<p><em>Note</em> While the W3C FileSystem spec is deprecated for web browsers, the FileSystem APIs are supported in Cordova applications with this plugin for the platforms listed in the <em>Supported Platforms</em> list, with the exception of the Browser platform.</p>
+</blockquote>
+
+<p>To get a few ideas how to use the plugin, check out the <a href="#sample">sample</a> at the bottom of this page. For additional examples (browser focused), see the HTML5 Rocks&#39; <a href="http://www.html5rocks.com/en/tutorials/file/filesystem/">FileSystem article.</a></p>
+
+<p>For an overview of other storage options, refer to Cordova&#39;s
+<a href="http://cordova.apache.org/docs/en/latest/cordova/storage/storage.html">storage guide</a>.</p>
+
+<p>This plugin defines global <code>cordova.file</code> object.</p>
+
+<p>Although in the global scope, it is not available until after the <code>deviceready</code> event.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(cordova.file);
+}
+</code></pre></div>
+<p>Report issues on the <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20File%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC">Apache Cordova issue tracker</a></p>
+
+<h2>Installation</h2>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add cordova-plugin-file
+</code></pre></div>
+<h2>Supported Platforms</h2>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>Firefox OS</li>
+<li>iOS</li>
+<li>OS X</li>
+<li>Windows Phone 7 and 8*</li>
+<li>Windows 8*</li>
+<li>Windows*</li>
+<li>Browser</li>
+</ul>
+
+<p>* <em>These platforms do not support <code>FileReader.readAsArrayBuffer</code> nor <code>FileWriter.write(blob)</code>.</em></p>
+
+<h2>Where to Store Files</h2>
+
+<p>As of v1.2.0, URLs to important file-system directories are provided.
+Each URL is in the form <em>file:///path/to/spot/</em>, and can be converted to a
+<code>DirectoryEntry</code> using <code>window.resolveLocalFileSystemURL()</code>.</p>
+
+<ul>
+<li><p><code>cordova.file.applicationDirectory</code> - Read-only directory where the application
+is installed. (<em>iOS</em>, <em>Android</em>, <em>BlackBerry 10</em>, <em>OSX</em>, <em>windows</em>)</p></li>
+<li><p><code>cordova.file.applicationStorageDirectory</code> - Root directory of the application&#39;s
+sandbox; on iOS &amp; windows this location is read-only (but specific subdirectories [like
+<code>/Documents</code> on iOS or <code>/localState</code> on windows] are read-write). All data contained within
+is private to the app. (<em>iOS</em>, <em>Android</em>, <em>BlackBerry 10</em>, <em>OSX</em>)</p></li>
+<li><p><code>cordova.file.dataDirectory</code> - Persistent and private data storage within the
+application&#39;s sandbox using internal memory (on Android, if you need to use
+external memory, use <code>.externalDataDirectory</code>). On iOS, this directory is not
+synced with iCloud (use <code>.syncedDataDirectory</code>). (<em>iOS</em>, <em>Android</em>, <em>BlackBerry 10</em>, <em>windows</em>)</p></li>
+<li><p><code>cordova.file.cacheDirectory</code> -  Directory for cached data files or any files
+that your app can re-create easily. The OS may delete these files when the device
+runs low on storage, nevertheless, apps should not rely on the OS to delete files
+in here. (<em>iOS</em>, <em>Android</em>, <em>BlackBerry 10</em>, <em>OSX</em>, <em>windows</em>)</p></li>
+<li><p><code>cordova.file.externalApplicationStorageDirectory</code> - Application space on
+external storage. (<em>Android</em>)</p></li>
+<li><p><code>cordova.file.externalDataDirectory</code> - Where to put app-specific data files on
+external storage. (<em>Android</em>)</p></li>
+<li><p><code>cordova.file.externalCacheDirectory</code> - Application cache on external storage.
+(<em>Android</em>)</p></li>
+<li><p><code>cordova.file.externalRootDirectory</code> - External storage (SD card) root. (<em>Android</em>, <em>BlackBerry 10</em>)</p></li>
+<li><p><code>cordova.file.tempDirectory</code> - Temp directory that the OS can clear at will. Do not
+rely on the OS to clear this directory; your app should always remove files as
+applicable. (<em>iOS</em>, <em>OSX</em>, <em>windows</em>)</p></li>
+<li><p><code>cordova.file.syncedDataDirectory</code> - Holds app-specific files that should be synced
+(e.g. to iCloud). (<em>iOS</em>, <em>windows</em>)</p></li>
+<li><p><code>cordova.file.documentsDirectory</code> - Files private to the app, but that are meaningful
+to other application (e.g. Office files). Note that for <em>OSX</em> this is the user&#39;s <code>~/Documents</code> directory. (<em>iOS</em>, <em>OSX</em>)</p></li>
+<li><p><code>cordova.file.sharedDirectory</code> - Files globally available to all applications (<em>BlackBerry 10</em>)</p></li>
+</ul>
+
+<h2>File System Layouts</h2>
+
+<p>Although technically an implementation detail, it can be very useful to know how
+the <code>cordova.file.*</code> properties map to physical paths on a real device.</p>
+
+<h3>iOS File System Layout</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Device Path</th>
+<th style="text-align: left"><code>cordova.file.*</code></th>
+<th style="text-align: left"><code>iosExtraFileSystems</code></th>
+<th style="text-align: center">r/w?</th>
+<th style="text-align: center">persistent?</th>
+<th style="text-align: center">OS clears</th>
+<th style="text-align: center">sync</th>
+<th style="text-align: center">private</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><code>/var/mobile/Applications/&lt;UUID&gt;/</code></td>
+<td style="text-align: left">applicationStorageDirectory</td>
+<td style="text-align: left">-</td>
+<td style="text-align: center">r</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;<code>appname.app/</code></td>
+<td style="text-align: left">applicationDirectory</td>
+<td style="text-align: left">bundle</td>
+<td style="text-align: center">r</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>www/</code></td>
+<td style="text-align: left">-</td>
+<td style="text-align: left">-</td>
+<td style="text-align: center">r</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;<code>Documents/</code></td>
+<td style="text-align: left">documentsDirectory</td>
+<td style="text-align: left">documents</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>NoCloud/</code></td>
+<td style="text-align: left">-</td>
+<td style="text-align: left">documents-nosync</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;<code>Library</code></td>
+<td style="text-align: left">-</td>
+<td style="text-align: left">library</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes?</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>NoCloud/</code></td>
+<td style="text-align: left">dataDirectory</td>
+<td style="text-align: left">library-nosync</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>Cloud/</code></td>
+<td style="text-align: left">syncedDataDirectory</td>
+<td style="text-align: left">-</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>Caches/</code></td>
+<td style="text-align: left">cacheDirectory</td>
+<td style="text-align: left">cache</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes*</td>
+<td style="text-align: center">Yes***</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;<code>tmp/</code></td>
+<td style="text-align: left">tempDirectory</td>
+<td style="text-align: left">-</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">No**</td>
+<td style="text-align: center">Yes***</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+</tr>
+</tbody></table>
+
+<p>* Files persist across app restarts and upgrades, but this directory can
+     be cleared whenever the OS desires. Your app should be able to recreate any
+     content that might be deleted.</p>
+
+<p>** Files may persist across app restarts, but do not rely on this behavior. Files
+     are not guaranteed to persist across updates. Your app should remove files from
+     this directory when it is applicable, as the OS does not guarantee when (or even
+     if) these files are removed.</p>
+
+<p>*** The OS may clear the contents of this directory whenever it feels it is
+     necessary, but do not rely on this. You should clear this directory as
+     appropriate for your application.</p>
+
+<h3>Android File System Layout</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Device Path</th>
+<th style="text-align: left"><code>cordova.file.*</code></th>
+<th style="text-align: left"><code>AndroidExtraFileSystems</code></th>
+<th style="text-align: center">r/w?</th>
+<th style="text-align: center">persistent?</th>
+<th style="text-align: center">OS clears</th>
+<th style="text-align: center">private</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><code>file:///android_asset/</code></td>
+<td style="text-align: left">applicationDirectory</td>
+<td style="text-align: left">assets</td>
+<td style="text-align: center">r</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>/data/data/&lt;app-id&gt;/</code></td>
+<td style="text-align: left">applicationStorageDirectory</td>
+<td style="text-align: left">-</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;<code>cache</code></td>
+<td style="text-align: left">cacheDirectory</td>
+<td style="text-align: left">cache</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Yes*</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;<code>files</code></td>
+<td style="text-align: left">dataDirectory</td>
+<td style="text-align: left">files</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>Documents</code></td>
+<td style="text-align: left"></td>
+<td style="text-align: left">documents</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>&lt;sdcard&gt;/</code></td>
+<td style="text-align: left">externalRootDirectory</td>
+<td style="text-align: left">sdcard</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;<code>Android/data/&lt;app-id&gt;/</code></td>
+<td style="text-align: left">externalApplicationStorageDirectory</td>
+<td style="text-align: left">-</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>cache</code></td>
+<td style="text-align: left">externalCacheDirectry</td>
+<td style="text-align: left">cache-external</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No**</td>
+<td style="text-align: center">No</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>files</code></td>
+<td style="text-align: left">externalDataDirectory</td>
+<td style="text-align: left">files-external</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+</tr>
+</tbody></table>
+
+<p>* The OS may periodically clear this directory, but do not rely on this behavior. Clear
+   the contents of this directory as appropriate for your application. Should a user
+   purge the cache manually, the contents of this directory are removed.</p>
+
+<p>** The OS does not clear this directory automatically; you are responsible for managing
+     the contents yourself. Should the user purge the cache manually, the contents of the
+     directory are removed.</p>
+
+<p><strong>Note</strong>: If external storage can&#39;t be mounted, the <code>cordova.file.external*</code>
+properties are <code>null</code>.</p>
+
+<h3>BlackBerry 10 File System Layout</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Device Path</th>
+<th style="text-align: left"><code>cordova.file.*</code></th>
+<th style="text-align: center">r/w?</th>
+<th style="text-align: center">persistent?</th>
+<th style="text-align: center">OS clears</th>
+<th style="text-align: center">private</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><code>file:///accounts/1000/appdata/&lt;app id&gt;/</code></td>
+<td style="text-align: left">applicationStorageDirectory</td>
+<td style="text-align: center">r</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;<code>app/native</code></td>
+<td style="text-align: left">applicationDirectory</td>
+<td style="text-align: center">r</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;<code>data/webviews/webfs/temporary/local__0</code></td>
+<td style="text-align: left">cacheDirectory</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;<code>data/webviews/webfs/persistent/local__0</code></td>
+<td style="text-align: left">dataDirectory</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>file:///accounts/1000/removable/sdcard</code></td>
+<td style="text-align: left">externalRemovableDirectory</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>file:///accounts/1000/shared</code></td>
+<td style="text-align: left">sharedDirectory</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+</tr>
+</tbody></table>
+
+<p><em>Note</em>: When application is deployed to work perimeter, all paths are relative to /accounts/1000-enterprise.</p>
+
+<h3>OS X File System Layout</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Device Path</th>
+<th style="text-align: left"><code>cordova.file.*</code></th>
+<th style="text-align: left"><code>iosExtraFileSystems</code></th>
+<th style="text-align: center">r/w?</th>
+<th style="text-align: center">OS clears</th>
+<th style="text-align: center">private</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><code>/Applications/&lt;appname&gt;.app/</code></td>
+<td style="text-align: left">-</td>
+<td style="text-align: left">bundle</td>
+<td style="text-align: center">r</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;<code>Content/Resources/</code></td>
+<td style="text-align: left">applicationDirectory</td>
+<td style="text-align: left">-</td>
+<td style="text-align: center">r</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>~/Library/Application Support/&lt;bundle-id&gt;/</code></td>
+<td style="text-align: left">applicationStorageDirectory</td>
+<td style="text-align: left">-</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;<code>files/</code></td>
+<td style="text-align: left">dataDirectory</td>
+<td style="text-align: left">-</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>~/Documents/</code></td>
+<td style="text-align: left">documentsDirectory</td>
+<td style="text-align: left">documents</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>~/Library/Caches/&lt;bundle-id&gt;/</code></td>
+<td style="text-align: left">cacheDirectory</td>
+<td style="text-align: left">cache</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>/tmp/</code></td>
+<td style="text-align: left">tempDirectory</td>
+<td style="text-align: left">-</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes*</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>/</code></td>
+<td style="text-align: left">rootDirectory</td>
+<td style="text-align: left">root</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">No**</td>
+<td style="text-align: center">No</td>
+</tr>
+</tbody></table>
+
+<p><strong>Note</strong>: This is the layout for non sandboxed applications. I you enable sandboxing, the <code>applicationStorageDirectory</code> will be below <code>~/Library/Containers/&lt;bundle-id&gt;/Data/Library/Application Support</code>.</p>
+
+<p>* Files persist across app restarts and upgrades, but this directory can
+     be cleared whenever the OS desires. Your app should be able to recreate any
+     content that might be deleted. You should clear this directory as
+     appropriate for your application.</p>
+
+<p>** Allows access to the entire file system. This is only available for non sandboxed apps.</p>
+
+<h3>Windows File System Layout</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Device Path</th>
+<th style="text-align: left"><code>cordova.file.*</code></th>
+<th style="text-align: center">r/w?</th>
+<th style="text-align: center">persistent?</th>
+<th style="text-align: center">OS clears</th>
+<th style="text-align: center">private</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><code>ms-appdata:///</code></td>
+<td style="text-align: left">applicationDirectory</td>
+<td style="text-align: center">r</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;<code>local/</code></td>
+<td style="text-align: left">dataDirectory</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;<code>temp/</code></td>
+<td style="text-align: left">cacheDirectory</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes*</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;<code>temp/</code></td>
+<td style="text-align: left">tempDirectory</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes*</td>
+<td style="text-align: center">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left">&nbsp;&nbsp;&nbsp;<code>roaming/</code></td>
+<td style="text-align: left">syncedDataDirectory</td>
+<td style="text-align: center">r/w</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+</tr>
+</tbody></table>
+
+<p>* The OS may periodically clear this directory</p>
+
+<h2>Android Quirks</h2>
+
+<h3>Android Persistent storage location</h3>
+
+<p>There are multiple valid locations to store persistent files on an Android
+device. See <a href="http://developer.android.com/guide/topics/data/data-storage.html">this page</a>
+for an extensive discussion of the various possibilities.</p>
+
+<p>Previous versions of the plugin would choose the location of the temporary and
+persistent files on startup, based on whether the device claimed that the SD
+Card (or equivalent storage partition) was mounted. If the SD Card was mounted,
+or if a large internal storage partition was available (such as on Nexus
+devices,) then the persistent files would be stored in the root of that space.
+This meant that all Cordova apps could see all of the files available on the
+card.</p>
+
+<p>If the SD card was not available, then previous versions would store data under
+<code>/data/data/&lt;packageId&gt;</code>, which isolates apps from each other, but may still
+cause data to be shared between users.</p>
+
+<p>It is now possible to choose whether to store files in the internal file
+storage location, or using the previous logic, with a preference in your
+application&#39;s <code>config.xml</code> file. To do this, add one of these two lines to
+<code>config.xml</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="AndroidPersistentFileLocation" value="Internal" /&gt;
+
+&lt;preference name="AndroidPersistentFileLocation" value="Compatibility" /&gt;
+</code></pre></div>
+<p>Without this line, the File plugin will use <code>Internal</code> as the default. If
+a preference tag is present, and is not one of these values, the application
+will not start.</p>
+
+<p>If your application has previously been shipped to users, using an older (pre-
+3.0.0) version of this plugin, and has stored files in the persistent filesystem,
+then you should set the preference to <code>Compatibility</code> if your config.xml does not specify a location for the persistent filesystem. Switching the location to
+&quot;Internal&quot; would mean that existing users who upgrade their application may be
+unable to access their previously-stored files, depending on their device.</p>
+
+<p>If your application is new, or has never previously stored files in the
+persistent filesystem, then the <code>Internal</code> setting is generally recommended.</p>
+
+<h3>Slow recursive operations for /android_asset</h3>
+
+<p>Listing asset directories is really slow on Android. You can speed it up though, by
+adding <code>src/android/build-extras.gradle</code> to the root of your android project (also
+requires cordova-android@4.0.0 or greater).</p>
+
+<h3>Permisson to write to external storage when it&#39;s not mounted on Marshmallow</h3>
+
+<p>Marshmallow requires the apps to ask for permissions when reading/writing to external locations. By
+<a href="http://developer.android.com/guide/topics/data/data-storage.html#filesExternal">default</a>, your app has permission to write to
+<code>cordova.file.applicationStorageDirectory</code> and <code>cordova.file.externalApplicationStorageDirectory</code>, and the plugin doesn&#39;t request permission
+for these two directories unless external storage is not mounted. However due to a limitation, when external storage is not mounted, it would ask for
+permission to write to <code>cordova.file.externalApplicationStorageDirectory</code>.</p>
+
+<h2>iOS Quirks</h2>
+
+<ul>
+<li><code>cordova.file.applicationStorageDirectory</code> is read-only; attempting to store
+files within the root directory will fail. Use one of the other <code>cordova.file.*</code>
+properties defined for iOS (only <code>applicationDirectory</code> and <code>applicationStorageDirectory</code> are
+read-only).</li>
+<li><code>FileReader.readAsText(blob, encoding)</code>
+
+<ul>
+<li>The <code>encoding</code> parameter is not supported, and UTF-8 encoding is always in effect.</li>
+</ul></li>
+</ul>
+
+<h3>iOS Persistent storage location</h3>
+
+<p>There are two valid locations to store persistent files on an iOS device: the
+Documents directory and the Library directory. Previous versions of the plugin
+only ever stored persistent files in the Documents directory. This had the
+side-effect of making all of an application&#39;s files visible in iTunes, which
+was often unintended, especially for applications which handle lots of small
+files, rather than producing complete documents for export, which is the
+intended purpose of the directory.</p>
+
+<p>It is now possible to choose whether to store files in the documents or library
+directory, with a preference in your application&#39;s <code>config.xml</code> file. To do this,
+add one of these two lines to <code>config.xml</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="iosPersistentFileLocation" value="Library" /&gt;
+
+&lt;preference name="iosPersistentFileLocation" value="Compatibility" /&gt;
+</code></pre></div>
+<p>Without this line, the File plugin will use <code>Compatibility</code> as the default. If
+a preference tag is present, and is not one of these values, the application
+will not start.</p>
+
+<p>If your application has previously been shipped to users, using an older (pre-
+1.0) version of this plugin, and has stored files in the persistent filesystem,
+then you should set the preference to <code>Compatibility</code>. Switching the location to
+<code>Library</code> would mean that existing users who upgrade their application would be
+unable to access their previously-stored files.</p>
+
+<p>If your application is new, or has never previously stored files in the
+persistent filesystem, then the <code>Library</code> setting is generally recommended.</p>
+
+<h2>Firefox OS Quirks</h2>
+
+<p>The File System API is not natively supported by Firefox OS and is implemented
+as a shim on top of indexedDB.</p>
+
+<ul>
+<li>Does not fail when removing non-empty directories</li>
+<li>Does not support metadata for directories</li>
+<li>Methods <code>copyTo</code> and <code>moveTo</code> do not support directories</li>
+</ul>
+
+<p>The following data paths are supported:</p>
+
+<ul>
+<li><code>applicationDirectory</code> - Uses <code>xhr</code> to get local files that are packaged with the app.</li>
+<li><code>dataDirectory</code> - For persistent app-specific data files.</li>
+<li><code>cacheDirectory</code> - Cached files that should survive app restarts (Apps should not rely
+on the OS to delete files in here).</li>
+</ul>
+
+<h2>Browser Quirks</h2>
+
+<h3>Common quirks and remarks</h3>
+
+<ul>
+<li>Each browser uses its own sandboxed filesystem. IE and Firefox use IndexedDB as a base.
+All browsers use forward slash as directory separator in a path.</li>
+<li>Directory entries have to be created successively.
+For example, the call <code>fs.root.getDirectory(&#39;dir1/dir2&#39;, {create:true}, successCallback, errorCallback)</code>
+will fail if dir1 did not exist.</li>
+<li>The plugin requests user permission to use persistent storage at the application first start.</li>
+<li>Plugin supports <code>cdvfile://localhost</code> (local resources) only. I.e. external resources are not supported via <code>cdvfile</code>.</li>
+<li>The plugin does not follow <a href="http://www.w3.org/TR/2011/WD-file-system-api-20110419/#naming-restrictions">&quot;File System API 8.3 Naming restrictions&quot;</a>.</li>
+<li>Blob and File&#39; <code>close</code> function is not supported.</li>
+<li><code>FileSaver</code> and <code>BlobBuilder</code> are not supported by this plugin and don&#39;t have stubs.</li>
+<li>The plugin does not support <code>requestAllFileSystems</code>. This function is also missing in the specifications.</li>
+<li>Entries in directory will not be removed if you use <code>create: true</code> flag for existing directory.</li>
+<li>Files created via constructor are not supported. You should use entry.file method instead.</li>
+<li>Each browser uses its own form for blob URL references.</li>
+<li><code>readAsDataURL</code> function is supported, but the mediatype in Chrome depends on entry name extension,
+mediatype in IE is always empty (which is the same as <code>text-plain</code> according the specification),
+the mediatype in Firefox is always <code>application/octet-stream</code>.
+For example, if the content is <code>abcdefg</code> then Firefox returns <code>data:application/octet-stream;base64,YWJjZGVmZw==</code>,
+IE returns <code>data:;base64,YWJjZGVmZw==</code>, Chrome returns <code>data:&lt;mediatype depending on extension of entry name&gt;;base64,YWJjZGVmZw==</code>.</li>
+<li><code>toInternalURL</code> returns the path in the form <code>file:///persistent/path/to/entry</code> (Firefox, IE).
+Chrome returns the path in the form <code>cdvfile://localhost/persistent/file</code>.</li>
+</ul>
+
+<h3>Chrome quirks</h3>
+
+<ul>
+<li>Chrome filesystem is not immediately ready after device ready event. As a workaround you can subscribe to <code>filePluginIsReady</code> event.
+Example:
+<code>javascript
+window.addEventListener(&#39;filePluginIsReady&#39;, function(){ console.log(&#39;File plugin is ready&#39;);}, false);
+</code>
+You can use <code>window.isFilePluginReadyRaised</code> function to check whether event was already raised.</li>
+<li>window.requestFileSystem TEMPORARY and PERSISTENT filesystem quotas are not limited in Chrome.</li>
+<li>To increase persistent storage in Chrome you need to call <code>window.initPersistentFileSystem</code> method. Persistent storage quota is 5 MB by default.</li>
+<li>Chrome requires <code>--allow-file-access-from-files</code> run argument to support API via <code>file:///</code> protocol.</li>
+<li><code>File</code> object will be not changed if you use flag <code>{create:true}</code> when getting an existing <code>Entry</code>.</li>
+<li>events <code>cancelable</code> property is set to true in Chrome. This is contrary to the <a href="http://dev.w3.org/2009/dap/file-system/file-writer.html">specification</a>.</li>
+<li><code>toURL</code> function in Chrome returns <code>filesystem:</code>-prefixed path depending on application host.
+For example, <code>filesystem:file:///persistent/somefile.txt</code>, <code>filesystem:http://localhost:8080/persistent/somefile.txt</code>.</li>
+<li><code>toURL</code> function result does not contain trailing slash in case of directory entry.
+Chrome resolves directories with slash-trailed urls correctly though.</li>
+<li><code>resolveLocalFileSystemURL</code> method requires the inbound <code>url</code> to have <code>filesystem</code> prefix. For example, <code>url</code> parameter for <code>resolveLocalFileSystemURL</code>
+should be in the form <code>filesystem:file:///persistent/somefile.txt</code> as opposed to the form <code>file:///persistent/somefile.txt</code> in Android.</li>
+<li>Deprecated <code>toNativeURL</code> function is not supported and does not have a stub.</li>
+<li><code>setMetadata</code> function is not stated in the specifications and not supported.</li>
+<li>INVALID<em>MODIFICATION</em>ERR (code: 9) is thrown instead of SYNTAX_ERR(code: 8) on requesting of a non-existant filesystem.</li>
+<li>INVALID<em>MODIFICATION</em>ERR (code: 9) is thrown instead of PATH<em>EXISTS</em>ERR(code: 12) on trying to exclusively create a file or directory, which already exists.</li>
+<li>INVALID<em>MODIFICATION</em>ERR (code: 9) is thrown instead of  NO<em>MODIFICATION</em>ALLOWED_ERR(code: 6) on trying to call removeRecursively on the root file system.</li>
+<li>INVALID<em>MODIFICATION</em>ERR (code: 9) is thrown instead of NOT<em>FOUND</em>ERR(code: 1) on trying to moveTo directory that does not exist.</li>
+</ul>
+
+<h3>IndexedDB-based impl quirks (Firefox and IE)</h3>
+
+<ul>
+<li><code>.</code> and <code>..</code> are not supported.</li>
+<li>IE does not support <code>file:///</code>-mode; only hosted mode is supported (http://localhost:xxxx).</li>
+<li>Firefox filesystem size is not limited but each 50MB extension will request a user permission.
+IE10 allows up to 10mb of combined AppCache and IndexedDB used in implementation of filesystem without prompting,
+once you hit that level you will be asked if you want to allow it to be increased up to a max of 250mb per site.
+So <code>size</code> parameter for <code>requestFileSystem</code> function does not affect filesystem in Firefox and IE.</li>
+<li><code>readAsBinaryString</code> function is not stated in the Specs and not supported in IE and does not have a stub.</li>
+<li><code>file.type</code> is always null.</li>
+<li>You should not create entry using DirectoryEntry instance callback result which was deleted.
+Otherwise, you will get a &#39;hanging entry&#39;.</li>
+<li>Before you can read a file, which was just written you need to get a new instance of this file.</li>
+<li><code>setMetadata</code> function, which is not stated in the Specs supports <code>modificationTime</code> field change only.</li>
+<li><code>copyTo</code> and <code>moveTo</code> functions do not support directories.</li>
+<li>Directories metadata is not supported.</li>
+<li>Both Entry.remove and directoryEntry.removeRecursively don&#39;t fail when removing
+non-empty directories - directories being removed are cleaned along with contents instead.</li>
+<li><code>abort</code> and <code>truncate</code> functions are not supported.</li>
+<li>progress events are not fired. For example, this handler will be not executed:
+<code>javascript
+writer.onprogress = function() { /*commands*/ };
+</code></li>
+</ul>
+
+<h2>Upgrading Notes</h2>
+
+<p>In v1.0.0 of this plugin, the <code>FileEntry</code> and <code>DirectoryEntry</code> structures have changed,
+to be more in line with the published specification.</p>
+
+<p>Previous (pre-1.0.0) versions of the plugin stored the device-absolute-file-location
+in the <code>fullPath</code> property of <code>Entry</code> objects. These paths would typically look like</p>
+<div class="highlight"><pre><code class="language-" data-lang="">/var/mobile/Applications/&lt;application UUID&gt;/Documents/path/to/file  (iOS)
+/storage/emulated/0/path/to/file                                    (Android)
+</code></pre></div>
+<p>These paths were also returned by the <code>toURL()</code> method of the <code>Entry</code> objects.</p>
+
+<p>With v1.0.0, the <code>fullPath</code> attribute is the path to the file, <em>relative to the root of
+the HTML filesystem</em>. So, the above paths would now both be represented by a <code>FileEntry</code>
+object with a <code>fullPath</code> of</p>
+<div class="highlight"><pre><code class="language-" data-lang="">/path/to/file
+</code></pre></div>
+<p>If your application works with device-absolute-paths, and you previously retrieved those
+paths through the <code>fullPath</code> property of <code>Entry</code> objects, then you should update your code
+to use <code>entry.toURL()</code> instead.</p>
+
+<p>For backwards compatibility, the <code>resolveLocalFileSystemURL()</code> method will accept a
+device-absolute-path, and will return an <code>Entry</code> object corresponding to it, as long as that
+file exists within either the <code>TEMPORARY</code> or <code>PERSISTENT</code> filesystems.</p>
+
+<p>This has particularly been an issue with the File-Transfer plugin, which previously used
+device-absolute-paths (and can still accept them). It has been updated to work correctly
+with FileSystem URLs, so replacing <code>entry.fullPath</code> with <code>entry.toURL()</code> should resolve any
+issues getting that plugin to work with files on the device.</p>
+
+<p>In v1.1.0 the return value of <code>toURL()</code> was changed (see <a href="https://issues.apache.org/jira/browse/CB-6394">CB-6394</a>)
+to return an absolute &#39;file://&#39; URL. wherever possible. To ensure a &#39;cdvfile:&#39;-URL you can use <code>toInternalURL()</code> now.
+This method will now return filesystem URLs of the form</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cdvfile://localhost/persistent/path/to/file
+</code></pre></div>
+<p>which can be used to identify the file uniquely.</p>
+
+<h2>cdvfile protocol</h2>
+
+<p><strong>Purpose</strong></p>
+
+<p><code>cdvfile://localhost/persistent|temporary|another-fs-root*/path/to/file</code> can be used for platform-independent file paths.
+cdvfile paths are supported by core plugins - for example you can download an mp3 file to cdvfile-path via <code>cordova-plugin-file-transfer</code> and play it via <code>cordova-plugin-media</code>.</p>
+
+<p><strong>*Note</strong>: See <a href="#where-to-store-files">Where to Store Files</a>, <a href="#file-system-layouts">File System Layouts</a> and <a href="#configuring-the-plugin-optional">Configuring the Plugin</a> for more details about available fs roots.</p>
+
+<p>To use <code>cdvfile</code> as a tag&#39; <code>src</code> you can convert it to native path via <code>toURL()</code> method of the resolved fileEntry, which you can get via <code>resolveLocalFileSystemURL</code> - see examples below.</p>
+
+<p>You can also use <code>cdvfile://</code> paths directly in the DOM, for example:</p>
+<div class="highlight"><pre><code class="language-HTML" data-lang="HTML">&lt;img src="cdvfile://localhost/persistent/img/logo.png" /&gt;
+</code></pre></div>
+<p><strong>Note</strong>: This method requires following Content Security rules updates:</p>
+
+<ul>
+<li>Add <code>cdvfile:</code> scheme to <code>Content-Security-Policy</code> meta tag of the index page, e.g.:
+
+<ul>
+<li><code>&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#39;self&#39; data: gap:</code><strong>cdvfile:</strong><code>https://ssl.gstatic.com &#39;unsafe-eval&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; media-src *&quot;&gt;</code></li>
+</ul></li>
+<li>Add <code>&lt;access origin=&quot;cdvfile://*&quot; /&gt;</code> to <code>config.xml</code>.</li>
+</ul>
+
+<p><strong>Converting cdvfile:// to native path</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="s1">'cdvfile://localhost/temporary/path/to/file.mp4'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">nativePath</span> <span class="o">=</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">();</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Native URI: '</span> <span class="o">+</span> <span class="nx">nativePath</span><span class="p">);</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'video'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">nativePath</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Converting native path to cdvfile://</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">nativePath</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'cdvfile URI: '</span> <span class="o">+</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">toInternalURL</span><span class="p">());</span>
+</code></pre></div>
+<p><strong>Using cdvfile in core plugins</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">fileTransfer</span><span class="p">.</span><span class="nx">download</span><span class="p">(</span><span class="nx">uri</span><span class="p">,</span> <span class="s1">'cdvfile://localhost/temporary/path/to/file.mp3'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span>
+</code></pre></div><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">my_media</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="s1">'cdvfile://localhost/temporary/path/to/file.mp3'</span><span class="p">,</span> <span class="p">...);</span>
+<span class="nx">my_media</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
+</code></pre></div>
+<h4>cdvfile quirks</h4>
+
+<ul>
+<li>Using <code>cdvfile://</code> paths in the DOM is not supported on Windows platform (a path can be converted to native instead).</li>
+</ul>
+
+<h2>List of Error Codes and Meanings</h2>
+
+<p>When an error is thrown, one of the following codes will be used.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: right">Code</th>
+<th style="text-align: left">Constant</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: right">1</td>
+<td style="text-align: left"><code>NOT_FOUND_ERR</code></td>
+</tr>
+<tr>
+<td style="text-align: right">2</td>
+<td style="text-align: left"><code>SECURITY_ERR</code></td>
+</tr>
+<tr>
+<td style="text-align: right">3</td>
+<td style="text-align: left"><code>ABORT_ERR</code></td>
+</tr>
+<tr>
+<td style="text-align: right">4</td>
+<td style="text-align: left"><code>NOT_READABLE_ERR</code></td>
+</tr>
+<tr>
+<td style="text-align: right">5</td>
+<td style="text-align: left"><code>ENCODING_ERR</code></td>
+</tr>
+<tr>
+<td style="text-align: right">6</td>
+<td style="text-align: left"><code>NO_MODIFICATION_ALLOWED_ERR</code></td>
+</tr>
+<tr>
+<td style="text-align: right">7</td>
+<td style="text-align: left"><code>INVALID_STATE_ERR</code></td>
+</tr>
+<tr>
+<td style="text-align: right">8</td>
+<td style="text-align: left"><code>SYNTAX_ERR</code></td>
+</tr>
+<tr>
+<td style="text-align: right">9</td>
+<td style="text-align: left"><code>INVALID_MODIFICATION_ERR</code></td>
+</tr>
+<tr>
+<td style="text-align: right">10</td>
+<td style="text-align: left"><code>QUOTA_EXCEEDED_ERR</code></td>
+</tr>
+<tr>
+<td style="text-align: right">11</td>
+<td style="text-align: left"><code>TYPE_MISMATCH_ERR</code></td>
+</tr>
+<tr>
+<td style="text-align: right">12</td>
+<td style="text-align: left"><code>PATH_EXISTS_ERR</code></td>
+</tr>
+</tbody></table>
+
+<h2>Configuring the Plugin (Optional)</h2>
+
+<p>The set of available filesystems can be configured per-platform. Both iOS and
+Android recognize a <preference> tag in <code>config.xml</code> which names the
+filesystems to be installed. By default, all file-system roots are enabled.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" /&gt;
+&lt;preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,assets,root" /&gt;
+</code></pre></div>
+<h3>Android</h3>
+
+<ul>
+<li><code>files</code>: The application&#39;s internal file storage directory</li>
+<li><code>files-external</code>: The application&#39;s external file storage directory</li>
+<li><code>sdcard</code>: The global external file storage directory (this is the root of the SD card, if one is installed). You must have the <code>android.permission.WRITE_EXTERNAL_STORAGE</code> permission to use this.</li>
+<li><code>cache</code>: The application&#39;s internal cache directory</li>
+<li><code>cache-external</code>: The application&#39;s external cache directory</li>
+<li><code>assets</code>: The application&#39;s bundle (read-only)</li>
+<li><code>root</code>: The entire device filesystem</li>
+</ul>
+
+<p>Android also supports a special filesystem named &quot;documents&quot;, which represents a &quot;/Documents/&quot; subdirectory within the &quot;files&quot; filesystem.</p>
+
+<h3>iOS</h3>
+
+<ul>
+<li><code>library</code>: The application&#39;s Library directory</li>
+<li><code>documents</code>: The application&#39;s Documents directory</li>
+<li><code>cache</code>: The application&#39;s Cache directory</li>
+<li><code>bundle</code>: The application&#39;s bundle; the location of the app itself on disk (read-only)</li>
+<li><code>root</code>: The entire device filesystem</li>
+</ul>
+
+<p>By default, the library and documents directories can be synced to iCloud. You can also request two additional filesystems, <code>library-nosync</code> and <code>documents-nosync</code>, which represent a special non-synced directory within the <code>/Library</code> or <code>/Documents</code> filesystem.</p>
+
+<h2>Sample: Create Files and Directories, Write, Read, and Append files <a name="sample"></a></h2>
+
+<p>The File plugin allows you to do things like store files in a temporary or persistent storage location for your app (sandboxed storage) and to store files in other platform-dependent locations. The code snippets in this section demonstrate different tasks including:</p>
+
+<ul>
+<li><a href="#persistent">Accessing the file system</a></li>
+<li>Using cross-platform Cordova file URLs to <a href="#appendFile">store your files</a> (see <em>Where to Store Files</em> for more info)</li>
+<li>Creating <a href="#persistent">files</a> and <a href="#createDir">directories</a></li>
+<li><a href="#writeFile">Writing to files</a></li>
+<li><a href="#readFile">Reading files</a></li>
+<li><a href="#appendFile">Appending files</a></li>
+<li><a href="#displayImage">Display an image file</a></li>
+</ul>
+
+<h2>Create a persistent file <a name="persistent"></a></h2>
+
+<p>Before you use the File plugin APIs, you can get access to the file system using <code>requestFileSystem</code>. When you do this, you can request either persistent or temporary storage. Persistent storage will not be removed unless permission is granted by the user.</p>
+
+<p>When you get file system access using <code>requestFileSystem</code>, access is granted for the sandboxed file system only (the sandbox limits access to the app itself), not for general access to any file system location on the device. (To access file system locations outside the sandboxed storage, use other methods such as window.requestLocalFileSystemURL, which support platform-specific locations. For one example of this, see <em>Append a File</em>.)</p>
+
+<p>Here is a request for persistent storage.</p>
+
+<blockquote>
+<p><em>Note</em> When targeting WebView clients (instead of a browser) or native apps (Windows), you dont need to use <code>requestQuota</code> before using persistent storage.</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">(</span><span class="nx">LocalFileSystem</span><span class="p">.</span><span class="nx">PERSISTENT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'file system open: '</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="s2">"newPersistentFile.txt"</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"fileEntry is file?"</span> <span class="o">+</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">isFile</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+        <span class="c1">// fileEntry.name == 'someFile.txt'</span>
+        <span class="c1">// fileEntry.fullPath == '/someFile.txt'</span>
+        <span class="nx">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="kc">null</span><span class="p">);</span>
+
+    <span class="p">},</span> <span class="nx">onErrorCreateFile</span><span class="p">);</span>
+
+<span class="p">},</span> <span class="nx">onErrorLoadFs</span><span class="p">);</span>
+</code></pre></div>
+<p>The success callback receives FileSystem object (fs). Use <code>fs.root</code> to return a DirectoryEntry object, which you can use to create or get a file (by calling <code>getFile</code>). In this example, <code>fs.root</code> is a DirectoryEntry object that represents the persistent storage in the sandboxed file system.</p>
+
+<p>The success callback for <code>getFile</code> receives a FileEntry object. You can use this to perform file write and file read operations.</p>
+
+<h2>Create a temporary file</h2>
+
+<p>Here is an example of a request for temporary storage. Temporary storage may be deleted by the operating system if the device runs low on memory.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">TEMPORARY</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'file system open: '</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+    <span class="nx">createFile</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">,</span> <span class="s2">"newTempFile.txt"</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+
+<span class="p">},</span> <span class="nx">onErrorLoadFs</span><span class="p">);</span>
+</code></pre></div>
+<p>When you are using temporary storage, you can create or get the file by calling <code>getFile</code>. As in the persistent storage example, this will give you a FileEntry object that you can use for read or write operations.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">createFile</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">,</span> <span class="nx">isAppend</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Creates a new file or returns the file if it already exists.</span>
+    <span class="nx">dirEntry</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="nx">fileName</span><span class="p">,</span> <span class="p">{</span><span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">isAppend</span><span class="p">);</span>
+
+    <span class="p">},</span> <span class="nx">onErrorCreateFile</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<h2>Write to a file <a name="writeFile"></a></h2>
+
+<p>Once you have a FileEntry object, you can write to the file by calling <code>createWriter</code>, which returns a FileWriter object in the success callback. Call the <code>write</code> method of FileWriter to write to the file.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">dataObj</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Create a FileWriter object for our FileEntry (log.txt).</span>
+    <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">createWriter</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">fileWriter</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onwriteend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Successful file write..."</span><span class="p">);</span>
+            <span class="nx">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
+        <span class="p">};</span>
+
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Failed file write: "</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+        <span class="p">};</span>
+
+        <span class="c1">// If data object is not passed in,</span>
+        <span class="c1">// create a new Blob instead.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">dataObj</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">dataObj</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="s1">'some file data'</span><span class="p">],</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="s1">'text/plain'</span> <span class="p">});</span>
+        <span class="p">}</span>
+
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">dataObj</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>Read a file <a name="readFile"></a></h2>
+
+<p>You also need a FileEntry object to read an existing file. Use the file property of FileEntry to get the file reference, and then create a new FileReader object. You can use methods like <code>readAsText</code> to start the read operation. When the read operation is complete, <code>this.result</code> stores the result of the read operation.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">file</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
+
+        <span class="nx">reader</span><span class="p">.</span><span class="nx">onloadend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Successful file read: "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+            <span class="nx">displayFileData</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">.</span><span class="nx">fullPath</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+        <span class="p">};</span>
+
+        <span class="nx">reader</span><span class="p">.</span><span class="nx">readAsText</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
+
+    <span class="p">},</span> <span class="nx">onErrorReadFile</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>Append a file using alternative methods <a name="appendFile"></a></h2>
+
+<p>Of course, you will often want to append existing files instead of creating new ones. Here is an example of that. This example shows another way that you can access the file system using window.resolveLocalFileSystemURL. In this example, pass the cross-platform Cordova file URL, cordova.file.dataDirectory, to the function. The success callback receives a DirectoryEntry object, which you can use to do things like create a file.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">window</span><span class="p">.</span><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">dataDirectory</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">dirEntry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'file system open: '</span> <span class="o">+</span> <span class="nx">dirEntry</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">isAppend</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="nx">createFile</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">,</span> <span class="s2">"fileToAppend.txt"</span><span class="p">,</span> <span class="nx">isAppend</span><span class="p">);</span>
+<span class="p">},</span> <span class="nx">onErrorLoadFs</span><span class="p">);</span>
+</code></pre></div>
+<p>In addition to this usage, you can use <code>resolveLocalFileSystemURL</code> to get access to some file system locations that are not part of the sandboxed storage system. See <em>Where to store Files</em> for more information; many of these storage locations are platform-specific. You can also pass cross-platform file system locations to <code>resolveLocalFileSystemURL</code> using the <em>cdvfile protocol</em>.</p>
+
+<p>For the append operation, there is nothing new in the <code>createFile</code> function that is called in the preceding code (see the preceding examples for the actual code). <code>createFile</code> calls <code>writeFile</code>. In <code>writeFile</code>, you check whether an append operation is requested.</p>
+
+<p>Once you have a FileWriter object, call the <code>seek</code> method, and pass in the index value for the position where you want to write. In this example, you also test whether the file exists. After calling seek, then call the write method of FileWriter.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">dataObj</span><span class="p">,</span> <span class="nx">isAppend</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Create a FileWriter object for our FileEntry (log.txt).</span>
+    <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">createWriter</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">fileWriter</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onwriteend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Successful file read..."</span><span class="p">);</span>
+            <span class="nx">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
+        <span class="p">};</span>
+
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Failed file read: "</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+        <span class="p">};</span>
+
+        <span class="c1">// If we are appending data to file, go to the end of the file.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">isAppend</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">seek</span><span class="p">(</span><span class="nx">fileWriter</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"file doesn't exist!"</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">dataObj</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>Store an existing binary file <a name="binaryFile"></a></h2>
+
+<p>We already showed how to write to a file that you just created in the sandboxed file system. What if you need to get access to an existing file and convert that to something you can store on your device? In this example, you obtain a file using an xhr request, and then save it to the cache in the sandboxed file system.</p>
+
+<p>Before you get the file, get a FileSystem reference using <code>requestFileSystem</code>. By passing window.TEMPORARY in the method call (same as before), the returned FileSystem object (fs) represents the cache in the sandboxed file system. Use <code>fs.root</code> to get the DirectoryEntry object that you need.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">TEMPORARY</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'file system open: '</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+    <span class="nx">getSampleFile</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">);</span>
+
+<span class="p">},</span> <span class="nx">onErrorLoadFs</span><span class="p">);</span>
+</code></pre></div>
+<p>For completeness, here is the xhr request to get a Blob image. There is nothing Cordova-specific in this code, except that you forward the DirectoryEntry reference that you already obtained as an argument to the saveFile function. You will save the blob image and display it later after reading the file (to validate the operation).</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">getSampleFile</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+    <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'GET'</span><span class="p">,</span> <span class="s1">'http://cordova.apache.org/static/img/cordova_bot.png'</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+    <span class="nx">xhr</span><span class="p">.</span><span class="nx">responseType</span> <span class="o">=</span> <span class="s1">'blob'</span><span class="p">;</span>
+
+    <span class="nx">xhr</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+
+            <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="k">this</span><span class="p">.</span><span class="nx">response</span><span class="p">],</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="s1">'image/png'</span> <span class="p">});</span>
+            <span class="nx">saveFile</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">,</span> <span class="nx">blob</span><span class="p">,</span> <span class="s2">"downloadedImage.png"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+    <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p><em>Note</em> For Cordova 5 security, the preceding code requires that you add the domain name, http://cordova.apache.org, to the Content-Security-Policy <meta> element in index.html.</p>
+</blockquote>
+
+<p>After getting the file, copy the contents to a new file. The current DirectoryEntry object is already associated with the app cache.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">saveFile</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">,</span> <span class="nx">fileData</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">dirEntry</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="nx">fileName</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">fileData</span><span class="p">);</span>
+
+    <span class="p">},</span> <span class="nx">onErrorCreateFile</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>In writeFile, you pass in the Blob object as the dataObj and you will save that in the new file.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">dataObj</span><span class="p">,</span> <span class="nx">isAppend</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">// Create a FileWriter object for our FileEntry (log.txt).</span>
+    <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">createWriter</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">fileWriter</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onwriteend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Successful file write..."</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">dataObj</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s2">"image/png"</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">readBinaryFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">};</span>
+
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Failed file write: "</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+        <span class="p">};</span>
+
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">dataObj</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>After writing to the file, read it and display it. You saved the image as binary data, so you can read it using FileReader.readAsArrayBuffer.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">readBinaryFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">file</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
+
+        <span class="nx">reader</span><span class="p">.</span><span class="nx">onloadend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Successful file write: "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+            <span class="nx">displayFileData</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">.</span><span class="nx">fullPath</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+
+            <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="k">new</span> <span class="nb">Uint8Array</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">)],</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"image/png"</span> <span class="p">});</span>
+            <span class="nx">displayImage</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
+        <span class="p">};</span>
+
+        <span class="nx">reader</span><span class="p">.</span><span class="nx">readAsArrayBuffer</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
+
+    <span class="p">},</span> <span class="nx">onErrorReadFile</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>After reading the data, you can display the image using code like this. Use window.URL.createObjectURL to get a DOM string for the Blob image.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">displayImage</span><span class="p">(</span><span class="nx">blob</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">// Displays image if result is a valid DOM string for an image.</span>
+    <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'imageFile'</span><span class="p">);</span>
+    <span class="c1">// Note: Use window.URL.revokeObjectURL when finished with image.</span>
+    <span class="nx">elem</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>Display an image file <a name="displayImage"></a></h2>
+
+<p>To display an image using a FileEntry, you can call the <code>toURL</code> method.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">displayImageByFileURL</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'imageFile'</span><span class="p">);</span>
+    <span class="nx">elem</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>If you are using some platform-specific URIs instead of a FileEntry and you want to display an image, you may need to include the main part of the URI in the Content-Security-Policy <meta> element in index.html. For example, on Windows 10, you can include <code>ms-appdata:</code> in your <meta> element. Here is an example.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Security-Policy"</span> <span class="na">content=</span><span class="s">"default-src 'self' data: gap: ms-appdata: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<h2>Create Directories <a name="createDir"></a></h2>
+
+<p>In the code here, you create directories in the root of the app storage location. You could use this code with any writable storage location (that is, any DirectoryEntry). Here, you write to the application cache (assuming that you used window.TEMPORARY to get your FileSystem object) by passing fs.root into this function.</p>
+
+<p>This code creates the /NewDirInRoot/images folder in the application cache. For platform-specific values, look at <em>File System Layouts</em>.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">createDirectory</span><span class="p">(</span><span class="nx">rootDirEntry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">rootDirEntry</span><span class="p">.</span><span class="nx">getDirectory</span><span class="p">(</span><span class="s1">'NewDirInRoot'</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">dirEntry</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">dirEntry</span><span class="p">.</span><span class="nx">getDirectory</span><span class="p">(</span><span class="s1">'images'</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">subDirEntry</span><span class="p">)</span> <span class="p">{</span>
+
+            <span class="nx">createFile</span><span class="p">(</span><span class="nx">subDirEntry</span><span class="p">,</span> <span class="s2">"fileInNewSubDir.txt"</span><span class="p">);</span>
+
+        <span class="p">},</span> <span class="nx">onErrorGetDir</span><span class="p">);</span>
+    <span class="p">},</span> <span class="nx">onErrorGetDir</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>When creating subfolders, you need to create each folder separately as shown in the preceding code.</p>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  7.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                セキュリティ ガイド - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/ja/8.x/guide/appdev/security/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '8.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/platforms/blackberry10/home.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/platforms/osx/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/appdev/whitelist/index.html">
+                Whitelisting
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/platforms/blackberry10/plugin.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-cli/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-battery-status/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-camera/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-console/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-contacts/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-device/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-device-motion/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-device-orientation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-dialogs/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-file/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-file-transfer/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-geolocation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-globalization/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-inappbrowser/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-media/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-media-capture/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-network-information/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-splashscreen/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-vibration/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-statusbar/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/8.x/reference/cordova-plugin-legacy-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        目次
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/platforms/blackberry10/home.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/platforms/osx/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/appdev/whitelist/index.html">
+        Whitelisting
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/platforms/blackberry10/plugin.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-cli/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-battery-status/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-camera/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-console/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-contacts/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-device/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-device-motion/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-device-orientation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-dialogs/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-file/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-file-transfer/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-geolocation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-globalization/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-inappbrowser/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-media/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-media-capture/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-network-information/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-splashscreen/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-vibration/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-statusbar/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/8.x/reference/cordova-plugin-legacy-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/ja/8.x/guide/appdev/security/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        日本語
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/8.x/guide/appdev/security/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/8.x/guide/appdev/security/" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/8.x/guide/appdev/security/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/8.x/guide/appdev/security/" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/8.x/guide/appdev/security/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/8.x/guide/appdev/security/" class="">
+                                
+                                    <span class="selected">
+                                        日本語
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/8.x/guide/appdev/security/" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/8.x/guide/appdev/security/" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/8.x/guide/appdev/security/" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/8.x/guide/appdev/security/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/8.x/guide/appdev/security/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/8.x/guide/appdev/security/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        8.x
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/8.x/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                8.x
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    これがないドキュメントの最新バージョンです！
+                    <a href="/docs/ja/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>セキュリティ ガイド</h1>
+
+<p>コルドバのアプリケーションを開発するときに考慮する必要がありますいくつかのセキュリティのベスト プラクティスについて説明します。 セキュリティは非常に複雑なトピック、従ってこのガイドは完全ではないことを留意してください。 このガイドに貢献することができる場合は、お気軽<a href="https://issues.apache.org/jira/browse/CB/component/12316407">「ドキュメント」</a>の下でコルドバのバグ追跡システム問題を報告します。 このガイドは、一般的なコルドバ開発 (全プラットフォーム) に該当するように設計されますが、特別なプラットフォーム固有の注意事項が記載されます。</p>
+
+<h2>このガイドには、次のトピックについて説明します。</h2>
+
+<ul>
+<li>  ホワイト リスト</li>
+<li>  Iframe およびコールバック Id メカニズム</li>
+<li>  証明書を固定</li>
+<li>  自己署名証明書</li>
+<li>  暗号化されたストレージ</li>
+<li>  一般的なヒント</li>
+<li>  お勧めの記事やその他のリソース</li>
+</ul>
+
+<h2>ホワイト リスト</h2>
+
+<ul>
+<li><p>読み取りし、ホワイト リスト ガイドを理解します。</p></li>
+<li><p>Android の API 10 と以下は、ホワイト リスト登録のドメインは動作しませんし、iframe の WP8 XMLHttpRequest。 つまり、攻撃者が iframe 内の任意のドメインに読み込むことができ、iframe 内のページのスクリプトも一切コルドバの JavaScript オブジェクトと対応するネイティブ Java オブジェクトに直接アクセスできます。 これらのプラットフォーム用のアプリケーションを構築する際、これを考慮に入れなければなりません。 実際にはつまり、ターゲット 10 より高い Android の API と、可能であればを使用しない iframe を読み込む外部コンテンツ - inAppBrowser プラグインや他のサードパーティ製プラグインを使用してください。</p></li>
+</ul>
+
+<h2>Iframe およびコールバック Id メカニズム</h2>
+
+<p>ホワイト リストに登録ドメインから iframe のコンテンツを提供しています、そのドメイン ネイティブ コルドバ ブリッジにお越し。 これはつまり、サードパーティの広告ネットワークをホワイト リストしこれら広告 iframe を通じて、悪意のある広告が iframe を打破し、悪意のある操作を実行することができること可能です。 このため、一般に使用しないでください iframe iframe コンテンツをホストしているサーバーをコントロールしていないかぎり。 サード パーティのプラグインの広告ネットワークをサポートするために利用できるがあることに注意してください。 この文が true の iOS は、iframe の接続を含むすべてを横取りしないことに注意してください。</p>
+
+<h2>証明書を固定</h2>
+
+<p>コルドバは固定する真の証明書をサポートしません。 これに対する主要な障壁は Android にネイティブ Api の欠如 SSL サーバーの証明書のチェックを実行する接続を遮断します。 （JSSE を使用して Java で Android 上の固定を行う証明書することは、Android 上 webview は C++ で書かれてサーバー接続はあなたのため、webview によって処理されますが、だから不可能だが Java と JSSE を使用する。)Apache コルドバは複数のプラットフォーム間で一貫性のある Api を提供するものです、のでその一貫性が切れます主要なプラットフォームの機能を持っていません。</p>
+
+<p>証明書を固定、またはアプリケーションの有効期間中に他の様々 な回でサーバーの公開キー (指紋) 予期される値が、アプリケーションの起動時のチェックなどを近似する方法があります。 サード パーティのプラグインを行うことができますコルドバがあります。 ただし、これは自動的に検証するサーバーへの接続ごとに予期される値の固定 true 証明書と同じです。</p>
+
+<h2>自己署名証明書</h2>
+
+<p>サーバーに自己署名証明書を使用することをお勧めします。 SSL を希望する場合、サーバーが既知の CA (証明機関) によって正しく署名されている証明書であることそれ勧め。 真の証明書を固定することができないことこれが重要になります。</p>
+
+<p>自己署名証明書を受け入れるサーバー証明書がデバイスによって有効と見なされることができます証明書チェーンの検証をバイパスするからです。 これは、中間者攻撃への通信を開きます。 ハッカーを傍受し、デバイスとサーバー間の通信を読むだけでなくだけでなく、コミュニケーションを変更する非常に簡単になります。 デバイスは、サーバーの証明書が信頼された CA によって署名されていることを確認しないのでこれが起こっているか決して知らない。 デバイスには、サーバーはそれを予期している証拠がありません。 中間者攻撃を行うための使いやすさのため自己署名入りの証明書の受け入れがだけ、信頼されていないネットワーク上の https ではなく http を実行するよりも同然。 はい、トラフィックは暗号化されますが、しかし、真ん中の男は、暗号化は受動オブザーバーを除いて役に立たないので、すべてをアクセスできるように、- で-仲介者からのキーで暗号化できます。 ユーザーに SSL をセキュリティで保護された、信頼し、これが意図的を作ることそれ安全でない、SSL 使用は誤解を招くになります。 これが、信頼されたネットワークで使用される場合 （すなわち、あなたが制御された企業の完全に内側）、[自己署名入りの証明書はまだお勧めしません。 信頼されたネットワークで 2 つの提言は、ネットワーク自体が信頼できる、ちょうど http を使用するか （自己署名されていない) 信頼される CA によって署名された証明書を取得します。 ネットワークが信頼されているかはありません。</p>
+
+<p>ここで説明した原則は Apache コルドバに限定されない、すべてのクライアント サーバー間の通信に適用されます。</p>
+
+<p>Android でコルドバを実行する場合を使用して <code>android:debuggable=&quot;true&quot;</code> 、アプリケーション マニフェストによって許可されます証明書などの SSL エラー チェーン検証エラー自己署名入りの証明書に。 この構成では自己署名入りの証明書を使用できますが、アプリケーションが運用環境で使用する構成ではありません。 アプリケーションの開発時にのみ使用するものです。</p>
+
+<h2>暗号化されたストレージ</h2>
+
+<p>（未定）</p>
+
+<h2>一般的なヒント</h2>
+
+<h3>Android のジンジャーブレッドを使用しないでください ！</h3>
+
+<ul>
+<li>  10 以上 min ターゲット sdk レベルを設定します。API 10 ジンジャーブレッド, あり、ジンジャーブレッドは、もはや Google またはデバイスの製造元によってサポートされているし、お勧めしたがってできません Cordova チームによって。 </li>
+<li>  ジンジャーブレッドは、安全でないことを示されているし、1 つは、最もターゲット モバイル Os <a href="http://bgr.com/2012/11/06/android-security-gingerbread-malware/">http://www.mobilemag.com/2012/11/06/andriod-2-3-gingerbread-security/</a>. </li>
+<li>  ジンジャーブレッドまたは低い Android 上のホワイト リストは動作しません。 つまり、攻撃者は悪意のあるコード コルドバ Api のすべてにアクセスする必要がありますし、そのアクセスを使用して個人データを盗む、プレミアム レート番号に SMS メッセージを送信およびその他の悪意のある行為を実行するでしたする iframe を読み込むことができます。 </li>
+</ul>
+
+<h3>InAppBrowser 外部リンクを使用します。</h3>
+
+<ul>
+<li>  InAppBrowser は、外部のウェブサイトへのリンクを開くときに使用します。 これは、ホワイト リスト登録のドメイン名と、InAppBrowser ネイティブ ブラウザーのセキュリティ機能を使用して、web サイトを与えることはありませんので、あなたのアプリケーション内で直接内容を含むコルドバ環境へのアクセスよりはるかに安全です。 サード パーティの web サイトを信頼、アプリケーションに直接組み込む場合でもその第三者の web サイトは悪意のある web コンテンツをリンクでした。 </li>
+</ul>
+
+<h3>すべてのユーザー入力を検証します。</h3>
+
+<ul>
+<li>  常にあなたのアプリケーションを受け入れるすべての入力を検証します。 これには、ユーザー名、パスワード、日付、アップロードされたメディアなどが含まれます。 攻撃者は HTML と JS 資産 (アプリケーションを逆コンパイル、または chrome://inspect のようなデバッグ ツールを使用するか) 操作可能性があります、ためこの検証データ任意のバックエンド サービスに渡す前に、特にまた、サーバー上実行必要があります。 </li>
+<li>  他のソースのデータを検証する必要があります: ユーザー ドキュメント、連絡先、プッシュ通知</li>
+</ul>
+
+<h3>機密性の高いデータをキャッシュしません。</h3>
+
+<ul>
+<li>  ユーザー名、パスワード、地理位置情報などの機密データをキャッシュする場合それが潜在的取得後、未承認のユーザーやアプリケーションによって。</li>
+</ul>
+
+<h3>あなたが何をやっている知っている限り、eval() を使用しないでください。</h3>
+
+<ul>
+<li>  JavaScript 関数 eval() 虐待されての長い歴史を持ちます。正しくを使用、コードのデバッグの難しさ、およびコード実行の速度が低下、インジェクション攻撃のために開くことができます。 </li>
+</ul>
+
+<h3>ソース コードが安全であるとは限りません</h3>
+
+<ul>
+<li>  コルドバのアプリケーションは、ネイティブなコンテナーにパッケージ化された HTML と JavaScript の資産から組み込まれて、あなたのコードが安全であることを考えないでください。 リバース エンジニア リング、コルドバ アプリケーションに可能です。 </li>
+</ul>
+
+<h2>お勧めの記事やその他のリソース</h2>
+
+<ul>
+<li>  <a href="https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet">HTML5 アプリケーションをセキュリティ保護する方法を詳述した HTML5 セキュリティ カンニング</a></li>
+<li>  <a href="https://github.com/phonegap/phonegap/wiki/Platform-Security">データの暗号化を使用するなど、デバイスのセキュリティに関する Phonegap の記事</a></li>
+<li>  <a href="http://www.cis.syr.edu/%7Ewedu/Research/paper/webview_acsac2011.pdf">Webview でよく知られているセキュリティ上の欠陥についてのホワイト ペーパー ベースのハイブリッド アプリケーション</a></li>
+</ul>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  8.x", "language: ja"] }
+    });
+</script>
+
+</body>
+</html>

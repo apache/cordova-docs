@@ -1,0 +1,3261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="Open an in-app browser window. ">
+
+    <title>
+        
+            
+                Inappbrowser - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/dev/reference/cordova-plugin-inappbrowser/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search 'dev' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/cli/template.html">
+                Templates for apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/platforms/windows/index.html">
+                Windows (deprecated)
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/platforms/osx/index.html">
+                OS X (deprecated)
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/platforms/electron/index.html">
+                Electron
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/platform_pinning/index.html">
+                Platform pinning
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/appdev/allowlist/index.html">
+                Allow List
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/platforms/windows/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/reference/cordova-cli/index.html">
+                CLI Reference
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/reference/cordova-plugin-battery-status/index.html">
+                Battery Status
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/reference/cordova-plugin-camera/index.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/reference/cordova-plugin-device/index.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/reference/cordova-plugin-dialogs/index.html">
+                Dialogs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/reference/cordova-plugin-file/index.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/reference/cordova-plugin-geolocation/index.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/reference/cordova-plugin-inappbrowser/index.html">
+                Inappbrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/reference/cordova-plugin-media/index.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/reference/cordova-plugin-media-capture/index.html">
+                Media Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/reference/cordova-plugin-network-information/index.html">
+                Network Information
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/reference/cordova-plugin-screen-orientation/index.html">
+                Screen Orientation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/reference/cordova-plugin-splashscreen/index.html">
+                Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/reference/cordova-plugin-statusbar/index.html">
+                Statusbar
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/reference/cordova-plugin-vibration/index.html">
+                Vibration
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/cli/template.html">
+        Templates for apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/platforms/windows/index.html">
+        Windows (deprecated)
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/platforms/osx/index.html">
+        OS X (deprecated)
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/platforms/electron/index.html">
+        Electron
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/platform_pinning/index.html">
+        Platform pinning
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/appdev/allowlist/index.html">
+        Allow List
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/platforms/windows/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/reference/cordova-cli/index.html">
+        CLI Reference
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/reference/cordova-plugin-battery-status/index.html">
+        Battery Status
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/reference/cordova-plugin-camera/index.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/reference/cordova-plugin-device/index.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/reference/cordova-plugin-dialogs/index.html">
+        Dialogs
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/reference/cordova-plugin-file/index.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/reference/cordova-plugin-geolocation/index.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/reference/cordova-plugin-inappbrowser/index.html">
+        Inappbrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/reference/cordova-plugin-media/index.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/reference/cordova-plugin-media-capture/index.html">
+        Media Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/reference/cordova-plugin-network-information/index.html">
+        Network Information
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/reference/cordova-plugin-screen-orientation/index.html">
+        Screen Orientation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/reference/cordova-plugin-splashscreen/index.html">
+        Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/reference/cordova-plugin-statusbar/index.html">
+        Statusbar
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/reference/cordova-plugin-vibration/index.html">
+        Vibration
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+                    <a class="edit hidden-xs hidden-sm" href="https://github.com/apache/cordova-plugin-inappbrowser/blob/master/README.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+
+                
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        English
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/dev/reference/cordova-plugin-inappbrowser/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/dev/reference/cordova-plugin-inappbrowser/" class="">
+                                
+                                    <span class="selected">
+                                        English
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/dev/reference/cordova-plugin-inappbrowser/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/dev/reference/cordova-plugin-inappbrowser/" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/dev/reference/cordova-plugin-inappbrowser/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/dev/reference/cordova-plugin-inappbrowser/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/dev/reference/cordova-plugin-inappbrowser/" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/dev/reference/cordova-plugin-inappbrowser/" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/dev/reference/cordova-plugin-inappbrowser/" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/dev/reference/cordova-plugin-inappbrowser/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/dev/reference/cordova-plugin-inappbrowser/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/dev/reference/cordova-plugin-inappbrowser/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        dev
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                dev
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/" class="missing-page">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/" class="missing-page">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/" class="missing-page">
+                                
+                                    
+                                3.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/" class="missing-page">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/" class="missing-page">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/" class="missing-page">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+                <div class="alert docs-alert alert-info" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is under development!
+                    <a href="/docs/en/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- outdated warning -->
+            
+
+            <!-- plugin version warning -->
+            
+                <div class="alert alert-warning docs-alert" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                     master.
+                    <a href="https://github.com/apache/cordova-plugin-inappbrowser/releases">
+                        
+                    </a>
+                </div>
+            
+
+            <div id="page-toc-source">
+                <!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<table><thead>
+<tr>
+<th style="text-align: center">AppVeyor</th>
+<th style="text-align: center">Travis CI</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><a href="https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-inappbrowser"><img src="https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-inappbrowser?branch=master" alt="Build status"></a></td>
+<td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-inappbrowser"><img src="https://travis-ci.org/apache/cordova-plugin-inappbrowser.svg?branch=master" alt="Build Status"></a></td>
+</tr>
+</tbody></table>
+
+<h1>cordova-plugin-inappbrowser</h1>
+
+<p>You can show helpful articles, videos, and web resources inside of your app. Users can view web pages without leaving your app.</p>
+
+<blockquote>
+<p>To get a few ideas, check out the <a href="#sample">sample</a> at the bottom of this page or go straight to the <a href="#reference">reference</a> content.</p>
+</blockquote>
+
+<p>This plugin provides a web browser view that displays when calling <code>cordova.InAppBrowser.open()</code>.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+</code></pre></div>
+<h3><code>window.open</code></h3>
+
+<p>The <code>cordova.InAppBrowser.open()</code> function is defined to be a drop-in replacement
+for the <code>window.open()</code> function.  Existing <code>window.open()</code> calls can use the
+InAppBrowser window, by replacing window.open:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">window.open = cordova.InAppBrowser.open;
+</code></pre></div>
+<p>If you change the browsers <code>window.open</code> function this way, it can have unintended side
+effects (especially if this plugin is included only as a dependency of another
+plugin).</p>
+
+<p>The InAppBrowser window behaves like a standard web browser,
+and can&#39;t access Cordova APIs. For this reason, the InAppBrowser is recommended
+if you need to load third-party (untrusted) content, instead of loading that
+into the main Cordova webview. The InAppBrowser is not subject to the
+whitelist, nor is opening links in the system browser.</p>
+
+<p>The InAppBrowser provides by default its own GUI controls for the user (back,
+forward, done).</p>
+
+<h2>Installation</h2>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add cordova-plugin-inappbrowser
+</code></pre></div>
+<p>If you want all page loads in your app to go through the InAppBrowser, you can
+simply hook <code>window.open</code> during initialization.  For example:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    window.open = cordova.InAppBrowser.open;
+}
+</code></pre></div>
+<h3>Preferences</h3>
+
+<h4><b>config.xml</b></h4>
+
+<ul>
+<li><b>InAppBrowserStatusBarStyle [iOS only]</b>: (string, options &#39;lightcontent&#39;, &#39;darkcontent&#39; or &#39;default&#39;. Defaults to &#39;default&#39;) set text color style for iOS. &#39;lightcontent&#39; is intended for use on dark backgrounds. &#39;darkcontent&#39; is only available since iOS 13 and intended for use on light backgrounds.
+<code>
+&lt;preference name=&quot;InAppBrowserStatusBarStyle&quot; value=&quot;lightcontent&quot; /&gt;
+</code></li>
+</ul>
+
+<h2>cordova.InAppBrowser.open</h2>
+
+<p>Opens a URL in a new <code>InAppBrowser</code> instance, the current browser
+instance, or the system browser.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">var ref = cordova.InAppBrowser.open(url, target, options);
+</code></pre></div>
+<ul>
+<li><p><strong>ref</strong>: Reference to the <code>InAppBrowser</code> window when the target is set to <code>&#39;_blank&#39;</code>. <em>(InAppBrowser)</em></p></li>
+<li><p><strong>url</strong>: The URL to load <em>(String)</em>. Call <code>encodeURI()</code> on this if the URL contains Unicode characters.</p></li>
+<li><p><strong>target</strong>: The target in which to load the URL, an optional parameter that defaults to <code>_self</code>. <em>(String)</em></p>
+
+<ul>
+<li><code>_self</code>: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the <code>InAppBrowser</code>.</li>
+<li><code>_blank</code>: Opens in the <code>InAppBrowser</code>.</li>
+<li><code>_system</code>: Opens in the system&#39;s web browser.</li>
+</ul></li>
+<li><p><strong>options</strong>: Options for the <code>InAppBrowser</code>. Optional, defaulting to: <code>location=yes</code>. <em>(String)</em></p>
+
+<p>The <code>options</code> string must not contain any blank space, and each feature&#39;s name/value pairs must be separated by a comma. Feature names are case insensitive.</p>
+
+<p>All platforms support:</p>
+
+<ul>
+<li><strong>location</strong>: Set to <code>yes</code> or <code>no</code> to turn the <code>InAppBrowser</code>&#39;s location bar on or off.</li>
+</ul>
+
+<p>Android supports these additional options:</p>
+
+<ul>
+<li><strong>hidden</strong>: set to <code>yes</code> to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to <code>no</code> (default) to have the browser open and load normally.</li>
+<li><strong>beforeload</strong>: set to enable the <code>beforeload</code> event to modify which pages are actually loaded in the browser. Accepted values are <code>get</code> to intercept only GET requests, <code>post</code> to intercept on POST requests or <code>yes</code> to intercept both GET &amp; POST requests. Note that POST requests are not currently supported and will be ignored (if you set <code>beforeload=post</code> it will raise an error).</li>
+<li><strong>clearcache</strong>: set to <code>yes</code> to have the browser&#39;s cookie cache cleared before the new window is opened</li>
+<li><strong>clearsessioncache</strong>: set to <code>yes</code> to have the session cookie cache cleared before the new window is opened</li>
+<li><strong>closebuttoncaption</strong>: set to a string to use as the close button&#39;s caption instead of a X. Note that you need to localize this value yourself.</li>
+<li><strong>closebuttoncolor</strong>: set to a valid hex color string, for example: <code>#00ff00</code>, and it will change the
+close button color from default, regardless of being a text or default X. Only has effect if user has location set to <code>yes</code>.</li>
+<li><strong>footer</strong>: set to <code>yes</code> to show a close button in the footer similar to the iOS <strong>Done</strong> button. 
+The close button will appear the same as for the header hence use <strong>closebuttoncaption</strong> and <strong>closebuttoncolor</strong> to set its properties.</li>
+<li><strong>footercolor</strong>: set to a valid hex color string, for example <code>#00ff00</code> or <code>#CC00ff00</code> (<code>#aarrggbb</code>) , and it will change the footer color from default.
+Only has effect if user has <strong>footer</strong> set to <code>yes</code>.</li>
+<li><strong>hardwareback</strong>: set to <code>yes</code> to use the hardware back button to navigate backwards through the <code>InAppBrowser</code>&#39;s history. If there is no previous page, the <code>InAppBrowser</code> will close.  The default value is <code>yes</code>, so you must set it to <code>no</code> if you want the back button to simply close the InAppBrowser.</li>
+<li><strong>hidenavigationbuttons</strong>: set to <code>yes</code> to hide the navigation buttons on the location toolbar, only has effect if user has location set to <code>yes</code>. The default value is <code>no</code>.</li>
+<li><strong>hideurlbar</strong>: set to <code>yes</code> to hide the url bar on the location toolbar, only has effect if user has location set to <code>yes</code>. The default value is <code>no</code>.</li>
+<li><strong>navigationbuttoncolor</strong>: set to a valid hex color string, for example: <code>#00ff00</code>, and it will change the color of both navigation buttons from default. Only has effect if user has location set to <code>yes</code> and not hidenavigationbuttons set to <code>yes</code>.</li>
+<li><strong>toolbarcolor</strong>: set to a valid hex color string, for example: <code>#00ff00</code>, and it will change the color the toolbar from default. Only has effect if user has location set to <code>yes</code>.</li>
+<li><strong>lefttoright</strong>: Set to <code>yes</code> to swap positions of the navigation buttons and the close button. Specifically, navigation buttons go to the right and close button to the left. Default value is <code>no</code>.</li>
+<li><strong>zoom</strong>: set to <code>yes</code> to show Android browser&#39;s zoom controls, set to <code>no</code> to hide them.  Default value is <code>yes</code>.</li>
+<li><strong>mediaPlaybackRequiresUserAction</strong>: Set to <code>yes</code> to prevent HTML5 audio or video from autoplaying (defaults to <code>no</code>).</li>
+<li><strong>shouldPauseOnSuspend</strong>: Set to <code>yes</code> to make InAppBrowser WebView to pause/resume with the app to stop background audio (this may be required to avoid Google Play issues like described in <a href="https://issues.apache.org/jira/browse/CB-11013">CB-11013</a>).</li>
+<li><strong>useWideViewPort</strong>: Sets whether the WebView should enable support for the &quot;viewport&quot; HTML meta tag or should use a wide viewport. When the value of the setting is <code>no</code>, the layout width is always set to the width of the WebView control in device-independent (CSS) pixels. When the value is <code>yes</code> and the page contains the viewport meta tag, the value of the width specified in the tag is used. If the page does not contain the tag or does not provide a width, then a wide viewport will be used. (defaults to <code>yes</code>).</li>
+<li><strong>fullscreen</strong>: Sets whether the InappBrowser WebView is displayed fullscreen or not. In fullscreen mode, the status bar is hidden. Default value is <code>yes</code>.</li>
+</ul>
+
+<p>iOS supports these additional options:</p>
+
+<ul>
+<li><strong>hidden</strong>: set to <code>yes</code> to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to <code>no</code> (default) to have the browser open and load normally.</li>
+<li><strong>beforeload</strong>: set to enable the <code>beforeload</code> event to modify which pages are actually loaded in the browser. Accepted values are <code>get</code> to intercept only GET requests, <code>post</code> to intercept on POST requests or <code>yes</code> to intercept both GET &amp; POST requests. Note that POST requests are not currently supported and will be ignored (if you set <code>beforeload=post</code> it will raise an error).</li>
+<li><strong>clearcache</strong>: set to <code>yes</code> to have the browser&#39;s cookie cache cleared before the new window is opened</li>
+<li><strong>clearsessioncache</strong>: set to <code>yes</code> to have the session cookie cache cleared before the new window is opened. For WKWebView, requires iOS 11+ on target device.</li>
+<li><strong>cleardata</strong>: set to <code>yes</code> to have the browser&#39;s entire local storage cleared (cookies, HTML5 local storage, IndexedDB, etc.) before the new window is opened</li>
+<li><strong>closebuttoncolor</strong>: set as a valid hex color string, for example: <code>#00ff00</code>, to change from the default <strong>Done</strong> button&#39;s color. Only applicable if toolbar is not disabled.</li>
+<li><strong>closebuttoncaption</strong>: set to a string to use as the <strong>Done</strong> button&#39;s caption. Note that you need to localize this value yourself.</li>
+<li><strong>disallowoverscroll</strong>: Set to <code>yes</code> or <code>no</code> (default is <code>no</code>). Turns on/off the the bounce of the WKWebView&#39;s UIScrollView.</li>
+<li><strong>hidenavigationbuttons</strong>:  set to <code>yes</code> or <code>no</code> to turn the toolbar navigation buttons on or off (defaults to <code>no</code>). Only applicable if toolbar is not disabled.</li>
+<li><strong>navigationbuttoncolor</strong>:  set as a valid hex color string, for example: <code>#00ff00</code>, to change from the default color. Only applicable if navigation buttons are visible.</li>
+<li><strong>toolbar</strong>:  set to <code>yes</code> or <code>no</code> to turn the toolbar on or off for the InAppBrowser (defaults to <code>yes</code>)</li>
+<li><strong>toolbarcolor</strong>: set as a valid hex color string, for example: <code>#00ff00</code>, to change from the default color of the toolbar. Only applicable if toolbar is not disabled.</li>
+<li><strong>toolbartranslucent</strong>:  set to <code>yes</code> or <code>no</code> to make the toolbar translucent(semi-transparent)  (defaults to <code>yes</code>). Only applicable if toolbar is not disabled.</li>
+<li><strong>lefttoright</strong>: Set to <code>yes</code> to swap positions of the navigation buttons and the close button. Specifically, close button goes to the right and navigation buttons to the left.</li>
+<li><strong>enableViewportScale</strong>:  Set to <code>yes</code> or <code>no</code> to prevent viewport scaling through a meta tag (defaults to <code>no</code>).</li>
+<li><strong>mediaPlaybackRequiresUserAction</strong>: Set to <code>yes</code> to prevent HTML5 audio or video from autoplaying (defaults to <code>no</code>).</li>
+<li><strong>allowInlineMediaPlayback</strong>: Set to <code>yes</code> or <code>no</code> to allow in-line HTML5 media playback, displaying within the browser window rather than a device-specific playback interface. The HTML&#39;s <code>video</code> element must also include the <code>webkit-playsinline</code> attribute (defaults to <code>no</code>).</li>
+<li><strong>presentationstyle</strong>:  Set to <code>pagesheet</code>, <code>formsheet</code> or <code>fullscreen</code> to set the <a href="https://developer.apple.com/documentation/uikit/uimodalpresentationstyle">presentation style</a> (defaults to <code>fullscreen</code>).</li>
+<li><strong>transitionstyle</strong>: Set to <code>fliphorizontal</code>, <code>crossdissolve</code> or <code>coververtical</code> to set the <a href="https://developer.apple.com/documentation/uikit/uimodaltransitionstyle">transition style</a> (defaults to <code>coververtical</code>).</li>
+<li><strong>toolbarposition</strong>: Set to <code>top</code> or <code>bottom</code> (default is <code>bottom</code>). Causes the toolbar to be at the top or bottom of the window.</li>
+<li><strong>hidespinner</strong>: Set to <code>yes</code> or <code>no</code> to change the visibility of the loading indicator (defaults to <code>no</code>).</li>
+</ul>
+
+<p>Windows supports these additional options:</p>
+
+<ul>
+<li><strong>hidden</strong>: set to <code>yes</code> to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to <code>no</code> (default) to have the browser open and load normally.</li>
+<li><strong>hardwareback</strong>: works the same way as on Android platform.</li>
+<li><strong>fullscreen</strong>: set to <code>yes</code> to create the browser control without a border around it. Please note that if <strong>location=no</strong> is also specified, there will be no control presented to user to close IAB window.</li>
+</ul></li>
+</ul>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Android</li>
+<li>Browser</li>
+<li>iOS</li>
+<li>OSX</li>
+<li>Windows</li>
+</ul>
+
+<h3>Example</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+var ref2 = cordova.InAppBrowser.open(encodeURI('http://ja.m.wikipedia.org/wiki/ハングル'), '_blank', 'location=yes');
+</code></pre></div>
+<h3>OSX Quirks</h3>
+
+<p>At the moment the only supported target in OSX is <code>_system</code>.</p>
+
+<p><code>_blank</code> and <code>_self</code> targets are not yet implemented and are ignored silently. Pull requests and patches to get these to work are greatly appreciated.</p>
+
+<h3>iOS Quirks</h3>
+
+<p>Since the introduction of iPadOS 13, iPads try to adapt their content mode / user agent for the optimal browsing experience. This may result in iPads having their user agent set to Macintosh, making it hard to detect them as mobile devices using user agent string sniffing. You can change this with the <code>PreferredContentMode</code> preference in <code>config.xml</code>.</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"PreferredContentMode"</span> <span class="na">value=</span><span class="s">"mobile"</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+<p>The example above forces the user agent to contain <code>iPad</code>. The other option is to use the value <code>desktop</code> to turn the user agent to <code>Macintosh</code>.</p>
+
+<h3>Browser Quirks</h3>
+
+<ul>
+<li><p>Plugin is implemented via iframe,</p></li>
+<li><p>Navigation history (<code>back</code> and <code>forward</code> buttons in LocationBar) is not implemented.</p></li>
+</ul>
+
+<h2>InAppBrowser</h2>
+
+<p>The object returned from a call to <code>cordova.InAppBrowser.open</code> when the target is set to <code>&#39;_blank&#39;</code>.</p>
+
+<h3>Methods</h3>
+
+<ul>
+<li>addEventListener</li>
+<li>removeEventListener</li>
+<li>close</li>
+<li>show</li>
+<li>hide</li>
+<li>executeScript</li>
+<li>insertCSS</li>
+</ul>
+
+<h2>InAppBrowser.addEventListener</h2>
+
+<blockquote>
+<p>Adds a listener for an event from the <code>InAppBrowser</code>. (Only available when the target is set to <code>&#39;_blank&#39;</code>)</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-" data-lang="">ref.addEventListener(eventname, callback);
+</code></pre></div>
+<ul>
+<li><p><strong>ref</strong>: reference to the <code>InAppBrowser</code> window <em>(InAppBrowser)</em></p></li>
+<li><p><strong>eventname</strong>: the event to listen for <em>(String)</em></p>
+
+<ul>
+<li><strong>loadstart</strong>: event fires when the <code>InAppBrowser</code> starts to load a URL.</li>
+<li><strong>loadstop</strong>: event fires when the <code>InAppBrowser</code> finishes loading a URL.</li>
+<li><strong>loaderror</strong>: event fires when the <code>InAppBrowser</code> encounters an error when loading a URL.</li>
+<li><strong>exit</strong>: event fires when the <code>InAppBrowser</code> window is closed.</li>
+<li><strong>beforeload</strong>: event fires when the <code>InAppBrowser</code> decides whether to load an URL or not (only with option <code>beforeload</code> set).</li>
+<li><strong>message</strong>: event fires when the <code>InAppBrowser</code> receives a message posted from the page loaded inside the <code>InAppBrowser</code> Webview.</li>
+</ul></li>
+<li><p><strong>callback</strong>: the function that executes when the event fires. The function is passed an <code>InAppBrowserEvent</code> object as a parameter.</p></li>
+</ul>
+
+<h2>Example</h2>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
+<span class="kd">var</span> <span class="nx">inAppBrowserRef</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">showHelp</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="s2">"_blank"</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="s2">"location=yes,hidden=yes,beforeload=yes"</span><span class="p">;</span>
+
+    <span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">.</span><span class="nx">InAppBrowser</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">target</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'loadstart'</span><span class="p">,</span> <span class="nx">loadStartCallBack</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'loadstop'</span><span class="p">,</span> <span class="nx">loadStopCallBack</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'loaderror'</span><span class="p">,</span> <span class="nx">loadErrorCallBack</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'beforeload'</span><span class="p">,</span> <span class="nx">beforeloadCallBack</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'message'</span><span class="p">,</span> <span class="nx">messageCallBack</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">loadStartCallBack</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#status-message'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">"loading please wait ..."</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">loadStopCallBack</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">inAppBrowserRef</span> <span class="o">!=</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">insertCSS</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="s2">"body{font-size: 25px;}"</span> <span class="p">});</span>
+
+        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">executeScript</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="s2">"\
+            var message = 'this is the message';\
+            var messageObj = {my_message: message};\
+            var stringifiedMessageObj = JSON.stringify(messageObj);\
+            webkit.messageHandlers.cordova_iab.postMessage(stringifiedMessageObj);"</span>
+        <span class="p">});</span>
+
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'#status-message'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">""</span><span class="p">);</span>
+
+        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">loadErrorCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#status-message'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">""</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">scriptErrorMesssage</span> <span class="o">=</span>
+       <span class="s2">"alert('Sorry we cannot open that page. Message from the server is : "</span>
+       <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="s2">"');"</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">executeScript</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="nx">scriptErrorMesssage</span> <span class="p">},</span> <span class="nx">executeScriptCallBack</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+
+    <span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">executeScriptCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'#status-message'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span>
+           <span class="s2">"Sorry we couldn't open that page. Message from the server is : '"</span>
+           <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="s2">"'"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">beforeloadCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s2">"http://www.example.com/"</span><span class="p">))</span> <span class="p">{</span>
+
+        <span class="c1">// Load this URL in the inAppBrowser.</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+
+        <span class="c1">// The callback is not invoked, so the page will not be loaded.</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'#status-message'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">"This browser only opens pages on http://www.example.com/"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">messageCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#status-message'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">"message received: "</span><span class="o">+</span><span class="nx">params</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">my_message</span><span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></div>
+<h3>InAppBrowserEvent Properties</h3>
+
+<ul>
+<li><p><strong>type</strong>: the eventname, either <code>loadstart</code>, <code>loadstop</code>, <code>loaderror</code>, <code>message</code> or <code>exit</code>. <em>(String)</em></p></li>
+<li><p><strong>url</strong>: the URL that was loaded. <em>(String)</em></p></li>
+<li><p><strong>code</strong>: the error code, only in the case of <code>loaderror</code>. <em>(Number)</em></p></li>
+<li><p><strong>message</strong>: the error message, only in the case of <code>loaderror</code>. <em>(String)</em></p></li>
+<li><p><strong>data</strong>: the message contents , only in the case of <code>message</code>. A stringified JSON object. <em>(String)</em></p></li>
+</ul>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Android</li>
+<li>Browser</li>
+<li>iOS</li>
+<li>Windows</li>
+<li>OSX</li>
+</ul>
+
+<h3>Browser Quirks</h3>
+
+<p><code>loadstart</code>, <code>loaderror</code>, <code>message</code> events are not fired.</p>
+
+<h3>Windows Quirks</h3>
+
+<p><code>message</code> event is not fired.</p>
+
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+ref.addEventListener('loadstart', function(event) { alert(event.url); });
+</code></pre></div>
+<h2>InAppBrowser.removeEventListener</h2>
+
+<blockquote>
+<p>Removes a listener for an event from the <code>InAppBrowser</code>. (Only available when the target is set to <code>&#39;_blank&#39;</code>)</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-" data-lang="">ref.removeEventListener(eventname, callback);
+</code></pre></div>
+<ul>
+<li><p><strong>ref</strong>: reference to the <code>InAppBrowser</code> window. <em>(InAppBrowser)</em></p></li>
+<li><p><strong>eventname</strong>: the event to stop listening for. <em>(String)</em></p>
+
+<ul>
+<li><strong>loadstart</strong>: event fires when the <code>InAppBrowser</code> starts to load a URL.</li>
+<li><strong>loadstop</strong>: event fires when the <code>InAppBrowser</code> finishes loading a URL.</li>
+<li><strong>loaderror</strong>: event fires when the <code>InAppBrowser</code> encounters an error loading a URL.</li>
+<li><strong>exit</strong>: event fires when the <code>InAppBrowser</code> window is closed.</li>
+<li><strong>message</strong>: event fires when the <code>InAppBrowser</code> receives a message posted from the page loaded inside the <code>InAppBrowser</code> Webview.</li>
+</ul></li>
+<li><p><strong>callback</strong>: the function to execute when the event fires.
+The function is passed an <code>InAppBrowserEvent</code> object.</p></li>
+</ul>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Android</li>
+<li>Browser</li>
+<li>iOS</li>
+<li>Windows</li>
+</ul>
+
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+var myCallback = function(event) { alert(event.url); }
+ref.addEventListener('loadstart', myCallback);
+ref.removeEventListener('loadstart', myCallback);
+</code></pre></div>
+<h2>InAppBrowser.close</h2>
+
+<blockquote>
+<p>Closes the <code>InAppBrowser</code> window.</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-" data-lang="">ref.close();
+</code></pre></div>
+<ul>
+<li><strong>ref</strong>: reference to the <code>InAppBrowser</code> window <em>(InAppBrowser)</em></li>
+</ul>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Android</li>
+<li>Browser</li>
+<li>iOS</li>
+<li>Windows</li>
+</ul>
+
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+ref.close();
+</code></pre></div>
+<h2>InAppBrowser.show</h2>
+
+<blockquote>
+<p>Displays an InAppBrowser window that was opened hidden. Calling this has no effect if the InAppBrowser was already visible.</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-" data-lang="">ref.show();
+</code></pre></div>
+<ul>
+<li><strong>ref</strong>: reference to the InAppBrowser window (<code>InAppBrowser</code>)</li>
+</ul>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Android</li>
+<li>Browser</li>
+<li>iOS</li>
+<li>Windows</li>
+</ul>
+
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'hidden=yes');
+// some time later...
+ref.show();
+</code></pre></div>
+<h2>InAppBrowser.hide</h2>
+
+<blockquote>
+<p>Hides the InAppBrowser window. Calling this has no effect if the InAppBrowser was already hidden.</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-" data-lang="">ref.hide();
+</code></pre></div>
+<ul>
+<li><strong>ref</strong>: reference to the InAppBrowser window (<code>InAppBrowser</code>)</li>
+</ul>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+<li>Windows</li>
+</ul>
+
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">var ref = cordova.InAppBrowser.open('http://apache.org', '_blank');
+// some time later...
+ref.hide();
+</code></pre></div>
+<h2>InAppBrowser.executeScript</h2>
+
+<blockquote>
+<p>Injects JavaScript code into the <code>InAppBrowser</code> window. (Only available when the target is set to <code>&#39;_blank&#39;</code>)</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-" data-lang="">ref.executeScript(details, callback);
+</code></pre></div>
+<ul>
+<li><p><strong>ref</strong>: reference to the <code>InAppBrowser</code> window. <em>(InAppBrowser)</em></p></li>
+<li><p><strong>injectDetails</strong>: details of the script to run, specifying either a <code>file</code> or <code>code</code> key. <em>(Object)</em></p>
+
+<ul>
+<li><strong>file</strong>: URL of the script to inject.</li>
+<li><strong>code</strong>: Text of the script to inject.</li>
+</ul></li>
+<li><p><strong>callback</strong>: the function that executes after the JavaScript code is injected.</p>
+
+<ul>
+<li>If the injected script is of type <code>code</code>, the callback executes
+with a single parameter, which is the return value of the
+script, wrapped in an <code>Array</code>. For multi-line scripts, this is
+the return value of the last statement, or the last expression
+evaluated.</li>
+</ul></li>
+</ul>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Android</li>
+<li>Browser</li>
+<li>iOS</li>
+<li>Windows</li>
+</ul>
+
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+ref.addEventListener('loadstop', function() {
+    ref.executeScript({file: "myscript.js"});
+});
+</code></pre></div>
+<h3>Browser Quirks</h3>
+
+<ul>
+<li>only <strong>code</strong> key is supported.</li>
+</ul>
+
+<h3>Windows Quirks</h3>
+
+<p>Due to <a href="https://msdn.microsoft.com/en-us/library/windows.ui.xaml.controls.webview.invokescriptasync.aspx">MSDN docs</a> the invoked script can return only string values, otherwise the parameter, passed to <strong>callback</strong> will be <code>[null]</code>.</p>
+
+<h2>InAppBrowser.insertCSS</h2>
+
+<blockquote>
+<p>Injects CSS into the <code>InAppBrowser</code> window. (Only available when the target is set to <code>&#39;_blank&#39;</code>)</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-" data-lang="">ref.insertCSS(details, callback);
+</code></pre></div>
+<ul>
+<li><p><strong>ref</strong>: reference to the <code>InAppBrowser</code> window <em>(InAppBrowser)</em></p></li>
+<li><p><strong>injectDetails</strong>: details of the script to run, specifying either a <code>file</code> or <code>code</code> key. <em>(Object)</em></p>
+
+<ul>
+<li><strong>file</strong>: URL of the stylesheet to inject.</li>
+<li><strong>code</strong>: Text of the stylesheet to inject.</li>
+</ul></li>
+<li><p><strong>callback</strong>: the function that executes after the CSS is injected.</p></li>
+</ul>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+<li>Windows</li>
+</ul>
+
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+ref.addEventListener('loadstop', function() {
+    ref.insertCSS({file: "mystyles.css"});
+});
+</code></pre></div>
+<p>__</p>
+
+<h2><a id="sample"></a>Sample: Show help pages with an InAppBrowser</h2>
+
+<p>You can use this plugin to show helpful documentation pages within your app. Users can view online help documents and then close them without leaving the app.</p>
+
+<p>Here&#39;s a few snippets that show how you do this.</p>
+
+<ul>
+<li><a href="#give">Give users a way to ask for help</a>.</li>
+<li><a href="#load">Load a help page</a>.</li>
+<li><a href="#let">Let users know that you&#39;re getting their page ready</a>.</li>
+<li><a href="#show">Show the help page</a>.</li>
+<li><a href="#handle">Handle page errors</a>.</li>
+</ul>
+
+<h3><a id="give"></a>Give users a way to ask for help</h3>
+
+<p>There&#39;s lots of ways to do this in your app. A drop down list is a simple way to do that.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">
+<span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"help-select"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"default"</span><span class="nt">&gt;</span>Need help?<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"article"</span><span class="nt">&gt;</span>Show me a helpful article<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"video"</span><span class="nt">&gt;</span>Show me a helpful video<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"search"</span><span class="nt">&gt;</span>Search for other topics<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;/select&gt;</span>
+
+</code></pre></div>
+<p>Gather the users choice in the <code>onDeviceReady</code> function of the page and then send an appropriate URL to a helper function in some shared library file. Our helper function is named <code>showHelp()</code> and we&#39;ll write that function next.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#help-select'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'change'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">url</span><span class="p">;</span>
+
+    <span class="k">switch</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="k">case</span> <span class="s2">"article"</span><span class="p">:</span>
+            <span class="nx">url</span> <span class="o">=</span> <span class="s2">"https://cordova.apache.org/docs/en/latest/"</span>
+                        <span class="o">+</span> <span class="s2">"reference/cordova-plugin-inappbrowser/index.html"</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">case</span> <span class="s2">"video"</span><span class="p">:</span>
+            <span class="nx">url</span> <span class="o">=</span> <span class="s2">"https://youtu.be/F-GlVrTaeH0"</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">case</span> <span class="s2">"search"</span><span class="p">:</span>
+            <span class="nx">url</span> <span class="o">=</span> <span class="s2">"https://www.google.com/#q=inAppBrowser+plugin"</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">showHelp</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+
+<span class="p">});</span>
+
+</code></pre></div>
+<h3><a id="load"></a>Load a help page</h3>
+
+<p>We&#39;ll use the <code>open</code> function to load the help page. We&#39;re setting the <code>hidden</code> property to <code>yes</code> so that we can show the browser only after the page content has loaded. That way, users don&#39;t see a blank browser while they wait for content to appear. When the <code>loadstop</code> event is raised, we&#39;ll know when the content has loaded. We&#39;ll handle that event shortly.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
+<span class="kd">function</span> <span class="nx">showHelp</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="s2">"_blank"</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="s2">"location=yes,hidden=yes"</span><span class="p">;</span>
+
+    <span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">.</span><span class="nx">InAppBrowser</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">target</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'loadstart'</span><span class="p">,</span> <span class="nx">loadStartCallBack</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'loadstop'</span><span class="p">,</span> <span class="nx">loadStopCallBack</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'loaderror'</span><span class="p">,</span> <span class="nx">loadErrorCallBack</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+</code></pre></div>
+<h3><a id="let"></a>Let users know that you&#39;re getting their page ready</h3>
+
+<p>Because the browser doesn&#39;t immediately appear, we can use the <code>loadstart</code> event to show a status message, progress bar, or other indicator. This assures users that content is on the way.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
+<span class="kd">function</span> <span class="nx">loadStartCallBack</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#status-message'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">"loading please wait ..."</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+</code></pre></div>
+<h3><a id="show"></a>Show the help page</h3>
+
+<p>When the <code>loadstopcallback</code> event is raised, we know that the content has loaded and we can make the browser visible. This sort of trick can create the impression of better performance. The truth is that whether you show the browser before content loads or not, the load times are exactly the same.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
+<span class="kd">function</span> <span class="nx">loadStopCallBack</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">inAppBrowserRef</span> <span class="o">!=</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">insertCSS</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="s2">"body{font-size: 25px;}"</span> <span class="p">});</span>
+
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'#status-message'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">""</span><span class="p">);</span>
+
+        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+</code></pre></div>
+<p>You might have noticed the call to the <code>insertCSS</code> function. This serves no particular purpose in our scenario. But it gives you an idea of why you might use it. In this case, we&#39;re just making sure that the font size of your pages have a certain size. You can use this function to insert any CSS style elements. You can even point to a CSS file in your project.</p>
+
+<h3><a id="handle"></a>Handle page errors</h3>
+
+<p>Sometimes a page no longer exists, a script error occurs, or a user lacks permission to view the resource. How or if you handle that situation is completely up to you and your design. You can let the browser show that message or you can present it in another way.</p>
+
+<p>We&#39;ll try to show that error in a message box. We can do that by injecting a script that calls the <code>alert</code> function. That said, this won&#39;t work in browsers on Windows devices so we&#39;ll have to look at the parameter of the <code>executeScript</code> callback function to see if our attempt worked. If it didn&#39;t work out for us, we&#39;ll just show the error message in a <code>&lt;div&gt;</code> on the page.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
+<span class="kd">function</span> <span class="nx">loadErrorCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#status-message'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">""</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">scriptErrorMesssage</span> <span class="o">=</span>
+       <span class="s2">"alert('Sorry we cannot open that page. Message from the server is : "</span>
+       <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="s2">"');"</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">executeScript</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="nx">scriptErrorMesssage</span> <span class="p">},</span> <span class="nx">executeScriptCallBack</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+
+    <span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">executeScriptCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'#status-message'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span>
+           <span class="s2">"Sorry we couldn't open that page. Message from the server is : '"</span>
+           <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="s2">"'"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+</code></pre></div>
+<h2>More Usage Info</h2>
+
+<h3>Local Urls ( source is in the app package )</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">var iab = cordova.InAppBrowser;
+
+iab.open('local-url.html');                  // loads in the Cordova WebView
+iab.open('local-url.html', '_self');         // loads in the Cordova WebView
+iab.open('local-url.html', '_system');       // Security error: system browser, but url will not load (iOS)
+iab.open('local-url.html', '_blank');        // loads in the InAppBrowser
+iab.open('local-url.html', 'random_string'); // loads in the InAppBrowser
+iab.open('local-url.html', 'random_string', 'location=no'); // loads in the InAppBrowser, no location bar
+
+</code></pre></div>
+<h3>Whitelisted Content</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">var iab = cordova.InAppBrowser;
+
+iab.open('http://whitelisted-url.com');                  // loads in the Cordova WebView
+iab.open('http://whitelisted-url.com', '_self');         // loads in the Cordova WebView
+iab.open('http://whitelisted-url.com', '_system');       // loads in the system browser
+iab.open('http://whitelisted-url.com', '_blank');        // loads in the InAppBrowser
+iab.open('http://whitelisted-url.com', 'random_string'); // loads in the InAppBrowser
+
+iab.open('http://whitelisted-url.com', 'random_string', 'location=no'); // loads in the InAppBrowser, no location bar
+
+</code></pre></div>
+<h3>Urls that are not white-listed</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">var iab = cordova.InAppBrowser;
+
+iab.open('http://url-that-fails-whitelist.com');                  // loads in the InAppBrowser
+iab.open('http://url-that-fails-whitelist.com', '_self');         // loads in the InAppBrowser
+iab.open('http://url-that-fails-whitelist.com', '_system');       // loads in the system browser
+iab.open('http://url-that-fails-whitelist.com', '_blank');        // loads in the InAppBrowser
+iab.open('http://url-that-fails-whitelist.com', 'random_string'); // loads in the InAppBrowser
+iab.open('http://url-that-fails-whitelist.com', 'random_string', 'location=no'); // loads in the InAppBrowser, no location bar
+
+</code></pre></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  dev", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

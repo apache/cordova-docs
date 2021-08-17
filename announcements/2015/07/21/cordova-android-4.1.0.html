@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that Cordova Android 4.1.0 has been released.With this release, there is now support for checking system requirements for Android pl...">
+
+    <title>
+        
+            
+                Apache Cordova Android 4.1.0 - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2015/07/21/cordova-android-4.1.0.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '10.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Apache Cordova Android 4.1.0</div>
+        <div class="author">By:
+            
+              <a href="https://twitter.com/nikhilkh">Nikhil Khandelwal</a>
+            
+        </div>
+        <div class="date">21 Jul 2015</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that <code>Cordova Android 4.1.0</code> has been released.</p>
+
+<p>With this release, there is now support for checking system requirements for Android platform:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$&gt;cordova requirements android
+
+Requirements check results for android:
+Java JDK: installed 1.7.0
+Android SDK: installed
+Android target: installed android-19,android-21,android-22,Google Inc.:Google APIs:19,Google Inc.:Google APIs (x86 System Image):19,Google Inc.:Google APIs:21
+Gradle: installed 1.12
+</code></pre></div>
+<p>Apart from a number of bug fixes, mininumSdkTarget has also been switched to 14 from 7. The minimum supported Android OS for Cordova is now Ice Cream Sandwich.</p>
+
+<p>To upgrade:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+cd my_project
+cordova platform update android@4.1.0
+</code></pre></div>
+<p>To add it explicitly:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@4.1.0
+</code></pre></div>
+<!--more-->
+
+<h2>What&#39;s new in Android platform</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-9392">CB-9392</a> Fixed printing flavored versions. This closes #184.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9382">CB-9382</a> [Android] Fix KeepRunning setting when Plugin activity is showed. This closes #200</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9391">CB-9391</a> Fixes cdvBuildMultipleApks option casting</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9343">CB-9343</a> Split the Content-Type to obtain a clean mimetype</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9255">CB-9255</a> Make getUriType case insensitive.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9149">CB-9149</a> Fixes JSHint issue introduced by 899daa9</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9372">CB-9372</a>: Remove unused files: &#39;main.js&#39; &amp; &#39;master.css&#39;. This closes #198</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9149">CB-9149</a> Make gradle alias subprojects in order to handle libs that depend on libs. This closes #182</li>
+<li>Update min SDK version to 14</li>
+<li>Update licenses. This closes #190</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9185">CB-9185</a> Fix signed release build exception. This closes #193.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9286">CB-9286</a> Fixes build failure when ANDROID_HOME is not set.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9284">CB-9284</a> Fix for handling absolute path for keystore in build.json</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9260">CB-9260</a> Install Android-22 on Travis-CI</li>
+<li>Adding .ratignore file.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9119">CB-9119</a> Adding lib/retry.js for retrying promise-returning functions. Retrying &#39;adb install&#39; in emulator.js because it sometimes hangs.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9115">CB-9115</a> android: Grant Lollipop permission req</li>
+<li>Remove extra console message</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8898">CB-8898</a> Report expected gradle location properly</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8898">CB-8898</a> Fixes gradle check failure due to missing quotes</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9080">CB-9080</a>: -d option is not supported on Android 4.1.1 and lower, removing</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8954">CB-8954</a> Adds <code>requirements</code> command support to check_reqs module</li>
+<li>Update JS snapshot to version 4.1.0-dev (via coho)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8417">CB-8417</a> updated platform specific files from cordova.js repo</li>
+<li>Adding tests to confirm that preferences aren&#39;t changed by Intents</li>
+<li>Forgot to remove the method that copied over the intent data</li>
+<li>Getting around to removing this old Intent code</li>
+<li>Update JS snapshot to version 4.1.0-dev (via coho)</li>
+<li>Fix CordovaPluginTest on KitKat (start-up events seem to change)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3360">CB-3360</a> Allow setting a custom User-Agent (close #162)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8902">CB-8902</a> Use immersive mode when available when going fullscreen (close #175)</li>
+<li>Make BridgeMode methods public (they were always supposed to be)</li>
+<li>Simplify: EncodingUtils.getBytes(str) -&gt; str.getBytes()</li>
+<li>Don&#39;t show warning when gradlew file is read-only</li>
+<li>Don&#39;t show warning when prepEnv copies gradlew and it&#39;s read-only</li>
+<li>Make gradle wrapper prepEnv code work even when android-sdk is read-only</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8897">CB-8897</a> Delete drawable/icon.png since it duplicates drawable-mdpi/icon.png</li>
+<li>Updating the template to target mininumSdkTarget=14</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8894">CB-8894</a>: Updating the template to target mininumSdkTarget=14</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8891">CB-8891</a> Add a note about when the gradle helpers were added</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8891">CB-8891</a> Add a gradle helper for retrieving config.xml preference values</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8884">CB-8884</a> Delete Eclipse tweaks from create script</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/news/2015/06/22/plugins-release.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2015/06/22/plugins-release.html">Plugins Release: June 22, 2015</a>
+                    <div class="date"> 22 Jun 2015 - By Steve Gill </div>
+                    <p class="content">
+                        The following plugins were updated today: cordova-plugin-battery-status@1.1.0 cordova-plugin-camera@1.2.0 cordova-plugin-console@1.0.1 cordova-plugin-contacts@1.1.0 cordova-plugin-device@1.0.1 cordova-plugin-device-motion@1.1.1...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2015/08/04/cordova-ios-3.9.0.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2015/08/04/cordova-ios-3.9.0.html">Apache Cordova iOS 3.9.0</a>
+                    <div class="date"> 04 Aug 2015 - By Sergey Grebnov </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        We are happy to announce that Cordova iOS 3.9.0 has been released...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cordovablogs';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  10.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

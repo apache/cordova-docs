@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Cordova for Windows 10 - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/latest/guide/platforms/win8/win10-support.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '5.1.1' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/guide/support/index.html">
+                Platform Support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/guide/cli/index.html">
+                The Command-Line Interface
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/guide/platforms/index.html">
+                Platform Guides
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/plugin_ref/plugman.html">
+                Using Plugman to Manage Plugins
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/config_ref/index.html">
+                The config.xml File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/config_ref/images.html">
+                Icons and Splash Screens
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/guide/hybrid/webviews/index.html">
+                Embedding WebViews
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/guide/hybrid/plugins/index.html">
+                Plugin Development Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/guide/appdev/privacy/index.html">
+                Privacy Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/guide/appdev/security/index.html">
+                Security Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/platform_plugin_versioning_ref/index.html">
+                Platforms and Plugins Version Management
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/guide/appdev/whitelist/index.html">
+                Whitelist Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/cordova/storage/storage.html">
+                Storage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/guide/appdev/hooks/index.html">
+                Hooks Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/5.1.1/cordova/plugins/pluginapis.html">
+                Plugin APIs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/en/5.1.1/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/guide/support/index.html">
+        Platform Support
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/guide/cli/index.html">
+        The Command-Line Interface
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/guide/platforms/index.html">
+        Platform Guides
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/plugin_ref/plugman.html">
+        Using Plugman to Manage Plugins
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/config_ref/index.html">
+        The config.xml File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/config_ref/images.html">
+        Icons and Splash Screens
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/guide/hybrid/webviews/index.html">
+        Embedding WebViews
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/guide/hybrid/plugins/index.html">
+        Plugin Development Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/guide/appdev/privacy/index.html">
+        Privacy Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/guide/appdev/security/index.html">
+        Security Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/platform_plugin_versioning_ref/index.html">
+        Platforms and Plugins Version Management
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/guide/appdev/whitelist/index.html">
+        Whitelist Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/cordova/storage/storage.html">
+        Storage
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/guide/appdev/hooks/index.html">
+        Hooks Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/5.1.1/cordova/plugins/pluginapis.html">
+        Plugin APIs
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/5.1.1/guide/platforms/win8/win10-support.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        English
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/5.1.1/guide/platforms/win8/win10-support.html" class="missing-page">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/5.1.1/guide/platforms/win8/win10-support.html" class="">
+                                
+                                    <span class="selected">
+                                        English
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/5.1.1/guide/platforms/win8/win10-support.html" class="missing-page">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/5.1.1/guide/platforms/win8/win10-support.html" class="missing-page">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/5.1.1/guide/platforms/win8/win10-support.html" class="missing-page">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/5.1.1/guide/platforms/win8/win10-support.html" class="missing-page">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/5.1.1/guide/platforms/win8/win10-support.html" class="missing-page">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/5.1.1/guide/platforms/win8/win10-support.html" class="missing-page">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/5.1.1/guide/platforms/win8/win10-support.html" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/5.1.1/guide/platforms/win8/win10-support.html" class="missing-page">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/5.1.1/guide/platforms/win8/win10-support.html" class="missing-page">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/5.1.1/guide/platforms/win8/win10-support.html" class="missing-page">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        5.1.1
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/guide/platforms/win8/win10-support.html" class="">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/guide/platforms/win8/win10-support.html" class="">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/guide/platforms/win8/win10-support.html" class="">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/guide/platforms/win8/win10-support.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                5.1.1
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/" class="missing-page">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/" class="missing-page">
+                                
+                                    
+                                3.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/" class="missing-page">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/" class="missing-page">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/" class="missing-page">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is outdated!
+                    <a href="/docs/en/latest/guide/platforms/win8/win10-support.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Cordova for Windows 10</h1>
+
+<p>Maybe you could instead call it &quot;Windows 10 for Cordova.&quot;  Windows 10 has had its HTML and
+JavaScript Apps platform re-engineered to bring Cordova support to the web, and to get
+platform security restrictions out of your way.</p>
+
+<h2>Getting Started with Windows 10</h2>
+
+<p>Adding Windows 10 support to your app is as easy as setting your Windows target platform
+version to 10.0:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="windows-target-version" value="10.0" /&gt;
+&lt;preference name="windows-phone-target-version" value="10.0" /&gt;
+</code></pre></div>
+<p>When you build with these preferences both set, only a single .appx (and .appxupload) will
+be built.  They will require Windows 10 at a minimum.</p>
+
+<h3>Understanding Remote Mode vs. Local Mode</h3>
+
+<p>Remote Mode is a new feature of the HTML Applications for Windows platform in Windows 10.  In
+Windows 8 and 8.1, HTML Applications worked in what is called &quot;Local Mode&quot; in Windows 10.  In
+Local Mode, HTML Applications have full access to the native Windows API surface and
+capabilities.  In order to prevent script injection attacks which could result in leaking
+personally-identifiable information due to malicious code, Local Mode disallows inline script,
+and requires developers who perform DOM manipulation to do so within an explicit context
+(<code>MSApp.execUnsafeLocalFunction</code>).</p>
+
+<p>Remote Mode eliminates those requirements, which makes it possible to use unmodified libraries like jQuery or AngularJS directly in your code, without any changes.  To do so, it removes your ability to declare certain capabilities when certifying your app in the Windows Store.  The removal of these capabilities usually doesn&#39;t prevent getting to certain functionality, but it might require to use a different combination of APIs or tactics.</p>
+
+<h3>Effect of Remote Mode on capabilities</h3>
+
+<p>The following capabilities are unavailable when deploying your Remote Mode application to the Windows Store:</p>
+
+<ul>
+<li>Enterprise Authentication (<code>enterpriseAuthentication</code>)</li>
+<li>Shared User Certificates (<code>sharedUserCertificates</code>)</li>
+<li>Documents Library (<code>documentsLibrary</code>)</li>
+<li>Music Library (<code>musicLibrary</code>)</li>
+<li>Pictures Library (<code>picturesLibrary</code>)</li>
+<li>Videos Library (<code>videosLibrary</code>)</li>
+<li>Removable <a href="../../../cordova/storage/storage.html">Storage</a> (<code>removableStorage</code>)</li>
+<li>Internet client/server (<code>internetClientServer</code>) - note that <code>internetClient</code> is still permitted</li>
+<li>Private network client/server (<code>privateNetworkClientServer</code>)</li>
+</ul>
+
+<p>Each of the library restrictions may be worked around by requesting that the user interact with the file system via a <a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx">File Picker</a>.  This prevents malicious injected code from arbitrarily accessing the file system.</p>
+
+<p>The network-related restrictions must be worked around by either using an API that doesn&#39;t use capability checks or by brokering communication via standard internet communication channels, such as <code>XMLHttpRequest</code> or Web Sockets.</p>
+
+<p>The Enterprise Authentication and Shared User Certificates capabilities are specifically targeted at Enterprise scenarios.  These capabilities are supported for private/enterprise-enabled App Stores, so if you are building apps which are going to be deployed to an internal deployment mechanism, you can still support these.  However, they are not supported for Remote Mode apps in the public Windows Store.  When you build targeting Windows 10, if one of these capabilities is detected in your app manifest, a warning will be displayed.</p>
+
+<h2>Reference</h2>
+
+<h3>config.xml Preferences</h3>
+
+<h4>windows-target-version, windows-phone-target-version</h4>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="windows-target-version" value="10.0" /&gt;
+&lt;preference name="windows-phone-target-version" value="10.0" /&gt;
+</code></pre></div>
+<p><em>At least one is required.</em></p>
+
+<p>These preferences identify the version of Windows or Windows Phone you would like your
+app package to target.</p>
+
+<p><strong>Valid Values</strong></p>
+
+<ul>
+<li><code>10.0</code>, <code>UAP</code>: Builds for Windows 10 Universal App Platform</li>
+<li><code>8.1</code>: Builds for Windows 8.1 or Windows Phone 8.1</li>
+<li><code>8.0</code>: Build for Windows 8.0.  Not valid for Windows Phone (use the <strong>wp8</strong> Cordova
+platform instead)</li>
+</ul>
+
+<p><strong>Scenarios</strong></p>
+
+<p>If you are targeting Windows 10 only, you only need to have a single <code>windows-target-version</code>
+setting in your config.xml file.</p>
+
+<h4>WindowsDefaultUriPrefix</h4>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="WindowsDefaultUriPrefix" value="ms-appx://|ms-appx-web://" /&gt;
+</code></pre></div>
+<p>This preference identifies whether you want your app to target the <strong>local context</strong> or <strong>remote
+context</strong> as its startup URI.  When building for Windows 10, the default is the remote
+context (<code>ms-appx-web://</code>).</p>
+
+<p>In order to have a local-mode application that is not impacted by Remote Mode capability
+restrictions, you must set this preference to <code>ms-appx://</code> and not declare any <code>&lt;access&gt;</code>
+elements with remote URIs.</p>
+
+<p><strong>Valid Values</strong></p>
+
+<ul>
+<li><code>ms-appx://</code> (Default for Windows 8.0, 8.1): The start page runs in the local context</li>
+<li><code>ms-appx-web://</code> (Default for Windows 10): The start page runs in the remote context</li>
+</ul>
+
+<h4>{SDK}-MinVersion, {SDK}-MaxVersionTested</h4>
+
+<p><em>Optional</em></p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="Windows.Universal-MinVersion" value="10.0.0.0" /&gt;
+&lt;preference name="Windows.Mobile-MinVersion" value="10.0.9927.0" /&gt;
+&lt;preference name="Windows.Mobile-MaxVersionTested" value="10.0.10031.0" /&gt;
+&lt;preference name="Microsoft.Band-MinVersion" value="10.0.11.0" /&gt;
+</code></pre></div>
+<p>These preferences identify which ecosystems (including but not limited to Windows Universal, Windows Mobile, or Xbox) and their min/max versions they are compatible with.  They still require that the platforms have support for the Universal App Platform (so Windows 10 as the base OS).  However, these may indicate that the application is aware of particular functionality that may only be available on certain devices (such as game streaming on Xbox).</p>
+
+<p><strong>Valid Values</strong></p>
+
+<p>There are three parts to each value: the <strong>SDK</strong>, the <strong>version restriction</strong>, and the <strong>version value</strong>.  These preferences are detected by beginning with <code>Windows</code> or <code>Microsoft</code> and ending in <code>-MinVersion</code> or <code>-MaxVersionTested</code>:</p>
+
+<ul>
+<li>The <strong>SDK</strong> defines what specialized platform you want to target.  The default is <code>Windows.Universal</code>.  Valid values for these are defined in the AppxManifest schema, in the <code>Package/Depednencies/TargetPlatform</code> elements.</li>
+<li>The <strong>version restriction</strong> defines application compatibility rules.  For example, if the <code>-MinVersion</code> is set to 10.1.0.0, then OS versions which don&#39;t support at least 10.1.0.0 of the corresponding SDK won&#39;t be able to load it.
+
+<ul>
+<li><code>-MinVersion</code> specifies the minimum version of the SDK required</li>
+<li><code>-MaxVersionTested</code> specifies the highest-tested version of the SDK.  If a new version of the corresponding SDK is released, it will run in compatibility mode for the specified version.</li>
+</ul></li>
+<li>The <strong>version value</strong> is a 4-integer tuple in the form of <em>major.minor.build.qfe</em>.</li>
+</ul>
+
+<p>If no preferences of these types are specified in your config.xml file, then Windows.Universal version 10.0.0.0 will be chosen by default.</p>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  5.1.1", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

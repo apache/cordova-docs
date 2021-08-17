@@ -1,0 +1,2427 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                안 드 로이드 플랫폼 가이드 - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/ko/dev/guide/platforms/android/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search 'dev' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/platforms/blackberry10/home.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/platforms/osx/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/appdev/whitelist/index.html">
+                Whitelisting
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/platforms/blackberry10/plugin.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-cli/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-battery-status/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-camera/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-console/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-contacts/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-device/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-device-motion/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-device-orientation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-dialogs/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-file/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-file-transfer/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-geolocation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-globalization/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-inappbrowser/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-media/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-media-capture/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-network-information/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-splashscreen/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-vibration/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-statusbar/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/dev/reference/cordova-plugin-legacy-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        차례
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/platforms/blackberry10/home.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/platforms/osx/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/appdev/whitelist/index.html">
+        Whitelisting
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/platforms/blackberry10/plugin.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-cli/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-battery-status/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-camera/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-console/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-contacts/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-device/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-device-motion/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-device-orientation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-dialogs/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-file/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-file-transfer/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-geolocation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-globalization/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-inappbrowser/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-media/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-media-capture/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-network-information/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-splashscreen/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-vibration/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-statusbar/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/dev/reference/cordova-plugin-legacy-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+                        
+                        
+                        
+
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/dev/guide/platforms/android/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                        <a class="edit" href="https://crowdin.com/project/cordova/ko#/cordova-docs/docs/en/dev/guide/platforms/android/"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+
+                    
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        한국어
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/dev/guide/platforms/android/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/dev/guide/platforms/android/" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/dev/guide/platforms/android/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/dev/guide/platforms/android/" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/dev/guide/platforms/android/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/dev/guide/platforms/android/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/dev/guide/platforms/android/" class="">
+                                
+                                    <span class="selected">
+                                        한국어
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/dev/guide/platforms/android/" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/dev/guide/platforms/android/" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/dev/guide/platforms/android/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/dev/guide/platforms/android/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/dev/guide/platforms/android/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        dev
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/dev/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                dev
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+                <div class="alert docs-alert alert-info" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is under development!
+                    <a href="/docs/ko/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- outdated warning -->
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>안 드 로이드 플랫폼 가이드</h1>
+
+<p>이 가이드에는 코르도바 애플 리 케이 션 안 드 로이드 장치에 대 한 배포 SDK 환경 설정 방법과 선택적으로 안 드 로이드 중심으로 명령줄 도구를 사용 하 여 개발 작업 흐름에서 보여 줍니다. 이러한 플랫폼 중심으로 셸 도구 또는 크로스 플랫폼 코르도바 CLI를 사용 하 여 개발 하고자 하는 여부에 관계 없이 안 드 로이드 SDK를 설치 해야 합니다. 두 가지 개발 경로 비교 개요를 참조 하십시오. 대 한 자세한 내용은 CLI, 명령줄 인터페이스를 참조 하십시오.</p>
+
+<h2>요구 사항 및 지원</h2>
+
+<p>코르 도우 바 안 드 로이드 OS X, 리눅스 또는 윈도우 운영 체제에 설치할 수 있는 안 드 로이드 SDK를 필요 합니다. 안 드 로이드 SDK의 <a href="http://developer.android.com/sdk/index.html#Requirements">시스템 요구 사항</a> 참조.</p>
+
+<p>코르 도우 바 지원 (안 드 로이드 API 레벨 14로 시작)는 안 드 로이드 4.0. x 이상. 일반적으로 안 드 로이드 버전 될 지원 되지 않는 코르도바에 의해로 그들은 Google의 <a href="http://developer.android.com/about/dashboards/index.html">대시보드 배포에</a>5% 찍어. 안 드 로이드 버전 이전 API 레벨 10, 및 3.x 버전 (허니 콤, API 수준 11-13)가 크게 5% 임계값.</p>
+
+<h2>코르 도우 바 쉘 도구 설치</h2>
+
+<p>SDK와 함께에서 코르도바의 안 드 로이드 중심으로 셸 도구를 사용 하려면 <a href="http://cordova.apache.org">cordova.apache.org</a>에서 코르도바를 다운로드 합니다. 그렇지 않으면 명령줄 인터페이스에 설명 된 크로스 플랫폼 CLI 도구를 사용 하려는 경우이 섹션을 무시 합니다.</p>
+
+<p>코르 도우 바 다운로드는 각 플랫폼에 대 한 별도 아카이브를 포함합니다. 적절 한 보관을 확장 해야 합니다. <code>android</code> 이 경우 빈 디렉토리 내에서 합니다. 관련 실행 유틸리티 최상위 수준에서 사용할 수 있는 <code>bin</code> 디렉터리. ( <strong>README</strong> 파일을 참조 자세한 방향에 대 한 필요한 경우.)</p>
+
+<p>이러한 셸 도구를 사용 하 여 작성, 구축 및 실행 안 드 로이드 애플 리 케이 션 수 있습니다. 모든 플랫폼에 걸쳐 플러그인 기능을 활성화 하는 추가 명령줄 인터페이스에 대 한 정보를 관리 플러그인을 사용 하 여 Plugman를 참조 하십시오. 플러그인을 개발 하는 방법에 대 한 내용은 응용 프로그램 플러그인을 참조 하십시오.</p>
+
+<h2>자바 개발 키트 (JDK) 설치</h2>
+
+<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">자바 개발 키트 (JDK) 7</a> 설치 또는 나중에.</p>
+
+<p>윈도우 설치할 때 JDK 설치 경로 (예: C:\Program Files\Java\jdk1.7.0<em>75)에 따르면 `JAVA</em>HOME` 환경 변수 설정 해야 합니다.</p>
+
+<h2>안 드 로이드 SDK 설치</h2>
+
+<p><a href="http://developer.android.com/sdk/installing/index.html?pkg=studio">안 드 로이드 스튜디오</a>또는 <a href="http://developer.android.com/sdk/installing/index.html?pkg=tools">안 드 로이드 독립 실행형 SDK 도구</a> 를 설치 합니다. <code>안 드 로이드 스튜디오</code> 안 드 로이드 플러그인에 대 한 새로운 코르도바를 개발 하거나 실행 하 고 디버깅 안 드 로이드 플랫폼 기본 도구를 사용 하 여 계획 하는 경우 Procceed. 그렇지 않으면, <code>안 드 로이드 독립 실행형 SDK 도구</code> 빌드 및 안 드 로이드 응용 프로그램 배포에 충분 하다.</p>
+
+<p>자세한 설치 지침을 사용할 수 있습니다 위의 설치 링크의 일환으로.</p>
+
+<p>일, 코르도바 명령줄 도구 또는 그들 따라 CLI에 대 한 <code>경로</code>에 SDK의 <code>도구</code> 및 <code>플랫폼 도구</code> 디렉터리를 포함 해야 합니다. 만들거나 수정 하려면 텍스트 편집기를 사용할 수 맥 이나 리눅스에는 <code>~/.bash_profile</code> 파일, SDK 설치에 따라 다음 줄을 추가:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
+</code></pre></div>
+<p><code>~/.Bash_profile</code> 에이 라인 새롭게 문이 연된 터미널 창에서 이러한 도구를 제공합니다. 당신의 최종적인 창 이미 OSX 또는 리눅스에 로그 아웃/로그인을 피하기 위해 열려 있으면 현재 터미널 창에서 사용할 수 있도록이 실행.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ source ~/.bash_profile
+</code></pre></div>
+<p>Windows에서 <code>경로</code> 환경 수정:</p>
+
+<ol>
+<li><p>바탕 화면 왼쪽 아래 <strong>시작</strong> 메뉴에 클릭 하십시오 <strong>컴퓨터</strong>를 마우스 오른쪽 단추로 클릭 하, <strong>속성</strong>.</p></li>
+<li><p>왼쪽 열에서 <strong>고급 시스템 설정</strong> 을 선택 합니다.</p></li>
+<li><p>결과 대화 상자에서 눌러 <strong>환경 변수</strong>.</p></li>
+<li><p><strong>경로</strong> 변수를 선택 하 고 <strong>편집</strong> 을 누릅니다.</p></li>
+<li><p>다음을 추가 <code>PATH</code> 기반으로 설치한 SDK, 예를 들면:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
+</code></pre></div></li>
+<li><p>값을 저장 하 고 두 대화 상자를 닫습니다.</p></li>
+</ol>
+
+<h2>SDK 패키지 설치</h2>
+
+<p>안 드 로이드 SDK 관리자를 엽니다 (예를 들어 터미널을 통해: <code>안 드 로이드</code>) 설치:</p>
+
+<ol>
+<li> 안 드 로이드 5.1.1 (API 22) 플랫폼 SDK</li>
+<li> 안 드 로이드 SDK 빌드 도구 버전 19.1.0 또는 그 이상</li>
+<li> 안 드 로이드 지원 저장소 (엑스트라)</li>
+</ol>
+
+<p>자세한 내용은 <a href="http://developer.android.com/sdk/installing/adding-packages.html">SDK 패키지 설치</a> 를 참조 하십시오.</p>
+
+<h2>에뮬레이터 구성</h2>
+
+<p>안 드 로이드 sdk는 기본적으로 모든 기본 에뮬레이터 인스턴스를 제공 하지 않습니다. 커맨드 라인에서 <code>안 드 로이드</code> 를 실행 하 여 새 것을 만들 수 있습니다. 보도 <strong>도구 → 관리 AVDs</strong> (안 드 로이드 가상 장치), 다음 <strong>장치 정의</strong> 결과 대화 상자에서 어떤 항목을 선택 합니다.</p>
+
+<p><img src="/static/img/guide/platforms/android/asdk_device.png" alt=""></p>
+
+<p>보도 <strong>AVD 생성</strong>, 선택적으로 이름, 수정 변경 내용을 적용 하려면 <strong>확인</strong> 을 누릅니다.</p>
+
+<p><img src="/static/img/guide/platforms/android/asdk_newAVD.png" alt=""></p>
+
+<p>AVD 다음 <strong>안 드 로이드 가상 장치</strong> 목록에 나타납니다.</p>
+
+<p><img src="/static/img/guide/platforms/android/asdk_avds.png" alt=""></p>
+
+<p>별도 응용 프로그램으로 에뮬레이터를 열려면는 AVD를 선택 하 고 <strong>시작</strong>을 누릅니다. 하드웨어 단추에 대 한 사용할 수 있는 추가 컨트롤 장치 것 만큼 출시:</p>
+
+<p><img src="/static/img/guide/platforms/android/asdk_emulator.png" alt=""></p>
+
+<p>더 빠른 경험을 위해 실행 속도 개선 하기 위해 <code>가상 컴퓨터 가속</code> 을 사용할 수 있습니다. 많은 현대 Cpu는 가상 컴퓨터를 보다 효율적으로 실행 하려면 확장을 제공 합니다. 가속의이 유형을 사용 하려고 시도 하기 전에 현재 개발 시스템의 CPU 하나를 다음과 같은 가상화 기술을 지원 하는지 확인 해야 합니다.</p>
+
+<ul>
+<li>  <strong>인텔 가상화 기술</strong> (버몬트-x, vmx) → <a href="http://ark.intel.com/products/virtualizationtechnology">인텔 VT x 지원 프로세서 목록</a></li>
+<li>  <strong>AMD 가상화</strong> 리눅스에 대해서만 지원 (AMD-V, SVM), (2006 년 5 월부터 모든 Cpu AMD 셈프론 제외한 AMD-V 포함).</li>
+</ul>
+
+<p>경우 인텔 프로세서 지원 하려면 VT-x 기술, <code>인텔 프로세서 식별 유틸리티</code>를 실행 하 여, <code>Windows</code>용 당신이 인텔 <a href="https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&amp;DwnldID=7838">다운로드 센터</a>에서 다운로드할 수 있습니다 하거나 <code>OS 독립</code> 은 <a href="https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&amp;DwnldID=7840&amp;lang=eng">booteable 유틸리티</a>를 사용할 수 있습니다 밖으로 찾는 또 다른 방법.</p>
+
+<p>후 설치 및 실행은 <code>인텔 프로세서 식별 유틸리티</code> 윈도우, CPU 가상화 기술을 지원 하는지 확인 하기 위해 다음 창의 얻을 것 이다:</p>
+
+<p><img src="/static/img/guide/platforms/android/intel_pid_util_620px.png" alt=""></p>
+
+<p>에뮬레이터를 가속화 해야 다운로드 하 고 설치 <code>인텔 하드웨어 가속 실행 관리자 (HAXM)</code> 로 서 하나 이상의 <code>인텔 x 86 원자</code> 시스템 이미지.</p>
+
+<p>안 드 로이드 SDK 관리자를 열고 고 <code>인텔 x 86 원자</code> 시스템 이미지 테스트 하려면 어느 버전을 선택 합니다. 다음 <code>엑스트라</code> 로 이동 <code>인텔 x86 에뮬레이터 가속기 (HAXM)</code>, 선택한 패키지 설치:</p>
+
+<p><img src="/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png" alt=""></p>
+
+<p>다운로드 후, <code>엑스트라/인텔/Hardware_Accelerated_Execution_Manager</code>에서 안 드 로이드 SDK에서 사용할 수 있는 인텔 설치 관리자를 실행 합니다. <strong>참고</strong>:<code>패키지 설치에 어떤 문제가 있는 경우 자세한 정보 및 단계별 지침 확인 찾을 수 있습니다</code> <a href="http://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture">인텔 문서</a>.</p>
+
+<ol>
+<li><p>하나 이상의 <code>인텔 x 86 원자</code> 시스템 이미지는 <code>인텔 하드웨어 가속 실행 관리자</code>, <strong>엑스트라</strong> 에서 사용할 수 설치.</p></li>
+<li><p><code>엑스트라/인텔/Hardware_Accelerated_Execution_Manager</code> 에서 안 드 로이드 SDK에서 사용할 수 있는 인텔 설치 프로그램을 실행.</p></li>
+<li><p>인텔 이미지를 설정 하는 목표와 함께 새로운 AVD를 만들.</p></li>
+<li><p>에뮬레이터를 시작할 때 HAX 모듈을 로드 하는 데 실패를 나타내는 오류 메시지가 없는 것을 확인 합니다.</p></li>
+</ol>
+
+<h2>새 프로젝트 만들기</h2>
+
+<p>이 시점에서 새 프로젝트를 만들 플랫폼 CLI 도구는 <a href="../../cli/index.html">명령줄 인터페이스</a> 또는 안 드 로이드 관련 셸 도구 집합 설명 사이 선택할 수 있습니다. 소스 코드 디렉토리 내 여기 CLI 접근이 이다:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova create hello com.example.hello HelloWorld
+    $ cd hello
+    $ cordova platform add android
+    $ cordova prepare              # or "cordova build"
+</code></pre></div>
+<p>다음은 유닉스와 윈도우에 대 한 해당 하위 셸 도구 접근이입니다.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
+    C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
+</code></pre></div>
+<h2>프로젝트 빌드</h2>
+
+<p>개발에서 CLI를 사용 하는 경우 프로젝트 디렉토리의 최상위 <code>www</code> 디렉토리에 소스 파일이 들어 있습니다. 이러한 디렉터리 내에서 프로젝트 응용 프로그램을 다시 실행 합니다.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova build                   # build all platforms that were added
+    $ cordova build android           # build debug for only Android
+    $ cordova build android --debug   # build debug for only Android
+    $ cordova build android --release # build release for only Android
+</code></pre></div>
+<p>개발에서 안 드 로이드 관련 셸 도구를 사용 하는 경우는 다른 접근이 이다.입니다. 일단 프로젝트를 생성 하면 기본 응용 프로그램의 소스는 <code>자산/www</code> 하위 디렉터리에. 후속 명령 그것의 <code>코르도바</code> 하위 디렉터리에 사용할 수 있습니다.</p>
+
+<p><code>build</code> 명령을 프로젝트 파일을 청소 하 고 응용 프로그램을 다시 작성 합니다. 여기에 맥과 윈도 즈에 대 한 구문이입니다. 예의 첫 번째 쌍 디버깅 정보를 생성 하 고 두 번째 릴리스에 대 한 애플 리 케이 션을 빌드:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/build --debug
+    C:\path\to\project\cordova\build.bat --debug
+
+    $ /path/to/project/cordova/build --release
+    C:\path\to\project\cordova\build.bat --release
+</code></pre></div>
+<h2>응용 프로그램 배포</h2>
+
+<p><code>코르 도우 바</code> CLI 유틸리티를 사용 하 여 명령줄에서 에뮬레이터 또는 장치에 응용 프로그램을 배포할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova emulate android       #to deploy the app on a default android emulator
+    $ cordova run android --device  #to deploy the app on a connected device
+</code></pre></div>
+<p>그렇지 않으면 대체 셸 인터페이스를 사용 하 여:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/run --emulator
+    $ /path/to/project/cordova/run --device
+</code></pre></div>
+<p>사용할 수 있습니다 <strong>cordova run android --list</strong> 모든 사용할 수 있는 대상을 참조 하 고 <strong>cordova run android --target=target_name</strong> 특정 장치 또는 에뮬레이터에서 응용 프로그램을 실행 하 (예를 들어 <code>cordova run android --target=&quot;Nexus4_emulator&quot;</code>).</p>
+
+<p>참조 추가 빌드 및 실행 옵션에 <strong>cordova run --help</strong> 사용할 수 있습니다.</p>
+
+<p>이 홈 화면에 앱을 못 살게 굴지 그리고 그것을 시작:</p>
+
+<p><img src="/static/img/guide/platforms/android/emulator2x.png" alt=""></p>
+
+<p>때 <code>실행</code> 애플 리 케이 션, 당신은 또한 <code>빌드</code> 그것. 추가 추가 할 수 있습니다 <code>--debug</code>, <code>--release</code>, 그리고 어떻게 그것은 내장, 또는 심지어 여부 재건은 필요한 제어 <code>--nobuild</code> 플래그:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/run --emulator --nobuild
+</code></pre></div>
+<h2>다른 명령</h2>
+
+<p>다음 응용 프로그램의 자세한 로그 실행으로 생성:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/log
+    C:\path\to\project\cordova\log.bat
+</code></pre></div>
+<p>다음 프로젝트 파일 정리:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/clean
+    C:\path\to\project\cordova\clean.bat
+</code></pre></div>
+<h2>SDK에는 새 프로젝트를 엽니다</h2>
+
+<p>안 드 로이드 플랫폼 프로젝트에 추가 되 면 <a href="http://developer.android.com/sdk/installing/index.html?pkg=studio">안 드 로이드 스튜디오</a>내에서 그것을 열 수 있습니다.</p>
+
+<ol>
+<li><p><strong>안 드 로이드 Studio</strong> 응용 프로그램을 시작 합니다.</p></li>
+<li><p><strong>가져오기 프로젝트 (이클립스 ADT, Gradle, 등)</strong> 선택.</p>
+
+<p><img src="/static/img/guide/platforms/android/asdk_import_project.png" alt=""></p></li>
+<li><p>안 드 로이드 플랫폼 저장된 (<code>your/project/platforms/android</code> 위치 선택).</p>
+
+<p><img src="/static/img/guide/platforms/android/asdk_import_select_location.png" alt=""></p></li>
+<li><p><code>Gradle 동기화</code> 질문에 대답할 수 있는 단순히 <strong>네</strong>.</p></li>
+</ol>
+
+<p>당신이 모두 지금 설정 빌드 수 및 <code>안 드 로이드 스튜디오</code> 에서 직접 응용 프로그램을 실행.</p>
+
+<p><img src="/static/img/guide/platforms/android/asdk_import_done.png" alt=""></p>
+
+<p><a href="http://developer.android.com/tools/studio/index.html">안 드 로이드 스튜디오 개요</a> 를 참조 하 고 <a href="http://developer.android.com/tools/building/building-studio.html">빌드 및 실행 안 드 로이드 스튜디오에서</a> 대 한 자세한 내용은.</p>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  dev", "language: ko"] }
+    });
+</script>
+
+</body>
+</html>

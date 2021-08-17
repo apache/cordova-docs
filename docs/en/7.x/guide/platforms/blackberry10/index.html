@@ -1,0 +1,3013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                BlackBerry 10 Platform Guide - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/7.x/guide/platforms/blackberry10/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '7.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/cli/template.html">
+                Templates for apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/blackberry10/home.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/osx/index.html">
+                OS X
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/appdev/whitelist/index.html">
+                Whitelisting
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/blackberry10/plugin.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-cli/index.html">
+                CLI Reference
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-battery-status/index.html">
+                Battery Status
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-camera/index.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-console/index.html">
+                Console
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-contacts/index.html">
+                Contacts
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-device/index.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-device-motion/index.html">
+                Device Motion
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-device-orientation/index.html">
+                Device Orientation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-dialogs/index.html">
+                Dialogs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-file/index.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-file-transfer/index.html">
+                File Transfer
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-geolocation/index.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-globalization/index.html">
+                Globalization
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-inappbrowser/index.html">
+                Inappbrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-media/index.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-media-capture/index.html">
+                Media Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-network-information/index.html">
+                Network Information
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-splashscreen/index.html">
+                Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-vibration/index.html">
+                Vibration
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-statusbar/index.html">
+                Statusbar
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-whitelist/index.html">
+                Whitelist
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-legacy-whitelist/index.html">
+                Legacy Whitelist
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/cli/template.html">
+        Templates for apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/blackberry10/home.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/osx/index.html">
+        OS X
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/appdev/whitelist/index.html">
+        Whitelisting
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/blackberry10/plugin.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-cli/index.html">
+        CLI Reference
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-battery-status/index.html">
+        Battery Status
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-camera/index.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-console/index.html">
+        Console
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-contacts/index.html">
+        Contacts
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-device/index.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-device-motion/index.html">
+        Device Motion
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-device-orientation/index.html">
+        Device Orientation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-dialogs/index.html">
+        Dialogs
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-file/index.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-file-transfer/index.html">
+        File Transfer
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-geolocation/index.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-globalization/index.html">
+        Globalization
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-inappbrowser/index.html">
+        Inappbrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-media/index.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-media-capture/index.html">
+        Media Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-network-information/index.html">
+        Network Information
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-splashscreen/index.html">
+        Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-vibration/index.html">
+        Vibration
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-statusbar/index.html">
+        Statusbar
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-whitelist/index.html">
+        Whitelist
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-legacy-whitelist/index.html">
+        Legacy Whitelist
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/7.x/guide/platforms/blackberry10/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        English
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/7.x/guide/platforms/blackberry10/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/7.x/guide/platforms/blackberry10/" class="">
+                                
+                                    <span class="selected">
+                                        English
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/7.x/guide/platforms/blackberry10/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/7.x/guide/platforms/blackberry10/" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/7.x/guide/platforms/blackberry10/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/7.x/guide/platforms/blackberry10/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/7.x/guide/platforms/blackberry10/" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/7.x/guide/platforms/blackberry10/" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/7.x/guide/platforms/blackberry10/" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/7.x/guide/platforms/blackberry10/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/7.x/guide/platforms/blackberry10/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/7.x/guide/platforms/blackberry10/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        7.x
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                7.x
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/" class="missing-page">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/" class="missing-page">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/" class="missing-page">
+                                
+                                    
+                                3.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/" class="missing-page">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/" class="missing-page">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/" class="missing-page">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is outdated!
+                    <a href="/docs/en/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>BlackBerry 10 Platform Guide</h1>
+
+<p>This guide shows how to set up your SDK environment to deploy
+Cordova apps for BlackBerry 10 devices.  For previous versions of
+BlackBerry, you need to use a different SDK environment and set of
+command-line tools, described in the BlackBerry Platform Guide.
+For BlackBerry 10, you need to install the SDK regardless of whether
+you want to use the cross-platform Cordova CLI for development, or a
+narrower set of platform-centered command-line tools.  For a
+comparison of the two development paths, see the <a href="../../overview/index.html">Overview</a>.  For
+details on each, see <a href="../../../reference/cordova-cli/index.html">Cordova CLI Reference</a> and the BlackBerry 10
+Shell Tool Guide.</p>
+
+<h2>Requirements</h2>
+
+<p>The development environment is available on Windows, Mac and Linux.</p>
+
+<p>Developers should use the <code>cordova</code> utility in conjunction with the
+BlackBerry WebWorks SDK or BlackBerry Native SDK. See The Command-Line
+Interface for information how to install <code>cordova</code>, add projects, then
+build and deploy for each platform.</p>
+
+<p>BlackBerry 10 Device Simulator:</p>
+
+<ul>
+<li>Processor: Intel dual core 2.0 GHz/AMD Athlon 4200+ or higher</li>
+<li>Disk space: 10 GB</li>
+<li>RAM Memory: 4 GB</li>
+<li>Virtualization: one of the following:
+
+<ul>
+<li><strong>Intel Virtualization Technology</strong> (VT, VT-x, vmx) &rarr; <a href="http://ark.intel.com/products/virtualizationtechnology">Intel VT-x supported processor list</a></li>
+<li><strong>AMD Virtualization</strong> (AMD-V, SVM) (Since May 2006 all AMD CPUs include AMD-V except Sempron).</li>
+</ul></li>
+</ul>
+
+<p>More information about requirements: <a href="http://developer.blackberry.com/devzone/develop/simulator/simulator_systemrequirements.html">BB10 Simulator requeriments</a>.</p>
+
+<h2>Install the BlackBerry WebWorks SDK</h2>
+
+<p>Download and install the BlackBerry WebWorks SDK from <a href="https://developer.blackberry.com/html5/download/">developer.blackberry.com</a></p>
+
+<p>The installer will add command-line tools to your path. Depending on your OS,
+you may need to open a new terminal window or re-log in.</p>
+
+<h2>Install the BlackBerry Native SDK</h2>
+
+<p>If you need to compile native code, for example when developing a native plugin, you
+will need to install the BlackBerry Native SDK.</p>
+
+<p>In order to get the BlackBerry Native SDK, download and install the IDE for BlackBerry available from
+<a href="http://developer.blackberry.com/native/download/">developer.blackberry.com</a>, then using the IDE, install the BlackBerry Native SDK.
+Following installation, you need to add its command-line tools to your
+system path.</p>
+
+<p>On Windows:</p>
+
+<ul>
+<li><p>Go to <strong>My Computer &rarr; Properties &rarr; Advanced &rarr; Environment Variables</strong>.</p></li>
+<li><p>Append the Native SDK&#39;s install directory to the PATH, for example:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">;C:\bbndk\host_10_1_0_132\win32\x86\usr\bin\
+</code></pre></div></li>
+</ul>
+
+<p>On Mac and Linux:</p>
+
+<ul>
+<li><p>Edit the <code>~/.bash_profile</code> file, adding a line such as the
+following, depending on where the Native SDK was installed:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
+
+<span class="c"># or for the 10.2 Native SDK:</span>
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
+</code></pre></div></li>
+<li><p>Run the following to apply the change in the current session:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">source</span> ~/.bash_profile
+</code></pre></div></li>
+</ul>
+
+<p>If you got any environmental problem, using the Native SDK from the command line, execute the appropriate file for your platform, located within the installation path:</p>
+
+<ul>
+<li><p>On Windows &rarr; MS-DOS shell:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">C:\&gt; \bbndk\bbndk-env_xx_xx_xx_xxxx.bat
+</code></pre></div></li>
+<li><p>On Windows &rarr; git bash shell:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
+</code></pre></div></li>
+<li><p>On Linux &rarr; Installed as root user:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="sb">`</span>./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh<span class="sb">`</span>
+</code></pre></div></li>
+<li><p>On Linux &rarr; Installed as non-root user:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="sb">`</span>./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh<span class="sb">`</span>
+</code></pre></div></li>
+<li><p>On Mac:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="sb">`</span>/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh<span class="sb">`</span>
+</code></pre></div></li>
+</ul>
+
+<h2>Set up for Signing</h2>
+
+<p>If you wish to test on a device or distribute apps through BlackBerry
+World, your system must be setup for code signing.</p>
+
+<p>To obtain a signing key, go to the <a href="https://www.blackberry.com/SignedKeys/codesigning.html">BlackBerry Keys Order Form</a>.</p>
+
+<p>Select the first checkbox: &quot;for BlackBerry10 apps developed using BlackBerry
+NDK&quot; and then sign in or create a BBID.</p>
+
+<p>Enter a password and click &quot;Get Token&quot; to download bbidtoken.csk. Save this
+file to the default location for your OS which will be displayed on the
+download page.</p>
+
+<p>The final step is to generate a signing certificate:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>blackberry-keytool <span class="nt">-genkeypair</span> <span class="nt">-storepass</span> &lt;password&gt; <span class="nt">-author</span> <span class="s1">'Your Name’
+</span></code></pre></div>
+<h2>Create a Project</h2>
+
+<p>Use the <code>cordova</code> utility to set up a new project, as described in
+<a href="../../../reference/cordova-cli/index.html">Cordova CLI Reference</a>. For example, in a source-code directory:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova create hello com.example.hello
+<span class="nv">$ </span><span class="nb">cd </span>hello
+<span class="nv">$ </span>cordova platform add blackberry10
+<span class="nv">$ </span>cordova build
+</code></pre></div>
+<h2>Deploy to Emulator</h2>
+
+<p>If you wish to run a device emulator, download and install the
+BlackBerry 10 Simulator.</p>
+
+<ul>
+<li><a href="http://developer.blackberry.com/native/download/">Download</a></li>
+<li><a href="http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html">Getting Started</a></li>
+</ul>
+
+<p>Before testing an app on either an emulator or a device, you need to
+enable development mode.</p>
+
+<p>Launch the emulator image, then choose <strong>Settings</strong> from the home screen:</p>
+
+<p><img src="/static/img/guide/platforms/blackberry10/bb_home.png" alt=""></p>
+
+<p>Navigate to the <strong>Security and Privacy &rarr; Development Mode</strong>
+section and enable the option:</p>
+
+<p><img src="/static/img/guide/platforms/blackberry10/bb_devel.png" alt=""></p>
+
+<p>An additional set of command-line utilities are included when you set
+up the BlackBerry 10 platform for your project.  The following
+command, in this case invoked from the project top-level directory,
+associates a target named <em>emu</em> with the IP address displayed above.</p>
+
+<ul>
+<li><p>On Windows:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ platforms\blackberry10\cordova\target.bat add emu 169.254.0.1 -t simulator
+</code></pre></div></li>
+<li><p>On Mac/Linux:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">platforms/blackberry10/cordova/target add emu 169.254.0.1 <span class="nt">-t</span> simulator
+</code></pre></div></li>
+</ul>
+
+<p>Then, run the <code>emulate</code> command to view the app:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova emulate blackberry10
+</code></pre></div>
+<h2>Deploy to Device</h2>
+
+<p>To deploy to a device, make sure it is plugged into your computer.
+Enable development mode and obtain the IP address as desribed in the
+emulator section above. You will also need to obtain the PIN from the
+the <strong>Settings</strong> application under <strong>About &rarr; Hardware</strong>:</p>
+
+<p><img src="/static/img/guide/platforms/blackberry10/bb_pin.png" alt=""></p>
+
+<p>Run the target command-line utility to associate a name with an IP
+address, device password and PIN.</p>
+
+<ul>
+<li><p>On Windows:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
+</code></pre></div></li>
+<li><p>On Mac/Linux:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>platforms/blackberry10/cordova/target add mydevice 169.254.0.1 <span class="nt">-t</span> device <span class="nt">--password</span> 123456 <span class="nt">--pin</span> FFFF972E
+</code></pre></div></li>
+</ul>
+
+<p>where:</p>
+
+<ul>
+<li><p><code>--password</code> refers to the password to unlock the device.</p></li>
+<li><p><code>--pin</code> refers to the device PIN obtained from the <strong>Settings</strong> application.</p></li>
+</ul>
+
+<p>Then, run the <code>run</code> command to view the app:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova run blackberry10
+</code></pre></div>
+<p>If a debug token is not yet set up for the device, an error message
+prompts you to use the platform run script with the password you
+provided when registering for signing keys.</p>
+
+<ul>
+<li><p>On Windows:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
+</code></pre></div></li>
+<li><p>On Mac/Linux:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>platforms/blackberry10/cordova/run <span class="nt">--device</span> <span class="nt">--keystorepass</span> mysecret
+</code></pre></div></li>
+</ul>
+
+<h2>Debugging with WebInspector</h2>
+
+<p>When debugging on the device or an emulator, you may run WebInspector
+remotely to view the application&#39;s internal state.  A prompt displays
+the URL that allows you to connect to the app with a standard web
+browser.  For more information, see
+<a href="http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html">Debugging using WebInspector</a>.</p>
+
+<h2>Building a Release Version</h2>
+
+<p>By default, running the <code>cordova build</code> command creates an unsigned
+<em>.bar</em> package file suitable for testing on a device or simulator.</p>
+
+<p>Use <code>--release</code> to create a release version suitable for distribution
+through BlackBerry World.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova build <span class="nt">--release</span> <span class="nt">--keystorepass</span> &lt;signing password&gt;
+</code></pre></div>
+<p>The <code>--keystorepass</code> option specifies the password you defined when
+configuring your computer to sign applications.</p>
+
+<h2>Deploy to Other Locations</h2>
+
+<p>The instructions above assume a device is plugged in via USB or a
+simulator is running on the local machine. It is also possible to
+deploy to other locations.</p>
+
+<p>An additional set of command-line utilities are included when you set
+up the BlackBerry 10 platform for your project.  The following
+command, in this case invoked from the project top-level directory,
+associates a target named <em>emu</em> with an IP address.</p>
+
+<ul>
+<li><p>On Windows:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
+</code></pre></div></li>
+<li><p>On Mac/Linux:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>platforms/blackberry10/cordova/build <span class="nt">--release</span> <span class="nt">--keystorepass</span> mysecret
+</code></pre></div></li>
+</ul>
+
+<p>Once the target is defined, you can provide it to the run command using
+<code>--target</code>:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova run blackberry10 <span class="nt">--target</span><span class="o">=</span>emu
+</code></pre></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  7.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

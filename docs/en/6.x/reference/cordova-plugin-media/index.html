@@ -1,0 +1,3400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="Record and play audio on the device. ">
+
+    <title>
+        
+            
+                Media - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/6.x/reference/cordova-plugin-media/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '6.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/cli/template.html">
+                Templates for apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/blackberry10/home.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/osx/index.html">
+                OS X
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/appdev/whitelist/index.html">
+                Whitelisting
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/blackberry10/plugin.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-cli/index.html">
+                CLI Reference
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-battery-status/index.html">
+                Battery Status
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-camera/index.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-console/index.html">
+                Console
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-contacts/index.html">
+                Contacts
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-device/index.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-device-motion/index.html">
+                Device Motion
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-device-orientation/index.html">
+                Device Orientation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-dialogs/index.html">
+                Dialogs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-file/index.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-file-transfer/index.html">
+                File Transfer
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-geolocation/index.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-globalization/index.html">
+                Globalization
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-inappbrowser/index.html">
+                Inappbrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-media/index.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-media-capture/index.html">
+                Media Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-network-information/index.html">
+                Network Information
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-splashscreen/index.html">
+                Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-vibration/index.html">
+                Vibration
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-statusbar/index.html">
+                Statusbar
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-whitelist/index.html">
+                Whitelist
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/6.x/reference/cordova-plugin-legacy-whitelist/index.html">
+                Legacy Whitelist
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/cli/template.html">
+        Templates for apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/blackberry10/home.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/osx/index.html">
+        OS X
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/appdev/whitelist/index.html">
+        Whitelisting
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/blackberry10/plugin.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-cli/index.html">
+        CLI Reference
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-battery-status/index.html">
+        Battery Status
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-camera/index.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-console/index.html">
+        Console
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-contacts/index.html">
+        Contacts
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-device/index.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-device-motion/index.html">
+        Device Motion
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-device-orientation/index.html">
+        Device Orientation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-dialogs/index.html">
+        Dialogs
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-file/index.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-file-transfer/index.html">
+        File Transfer
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-geolocation/index.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-globalization/index.html">
+        Globalization
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-inappbrowser/index.html">
+        Inappbrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-media/index.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-media-capture/index.html">
+        Media Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-network-information/index.html">
+        Network Information
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-splashscreen/index.html">
+        Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-vibration/index.html">
+        Vibration
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-statusbar/index.html">
+        Statusbar
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-whitelist/index.html">
+        Whitelist
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/6.x/reference/cordova-plugin-legacy-whitelist/index.html">
+        Legacy Whitelist
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+                    <a class="edit hidden-xs hidden-sm" href="https://github.com/apache/cordova-plugin-media/blob/master/README.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+
+                
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        English
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/6.x/reference/cordova-plugin-media/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/6.x/reference/cordova-plugin-media/" class="">
+                                
+                                    <span class="selected">
+                                        English
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/6.x/reference/cordova-plugin-media/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/6.x/reference/cordova-plugin-media/" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/6.x/reference/cordova-plugin-media/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/6.x/reference/cordova-plugin-media/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/6.x/reference/cordova-plugin-media/" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/6.x/reference/cordova-plugin-media/" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/6.x/reference/cordova-plugin-media/" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/6.x/reference/cordova-plugin-media/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/6.x/reference/cordova-plugin-media/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/6.x/reference/cordova-plugin-media/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        6.x
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                6.x
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/" class="missing-page">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/" class="missing-page">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/" class="missing-page">
+                                
+                                    
+                                3.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/" class="missing-page">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/" class="missing-page">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/" class="missing-page">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is outdated!
+                    <a href="/docs/en/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+                <div class="alert alert-warning docs-alert" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                     master.
+                    <a href="https://github.com/apache/cordova-plugin-media/releases">
+                        
+                    </a>
+                </div>
+            
+
+            <div id="page-toc-source">
+                <!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<table><thead>
+<tr>
+<th style="text-align: center">Android</th>
+<th style="text-align: center">iOS</th>
+<th style="text-align: center">Windows 8.1 Store</th>
+<th style="text-align: center">Windows 8.1 Phone</th>
+<th style="text-align: center">Windows 10 Store</th>
+<th style="text-align: center">Travis CI</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-media/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-media" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-media/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-media" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-media/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-media" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-media/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-media" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-media/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-media" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-media"><img src="https://travis-ci.org/apache/cordova-plugin-media.svg?branch=master" alt="Build Status"></a></td>
+</tr>
+</tbody></table>
+
+<h1>cordova-plugin-media</h1>
+
+<p>This plugin provides the ability to record and play back audio files on a device.</p>
+
+<p><strong>NOTE</strong>: The current implementation does not adhere to a W3C
+specification for media capture, and is provided for convenience only.
+A future implementation will adhere to the latest W3C specification
+and may deprecate the current APIs.</p>
+
+<p>This plugin defines a global <code>Media</code> Constructor.</p>
+
+<p>Although in the global scope, it is not available until after the <code>deviceready</code> event.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">Media</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Report issues with this plugin on the <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20Media%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC">Apache Cordova issue tracker</a></p>
+
+<h2>Installation</h2>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova plugin add cordova-plugin-media
+</code></pre></div>
+<h2>Supported Platforms</h2>
+
+<ul>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>iOS</li>
+<li>Windows Phone 7 and 8</li>
+<li>Tizen</li>
+<li>Windows 8</li>
+<li>Windows</li>
+<li>Browser</li>
+</ul>
+
+<h2>Windows Phone Quirks</h2>
+
+<ul>
+<li>Only one media file can be played back at a time.</li>
+</ul>
+
+<h2>Media</h2>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">media</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="nx">mediaSuccess</span><span class="p">,</span> <span class="p">[</span><span class="nx">mediaError</span><span class="p">],</span> <span class="p">[</span><span class="nx">mediaStatus</span><span class="p">]);</span>
+</code></pre></div>
+<h3>Parameters</h3>
+
+<ul>
+<li><p><strong>src</strong>: A URI containing the audio content. <em>(DOMString)</em></p></li>
+<li><p><strong>mediaSuccess</strong>: (Optional) The callback that executes after a <code>Media</code> object has completed the current play, record, or stop action. <em>(Function)</em></p></li>
+<li><p><strong>mediaError</strong>: (Optional) The callback that executes if an error occurs. <em>(Function)</em></p></li>
+<li><p><strong>mediaStatus</strong>: (Optional) The callback that executes to indicate status changes. <em>(Function)</em></p></li>
+</ul>
+
+<p><strong>NOTE</strong>: <code>cdvfile</code> path is supported as <code>src</code> parameter:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">my_media</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="s1">'cdvfile://localhost/temporary/recording.mp3'</span><span class="p">,</span> <span class="p">...);</span>
+</code></pre></div>
+<h3>Constants</h3>
+
+<p>The following constants are reported as the only parameter to the
+<code>mediaStatus</code> callback:</p>
+
+<ul>
+<li><code>Media.MEDIA_NONE</code>     = 0;</li>
+<li><code>Media.MEDIA_STARTING</code> = 1;</li>
+<li><code>Media.MEDIA_RUNNING</code>  = 2;</li>
+<li><code>Media.MEDIA_PAUSED</code>   = 3;</li>
+<li><code>Media.MEDIA_STOPPED</code>  = 4;</li>
+</ul>
+
+<h3>Methods</h3>
+
+<ul>
+<li><p><code>media.getCurrentAmplitude</code>: Returns the current position within an audio file.</p></li>
+<li><p><code>media.getCurrentPosition</code>: Returns the current position within an audio file.</p></li>
+<li><p><code>media.getDuration</code>: Returns the duration of an audio file.</p></li>
+<li><p><code>media.play</code>: Start or resume playing an audio file.</p></li>
+<li><p><code>media.pause</code>: Pause playback of an audio file.</p></li>
+<li><p><code>media.pauseRecord</code>: Pause recording of an audio file.</p></li>
+<li><p><code>media.release</code>: Releases the underlying operating system&#39;s audio resources.</p></li>
+<li><p><code>media.resumeRecord</code>: Resume recording of an audio file.</p></li>
+<li><p><code>media.seekTo</code>: Moves the position within the audio file.</p></li>
+<li><p><code>media.setVolume</code>: Set the volume for audio playback.</p></li>
+<li><p><code>media.startRecord</code>: Start recording an audio file.</p></li>
+<li><p><code>media.stopRecord</code>: Stop recording an audio file.</p></li>
+<li><p><code>media.stop</code>: Stop playing an audio file.</p></li>
+</ul>
+
+<h3>Additional ReadOnly Parameters</h3>
+
+<ul>
+<li><p><strong>position</strong>: The position within the audio playback, in seconds.</p>
+
+<ul>
+<li>Not automatically updated during play; call <code>getCurrentPosition</code> to update.</li>
+</ul></li>
+<li><p><strong>duration</strong>: The duration of the media, in seconds.</p></li>
+</ul>
+
+<h2>media.getCurrentAmplitude</h2>
+
+<p>Returns the current amplitude of the current recording.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">media.getCurrentAmplitude(mediaSuccess, [mediaError]);
+</code></pre></div>
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+</ul>
+
+<h3>Parameters</h3>
+
+<ul>
+<li><p><strong>mediaSuccess</strong>: The callback that is passed the current amplitude (0.0 - 1.0).</p></li>
+<li><p><strong>mediaError</strong>: (Optional) The callback to execute if an error occurs.</p></li>
+</ul>
+
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Audio player</span>
+<span class="c1">//</span>
+<span class="kd">var</span> <span class="nx">my_media</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">);</span>
+
+<span class="c1">// Record audio</span>
+<span class="nx">my_media</span><span class="p">.</span><span class="nx">startRecord</span><span class="p">();</span>
+
+<span class="nx">mediaTimer</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// get media amplitude</span>
+    <span class="nx">my_media</span><span class="p">.</span><span class="nx">getCurrentAmplitude</span><span class="p">(</span>
+        <span class="c1">// success callback</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">amp</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">amp</span> <span class="o">+</span> <span class="s2">"%"</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="c1">// error callback</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Error getting amp="</span> <span class="o">+</span> <span class="nx">e</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">);</span>
+<span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+</code></pre></div>
+<h2>media.getCurrentPosition</h2>
+
+<p>Returns the current position within an audio file.  Also updates the <code>Media</code> object&#39;s <code>position</code> parameter.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">media.getCurrentPosition(mediaSuccess, [mediaError]);
+</code></pre></div>
+<h3>Parameters</h3>
+
+<ul>
+<li><p><strong>mediaSuccess</strong>: The callback that is passed the current position in seconds.</p></li>
+<li><p><strong>mediaError</strong>: (Optional) The callback to execute if an error occurs.</p></li>
+</ul>
+
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Audio player</span>
+<span class="c1">//</span>
+<span class="kd">var</span> <span class="nx">my_media</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">);</span>
+
+<span class="c1">// Update media position every second</span>
+<span class="kd">var</span> <span class="nx">mediaTimer</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// get media position</span>
+    <span class="nx">my_media</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span>
+        <span class="c1">// success callback</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">position</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">((</span><span class="nx">position</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" sec"</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="c1">// error callback</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Error getting pos="</span> <span class="o">+</span> <span class="nx">e</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">);</span>
+<span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+</code></pre></div>
+<h2>media.getDuration</h2>
+
+<p>Returns the duration of an audio file in seconds. If the duration is unknown, it returns a value of -1.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">media.getDuration();
+</code></pre></div>
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Audio player</span>
+<span class="c1">//</span>
+<span class="kd">var</span> <span class="nx">my_media</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">);</span>
+
+<span class="c1">// Get duration</span>
+<span class="kd">var</span> <span class="nx">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">timerDur</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">counter</span> <span class="o">=</span> <span class="nx">counter</span> <span class="o">+</span> <span class="mi">100</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">counter</span> <span class="o">&gt;</span> <span class="mi">2000</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">clearInterval</span><span class="p">(</span><span class="nx">timerDur</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">var</span> <span class="nx">dur</span> <span class="o">=</span> <span class="nx">my_media</span><span class="p">.</span><span class="nx">getDuration</span><span class="p">();</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">dur</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">clearInterval</span><span class="p">(</span><span class="nx">timerDur</span><span class="p">);</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'audio_duration'</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dur</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" sec"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">},</span> <span class="mi">100</span><span class="p">);</span>
+</code></pre></div>
+<h2>media.pause</h2>
+
+<p>Pauses playing an audio file.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">media.pause();
+</code></pre></div>
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Play audio</span>
+<span class="c1">//</span>
+<span class="kd">function</span> <span class="nx">playAudio</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Play the audio file at url</span>
+    <span class="kd">var</span> <span class="nx">my_media</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span>
+        <span class="c1">// success callback</span>
+        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"playAudio():Audio Success"</span><span class="p">);</span> <span class="p">},</span>
+        <span class="c1">// error callback</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"playAudio():Audio Error: "</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span> <span class="p">}</span>
+    <span class="p">);</span>
+
+    <span class="c1">// Play audio</span>
+    <span class="nx">my_media</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
+
+    <span class="c1">// Pause after 10 seconds</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">my_media</span><span class="p">.</span><span class="nx">pause</span><span class="p">();</span>
+    <span class="p">},</span> <span class="mi">10000</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>media.pauseRecord</h2>
+
+<p>Pauses recording an audio file.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">media.pauseRecord();
+</code></pre></div>
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>iOS</li>
+</ul>
+
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Record audio</span>
+<span class="c1">//</span>
+<span class="kd">function</span> <span class="nx">recordAudio</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="s2">"myrecording.mp3"</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">mediaRec</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span>
+        <span class="c1">// success callback</span>
+        <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"recordAudio():Audio Success"</span><span class="p">);</span>
+        <span class="p">},</span>
+
+        <span class="c1">// error callback</span>
+        <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"recordAudio():Audio Error: "</span><span class="o">+</span> <span class="nx">err</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
+        <span class="p">});</span>
+
+    <span class="c1">// Record audio</span>
+    <span class="nx">mediaRec</span><span class="p">.</span><span class="nx">startRecord</span><span class="p">();</span>
+
+    <span class="c1">// Pause Recording after 5 seconds</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">my_media</span><span class="p">.</span><span class="nx">pauseRecord</span><span class="p">();</span>
+    <span class="p">},</span> <span class="mi">5000</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>media.play</h2>
+
+<p>Starts or resumes playing an audio file.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">media</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
+</code></pre></div>
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Play audio</span>
+<span class="c1">//</span>
+<span class="kd">function</span> <span class="nx">playAudio</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Play the audio file at url</span>
+    <span class="kd">var</span> <span class="nx">my_media</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span>
+        <span class="c1">// success callback</span>
+        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"playAudio():Audio Success"</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="c1">// error callback</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"playAudio():Audio Error: "</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">);</span>
+    <span class="c1">// Play audio</span>
+    <span class="nx">my_media</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3>iOS Quirks</h3>
+
+<ul>
+<li><p><strong>numberOfLoops</strong>: Pass this option to the <code>play</code> method to specify
+the number of times you want the media file to play, e.g.:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
+myMedia.play({ numberOfLoops: 2 })
+</code></pre></div></li>
+<li><p><strong>playAudioWhenScreenIsLocked</strong>: Pass in this option to the <code>play</code>
+method to specify whether you want to allow playback when the screen
+is locked.  If set to <code>true</code> (the default value), the state of the
+hardware mute button is ignored, e.g.:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
+myMedia.play({ playAudioWhenScreenIsLocked : false })
+</code></pre></div></li>
+<li><p><strong>order of file search</strong>: When only a file name or simple path is
+provided, iOS searches in the <code>www</code> directory for the file, then in
+the application&#39;s <code>documents/tmp</code> directory:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">var myMedia = new Media("audio/beer.mp3")
+myMedia.play()  // first looks for file in www/audio/beer.mp3 then in &lt;application&gt;/documents/tmp/audio/beer.mp3
+</code></pre></div></li>
+</ul>
+
+<h2>media.release</h2>
+
+<p>Releases the underlying operating system&#39;s audio resources.
+This is particularly important for Android, since there are a finite amount of
+OpenCore instances for media playback. Applications should call the <code>release</code>
+function for any <code>Media</code> resource that is no longer needed.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">media.release();
+</code></pre></div>
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Audio player</span>
+<span class="c1">//</span>
+<span class="kd">var</span> <span class="nx">my_media</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">);</span>
+
+<span class="nx">my_media</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
+<span class="nx">my_media</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
+<span class="nx">my_media</span><span class="p">.</span><span class="nx">release</span><span class="p">();</span>
+</code></pre></div>
+<h2>media.resumeRecord</h2>
+
+<p>Resume recording an audio file.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">media.resumeRecord();
+</code></pre></div>
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>iOS</li>
+</ul>
+
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Record audio</span>
+<span class="c1">//</span>
+<span class="kd">function</span> <span class="nx">recordAudio</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="s2">"myrecording.mp3"</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">mediaRec</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span>
+        <span class="c1">// success callback</span>
+        <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"recordAudio():Audio Success"</span><span class="p">);</span>
+        <span class="p">},</span>
+
+        <span class="c1">// error callback</span>
+        <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"recordAudio():Audio Error: "</span><span class="o">+</span> <span class="nx">err</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
+        <span class="p">});</span>
+
+    <span class="c1">// Record audio</span>
+    <span class="nx">mediaRec</span><span class="p">.</span><span class="nx">startRecord</span><span class="p">();</span>
+
+    <span class="c1">// Pause Recording after 5 seconds</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">my_media</span><span class="p">.</span><span class="nx">pauseRecord</span><span class="p">();</span>
+    <span class="p">},</span> <span class="mi">5000</span><span class="p">);</span>
+
+    <span class="c1">// Resume Recording after 10 seconds</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">my_media</span><span class="p">.</span><span class="nx">resumeRecord</span><span class="p">();</span>
+    <span class="p">},</span> <span class="mi">10000</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>media.seekTo</h2>
+
+<p>Sets the current position within an audio file.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">media.seekTo(milliseconds);
+</code></pre></div>
+<h3>Parameters</h3>
+
+<ul>
+<li><strong>milliseconds</strong>: The position to set the playback position within the audio, in milliseconds.</li>
+</ul>
+
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Audio player</span>
+<span class="c1">//</span>
+<span class="kd">var</span> <span class="nx">my_media</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">);</span>
+    <span class="nx">my_media</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
+<span class="c1">// SeekTo to 10 seconds after 5 seconds</span>
+<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">my_media</span><span class="p">.</span><span class="nx">seekTo</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+<span class="p">},</span> <span class="mi">5000</span><span class="p">);</span>
+</code></pre></div>
+<h3>BlackBerry 10 Quirks</h3>
+
+<ul>
+<li>Not supported on BlackBerry OS 5 devices.</li>
+</ul>
+
+<h2>media.setVolume</h2>
+
+<p>Set the volume for an audio file.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">media.setVolume(volume);
+</code></pre></div>
+<h3>Parameters</h3>
+
+<ul>
+<li><strong>volume</strong>: The volume to set for playback.  The value must be within the range of 0.0 to 1.0.</li>
+</ul>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+</ul>
+
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Play audio</span>
+<span class="c1">//</span>
+<span class="kd">function</span> <span class="nx">playAudio</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Play the audio file at url</span>
+    <span class="kd">var</span> <span class="nx">my_media</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span>
+        <span class="c1">// success callback</span>
+        <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"playAudio():Audio Success"</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="c1">// error callback</span>
+        <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"playAudio():Audio Error: "</span><span class="o">+</span><span class="nx">err</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="c1">// Play audio</span>
+    <span class="nx">my_media</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
+
+    <span class="c1">// Mute volume after 2 seconds</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">my_media</span><span class="p">.</span><span class="nx">setVolume</span><span class="p">(</span><span class="s1">'0.0'</span><span class="p">);</span>
+    <span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
+
+    <span class="c1">// Set volume to 1.0 after 5 seconds</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">my_media</span><span class="p">.</span><span class="nx">setVolume</span><span class="p">(</span><span class="s1">'1.0'</span><span class="p">);</span>
+    <span class="p">},</span> <span class="mi">5000</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>media.startRecord</h2>
+
+<p>Starts recording an audio file.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">media.startRecord();
+</code></pre></div>
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows</li>
+</ul>
+
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Record audio</span>
+<span class="c1">//</span>
+<span class="kd">function</span> <span class="nx">recordAudio</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="s2">"myrecording.mp3"</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">mediaRec</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span>
+        <span class="c1">// success callback</span>
+        <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"recordAudio():Audio Success"</span><span class="p">);</span>
+        <span class="p">},</span>
+
+        <span class="c1">// error callback</span>
+        <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"recordAudio():Audio Error: "</span><span class="o">+</span> <span class="nx">err</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
+        <span class="p">});</span>
+
+    <span class="c1">// Record audio</span>
+    <span class="nx">mediaRec</span><span class="p">.</span><span class="nx">startRecord</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3>Android Quirks</h3>
+
+<ul>
+<li>Android devices record audio in Adaptive Multi-Rate format. The specified file should end with a <em>.amr</em> extension.</li>
+<li>The hardware volume controls are wired up to the media volume while any Media objects are alive. Once the last created Media object has <code>release()</code> called on it, the volume controls revert to their default behaviour. The controls are also reset on page navigation, as this releases all Media objects.</li>
+</ul>
+
+<h3>iOS Quirks</h3>
+
+<ul>
+<li><p>iOS only records to files of type <em>.wav</em> and returns an error if the file name extension is not correct.</p></li>
+<li><p>If a full path is not provided, the recording is placed in the application&#39;s <code>documents/tmp</code> directory. This can be accessed via the <code>File</code> API using <code>LocalFileSystem.TEMPORARY</code>. Any subdirectory specified at record time must already exist.</p></li>
+<li><p>Files can be recorded and played back using the documents URI:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">var myMedia = new Media("documents://beer.mp3")
+</code></pre></div></li>
+</ul>
+
+<h3>Windows Quirks</h3>
+
+<ul>
+<li><p>Windows devices can use MP3, M4A and WMA formats for recorded audio. However in most cases it is not possible to use MP3 for audio recording on <em>Windows Phone 8.1</em> devices, because an MP3 encoder is <a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.mediaproperties.mediaencodingprofile.createmp3.aspx">not shipped with Windows Phone</a>.</p></li>
+<li><p>If a full path is not provided, the recording is placed in the <code>AppData/temp</code> directory. This can be accessed via the <code>File</code> API using <code>LocalFileSystem.TEMPORARY</code> or <code>ms-appdata:///temp/&lt;filename&gt;</code> URI.</p></li>
+<li><p>Any subdirectory specified at record time must already exist.</p></li>
+</ul>
+
+<h3>Tizen Quirks</h3>
+
+<ul>
+<li>Not supported on Tizen devices.</li>
+</ul>
+
+<h2>media.stop</h2>
+
+<p>Stops playing an audio file.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">media.stop();
+</code></pre></div>
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Play audio</span>
+<span class="c1">//</span>
+<span class="kd">function</span> <span class="nx">playAudio</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Play the audio file at url</span>
+    <span class="kd">var</span> <span class="nx">my_media</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span>
+        <span class="c1">// success callback</span>
+        <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"playAudio():Audio Success"</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="c1">// error callback</span>
+        <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"playAudio():Audio Error: "</span><span class="o">+</span><span class="nx">err</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">);</span>
+
+    <span class="c1">// Play audio</span>
+    <span class="nx">my_media</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
+
+    <span class="c1">// Pause after 10 seconds</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">my_media</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
+    <span class="p">},</span> <span class="mi">10000</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>media.stopRecord</h2>
+
+<p>Stops recording an audio file.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">media.stopRecord();
+</code></pre></div>
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows</li>
+</ul>
+
+<h3>Quick Example</h3>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Record audio</span>
+<span class="c1">//</span>
+<span class="kd">function</span> <span class="nx">recordAudio</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="s2">"myrecording.mp3"</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">mediaRec</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span>
+        <span class="c1">// success callback</span>
+        <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"recordAudio():Audio Success"</span><span class="p">);</span>
+        <span class="p">},</span>
+
+        <span class="c1">// error callback</span>
+        <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"recordAudio():Audio Error: "</span><span class="o">+</span> <span class="nx">err</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">);</span>
+
+    <span class="c1">// Record audio</span>
+    <span class="nx">mediaRec</span><span class="p">.</span><span class="nx">startRecord</span><span class="p">();</span>
+
+    <span class="c1">// Stop recording after 10 seconds</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">mediaRec</span><span class="p">.</span><span class="nx">stopRecord</span><span class="p">();</span>
+    <span class="p">},</span> <span class="mi">10000</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3>Tizen Quirks</h3>
+
+<ul>
+<li>Not supported on Tizen devices.</li>
+</ul>
+
+<h2>MediaError</h2>
+
+<p>A <code>MediaError</code> object is returned to the <code>mediaError</code> callback
+function when an error occurs.</p>
+
+<h3>Properties</h3>
+
+<ul>
+<li><p><strong>code</strong>: One of the predefined error codes listed below.</p></li>
+<li><p><strong>message</strong>: An error message describing the details of the error.</p></li>
+</ul>
+
+<h3>Constants</h3>
+
+<ul>
+<li><code>MediaError.MEDIA_ERR_ABORTED</code>        = 1</li>
+<li><code>MediaError.MEDIA_ERR_NETWORK</code>        = 2</li>
+<li><code>MediaError.MEDIA_ERR_DECODE</code>         = 3</li>
+<li><code>MediaError.MEDIA_ERR_NONE_SUPPORTED</code> = 4</li>
+</ul>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  6.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

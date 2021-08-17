@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that we have just released cordova-lib 10.0.0!cordova-lib@10.0.0Release HighlightsIn addition to various improvements and fixes, thi...">
+
+    <title>
+        
+            
+                Cordova Lib 10.0.0 Released! - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2020/07/28/cordova-lib-release-10.0.0.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '10.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Cordova Lib 10.0.0 Released!</div>
+        <div class="author">By:
+            
+              Bryan Ellis
+            
+        </div>
+        <div class="date">28 Jul 2020</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that we have just released <code>cordova-lib 10.0.0</code>!</p>
+
+<ul>
+<li><a href="https://www.npmjs.com/package/cordova-lib">cordova-lib@10.0.0</a></li>
+</ul>
+
+<h2>Release Highlights</h2>
+
+<p>In addition to various improvements and fixes, this release has:</p>
+
+<ul>
+<li>Removed the <code>plugin save</code> command, which had become the default behaviour since version 7.0.</li>
+<li>Updated the pinned platforms:
+
+<ul>
+<li>cordova-android@9.0.0</li>
+<li>cordova-ios@6.1.0</li>
+<li>cordova-osx@6.0.0</li>
+</ul></li>
+<li>Raised the minimum required NodeJS version for this release to 10.x.</li>
+</ul>
+
+<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+
+<!--more-->
+
+<h1>Changes include:</h1>
+
+<ul>
+<li><a href="https://github.com/apache/cordova-lib/pull/846">GH-846</a> breaking: remove <code>cordova info</code> logic from <code>lib</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/849">GH-849</a> breaking: bump dependencies</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/847">GH-847</a> chore: update dev dependencies</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/848">GH-848</a> chore: bump <code>cordova-eslint</code> w/ automatic fixes</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/843">GH-843</a> test(<code>fixture-helper</code>): install <strong>Android</strong> platform by name again</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/844">GH-844</a> fix: remove unused dependency on <code>cordova-create</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/841">GH-841</a> chore: add <code>package-lock.json</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/840">GH-840</a> chore: use short notation in <code>package.json</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/839">GH-839</a> chore: stop testing with nightly</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/838">GH-838</a> chore: update <strong>Android</strong> platform pinning to 9.0.0</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/837">GH-837</a> chore: update <strong>OSX</strong> platform pinning to 6.0.0</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/836">GH-836</a> chore: update <strong>iOS</strong> platform pinning to 6.1.0</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/835">GH-835</a> GH-832: Look at devDeps for restoring platforms</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/833">GH-833</a> breaking: upgrade cordova dependencies for next major</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/831">GH-831</a> test: use <code>expectAsync</code> for rejections</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/825">GH-825</a> test(e2e): improve <code>HooksRunner.spec</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/828">GH-828</a> chore: consolidate eslint configs</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/803">GH-803</a> test: move <code>cordova/platform/{platform =&gt; addHelper}</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/827">GH-827</a> fix: plugin installation from <code>git</code> url w/ <code>semver</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/826">GH-826</a> test: use <code>fs.copySync</code> for increased performance</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/823">GH-823</a> test(e2e): re-enable HooksRunner#12 and move it to plugin#14</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/824">GH-824</a> style: fix linting violations</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/821">GH-821</a> feat: proper support for scoped plugins</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/822">GH-822</a> refactor: <code>eslint</code> setup</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/820">GH-820</a> refactor: remove stub interface to <code>cordova-create</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/819">GH-819</a> refactor: use <code>execa</code>&#39;s cross-platform shebang support in <code>HooksRunner</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/812">GH-812</a> chore: replace <code>superspawn</code> with <code>execa</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/781">GH-781</a> chore: remove <code>plugin save</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/780">GH-780</a> chore: deprecate <code>plugin save</code> command</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/818">GH-818</a> Extend and improve plugin tests in preparation of supporting scoped plugins</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/810">GH-810</a> chore: bump production dependencies</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/816">GH-816</a> Simplify <code>jasmine</code> configuration</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/817">GH-817</a> Remove dead code in <code>integration-tests/plugin.spec</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/815">GH-815</a> Do not spawn child process to get platform version</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/813">GH-813</a> <code>plugman_fetch.spec</code> cleanup</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/814">GH-814</a> Remove obsolete and duplicate ignore entries</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/809">GH-809</a> chore: improve npm ignore list</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/811">GH-811</a> chore: update <code>jasmine</code> dependencies</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/808">GH-808</a> Remove unused module plugman/platforms/common</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/807">GH-807</a> Break dependency cycles</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/804">GH-804</a> Fix <code>cordova/emulate.spec</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/806">GH-806</a> Remove unused exports from <code>cordova/util</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/805">GH-805</a> Remove support for obsolete <code>&lt;project&gt;/.cordova/config.json</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/802">GH-802</a> Minor code cleanup</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/797">GH-797</a> Do not run legacy hooks from dirs anymore</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/800">GH-800</a> Remove <code>platform.check</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/765">GH-765</a> Remove code to handle plugins that were added by cordova@&lt;5.4.0</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/766">GH-766</a> Remove parts of plugman that have been moved to the plugman repo</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/772">GH-772</a> Replace underscore with modern JS</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/799">GH-799</a> chore: drop node 6 and 8 support</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/798">GH-798</a> chore: bump version to 10.0.0-dev</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/770">GH-770</a> Use up-to-date fixtures in tests</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/796">GH-796</a> HooksRunner code &amp; spec cleanup</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/791">GH-791</a> fix: error message during plugin installation w/ missing engine</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/777">GH-777</a> chore: add Node.js 12 to CI services</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/786">GH-786</a> Quick workaround for e2e failure on AppVeyor CI</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/783">GH-783</a> <code>nyc@14</code> update in devDependencies</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/775">GH-775</a> chore: cleanup <code>plugman.createPackageJson</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/767">GH-767</a> Simpler and better <code>cordova/util.getPlatformApiFunction</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/774">GH-774</a> Make <code>src/plugman/init-defaults.js</code> lintable</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/773">GH-773</a> Have <code>plugman.createPackageJson</code> create file in plugin dir, not in cwd</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/771">GH-771</a> Prevent masking of errors during testing</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/768">GH-768</a> Proper async code in <code>src/plugman/createpackagejson.js</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/764">GH-764</a> chore: expressive <code>pkgJson.spec</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/763">GH-763</a> Remove unnecessary spy</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/762">GH-762</a> Remove unused fixtures</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/761">GH-761</a> chore: various test improvements
+
+<ul>
+<li>Fix some test descriptions in <code>cordova/util.spec</code></li>
+<li>Stop <code>cordova/util.spec</code> from messing with the user&#39;s home directory!</li>
+<li>Proper temp folder usage in <code>cordova/util.spec</code></li>
+<li>Remove outdated test from <code>cordova/util.spec</code></li>
+<li>Remove <code>rewire</code>/<code>revert</code> anti-pattern</li>
+<li>Remove <code>superspawn</code> faking from <code>HooksRunner.spec</code></li>
+</ul></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/760">GH-760</a> Minor cleanup of CI configs</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/news/2020/07/21/splashscreen-plugin-release.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2020/07/21/splashscreen-plugin-release.html">Splash Screen Plugin Released!</a>
+                    <div class="date"> 21 Jul 2020 - By Bryan Ellis </div>
+                    <p class="content">
+                        We are happy to announce that we have just released an update...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2020/08/04/cordova-cli-release-10.0.0.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2020/08/04/cordova-cli-release-10.0.0.html">Cordova CLI 10.0.0 Released!</a>
+                    <div class="date"> 04 Aug 2020 - By Bryan Ellis </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        We are happy to announce that we have just released cordova 10.0.0!...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cordovablogs';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  10.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

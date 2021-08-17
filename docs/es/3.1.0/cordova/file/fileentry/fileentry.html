@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                FileEntry - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/es/latest/cordova/file/fileentry/fileentry.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '3.1.0' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/guide/overview/index.html">
+                Perspectiva general
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/guide/cli/index.html">
+                La interfaz de línea de comandos
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/guide/platforms/index.html">
+                Guías de plataforma
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/config_ref/index.html">
+                El archivo config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/config_ref/images.html">
+                Los iconos y las pantallas Splash
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/guide/hybrid/webviews/index.html">
+                Incrustar WebViews
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/guide/hybrid/plugins/index.html">
+                Guía de desarrollo de plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/guide/appdev/privacy/index.html">
+                Guía de privacidad
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/guide/appdev/whitelist/index.html">
+                Guía de lista blanca
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/accelerometer/accelerometer.html">
+                Acelerómetro
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/camera/camera.html">
+                Cámara
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/media/capture/capture.html">
+                Captura
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/compass/compass.html">
+                Brújula
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/connection/connection.html">
+                Conexión
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/contacts/contacts.html">
+                Contactos
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/device/device.html">
+                Dispositivo
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/events/events.html">
+                Eventos
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/file/file.html">
+                Archivo
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/geolocation/geolocation.html">
+                Geolocalización
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/globalization/globalization.html">
+                Globalización
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/inappbrowser/inappbrowser.html">
+                InAppBrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/media/media.html">
+                Los medios de comunicación
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/notification/notification.html">
+                Notificación
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/splashscreen/splashscreen.html">
+                SplashScreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/es/3.1.0/cordova/storage/storage.html">
+                Almacenamiento de información
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Tabla de Contenidos
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/es/3.1.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/guide/overview/index.html">
+        Perspectiva general
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/guide/cli/index.html">
+        La interfaz de línea de comandos
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/guide/platforms/index.html">
+        Guías de plataforma
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/config_ref/index.html">
+        El archivo config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/config_ref/images.html">
+        Los iconos y las pantallas Splash
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/guide/hybrid/webviews/index.html">
+        Incrustar WebViews
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/guide/hybrid/plugins/index.html">
+        Guía de desarrollo de plugin
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/guide/appdev/privacy/index.html">
+        Guía de privacidad
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/guide/appdev/whitelist/index.html">
+        Guía de lista blanca
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/accelerometer/accelerometer.html">
+        Acelerómetro
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/camera/camera.html">
+        Cámara
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/media/capture/capture.html">
+        Captura
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/compass/compass.html">
+        Brújula
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/connection/connection.html">
+        Conexión
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/contacts/contacts.html">
+        Contactos
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/device/device.html">
+        Dispositivo
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/events/events.html">
+        Eventos
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/file/file.html">
+        Archivo
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/geolocation/geolocation.html">
+        Geolocalización
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/globalization/globalization.html">
+        Globalización
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/inappbrowser/inappbrowser.html">
+        InAppBrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/media/media.html">
+        Los medios de comunicación
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/notification/notification.html">
+        Notificación
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/splashscreen/splashscreen.html">
+        SplashScreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/es/3.1.0/cordova/storage/storage.html">
+        Almacenamiento de información
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/es/3.1.0/cordova/file/fileentry/fileentry.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Español
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    <span class="selected">
+                                        Español
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/3.1.0/cordova/file/fileentry/fileentry.html" class="missing-page">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/3.1.0/cordova/file/fileentry/fileentry.html" class="missing-page">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        3.1.0
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/latest/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    
+                                10.x
+                                
+                                    (Ultima)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/es/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                3.1.0
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    Esta no es la versión más reciente de la documentación!
+                    <a href="/docs/es/latest/cordova/file/fileentry/fileentry.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>FileEntry</h1>
+
+<p>Representa un archivo en un sistema de archivos, como se define en la especificación <a href="http://www.w3.org/TR/file-system-api/">W3C directorios y sistemas</a> .</p>
+
+<h2>Propiedades</h2>
+
+<ul>
+<li><p><strong>isFile</strong>: siempre <code>true</code> . <em>(booleano)</em></p></li>
+<li><p><strong>isDirectory</strong>: siempre <code>false</code> . <em>(booleano)</em></p></li>
+<li><p><strong>nombre</strong>: el nombre de la <code>FileEntry</code> , excluyendo el camino que conduce a ella. <em>(DOMString)</em></p></li>
+<li><p><strong>fullPath</strong>: la ruta absoluta completa desde la raíz a la <code>FileEntry</code> . <em>(DOMString)</em></p></li>
+</ul>
+
+<p><strong>Nota:</strong> El siguiente atributo está definido por la especificación del W3C, pero <em>no</em> es compatible:</p>
+
+<ul>
+<li>  <strong>sistema de archivos</strong>: el sistema de archivo en el cual el <code>FileEntry</code> reside. <em>(FileSystem)</em></li>
+</ul>
+
+<h2>Métodos</h2>
+
+<ul>
+<li><p><strong>getMetadata</strong>: ver metadatos de un archivo.</p></li>
+<li><p><strong>setMetadata</strong>: establezca los metadatos en un archivo.</p></li>
+<li><p><strong>moveTo</strong>: mover un archivo a una ubicación diferente en el sistema de archivos.</p></li>
+<li><p><strong>copyTo</strong>: copiar un archivo en una ubicación diferente en el sistema de archivos.</p></li>
+<li><p><strong>visita</strong>: devolver una dirección URL que puede utilizarse para localizar un archivo.</p></li>
+<li><p><strong>eliminar</strong>: elimina un archivo.</p></li>
+<li><p><strong>getParent</strong>: ver el directorio padre.</p></li>
+<li><p><strong>createWriter</strong>: crea un <code>[FileWriter](../filewriter/filewriter.html)</code> objeto que puede ser utilizado para escribir en un archivo.</p></li>
+<li><p><strong>archivo</strong>: crea un <code>File</code> objeto que contiene las propiedades del archivo.</p></li>
+</ul>
+
+<h2>Plataformas soportadas</h2>
+
+<ul>
+<li>  Android</li>
+<li>  BlackBerry WebWorks (OS 5.0 y superiores)</li>
+<li>  iOS</li>
+<li>  Windows Phone 7 y 8</li>
+<li>  Windows 8</li>
+</ul>
+
+<h2>getMetadata</h2>
+
+<p>Ver metadatos de un archivo.</p>
+
+<p><strong>Parámetros:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: una devolución de llamada que se pasa un <code>Metadata</code> objeto. <em>(Función)</em></p></li>
+<li><p><strong>errorCallback</strong>: una devolución de llamada que se ejecuta si se produce un error al recuperar los <code>Metadata</code> . Invocado con un <code>[FileError](../fileerror/fileerror.html)</code> objeto. <em>(Función)</em></p></li>
+</ul>
+
+<p><strong>Ejemplo rápido</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success(metadata) {console.log ("última modificación:" + metadata.modificationTime);}
+
+function fail(error) {alert(error.code)};
+
+/ / Solicitud objeto de metadatos para esta entrada entry.getMetadata (éxito, fail);
+</code></pre></div>
+<h2>setMetadata</h2>
+
+<p>Conjunto de metadatos en un archivo.</p>
+
+<p><strong>Actualmente sólo funciona en iOS.</strong></p>
+
+<ul>
+<li>  Esto ajustará los atributos extendidos de un archivo.</li>
+</ul>
+
+<p><strong>Parámetros:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: una devolución de llamada que se ejecuta cuando los metadatos se establece. <em>(Función)</em></p></li>
+<li><p><strong>errorCallback</strong>: una devolución de llamada que se ejecuta cuando los metadatos no se ha establecido con éxito. <em>(Función)</em></p></li>
+<li><p><strong>metadataObject</strong>: un objeto que contiene de los metadatos claves y valores. <em>(Objeto)</em></p></li>
+</ul>
+
+<p><strong>Ejemplo rápido</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success() {
+    console.log("The metadata was successfully set.");
+}
+
+function fail() {
+    alert("There was an error in setting the metadata");
+}
+
+// Set the metadata
+entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
+</code></pre></div>
+<p><strong>iOS Quirk</strong></p>
+
+<ul>
+<li>  Solamente el <code>com.apple.MobileBackup</code> se admite el atributo extendido. Establezca el valor en <code>1</code> para evitar que el archivo se hace backup de iCloud. Establezca el valor en `` para volver a habilitar el archivo para realizar backup de iCloud.</li>
+</ul>
+
+<p><strong>Ejemplo rápido</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function setFileMetadata(localFileSystem, filePath, metadataKey, metadataValue)
+{
+    var onSetMetadataWin = function() {
+        console.log("success setting metadata")
+    }
+    var onSetMetadataFail = function() {
+        console.log("error setting metadata")
+    }
+
+    var onGetFileWin = function(parent) {
+        var data = {};
+        data[metadataKey] = metadataValue;
+        parent.setMetadata(onSetMetadataWin, onSetMetadataFail, data);
+    }
+    var onGetFileFail = function() {
+        console.log("error getting file")
+    }
+
+    var onFSWin = function(fileSystem) {
+        fileSystem.root.getFile(filePath, {create: true, exclusive: false}, onGetFileWin, onGetFileFail);
+    }
+
+    var onFSFail = function(evt) {
+        console.log(evt.target.error.code);
+    }
+
+    window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+}
+
+    setFileMetadata(LocalFileSystem.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
+</code></pre></div>
+<h2>moveTo</h2>
+
+<p>Mover un archivo a una ubicación diferente en el sistema de archivos. Un error de los resultados si la aplicación intenta:</p>
+
+<ul>
+<li><p>mover un archivo a su padre si no proporciona un nombre diferente a su actual;</p></li>
+<li><p>mover un archivo a un sendero ocupado por un directorio;</p></li>
+</ul>
+
+<p>Además, mover un archivo en la cima de un archivo existente intentos eliminar y reemplazar ese archivo.</p>
+
+<p><strong>Parámetros:</strong></p>
+
+<ul>
+<li><p><strong>padres</strong>: el directorio al que se mueva el archivo. <em>(DirectoryEntry)</em></p></li>
+<li><p><strong>newName</strong>: el nuevo nombre del archivo. Por defecto el nombre actual si no se especifica. <em>(DOMString)</em></p></li>
+<li><p><strong>successCallback</strong>: una devolución de llamada que se pasa el nuevo archivo <code>FileEntry</code> objeto. <em>(Función)</em></p></li>
+<li><p><strong>errorCallback</strong>: una devolución de llamada que se ejecuta si se produce un error al intentar mover el archivo. Invocado con un <code>[FileError](../fileerror/fileerror.html)</code> objeto. <em>(Función)</em></p></li>
+</ul>
+
+<p><strong>Ejemplo rápido</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success(entry) {
+    console.log("New Path: " + entry.fullPath);
+}
+
+function fail(error) {
+    alert(error.code);
+}
+
+function moveFile(entry) {
+    var parent = document.getElementById('parent').value,
+        parentName = parent.substring(parent.lastIndexOf('/')+1),
+        parentEntry = new DirectoryEntry(parentName, parent);
+
+    // move the file to a new directory and rename it
+    entry.moveTo(parentEntry, "newFile.txt", success, fail);
+}
+</code></pre></div>
+<h2>copyTo</h2>
+
+<p>Copiar un archivo a una nueva ubicación en el sistema de archivos. Un error de los resultados si la aplicación intenta:</p>
+
+<ul>
+<li>  copiar un archivo a su padre si no se proporciona un nombre diferente a la actual.</li>
+</ul>
+
+<p><strong>Parámetros:</strong></p>
+
+<ul>
+<li><p><strong>padres</strong>: el directorio al que copiar el archivo. <em>(DirectoryEntry)</em></p></li>
+<li><p><strong>newName</strong>: el nuevo nombre del archivo. Por defecto el nombre actual si no se especifica. <em>(DOMString)</em></p></li>
+<li><p><strong>successCallback</strong>: una devolución de llamada que se pasa el nuevo archivo <code>FileEntry</code> objeto. <em>(Función)</em></p></li>
+<li><p><strong>errorCallback</strong>: una devolución de llamada que se ejecuta si se produce un error al intentar copiar el archivo. Invocado con un <code>[FileError](../fileerror/fileerror.html)</code> objeto. <em>(Función)</em></p></li>
+</ul>
+
+<p><strong>Ejemplo rápido</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function win(entry) {
+    console.log("New Path: " + entry.fullPath);
+}
+
+function fail(error) {
+    alert(error.code);
+}
+
+function copyFile(entry) {
+    var parent = document.getElementById('parent').value,
+        parentName = parent.substring(parent.lastIndexOf('/')+1),
+        parentEntry = new DirectoryEntry(parentName, parent);
+
+    // copy the file to a new directory and rename it
+    entry.copyTo(parentEntry, "file.copy", success, fail);
+}
+</code></pre></div>
+<h2>Visita</h2>
+
+<p>Devuelve una dirección URL que se puede utilizar para localizar el archivo.</p>
+
+<p><strong>Ejemplo rápido</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">// Request the URL for this entry
+var fileURL = entry.toURL();
+console.log(fileURL);
+</code></pre></div>
+<h2>quitar</h2>
+
+<p>Elimina un archivo.</p>
+
+<p><strong>Parámetros:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: una devolución de llamada que se ejecuta después de que el archivo se ha eliminado. Se invoca sin parámetros. <em>(Función)</em></p></li>
+<li><p><strong>errorCallback</strong>: una devolución de llamada que se ejecuta si se produce un error al intentar borrar el archivo. Invocado con un <code>[FileError](../fileerror/fileerror.html)</code> objeto. <em>(Función)</em></p></li>
+</ul>
+
+<p><strong>Ejemplo rápido</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success(entry) {
+    console.log("Removal succeeded");
+}
+
+function fail(error) {
+    alert('Error removing file: ' + error.code);
+}
+
+// remove the file
+entry.remove(success, fail);
+</code></pre></div>
+<h2>getParent</h2>
+
+<p>Ver el padre <code>[DirectoryEntry](../directoryentry/directoryentry.html)</code> que contiene el archivo.</p>
+
+<p><strong>Parámetros:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: una devolución de llamada que se pasa a los padres del archivo <code>[DirectoryEntry](../directoryentry/directoryentry.html)</code> . <em>(Función)</em></p></li>
+<li><p><strong>errorCallback</strong>: una devolución de llamada que se ejecuta si se produce un error al intentar recuperar el padre <code>[DirectoryEntry](../directoryentry/directoryentry.html)</code> . Invocado con un <code>[FileError](../fileerror/fileerror.html)</code> objeto. <em>(Función)</em></p></li>
+</ul>
+
+<p><strong>Ejemplo rápido</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success(parent) {
+    console.log("Parent Name: " + parent.name);
+}
+
+function fail(error) {
+    alert(error.code);
+}
+
+// Get the parent DirectoryEntry
+entry.getParent(success, fail);
+</code></pre></div>
+<h2>createWriter</h2>
+
+<p>Crear un <code>[FileWriter](../filewriter/filewriter.html)</code> objeto asociado con el archivo representado por el<code>FileEntry</code>.</p>
+
+<p><strong>Parámetros:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: una devolución de llamada que se pasa un <code>[FileWriter](../filewriter/filewriter.html)</code> objeto. <em>(Función)</em></p></li>
+<li><p><strong>errorCallback</strong>: una devolución de llamada que se ejecuta si se produce un error al intentar crear el <a href="../filewriter/filewriter.html">FileWriter</a>. Invocado con un <code>[FileError](../fileerror/fileerror.html)</code> objeto. <em>(Función)</em></p></li>
+</ul>
+
+<p><strong>Ejemplo rápido</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success(writer) {
+    writer.write("Some text to the file");
+}
+
+function fail(error) {
+    alert(error.code);
+}
+
+// create a FileWriter to write to the file
+entry.createWriter(success, fail);
+</code></pre></div>
+<h2>archivo</h2>
+
+<p>Volver a <code>File</code> objeto que representa el estado actual del archivo que esta <code>FileEntry</code> representa.</p>
+
+<p><strong>Parámetros:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: una devolución de llamada que se pasa un <code>File</code> objeto. <em>(Función)</em></p></li>
+<li><p><strong>errorCallback</strong>: una devolución de llamada que se ejecuta si se produce un error al crear el <code>File</code> objeto, por ejemplo, cuando el archivo ya no existe. Invocado con un <code>[FileError](../fileerror/fileerror.html)</code> objeto. <em>(Función)</em></p></li>
+</ul>
+
+<p><strong>Ejemplo rápido</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success(file) {
+    console.log("File size: " + file.size);
+}
+
+function fail(error) {
+    alert("Unable to retrieve file properties: " + error.code);
+}
+
+// obtain properties of a file
+entry.file(success, fail);
+</code></pre></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  3.1.0", "language: es"] }
+    });
+</script>
+
+</body>
+</html>

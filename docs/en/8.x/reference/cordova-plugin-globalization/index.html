@@ -1,0 +1,3471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="Access locale data. ">
+
+    <title>
+        
+            
+                Globalization - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/8.x/reference/cordova-plugin-globalization/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '8.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/cli/template.html">
+                Templates for apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/platforms/windows/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/platforms/osx/index.html">
+                OS X
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/appdev/whitelist/index.html">
+                Whitelisting
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/platforms/windows/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-cli/index.html">
+                CLI Reference
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-plugin-battery-status/index.html">
+                Battery Status
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-plugin-camera/index.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-plugin-device/index.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-plugin-dialogs/index.html">
+                Dialogs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-plugin-file/index.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-plugin-geolocation/index.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-plugin-inappbrowser/index.html">
+                Inappbrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-plugin-media/index.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-plugin-media-capture/index.html">
+                Media Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-plugin-network-information/index.html">
+                Network Information
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-plugin-screen-orientation/index.html">
+                Screen Orientation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-plugin-splashscreen/index.html">
+                Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-plugin-statusbar/index.html">
+                Statusbar
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-plugin-vibration/index.html">
+                Vibration
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/8.x/reference/cordova-plugin-whitelist/index.html">
+                Whitelist
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/cli/template.html">
+        Templates for apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/platforms/windows/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/platforms/osx/index.html">
+        OS X
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/appdev/whitelist/index.html">
+        Whitelisting
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/platforms/windows/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-cli/index.html">
+        CLI Reference
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-plugin-battery-status/index.html">
+        Battery Status
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-plugin-camera/index.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-plugin-device/index.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-plugin-dialogs/index.html">
+        Dialogs
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-plugin-file/index.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-plugin-geolocation/index.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-plugin-inappbrowser/index.html">
+        Inappbrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-plugin-media/index.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-plugin-media-capture/index.html">
+        Media Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-plugin-network-information/index.html">
+        Network Information
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-plugin-screen-orientation/index.html">
+        Screen Orientation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-plugin-splashscreen/index.html">
+        Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-plugin-statusbar/index.html">
+        Statusbar
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-plugin-vibration/index.html">
+        Vibration
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/8.x/reference/cordova-plugin-whitelist/index.html">
+        Whitelist
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+                    <a class="edit hidden-xs hidden-sm" href="https://github.com/apache/cordova-plugin-globalization/blob/master/README.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+
+                
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        English
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/8.x/reference/cordova-plugin-globalization/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/8.x/reference/cordova-plugin-globalization/" class="">
+                                
+                                    <span class="selected">
+                                        English
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/8.x/reference/cordova-plugin-globalization/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/8.x/reference/cordova-plugin-globalization/" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/8.x/reference/cordova-plugin-globalization/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/8.x/reference/cordova-plugin-globalization/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/8.x/reference/cordova-plugin-globalization/" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/8.x/reference/cordova-plugin-globalization/" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/8.x/reference/cordova-plugin-globalization/" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/8.x/reference/cordova-plugin-globalization/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/8.x/reference/cordova-plugin-globalization/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/8.x/reference/cordova-plugin-globalization/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        8.x
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                8.x
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/" class="missing-page">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/" class="missing-page">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/" class="missing-page">
+                                
+                                    
+                                3.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/" class="missing-page">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/" class="missing-page">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/" class="missing-page">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is outdated!
+                    <a href="/docs/en/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+                <div class="alert alert-warning docs-alert" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                     master.
+                    <a href="https://github.com/apache/cordova-plugin-globalization/releases">
+                        
+                    </a>
+                </div>
+            
+
+            <div id="page-toc-source">
+                <!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<table><thead>
+<tr>
+<th style="text-align: center">AppVeyor</th>
+<th style="text-align: center">Travis CI</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><a href="https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-geolocation"><img src="https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-geolocation?branch=master" alt="Build status"></a></td>
+<td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-geolocation"><img src="https://travis-ci.org/apache/cordova-plugin-geolocation.svg?branch=master" alt="Build Status"></a></td>
+</tr>
+</tbody></table>
+
+<h1>cordova-plugin-globalization</h1>
+
+<p>This plugin obtains information and performs operations specific to the user&#39;s
+locale, language, and timezone. Note the difference between locale and language:
+locale controls how numbers, dates, and times are displayed for a region, while
+language determines what language text appears as, independently of locale settings.
+Often developers use locale to set both settings, but there is no reason a user
+couldn&#39;t set her language to &quot;English&quot; but locale to &quot;French&quot;, so that text is
+displayed in English but dates, times, etc., are displayed as they are in France.
+Unfortunately, most mobile platforms currently do not make a distinction between
+these settings.</p>
+
+<p>This plugin defines global <code>navigator.globalization</code> object.</p>
+
+<p>Although in the global scope, it is not available until after the <code>deviceready</code> event.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>Report issues with this plugin on the <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20Globalization%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC">Apache Cordova issue tracker</a></p>
+
+<h3>Deprecation Notice</h3>
+
+<p>With the <a href="https://www.ecma-international.org/ecma-402/1.0/">ECMA Internationalization API</a> now supported on iOS, Android and Windows devices, this plugin is not required any more. Migrating from this plugin to the <a href="https://www.ecma-international.org/ecma-402/1.0/">ECMA Internationalization API</a> is explained in this <a href="https://cordova.apache.org/news/2017/11/20/migrate-from-cordova-globalization-plugin.html">Cordova blog post</a>.</p>
+
+<h2>Installation</h2>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add cordova-plugin-globalization
+</code></pre></div>
+<h2>Objects</h2>
+
+<ul>
+<li>GlobalizationError</li>
+</ul>
+
+<h2>Methods</h2>
+
+<ul>
+<li>navigator.globalization.getPreferredLanguage</li>
+<li>navigator.globalization.getLocaleName</li>
+<li>navigator.globalization.dateToString</li>
+<li>navigator.globalization.stringToDate</li>
+<li>navigator.globalization.getDatePattern</li>
+<li>navigator.globalization.getDateNames</li>
+<li>navigator.globalization.isDayLightSavingsTime</li>
+<li>navigator.globalization.getFirstDayOfWeek</li>
+<li>navigator.globalization.numberToString</li>
+<li>navigator.globalization.stringToNumber</li>
+<li>navigator.globalization.getNumberPattern</li>
+<li>navigator.globalization.getCurrencyPattern</li>
+</ul>
+
+<h2>navigator.globalization.getPreferredLanguage</h2>
+
+<p>Get the BCP 47 language tag for the client&#39;s current language.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getPreferredLanguage</span><span class="p">(</span><span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">);</span>
+</code></pre></div>
+<h3>Description</h3>
+
+<p>Returns the BCP-47 compliant language identifier tag to the <code>successCallback</code>
+with a <code>properties</code> object as a parameter. That object should have a <code>value</code>
+property with a <code>String</code> value.</p>
+
+<p>If there is an error getting the language, then the <code>errorCallback</code>
+executes with a <code>GlobalizationError</code> object as a parameter. The
+error&#39;s expected code is <code>GlobalizationError.UNKNOWN_ERROR</code>.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>Browser</li>
+<li>Firefox OS</li>
+<li>iOS</li>
+<li>Windows Phone 8</li>
+<li>Windows</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>When the browser is set to the <code>en-US</code> language, this should display a
+popup dialog with the text <code>language: en-US</code>:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getPreferredLanguage</span><span class="p">(</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">language</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'language: '</span> <span class="o">+</span> <span class="nx">language</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);},</span>
+        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting language\n'</span><span class="p">);}</span>
+    <span class="p">);</span>
+</code></pre></div>
+<h3>Android Quirks</h3>
+
+<ul>
+<li>Returns the ISO 639-1 two-letter language code, upper case ISO 3166-1
+country code and variant separated by hyphens. Examples: &quot;en&quot;, &quot;en-US&quot;, &quot;US&quot;</li>
+</ul>
+
+<h3>Windows Phone 8 Quirks</h3>
+
+<ul>
+<li>Returns the ISO 639-1 two-letter language code and ISO 3166-1 country code
+of the regional variant corresponding to the &quot;Language&quot; setting, separated by
+a hyphen.</li>
+<li>Note that the regional variant is a property of the &quot;Language&quot; setting and
+not determined by the unrelated &quot;Country/Region&quot; setting on Windows Phone.</li>
+</ul>
+
+<h3>Windows Quirks</h3>
+
+<ul>
+<li>Returns the ISO 639-1 two-letter language code and ISO 3166-1 country code
+of the regional variant corresponding to the &quot;Language&quot; setting, separated by
+a hyphen.</li>
+</ul>
+
+<h3>Browser Quirks</h3>
+
+<ul>
+<li>Falls back on getLocaleName</li>
+</ul>
+
+<h2>navigator.globalization.getLocaleName</h2>
+
+<p>Returns the BCP 47 compliant tag for the client&#39;s current locale setting.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getLocaleName</span><span class="p">(</span><span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">);</span>
+</code></pre></div>
+<h3>Description</h3>
+
+<p>Returns the BCP 47 compliant locale identifier string to the <code>successCallback</code>
+with a <code>properties</code> object as a parameter. That object should have a <code>value</code>
+property with a <code>String</code> value. The locale tag will consist of a two-letter lower
+case language code, two-letter upper case country code, and (unspecified) variant
+code, separated by a hyphen.</p>
+
+<p>If there is an error getting the locale, then the <code>errorCallback</code>
+executes with a <code>GlobalizationError</code> object as a parameter. The
+error&#39;s expected code is <code>GlobalizationError.UNKNOWN_ERROR</code>.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>Firefox OS</li>
+<li>iOS</li>
+<li>Windows Phone 8</li>
+<li>Windows</li>
+<li>Browser</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>When the browser is set to the <code>en-US</code> locale, this displays a popup
+dialog with the text <code>locale: en-US</code>.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getLocaleName</span><span class="p">(</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">locale</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'locale: '</span> <span class="o">+</span> <span class="nx">locale</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);},</span>
+        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting locale\n'</span><span class="p">);}</span>
+    <span class="p">);</span>
+</code></pre></div>
+<h3>Android Quirks</h3>
+
+<ul>
+<li>Java does not distinguish between a set &quot;langauge&quot; and set &quot;locale,&quot; so this
+method is essentially the same as <code>navigator.globalization.getPreferredLanguage()</code>.</li>
+</ul>
+
+<h3>Windows Phone 8 Quirks</h3>
+
+<ul>
+<li>Returns the ISO 639-1 two-letter language code and ISO 3166-1 country code
+of the regional variant corresponding to the &quot;Regional Format&quot; setting, separated
+by a hyphen.</li>
+</ul>
+
+<h3>Windows Quirks</h3>
+
+<ul>
+<li>Locale setting can be changed in Control Panel -&gt; Clock, Language and Region
+-&gt; Region -&gt; Formats -&gt; Format,
+and in Settings -&gt; Region -&gt; Regional Format on Windows Phone 8.1.</li>
+</ul>
+
+<h3>Browser Quirks</h3>
+
+<ul>
+<li>IE returns the locale of operating system. Chrome and Firefox return browser language tag.</li>
+</ul>
+
+<h2>navigator.globalization.dateToString</h2>
+
+<p>Returns a date formatted as a string according to the client&#39;s locale and timezone.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">dateToString</span><span class="p">(</span><span class="nx">date</span><span class="p">,</span> <span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</code></pre></div>
+<h3>Description</h3>
+
+<p>Returns the formatted date <code>String</code> via a <code>value</code> property accessible
+from the object passed as a parameter to the <code>successCallback</code>.</p>
+
+<p>The inbound <code>date</code> parameter should be of type <code>Date</code>.</p>
+
+<p>If there is an error formatting the date, then the <code>errorCallback</code>
+executes with a <code>GlobalizationError</code> object as a parameter. The
+error&#39;s expected code is <code>GlobalizationError.FORMATTING_ERROR</code>.</p>
+
+<p>The <code>options</code> parameter is optional, and its default values are:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="p">{</span><span class="nl">formatLength</span><span class="p">:</span><span class="s1">'short'</span><span class="p">,</span> <span class="nx">selector</span><span class="p">:</span><span class="s1">'date and time'</span><span class="p">}</span>
+</code></pre></div>
+<p>The <code>options.formatLength</code> can be <code>short</code>, <code>medium</code>, <code>long</code>, or <code>full</code>.</p>
+
+<p>The <code>options.selector</code> can be <code>date</code>, <code>time</code> or <code>date and time</code>.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>Firefox OS</li>
+<li>iOS</li>
+<li>Windows Phone 8</li>
+<li>Windows</li>
+<li>Browser</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>If the browser is set to the <code>en_US</code> locale, this displays a popup
+dialog with text similar to <code>date: 9/25/2012 4:21PM</code> using the default
+options:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">dateToString</span><span class="p">(</span>
+        <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">date</span><span class="p">)</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s1">'date: '</span> <span class="o">+</span> <span class="nx">date</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span> <span class="p">},</span>
+        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting dateString\n'</span><span class="p">);</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="na">formatLength</span><span class="p">:</span> <span class="s1">'short'</span><span class="p">,</span> <span class="na">selector</span><span class="p">:</span> <span class="s1">'date and time'</span> <span class="p">}</span>
+    <span class="p">);</span>
+</code></pre></div>
+<h3>Android Quirks</h3>
+
+<ul>
+<li><code>formatLength</code> options are a subset of Unicode
+<a href="http://unicode.org/reports/tr35/tr35-4.html">UTS #35</a>. The default option
+<code>short</code> depends on a user selected date format within
+<code>Settings -&gt; System -&gt; Date &amp; time -&gt; Choose date format</code>,
+which provide a <code>year</code> pattern only with 4 digits, not 2 digits.
+This means that it is not completely aligned with
+<a href="http://demo.icu-project.org/icu-bin/locexp?d_=en_US&amp;_=en_US">ICU</a>.</li>
+</ul>
+
+<h3>Windows Phone 8 Quirks</h3>
+
+<ul>
+<li><p>The <code>formatLength</code> option supports only <code>short</code> and <code>full</code> values.</p></li>
+<li><p>The pattern for &#39;date and time&#39; selector is always a full datetime format.</p></li>
+<li><p>The returned value may be not completely aligned with ICU depending on a user locale.</p></li>
+</ul>
+
+<h3>Windows Quirks</h3>
+
+<ul>
+<li><p>The <code>formatLength</code> option supports only <code>short</code> and <code>full</code> values.</p></li>
+<li><p>The pattern for &#39;date and time&#39; selector is always a full datetime format.</p></li>
+<li><p>The returned value may be not completely aligned with ICU depending on a user locale.</p></li>
+</ul>
+
+<h3>Browser Quirks</h3>
+
+<ul>
+<li><p>Only 79 locales are supported because moment.js is used in this method.</p></li>
+<li><p>The returned value may be not completely aligned with ICU depending on a user locale.</p></li>
+<li><p><code>time</code> selector supports <code>full</code> and <code>short</code> formatLength only.</p></li>
+</ul>
+
+<h3>Firefox OS Quirks</h3>
+
+<ul>
+<li><code>formatLength</code> is not distinguishing <code>long</code> and <code>full</code></li>
+<li>only one method of displaying date (no <code>long</code> or <code>full</code> version)</li>
+</ul>
+
+<h2>navigator.globalization.getCurrencyPattern</h2>
+
+<p>Returns a pattern string to format and parse currency values according
+to the client&#39;s user preferences and ISO 4217 currency code.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">     <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getCurrencyPattern</span><span class="p">(</span><span class="nx">currencyCode</span><span class="p">,</span> <span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">);</span>
+</code></pre></div>
+<h3>Description</h3>
+
+<p>Returns the pattern to the <code>successCallback</code> with a <code>properties</code> object
+as a parameter. That object should contain the following properties:</p>
+
+<ul>
+<li><p><strong>pattern</strong>: The currency pattern to format and parse currency values.  The patterns follow <a href="http://unicode.org/reports/tr35/tr35-4.html">Unicode Technical Standard #35</a>. <em>(String)</em></p></li>
+<li><p><strong>code</strong>: The ISO 4217 currency code for the pattern. <em>(String)</em></p></li>
+<li><p><strong>fraction</strong>: The number of fractional digits to use when parsing and formatting currency. <em>(Number)</em></p></li>
+<li><p><strong>rounding</strong>: The rounding increment to use when parsing and formatting. <em>(Number)</em></p></li>
+<li><p><strong>decimal</strong>: The decimal symbol to use for parsing and formatting. <em>(String)</em></p></li>
+<li><p><strong>grouping</strong>: The grouping symbol to use for parsing and formatting. <em>(String)</em></p></li>
+</ul>
+
+<p>The inbound <code>currencyCode</code> parameter should be a <code>String</code> of one of
+the ISO 4217 currency codes, for example &#39;USD&#39;.</p>
+
+<p>If there is an error obtaining the pattern, then the <code>errorCallback</code>
+executes with a <code>GlobalizationError</code> object as a parameter. The
+error&#39;s expected code is <code>GlobalizationError.FORMATTING_ERROR</code>.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>iOS</li>
+<li>Windows</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>When the browser is set to the <code>en_US</code> locale and the selected
+currency is United States Dollars, this example displays a popup
+dialog with text similar to the results that follow:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getCurrencyPattern</span><span class="p">(</span>
+        <span class="s1">'USD'</span><span class="p">,</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">pattern</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="s1">'pattern: '</span>  <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">pattern</span>  <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
+                  <span class="s1">'code: '</span>     <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">code</span>     <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
+                  <span class="s1">'fraction: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">fraction</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
+                  <span class="s1">'rounding: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">rounding</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
+                  <span class="s1">'decimal: '</span>  <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">decimal</span>  <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
+                  <span class="s1">'grouping: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">grouping</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting pattern\n'</span><span class="p">);</span> <span class="p">}</span>
+    <span class="p">);</span>
+</code></pre></div>
+<p>Expected result:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nx">pattern</span><span class="p">:</span> <span class="nx">$</span><span class="err">#</span><span class="p">,</span><span class="err">##</span><span class="mi">0</span><span class="p">.</span><span class="err">##</span><span class="p">;(</span><span class="nx">$</span><span class="err">#</span><span class="p">,</span><span class="err">##</span><span class="mi">0</span><span class="p">.</span><span class="err">##</span><span class="p">)</span>
+    <span class="nx">code</span><span class="p">:</span> <span class="nx">USD</span>
+    <span class="nx">fraction</span><span class="p">:</span> <span class="mi">2</span>
+    <span class="nx">rounding</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="nx">decimal</span><span class="p">:</span> <span class="p">.</span>
+    <span class="nx">grouping</span><span class="p">:</span> <span class="p">,</span>
+</code></pre></div>
+<h3>Windows Quirks</h3>
+
+<ul>
+<li>Only &#39;code&#39; and &#39;fraction&#39; properties are supported</li>
+</ul>
+
+<h2>navigator.globalization.getDateNames</h2>
+
+<p>Returns an array of the names of the months or days of the week,
+depending on the client&#39;s user preferences and calendar.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getDateNames</span><span class="p">(</span><span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</code></pre></div>
+<h3>Description</h3>
+
+<p>Returns the array of names to the <code>successCallback</code> with a
+<code>properties</code> object as a parameter. That object contains a <code>value</code>
+property with an <code>Array</code> of <code>String</code> values. The array features names
+starting from either the first month in the year or the first day of
+the week, depending on the option selected.</p>
+
+<p>If there is an error obtaining the names, then the <code>errorCallback</code>
+executes with a <code>GlobalizationError</code> object as a parameter. The
+error&#39;s expected code is <code>GlobalizationError.UNKNOWN_ERROR</code>.</p>
+
+<p>The <code>options</code> parameter is optional, and its default values are:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="p">{</span><span class="nl">type</span><span class="p">:</span><span class="s1">'wide'</span><span class="p">,</span> <span class="nx">item</span><span class="p">:</span><span class="s1">'months'</span><span class="p">}</span>
+</code></pre></div>
+<p>The value of <code>options.type</code> can be <code>narrow</code> or <code>wide</code>.</p>
+
+<p>The value of <code>options.item</code> can be <code>months</code> or <code>days</code>.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>Firefox OS</li>
+<li>iOS</li>
+<li>Windows Phone 8</li>
+<li>Windows</li>
+<li>Browser</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>When the browser is set to the <code>en_US</code> locale, this example displays
+a series of twelve popup dialogs, one per month, with text similar to
+<code>month: January</code>:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getDateNames</span><span class="p">(</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">names</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">names</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">alert</span><span class="p">(</span><span class="s1">'month: '</span> <span class="o">+</span> <span class="nx">names</span><span class="p">.</span><span class="nx">value</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting names\n'</span><span class="p">);</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="s1">'wide'</span><span class="p">,</span> <span class="na">item</span><span class="p">:</span> <span class="s1">'months'</span> <span class="p">}</span>
+    <span class="p">);</span>
+</code></pre></div>
+<h3>Firefox OS Quirks</h3>
+
+<ul>
+<li><code>options.type</code> supports a <code>genitive</code> value, important for some languages.</li>
+</ul>
+
+<h3>Windows Phone 8 Quirks</h3>
+
+<ul>
+<li>The array of months contains 13 elements.</li>
+<li>The returned array may be not completely aligned with ICU depending on a user locale.</li>
+</ul>
+
+<h3>Windows Quirks</h3>
+
+<ul>
+<li>The array of months contains 12 elements.</li>
+<li>The returned array may be not completely aligned with ICU depending on a user locale.</li>
+</ul>
+
+<h3>Browser Quirks</h3>
+
+<ul>
+<li>Date names are not completely aligned with ICU.</li>
+<li>The array of months contains 12 elements.</li>
+</ul>
+
+<h2>navigator.globalization.getDatePattern</h2>
+
+<p>Returns a pattern string to format and parse dates according to the
+client&#39;s user preferences.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getDatePattern</span><span class="p">(</span><span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</code></pre></div>
+<h3>Description</h3>
+
+<p>Returns the pattern to the <code>successCallback</code>. The object passed in as
+a parameter contains the following properties:</p>
+
+<ul>
+<li><p><strong>pattern</strong>: The date and time pattern to format and parse dates. The patterns follow <a href="http://unicode.org/reports/tr35/tr35-4.html">Unicode Technical Standard #35</a>. <em>(String)</em></p></li>
+<li><p><strong>timezone</strong>: The abbreviated name of the time zone on the client. <em>(String)</em></p></li>
+<li><p><strong>iana_timezone</strong>: The IANA name of the time zone on the client. <em>(String)</em></p></li>
+<li><p><strong>utc_offset</strong>: The current difference in seconds between the client&#39;s time zone and coordinated universal time. <em>(Number)</em></p></li>
+<li><p><strong>dst_offset</strong>: The current daylight saving time offset in seconds between the client&#39;s non-daylight saving&#39;s time zone and the client&#39;s daylight saving&#39;s time zone. <em>(Number)</em></p></li>
+</ul>
+
+<p>If there is an error obtaining the pattern, the <code>errorCallback</code>
+executes with a <code>GlobalizationError</code> object as a parameter. The
+error&#39;s expected code is <code>GlobalizationError.PATTERN_ERROR</code>.</p>
+
+<p>The <code>options</code> parameter is optional, and defaults to the following values:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="p">{</span><span class="nl">formatLength</span><span class="p">:</span><span class="s1">'short'</span><span class="p">,</span> <span class="nx">selector</span><span class="p">:</span><span class="s1">'date and time'</span><span class="p">}</span>
+</code></pre></div>
+<p>The <code>options.formatLength</code> can be <code>short</code>, <code>medium</code>, <code>long</code>, or
+<code>full</code>.  The <code>options.selector</code> can be <code>date</code>, <code>time</code> or <code>date and
+time</code>.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>iOS</li>
+<li>Windows Phone 8</li>
+<li>Windows</li>
+<li>Browser</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>When the browser is set to the <code>en_US</code> locale, this example displays
+a popup dialog with text such as <code>pattern: M/d/yyyy h:mm a</code>:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="kd">function</span> <span class="nx">checkDatePattern</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getDatePattern</span><span class="p">(</span>
+            <span class="kd">function</span> <span class="p">(</span><span class="nx">date</span><span class="p">)</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s1">'pattern: '</span> <span class="o">+</span> <span class="nx">date</span><span class="p">.</span><span class="nx">pattern</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span> <span class="p">},</span>
+            <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting pattern\n'</span><span class="p">);</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="na">formatLength</span><span class="p">:</span> <span class="s1">'short'</span><span class="p">,</span> <span class="na">selector</span><span class="p">:</span> <span class="s1">'date and time'</span> <span class="p">}</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+<h3>Windows Phone 8 Quirks</h3>
+
+<ul>
+<li><p>The <code>formatLength</code> supports only <code>short</code> and <code>full</code> values.</p></li>
+<li><p>The <code>pattern</code> for <code>date and time</code> pattern returns only full datetime format.</p></li>
+<li><p>The <code>timezone</code> returns the full time zone name.</p></li>
+<li><p>The <code>dst_offset</code> property is not supported, and always returns zero.</p></li>
+<li><p>The pattern may be not completely aligned with ICU depending on a user locale.</p></li>
+</ul>
+
+<h3>Windows Quirks</h3>
+
+<ul>
+<li><p>The <code>formatLength</code> supports only <code>short</code> and <code>full</code> values.</p></li>
+<li><p>The <code>pattern</code> for <code>date and time</code> pattern returns only full datetime format.</p></li>
+<li><p>The <code>timezone</code> returns the full time zone name.</p></li>
+<li><p>The <code>iana_timezone</code> property is not supported, and always returns empty string.</p></li>
+<li><p>The <code>dst_offset</code> property is not supported, and always returns zero.</p></li>
+<li><p>The pattern may be not completely aligned with ICU depending on a user locale.</p></li>
+</ul>
+
+<h3>Browser Quirks</h3>
+
+<ul>
+<li><p>The &#39;pattern&#39; property is not supported and returns empty string.</p></li>
+<li><p>Only Chrome returns &#39;timezone&#39; property. Its format is &quot;Part of the world/{City}&quot;.
+Other browsers return empty string.</p></li>
+</ul>
+
+<h2>navigator.globalization.getFirstDayOfWeek</h2>
+
+<p>Returns the first day of the week according to the client&#39;s user
+preferences and calendar.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getFirstDayOfWeek</span><span class="p">(</span><span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">);</span>
+</code></pre></div>
+<h3>Description</h3>
+
+<p>The days of the week are numbered starting from 1, where 1 is assumed
+to be Sunday.  Returns the day to the <code>successCallback</code> with a
+<code>properties</code> object as a parameter. That object should have a <code>value</code>
+property with a <code>Number</code> value.</p>
+
+<p>If there is an error obtaining the pattern, then the <code>errorCallback</code>
+executes with a <code>GlobalizationError</code> object as a parameter. The
+error&#39;s expected code is <code>GlobalizationError.UNKNOWN_ERROR</code>.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>Firefox OS</li>
+<li>iOS</li>
+<li>Windows Phone 8</li>
+<li>Windows</li>
+<li>Browser</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>When the browser is set to the <code>en_US</code> locale, this displays a
+popup dialog with text similar to <code>day: 1</code>.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getFirstDayOfWeek</span><span class="p">(</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">day</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'day: '</span> <span class="o">+</span> <span class="nx">day</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);},</span>
+        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting day\n'</span><span class="p">);}</span>
+    <span class="p">);</span>
+</code></pre></div>
+<h3>Windows Quirks</h3>
+
+<ul>
+<li>On Windows 8.0/8.1 the value depends on user&#39; calendar preferences. On Windows Phone 8.1
+the value depends on current locale.</li>
+</ul>
+
+<h3>Browser Quirks</h3>
+
+<ul>
+<li>Only 79 locales are supported because moment.js is used in this method.</li>
+</ul>
+
+<h2>navigator.globalization.getNumberPattern</h2>
+
+<p>Returns a pattern string to format and parse numbers according to the client&#39;s user preferences.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getNumberPattern</span><span class="p">(</span><span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</code></pre></div>
+<h3>Description</h3>
+
+<p>Returns the pattern to the <code>successCallback</code> with a <code>properties</code> object
+as a parameter. That object contains the following properties:</p>
+
+<ul>
+<li><p><strong>pattern</strong>: The number pattern to format and parse numbers.  The patterns follow <a href="http://unicode.org/reports/tr35/tr35-4.html">Unicode Technical Standard #35</a>. <em>(String)</em></p></li>
+<li><p><strong>symbol</strong>: The symbol to use when formatting and parsing, such as a percent or currency symbol. <em>(String)</em></p></li>
+<li><p><strong>fraction</strong>: The number of fractional digits to use when parsing and formatting numbers. <em>(Number)</em></p></li>
+<li><p><strong>rounding</strong>: The rounding increment to use when parsing and formatting. <em>(Number)</em></p></li>
+<li><p><strong>positive</strong>: The symbol to use for positive numbers when parsing and formatting. <em>(String)</em></p></li>
+<li><p><strong>negative</strong>: The symbol to use for negative numbers when parsing and formatting. <em>(String)</em></p></li>
+<li><p><strong>decimal</strong>: The decimal symbol to use for parsing and formatting. <em>(String)</em></p></li>
+<li><p><strong>grouping</strong>: The grouping symbol to use for parsing and formatting. <em>(String)</em></p></li>
+</ul>
+
+<p>If there is an error obtaining the pattern, then the <code>errorCallback</code>
+executes with a <code>GlobalizationError</code> object as a parameter. The
+error&#39;s expected code is <code>GlobalizationError.PATTERN_ERROR</code>.</p>
+
+<p>The <code>options</code> parameter is optional, and default values are:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="p">{</span><span class="nl">type</span><span class="p">:</span><span class="s1">'decimal'</span><span class="p">}</span>
+</code></pre></div>
+<p>The <code>options.type</code> can be <code>decimal</code>, <code>percent</code>, or <code>currency</code>.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>iOS</li>
+<li>Windows Phone 8</li>
+<li>Windows</li>
+<li>Browser</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>When the browser is set to the <code>en_US</code> locale, this should display a
+popup dialog with text similar to the results that follow:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getNumberPattern</span><span class="p">(</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">pattern</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'pattern: '</span>  <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">pattern</span>  <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
+                                  <span class="s1">'symbol: '</span>   <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">symbol</span>   <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
+                                  <span class="s1">'fraction: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">fraction</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
+                                  <span class="s1">'rounding: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">rounding</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
+                                  <span class="s1">'positive: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">positive</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
+                                  <span class="s1">'negative: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">negative</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
+                                  <span class="s1">'decimal: '</span>  <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">decimal</span>  <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
+                                  <span class="s1">'grouping: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">grouping</span><span class="p">);},</span>
+        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting pattern\n'</span><span class="p">);},</span>
+        <span class="p">{</span><span class="na">type</span><span class="p">:</span><span class="s1">'decimal'</span><span class="p">}</span>
+    <span class="p">);</span>
+</code></pre></div>
+<p>Results:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nx">pattern</span><span class="p">:</span> <span class="err">#</span><span class="p">,</span><span class="err">##</span><span class="mi">0</span><span class="p">.</span><span class="err">###</span>
+    <span class="nx">symbol</span><span class="p">:</span> <span class="p">.</span>
+    <span class="nx">fraction</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="nx">rounding</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="nx">positive</span><span class="p">:</span>
+    <span class="nx">negative</span><span class="p">:</span> <span class="o">-</span>
+    <span class="nx">decimal</span><span class="p">:</span> <span class="p">.</span>
+    <span class="nx">grouping</span><span class="p">:</span> <span class="p">,</span>
+</code></pre></div>
+<h3>Windows Phone 8 Quirks</h3>
+
+<ul>
+<li><p>The <code>pattern</code> property is not supported, and returns an empty string.</p></li>
+<li><p>The <code>fraction</code> property is not supported, and returns zero.</p></li>
+</ul>
+
+<h3>Windows Quirks</h3>
+
+<ul>
+<li>The <code>pattern</code> property is not supported, and returns an empty string.</li>
+</ul>
+
+<h3>Browser Quirks</h3>
+
+<ul>
+<li>getNumberPattern is supported in Chrome only; the only defined property is <code>pattern</code>.</li>
+</ul>
+
+<h2>navigator.globalization.isDayLightSavingsTime</h2>
+
+<p>Indicates whether daylight savings time is in effect for a given date
+using the client&#39;s time zone and calendar.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">navigator.globalization.isDayLightSavingsTime(date, successCallback, errorCallback);
+</code></pre></div>
+<h3>Description</h3>
+
+<p>Indicates whether or not daylight savings time is in effect to the
+<code>successCallback</code> with a <code>properties</code> object as a parameter. That object
+should have a <code>dst</code> property with a <code>Boolean</code> value. A <code>true</code> value
+indicates that daylight savings time is in effect for the given date,
+and <code>false</code> indicates that it is not.</p>
+
+<p>The inbound parameter <code>date</code> should be of type <code>Date</code>.</p>
+
+<p>If there is an error reading the date, then the <code>errorCallback</code>
+executes. The error&#39;s expected code is <code>GlobalizationError.UNKNOWN_ERROR</code>.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>Firefox OS</li>
+<li>iOS</li>
+<li>Windows Phone 8</li>
+<li>Windows</li>
+<li>Browser</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>During the summer, and if the browser is set to a DST-enabled
+timezone, this should display a popup dialog with text similar to
+<code>dst: true</code>:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">isDayLightSavingsTime</span><span class="p">(</span>
+        <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">date</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'dst: '</span> <span class="o">+</span> <span class="nx">date</span><span class="p">.</span><span class="nx">dst</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);},</span>
+        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting names\n'</span><span class="p">);}</span>
+    <span class="p">);</span>
+</code></pre></div>
+<h2>navigator.globalization.numberToString</h2>
+
+<p>Returns a number formatted as a string according to the client&#39;s user preferences.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">numberToString</span><span class="p">(</span><span class="nx">number</span><span class="p">,</span> <span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</code></pre></div>
+<h3>Description</h3>
+
+<p>Returns the formatted number string to the <code>successCallback</code> with a
+<code>properties</code> object as a parameter. That object should have a <code>value</code>
+property with a <code>String</code> value.</p>
+
+<p>If there is an error formatting the number, then the <code>errorCallback</code>
+executes with a <code>GlobalizationError</code> object as a parameter. The
+error&#39;s expected code is <code>GlobalizationError.FORMATTING_ERROR</code>.</p>
+
+<p>The <code>options</code> parameter is optional, and its default values are:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="p">{</span><span class="nl">type</span><span class="p">:</span><span class="s1">'decimal'</span><span class="p">}</span>
+</code></pre></div>
+<p>The <code>options.type</code> can be <code>decimal</code>, <code>percent</code>, or <code>currency</code>.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>iOS</li>
+<li>Windows Phone 8</li>
+<li>Windows</li>
+<li>Browser</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>When the browser is set to the <code>en_US</code> locale, this displays a popup
+dialog with text similar to <code>number: 3.142</code>:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">numberToString</span><span class="p">(</span>
+        <span class="mf">3.1415926</span><span class="p">,</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">number</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'number: '</span> <span class="o">+</span> <span class="nx">number</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);},</span>
+        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting number\n'</span><span class="p">);},</span>
+        <span class="p">{</span><span class="na">type</span><span class="p">:</span><span class="s1">'decimal'</span><span class="p">}</span>
+    <span class="p">);</span>
+</code></pre></div>
+<h3>Windows Quirks</h3>
+
+<ul>
+<li><p>Windows 8.0 does not support number rounding, therefore values will not be rounded automatically.</p></li>
+<li><p>On Windows 8.1 and Windows Phone 8.1 fractional part is being truncated instead of rounded in case of <code>percent</code> number type therefore fractional digits count is set to 0.</p></li>
+<li><p><code>percent</code> numbers are not grouped as they can&#39;t be parsed in stringToNumber if grouped.</p></li>
+</ul>
+
+<h3>Browser Quirks</h3>
+
+<ul>
+<li><code>currency</code> type is not supported.</li>
+</ul>
+
+<h2>navigator.globalization.stringToDate</h2>
+
+<p>Parses a date formatted as a string, according to the client&#39;s user
+preferences and calendar using the time zone of the client, and
+returns the corresponding date object.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">stringToDate</span><span class="p">(</span><span class="nx">dateString</span><span class="p">,</span> <span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</code></pre></div>
+<h3>Description</h3>
+
+<p>Returns the date to the success callback with a <code>properties</code> object as
+a parameter. That object should have the following properties:</p>
+
+<ul>
+<li><p><strong>year</strong>: The four digit year. <em>(Number)</em></p></li>
+<li><p><strong>month</strong>: The month from (0-11). <em>(Number)</em></p></li>
+<li><p><strong>day</strong>: The day from (1-31). <em>(Number)</em></p></li>
+<li><p><strong>hour</strong>: The hour from (0-23). <em>(Number)</em></p></li>
+<li><p><strong>minute</strong>: The minute from (0-59). <em>(Number)</em></p></li>
+<li><p><strong>second</strong>: The second from (0-59). <em>(Number)</em></p></li>
+<li><p><strong>millisecond</strong>: The milliseconds (from 0-999), not available on all platforms. <em>(Number)</em></p></li>
+</ul>
+
+<p>The inbound <code>dateString</code> parameter should be of type <code>String</code>.</p>
+
+<p>The <code>options</code> parameter is optional, and defaults to the following
+values:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="p">{</span><span class="nl">formatLength</span><span class="p">:</span><span class="s1">'short'</span><span class="p">,</span> <span class="nx">selector</span><span class="p">:</span><span class="s1">'date and time'</span><span class="p">}</span>
+</code></pre></div>
+<p>The <code>options.formatLength</code> can be <code>short</code>, <code>medium</code>, <code>long</code>, or
+<code>full</code>.  The <code>options.selector</code> can be <code>date</code>, <code>time</code> or <code>date and
+time</code>.</p>
+
+<p>If there is an error parsing the date string, then the <code>errorCallback</code>
+executes with a <code>GlobalizationError</code> object as a parameter. The
+error&#39;s expected code is <code>GlobalizationError.PARSING_ERROR</code>.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>Firefox OS</li>
+<li>iOS</li>
+<li>Windows Phone 8</li>
+<li>Windows</li>
+<li>Browser</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>When the browser is set to the <code>en_US</code> locale, this displays a
+popup dialog with text similar to <code>month:8 day:25 year:2012</code>. Note
+that the month integer is one less than the string, as the month
+integer represents an array index.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">stringToDate</span><span class="p">(</span>
+        <span class="s1">'9/25/2012'</span><span class="p">,</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">date</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'month:'</span> <span class="o">+</span> <span class="nx">date</span><span class="p">.</span><span class="nx">month</span> <span class="o">+</span>
+                               <span class="s1">' day:'</span>  <span class="o">+</span> <span class="nx">date</span><span class="p">.</span><span class="nx">day</span>   <span class="o">+</span>
+                               <span class="s1">' year:'</span> <span class="o">+</span> <span class="nx">date</span><span class="p">.</span><span class="nx">year</span>  <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);},</span>
+        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting date\n'</span><span class="p">);},</span>
+        <span class="p">{</span><span class="na">selector</span><span class="p">:</span> <span class="s1">'date'</span><span class="p">}</span>
+    <span class="p">);</span>
+</code></pre></div>
+<h3>Windows Phone 8 Quirks</h3>
+
+<ul>
+<li><p>The <code>formatLength</code> option supports only <code>short</code> and <code>full</code> values.</p></li>
+<li><p>The pattern for &#39;date and time&#39; selector is always a full datetime format.</p></li>
+<li><p>The inbound <code>dateString</code> parameter should be formed in compliance with a pattern returned by getDatePattern.
+This pattern may be not completely aligned with ICU depending on a user locale.</p></li>
+</ul>
+
+<h3>Windows Quirks</h3>
+
+<ul>
+<li><p>The <code>formatLength</code> option supports only <code>short</code> and <code>full</code> values.</p></li>
+<li><p>The pattern for &#39;date and time&#39; selector is always a full datetime format.</p></li>
+<li><p>The inbound <code>dateString</code> parameter should be formed in compliance with a pattern returned by getDatePattern.
+This pattern may be not completely aligned with ICU depending on a user locale.</p></li>
+</ul>
+
+<h3>Browser Quirks</h3>
+
+<ul>
+<li><p>Only 79 locales are supported because moment.js is used in this method.</p></li>
+<li><p>Inbound string should be aligned with <code>dateToString</code> output format and may not completely aligned with ICU depending on a user locale.</p></li>
+<li><p><code>time</code> selector supports <code>full</code> and <code>short</code> formatLength only.</p></li>
+</ul>
+
+<h2>navigator.globalization.stringToNumber</h2>
+
+<p>Parses a number formatted as a string according to the client&#39;s user
+preferences and returns the corresponding number.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">stringToNumber</span><span class="p">(</span><span class="nx">string</span><span class="p">,</span> <span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</code></pre></div>
+<h3>Description</h3>
+
+<p>Returns the number to the <code>successCallback</code> with a <code>properties</code> object
+as a parameter. That object should have a <code>value</code> property with a
+<code>Number</code> value.</p>
+
+<p>If there is an error parsing the number string, then the
+<code>errorCallback</code> executes with a <code>GlobalizationError</code> object as a
+parameter. The error&#39;s expected code is
+<code>GlobalizationError.PARSING_ERROR</code>.</p>
+
+<p>The <code>options</code> parameter is optional, and defaults to the following
+values:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="p">{</span><span class="nl">type</span><span class="p">:</span><span class="s1">'decimal'</span><span class="p">}</span>
+</code></pre></div>
+<p>The <code>options.type</code> can be <code>decimal</code>, <code>percent</code>, or <code>currency</code>.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>iOS</li>
+<li>Windows Phone 8</li>
+<li>Windows</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>When the browser is set to the <code>en_US</code> locale, this should display a
+popup dialog with text similar to <code>number: 1234.56</code>:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">stringToNumber</span><span class="p">(</span>
+        <span class="s1">'1234.56'</span><span class="p">,</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">number</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'number: '</span> <span class="o">+</span> <span class="nx">number</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);},</span>
+        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting number\n'</span><span class="p">);},</span>
+        <span class="p">{</span><span class="na">type</span><span class="p">:</span><span class="s1">'decimal'</span><span class="p">}</span>
+    <span class="p">);</span>
+</code></pre></div>
+<h3>Windows Phone 8 Quirks</h3>
+
+<ul>
+<li>In case of <code>percent</code> type the returned value is not divided by 100.</li>
+</ul>
+
+<h3>Windows Quirks</h3>
+
+<ul>
+<li><p>The string must strictly conform to the locale format. For example, percent symbol should be
+separated by space for &#39;en-US&#39; locale if the type parameter is &#39;percent&#39;.</p></li>
+<li><p><code>percent</code> numbers must not be grouped to be parsed correctly.</p></li>
+</ul>
+
+<h2>GlobalizationError</h2>
+
+<p>An object representing a error from the Globalization API.</p>
+
+<h3>Properties</h3>
+
+<ul>
+<li><strong>code</strong>:  One of the following codes representing the error type <em>(Number)</em>
+
+<ul>
+<li><code>GlobalizationError.UNKNOWN_ERROR</code>: 0</li>
+<li><code>GlobalizationError.FORMATTING_ERROR</code>: 1</li>
+<li><code>GlobalizationError.PARSING_ERROR</code>: 2</li>
+<li><code>GlobalizationError.PATTERN_ERROR</code>: 3</li>
+</ul></li>
+<li><strong>message</strong>:  A text message that includes the error&#39;s explanation and/or details. <em>(String)</em></li>
+</ul>
+
+<h3>Description</h3>
+
+<p>This object is created and populated by Cordova, and returned to a callback in the case of an error.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>Firefox OS</li>
+<li>iOS</li>
+<li>Windows Phone 8</li>
+<li>Windows</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>When the following error callback executes, it displays a
+popup dialog with the text similar to <code>code: 3</code> and <code>message:</code></p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">    <span class="kd">function</span> <span class="nx">errorCallback</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s1">'code: '</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
+              <span class="s1">'message: '</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span>
+    <span class="p">};</span>
+</code></pre></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  8.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

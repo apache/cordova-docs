@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Интерфейс командной строки - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/ru/5.4.0/guide/cli/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '5.4.0' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/guide/overview/index.html">
+                Введение
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/guide/support/index.html">
+                Поддерживаемые Платформы
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/guide/cli/index.html">
+                Интерфейс командной строки
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/guide/platforms/index.html">
+                Руководство по поддерживаемым платформам
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/plugin_ref/plugman.html">
+                Использование Plugman для управления расширениями
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/config_ref/index.html">
+                Файл config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/config_ref/images.html">
+                Иконки и заставки
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/guide/hybrid/webviews/index.html">
+                Интеграция WebViews
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/guide/hybrid/plugins/index.html">
+                Руководство по разработке плагинов
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/plugin_ref/spec.html">
+                Спецификация расширений
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/guide/appdev/privacy/index.html">
+                Руководство по конфиденциальности
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/guide/appdev/security/index.html">
+                Руководство по безопасности
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/platform_plugin_versioning_ref/index.html">
+                Управление версиями платформ и плагинов
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/guide/appdev/whitelist/index.html">
+                Инструкция по доступу к внешним ресурсам
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/cordova/storage/storage.html">
+                Хранилище
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/guide/appdev/hooks/index.html">
+                Руководство по хукам
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/guide/next/index.html">
+                Последующие шаги
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/cordova/events/events.html">
+                События
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/5.4.0/cordova/plugins/pluginapis.html">
+                API плагинов
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Содержание
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/guide/overview/index.html">
+        Введение
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/guide/support/index.html">
+        Поддерживаемые Платформы
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/guide/cli/index.html">
+        Интерфейс командной строки
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/guide/platforms/index.html">
+        Руководство по поддерживаемым платформам
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/plugin_ref/plugman.html">
+        Использование Plugman для управления расширениями
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/config_ref/index.html">
+        Файл config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/config_ref/images.html">
+        Иконки и заставки
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/guide/hybrid/webviews/index.html">
+        Интеграция WebViews
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/guide/hybrid/plugins/index.html">
+        Руководство по разработке плагинов
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/plugin_ref/spec.html">
+        Спецификация расширений
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/guide/appdev/privacy/index.html">
+        Руководство по конфиденциальности
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/guide/appdev/security/index.html">
+        Руководство по безопасности
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/platform_plugin_versioning_ref/index.html">
+        Управление версиями платформ и плагинов
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/guide/appdev/whitelist/index.html">
+        Инструкция по доступу к внешним ресурсам
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/cordova/storage/storage.html">
+        Хранилище
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/guide/appdev/hooks/index.html">
+        Руководство по хукам
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/guide/next/index.html">
+        Последующие шаги
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/cordova/events/events.html">
+        События
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/5.4.0/cordova/plugins/pluginapis.html">
+        API плагинов
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/ru/5.4.0/guide/cli/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Русский
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/5.4.0/guide/cli/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/5.4.0/guide/cli/" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/5.4.0/guide/cli/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/5.4.0/guide/cli/" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/5.4.0/guide/cli/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/5.4.0/guide/cli/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/5.4.0/guide/cli/" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/5.4.0/guide/cli/" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/5.4.0/guide/cli/" class="">
+                                
+                                    <span class="selected">
+                                        Русский
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/5.4.0/guide/cli/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/5.4.0/guide/cli/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/5.4.0/guide/cli/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        5.4.0
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Последняя)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/5.4.0/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                5.4.0
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/5.1.1/" class="missing-page">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    Эта версия документации устарела!
+                    <a href="/docs/ru/latest/">
+                        Нажмите здесь для последней выпущенной версии.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <style type="text/css">
+    /* Workaround for the spacing on the Russian /docs/ru/version/index.html pages */
+    .docs .home .summary {
+        height: 100px;
+    }
+    .docs #old-home ul li {
+        height: 160px;
+    }
+</style>
+
+<h1>Интерфейс командной строки</h1>
+
+<p>Это руководство показывает, как создать приложения и развернуть их на различных мобильных платформах с использованием <code>cordova</code> интерфейса командной строки (CLI). Эта программа позволяет вам создавать новые проекты, собирать их на различных платформах, и запускать ваше приложение на устройствах или в эмуляторах. CLI является основным инструментом используемым для кросс платформенного процесса разработки, описанного в разделе &quot;<a href="../overview/index.html">Введение</a>&quot;. В другом случае вы также можете использовать CLI для инициализации кода проекта, а затем переключиться на использование SDK различных платформ и другие инструменты командной строки для дальнейшей разработки.</p>
+
+<h2>Необходимые условия</h2>
+
+<p>Перед запуском любого средства командной строки, необходимо установить пакет SDK для каждой платформы, для которой вы хотите разрабатывать. (См. раздел &quot;<a href="../platforms/index.html">Руководство по поддерживаемым платформам</a>&quot; для получения более подробной информации.)</p>
+
+<p>Чтобы добавить поддержку платформы или перестроить проект для какой либо платформы, вы должны запустить интерфейс командной строки на том же компьютере, который поддерживает SDK платформы. CLI поддерживает следующие комбинации:</p>
+
+<ul>
+<li>  iOS (Mac)</li>
+<li>  Amazon Fire OS (Mac, Linux, Windows)</li>
+<li>  Android (Mac, Linux, Windows)</li>
+<li>  BlackBerry 10 (Mac, Linux, Windows)</li>
+<li>  Windows Phone 8 (Windows)</li>
+<li>  Windows (Windows)</li>
+<li>  Firefox OS (Mac, Linux, Windows)</li>
+</ul>
+
+<p>На Mac командная строка доступна с помощью приложения <em>Терминал</em>. На ПК он доступен как приложение <em>Командная строка</em> в разделе <em>Аксессуары</em>.</p>
+
+<p><strong>Примечание</strong>: Для Windows платформ, вы по прежнему можете вести свою разработку на Mac запуская Windows в виртуальной машине или в режиме двойной загрузки. Доступные параметры см. в разделах &quot;<a href="../platforms/wp8/index.html">Руководство для платформы Windows Phone 8</a>&quot; или &quot;<a href="../platforms/win8/index.html">Руководство по платформе Windows</a>&quot;.</p>
+
+<p>Скорее всего, вы будете запускать CLI с различных компьютеров, тем больше имеет смысл поддерживать удаленный репозиторий, откуда вы будете забирать рабочие материалы в локальные каталоги.</p>
+
+<h2>Установка CLI Cordova</h2>
+
+<p>Средство командной строки Cordova распространяется как пакет npm в готовом к использованию формате. Нет необходимости для его компиляции из исходного кода.</p>
+
+<p>Чтобы установить инструмент командной строки <code>cordova</code>, выполните следующие действия:</p>
+
+<ol>
+<li><p>Скачайте и установите <a href="http://nodejs.org/">Node.js</a>. После установки вы должны быть возможность выполнять <code>node</code> и <code>npm</code> в командной строке. При желании, вы можете дополнительно использовать инструмент, как например <code>nvm</code> или <code>nave</code> для управления вашей установкой Node.js.</p></li>
+<li><p>Скачайте и установите <a href="http://git-scm.com/">git клиент</a>, если у вас его еще нет. После установки вы должны быть способны вызвать <code>git</code> из вашей командной строки. Даже несмотря на то, что вы не будете использовать <code>git</code> вручную, CLI использовать для загрузки некоторых ресурсов при создании нового проекта.</p></li>
+<li><p>Установите модуль <code>cordova</code> с помощью инструмента <code>npm</code> Node.js. Модуль <code>cordova</code> будет автоматически загружен <code>npm</code>.</p></li>
+</ol>
+<div class="highlight"><pre><code class="language-" data-lang="">*   В OS X и Linux:
+
+        $ sudo npm install -g cordova
+
+    В OS X и Linux, может быть необходимым предварять команду `npm` командой `sudo` чтобы установить этот инструмент разработки, в защищенные каталоги, такие как `usr/local/share`. Если вы используете инструмент nvm/nave и имеете доступ на запись к каталогу установки, префикс `sudo` можно опустить. Есть [больше подсказок][3] по использованию `npm` без `sudo`, если вы имеете желание сделать это.
+
+*   В Windows:
+
+        C:\&gt;npm install -g cordova
+
+Упомянутый выше флаг `-g` указывает `npm` установить `cordova` глобально. В противном случае он будет установлен в подкаталоге `node_modules` текущего рабочего каталога.
+
+Вам может понадобиться добавить каталог `npm` в переменную `PATH` вашего окружения, для того чтобы вызывать глобально установленные `npm` модули. В Windows `npm` обычно можно найти в каталоге `C:\Users\username\AppData\Roaming\npm`. На OS X и Linux его обычно можно найти в каталоге `/usr/local/share/npm`.
+
+Журнал установки может приводить к ошибкам, для любого не установленного SDK платформы.
+
+После установки вы должны иметь возможность запускать `cordova` в командной строке без аргументов, и это должно напечатать текст справки.
+</code></pre></div>
+<h2>Создание приложения</h2>
+
+<p>Перейдите в каталог, где вы сохранили ваш исходный код и выполнить команду следующего вида:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova create hello com.example.hello HelloWorld
+</code></pre></div>
+<p>Завершение команды может длиться дольше нескольких секунд, поэтому будьте терпеливы. Запуск команды с опцией <code>-d</code> будет показывать информацию о прогрессе операции.</p>
+
+<p>Первый аргемент - <em>hello</em> указывает каталог в котором будет сформирован ваш проект. Этот каталог не должен существовать, Cordova создаст его для вас. Подкаталог <code>www</code> созданной директории будет содержать домашнюю страницу вашего приложения, совместно с ресурсами в каталогах <code>css</code>, <code>js</code>, и <code>img</code>, что соответствует общепринятым соглашениям по наименованию файлов и каталогов принятых в веб-разработке. Эти активы будут храниться в локальной файловой системе устройства, не служил удаленно. Файл <code>config.xml</code> содержит важные метаданные необходимые для формирования и распространения приложения.</p>
+
+<p>Второй аргумент <code>com.example.hello</code> указывает идентификатор вашего проекта в обратном формате доменных имен. Этот аргумент необязателен, но только если вы также пропустите третий аргумент, потому что аргументы определяются в зависимости от их позиций. Вы можете изменить это значение позже в файле <code>config.xml</code>, но вам надо учитывать что возможно код сформированный вне <code>config.xml</code> использует это значение, как например имена Java пакетов. Значение по умолчанию <code>io.cordova.hellocordova</code>, но рекомендуется чтобы вы выбрали подходящее значение.</p>
+
+<p>Третий аргумент <code>HelloWorld</code> указывает отображаемое имя приложения. Этот аргумент является необязательным. Вы можете изменить это значение позже в файле <code>config.xml</code>, но вам надо учитывать что возможно код сформированный вне <code>config.xml</code> использует это значение, как например имена Java классов. Значением по умолчанию является <code>HelloCordova</code>, но мы рекомендуем вам выбрать подходящее значение.</p>
+
+<h2>Добавление платформ</h2>
+
+<p>Все последующие команды должны быть выполняться в каталоге проекта или любых подкаталогах в его пределах:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cd hello
+</code></pre></div>
+<p>Перед тем, как можно построить проект, необходимо указать набор целевых платформ. Ваши возможности по запуску этих команд зависят от того поддерживает ваш компьютер каждое SDK, и установили ли вы соответствующее SDK. Запустите любую из этих команд на Mac:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova platform add ios
+    $ cordova platform add amazon-fireos
+    $ cordova platform add android
+    $ cordova platform add blackberry10
+    $ cordova platform add firefoxos
+</code></pre></div>
+<p>Запустите любую из этих команд на Windows компьютере, где <em>wp</em> ссылается на различные версии операционной системы Windows Phone:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova platform add wp8
+    $ cordova platform add windows
+    $ cordova platform add amazon-fireos
+    $ cordova platform add android
+    $ cordova platform add blackberry10
+    $ cordova platform add firefoxos
+</code></pre></div>
+<p>Выполните это, чтобы проверить ваш текущий набор платформ:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova platforms ls
+</code></pre></div>
+<p>(Обратите внимание, что команды <code>platform</code> и <code>platforms</code> являются синонимами.)</p>
+
+<p>Выполните одну из следующих команд, которые являются синонимами, чтобы удалить платформу:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova platform remove blackberry10
+    $ cordova platform rm amazon-fireos
+    $ cordova platform rm android
+</code></pre></div>
+<p>Выполнение команд для добавления или удаления платформ затрагивает содержимое каталога <em>platforms</em> проекта, где каждая указанная платформа представлена как подкаталог. Исходный каталог <em>www</em> повторяется в подкаталоге каждой платформы, например вы можете увидеть его в <code>platforms/ios/www</code> или <code>platforms/android/assets/www</code>. Потому что CLI постоянно копирует файлы из исходной папки <em>www</em>, следует изменять только эти файлы, а не файлы, расположенные в подкаталогах <em>platforms</em>. При использовании системы управления версиями, следует добавить папку с исходным кодом <em>www</em>, наряду с папкой <em>merges</em> в вашу систему управления версиями. (Дополнительные сведения о папке <em>merges</em> можно найти в разделе &quot;Настройка каждой платформы&quot; ниже.)</p>
+
+<p><strong>Предупреждение</strong>: При использовании CLI для построения вашего приложение, вы <em>не</em> должны редактировать какие либо файлы в каталоге <code>/platforms/</code> за исключением того случая если вы знаете что вы делаете, или в документации указано обратное. Файлы в этом каталоге обычно перезаписываются при подготовке приложений к построения, или при переустановке плагина.</p>
+
+<p>Если вы хотите в данный момент, можно использовать IDE, как например Eclipse или Xcode чтобы открыть проект который вы создали. Вам будет нужно открыть производный набор ресурсов из каталога <code>/platforms/</code> для разработки с использованием SDK. Это потому что специфичные для SDK метаданные хранятся в соответствующем подкаталоге <code>/platforms/</code>. (См. раздел &quot;<a href="../platforms/index.html">Руководство по поддерживаемым платформам</a>&quot; для получения информации о том как разрабатывать приложение в каждой IDE.) Используйте этот подход, если вы просто хотите инициализироавть проект с использованием CLI и потом переключиться на SDK для работы с инструментами платформы.</p>
+
+<p>Продолжайте читать если вы хотите использовать кросс-платформенный процесс разработки (CLI) для всего цикла разработки.</p>
+
+<h2>Построение приложения</h2>
+
+<p>По умолчанию скрипт <code>cordova create</code> создает каркас веб приложения чья домашняя страница это файл проекта <code>www/index.html</code>. Изменяйте это приложения как вы желаете, но любая инициализация должна быть указана как часть обработчика события <code>[deviceready](../../cordova/events/events.deviceready.html)</code>, используемого по умолчанию из <code>www/js/index.js</code>.</p>
+
+<p>Выполните следующую команду для итеративного построения проекта:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova build
+</code></pre></div>
+<p>Это создает код платформы в подкаталоге проекта <code>platforms</code>. При необходимости можно ограничить применения каждой сборки для выбранных платформ:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova build ios
+</code></pre></div>
+<p>Команда <code>cordova build</code> это сокращение для следующих команд, которые в этом примере нацелены на одну платформу:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova prepare ios
+    $ cordova compile ios
+</code></pre></div>
+<p>В этом случае, как только вы запустили <code>prepare</code>, вы можете использовать Xcode SDK компании Apple как альтернативу для изменения и компиляции платформо-зависимого кода, который кордова создала в каталоге <code>platforms/ios</code>. Вы можете использовать тот же подход для SDK других платформ.</p>
+
+<h2>Тестирование приложения на эмуляторе или устройстве</h2>
+
+<p>SDK для мобильных платформ часто поставляются с эмуляторами которые выполняют образ устройства, таким образом что вы можете запустить ваше приложение из главного экрана и посмотреть как оно взаимодействует с различными функциями платформы. Выполните команду как указано ниже для перепостроения приложения запуска его в эмуляторе указанной платформы:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova emulate android
+</code></pre></div>
+<p>Некоторые мобильные платформы эмулируют определенное устройство по умолчанию, как например iPhone для проектов iOS. Для других платформы, вам может понадобиться сперва ассоциировать устройство с эмулятором.</p>
+
+<p><strong>Примечание</strong>: Поддержка эмулятора в настоящее время недоступна для Amazon Fire ОС.</p>
+
+<p>(См. &quot;<a href="../platforms/index.html">Руководство по поддерживаемым платформам</a>&quot; для подробной информации). Например вы можете сначала выполнить команду <code>android</code> для запуска Android SDK, а затем запустить образ конкретного устройства, которое запускает его согласно поведению по умолчанию:</p>
+
+<p><img src="/static/img/guide/cli/android_emulate_init.png" alt=""></p>
+
+<p>Последующая команда <code>cordova emulate</code> обновляет образ эмулятор для отображения последней версии приложение, которое теперь доступно для запуска с главного экрана:</p>
+
+<p><img src="/static/img/guide/cli/android_emulate_install.png" alt=""></p>
+
+<p>Поочередно можно подключить телефон к компьютеру и тестирование приложения непосредственно на нем:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova run android
+</code></pre></div>
+<p>Перед выполнением этой команды, необходимо настроить устройство для тестирования, следуя процедурам, которые различаются для каждой платформы. В устройствах Android и Amazon Fire ОС вам придется включить функцию <strong>Отладка USB</strong> на устройстве и возможно добавить драйвер, USB в зависимости от вашего окружения разработки. Смотрите раздел &quot;<a href="../platforms/index.html">Руководство по поддерживаемым платформам</a>&quot; за подробностями о требованиях каждой платформы.</p>
+
+<h2>Добавить функции плагина</h2>
+
+<p>При построении или просмотре нового проекта, приложение по умолчанию не делает очень много. Вы можете изменить приложение различными способами используя преимущества стандартных веб-технологий, но для того чтобы приложение тесно взаимодействовало с различными функциями устройства, вам необходимо добавить плагины которые предоставят доступ к базовым функциям Cordova API.</p>
+
+<p><em>Плагин</em> это немного дополнительного кода которые предоставляет интерфейс к встроенным компонентам платформы. ВЫ можете создать свой собственный интерфейс плагина, к примеры для проектирования гибридного приложения которое совмещает Cordova WebView с встроенными компонентами. (За подробной информацией смотрите &quot;<a href="../hybrid/webviews/index.html">Интеграция WebViews</a>&quot; и <a href="guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide">Руководство по разработке плагинов</a>.) В основном, вы будете добавлять плагин чтобы включить одну из базовых функций Cordova описанном в разделе &quot;Справочник по API&quot;.</p>
+
+<p>Начиная с версии 3.0 при создании проекта Cordova она не содержит каких-либо плагинов настоящей. Это новое поведение по умолчанию. Какие плагины вы хотите, даже основные плагины, должен быть явно добавлен.</p>
+
+<p>Список этих плагинов, включая дополнительные сторонние плагины, сообщества, можно найти в реестре по адресу <a href="http://plugins.cordova.io/">plugins.cordova.io</a>. Вы можете использовать CLI для поиска плагинов в этом реестре. К примеру поиск <code>bar</code> и <code>code</code> возвращает один результат который содержит оба слова без учета регистра:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin search bar code
+
+    com.phonegap.plugins.barcodescanner - Scans Barcodes
+</code></pre></div>
+<p>Поиск только по слову <code>bar</code> возвращает дополнительный результат:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    cordova-plugin-statusbar - Cordova StatusBar Plugin
+</code></pre></div>
+<p>Команда <code>cordova plugin add</code> требует чтобы вы указали репозиторий для кода плагина. Вот пример как вы можете использовать CLI для добавления функций в приложение:</p>
+
+<ul>
+<li><p>Базовая информация устройства (Device API):</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cordova plugin add cordova-plugin-device
+</code></pre></div></li>
+<li><p>Сетевое подключение и <a href="../../cordova/events/events.html">События</a> батареи:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cordova plugin add cordova-plugin-network-information
+$ cordova plugin add cordova-plugin-battery-status
+</code></pre></div></li>
+<li><p>Акселерометр, компас и информация о расположении:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cordova plugin add cordova-plugin-device-motion
+$ cordova plugin add cordova-plugin-device-orientation
+$ cordova plugin add cordova-plugin-geolocation
+</code></pre></div></li>
+<li><p>Камера, воспроизведение мультимедиа и съемка:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cordova plugin add cordova-plugin-camera
+$ cordova plugin add cordova-plugin-media-capture
+$ cordova plugin add cordova-plugin-media
+</code></pre></div></li>
+<li><p>Доступ к файлам на устройстве или по сети (File API):</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cordova plugin add cordova-plugin-file
+$ cordova plugin add cordova-plugin-file-transfer
+</code></pre></div></li>
+<li><p>Уведомление с помощью диалогового окна или вибрации:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cordova plugin add cordova-plugin-dialogs
+$ cordova plugin add cordova-plugin-vibration
+</code></pre></div></li>
+<li><p>Контакты:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cordova plugin add cordova-plugin-contacts
+</code></pre></div></li>
+<li><p>Глобализация:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cordova plugin add cordova-plugin-globalization
+</code></pre></div></li>
+<li><p>Заставка:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cordova plugin add cordova-plugin-splashscreen
+</code></pre></div></li>
+<li><p>Открытие новых окон браузера (InAppBrowser):</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cordova plugin add cordova-plugin-inappbrowser
+</code></pre></div></li>
+<li><p>Консоль отладки:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cordova plugin add cordova-plugin-console
+</code></pre></div></li>
+</ul>
+
+<p><strong>Примечание</strong>: CLI добавляет код плагина соответствующим образом для каждой платформы. Если вы хотите разработать с использованием инструментов низкого уровня или SDK платформы, как описано в разделе &quot;<a href="../overview/index.html">Введение</a>&quot;, необходимо запустить утилиту Plugman которая добавит плагины отдельно для каждой платформы. (Для получения дополнительной информации, см. раздел &quot;<a href="../../plugin_ref/plugman.html">Использование Plugman для управления расширениями</a>&quot;.)</p>
+
+<p>Используйте <code>plugin ls</code> (или <code>plugin list</code>, или просто <code>plugin</code>) для просмотра установленных на данный момент плагинов. Для каждого установленного плагина отображается его идентификатор:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin ls    # or 'plugin list'
+    [ 'cordova-plugin-console' ]
+</code></pre></div>
+<p>Чтобы удалить плагин, сошлитесь к нему по тому же идентификатору, который появляется в списке. Например таким образом вы бы удалили поддержку для консоли отладки из версии релиза:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin rm cordova-plugin-console
+    $ cordova plugin remove cordova-plugin-console    # same
+</code></pre></div>
+<p>Вы можете удалять или добавлять плагины пакетно указывая более чем один аргумент для соответствующей команды:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add cordova-plugin-console cordova-plugin-device
+</code></pre></div>
+<h2>Расширенные параметры плагина</h2>
+
+<p>При добавлении плагина, некоторые параметры позволяют указать откуда взять плагин. Приведенные выше примеры использования общепринятого реестра <code>registry.cordova.io</code>, и плагин определяется по его <code>id</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add cordova-plugin-console
+</code></pre></div>
+<p><code>Id</code> также может включать номер версии плагина, добавленный после символа <code>@</code>. Версия <code>latest</code> — это псевдоним для самой последней версии. Например:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add cordova-plugin-console@latest
+    $ cordova plugin add cordova-plugin-console@0.2.1
+</code></pre></div>
+<p>Если плагин не зарегистрирована в <code>registry.cordova.io</code>, но расположен в другом репозитории git, вы можете указать альтернативный URL-адрес:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add https://github.com/apache/cordova-plugin-console.git
+</code></pre></div>
+<p>Приведенный выше пример git получает плагин из последней версии ветки master, но альтернативная git ссылка например тег или другая ветка могут быть добавлены после символа <code>#</code>:</p>
+
+<p>Установка из тега:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
+</code></pre></div>
+<p>или из ветки:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#CB-8438cordova-plugin-console
+</code></pre></div>
+<p>или git-ref также может также быть конкретным коммитом:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#f055daec45575bf08538f885e09c85a0eba363ff
+</code></pre></div>
+<p>Если плагин (и его файл <code>plugin.xml</code>) находится в подкаталоге репозитария git, вы можете указать его после символа <code>:</code>. Обратите внимание, что символ <code>#</code> все еще необходим:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
+</code></pre></div>
+<p>Вы также можете объединить как ссылку git так и подкаталоги:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
+</code></pre></div>
+<p>Как вариант укажите локальный путь к папке плагина, который содержит файл <code>plugin.xml</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add ../my_plugin_dir
+</code></pre></div>
+<h2>Использование каталога <em>merges</em> для настройки каждой платформы</h2>
+
+<p>Хотя Cordova позволяет легко развертывать приложение на разных платформах, иногда необходимо добавить индивидуальные настройки. В этом случае вы не хотите изменить исходные файлы в различных каталогах <code>www</code> в каталоге верхнего уровня <code>платформы</code>, потому что они регулярно заменяются из кросс-платформенного источника - каталога верхнего уровня <code>www</code>.</p>
+
+<p>Вместо этого в каталог верхнего уровня <code>merges</code> предоставляет место для указания ресурсов для развертывания на определенных платформах. Каждый платформо-зависимый подкаталог <code>merges</code> отражает повторяет структуру директории <code>www</code>, и позволяет переопределить или добавить файлы, как это необходимо. Например вот как вы, возможно, использует <code>merges</code> чтобы увеличить размер шрифта по умолчанию для устройств Android и Amazon Fire ОС:</p>
+
+<ul>
+<li><p>Измените файл <code>www/index.html</code>, добавив ссылку на дополнительный CSS-файл, <code>overrides.css</code> в данном случае:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;link rel="stylesheet" type="text/css" href="css/overrides.css" /&gt;
+</code></pre></div></li>
+<li><p>При необходимости создайте пустой <code>www/css/overrides.css</code> файл, который будет применяться для всех построений отличных от Android, предотвращая ошибку недостающего файла.</p></li>
+<li><p>Создайте <code>css</code> подкаталог внутри <code>merges/android</code> , затем добавьте соответствующий файл <code>overrides.css</code>. Укажите CSS, который переопределяет 12 пунктовый размер шрифта по умолчанию, указанный в <code>www/css/index.css</code> , например:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">body { font-size:14px; }
+</code></pre></div></li>
+</ul>
+
+<p>При повторном построении проекта, Android версия будет содержать измененный размер шрифта, в то время как другие платформы остаются неизменными.</p>
+
+<p>Можно также использовать <code>merges</code> для добавления файлов, изначально не присутствующих в каталоге <code>www</code>. Например приложение может включить изображение для <em>кнопки Назал</em> в интерфейсе iOS, хранимом в <code>merges/ios/img/back_button.png</code>, в то время как версия Android вместо этого может перехватывать захватить события <code>[backbutton](../../cordova/events/events.backbutton.html)</code> от соответствующей аппаратной кнопки.</p>
+
+<h2>Команды справки</h2>
+
+<p>Cordova имеет несколько глобальных команд, которые могут помочь вам, если вы застряли или возникли проблемы. Команда <code>help</code> отображает все доступные команды Cordova и их синтаксис:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cordova help
+$ cordova        # same
+</code></pre></div>
+<p>Кроме того вы можете получить более подробную справку по определенной команде. Например:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cordova run --help
+</code></pre></div>
+<p>Команда <code>info</code> формирует список потенциально полезных сведений, например установленных платформ и плагинов, версии SDK для каждой платформы и версии CLI и <code>node.js</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cordova info
+</code></pre></div>
+<p>Она представляет информацию на экран и перенаправляет выходные данные в локальный файл <code>info.txt</code>.</p>
+
+<p><strong>Примечание</strong>: в настоящее время, доступны только сведения о платформах iOS и Android.</p>
+
+<h2>Обновление Cordova и вашего проекта</h2>
+
+<p>После установки утилиты <code>cordova</code>, вы можете всегда обновить ее до последней версии, выполнив следующую команду:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ sudo npm update -g cordova
+</code></pre></div>
+<p>Используйте этот синтаксис для установки определенной версии:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ sudo npm install -g cordova@3.1.0-0.2.0
+</code></pre></div>
+<p>Запустите <code>cordova - v</code>, чтобы увидеть, какая версия в настоящее время установлена. Выполните команду <code>npm info</code> для более длинного списка, который включает в себя текущую версию и другие доступные номера версий:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ npm info cordova
+</code></pre></div>
+<p>Кордова 3.0 является первая версия поддерживающая интерфейс командной строки, описанные в этом разделе. Если вы обновляете проект с версии ранее чем 3.0, необходимо создать новый проект, как описано выше, а затем скопировать старые ресурсы приложения в каталог верхнего уровня <code>www</code>. Там, где это применимо, далее сведения об обновлении до 3.0 доступны в разделе &quot;<a href="../platforms/index.html">Руководство по поддерживаемым платформам</a>&quot;. После обновления к интерфейсу командной строки <code>cordova</code> используйте <code>npm update</code> чтобы оставаться актуальным, более длительные процедуры, описанные там более не актуальны.</p>
+
+<p>Cordova 3.0 + по-прежнему может требовать различных изменений структуры каталогов уровня проекта и других зависимостей. После того, как вы выполните команду <code>npm</code> указанную выше для обновления Cordova, необходимо убедиться, что ресурсы вашего проекта соответствуют требованиям последней версии. Выполните команды указанную ниже для каждой платформы, под которую вы создаете приложение:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova platform update android
+    $ cordova platform update ios
+    ...etc.
+</code></pre></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  5.4.0", "language: ru"] }
+    });
+</script>
+
+</body>
+</html>

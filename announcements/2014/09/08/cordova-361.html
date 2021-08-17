@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that Apache Cordova 3.6 has been released!Most notable changes include:Android and Amazon FireOS platforms include a new whitelist f...">
+
+    <title>
+        
+            
+                Apache Cordova 3.6 - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2014/09/08/cordova-361.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '10.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Apache Cordova 3.6</div>
+        <div class="author">By:
+            
+              <a href="https://twitter.com/stevesgill">Steve Gill</a>
+            
+        </div>
+        <div class="date">08 Sep 2014</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that <code>Apache Cordova 3.6</code> has been released!</p>
+
+<p>Most notable changes include:</p>
+
+<ul>
+<li>Android and Amazon FireOS platforms include a new whitelist for controlling the launch of external applications via intents. Also support for gradle was added.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6761">CB-6761</a> Android: Fix native-&gt;JS bridge ceasing to fire when page changes and online is set to false and the JS loads quickly</li>
+<li>Windows8 platform is now called Windows to indicate the support for windows universal apps. The windows8/windows platform now supports building apps targeting Windows 8.1 and Windows Phone 8.1 in addition to Windows 8 which was originally supported (see documentation for new --win and --phone Command Line switches). </li>
+<li>For targeting Windows Phone 8.0, the wp8 is still supported. </li>
+<li>Support for Windows Universal Apps is being added.</li>
+</ul>
+
+<p>To upgrade: (replace <code>android</code> with the platform you want to update):</p>
+<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+cd my_project
+cordova platform update android
+</code></pre></div>
+<p>For non-CLI projects or for pre-3.0 projects, refer to the <a href="http://cordova.apache.org/docs/en/3.6.0/guide_platforms_index.md.html">upgrade guides</a>.</p>
+
+<h2>If this is 3.6.3, where are 3.6.0, 3.6.1, and 3.6.2?</h2>
+
+<p>While preparing the 3.6.0 release,
+the release candidates were published to a write-once repository.
+When it was discovered that the release candidates needed to be updated,
+we were unable to modify the write-once repository,
+so we were forced to bump the version number.
+This is why all the 3.6 cadence release items are labelled as &quot;3.6.3&quot;.
+So 3.6.3 is the first release of the 3.6.x version.
+Apologies for the confusion.</p>
+
+<h2>What&#39;s new in Android</h2>
+
+<!--more-->
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-3445">CB-3445</a> Add environment variable <code>BUILD_MULTIPLE_APKS</code> for splitting <strong>APK</strong>s based on architecture</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7410">CB-7410</a> Add whitelist entries to get <code>iframe</code>/<strong>GoogleMaps</strong> working</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7291">CB-7291</a> Add <code>external-launch-whitelist</code> and use it for filtering intent launches</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3445">CB-3445</a> Work-in-progress gradle support</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7325">CB-7325</a> Fix error message in <code>android_sdk_version.js</code> when missing SDK on Windows</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7335">CB-7335</a> Add a <code>.gitignore</code> to android project template</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7330">CB-7330</a> Don&#39;t run <code>android update</code> during creation</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7321">CB-7321</a> Don&#39;t require <code>ant</code> for <code>create</code> script</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7044">CB-7044</a>, <a href="https://issues.apache.org/jira/browse/CB-7299">CB-7299</a> Fix up <code>PATH</code> problems when possible</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7261">CB-7261</a> Fix <code>setNativeToJsBridgeMode</code> sometimes crashing when switching to <code>ONLINE_EVENT</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7265">CB-7265</a> Fix crash when navigating to custom protocol (introduced in <code>3.5.1</code>)</li>
+<li>Filter out non-launchable <strong>intents</strong></li>
+<li>Extend whitelist to handle <strong>URL</strong>s without <code>//</code> chars</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7172">CB-7172</a> Force window to have focus after resume</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7018">CB-7018</a> Fix <code>setButtonPlumbedToJs</code> never un-listening</li>
+<li><code>@Deprecate</code> methods of <code>PluginManager</code> that were never meant to be public</li>
+<li>Move plugin instantiation and instance storing logic <code>PluginEntry</code>-&gt;<code>PluginManager</code></li>
+<li>Update to check for <strong>Google Glass</strong> APIs</li>
+<li>Fix for <code>android</code> not being in <code>PATH</code> check on Windows</li>
+<li>Tweak log messages in <code>CordovaBridge</code> with bridgeSecret is wrong</li>
+<li>Add <code>node_module</code> licenses to <code>LICENSE</code></li>
+<li>Provide <code>CordovaPlugin</code> with <code>CordovaPreferences</code>. Add new <code>Plugin.initialize()</code></li>
+<li>Convert usages of <code>Config.</code>* to use the non-static versions</li>
+<li>Change <code>getProperty</code> -&gt; <code>prefs.get*</code> within <code>CordovaActivity</code></li>
+<li>Move registration of App plugin from <code>config.xml</code> -&gt; code</li>
+<li>Make <code>setWebViewClient</code> an override instead of an overload.</li>
+<li>Refactor: Use <code>ConfigXmlParser</code> in activity. Adds <code>CordovaWebView.init()</code></li>
+<li>Deprecate some convenience methods on <code>CordovaActivity</code></li>
+<li>Refactor: Move <code>url-filter</code> information into <code>PluginEntry</code></li>
+<li>Don&#39;t re-parse <code>config.xml</code> in <code>onResume</code></li>
+<li>Move handling of <code>Fullscreen</code> preference to <code>CordovaActivity</code></li>
+<li>Delete <code>CB-3064: The errorUrl is...</code> log message left over from debugging presumably</li>
+<li>Refactor <code>Config</code> into <code>ConfigXmlParser</code>, <code>CordovaPreferences</code></li>
+<li>Delete Location-change JS-&gt;Native bridge mode</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5988">CB-5988</a> Allow <code>exec()</code> only from <em>file</em>: or start-up <em>URL</em>&#39;s domain</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6761">CB-6761</a> Fix native-&gt;JS bridge ceasing to fire when page changes and online is set to false and the JS loads quickly</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7018">CB-7018</a> Clean up and deprecation of some button-related functions</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7017">CB-7017</a> Fix <code>onload=true</code> being set on all subsequent plugins</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5971">CB-5971</a> Fix package / project validation</li>
+<li>Delete explicit <code>activity.finish()</code> in back button handling. No change in behaviour</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4404">CB-4404</a> Changing where <code>android:windowSoftInputMode</code> is in the manifest so it works</li>
+<li>Add documentation referencing other implementation</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6851">CB-6851</a> Deprecate <code>WebView.sendJavascript()</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6876">CB-6876</a> Show the correct executable name</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6860">CB-6860</a> Add <code>activity_name</code> and <code>launcher_name</code> to <code>AndroidManifest.xml</code> &amp; <code>strings.xml</code></li>
+<li>Add a comment to <code>custom_rules.xml</code> saying why we move <code>AndroidManifest.xml</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6784">CB-6784</a> Add missing licenses</li>
+<li>Revert <code>defaults.xml: Add AndroidLaunchMode preference</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6315">CB-6315</a> Wrapping this so it runs on the UI thread</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6723">CB-6723</a> Update package name for <strong>Robotium</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6707">CB-6707</a> Update <code>minSdkVersion</code> to <code>10</code> consistently</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5652">CB-5652</a> Make visible cordova version</li>
+</ul>
+
+<h2>What&#39;s new in iOS</h2>
+
+<ul>
+<li>Updated default template</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7432">CB-7432</a> Version script should be updated by <code>coho</code> at release time</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5535">CB-5535</a> Ignore unused arguments in <code>bin/create</code> (e.g <code>--arc</code>), remove <code>--arc</code> references in <code>bin/create</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6897">CB-6897</a> <code>nil</code> <code>callbackId</code> in <code>isValidCallbackId()</code> causes regex match to throw exception</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6897">CB-6897</a> Added unit test</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7169">CB-7169</a> Fix <code>__PROJECT_NAME__</code> replacing code in <code>create</code> script</li>
+<li>Remove trailing whitespace from project template&#39;s <code>.plist</code>, <code>.pch</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7187">CB-7187</a> Delete <code>CDVShared.m</code> &amp; remove dependency on <code>CoreLocation</code></li>
+<li>Fix warning in <code>MainViewController.m</code> (spurious semi-colon)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7162">CB-7162</a> <code>pre-commit</code> hook can&#39;t find <code>uncrustify</code> in path in Git GUI apps</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7134">CB-7134</a> Deprecate <code>CDVPluginResult</code> methods</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7043">CB-7043</a> Fix property <code>statusCode</code> of <code>CDVHTTPURLResponse</code> conflict with superclass property <code>statusCode</code> of <code>NSHTTPURLResponse</code> (<strong>iOS</strong> <code>8</code>)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6165">CB-6165</a> Removing the <code>&quot;OK&quot;</code> String from success callback</li>
+<li>Update version of <strong>NSData+Base64</strong> to get a more normal license on it</li>
+<li>Minor uncrustification of a few files</li>
+<li>Update <code>LICENSE</code> to include <strong>shelljs</strong>&#39;s license</li>
+<li>Remove <code>LICENSE</code> entries for files that we no longer use</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6579">CB-6579</a> Update deprecation to use <code>CDV_DEPRECATED</code> macro</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6998">CB-6998</a> Remove <code>CDVCommandDelegate::execute</code> deprecated call (deprecated since <code>2.2</code>)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6997">CB-6997</a> Deprecate obsolete <code>CDVPlugin</code> methods</li>
+<li>Fix minor grammar in <code>CDVLocalStorage</code> <strong>iCloud</strong> warning</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6785">CB-6785</a> Add license to <code>CONTRIBUTING.md</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6729">CB-6729</a> Update <code>printDeprecationNotice</code> to new name, and new warning for <strong>iOS</strong> &lt; <code>6.0</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5651">CB-5651</a> Make visible the version of the Cordova native lib</li>
+</ul>
+
+<h2>What&#39;s new in Windows Phone 8</h2>
+
+<ul>
+<li>Fix template def missing files</li>
+<li>Remove unwanted slashes and handle Exceptions</li>
+<li>Add <strong>AppVeyor</strong> badge</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7368">CB-7368</a> <code>--archs=&quot;x86&quot;</code> now produces correct binaries</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7341">CB-7341</a> Port tooling/platform scripts from <strong>WSH</strong> to <strong>NodeJS</strong></li>
+<li>Adding testing to the workflow</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6763">CB-6763</a> Fixes issue when multiple simultaneous requests are sent</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4655">CB-4655</a> Default native project template should be overridable at project creation time</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7305">CB-7305</a> Remove trailing slash from dest</li>
+<li>Cleanup file, remove commented out stuff after testing it</li>
+<li>Update instructions minus <code>createTemplates</code> stuff</li>
+<li>Fix intermittent issue with invalid app manifest because of xml commented apache header</li>
+<li><code>create</code> needs to copy+rename the <code>defaults.xml</code> file for projects created outside the cordova-cli</li>
+<li>Removing outdated/unused tooling scripts</li>
+<li>Move <code>createTemplates</code> scripts (they will live undoc&#39;d for a while)</li>
+<li>Move common items to their rightful home</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7028">CB-7028</a> Fixed memory leak in <strong>WP</strong> with plugins</li>
+<li>Use wildcard for contents of <code>www/</code> folder</li>
+<li>Small fix for spaces in path</li>
+<li><code>createTemplates</code> script copies <code>defaults.xml</code>-&gt;<code>config.xml</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5049">CB-5049</a> Create <code>defaults.xml</code> that contains platform <code>config.xml</code> defaults</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6788">CB-6788</a> Fix header licenses (<strong>Apache RAT</strong> report)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7060">CB-7060</a> Fix large project build performance issue</li>
+<li>Adds support for chip architectures to <code>run</code> command</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6924">CB-6924</a> Fixed memory leak in WP page navigation</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6939">CB-6939</a> Replace dash chars in package name and validate it</li>
+<li>Fixes handling of UTF-8 encoded project files</li>
+<li>Added list of supported architectures in help text</li>
+<li>Adds support for target architectures to build command</li>
+<li>Escapes paths in <code>target()</code> function</li>
+<li>add license header to all bat files, and echo off so we don&#39;t see the goto output</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6788">CB-6788</a> Add license header</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6775">CB-6775</a> Added support for autoload, splashscreen uses this</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5653">CB-5653</a> Make visible cordova version</li>
+<li><strong>WP8.1</strong> and the <strong>IE11 WebBrowser</strong> control do not support <code>execScript</code>, moving to <code>eval</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6732">CB-6732</a> Fix <code>MSBuild 64 bit is not supported</code> build error</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6341">CB-6341</a> Remove requirement to have <code>MSBuild</code> in the <code>%PATH%</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6676">CB-6676</a> Allow extra params to <code>build</code>/<code>run</code> and ignore them</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6685">CB-6685</a> [3.5.0rc] Build error: <code>Command failed with exit code 2</code></li>
+<li>Adds <code>-wait</code> flag to <code>CordovaDeploy</code>. Removes unnecessary <code>Program</code> class</li>
+<li><strong>WP7</strong> Goodbye, it has been fun. <code>;)</code></li>
+<li>Apply <code>app-hello-world</code> update</li>
+</ul>
+
+<h2>What&#39;s new in Windows</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-7377">CB-7377</a> Removes unnecessary rules tracing which is also incorrectly handled by <strong>PowerShell</strong></li>
+<li>Removed un-needed files, multiple <code>cordova.js</code> files can only cause confusion</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7377">CB-7377</a> Whitelist. Windows build error due to <code>invalid URI rules in config.xml</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7333">CB-7333</a> Makes default platform template files overridable</li>
+<li>Add <strong>AppVeyor</strong> badge</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7129">CB-7129</a> <strong>VS2012</strong> solution now accepts <code>anycpu</code> target instead of <code>any cpu</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7129">CB-7129</a> Fixes issue when project isn&#39;t built if <strong>msbuild v12.0</strong> is not found</li>
+<li>Updated repo <code>README</code></li>
+<li>Add <strong>AppVeyor</strong> file for CI</li>
+<li>Add basic <code>npm</code> test of create+build project</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6976">CB-6976</a> Reflect new switch name to project structure</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6976">CB-6976</a> Changes switch name from <code>--store</code> to <code>--win</code></li>
+<li>Moves <code>node_modules</code> to <code>bin</code> to correctly work under <code>npm</code></li>
+<li>Adds missing <code>ExecutionPolicy</code> option for <strong>PowerShell</strong></li>
+<li>Configurable target version for store and phone targets</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7129">CB-7129</a> Spellcheck</li>
+<li>Rewrite tooling/platform scripts from <strong>WSH</strong> to <strong>NodeJS</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7243">CB-7243</a> <code>VERSION</code> file is copied over in <code>create</code> platform script</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6699">CB-6699</a> Using wildcard <code>**</code> glob to include <code>www</code> folder items</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7144">CB-7144</a> <code>run</code> fails if replace default certificate</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6787">CB-6787</a> Fix header licenses (<strong>Apache RAT</strong> report)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6976">CB-6976</a> Support for new splash screen and icon images</li>
+<li>Fixes potential perf issue inside <code>exec_verbose</code> method</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6976">CB-6976</a> Fixes deploy error when <code>--nobuild</code> option specified</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6976">CB-6976</a> Replaces new template icons and splash screens</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6976">CB-6976</a> Fixes deploy error on <strong>WP8.1</strong> emulator</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6976">CB-6976</a> Fixes <code>run</code>/<code>emulate</code> error when it runs for the first time</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6976">CB-6976</a> Fixes deploy when target type is not specified</li>
+<li>Adds support for build archs to <code>run</code> command  + small cleanup and refactoring  + fix <strong>jshint</strong> issues</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6976">CB-6976</a> Add support for <strong>Windows Universal</strong> apps (<strong>Windows 8.1</strong> and <strong>WP 8.1</strong>)</li>
+<li>Removed <strong>Windows7</strong> which is now in its own branch</li>
+<li>Added list of supported architectures in help text</li>
+<li>Adds support for target architectures to build command</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6686">CB-6686</a> [3.5.0rc] Build  error if path contains whitespaces</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6684">CB-6684</a> [3.5.0rc] Splash screen setting breaks the build</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6787">CB-6787</a> Add license to <code>windows8/CONTRIBUTING.md</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6684">CB-6684</a> [3.5.0rc] Splash screen setting breaks the build</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6686">CB-6686</a> [3.5.0rc] Build  error if path contains whitespaces</li>
+</ul>
+
+<h2>What&#39;s new in BlackBerry 10</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-7409">CB-7409</a> Update <code>CORDOVA_HOME_DIR</code> based on <code>npm_cache</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7411">CB-7411</a> Make version in version script easier to replace by <code>coho</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7336">CB-7336</a> Add <code>bundledDependencies</code> to <code>package.json</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7211">CB-7211</a> <strong>jshint</strong>: force to see all errors</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7210">CB-7210</a> Cleanup <code>create</code> remove <code>clean</code>/<code>copyJavascript</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7250">CB-7250</a> Test/cordova/integration/target use private home</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7209">CB-7209</a> Improve tests including adding parallelism support</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7186">CB-7186</a> Fix up packager-validator tests to indicate signing</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7186">CB-7186</a> <code>--no-signing</code> will be ignored if <code>--buildId</code> is set</li>
+<li>Update package name to match convention (<code>cordova-</code>[platform name])</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5815">CB-5815</a> Fix <code>cordova</code> not defined when pausing w/o <code>cordova.js</code> included</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7119">CB-7119</a> Fix <code>cordova run --target xxx</code> dies if <code>blackberry10.json</code> is empty</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7087">CB-7087</a> Retire <code>blackberry10/</code> directory</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6492">CB-6492</a> Fix <code>AppData</code> hint for <strong>wXP</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7036">CB-7036</a> Make <code>npm test</code> work again (using <code>grunt</code> instead of <code>jake</code>)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7025">CB-7025</a> Report platform update</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6968">CB-6968</a> Fix bashism (<code>source</code>) in <code>update</code> script and <code>bb10-ndk-version</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6934">CB-6934</a> <code>run</code> should complain about target w/o ip before password</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6925">CB-6925</a> Simulator detection: fail gracefully w/ no DHCP leases</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6904">CB-6904</a> Improve Markdown in <code>README.md</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5436">CB-5436</a> Update <code>defaults.xml</code> and <code>config.xml</code> configuration reference</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6850">CB-6850</a> Use <code>path.join()</code> for <code>blackberry10debugtoken.bar</code> warning</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6757">CB-6757</a> Provide useful hint when simulator does not seem to know its IP</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5654">CB-5654</a> Log &#39;native&#39; Cordova version during framework bootstrap</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6786">CB-6786</a> Add license to <code>CONTRIBUTING.md</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6730">CB-6730</a> Tweak whitelist URI parsing to fix whitelist issues with <code>@2x</code> resource naming</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6554">CB-6554</a> Fix malformed json file</li>
+</ul>
+
+<h2>What&#39;s new in Firefox OS</h2>
+
+<ul>
+<li>Added <code>bundledDependencies</code> to <code>package.json</code></li>
+<li>Added <code>console.log</code> to <code>version</code> script</li>
+<li>Remove hardcoded cordova version</li>
+<li>Fixing error on new CLI/LIB: <code>cp: no such file or directory: /Users/rodrigo/mozilla/cordova/delme/platforms/firefoxos/www/cordova.js</code></li>
+<li>Add <code>clean.bat</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7016">CB-7016</a> <code>.zip</code> created by build has unnecessary <code>./</code> folder on all files</li>
+<li><code>cordova.js</code> needs to be copied to platform <code>www</code></li>
+<li>Update <code>Readme</code></li>
+<li>Remove <code>&lt;!-- and --&gt;</code></li>
+<li>Update header licenses</li>
+<li>Delete <code>foo</code> file</li>
+<li>Update project</li>
+<li>Update defaults</li>
+<li>Add icons</li>
+<li>Removing unused template</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6816">CB-6816</a> Add license to <code>CONTRIBUTING.md</code></li>
+<li>Simplifies build</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5751">CB-5751</a> Fix <strong>FirefoxOS</strong> build issue</li>
+</ul>
+
+<h2>What&#39;s new in Ubuntu (touch)</h2>
+
+<ul>
+<li>Added missing licenses</li>
+<li><code>bin/create</code>: create <code>www</code></li>
+<li>Switch to incremental build</li>
+<li>Set <code>policy_version</code> in <code>apparmor.json</code> based on framework version</li>
+<li>Remove <code>-flto</code> from compiler flags</li>
+<li>Change default to <code>ubuntu-sdk-14.04</code></li>
+<li>Plugin could specify additional build dependency</li>
+<li>Use different compiler flags for debug/release build</li>
+<li>Fix build problem with <code>ubuntu-sdk-14.04</code></li>
+<li><code>bin/build/build</code>: integrate with <code>click-reviewers-tools</code></li>
+<li><code>bin/build/build</code>: check <code>chroot</code> env before build</li>
+<li><code>bin/build/build</code>, <code>bin/build/run</code>: add <code>--framework</code> option</li>
+<li>Add emulator support</li>
+<li>Add support for non-arm based <strong>Ubuntu Touch</strong> devices</li>
+<li><code>CordovaViewInternal</code>: add <code>overrideScheme</code></li>
+<li><code>cplugin</code>: add <code>onAppLoaded</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6818">CB-6818</a> Add license for <code>CONTRIBUTING.md</code></li>
+</ul>
+
+<h2>What&#39;s new in Amazon FireOS</h2>
+
+<ul>
+<li>Updated <code>cordova.js</code> in tests</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7291">CB-7291</a> Add <code>external-launch-whitelist</code> and use it for filtering intent launches</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3445">CB-3445</a> Ensure that <strong>JAR</strong> files in <code>libs</code> directory are included</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7410">CB-7410</a> Add whitelist entries to get <code>iframe</code>/<strong>GoogleMaps</strong> working</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7291">CB-7291</a> Propagate change in method signature to the native tests</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7291">CB-7291</a> Restrict meaning of <code>*</code> in internal whitelist to just <em>http</em> and <em>https</em></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7291">CB-7291</a> Only add <em>file</em>, <em>content</em> and <em>data</em> <strong>URL</strong>s to internal whitelist</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7291">CB-7291</a> Add defaults to external whitelist</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3445">CB-3445</a> Read <code>project.properties</code> to configure <strong>gradle</strong> libraries</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7325">CB-7325</a> Fix error message in <code>android_sdk_version.js</code> when missing SDK on Windows</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7335">CB-7335</a> Add a <code>.gitignore</code> to android project template</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7330">CB-7330</a> Don&#39;t run <code>android update</code> during creation</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3445">CB-3445</a> Add <code>gradle clean</code> command (plus some code cleanup)</li>
+<li>Fix for <code>AmazonWebView</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3445">CB-3445</a> Copy gradle wrapper in <code>build</code> instead of <code>create</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3445">CB-3445</a> Add <code>.gradle</code> template files for <code>update</code> as well as <code>create</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7044">CB-7044</a> Add <code>JAVA_HOME</code> when not set. Be stricter about <code>ANDROID_HOME</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3445">CB-3445</a> Speed up gradle building (incremental builds go from 10s -&gt; 1.5s for me)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3445">CB-3445</a> Copy Gradle wrapper from Android SDK rather than bundling a JAR</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3445">CB-3445</a> Add which to checked-in node_modules</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3445">CB-3445</a> Add option to build and install with gradle</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3445">CB-3445</a> Add an initial set of Gradle build scripts</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7321">CB-7321</a> Don&#39;t require <code>ant</code> for <code>create</code> script</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7044">CB-7044</a>, <a href="https://issues.apache.org/jira/browse/CB-7299">CB-7299</a> Fix up <code>PATH</code> problems when possible</li>
+<li>Change in test&#39;s <code>AndroidManifest.xml</code> needed for the test to run properly</li>
+<li>Adding tests related to <code>3.5.1</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7261">CB-7261</a> Fix <code>setNativeToJsBridgeMode</code> sometimes crashing when switching to <code>ONLINE_EVENT</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7265">CB-7265</a> Fix crash when navigating to custom protocol (introduced in <code>3.5.1</code>)</li>
+<li>Filter out non-launchable <strong>intents</strong></li>
+<li>Handle unsupported protocol errors in webview better</li>
+<li>Amazon related fixes after uplevel</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7238">CB-7238</a> I should have collapsed this, but <code>Config.init()</code> must go before the creation of <code>CordovaWebView</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7238">CB-7238</a> Minor band-aid to get tests running again, this has to go away before <code>3.6.0</code> is released, since this is an API change</li>
+<li>Extend whitelist to handle <strong>URL</strong>s without <code>//</code> chars</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7172">CB-7172</a> Force window to have focus after resume</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7159">CB-7159</a> Set background color of webView as well as its parent</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7018">CB-7018</a> Fix <code>setButtonPlumbedToJs</code> never un-listening</li>
+<li><code>@Deprecate</code> methods of <code>PluginManager</code> that were never meant to be public</li>
+<li>Move plugin instantiation and instance storing logic <code>PluginEntry</code>-&gt;<code>PluginManager</code></li>
+<li>Fix broken unit test due to missing <code>Config.init()</code> call</li>
+<li>Update to check for <strong>Google Glass</strong> APIs</li>
+<li>Fix for <code>android</code> not being in <code>PATH</code> check on Windows</li>
+<li>Displaying error when regex does not match</li>
+<li>Tweak <code>CordovaPlugin.initialize</code> method to be less deprecated</li>
+<li>Un-deprecate <code>CordovaActivity.init()</code> - it&#39;s needed to tweak prefs in <code>onCreate</code></li>
+<li>Tweak log messages in <code>CordovaBridge</code> with bridgeSecret is wrong</li>
+<li>Backport <code>CordovaBridge</code> from 4.0.x -&gt; master</li>
+<li>Update unit tests to not use most deprecated things (e.g. <strong>DroidGap</strong>)</li>
+<li>Add non-String overloads for <code>CordovaPreferences.set()</code></li>
+<li>Make <code>CordovaWebview</code> resilient to <code>init()</code> not being called (for backwards-compatibility)</li>
+<li>Add <code>node_module</code> licenses to <code>LICENSE</code></li>
+<li>Provide <code>CordovaPlugin</code> with <code>CordovaPreferences</code>. Add new <code>Plugin.initialize()</code></li>
+<li>Convert usages of <code>Config.</code>* to use the non-static versions</li>
+<li>Change <code>getProperty</code> -&gt; <code>prefs.get*</code> within <code>CordovaActivity</code></li>
+<li>Make <code>CordovaUriHelper</code> class package-private</li>
+<li>Fix <code>PluginManager.setPluginEntries</code> not removing old entries</li>
+<li>Move registration of App plugin from <code>config.xml</code> -&gt; code</li>
+<li>Make <code>setWebViewClient</code> an override instead of an overload. Delete Location-change JS-&gt;Native bridge mode (missed some of it)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4404">CB-4404</a> Revert setting <code>android:windowSoftInputMode</code> to <code>adjustPan</code></li>
+<li>Refactor: Use <code>ConfigXmlParser</code> in activity. Adds <code>CordovaWebView.init()</code></li>
+<li>Deprecate some convenience methods on <code>CordovaActivity</code></li>
+<li>Fix <code>CordovaPreferences</code> not correctly parsing hex values (<code>valueOf</code>-&gt;<code>decode</code>)</li>
+<li>Refactor: Move <code>url-filter</code> information into <code>PluginEntry</code></li>
+<li>Don&#39;t re-parse <code>config.xml</code> in <code>onResume</code></li>
+<li>Move handling of <code>Fullscreen</code> preference to <code>CordovaActivity</code></li>
+<li>Delete dead code from <code>CordovaActivity</code></li>
+<li>Update <code>.classpath</code> to make <strong>Eclipse</strong> happy (just re-orders one line)</li>
+<li>Delete <code>CB-3064: The errorUrl is...</code> log message left over from debugging presumably</li>
+<li>Refactor <code>Config</code> into <code>ConfigXmlParser</code>, <code>CordovaPreferences</code></li>
+<li>Delete Location-change JS-&gt;Native bridge mode</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5988">CB-5988</a> Allow <code>exec()</code> only from <em>file</em>: or start-up <em>URL</em>&#39;s domain</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6761">CB-6761</a> Fix native-&gt;JS bridge ceasing to fire when page changes and online is set to false and the JS loads quickly</li>
+<li>Update the <code>errorurl</code> to no longer use <strong>intents</strong></li>
+<li>Refactoring the URI handling on Cordova, removing dead code</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7018">CB-7018</a> Clean up and deprecation of some button-related functions</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7017">CB-7017</a> Fix onload=true being set on all subsequent plugins</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5971">CB-5971</a> Fix package / project validation</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5971">CB-5971</a> Add unit tests to cordova-android</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5971">CB-5971</a> Factor out package/project name validation logic</li>
+<li>Delete explicit <code>activity.finish()</code> in back button handling. No change in behaviour</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4404">CB-4404</a> Changing where <code>android:windowSoftInputMode</code> is in the manifest so it works</li>
+<li>Add documentation referencing other implementation</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6851">CB-6851</a> Deprecate <code>WebView.sendJavascript()</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6876">CB-6876</a> Show the correct executable name</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6876">CB-6876</a> Fix the &quot;print usage&quot;</li>
+<li>Trivial spelling fix in comments when reading <code>CordovaResourceApi</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6818">CB-6818</a> I want to remove this code, because Square didn&#39;t do their headers properly</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6860">CB-6860</a> Add <code>activity_name</code> and <code>launcher_name</code> to <code>AndroidManifest.xml</code> &amp; <code>strings.xml</code></li>
+<li>Add a comment to <code>custom_rules.xml</code> saying why we move <code>AndroidManifest.xml</code></li>
+<li>Remove +x from <code>README.md</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6784">CB-6784</a> Add missing licenses</li>
+<li>Revert <code>defaults.xml: Add AndroidLaunchMode preference</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6315">CB-6315</a> Wrapping this so it runs on the UI thread</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6723">CB-6723</a> Update package name for <strong>Robotium</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6707">CB-6707</a> Update <code>minSdkVersion</code> to <code>10</code> consistently</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5652">CB-5652</a> Make visible cordova version</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6392">CB-6392</a> <code>create.js</code> updated to create <code>libs</code> folder before copying it to the project&#39;s platform folder</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6392">CB-6392</a> Checking for <code>awv_interface.jar</code> existance is moved to <code>create_project()</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6392">CB-6392</a> <code>check_reqs.js</code> no longer checks for <code>awv_interface.jar</code></li>
+<li>Fixing a typo which was sending the wrong string to plugins for js confirm dialogs</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6740">CB-6740</a> Cleanup error reporting when <code>AmazonWebView SDK</code> is not found; Updated create script to check commonlibs folder under <code>~/.cordova/lib</code>. If it doesn&#39;t exist create one and let user know. Error message updated. If exists copy it to specific release&#39;s <code>framework/libs</code> folder</li>
+<li>JS confirm DnD alert dialog in Cordova consumes all key events</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6818">CB-6818</a> Add license for <code>CONTRIBUTING.md</code></li>
+<li>Updated release notes</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6644">CB-6644</a> Add a check for webview being null in template code Added a check and some comments to guide devs</li>
+</ul>
+
+<h2>What&#39;s new in Cordova-CLI</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-7355">CB-7355</a> Re added single test to test call through to cordova-lib cordova raw create</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7364">CB-7364</a> Remove duplicate logging initialization for cordova/plugman</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7363">CB-7363</a> Do not insist on precise version of cordova-lib</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7355">CB-7355</a> Removed create tests which test behaviour of downstream dependencies</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7358">CB-7358</a> Cli spec mocks console log to avoid polluting test output while testing</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7347">CB-7347</a> Document <code>cordova platform add /path/to</code> support</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7345">CB-7345</a> Add tests to validate documentation</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7345">CB-7345</a> Improve cli documentation</li>
+<li>Refactored test to make use of <strong>jasmine</strong>&#39;s <code>toThrow</code> expectation</li>
+<li>Correct object referenced in tests</li>
+<li>Proper order of initializers, which indicates a bigger problem</li>
+<li>Moved custom www handling code to a separate function</li>
+<li>Basic tests and structure added to create spec</li>
+<li>Renamed cli create spec more sensibly</li>
+<li>Parse config json moved to a function</li>
+<li>Functional refactor of create with expected input from caller implemented</li>
+<li>Updated tests and cli to pass all tests</li>
+<li>Tracking cli create spec</li>
+<li>Initial commit of cli create command logic in its own file</li>
+<li>Added verbose mode initialization to set up event handlers</li>
+<li>Created <code>init</code> function to handle initialization of <code>underscore</code> and <code>nopt</code></li>
+<li>Added <strong>browserify</strong> option <code>download_opts</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7249">CB-7249</a> Cordova-cli documentation translation: cordova-cli</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7001">CB-7001</a> Added <code>--browserify</code> to help documentation</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6024">CB-6024</a> Document <code>--</code> for platform options</li>
+<li>Added <code>--browserify</code> flag to cli options</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7220">CB-7220</a> Support <code>cordova_lib.binname</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7220">CB-7220</a> Split cordova help into per feature help files</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6756">CB-6756</a> Adds the <code>platforms</code> subcommand for <code>save</code> and <code>restore</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7100">CB-7100</a> Use <code>npm</code> based <strong>lazy-load</strong> by default</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Documentation translation</li>
+<li>Call <code>process.removeAllListeners()</code> in cli spec</li>
+<li>Add <code>--captureExceptions</code> flag to <code>jasmine</code></li>
+<li>Pin <code>jasmine</code> to older version <em>temporarily</em></li>
+<li>Fix <a href="https://issues.apache.org/jira/browse/CB-7069">CB-7069</a> Copy-from &amp; link-to custom uri -&gt; url</li>
+</ul>
+
+<h2>What&#39;s new in Cordova-Plugman</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-7363">CB-7363</a> Do not insist on precise version of cordova-lib</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7362">CB-7362</a> Add <code>Please run npm install from this directory</code> code</li>
+<li>Remove <code>package.json</code>:<code>scripts.test</code></li>
+</ul>
+
+<h2>What&#39;s new in Cordova-Lib</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-5535">CB-5535</a> Remove <code>--arc</code> from <strong>iOS</strong> platform creation args</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7416">CB-7416</a> Fixes file path reference when adding new source file</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7416">CB-7416</a> <code>HandleInstall</code> tests for <code>null</code> <code>platformTag</code>. removed uncalled <code>hasPlatformSection</code> from <code>PluginInfo.js</code></li>
+<li>Remove use of <code>path.join</code> for <code>manifest.launch_path</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7347">CB-7347</a> Improve cordova platform add <code>/path/to</code> handling</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7114">CB-7114</a> <strong>Android</strong> add support of min/max/target SDK to <code>config.xml</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7118">CB-7118</a> Use updated version of <code>node-xcode</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7118">CB-7118</a> <strong>iOS</strong> add <code>target-device</code> and <code>MinimumOSVersion</code> support to <code>config.xml</code></li>
+<li><strong>Ubuntu</strong> support incremental builds</li>
+<li><strong>Ubuntu</strong> support <code>target-dir</code> for <code>resource-file</code></li>
+<li><strong>Ubuntu</strong> use <code>common.copyFile</code></li>
+<li><strong>Ubuntu</strong> check icon existence</li>
+<li><strong>FxOS</strong> Make author url optional</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7142">CB-7142</a> Add <code>&lt;variable&gt;</code> to <code>&lt;feature&gt;</code> for <code>cordova plugin restore</code> command</li>
+<li>Set <code>git clone depth</code> to <code>10</code> for <strong>Travis</strong> to make it faster</li>
+<li><strong>Windows</strong> update as per changed manifest file names</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6699">CB-6699</a> Include files from <code>www</code> folder via single element (use <code>**</code> glob pattern)</li>
+<li>Allow plugin modules to be <code>.json</code> files</li>
+<li>Taking care of dashes in <code>amazon-fireos</code> platform name</li>
+<li>Fix link/copy parent check for <strong>Windows</strong></li>
+<li>Fix error in comments for munge functions</li>
+<li>Add link to <strong>BuildBot</strong> at <code>ci.cordova.io</code> in <code>README</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7255">CB-7255</a> Fixed writing plist unescaped</li>
+<li>Style fixes - white space only</li>
+<li>Add <strong>JSCS</strong> config file</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7228">CB-7228</a> Fixed issue with <code>cordova prepare --browserify</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7001">CB-7001</a> Create a <code>--browserify</code> option for run action</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7228">CB-7228</a> Cordova prepare <code>--browserify</code> runs on all installed plugins</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7001">CB-7001</a> Create a <code>--browserify</code> option for run action</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7228">CB-7228</a> Cordova prepare <code>--browserify</code> runs on all installed plugins</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7190">CB-7190</a> Add <strong>browserify</strong> support in <code>cordova-lib</code>/<code>cordova-cli</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7234">CB-7234</a> Added better outputs for plugin registry workflows</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7100">CB-7100</a> Use <code>npm</code> based <strong>lazy-load</strong> by default</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7091">CB-7091</a> Remove <code>check_requirements()</code> functions from platform parsers</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7140">CB-7140</a> Check plugin versions in local search path</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7203">CB-7203</a> <code>IsRelativePath</code> needs to pass path through</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7199">CB-7199</a> Control <code>git</code>/<code>npm</code> using <code>platform.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6756">CB-6756</a> Adds <code>save</code> and <code>restore</code> command for platforms</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7132">CB-7132</a> Fix regression regarding default resources</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7187">CB-7187</a> Make <code>CoreLocation</code> a required library only for <strong>cordova-ios</strong> <code>&lt; 3.6.0</code></li>
+<li>Add <strong>AppVeyor</strong> badge to <code>README</code></li>
+<li>Add <strong>Travis</strong> and <strong>npm</strong> badges to <code>README.md</code></li>
+<li>Fix test cordova/lazy_load spec on <strong>Windows</strong></li>
+<li>Fix plugman/install spec</li>
+<li>Build configuration for <strong>AppVeyor</strong></li>
+<li>Build configurations for <strong>Travis</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7124">CB-7124</a> Wrap the cordova platform string in <code>Platform</code> object</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7140">CB-7140</a> Switch to using <code>PluginInfo</code> in <code>plugman/fetch.js</code></li>
+<li>Minor style fixes in <code>fetch.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7078">CB-7078</a> Disable <code>serve.spec.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6512">CB-6512</a> Platform add <code>&lt;path&gt;</code> was using wrong <code>www/cordova.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7083">CB-7083</a> Missing <code>SDKReference</code> support on <strong>WP</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6874">CB-6874</a> Consolidate <code>&lt;Content&gt;</code> tag additions into 1 <code>ItemGroup</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7100">CB-7100</a> Use <code>npm</code> based <strong>lazy-load</strong> by default</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7091">CB-7091</a> Remove <code>check_requirements()</code> funcs from platform parsers</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7091">CB-7091</a> Don&#39;t call <code>check_requirements</code> during platform add</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7087">CB-7087</a> Retire <code>blackberry10/</code> directory</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6776">CB-6776</a> Fix uri/url renaming bug</li>
+<li>Remove <code>npm-shrinkwrap.json</code></li>
+</ul>
+
+<h2>What&#39;s new in Cordova JS</h2>
+
+<ul>
+<li>Checking for Windows style path</li>
+<li>Better handling of all <code>modulemapper.clobbers</code> replacements</li>
+<li>Fixed <strong>browserify</strong> <code>onDeviceReady</code> event not firing on the browser</li>
+<li>Removed check for <code>c:</code> and added check for <strong>Windows</strong> platform</li>
+<li>Fixed Windows path issue when trying to set <code>navigator.app</code> in <code>cordova.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7349">CB-7349</a> Tell users to run <code>npm install</code></li>
+<li>Upleveled <strong>amazon-fireos</strong> changes</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-870">CB-870</a> <strong>Android</strong> Add volume button event support</li>
+<li><strong>FxOS</strong> Remove hardcoded cordova version</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6764">CB-6764</a> Fix <code>findCordovaPath()</code> detecting <code>notcordova.js</code> as <code>cordova.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6976">CB-6976</a> Add support for <strong>Windows Universal</strong> apps (<strong>Windows 8.1</strong> and <strong>WP 8.1</strong>)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6714">CB-6714</a> Base <strong>webOS</strong> <code>3.x</code> Cordova implementation</li>
+<li><strong>Android</strong> Delete Location-change JS-&gt;Native bridge mode</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5988">CB-5988</a> <strong>Android</strong> Allow <code>exec()</code> only from <em>file</em>: or start-up <em>URL</em>&#39;s domain</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7034">CB-7034</a> <strong>BlackBerry10</strong> Add error handling to exec makeSyncCall</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6983">CB-6983</a> Misleading debug statement</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6884">CB-6884</a> Fixed js callbacks not firing using <code>WKWebView</code> Cordova bridge</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6884">CB-6884</a> Added <code>WKWebView</code> Cordova bridge</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6863">CB-6863</a> Default Cordova bridge broken due to replacing <code>window.navigator</code> (<strong>iOS</strong> 8)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6867">CB-6867</a> <strong>WP8</strong>, <strong>Windows8</strong> allow empty args</li>
+<li>Adding <code>cordova.require</code></li>
+<li>Adding transform for File plugin</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6792">CB-6792</a> Add license to <code>CONTRIBUTING.md</code></li>
+<li>Removed contacts hack, added regex to handle geolocation</li>
+<li>Fix some old references in the <code>README.md</code></li>
+<li>Updating transform to support bs paths</li>
+<li>Updating transform for <strong>iOS</strong> contacts</li>
+<li>Moving to <code>TreeTransformer</code> and adding a quick substitution for <strong>Android</strong> <code>navigator.app</code> clobber</li>
+<li>Changed id to <strong>amazon-fireos</strong></li>
+<li>Fix broken unit tests with <strong>Node</strong> v0.11.13+ <em>hack</em></li>
+<li>Disable <code>urlutil</code> tests under <strong>jsdom</strong> &amp; set <strong>jsdom</strong> to <code>file:</code> to avoid hitting network</li>
+</ul>
+
+<h2>Plugin versions tested with this release</h2>
+
+<ul>
+<li>cordova-plugin-battery-status: 0.2.10</li>
+<li>cordova-plugin-camera: 0.3.1</li>
+<li>cordova-plugin-console: 0.2.10</li>
+<li>cordova-plugin-contacts: 0.2.12</li>
+<li>cordova-plugin-device: 0.2.11</li>
+<li>cordova-plugin-device-motion: 0.2.9</li>
+<li>cordova-plugin-device-orientation: 0.3.8</li>
+<li>cordova-plugin-dialogs: 0.2.9</li>
+<li>cordova-plugin-file: 1.3.0</li>
+<li>cordova-plugin-file-transfer: 0.4.5</li>
+<li>cordova-plugin-geolocation: 0.3.9</li>
+<li>cordova-plugin-globalization: 0.3.0</li>
+<li>cordova-plugin-inappbrowser: 0.5.1</li>
+<li>cordova-plugin-media: 0.2.12</li>
+<li>cordova-plugin-media-capture: 0.3.2</li>
+<li>cordova-plugin-network-information: 0.2.11</li>
+<li>cordova-plugin-splashscreen: 0.3.2</li>
+<li>cordova-plugin-statusbar: 0.1.7</li>
+<li>cordova-plugin-vibration: 0.3.10</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/news/2014/08/13/tools-update.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2014/08/13/tools-update.html">Tools Release: August 13, 2014</a>
+                    <div class="date"> 13 Aug 2014 - By Marcel Kinard </div>
+                    <p class="content">
+                        An updated version of cordova and cordova-lib are available starting today. cordova@3.5.0-0.2.7...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/news/2014/09/22/plugins-release.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2014/09/22/plugins-release.html">Plugins Release: September 22, 2014</a>
+                    <div class="date"> 22 Sep 2014 - By Marcel Kinard </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        The following plugins were updated today: cordova-plugin-battery-status: 0.2.11 cordova-plugin-camera: 0.3.2 cordova-plugin-console: 0.2.11...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cordovablogs';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  10.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

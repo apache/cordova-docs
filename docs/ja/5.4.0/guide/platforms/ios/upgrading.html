@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                IOS のアップグレード - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/ja/latest/guide/platforms/ios/upgrading.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '5.4.0' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/guide/overview/index.html">
+                概要
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/guide/support/index.html">
+                プラットフォームのサポート
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/guide/cli/index.html">
+                コマンド ライン インターフェイス
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/guide/platforms/index.html">
+                プラットフォームのガイド
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/plugin_ref/plugman.html">
+                Plugman を使用してプラグインを管理するには
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/config_ref/index.html">
+                Config.xml ファイル
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/config_ref/images.html">
+                アイコンとスプラッシュ画面
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/guide/hybrid/webviews/index.html">
+                埋め込み web 表示
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/guide/hybrid/plugins/index.html">
+                プラグイン開発ガイド
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/plugin_ref/spec.html">
+                プラグイン仕様
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/guide/appdev/privacy/index.html">
+                プライバシー ガイド
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/guide/appdev/security/index.html">
+                セキュリティ ガイド
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/platform_plugin_versioning_ref/index.html">
+                プラットフォームとプラグインのバージョン管理
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/guide/appdev/whitelist/index.html">
+                ホワイト リスト ガイド
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/cordova/storage/storage.html">
+                ストレージ
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/guide/next/index.html">
+                次のステップ
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/cordova/events/events.html">
+                イベント
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/5.4.0/cordova/plugins/pluginapis.html">
+                プラグイン Api
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        目次
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/guide/overview/index.html">
+        概要
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/guide/support/index.html">
+        プラットフォームのサポート
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/guide/cli/index.html">
+        コマンド ライン インターフェイス
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/guide/platforms/index.html">
+        プラットフォームのガイド
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/plugin_ref/plugman.html">
+        Plugman を使用してプラグインを管理するには
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/config_ref/index.html">
+        Config.xml ファイル
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/config_ref/images.html">
+        アイコンとスプラッシュ画面
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/guide/hybrid/webviews/index.html">
+        埋め込み web 表示
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/guide/hybrid/plugins/index.html">
+        プラグイン開発ガイド
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/plugin_ref/spec.html">
+        プラグイン仕様
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/guide/appdev/privacy/index.html">
+        プライバシー ガイド
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/guide/appdev/security/index.html">
+        セキュリティ ガイド
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/platform_plugin_versioning_ref/index.html">
+        プラットフォームとプラグインのバージョン管理
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/guide/appdev/whitelist/index.html">
+        ホワイト リスト ガイド
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/cordova/storage/storage.html">
+        ストレージ
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/guide/next/index.html">
+        次のステップ
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/cordova/events/events.html">
+        イベント
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/5.4.0/cordova/plugins/pluginapis.html">
+        プラグイン Api
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/ja/5.4.0/guide/platforms/ios/upgrading.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        日本語
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/5.4.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/5.4.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/5.4.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/5.4.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/5.4.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/5.4.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    <span class="selected">
+                                        日本語
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/5.4.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/5.4.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/5.4.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/5.4.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/5.4.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/5.4.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        5.4.0
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/dev/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/latest/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/9.x/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/8.x/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/7.x/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/6.x/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/5.4.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                5.4.0
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/3.5.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/3.4.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/3.1.0/guide/platforms/ios/upgrading.html" class="">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    これがないドキュメントの最新バージョンです！
+                    <a href="/docs/ja/latest/guide/platforms/ios/upgrading.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>IOS のアップグレード</h1>
+
+<p>このガイドは、コルドバの旧バージョンからアップグレードする iOS のプロジェクトを変更する方法を示します。 これらの命令のほとんど、古いの前にあるコマンド ライン ツールのセットで作成されたプロジェクトに適用されます、 <code>cordova</code> CLI ユーティリティ。 CLI のバージョンを更新する方法については、コマンド ライン インターフェイス参照してください。</p>
+
+<p><strong>注</strong>: Xcode 4.6 必要、Xcode 5 はお勧めします。 現在、Apple の App Store に提出する必要があります使用する iOS SDK の最新の出荷されたバージョン iOS 7 であります。 iOS 7 SDK 必要はありませんまだ、しかしこれはすぐに変更可能性があります。</p>
+
+<h2>3.2.0 プロジェクト アップグレード 3.1.0</h2>
+
+<p>CLI 以外のプロジェクトを実行します。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    bin/パス/を/プロジェクトの更新
+</code></pre></div>
+<p>CLI のプロジェクト。</p>
+
+<ol>
+<li><p>更新、 <code>cordova</code> CLI バージョン。コマンド ライン インターフェイスを参照してください。</p></li>
+<li><p>実行<code>cordova platform update ios</code></p></li>
+</ol>
+
+<h2>アップグレード 3.0.0 プロジェクト 3.1.0</h2>
+
+<p>CLI 以外のプロジェクトを実行します。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    bin/パス/を/プロジェクトの更新
+</code></pre></div>
+<p>CLI のプロジェクト。</p>
+
+<ol>
+<li><p>更新、 <code>cordova</code> CLI バージョン。コマンド ライン インターフェイスを参照してください。</p></li>
+<li><p>実行<code>cordova platform update ios</code></p></li>
+</ol>
+
+<p>iOS 7 の問題:</p>
+
+<ol>
+<li><p>削除 <code>width=device-width, height=device-height</code> から、 <code>index.html</code> ファイルの <code>viewport</code> <code>meta</code> タグ。 （<a href="https://issues.apache.org/jira/browse/CB-4323">関連するバグ</a>を参照してください。.)</p></li>
+<li><p>IOS 7 サポートのメディア、メディアのキャプチャ、splashscreen コア プラグインを更新します。</p></li>
+</ol>
+
+<p>Xcode 5 問題：</p>
+
+<ol>
+<li><p>Xcode 5 (問題ナビゲーター） でそうように求められます場合は、プロジェクトの設定を更新します。</p></li>
+<li><p>更新、<strong>コンパイラ C の/C + + Objective-C</strong> <strong>ビルド オプション</strong>] セクションで [<strong>ビルド設定</strong>] タブで設定します。 <strong>既定のコンパイラ (アップル LLVM 5.0)</strong>を選択します。.</p></li>
+</ol>
+
+<h2>2.9.0 から CLI (3.0.0) へのアップグレード</h2>
+
+<ol>
+<li><p>コマンド ライン インターフェイスで説明されているようにコルドバ、CLI を使用して新しい Apache コルドバ 3.0.0 プロジェクトを作成します。</p></li>
+<li><p>たとえばコルドバ プロジェクトにあなたのプラットフォームを追加します。<code>cordova
+platform add ios</code>.</p></li>
+<li><p>プロジェクトの内容をコピー <code>www</code> ディレクトリを <code>www</code> で作成したコルドバ プロジェクトのルート ディレクトリ。</p></li>
+<li><p>コピーまたは元のプロジェクトから任意のネイティブの資産を上書き ( <code>Resources</code> など)、確実に新しいファイルを追加する、 <code>.xcodeproj</code> プロジェクト。 IOS のプロジェクトのビルド中、 <code>platforms\ios</code> ディレクトリ。</p></li>
+<li><p>コピー、 <code>config.xml</code> に、 <code>www</code> ディレクトリ、すべてのプラグインの定義を削除します。プラットフォーム ディレクトリの代わりにここでの設定を変更します。</p></li>
+<li><p>コルドバ CLI ツールを使用して、必要な任意のプラグインをインストールします。CLI 処理するすべてのコア Api のプラグインとして追加する必要がありますので注意してください。のみ 3.0.0 プラグインは CLI と互換性があります。</p></li>
+<li><p>ビルドおよびテストします。</p></li>
+</ol>
+
+<h2>3.0.0 にアップグレード 2.9.0 プロジェクト</h2>
+
+<ol>
+<li><p>ダウンロードし、するたとえば、ハード ドライブ上の永続的なディレクトリ場所にコルドバ 3.0.0 ソースを展開<code>~/Documents/Cordova-3.0.0</code>.</p></li>
+<li><p>それが実行されている場合は、Xcode を終了します。</p></li>
+<li><p>ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。</p></li>
+<li><p>IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。</p></li>
+<li><p>コピー、 <code>www/cordova.js</code> (バージョン サフィックスをもうがない、バージョン ヘッダー ファイル自体には注意してください) に新しいプロジェクトからファイルを <code>www</code> ディレクトリと削除あなた <code>www/cordova.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>cordova.js</code> ファイル。</p></li>
+<li><p>削除、 <code>CordovaLib</code> ディレクトリ、およびコピー、 <code>CordovaLib</code> プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。</p></li>
+</ol>
+
+<p><strong>注</strong>: コルドバ 3.0.0 を皮切りに、プラグインがあらかじめインストールされていないと使用する必要があります、 <code>plugman</code> それらを自分でインストールするコマンド ライン ユーティリティです。 Plugman を使用してプラグインを管理するを参照してください。</p>
+
+<h2>アップグレード 2.8.0 プロジェクト 2.9.0</h2>
+
+<ol>
+<li><p>ダウンロードし、するたとえば、ハード ドライブ上の永続的なディレクトリ場所にコルドバ 2.9.0 ソースを展開<code>~/Documents/Cordova-2.9.0</code>.</p></li>
+<li><p>それが実行されている場合は、Xcode を終了します。</p></li>
+<li><p>ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。</p></li>
+<li><p>IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。</p></li>
+<li><p>コピー、 <code>www/cordova.js</code> (バージョン サフィックスをもうがない、バージョン ヘッダー ファイル自体には注意してください) に新しいプロジェクトからファイルを <code>www</code> ディレクトリと削除あなた <code>www/cordova.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>cordova.js</code> ファイル。</p></li>
+<li><p>削除、 <code>CordovaLib</code> ディレクトリ、およびコピー、 <code>CordovaLib</code> プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。</p></li>
+</ol>
+
+<h2>アップグレード 2.7.0 2.8.0 にプロジェクト</h2>
+
+<ol>
+<li><p>ダウンロードし、するたとえば、ハード ドライブ上の永続的なディレクトリ場所にコルドバ 2.8.0 ソースを展開<code>~/Documents/Cordova-2.8.0</code>.</p></li>
+<li><p>それが実行されている場合は、Xcode を終了します。</p></li>
+<li><p>ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。</p></li>
+<li><p>IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。</p></li>
+<li><p>コピー、 <code>www/cordova.js</code> (バージョン サフィックスをもうがない、バージョン ヘッダー ファイル自体には注意してください) に新しいプロジェクトからファイルを <code>www</code> ディレクトリと削除あなた <code>www/cordova-2.7.0.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>cordova.js</code> ファイル。</p></li>
+<li><p>更新 <code>&lt;plugin&gt;</code> 内のタグの <code>config.xml</code> ファイルを <code>&lt;feature&gt;</code> タグ。 既存のことに注意してください <code>&lt;plugin&gt;</code> タグまだ動作しますは推奨されません。 この情報をコピーすることができます、 <code>config.xml</code> 、新しいプロジェクト用のファイル。 たとえば。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugins&gt;
+    &lt;plugin name="LocalStorage" value="CDVLocalStorage" /&gt;
+    &lt;!-- other plugins --&gt;
+&lt;/plugins&gt;
+
+&lt;!-- change to: (note that a &lt;feature&gt; tag is on the same level as &lt;plugins&gt; --&gt;
+&lt;feature name="LocalStorage"&gt;
+    &lt;param name="ios-package" value="CDVLocalStorage" /&gt;
+&lt;/feature&gt;
+&lt;!-- other &lt;feature&gt; tags --&gt;
+</code></pre></div></li>
+<li><p>削除、 <code>CordovaLib</code> ディレクトリ、およびコピー、 <code>CordovaLib</code> プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。</p></li>
+<li><p>これら 2 つのフレームワークをプロジェクトに追加します。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">OpenAL ImageIO
+</code></pre></div></li>
+<li><p>ターゲット プロジェクトの<strong>ビルド設定</strong>を更新します。<strong>リンク → その他のリンカーのフラグ</strong>の下で編集する<strong>&quot;- Obj - C&quot;</strong> <strong>&quot;-ObjC」</strong>.</p></li>
+<li><p>ターゲット プロジェクトの<strong>ビルド設定</strong>を更新します。 <strong>リンク → その他のリンカーのフラグ</strong>の下を変更<strong>&quot;-all_load&quot;</strong>を <code>-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a</code> 。 これを行うにで定義されている問題がある場合必要がありますのみ<a href="https://issues.apache.org/jira/browse/CB-3458">この問題します</a>。.</p></li>
+</ol>
+
+<h2>アップグレード 2.6.0 へ 2.7.0 プロジェクト</h2>
+
+<ol>
+<li><p>ダウンロードし、たとえば、ハード ドライブ上の永続的なディレクトリの場所へ 2.7.0 コルドバ ソースを抽出、<code>~/Documents/Cordova-2.7.0</code>.</p></li>
+<li><p>それが実行されている場合は、Xcode を終了します。</p></li>
+<li><p>ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。</p></li>
+<li><p>IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。</p></li>
+<li><p>コピー、 <code>www/cordova-2.7.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/cordova-2.6.0.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>cordova-2.7.0.js</code> ファイル。</p></li>
+<li><p>更新 (または置き換えるには、決してファイルを変更した場合)、 <code>AppDelegate.m</code> ファイルから、新しい 1 つによると （<a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=5c05ac80e056753c0e8736f887ba9f28d5b0774c;hp=623ad8ec3c46f656ea18c6c3a190d650dd64e479;hb=c6e71147386d4ad94b07428952d1aae0a9cbf3f5;hpb=c017fda8af00375a453cf27cfc488647972e9a23">この diff</a>を見るプロジェクト).</p></li>
+<li><p><code>config.xml</code>ファイルに<a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=537705d76a5ef6bc5e57a8ebfcab78c02bb4110b;hp=8889726d9a8f8c530fe1371c56d858c34552992a;hb=064239b7b5fa9a867144cf1ee8b2fb798ce1f988;hpb=c9f233250d4b800f3412eeded811daaafb17b2cc">この行を削除</a>.</p></li>
+<li><p>削除、 <code>CordovaLib</code> ディレクトリ、およびコピー、 <code>CordovaLib</code> プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。</p></li>
+</ol>
+
+<h2>2.6.0 にアップグレード 2.5.0 プロジェクト</h2>
+
+<ol>
+<li><p>ダウンロードし、するたとえば、ハード ドライブ上の永続的なディレクトリ場所にコルドバ 2.6.0 ソースを展開<code>~/Documents/Cordova-2.6.0</code>.</p></li>
+<li><p>それが実行されている場合は、Xcode を終了します。</p></li>
+<li><p>ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。</p></li>
+<li><p>IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。</p></li>
+<li><p>プロジェクトのコピー <code>www/cordova-2.6.0.js</code> にファイルを <code>www</code> ディレクトリ、および削除を <code>www/cordova-2.5.0.js</code> ファイル。</p></li>
+<li><p>コルドバのスクリプト参照を更新あなた <code>www/index.html</code> ファイルと共に、スクリプトを参照する他のファイル) を指す、新しい <code>cordova-2.6.0.js</code> ファイル。</p></li>
+<li><p>更新 (または置き換えるには、決してファイルを変更した場合)、 <code>AppDelegate.m</code> ファイルから、新しい 1 つによると （<a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=124a56bb4f361e95616f44d6d6f5a96ffa439b60;hp=318f79326176be8f16ebc93bad85dd745f4205b6;hb=a28c7712810a63396e9f32fa4eb94fe3f8b93985;hpb=36acdf55e4cab52802d73764c8a4b5b42cf18ef9">この diff</a>を見るプロジェクト).</p></li>
+<li><p><code>config.xml</code>ファイルは、<a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=1555b5e81de326a07efe0bccaa5f5e2326b07a9a;hp=0652d60f8d35ac13c825c572dca6ed01fea4a540;hb=95f16a6dc252db0299b8e2bb53797995b1e39aa1;hpb=a2de90b8f5f5f68bd9520bcbbb9afa3ac409b96d">この新しい行を追加</a>.</p></li>
+<li><p><code>config.xml</code>ファイルは、<a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=d307827b7e67301171a913417fb10003d43ce39d;hp=04260aa9786d6d74ab20a07c86d7e8b34e31968c;hb=97b89edfae3527828c0ca6bb2f6d58d9ded95188;hpb=942d33c8e7174a5766029ea1232ba2e0df745c3f">この新しい行を追加</a>.</p></li>
+<li><p><code>config.xml</code>ファイル、 <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=8889726d9a8f8c530fe1371c56d858c34552992a;hp=d307827b7e67301171a913417fb10003d43ce39d;hb=57982de638a4dce6ae130a26662591741b065f00;hpb=ec411f18309d577b4debefd9a2f085ba719701d5">UIWebViewBounce DisallowOverscroll に変更されているしデフォルト値が異なる</a>.</p></li>
+<li><p><code>config.xml</code>ファイル、 <code>EnableLocation</code> の好みは廃止されました。</p></li>
+<li><p>削除、 <code>CordovaLib</code> ディレクトリ、およびコピー、 <code>CordovaLib</code> プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。</p></li>
+</ol>
+
+<h2>アップグレード 2.4.0 2.5.0 にプロジェクト</h2>
+
+<ol>
+<li><p>ダウンロードし、するたとえば、ハード ドライブ上の永続的なディレクトリ場所にコルドバ 2.5.0 ソースを展開<code>~/Documents/Cordova-2.5.0</code>.</p></li>
+<li><p>それが実行されている場合は、Xcode を終了します。</p></li>
+<li><p>ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。</p></li>
+<li><p>IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。</p></li>
+<li><p>コピー、 <code>www/cordova-2.5.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリと削除あなた <code>www/cordova-2.4.0.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>cordova-2.5.0.js</code> ファイル。</p></li>
+<li><p>更新 (または置き換えるには、決してファイルを変更した場合)、 <code>AppDelegate.m</code> ファイルから、新しい 1 つによると （<a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=318f79326176be8f16ebc93bad85dd745f4205b6;hp=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hb=4001ae13fcb1fcbe73168327630fbc0ce44703d0;hpb=299a324e8c30065fc4511c1fe59c6515d4842f09">この diff</a>を見るプロジェクト).</p></li>
+<li><p><code>config.xml</code>ファイル、<a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=903944c4b1e58575295c820e154be2f5f09e6314;hp=721c734120b13004a4a543ee25f4287e541f34be;hb=ae467249b4a256bd31ee89aea7a06f4f2316b8ac;hpb=9e39f7ef8096fb15b38121ab0e245a3a958d9cbb">これらの新しい行を追加</a>.</p></li>
+<li><p><code>config.xml</code>ファイル、<a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=64e71636f5dd79fa0978a97b9ff5aa3860a493f5;hp=d8579352dfb21c14e5748e09b2cf3f4396450163;hb=0e711f8d09377a7ac10ff6be4ec17d22cdbee88d;hpb=57c3c082ed9be41c0588d0d63a1d2bfcd2ed878c">ルート要素を編集する、ウィジェットにコルドバからそれを変える</a>.</p></li>
+<li><p><code>config.xml</code>ファイル、 <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=721c734120b13004a4a543ee25f4287e541f34be;hp=7d67508b70914aa921a16e79f79c00512502a8b6;hb=187bf21b308551bfb4b98b1a5e11edf04f699791;hpb=03b8854bdf039bcefbe0212db937abd81ac675e4">OpenAllWhitelistURLsInWebView 設定の削除</a>.</p></li>
+<li><p>削除、 <code>cordova</code> ディレクトリ、およびコピー、 <code>cordova</code> プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。2.5.0 で、これはスクリプトを更新します。</p></li>
+<li><p>削除、 <code>CordovaLib</code> ディレクトリ、およびコピー、 <code>CordovaLib</code> プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。</p></li>
+</ol>
+
+<h2>アップグレード 2.3.0 2.4.0 にプロジェクト</h2>
+
+<ol>
+<li><p>ダウンロードし、するたとえば、ハード ドライブ上の永続的なディレクトリ場所にコルドバ 2.4.0 ソースを展開<code>~/Documents/Cordova-2.4.0</code>.</p></li>
+<li><p>それが実行されている場合は、Xcode を終了します。</p></li>
+<li><p>ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。</p></li>
+<li><p>IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。</p></li>
+<li><p>コピー、 <code>www/cordova-2.4.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/cordova-2.3.0.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>cordova-2.4.0.js</code> ファイル。</p></li>
+<li><p>更新 (または置き換えるには、決してファイルを変更した場合)、 <code>MainViewController.m</code> ファイルから、新しい 1 つによると （<a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/MainViewController.m;h=5f9eeac15c2437cd02a6eb5835b48374e9b94100;hp=89da1082d06ba5e5d0dffc5b2e75a3a06d5c2aa6;hb=b4a2e4ae0445ba7aec788090dce9b822d67edfd8;hpb=a484850f4610e73c7b20cd429a7794ba829ec997">この diff</a>を見るプロジェクト).</p></li>
+<li><p>更新 (または置き換えるには、決してファイルを変更した場合)、 <code>AppDelegate.m</code> ファイルから、新しい 1 つによると （<a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hp=1ca3dafeb354c4442b7e149da4f281675aa6b740;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d">この diff</a>を見るプロジェクト).</p></li>
+<li><p><code>config.xml</code>ファイルは、<a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=7d67508b70914aa921a16e79f79c00512502a8b6;hp=337d38da6f40c7432b0bce05aa3281d797eec40a;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d">この新しい行を追加</a>.</p></li>
+<li><p>削除、 <code>cordova</code> ディレクトリ、およびコピー、 <code>cordova</code> プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。2.4.0 でこのスクリプトを修正します。</p></li>
+<li><p>削除、 <code>CordovaLib</code> ディレクトリ、およびコピー、 <code>CordovaLib</code> プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。</p></li>
+<li><p>リソースとしてプロジェクトに AssetsLibrary.framework を追加します。 ( <a href="https://developer.apple.com/library/ios/#recipes/xcode_help-project_editor/Articles/AddingaLibrarytoaTarget.html">Apple のドキュメント</a>について参照してくださいそう方法。)。</p></li>
+</ol>
+
+<h2>アップグレード 2.2.0 2.3.0 にプロジェクト</h2>
+
+<ol>
+<li><p>ダウンロードし、するたとえば、ハード ドライブ上の永続的なディレクトリ場所にコルドバ 2.3.0 ソースを展開<code>~/Documents/Cordova-2.3.0</code>.</p></li>
+<li><p>それが実行されている場合は、Xcode を終了します。</p></li>
+<li><p>ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。</p></li>
+<li><p>IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。</p></li>
+<li><p>コピー、 <code>www/cordova-2.3.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/cordova-2.2.0.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>cordova-2.3.0.js</code> ファイル。</p></li>
+<li><p>更新 (または置き換えるには、決してファイルを変更した場合)、 <code>MainViewController.m</code> 新しいプロジェクトからの 1 つによると。</p></li>
+<li><p>削除、 <code>cordova</code> ディレクトリ、およびコピー、 <code>cordova</code> プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。2.3.0、新しいスクリプトがあります。</p></li>
+<li><p>削除、 <code>CordovaLib</code> ディレクトリ、およびコピー、 <code>CordovaLib</code> プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。</p></li>
+<li><p>変換、 <code>Cordova.plist</code> ファイルを <code>config.xml</code> 、スクリプトを実行して <code>bin/cordova\_plist\_to\_config\_xml</code> プロジェクト ファイル。</p></li>
+<li><p>InAppBrowser プラグインを追加、 <code>config.xml</code> の下でこのタグを追加することによって <code>&lt;cordova&gt;&lt;plugins&gt;</code> :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt; プラグイン名"InAppBrowser"の値を = ="CDVInAppBrowser"/&gt;
+</code></pre></div></li>
+<li><p>Objective-C のプラグインはもう<em>ない</em>ホワイト注意ください。 ホワイト リストにアプリケーションのホワイト リストとの接続を設定する必要が、 <code>User-Agent</code> メイン コルドバ WebView として同じユーザー エージェントへの接続のヘッダー。 アクセスしてこれを得ることができる、 <code>userAgent</code> メイン ビュー コント ローラーをオフ プロパティ。 メイン ビュー コント ローラー ( <code>CDVViewController</code> ) はまた、 <code>URLisAllowed</code> URL ホワイト リストを渡すかどうかをチェックするメソッド。</p></li>
+<li><p>デバイス API の変更:</p></li>
+</ol>
+<div class="highlight"><pre><code class="language-" data-lang="">*   IOS は、device.platform を返すを使用して `iPhone` 、 `iPad` または `iPod Touch` （正しく） を返します今;`iOS`.
+*   IOS は、ユーザーのデバイスの名前を返す使用 (すべてのプラットフォームでは非推奨今) device.name (例えば ' Shazron の iPhone 5 '）;今、それを返すために使用どのような device.platform を返します： `iPhone` 、 `iPad` または`iPod Touch`.
+*   すべてのプラットフォーム、device.model; と呼ばれる新しいプロパティがありますこれは特定のデバイス モデルを返します、例えば `iPad2,5` (他のプラットフォームでは、返すを返すために使用どのような device.name)。
+</code></pre></div>
+<h2>2.2.0 にプロジェクト アップグレード 2.1.0</h2>
+
+<ol>
+<li><p>ダウンロードし、するたとえば、ハード ドライブ上の永続的なディレクトリ場所にコルドバ 2.2.0 ソースを展開<code>~/Documents/Cordova-2.2.0</code>.</p></li>
+<li><p>それが実行されている場合は、Xcode を終了します。</p></li>
+<li><p>ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。</p></li>
+<li><p>IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。</p></li>
+<li><p>コピー、 <code>www/cordova-2.2.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/cordova-2.1.0.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>cordova-2.2.0.js</code> ファイル。</p></li>
+<li><p>更新 (または置き換えるには、決してファイルを変更した場合)、 <code>MainViewController.m</code> 新しいプロジェクトからの 1 つによると：</p></li>
+</ol>
+<div class="highlight"><pre><code class="language-" data-lang="">*   更新 → viewWillAppear
+</code></pre></div>
+<ol>
+<li><p>コピー、 <code>cordova</code> プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。2.2.0、これは、更新されたエミュレート&#39; スクリプト。</p></li>
+<li><p>次に、更新、 <code>CordovaLib</code> サブ プロジェクト参照。 コルドバ 2.1.0 以降では、使用していない CORDOVALIB Xcode 変数もうどこを参照するとき <code>CordovaLib</code> が存在する、参照は絶対参照、現在。</p>
+
+<ol>
+<li> ターミナル.app を起動します。</li>
+<li> コルドバをインストールした場所に移動 (手順 1 を参照) で、 <code>bin</code> サブディレクトリ</li>
+<li><p>最初のパラメーターは、プロジェクトのパスをあなたの以下のスクリプトを実行 <code>.xcodeproj</code> ファイル。</p>
+
+<p><code>update_cordova_subproject path/to/your/project/xcodeproj</code></p></li>
+</ol></li>
+</ol>
+
+<p><strong>注</strong>: コードを至る 2.2.0 で、 <code>bin/create</code> スクリプトのコピーで、 <code>CordovaLib</code> プロジェクトにプロジェクトのサブ。 セットアップの同じようなものが、ちょうど右のコピー <code>CordovaLib</code> 更新をプロジェクト ディレクトリに、 <code>CordovaLib</code> サブテーマ Xcode ファイル インスペクター (プロジェクト) の相対位置。</p>
+
+<h2>アップグレード 2.0.0 プロジェクト 2.1.0</h2>
+
+<p>コルドバ 2.1.0 と <code>CordovaLib</code> を<strong>自動参照カウント (ARC)</strong>を使用してアップグレードされました。 必要な<strong>アーク</strong>を使用する CordovaLib が<strong>アーク</strong>を使用してプロジェクトをアップグレードする場合にアップグレードするください使用しないメニューから Xcode 移行ウィザード：<strong>編集 → → リファクタリング... Objective-C の弧に変換</strong>、libCordova.a の選択を解除し、ウィザードを完了するまで実行します。</p>
+
+<ol>
+<li><p>ダウンロードし、するたとえば、ハード ドライブ上の永続的なディレクトリ場所にコルドバ 2.1.0 ソースを展開<code>~/Documents/Cordova-2.1.0</code>.</p></li>
+<li><p>それが実行されている場合は、Xcode を終了します。</p></li>
+<li><p>ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。</p></li>
+<li><p>IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。</p></li>
+<li><p>コピー、 <code>www/cordova-2.1.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/cordova-2.0.0.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>cordova-2.1.0.js</code> ファイル。</p></li>
+<li><p>更新 (または置き換えるには、決してファイルを変更した場合)、 <code>AppDelegate.m</code> 新しいプロジェクトからの 1 つによると：</p></li>
+</ol>
+<div class="highlight"><pre><code class="language-" data-lang="">*   編集 → アプリケーション: didFinishLaunchingWithOptions:
+*   追加 → アプリケーション: supportedInterfaceOrientationsForWindow:
+</code></pre></div>
+<ol>
+<li> 更新 (または置き換えるには、決してファイルを変更した場合)、 <code>MainViewController.m</code> 新しいプロジェクトからの 1 つによると：</li>
+</ol>
+<div class="highlight"><pre><code class="language-" data-lang="">*   追加 → viewWillAppear
+</code></pre></div>
+<ol>
+<li><p>コピー、 <code>cordova</code> プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。2.1.0 でスペースを含むパスをサポートする更新されたスクリプトがあります。</p></li>
+<li><p>削除する、 <code>VERSION</code> ファイルをプロジェクトから参照 (<em>ない</em>1 つで<code>CordovaLib</code>).</p></li>
+<li><p>次に、更新、 <code>CordovaLib</code> サブ プロジェクト参照。 コルドバ 2.1.0 以降では、使用していない CORDOVALIB Xcode 変数もうどこを参照するとき <code>CordovaLib</code> が存在する、参照は絶対参照、現在。</p>
+
+<ol>
+<li> ターミナル.app を起動します。</li>
+<li> コルドバをインストールした場所に移動 (手順 1 を参照) で、 <code>bin</code> サブディレクトリ</li>
+<li><p>最初のパラメーターは、プロジェクトのパスをあなたの以下のスクリプトを実行 <code>.xcodeproj</code> ファイル。</p>
+
+<p><code>update_cordova_subproject パス/を/あなた/プロジェクト/xcodeproj</code></p></li>
+</ol></li>
+</ol>
+
+<h2>アップグレード 1.9.0 プロジェクト 2.0.0</h2>
+
+<ol>
+<li><p>コルドバ 2.0.0 をインストールします。</p></li>
+<li><p>IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。</p></li>
+<li><p>コピー、 <code>www/cordova-2.0.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/cordova-1.9.0.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>cordova-2.0.0.js</code> ファイル。</p></li>
+<li><p>コピー、 <code>cordova</code> (場合プロジェクト コマンド ライン ツール) は、プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。</p></li>
+<li><p>下の新しいエントリを追加 <code>Plugins</code> で、 <code>Cordova.plist</code> ファイル、<strong>サポート ファイル</strong>のグループの下で。 キーが <code>Device</code> で、値は<code>CDVDevice</code>.</p></li>
+<li><p>削除<code>Cordova.framework</code>.</p></li>
+<li><p>削除 <code>verify.sh</code> <strong>サポート ファイル</strong>グループから。</p></li>
+<li><p>プロジェクト ナビゲーターでプロジェクト アイコンを選択して、<strong>ターゲット</strong>プロジェクトを選択し、[<strong>ビルド設定</strong>] タブを選択します。</p></li>
+<li><p><strong>プリプロセッサ マクロ</strong>を検索し、すべて削除します<strong>CORDOVA_FRAMEWORK = 1</strong>の値。</p></li>
+<li><p>検索、 <code>CordovaLib</code> ホーム ・ フォルダーの下に、ハード ドライブにインストールされているディレクトリ <code>Documents</code> サブディレクトリ。</p></li>
+<li><p>検索、 <code>CordovaLib.xcodeproj</code> ファイルで、 <code>CordovaLib</code> ディレクトリ、その後ドラッグ アンド ドロップ、ファイルをプロジェクトに。それは、サブプロジェクトとして表示されます。</p></li>
+<li><p>プロジェクトをビルドし、関連するいくつかのエラーを取得する必要があります <code>#import</code> ディレクティブ。</p></li>
+<li><p>ため、 <code>#import</code> エラー、変更このスタイルでの輸入品を任意の引用：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">#import "CDV.h"
+</code></pre></div>
+<p>このブラケット ベース スタイル。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">#import &lt;Cordova/CDV.h&gt;
+</code></pre></div>
+<p>いずれかを削除して <code>#ifdef</code> 、コルドバの周囲にラッパーをインポートして、彼らはもはや必要ありません （輸入が今統一される)</p></li>
+<li><p>もう一度、プロジェクトをビルドしする必要はありませんいずれか <code>#import</code> エラー。</p></li>
+<li><p>プロジェクト ナビゲーターで<strong>プロジェクトのアイコン</strong>を選択、<strong>ターゲット</strong>プロジェクトを選択し、[<strong>ビルド フェーズ</strong>] タブを選択します。</p></li>
+<li><p><strong>ターゲットの依存関係</strong>の位相、し選択<strong>+</strong>ボタンを展開します。</p></li>
+<li><p>選択して、 <code>CordovaLib</code> ターゲット、し<strong>追加</strong>] ボタンを選択します。</p></li>
+<li><p>最初の<strong>リンク ライブラリとバイナリ</strong>フェーズ (フレームワークの束を既に含める必要があります) を展開し、 <strong>+</strong>の選択ボタン。</p></li>
+<li><p>選択、 <code>libCordova.a</code> スタティック ライブラリは、[<strong>追加</strong>] ボタンを選択します。</p></li>
+<li><p><strong>スクリプトの実行</strong>フェーズを削除します。</p></li>
+<li><p>プロジェクト ナビゲーターで<strong>プロジェクトのアイコン</strong>を選択、<strong>ターゲット</strong>プロジェクトを選択し、[<strong>ビルド設定</strong>] タブを選択します。</p></li>
+<li><p><strong>その他のリンカーのフラグ</strong>を検索し、値を追加<strong>-force_load</strong>と<strong>Obj-C</strong>.</p></li>
+<li><p>展開、 <code>CordovaLib</code> サブ プロジェクト。</p></li>
+<li><p>検索、 <code>VERSION</code> ファイルは、(コピーではなく、それへのリンクを作成する) をメイン プロジェクトにドラッグします。</p></li>
+<li><p><strong>追加フォルダーを作成するグループ</strong>のラジオボタンを選択し、[<strong>完了</strong>] ボタンを選択します。</p></li>
+<li><p>選択、 <code>VERSION</code> 、前の手順でドラッグしたファイル。</p></li>
+<li><p><strong>ファイル インスペクター</strong>を表示する<strong>オプション コマンド 1</strong>のキーの組み合わせ入力 (または menuitem<strong>表示 → ユーティリティ → ファイル インスペクターの表示</strong>).</p></li>
+<li><p>ドロップ ダウン メニューを<strong>ファイル検査</strong>で<strong>場所</strong>に対して<strong>相対 CORDOVALIB</strong>を選択します。.</p></li>
+<li><p>設定、Xcode <strong>Xcode 設定 → 場所 → 派生データ高度な...</strong>を<strong>ユニークな</strong>統一されたヘッダーを見つけることができますように。</p></li>
+<li><p>プロジェクト ナビゲーターで<strong>プロジェクトのアイコン</strong>を選択、<strong>ターゲット</strong>を選択し、[<strong>ビルド設定</strong>] タブを選択します。</p></li>
+<li><p><strong>ヘッダー検索パス</strong>で検索します。この設定では、これら 3 つの値は、引用符を含むを追加します。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">"$(TARGET_BUILD_DIR)/usr/local/lib/include"
+
+"$(OBJROOT)/UninstalledProducts/include"
+
+"$(BUILT_PRODUCTS_DIR)"
+</code></pre></div></li>
+<li><p><strong>その他のリンカーのフラグ</strong>を検索します。この設定では、この値を追加します。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">-weak_framework CoreFoundation
+</code></pre></div></li>
+<li><p>プロジェクトをビルドし、それをコンパイルして問題<strong>なく</strong>リンクする必要があります。.</p></li>
+<li><p><strong>スキーム</strong>] ドロップダウンから、プロジェクトを選択し、[ <strong>iPhone 5.1 シミュレータ</strong>.</p></li>
+<li><p>[<strong>実行</strong>] ボタンを選択します。</p></li>
+</ol>
+
+<p><strong>注</strong>: 手がかり Xcode でコンソール ・ ログでエラーの確認してくださいシミュレータで期待どおりにプロジェクトが動作していない場合。</p>
+
+<h2>1.8.X プロジェクト 1.9.0 をアップグレードします。</h2>
+
+<ol>
+<li><p>コルドバ 1.9.0 をインストールします。</p></li>
+<li><p>新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。</p></li>
+<li><p>コピー、 <code>www/cordova-1.9.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/cordova-1.8.x.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>cordova-1.9.0.js</code> ファイル。</p></li>
+</ol>
+
+<p><strong>注</strong>: 1.9.0 サポートする新しい <code>BackupWebStorage</code> ブール <code>Cordova.plist</code> 設定。 それはデフォルトで有効になっているので、設定それ <code>false</code> 特に iOS の 6 で、それを無効にします。 参照してください<a href="https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html">リリース ノート: サファリと UIKit セクション</a></p>
+
+<h2>1.8.X プロジェクト アップグレード 1.7.0</h2>
+
+<ol>
+<li><p>コルドバ 1.8.0 をインストールします。</p></li>
+<li><p>新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。</p></li>
+<li><p>コピー、 <code>www/cordova-1.8.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/cordova-1.7.x.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>cordova-1.8.0.js</code> ファイル。</p></li>
+</ol>
+
+<p>キャプチャ API を使用する、新しい<strong>ipad と網膜ディスプレイ</strong>資産必要があります。</p>
+
+<ol>
+<li><p>コピー、 <code>Resources/Capture.bundle</code> 、上書き、既存のプロジェクトのディレクトリに新しいプロジェクトからの項目 <code>Resources/Capture.bundle</code> アイテム。</p></li>
+<li><p>プロジェクトでは、選択、 <code>Capture.bundle</code> 項目 xcode プロジェクト ナビゲーターのあなたに<strong>削除</strong>キーを入力し、表示されるダイアログ ボックスから<strong>削除する参照</strong>を選択します。</p></li>
+<li><p>新しいドラッグ <code>Capture.bundle</code> xcode プロジェクト ナビゲーターはあなたに上記の手順 1 でオプションを選択、<strong>追加フォルダーを作成するグループ</strong>。</p></li>
+</ol>
+
+<h2>1.7.0 1.6.X プロジェクトのアップグレード</h2>
+
+<ol>
+<li><p>コルドバ 1.7.0 をインストールします。</p></li>
+<li><p>新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。</p></li>
+<li><p>コピー、 <code>www/cordova-1.7.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/cordova-1.6.0.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>cordova-1.7.0.js</code> ファイル。</p></li>
+</ol>
+
+<h2>アップグレード 1.5.0 1.6.x にプロジェクト</h2>
+
+<ol>
+<li><p>コルドバ 1.6.1 をインストールします。</p></li>
+<li><p>バックアップを作成 <code>AppDelegate.m</code> 、 <code>AppDelegate.h</code> 、 <code>MainViewController.m</code> 、 <code>MainViewController.h</code> 、および <code>Cordova.plist</code> プロジェクト内。</p></li>
+<li><p>新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。</p></li>
+<li><p>1.5.0-Based プロジェクトのディレクトリ (バックアップ ファイルを最初から上記の手順 2) すべての古いファイルを置き換える、ディスク上に新しいプロジェクトからこれらのファイルをコピーします。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">AppDelegate.h
+AppDelegate.m
+MainViewController.h
+MainViewController.m
+Cordova.plist
+</code></pre></div></li>
+<li><p>追加するすべての新しい <code>MainViewController</code> と <code>AppDelegate</code> 、Xcode プロジェクトへファイルを。</p></li>
+<li><p>コピー、 <code>www/cordova-1.6.1.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/cordova-1.5.0.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>cordova-1.6.1.js</code> ファイル。</p></li>
+<li><p>追加、新しい <code>Cordova.plist</code> ファイルをプロジェクトに。 統一コルドバ JavaScript ファイル （Android とブラックベリーからのものと一致するコアのプラグインのサービスの名前を変更する必要がありますので、これは必要です。<code>cordova-js</code>).</p></li>
+<li><p>統合の設定、新しいにあなたの<strong>バックアップ Cordova.plist</strong>でいた<strong>プラグイン</strong>と<strong>ExternalHosts</strong>のエントリ<code>Cordova.plist</code>.</p></li>
+<li><p>統合、バックアップ内にあるプロジェクトに固有のコード <code>AppDelegate.h</code> と <code>AppDelegate.m</code> に新しい <code>AppDelegate</code> ファイル。 任意 <code>UIWebViewDelegate</code> または <code>CDVCommandDelegate</code> でコード <code>AppDelegate.m</code> に行く必要がある <code>MainViewController.m</code> 今 (そのファイル内のコメント アウト セクションを参照してください)。</p></li>
+<li><p>あなたのバックアップであるプロジェクトに固有のコードを統合 <code>MainViewController.h</code> と <code>MainViewController.m</code> に新しい MainViewController ファイル。</p></li>
+<li><p>プロジェクト ナビゲーターでプロジェクト アイコンをクリックして、<strong>プロジェクト</strong>を選択し、[<strong>ビルド設定</strong>] タブを選択します。</p></li>
+<li><p>入力<strong>コンパイラ C の/C + + Objective-C</strong>の検索フィールド。</p></li>
+<li><p><strong>アップル LLVM コンパイラ 3.1</strong>値を選択します。</p></li>
+</ol>
+
+<h2>1.4.X プロジェクト 1.5.0 をアップグレードします。</h2>
+
+<ol>
+<li><p>コルドバ 1.5.0 をインストールします。</p></li>
+<li><p>新しいプロジェクトを作成し、一度それを実行します。この新しいプロジェクトから資産の一部を必要があります。</p></li>
+<li><p>コピー、 <code>www/cordova-1.5.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/phonegap-1.4.x.js</code> ファイル。</p></li>
+<li><p>コルドバのスクリプト参照に更新あなた <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す新しいコルドバ <code>cordova-1.5.0.js</code> ファイル。</p></li>
+<li><p>検索 <code>PhoneGap.framework</code> 、プロジェクト ナビゲーターでそれを選択します。</p></li>
+<li><p><strong>削除</strong>キーを入力し、削除、 <code>PhoneGap.framework</code> プロジェクト ナビゲーターの参照。</p></li>
+<li><p>(<strong>ファイルの追加</strong>シート） プロジェクトにファイルを追加するシートをドロップダウンする必要があります<strong>オプション コマンド A</strong>のキーの組み合わせを入力します。 <strong>追加フォルダーを作成済みグループ</strong>のラジオボタンが選択されていることを確認してください。</p></li>
+<li><p>フォルダーに移動するための別のシートにドロップダウンする必要があります<strong>シフト コマンド G</strong>のキーの組み合わせ入力 (、<strong>フォルダーに移動する：</strong>シート)。</p></li>
+<li><p>入力してください <code>/Users/Shared/Cordova/Frameworks/Cordova.framework</code> で、<strong>フォルダーに移動する：</strong>シートし、 <strong>[移動</strong>] ボタンを押します。</p></li>
+<li><p><strong>ファイルの追加</strong>シートで、<strong>追加</strong>ボタンを押します。</p></li>
+<li><p>選択 <code>Cordova.framework</code> プロジェクト ナビゲーターで。</p></li>
+<li><p><strong>ファイル インスペクター</strong>を表示する<strong>オプション コマンド 1</strong>のキーの組み合わせを入力します。.</p></li>
+<li><p>ドロップ ダウン メニューを<strong>ファイル検査</strong>で<strong>場所</strong>の<strong>絶対パス</strong>を選択します。.</p></li>
+<li><p>(<strong>ファイルの追加</strong>シート） プロジェクトにファイルを追加するシートをドロップダウンする必要があります<strong>オプション コマンド A</strong>のキーの組み合わせを入力します。 <strong>追加フォルダーを作成済みグループ</strong>のラジオボタンが選択されていることを確認してください。</p></li>
+<li><p>フォルダーに移動するための別のシートにドロップダウンする必要があります<strong>シフト コマンド G</strong>のキーの組み合わせ入力 (、<strong>フォルダーに移動する：</strong>シート)。</p></li>
+<li><p>入力してください <code>~/Documents/CordovaLib/Classes/deprecated</code> で、<strong>フォルダーに移動する：</strong>シートし、 <strong>[移動</strong>] ボタンを押します。</p></li>
+<li><p><strong>ファイルの追加</strong>シートで、<strong>追加</strong>ボタンを押します。</p></li>
+<li><p><code>AppDelegate.h</code>、 <code>AppDelegate.m</code> 、および <code>MainViewController.h</code> 、ファイル全体を置き換える <code>#ifdef PHONEGAP_FRAMEWORK</code> とブロックします。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">#import"CDVDeprecated.h"
+</code></pre></div></li>
+<li><p>プロジェクト ナビゲーターで<strong>プロジェクト アイコン</strong>をクリックして、<strong>ターゲット</strong>を選択し、[<strong>ビルド設定</strong>] タブを選択します。</p></li>
+<li><p><strong>フレームワークの検索パス</strong>の検索.</p></li>
+<li><p>既存の値を置き換える<code>/Users/Shared/Cordova/Frameworks</code>.</p></li>
+<li><p><strong>プリプロセッサ マクロ</strong>の検索.</p></li>
+<li><p>最初の (結合された) 値と値を交換してください<strong>CORDOVA_FRAMEWORK = はい</strong>。.</p></li>
+<li><p><strong>構築フェーズ</strong>] タブを選択します。</p></li>
+<li><p>展開<strong>スクリプトを実行</strong>.</p></li>
+<li><p><strong>コルドバ</strong>の<strong>PhoneGap</strong>の出現を置き換える.</p></li>
+<li><p>見つけるあなた <code>PhoneGap.plist</code> プロジェクト ナビゲーターのファイルし、一度名前編集モードを入力するファイル名をクリックします。</p></li>
+<li><p>名前を変更する <code>PhoneGap.plist</code> に<code>Cordova.plist</code>.</p></li>
+<li><p>右クリックして <code>Cordova.plist</code> <strong>→ としてオープン ソース コード</strong>を選択します。.</p></li>
+<li><p><strong>オプション コマンド F</strong>キーを押して、ソース ウィンドウの左上のドロップダウンから<strong>置換</strong>を選択します。</p></li>
+<li><p>入力してください <code>com.phonegap</code> の検索文字列と <code>org.apache.cordova</code> の置換文字列を<strong>すべて置換</strong>ボタンを押します。</p></li>
+<li><p>置換文字列検索文字列と<strong>CDV</strong>の<strong>PG</strong>を入力し、<strong>すべて置換</strong>ボタンを押します。</p></li>
+<li><p>構築する<strong>コマンド + B</strong>キーを押します。 あなたは、将来の取り除くことができます廃止まだがある （参照してください <code>CDVDeprecated.h</code> 。 置換コード クラスを PG * CDV * を使用するなど)。</p></li>
+</ol>
+
+<h2>1.4.1 にアップグレード 1.4.0 プロジェクト</h2>
+
+<ol>
+<li><p>コルドバ 1.4.1 をインストールします。</p></li>
+<li><p>バックアップを作成します。<code>MainViewController.m</code>.</p></li>
+<li><p>新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。</p></li>
+<li><p>コピー、 <code>MainViewController.m</code> プロジェクトの 1.4.0-based ディレクトリに新しいプロジェクトから古いファイルを置き換える、ディスク上のファイル (バックアップ ファイルを最初から上記の手順 2)。</p></li>
+<li><p>追加、 <code>MainViewController.m</code> 、Xcode プロジェクトにファイル。</p></li>
+<li><p>統合、バックアップ内にあるプロジェクトに固有のコード <code>MainViewController.m</code> 新しいファイルに。</p></li>
+<li><p>更新、 <code>phonegap-1.4.0.js</code> ファイルは省略可能、何も JavaScript 1.4.0 と 1.4.1 の間で変わった。</p></li>
+</ol>
+
+<h2>アップグレード 1.3.0 プロジェクト 1.4.0</h2>
+
+<ol>
+<li><p>コルドバ 1.4.0 をインストールします。</p></li>
+<li><p>バックアップを作成 <code>AppDelegate.m</code> と <code>AppDelegate.h</code> プロジェクト内。</p></li>
+<li><p>新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。</p></li>
+<li><p>1.3.0-Based プロジェクトのディレクトリ (バックアップ ファイルを最初から上記の手順 2) すべての古いファイルを置き換える、ディスク上に新しいプロジェクトからこれらのファイルをコピーします。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
+</code></pre></div></li>
+<li><p>すべて追加の <code>MainViewController</code> Xcode プロジェクトへファイルを。</p></li>
+<li><p>コピー、 <code>www/phonegap-1.4.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/phonegap-1.3.0.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>phonegap-1.4.0.js</code> ファイル。</p></li>
+<li><p>下で新しいエントリを追加する <code>Plugins</code> で、 <code>PhoneGap.plist</code> ファイル。キーが <code>com.phonegap.battery</code> で、値は<code>PGBattery</code>.</p></li>
+<li><p>あなたのバックアップであるプロジェクトに固有のコードを統合 <code>AppDelegate.h</code> と <code>AppDelegate.m</code> に新しい AppDelegate ファイル。</p></li>
+</ol>
+
+<h2>1.3.0 に 1.2.0 アップグレード プロジェクト</h2>
+
+<ol>
+<li><p>コルドバ 1.3.0 をインストールします。</p></li>
+<li><p>バックアップを作成 <code>AppDelegate.m</code> と <code>AppDelegate.h</code> プロジェクト内。</p></li>
+<li><p>新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。</p></li>
+<li><p>1.2.0-Based プロジェクトのディレクトリ (バックアップ ファイルを最初から上記の手順 2) すべての古いファイルを置き換える、ディスク上に新しいプロジェクトからこれらのファイルをコピーします。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
+</code></pre></div></li>
+<li><p>すべて追加の <code>MainViewController</code> Xcode プロジェクトへファイルを。</p></li>
+<li><p>コピー、 <code>www/phonegap-1.3.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/phonegap-1.2.0.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>phonegap-1.3.0.js</code> ファイル。</p></li>
+<li><p>下で新しいエントリを追加する <code>Plugins</code> で、 <code>PhoneGap.plist</code> ファイル。キーが <code>com.phonegap.battery</code> で、値は<code>PGBattery</code>.</p></li>
+<li><p>あなたのバックアップであるプロジェクトに固有のコードを統合 <code>AppDelegate.h</code> と <code>AppDelegate.m</code> に新しい AppDelegate ファイル。</p></li>
+</ol>
+
+<h2>1.2.0 をプロジェクト アップグレード 1.1.0</h2>
+
+<ol>
+<li><p>コルドバ 1.2.0 をインストールします。</p></li>
+<li><p>バックアップを作成 <code>AppDelegate.m</code> と <code>AppDelegate.h</code> プロジェクト内。</p></li>
+<li><p>新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。</p></li>
+<li><p>1.1.0-Based プロジェクトのディレクトリ (バックアップ ファイルを最初から上記の手順 2) すべての古いファイルを置き換える、ディスク上に新しいプロジェクトからこれらのファイルをコピーします。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
+</code></pre></div></li>
+<li><p>すべて追加の <code>MainViewController</code> Xcode プロジェクトへファイルを。</p></li>
+<li><p>コピー、 <code>www/phonegap-1.2.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/phonegap-1.1.0.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>phonegap-1.2.0.js</code> ファイル。</p></li>
+<li><p>下で新しいエントリを追加する <code>Plugins</code> で、 <code>PhoneGap.plist</code> ファイル。キーが <code>com.phonegap.battery</code> で、値は<code>PGBattery</code>.</p></li>
+<li><p>あなたのバックアップであるプロジェクトに固有のコードを統合 <code>AppDelegate.h</code> と <code>AppDelegate.m</code> に新しい AppDelegate ファイル。</p></li>
+</ol>
+
+<h2>アップグレード 1.0.0 1.1.0 するプロジェクト</h2>
+
+<ol>
+<li><p>コルドバ 1.1.0 をインストールします。</p></li>
+<li><p>バックアップを作成 <code>AppDelegate.m</code> と <code>AppDelegate.h</code> プロジェクト内。</p></li>
+<li><p>新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。</p></li>
+<li><p>1.0.0-Based プロジェクトのディレクトリ (バックアップ ファイルを最初から上記の手順 2) すべての古いファイルを置き換える、ディスク上に新しいプロジェクトからこれらのファイルをコピーします。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
+</code></pre></div></li>
+<li><p>すべて追加の <code>MainViewController</code> Xcode プロジェクトへファイルを。</p></li>
+<li><p>コピー、 <code>www/phonegap-1.1.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/phonegap-1.0.0.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>phonegap-1.1.0.js</code> ファイル。</p></li>
+<li><p>下で新しいエントリを追加する <code>Plugins</code> で、 <code>PhoneGap.plist</code> ファイル。キーが <code>com.phonegap.battery</code> で、値は<code>PGBattery</code>.</p></li>
+<li><p>あなたのバックアップであるプロジェクトに固有のコードを統合 <code>AppDelegate.h</code> と <code>AppDelegate.m</code> に新しい AppDelegate ファイル。</p></li>
+</ol>
+
+<h2>アップグレード 0.9.6 プロジェクトを 1.0.0 に</h2>
+
+<ol>
+<li><p>コルドバ 1.0.0 をインストールします。</p></li>
+<li><p>バックアップを作成 <code>AppDelegate.m</code> と <code>AppDelegate.h</code> プロジェクト内。</p></li>
+<li><p>新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。</p></li>
+<li><p>0.9.6-Based プロジェクトのディレクトリ (バックアップ ファイルを最初から上記の手順 2) すべての古いファイルを置き換える、ディスク上に新しいプロジェクトからこれらのファイルをコピーします。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
+</code></pre></div></li>
+<li><p>すべて追加の <code>MainViewController</code> Xcode プロジェクトへファイルを。</p></li>
+<li><p>コピー、 <code>www/phonegap-1.0.0.js</code> に新しいプロジェクトからファイルを <code>www</code> ディレクトリ、および削除を <code>www/phonegap-0.9.6.js</code> ファイル。</p></li>
+<li><p>コルドバ スクリプト参照を更新して、 <code>www/index.html</code> ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい <code>phonegap-1.0.0.js</code> ファイル。</p></li>
+<li><p>下で新しいエントリを追加する <code>Plugins</code> で、 <code>PhoneGap.plist</code> ファイル。キーが <code>com.phonegap.battery</code> で、値は<code>PGBattery</code>.</p></li>
+<li><p>あなたのバックアップであるプロジェクトに固有のコードを統合 <code>AppDelegate.h</code> と <code>AppDelegate.m</code> に新しい AppDelegate ファイル。</p></li>
+</ol>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  5.4.0", "language: ja"] }
+    });
+</script>
+
+</body>
+</html>

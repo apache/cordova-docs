@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                DirectoryEntry - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/ja/latest/cordova/file/directoryentry/directoryentry.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '3.1.0' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/guide/overview/index.html">
+                概要
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/guide/cli/index.html">
+                コマンド ライン インターフェイス
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/guide/platforms/index.html">
+                プラットフォームのガイド
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/config_ref/index.html">
+                Config.xml ファイル
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/config_ref/images.html">
+                アイコンとスプラッシュ画面
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/guide/hybrid/webviews/index.html">
+                埋め込み web 表示
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/guide/hybrid/plugins/index.html">
+                プラグイン開発ガイド
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/guide/appdev/privacy/index.html">
+                プライバシー ガイド
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/guide/appdev/whitelist/index.html">
+                ホワイト リスト ガイド
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/accelerometer/accelerometer.html">
+                加速度センサー
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/camera/camera.html">
+                カメラ
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/media/capture/capture.html">
+                キャプチャ
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/compass/compass.html">
+                コンパス
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/connection/connection.html">
+                接続
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/contacts/contacts.html">
+                連絡先
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/device/device.html">
+                デバイス
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/events/events.html">
+                イベント
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/file/file.html">
+                ファイル
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/geolocation/geolocation.html">
+                地理位置情報
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/globalization/globalization.html">
+                グローバリゼーション
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/inappbrowser/inappbrowser.html">
+                InAppBrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/media/media.html">
+                メディア
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/notification/notification.html">
+                通知
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/splashscreen/splashscreen.html">
+                スプラッシュ スクリーン
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/3.1.0/cordova/storage/storage.html">
+                ストレージ
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        目次
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/guide/overview/index.html">
+        概要
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/guide/cli/index.html">
+        コマンド ライン インターフェイス
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/guide/platforms/index.html">
+        プラットフォームのガイド
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/config_ref/index.html">
+        Config.xml ファイル
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/config_ref/images.html">
+        アイコンとスプラッシュ画面
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/guide/hybrid/webviews/index.html">
+        埋め込み web 表示
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/guide/hybrid/plugins/index.html">
+        プラグイン開発ガイド
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/guide/appdev/privacy/index.html">
+        プライバシー ガイド
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/guide/appdev/whitelist/index.html">
+        ホワイト リスト ガイド
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/accelerometer/accelerometer.html">
+        加速度センサー
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/camera/camera.html">
+        カメラ
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/media/capture/capture.html">
+        キャプチャ
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/compass/compass.html">
+        コンパス
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/connection/connection.html">
+        接続
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/contacts/contacts.html">
+        連絡先
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/device/device.html">
+        デバイス
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/events/events.html">
+        イベント
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/file/file.html">
+        ファイル
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/geolocation/geolocation.html">
+        地理位置情報
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/globalization/globalization.html">
+        グローバリゼーション
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/inappbrowser/inappbrowser.html">
+        InAppBrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/media/media.html">
+        メディア
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/notification/notification.html">
+        通知
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/splashscreen/splashscreen.html">
+        スプラッシュ スクリーン
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/3.1.0/cordova/storage/storage.html">
+        ストレージ
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/ja/3.1.0/cordova/file/directoryentry/directoryentry.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        日本語
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/3.1.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/3.1.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/3.1.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/3.1.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/3.1.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/3.1.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    <span class="selected">
+                                        日本語
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/3.1.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/3.1.0/cordova/file/directoryentry/directoryentry.html" class="missing-page">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/3.1.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/3.1.0/cordova/file/directoryentry/directoryentry.html" class="missing-page">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/3.1.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/3.1.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        3.1.0
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/latest/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/3.1.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                3.1.0
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/2.2.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/2.1.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/2.0.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/1.9.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/1.8.1/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/1.7.0/cordova/file/directoryentry/directoryentry.html" class="">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    これがないドキュメントの最新バージョンです！
+                    <a href="/docs/ja/latest/cordova/file/directoryentry/directoryentry.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>DirectoryEntry</h1>
+
+<p><a href="http://www.w3.org/TR/file-system-api/">W3C ディレクトリとシステム</a>仕様で定義されているファイル システム上のディレクトリを表します。</p>
+
+<h2>プロパティ</h2>
+
+<ul>
+<li><p><strong>isFile</strong>： 常に <code>false</code> 。<em>(ブール値)</em></p></li>
+<li><p><strong>isDirectory</strong>： 常に <code>true</code> 。<em>(ブール値)</em></p></li>
+<li><p><strong>名前</strong>： の名前、 <code>DirectoryEntry</code> 、それにつながるパスを除きます。<em>（，）</em></p></li>
+<li><p><strong>fullPath</strong>: 完全絶対パスをルートから、 <code>DirectoryEntry</code> 。<em>（，）</em></p></li>
+</ul>
+
+<p><strong>注：</strong>次の属性は、W3C の仕様によって定義されますが<em>サポートされます</em>。</p>
+
+<ul>
+<li>  <strong>ファイルシステム</strong>: ファイルシステムを <code>DirectoryEntry</code> が存在します。<em>(ファイルシステム)</em></li>
+</ul>
+
+<h2>メソッド</h2>
+
+<p>次の方法で呼び出し可能な <code>DirectoryEntry</code> オブジェクト。</p>
+
+<ul>
+<li><p><strong>getMetadata</strong>: ディレクトリに関するメタデータを検索します。</p></li>
+<li><p><strong>setMetadata</strong>： ディレクトリにメタデータを設定します。</p></li>
+<li><p><strong>[moveto]</strong>: <a href="../fileobj/fileobj.html">ファイル</a> システムに別の場所にディレクトリを移動します。</p></li>
+<li><p><strong>copyTo</strong>: <a href="../fileobj/fileobj.html">ファイル</a> システム上の別の場所にディレクトリをコピーします。</p></li>
+<li><p><strong>網</strong>: ディレクトリを検出する URL を返します。</p></li>
+<li><p><strong>削除</strong>: ディレクトリを削除します。ディレクトリは空である必要があります。</p></li>
+<li><p><strong>getParent</strong>: 親ディレクトリを検索します。</p></li>
+<li><p><strong>createReader</strong>: 新規作成 <code>[DirectoryReader](../directoryreader/directoryreader.html)</code> をディレクトリからエントリを読み取ることができます。</p></li>
+<li><p><strong>getDirectory</strong>: 作成または、ディレクトリを検索します。</p></li>
+<li><p><strong>getFile</strong>: 作成または、ファイルを検索します。</p></li>
+<li><p><strong>removeRecursively</strong>： ディレクトリとそのすべての内容を削除します。</p></li>
+</ul>
+
+<h2>サポートされているプラットフォーム</h2>
+
+<ul>
+<li>  アンドロイド</li>
+<li>  ブラックベリー WebWorks (OS 5.0 およびより高い)</li>
+<li>  iOS</li>
+<li>  Windows Phone 7 と 8</li>
+<li>  Windows 8</li>
+</ul>
+
+<h2>getMetadata</h2>
+
+<p>ディレクトリに関するメタデータをご覧ください。</p>
+
+<p><strong>パラメーター:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: が実行するコールバック関数を <code>Metadata</code> オブジェクト。<em>(機能)</em></p></li>
+<li><p><strong>解り</strong>: コールバック関数を取得するときにエラーが発生した場合の実行を <code>Metadata</code> 。呼び出されると、 <code>[FileError](../fileerror/fileerror.html)</code> オブジェクト。<em>(機能)</em></p></li>
+</ul>
+
+<p><strong>簡単な例</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">success(metadata) 関数 {console.log ("最終更新日時:"+ metadata.modificationTime);}関数 fail(error) {alert(error.code);}//このエントリ entry.getMetadata (成功、失敗）; のメタデータ オブジェクトをリクエスト
+</code></pre></div>
+<h2>setMetadata</h2>
+
+<p>ディレクトリの拡張属性、またはメタデータを設定します。<em>現在 iOS でのみ動作します</em>。</p>
+
+<p><strong>パラメーター:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: メタデータの設定が成功したときに実行されるコールバック。<em>(機能)</em></p></li>
+<li><p><strong>解り</strong>: メタデータを設定するが失敗したときに実行されるコールバック。<em>(機能)</em></p></li>
+<li><p><strong>metadataObject</strong>: メタデータのキーと値を格納しているオブジェクト。<em>(オブジェクト)</em></p></li>
+</ul>
+
+<p><strong>簡単な例</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success() {
+    console.log("The metadata was successfully set.");
+}
+
+function fail() {
+    alert("There was an error in setting the metadata");
+}
+
+// Set the metadata
+entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
+</code></pre></div>
+<p><strong>iOS の気まぐれ</strong></p>
+
+<ul>
+<li>  のみ、 <code>com.apple.MobileBackup</code> 拡張属性がサポートされています。 値を設定します <code>1</code> をディレクトリが iCloud にバックアップされることを防ぐために。 値を設定します `` を iCloud にバックアップ ディレクトリを再度有効にします。</li>
+</ul>
+
+<p><strong>簡単な例</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function setFolderMetadata(localFileSystem, subFolder, metadataKey, metadataValue)
+{
+    var onSetMetadataWin = function() {
+        console.log("success setting metadata")
+    }
+    var onSetMetadataFail = function() {
+        console.log("error setting metadata")
+    }
+
+    var onGetDirectoryWin = function(parent) {
+        var data = {};
+        data[metadataKey] = metadataValue;
+        parent.setMetadata(onSetMetadataWin, onSetMetadataFail, data);
+    }
+    var onGetDirectoryFail = function() {
+        console.log("error getting dir")
+    }
+
+    var onFSWin = function(fileSystem) {
+        fileSystem.root.getDirectory(subFolder, {create: true, exclusive: false}, onGetDirectoryWin, onGetDirectoryFail);
+    }
+
+    var onFSFail = function(evt) {
+        console.log(evt.target.error.code);
+    }
+
+    window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+}
+
+    setFolderMetadata(LocalFileSystem.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
+</code></pre></div>
+<h2>[moveto]</h2>
+
+<p><a href="../fileobj/fileobj.html">ファイル</a> システム上の別の場所にディレクトリを移動します。アプリしようとすると、エラーが発生します。</p>
+
+<ul>
+<li><p>任意の深さでそれ自体の内部または任意の子にディレクトリを移動します。</p></li>
+<li><p>その現在のディレクトリとは異なる名前を指定しない場合、親にディレクトリを移動します。</p></li>
+<li><p>ファイルによって占められるパスにディレクトリを移動します。</p></li>
+<li><p>ディレクトリが空でないディレクトリによって占められるパスに移動します。</p></li>
+</ul>
+
+<p>削除し、そのディレクトリを置き換えますしようと、既存の空のディレクトリ上にディレクトリを移動します。</p>
+
+<p><strong>パラメーター:</strong></p>
+
+<ul>
+<li><p><strong>親</strong>: 親ディレクトリ、ディレクトリを移動します。<em>(DirectoryEntry)</em></p></li>
+<li><p><strong>newName</strong>: ディレクトリの新しい名前。現在の名前を指定しない場合のデフォルトです。<em>（，）</em></p></li>
+<li><p><strong>successCallback</strong>: コールバックで実行することを <code>DirectoryEntry</code> の新しいディレクトリ オブジェクト。<em>(機能)</em></p></li>
+<li><p><strong>解り</strong>: ディレクトリを移動するしようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 <code>[FileError](../fileerror/fileerror.html)</code> オブジェクト。<em>(機能)</em></p></li>
+</ul>
+
+<p><strong>簡単な例</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success(entry) {
+    console.log("New Path: " + entry.fullPath);
+}
+
+function fail(error) {
+    alert(error.code);
+}
+
+function moveDir(entry) {
+    var parent = document.getElementById('parent').value,
+        parentName = parent.substring(parent.lastIndexOf('/')+1),
+        newName = document.getElementById('newName').value,
+        parentEntry = new DirectoryEntry(parentName, parent);
+
+    // move the directory to a new directory and rename it
+    entry.moveTo(parentEntry, newName, success, fail);
+}
+</code></pre></div>
+<h2>copyTo</h2>
+
+<p><a href="../fileobj/fileobj.html">ファイル</a> システム上の別の場所にディレクトリをコピーします。アプリしようとすると、エラーが発生します。</p>
+
+<ul>
+<li><p>任意の深さでそれ自体の内部のディレクトリをコピーします。</p></li>
+<li><p>その現在のディレクトリとは異なる名前を指定しない場合、その親にディレクトリをコピーします。</p></li>
+</ul>
+
+<p>ディレクトリ コピーは常に再帰的で、しディレクトリのすべての内容をコピーします。</p>
+
+<p><strong>パラメーター:</strong></p>
+
+<ul>
+<li><p><strong>親</strong>: ディレクトリをコピー先の親ディレクトリです。<em>(DirectoryEntry)</em></p></li>
+<li><p><strong>newName</strong>: ディレクトリの新しい名前。現在の名前を指定しない場合のデフォルトです。<em>（，）</em></p></li>
+<li><p><strong>successCallback</strong>: コールバックで実行することを <code>DirectoryEntry</code> の新しいディレクトリ オブジェクト。<em>(機能)</em></p></li>
+<li><p><strong>解り</strong>: 基になるディレクトリをコピーしようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 <code>[FileError](../fileerror/fileerror.html)</code> オブジェクト。<em>(機能)</em></p></li>
+</ul>
+
+<p><strong>簡単な例</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function win(entry) {
+    console.log("New Path: " + entry.fullPath);
+}
+
+function fail(error) {
+    alert(error.code);
+}
+
+function copyDir(entry) {
+    var parent = document.getElementById('parent').value,
+        parentName = parent.substring(parent.lastIndexOf('/')+1),
+        newName = document.getElementById('newName').value,
+        parentEntry = new DirectoryEntry(parentName, parent);
+
+    // copy the directory to a new directory and rename it
+    entry.copyTo(parentEntry, newName, success, fail);
+}
+</code></pre></div>
+<h2>網</h2>
+
+<p>ディレクトリを検索するために使用できる URL を返します。</p>
+
+<p><strong>簡単な例</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">// Get the URL for this directory
+var dirURL = entry.toURL();
+console.log(dirURL);
+</code></pre></div>
+<h2>削除</h2>
+
+<p>ディレクトリを削除します。アプリしようとすると、エラーが発生します。</p>
+
+<ul>
+<li><p>空でないディレクトリを削除します。</p></li>
+<li><p>ファイルシステムのルート ディレクトリを削除します。</p></li>
+</ul>
+
+<p><strong>パラメーター:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: ディレクトリが削除された後に実行されるコールバック。パラメーターなしで呼び出されます。<em>(機能)</em></p></li>
+<li><p><strong>解り</strong>: ディレクトリを削除しようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 <code>[FileError](../fileerror/fileerror.html)</code> オブジェクト。<em>(機能)</em></p></li>
+</ul>
+
+<p><strong>簡単な例</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">関数 success(entry) {console.log (「の除去に成功しました」);}fail(error) 関数 {警告 (' ディレクトリの削除中にエラー: ' + error.code);}//削除このディレクトリ entry.remove (成功、失敗);
+</code></pre></div>
+<h2>getParent</h2>
+
+<p>親を見て <code>DirectoryEntry</code> ディレクトリを含みます。</p>
+
+<p><strong>パラメーター:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>： ディレクトリの親を渡されるコールバック <code>DirectoryEntry</code> 。<em>(機能)</em></p></li>
+<li><p><strong>解り</strong>: 親を取得しようとしてエラーが発生した場合に実行されるコールバック <code>DirectoryEntry</code> 。 呼び出されると、 <code>[FileError](../fileerror/fileerror.html)</code> オブジェクト。 <em>(機能)</em></p></li>
+</ul>
+
+<p><strong>簡単な例</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success(parent) {
+    console.log("Parent Name: " + parent.name);
+}
+
+function fail(error) {
+    alert('Failed to get parent directory: ' + error.code);
+}
+
+// Get the parent DirectoryEntry
+entry.getParent(success, fail);
+</code></pre></div>
+<h2>createReader</h2>
+
+<p>ディレクトリ内のエントリを読み取る新しい <a href="../directoryreader/directoryreader.html">DirectoryReader</a> を作成します。</p>
+
+<p><strong>簡単な例</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">// create a directory reader
+var directoryReader = entry.createReader();
+</code></pre></div>
+<h2>getDirectory</h2>
+
+<p>作成または、既存のディレクトリを検索します。アプリしようとすると、エラーが発生します。</p>
+
+<ul>
+<li>  そのすぐ上の親がまだ存在しないディレクトリを作成します。</li>
+</ul>
+
+<p><strong>パラメーター:</strong></p>
+
+<ul>
+<li><p><strong>パス</strong>: ルックアップまたは作成するディレクトリへのパス。これからの相対パスまたは絶対パス <code>DirectoryEntry</code> 。<em>（，）</em></p></li>
+<li><p><strong>オプション</strong>: ディレクトリが存在しない場合に作成するかどうかを指定するオプション。<em>(フラグ)</em></p></li>
+<li><p><strong>successCallback</strong>： で実行するコールバックを <code>DirectoryEntry</code> オブジェクト。<em>(機能)</em></p></li>
+<li><p><strong>解り</strong>: 作成または、ディレクトリを探しているときにエラーが発生した場合に実行されるコールバック。呼び出されると、 <code>[FileError](../fileerror/fileerror.html)</code> オブジェクト。<em>(機能)</em></p></li>
+</ul>
+
+<p><strong>簡単な例</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">success(dirEntry) 関数 {console.log (「ディレクトリ名:"+ dirEntry.name);}fail(error) 機能 {警告 (「新しいディレクトリを作成できません:"+ error.code);}//、既存のディレクトリを取得または entry.getDirectory を既に存在しない場合に作成します ("newDir"{作成: true の場合、排他的な: false}、成功、失敗);
+</code></pre></div>
+<h2>getFile</h2>
+
+<p>作成または、ファイルを検索します。アプリしようとすると、エラーが発生します。</p>
+
+<ul>
+<li>  そのすぐ上の親がまだ存在しないファイルを作成します。</li>
+</ul>
+
+<p><strong>パラメーター:</strong></p>
+
+<ul>
+<li><p><strong>パス</strong>: ルックアップまたは作成するファイルへのパス。これからの相対パスまたは絶対パス <code>DirectoryEntry</code> 。<em>（，）</em></p></li>
+<li><p><strong>オプション</strong>: が存在しない場合、ファイルが作成されるかどうかを指定するオプション。<em>(フラグ)</em></p></li>
+<li><p><strong>successCallback</strong>: 渡されたコールバックを <code>[FileEntry](../fileentry/fileentry.html)</code> オブジェクト。<em>(機能)</em></p></li>
+<li><p><strong>解り</strong>: 作成または、ファイルを探しているときにエラーが発生した場合に実行されるコールバック。呼び出されると、 <code>[FileError](../fileerror/fileerror.html)</code> オブジェクト。<em>(機能)</em></p></li>
+</ul>
+
+<p><strong>簡単な例</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">success(fileEntry) 関数 {console.log （"ファイル名:"+ fileEntry.name);}fail(error) 機能 {警告 （"ファイルを取得できませんでした:"+ error.code);}//、既存のファイルを取得または entry.getFile が存在しない場合に作成する ("newFile.txt"{作成: true の場合、排他的な: false}、成功、失敗);
+</code></pre></div>
+<h2>removeRecursively</h2>
+
+<p>ディレクトリとそのすべての内容を削除します。 (削除することはできませんファイルを含むディレクトリを削除しようとしています) など、エラーが発生した場合、ディレクトリの内容の一部を削除可能性があります。 アプリしようとすると、エラーが発生します。</p>
+
+<ul>
+<li>  ファイルシステムのルート ディレクトリを削除します。</li>
+</ul>
+
+<p><strong>パラメーター:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: の後に実行されるコールバック、 <code>DirectoryEntry</code> が削除されています。パラメーターなしで呼び出されます。<em>(機能)</em></p></li>
+<li><p><strong>解り</strong>: コールバックを削除しようとしたときにエラーが発生した場合に実行される、 <code>DirectoryEntry</code> 。呼び出されると、 <code>[FileError](../fileerror/fileerror.html)</code> オブジェクト。<em>(機能)</em></p></li>
+</ul>
+
+<p><strong>簡単な例</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success(parent) {
+    console.log("Remove Recursively Succeeded");
+}
+
+function fail(error) {
+    alert("Failed to remove directory or it's contents: " + error.code);
+}
+
+// remove the directory and all it's contents
+entry.removeRecursively(success, fail);
+</code></pre></div>
+<h2>ブラックベリーの癖</h2>
+
+<p>失敗する可能性があります、 <code>ControlledAccessException</code> 、次の場合。</p>
+
+<ul>
+<li>  アプリは、アプリの以前のインストールによって作成されたディレクトリにアクセスしようとします。</li>
+</ul>
+
+<blockquote>
+<p>解決策: 手動で、または再インストールする前にアプリケーションによって一時ディレクトリはきれいに確認してください。</p>
+</blockquote>
+
+<ul>
+<li>  場合は、デバイスは USB で接続されました。</li>
+</ul>
+
+<blockquote>
+<p>ソリューション: 再実行して、デバイスから USB ケーブルを外します。</p>
+</blockquote>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  3.1.0", "language: ja"] }
+    });
+</script>
+
+</body>
+</html>

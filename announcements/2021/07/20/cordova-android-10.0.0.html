@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that we have just released Cordova Android 10.0.0!  This is one of Cordova&#39;s supported platforms for building Android mobile app...">
+
+    <title>
+        
+            
+                Cordova Android 10.0.0 Released! - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2021/07/20/cordova-android-10.0.0.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '10.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Cordova Android 10.0.0 Released!</div>
+        <div class="author">By:
+            
+              Bryan Ellis
+            
+        </div>
+        <div class="date">20 Jul 2021</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that we have just released <code>Cordova Android 10.0.0</code>!  This is one of Cordova&#39;s supported platforms for building Android mobile applications.</p>
+
+<ul>
+<li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@10.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform remove android
+cordova platform add android@10.0.0
+</code></pre></div>
+<h2>Release Highlights</h2>
+
+<ul>
+<li><p><strong><code>AndroidX</code> Only Support</strong></p>
+
+<p>In this release, we have completely migrated to the AndroidX library and no longer support the Android Support Library. All plugins that continue to use the Android Support Library will need to be updated to reference the new AndroidX library.</p>
+
+<p>If plugins have not been updated, you can still use the <a href="https://www.npmjs.com/package/cordova-plugin-androidx-adapter">cordova-plugin-androidx-adapter</a> plugin, which can be used to migrate the legacy references to the new AndroidX references.</p></li>
+<li><p><strong><code>WebViewAssetLoader</code> Support</strong></p></li>
+</ul>
+
+<p>By default, the <code>WebViewAssetLoader</code> is enabled and allows apps to serve their content from a &#39;proper&#39; origin. This will makes routing work easily for frameworks like Angular.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">With no additional configurations, the app content is served from `https://localhost/`. You can configure the hostname by setting the preference option `hostname`.
+
+```xml
+&lt;preference name="hostname" value="localhost" /&gt;
+```
+
+The scheme, `https`, is not configurable by nature.
+
+Please note that this is a breaking change that will cause data associated with the `file://` scheme, such as cookies, local storage, local cache, and web-based databases, to be lost. You will need to handle the migration of data. If you are unable to migrate the data at this time, you can revert this setting by setting the `AndroidInsecureFileModeEnabled` preference flag.
+
+```xml
+&lt;preference name="AndroidInsecureFileModeEnabled" value="true" /&gt;
+```
+
+Setting this flag will keep the content on the  `file://` scheme, which Google reports to be insecure.
+</code></pre></div>
+<ul>
+<li><p><strong>Android App Bundles <code>aab</code> Support</strong></p>
+
+<p>By default, release builds will now generate an <code>aab</code> formatted package type for release.</p>
+
+<p>By nature, <code>aab</code> packages can not be deployed or pushed manually to a device for testing. If you need to test a release build, you will need to change the package type back to <code>apk</code> with the <code>packageType</code> flag.</p>
+
+<p>Debug builds will continue to create an <code>apk</code> formatted package.</p></li>
+<li><p><strong>Tooling and Default Support Bump</strong></p>
+
+<ul>
+<li>Target SDK (<code>targetSdk</code>): <code>30</code></li>
+<li>SDK Build Tool: <code>30.0.3</code></li>
+<li>Gradle: <code>7.1.1</code></li>
+<li>Kotlin: <code>1.5.20</code></li>
+<li>Android Gradle Plugin (AGP): <code>4.2.2</code></li>
+<li>Google Services Gradle Plugin: <code>4.3.5</code></li>
+</ul></li>
+<li><p><strong>Node Support</strong></p>
+
+<p>Since Node 10 is no longer being supported by the Node.js team, we have dropped support for Node 10.</p></li>
+<li><p><strong>Java 11 Support</strong></p>
+
+<p>With the current release of Android Studio 4.2, the Android tooling can now support running on Java 11. Please note that this does not mean you can start compiling Java 11 source code.</p></li>
+</ul>
+
+<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+
+<h2>Notice of Issue</h2>
+
+<p>There is a known issue for users or plugins that enable the Google Services Gradle plugin.</p>
+
+<p>https://github.com/apache/cordova-android/issues/1284</p>
+
+<p>We are preparing and aiming for a patch release vote within the next three days.</p>
+
+<!--more-->
+
+<h2>Full Changelog</h2>
+
+<p><strong>Breaking:</strong></p>
+
+<ul>
+<li><a href="https://github.com/apache/cordova-android/pull/1052">GH-1052</a> feat!: only support <code>AndroidX</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1137">GH-1137</a> feat!: implement <code>WebViewAssetLoader</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1268">GH-1268</a> feat!: release build defaults to <code>aab</code> package type</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1182">GH-1182</a> feat!: bump <code>target sdk@30</code> w/ <code>build-tool@30.0.3</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1257">GH-1257</a> feat!: upgrade <code>gradle@7.1.1</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1197">GH-1197</a> feat!: upgrade <code>gradle@6.8.3</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1256">GH-1256</a> feat!: upgrade <code>kotlin@1.5.20</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1204">GH-1204</a> feat!: upgrade <code>kotlin@1.4.32</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1200">GH-1200</a> feat!: upgrade <code>kotlin@1.4.31</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1255">GH-1255</a> feat!: upgrade <code>android-gradle-plugin@4.2.2</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1232">GH-1232</a> feat!: upgrade <code>android-gradle-plugin@4.2.1</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1198">GH-1198</a> feat!: upgrade <code>android-gradle-plugin@4.1.3</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1199">GH-1199</a> feat!: upgrade <code>Google Services Gradle Plugin@4.3.5</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1262">GH-1262</a> feat!: bump <code>appcompat@1.3.0</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1258">GH-1258</a> feat!: bump <code>android.webkit@1.4.0</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1252">GH-1252</a> feat!: drop abandoned <code>com.github.dcendents:android-maven-gradle-plugin</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1212">GH-1212</a> feat!: unify &amp; fix gradle library/tooling overrides</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1138">GH-1138</a> feat(allow-list)!: integrate and refactor core plugin</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1201">GH-1201</a> feat!: upgrade jfrog <code>gradle-bintray-plugin@1.8.5</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1279">GH-1279</a> chore!: bump all dependencies</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1278">GH-1278</a> chore!: drop <code>node</code> 10 support</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1205">GH-1205</a> chore! (<code>npm</code>): update all dependencies</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1274">GH-1274</a> cleanup!: remove deprecated settings &amp; add todo comments</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1048">GH-1048</a> cleanup!: remove <code>keystore</code> password prompt</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1251">GH-1251</a> cleanup!: drop <code>jcenter</code> &amp; update dependencies</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1269">GH-1269</a> refactor!: do not copy JS lib to platform project</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1270">GH-1270</a> refactor(Api)!: use version from <code>package.json</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1266">GH-1266</a> refactor(run)!: <code>run</code> method</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1083">GH-1083</a> refactor!: drop support for <code>android</code> SDK tool</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1100">GH-1100</a> refactor!: remove most platform binaries</li>
+</ul>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+<li><a href="https://github.com/apache/cordova-android/pull/1241">GH-1241</a> feat: remove <code>java</code> 1.8 version check</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1254">GH-1254</a> feat: support <code>webkit</code> version override</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1229">GH-1229</a> feat: <code>CORDOVA_JAVA_HOME</code> env variable</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1222">GH-1222</a> feat: add backwards compatibility mode for <code>WebViewAssetLoader</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1166">GH-1166</a> feat: overload <code>PluginEntry</code> constructor to set onload property</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1208">GH-1208</a> feat: allow <code>appcompat</code> version to be configurable</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1047">GH-1047</a> feat: Deprecated <code>onRequestPermissionResult</code> in favour for <code>onRequestPermissionsResult</code> for consistency</li>
+</ul>
+
+<p><strong>Fixes:</strong></p>
+
+<ul>
+<li><a href="https://github.com/apache/cordova-android/pull/1283">GH-1283</a> fix: add missing apache-license header to <code>getASPath.bat</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1275">GH-1275</a> fix: add <code>WebViewAssetloader</code> to default allow list</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1216">GH-1216</a> fix: request focus after custom view hided</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1264">GH-1264</a> fix: missing <code>super.onRequestPermissionsResult</code> error (<code>MissingSuperCall</code>)</li>
+<li><a href="https://github.com/apache/cordova-android/pull/563">GH-563</a> fix(build): support tilde expansion on Windows</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1220">GH-1220</a> fix(<code>requirements</code> check): use regex to get java version from javac output</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1227">GH-1227</a> fix(prepare): delete splash screens if none are used</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1228">GH-1228</a> fix: java checks</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1276">GH-1276</a> fix: remove forced default <code>gradle.daemon</code> setting</li>
+</ul>
+
+<p><strong>Refactors:</strong></p>
+
+<ul>
+<li><a href="https://github.com/apache/cordova-android/pull/1265">GH-1265</a> refactor: do not infer project root from script location</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1267">GH-1267</a> refactor: use target SDK of built APK to determine best emulator</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1253">GH-1253</a> refactor: <code>gradle</code> cleanup</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1260">GH-1260</a> refactor(<code>check_reqs</code>): drop <code>originalError</code> param from <code>check_android_target</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1246">GH-1246</a> refactor(<code>env/java</code>): improve tests and implementation</li>
+</ul>
+
+<p><strong>Chores &amp; Cleanup:</strong></p>
+
+<ul>
+<li><a href="https://github.com/apache/cordova-android/pull/1273">GH-1273</a> chore: remove old <code>VERSION</code> file</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1272">GH-1272</a> cleanup: delete old ANT &amp; Eclipse files</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1141">GH-1141</a> cleanup: remove app cache settings</li>
+</ul>
+
+<p><strong>CI, Build &amp; Testing:</strong></p>
+
+<ul>
+<li><a href="https://github.com/apache/cordova-android/pull/1218">GH-1218</a> ci: Add <code>Node16</code> to CI matrix</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1271">GH-1271</a> build: build <code>cordova.js</code> during npm prepare</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1207">GH-1207</a> test(<code>AndroidManifest</code>): update theme to <code>Theme.AppCompat.NoActionBar</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1263">GH-1263</a> test(<code>check_reqs</code>): do not hardcode <code>DEFAULT_TARGET_API</code></li>
+<li><a href="https://github.com/apache/cordova-android/pull/1259">GH-1259</a> test(<code>prepare</code>): factor out common vars</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/news/2021/06/28/whitelist-plugin-release.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2021/06/28/whitelist-plugin-release.html">Whitelist Plugin Released!</a>
+                    <div class="date"> 28 Jun 2021 - By Pieter Van Poyer </div>
+                    <p class="content">
+                        We are happy to announce that we have just released an update...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2021/07/30/cordova-android-10.0.1.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2021/07/30/cordova-android-10.0.1.html">Cordova Android 10.0.1 Released!</a>
+                    <div class="date"> 30 Jul 2021 - By Bryan Ellis </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        We are happy to announce that we have just released a bugfix...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cordovablogs';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  10.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

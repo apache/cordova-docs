@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Guida piattaforma Android - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/it/3.5.0/guide/platforms/android/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '3.5.0' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/3.5.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/3.5.0/guide/overview/index.html">
+                Panoramica
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/3.5.0/guide/support/index.html">
+                Supporto di piattaforma
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/3.5.0/guide/cli/index.html">
+                L'interfaccia della riga di comando
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/3.5.0/guide/platforms/index.html">
+                Piattaforma guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/3.5.0/plugin_ref/plugman.html">
+                L'utilizzo di Plugman per gestire i plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/3.5.0/config_ref/index.html">
+                Il File config. Xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/3.5.0/config_ref/images.html">
+                Icone e Splash screen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/3.5.0/guide/hybrid/webviews/index.html">
+                Incorporamento visualizzazioni Web
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/3.5.0/guide/hybrid/plugins/index.html">
+                Guida allo sviluppo di plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/3.5.0/guide/appdev/privacy/index.html">
+                Guida sulla privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/3.5.0/guide/appdev/whitelist/index.html">
+                Guida di whitelist
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/3.5.0/cordova/storage/storage.html">
+                Archiviazione
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/3.5.0/cordova/events/events.html">
+                Eventi
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/3.5.0/cordova/plugins/pluginapis.html">
+                Plugin API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Sommario
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/it/3.5.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/3.5.0/guide/overview/index.html">
+        Panoramica
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/3.5.0/guide/support/index.html">
+        Supporto di piattaforma
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/3.5.0/guide/cli/index.html">
+        L'interfaccia della riga di comando
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/3.5.0/guide/platforms/index.html">
+        Piattaforma guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/3.5.0/plugin_ref/plugman.html">
+        L'utilizzo di Plugman per gestire i plugin
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/3.5.0/config_ref/index.html">
+        Il File config. Xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/3.5.0/config_ref/images.html">
+        Icone e Splash screen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/3.5.0/guide/hybrid/webviews/index.html">
+        Incorporamento visualizzazioni Web
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/3.5.0/guide/hybrid/plugins/index.html">
+        Guida allo sviluppo di plugin
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/3.5.0/guide/appdev/privacy/index.html">
+        Guida sulla privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/3.5.0/guide/appdev/whitelist/index.html">
+        Guida di whitelist
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/3.5.0/cordova/storage/storage.html">
+        Archiviazione
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/3.5.0/cordova/events/events.html">
+        Eventi
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/3.5.0/cordova/plugins/pluginapis.html">
+        Plugin API
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/it/3.5.0/guide/platforms/android/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Italiano
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/3.5.0/guide/platforms/android/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/3.5.0/guide/platforms/android/" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/3.5.0/guide/platforms/android/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/3.5.0/guide/platforms/android/" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/3.5.0/guide/platforms/android/" class="">
+                                
+                                    <span class="selected">
+                                        Italiano
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/3.5.0/guide/platforms/android/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/3.5.0/guide/platforms/android/" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/3.5.0/guide/platforms/android/" class="missing-page">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/3.5.0/guide/platforms/android/" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/3.5.0/guide/platforms/android/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/3.5.0/guide/platforms/android/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/3.5.0/guide/platforms/android/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        3.5.0
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/3.5.0/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                3.5.0
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    Questa non è la versione più recente della documentazione!
+                    <a href="/docs/it/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Guida piattaforma Android</h1>
+
+<p>Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per distribuire Cordova apps per dispositivi Android. Si cammina attraverso il processo di installare Android SDK, aprendo un progetto Android in Eclipse SDK e distribuendo un emulatore o dispositivo. Devi seguire questa guida per installare almeno il SDK di Android, indipendentemente dal flusso di lavoro che si sta seguendo. (Entrambi i workflow <em>Web progetto Dev</em> e <em>Nativo Dev Platform</em> richiedono il SDK di Android essere installato e accessibile tramite il percorso).</p>
+
+<p>Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:</p>
+
+<ul>
+<li>  <a href="config.html">Android configurazione</a></li>
+<li>  <a href="webview.html">Visualizzazioni Web Android</a></li>
+<li>  <a href="plugin.html">Plugin Android</a></li>
+<li>  <a href="upgrading.html">L&#39;aggiornamento di Android</a></li>
+<li>  <a href="tools.html">Android strumenti da riga di comando</a></li>
+</ul>
+
+<p>Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull&#39;interfaccia corrente, vedere l&#39;interfaccia della riga di comando.</p>
+
+<h2>Requisiti e supporto</h2>
+
+<p>Vedere i <a href="http://developer.android.com/sdk/index.html">requisiti di sistema</a> per il SDK di Android.</p>
+
+<p>Cordova supporta Android 2.2, 2.3 e 4. x. Come regola generale, le piattaforme sono obsoleti come essi tuffo sotto il 5% di Google <a href="http://developer.android.com/about/dashboards/index.html">dashboard di distribuzione</a>.</p>
+
+<!--
+NOTE, doc said:
+- Android 2.1 (Deprecated May 2013)
+- Android 3.x (Deprecated May 2013)
+-->
+
+<p>Gli sviluppatori devono utilizzare il <code>cordova</code> utilità in combinazione con il SDK di Android. <a href="../../cli/index.html">L&#39;interfaccia della riga di comando</a> per informazioni, vedere come installarlo, aggiungere progetti, quindi compilare e distribuire un progetto.</p>
+
+<p>Installare il SDK di Android da <a href="http://developer.android.com/sdk/">Developer.Android.com/SDK</a>. il sdk di android è distribuito come un &#39; adt-bundle -<os>-<arch>-<ver>&#39; file. Su windows, l&#39;adt-bundle è confezionato con un programma di installazione. Su OSX e Linux, semplicemente scompattare l&#39;adt-bundle nel percorso si memorizzano gli strumenti di sviluppo. <a href="http://developer.android.com/sdk/installing/bundle.html">Informazioni dettagliate sull&#39;installazione di Android SDK possono essere trovati qui</a></p>
+
+<p>Per strumenti da riga di comando di Cordova a lavorare, è necessario includere il SDK <code>tools</code> e <code>platform-tools</code> le directory nel tuo ambiente PATH. Su Mac, è possibile utilizzare un editor di testo per creare o modificare il <code>~/.bash_profile</code> file, aggiungendo una riga come la seguente, a seconda di dove viene installato il SDK:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">Export PATH = ${PATH}: / / adt-bundle/sdk/piattaforma-strumenti di sviluppo: / sviluppo/adt-bundle/sdk/tools
+</code></pre></div>
+<p>Questo espone strumenti SDK in windows terminal inaugurato di recente. In caso contrario eseguire questo per renderli disponibili nella sessione corrente:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ fonte ~/.bash_profile
+</code></pre></div>
+<p>Per modificare l&#39;ambiente del percorso su Windows 7:</p>
+
+<ul>
+<li><p>Fare clic su <strong>Start nell&#39;angolo inferiore sinistro del desktop</strong> , tasto destro del mouse su <strong>Computer</strong>, quindi fare clic su <strong>proprietà</strong>.</p></li>
+<li><p>Fare clic su <strong>Impostazioni di sistema avanzate</strong> nella colonna a sinistra.</p></li>
+<li><p>Nella finestra di dialogo risultante, premere <strong>Le variabili di ambiente</strong>.</p></li>
+<li><p>Selezionare la variabile <strong>PATH</strong> e premere <strong>Modifica</strong>.</p></li>
+<li><p>Aggiungere quanto segue al percorso basato su cui è installato il SDK, per esempio:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
+</code></pre></div></li>
+<li><p>Salvare il valore e chiudere le due finestre di dialogo.</p></li>
+</ul>
+
+<p>Potrebbe essere necessario abilitare Java e Ant. Apri un prompt dei comandi e digitare <code>java</code> e anche di tipo <code>ant</code> . Aggiungere al percorso qualunque non riescono ad eseguire:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    ;%JAVA_HOME%\bin;%ANT_HOME%\bin
+</code></pre></div>
+<h2>Aprire un progetto in SDK</h2>
+
+<p>Uso il <code>cordova</code> utility per impostare un nuovo progetto, come descritto in The Cordova le Command-Line Interface. Ad esempio, in una directory del codice sorgente:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova create hello com.example.hello "HelloWorld"
+    $ cd hello
+    $ cordova platform add android
+    $ cordova build
+</code></pre></div>
+<p>Una volta creato, ecco come utilizzare il SDK per modificarlo:</p>
+
+<ul>
+<li><p>Avviare l&#39;applicazione di <strong>Eclipse</strong> .</p></li>
+<li><p>Selezionare la voce di menu <strong>Nuovo progetto</strong> .</p></li>
+<li><p>Scegliere <strong>Progetto Android da codice esistente</strong> nella finestra di dialogo risultante e premere <strong>avanti</strong>: <img src="/static/img/guide/platforms/android/eclipse_new_project.png" alt=""></p></li>
+<li><p>Passare a <code>hello</code> , o qualunque directory creata per il progetto, poi per il <code>platforms/android</code> sottodirectory.</p></li>
+<li><p>Assicurarsi che sia <code>hello</code> e <code>hello-CordovaLib</code> progetti sono selezionati per essere importati. Il <code>hello-CordovaLib</code> progetto è necessaria a partire da Cordova 3.3.0 perché Cordova è ora usato come una libreria di Android invece di un file. jar.</p></li>
+<li><p>Premere <strong>fine</strong>.</p></li>
+</ul>
+
+<p>Una volta che si apre la finestra di Eclipse può apparire una rossa <strong>X</strong> per indicare problemi irrisolti. Se è così, segui questi passaggi aggiuntivi:</p>
+
+<ul>
+<li><p>Tasto destro del mouse sulla directory del progetto.</p></li>
+<li><p>Nella finestra di dialogo <strong>Proprietà</strong> , selezionare <strong>Android</strong> dal riquadro di spostamento.</p></li>
+<li><p>Per il progetto di costruire la destinazione, selezionare il massimo livello di API di Android che è stato installato.</p></li>
+<li><p>Fare clic su <strong>OK</strong>.</p></li>
+<li><p>Dal menu <strong>progetto</strong> , selezionare <strong>Clean</strong> . Questo dovrebbe correggere tutti gli errori nel progetto.</p></li>
+</ul>
+
+<h2>Distribuire all&#39;emulatore</h2>
+
+<p>È possibile utilizzare il <code>cordova</code> utility per eseguire un&#39;applicazione in un emulatore, o può essere eseguito all&#39;interno del SDK. Ad ogni modo, il SDK in primo luogo deve essere configurato per almeno un dispositivo di visualizzazione. A tale scopo, utilizzare l&#39;Android SDK Manager, un&#39;applicazione Java che viene eseguita separatamente da Eclipse. Ci sono due modi per aprirlo:</p>
+
+<ul>
+<li><p>Eseguire <code>android</code> sulla riga di comando.</p></li>
+<li><p>All&#39;interno di Eclipse, premere l&#39;icona della barra degli strumenti:</p>
+
+<p><img src="/static/img/guide/platforms/android/eclipse_android_sdk_button.png" alt=""></p></li>
+</ul>
+
+<p>Una volta aperto, l&#39;Android SDK Manager visualizza varie librerie di runtime:</p>
+
+<p><img src="/static/img/guide/platforms/android/asdk_window.png" alt=""></p>
+
+<p>Scegliere <strong>Strumenti → gestione AVDs</strong> (dispositivi Android virtuale), quindi scegliere qualsiasi elemento da <strong>Definizioni di dispositivo</strong> nella finestra di dialogo risultante:</p>
+
+<p><img src="/static/img/guide/platforms/android/asdk_device.png" alt=""></p>
+
+<p>Stampa <strong>Creare AVD</strong>, eventualmente modificando il nome, quindi premere <strong>OK</strong> per accettare le modifiche:</p>
+
+<p><img src="/static/img/guide/platforms/android/asdk_newAVD.png" alt=""></p>
+
+<p>L&#39;AVD poi appare nell&#39;elenco dei <strong>Dispositivi Android virtuale</strong> :</p>
+
+<p><img src="/static/img/guide/platforms/android/asdk_avds.png" alt=""></p>
+
+<p>Per aprire l&#39;emulatore come applicazione separata, selezionare l&#39;AVD e premere <strong>Start</strong>. Si lancia proprio come farebbe sul dispositivo, con controlli aggiuntivi disponibili per i pulsanti hardware:</p>
+
+<p><img src="/static/img/guide/platforms/android/asdk_emulator.png" alt=""></p>
+
+<p>A questo punto è possibile utilizzare il <code>cordova</code> utility per distribuire l&#39;applicazione nell&#39;emulatore dalla riga di comando:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova emulate android
+</code></pre></div>
+<p>Se invece si lavora all&#39;interno di Eclipse, il progetto di fare clic destro e scegliere <strong>Esegui come → applicazione Android</strong>. Può essere chiesto di specificare un AVD se nessuno è già aperto.</p>
+
+<p>Per un&#39;esperienza più veloce, utilizzare un&#39;immagine di emulatore basato su Intel:</p>
+
+<ul>
+<li><p>Installare uno o più <code>Intel x86 Atom</code> Immagini di sistema così come il <code>Intel Hardware Accelerated Execution Manager</code> , disponibile sotto <strong>extra</strong>.</p></li>
+<li><p>Eseguire il programma di installazione di Intel, che è disponibile all&#39;interno del vostro Android SDK presso<code>extras/intel/Hardware_Accelerated_Execution_Manager</code>.</p></li>
+<li><p>Creare un nuovo AVD con l&#39;obiettivo di impostare un&#39;immagine di Intel.</p></li>
+<li><p>Quando si avvia l&#39;emulatore, assicurarsi che non sono presenti messaggi di errore che indica un guasto per caricare i moduli HAX.</p></li>
+</ul>
+
+<h2>Distribuire al dispositivo</h2>
+
+<p>Per spingere un app direttamente al dispositivo, assicurarsi che il debug USB è attivato sul tuo dispositivo come descritto sul <a href="http://developer.android.com/tools/device.html">Sito per sviluppatori Android</a>e utilizzare un cavo mini USB per collegarlo al vostro sistema.</p>
+
+<p>Si può spingere l&#39;app per il dispositivo dalla riga di comando:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova run android
+</code></pre></div>
+<p>Alternativamente all&#39;interno di Eclipse, il progetto di fare clic destro e scegliere <strong>Esegui come → applicazione Android</strong>.</p>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  3.5.0", "language: it"] }
+    });
+</script>
+
+</body>
+</html>

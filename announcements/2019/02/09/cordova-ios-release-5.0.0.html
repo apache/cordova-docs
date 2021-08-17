@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that we have just released Cordova iOS 5.0.0!  This is one of Cordova&#39;s supported platforms for building iOS mobile applications...">
+
+    <title>
+        
+            
+                Cordova iOS 5.0.0 Released! - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2019/02/09/cordova-ios-release-5.0.0.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '10.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Cordova iOS 5.0.0 Released!</div>
+        <div class="author">By:
+            
+              Bryan Ellis
+            
+        </div>
+        <div class="date">09 Feb 2019</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that we have just released <code>Cordova iOS 5.0.0</code>!  This is one of Cordova&#39;s supported platforms for building iOS mobile applications.</p>
+
+<ul>
+<li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@5.0.0</a></li>
+</ul>
+
+<h2>Release Highlights</h2>
+
+<p><strong>To upgrade:</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova platform remove ios
+cordova platform add ios@5.0.0
+</code></pre></div>
+<p>In addition to the various improvements and bug fixes, this release also comes packed with some major features.</p>
+
+<p>Some of the key features are:</p>
+
+<ul>
+<li><a href="https://github.com/apache/cordova-ios/pull/409">GH-409</a> <a href="https://github.com/apache/cordova-ios/pull/489">GH-489</a> Supports Xcode 10 New Build System</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/405">GH-405</a> Improved Cocoapods Support</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/395">GH-395</a> Improved Swift Support</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/508">GH-508</a> Improved Automatic Provisioning Profile Signing</li>
+</ul>
+
+<p>This release only supports Xcode 9 and up. It is important to know that starting March 2019, Apple requires all new apps submitted to the App store to be built with the iOS 12.1 SDK or later (Xcode 10). <a href="https://developer.apple.com/ios/submit/">source</a></p>
+
+<p>Additional, as NodeJS 4.x support has been dropped by the NodeJS team on April 30th, 2018, we have raised the minimum required NodeJS version for this release to 6.x.</p>
+
+<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+
+<!--more-->
+
+<h1>Changes include:</h1>
+
+<ul>
+<li><a href="https://github.com/apache/cordova-ios/pull/515">GH-515</a> Remove Deprecated Local and Remote Push Notification Constants</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/512">GH-512</a> AppIcon and LaunchImage Updates</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/254">GH-254</a> Expose <code>CDVCommandStatus</code> enum to Swift</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/508">GH-508</a> Remove removing certificates functions in xcode post scripts</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/489">GH-489</a> CordovaLib.xcodeproj file upgraded for Xcode 10</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/501">GH-501</a> <code>cordova-common</code> backwards compatability for <code>getPodSpecs</code> function</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/496">GH-496</a> iOS Platform Release Preparation (Cordova 9)</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/494">GH-494</a> Fixes <code>$(PRODUCT_BUNDLE_IDENTIFIER)</code> not being resolved for a product archive</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/481">GH-481</a> Add warning that function in spawn.js is deprecated</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/461">GH-461</a> <code>cordova run --list --device</code> fails for Virtualhere devices</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/355">GH-355</a> <a href="https://issues.apache.org/jira/browse/CB-13927">CB-13927</a> - Modified xcodeProjDir to filter out files/folders that contain &quot;._&quot;</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/483">GH-483</a> Restore stdio behavior from previous spawn approach</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/479">GH-479</a> emit xcodebuild &amp; other spawned CLI commands</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/482">GH-482</a> Copy node_modules if the directory exists</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/478">GH-478</a> Use <code>cross-spawn</code> &amp; <code>shelljs</code> instead of <code>child-process</code></li>
+<li><a href="https://github.com/apache/cordova-ios/pull/409">GH-409</a> Update project files for Xcode 10</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/474">GH-474</a> Fix issue after updating to macOS 10.14.2.</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/405">GH-405</a> Cocoapods support improvement, using podspec tag in <code>plugin.xml</code></li>
+<li><a href="https://github.com/apache/cordova-ios/pull/451">GH-451</a> Fix running <code>cordova build ios</code> for emulators with Xcode 10.1 RELEASE</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/406">GH-406</a> Added missing <code>unorm</code> dependency</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/398">GH-398</a> Removal of xcconfig build flag</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-14141">CB-14141</a> Don&#39;t duplicate resource files in xcodeproj</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/397">GH-397</a> Update Objc-Test for Local &amp; TravisCI</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/395">GH-395</a> Implement Swift Support and Testing</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-14242">CB-14242</a> remove committed node_modules</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-14242">CB-14242</a> <code>package.json</code> remove bundledDependencies</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-14074">CB-14074</a> Remove Node 4 from CI</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-14244">CB-14244</a> <a href="https://issues.apache.org/jira/browse/CB-9366">CB-9366</a> log error.stack in cordova.js</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/376">GH-376</a> Fixed Get Apple OSX Version method</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-13581">CB-13581</a> open <strong>iOS</strong> simulator by using child_process</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-14045">CB-14045</a> Reinit url after app freezes</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-14076">CB-14076</a> Setting UIWebViewDelegate on CDVWebViewEngineProtocol doesn&#39;t work</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-14039">CB-14039</a> Inputs type text don&#39;t work on <strong>iOS</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-13921">CB-13921</a> Update Xcode requirement to Xcode 9</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-13382">CB-13382</a> dealloc the webViewEngine</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-13523">CB-13523</a> Pass automaticProvisioning to build step</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12940">CB-12940</a> Use deployment-target from <code>config.xml</code> for platform version in Podfile</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-13824">CB-13824</a> Xcode 9/Swift 4 support</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/354">GH-354</a> exec purgeProjectFileCache when pod install</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/356">GH-356</a> Fix prototype declaration warnings</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-13510">CB-13510</a> Removed clipboard workaround, which was braking copy/paste functional <strong>iOS</strong> 11</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/343">GH-343</a> <a href="https://issues.apache.org/jira/browse/CB-13513">CB-13513</a> Declare ProvisioningStyle as Automatic in project.pbxproj template.</li>
+<li><a href="https://github.com/apache/cordova-ios/pull/351">GH-351</a> Prevent a memory leak when converting to JSON</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-13597">CB-13597</a> update podfile with <strong>iOS</strong> version 9.0</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2019/02/04/cordova-osx-release-5.0.0.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2019/02/04/cordova-osx-release-5.0.0.html">Cordova OSX 5.0.0 Released!</a>
+                    <div class="date"> 04 Feb 2019 - By Bryan Ellis </div>
+                    <p class="content">
+                        We are happy to announce that we have just released Cordova OSX...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2019/02/16/cordova-android-release-8.0.0.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2019/02/16/cordova-android-release-8.0.0.html">Cordova Android 8.0.0 Released!</a>
+                    <div class="date"> 16 Feb 2019 - By Bryan Ellis </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        We are happy to announce that we have just released Cordova Android...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cordovablogs';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  10.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

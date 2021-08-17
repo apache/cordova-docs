@@ -1,0 +1,2662 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                外掛程式規範 - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/zh-tw/latest/plugin_ref/spec.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search 'dev' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/platforms/blackberry10/home.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/platforms/osx/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/appdev/whitelist/index.html">
+                Whitelisting
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/platforms/blackberry10/plugin.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-cli/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="this-page" href="/docs/zh-tw/dev/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+                <span class="entry-highlight"></span>
+            
+        
+
+        
+        <div id="page-toc" class="page-toc"></div>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-battery-status/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-camera/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-console/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-contacts/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-device/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-device-motion/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-device-orientation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-dialogs/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-file/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-file-transfer/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-geolocation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-globalization/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-inappbrowser/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-media/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-media-capture/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-network-information/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-splashscreen/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-vibration/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-statusbar/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-legacy-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        目录
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/platforms/blackberry10/home.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/platforms/osx/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/appdev/whitelist/index.html">
+        Whitelisting
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/platforms/blackberry10/plugin.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-cli/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="this-page" href="/docs/zh-tw/dev/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-battery-status/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-camera/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-console/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-contacts/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-device/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-device-motion/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-device-orientation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-dialogs/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-file/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-file-transfer/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-geolocation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-globalization/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-inappbrowser/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-media/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-media-capture/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-network-information/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-splashscreen/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-vibration/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-statusbar/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/zh-tw/dev/reference/cordova-plugin-legacy-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+                        
+                        
+                        
+
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/dev/plugin_ref/spec.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                        <a class="edit" href="https://crowdin.com/project/cordova/zh-tw#/cordova-docs/docs/en/dev/plugin_ref/"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+
+                    
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        繁體中文
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/dev/plugin_ref/spec.html" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/dev/plugin_ref/spec.html" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/dev/plugin_ref/spec.html" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/dev/plugin_ref/spec.html" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/dev/plugin_ref/spec.html" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/dev/plugin_ref/spec.html" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/dev/plugin_ref/spec.html" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/dev/plugin_ref/spec.html" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/dev/plugin_ref/spec.html" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/dev/plugin_ref/spec.html" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/dev/plugin_ref/spec.html" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/dev/plugin_ref/spec.html" class="">
+                                
+                                    <span class="selected">
+                                        繁體中文
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        dev
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-tw/dev/plugin_ref/spec.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                dev
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-tw/latest/plugin_ref/spec.html" class="">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-tw/9.x/plugin_ref/spec.html" class="">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-tw/8.x/plugin_ref/spec.html" class="">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-tw/7.x/plugin_ref/spec.html" class="">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-tw/6.x/plugin_ref/spec.html" class="">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-tw/5.4.0/plugin_ref/spec.html" class="">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-tw/3.5.0/plugin_ref/spec.html" class="">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-tw/3.4.0/plugin_ref/spec.html" class="">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/zh-tw/3.1.0/plugin_ref/spec.html" class="">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+                <div class="alert docs-alert alert-info" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is under development!
+                    <a href="/docs/zh-tw/latest/plugin_ref/spec.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- outdated warning -->
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>外掛程式規範</h1>
+
+<p><code>plugin.xml</code>檔是一個 XML 文檔在 <code>plugins</code> 命名空間： <code>http://apache.org/cordova/ns/plugins/1.0</code> 。 它包含頂級 <code>plugin</code> 元素，定義該外掛程式和定義外掛程式的結構的兒童。</p>
+
+<p>示例外掛程式元素：</p>
+<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;plugin</span> <span class="na">xmlns=</span><span class="s">"http://apache.org/cordova/ns/plugins/1.0"</span>
+    <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+    <span class="na">id=</span><span class="s">"com.alunny.foo"</span>
+    <span class="na">version=</span><span class="s">"1.0.2"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<h2><em>外掛程式</em>元素</h2>
+
+<p><code>plugin</code>元素是外掛程式清單的頂級元素。它具有下列屬性：</p>
+
+<ul>
+<li><p><code>xmlns</code>（必填）： 外掛程式的命名空間， <code>http://apache.org/cordova/ns/plugins/1.0</code> 。 如果文檔包含 XML 從其他命名空間如標記添加到 <code>AndroidManifest.xml</code> 檔中，這些命名空間，也應該列入的頂級元素。</p></li>
+<li><p><code>id</code>（必填）： 一個反向域樣式識別碼的外掛程式，如<code>com.alunny.foo</code></p></li>
+<li><p><code>version</code>（必填）： 該外掛程式相匹配的以下主要-未成年人-修補程式樣式的正則運算式的版本號：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">^\d+[.]\d+[.]\d+$
+</code></pre></div></li>
+</ul>
+
+<h2><em>發動機</em>和<em>引擎</em>的元素</h2>
+
+<p>子項目的 <code>&lt;engines&gt;</code> 元素指定版本的此外掛程式支援的基於 Apache 科爾多瓦的框架。示例：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;engines&gt;
+    &lt;engine name="cordova" version="1.7.0" /&gt;
+    &lt;engine name="cordova" version="1.8.1" /&gt;
+    &lt;engine name="worklight" version="1.0.0" platform="android" scriptSrc="worklight_version"/&gt;
+&lt;/engines&gt;
+</code></pre></div>
+<p>類似于 <code>&lt;plugin&gt;</code> 元素的 <code>version</code> 屬性中，指定的版本字串應匹配符合正則運算式的字串主要-未成年人-修補程式：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    ^\d+[.]\d+[.]\d+$
+</code></pre></div>
+<p>引擎的元素也可指定模糊比對為了避免重複，並減少維護基礎平臺更新時。 工具應該支援的最低 <code>&gt;</code> ， <code>&gt;=</code> ， <code>&lt;</code> 和 <code>&lt;=</code> ，例如：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;engines&gt;
+    &lt;engine name="cordova" version="&gt;=1.7.0" /&gt;
+    &lt;engine name="cordova" version="&lt;1.8.1" /&gt;
+&lt;/engines&gt;
+</code></pre></div>
+<p><code>&lt;engine&gt;</code>標籤也有預設支援的所有主要平臺存在的科爾多瓦。 指定 <code>cordova</code> 引擎標記，則意味著所有版本的科爾多瓦在任何平臺上必須都滿足發動機版本屬性。 你可能還會列出特定的平臺和它們的版本以覆蓋全部捕獲 <code>cordova</code> 引擎：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;engines&gt;
+    &lt;engine name="cordova" version="&gt;=1.7.0" /&gt;
+    &lt;engine name="cordova-android" version="&gt;=1.8.0" /&gt;
+    &lt;engine name="cordova-ios" version="&gt;=1.7.1" /&gt;
+&lt;/engines&gt;
+</code></pre></div>
+<p>這裡是<code>&lt; engine &gt;</code>標記支援預設引擎的清單:</p>
+
+<ul>
+<li>  <code>cordova</code></li>
+<li>  <code>cordova-plugman</code></li>
+<li>  <code>cordova-amazon-fireos</code></li>
+<li>  <code>cordova-android</code></li>
+<li>  <code>cordova-ios</code></li>
+<li>  <code>cordova-blackberry10</code></li>
+<li>  <code>cordova-wp8</code></li>
+<li>  <code>cordova-windows8</code></li>
+<li>  <code>android-sdk</code> // returns the highest Android api level installed</li>
+<li>  <code>apple-xcode</code> // returns the xcode version </li>
+<li>  <code>apple-ios</code> // returns the highest iOS version installed</li>
+<li>  <code>apple-osx</code> // returns the OSX version</li>
+<li>  <code>blackberry-ndk</code> // returns the native blackberry SDK version</li>
+</ul>
+
+<p>指定自訂的基於 Apache 科爾多瓦的框架應列出引擎標記下就像這樣：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;engines&gt;
+    &lt;engine name="my_custom_framework" version="1.0.0" platform="android" scriptSrc="path_to_my_custom_framework_version"/&gt;
+    &lt;engine name="another_framework" version="&gt;0.2.0" platform="ios|android" scriptSrc="path_to_another_framework_version"/&gt;
+    &lt;engine name="even_more_framework" version="&gt;=2.2.0" platform="*" scriptSrc="path_to_even_more_framework_version"/&gt;
+&lt;/engines&gt;
+</code></pre></div>
+<p>一個自訂的基於 Apache 科爾多瓦框架需要引擎的元素包含以下特性： <code>name</code> ， <code>version</code> ， <code>scriptSrc</code> ，和<code>platform</code>.</p>
+
+<ul>
+<li><p><code>name</code>(必填): 人類可讀的名稱為您自訂的框架。</p></li>
+<li><p><code>version</code>(必填): 您的框架必須要安裝的版本。</p></li>
+<li><p><code>scriptSrc</code>(必填): 告訴 plugman 是什麼版本的自訂框架的指令檔。 理想情況下，這個檔應該在你的外掛程式目錄的頂級目錄內。</p></li>
+<li><p><code>platform</code>(必填): 您的框架支援哪些平臺。 您可以使用萬用字元<code>*</code>說支援的所有平臺，指定多個像<code>android|ios|blackberry10</code>的管道字元或只是一個單一的平臺，像<code>android</code>.</p></li>
+</ul>
+
+<p>plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任何外掛程式。</p>
+
+<p>如果不是 <code>&lt;engine&gt;</code> 指定的標記、 plugman 嘗試盲目地安裝到指定的科爾多瓦的專案目錄。</p>
+
+<h2><em>名稱</em>元素</h2>
+
+<p>該外掛程式，其文本內容包含外掛程式的名稱人類可讀的名稱。例如：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;name&gt;Foo&lt;/name&gt;
+</code></pre></div>
+<p>此元素還不能 () 處理當地語系化。</p>
+
+<h2><em>說明</em>元素</h2>
+
+<p>對該外掛程式的人類可讀說明。元素的文本內容包含外掛程式的描述。示例：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;description&gt;Foo plugin description&lt;/description&gt;
+</code></pre></div>
+<p>此元素還不能 () 處理當地語系化。</p>
+
+<h2><em>作者</em>元素</h2>
+
+<p>外掛程式作者姓名。元素的文本內容包含外掛程式作者的姓名。示例：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;author&gt;Foo plugin description&lt;/author&gt;
+</code></pre></div>
+<h2><em>關鍵字</em>元素</h2>
+
+<p>外掛程式關鍵字。元素的文本內容包含以逗號分隔的關鍵字來描述該外掛程式。示例：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;keywords&gt;foo,bar&lt;/keywords&gt;
+</code></pre></div>
+<h2><em>許可證</em>元素</h2>
+
+<p>外掛程式許可。元素的文本內容包含外掛程式許可證。示例：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;license&gt;Apache 2.0 License&lt;/license&gt;
+</code></pre></div>
+<h2><em>資產</em>元素</h2>
+
+<p>一個或多個元素列出檔或目錄複寫到科爾多瓦 app <code>www</code> 目錄。例子：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;!-- a single file, to be copied in the root directory --&gt;
+&lt;asset src="www/foo.js" target="foo.js" /&gt;
+&lt;!-- a directory, also to be copied in the root directory --&gt;
+&lt;asset src="www/foo" target="foo" /&gt;
+</code></pre></div>
+<p>所有 <code>&lt;asset&gt;</code> 標籤需要兩個 <code>src</code> 和 <code>target</code> 的屬性。 只有 web 外掛程式包含主要是 <code>&lt;asset&gt;</code> 的元素。 任何 <code>&lt;asset&gt;</code> 元素的嵌套在 <code>&lt;platform&gt;</code> 元素指定特定于平臺 web 資產，如下所述。 屬性包括：</p>
+
+<ul>
+<li><p><code>src</code>(必填): 檔或目錄位於外掛程式包，相對於<code>plugin.xml</code>文檔。 如果檔不存在指定的<code>src</code>地點，plugman 停止反轉安裝過程，發出一個通知關於衝突，和與非零代碼退出。</p></li>
+<li><p><code>target</code> (required):</p>
+
+<p>在那裡的檔或目錄應位於科爾多瓦 app，相對於<code>www</code>目錄。 資產可以有針對性地對子目錄，例如:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;asset src="www/new-foo.js" target="js/experimental/foo.js" /&gt;
+</code></pre></div>
+<p>創建<code>js/experimental</code>目錄在<code>www</code>目錄中，除非已經呈現，然後將<code>new-foo.js</code>檔案複製並重命名為<code>foo.js</code>。 如果目標位置已存在的檔，plugman 停止和反轉安裝過程、 然後發出一個通知關於衝突，並在此與非零代碼退出。</p></li>
+</ul>
+
+<h2><em>js 模組</em>元素</h2>
+
+<p>大多數的外掛程式包括一個或多個 JavaScript 檔。 每個 <code>&lt;js-module&gt;</code> 標記對應于一個 JavaScript 檔，並防止外掛程式的使用者不必添加 <code>&lt;script&gt;</code> 為每個檔標記。 雖然 <code>&lt;asset&gt;</code> 標籤只是將一個檔案複製從外掛程式子目錄到 <code>www</code> ， <code>&lt;js-module&gt;</code> 標記是複雜得多。 他們看起來像這樣：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;js-module src="socket.js" name="Socket"&gt;
+    &lt;clobbers target="chrome.socket" /&gt;
+&lt;/js-module&gt;
+</code></pre></div>
+<p>與上面的例子，安裝一個外掛程式時 <code>socket.js</code> 複製到 <code>www/plugins/my.plugin.id/socket.js</code> ，並作為對條目添加 <code>www/cordova_plugins.js</code> 。 在載入時，代碼在 <code>cordova.js</code> 使用 XHR 來讀取每個檔並注入 <code>&lt;script&gt;</code> 到 HTML 標籤。 它將添加一個映射，以痛打或合併並酌情按如下所述。</p>
+
+<p><em>不</em>換行的檔 <code>cordova.define</code> ，因為它會自動添加。 模組包裹在一個閉包， <code>module</code> ， <code>exports</code> ，和 <code>require</code> 在範圍中，如是正常的 AMD 模組。</p>
+
+<p>詳細資訊 <code>&lt;js-module&gt;</code> 標記：</p>
+
+<ul>
+<li><p><code>src</code>引用相對於<code>plugin.xml</code>檔外掛程式目錄中的檔。</p></li>
+<li><p>該<code>name</code>提供模組名稱的最後一部分。 如果你想要使用<code>cordova.require</code>來導入你的外掛程式在 JavaScript 代碼中的其他部分，它一般可以無論你喜歡，和它的唯一事項。 模組名稱為<code>&lt; js-module &gt;</code>是你的外掛程式<code>id</code>後, 跟<code>名稱</code>的值。 例如上面， <code>id</code>為<code>chrome.socket</code>的模組名稱是<code>chrome.socket.Socket</code>.</p></li>
+<li><p>在<code>&lt; js-module &gt;</code>內允許三個標記:</p>
+
+<ul>
+<li>  <code>&lt; clobbers target=&quot;some.value&quot;/ &gt;</code>指示<code>module.exports</code>插入作為<code>window.some.value</code>的<code>視窗</code>物件。 你可以有多<code>&lt; clobbers &gt;</code>如你所願。 創建任何物件在<code>window</code>上不可用。</li>
+<li>  <code>&lt; merges target=&quot;some.value&quot;/ &gt;</code>指示，應與在<code>window.some.value</code>的任何現有值合併模組。 如果已經存在任何鍵，模組的版本將覆蓋原始。 你可以有多<code>&lt; merges &gt;</code>如你所願。 創建任何物件在<code>window</code>上不可用。</li>
+<li>  <code>&lt; runs / &gt;</code>意味著您的代碼應該用<code>cordova.require</code>，指定，但不是安裝在<code>window</code>物件上。 這是有用的當初始化模組，將事件處理常式附加或以其他方式。 你只能有一個<code>&lt; runs / &gt;</code>標記。 請注意，包括<code>&lt; runs / &gt;</code><code>&lt; clobbers / &gt;</code>或<code>&lt; merges / &gt;</code>是多餘的因為他們也<code>cordova.require</code>您的模組。</li>
+<li>  空的<code>&lt; js-module &gt;</code>仍然載入，並可以通過<code>cordova.require</code>的其他模組中訪問.</li>
+</ul></li>
+</ul>
+
+<p>如果 <code>src</code> 不能解決到現有檔，plugman 將停止和反轉安裝，發出一個通知的問題，和以非零代碼退出。</p>
+
+<p>嵌套 <code>&lt;js-module&gt;</code> 內的元素 <code>&lt;platform&gt;</code> 聲明特定平臺 JavaScript 模組綁定。</p>
+
+<h2><em>依賴項</em>元素</h2>
+
+<p><code>&lt;dependency&gt;</code>標記使您可以指定當前外掛程式所依賴的其他外掛程式。 雖然未來的版本將從外掛程式庫訪問它們，在短期內的外掛程式直接引用的 Url 作為 <code>&lt;dependency&gt;</code> 的標記。 他們的格式如下：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" /&gt;
+</code></pre></div>
+<ul>
+<li><p><code>id</code>: 提供外掛程式的 ID。 它應該是全域唯一的並表示在反向域風格。 沒有這些限制目前執行的而他們可能在將來。</p></li>
+<li><p><code>url</code>: 該外掛程式的 URL。這應引用一個 git 倉庫，其中 plugman 試圖克隆。</p></li>
+<li><p><code>commit</code>: 這是理解的<code>git 簽出</code>任何 git 引用: 一個分支或標記的名稱 (例如，<code>師父</code>， <code>0.3.1</code>) 或提交雜湊值 (例如， <code>975ddb228af811dd8bb37ed1dfd092a3d05295f9</code>).</p></li>
+<li><p><code>subdir</code>: 指定目標的外掛程式依賴存在作為 git 倉庫的子目錄。 這是有用的因為它允許存儲庫中包含幾個相關的外掛程式，每個單獨指定。</p></li>
+</ul>
+
+<p>在將來，將會介紹版本限制，和一個外掛程式庫會存在支援按名稱而不是顯式 Url 獲取。</p>
+
+<h3>相對依賴項的路徑</h3>
+
+<p>如果您將設置 <code>url</code> 的 <code>&lt;dependency&gt;</code> 標記到 <code>&quot;.&quot;</code> ，並提供 <code>subdir</code> 、 依賴外掛程式安裝從同一個本地或遠端 git 資源庫作為父外掛程式，指定 <code>&lt;dependency&gt;</code> 標記。</p>
+
+<p>請注意， <code>subdir</code> 總是指定<em>根</em>的 git 資源庫，不該父外掛程式的相對路徑。 即使你安裝的外掛程式與直接向它的本地路徑，也是如此。 Plugman 發現 git 資源庫的根目錄，然後查找其他外掛程式從那裡。</p>
+
+<h2><em>平臺</em>元素</h2>
+
+<p><code>&lt;platform&gt;</code>標記標識平臺有關聯的本機代碼或需要對它們的設定檔進行修改。 使用此規範的工具可以標識支援的平臺和科爾多瓦專案中安裝代碼。</p>
+
+<p>無外掛程式 <code>&lt;platform&gt;</code> 標籤被假定為只 JavaScript 的並因此可安裝在所有的平臺上。</p>
+
+<p>平臺標記示例：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;platform name="android"&gt;
+    &lt;!-- android-specific elements --&gt;
+&lt;/platform&gt;
+&lt;platform name="ios"&gt;
+    &lt;!-- ios-specific elements --&gt;
+&lt;/platform&gt;
+</code></pre></div>
+<p>所需 <code>name</code> 屬性標識一個平臺支援，將與該平臺關聯元素的子級。</p>
+
+<p>平臺名稱應該是小寫字母。平臺名稱，如任意選擇，列出：</p>
+
+<ul>
+<li>  亞馬遜 fireos</li>
+<li>  安卓系統</li>
+<li>  blackberry10</li>
+<li>  ios</li>
+<li>  wp8</li>
+<li>  windows8</li>
+</ul>
+
+<h2><em>原始程式碼檔</em>元素</h2>
+
+<p><code>&lt;source-file&gt;</code>元素標識應安裝到一個專案的可執行檔的原始程式碼。例子：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;!-- android --&gt;
+&lt;source-file src="src/android/Foo.java"
+                target-dir="src/com/alunny/foo" /&gt;
+&lt;!-- ios --&gt;
+&lt;source-file src="src/ios/CDVFoo.m" /&gt;
+&lt;source-file src="src/ios/someLib.a" framework="true" /&gt;
+&lt;source-file src="src/ios/someLib.a" compiler-flags="-fno-objc-arc" /&gt;
+</code></pre></div>
+<p>它支援以下屬性：</p>
+
+<ul>
+<li><p><code>src</code>(必填): 相對於<code>plugin.xml</code>檔的位置。 如果不能找到<code>src</code>檔，plugman 停止和反轉安裝、 然後發出一個通知有關的問題，並在此與非零代碼退出。</p></li>
+<li><p><code>target-dir</code>: 檔應該將複製到其中，相對於科爾多瓦專案的根目錄的目錄。 在實踐中，這是最重要的是基於 JAVA 的平臺上，在<code>com.alunny.foo</code>包中的檔必須位於<code>com/alunny/美孚</code>目錄內。 對於原始目錄是不重要的平臺，應忽略此屬性。</p>
+
+<p>作為資產，如果<code>target</code><code>source-file</code>會覆蓋現有的檔，plugman 停止和反轉安裝，發出一個通知有關的問題，並退出非零代碼。</p></li>
+<li><p><code>framework</code>(僅適用于 iOS): 如果設置為<code>true</code>，還將指定的檔作為一個框架添加到專案。</p></li>
+<li><p><code>compiler-flags</code>(僅適用于 iOS): 如果設置，分配特定的原始檔案中指定的編譯器標誌。</p></li>
+</ul>
+
+<h2><em>設定檔</em>元素</h2>
+
+<p>標識要進行修改，在該檔中修改應考慮的地方，和什麼應修改基於 XML 的設定檔。</p>
+
+<p>與此元素修改測試過的兩種檔案類型是 <code>xml</code> 和 <code>plist</code> 的檔。</p>
+
+<p><code>config-file</code>元素只允許您將新的兒童追加到 XML 文檔樹。孩子們在目的文件中要插入的 XML 文本。</p>
+
+<p>XML 的的示例：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;config-file target="AndroidManifest.xml" parent="/manifest/application"&gt;
+    &lt;activity android:name="com.foo.Foo" android:label="@string/app_name"&gt;
+        &lt;intent-filter&gt;
+        &lt;/intent-filter&gt;
+    &lt;/activity&gt;
+&lt;/config-file&gt;
+</code></pre></div>
+<p>例如 <code>plist</code> ：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;config-file target="*-Info.plist" parent="CFBundleURLTypes"&gt;
+    &lt;array&gt;
+        &lt;dict&gt;
+            &lt;key&gt;PackageName&lt;/key&gt;
+            &lt;string&gt;$PACKAGE_NAME&lt;/string&gt;
+        &lt;/dict&gt;
+    &lt;/array&gt;
+&lt;/config-file&gt;
+</code></pre></div>
+<p>它支援以下屬性：</p>
+
+<ul>
+<li><p><code>target</code>:</p>
+
+<p>要修改檔和科爾多瓦專案根目錄的相對路徑。</p>
+
+<p>目標可以包括萬用字元 (``*) 元素。在這種情況下，plugman 遞迴搜索專案目錄結構，並使用第一場比賽。</p>
+
+<p>在 iOS，相對於專案目錄的根設定檔的位置不是知道，所以指定目標<code>config.xml</code>解析為<code>cordova-ios-project/MyAppName/config.xml</code>.</p>
+
+<p>如果指定的檔不存在，該工具將忽略配置更改並繼續安裝。</p></li>
+<li><p><code>parent</code>: XPath 選擇器引用父級的元素添加到設定檔。 如果你使用絕對選擇器，您可以使用萬用字元 (`<code>*) 來指定的根項目，例如，</code>/ * / 外掛程式`.</p>
+
+<p><code>Plist</code>檔，<code>父</code>確定應該在什麼父項下插入指定的 XML。</p>
+
+<p>如果選擇器不會解析為指定文檔的一個孩子，工具停止和挫折安裝過程中，會發出警告，並且具有非零代碼退出。</p></li>
+<li><p><code>after</code>: 接受兄弟姐妹後要添加 XML 程式碼片段的優先順序的清單。 用於在需要嚴格排序的 XML 元素，如<a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement">HTTP://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement</a>的檔中指定的變化</p></li>
+</ul>
+
+<p>Windows 平臺支援兩個附加屬性 （兩個可選） 時影響 <code>package.appxmanifest</code> 元名稱：</p>
+
+<p>該 <code>device-target</code> 屬性指示，只應包括，當生成指定的目標裝置類型。 受支援的值是 <code>win</code>、 <code>phone</code> 或 <code>all</code>.</p>
+
+<p>該 <code>versions</code> 屬性指示特定的 Windows 版本的應用程式清單只應會被更改為指定的版本字串相匹配的版本。 值可以是任何有效的節點語義版本範圍的字串。</p>
+
+<p>使用這些視窗的特定屬性的示例：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="&lt;8.1.0"&gt;
+    &lt;Capability Name="picturesLibrary" /&gt;
+    &lt;DeviceCapability Name="webcam" /&gt;
+&lt;/config-file&gt;
+&lt;config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="&gt;=8.1.0" device-target="phone"&gt;
+    &lt;DeviceCapability Name="webcam" /&gt;
+&lt;/config-file&gt;
+</code></pre></div>
+<p>上面的示例中將設置預 8.1 平臺 （Windows 8，具體），需要 <code>webcam</code> 裝置功能和 <code>picturesLibrary</code> 的綜合性能，而且 <code>webcam</code> 裝置功能僅適用于 Windows 8.1 的專案生成為 Windows Phone。 Windows 桌面 8.1 系統是未被修改。</p>
+
+<h2><em>外掛程式-plist</em>元素</h2>
+
+<p>這是 <em>過時</em> 的因為它只適用于科爾多瓦 ios 2.2.0 和下面。科爾多瓦的較新版本使用 <code>&lt;config-file&gt;</code> 標記。</p>
+
+<p>示例:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;config-file target="config.xml" parent="/widget/plugins"&gt;
+    &lt;feature name="ChildBrowser"&gt;
+        &lt;param name="ios-package" value="ChildBrowserCommand"/&gt;
+    &lt;/feature&gt;
+&lt;/config-file&gt;
+</code></pre></div>
+<p>指定的鍵和值追加到 iOS 科爾多瓦專案中的正確的 <code>AppInfo.plist</code> 檔。舉個例子：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugins-plist key="Foo" string="CDVFoo" /&gt;
+</code></pre></div>
+<h2><em>資源檔</em>和<em>標頭檔</em>元素</h2>
+
+<p>像原始檔案，而是專門負責 iOS 平臺，區分原始檔案、 標頭檔和資源。iOS 的例子：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;resource-file src="CDVFoo.bundle" /&gt;
+&lt;resource-file src="CDVFooViewController.xib" /&gt;
+&lt;header-file src="CDVFoo.h" /&gt;
+</code></pre></div>
+<p>Android 的示例：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" /&gt;
+</code></pre></div>
+<h2><em>lib 檔</em>元素</h2>
+
+<p>像源、 資源和標頭檔，而是專門負責平臺 （如黑莓 10 的使用使用者生成的庫。示例：</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" /&gt;
+&lt;lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" /&gt;
+</code></pre></div>
+<p>支援的屬性：</p>
+
+<ul>
+<li><p><code>src</code>(必填): 相對於<code>plugin.xml</code>檔的位置。 如果不能找到<code>src</code> ，plugman 停止和反轉安裝，具有非零代碼問題有關的問題和出口的警告。</p></li>
+<li><p><code>arch</code>: 為<code>.so</code>檔已經建成，<code>device</code>或<code>simulator</code>的體系結構.</p></li>
+</ul>
+
+<p>對於 Windows 平臺上，<code>&lt;lib-file&gt;</code> 元素允許 <code>&lt; SDKReference &gt;</code> 生成 Windows 專案檔案中列入。</p>
+
+<p>支援的屬性：</p>
+
+<ul>
+<li><p><code>src</code>(必填): 的 SDK，包括名稱 (這將用作生成的<code>&lt; SDKReference &gt;</code>元素<code>包含</code>屬性的值)。</p></li>
+<li><p><code>arch</code>: 指示為指定的架構生成時只應包含<code>&lt; SDKReference &gt;</code> 。 受支援的值是 <code>x86</code> ， <code>x64</code> 或<code>ARM</code>.</p></li>
+<li><p><code>device-target</code>： 指示當生成指定的目標裝置類型只應包含 <code>&lt; SDKReference &gt;</code>。 受支援的值是 <code>win</code> (或 <code>windows</code> )， <code>phone</code> 或<code>all</code>.</p></li>
+<li><p><code>versions</code>： 指示當生成指定的版本字串相匹配的版本只應包含 <code>&lt; SDKReference &gt;</code>。 值可以是任何有效的節點語義版本範圍的字串。</p></li>
+</ul>
+
+<p>例子:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" /&gt;
+&lt;lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions="&gt;=8.1" /&gt;
+&lt;lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" /&gt;
+&lt;lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="win" versions="8.0" arch="x86" /&gt;
+</code></pre></div>
+<h2><em>框架</em>元素</h2>
+
+<p>標識該外掛程式所依賴的框架 （通常的作業系統/平臺的一部分）。</p>
+
+<p>可選的<code>custom</code>屬性是一個布林值，該值指示是否框架一種作為您的外掛程式檔的一部分 (因此它不是一個系統框架)。</p>
+
+<h3>iOS <em>framework</em></h3>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="libsqlite3.dylib" /&gt;
+&lt;framework src="social.framework" weak="true" /&gt;
+&lt;framework src="relative/path/to/my.framework" custom="true" /&gt;
+</code></pre></div>
+<p>可選的<code>weak</code>屬性是一個布林值，該值指示是否應弱連結的框架。預設值為<code>false</code>.</p>
+
+<h3>安卓系統 <em>framework</em></h3>
+
+<p>在 android 系統 (如 cordova-android@4.0.0)，<em>框架</em>標籤用於包括 Maven 依賴關係，或包括捆綁的庫專案。</p>
+
+<p>例子:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;!-- Depend on latest version of GCM from play services --&gt;
+&lt;framework src="com.google.android.gms:play-services-gcm:+" /&gt;
+&lt;!-- Depend on v21 of appcompat-v7 support library --&gt;
+&lt;framework src="com.android.support:appcompat-v7:21+" /&gt;
+&lt;!-- Depend on library project included in plugin --&gt;
+&lt;framework src="relative/path/FeedbackLib" custom="true" /&gt;
+</code></pre></div>
+<p><em>framewokr</em>也可以用於有分納入主要專案的.gradle 檔的自訂.gradle 檔:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="relative/path/rules.gradle" custom="true" type="gradleReference" /&gt;
+</code></pre></div>
+<p>為 pre-android@4.0.0 (基於 ANT 的專案):</p>
+
+<p>可選的<code>type</code>屬性是一個字串，指示框架添加的類型。 目前，只有<code>projectReference</code>支援並且僅用於 Windows。 使用<code>custom=&#39;true&#39;</code>和<code>type=&#39;projectReference&#39;</code>將引用添加到專案，將被添加到編譯 + 連結科爾多瓦專案的步驟。 這基本上是目前唯一的方式，&#39;custom&#39; 的框架可以針對多個體系結構，因為他們作為一種依賴由顯式引用科爾多瓦應用程式。</p>
+
+<p>可選的<code>parent</code>將相對路徑設置為包含要向其增加參考的子專案的目錄。 預設值是<code>.</code>，即應用程式專案。 它允許添加像在此示例中的子專案之間的引用:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" /&gt;
+</code></pre></div>
+<h3><em>framework</em>視窗</h3>
+
+<p>Windows 平臺支援三個附加屬性 (所有可選) 精煉時框架應包括:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/&gt;
+</code></pre></div>
+<p>該<code>arch</code>屬性指示時為指定的建築建設只應包括框架。 受支援的值是 <code>x86</code>、<code>x64</code> 或 <code>ARM</code>.</p>
+
+<p>該<code>device-target</code>屬性指示當生成指定的目標裝置類型後，應該只能包含框架。 受支援的值是 <code>win</code> （或 <code>windows</code>），<code>phone</code> 或 <code>all</code>.</p>
+
+<p>該<code>versions</code>屬性指示框架只應包括當生成指定的版本字串相匹配的版本。 值可以是任何有效的節點語義版本範圍的字串。</p>
+
+<p>使用這些 Windows 特定屬性的示例:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="src/windows/example.dll" arch="x64" /&gt;
+&lt;framework src="src/windows/example.dll" versions="&gt;=8.0" /&gt;
+&lt;framework src="src/windows/example.vcxproj" type="projectReference" target="win" /&gt;
+&lt;framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" /&gt;
+</code></pre></div>
+<h2><em>資訊</em>元素</h2>
+
+<p>向使用者提供的其他資料。當你需要額外的步驟，不能很容易自動或超出 plugman 的範圍時，這非常有用。 例子:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;info&gt;
+You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
+
+You need to add the following line to the `local.properties`:
+
+android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+&lt;/info&gt;
+</code></pre></div>
+<h2><em>hook</em>元素</h2>
+
+<p>表示您自訂的腳本，將調用由科爾多瓦發生某些操作時 (例如，添加外掛程式或平臺編寫邏輯之後調用)。 當您需要擴展預設科爾多瓦功能時，這很有用。 更多的資訊，請參閱掛鉤的指南。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;hook type="after_plugin_install" src="scripts/afterPluginInstall.js" /&gt;
+</code></pre></div>
+<h2>變數</h2>
+
+<p>在某些情況下，外掛程式可能需要進行配置更改依賴于目標應用程式。 例如，若要註冊為 C2DM 在 Android 上，其包 id 是<code>com.alunny.message</code>的應用程式還將如需要許可權:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;uses-permission android:name="com.alunny.message.permission.C2D_MESSAGE"/&gt;
+</code></pre></div>
+<p>在插入從<code>plugin.xml</code>檔的內容不事先知道這種情況下，可以由一個貨幣符號進行一系列的大寫英文字母，數位或底線表示變數。 對於上面的示例中， <code>plugin.xml</code>檔將包括此標記:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/&gt;
+</code></pre></div>
+<p>plugman 變數引用替換為指定的值或空字串，如果沒有找到。 可能檢測到 (在這種情況下，從<code>AndroidManifest.xml</code>檔) 或工具; 使用者指定的變數引用的值確切的過程是依賴于特定的工具。</p>
+
+<p>plugman 可以要求使用者指定一個外掛程式所需的變數。例如，C2M 和谷歌地圖的 API 金鑰可以指定為一個命令列參數:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
+</code></pre></div>
+<p>為了使變數成為強制性， <code>&lt;platform&gt;</code>標記需要包含<code>&lt;preference&gt;</code>標記。例如:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="API_KEY" /&gt;
+</code></pre></div>
+<p>plugman 檢查中通過的這些所需的首選項。 如果不是，它應該警告使用者如何傳遞中的變數和以非零代碼退出。</p>
+
+<p>應保留某些變數的名稱，如下所示。</p>
+
+<h2>$PACKAGE_NAME</h2>
+
+<p>反向功能變數名稱風格包的對應于<code>CFBundleIdentifier</code>對 iOS 或<code>AndroidManifest.xml</code>檔中的頂級<code>表現</code>元素的<code>包</code>屬性的唯一識別碼。</p>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  dev", "language: zh-tw"] }
+    });
+</script>
+
+</body>
+</html>

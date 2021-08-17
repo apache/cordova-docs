@@ -1,0 +1,2394 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Windows 플랫폼 가이드 - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/ko/9.x/guide/platforms/win8/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '9.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/platforms/blackberry10/home.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/platforms/osx/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/appdev/whitelist/index.html">
+                Whitelisting
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/platforms/blackberry10/plugin.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-cli/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-battery-status/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-camera/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-console/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-contacts/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-device/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-device-motion/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-device-orientation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-dialogs/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-file/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-file-transfer/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-geolocation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-globalization/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-inappbrowser/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-media/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-media-capture/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-network-information/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-splashscreen/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-vibration/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-statusbar/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/9.x/reference/cordova-plugin-legacy-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        차례
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/platforms/blackberry10/home.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/platforms/osx/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/appdev/whitelist/index.html">
+        Whitelisting
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/platforms/blackberry10/plugin.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-cli/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-battery-status/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-camera/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-console/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-contacts/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-device/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-device-motion/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-device-orientation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-dialogs/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-file/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-file-transfer/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-geolocation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-globalization/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-inappbrowser/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-media/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-media-capture/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-network-information/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-splashscreen/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-vibration/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-statusbar/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/9.x/reference/cordova-plugin-legacy-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/ko/9.x/guide/platforms/win8/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        한국어
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/9.x/guide/platforms/win8/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/9.x/guide/platforms/win8/" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/9.x/guide/platforms/win8/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/9.x/guide/platforms/win8/" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/9.x/guide/platforms/win8/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/9.x/guide/platforms/win8/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/9.x/guide/platforms/win8/" class="">
+                                
+                                    <span class="selected">
+                                        한국어
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/9.x/guide/platforms/win8/" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/9.x/guide/platforms/win8/" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/9.x/guide/platforms/win8/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/9.x/guide/platforms/win8/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/9.x/guide/platforms/win8/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        9.x
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/9.x/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                9.x
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    이 아닌 문서의 최신 버전입니다!
+                    <a href="/docs/ko/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Windows 플랫폼 가이드</h1>
+
+<p>이 가이드에서는 구축 하 고 윈도우 8, 윈도우 8.1, Windows Phone 8.1와 Windows 10 범용 응용 프로그램 플랫폼에 대 한 코르도바 애플 리 케이 션을 배포 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 그것은 생성 하 고 빌드 애플 리 케이 션, 셸 도구를 사용 하는 방법을 보여 줍니다 또는 크로스-플랫폼 코르도바 CLI 명령줄 인터페이스에서 논의. (이러한 개발 옵션의 비교에 대 한 개요를 참조 하십시오.) 이 섹션에는 또한 Visual Studio 내에서 코르도바 애플 리 케이 션을 수정 하는 방법을 보여 줍니다. 당신은 어떤 접근에 해야 Visual Studio SDK를 설치 하려면 아래와 같이 합니다.</p>
+
+<p>기존 윈도우 8 코르 도우 바 프로젝트를 업그레이드 하는 방법에 대 한 내용은 업그레이드 Windows 8을 참조 하십시오.</p>
+
+<p>별도 플랫폼으로 창 전화 8 (wp8) 숙박 자세한 내용은 Windows Phone 8 플랫폼 설명서를 참조.</p>
+
+<p>코르 도우 바 WebViews Windows에서 실행 되 의존 인터넷 익스플로러 10 (Windows 8.0) 및 인터넷 익스플로러 11 (윈도 즈 8.1와 Windows Phone 8.1) 그들의 렌더링 엔진으로, 실질적인 문제로 서 코르도바 Api를 호출 하지 않는 모든 웹 콘텐츠를 테스트 하려면 IE의 강력한 디버거를 사용할 수 있습니다. Windows Phone 개발자 블로그 지원 IE 웹 킷 브라우저를 비교 하는 방법에 <a href="http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx">도움이 지침</a> 을 제공합니다.</p>
+
+<h2>요구 사항 및 지원</h2>
+
+<p>Windows 플랫폼을 위한 애플 리 케이 션을 개발 하기 위해 다음 작업을 수행 해야 합니다.</p>
+
+<ul>
+<li><p>최소 4gb RAM의 윈도우 8.1, 32 또는 64-비트 기계 (<em>홈</em>, <em>프로</em>또는 <em>기업</em> 버전).</p></li>
+<li><p>Windows 8.0, 8.1 또는 10, 32 또는 64-비트 <em>홈</em>, <em>프로</em>또는 <a href="http://www.visualstudio.com/downloads">Visual Studio 2012 Express</a> 또는 Visual Studio 2013 <em>엔터프라이즈</em> 버전. Visual Studio 2015는 Windows 8.0 애플 리 케이 션을 만들 수 없습니다.</p></li>
+</ul>
+
+<p>윈도 즈 8.0과 8.1 (를 포함 하 여 Windows Phone 8.1)에 대 한 애플 리 케이 션 개발:</p>
+
+<ul>
+<li><p>윈도우 8.1 윈도 10, 32 또는 64-비트 <em>홈</em>, <em>프로</em>또는 <em>엔터프라이즈</em> 버전, <a href="http://www.visualstudio.com/downloads">Visual Studio 2013 Express</a> 와 함께 또는 그 이상. 윈도 즈 8.1 엔터프라이즈 평가 버전은 <a href="http://msdn.microsoft.com/en-US/evalcenter/jj554510">마이크로소프트 개발자 네트워크</a> 에서 사용할 수.</p></li>
+<li><p>Windows Phone 에뮬레이터, 프로 페 셔널 에디션 윈도우 8.1 (64)에 대 한 또는 더 높은, 그리고 프로세서를 지 원하는 <a href="https://msdn.microsoft.com/en-us/library/windows/apps/ff626524(v=vs.105).aspx#hyperv">클라이언트 하이퍼-V와 두 번째 수준의 주소 변환 (판금)</a>. 윈도 즈 8.1 엔터프라이즈 평가 버전은 <a href="http://msdn.microsoft.com/en-US/evalcenter/jj554510">마이크로소프트 개발자 네트워크</a> 에서 사용할 수.</p></li>
+<li><p><a href="http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-windows-8">Windows 용 visual Studio 2013</a> (또는 더 높은).</p></li>
+</ul>
+
+<p>윈도우 10 애플 리 케이 션 개발:</p>
+
+<ul>
+<li>  윈도우 8.1 또는 Windows 10 기술 미리 보기 2, 32-또는 64-비트, <a href="http://www.visualstudio.com/preview">Visual Studio 2015 RC</a> 함께 또는 그 이상.</li>
+</ul>
+
+<p>응용 프로그램 호환성 app 대상 운영 체제에 의해 결정 됩니다. 애플 리 케이 션은 ㄹ 호환 하지만 하지 backwardly 호환, 그래서 윈도우 8.1를 대상으로 응용 프로그램 8.0에서 실행할 수 없습니다 하지만 8.0 내장 app 8.1에서 실행할 수 있습니다.</p>
+
+<p>앱을 Windows 스토어에 제출 하는 <a href="http://www.windowsstore.com/">windowsstore.com</a> 에서 지침을 따릅니다.</p>
+
+<p>Windows에 대 한 코르도바 애플 리 케이 션을 개발, 당신은 Windows를 실행 하는 PC를 사용할 수 있지만 가상 컴퓨터 환경 실행 하거나 듀얼-부팅 윈도우 8.1 파티션에 부트 캠프를 사용 하 여 당신은 또한 Mac에서 개발할 수 있습니다. Mac에서 필요한 Windows 개발 환경을 설정 하는 이러한 리소스를 참조 하십시오.</p>
+
+<ul>
+<li><p><a href="http://msdn.microsoft.com/en-US/library/windows/apps/jj945426">VMWare Fusion</a></p></li>
+<li><p><a href="http://msdn.microsoft.com/en-US/library/windows/apps/jj945424">Parallels Desktop</a></p></li>
+<li><p><a href="http://msdn.microsoft.com/en-US/library/windows/apps/jj945423">Boot Camp</a></p></li>
+</ul>
+
+<h2>코르 도우 바 쉘 도구를 사용 하 여</h2>
+
+<p>SDK와 함께에서 코르도바의 윈도우 중심으로 셸 도구를 사용 하려면 두 가지 기본 옵션이 있습니다.</p>
+
+<ul>
+<li><p>CLI에서 생성 된 프로젝트 코드에서 로컬로 액세스할 그들. 사용할 수 있는 <code>플랫폼/윈도우/</code> 디렉토리 아래 설명 된 대로 <code>windows</code> 플랫폼을 추가 하면.</p></li>
+<li><p><a href="https://www.apache.org/dist/cordova/platforms/">Cordova.apache.org</a>에서 별도 메일에서 그들을 다운로드 합니다. 코르도바 배포는 각 플랫폼에 대 한 별도 아카이브를 포함합니다. 이 경우에, 빈 디렉토리 내 적절 한 보관, <code>코르도바-windows</code> 를 확장 해야 합니다. 관련 일괄 처리 유틸리티 <code>package/bin</code> 디렉터리에서 사용할 수 있습니다. ( <strong>README</strong> 파일을 참조 자세한 방향에 대 한 필요한 경우.)</p></li>
+</ul>
+
+<p>이러한 셸 도구 작성, 구축 및 Windows 애플 리 케이 션을 실행할 수 있습니다. 모든 플랫폼에 걸쳐 플러그인 기능을 활성화 하는 추가 명령줄 인터페이스에 대 한 정보를 관리 플러그인을 사용 하 여 Plugman를 참조 하십시오.</p>
+
+<h2>SDK 설치</h2>
+
+<p><a href="http://www.visualstudio.com/downloads">Visual Studio</a> 버전 위에 나열 된 요구 사항에 일치의 어떤 버전을 설치 합니다.</p>
+
+<p><img src="/static/img/guide/platforms/win8/win8_installSDK.png" alt=""></p>
+
+<p>윈도우 10, Visual Studio 설치 관리자 범용 윈도우 애플 리 케이 션을 구축 하는 도구를 설치 하려면 옵션이 있다. 이 옵션을 선택 설치할 때 필요한 SDK를 설치 해야 합니다.</p>
+
+<h2>새 프로젝트 만들기</h2>
+
+<p>이 시점에서, 새로운 프로젝트를 생성 하려면 크로스-플랫폼 CLI 도구는 <a href="../../cli/index.html">명령줄 인터페이스</a>, 또는 특정 Windows 셸 도구 집합 설명 사이 선택할 수 있습니다. CLI 접근 아래는 애플 리 케이 션을 새로운 <code>hello</code> 프로젝트 디렉터리 내에서 <em>HelloWorld</em> 라는 생성:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    &gt; cordova create hello com.example.hello HelloWorld
+    &gt; cd hello
+    &gt; cordova platform add windows
+</code></pre></div>
+<p>여기에 해당 하위 셸 도구 접근은:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    C:\path\to\cordova-windows\package\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
+</code></pre></div>
+<p>이 프로젝트는 기본 대상 OS로 윈도우 8.1을 대상. 8.0 또는 10.0 (&quot;구성 대상 윈도우 버전&quot; 아래 참조) 모든 빌드를 대상으로 선택할 수 있습니다 하거나 각 빌드 동안 특정 특정 버전을 대상.</p>
+
+<h2>프로젝트 빌드</h2>
+
+<p>프로젝트 디렉터리의 최상위 개발에서 CLI를 사용 하는 경우 <code>www</code> 디렉터리에 소스 파일 포함 되어 있습니다. 응용 프로그램을 다시 프로젝트 디렉터리에서 다음 중 하나를 실행 합니다.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    &gt; cordova build
+    &gt; cordova build windows              # do not rebuild other platforms
+    &gt; cordova build windows   --debug    # generates debugging information
+    &gt; cordova build windows   --release  # signs the apps for release
+</code></pre></div>
+<p>여기에 해당 하위 셸 도구 접근은:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    C:\path\to\project\cordova\build.bat --debug        
+    C:\path\to\project\cordova\build.bat --release
+</code></pre></div>
+<p><code>clean</code>명령 다음에 대 한 준비 디렉터리 밖으로 플러시 도움이 됩니다 <code>build</code> :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    C:\path\to\project\cordova\clean.bat 
+</code></pre></div>
+<h2>대상 Windows 버전 구성</h2>
+
+<p>기본 <code>구축</code> 으로 명령 두 패키지 생성: 윈도우 8.0과 Windows Phone 8.1. 버전 8.1 다음 구성 설정은 구성 파일 (<code>config.xml</code> 에 추가 되어야 합니다 Windows 패키지 업그레이드).</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    &lt;preference name="windows-target-version" value="8.1" /&gt;
+</code></pre></div>
+<p>추가한 후이 설정을 <code>빌드</code> 명령을 Windows 8.1와 Windows Phone 8.1 패키지 생산을 시작할 것 이다.</p>
+
+<h3>-약 매개 변수</h3>
+
+<p>특정 운영 체제를 대상으로 하는 응용 프로그램의 특정 버전을 구축 하려는 결정할 수 있습니다 (예를 들어 수 설정한 대상 Windows 10, 하지만 Windows Phone 8.1에 대 한 빌드 하려는). 이 위해 <code>--appx</code> 매개 변수를 사용할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    &gt; cordova build windows -- --appx=8.1-phone
+</code></pre></div>
+<p>빌드 시스템 config.xml 대상 Windows 버전에 대 한 기본 설정 집합을 무시 하 고 엄격 하 게 Windows Phone 8.1에 대 한 패키지를 구축 합니다.</p>
+
+<p><code>-약</code> 플래그에 대 한 유효한 값은 <code>8.1-승리</code>, <code>8.1 전화</code>및 <code>uap</code> (창을 10 보편적인 애플 리 케이 션)에 대 한. 이 옵션은 또한 <code>cordova run</code> 명령에 적용 됩니다.</p>
+
+<h3>대상 Windows 버전에 대 한 고려 사항</h3>
+
+<p><a href="win10-support.html">윈도우 10 코르도바</a> 애플 리 케이 션 (및 일반에서 HTML 애플 리 케이 션)에 대 한 새로운 &quot;원격&quot; 모드를 지원합니다. 이 모드 애플 리 케이 션 DOM 조작 및 인라인 스크립트를 사용 하 여 같은 일반적인 웹 패턴의 사용을 훨씬 더 자유 존중 하지만 너무 기능 집합을 줄임으로써 응용 프로그램 공용 Windows 스토어에 제출 하는 경우 사용할 수 있습니다. 윈도우 10 및 원격 모드에 대 한 자세한 내용은, <a href="win10-support.md.html">Cordova에 대 한 Windows 10</a> 설명서를 봐.</p>
+
+<p>원격 모드를 사용할 경우 개발자는 스크립트 주입 공격을 방지 하기 위해 그들의 응용 프로그램에 콘텐츠 보안 정책 (CSP)를 적용 하는 것이 좋습니다.</p>
+
+<h2>응용 프로그램 배포</h2>
+
+<p>Windows 패키지 배포:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    &gt; cordova run windows -- --win  # explicitly specify Windows as deployment target
+    &gt; cordova run windows # `run` uses Windows package by default
+</code></pre></div>
+<p>Windows Phone 패키지 배포:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    &gt; cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
+    &gt; cordova run windows --device -- --phone  # deploy app to connected device
+</code></pre></div>
+<p>당신이 보고 사용할 수 있습니다 <strong>코르도바 실행 창-목록</strong> 모두 사용 가능한 대상 및 <strong>코르도바 실행 창-대상 target_name-=-전화</strong> 특정 장치 또는 에뮬레이터에서 응용 프로그램을 실행 (예를 들어 <code>코르도바 실행 창-대상 = &quot;에뮬레이터 8.1 720 P 4.7 인치&quot;--전화</code>).</p>
+
+<p>또한 참조 추가 빌드 및 실행 옵션에 <strong>코르도바 실행-도움말을</strong> 사용할 수 있습니다.</p>
+
+<h2>SDK에서 프로젝트를 열고 응용 프로그램 배포</h2>
+
+<p>위에서 설명한 대로 코르도바 애플 리 케이 션을 구축, Visual Studio를 열 수 있습니다. 다양 한 <code>빌드</code> 명령을 Visual Studio 솔루션 (<em>.sln</em>) 파일을 생성합니다. Visual Studio 내에서 프로젝트를 수정 하려면 파일 탐색기에서 파일을 엽니다.</p>
+
+<p><img src="/static/img/guide/platforms/win8/win8_sdk_openSLN.png" alt=""></p>
+
+<p><code>CordovaApp</code> 구성 요소는 솔루션 내에서 표시 하 고 그 <code>www</code> 디렉토리는 <code>index.html</code> 홈 페이지를 포함 하 여 웹 기반 소스 코드를 포함:</p>
+
+<p><img src="/static/img/guide/platforms/win8/win8_sdk.png" alt=""></p>
+
+<p>Visual Studio의 주 메뉴 아래 컨트롤을 사용 하 여 테스트 또는 응용 프로그램을 배포할 수 있습니다.</p>
+
+<p><img src="/static/img/guide/platforms/win8/win8_sdk_deploy.png" alt=""></p>
+
+<p><strong>로컬 컴퓨터</strong> 선택, Visual Studio를 실행 하는 동일한 컴퓨터에 응용 프로그램을 설치 하려면 녹색 화살표를 누릅니다. 일단 당신이 이렇게, 응용 프로그램 윈도우 8의 응용 프로그램 목록에 나타납니다.</p>
+
+<p><img src="/static/img/guide/platforms/win8/win8_sdk_runApp.png" alt=""></p>
+
+<p>응용 프로그램을 다시 만들 때마다 인터페이스에서 사용할 수 있는 버전을 새로 고칩니다.</p>
+
+<p>일단 응용 프로그램 목록에서 사용할 수 있는 응용 프로그램을 선택 하는 동안 <strong>CTRL</strong> 키를 누른 수 있습니다 메인 화면에 고정:</p>
+
+<p><img src="/static/img/guide/platforms/win8/win8_sdk_runHome.png" alt=""></p>
+
+<p>가상 컴퓨터 환경 내에서 응용 프로그램을 열면 당신은 모서리 또는 애플 리 케이 션을 전환 또는 추가 기능에 액세스 하는 windows의 측면을 따라 클릭 해야 할 수도 있습니다 note:</p>
+
+<p><img src="/static/img/guide/platforms/win8/win8_sdk_run.png" alt=""></p>
+
+<p>또는, <strong>시뮬레이터</strong> 배포 옵션 마치 태블릿 장치에서 실행 되는 응용 프로그램을 선택:</p>
+
+<p><img src="/static/img/guide/platforms/win8/win8_sdk_sim.png" alt=""></p>
+
+<p>데스크톱 배포와 달리이 옵션을 시뮬레이션 하는 태블릿의 방향, 위치, 네트워크 설정을 다를 수 있습니다.</p>
+
+<p><strong>참고</strong>: 워크플로에서 코르도바의 명령줄 도구 또는 SDK를 사용 하는 방법에 대 한 조언을 개요를 참조 하십시오. 코르도바 CLI을 정기적으로 SDK에서 사용 되는 플랫폼 특정 파일을 덮어쓰는 크로스-플랫폼 소스 코드에 의존 합니다. SDK를 사용 하 여 프로젝트 수정 하려는 경우 하위 셸 도구를 사용 하 여 CLI에 대 안으로.</p>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  9.x", "language: ko"] }
+    });
+</script>
+
+</body>
+</html>

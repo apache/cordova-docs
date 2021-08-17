@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that Cordova iOS 4.0.0 has been released.This is a major release, and deprecated APIs have been removed. Some 3rd party plugins migh...">
+
+    <title>
+        
+            
+                Cordova iOS 4.0.0 - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2015/12/08/cordova-ios-4.0.0.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '10.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Cordova iOS 4.0.0</div>
+        <div class="author">By:
+            
+              <a href="https://twitter.com/shazron">Shazron Abdullah</a>
+            
+        </div>
+        <div class="date">08 Dec 2015</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that <code>Cordova iOS 4.0.0</code> has been released.</p>
+
+<p>This is a major release, and <a href="https://github.com/apache/cordova-ios/blob/master/guides/API%20changes%20in%204.0.md">deprecated APIs have been removed</a>. Some 3rd party plugins might require updates before they are compatible. This release adds first-class support for pluggable webviews - namely we now support <a href="https://developer.apple.com/library/ios/documentation/WebKit/Reference/WKWebView_Ref/">WKWebView</a> -- a bundled modern WebView for iOS! </p>
+
+<p>The platform now supports Asset Catalogs for splashscreens and icons -- this is all transparent to you when using the <code>&lt;splash&gt;</code> and <code>&lt;icon&gt;</code> tags in <a href="http://cordova.apache.org/docs/en/latest/config_ref/images.html">config.xml</a>. </p>
+
+<p><a href="https://www.npmjs.com/package/ios-sim">ios-sim</a> is bundled with the platform now, you will not need to install this separately anymore. However for <a href="https://www.npmjs.com/package/ios-deploy">ios-deploy</a> you will need to update your version to the latest.</p>
+
+<p>The minimum deployment target has been updated to <strong>iOS 8.0</strong>. This means that this platform release has only been tested on iOS 8 devices and greater only and will only support those iOS versions.</p>
+
+<p><code>cordova-ios@4.0.0</code> will be the default iOS version in the next version of <code>cordova</code>. If you just can&#39;t wait though, you can try it out now:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cd my_project
+cordova platform update ios@4.0.0
+# To install the WKWebView engine (optional):
+cordova plugin add cordova-plugin-wkwebview-engine
+</code></pre></div>
+<p>We are in the process of releasing the <code>cordova-plugin-wkwebview-engine</code> plugin to <a href="https://www.npmjs.com/">npm</a>. If you decide to update to <code>cordova-ios@4.0.0</code> before we release this plugin, please install the plugin via <code>git</code> for now.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add https://github.com/apache/cordova-plugin-wkwebview-engine.git#1.0.0
+</code></pre></div>
+<p>Note that the <code>cordova-plugin-wkwebview-engine</code> plugin has some limitations versus the default UIWebView, please consult the <a href="https://github.com/apache/cordova-plugin-wkwebview-engine/blob/master/README.md">README</a> for more details.</p>
+
+<p>In addition to the <code>&lt;access&gt;</code> tag, there is support for the new <code>&lt;allow-intent&gt;</code> and <code>&lt;allow-navigation&gt;</code> tags, documented <a href="https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md">here</a>. Note that you do <em>not</em> need <code>cordova-plugin-whitelist</code> installed for <code>cordova-ios-4.0.0</code>.</p>
+
+<p><code>cordova</code> will convert <code>&lt;access&gt;</code> and <code>&lt;allow-navigation&gt;</code> tags to the appropriate <a href="https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/">Application Transport Security (ATS)</a> directives which are new in iOS 9. <code>&lt;access&gt;</code> and <code>&lt;allow-navigation&gt;</code> tags also <a href="http://cordova.apache.org/docs/en/latest/guide/appdev/whitelist/index.html">support two new attributes</a>: <code>minimum-tls-version</code> and <code>requires-forward-secrecy</code>. </p>
+
+<p>To upgrade:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+cd my_project
+cordova platform update ios@4.0.0
+</code></pre></div>
+<p>To add it explicitly:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add ios@4.0.0
+</code></pre></div>
+<!--more-->
+
+<h2>What&#39;s new in iOS platform</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-10136">CB-10136</a> - error in <code>cordova prepare</code> (Platform API)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10048">CB-10048</a> - clobbering of <code>&lt;access&gt;</code> tags to <strong>ATS</strong> directives <a href="https://issues.apache.org/jira/browse/CB-10057">CB-10057</a> - removing <code>&lt;access&gt;</code> tag does not remove <strong>ATS</strong> entry</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10106">CB-10106</a> - added bridge proxy</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9827">CB-9827</a> - fixed version file to be requireable</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9827">CB-9827</a> - Implement and expose PlatformApi for <strong>iOS</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10106">CB-10106</a> - <strong>iOS</strong> bridges need to take into account bridge changes</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10072">CB-10072</a> - Add <code>SWIFT\_OBJC\_BRIDGING_HEADER</code> value in <code>build.xcconfig</code>, remove from <code>pbxproj</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10004">CB-10004</a> - Rename <code>CDVSystemSchemes</code> plugin name to something more appropriate</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10001">CB-10001</a> <a href="https://issues.apache.org/jira/browse/CB-10003">CB-10003</a> Handle <code>&lt;allow-navigation&gt;</code> and <code>&lt;allow-intent&gt;</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10025">CB-10025</a> - <code>CDVWhiteList</code> can&#39;t parse <code>URIs</code> that don&#39;t have double slashes after the scheme</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9972">CB-9972</a> - Remove <strong>iOS</strong> whitelist</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9883">CB-9883</a> <a href="https://issues.apache.org/jira/browse/CB-9948">CB-9948</a> Update <code>cordova.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9948">CB-9948</a> - Remove deprecated command format from <code>exec.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9883">CB-9883</a> - Remove unused <strong>iOS</strong> bridges</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9836">CB-9836</a> - Add <code>.gitattributes</code> to prevent <code>CRLF</code> line endings in repos</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9787">CB-9787</a> - <code>[CDVStartPageTest testParametersInStartPage]</code> unit-test failure</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9917">CB-9917</a> - refix. Order matters in <code>.gitattributes</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9917">CB-9917</a> - Failure: <code>cordova platform add https://github.com/apache/cordova-ios.git#tagOrBranch</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9870">CB-9870</a> - updated hello world template</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9609">CB-9609</a> - Cordova run opts don&#39;t make it through to <code>ios-deploy</code> on real device</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9893">CB-9893</a> - Update API changes doc with more upgrade examples</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9638">CB-9638</a> - Cordova/NSData+Base64.h missing from cordova-ios - updated API Changes doc</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9836">CB-9836</a> Add .gitattributes to prevent CRLF line endings in repos</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9685">CB-9685</a> - A fix for the magnifying glass popping up on <strong>iOS9</strong> when longpressing the webview. </li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9800">CB-9800</a> - Fixing contribute link.</li>
+<li>Updated bundled <code>ios-sim</code> to 5.0.3</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9500">CB-9500</a> - Added no sign argument to <strong>iOS</strong> build</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9787">CB-9787</a> - <code>[CDVStartPageTest testParametersInStartPage]</code> unit-test failure (improved fix)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9754">CB-9754</a> - Icon and launch image warnings</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9719">CB-9719</a> - set <code>allow_non_modular_includes</code> to yes</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9685">CB-9685</a> - A fix for the magnifying glass popping up on <strong>iOS9</strong> when longpressing the webview</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9552">CB-9552</a> - Updating linked platform removes original files</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6992">CB-6992</a> - can&#39;t deploy app if display name contains unicode characters</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9726">CB-9726</a> - Update minimum Deployment Target to <strong>iOS 8.0</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9679">CB-9679</a> - Resource rules issue with <strong>iOS 9</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9721">CB-9721</a> - Set <code>ENABLE_BITCODE</code> to <code>NO</code> in <code>build.xcconfig</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9698">CB-9698</a> - Add <code>rsync</code> error handling in ios <code>copy-www-build-step.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9671">CB-9671</a> - Remove installation of <code>ios-sim</code> from <code>travis.yml</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9693">CB-9693</a> - Fix www copy with spaces in project name</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9690">CB-9690</a> - Can&#39;t submit iPad apps to the App Store for <strong>iOS 9</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9328">CB-9328</a> - Use <code>ios-sim</code> as a node module, not a CLI utility</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9558">CB-9558</a> - Add blob: to <code>allowedSchemes</code> used by <code>CDVUIWebViewDelegate::shouldLoadRequest</code> (closes #163)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9558">CB-9558</a> - Blob schemes won&#39;t load in iframes</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9667">CB-9667</a> - create tests failing in <code>cordova-ios 4.x</code> (related to <a href="https://issues.apache.org/jira/browse/CB-8789">CB-8789</a> pull request that didn&#39;t test for projects with spaces in the name)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9650">CB-9650</a> - Update API compatibility doc in cordova-ios for <code>AppDelegate.m</code> template change</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9638">CB-9638</a> - <code>Cordova/NSData+Base64.h</code> missing from <code>cordova-ios 4.x</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8789">CB-8789</a> - Support Asset Catalog for App icons and splashscreens</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8789">CB-8789</a> - Asset Catalog support</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9642">CB-9642</a> - Integrate 3.9.0, 3.9.1, 3.9.2 version updates in <code>CDVAvailability.h</code> into master</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9261">CB-9261</a> - localizations broken in Xcode template</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9656">CB-9656</a> - <code>Xcode</code> can&#39;t find <code>CDVViewController.h</code> when archiving in <code>Xcode 7.1</code> beta</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9254">CB-9254</a> - <code>update_cordova_subproject</code> command for <code>cordova-ios 4.0.0-dev</code> results in a build error</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9636">CB-9636</a> - only load a <code>WebView</code> engine if the url to load passes the engine&#39;s <code>canLoadRequest</code> filter</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9610">CB-9610</a> - Fix warning in <code>cordova-ios</code> under <code>Xcode 7</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9613">CB-9613</a> - <code>CDVWhitelist::matches</code> crashes when there is no hostname in a URL</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9485">CB-9485</a> - Use <code>absoluteString</code> method of <code>NSURL</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8365">CB-8365</a> - Add <code>NSInteger</code>, <code>NSUInteger</code> factory methods to <code>CDVPluginResult</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9266">CB-9266</a> - <code>cordova run</code> for <strong>iOS</strong> does not see non-running emulators</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9462">CB-9462</a> - <strong>iOS</strong> 3.9.0 breaks npm link modules</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9453">CB-9453</a> - Updating to <strong>iOS@3.9.0</strong> not building</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9273">CB-9273</a> - Copy www build phase node is not found</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9266">CB-9266</a> - changed target default to iPhone-5 in the interim</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8197">CB-8197</a> - Switch to nodejs for ios platform scripts</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9203">CB-9203</a> - <strong>iOS</strong> unit-tests should use tmp instead of same folder</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8468">CB-8468</a> - Application freezes if breakpoint hits JavaScript callback invoked from native</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8812">CB-8812</a> - moved system schemes handler into its own plugin (<code>CDVSystemSchemes</code>)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8812">CB-8812</a> - protocol hander raises error on second firing</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9050">CB-9050</a> - <code>cordova run --list</code> does not show that you have an outdated <code>ios-sim</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8730">CB-8730</a> - Can&#39;t deploy to device</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8788">CB-8788</a> - Drop <code>armv7s</code> from default <strong>iOS</strong> Cordova build to align with <code>Xcode 6</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9046">CB-9046</a> - <code>cordova run ios --emulator --target</code> &quot;iPhone-5, 7.1&quot; (target with runtime) does not work</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8906">CB-8906</a> - <code>cordova run ios --target</code> doesn&#39;t work</li>
+<li>Incremented <code>ios-sim</code> version to 4.0.0</li>
+<li>Incremented <code>ios-deploy</code> version to 1.7.0</li>
+<li>Incremented <code>xcodebuild</code> version to 6.0.0</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8895">CB-8895</a> - Change <code>CDVStartPageTests::testParametersInStartPage</code> into an async test</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8047">CB-8047</a> - <strong>WKWebView</strong> <strong>iOS8</strong> <code>wkwebview</code> / local webserver plugin orientation issue</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8838">CB-8838</a> - Moved <code>commandQueue</code> push into <code>non-WK_WEBVIEW_BINDING</code> branch. (closes #136)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8868">CB-8868</a> - <strong>ios</strong> 4.0.x cannot archive</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7767">CB-7767</a> - Removed <code>NSData+Base64</code> files, updated unit tests.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8710">CB-8710</a> - <code>cordova-ios</code> jasmine tests do not clean up build products, tests can only be run once</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7767">CB-7767</a> - Remove usage of <code>NSData+Base64</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8709">CB-8709</a> - Remove usage of obsolete <code>CDVLocalStorage</code> fix in <code>CDVViewController.m</code> (plus style fix-ups)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8270">CB-8270</a> - Update <code>Objective-C</code> unit tests for <code>JSON</code> serialization. Cleaned up unit test workspace as well.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8690">CB-8690</a> - Exported headers were not in Public section, but Project. Moved.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8690">CB-8690</a> - Group files into folders in <code>CordovaLib/Classes</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8697">CB-8697</a> - Remove obsolete <code>merges</code> folder reference in default template(s)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5520">CB-5520</a> - Remove all frameworks specified in the templates. Rely on implicit Clang Module loading.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5520">CB-5520</a> - Removed most Build Settings from <code>.pbxproj</code> to <code>.xcconfig</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5520">CB-5520</a> - Added <code>cordova/build*.xcconfig</code> support in the default template (IDE use)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8678">CB-8678</a> - Mismatched case typo in startup plugin name in <code>config.xml</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7428">CB-7428</a> - Add bridging header.  Make sure all deployment targets are 7.0 Add swift runtime to search path (closes #133)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7826">CB-7826</a> - Add <code>CDVPlugin</code> support for getting items from plugin resource bundles</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8640">CB-8640</a> - Template-ize <code>CDVAvailability.h</code> for coho release tool</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8678">CB-8678</a> - Included core plugins should be added through configuration, not code</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8643">CB-8643</a> - Drop <strong>iOS</strong> 6 support, minimum <strong>iOS</strong> 7</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8677">CB-8677</a> - Remove conditional <code>IsAtLeastIosVersion</code> code (plus style fix-ups)</li>
+<li>Update version to 4.0.0 in <code>CDVAvailability.h</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8556">CB-8556</a> - <code>handleOpenURL</code> functionality to be removed to a plugin</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8474">CB-8474</a> - Remove local/remote push notification delegates from <code>CDVAppDelegate</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8464">CB-8464</a> - Remove non-ARC code in <code>AppDelegate</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8473">CB-8473</a> - Remove <code>AppDelegate</code> code from template (includes uncrustify style fix-ups)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8664">CB-8664</a> - Make <code>CDVPlugin</code> initializer private</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7753">CB-7753</a> - Remove <code>CDV_IsIPad</code> and <code>CDV_IsIPhone5</code> macros in <code>CDVAvailabiltyDeprecated.h</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7000">CB-7000</a> - Remove deprecated <code>CDVPlugin</code> and <code>CDVPluginResult</code> methods</li>
+<li>Make webView property dynamic in <code>CDVViewController</code> and <code>CDVPlugin</code> (from <code>CDVWebViewEngineProtocol</code> reference). Added scrollView category to <code>UIView</code> for backwards compatibility reasons.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8032">CB-8032</a> - Added a <code>typedef</code> for block definition.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-8032">CB-8032</a> - Add new property in <code>CDVCommandDelegate</code> (<code>urlTransformer</code>), plus style fixups.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6884">CB-6884</a> - Support new Cordova bridge under <strong>iOS</strong> 8 <code>WKWebView</code> (typo fix)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7184">CB-7184</a> - Implement support for <code>mediaPlaybackAllowsAirPlay</code> in <code>UIWebView</code> and <code>WKWebView</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7047">CB-7047</a> - Support <code>config.xml</code> preferences for <code>WKWebView</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7182">CB-7182</a> - Running mobile-spec in an <strong>iOS</strong> 8 project but using <code>UIWebView</code> results in an exception</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7047">CB-7047</a> - Support <code>config.xml</code> preferences for <code>WKWebView</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7182">CB-7182</a> - Running <code>mobile-spec</code> in an <strong>iOS</strong> 8 project but using <code>UIWebView</code> results in an exception</li>
+<li>Split into Public and Private headers more clearly. Delete most deprectated symbols.</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/news/2015/11/24/tools-release.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2015/11/24/tools-release.html">Tools Release</a>
+                    <div class="date"> 24 Nov 2015 - By Steve Gill </div>
+                    <p class="content">
+                        New patch update of cordova-cli and cordova are now live! cordova-lib@5.4.1 cordova@5.4.1...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/news/2015/12/08/wkwebview-engine-plugin-release.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2015/12/08/wkwebview-engine-plugin-release.html">Plugins Release</a>
+                    <div class="date"> 08 Dec 2015 - By Shazron Abdullah </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        The following plugins were updated today: cordova-plugin-wkwebview-engine@1.0.0 This is the initial release...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cordovablogs';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  10.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

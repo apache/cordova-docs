@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl"?>
+<rdf:RDF xml:lang="en"
+         xmlns="http://usefulinc.com/ns/doap#"
+         xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:asfext="https://projects.apache.org/ns/asfext#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+  <Project rdf:about="https://cordova.apache.org/">
+    <created>2013-01-11</created>
+    <license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0.txt" />
+    <name>Apache Cordova</name>
+    <homepage rdf:resource="https://cordova.apache.org" />
+    <!-- see the comment at the top of pmc_list.xml that explains asfext:pmc rdf:resource -->
+    <asfext:pmc rdf:resource="https://svn.apache.org/repos/asf/cordova/site/public/infra/doap_Cordova_PMC.rdf" />
+    <shortdesc>A tool to create cross-platform apps from standard web technologies (HTML, CSS, and JavaScript).</shortdesc>
+    <description>Apache Cordova is a tool to create cross-platform apps from standard web technologies (HTML, CSS, and JavaScript). Its primary purpose is to provide a bridge for native device API access and to bundle for distribution.</description>
+    <bug-database rdf:resource="https://github.com/apache/cordova" />
+    <mailing-list rdf:resource="https://cordova.apache.org/contact/" />
+    <download-page rdf:resource="https://cordova.apache.org/#getstarted" />
+    <programming-language>JavaScript</programming-language>
+    <programming-language>Java</programming-language>
+    <programming-language>Objective-C</programming-language>
+    <programming-language>C++</programming-language>
+    <programming-language>C#</programming-language>
+    <programming-language>node.js</programming-language>
+    <category rdf:resource="https://projects.apache.org/projects.html?category#mobile" />
+    <category rdf:resource="https://projects.apache.org/projects.html?category#library" />
+    <release>
+       <Version>
+           <name>Latest Stable</name>
+           <created>2020-08-04</created>
+           <revision>10.0.0</revision>
+       </Version>
+   </release>
+    <repository>
+      <SVNRepository>
+        <location rdf:resource="https://cordova.apache.org/contribute/"/>
+        <browse rdf:resource="https://cordova.apache.org/contribute/"/>
+      </SVNRepository>
+    </repository>
+  </Project>
+</rdf:RDF>

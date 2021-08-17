@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Последующие шаги - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/ru/7.x/guide/next/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '7.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/platforms/blackberry10/home.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/platforms/osx/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/appdev/whitelist/index.html">
+                Whitelisting
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/platforms/blackberry10/plugin.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-cli/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-battery-status/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-camera/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-console/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-contacts/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-device/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-device-motion/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-device-orientation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-dialogs/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-file/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-file-transfer/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-geolocation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-globalization/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-inappbrowser/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-media/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-media-capture/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-network-information/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-splashscreen/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-vibration/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-statusbar/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ru/7.x/reference/cordova-plugin-legacy-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Содержание
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/platforms/blackberry10/home.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/platforms/osx/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/appdev/whitelist/index.html">
+        Whitelisting
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/platforms/blackberry10/plugin.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-cli/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-battery-status/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-camera/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-console/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-contacts/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-device/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-device-motion/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-device-orientation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-dialogs/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-file/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-file-transfer/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-geolocation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-globalization/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-inappbrowser/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-media/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-media-capture/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-network-information/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-splashscreen/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-vibration/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-statusbar/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ru/7.x/reference/cordova-plugin-legacy-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/ru/7.x/guide/next/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Русский
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/7.x/guide/next/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/7.x/guide/next/" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/7.x/guide/next/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/7.x/guide/next/" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/7.x/guide/next/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/7.x/guide/next/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/7.x/guide/next/" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/7.x/guide/next/" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/7.x/guide/next/" class="">
+                                
+                                    <span class="selected">
+                                        Русский
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/7.x/guide/next/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/7.x/guide/next/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/7.x/guide/next/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        7.x
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Последняя)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/7.x/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                7.x
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/5.1.1/" class="missing-page">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ru/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    Эта версия документации устарела!
+                    <a href="/docs/ru/latest/">
+                        Нажмите здесь для последней выпущенной версии.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <style type="text/css">
+    /* Workaround for the spacing on the Russian /docs/ru/version/index.html pages */
+    .docs .home .summary {
+        height: 100px;
+    }
+    .docs #old-home ul li {
+        height: 160px;
+    }
+</style>
+
+<h1>Последующие шаги</h1>
+
+<p>Для разработчиков, иметь представление о том, как использовать Cordova CLI и использовать плагины, есть несколько вещей, вы можете хотеть рассматривать исследования рядом с построения лучшего, более мощные приложений Cordova. Следующий документ предлагает советы по различным темам, касающимся передовой практики, испытаний, модернизации и другие темы, но не предназначен быть директивный характер. Рассмотрим это вашей отправной точкой для вашего роста, как разработчик Кордова. Кроме того если вы видите то, что можно улучшить, пожалуйста, <a href="http://cordova.apache.org/#contribute">внести</a>!</p>
+
+<p>Данное руководство содержит следующие разделы:</p>
+
+<ul>
+<li>  Лучшие практики</li>
+<li>  Обработка обновлений</li>
+<li>  Тестирование приложений Cordova</li>
+<li>  Отладка приложений Cordova</li>
+<li>  Пользовательский интерфейс</li>
+<li>  Особые соображения</li>
+<li>  Ногу</li>
+<li>  Получение справки </li>
+</ul>
+
+<h1>Лучшие практики разработки приложений Cordova</h1>
+
+<h2>1) Спа-ваш друг</h2>
+
+<p>Прежде всего - приложений Cordova следует принять дизайн спа (одной страницы приложения). Слабо определены, Спа это клиентское приложение, которое запускается из одного запроса веб-страницы. Пользователь загружает начальный набор ресурсов (HTML, CSS и JavaScript) и дальнейшего обновления (показывая новый взгляд, загрузки данных) делается через AJAX. Курорты широко используются для более сложных клиентских приложений. GMail является прекрасным примером этого. После загрузки GMail, mail просмотров, редактирования и Организации выполняются путем обновления DOM вместо фактически оставляя на текущей странице для загрузки полностью новый.</p>
+
+<p>С помощью спа может помочь вам организовать ваше приложение более эффективным образом, но она также имеет конкретные преимущества для приложений Cordova. Cordova-приложение необходимо дождаться события <a href="../../cordova/events/events.deviceready.html">deviceready</a> прежде чем какие-либо плагины могут быть использованы. Если вы не использовать спа, и пользователь нажимает перейти от одной страницы к другой, вам придется ждать <a href="../../cordova/events/events.deviceready.html">deviceready</a> огонь снова прежде чем вы делаете использовать плагин. Это легко забыть, как ваше приложение получает больше.</p>
+
+<p>Даже если вы не хотите использовать Cordova, создание мобильного приложения без использования архитектуры одной страницы будет иметь серьезные производительность последствия. Это потому, что Навигация между страницами потребует скрипты, активов и т.д., необходимо перезагрузить. Даже если эти активы кэшируются, по-прежнему будет проблем производительности.</p>
+
+<p>Примеры спа библиотек, которые можно использовать в приложениях Cordova являются:</p>
+
+<ul>
+<li>  <a href="http://angularjs.org">AngularJS</a></li>
+<li>  <a href="http://emberjs.com">EmberJS</a></li>
+<li>  <a href="http://backbonejs.org">Костяк</a></li>
+<li>  <a href="http://www.telerik.com/kendo-ui">Кэндо пользовательского интерфейса</a></li>
+<li>  <a href="http://monaca.mobi/en/">Монака</a></li>
+<li>  <a href="http://facebook.github.io/react/">ReactJS</a></li>
+<li>  <a href="http://www.sencha.com/products/touch/">Sencha Touch</a></li>
+<li>  <a href="http://jquerymobile.com">jQuery Mobile</a></li>
+</ul>
+
+<p>И много, много, больше.</p>
+
+<h2>2) производительность.</h2>
+
+<p>Один из самых больших ошибок, можно сделать новый разработчик Кордова является предположить, что производительность, они получают на столе машины является то же самое, они получат на мобильном устройстве. Хотя наших мобильных устройств получили более мощные каждый год, они по-прежнему не хватает мощности и производительности рабочего стола. Мобильные устройства, как правило, имеют гораздо меньше оперативной памяти и GPU, что является далеко от их стола (или даже ноутбук) братьев. Полный список советов здесь будет слишком много, но вот несколько вещей, чтобы иметь в виду (с перечнем больше ресурсов в конце для дальнейших исследований).</p>
+
+<p><strong>Щелкните по сравнению с Touch</strong> - крупнейший и самый простой ошибкой, вы можете сделать должна использовать события click. Хотя эти «работы» просто отлично на мобильный, большинство устройств вводят 300 мс задержки на них для того, чтобы различить прикосновение и коснуться событие «hold». С помощью <code>touchstart</code> , или <code>touchend</code> , приведет к резкому улучшению - 300 мс не звучит как много, но это может привести к отрывисто обновления пользовательского интерфейса и поведения. Следует также учитывать тот факт, что «touch» события не поддерживаются на не webkit-браузерами, см <a href="http://caniuse.com/#search=touch">CanIUse</a>. Для того, чтобы справиться с эти ограничения, вы можете оформить различные библиотеки, такие как HandJS и Fastouch.</p>
+
+<p><strong>Переходы CSS против манипуляции DOM</strong> - с использованием аппаратного ускорения переходы CSS будет значительно лучше, чем использование JavaScript для создания анимации. Смотрите список ресурсов в конце этого раздела для примеров.</p>
+
+<p><strong>Сетей сосать</strong> - ОК, сети не всегда сосать, но задержку мобильных сетей, даже хорошие мобильные сети, намного хуже, чем вы, вероятно, думаете. Приложение рабочего стола, который хлебает вниз 500 строк данных JSON, каждые 30 секунд, будет медленнее на мобильное устройство, а также батарея hog. Имейте в виду, что Кордова apps имеют несколько способов для сохранения данных в приложении (LocalStorage и файловой системе, например). Кэшировать данные локально и учитывать количество данных, отправляемых и обратно. Это особенно важно, когда ваше приложение подключается через сотовую сеть.</p>
+
+<p><strong>Дополнительный выигрыш в производительности статьи и ресурсы</strong></p>
+
+<ul>
+<li>  <a href="http://sintaxi.com/you-half-assed-it">«Вы наполовину assed он»</a></li>
+<li>  <a href="http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/">«Топ 10 Советы по повышению производительности для PhoneGap и гибридных приложений»</a></li>
+<li>  <a href="https://channel9.msdn.com/Events/Build/2013/4-313">«Быстрые приложения и сайты с JavaScript»</a></li>
+</ul>
+
+<h2>3) признавать и обрабатывать автономный статус</h2>
+
+<p>Смотрите предыдущий совет о сетях. Не только вы можете быть на медленных сетях, это вполне возможно для вашего приложения в полностью автономном режиме. Приложение должно обрабатывать это интеллигентая(ый) образом. Если ваше приложение не произойдет, люди будут думать, что ваше приложение не работает. Учитывая, насколько легко это для обработки (Кордова поддерживает прослушивание для оффлайн и онлайн событие) нет абсолютно никаких оснований для вашего приложения не реагировать, хорошо, когда запускать в автономном режиме. Будьте уверены, чтобы проверить (см. ниже раздел Тестирование) вашего приложения и не забудьте проверить, как ваше приложение обрабатывает при запуске в одном государстве и затем переключиться на другой.</p>
+
+<p>Обратите внимание, что онлайн и оффлайн события, а также API подключения сети не является совершенным. Вам придется полагаться на с помощью XHR-запрос, чтобы увидеть, если оно действительно оффлайн или онлайн. В конце дня быть уверен, добавить той или иной форме поддержку для сетевых проблем - в самом деле, в Apple store (и возможно другие магазины) будут отвергать apps которые не обрабатывает должным образом оффлайн/онлайн государств. Для более подробного обсуждения этой темы см <a href="http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29">«Является эта вещь по?»</a></p>
+
+<h1>Обработка обновлений</h1>
+
+<h2>Обновление проектов Кордова</h2>
+
+<p>Если ваш существующий проект был создан с помощью Cordova 3.x, можно обновить проект, выполнив следующие действия:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">Кордова Платформа обновления имя платформы ios, android, и др.
+</code></pre></div>
+<p>Если ваш существующий проект был создан в версии до Кордова 3.x, вероятно было бы лучше, чтобы создать новый проект 3.x Кордова, а затем скопируйте код и ресурсы вашего существующего проекта в новый проект. Типичные действия:</p>
+
+<ul>
+<li>  Создайте новый проект 3.x Кордова (Кордова создание...)</li>
+<li>  Скопируйте папку www из старого проекта в новый проект</li>
+<li>  Скопируйте любые параметры конфигурации из старого проекта в новый проект</li>
+<li>  Добавьте любые плагины, используемые в старого проекта в новый проект</li>
+<li>  Создайте свой проект</li>
+<li>  Тест, тест, тест!</li>
+</ul>
+
+<p>Независимо от предыдущей версии проекта абсолютно важно, что вы читаете на то, что было изменено в обновленной версии, как обновление может нарушить ваш код. Лучшее место, чтобы найти эту информацию будет в выпуске опубликованы на блоге Кордова и в хранилищах. Необходимо тщательно протестировать приложение, чтобы проверить правильность работы после выполнения обновления.</p>
+
+<p>Примечание: некоторые плагины не могут быть совместимы с новой версией Кордова. Если плагин не совместим, вы можете быть в состоянии найти замену плагин, который делает то, что вам нужно, или может потребоваться отложить модернизацию вашего проекта. Кроме того изменить плагин, чтобы он работать под новой версии и вносить обратно в общины.</p>
+
+<h2>Обновления плагинов</h2>
+
+<p>По состоянию на Cordova 3.4 не существует механизма для обновления измененных плагины, с помощью одной команды. Вместо этого удалить плагин и добавить его обратно в ваш проект, и будет установлена новая версия:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">Кордова плагин rm com.some.plugin cordova плагин добавить com.some.plugin
+</code></pre></div>
+<p>Не забудьте проверить обновленный плагин документации, как вам может потребоваться настроить код для работы с новой версией. Кроме того проверьте, что новая версия плагина работает с версией вашего проекта Кордова.</p>
+
+<p>Всегда проверяйте свои приложения, чтобы обеспечить, что установка нового плагина не нарушил что-то, что вы не планировали.</p>
+
+<p>Если ваш проект имеет много плагинов, которые необходимо обновить, он может сэкономить время для создания оболочки или пакетный сценарий, который удаляет и добавляет плагины с помощью одной команды.</p>
+
+<h1>Тестирование приложений Cordova</h1>
+
+<p>Супер важно, тестирование приложений. Кордова команда использует Жасмин, но любой дружественный отряд веб-тестирования решение будет делать.</p>
+
+<h2>Тестирование на тренажере против на реальном устройстве</h2>
+
+<p>Это не редкость для использования настольных браузеров и тренажеры/эмуляторы устройств при разработке Cordova-приложение. Однако это невероятно важно, что вы протестировали свое приложение на столько физических устройств, как вы, возможно, может:</p>
+
+<ul>
+<li>  Тренажеры являются именно: тренажеры. Например ваше приложение может работать в симуляторе iOS без проблем, но он может не на реальном устройстве (особенно в определенных обстоятельствах, например состояние нехватки памяти). Или, ваше приложение может на самом деле не на тренажере, хотя она прекрасно работает на реальном устройстве. </li>
+<li>  Эмуляторы являются именно: Эмуляторы. Они не представляют, насколько хорошо ваше приложение будет работать на физическом устройстве. Например некоторые эмуляторы может сделать ваше приложение с искаженными дисплеем, в то время как реальное устройство не имеет никаких проблем. (Если вы столкнулись с этой проблемой, отключите узел GPU в эмуляторе).</li>
+<li>  Тренажеры обычно быстрее, чем физическое устройство. Эмуляторы, с другой стороны, как правило, медленнее. Не судите производительность вашего приложения, как он выполняет в тренажере или эмуляторе. Судья производительность вашего приложения, как он работает на спектр реальных устройств.</li>
+<li>  Невозможно получить хорошую почувствовать, как приложение реагирует на ваши прикосновения, используя эмулятор или симулятор. Вместо этого запуск приложения на реальном устройстве можно отметить проблемы с размерами элементов пользовательского интерфейса, отзывчивость и др.</li>
+<li>  Хотя было бы неплохо иметь возможность проверить только на одно устройство на платформе, то лучше проверить на многих устройствах, спортивные много различных версий ОС. К примеру что работает на вашей конкретной Android смартфон может не на другом устройстве Android. То, что работает на устройстве iOS 7 может не на устройстве iOS 6.</li>
+</ul>
+
+<p>Это, конечно же, невозможно проверить на все возможные устройства на рынке. По этой причине то целесообразно набирать много тестеров, которые имеют различные устройства. Хотя они не будут ловить каждую проблему, имеются хорошие шансы, что они откроют причуды и вопросы, которые вы бы никогда не найти в одиночку.</p>
+
+<p>Подсказка: Это возможно на устройствах Android Nexus легко прошить различных версий Android на устройстве. Этот простой процесс позволит вам легко тестировать приложения на различных уровнях с помощью одного устройства Андроид без аннулирования гарантии или требуя «побег из тюрьмы» или «корень» ваше устройство. Изображения фабрика Google Android и инструкции находятся в: https://developers.google.com/android/nexus/images#instructions</p>
+
+<h1>Отладка приложений Cordova</h1>
+
+<p>Отладка Cordova требуется небольшая Настройка. В отличие от настольных приложений вы не можете просто открыть dev инструменты на вашем мобильном устройстве и начать отладку, к счастью, есть некоторые большие альтернативы.</p>
+
+<h2>iOS Отладка</h2>
+
+<h3>Xcode</h3>
+
+<p>С помощью Xcode можно отлаживать iOS родной стороне Cordova-приложение. Убедитесь, что область отладки показывает (вид-&gt; отладки район). После того, как ваше приложение выполняется на устройстве (или симулятор), вывод журнала можно просмотреть в области отладки. Это где будет печатать любые ошибки или предупреждения. Также можно установить точки останова в файлах источника. Это позволит вам просматривать состояние переменных в то время и шаг через код по одной строке за один раз. Состояние переменных отображается в области отладки, когда точка останова. Как только ваше приложение и работает на устройстве, вы можете принести вверх в Safari веб-инспектор (как описано ниже) для отладки в webview и js части вашего приложения. Для более подробной информации и помощи, найти в руководстве Xcode: <a href="https://developer.apple.com/library/mac/documentation/ToolsLanguages/Conceptual/Xcode_Overview/DebugYourApp/DebugYourApp.html#//apple_ref/doc/uid/TP40010215-CH18-SW1">Руководство по отладке Xcode</a></p>
+
+<h3>Safari удаленной отладки с веб-инспектор</h3>
+
+<p>С Safari веб-инспектор можно отлаживать код webview и js в Cordova-приложение. Это работает только на OSX и только с iOS 6 (и выше). Он использует Safari для подключения к устройству (или симулятор) и будет подключаться к Cordova-приложение браузера dev инструменты. Вы получаете то, что вы ожидаете от dev tools - инспекции/манипуляции DOM, отладчик JavaScript, сеть инспекции, консоли и многое другое. Как Xcode с Safari веб-инспектор можно установить точки останова в коде JavaScript и посмотреть состояние переменных в то время. Можно просмотреть ошибки, предупреждения или сообщения, которые выводятся на консоль. Можно также выполнять команды JavaScript непосредственно из консоли, как ваше приложение выполняется. Для более подробной информации о том, как установить его вверх и то, что вы можете сделать, увидеть эту прекрасную блоге: <a href="http://moduscreate.com/enable-remote-web-inspector-in-ios-6/">http://moduscreate.com/enable-remote-web-inspector-in-ios-6/</a> и это руководство: <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html">Safari веб-инспектор руководство</a></p>
+
+<h2>Хром удаленной отладки</h2>
+
+<p>Практически же, как в версии Safari, это работает только с Android, но может быть использован с любой настольной операционной системы. Это требует как минимум Андроид 4.4 (KitKat), минимальный уровень API 19 и хром 30 + (на столе). После подключения, вы получите тот же опыт хром Dev Tools для мобильных приложений, как приложения для настольных. Даже лучше Chrome Dev инструменты имеют зеркальный вариант, который показывает ваше приложение работает на мобильном устройстве. Это больше, чем просто представление - вы можете прокручивать и нажмите от dev tools и обновляет на мобильном устройстве. Подробнее об удаленной отладки Chrome можно найти здесь: <a href="https://developers.google.com/chrome/mobile/docs/debugging">https://developers.google.com/chrome/mobile/docs/debugging</a></p>
+
+<p>Это позволяет использовать Chrome Dev инструменты для проверки приложений iOS, через прокси WebKit: <a href="https://github.com/google/ios-webkit-debug-proxy/">https://github.com/google/ios-webkit-debug-proxy/</a></p>
+
+<h2>Пульсации</h2>
+
+<p>Пульсация — обои на основе эмулятор для Кордова проектов. По сути он позволяет запускать Cordova-приложение в вашем настольном приложении и поддельные различные функции Кордова. Например он позволяет имитировать акселерометр для тестирования трясти события. Это подделки камеры API, позволяя выбрать картинку с вашего жесткого диска. Пульсации позволяет вам сосредоточиться на пользовательский код, а не беспокоиться о Кордове плагины. Вы можете узнать больше о пульсации здесь: <a href="http://ripple.incubator.apache.org/">http://ripple.incubator.apache.org/</a></p>
+
+<h2>Weinre</h2>
+
+<p>Weinre создает локальный сервер, который может содержать клиент удаленной отладки для приложений Cordova. После того как установил и начал его, вы скопировать строку кода в Cordova-приложение и перезапустите его. Затем можно открыть панель инструментов dev на рабочем столе для работы с приложением. Weinre не как фантазии, как Chrome и Safari удаленной отладки, но имеет преимущества работы с гораздо большей спектр операционных систем и платформ. Дополнительную информацию можно найти здесь: <a href="http://people.apache.org/%7Epmuellr/weinre/docs/latest/">http://people.apache.org/~pmuellr/weinre/docs/latest/</a></p>
+
+<h2>Другие варианты</h2>
+
+<ul>
+<li>  BlackBerry 10 поддерживает отладку также: <a href="https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html">Документация</a></li>
+<li>  Вы можете отлаживать, а также с помощью диспетчера приложений Firefox, <a href="https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/">этот блог</a> и эту <a href="https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging">статью MDN</a>.</li>
+<li>  Дополнительные примеры и объяснения выше отладки советы, см: <a href="http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/">http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/</a></li>
+</ul>
+
+<h1>Пользовательский интерфейс</h1>
+
+<p>Здание Cordova-приложение, которое выглядит хорошо на мобильный может быть сложной задачей, особенно для разработчиков. Многие люди решили использовать UI framework, чтобы сделать это проще. Вот краткий список опций, которые вы можете хотеть рассматривать.</p>
+
+<ul>
+<li>  <a href="http://jquerymobile.com">jQuery Mobile</a> - jQuery Mobile автоматически повышает ваш макет для мобильных оптимизации. Он также обрабатывает создание спа для вас автоматически.</li>
+<li>  <a href="http://ionicframework.com/">Ionic</a> -это мощная инфраструктура пользовательского интерфейса на самом деле имеет свой собственный CLI для обработки создания проекта. </li>
+<li>  <a href="http://goratchet.com/">Храповик</a> - привлечены к вам люди, которые создали Bootstrap. </li>
+<li>  <a href="http://www.telerik.com/kendo-ui">Кэндо UI</a> - открытым исходным кодом пользовательского интерфейса и платформа приложений от Telerik.</li>
+<li>  <a href="http://topcoat.io">Автоэмаль</a></li>
+<li>  <a href="http://facebook.github.io/react/">ReactJS</a></li>
+</ul>
+
+<p>При создании интерфейса пользователя, важно думать о всех платформ, которые вы ориентируетесь и различия между ожиданиям пользователя. Например, Android приложение, которое имеет интерфейс iOS стиль будет вероятно не хорошо сочетаются с пользователей. Это иногда даже применяется в различных магазинах приложений. Из-за этого, важно, что вы уважаете конвенций каждой платформы и поэтому знакомы с различными руководящими принципами пользовательского интерфейса:</p>
+
+<ul>
+<li>  <a href="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html">iOS</a></li>
+<li>  <a href="https://developer.android.com/designWP8">Android</a></li>
+<li>  <a href="http://dev.windowsphone.com/en-us/design/library">Windows Phone</a></li>
+</ul>
+
+<h2>Дополнительные пользовательского интерфейса статьи и ресурсы</h2>
+
+<p>Хотя браузеров становится все больше и больше стандартов жалобы, мы все еще живем в мире, префиксом (-webkit и - г-жа) следующие статьи ценно при разработке UI в для кросс-браузер приложений: <a href="http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx">http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx</a></p>
+
+<h1>Особые соображения</h1>
+
+<p>Хотя Cordova упрощает кросс платформенной разработки, это просто не возможно обеспечить 100% изоляция от родной базовой платформы. Так что надо знать ограничений.</p>
+
+<h2>Особенности платформы</h2>
+
+<p>При чтении документации, искать разделы, которые структура различных поведений или требования на различных платформах. Если они присутствуют, они будут в разделе под названием «Android причуды», «причуды iOS», и т.д. Прочитайте эти причуды и быть осведомлены о них, как вы работаете с Кордова.</p>
+
+<h2>Загрузка удаленного содержимого</h2>
+
+<p>Вызов функции Cordova JavaScript с удаленной загрузки HTML-страницы (HTML-страницы, не хранятся локально на устройстве) является неподдерживаемая конфигурация. Это потому что Кордова была не предназначены для этого, и сообщество Apache Cordova делает не тестирования данной конфигурации. Хотя она может работать в некоторых случаях, она не рекомендуется и не поддерживается. Есть проблемы с политики единого происхождения, сохраняя JavaScript и родной части Cordova синхронизированы на той же версии (так как они соединены через частной API, которые могут изменяться), в надежности удаленного контента, вызов собственных функций местных и потенциальный отказ магазина app.</p>
+
+<p>Отображение удаленного загрузки HTML-содержимое в webview должно быть сделано с помощью Кордова в InAppBrowser. InAppBrowser разработан таким образом, что JavaScript, работает там не имеют доступа к API JavaScript Кордова по причинам, перечисленным выше. Пожалуйста, обратитесь к разделу &quot;<a href="../appdev/security/index.html">Руководство по безопасности</a>&quot;.</p>
+
+<h1>Ногу</h1>
+
+<p>Вот несколько способов, чтобы держать в курсе Кордова.</p>
+
+<ul>
+<li>  Подписаться на <a href="http://cordova.apache.org/#news">блог Кордова</a>.</li>
+<li>  Подписаться на <a href="http://cordova.apache.org/#mailing-list">список разработчиков</a>. Обратите внимание - это не группа поддержки! Скорее это место, где обсуждается развитие Кордова.</li>
+</ul>
+
+<h1>Получение справки</h1>
+
+<p>Следующие ссылки являются лучшими местами, чтобы получить помощь для Кордова:</p>
+
+<ul>
+<li>  StackOverflow: <a href="http://stackoverflow.com/questions/tagged/cordova">http://stackoverflow.com/questions/tagged/cordova</a> с помощью тега Cordova, можно просматривать и просматривать все вопросы Кордова. Обратите внимание, что StackOverflow автоматически преобразует тег &quot;Phonegap&quot;, чтобы &quot;Кордова&quot;, так что таким образом вы в том числе будете иметь доступ к ранее заданным вопросам</li>
+<li>  PhoneGap Google Group: <a href="https://groups.google.com/forum/#!forum/phonegap">https://groups.google.com/forum/#!forum/phonegap</a> This Google Group was the old support forum when Cordova was still called PhoneGap. Хотя есть еще много Кордова пользователей, которые часто посещают эту группу, сообщество Кордова выразило интерес в сфокусировании менее на этой группе и вместо этого использовании StackOverflow для поддержки</li>
+<li>  Meetup: <a href="http://phonegap.meetup.com">http://phonegap.meetup.com</a> - рассмотреть возможность найти местные группы встреч Кордова/PhoneGap</li>
+</ul>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  7.x", "language: ru"] }
+    });
+</script>
+
+</body>
+</html>

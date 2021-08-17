@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Guide de développement de plugin - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/fr/3.4.0/guide/hybrid/plugins/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '3.4.0' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.4.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.4.0/guide/overview/index.html">
+                Présentation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.4.0/guide/support/index.html">
+                Plateforme de Support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.4.0/guide/platforms/index.html">
+                Guides de la plate-forme
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.4.0/config_ref/index.html">
+                Le fichier config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.4.0/config_ref/images.html">
+                Icones et Splash Screen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.4.0/guide/hybrid/plugins/index.html">
+                Guide de développement de plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.4.0/guide/appdev/privacy/index.html">
+                Guide de la vie privée
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.4.0/guide/appdev/whitelist/index.html">
+                Guide de la liste blanche
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.4.0/cordova/storage/storage.html">
+                Stockage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.4.0/cordova/plugins/pluginapis.html">
+                Plugin API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table des Matières
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/fr/3.4.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.4.0/guide/overview/index.html">
+        Présentation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.4.0/guide/support/index.html">
+        Plateforme de Support
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.4.0/guide/platforms/index.html">
+        Guides de la plate-forme
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.4.0/config_ref/index.html">
+        Le fichier config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.4.0/config_ref/images.html">
+        Icones et Splash Screen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.4.0/guide/hybrid/plugins/index.html">
+        Guide de développement de plugin
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.4.0/guide/appdev/privacy/index.html">
+        Guide de la vie privée
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.4.0/guide/appdev/whitelist/index.html">
+        Guide de la liste blanche
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.4.0/cordova/storage/storage.html">
+        Stockage
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.4.0/cordova/plugins/pluginapis.html">
+        Plugin API
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/fr/3.4.0/guide/hybrid/plugins/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Français
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/3.4.0/guide/hybrid/plugins/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/3.4.0/guide/hybrid/plugins/" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/3.4.0/guide/hybrid/plugins/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/3.4.0/guide/hybrid/plugins/" class="">
+                                
+                                    <span class="selected">
+                                        Français
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/3.4.0/guide/hybrid/plugins/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/3.4.0/guide/hybrid/plugins/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/3.4.0/guide/hybrid/plugins/" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/3.4.0/guide/hybrid/plugins/" class="missing-page">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/3.4.0/guide/hybrid/plugins/" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/3.4.0/guide/hybrid/plugins/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/3.4.0/guide/hybrid/plugins/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/3.4.0/guide/hybrid/plugins/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        3.4.0
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Dernière)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/3.4.0/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                3.4.0
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    Ca n'est past la dernière version de la documentation.
+                    <a href="/docs/fr/latest/">
+                        Cliquez ici pour voire la dernière version de la documentation.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Guide de développement de plugin</h1>
+
+<p>Un <em>plugin</em> est un ensemble de code injecté qui permet le webview Cordova au sein de laquelle votre application restitue pour communiquer avec la plate-forme native sur lequel il s&#39;exécute. Plugins permettent d&#39;accéder aux fonctionnalités de périphérique et de la plate-forme habituellement non disponible pour les applications web. Toutes les fonctionnalités principales de Cordova API sont implémentées comme des plugins, et beaucoup d&#39;autres n&#39;est disponibles qu&#39;enable caractéristiques tels que les scanners de codes à barres, communication NFC, ou d&#39;adapter le calendrier des interfaces.</p>
+
+<p>Plugins comportent une seule interface JavaScript ainsi que les bibliothèques de code natif correspondant pour chaque plate-forme prise en charge. Étapes de cette section à un plugin simple <em>écho</em> qui transmet une chaîne à partir de JavaScript pour la plate-forme native et le retour, que vous pouvez utiliser comme modèle pour créer des fonctionnalités beaucoup plus complexes. Cette section traite de la structure du plugin de base et l&#39;interface JavaScript donnant sur l&#39;extérieur. Pour chaque interface native correspondante, consultez la liste à la fin de cette section.</p>
+
+<p>En plus de ces instructions, avant de commencer à écrire un plugin qu&#39;il est préférable de chercher sur <a href="https://github.com/apache/cordova-android/tree/master/framework/src/org/apache/cordova">les plugins</a> pour l&#39;orientation.</p>
+
+<h2>Construction d&#39;un Plugin</h2>
+
+<p>Les développeurs d&#39;applications utilisent de la CLI <code>plugin add</code> commande (discuté dans l&#39;Interface de ligne de commande) d&#39;appliquer un plugin pour un projet. L&#39;argument de cette commande est l&#39;URL pour un dépôt <em>git</em> contenant le code du plugin. Cet exemple implémente Device API de Cordova :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+</code></pre></div>
+<p>Le référentiel plugin doit disposent d&#39;un niveau supérieur <code>plugin.xml</code> fichier manifeste. Il existe de nombreuses façons de configurer ce fichier, détails pour lesquels n&#39;existent pas dans la spécification de Plugin. Cette version abrégée de la <code>Device</code> plugin fournit un exemple simple d&#39;utiliser un modèle :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+    &lt;plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+            id="org.apache.cordova.device" version="0.2.3"&gt;
+        &lt;name&gt;Device&lt;/name&gt;
+        &lt;description&gt;Cordova Device Plugin&lt;/description&gt;
+        &lt;license&gt;Apache 2.0&lt;/license&gt;
+        &lt;keywords&gt;cordova,device&lt;/keywords&gt;
+        &lt;js-module src="www/device.js" name="device"&gt;
+            &lt;clobbers target="device" /&gt;
+        &lt;/js-module&gt;
+        &lt;platform name="ios"&gt;
+            &lt;config-file target="config.xml" parent="/*"&gt;
+                &lt;feature name="Device"&gt;
+                    &lt;param name="ios-package" value="CDVDevice"/&gt;
+                &lt;/feature&gt;
+            &lt;/config-file&gt;
+            &lt;header-file src="src/ios/CDVDevice.h" /&gt;
+            &lt;source-file src="src/ios/CDVDevice.m" /&gt;
+        &lt;/platform&gt;
+    &lt;/plugin&gt;
+</code></pre></div>
+<p>Le niveau supérieur <code>plugin</code> de tag <code>id</code> attribut utilise le même format de domaine inverse pour identifier le paquet plugin que les apps à elles sont ajoutées. Le <code>js-module</code> balise spécifie le chemin d&#39;accès à l&#39;interface commune de JavaScript. Le <code>platform</code> balise spécifie un jeu correspondant du code natif, pour le <code>ios</code> plate-forme dans ce cas. Le <code>config-file</code> tag encapsule un <code>feature</code> tag qui est injecté dans le spécifique à la plateforme <code>config.xml</code> fichier pour sensibiliser la plate-forme de la bibliothèque de code supplémentaire. Le <code>header-file</code> et <code>source-file</code> balises spécifient le chemin d&#39;accès aux fichiers de composant de la bibliothèque.</p>
+
+<h2>Validation d&#39;un Plugin</h2>
+
+<p>Vous pouvez utiliser le <code>plugman</code> utilitaire vérifie si le plugin est installé correctement pour chaque plate-forme. Installer <code>plugman</code> avec la commande suivante de <a href="http://nodejs.org/">nœud</a> :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ npm install -g plugman
+</code></pre></div>
+<p>Vous avez besoin d&#39;un répertoire source app valides, tels que le niveau supérieur <code>www</code> répertoire inclus dans un projet de CLI-généré par défaut tel que décrit dans l&#39;Interface de ligne de commande. S&#39;assurer de l&#39;application <code>index.html</code> page d&#39;accueil de référence le nom de JavaScript interface du plugin, comme si elle était dans le même répertoire source :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    &lt;script src="myplugin.js"&gt;&lt;/script&gt;
+</code></pre></div>
+<p>Puis, exécutez une commande semblable à la suivante pour vérifier si les dépendances iOS chargent correctement :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    $ plugman -platform ios /path/to/my/project/www /path/to/my/plugin
+</code></pre></div>
+<p>Pour plus d&#39;informations sur <code>plugman</code> options, voir Plugman à l&#39;aide à gérer les Plugins. Pour plus d&#39;informations sur la façon de <em>Déboguer</em> en fait des plugins, voir interface native de chaque plate-forme figurant au bas de cette page.</p>
+
+<h2>L&#39;Interface JavaScript</h2>
+
+<p>Le code JavaScript fournit l&#39;interface de la face, ce qui en fait peut-être la partie la plus importante du plugin. Vous structurez votre plugin JavaScript mais vous aimez, mais vous devez appeler <code>cordova.exec</code> pour communiquer avec la plate-forme native, à l&#39;aide de la syntaxe suivante :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    cordova.exec(function(winParam) {},
+                 function(error) {},
+                 "service",
+                 "action",
+                 ["firstArgument", "secondArgument", 42, false]);
+</code></pre></div>
+<p>Voici comment chaque paramètre fonctionne :</p>
+
+<ul>
+<li><p><code>function(winParam) {}</code>: Une fonction de rappel de succès. En supposant que votre <code>exec</code> appel se termine avec succès, cette fonction s&#39;exécute avec des paramètres que vous lui passez.</p></li>
+<li><p><code>function(error) {}</code>: Une fonction de rappel d&#39;erreur. Si l&#39;opération ne se termine pas avec succès, cette fonction s&#39;exécute avec le paramètre d&#39;erreur facultatives.</p></li>
+<li><p><code>&quot;service&quot;</code>: Le nom de service à appeler sur le côté natif. Cela correspond à une classe native, pour laquelle plus d&#39;informations sont disponibles dans les guides autochtones énumérées ci-dessous.</p></li>
+<li><p><code>&quot;action&quot;</code>: Le nom de l&#39;action à appeler sur le côté natif. Généralement, cela correspond à la méthode de la classe native. Consultez les guides autochtones énumérées ci-dessous.</p></li>
+<li><p><code>[/* arguments */]</code>: Un tableau d&#39;arguments à passer dans l&#39;environnement natif.</p></li>
+</ul>
+
+<h2>Exemples JavaScript</h2>
+
+<p>Cet exemple montre une façon d&#39;implémenter l&#39;interface JavaScript de plugin :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    window.echo = function(str, callback) {
+        cordova.exec(callback, function(err) {
+            callback('Nothing to echo.');
+        }, "Echo", "echo", [str]);
+    };
+</code></pre></div>
+<p>Dans cet exemple, le plugin s&#39;attache à la <code>window</code> d&#39;objet comme le <code>echo</code> fonction qui appellent plugin utilisateurs comme suit :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    window.echo("echome", function(echoValue) {
+        alert(echoValue == "echome"); // should alert true.
+    });
+</code></pre></div>
+<p>Regarder les trois derniers arguments pour le <code>cordova.exec</code> fonction. Les premiers appels du <code>Echo</code> <em>service</em>, un nom de classe. La deuxième demande la <code>echo</code> <em>action</em>, une méthode dans cette classe. Le troisième est un tableau d&#39;arguments qui contient la chaîne echo, qui est le <code>window.echo</code> fonction du premier paramètre.</p>
+
+<p>Le rappel du succès passé dans <code>exec</code> est simplement une référence à la fonction de rappel <code>window.echo</code> prend. Si la plate-forme native déclenche le rappel de l&#39;erreur, il simplement solliciter le rappel de succès et lui passe une chaîne par défaut.</p>
+
+<h2>Interfaces natives</h2>
+
+<p>Une fois que vous définissez JavaScript pour votre plugin, vous devez compléter au moins une implémentation native. Détails pour chaque plate-forme sont énumérés ci-dessous, et chacun s&#39;appuie sur l&#39;exemple simple de Plugin Echo ci-dessus :</p>
+
+<ul>
+<li>  <a href="../../platforms/amazonfireos/plugin.html">Amazon Fire OS Plugins</a></li>
+<li>  <a href="../../platforms/android/plugin.html">Plugins Android</a></li>
+<li>  <a href="../../platforms/ios/plugin.html">iOS Plugins</a></li>
+<li>  <a href="../../platforms/blackberry10/plugin.html">BlackBerry 10 Plugins</a></li>
+<li>  <a href="../../platforms/wp8/plugin.html">Windows Phone Plugins</a></li>
+</ul>
+
+<p>La plateforme de paciarelli ne supporte pas les plugins.</p>
+
+<h2>Plugins édition</h2>
+
+<p>Une fois que vous développez votre plugin, vous pouvez publier et partager avec la communauté. Vous pouvez publier votre plugin dans le registre de cordova (basé sur <a href="https://github.com/isaacs/npmjs.org"> <code>npmjs</code> </a>) ou à tout autre <code>npmjs</code> -base de Registre. Autres développeurs puissent l&#39;installer automatiquement à l&#39;aide soit <code>plugman</code> ou la CLI de Cordova. (Pour plus de détails sur chaque voie de développement, voir Plugman à l&#39;aide à gérer les Plugins et l&#39;Interface de ligne de commande).</p>
+
+<p>Pour publier un plugin, vous devez utiliser le <code>plugman</code> outil et passer par les étapes suivantes :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ plugman adduser # that is if you don't have an account yet
+$ plugman publish /path/to/your/plugin
+</code></pre></div>
+<p>C&#39;est tout !</p>
+
+<p>En cours d&#39;exécution <code>plugman --help</code> répertorie les autres commandes disponibles basés sur le registre.</p>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  3.4.0", "language: fr"] }
+    });
+</script>
+
+</body>
+</html>

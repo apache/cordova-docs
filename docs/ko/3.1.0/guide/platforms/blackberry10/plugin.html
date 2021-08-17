@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                블랙베리 10 플러그인 - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/ko/latest/guide/platforms/blackberry10/plugin.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '3.1.0' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/overview/index.html">
+                개요
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/platforms/index.html">
+                플랫폼 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/config_ref/index.html">
+                Config.xml 파일
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/config_ref/images.html">
+                아이콘 및 시작 화면
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/hybrid/webviews/index.html">
+                WebViews 포함
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/hybrid/plugins/index.html">
+                플러그인 개발 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/appdev/privacy/index.html">
+                개인 정보 보호 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/appdev/whitelist/index.html">
+                화이트 리스트 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/accelerometer/accelerometer.html">
+                가 속도계
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/camera/camera.html">
+                카메라
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/compass/compass.html">
+                나침반
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/connection/connection.html">
+                연결
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/contacts/contacts.html">
+                연락처
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/device/device.html">
+                장치
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/events/events.html">
+                이벤트
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/file/file.html">
+                파일
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/geolocation/geolocation.html">
+                지리적 위치
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/notification/notification.html">
+                알림
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/storage/storage.html">
+                스토리지
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        차례
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/overview/index.html">
+        개요
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/platforms/index.html">
+        플랫폼 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/config_ref/index.html">
+        Config.xml 파일
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/config_ref/images.html">
+        아이콘 및 시작 화면
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/hybrid/webviews/index.html">
+        WebViews 포함
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/hybrid/plugins/index.html">
+        플러그인 개발 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/appdev/privacy/index.html">
+        개인 정보 보호 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/appdev/whitelist/index.html">
+        화이트 리스트 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/accelerometer/accelerometer.html">
+        가 속도계
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/camera/camera.html">
+        카메라
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/compass/compass.html">
+        나침반
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/connection/connection.html">
+        연결
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/contacts/contacts.html">
+        연락처
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/device/device.html">
+        장치
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/events/events.html">
+        이벤트
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/file/file.html">
+        파일
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/geolocation/geolocation.html">
+        지리적 위치
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/notification/notification.html">
+        알림
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/storage/storage.html">
+        스토리지
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/ko/3.1.0/guide/platforms/blackberry10/plugin.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        한국어
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/3.1.0/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/3.1.0/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/3.1.0/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/3.1.0/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/3.1.0/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/3.1.0/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/3.1.0/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    <span class="selected">
+                                        한국어
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/3.1.0/guide/platforms/blackberry10/plugin.html" class="missing-page">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/3.1.0/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/3.1.0/guide/platforms/blackberry10/plugin.html" class="missing-page">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/3.1.0/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/3.1.0/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        3.1.0
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/dev/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/latest/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/9.x/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/8.x/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/7.x/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/6.x/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/5.4.0/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.5.0/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.4.0/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.1.0/guide/platforms/blackberry10/plugin.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                3.1.0
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    이 아닌 문서의 최신 버전입니다!
+                    <a href="/docs/ko/latest/guide/platforms/blackberry10/plugin.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>블랙베리 10 플러그인</h1>
+
+<p>이것은 코르도바를 위한 플러그인 개발 가이드의 연속 이다. 일단 검토 했으면 그 내용을 지금 하자 우리가 블랙베리 10 플랫폼에 대 한 에코 플러그인 필요가 있는 것 좀 봐. 리콜 에코 플러그인 기본적으로 뭐 든 사용자 문자열 반환 제공 하는 <code>window.echo</code> 기능:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">window.echo = function(str, callback) {
+        cordova.exec(callback, function(err) {
+            callback('Nothing to echo.');
+        }, "Echo", "echo", [str]);
+    };
+</code></pre></div>
+<p>Cordova에 대 한 네이티브 BlackBerry 10 플러그인 자바 스크립트 코드를 포함 하 고 네이티브 코드 포함 될 수도 있습니다. 에코 플러그인 예제에서는 자바에서 기본 기능을 호출 하는 방법을 보여 줍니다. 네이티브와 JavaScript 코드는 JNEXT에서 제공 하는 프레임 워크를 통해 서로 통신 합니다. 모든 플러그인 포함 되어야 합니다는 <code>plugin.xml</code> <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.</p>
+
+<h2>귀하의 플러그인의 네이티브 부분을 만들기</h2>
+
+<p>귀하의 플러그인의 네이티브 부분을 만들기 위해 블랙베리 10 NDK IDE 열고 선택 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> &gt; 새로운 &gt; 블랙베리 프로젝트 &gt; 기본 확장 &gt; 블랙베리 WebWorks. 원하는 프로젝트 이름을 입력 / 위치와 클릭 마무리.</p>
+
+<p>IDE에 의해 만들어진 프로젝트 메모리 플러그인에 대 한 샘플 코드가 들어 있습니다. 대체 하거나 자신의 기능을 포함 하도록이 파일을 수정할 수 있습니다.</p>
+
+<ul>
+<li><p><code>*name*_js.hpp</code>: JNEXT 코드 c + + 헤더입니다.</p></li>
+<li><p><code>*name*_js.cpp</code>: JNEXT c + + 코드입니다.</p></li>
+</ul>
+
+<p>프로젝트의 공용 디렉터리에 플러그인 헤더 파일에 JNEXT 확장을 위한 기본 인터페이스를 볼 수 있습니다. 또한 상수 및 네이티브 코드에서 사용할 수 있는 유틸리티 함수가 포함 되어 있습니다. 귀하의 플러그인은 plugin.h에 정의 된 JSExt에서 파생 되어야 합니다. 즉, 다음과 같은 클래스를 구현 해야 합니다.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">JSExt 클래스 {공공: 가상 ~JSExt() ();
+    가상 문자열 InvokeMethod (const 문자열 &amp; strCommand) = 0;
+    가상 bool CanDelete (void) = 0;
+개인: 대 m_id;
+};
+</code></pre></div>
+<p>따라서, 확장 plugin.h 헤더 파일을 포함 해야 합니다. 에코 예제에 사용 JSExt 다음과 같이 echo_js.hpp 파일에:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">#include ".../ public/plugin.h "#include &lt; string &gt; #ifndef ECHO_JS_H_ #define ECHO_JS_H_ 에코 클래스: 공용 JSExt {공공: 명시적 에코 (const 대 &amp; id);
+    가상 ~ echo ();
+    가상 대 InvokeMethod (const 대 &amp; 명령);
+    가상 bool CanDelete();
+개인: 대 m_id;
+};
+
+#endif / / ECHO_JS_H_
+</code></pre></div>
+<p><code>m_id</code>이 개체의 JNEXT id를 포함 하는 특성입니다. Id는 클래스 생성자에 인수로 전달 됩니다. 네이티브에서 자바 스크립트 쪽에 이벤트를 실행 하는 데 필요 합니다. 자세한 방법은 JNEXT 네이티브 개체를 삭제할 수 있는지 여부를 확인 하는 데 사용 됩니다. InvokeMethod 함수는이 특정 개체의 메서드를 호출 하려면 JavaScript에서 요청에서 결과적으로 호출 됩니다. 이 함수에 유일한 인수는이 메서드가 실행 되는 네이티브 개체의 메서드를 결정 하기 위해 구문 분석 되어야 합니다 자바 스크립트에서 전달 된 문자열입니다. 지금 우리는 echo_js.cpp에서 이러한 함수를 구현합니다. 에코 예 우리 InvokeMethod 함수 다음과 같이 구현할:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">Echo::InvokeMethod 문자열 (const 문자열 &amp; 명령) {//parse 명령과 문자열 int 인덱스에서 args = command.find_first_of("");
+    문자열 strCommand = command.substr (0 인덱스);
+    strValue string command.substr = (인덱스 + 1, command.length());
+
+    / / 실행 되는 함수를 결정 하는 경우 (strCommand "에코" = =) {반환 strValue;
+    } 다른 {반환 "지원 되지 않는 방법";
+    }
+}
+</code></pre></div>
+<p>기본 플러그인 또한 다음 콜백 함수를 구현 해야 합니다.</p>
+
+<ul>
+<li><p><code>extern char * onGetObjList (void);</code></p></li>
+<li><p><code>extern JSExt * onCreateObject (const 문자열 strClassName, const 문자열 &amp; strObjId);</code></p></li>
+</ul>
+
+<p><code>onGetObjList</code>함수 클래스 JNEXT에서 지 원하는 쉼표로 구분 된 목록을 반환 합니다. JNEXT이이 함수를 사용 하 여 JNEXT 인스턴스화할 수 있는 클래스의 집합을 결정 합니다. 우리의 에코 플러그인에서 왔습니다 다음 <code>echo_js.cpp</code> :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">char * onGetObjList() {정적 char 이름 = "에코";
+    반환 이름;
+}
+</code></pre></div>
+<p><code>onCreateObject</code>함수 2 매개 <a href="../../../plugin_ref/spec.html">변수</a>. 첫 번째 매개 변수는 자바 스크립트 측면에서 생성 하는 클래스의 이름. 유효한 이름은에서 반환 되는 <code>onGetObjList</code> . 두 번째 매개 변수는 클래스에 대 한 고유한 개체 id입니다. 이 메서드는 만든된 플러그인 개체에 대 한 포인터를 반환합니다. 우리의 에코 플러그인에서 왔습니다 다음 <code>echo_js.cpp</code> :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">JSExt * onCreateObject (const 문자열 className, const 문자열 &amp; id) {경우 (className = = "에코") {반환 새로운 Echo(id);
+    }; NULL을 반환
+}
+</code></pre></div>
+<h2>귀하의 플러그인의 자바 부분 만들기</h2>
+
+<p>귀하의 플러그인의 자바 부분 다음 파일을 포함 해야 합니다.</p>
+
+<ul>
+<li><p><code>client.js</code>:이 클라이언트 쪽 간주 되며 코르도바 응용 프로그램에서 호출할 수 있는 API를 포함 되어 있습니다. 에 API <code>client.js</code> 호출 하면 호출을 <code>index.js</code> . 에 API <code>client.js</code> 또한 콜백 함수는 콜백을 발생 하는 이벤트에 <a href="../../../cordova/connection/connection.html">연결</a> 합니다.</p></li>
+<li><p><code>index.js</code>: 코르 도우 바 로드 <code>index.js</code> 및 cordova.exec 다리를 통해 액세스할 수 있습니다. <code>client.js</code>파일에서 API 호출 하는 <code>index.js</code> 파일을 차례로 네이티브 쪽와 통신 하는 JNEXT를 호출 하 게 합니다.</p></li>
+</ul>
+
+<p>클라이언트와 서버 측 ( <code>client.js</code> 및 <code>index.js</code> )를 통해 상호 작용 하는 <code>Cordova.exec</code> 기능. 그래서, <code>client.js</code> 호출 하는 <code>exec</code> 기능을 하 고 필요한 인수를 제공. 에코 플러그인에서 우리는 다음에 <code>client.js</code> <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">var service = "org.apache.cordova.blackberry.echo",
+    exec = cordova.require("cordova/exec");
+
+module.exports = {
+    echo: function (data, success, fail) {
+        exec(success, fail, service, "echo", { data: data });
+    }
+};
+</code></pre></div>
+<p>지금, <code>index.js</code> JNEXT를 사용 하 여 네이티브 쪽 상호 작용. 그래서 JNEXT에 에코 라는 생성자 함수 <a href="../../../cordova/connection/connection.html">연결</a>. 생성자 내에서 초기화 함수를 사용 하 여 다음과 같은 주요 작업을 수행할 수 있습니다.</p>
+
+<ul>
+<li>  네이티브 쪽에서 내보낸 필수 모듈을 지정 합니다. 필수 모듈의 공유 라이브러리 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (.so 파일)의 이름을 일치 해야 합니다.</li>
+</ul>
+
+<p><code>JNEXT.require(&quot;libecho&quot;)</code></p>
+
+<ul>
+<li>  획득된 모듈을 사용 하 여 개체를 만들고 호출에 의해 반환 되는 ID를 저장 합니다. self.m_id = JNEXT.createObject (&quot;libecho.에코 &quot;); 응용 프로그램 echo 함수를 호출 하는 때 <code>client.js</code> , 그 전화는 차례 차례로 에코 함수를 호출 <code>index.js</code> , 어디 PluginResult 개체 응답 (데이터) 다시 보냅니다 <code>client.js</code> . Args 인수는 함수에 전달 된 JSON.stringfy()로 변환 했다는 URIcomponent로 인코딩 이후 다음 호출 해야 합니다.</li>
+</ul>
+
+<p><code>데이터 = JSON.parse(decodeURIComponent(args.data));</code></p>
+
+<p>이제 데이터를 다시 보낼 수 있습니다. 모두 함께 넣어 보자:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">module.exports = {
+
+    echo: function (success, fail, args, env) {
+
+        var result = new PluginResult(args, env),
+        data = JSON.parse(decodeURIComponent(args.data)),
+        response = echo.getInstance().echo(data);
+        result.ok(response, false);
+    }
+};
+</code></pre></div>
+<h2>플러그인 아키텍처</h2>
+
+<p>포함 하는 플러그인의 유물을 배치할 수 있습니다는 <code>plugin.xml</code> <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>, 소스 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (자바 스크립트, c + +), 및 이진 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> ( <code>.so</code> ) 올바르게에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 위치를 지정 하는 만큼 어떤 디렉터리 구조 내에 <code>plugin.xml</code> <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>. 일반적인 구조는 다음과 같습니다.</p>
+
+<p><strong><em>your_project_directory</em></strong> (&gt; plugin.xml)</p>
+
+<ul>
+<li>  <strong>www</strong> (&gt; client.js)</li>
+<li>  <strong>src</strong> 
+
+<ul>
+<li>  <strong>blackberry10</strong> (&gt; index.js, <strong>네이티브</strong> &gt; *.cpp, *.hpp)</li>
+<li>  <strong>장치</strong> (&gt;<em>이진 파일</em> *.so)</li>
+<li>  <strong>시뮬레이터</strong> (&gt;<em>이진 파일</em> *.so)</li>
+</ul></li>
+</ul>
+
+<p>(목록 최상위 디렉터리 간의 계층적 관계를 보여 줍니다. 괄호 지정 된 디렉터리의 내용을 표시 합니다. 모든 디렉터리 이름은 굵은 텍스트로 표시 됩니다. <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 이름 앞에 <code>&gt;</code> 로그인.)</p>
+
+<h2>내용에서 <code>plugin.xml</code> 파일</h2>
+
+<p><code>plugin.xml</code><a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 확장명 및 기타 메타 데이터의 네임 스페이스를 포함 합니다. 네임 스페이스를 정의 하 고 에코 플러그인에 대 한 다른 메타 데이터를 다음과 같이 지정 합니다.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt; 플러그인 xmlns = "http://www.phonegap.com/ns/plugins/1.0" id="org.apache.cordova.blackberry.echo" 버전 "1.0.0" = &gt;&lt; js 모듈 src = "www/client.js" &gt;&lt; 병합 대상 "네비게이터" = / &gt;&lt; / js 모듈 &gt;&lt; 플랫폼 이름 "blackberry10" = &gt;&lt; 소스 파일 src="src/blackberry10/index.js" / &gt;&lt; lib 파일 src="src/blackberry10/native/device/libecho.so" 아치 = "장치" / &gt;&lt; lib 파일 src="src/blackberry10/native/simulator/libecho.so" 아치 "시뮬레이터" = / &gt;&lt; 구성 파일 대상 = "www/config.xml" 부모 = "/ 위젯" &gt;&lt; name="org.apache.cordova.blackberry.echo 기능" value="org.apache.cordova.blackberry.echo" / &gt;&lt; / config 파일 &gt;&lt; /플랫폼 &gt;&lt; / 플러그인 &gt;
+</code></pre></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  3.1.0", "language: ko"] }
+    });
+</script>
+
+</body>
+</html>

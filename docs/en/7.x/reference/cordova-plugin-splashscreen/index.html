@@ -1,0 +1,3544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="Control the splash screen for your app. ">
+
+    <title>
+        
+            
+                Splashscreen - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/7.x/reference/cordova-plugin-splashscreen/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '7.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/cli/template.html">
+                Templates for apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/blackberry10/home.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/osx/index.html">
+                OS X
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/appdev/whitelist/index.html">
+                Whitelisting
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/blackberry10/plugin.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-cli/index.html">
+                CLI Reference
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-battery-status/index.html">
+                Battery Status
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-camera/index.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-console/index.html">
+                Console
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-contacts/index.html">
+                Contacts
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-device/index.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-device-motion/index.html">
+                Device Motion
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-device-orientation/index.html">
+                Device Orientation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-dialogs/index.html">
+                Dialogs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-file/index.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-file-transfer/index.html">
+                File Transfer
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-geolocation/index.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-globalization/index.html">
+                Globalization
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-inappbrowser/index.html">
+                Inappbrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-media/index.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-media-capture/index.html">
+                Media Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-network-information/index.html">
+                Network Information
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-splashscreen/index.html">
+                Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-vibration/index.html">
+                Vibration
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-statusbar/index.html">
+                Statusbar
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-whitelist/index.html">
+                Whitelist
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/7.x/reference/cordova-plugin-legacy-whitelist/index.html">
+                Legacy Whitelist
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/cli/template.html">
+        Templates for apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/blackberry10/home.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/osx/index.html">
+        OS X
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/appdev/whitelist/index.html">
+        Whitelisting
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/blackberry10/plugin.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-cli/index.html">
+        CLI Reference
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-battery-status/index.html">
+        Battery Status
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-camera/index.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-console/index.html">
+        Console
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-contacts/index.html">
+        Contacts
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-device/index.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-device-motion/index.html">
+        Device Motion
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-device-orientation/index.html">
+        Device Orientation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-dialogs/index.html">
+        Dialogs
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-file/index.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-file-transfer/index.html">
+        File Transfer
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-geolocation/index.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-globalization/index.html">
+        Globalization
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-inappbrowser/index.html">
+        Inappbrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-media/index.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-media-capture/index.html">
+        Media Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-network-information/index.html">
+        Network Information
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-splashscreen/index.html">
+        Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-vibration/index.html">
+        Vibration
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-statusbar/index.html">
+        Statusbar
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-whitelist/index.html">
+        Whitelist
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/7.x/reference/cordova-plugin-legacy-whitelist/index.html">
+        Legacy Whitelist
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+                    <a class="edit hidden-xs hidden-sm" href="https://github.com/apache/cordova-plugin-splashscreen/blob/master/README.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+
+                
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        English
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/7.x/reference/cordova-plugin-splashscreen/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/7.x/reference/cordova-plugin-splashscreen/" class="">
+                                
+                                    <span class="selected">
+                                        English
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/7.x/reference/cordova-plugin-splashscreen/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/7.x/reference/cordova-plugin-splashscreen/" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/7.x/reference/cordova-plugin-splashscreen/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/7.x/reference/cordova-plugin-splashscreen/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/7.x/reference/cordova-plugin-splashscreen/" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/7.x/reference/cordova-plugin-splashscreen/" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/7.x/reference/cordova-plugin-splashscreen/" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/7.x/reference/cordova-plugin-splashscreen/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/7.x/reference/cordova-plugin-splashscreen/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/7.x/reference/cordova-plugin-splashscreen/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        7.x
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                7.x
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/" class="missing-page">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/" class="missing-page">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/" class="missing-page">
+                                
+                                    
+                                3.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/" class="missing-page">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/" class="missing-page">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/" class="missing-page">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is outdated!
+                    <a href="/docs/en/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+                <div class="alert alert-warning docs-alert" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                     master.
+                    <a href="https://github.com/apache/cordova-plugin-splashscreen/releases">
+                        
+                    </a>
+                </div>
+            
+
+            <div id="page-toc-source">
+                <!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<table><thead>
+<tr>
+<th style="text-align: center">Android 4.4</th>
+<th style="text-align: center">Android 5.1</th>
+<th style="text-align: center">Android 6.0</th>
+<th style="text-align: center">iOS 9.3</th>
+<th style="text-align: center">iOS 10.0</th>
+<th style="text-align: center">Windows 10 Store</th>
+<th style="text-align: center">Travis CI</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android-4.4,PLUGIN=cordova-plugin-splashscreen/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android-4.4,PLUGIN=cordova-plugin-splashscreen" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android-5.1,PLUGIN=cordova-plugin-splashscreen/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android-5.1,PLUGIN=cordova-plugin-splashscreen" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android-6.0,PLUGIN=cordova-plugin-splashscreen/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android-6.0,PLUGIN=cordova-plugin-splashscreen" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios-9.3,PLUGIN=cordova-plugin-splashscreen/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios-9.3,PLUGIN=cordova-plugin-splashscreen" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios-10.0,PLUGIN=cordova-plugin-splashscreen/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios-10.0,PLUGIN=cordova-plugin-splashscreen" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-splashscreen/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-splashscreen" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-splashscreen"><img src="https://travis-ci.org/apache/cordova-plugin-splashscreen.svg?branch=master" alt="Build Status"></a></td>
+</tr>
+</tbody></table>
+
+<h1>cordova-plugin-splashscreen</h1>
+
+<p>This plugin is required to work with splash screens. This plugin displays and hides a splash screen during application launch.</p>
+
+<p>Report issues with this plugin on the <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20Splashscreen%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC">Apache Cordova issue tracker</a>.</p>
+
+<h2>Installation</h2>
+<div class="highlight"><pre><code class="language-" data-lang="">// npm hosted (new) id
+cordova plugin add cordova-plugin-splashscreen
+
+// you may also install directly from this repo
+cordova plugin add https://github.com/apache/cordova-plugin-splashscreen.git
+</code></pre></div>
+<h2>Supported Platforms</h2>
+
+<ul>
+<li>Amazon Fire OS</li>
+<li>Android</li>
+<li>BlackBerry 10</li>
+<li>iOS</li>
+<li>Windows Phone 7 and 8</li>
+<li>Windows (<code>cordova-windows</code> version &gt;= 4.4.0 is required)</li>
+<li>Browser</li>
+</ul>
+
+<p><strong>Note</strong>: Extended splashscreen does not require the plugin on Windows (as opposed to Android and iOS) in case you don&#39;t use the plugin API, i.e. programmatic hide/show.</p>
+
+<h3>iOS-specific information</h3>
+
+<p>There are two mechanisms for displaying a launch screen on iOS:</p>
+
+<ol>
+<li><p>Legacy launch images: images are sized exactly for the device&#39;s screen size. Does not support the iPad Pro 12.9&#39;s native resolution or split-screen/slide-over multitasking.</p></li>
+<li><p>Launch storyboard images: Images are sized based on scale, idiom, and size classes. Supports all devices, and can be used with split-screen/slide-over multitasking.</p></li>
+</ol>
+
+<p>Apple is moving away from legacy launch images. There is no official support for providing a native-resolution launch image for the iPad Pro 12.9 or for providing launch images that work with split-screen multitasking or slide-over. If your app doesn&#39;t need to support these contexts, then you can continue to use legacy launch images for as long as you like. </p>
+
+<p>The preferred method of providing launch images is to use a launch storyboard. For native app developers, the ideal launch storyboard is an unpopulated version of the app&#39;s user interface at launch. For non-native app developers who don&#39;t wish to learn Interface Builder, however, this plugin simulates the legacy launch image method as much as is feasible.</p>
+
+<h4>Legacy launch images</h4>
+
+<p>If you choose to use legacy launch images, you will use the following syntax in <code>config.xml</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    &lt;splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/&gt;
+    &lt;splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/&gt;
+    &lt;splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/&gt;
+    &lt;splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/&gt;
+    &lt;splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/&gt;
+    &lt;splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/&gt;
+    &lt;splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/&gt;
+    &lt;splash src="res/screen/ios/Default-667h.png" width="750" height="1334"/&gt;
+    &lt;splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/&gt;
+</code></pre></div>
+<p>Technically the filename for the <code>src</code> attribute can be anything you want; the filenames are used because they match what will be used when your project is compiled. The width and height attributes determine which launch images are displayed on which devices as follows:</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">width</th>
+<th style="text-align: center">height</th>
+<th style="text-align: center">device (orientation)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">320</td>
+<td style="text-align: center">480</td>
+<td style="text-align: center">All non-retina iPhones and iPods</td>
+</tr>
+<tr>
+<td style="text-align: center">640</td>
+<td style="text-align: center">960</td>
+<td style="text-align: center">iPhone 4/4s/5/5s (portrait)</td>
+</tr>
+<tr>
+<td style="text-align: center">750</td>
+<td style="text-align: center">1334</td>
+<td style="text-align: center">iPhone 6/6s/7 (portrait)</td>
+</tr>
+<tr>
+<td style="text-align: center">1242</td>
+<td style="text-align: center">2208</td>
+<td style="text-align: center">iPhone 6+/6s+/7+ (portrait)</td>
+</tr>
+<tr>
+<td style="text-align: center">2208</td>
+<td style="text-align: center">1242</td>
+<td style="text-align: center">iPhone 6+/6s+/7+ (landscape)</td>
+</tr>
+<tr>
+<td style="text-align: center">768</td>
+<td style="text-align: center">1024</td>
+<td style="text-align: center">All non-retina iPads (portrait)</td>
+</tr>
+<tr>
+<td style="text-align: center">1024</td>
+<td style="text-align: center">768</td>
+<td style="text-align: center">All non-retina iPads (landscape)</td>
+</tr>
+<tr>
+<td style="text-align: center">1536</td>
+<td style="text-align: center">2048</td>
+<td style="text-align: center">All retina iPads (portrait)</td>
+</tr>
+<tr>
+<td style="text-align: center">2048</td>
+<td style="text-align: center">1536</td>
+<td style="text-align: center">All retina iPads (landscape)</td>
+</tr>
+</tbody></table>
+
+<p>Note: It is vitally important that the source image actually matches the size specified in the <code>width</code> and <code>height</code> attributes. If it does not, the device may fail to render it properly, if at all.</p>
+
+<h4>Launch storyboard images</h4>
+
+<p>In order to support newer form factors and split-screen/slide-over multitasking, you should use launch storyboard images. These are similar to the legacy launch images above, but there are crucial differences:</p>
+
+<ul>
+<li><p>images are not specific to a given device.</p></li>
+<li><p>images are scaled to fill the available viewport (while maintaining the aspect ratio).</p></li>
+<li><p>the outer edges of the images will be cropped, and the amount will vary based on device an viewport.</p></li>
+<li><p>there is no need to provide an image for each possible device, viewport, and orientation; iOS will choose the best image for the situation automatically.</p></li>
+</ul>
+
+<h5>Designing launch storyboard images</h5>
+
+<p>The key to designing a launch storyboard image is understanding that the edges of the image will almost certainly be cropped. Therefore, one should not place any important information near the edges of any images provided to the launch storyboard. Only the center is a safe area, and this all but guarantees that following Apple&#39;s advice of presenting an unpopulated user interface will not work well.</p>
+
+<p>Instead, the following tips should enable you to create a launch image that works across a multitude of form factors, viewports, and orientations:</p>
+
+<ul>
+<li><p>Important graphics (logos, icons, titles) should be centered. The safe bounding region will vary, so you will need to test to ensure that the important graphics are never cropped. Better yet, don&#39;t supply any important graphics in the first place.</p>
+
+<ul>
+<li>You <em>can</em> fine-tune the placement and size of these graphics, but you don&#39;t have the same fine-grained control as you did with legacy launch images.</li>
+</ul></li>
+<li><p>Use a simple color wash. If you use two colors, you&#39;ll want one color to fill the top half of the image, and the second to fill the bottom half.  If you use a gradient, you&#39;ll probably want to ensure that the middle of the gradient lines up with the center of the image. </p></li>
+<li><p>Don&#39;t worry about pixel perfection -- because the images are scaled, there&#39;s almost no chance the images will be perfectly fit to the pixel grid. Since all supported iOS devices use retina screens, users will be hard pressed to notice it anyway.</p></li>
+</ul>
+
+<p>It is important to understand the concept of scale, idiom, and size class traits in order to use launch storyboard images effectively. Of the images supplied to the launch storyboard, iOS will choose the image that best matches the device and viewport and render that image. It is possible to supply only one launch image if so desired, but it is also possible to fine-tune the displayed launch image based on traits. When fine-tuning, one can ignore traits that aren&#39;t targeted or supported by the app.</p>
+
+<blockquote>
+<p>Note: If you are using launch storyboard images, there is no need to include legacy images. If you do, the legacy images will be copied, but not used.</p>
+</blockquote>
+
+<h5>Scale</h5>
+
+<table><thead>
+<tr>
+<th style="text-align: center">scale</th>
+<th style="text-align: center">devices</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">1x</td>
+<td style="text-align: center">All non-retina devices</td>
+</tr>
+<tr>
+<td style="text-align: center">2x</td>
+<td style="text-align: center">Most retina devices</td>
+</tr>
+<tr>
+<td style="text-align: center">3x</td>
+<td style="text-align: center">iPhone 6+/6s+,7s+</td>
+</tr>
+</tbody></table>
+
+<p>In general, you&#39;ll want to supply 2x and 3x images. Cordova only supports retina devices now, so there&#39;s no point in supplying 1x images.</p>
+
+<h5>Idioms</h5>
+
+<table><thead>
+<tr>
+<th style="text-align: center">idiom</th>
+<th style="text-align: center">devices</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">ipad</td>
+<td style="text-align: center">All iPads</td>
+</tr>
+<tr>
+<td style="text-align: center">iphone</td>
+<td style="text-align: center">All iPhones and iPod Touches</td>
+</tr>
+<tr>
+<td style="text-align: center">universal</td>
+<td style="text-align: center">All devices</td>
+</tr>
+</tbody></table>
+
+<p>You only need to provide universal images unless you need to fine-tune for a specific device idiom.</p>
+
+<h5>Size classes</h5>
+
+<p>There are two size classes applies to both screen axes. Narrow viewports are considered to be the &quot;compact&quot; size class, and remaining viewports are considered &quot;regular&quot;. When supplying images to Xcode, however, one must choose between &quot;any &amp; compact&quot; and &quot;any &amp; regular&quot;. To stay consistent with the native terminology, this feature will match based on &quot;any&quot; and &quot;compact&quot;. <code>any</code> will match regular-sized viewports. </p>
+
+<p>Note: this feature uses <code>com</code> as an abbreviation for &quot;compact&quot; classes.</p>
+
+<p>The following classes are supported by this feature:</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">width</th>
+<th style="text-align: center">height</th>
+<th style="text-align: center">orientation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">any</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">any</td>
+</tr>
+<tr>
+<td style="text-align: center">com</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">portrait</td>
+</tr>
+<tr>
+<td style="text-align: center">any</td>
+<td style="text-align: center">com</td>
+<td style="text-align: center">landscape (wide)</td>
+</tr>
+<tr>
+<td style="text-align: center">com</td>
+<td style="text-align: center">com</td>
+<td style="text-align: center">landscape (narrow)</td>
+</tr>
+</tbody></table>
+
+<p>To see the complete list of size classes associated with devices and viewports, see <a href="http://www.sizeclasses.com">http://www.sizeclasses.com</a>.</p>
+
+<h5>Single-image launch screen</h5>
+
+<p>If your launch image is simple, you may be able to avoid creating a lot of different launch images and supply only one. The launch image needs to meet the following requirements:</p>
+
+<ul>
+<li><p>the image should be square</p></li>
+<li><p>the image should be large enough to fit on an iPad Pro 12.9&quot;: 2732x2732</p></li>
+<li><p>anything important should fit within the center</p></li>
+</ul>
+
+<p>Keep in mind that the image will be cropped, possibly quite severely, depending upon the viewport. </p>
+
+<p>Once the image is created, you can include it in your project by adding the following to <code>config.xml</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    &lt;splash src="res/screen/ios/Default@2x~universal~anyany.png" /&gt;
+</code></pre></div>
+<p>Because only one image is provided, iOS will utilize it in every context.</p>
+
+<h5>Multi-image launch screen</h5>
+
+<p>If a single launch image won&#39;t meet your needs, you will probably need to supply at least six images, if not more. Furthermore, keep in mind that it will not be possible to fine tune the image to a specific device, but only to a device class, display factor, and viewport size.</p>
+
+<p>If you don&#39;t need to target images to a specific idiom, you should create six images, as follows:</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">scale</th>
+<th style="text-align: center">idiom</th>
+<th style="text-align: center">width</th>
+<th style="text-align: center">height</th>
+<th style="text-align: center">size</th>
+<th style="text-align: center">filename</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">2x*</td>
+<td style="text-align: center">universal</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">2732x2732</td>
+<td style="text-align: center"><code>Default@2x~universal~anyany.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">2x</td>
+<td style="text-align: center">universal</td>
+<td style="text-align: center">com</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">1278x2732</td>
+<td style="text-align: center"><code>Default@2x~universal~comany.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">2x</td>
+<td style="text-align: center">universal</td>
+<td style="text-align: center">com</td>
+<td style="text-align: center">com</td>
+<td style="text-align: center">1334x750</td>
+<td style="text-align: center"><code>Default@2x~universal~comcom.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">3x*</td>
+<td style="text-align: center">universal</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">2208x2208</td>
+<td style="text-align: center"><code>Default@3x~universal~anyany.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">3x</td>
+<td style="text-align: center">universal</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">com</td>
+<td style="text-align: center">2208x1242</td>
+<td style="text-align: center"><code>Default@3x~universal~anycom.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">3x</td>
+<td style="text-align: center">universal</td>
+<td style="text-align: center">com</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">1242x2208</td>
+<td style="text-align: center"><code>Default@3x~universal~comany.png</code></td>
+</tr>
+</tbody></table>
+
+<p>* this image is required in order for iOS utilize the other images within this scale and idiom.</p>
+
+<blockquote>
+<p>Note: If the 3x sizes look small too you, that&#39;s because there&#39;s only one device class that currently has a 3x density: the iPhone 6+/6s+/7+.</p>
+</blockquote>
+
+<p>The above looks like the following snippet when present in <code>config.xml</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    &lt;splash src="res/screen/ios/Default@2x~universal~anyany.png" /&gt;
+    &lt;splash src="res/screen/ios/Default@2x~universal~comany.png" /&gt;
+    &lt;splash src="res/screen/ios/Default@2x~universal~comcom.png" /&gt;
+    &lt;splash src="res/screen/ios/Default@3x~universal~anyany.png" /&gt;
+    &lt;splash src="res/screen/ios/Default@3x~universal~anycom.png" /&gt;
+    &lt;splash src="res/screen/ios/Default@3x~universal~comany.png" /&gt;
+</code></pre></div>
+<p>Should one need to further fine tune based upon device idiom, one can do so. This might look like so:</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">scale</th>
+<th style="text-align: center">idiom</th>
+<th style="text-align: center">width</th>
+<th style="text-align: center">height</th>
+<th style="text-align: center">size</th>
+<th style="text-align: center">filename</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">2x*</td>
+<td style="text-align: center">iphone</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">1334x1334</td>
+<td style="text-align: center"><code>Default@2x~iphone~anyany.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">2x</td>
+<td style="text-align: center">iphone</td>
+<td style="text-align: center">com</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">750x1334</td>
+<td style="text-align: center"><code>Default@2x~iphone~comany.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">2x</td>
+<td style="text-align: center">iphone</td>
+<td style="text-align: center">com</td>
+<td style="text-align: center">com</td>
+<td style="text-align: center">1334x750</td>
+<td style="text-align: center"><code>Default@2x~iphone~comcom.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">3x*</td>
+<td style="text-align: center">iphone</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">2208x2208</td>
+<td style="text-align: center"><code>Default@3x~iphone~anyany.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">3x</td>
+<td style="text-align: center">iphone</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">com</td>
+<td style="text-align: center">2208x1242</td>
+<td style="text-align: center"><code>Default@3x~iphone~anycom.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">3x</td>
+<td style="text-align: center">iphone</td>
+<td style="text-align: center">com</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">1242x2208</td>
+<td style="text-align: center"><code>Default@3x~iphone~comany.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">2x*</td>
+<td style="text-align: center">ipad</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">2732x2732</td>
+<td style="text-align: center"><code>Default@2x~ipad~anyany.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">2x</td>
+<td style="text-align: center">ipad</td>
+<td style="text-align: center">com</td>
+<td style="text-align: center">any</td>
+<td style="text-align: center">1278x2732</td>
+<td style="text-align: center"><code>Default@2x~ipad~comany.png</code></td>
+</tr>
+</tbody></table>
+
+<p>* this image is required in order for iOS utilize the other images within this scale and idiom.</p>
+
+<p>The above looks like the following in <code>config.xml</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    &lt;splash src="res/screen/ios/Default@2x~iphone~anyany.png" /&gt;
+    &lt;splash src="res/screen/ios/Default@2x~iphone~comany.png" /&gt;
+    &lt;splash src="res/screen/ios/Default@2x~iphone~comcom.png" /&gt;
+    &lt;splash src="res/screen/ios/Default@3x~iphone~anyany.png" /&gt;
+    &lt;splash src="res/screen/ios/Default@3x~iphone~anycom.png" /&gt;
+    &lt;splash src="res/screen/ios/Default@3x~iphone~comany.png" /&gt;
+    &lt;splash src="res/screen/ios/Default@2x~ipad~anyany.png" /&gt;
+    &lt;splash src="res/screen/ios/Default@2x~ipad~comany.png" /&gt;
+</code></pre></div>
+<h5>Quirks and Known Issues</h5>
+
+<ol>
+<li><p><strong>App on target may not reflect changes to images</strong>
+Once you run the app on a target, iOS caches the launch image. Unfortunately, when you chance the images, iOS does <em>not</em> invalidate the cache, which means you&#39;ll still see the old launch image. You should either: delete the app, or reset content &amp; settings (simulator).</p></li>
+<li><p><strong>Simulator may not show expected images when launched from CLI</strong>
+When Xcode deploys to a specific simulator, it only copies the assets that match the simulator&#39;s characteristics. For example, if you try to run an app on the iPhone 6s Plus simulator, only @3x launch images are copied. When compiling from the CLI, however, the default is to assume an iPhone 5s, which means only @2x launch images are copied. Unless your launch images are markedly different, chances are good the difference would go unnoticed, but this does mean that the only accurate method of testing is to test on a physical device.</p></li>
+<li><p><strong><code>anyany</code> must be provided for other variations to be used</strong>
+If you don&#39;t provide an <code>anyany</code> version of the launch image for a specific scale and idiom, the other variations (like <code>anycom</code>, <code>comany</code>, and <code>comcom</code>) will ignored. </p></li>
+</ol>
+
+<h2>Windows-specific information</h2>
+
+<p>Splash screen images can be defined using the <a href="https://cordova.apache.org/docs/en/dev/config_ref/images.html#windows">MRT</a> concept.<br>
+If you specify src=&quot;res/windows/splashscreen.png&quot; the following files will be copied into the application&#39;s images folder:<br>
+<code>res/windows/splashscreen.png</code> | <code>res/windows/splashscreen.scale-100.png</code>, <code>res/windows/splashscreen.scale-125.png</code>, etc.<br>
+The following are supported:</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Scale, %</th>
+<th style="text-align: center">Project</th>
+<th style="text-align: center">Width</th>
+<th style="text-align: center">Height</th>
+<th style="text-align: center">Filename</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">100</td>
+<td style="text-align: center">Windows 10/8.1</td>
+<td style="text-align: center">620</td>
+<td style="text-align: center">300</td>
+<td style="text-align: center"><code>splashscreen.png</code> \</td>
+</tr>
+<tr>
+<td style="text-align: center">125</td>
+<td style="text-align: center">Windows 10</td>
+<td style="text-align: center">775</td>
+<td style="text-align: center">375</td>
+<td style="text-align: center"><code>splashscreen.scale-125.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">150</td>
+<td style="text-align: center">Windows 10</td>
+<td style="text-align: center">930</td>
+<td style="text-align: center">450</td>
+<td style="text-align: center"><code>splashscreen.scale-150.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">200</td>
+<td style="text-align: center">Windows 10</td>
+<td style="text-align: center">1240</td>
+<td style="text-align: center">600</td>
+<td style="text-align: center"><code>splashscreen.scale-200.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">400</td>
+<td style="text-align: center">Windows 10</td>
+<td style="text-align: center">2480</td>
+<td style="text-align: center">1200</td>
+<td style="text-align: center"><code>splashscreen.scale-400.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">140</td>
+<td style="text-align: center">Windows 8.1</td>
+<td style="text-align: center">868</td>
+<td style="text-align: center">420</td>
+<td style="text-align: center"><code>splashscreen.scale-140.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">180</td>
+<td style="text-align: center">Windows 8.1</td>
+<td style="text-align: center">1116</td>
+<td style="text-align: center">540</td>
+<td style="text-align: center"><code>splashscreen.scale-180.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">100</td>
+<td style="text-align: center">Windows Phone 8.1</td>
+<td style="text-align: center">480</td>
+<td style="text-align: center">800</td>
+<td style="text-align: center"><code>splashscreenphone.png</code> \</td>
+</tr>
+<tr>
+<td style="text-align: center">140</td>
+<td style="text-align: center">Windows Phone 8.1</td>
+<td style="text-align: center">672</td>
+<td style="text-align: center">1120</td>
+<td style="text-align: center"><code>splashscreenphone.scale-140.png</code></td>
+</tr>
+<tr>
+<td style="text-align: center">240</td>
+<td style="text-align: center">Windows Phone 8.1</td>
+<td style="text-align: center">1152</td>
+<td style="text-align: center">1920</td>
+<td style="text-align: center"><code>splashscreenphone.scale-240.png</code></td>
+</tr>
+</tbody></table>
+
+<p><strong>Note</strong>: SplashScreens size for Windows 10 project should not exceed 200 KBytes.<br>
+<strong>Note</strong>: Supported formats are <code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>. Mixing of the extensions within a target is not supported. I.e. you can have <code>splashscreen.jpg</code> and <code>splashscreenphone.png</code> but not <code>splashscreen.scale-100.png</code>, <code>splashscreen.scale-400.jpg</code>.<br>
+<strong>Note</strong>: You may need to reopen Visual Studio solution after changing the images and doing a <code>cordova prepare</code> for the changes to take effect.</p>
+
+<h2>Example Configuration</h2>
+
+<p>In the top-level <code>config.xml</code> file (not the one in <code>platforms</code>), add configuration elements like those specified here.</p>
+
+<p>Please notice that the value of the &quot;src&quot; attribute is relative to the project root directory and not to the www directory (see <code>Directory structure</code> below). You can name the source image whatever you like. The internal name in the app is determined by Cordova.</p>
+
+<p>Directory structure:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">projectRoot
+    hooks
+    platforms
+    plugins
+    www
+        css
+        img
+        js
+    res
+        screen
+            android
+            ios
+            windows
+</code></pre></div><div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- you can use any density that exists in the Android project --&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-hdpi.png"</span> <span class="na">density=</span><span class="s">"land-hdpi"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-ldpi.png"</span> <span class="na">density=</span><span class="s">"land-ldpi"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-mdpi.png"</span> <span class="na">density=</span><span class="s">"land-mdpi"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-xhdpi.png"</span> <span class="na">density=</span><span class="s">"land-xhdpi"</span><span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-hdpi.png"</span> <span class="na">density=</span><span class="s">"port-hdpi"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-ldpi.png"</span> <span class="na">density=</span><span class="s">"port-ldpi"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-mdpi.png"</span> <span class="na">density=</span><span class="s">"port-mdpi"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-xhdpi.png"</span> <span class="na">density=</span><span class="s">"port-xhdpi"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
+
+<span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- There are two mechanisms for showing launch images.
+      -- Legacy method (supports all devices except iPad Pro 12.9):
+      -- Note: Images are determined by width and height. The following are supported --&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default~iphone.png"</span> <span class="na">width=</span><span class="s">"320"</span> <span class="na">height=</span><span class="s">"480"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~iphone.png"</span> <span class="na">width=</span><span class="s">"640"</span> <span class="na">height=</span><span class="s">"960"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default-Portrait~ipad.png"</span> <span class="na">width=</span><span class="s">"768"</span> <span class="na">height=</span><span class="s">"1024"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default-Portrait@2x~ipad.png"</span> <span class="na">width=</span><span class="s">"1536"</span> <span class="na">height=</span><span class="s">"2048"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default-Landscape~ipad.png"</span> <span class="na">width=</span><span class="s">"1024"</span> <span class="na">height=</span><span class="s">"768"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default-Landscape@2x~ipad.png"</span> <span class="na">width=</span><span class="s">"2048"</span> <span class="na">height=</span><span class="s">"1536"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default-568h@2x~iphone.png"</span> <span class="na">width=</span><span class="s">"640"</span> <span class="na">height=</span><span class="s">"1136"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default-667h.png"</span> <span class="na">width=</span><span class="s">"750"</span> <span class="na">height=</span><span class="s">"1334"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default-736h.png"</span> <span class="na">width=</span><span class="s">"1242"</span> <span class="na">height=</span><span class="s">"2208"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default-Landscape-736h.png"</span> <span class="na">width=</span><span class="s">"2208"</span> <span class="na">height=</span><span class="s">"1242"</span><span class="nt">/&gt;</span>
+    <span class="c">&lt;!-- Storyboard method (supports all devices):
+      -- Important: If you use the storyboard method, legacy images are 
+      -- copied but ignored.
+      -- Note: images are determined by scale, idiom, and size traits. The following
+      -- are suggested based on current device form factors --&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~anyany.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~comany.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~comcom.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@3x~universal~anyany.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@3x~universal~anycom.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@3x~universal~comany.png"</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/platform&gt;</span>
+
+<span class="c">&lt;!-- Configuration using MRT concept (Recommended, see "Windows-specific information" section for details): --&gt;</span>
+<span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/windows/splashscreen.png"</span> <span class="na">target=</span><span class="s">"SplashScreen"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/windows/splashscreenphone.png"</span> <span class="na">target=</span><span class="s">"SplashScreenPhone"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
+
+<span class="c">&lt;!-- Configuration using image size: --&gt;</span>
+<span class="c">&lt;!--&lt;platform name="windows"&gt;
+    &lt;splash src="res/screen/windows/splashscreen.png" width="620" height="300"/&gt;
+    &lt;splash src="res/screen/windows/splashscreenphone.png" width="1152" height="1920"/&gt;
+&lt;/platform&gt;--&gt;</span>
+
+<span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"blackberry10"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Add a rim:splash element for each resolution and locale you wish --&gt;</span>
+    <span class="c">&lt;!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html --&gt;</span>
+    <span class="nt">&lt;rim:splash</span> <span class="na">src=</span><span class="s">"res/screen/blackberry/splashscreen.png"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
+
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreenDelay"</span> <span class="na">value=</span><span class="s">"10000"</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+<h2>Preferences</h2>
+
+<h4>config.xml</h4>
+
+<ul>
+<li><code>AutoHideSplashScreen</code> (boolean, default to <code>true</code>). Indicates whether to hide splash screen automatically or not. Splash screen hidden after amount of time specified in the <code>SplashScreenDelay</code> preference.</li>
+</ul>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AutoHideSplashScreen"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+<ul>
+<li><code>SplashScreenDelay</code> (number, default to 3000). Amount of time in milliseconds to wait before automatically hide splash screen.</li>
+</ul>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreenDelay"</span> <span class="na">value=</span><span class="s">"3000"</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+<p>Note also that this value used to be seconds, and not milliseconds, so values less than 30 will still be treated as seconds. ( Consider this a deprecated patch that will disapear in some future version. )</p>
+
+<p>To disable the splashscreen add the following preference to <code>config.xml</code>:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreenDelay"</span> <span class="na">value=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+</code></pre></div>
+<p><strong>Windows Quirk</strong>: You should disable the splashscreen in case you are updating the entire document body dynamically (f.e. with a SPA router) to avoid affecting UI/controls.<br>
+Note that you should also directly reference <code>WinJS/base.js</code> in the page HTML in this case to avoid the issues with activation context (<a href="https://issues.apache.org/jira/browse/CB-11658">CB-11658</a>).</p>
+
+<p><strong>iOS Quirk</strong>: to disable the splashscreen on <code>ios</code> platform you should also add <code>&lt;preference name=&quot;FadeSplashScreenDuration&quot; value=&quot;0&quot;/&gt;</code> to <code>config.xml</code>.</p>
+
+<ul>
+<li><code>FadeSplashScreen</code> (boolean, defaults to <code>true</code>): Set to <code>false</code> to
+prevent the splash screen from fading in and out when its display
+state changes.</li>
+</ul>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"FadeSplashScreen"</span> <span class="na">value=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+</code></pre></div>
+<ul>
+<li><code>FadeSplashScreenDuration</code> (float, defaults to <code>500</code>): Specifies the
+number of milliseconds for the splash screen fade effect to execute.</li>
+</ul>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"FadeSplashScreenDuration"</span> <span class="na">value=</span><span class="s">"750"</span><span class="nt">/&gt;</span>
+</code></pre></div>
+<p><em>Note</em>: <code>FadeSplashScreenDuration</code> is included into <code>SplashScreenDelay</code>, for example if you have <code>&lt;preference name=&quot;SplashScreenDelay&quot; value=&quot;3000&quot; /&gt;</code> and <code>&lt;preference name=&quot;FadeSplashScreenDuration&quot; value=&quot;1000&quot;/&gt;</code> defined in <code>config.xml</code>:</p>
+
+<ul>
+<li>00:00 - splashscreen is shown</li>
+<li>00:02 - fading has started</li>
+<li>00:03 - splashscreen is hidden</li>
+</ul>
+
+<p>Turning the fading off via <code>&lt;preference name=&quot;FadeSplashScreen&quot; value=&quot;false&quot;/&gt;</code> technically means fading duration to be <code>0</code> so that in this example the overall splash delay will still be 3 seconds.</p>
+
+<p><em>Note</em>: This only applies to the app startup - you need to take the fading timeout into account when manually showing/hiding the splashscreen in the code:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+<span class="p">},</span> <span class="nx">splashDuration</span> <span class="o">-</span> <span class="nx">fadeDuration</span><span class="p">);</span>
+</code></pre></div>
+<ul>
+<li><code>ShowSplashScreenSpinner</code> (boolean, defaults to <code>true</code>): Set to <code>false</code>
+to hide the splash-screen spinner.</li>
+</ul>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"ShowSplashScreenSpinner"</span> <span class="na">value=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+</code></pre></div>
+<h3>Android Quirks</h3>
+
+<p>In your <code>config.xml</code>, you can add the following preferences:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashMaintainAspectRatio"</span> <span class="na">value=</span><span class="s">"true|false"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashShowOnlyFirstTime"</span> <span class="na">value=</span><span class="s">"true|false"</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+<p>&quot;SplashMaintainAspectRatio&quot; preference is optional. If set to true, splash screen drawable is not stretched to fit screen, but instead simply &quot;covers&quot; the screen, like CSS &quot;background-size:cover&quot;. This is very useful when splash screen images cannot be distorted in any way, for example when they contain scenery or text. This setting works best with images that have large margins (safe areas) that can be safely cropped on screens with different aspect ratios.</p>
+
+<p>The plugin reloads splash drawable whenever orientation changes, so you can specify different drawables for portrait and landscape orientations.</p>
+
+<p>&quot;SplashShowOnlyFirstTime&quot; preference is also optional and defaults to <code>true</code>. When set to <code>true</code> splash screen will only appear on application launch. However, if you plan to use <code>navigator.app.exitApp()</code> to close application and force splash screen appear on next launch, you should set this property to <code>false</code> (this also applies to closing the App with Back button).</p>
+
+<h3>Browser Quirks</h3>
+
+<p>You can use the following preferences in your <code>config.xml</code>:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"browser"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreen"</span> <span class="na">value=</span><span class="s">"/images/browser/splashscreen.jpg"</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- defaults to "/img/logo.png" --&gt;</span>
+    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreenDelay"</span> <span class="na">value=</span><span class="s">"3000"</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- defaults to "3000" --&gt;</span>
+    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreenBackgroundColor"</span> <span class="na">value=</span><span class="s">"green"</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- defaults to "#464646" --&gt;</span>
+    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"ShowSplashScreen"</span> <span class="na">value=</span><span class="s">"false"</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- defaults to "true" --&gt;</span>
+    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreenWidth"</span> <span class="na">value=</span><span class="s">"600"</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- defaults to "170" --&gt;</span>
+    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreenHeight"</span> <span class="na">value=</span><span class="s">"300"</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- defaults to "200" --&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
+</code></pre></div>
+<p><strong>Note</strong>: <code>SplashScreen</code> value should be absolute in order to work in a sub-page. The <code>SplashScreen</code> value is used only for the browser platform. The value will be ignored for other platforms.</p>
+
+<h3>iOS Quirks</h3>
+
+<ul>
+<li>In iOS, the splashscreen images are called launch images. These images are mandatory on iOS.</li>
+</ul>
+
+<h3>Windows Quirks</h3>
+
+<ul>
+<li><code>SplashScreenSpinnerColor</code> (string, defaults to system accent color): hash, rgb notation or CSS color name.</li>
+</ul>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreenSpinnerColor"</span> <span class="na">value=</span><span class="s">"#242424"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreenSpinnerColor"</span> <span class="na">value=</span><span class="s">"DarkRed"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreenSpinnerColor"</span> <span class="na">value=</span><span class="s">"rgb(50,128,128)"</span><span class="nt">/&gt;</span>
+</code></pre></div>
+<ul>
+<li><code>SplashScreenBackgroundColor</code> (string, defaults to #464646): hex notation.</li>
+</ul>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreenBackgroundColor"</span> <span class="na">value=</span><span class="s">"0xFFFFFFFF"</span><span class="nt">/&gt;</span>
+</code></pre></div>
+<h2>Methods</h2>
+
+<ul>
+<li>splashscreen.show</li>
+<li>splashscreen.hide</li>
+</ul>
+
+<h2>splashscreen.hide</h2>
+
+<p>Dismiss the splash screen.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+</code></pre></div>
+<h3>BlackBerry 10, WP8, iOS Quirk</h3>
+
+<p>The <code>config.xml</code> file&#39;s <code>AutoHideSplashScreen</code> setting must be
+<code>false</code>. To delay hiding the splash screen for two seconds, add a
+timer such as the following in the <code>deviceready</code> event handler:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+<span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
+</code></pre></div>
+<h2>splashscreen.show</h2>
+
+<p>Displays the splash screen.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+</code></pre></div>
+<p>Your application cannot call <code>navigator.splashscreen.show()</code> until the app has
+started and the <code>deviceready</code> event has fired. But since typically the splash
+screen is meant to be visible before your app has started, that would seem to
+defeat the purpose of the splash screen.  Providing some configuration in
+<code>config.xml</code> will automatically <code>show</code> the splash screen immediately after your
+app launch and before it has fully started and received the <code>deviceready</code>
+event. For this reason, it is unlikely you need to call <code>navigator.splashscreen.show()</code> to make the splash
+screen visible for app startup.</p>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  7.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

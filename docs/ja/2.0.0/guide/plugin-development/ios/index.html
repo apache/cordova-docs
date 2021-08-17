@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Developing a Plugin on iOS - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/ja/2.0.0/guide/plugin-development/ios/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '2.0.0' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/cordova/accelerometer/accelerometer.html">
+                Accelerometer
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/cordova/camera/camera.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/cordova/media/capture/capture.html">
+                Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/cordova/compass/compass.html">
+                Compass
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/cordova/connection/connection.html">
+                Connection
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/cordova/contacts/contacts.html">
+                Contacts
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/cordova/device/device.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/cordova/file/file.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/cordova/geolocation/geolocation.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/cordova/media/media.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/cordova/notification/notification.html">
+                Notification
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/cordova/storage/storage.html">
+                Storage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/guide/getting-started/index.html">
+                入門ガイド
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/guide/command-line/index.html">
+                コマンドライン使用ガイド
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/guide/upgrading/index.html">
+                アップグレードガイド
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/guide/plugin-development/index.html">
+                プラグイン開発ガイド
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/guide/whitelist/index.html">
+                ドメインホワイトリストガイド
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ja/2.0.0/guide/cordova-webview/index.html">
+                WebView の埋め込み
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        目次
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/cordova/accelerometer/accelerometer.html">
+        Accelerometer
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/cordova/camera/camera.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/cordova/media/capture/capture.html">
+        Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/cordova/compass/compass.html">
+        Compass
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/cordova/connection/connection.html">
+        Connection
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/cordova/contacts/contacts.html">
+        Contacts
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/cordova/device/device.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/cordova/file/file.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/cordova/geolocation/geolocation.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/cordova/media/media.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/cordova/notification/notification.html">
+        Notification
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/cordova/storage/storage.html">
+        Storage
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/guide/getting-started/index.html">
+        入門ガイド
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/guide/command-line/index.html">
+        コマンドライン使用ガイド
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/guide/upgrading/index.html">
+        アップグレードガイド
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/guide/plugin-development/index.html">
+        プラグイン開発ガイド
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/guide/whitelist/index.html">
+        ドメインホワイトリストガイド
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ja/2.0.0/guide/cordova-webview/index.html">
+        WebView の埋め込み
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/ja/2.0.0/guide/plugin-development/ios/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        日本語
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/2.0.0/guide/plugin-development/ios/" class="missing-page">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/2.0.0/guide/plugin-development/ios/" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/2.0.0/guide/plugin-development/ios/" class="missing-page">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/2.0.0/guide/plugin-development/ios/" class="missing-page">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/2.0.0/guide/plugin-development/ios/" class="missing-page">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/2.0.0/guide/plugin-development/ios/" class="">
+                                
+                                    <span class="selected">
+                                        日本語
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/2.0.0/guide/plugin-development/ios/" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/2.0.0/guide/plugin-development/ios/" class="missing-page">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/2.0.0/guide/plugin-development/ios/" class="missing-page">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/2.0.0/guide/plugin-development/ios/" class="missing-page">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/2.0.0/guide/plugin-development/ios/" class="missing-page">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/2.0.0/guide/plugin-development/ios/" class="missing-page">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        2.0.0
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/2.0.0/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                2.0.0
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ja/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    これがないドキュメントの最新バージョンです！
+                    <a href="/docs/ja/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Developing a Plugin on iOS</h1>
+
+<p>プラグインの開発には、 Cordova-iOS のアーキテクチャの理解が必要です。 Conrdova-iOS は UIWebView から構成されています。インターセプト命令は、 URL の変化に応じて UIWebView に渡されます。これらのプラグインは .plist ファイルの Plugins キーにクラスマッピングとして表されています。</p>
+
+<p>プラグインは <code>CDVPlugin</code> クラスを継承した Objective-C のクラスです。</p>
+
+<h2>プラグインクラスのマッピング</h2>
+
+<p>プラグインの JavaScript 部分は常に <code>cordova.exec</code> メソッドを以下のように使います:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">exec(&lt;successFunction&gt;, &lt;failFunction&gt;, &lt;service&gt;, &lt;action&gt;, [&lt;args&gt;]);
+</code></pre></div>
+<p>これは UIWebView から iOS ネイティブ側へのリクエストを整理し、おおよそ要約すると <code>service</code> クラスで <code>action</code> メソッドを、 <code>args</code> 配列で渡された引数と一緒に呼び出すということになります。</p>
+
+<p>Objective-C プラグインメソッドの <code>options</code> パラメーターは非推奨であり、使われるべきではありません。レガシー的な理由で、 <code>args</code> 配列の最後の JavaScript オブジェクト要素は、 Objective-C 側メソッドの <code>options</code> 辞書に渡されます。どんな JavaScript オブジェクトでも <code>args</code> 配列の最後の要素として渡されるべきであり、もし配列の途中の要素に JavaScript オブジェクトがあると、それ以降の Objective-C 側の配列のインデックスがでたらめになることに十分注意してください。 options 辞書はただ1つの JavaScript オブジェクトのみをサポートしており、また配列の一番最後の要素のみネイティブメソッドに渡されます。このようにエラーを起こしやすいので、 <code>options</code> は非推奨となっています。</p>
+
+<p>このプラグインは、 Cordova-iOS アプリケーションのプロジェクトフォルダーの中の <code>Cordova.plist</code> ファイルの <code>Plugins</code> キー (辞書) に追加される必要があります。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;key&gt;service_name&lt;/key&gt;
+&lt;string&gt;PluginClassName&lt;/string&gt;
+</code></pre></div>
+<p><code>service_name</code> のキーは JavaScript の <code>exec</code> の中で使用しているものと一致している必要があり、値はプラグインの Objective-C クラスの名前になります。これがないと、プラグインはコンパイルされますが、 Cordova からアクセスできない状態となります。</p>
+
+<h2>iOS Cordova Plugin の作成</h2>
+
+<p>私たちはプラグインリクエストをネイティブ側に送る JavaScript を作成しました。また、正しく <code>Cordova.plist</code> ファイルでマッピングされた iOS Objective-C プラグインもあります。では、最終的に iOS Objective-C プラグインのクラスがどのようになるのか見ていきましょう。</p>
+
+<p>JavaScript の <code>exec</code> 関数によってプラグインに割り当てられたものは、プラグインクラスの対応する <code>action</code> メソッドに渡されます。大半のメソッドの実装は以下のようになります:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">- (void) myMethod:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options
+{
+    NSString* callbackId = [arguments objectAtIndex:0];
+
+    CDVPluginResult* pluginResult = nil;
+    NSString* javaScript = nil;
+
+    @try {
+        NSString* myarg = [arguments objectAtIndex:1];
+
+        if (myarg != nil) {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+            javaScript = [pluginResult toSuccessCallbackString:callbackId];
+        } 
+    } @catch (id exception) {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_JSON_EXCEPTION messageAsString:[exception reason]];
+        javaScript = [pluginResult toErrorCallbackString:callbackId];
+    }
+
+    [self writeJavascript:javaScript];
+}
+</code></pre></div>
+<h3>iOS プラグインの Echo プラグイン</h3>
+
+<p><code>Cordova.plist</code> ファイルの <code>Plugins</code> キー (辞書) に以下を追加します:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;key&gt;Echo&lt;/key&gt;
+&lt;string&gt;Echo&lt;/string&gt;
+</code></pre></div>
+<p>次のファイル (<code>Echo.h</code> と <code>Echo.m</code>) を Cordova-iOS アプリケーションフォルダーの中の
+プラグインフォルダーに追加します:</p>
+<div class="highlight"><pre><code class="language-" data-lang=""><span class="cm">/********* Echo.h Cordova Plugin Header *******/</span>
+
+<span class="cp">#import &lt;Cordova/CDVPlugin.h&gt;
+</span>
+<span class="k">@interface</span> <span class="nc">Echo</span> <span class="p">:</span> <span class="nc">CDVPlugin</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">echo</span><span class="p">:(</span><span class="n">NSMutableArray</span><span class="o">*</span><span class="p">)</span><span class="nv">arguments</span> <span class="nf">withDict</span><span class="p">:(</span><span class="n">NSMutableDictionary</span><span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span>
+
+<span class="k">@end</span>
+
+<span class="cm">/********* Echo.m Cordova Plugin Implementation *******/</span>
+
+<span class="cp">#import "Echo.h"
+#import &lt;Cordova/CDVPluginResult.h&gt;
+</span>
+<span class="k">@implementation</span> <span class="nc">Echo</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">echo</span><span class="p">:(</span><span class="n">NSMutableArray</span><span class="o">*</span><span class="p">)</span><span class="nv">arguments</span> <span class="nf">withDict</span><span class="p">:(</span><span class="n">NSMutableDictionary</span><span class="o">*</span><span class="p">)</span><span class="nv">options</span>
+<span class="p">{</span>
+    <span class="n">NSString</span><span class="o">*</span> <span class="n">callbackId</span> <span class="o">=</span> <span class="p">[</span><span class="n">arguments</span> <span class="nf">objectAtIndex</span><span class="p">:</span><span class="mi">0</span><span class="p">];</span>
+
+    <span class="n">CDVPluginResult</span><span class="o">*</span> <span class="n">pluginResult</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+    <span class="n">NSString</span><span class="o">*</span> <span class="n">javaScript</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+
+    <span class="k">@try</span> <span class="p">{</span>
+        <span class="n">NSString</span><span class="o">*</span> <span class="n">echo</span> <span class="o">=</span> <span class="p">[</span><span class="n">arguments</span> <span class="nf">objectAtIndex</span><span class="p">:</span><span class="mi">1</span><span class="p">];</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">echo</span> <span class="o">!=</span> <span class="nb">nil</span> <span class="o">&amp;&amp;</span> <span class="p">[</span><span class="n">echo</span> <span class="nf">length</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">pluginResult</span> <span class="o">=</span> <span class="p">[</span><span class="n">CDVPluginResult</span> <span class="nf">resultWithStatus</span><span class="p">:</span><span class="n">CDVCommandStatus_OK</span> <span class="nf">messageAsString</span><span class="p">:</span><span class="n">echo</span><span class="p">];</span>
+            <span class="n">javaScript</span> <span class="o">=</span> <span class="p">[</span><span class="n">pluginResult</span> <span class="nf">toSuccessCallbackString</span><span class="p">:</span><span class="n">callbackId</span><span class="p">];</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">pluginResult</span> <span class="o">=</span> <span class="p">[</span><span class="n">CDVPluginResult</span> <span class="nf">resultWithStatus</span><span class="p">:</span><span class="n">CDVCommandStatus_ERROR</span><span class="p">];</span>
+            <span class="n">javaScript</span> <span class="o">=</span> <span class="p">[</span><span class="n">pluginResult</span> <span class="nf">toErrorCallbackString</span><span class="p">:</span><span class="n">callbackId</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">@catch</span> <span class="p">(</span><span class="n">NSException</span><span class="o">*</span> <span class="n">exception</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">pluginResult</span> <span class="o">=</span> <span class="p">[</span><span class="n">CDVPluginResult</span> <span class="nf">resultWithStatus</span><span class="p">:</span><span class="n">CDVCommandStatus_JSON_EXCEPTION</span> <span class="nf">messageAsString</span><span class="p">:[</span><span class="n">exception</span> <span class="nf">reason</span><span class="p">]];</span>
+        <span class="n">javaScript</span> <span class="o">=</span> <span class="p">[</span><span class="n">pluginResult</span> <span class="nf">toErrorCallbackString</span><span class="p">:</span><span class="n">callbackId</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="p">[</span><span class="n">self</span> <span class="nf">writeJavascript</span><span class="p">:</span><span class="n">javaScript</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="k">@end</span>
+</code></pre></div>
+<p>コードを見ていきましょう。一番上には、必要なすべての Cordova に関する import 文が並んでいます。クラスは <code>CDVPlugin</code> を継承しています - これはとても重要です。</p>
+
+<p>このプラグインは1つのアクション <code>echo</code> のみをサポートしています。最初に、引数配列の0番目の要素である <code>callbackId</code> パラメーターを取得します。次に、 <code>objectAtIndex</code> メソッドを使って、引数配列の1番目の要素である echo 用文字列を取得します。ここで、少しパラメーターに対してチェックを行います: <code>nil</code> チェックや文字列の長さが0でないかどうかなどです。</p>
+
+<p>もしそうであった場合は、ステータスが <code>ERROR</code> の <code>PluginResult</code> を返します。もしこれらのチェックをパスしたら、ステータスが <code>OK</code> の <code>PluginResult</code> を返し、パラメーターとして受け取った <code>echo</code> 文字列を渡します。そして、もし正常な場合は <code>toSuccessCallbackString</code> メソッド、エラーの場合は <code>toErrorCallbackString</code> メソッドを呼びだして <code>PluginResult</code> を JavaScript に変換します。</p>
+
+<p>最後に、 JavaScript 側で成功またはエラーコールバック関数を実行するような JavaScript を書き出します。もし成功コールバックが呼ばれた場合は、 <code>echo</code> パラメーターをパラメーターとして渡します。</p>
+
+<h2>一歩進んだプラグインの機能</h2>
+
+<p>他にも、オーバーライド出来るメソッドについては以下を参照してください:</p>
+
+<ol>
+<li><a href="https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h">CDVPlugin.h</a></li>
+<li><a href="https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m">CDVPlugin.m</a></li>
+</ol>
+
+<p>例えば、 pausa, <a href="../../../cordova/events/events.resume.html">resume</a>, app terminate, handleOpenURL events といったような機能を実装できます。</p>
+
+<h2>プラグインのデバッグ</h2>
+
+<p>Objective-C 側でデバッグするには、 Xcode のビルトインのデバッガーを使用します。 JavaScript 側では、 <a href="https://github.com/apache/cordova-weinre">Apache Cordova Project の Weinre</a> または <a href="http://www.iwebinspector.com/">サードパーティ製の iWebInspector</a> を使用できます。</p>
+
+<h2>よくある落とし穴</h2>
+
+<ul>
+<li>Cordova.plist にプラグインマッピングを追加することを忘れないでください - もし忘れている場合は、 Xcode のコンソールログにエラーが表示されます</li>
+<li>接続するすべてのホストを <a href="guide_whitelist_index.md.html#Domain%20Whitelist%20Guide">ホワイトリスト</a> に追加することを忘れないで下さい - もし忘れている場合は、 Xcode のコンソールログにエラーが表示されます</li>
+<li><p>もしアプリが復帰する際にイベント処理をしていて、イベント復帰時にアラートといったようなネイティブ関数を実行すると、アプリケーションが停止してしまいます。安全のため、 JavaScript 呼び出しをタイムアウト値0の setTimeout でラップしてください:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">setTimeout(function() {
+    // 任意のコード
+}, 0);
+</code></pre></div></li>
+</ul>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  2.0.0", "language: ja"] }
+    });
+</script>
+
+</body>
+</html>

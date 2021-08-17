@@ -1,0 +1,2654 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Plugin Specification - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/it/latest/plugin_ref/spec.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '9.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/platforms/blackberry10/home.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/platforms/osx/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/platforms/ubuntu/index.html">
+                Ubuntu
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/platforms/win8/index.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/platforms/wp8/home.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/appdev/whitelist/index.html">
+                Whitelisting
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/platforms/blackberry10/plugin.html">
+                Blackberry 10
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/platforms/win8/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/platforms/wp8/plugin.html">
+                WP8
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-cli/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="this-page" href="/docs/it/9.x/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+                <span class="entry-highlight"></span>
+            
+        
+
+        
+        <div id="page-toc" class="page-toc"></div>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-battery-status/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-camera/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-console/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-contacts/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-device/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-device-motion/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-device-orientation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-dialogs/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-file/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-file-transfer/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-geolocation/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-globalization/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-inappbrowser/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-media/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-media-capture/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-network-information/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-splashscreen/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-vibration/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-statusbar/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/it/9.x/reference/cordova-plugin-legacy-whitelist/index.html">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Sommario
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/platforms/blackberry10/home.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/platforms/osx/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/platforms/ubuntu/index.html">
+        Ubuntu
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/platforms/win8/index.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/platforms/wp8/home.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/appdev/whitelist/index.html">
+        Whitelisting
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/platforms/blackberry10/plugin.html">
+        Blackberry 10
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/platforms/win8/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/platforms/wp8/plugin.html">
+        WP8
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-cli/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="this-page" href="/docs/it/9.x/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-battery-status/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-camera/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-console/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-contacts/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-device/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-device-motion/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-device-orientation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-dialogs/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-file/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-file-transfer/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-geolocation/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-globalization/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-inappbrowser/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-media/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-media-capture/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-network-information/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-splashscreen/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-vibration/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-statusbar/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/it/9.x/reference/cordova-plugin-legacy-whitelist/index.html">
+        
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/it/9.x/plugin_ref/spec.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Italiano
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/9.x/plugin_ref/spec.html" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/9.x/plugin_ref/spec.html" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/9.x/plugin_ref/spec.html" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/9.x/plugin_ref/spec.html" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/9.x/plugin_ref/spec.html" class="">
+                                
+                                    <span class="selected">
+                                        Italiano
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/9.x/plugin_ref/spec.html" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/9.x/plugin_ref/spec.html" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/9.x/plugin_ref/spec.html" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/9.x/plugin_ref/spec.html" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/9.x/plugin_ref/spec.html" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/9.x/plugin_ref/spec.html" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/9.x/plugin_ref/spec.html" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        9.x
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/dev/plugin_ref/spec.html" class="">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/latest/plugin_ref/spec.html" class="">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/9.x/plugin_ref/spec.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                9.x
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/8.x/plugin_ref/spec.html" class="">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/7.x/plugin_ref/spec.html" class="">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/6.x/plugin_ref/spec.html" class="">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/5.4.0/plugin_ref/spec.html" class="">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/3.5.0/plugin_ref/spec.html" class="">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/3.4.0/plugin_ref/spec.html" class="">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/it/3.1.0/plugin_ref/spec.html" class="">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    Questa non è la versione più recente della documentazione!
+                    <a href="/docs/it/latest/plugin_ref/spec.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Plugin Specification</h1>
+
+<p>La <code>plugin.xml</code> file è un documento XML nella <code>plugins</code> dello spazio dei nomi: <code>http://apache.org/cordova/ns/plugins/1.0</code> . Esso contiene un primo livello <code>plugin</code> elemento che definisce il plugin e bambini che definiscono la struttura del plugin.</p>
+
+<p>Un elemento di plugin di esempio:</p>
+<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;plugin</span> <span class="na">xmlns=</span><span class="s">"http://apache.org/cordova/ns/plugins/1.0"</span>
+    <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+    <span class="na">id=</span><span class="s">"com.alunny.foo"</span>
+    <span class="na">version=</span><span class="s">"1.0.2"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<h2><em>plugin</em> Elemento</h2>
+
+<p>Il <code>plugin</code> elemento è l&#39;elemento di primo livello del manifesto plugin. Esso presenta i seguenti attributi:</p>
+
+<ul>
+<li><p><code>xmlns</code>(obbligatorio): lo spazio dei nomi di plugin, <code>http://apache.org/cordova/ns/plugins/1.0</code> . Se il documento contiene XML da altri spazi dei nomi, ad esempio tag aggiunta alla <code>AndroidManifest.xml</code> file, tali spazi dei nomi devono essere compresi nell&#39;elemento di primo livello.</p></li>
+<li><p><code>id</code>(obbligatorio): un dominio inverso di stile come identificatore per il plugin,<code>com.alunny.foo</code></p></li>
+<li><p><code>version</code>(obbligatorio): un numero di versione per il plugin, che corrisponde all&#39;espressione regolare seguente di stile maggiore-minore-patch:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">^\d+[.]\d+[.]\d+$
+</code></pre></div></li>
+</ul>
+
+<h2>Elementi <em>motori</em> e <em>motore</em></h2>
+
+<p>Gli elementi figlio del <code>&lt;engines&gt;</code> elemento specificare le versioni di framework basato su Apache Cordova che supporta questo plugin. Un esempio:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;engines&gt;
+    &lt;engine name="cordova" version="1.7.0" /&gt;
+    &lt;engine name="cordova" version="1.8.1" /&gt;
+    &lt;engine name="worklight" version="1.0.0" platform="android" scriptSrc="worklight_version"/&gt;
+&lt;/engines&gt;
+</code></pre></div>
+<p>Simile al <code>&lt;plugin&gt;</code> dell&#39;elemento <code>version</code> attributo, la stringa di versione specificato deve corrispondere una stringa maggiore-minore-patch conforme all&#39;espressione regolare:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">    ^\d+[.]\d+[.]\d+$
+</code></pre></div>
+<p>Elementi del motore possono inoltre specificare fuzzy partite per evitare la ripetizione e ridurre la manutenzione quando viene aggiornata la piattaforma sottostante. Strumenti dovrebbero sostenere un minimo di <code>&gt;</code> , <code>&gt;=</code> , <code>&lt;</code> e <code>&lt;=</code> , per esempio:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;engines&gt;
+    &lt;engine name="cordova" version="&gt;=1.7.0" /&gt;
+    &lt;engine name="cordova" version="&lt;1.8.1" /&gt;
+&lt;/engines&gt;
+</code></pre></div>
+<p>Il <code>&lt;engine&gt;</code> tag ha anche il supporto predefinito per tutte le principali piattaforme Cordova esiste. Specificando il <code>cordova</code> tag motore significa che tutte le versioni di Cordova su qualsiasi piattaforma devono soddisfare l&#39;attributo di versione del motore. Si possono elencare anche specifiche piattaforme e le versioni al fine di eseguire l&#39;override del catch-all <code>cordova</code> motore:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;engines&gt;
+    &lt;engine name="cordova" version="&gt;=1.7.0" /&gt;
+    &lt;engine name="cordova-android" version="&gt;=1.8.0" /&gt;
+    &lt;engine name="cordova-ios" version="&gt;=1.7.1" /&gt;
+&lt;/engines&gt;
+</code></pre></div>
+<p>Ecco un elenco di default motori che il <code>&lt;engine&gt;</code> tag supporta:</p>
+
+<ul>
+<li>  <code>cordova</code></li>
+<li>  <code>cordova-plugman</code></li>
+<li>  <code>cordova-amazon-fireos</code></li>
+<li>  <code>cordova-android</code></li>
+<li>  <code>cordova-ios</code></li>
+<li>  <code>cordova-blackberry10</code></li>
+<li>  <code>cordova-wp8</code></li>
+<li>  <code>cordova-windows8</code></li>
+<li>  <code>android-sdk</code> // returns the highest Android api level installed</li>
+<li>  <code>apple-xcode</code> // returns the xcode version </li>
+<li>  <code>apple-ios</code> // returns the highest iOS version installed</li>
+<li>  <code>apple-osx</code> // returns the OSX version</li>
+<li>  <code>blackberry-ndk</code> // returns the native blackberry SDK version</li>
+</ul>
+
+<p>Specifica quadri personalizzati basati su Apache Cordova dovrebbero essere elencati sotto l&#39;etichetta del motore in questo modo:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;engines&gt;
+    &lt;engine name="my_custom_framework" version="1.0.0" platform="android" scriptSrc="path_to_my_custom_framework_version"/&gt;
+    &lt;engine name="another_framework" version="&gt;0.2.0" platform="ios|android" scriptSrc="path_to_another_framework_version"/&gt;
+    &lt;engine name="even_more_framework" version="&gt;=2.2.0" platform="*" scriptSrc="path_to_even_more_framework_version"/&gt;
+&lt;/engines&gt;
+</code></pre></div>
+<p>Un quadro personalizzato basato su Apache Cordova richiede che un elemento motore include i seguenti attributi: <code>name</code> , <code>version</code> , <code>scriptSrc</code> , e<code>platform</code>.</p>
+
+<ul>
+<li><p><code>name</code>(obbligatorio): un nome leggibile per il tuo quadro personalizzato.</p></li>
+<li><p><code>version</code>(richiesto): la versione che il quadro deve avere per poter installare.</p></li>
+<li><p><code>scriptSrc</code>(obbligatorio): il file di script che dice plugman è quale versione di framework personalizzati. Idealmente, questo file deve essere all&#39;interno della directory di livello superiore della directory dei plugin.</p></li>
+<li><p><code>platform</code>(obbligatorio): quali piattaforme che supporta il framework. È possibile utilizzare il carattere jolly <code>*</code> per dire supportati per tutte le piattaforme, specificare più con un carattere di pipe come <code>android|ios|blackberry10</code> o solo una singola piattaforma come<code>android</code>.</p></li>
+</ul>
+
+<p>plugman viene interrotta con un codice diverso da zero per qualsiasi plugin il cui progetto di destinazione non soddisfa i vincoli del motore.</p>
+
+<p>Se non <code>&lt;engine&gt;</code> i tag sono specificati, plugman tenta di installare nella directory del progetto specificato cordova ciecamente.</p>
+
+<h2><em>nome</em> Elemento</h2>
+
+<p>Un nome leggibile per il plugin, il cui contenuto di testo contiene il nome del plugin. Ad esempio:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;name&gt;Foo&lt;/name&gt;
+</code></pre></div>
+<p>Questo elemento non (ancora) gestire la localizzazione.</p>
+
+<h2><em>Descrizione</em> Elemento</h2>
+
+<p>Una descrizione leggibile per il plugin. Il contenuto di testo dell&#39;elemento contiene la descrizione del plugin. Un esempio:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;description&gt;Foo plugin description&lt;/description&gt;
+</code></pre></div>
+<p>Questo elemento non (ancora) gestire la localizzazione.</p>
+
+<h2><em>autore</em> Elemento</h2>
+
+<p>Nome autore del plugin. Il contenuto di testo dell&#39;elemento contiene il nome dell&#39;autore plugin. Un esempio:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;author&gt;Foo plugin description&lt;/author&gt;
+</code></pre></div>
+<h2><em>Parole chiavi</em> Elemento</h2>
+
+<p>Parole chiave del plugin. Il contenuto di testo dell&#39;elemento contiene Parole chiavi separate da virgole per descrivere il plugin. Un esempio:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;keywords&gt;foo,bar&lt;/keywords&gt;
+</code></pre></div>
+<h2><em>licenza</em> Elemento</h2>
+
+<p>Licenza di plugin. Il contenuto di testo dell&#39;elemento contiene la licenza di plugin. Un esempio:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;license&gt;Apache 2.0 License&lt;/license&gt;
+</code></pre></div>
+<h2><em>Asset</em> Elemento</h2>
+
+<p>Uno o più elementi che elenca i file o le directory da copiare in un&#39;app di Cordova <code>www</code> directory. Esempi:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;!-- a single file, to be copied in the root directory --&gt;
+&lt;asset src="www/foo.js" target="foo.js" /&gt;
+&lt;!-- a directory, also to be copied in the root directory --&gt;
+&lt;asset src="www/foo" target="foo" /&gt;
+</code></pre></div>
+<p>Tutti i <code>&lt;asset&gt;</code> tag richiedono entrambi <code>src</code> e <code>target</code> gli attributi. Solo Web plugin contiene principalmente <code>&lt;asset&gt;</code> elementi. Qualsiasi <code>&lt;asset&gt;</code> elementi annidati all&#39;interno di <code>&lt;platform&gt;</code> elementi specificano risorse specifiche della piattaforma web, come descritto di seguito. Attributi includono:</p>
+
+<ul>
+<li><p><code>src</code>(obbligatorio): dove si trova il file o la directory nel pacchetto di plugin, relativo alla <code>plugin.xml</code> documento. Se un file non esiste a specificato <code>src</code> posizione, plugman si ferma e inverte il processo di installazione, invia una notifica sul conflitto e termina con un codice diverso da zero.</p></li>
+<li><p><code>target</code> (required):</p>
+
+<p>Dove il file o la directory deve trovarsi nell&#39;app di Cordova, relativo al <code>www</code> directory. Beni possono essere mirati alle sottodirectory, ad esempio:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;asset src="www/new-foo.js" target="js/experimental/foo.js" /&gt;
+</code></pre></div>
+<p>Crea il <code>js/experimental</code> directory all&#39;interno il <code>www</code> directory, a meno che non già presente, quindi copie il <code>new-foo.js</code> il file e rinominarlo <code>foo.js</code> . Se un file esiste già nella posizione di destinazione, plugman si ferma e inverte il processo di installazione, invia una notifica sul conflitto ed esce con un codice diverso da zero.</p></li>
+</ul>
+
+<h2><em>JS-modulo</em> Elemento</h2>
+
+<p>La maggior parte dei plugin includono uno o più file JavaScript. Ogni <code>&lt;js-module&gt;</code> tag corrisponde a un file JavaScript e impedisce agli utenti del plugin di dover aggiungere un <code>&lt;script&gt;</code> tag per ogni file. Mentre <code>&lt;asset&gt;</code> tag semplicemente copiare un file dalla sottodirectory plugin in <code>www</code> , <code>&lt;js-module&gt;</code> tag sono molto più sofisticati. Hanno questo aspetto:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;js-module src="socket.js" name="Socket"&gt;
+    &lt;clobbers target="chrome.socket" /&gt;
+&lt;/js-module&gt;
+</code></pre></div>
+<p>Quando si installa un plugin con l&#39;esempio precedente, <code>socket.js</code> viene copiato in <code>www/plugins/my.plugin.id/socket.js</code> e aggiunto come voce per <code>www/cordova_plugins.js</code> . Al momento del caricamento, codice delle <code>cordova.js</code> utilizza XHR per leggere ogni file e iniettare un <code>&lt;script&gt;</code> tag in HTML. Aggiunge un mapping per clobber o unire più appropriata, come descritto di seguito.</p>
+
+<p><em>Non</em> avvolgere i file con <code>cordova.define</code> , come viene aggiunto automaticamente. Il modulo è avvolta da una chiusura, con <code>module</code> , <code>exports</code> , e <code>require</code> in ambito, come è normale per i moduli AMD.</p>
+
+<p>I dettagli per il <code>&lt;js-module&gt;</code> tag:</p>
+
+<ul>
+<li><p>Il <code>src</code> fa riferimento a un file nella directory dei plugin relativi alla <code>plugin.xml</code> file.</p></li>
+<li><p>Il <code>name</code> fornisce l&#39;ultima parte del nome del modulo. Generalmente può essere quello che vuoi, e conta solo se si desidera utilizzare <code>cordova.require</code> per importare altre parti del vostro plugin nel codice JavaScript. Il nome del modulo per un <code>&lt;js-module&gt;</code> è il vostro plugin <code>id</code> seguito dal valore di <code>name</code> . Per l&#39;esempio precedente, con un <code>id</code> di <code>chrome.socket</code> , il nome del modulo è<code>chrome.socket.Socket</code>.</p></li>
+<li><p>Tre tag sono consentiti all&#39;interno di <code>&lt;js-module&gt;</code> :</p>
+
+<ul>
+<li>  <code>&lt;clobbers target=&quot;some.value&quot;/&gt;</code>indica che il <code>module.exports</code> viene inserito il <code>window</code> oggetto come <code>window.some.value</code> . Si può avere come molti <code>&lt;clobbers&gt;</code> come ti piace. Qualsiasi oggetto non disponibile su <code>window</code> viene creato.</li>
+<li>  <code>&lt;merges target=&quot;some.value&quot;/&gt;</code>indica che il modulo dovrebbe essere unito con qualsiasi valore esistente presso <code>window.some.value</code> . Se esiste già un tasto qualsiasi, versione del modulo sostituisce l&#39;originale. Si può avere come molti <code>&lt;merges&gt;</code> come ti piace. Qualsiasi oggetto non disponibile su <code>window</code> viene creato.</li>
+<li>  <code>&lt;runs/&gt;</code>significa che il codice deve essere specificato con <code>cordova.require</code> , ma non installato il <code>window</code> oggetto. Questo è utile durante l&#39;inizializzazione del modulo, associare gestori eventi o altrimenti. Si può avere solo fino a uno <code>&lt;runs/&gt;</code> tag. Si noti che, tra cui un <code>&lt;runs/&gt;</code> con <code>&lt;clobbers/&gt;</code> o <code>&lt;merges/&gt;</code> è ridondante, dato che anche <code>cordova.require</code> il tuo modulo.</li>
+<li>  Un vuoto <code>&lt;js-module&gt;</code> ancora carica e può essere letta in altri moduli<code>cordova.require</code>.</li>
+</ul></li>
+</ul>
+
+<p>Se <code>src</code> non si risolve in un file esistente, plugman si ferma e inverte l&#39;installazione, invia una notifica del problema ed esce con un codice diverso da zero.</p>
+
+<p>Nidificazione di <code>&lt;js-module&gt;</code> elementi all&#39;interno di <code>&lt;platform&gt;</code> dichiara le specifiche della piattaforma JavaScript modulo associazioni.</p>
+
+<h2><em>dipendenza</em> Elemento</h2>
+
+<p>Il <code>&lt;dependency&gt;</code> tag consente di specificare altri plugin da cui dipende l&#39;attuale plugin. Mentre le versioni future li avrà accesso dai repository dei plugin, a breve termine plugin direttamente fanno riferimento come URL di <code>&lt;dependency&gt;</code> tag. Sono formattati come segue:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" /&gt;
+</code></pre></div>
+<ul>
+<li><p><code>id</code>: fornisce l&#39;ID del plugin. Dovrebbe essere univoco globale ed espresse in stile retro-dominio. Mentre nessuna di queste restrizioni è attualmente applicata, possono essere in futuro.</p></li>
+<li><p><code>url</code>: Un URL per il plugin. Questo dovrebbe fare riferimento a un repository git, quali plugman tenta di clonare.</p></li>
+<li><p><code>commit</code>: Si tratta di qualsiasi riferimento di git compreso da <code>git checkout</code> : un nome del ramo o tag (ad es., <code>master</code> , <code>0.3.1</code> ), o un commit hash (ad es.,<code>975ddb228af811dd8bb37ed1dfd092a3d05295f9</code>).</p></li>
+<li><p><code>subdir</code>: Specifica che il plugin mirate dipendenza esiste come una sottodirectory del repository git. Questo è utile perché permette al repository di contenere diversi plugin correlati, ciascuno individualmente specificati.</p></li>
+</ul>
+
+<p>In futuro, saranno introdotto vincoli versione e un repository dei plugin esisterà per supportare il recupero di nome anziché gli URL espliciti.</p>
+
+<h3>Percorsi di dipendenza relativa</h3>
+
+<p>Se si imposta la <code>url</code> di un <code>&lt;dependency&gt;</code> tag per <code>&quot;.&quot;</code> e fornire una <code>subdir</code> , è installato il plugin dipendente dallo stesso locale o remoto git repository come il plugin di padre che specifica il <code>&lt;dependency&gt;</code> tag.</p>
+
+<p>Si noti che la <code>subdir</code> sempre specifica un percorso relativo alla <em>radice</em> del repository git, non il padre di plugin. Questo è vero anche se è stato installato il plugin con un percorso locale direttamente ad esso. Plugman trova la radice del repository git e poi trova l&#39;altro plugin da lì.</p>
+
+<h2><em>piattaforma</em> Elemento</h2>
+
+<p>Il <code>&lt;platform&gt;</code> etichetta identifica le piattaforme che hanno associato il codice nativo o richiedono modifiche ai loro file di configurazione. Strumenti utilizzando questa specifica possono identificare piattaforme supportate e installare il codice nei progetti di Cordova.</p>
+
+<p>Plugin senza <code>&lt;platform&gt;</code> tag sono presupposte per essere solo JavaScript e quindi installabile su tutte le piattaforme.</p>
+
+<p>Un tag di piattaforma del campione:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;platform name="android"&gt;
+    &lt;!-- android-specific elements --&gt;
+&lt;/platform&gt;
+&lt;platform name="ios"&gt;
+    &lt;!-- ios-specific elements --&gt;
+&lt;/platform&gt;
+</code></pre></div>
+<p>La richiesta <code>name</code> attributo identifica una piattaforma, come sostenuto, associando i bambini dell&#39;elemento con quella piattaforma.</p>
+
+<p>Nomi di piattaforma dovrebbero essere minuscoli. Nomi di piattaforma, come arbitrariamente scelti, sono elencati:</p>
+
+<ul>
+<li>  Amazon-fireos</li>
+<li>  Android</li>
+<li>  BlackBerry 10</li>
+<li>  iOS</li>
+<li>  wp8</li>
+<li>  windows8</li>
+</ul>
+
+<h2><em>file di origine</em> Elemento</h2>
+
+<p>Il <code>&lt;source-file&gt;</code> elemento identifica il codice eseguibile sorgente che deve essere installato in un progetto. Esempi:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;!-- android --&gt;
+&lt;source-file src="src/android/Foo.java"
+                target-dir="src/com/alunny/foo" /&gt;
+&lt;!-- ios --&gt;
+&lt;source-file src="src/ios/CDVFoo.m" /&gt;
+&lt;source-file src="src/ios/someLib.a" framework="true" /&gt;
+&lt;source-file src="src/ios/someLib.a" compiler-flags="-fno-objc-arc" /&gt;
+</code></pre></div>
+<p>Esso supporta i seguenti attributi:</p>
+
+<ul>
+<li><p><code>src</code>(obbligatorio): percorso del file relativo a <code>plugin.xml</code> . Se il <code>src</code> Impossibile trovare il file, plugman si ferma e inverte l&#39;installazione, invia una notifica sul problema e si chiude con un codice diverso da zero.</p></li>
+<li><p><code>target-dir</code>: Una directory in cui devono essere copiati i file, relativo alla radice del progetto Cordova. In pratica, questo è più importante per piattaforme basate su Java, dove un file nella <code>com.alunny.foo</code> pacchetto deve essere situato il <code>com/alunny/foo</code> directory. Per le piattaforme dove la directory di origine non è importante, questo attributo deve essere omesso.</p>
+
+<p>Come con i beni, se il <code>target</code> di un <code>source-file</code> sarebbe sovrascrivere un file esistente, plugman si ferma e inverte l&#39;installazione, invia una notifica sul problema e si chiude con un codice diverso da zero.</p></li>
+<li><p><code>framework</code>(solo iOS): se impostato su <code>true</code> , inoltre aggiunge il file specificato come un quadro di riferimento al progetto.</p></li>
+<li><p><code>compiler-flags</code>(solo iOS): se impostato, assegna i flag del compilatore specificato per il file di origine specifico.</p></li>
+</ul>
+
+<h2><em>config-file</em> Elemento</h2>
+
+<p>Identifica un file di configurazione basata su XML per essere modificata, dove in quel documento la modifica dovrebbe avvenire, e ciò che deve essere modificata.</p>
+
+<p>Due tipi di file che sono stati testati per la modifica con questo elemento sono <code>xml</code> e <code>plist</code> file.</p>
+
+<p>Il <code>config-file</code> elemento consente solo di aggiungere nuovi bambini a un albero del documento XML. I bambini sono valori letterali XML per essere inserito nel documento di destinazione.</p>
+
+<p>Esempio di XML:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;config-file target="AndroidManifest.xml" parent="/manifest/application"&gt;
+    &lt;activity android:name="com.foo.Foo" android:label="@string/app_name"&gt;
+        &lt;intent-filter&gt;
+        &lt;/intent-filter&gt;
+    &lt;/activity&gt;
+&lt;/config-file&gt;
+</code></pre></div>
+<p>Esempio per <code>plist</code> :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;config-file target="*-Info.plist" parent="CFBundleURLTypes"&gt;
+    &lt;array&gt;
+        &lt;dict&gt;
+            &lt;key&gt;PackageName&lt;/key&gt;
+            &lt;string&gt;$PACKAGE_NAME&lt;/string&gt;
+        &lt;/dict&gt;
+    &lt;/array&gt;
+&lt;/config-file&gt;
+</code></pre></div>
+<p>Esso supporta i seguenti attributi:</p>
+
+<ul>
+<li><p><code>target</code>:</p>
+
+<p>Il file deve essere modificato e il percorso relativo alla radice del progetto Cordova.</p>
+
+<p>La destinazione può includere caratteri jolly ( <code>*</code> ) elementi. In questo caso, in modo ricorsivo plugman cerca attraverso la struttura di directory del progetto e utilizza la prima partita.</p>
+
+<p>Su iOS, il percorso dei file di configurazione relativo alla radice della directory del progetto non è noto, quindi specificando una destinazione <code>config.xml</code> si risolve in<code>cordova-ios-project/MyAppName/config.xml</code>.</p>
+
+<p>Se il file specificato non esiste, lo strumento ignora il cambiamento di configurazione e continua l&#39;installazione.</p></li>
+<li><p><code>parent</code>: Un selettore XPath che fa riferimento il padre degli elementi da aggiungere al file di configurazione. Se si utilizzano selettori assolute, è possibile utilizzare un carattere jolly ( <code>*</code> ) per specificare l&#39;elemento radice, ad esempio,<code>/*/plugins</code>.</p>
+
+<p>Per <code>plist</code> file, il <code>parent</code> determina quale chiave padre XML specificato deve essere inserito.</p>
+
+<p>Se il selettore non si risolve in un bambino del documento specificato, il tool si ferma ed inverte il processo di installazione, genera un avviso ed esce con un codice diverso da zero.</p></li>
+<li><p><code>after</code>: Un elenco prioritario dei fratelli accettati dopo di che aggiungere il frammento XML. Utile per specificare le modifiche nei file che richiedono ordine rigido di elementi XML come <a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement">http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement</a></p></li>
+</ul>
+
+<p>La piattaforma Windows supporta due attributi aggiuntivi (entrambi optional) quando colpisce il meta-nome <code>package.appxmanifest</code>:</p>
+
+<p>Il <code>device-target</code> attributo indica che il deve essere incluso solo quando la costruzione per il tipo di periferica di destinazione specificata. Valori supportati sono <code>win</code>, <code>phone</code>o <code>all</code>.</p>
+
+<p>L&#39;attributo <code>versions</code> indica che manifesti di app per versioni specifiche di Windows dovrebbero essere modificati solo per le versioni che corrispondono alla stringa di versione specificato. Valore può essere qualsiasi stringa di gamma versione semantico nodo valido.</p>
+
+<p>Esempi di utilizzo di questi attributi specifici di Windows:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="&lt;8.1.0"&gt;
+    &lt;Capability Name="picturesLibrary" /&gt;
+    &lt;DeviceCapability Name="webcam" /&gt;
+&lt;/config-file&gt;
+&lt;config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="&gt;=8.1.0" device-target="phone"&gt;
+    &lt;DeviceCapability Name="webcam" /&gt;
+&lt;/config-file&gt;
+</code></pre></div>
+<p>L&#39;esempio sopra imposterà pre-8.1 piattaforme (Windows 8, in particolare) richiedono la funzionalità del dispositivo di <code>webcam</code> e la capacità generale di <code>picturesLibrary</code> , e applicare la funzionalità del dispositivo <code>webcam</code> solo per progetti Windows 8.1 che costruiamo per Windows Phone. Windows desktop 8.1 sistemi sono non modificati.</p>
+
+<h2><em>plugin-plist</em> Elemento</h2>
+
+<p>Questo è <em>superata</em> in quanto si applica solo a cordova-ios 2.2.0 e sotto. Utilizzare il tag <code>&lt; config-file &gt;</code> versioni più recenti di Cordova.</p>
+
+<p>Esempio:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;config-file target="config.xml" parent="/widget/plugins"&gt;
+    &lt;feature name="ChildBrowser"&gt;
+        &lt;param name="ios-package" value="ChildBrowserCommand"/&gt;
+    &lt;/feature&gt;
+&lt;/config-file&gt;
+</code></pre></div>
+<p>Specifica una chiave e un valore da aggiungere al file <code>AppInfo.plist</code> corretto in un progetto di Cordova iOS. Per esempio:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugins-plist key="Foo" string="CDVFoo" /&gt;
+</code></pre></div>
+<h2>Elementi del <em>file di risorse</em> e <em>file di intestazione</em></h2>
+
+<p>Come file di origine, ma in particolare per piattaforme come iOS che distinguere tra i file di origine, intestazioni e risorse. Esempi di iOS:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;resource-file src="CDVFoo.bundle" /&gt;
+&lt;resource-file src="CDVFooViewController.xib" /&gt;
+&lt;header-file src="CDVFoo.h" /&gt;
+</code></pre></div>
+<p>Esempio di Android:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" /&gt;
+</code></pre></div>
+<h2><em>lib-file</em> Elemento</h2>
+
+<p>Come sorgente, risorse e file di intestazione, ma specificamente per piattaforme come BlackBerry 10 che utilizzare librerie generati dagli utenti. Esempi:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" /&gt;
+&lt;lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" /&gt;
+</code></pre></div>
+<p>Attributi supportati:</p>
+
+<ul>
+<li><p><code>src</code>(obbligatorio): il percorso del file relativo a <code>plugin.xml</code> . Se <code>src</code> non viene trovato, plugman si ferma e inverte l&#39;installazione, problemi un avvertimento circa il problema ed esce con un codice diverso da zero.</p></li>
+<li><p><code>arch</code>: L&#39;architettura per la quale il <code>.so</code> file è stato costruito, o <code>device</code> o<code>simulator</code>.</p></li>
+</ul>
+
+<p>Per la piattaforma Windows, elemento <code>&lt; lib-file &gt;</code> permette l&#39;inserimento di un <code>&lt; SDKReference &gt;</code> nel file di progetto di Windows generati.</p>
+
+<p>Attributi supportati:</p>
+
+<ul>
+<li><p><code>src</code>(obbligatorio): il nome di SDK per includere (che verrà utilizzato come valore del <code>Include</code> attributo di generato <code>&lt;SDKReference&gt;</code> elemento).</p></li>
+<li><p><code>arch</code>: Indica che il <code>&lt;SDKReference&gt;</code> deve essere incluso solo quando si costruisce per l&#39;architettura specificata. Valori supportati sono <code>x86</code> , <code>x64</code> o<code>ARM</code>.</p></li>
+<li><p><code>device-target</code>: Indica che il <code>&lt;SDKReference&gt;</code> deve essere incluso solo durante la compilazione per il tipo di periferica di destinazione specificato. Valori supportati sono <code>win</code> (o <code>windows</code> ), <code>phone</code> o<code>all</code>.</p></li>
+<li><p><code>versions</code>: Indica che il <code>&lt;SDKReference&gt;</code> deve essere incluso solo durante la compilazione per le versioni che corrispondono alla stringa di versione specificata. Valore può essere qualsiasi stringa di intervallo semantico versione nodo valido.</p></li>
+</ul>
+
+<p>Esempi:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" /&gt;
+&lt;lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions="&gt;=8.1" /&gt;
+&lt;lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" /&gt;
+&lt;lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="win" versions="8.0" arch="x86" /&gt;
+</code></pre></div>
+<h2><em>quadro</em> Elemento</h2>
+
+<p>Identifica un quadro (solitamente parte della piattaforma/OS) su cui il plugin dipende.</p>
+
+<p>L&#39;attributo facoltativo <code>custom</code> è un valore booleano che indica se il quadro è quello che è incluso come parte del vostro file di plugin (quindi non è un quadro di sistema).</p>
+
+<h3><em>framework</em> per iOS</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="libsqlite3.dylib" /&gt;
+&lt;framework src="social.framework" weak="true" /&gt;
+&lt;framework src="relative/path/to/my.framework" custom="true" /&gt;
+</code></pre></div>
+<p>L&#39;attributo facoltativo <code>weak</code> è un valore booleano che indica se il quadro dovrebbe essere debolmente collegato. Il valore predefinito è <code>false</code>.</p>
+
+<h3><em>framework</em> per Android</h3>
+
+<p>Su Android (al cordova-android@4.0.0), <em>framework</em> tag vengono utilizzati per includere le dipendenze Maven, o per includere progetti libreria in dotazione.</p>
+
+<p>Esempi:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;!-- Depend on latest version of GCM from play services --&gt;
+&lt;framework src="com.google.android.gms:play-services-gcm:+" /&gt;
+&lt;!-- Depend on v21 of appcompat-v7 support library --&gt;
+&lt;framework src="com.android.support:appcompat-v7:21+" /&gt;
+&lt;!-- Depend on library project included in plugin --&gt;
+&lt;framework src="relative/path/FeedbackLib" custom="true" /&gt;
+</code></pre></div>
+<p><em>framework</em> è utilizzabile anche per avere i file personalizzati .gradle sub-inclusi nel file .gradle del progetto principale:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="relative/path/rules.gradle" custom="true" type="gradleReference" /&gt;
+</code></pre></div>
+<p>Per pre-android@4.0.0 (progetti basati su ANT):</p>
+
+<p>Il <code>type</code> di attributo facoltativo è una stringa che indica il tipo di framework per aggiungere. È supportato attualmente solo <code>projectReference</code> e solo per Windows. Utilizzando <code>custom=&#39;true&#39;</code> e <code>type=&#39;projectReference&#39;</code> verrà aggiunto un riferimento al progetto che verrà aggiunto alla compilazione + link passi del progetto cordova. Questo essenzialmente è l&#39;unico modo attualmente che un framework &#39;personalizzato&#39; possono essere eseguite più architetture come sono costruiti in modo esplicito come una dipendenza di riferimento applicazione di cordova.</p>
+
+<p>Il opzionale <code>parent</code> imposta il percorso relativo alla directory contenente il sotto-progetto a cui aggiungere il riferimento. Il valore predefinito è <code>.</code>, cioè il progetto di applicazione. Permette di aggiungere riferimenti tra sub progetti come in questo esempio:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" /&gt;
+</code></pre></div>
+<h3><em>framework</em> per Windows</h3>
+
+<p>La piattaforma Windows supporta tre attributi aggiuntivi (facoltativi) per perfezionare quando il quadro dovrebbe essere incluso:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/&gt;
+</code></pre></div>
+<p>L&#39;attributo di <code>arch</code> indica che il quadro deve essere incluso solo quando si costruisce per l&#39;architettura specificata. Valori supportati sono <code>x86</code>, <code>x64</code> o <code>ARM</code>.</p>
+
+<p>L&#39;attributo <code>device-target</code> indica che il quadro deve essere incluso solo durante la compilazione per il tipo di periferica di destinazione specificato. Valori supportati sono <code>win</code> (o <code>windows</code>), <code>phone</code> o <code>all</code>.</p>
+
+<p>L&#39;attributo di <code>versions</code> indica che il quadro deve essere incluso solo durante la compilazione per le versioni che corrispondono alla stringa di versione specificata. Valore può essere qualsiasi stringa di intervallo semantico versione nodo valido.</p>
+
+<p>Esempi di utilizzo di questi attributi specifici di Windows:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="src/windows/example.dll" arch="x64" /&gt;
+&lt;framework src="src/windows/example.dll" versions="&gt;=8.0" /&gt;
+&lt;framework src="src/windows/example.vcxproj" type="projectReference" target="win" /&gt;
+&lt;framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" /&gt;
+</code></pre></div>
+<h2><em>info</em> Elemento</h2>
+
+<p>Ulteriori informazioni fornite agli utenti. Ciò è utile quando si richiedono passaggi aggiuntivi che non possono essere facilmente automatizzati o ambito di plugman. Esempi:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;info&gt;
+You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
+
+You need to add the following line to the `local.properties`:
+
+android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+&lt;/info&gt;
+</code></pre></div>
+<h2><em>hook</em> Elemento</h2>
+
+<p>Rappresenta lo script personalizzato che verrà chiamato da Cordova quando certa azione si verifica (ad esempio, viene richiamato dopo plugin viene aggiunto o piattaforma preparare logica). Questo è utile quando è necessario estendere le funzionalità predefinite di Cordova. Per ulteriori informazioni, vedere la <a href="../guide/appdev/hooks/index.html">Guida di ganci</a>.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;hook type="after_plugin_install" src="scripts/afterPluginInstall.js" /&gt;
+</code></pre></div>
+<h2>Variabili</h2>
+
+<p>In alcuni casi, potrebbe essere necessario apportare modifiche alla configurazione dipende l&#39;applicazione di destinazione un plugin. Ad esempio, per iscriversi C2DM su Android, un&#39;app di cui id di pacchetto è <code>com.alunny.message</code> richiederebbe un&#39;autorizzazione quali:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;uses-permission android:name="com.alunny.message.permission.C2D_MESSAGE"/&gt;
+</code></pre></div>
+<p>In tali casi dove il contenuto inserito da <code>plugin</code> . xml file non è noto in anticipo, le variabili possono essere indicate da un segno di dollaro seguito da una serie di lettere maiuscole, cifre o caratteri di sottolineatura. Per l&#39;esempio precedente, il file di <code>plugin.xml</code> includerebbe questo tag:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/&gt;
+</code></pre></div>
+<p>Plugman sostituisce i riferimenti alle variabili con il valore specificato, o una stringa vuota se non viene trovato. Il valore del riferimento variabile può essere rilevato (in questo caso, dal file <code>AndroidManifest. XML</code> ) o specificato dall&#39;utente dello strumento; il processo esatto dipende dal particolare strumento.</p>
+
+<p>Plugman possibile richiedere agli utenti di specificare le variabili necessarie di un plugin. Ad esempio, i tasti per C2M e Google Maps API possono essere specificati come un argomento della riga di comando:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
+</code></pre></div>
+<p>Per rendere obbligatoria la variabile, il tag <code>&lt; platform &gt;</code> deve contenere un tag <code>&lt; preference &gt;</code> . Per esempio:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="API_KEY" /&gt;
+</code></pre></div>
+<p>Plugman controlla che queste preferenze richieste vengono passate. Se così non fosse, si dovrebbe mettere in guardia l&#39;utente come passare la variabile in e uscire con un codice diverso da zero.</p>
+
+<p>Alcuni nomi di variabile dovrebbero essere riservati, come elencato di seguito.</p>
+
+<h2>$PACKAGE_NAME</h2>
+
+<p>L&#39;identificatore univoco di stile retro-dominio per il pacchetto, corrispondente a <code>CFBundleIdentifier</code> su iOS o l&#39;attributo del <code>package</code> dell&#39;elemento di primo livello <code>manifest</code> in un file <code>AndroidManifest. XML</code> .</p>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  9.x", "language: it"] }
+    });
+</script>
+
+</body>
+</html>

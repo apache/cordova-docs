@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce the minor version of Cordova iOS 4.3.0 has been released!This release includes:CocoaPods support in &lt;framework&gt; tags of plugin...">
+
+    <title>
+        
+            
+                Cordova iOS 4.3.0 - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2016/10/24/ios-release.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '10.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Cordova iOS 4.3.0</div>
+        <div class="author">By:
+            
+              <a href="https://twitter.com/shazron">Shazron Abdullah</a>
+            
+        </div>
+        <div class="date">24 Oct 2016</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce the minor version of <code>Cordova iOS 4.3.0</code> has been released!</p>
+
+<p>This release includes:</p>
+
+<ol>
+<li><code>CocoaPods</code> support in <a href="/docs/en/latest/plugin_ref/spec.html#framework"><code>&lt;framework&gt;</code> tags</a> of plugins (static libraries only)</li>
+<li>the <a href="/docs/en/latest/guide/platforms/ios/index.html#xcode-build-flags"><code>--buildFlag</code> option</a> to send extra <code>xcodebuild</code> flags when building/running your app</li>
+<li>Both Xcode 7 and Xcode 8 support (<a href="/docs/en/latest/guide/platforms/ios/index.html#signing-an-app">automatic code signing</a>). Xcode 6 support has been dropped.</li>
+<li>Support for the <a href="/docs/en/latest/guide/appdev/whitelist/index.html">four new App Transport Security</a> (ATS) keys <a href="https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33">introduced</a> in iOS 10</li>
+</ol>
+
+<p><br /></p>
+
+<p><strong>Note:</strong> When updating <strong>iOS</strong>, make sure to save your plugins as current unsaved plugins may not be reinstalled otherwise. Run the following command in your project to save your currently installed plugins into <code>config.xml</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin save
+</code></pre></div>
+<p>To upgrade:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+cd my_project
+cordova platform rm ios
+cordova platform add ios@4.3.0
+</code></pre></div>
+<p>To add it explicitly:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add ios@4.3.0
+</code></pre></div>
+<!--more-->
+
+<h2>What&#39;s new in iOS</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-12054">CB-12054</a> - Remove npm absolute paths in node_modules/package.json (using removeNPMAbsolutePaths utility)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12054">CB-12054</a> - Updated checked-in node_modules</li>
+<li>Update bundled ios-sim to 5.0.9</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12003">CB-12003</a> - Updated node_modules for cordova-common 1.5.1</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11999">CB-11999</a> - platformAPIs contain js code that is deceptively uncallable</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11936">CB-11936</a> - Support four new App Transport Security (ATS) keys</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11952">CB-11952</a> - Introduce buildFlag option - adds buildFlag option for passing args to xcodebuild </li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11970">CB-11970</a> - Support CocoaPod pod specification other than version</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11729">CB-11729</a> - template file MainViewController.m has deprecated override shouldAutorotateToInterfaceOrientation</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11957">CB-11957</a> - Update docs for remote/local notifications removed in cordova-ios-4.0</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11920">CB-11920</a> - Add github pull request template</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11860">CB-11860</a> - Update packaging strategy for Xcode 8</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11771">CB-11771</a> - Deep symlink directories to target project instead of linking the directory itself</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-10078">CB-10078</a> - Refresh cached userAgent on version bump</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9762">CB-9762</a>   - Add launch storyboard support</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11792">CB-11792</a> - Fixed configuration file could not be parsed due to preprocessing errors</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11854">CB-11854</a> - Create Entitlements.plist file (one each for Debug and Release configurations)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11863">CB-11863</a> - Update README</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11863">CB-11863</a> - Update travis.yml to xcode 7.3 image</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11863">CB-11863</a> - Update xcodebuild minimum version to 7.0.0</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11862">CB-11862</a> - Update ios-deploy minimum version required to 1.9.0</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11831">CB-11831</a> - Add missing LD<em>RUNPATH</em>SEARCH_PATHS setting to the Release build configuration</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11845">CB-11845</a> - Add developmentTeam flag to cordova build and &#39;developmentTeam&#39; key in build.json buildConfig file</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11811">CB-11811</a> - CocoaPods error in cordova-lib tests</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11790">CB-11790</a> - Check that Cocoapods is installed by checking <code>pod install</code> return code, show help text</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11791">CB-11791</a> - &#39;pod install&#39; should pass in the &#39;--verbose&#39; flag, if set</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11789">CB-11789</a> - Generated Podfile should not have an absolute path to .xcodeproj</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11792">CB-11792</a> - Add Cocoapods .xcconfig includes to build.xcconfig files in template, modify create script</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11712">CB-11712</a> - <name> changes in config.xml does a &#39;search and replace all&#39; for occurrences of the old name with the new name in the pbxproj</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11788">CB-11788</a> - Change create and build scripts to use .xcworkspace</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11731">CB-11731</a> - Re-read ios.json on every prepare</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11705">CB-11705</a> - Adding CordovaDefaultWebViewEngine configuration option to be able to use a different WebView as default and/or fallback</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11725">CB-11725</a> - Update appveyor node versions to 4 and 6, so they will always use the latest versions</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9789">CB-9789</a> - Allow setting the default locale</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11703">CB-11703</a> - travis ci setup is still using 0.10.32 node (specify specific version, using LTS version)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11706">CB-11706</a> - travis ci setup is not running unit-tests</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11238">CB-11238</a> - Expose supportedOrientations methods so native code can override the current behavior</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11648">CB-11648</a> - Make CDVViewController send notifications when UIViewController methods are called</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-9825">CB-9825</a> - Cocoapod integration for plugins</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11528">CB-11528</a> - Remove verbose mode from xcrun in build.js to prevent logging of environment variables.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11270">CB-11270</a> - Handle JavaScript onclick handler navigation</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11535">CB-11535</a> <a href="https://issues.apache.org/jira/browse/CB-10361">CB-10361</a> - ios: fix bug with remove frameworks</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2016/10/24/cordova-windows-4.4.3.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2016/10/24/cordova-windows-4.4.3.html">Apache Cordova Windows 4.4.3</a>
+                    <div class="date"> 24 Oct 2016 - By Sergey Shakhnazarov </div>
+                    <p class="content">
+                        We are happy to announce that Cordova Windows 4.4.3 has been released!...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/news/2016/10/25/tools-release.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2016/10/25/tools-release.html">Tools Released!</a>
+                    <div class="date"> 25 Oct 2016 - By Steve Gill </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        New updates of our tools are now available! cordova@6.4.0 cordova-lib@6.4.0 plugman@1.4.0 cordova-js@4.2.0...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cordovablogs';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  10.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

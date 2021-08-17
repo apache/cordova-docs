@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                camera.getPicture - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/ko/latest/cordova/camera/camera.getPicture.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '3.1.0' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/overview/index.html">
+                개요
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/platforms/index.html">
+                플랫폼 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/config_ref/index.html">
+                Config.xml 파일
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/config_ref/images.html">
+                아이콘 및 시작 화면
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/hybrid/webviews/index.html">
+                WebViews 포함
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/hybrid/plugins/index.html">
+                플러그인 개발 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/appdev/privacy/index.html">
+                개인 정보 보호 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/appdev/whitelist/index.html">
+                화이트 리스트 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/accelerometer/accelerometer.html">
+                가 속도계
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/camera/camera.html">
+                카메라
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/compass/compass.html">
+                나침반
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/connection/connection.html">
+                연결
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/contacts/contacts.html">
+                연락처
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/device/device.html">
+                장치
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/events/events.html">
+                이벤트
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/file/file.html">
+                파일
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/geolocation/geolocation.html">
+                지리적 위치
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/notification/notification.html">
+                알림
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/storage/storage.html">
+                스토리지
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        차례
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/overview/index.html">
+        개요
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/platforms/index.html">
+        플랫폼 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/config_ref/index.html">
+        Config.xml 파일
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/config_ref/images.html">
+        아이콘 및 시작 화면
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/hybrid/webviews/index.html">
+        WebViews 포함
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/hybrid/plugins/index.html">
+        플러그인 개발 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/appdev/privacy/index.html">
+        개인 정보 보호 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/appdev/whitelist/index.html">
+        화이트 리스트 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/accelerometer/accelerometer.html">
+        가 속도계
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/camera/camera.html">
+        카메라
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/compass/compass.html">
+        나침반
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/connection/connection.html">
+        연결
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/contacts/contacts.html">
+        연락처
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/device/device.html">
+        장치
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/events/events.html">
+        이벤트
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/file/file.html">
+        파일
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/geolocation/geolocation.html">
+        지리적 위치
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/notification/notification.html">
+        알림
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/storage/storage.html">
+        스토리지
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/ko/3.1.0/cordova/camera/camera.getPicture.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        한국어
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/3.1.0/cordova/camera/camera.getPicture.html" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/3.1.0/cordova/camera/camera.getPicture.html" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/3.1.0/cordova/camera/camera.getPicture.html" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/3.1.0/cordova/camera/camera.getPicture.html" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/3.1.0/cordova/camera/camera.getPicture.html" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/3.1.0/cordova/camera/camera.getPicture.html" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/3.1.0/cordova/camera/camera.getPicture.html" class="">
+                                
+                                    <span class="selected">
+                                        한국어
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/3.1.0/cordova/camera/camera.getPicture.html" class="missing-page">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/3.1.0/cordova/camera/camera.getPicture.html" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/3.1.0/cordova/camera/camera.getPicture.html" class="missing-page">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/3.1.0/cordova/camera/camera.getPicture.html" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/3.1.0/cordova/camera/camera.getPicture.html" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        3.1.0
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/latest/cordova/camera/camera.getPicture.html" class="">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.1.0/cordova/camera/camera.getPicture.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                3.1.0
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/2.0.0/cordova/camera/camera.getPicture.html" class="">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    이 아닌 문서의 최신 버전입니다!
+                    <a href="/docs/ko/latest/cordova/camera/camera.getPicture.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>camera.getPicture</h1>
+
+<p>카메라를 사용 하 여 사진을 걸립니다 또는 소자의 이미지 갤러리에서 사진을 검색 합니다. 이미지 base64 인코딩으로 성공 콜백에 전달 됩니다 <code>String</code> , 또는 이미지 파일에 대 한 URI로. 방법 자체는 반환 합니다 한 <code>[CameraPopoverHandle](parameter/CameraPopoverHandle.html)</code> 개체 <a href="../file/fileobj/fileobj.html">파일</a> 선택 popover를 재배치 하는 데 사용할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
+</code></pre></div>
+<h2>설명</h2>
+
+<p><code>camera.getPicture</code>기능 스냅 사진을 사용자가 디바이스의 기본 <a href="camera.html">카메라</a> 응용 프로그램을 엽니다. 이 동작은 기본적으로 발생 할 때 <code>Camera.sourceType</code> 와 <code>Camera.PictureSourceType.CAMERA</code> . 일단 사용자 스냅 사진, <a href="camera.html">카메라</a> 응용 프로그램 종료 하 고 응용 프로그램 복원 됩니다.</p>
+
+<p>경우 <code>Camera.sourceType</code> 은 <code>Camera.PictureSourceType.PHOTOLIBRARY</code> 또는 <code>Camera.PictureSourceType.SAVEDPHOTOALBUM</code> , 사용자가 기존 이미지를 선택할 수 있도록 다음 대화 상자 표시. <code>camera.getPicture</code>반환 함수는 <code>[CameraPopoverHandle](parameter/CameraPopoverHandle.html)</code> <a href="../device/device.html">장치</a> 방향 변경 될 때 이미지 선택 대화 상자, 예를 들어, 위치를 변경 하려면 사용할 수 있는 개체.</p>
+
+<p>반환 값에 전송 되는 <code>[cameraSuccess](parameter/cameraSuccess.html)</code> 콜백 함수에 따라 지정 된 다음 형식 중 하나에 <code>[cameraOptions](parameter/cameraOptions.html)</code> :</p>
+
+<ul>
+<li><p>A <code>String</code> base64 인코딩된 사진 이미지를 포함 합니다.</p></li>
+<li><p>A <code>String</code> 로컬 저장소 (기본값)의 이미지 <a href="../file/fileobj/fileobj.html">파일</a> 위치를 나타내는.</p></li>
+</ul>
+
+<p>할 수 있는 당신이 원하는대로 인코딩된 이미지 또는 URI, 예를 들면:</p>
+
+<ul>
+<li><p>렌더링 이미지는 <code>&lt;img&gt;</code> 아래 예제와 같이 태그</p></li>
+<li><p>로컬로 데이터를 저장 ( <code>LocalStorage</code> , <a href="http://brianleroux.github.com/lawnchair/">Lawnchair</a>, 등.)</p></li>
+<li><p>원격 서버에 데이터 게시</p></li>
+</ul>
+
+<p><strong>참고:</strong> 더 새로운 장치에 사진 해상도 확실히 좋다입니다. 소자의 갤러리에서 선택 된 사진을 하지 낮은 품질에 관하여는 경우에는 <code>quality</code> 매개 변수를 지정 합니다. 일반적인 메모리 문제를 방지 하려면 설정 <code>Camera.destinationType</code> 을 <code>FILE_URI</code> 보다는<code>DATA_URL</code>.</p>
+
+<h2>지원 되는 플랫폼</h2>
+
+<ul>
+<li>  안 드 로이드</li>
+<li>  블랙베리 WebWorks (운영 체제 5.0와 더 높은)</li>
+<li>  iOS</li>
+<li>  Tizen</li>
+<li>  Windows Phone 7과 8</li>
+<li>  윈도우 8</li>
+</ul>
+
+<h2>안 드 로이드 단점</h2>
+
+<p>안 드 로이드 의도 사용 하 여 이미지 <a href="../media/capture/capture.html">캡처</a> 장치에서 <a href="camera.html">카메라</a> 활동을 시작 하 고 낮은 메모리와 휴대 전화에 코르 도우 바 활동 살해 수 있습니다. 코르도바 활동 복원 되 면이 시나리오에서는 이미지가 나타나지 않을 수 있습니다.</p>
+
+<h2>iOS 단점</h2>
+
+<p>자바 스크립트를 포함 하 여 <code>alert()</code> 함수는 콜백 중에 문제를 일으킬 수 있습니다. 내 경고를 래핑하는 <code>setTimeout()</code> 허용 iOS 이미지 피커 또는 popover를 완벽 하 게 경고를 표시 하기 전에 닫습니다:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">setTimeout(function() {/ / 여기 짓!}, 0);
+</code></pre></div>
+<h2>Windows Phone 7 단점</h2>
+
+<p>당신의 <a href="../device/device.html">장치</a> Zune 통해 <a href="../connection/connection.html">연결</a> 하는 동안 네이티브 <a href="camera.html">카메라</a> 응용 프로그램을 호출 하면 작동 하지 않습니다 하 고 오류 콜백 트리거합니다.</p>
+
+<h2>Tizen 특수</h2>
+
+<p>Tizen만 지원 한 <code>destinationType</code> 의 <code>Camera.DestinationType.FILE_URI</code> 와 <code>sourceType</code> 의<code>Camera.PictureSourceType.PHOTOLIBRARY</code>.</p>
+
+<h2>빠른 예제</h2>
+
+<p>촬영 및 base64 인코딩 이미지로 검색:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+    destinationType: Camera.DestinationType.DATA_URL
+});
+
+function onSuccess(imageData) {
+    var image = document.getElementById('myImage');
+    image.src = "data:image/jpeg;base64," + imageData;
+}
+
+function onFail(message) {
+    alert('Failed because: ' + message);
+}
+</code></pre></div>
+<p>촬영 하 고 이미지의 <a href="../file/fileobj/fileobj.html">파일</a> 위치를 검색:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+    destinationType: Camera.DestinationType.FILE_URI });
+
+function onSuccess(imageURI) {
+    var image = document.getElementById('myImage');
+    image.src = imageURI;
+}
+
+function onFail(message) {
+    alert('Failed because: ' + message);
+}
+</code></pre></div>
+<h2>전체 예제</h2>
+<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Capture Photo<span class="nt">&lt;/title&gt;</span>
+
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+
+    <span class="kd">var</span> <span class="nx">pictureSource</span><span class="p">;</span>   <span class="c1">// picture source</span>
+    <span class="kd">var</span> <span class="nx">destinationType</span><span class="p">;</span> <span class="c1">// sets the format of returned value</span>
+
+    <span class="c1">// Wait for device API libraries to load</span>
+    <span class="c1">//</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span><span class="nx">onDeviceReady</span><span class="p">,</span><span class="kc">false</span><span class="p">);</span>
+
+    <span class="c1">// device APIs are available</span>
+    <span class="c1">//</span>
+    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">pictureSource</span><span class="o">=</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">PictureSourceType</span><span class="p">;</span>
+        <span class="nx">destinationType</span><span class="o">=</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">DestinationType</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Called when a photo is successfully retrieved</span>
+    <span class="c1">//</span>
+    <span class="kd">function</span> <span class="nx">onPhotoDataSuccess</span><span class="p">(</span><span class="nx">imageData</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Uncomment to view the base64-encoded image data</span>
+      <span class="c1">// console.log(imageData);</span>
+
+      <span class="c1">// Get image handle</span>
+      <span class="c1">//</span>
+      <span class="kd">var</span> <span class="nx">smallImage</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'smallImage'</span><span class="p">);</span>
+
+      <span class="c1">// Unhide image elements</span>
+      <span class="c1">//</span>
+      <span class="nx">smallImage</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">'block'</span><span class="p">;</span>
+
+      <span class="c1">// Show the captured photo</span>
+      <span class="c1">// The inline CSS rules are used to resize the image</span>
+      <span class="c1">//</span>
+      <span class="nx">smallImage</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s2">"data:image/jpeg;base64,"</span> <span class="o">+</span> <span class="nx">imageData</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Called when a photo is successfully retrieved</span>
+    <span class="c1">//</span>
+    <span class="kd">function</span> <span class="nx">onPhotoURISuccess</span><span class="p">(</span><span class="nx">imageURI</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Uncomment to view the image file URI</span>
+      <span class="c1">// console.log(imageURI);</span>
+
+      <span class="c1">// Get image handle</span>
+      <span class="c1">//</span>
+      <span class="kd">var</span> <span class="nx">largeImage</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'largeImage'</span><span class="p">);</span>
+
+      <span class="c1">// Unhide image elements</span>
+      <span class="c1">//</span>
+      <span class="nx">largeImage</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">'block'</span><span class="p">;</span>
+
+      <span class="c1">// Show the captured photo</span>
+      <span class="c1">// The inline CSS rules are used to resize the image</span>
+      <span class="c1">//</span>
+      <span class="nx">largeImage</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">imageURI</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// A button will call this function</span>
+    <span class="c1">//</span>
+    <span class="kd">function</span> <span class="nx">capturePhoto</span><span class="p">()</span> <span class="p">{</span>
+      <span class="c1">// Take picture using device camera and retrieve image as base64-encoded string</span>
+      <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="nx">onPhotoDataSuccess</span><span class="p">,</span> <span class="nx">onFail</span><span class="p">,</span> <span class="p">{</span> <span class="na">quality</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="na">destinationType</span><span class="p">:</span> <span class="nx">destinationType</span><span class="p">.</span><span class="nx">DATA_URL</span> <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="c1">// A button will call this function</span>
+    <span class="c1">//</span>
+    <span class="kd">function</span> <span class="nx">capturePhotoEdit</span><span class="p">()</span> <span class="p">{</span>
+      <span class="c1">// Take picture using device camera, allow edit, and retrieve image as base64-encoded string</span>
+      <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="nx">onPhotoDataSuccess</span><span class="p">,</span> <span class="nx">onFail</span><span class="p">,</span> <span class="p">{</span> <span class="na">quality</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="na">allowEdit</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="na">destinationType</span><span class="p">:</span> <span class="nx">destinationType</span><span class="p">.</span><span class="nx">DATA_URL</span> <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="c1">// A button will call this function</span>
+    <span class="c1">//</span>
+    <span class="kd">function</span> <span class="nx">getPhoto</span><span class="p">(</span><span class="nx">source</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Retrieve image file location from specified source</span>
+      <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="nx">onPhotoURISuccess</span><span class="p">,</span> <span class="nx">onFail</span><span class="p">,</span> <span class="p">{</span> <span class="na">quality</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="na">destinationType</span><span class="p">:</span> <span class="nx">destinationType</span><span class="p">.</span><span class="nx">FILE_URI</span><span class="p">,</span>
+        <span class="na">sourceType</span><span class="p">:</span> <span class="nx">source</span> <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Called if something bad happens.</span>
+    <span class="c1">//</span>
+    <span class="kd">function</span> <span class="nx">onFail</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">alert</span><span class="p">(</span><span class="s1">'Failed because: '</span> <span class="o">+</span> <span class="nx">message</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"capturePhoto();"</span><span class="nt">&gt;</span>Capture Photo<span class="nt">&lt;/button&gt;</span> <span class="nt">&lt;br&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"capturePhotoEdit();"</span><span class="nt">&gt;</span>Capture Editable Photo<span class="nt">&lt;/button&gt;</span> <span class="nt">&lt;br&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"getPhoto(pictureSource.PHOTOLIBRARY);"</span><span class="nt">&gt;</span>From Photo Library<span class="nt">&lt;/button&gt;&lt;br&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"getPhoto(pictureSource.SAVEDPHOTOALBUM);"</span><span class="nt">&gt;</span>From Photo Album<span class="nt">&lt;/button&gt;&lt;br&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">style=</span><span class="s">"display:none;width:60px;height:60px;"</span> <span class="na">id=</span><span class="s">"smallImage"</span> <span class="na">src=</span><span class="s">""</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">style=</span><span class="s">"display:none;"</span> <span class="na">id=</span><span class="s">"largeImage"</span> <span class="na">src=</span><span class="s">""</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  3.1.0", "language: ko"] }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="The Apache Cordova team has just released Cordova 2.9.1. Wait what?! You read right! We have backported some bug fixes to the Cordova 2 series for all of you...">
+
+    <title>
+        
+            
+                Apache Cordova 2.9.1 - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/blog/releases/2013/11/06/cordova-291.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '10.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Apache Cordova 2.9.1</div>
+        <div class="author">By:
+            
+              <a href="https://twitter.com/stevesgill">Steve Gill</a>
+            
+        </div>
+        <div class="date">06 Nov 2013</div>
+    </header>
+    <section>
+        <div>
+            <p>The <a href="http://cordova.apache.org/">Apache Cordova</a> team has just released Cordova 2.9.1. Wait what?! You read right! We have backported some bug fixes to the Cordova 2 series for all of you that haven&#39;t upgraded to the Cordova 3 series yet. Hurray! Among other fixes, this release backports iOS 7 support.</p>
+
+<p>Users can download the source zip from <a href="https://www.apache.org/dist/cordova/cordova-2.9.1-src.zip">https://www.apache.org/dist/cordova/cordova-2.9.1-src.zip</a></p>
+
+<p>We will continue to backport fixes for a few more months, but we highly suggest upgrading to the Cordova 3 series.</p>
+
+<!--more-->
+
+<h2>What&#39;s new in Android</h2>
+
+<ul>
+<li>Update JS snapshot to version 2.9.1 (via coho)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5193">CB-5193</a> Fix Android WebSQL sometime throwing SECURITY_ERR.</li>
+<li>Move java files back into api/ directory.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4817">CB-4817</a> Remove unused assets in project template.</li>
+<li>Update InAppBrowser.java </li>
+<li>Update snapshot of CameraLauncher.java </li>
+<li>Update snapshot of FileTransfer.java</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5080">CB-5080</a> Find resources in a way that works with aapt&#39;s --rename-manifest-package (cherry picked fro</li>
+<li>Tweak the online bridge to not send excess online events.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4495">CB-4495</a> Modify start-emulator script to exit immediately on a fatal emulator error. (cherry picke</li>
+<li>Fix data URI decoding in CordovaResourceApi</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4466">CB-4466</a> fixed jscript check_reqs to get target from project.properties</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4463">CB-4463</a> Updated bin/check_reqs to looks for android-18 target.Also fixed an issue in unix version</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4198">CB-4198</a> bin/create script should be better at handling non-word characters in activity name. Patc</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4198">CB-4198</a> bin/create should handle spaces in activity better.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Fix thread assertion when plugins remap URIs (cherry picked from commit b915aafb5be319121</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Use the ExposedJsApi to detect webCore thread instead of IceCreamCordovaWebViewClient.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Reworked UriResolver into CordovaResourceApi.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Add a length getter for UriResolver. Change from interface -&gt; abstract class.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Make UriResolver assert that IO is not on the UI nor WebCore threads. (cherry picked from</li>
+<li>Backporting FileUtils fixes to 2.9</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4633">CB-4633</a>: Backporting to Android 2.9.x</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4013">CB-4013</a> Fixed loadUrlTimeoutValue preference.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4155">CB-4155</a>: Cordova Android - navigator.app.clearCache(); is called on (prospectively unsupported) Web</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4103">CB-4103</a> Made config parameters case-insensitive.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4038">CB-4038</a> Move non-deprecated classes from the api package into the main package. (cherry picked fr</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Rewrite of DataResource into UriResolver + UriResolvers</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3998">CB-3998</a> video duration is an int</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3927">CB-3927</a> Fix start-up race condition that could cause exec() responses to be dropped.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3949">CB-3949</a>: Adding code to mitigate broken intents with the application installer</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3854">CB-3854</a>: Added support for wildcard. </li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3932">CB-3932</a> Remove baseUrl comment in handleDestroy method made redundant by <a href="https://issues.apache.org/jira/browse/CB-3766">CB-3766</a></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3902">CB-3902</a>: Explicitly add market URIs to CordovaWebViewClient so this always works, not just sometime</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3625">CB-3625</a> <a href="https://issues.apache.org/jira/browse/CB-3338">CB-3338</a> updated windows cli scripts and added version option</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3998">CB-3998</a> video duration is an int</li>
+</ul>
+
+<h2>What&#39;s new in iOS</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-5199">CB-5199</a> - Media Capture - UI issues under iOS 7 (uncrustify style fix-ups as well)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport of v2.9.1 - add CoreMotion.framework to the default template</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport of v2.9.1 from <a href="https://issues.apache.org/jira/browse/CB-4825">CB-4825</a>, <a href="https://issues.apache.org/jira/browse/CB-5035">CB-5035</a> (Device Motion / Accelerometer)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport of v2.9.1 from <a href="https://issues.apache.org/jira/browse/CB-4847">CB-4847</a> (Media only)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport of v2.9.1 from <a href="https://issues.apache.org/jira/browse/CB-4847">CB-4847</a> (Media Capture only)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport for v2.9.1 of <a href="https://issues.apache.org/jira/browse/CB-4806">CB-4806</a>, <a href="https://issues.apache.org/jira/browse/CB-4355">CB-4355</a> (Splashscreen)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport for v2.9.1 of <a href="https://issues.apache.org/jira/browse/CB-4930">CB-4930</a> (InAppBrowser)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport for v2.9.1 of <a href="https://issues.apache.org/jira/browse/CB-4958">CB-4958</a>, <a href="https://issues.apache.org/jira/browse/CB-3482">CB-3482</a> and <a href="https://issues.apache.org/jira/browse/CB-3453">CB-3453</a> changes</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4480">CB-4480</a> Using 64 bit ints to store file size</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3448">CB-3448</a> bin/diagnose_project script fails if CORDOVALIB variable not in prefs plist</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-3567">CB-3567</a> Redirect initiated in JavaScript fails the app from loading</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4147">CB-4147</a> Fixing crash when calling show() on an already open InAppBrowser window.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4104">CB-4104</a> Made config parameters case-insensitive.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4033">CB-4033</a> Relaxed case-sensitivity of &quot;UTF-8&quot;.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4037">CB-4037</a> Unable to Archive iOS projects for upload to App Store in 2.9</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4025">CB-4025</a> iOS emulate command broken when run inside the cordova folder</li>
+</ul>
+
+<h2>What&#39;s new in Windows Phone 7 &amp; 8</h2>
+
+<ul>
+<li>support namespace, and deprecated plugin tags in config.xml</li>
+<li>Update File.write method with additional params</li>
+<li>bumped version to 2.9.1 and removed dupe geolocation from config.xml for wp7+8 <a href="https://issues.apache.org/jira/browse/CB-4090">CB-4090</a></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4090">CB-4090</a> Broken notification handling</li>
+<li>update templates to include all plugins for 2.9.1</li>
+<li>update cordova.js for 2.9.1</li>
+<li>Fix null reference exception</li>
+<li>update Audio/Media plugins</li>
+<li>add callback id to compass callbacks</li>
+<li>add callback id to callbacks</li>
+<li>update FileTransfer plug from plugin repo</li>
+<li>add plugns back, and remove dupe classes</li>
+</ul>
+
+<h2>What&#39;s new in Windows 8</h2>
+
+<ul>
+<li>Cordova JS has been updated to 2.9.1</li>
+</ul>
+
+<p>For a full list of changes, refer to RELEASENOTES.md included in the download.</p>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/news/2013/10/28/plugins-release.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2013/10/28/plugins-release.html">CLI, Plugman &amp; Plugins Release: Oct 28, 2013</a>
+                    <div class="date"> 28 Oct 2013 - By Steve Gill </div>
+                    <p class="content">
+                        Today we are doing a plugins and tooling release in preparation for...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/releases/2013/11/13/cordova-320rc1.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/releases/2013/11/13/cordova-320rc1.html">Apache Cordova 3.2.0 RC1</a>
+                    <div class="date"> 13 Nov 2013 - By Steve Gill </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        The Apache Cordova team has just released the first release candidate for...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cordovablogs';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  10.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

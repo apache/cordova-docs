@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that Apache Cordova 7.0.0 has been released!Most notable changes include:cordova@7.0.0cordova-lib@7.0.0plugman@1.5.0cordova-app-hell...">
+
+    <title>
+        
+            
+                Apache Cordova 7.0.0 - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/news/2017/05/04/cordova-7.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '10.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Apache Cordova 7.0.0</div>
+        <div class="author">By:
+            
+              <a href="https://twitter.com/aud_rey_so">Audrey So</a>
+            
+        </div>
+        <div class="date">04 May 2017</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that <code>Apache Cordova 7.0.0</code> has been released!</p>
+
+<p>Most notable changes include:</p>
+
+<ul>
+<li><a href="https://www.npmjs.org/package/cordova">cordova@7.0.0</a></li>
+<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@7.0.0</a></li>
+<li><a href="https://www.npmjs.com/package/plugman">plugman@1.5.0</a></li>
+<li><a href="https://www.npmjs.com/package/cordova-app-hello-world">cordova-app-hello-world@3.12.0</a></li>
+<li><a href="https://www.npmjs.com/package/cordova-common">cordova-common@2.0.3</a></li>
+<li><a href="https://www.npmjs.com/package/cordova-create">cordova-create@1.1.0</a></li>
+<li><p><a href="https://www.npmjs.com/package/cordova-fetch">cordova-fetch@1.1.0</a></p></li>
+<li><p>If a <code>package.json</code> does not exist in your project, it will be auto-created for you when <code>cordova prepare</code> is called.</p></li>
+<li><p>When adding a platform or plugin, the previous default behavior of not-saving has changed to saving. Now it will automatically save that platform or plugin to your <code>config.xml</code> and <code>package.json</code>. Details about platform and plugin versions are also automatically saved in <code>config.xml</code> and <code>package.json</code>. The <code>--save</code> flag is no longer required to save. Use <code>--nosave</code> to prevent saving to <code>config.xml</code> or <code>package.json</code>.</p></li>
+<li><p>Fetch is now the default method for fetching platforms. Fetch uses your system <code>npm</code> to <code>npm install</code> modules into your project. The <code>--fetch</code> flag is no longer required. Use the <code>--nofetch</code> flag to revert to pre-<code>Cordova@7.0</code> behavior (<code>npm install</code> is not used to fetch modules).</p></li>
+<li><p>After <code>cordova prepare</code> is run, <code>package.json</code> and <code>config.xml</code> should contain identical platforms and versions.  In case of conflicts, <code>package.json</code> is given precedence over <code>config.xml</code>. For example, suppose <code>package.json</code> contains <code>cordova-android@6.0.0</code> and <code>config.xml</code> contains <code>cordova-android@4.0.0</code>. After <code>cordova prepare</code> is run, <code>config.xml</code> and <code>package.json</code> will each contain only <code>cordova-android@6.0.0</code>.</p></li>
+<li><p>Platforms and plugins are now required to have a <code>package.json</code> file.</p></li>
+<li><p>We have added support for custom platforms. This will allow future custom platforms, and modified versions of existing platforms. Example: </p>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add custom-platform-name
+</code></pre></div></li>
+<li><p>A <code>cordova config</code> command has been created to <code>set</code>, <code>get</code>, <code>delete</code>, <code>edit</code>, and <code>list</code> global Cordova options. For example, you can use the following command <code>cordova config set &lt;key&gt; &lt;value&gt;</code> to set the value of <code>autosave</code> or <code>fetch</code> to <code>true</code> or <code>false</code>. </p>
+
+<p>In the following case, you are turning off <code>autosave</code> as the default setting. <code>autosave</code> is true by default in cordova. Example: </p>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova config set autosave false
+</code></pre></div>
+<p>In the following case, you are turning off <code>fetch</code> as the default setting. <code>fetch</code> is <code>true</code> by default in cordova.  Example:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova config set fetch false
+</code></pre></div>
+<p>In addition, the <code>cordova config</code> command supports the <code>browserify</code> setting, which allows the JavaScript of plugins to be loaded at build time compared to run time. For instance, if the <code>browserify</code> value is not explicitly passed in by the user, the <code>cordova config</code> command will automatically set the <code>browserify</code> value saved in <code>~/.config/configstore/</code> to be saved <code>globally</code>. Users can get and set <code>browserify</code>. <code>browserify</code> is <code>false</code> by deafult in cordova. Example:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova config get browserify
+cordova config set browserify true
+</code></pre></div></li>
+<li><p>Dropped support for node 0.x. Only node versions 4.0 and up are supported.</p></li>
+<li><p>Dropped support for wp8 (windows phone 8).</p></li>
+<li><p><code>cordova-windows</code> : dropped support for any versions older than 4.0.0.</p></li>
+<li><p><code>cordova-android</code> : dropped support for any versions older than 5.0.0.</p></li>
+<li><p><code>cordova-ios</code> : dropped support for any versions older than 4.0.0.</p></li>
+<li><p><code>cordova-osx</code> : dropped support for any versions older than 4.0.0.</p></li>
+</ul>
+
+<p>To upgrade:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova@latest
+</code></pre></div>
+<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+
+<!--more-->
+
+<h1>Changes include:</h1>
+
+<h2>cordova-lib</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-12747">CB-12747</a>: updated pinned platforms</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12705">CB-12705</a>: Modified <code>(before|after)_plugin_(uninstall|install)</code> to always expect existence of plugin field</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12705">CB-12705</a>: Pass plugin info to project <code>*_plugin_install</code> hooks</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11242">CB-11242</a>: removed support for platforms that don&#39;t have a <code>package.json</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11242">CB-11242</a>: updated tests and fixtures</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11242">CB-11242</a>: refactored out <code>getPlatformApiFunction</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11242">CB-11242</a>: removed <code>parser</code> and <code>handler</code> files for deprecated versions of platforms</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12683">CB-12683</a>: improved error messaging for when a plugin doesn&#39;t have <code>package.json</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12674">CB-12674</a>: Added deprecation notice for <strong>blackberry10</strong> and <strong>ubuntu</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11777">CB-11777</a>: Restore plugins before preparing</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12643">CB-12643</a>: removed references to <strong>wp8</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12645">CB-12645</a>: removed references to <strong>firefoxos</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a>: removed <code>engineStrict</code> as it is no longer supported</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12612">CB-12612</a>: removing old <code>amazon-fireos</code> code</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12425">CB-12425</a>: autocreate a <code>package.json</code> if it doesn&#39;t exist during <code>cordova prepare</code> </li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12517">CB-12517</a>: <code>package.json</code> <code>name</code> field is <code>config.xml</code> <code>id</code> field and <code>package.json</code> <code>displayName</code> field is <code>config.xml</code> <code>name</code> field</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12592">CB-12592</a>: added <code>requireNoCache</code> function and replaced instances of <code>delete.require cache</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12606">CB-12606</a>: Fix plugin dependency installation. Now it respects the <code>spec</code> specified for dependencies of plugins in <code>plugin.xml</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12016">CB-12016</a>: removed <code>pluginMapper</code> code from uninstall</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12337">CB-12337</a>: Resolve symbolic links in project root</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11346">CB-11346</a>: Remove known platforms check</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11977">CB-11977</a>: removed support for <code>node 0.x</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12021">CB-12021</a>: Added local path support to <code>--fetch</code> and fixed failing tests for adding a relative path</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11960">CB-11960</a>: Added support to <code>package.json</code> for platform/plugin add/rm</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12001">CB-12001</a>: Added support for platform/plugin &amp; <code>spec</code> restore to sync <code>config.xml</code> and <code>package.json</code></li>
+</ul>
+
+<h2>cordova-cli</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-12570">CB-12570</a>: <code>cordova-fetch</code> is true by default. Use <code>--nofetch</code> flag to fetch platforms and plugins using old fetching logic.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a>: removed <code>engineStrict</code> as it is no longer supported</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11982">CB-11982</a>: added <code>edit</code> and <code>ls</code> to <code>cordova config</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11982">CB-11982</a>: added new <code>cordova config</code> command that <code>sets</code>, <code>gets</code>, and <code>deletes</code> global environment variables.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12008">CB-12008</a>: updated docs to reflect new autosave changes and removed variables missed due to rebase</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12008">CB-12008</a>: made autosave the default for platform and plugin add/remove</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11977">CB-11977</a>: removed support for <code>node 0.x</code></li>
+</ul>
+
+<h2>cordova-fetch</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a>: removed <code>enginestrict</code> since it is deprecated</li>
+<li>added support for dealing with local path targets</li>
+</ul>
+
+<h2>cordova-common</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-8978">CB-8978</a>: Add option to get <code>resource-file</code> from <code>root</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-11908">CB-11908</a>: Add tests for <code>edit-config</code> in <code>config.xml</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a>: removed <code>enginestrict</code> since it is deprecated</li>
+</ul>
+
+<h2>plugman</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-12747">CB-12747</a>: Updated <code>cordova-lib</code> dependency to <code>7.0.0</code></li>
+</ul>
+
+<h2>cordova-create</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-10681">CB-10681</a>: templates will add <code>@latest</code> when fetching from npm when no version is specified. This will ensure an older cached version of the template is not used</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12666">CB-12666</a>: Remove <code>node 0.x</code> support.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-12517">CB-12517</a>: <code>package.json</code> <code>displayname</code> should equal <code>config.xml</code> name field and <code>package.json</code> <code>name</code> field should equal <code>config.xml</code> <code>id</code> field.</li>
+</ul>
+
+<h2>cordova-app-hello-world</h2>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-12684">CB-12684</a>: added <code>package.json</code> to default hello world app</li>
+<li>Add GitHub pull request template</li>
+</ul>
+
+<h2>Pinned Platform Versions for <strong>Cordova CLI 7.0.0</strong></h2>
+
+<ul>
+<li>Cordova Android: ~6.2.2</li>
+<li>Cordova BlackBerry10: ~3.8.0</li>
+<li>Cordova Browser: ~4.1.0</li>
+<li>Cordova iOS: ~4.4.0</li>
+<li>Cordova OSX: ~4.0.1</li>
+<li>Cordova Ubuntu: ~4.3.4</li>
+<li>Cordova Windows: ~5.0.0</li>
+<li>Cordova WebOS: ~3.7.0</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2017/05/04/android-release.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2017/05/04/android-release.html">Cordova Android 6.2.3 Released!</a>
+                    <div class="date"> 04 May 2017 - By Fil Maj </div>
+                    <p class="content">
+                        We are happy to announce that Cordova Android 6.2.3 has been released!...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/news/2017/05/12/tools-release.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2017/05/12/tools-release.html">Tools Released!</a>
+                    <div class="date"> 12 May 2017 - By Steve Gill </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        We just released a small update to our tools! cordova@7.0.1 cordova-lib@7.0.1 cordova-create@1.1.1...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cordovablogs';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  10.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

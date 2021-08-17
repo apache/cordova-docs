@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Guide de la liste blanche - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/fr/3.1.0/guide/appdev/whitelist/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '3.1.0' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/guide/overview/index.html">
+                Présentation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/guide/cli/index.html">
+                L'Interface de ligne de commande
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/guide/platforms/index.html">
+                Guides de la plate-forme
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/config_ref/index.html">
+                Le fichier config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/cordova/file/file.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/config_ref/images.html">
+                Icones et Splash Screen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/guide/hybrid/webviews/index.html">
+                Intégration WebViews
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/guide/hybrid/plugins/index.html">
+                Guide de développement de plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/guide/appdev/privacy/index.html">
+                Guide de la vie privée
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/guide/appdev/whitelist/index.html">
+                Guide de la liste blanche
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/cordova/accelerometer/accelerometer.html">
+                Accéléromètre
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/cordova/camera/camera.html">
+                Appareil photo
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/cordova/media/capture/capture.html">
+                Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/cordova/compass/compass.html">
+                Boussole
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/cordova/connection/connection.html">
+                Connexion
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/cordova/contacts/contacts.html">
+                Contacts
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/cordova/device/device.html">
+                Appareil
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/cordova/globalization/globalization.html">
+                Mondialisation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/cordova/inappbrowser/inappbrowser.html">
+                InAppBrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/cordova/media/media.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/cordova/notification/notification.html">
+                Notification
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/cordova/splashscreen/splashscreen.html">
+                SplashScreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/fr/3.1.0/cordova/storage/storage.html">
+                Stockage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table des Matières
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/guide/overview/index.html">
+        Présentation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/guide/cli/index.html">
+        L'Interface de ligne de commande
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/guide/platforms/index.html">
+        Guides de la plate-forme
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/config_ref/index.html">
+        Le fichier config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/cordova/file/file.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/config_ref/images.html">
+        Icones et Splash Screen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/guide/hybrid/webviews/index.html">
+        Intégration WebViews
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/guide/hybrid/plugins/index.html">
+        Guide de développement de plugin
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/guide/appdev/privacy/index.html">
+        Guide de la vie privée
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/guide/appdev/whitelist/index.html">
+        Guide de la liste blanche
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/cordova/accelerometer/accelerometer.html">
+        Accéléromètre
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/cordova/camera/camera.html">
+        Appareil photo
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/cordova/media/capture/capture.html">
+        Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/cordova/compass/compass.html">
+        Boussole
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/cordova/connection/connection.html">
+        Connexion
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/cordova/contacts/contacts.html">
+        Contacts
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/cordova/device/device.html">
+        Appareil
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/cordova/globalization/globalization.html">
+        Mondialisation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/cordova/inappbrowser/inappbrowser.html">
+        InAppBrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/cordova/media/media.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/cordova/notification/notification.html">
+        Notification
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/cordova/splashscreen/splashscreen.html">
+        SplashScreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/fr/3.1.0/cordova/storage/storage.html">
+        Stockage
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/fr/3.1.0/guide/appdev/whitelist/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Français
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/3.1.0/guide/appdev/whitelist/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/3.1.0/guide/appdev/whitelist/" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/3.1.0/guide/appdev/whitelist/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/3.1.0/guide/appdev/whitelist/" class="">
+                                
+                                    <span class="selected">
+                                        Français
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/3.1.0/guide/appdev/whitelist/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/3.1.0/guide/appdev/whitelist/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/3.1.0/guide/appdev/whitelist/" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/3.1.0/guide/appdev/whitelist/" class="missing-page">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/3.1.0/guide/appdev/whitelist/" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/3.1.0/guide/appdev/whitelist/" class="missing-page">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/3.1.0/guide/appdev/whitelist/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/3.1.0/guide/appdev/whitelist/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        3.1.0
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Dernière)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/fr/3.1.0/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                3.1.0
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    Ca n'est past la dernière version de la documentation.
+                    <a href="/docs/fr/latest/">
+                        Cliquez ici pour voire la dernière version de la documentation.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Guide de la liste blanche</h1>
+
+<h2>Vue d&#39;ensemble</h2>
+
+<p>Ressources liste blanche est un modèle de sécurité qui contrôle l&#39;accès aux ressources réseau externe, tel que <code>http://google.com</code> . Stratégie de sécurité par défaut de Apache Cordova permet d&#39;accéder à toute ressource sur n&#39;importe quel site sur Internet. Avant de déplacer votre application à la production, vous devriez revoir la liste blanche et déclarer l&#39;accès au réseau des domaines et sous-domaines.</p>
+
+<h2>Spécification</h2>
+
+<p>Domaine whitelisting jette les bases pour la spécification <a href="http://www.w3.org/TR/widgets-access/">W3C Widget accès</a> . Dans la spécification de l&#39;accès de Widget, le <code>&lt;access&gt;</code> élément est utilisé pour déclarer l&#39;accès aux ressources de réseau spécifiques. Apache Cordova s&#39;étend ce concept afin de permettre la liste blanche des ressources réseau individuel (URLs). À l&#39;avenir, Apache Cordova va résumer les implémentations de liste blanche de plate-forme. Toutefois, pour l&#39;instant chaque plate-forme implémente sa propre liste blanche de ressource ou de domaine. Les différences entre les implémentations de plate-forme sont décrites plus loin dans ce document.</p>
+
+<p>Le modèle général pour les entrées de la liste blanche conforme à la spécification &quot;<a href="http://developer.chrome.com/apps/match_patterns.html">correspondre modèle</a>&quot; pour Google Chrome emballés Apps. Les ressources sont spécifiées par l&#39;URL, mais un astérisque (*) caractère peut être utilisé comme « Joker » dans plusieurs endroits pour indiquer « n&#39;importe quelle valeur peut aller ici ». Des exemples précis sont indiqués ci-dessous.</p>
+
+<h2>Syntaxe</h2>
+
+<p>Accès à toutes les ressources à <a href="http://google.com">google.com</a>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">http://google.com/*
+</code></pre></div>
+<p>Accès à toutes les ressources à sûr <a href="https://google.com">google.com</a> ( <code>https://</code> ) :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">https://Google.com/ *
+</code></pre></div>
+<p>Accès pour le sous-domaine spécifique <a href="http://maps.google.com">maps.google.com</a>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">http://maps.google.com/*
+</code></pre></div>
+<p>Accès à tous les sous-domaines sur <a href="http://google.com">google.com</a> (p. ex., <a href="http://mail.google.com">mail.google.com</a> et <a href="http://docs.google.com">docs.google.com</a>) :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">http://*.google.com/*
+</code></pre></div>
+<p>Accès à toutes les ressources sur <a href="http://www.google.com">www.google.com</a> sous le chemin d&#39;accès &quot;/ mobile&quot; :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">http://www.google.com/mobile/*
+</code></pre></div>
+<p>Accès à <a href="http://google.com">google.com</a> sur n&#39;importe quel protocole (HTTP, HTTPS, FTP, etc.) :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">*://google.com/*
+</code></pre></div>
+<p>Accès à toutes les ressources sur Internet (par exemple, <a href="http://google.com">google.com</a> et <a href="http://developer.mozilla.org">developer.mozilla.org</a>) :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">*
+</code></pre></div>
+<h2>Android</h2>
+
+<h3>Détails</h3>
+
+<p>Les règles de liste blanche se trouvent dans <code>res/xml/config.xml</code> et déclarée avec l&#39;élément<code>&lt;access origin=&quot;...&quot; /&gt;</code>.</p>
+
+<p>Android soutient pleinement la syntaxe de la liste blanche.</p>
+
+<h3>Syntaxe</h3>
+
+<p>Accès à <a href="http://google.com">google.com</a>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com/*" /&gt;
+</code></pre></div>
+<h2>BlackBerry 10</h2>
+
+<h3>Détails</h3>
+
+<p>Les règles de liste blanche se trouvent dans <code>www/config.xml</code> et déclarée avec l&#39;élément<code>&lt;access origin=&quot;...&quot; /&gt;</code>.</p>
+
+<p>BlackBerry 10 gère les caractères génériques différemment des autres plates-formes de deux façons :</p>
+
+<p>1) Contenu accédé par XMLHttpRequest doit être déclarée explicitement. origine = &quot;*&quot; on respectera pas pour ce cas d&#39;utilisation. Sinon, toute sécurité web peut être désactivée à l&#39;aide d&#39;une préférence.</p>
+
+<p>2) sous-domaines = &quot;true&quot; peut être utilisé à la place de &quot;* *.domain&quot;</p>
+
+<h3>Syntaxe</h3>
+
+<p>Accès à <a href="http://google.com">google.com</a>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" subdomains="false" /&gt;
+</code></pre></div>
+<p>Accès à <a href="http://maps.google.com">maps.google.com</a>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://maps.google.com" subdomains="false" /&gt;
+</code></pre></div>
+<p>Accès à tous les sous-domaines sur <a href="http://google.com">Google.fr</a>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" subdomains="true" /&gt;
+</code></pre></div>
+<p>Accès à tous les domaines, y compris <code>file://</code> protocole :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="*" subdomains="true" /&gt;
+</code></pre></div>
+<p>Désactiver toute sécurité web :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="websecurity" value="disable" /&gt;
+</code></pre></div>
+<h2>iOS</h2>
+
+<h3>Détails</h3>
+
+<p>Les règles de liste blanche se trouvent dans <code>AppName/config.xml</code> et déclarée avec l&#39;élément<code>&lt;access origin=&quot;...&quot; /&gt;</code>.</p>
+
+<p>iOS soutient pleinement la syntaxe de la liste blanche.</p>
+
+<h3>Changé en 3.1.0 :</h3>
+
+<p>Avant la version 3.1.0, Cordova-iOS inclus quelques extensions non standards pour le régime de whilelisting de domaine pris en charge par les autres plateformes de Cordova. En 3.1.0, le whitelist iOS est maintenant conforme à la syntaxe de liste blanche de ressource décrite en haut de ce document. Si vous mettez à niveau pre-3.1.0, et que vous utilisiez ces extensions, vous devrez peut-être modifier votre <code>config.xml</code> fichier afin de continuer la liste blanche du même ensemble de ressources comme avant.</p>
+
+<p>Plus précisément, ces motifs doivent être actualisés :</p>
+
+<ul>
+<li><p>&quot; <code>apache.org</code> &quot; (pas de protocole): cela correspondrait précédemment <code>http</code> , <code>https</code> , <code>ftp</code> , et <code>ftps</code> des protocoles. Remplacez &quot; <code>*://apache.org/*</code> &quot; d&#39;inclure tous les protocoles, ou inclure une ligne pour chaque protocole, vous devez appuyer.</p></li>
+<li><p>&quot; <code>http://apache.*</code> &quot; (caractère générique à la fin du domaine): cela correspondrait auparavant tous les top domaines niveau, y compris tous les TLDs possibles de deux lettres (mais pas utiles domaines aiment. co.uk). Inclure une ligne pour chaque TLD qui vous en fait Contrôlez et devez whitelist.</p></li>
+<li><p>&quot; <code>h*t*://ap*he.o*g</code> &quot; (caractères génériques pour les lettres manquantes au hasard): ceux-ci ne sont plus supportés ; changement à inclure une ligne pour chaque domaine et protocole que vous avez réellement besoin de liste blanche.</p></li>
+</ul>
+
+<h3>Syntaxe</h3>
+
+<p>Accès à <a href="http://google.com">google.com</a>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com/*" /&gt;
+</code></pre></div>
+<h2>Windows Phone (7 &amp; 8)</h2>
+
+<p>Les règles de liste blanche se trouvent dans <code>config.xml</code> et déclarée avec l&#39;élément<code>&lt;access origin=&quot;...&quot; /&gt;</code>.</p>
+
+<h3>Syntaxe</h3>
+
+<p>Accès à <a href="http://google.com">google.com</a>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" /&gt;
+</code></pre></div>
+<h2>Paciarelli</h2>
+
+<h3>Détails</h3>
+
+<p>Du répertoire racine l&#39;application <code>config.xml</code> fichier spécifie les règles de liste blanche de domaine, en utilisant le <code>&lt;access origin=&quot;...&quot; /&gt;</code> élément. Pour une référence complète, consultez la <a href="https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources">documentation de paciarelli accès à des ressources du réseau externe</a>.</p>
+
+<h3>Syntaxe</h3>
+
+<p>Accès à <a href="http://google.com">google.com</a>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" subdomains="false" /&gt;
+</code></pre></div>
+<p>Accès sécurisé <a href="https://google.com">google.com</a> ( <code>https://</code> ) :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="https://google.com" subdomains="false" /&gt;
+</code></pre></div>
+<p>Accès à tous les sous-domaines sur <a href="http://google.com">Google.fr</a>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" subdomains="true" /&gt;
+</code></pre></div>
+<p>Accès à tous les domaines, y compris <code>file://</code> protocole :</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="*" subdomains="true" /&gt;
+</code></pre></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  3.1.0", "language: fr"] }
+    });
+</script>
+
+</body>
+</html>

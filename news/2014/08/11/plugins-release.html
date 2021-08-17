@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="The following plugins were updated today:cordova-plugin-battery-status: 0.2.10cordova-plugin-camera: 0.3.1cordova-plugin-console: 0.2.10cordova-plugin-contac...">
+
+    <title>
+        
+            
+                Plugins Release: August 11, 2014 - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/news/2014/08/11/plugins-release.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '10.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Plugins Release: August 11, 2014</div>
+        <div class="author">By:
+            
+              <a href="https://twitter.com/stevesgill">Steve Gill</a>
+            
+        </div>
+        <div class="date">11 Aug 2014</div>
+    </header>
+    <section>
+        <div>
+            <p>The following plugins were updated today:</p>
+
+<ul>
+<li>cordova-plugin-battery-status: 0.2.10</li>
+<li>cordova-plugin-camera: 0.3.1</li>
+<li>cordova-plugin-console: 0.2.10</li>
+<li>cordova-plugin-contacts: 0.2.12 </li>
+<li>cordova-plugin-device: 0.2.11 </li>
+<li>cordova-plugin-device-motion: 0.2.9</li>
+<li>cordova-plugin-device-orientation: 0.3.8</li>
+<li>cordova-plugin-dialogs: 0.2.9 </li>
+<li>cordova-plugin-file: 1.3.0 </li>
+<li>cordova-plugin-file-transfer: 0.4.5 </li>
+<li>cordova-plugin-geolocation: 0.3.9 </li>
+<li>cordova-plugin-globalization: 0.3.0 </li>
+<li>cordova-plugin-inappbrowser: 0.5.1 </li>
+<li>cordova-plugin-media: 0.2.12 </li>
+<li>cordova-plugin-media-capture: 0.3.2 </li>
+<li>cordova-plugin-network-information: 0.2.11 </li>
+<li>cordova-plugin-splashscreen: 0.3.2 </li>
+<li>cordova-plugin-statusbar: 0.1.7 </li>
+<li>cordova-plugin-vibration: 0.3.10</li>
+</ul>
+
+<p>Notable changes include:</p>
+
+<ul>
+<li>Most of the plugins docs are now translated into other languages.</li>
+<li><strong>FirefoxOS</strong> has updated many of their proxies for plugins</li>
+<li><strong>FirefoxOS</strong> support added to device motion plugin</li>
+<li>Many updates to file plugin for <strong>BlackBerry10</strong>, <strong>FirefoxOS</strong> and <strong>Windows</strong></li>
+<li><strong>BlackBerry10</strong> &amp; <strong>FirefoxOS</strong> support added to globalization plugin</li>
+</ul>
+
+<p>The plugins have been updated on our registry at <a href="http://plugins.cordova.io/">plugins.cordova.io</a>.</p>
+
+<hr>
+
+<p>You can update any plugin by removing it, and then readding it. E.g. To update your file plugin:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm org.apache.cordova.file
+cordova plugin add org.apache.cordova.file
+</code></pre></div>
+<p>Other changes include:</p>
+
+<!--more-->
+
+<p>org.apache.cordova.battery-status@0.2.10</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-6957">CB-6957</a> Ported <code>Battery-status</code> manual &amp; automated tests</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+</ul>
+
+<p>org.apache.cordova.camera@0.3.1</p>
+
+<ul>
+<li><strong>FirefoxOS</strong> update <code>CameraProxy.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7187">CB-7187</a> <strong>iOS</strong>: Add explicit dependency on <code>CoreLocation.framework</code></li>
+<li><strong>BlackBerry10</strong> Doc correction - <code>sourceType</code> is supported</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7071">CB-7071</a> <strong>Android</strong>: Fix callback firing before <code>CROP</code> intent is sent when <code>allowEdit=true</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6875">CB-6875</a> <strong>Android</strong>: Handle exception when SDCard is not mounted</li>
+<li><strong>iOS</strong>: Delete <code>postImage</code> (dead code)</li>
+<li>Prevent <code>NPE</code> on <code>processResiultFromGallery</code> when intent comes <code>null</code></li>
+<li>Remove <strong>iOS</strong> doc reference to non-existing <code>navigator.fileMgr API</code></li>
+<li>Docs updated with some default values</li>
+<li>Removes File plugin dependency from <strong>Windows 8</strong> code.</li>
+<li>Use <code>WinJS</code> functionality to resize image instead of File plugin functionality</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+</ul>
+
+<p>org.apache.cordova.console@0.2.10</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+</ul>
+
+<p>org.apache.cordova.contacts@0.2.12</p>
+
+<ul>
+<li>fixes <code>.find</code> method when <code>options</code> param is not passed. Will return all contacts on missing <code>options</code> param</li>
+<li><strong>FirefoxOS</strong> update <code>ContactsProxy.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-5698">CB-5698</a> <strong>iOS</strong>: Check to see if <code>photoData</code> exists before using</li>
+</ul>
+
+<p>org.apache.cordova.device@0.2.11</p>
+
+<ul>
+<li><strong>FirefoxOS</strong> update <code>DeviceProxy.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+<li>Use <strong>Windows</strong> system calls to get better info</li>
+</ul>
+
+<p>org.apache.cordova.device-motion@0.2.9</p>
+
+<ul>
+<li><strong>FirefoxOS</strong> update <code>accelerometer.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+<li><strong>FirefoxOS</strong> added to supported platforms</li>
+</ul>
+
+<p>org.apache.cordova.device-orientation@0.3.8</p>
+
+<ul>
+<li><strong>FirefoxOS</strong> update <code>compass.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7187">CB-7187</a> <strong>iOS</strong>: Add explicit dependency on <code>CoreLocation.framework</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7187">CB-7187</a> Delete unused <code>#import</code> of <code>CDVShared.h</code></li>
+</ul>
+
+<p>org.apache.cordova.dialogs@0.2.9</p>
+
+<ul>
+<li><strong>Ubuntu</strong>: pass proper arguments to prompt callback</li>
+<li><strong>Ubuntu</strong>: use <code>TextField</code> instead of <code>TextInput</code></li>
+<li><strong>Ubuntu</strong>: proper message escaping before passing to <code>qml</code></li>
+<li><strong>FirefoxOS</strong> update <code>notification.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+<li><strong>Android</strong>: Explicitly apply default theme to dialogs</li>
+<li>Fix <code>Beep</code> exception on <strong>Android</strong> when no argument passed</li>
+</ul>
+
+<p>org.apache.cordova.file@1.3.0</p>
+
+<ul>
+<li><strong>FirefoxOS</strong> Remove unsupported paths from <code>requestAllPaths</code></li>
+<li><strong>FirefoxOS</strong> Support for <code>resolve URI</code>, request all paths and local app directory.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4263">CB-4263</a> set ready state to done before onload</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7167">CB-7167</a> <strong>BlackBerry10</strong> <code>copyTo</code> - return wrapped entry rather than native</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7167">CB-7167</a> <strong>BlackBerry10</strong> Add directory support to <code>getFileMetadata</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7167">CB-7167</a> <strong>BlackBerry10</strong> Fix tests detection of <code>blob</code> support (<code>window.Blob</code> is <code>BlobConstructor</code> object)</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7161">CB-7161</a> <strong>BlackBerry10</strong> Add file system directory paths</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7093">CB-7093</a> Create separate <code>plugin.xml</code> for new-style tests</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7057">CB-7057</a> Docs update: elaborate on what directories are for</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7093">CB-7093</a>: Add <code>JS module</code> to <code>plugin.xml</code> file for auto-tests</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7093">CB-7093</a> Ported automated file tests</li>
+<li><strong>Windows</strong> remove extra function closure, not    needed</li>
+<li><strong>Windows</strong> remove check for undefined <code>fail()</code>, it is defined by the proxy and always exists</li>
+<li><strong>Windows</strong> re-apply <code>readAsBinaryString</code> and <code>readAsArrayBuffer</code></li>
+<li><strong>Windows</strong> Moved similar calls to be the same calls, aliased long namespaced functions</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6571">CB-6571</a> Fix <code>getParentForLocalURL</code> to work correctly with directories with trailing &#39;/&#39; (This closes #58)</li>
+<li><code>UTTypeCopyPreferredTagWithClass</code> returns <code>nil mimetype</code> for css when there is no network</li>
+<li>updated spec links in docs ( en only )</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6571">CB-6571</a> add trailing space it is missing in <code>DirectoryEnty</code> constructor.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6980">CB-6980</a> Fixing <code>filesystem:null</code> property in <code>Entry</code></li>
+<li>Add <strong>Windows 8</strong> support for <code>readAsBinaryString</code> and <code>readAsArrayBuffer</code></li>
+<li><strong>FirefoxOS</strong> Update <code>FileProxy.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6940">CB-6940</a>: <code>context.getExternal</code> methods return null if sdcard isn&#39;t in mounted state, causing exceptions that prevent startup from reaching readystate</li>
+<li>Fix mis-handling of filesystem reference in <code>Entry.moveTo</code> </li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6902">CB-6902</a>: Use <code>File.lastModified</code> rather than <code>.lastModifiedDate</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6922">CB-6922</a>: Remove unused <code>getMetadata</code> native code</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6922">CB-6922</a>: Use <code>getFileMetadata</code> consistently to get metadata</li>
+<li>changed fullPath to <code>self.rootDocsPath</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6890">CB-6890</a>: Fix <code>pluginManager</code> access for 4.0.x branch</li>
+</ul>
+
+<p>org.apache.cordova.file-transfer@0.4.5</p>
+
+<ul>
+<li>Fixed documentation of parameter order for <code>FileTransfer.upload</code></li>
+<li><strong>FirefoxOS</strong> initial implementation</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6781">CB-6781</a>: Expose <code>FileTransferError.exception</code> to application</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6928">CB-6928</a>: Add new error code to documentation</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6928">CB-6928</a>: Handle 304 status code</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6928">CB-6928</a>: Open output stream only if it&#39;s necessary.</li>
+<li><strong>BlackBerry10</strong> Minor doc correction</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+<li><strong>Windows 8</strong> upload uses the provided <code>fileName</code> or the actual <code>fileName</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-2420">CB-2420</a> <strong>Windows 8</strong> honor <code>fileKey</code> and param options. This closes #15</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6781">CB-6781</a>: add the exception text to the error object</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6890">CB-6890</a>: Fix <code>pluginManager</code> access for 4.0.x branch</li>
+</ul>
+
+<p>org.apache.cordova.geolocation@0.3.9</p>
+
+<ul>
+<li><strong>FirefoxOS</strong> update <code>GeolocationProxy.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7187">CB-7187</a> <strong>iOS</strong>: Add explicit dependency on <code>CoreLocation.framework</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7187">CB-7187</a> Delete unused <code>#import</code> of <code>CDVShared.h</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+<li><strong>iOS</strong>: Changed <code>distanceFilter</code> from none to 5 meters, prevents it from spamming the callback even though nothing changed.</li>
+</ul>
+
+<p>org.apache.cordova.globalization@0.3.0</p>
+
+<ul>
+<li>The right Apache License 2.0 added</li>
+<li>Update headers and <code>NOTICE</code> file</li>
+<li><strong>BlackBerry10</strong> support implemented for Globalization</li>
+<li>Initial implementation for <strong>FirefoxOS</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4602">CB-4602</a> <strong>iOS</strong>: Use normalized values for <code>getPreferredLanguage</code>.</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-4602">CB-4602</a> <code>geolocation.getPreferredLanguage</code> and <code>geolocation.getLocaleName</code> now return strings with hypen <code>(-)</code> to stay compliant with current standards</li>
+</ul>
+
+<p>org.apache.cordova.inappbrowser@0.5.1</p>
+
+<ul>
+<li><strong>Ubuntu</strong>: support <code>qt 5.2</code></li>
+<li><strong>FirefoxOS</strong> update <code>InAppBrowserProxy.js</code></li>
+<li><strong>FirefoxOS</strong> app needs to be <code>privileged</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6769">CB-6769</a> <strong>iOS</strong>: Fix <code>statusbar</code> color reset wasn&#39;t working on <code>iOS7+</code></li>
+</ul>
+
+<p>org.apache.cordova.media@0.2.12</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+<li><strong>iOS</strong>: Make it easier to play media and record audio simultaneously</li>
+<li>code <code>#s</code> for <code>MediaError</code></li>
+</ul>
+
+<p>org.apache.cordova.media-capture@0.3.2</p>
+
+<ul>
+<li><strong>Ubuntu</strong>: fix compiler warnings</li>
+<li><strong>Ubuntu</strong>: support <code>qt 5.2</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6978">CB-6978</a> <code>captureImage()</code> function fails in <strong>Android</strong></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6890">CB-6890</a>: Fix <code>pluginManager</code> access for 4.0.x branch</li>
+</ul>
+
+<p>org.apache.cordova.network-information@0.2.11</p>
+
+<ul>
+<li><strong>FirefoxOS</strong> update <code>NetworkProxy.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+<li>Fixed docs for <code>online/offline</code> event being backwards</li>
+</ul>
+
+<p>org.apache.cordova.splashscreen@0.3.2</p>
+
+<ul>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-7041">CB-7041</a> <strong>iOS</strong>: Fix image filename logic when setting the <code>iPad</code> splash screen</li>
+<li>fixes Splashscreen crash on <strong>WP8</strong></li>
+</ul>
+
+<p>org.apache.cordova.statusbar@0.1.7</p>
+
+<ul>
+<li>Add <code>LICENSE</code> and <code>NOTICE</code></li>
+<li>Update <code>statusbar.js</code></li>
+<li>Update <code>backgroundColorByHexString</code> function</li>
+<li><strong>iOS</strong>: Use a persistent <code>callbackId</code> instead of calling <code>sendJs</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6626">CB-6626</a> <strong>iOS</strong>: Add a JS event for tapping on <code>statusbar</code></li>
+<li><strong>iOS</strong>: Fix hide to adjust webview&#39;s frame only when status bar is not overlaying webview</li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+<li><strong>Android</strong>: Fix <code>StatusBar.initialize()</code> not running on UI thread</li>
+</ul>
+
+<p>org.apache.cordova.vibration@0.3.10</p>
+
+<ul>
+<li><strong>Ubuntu</strong>: Implemented <code>vibrateWithPattern/cancelVibration</code></li>
+<li><strong>FirefoxOS</strong> update <code>VibrationProxy.js</code></li>
+<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Updated translations for docs</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2014/08/06/android-351-update.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2014/08/06/android-351-update.html">Apache Cordova Android 3.5.1 Update</a>
+                    <div class="date"> 06 Aug 2014 - By Ian Clelland </div>
+                    <p class="content">
+                        On Monday, we released Cordova Android 3.5.1, to address a couple of...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/news/2014/08/13/tools-update.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2014/08/13/tools-update.html">Tools Release: August 13, 2014</a>
+                    <div class="date"> 13 Aug 2014 - By Marcel Kinard </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        An updated version of cordova and cordova-lib are available starting today. cordova@3.5.0-0.2.7...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cordovablogs';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  10.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

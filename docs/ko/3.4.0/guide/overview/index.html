@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                개요 - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/ko/3.4.0/guide/overview/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '3.4.0' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.4.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.4.0/guide/overview/index.html">
+                개요
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.4.0/guide/support/index.html">
+                플랫폼 지원
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.4.0/guide/cli/index.html">
+                명령줄 인터페이스
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.4.0/guide/platforms/index.html">
+                플랫폼 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.4.0/plugin_ref/plugman.html">
+                Plugman를 사용 하 여 플러그인을 관리 하
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.4.0/config_ref/index.html">
+                Config.xml 파일
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.4.0/config_ref/images.html">
+                아이콘 및 시작 화면
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.4.0/guide/hybrid/webviews/index.html">
+                WebViews 포함
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.4.0/guide/hybrid/plugins/index.html">
+                플러그인 개발 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.4.0/guide/appdev/privacy/index.html">
+                개인 정보 보호 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.4.0/guide/appdev/whitelist/index.html">
+                화이트 리스트 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.4.0/cordova/storage/storage.html">
+                스토리지
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.4.0/cordova/events/events.html">
+                이벤트
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.4.0/cordova/plugins/pluginapis.html">
+                플러그인 Api
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        차례
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/ko/3.4.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.4.0/guide/overview/index.html">
+        개요
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.4.0/guide/support/index.html">
+        플랫폼 지원
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.4.0/guide/cli/index.html">
+        명령줄 인터페이스
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.4.0/guide/platforms/index.html">
+        플랫폼 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.4.0/plugin_ref/plugman.html">
+        Plugman를 사용 하 여 플러그인을 관리 하
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.4.0/config_ref/index.html">
+        Config.xml 파일
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.4.0/config_ref/images.html">
+        아이콘 및 시작 화면
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.4.0/guide/hybrid/webviews/index.html">
+        WebViews 포함
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.4.0/guide/hybrid/plugins/index.html">
+        플러그인 개발 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.4.0/guide/appdev/privacy/index.html">
+        개인 정보 보호 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.4.0/guide/appdev/whitelist/index.html">
+        화이트 리스트 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.4.0/cordova/storage/storage.html">
+        스토리지
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.4.0/cordova/events/events.html">
+        이벤트
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.4.0/cordova/plugins/pluginapis.html">
+        플러그인 Api
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/ko/3.4.0/guide/overview/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        한국어
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/3.4.0/guide/overview/" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/3.4.0/guide/overview/" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/3.4.0/guide/overview/" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/3.4.0/guide/overview/" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/3.4.0/guide/overview/" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/3.4.0/guide/overview/" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/3.4.0/guide/overview/" class="">
+                                
+                                    <span class="selected">
+                                        한국어
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/3.4.0/guide/overview/" class="missing-page">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/3.4.0/guide/overview/" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/3.4.0/guide/overview/" class="">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/3.4.0/guide/overview/" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/3.4.0/guide/overview/" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        3.4.0
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/latest/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.4.0/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                3.4.0
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    이 아닌 문서의 최신 버전입니다!
+                    <a href="/docs/ko/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>개요</h1>
+
+<p>코르 도우 바는 오픈 소스 모바일 개발 프레임 워크입니다. 각 모바일 플랫폼의 네이티브 개발 언어를 피하고 크로스 플랫폼 개발을 위한 HTML5, CSS3, 자바 스크립트 등 표준 웹 기술을 사용할 수 있습니다. 응용 프로그램 각 플랫폼을 타겟으로 래퍼 내에서 실행 하 고 표준 API 바인딩을 액세스할 각 장치 센서, 데이터 및 네트워크 상태에 의존.</p>
+
+<p>코르도바를 사용 하 여 있습니다.</p>
+
+<ul>
+<li><p>모바일 개발자 및 다시 각 플랫폼의 언어와 도구를 구현 하지 않고 하나 이상의 플랫폼에서 응용 프로그램을 확장 하려면 원하는 설정 합니다.</p></li>
+<li><p>웹 애플 리 케이 션은 다양 한 애플 리 케이 션에 배포 패키지를 배포 하 고 웹 개발자 포털을 저장 합니다.</p></li>
+<li><p>모바일 개발자는 <em>WebView</em> (브라우저 창) 장치 레벨 Api에 액세스할 수 있는 기본 응용 프로그램 구성 요소를 혼합에 관심된 또는 네이티브 및 WebView 구성 요소 간의 인터페이스를 플러그인을 개발 하려는 경우.</p></li>
+</ul>
+
+<h2>기본 구성 요소</h2>
+
+<p>일반적인 의존 코르도바 응용 프로그램 <code>config.xml</code> 파일을 응용 프로그램에 대 한 정보를 제공 하 고에 영향을 미치는 어떻게 작동 하는지, 교대 방향 응답 여부와 같은 매개 변수를 지정 합니다. 이 파일 사양을 준수 하는 W3C의 <a href="http://www.w3.org/TR/widgets/">웹 응용 프로그램 패키지</a>, 또는 <em>위젯</em>.</p>
+
+<p>응용 프로그램 자체 웹 페이지로 구현, <em>index.html</em> 어떤 CSS, 자바 스크립트, 이미지, 미디어 파일을 참조 하는 기본적으로 명명 된 또는 다른 리소스는 실행에 필요한. App는 app 상점에 배 부하는 네이티브 응용 프로그램 래퍼 내에서 <em>WebView</em> 로 실행 합니다. 다양 한 장치 기능 방식으로 네이티브 애플 리 케이 션과 상호 작용을 웹 응용 프로그램에 대 한 그것은 또한 참조 해야 합니다는 <code>cordova.js</code> API 바인딩을 제공 하는 파일.</p>
+
+<p>코르 도우 바 활성화 WebView의 전체 사용자 인터페이스와 응용 프로그램을 제공할 수 있습니다. 또한 네이티브 응용 프로그램 구성 요소와 WebView를 혼합, 하이브리드 응용 프로그램 내에서 구성 요소 수 있습니다. 코르 도우 바 서로 통신 하려면 이러한 구성 요소에 대 한 <em>플러그인</em> 인터페이스를 제공 합니다.</p>
+
+<h2>개발 경로</h2>
+
+<p>버전 3.0, 모바일 응용 프로그램을 만드는 두 가지 기본 워크플로 사용할 수 있습니다. 두 워크플로 사용 하 여 같은 일을 수행할 수 있습니다, 하는 동안 특정 작업은 더 나은 다른 하나의 워크플로 사용 하 여 적합 합니다. 이런 이유로 최고의 상황을 위한 최고의 도구를 사용할 수 있도록 두 워크플로 이해 해야 합니다.</p>
+
+<p>지원 되는 두 개의 주요 워크플로 <em>웹 프로젝트 개발</em> 워크플로 및 <em>네이티브 플랫폼 개발</em> 워크플로.</p>
+
+<h3>웹 프로젝트 개발</h3>
+
+<p>첫 번째 워크플로 <em>웹 프로젝트 개발</em> 워크플로로 생각할 수 있습니다. 가능한 작은 플랫폼 관련 개발 작업 가능한 많은 모바일 운영 체제에서 실행 되는 코르도바 응용 프로그램을 만들 때이 워크플로 사용 해야 합니다. 이 워크플로 코르도바 3.0 존재와 코르도바 <em>명령줄 인터페이스</em> (CLI)의 창조로 왔다. CLI 당신의 애플 리 케이 션을 구축 관련된 세부 정보를 관리 하는 낮은 수준의 쉘 스크립트의 기능을 많이 추상화, 복사 하는 등 각 모바일 플랫폼에 대 한 올바른 폴더로 웹 자산 플랫폼 특정 구성 변경, 또는 특정 실행 빌드 응용 프로그램 이진 파일을 생성 하는 스크립트. 자세한 <em>웹 프로젝트 개발</em> 워크플로 명령줄 인터페이스에 대 한. 종종 사람들이 말할 때 &quot;cli&quot;, 그들은이 <em>웹 프로젝트 개발</em> 워크플로 대 한 이야기는 note 하시기 바랍니다.</p>
+
+<h3>네이티브 플랫폼 개발</h3>
+
+<p>두 번째 워크플로 <em>네이티브 플랫폼 개발</em> 워크플로로 생각할 수 있습니다. 단일 플랫폼에 대 한 응용 프로그램 개발에 집중 하 고 하위 수준의 플랫폼 세부 사항 변화에 관심이 때 사용 해야 합니다. 크로스 플랫폼 애플 리 케이 션을 구축에이 워크플로 사용할 수 있습니다, 하는 동안 다양 한 빌드 단계를 추상화 하는 도구의 부족 더 어렵게 만들 것입니다. 예를 들어, Plugman를 사용 하 여 지원 하고자 하는 각 플랫폼에 한 번씩 같은 플러그인을 설치 해야 합니다. 이 <em>네이티브 플랫폼 개발</em> 워크플로 사용 하 여 혜택에 액세스할 수 하위 쉘 스크립트 구축 하 고 테스트 응용 프로그램, 그래서 만약 당신이 사물의 네이티브 측면에서 해킹 하는 그것이,이 워크플로 변경 내용을 테스트 하는 가장 효율적인 방법. 이 워크플로 또한 더 큰 네이티브 응용 프로그램에서 작은 부분으로는 CordovaWebView를 사용 하려는 경우에 적합 (포함 WebViews 가이드를 참조 하십시오.) 다른 셸 도구 <a href="../../index.html">가이드</a>, 예를 들어, 안 드 로이드 쉘 도구 <a href="../../index.html">가이드</a> 및 iOS 셸 도구 가이드에서에서이 워크플로에 대해 읽을 수 있습니다.</p>
+
+<p>처음 시작, <em>웹 프로젝트 개발</em> 워크플로 사용 하 여 응용 프로그램을 만드는 가장 쉬운 수 있습니다. (CLI를 설치 하는 <a href="../cli/index.html">명령줄 인터페이스</a> 참조.) 플랫폼 대상 원하는 설정에 따라 개발 사이클의 진보적으로 더 큰 주식에 대해 CLI에 의존 수 있습니다.</p>
+
+<ul>
+<li><p>가장 기본적인 시나리오에서 간단 하 게 수정할 수 있습니다에 대 한 기본 구성으로 채워지는 새로운 프로젝트를 생성 하려면 CLI를 사용할 수 있습니다.</p></li>
+<li><p>많은 모바일 플랫폼에 대 한 각 SDK에서 컴파일 하는 데 필요한 추가 프로젝트 파일을 설정 하는 CLI를 사용할 수 있습니다. 이 대 한 각 대상된 플랫폼의 SDK를 설치 해야 합니다. (자세한 내용은 플랫폼 가이드를 참조 하십시오.) <a href="../support/index.html">플랫폼 지원</a> 표에 표시 된 대상된 플랫폼에 따라 서로 다른 운영 체제에서 CLI를 실행 해야 할 수도 있습니다.</p></li>
+<li><p>플랫폼 지원에 대 한 CLI 실행 응용 프로그램을 컴파일 하 고 SDK 기반 장치 에뮬레이터에서 실행 수 있습니다. 포괄적인 테스트를 위해 응용 프로그램 파일을 생성 하 고 장치에 직접 설치도 수 있습니다.</p></li>
+</ul>
+
+<p>개발 주기에서 어느 시점에서 더 <em>네이티브 플랫폼 개발</em> 워크플로 사용 하 여 전환할 수 있습니다. 제공 하는 플랫폼 SDK 도구 옵션 풍부한 집합을 제공할 수 있습니다. (각 플랫폼 SDK 도구에 대 한 자세한 내용은 플랫폼 <a href="../../index.html">가이드</a> 설정을 참조 하십시오.)</p>
+
+<p>SDK 환경 웹 기반 및 기본 응용 프로그램 구성 요소를 혼합 한 하이브리드 애플 리 케이 션을 구현 하려는 경우에 더 적합 하다. 처음 애플 리 케이 션을 생성 하기 위해 명령줄 유틸리티를 사용할 수 있습니다 또는 반복적으로 그 후 SDK 도구 업데이트 코드를 피드를 합니다. 당신은 또한 만들 수 있습니다 응용 프로그램의 구성 파일 자신. (Config.xml 파일에 대 한 자세한 내용은 참조 하십시오.)</p>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  3.4.0", "language: ko"] }
+    });
+</script>
+
+</body>
+</html>

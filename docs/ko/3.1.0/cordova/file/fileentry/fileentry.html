@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                FileEntry - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/ko/latest/cordova/file/fileentry/fileentry.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '3.1.0' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/overview/index.html">
+                개요
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/platforms/index.html">
+                플랫폼 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/config_ref/index.html">
+                Config.xml 파일
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/config_ref/images.html">
+                아이콘 및 시작 화면
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/hybrid/webviews/index.html">
+                WebViews 포함
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/hybrid/plugins/index.html">
+                플러그인 개발 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/appdev/privacy/index.html">
+                개인 정보 보호 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/guide/appdev/whitelist/index.html">
+                화이트 리스트 가이드
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/accelerometer/accelerometer.html">
+                가 속도계
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/camera/camera.html">
+                카메라
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/compass/compass.html">
+                나침반
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/connection/connection.html">
+                연결
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/contacts/contacts.html">
+                연락처
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/device/device.html">
+                장치
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/events/events.html">
+                이벤트
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/file/file.html">
+                파일
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/geolocation/geolocation.html">
+                지리적 위치
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/notification/notification.html">
+                알림
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/ko/3.1.0/cordova/storage/storage.html">
+                스토리지
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        차례
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/overview/index.html">
+        개요
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/platforms/index.html">
+        플랫폼 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/config_ref/index.html">
+        Config.xml 파일
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/config_ref/images.html">
+        아이콘 및 시작 화면
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/hybrid/webviews/index.html">
+        WebViews 포함
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/hybrid/plugins/index.html">
+        플러그인 개발 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/appdev/privacy/index.html">
+        개인 정보 보호 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/guide/appdev/whitelist/index.html">
+        화이트 리스트 가이드
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/accelerometer/accelerometer.html">
+        가 속도계
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/camera/camera.html">
+        카메라
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/compass/compass.html">
+        나침반
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/connection/connection.html">
+        연결
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/contacts/contacts.html">
+        연락처
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/device/device.html">
+        장치
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/events/events.html">
+        이벤트
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/file/file.html">
+        파일
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/geolocation/geolocation.html">
+        지리적 위치
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/notification/notification.html">
+        알림
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/ko/3.1.0/cordova/storage/storage.html">
+        스토리지
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/ko/3.1.0/cordova/file/fileentry/fileentry.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        한국어
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    <span class="selected">
+                                        한국어
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/3.1.0/cordova/file/fileentry/fileentry.html" class="missing-page">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/3.1.0/cordova/file/fileentry/fileentry.html" class="missing-page">
+                                
+                                    Slovene
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        3.1.0
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/latest/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/3.1.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                3.1.0
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/ko/2.0.0/cordova/file/fileentry/fileentry.html" class="">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    이 아닌 문서의 최신 버전입니다!
+                    <a href="/docs/ko/latest/cordova/file/fileentry/fileentry.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>FileEntry</h1>
+
+<p><a href="http://www.w3.org/TR/file-system-api/">W3C 디렉터리 및 시스템</a> 사양에 정의 된 <a href="../fileobj/fileobj.html">파일</a> 시스템에 파일을 나타냅니다.</p>
+
+<h2>속성</h2>
+
+<ul>
+<li><p><strong>isFile</strong>: 항상 <code>true</code> . <em>(부울)</em></p></li>
+<li><p><strong>isDirectory</strong>: 항상 <code>false</code> . <em>(부울)</em></p></li>
+<li><p><strong>이름</strong>:의 이름에서 <code>FileEntry</code> , 그것에 지도 하는 경로 제외 하 고. <em>(DOMString)</em></p></li>
+<li><p><strong>fullPath</strong>: 하 루트에서의 전체 절대 경로 <code>FileEntry</code> . <em>(DOMString)</em></p></li>
+</ul>
+
+<p><strong>참고:</strong> 다음 특성 W3C 사양에 정의 되어 있지만 지원 <em>되지</em> 않습니다.</p>
+
+<ul>
+<li>  <strong>파일 시스템</strong>: <a href="../fileobj/fileobj.html">파일</a> 시스템에는 <code>FileEntry</code> 거주. <em>(<a href="../fileobj/fileobj.html">파일</a> 시스템)</em></li>
+</ul>
+
+<h2>메서드</h2>
+
+<ul>
+<li><p><strong>getMetadata</strong>: 파일에 대 한 메타 데이터를 조회 합니다.</p></li>
+<li><p><strong>setMetadata</strong>: 파일에 메타 데이터를 설정 합니다.</p></li>
+<li><p><strong>moveTo</strong>: <a href="../fileobj/fileobj.html">파일</a> 시스템에서 다른 위치로 파일을 이동 합니다.</p></li>
+<li><p><strong>copyTo</strong>: <a href="../fileobj/fileobj.html">파일</a> 시스템에서 다른 위치로 파일을 복사 합니다.</p></li>
+<li><p><strong>toURL</strong>: 파일을 찾는 데 사용할 수 있는 URL을 반환 합니다.</p></li>
+<li><p><strong>제거</strong>: 파일을 삭제 합니다.</p></li>
+<li><p><strong>getParent</strong>: 상위 디렉토리를 조회 합니다.</p></li>
+<li><p><strong>createWriter</strong>: 생성 한 <code>[FileWriter](../filewriter/filewriter.html)</code> 개체를 파일에 쓰는 데 사용할 수 있습니다.</p></li>
+<li><p><strong>파일</strong>: 생성 된 <code>File</code> <a href="../fileobj/fileobj.html">파일</a> 속성을 포함 하는 개체.</p></li>
+</ul>
+
+<h2>지원 되는 플랫폼</h2>
+
+<ul>
+<li>  안 드 로이드</li>
+<li>  블랙베리 WebWorks (운영 체제 5.0와 더 높은)</li>
+<li>  iOS</li>
+<li>  Windows Phone 7과 8</li>
+<li>  윈도우 8</li>
+</ul>
+
+<h2>getMetadata</h2>
+
+<p>파일에 대 한 메타 데이터를 조회.</p>
+
+<p><strong>매개 <a href="../../../plugin_ref/spec.html">변수</a>:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: 콜백 전달 되는 <code>Metadata</code> 개체. <em>(기능)</em></p></li>
+<li><p><strong>errorCallback</strong>: 콜백 검색할 때 오류가 발생 하면 실행 되는 <code>Metadata</code> . 로 호출을 <code>[FileError](../fileerror/fileerror.html)</code> 개체. <em>(기능)</em></p></li>
+</ul>
+
+<p><strong>빠른 예제</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">success(metadata) 함수 {console.log ("마지막 수정:" + metadata.modificationTime);}
+
+함수 fail(error) {alert(error.code);}
+
+/ /이 항목 entry.getMetadata (성공, 실패)에 대 한 메타 데이터 개체를 요청
+</code></pre></div>
+<h2>setMetadata</h2>
+
+<p>설정된 파일에 메타 데이터입니다.</p>
+
+<p><strong>현재 iOS 에서만 작동합니다.</strong></p>
+
+<ul>
+<li>  이 파일의 확장된 특성을 설정 합니다.</li>
+</ul>
+
+<p><strong>매개 <a href="../../../plugin_ref/spec.html">변수</a>:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: 메타 데이터를 설정 하는 콜백. <em>(기능)</em></p></li>
+<li><p><strong>errorCallback</strong>: 콜백을 메타 데이터를 성공적으로 설정 하지. <em>(기능)</em></p></li>
+<li><p><strong>metadataObject</strong>: 메타 데이터의 키와 값을 포함 하는 개체. <em>(개체)</em></p></li>
+</ul>
+
+<p><strong>빠른 예제</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success() {
+    console.log("The metadata was successfully set.");
+}
+
+function fail() {
+    alert("There was an error in setting the metadata");
+}
+
+// Set the metadata
+entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
+</code></pre></div>
+<p><strong>iOS 특질</strong></p>
+
+<ul>
+<li>  단지는 <code>com.apple.MobileBackup</code> 확장된 특성을 지원 합니다. 값을 설정 <code>1</code> iCloud에 백업에서 파일을 방지 하기 위해. 값을 설정 `` 를 다시 iCloud에 백업 해야 할 파일을 사용 합니다.</li>
+</ul>
+
+<p><strong>빠른 예제</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function setFileMetadata(localFileSystem, filePath, metadataKey, metadataValue)
+{
+    var onSetMetadataWin = function() {
+        console.log("success setting metadata")
+    }
+    var onSetMetadataFail = function() {
+        console.log("error setting metadata")
+    }
+
+    var onGetFileWin = function(parent) {
+        var data = {};
+        data[metadataKey] = metadataValue;
+        parent.setMetadata(onSetMetadataWin, onSetMetadataFail, data);
+    }
+    var onGetFileFail = function() {
+        console.log("error getting file")
+    }
+
+    var onFSWin = function(fileSystem) {
+        fileSystem.root.getFile(filePath, {create: true, exclusive: false}, onGetFileWin, onGetFileFail);
+    }
+
+    var onFSFail = function(evt) {
+        console.log(evt.target.error.code);
+    }
+
+    window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+}
+
+    setFileMetadata(LocalFileSystem.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
+</code></pre></div>
+<h2>moveTo</h2>
+
+<p><a href="../fileobj/fileobj.html">파일</a> 시스템에서 다른 위치로 파일을 이동 합니다. 오류 결과 애플 리 케이 션을 시도 하는 경우:</p>
+
+<ul>
+<li><p>현재 하나에서 다른 이름을 제공 하지 않습니다; 하는 경우 부모에 <a href="../fileobj/fileobj.html">파일</a> 이동</p></li>
+<li><p>디렉터리;에 의해 점유 된 경로에 <a href="../fileobj/fileobj.html">파일</a> 이동</p></li>
+</ul>
+
+<p>또한, 기존 <a href="../fileobj/fileobj.html">파일</a> 위에 파일을 이동 하려고 삭제 하 고 해당 파일을 대체 합니다.</p>
+
+<p><strong>매개 <a href="../../../plugin_ref/spec.html">변수</a>:</strong></p>
+
+<ul>
+<li><p><strong>부모</strong>: 부모 디렉터리를 파일을 이동 합니다. <em>(DirectoryEntry)</em></p></li>
+<li><p><strong>새 이름</strong>: 파일의 새 이름. 현재 이름이 지정 되지 않은 경우 기본값입니다. <em>(DOMString)</em></p></li>
+<li><p><strong>successCallback</strong>: 새로운 파일의 전달 된 콜백 <code>FileEntry</code> 개체. <em>(기능)</em></p></li>
+<li><p><strong>errorCallback</strong>: 파일을 이동 하려고 할 때 오류가 발생 하면 실행 되는 콜백. 로 호출을 <code>[FileError](../fileerror/fileerror.html)</code> 개체. <em>(기능)</em></p></li>
+</ul>
+
+<p><strong>빠른 예제</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success(entry) {
+    console.log("New Path: " + entry.fullPath);
+}
+
+function fail(error) {
+    alert(error.code);
+}
+
+function moveFile(entry) {
+    var parent = document.getElementById('parent').value,
+        parentName = parent.substring(parent.lastIndexOf('/')+1),
+        parentEntry = new DirectoryEntry(parentName, parent);
+
+    // move the file to a new directory and rename it
+    entry.moveTo(parentEntry, "newFile.txt", success, fail);
+}
+</code></pre></div>
+<h2>copyTo</h2>
+
+<p><a href="../fileobj/fileobj.html">파일</a> 시스템에서 새 위치로 파일을 복사 합니다. 오류 결과 애플 리 케이 션을 시도 하는 경우:</p>
+
+<ul>
+<li>  현재 하나에서 다른 이름이 제공 되지 않은 경우 부모에 파일을 복사 합니다.</li>
+</ul>
+
+<p><strong>매개 <a href="../../../plugin_ref/spec.html">변수</a>:</strong></p>
+
+<ul>
+<li><p><strong>부모</strong>: 부모 디렉터리를 파일을 복사 합니다. <em>(DirectoryEntry)</em></p></li>
+<li><p><strong>새 이름</strong>: 파일의 새 이름. 현재 이름이 지정 되지 않은 경우 기본값입니다. <em>(DOMString)</em></p></li>
+<li><p><strong>successCallback</strong>: 새로운 파일의 전달 된 콜백 <code>FileEntry</code> 개체. <em>(기능)</em></p></li>
+<li><p><strong>errorCallback</strong>: 파일을 복사 하려고 할 때 오류가 발생 하면 실행 되는 콜백. 로 호출을 <code>[FileError](../fileerror/fileerror.html)</code> 개체. <em>(기능)</em></p></li>
+</ul>
+
+<p><strong>빠른 예제</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function win(entry) {
+    console.log("New Path: " + entry.fullPath);
+}
+
+function fail(error) {
+    alert(error.code);
+}
+
+function copyFile(entry) {
+    var parent = document.getElementById('parent').value,
+        parentName = parent.substring(parent.lastIndexOf('/')+1),
+        parentEntry = new DirectoryEntry(parentName, parent);
+
+    // copy the file to a new directory and rename it
+    entry.copyTo(parentEntry, "file.copy", success, fail);
+}
+</code></pre></div>
+<h2>toURL</h2>
+
+<p>파일을 사용할 수 있는 URL을 반환 합니다.</p>
+
+<p><strong>빠른 예제</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">// Request the URL for this entry
+var fileURL = entry.toURL();
+console.log(fileURL);
+</code></pre></div>
+<h2>제거</h2>
+
+<p>파일을 삭제합니다.</p>
+
+<p><strong>매개 <a href="../../../plugin_ref/spec.html">변수</a>:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: <a href="../fileobj/fileobj.html">파일</a> 삭제 후 실행 되는 콜백. 매개 <a href="../../../plugin_ref/spec.html">변수</a> 없이 호출 됩니다. <em>(기능)</em></p></li>
+<li><p><strong>errorCallback</strong>: 파일을 삭제 하려고 할 때 오류가 발생 하면 실행 되는 콜백. 로 호출을 <code>[FileError](../fileerror/fileerror.html)</code> 개체. <em>(기능)</em></p></li>
+</ul>
+
+<p><strong>빠른 예제</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success(entry) {
+    console.log("Removal succeeded");
+}
+
+function fail(error) {
+    alert('Error removing file: ' + error.code);
+}
+
+// remove the file
+entry.remove(success, fail);
+</code></pre></div>
+<h2>getParent</h2>
+
+<p>부모를 보면 <code>[DirectoryEntry](../directoryentry/directoryentry.html)</code> 파일이 포함 된.</p>
+
+<p><strong>매개 <a href="../../../plugin_ref/spec.html">변수</a>:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: 파일의 부모에 전달 된 콜백 <code>[DirectoryEntry](../directoryentry/directoryentry.html)</code> . <em>(기능)</em></p></li>
+<li><p><strong>errorCallback</strong>: 부모를 검색 하려고 할 때 오류가 발생 하면 실행 되는 콜백 <code>[DirectoryEntry](../directoryentry/directoryentry.html)</code> . 로 호출을 <code>[FileError](../fileerror/fileerror.html)</code> 개체. <em>(기능)</em></p></li>
+</ul>
+
+<p><strong>빠른 예제</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success(parent) {
+    console.log("Parent Name: " + parent.name);
+}
+
+function fail(error) {
+    alert(error.code);
+}
+
+// Get the parent DirectoryEntry
+entry.getParent(success, fail);
+</code></pre></div>
+<h2>createWriter</h2>
+
+<p>생성 한 <code>[FileWriter](../filewriter/filewriter.html)</code> 개체가 나타내는 파일은<code>FileEntry</code>.</p>
+
+<p><strong>매개 <a href="../../../plugin_ref/spec.html">변수</a>:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: 콜백 전달 되는 <code>[FileWriter](../filewriter/filewriter.html)</code> 개체. <em>(기능)</em></p></li>
+<li><p><strong>errorCallback</strong>:는 <a href="../filewriter/filewriter.html">FileWriter</a> 만들려고 하는 동안 오류가 발생 하는 경우 실행 되는 콜백. 로 호출을 <code>[FileError](../fileerror/fileerror.html)</code> 개체. <em>(기능)</em></p></li>
+</ul>
+
+<p><strong>빠른 예제</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success(writer) {
+    writer.write("Some text to the file");
+}
+
+function fail(error) {
+    alert(error.code);
+}
+
+// create a FileWriter to write to the file
+entry.createWriter(success, fail);
+</code></pre></div>
+<h2>파일</h2>
+
+<p>반환 된 <code>File</code> 파일의 현재 상태를 나타내는 개체가 <code>FileEntry</code> 나타냅니다.</p>
+
+<p><strong>매개 <a href="../../../plugin_ref/spec.html">변수</a>:</strong></p>
+
+<ul>
+<li><p><strong>successCallback</strong>: 콜백 전달 되는 <code>File</code> 개체. <em>(기능)</em></p></li>
+<li><p><strong>errorCallback</strong>: 콜백 만들 때 오류가 발생 하면 실행 되는 <code>File</code> 파일이 더 이상 존재 하는 때 같은 개체. 로 호출을 <code>[FileError](../fileerror/fileerror.html)</code> 개체. <em>(기능)</em></p></li>
+</ul>
+
+<p><strong>빠른 예제</strong></p>
+<div class="highlight"><pre><code class="language-" data-lang="">function success(file) {
+    console.log("File size: " + file.size);
+}
+
+function fail(error) {
+    alert("Unable to retrieve file properties: " + error.code);
+}
+
+// obtain properties of a file
+entry.file(success, fail);
+</code></pre></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  3.1.0", "language: ko"] }
+    });
+</script>
+
+</body>
+</html>

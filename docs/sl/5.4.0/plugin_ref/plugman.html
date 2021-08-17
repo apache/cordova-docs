@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Uporaba Plugman za upravljanje Plugins - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/sl/latest/plugin_ref/plugman.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '5.4.0' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/sl/5.4.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/sl/5.4.0/guide/overview/index.html">
+                Pregled
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/sl/5.4.0/guide/support/index.html">
+                Platforma podporo
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/sl/5.4.0/guide/cli/index.html">
+                Vmesnik ukazne vrstice
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/sl/5.4.0/guide/platforms/index.html">
+                Platforma vodniki
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="this-page" href="/docs/sl/5.4.0/plugin_ref/plugman.html">
+                Uporaba Plugman za upravljanje Plugins
+            </a>
+            
+                <span class="entry-highlight"></span>
+            
+        
+
+        
+        <div id="page-toc" class="page-toc"></div>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/sl/5.4.0/config_ref/index.html">
+                Config.xml datoteke
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/sl/5.4.0/config_ref/images.html">
+                Ikone in brizg zaslon
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/sl/5.4.0/guide/hybrid/webviews/index.html">
+                Vdelava spletni pogledi
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/sl/5.4.0/guide/hybrid/plugins/index.html">
+                Plugin razvoj vodnik
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/sl/5.4.0/plugin_ref/spec.html">
+                Plugin specifikacija
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/sl/5.4.0/guide/appdev/privacy/index.html">
+                Vodnik o zasebnosti
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/sl/5.4.0/guide/appdev/whitelist/index.html">
+                Seznam dovoljenih vodnik
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/sl/5.4.0/cordova/storage/storage.html">
+                Shranjevanje
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/sl/5.4.0/cordova/events/events.html">
+                Dogodki
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/sl/5.4.0/cordova/plugins/pluginapis.html">
+                Plugin API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Kazalo
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/sl/5.4.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/sl/5.4.0/guide/overview/index.html">
+        Pregled
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/sl/5.4.0/guide/support/index.html">
+        Platforma podporo
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/sl/5.4.0/guide/cli/index.html">
+        Vmesnik ukazne vrstice
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/sl/5.4.0/guide/platforms/index.html">
+        Platforma vodniki
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="this-page" href="/docs/sl/5.4.0/plugin_ref/plugman.html">
+        Uporaba Plugman za upravljanje Plugins
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/sl/5.4.0/config_ref/index.html">
+        Config.xml datoteke
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/sl/5.4.0/config_ref/images.html">
+        Ikone in brizg zaslon
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/sl/5.4.0/guide/hybrid/webviews/index.html">
+        Vdelava spletni pogledi
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/sl/5.4.0/guide/hybrid/plugins/index.html">
+        Plugin razvoj vodnik
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/sl/5.4.0/plugin_ref/spec.html">
+        Plugin specifikacija
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/sl/5.4.0/guide/appdev/privacy/index.html">
+        Vodnik o zasebnosti
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/sl/5.4.0/guide/appdev/whitelist/index.html">
+        Seznam dovoljenih vodnik
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/sl/5.4.0/cordova/storage/storage.html">
+        Shranjevanje
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/sl/5.4.0/cordova/events/events.html">
+        Dogodki
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/sl/5.4.0/cordova/plugins/pluginapis.html">
+        Plugin API
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/sl/5.4.0/plugin_ref/plugman.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Language dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Slovene
+                        <span class="caret"></span>
+                    </button>
+
+                    <!-- List all languages -->
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/de/5.4.0/plugin_ref/plugman.html" class="">
+                                
+                                    Deutsch
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/en/5.4.0/plugin_ref/plugman.html" class="">
+                                
+                                    English
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/es/5.4.0/plugin_ref/plugman.html" class="">
+                                
+                                    Español
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/fr/5.4.0/plugin_ref/plugman.html" class="">
+                                
+                                    Français
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/it/5.4.0/plugin_ref/plugman.html" class="">
+                                
+                                    Italiano
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ja/5.4.0/plugin_ref/plugman.html" class="">
+                                
+                                    日本語
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ko/5.4.0/plugin_ref/plugman.html" class="">
+                                
+                                    한국어
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/pl/5.4.0/plugin_ref/plugman.html" class="">
+                                
+                                    Polski
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/ru/5.4.0/plugin_ref/plugman.html" class="">
+                                
+                                    Русский
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/sl/5.4.0/plugin_ref/plugman.html" class="">
+                                
+                                    <span class="selected">
+                                        Slovene
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-cn/5.4.0/plugin_ref/plugman.html" class="">
+                                
+                                    简体中文
+                                
+                            </a>
+                        </li>
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+
+                        
+                        
+
+                        <li>
+                            <a href="/docs/zh-tw/5.4.0/plugin_ref/plugman.html" class="">
+                                
+                                    繁體中文
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        5.4.0
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/sl/dev/plugin_ref/plugman.html" class="">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/sl/latest/plugin_ref/plugman.html" class="">
+                                
+                                    
+                                10.x
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/sl/9.x/plugin_ref/plugman.html" class="">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/sl/8.x/plugin_ref/plugman.html" class="">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/sl/7.x/plugin_ref/plugman.html" class="">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/sl/6.x/plugin_ref/plugman.html" class="">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/sl/5.4.0/plugin_ref/plugman.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                5.4.0
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/sl/3.5.0/plugin_ref/plugman.html" class="">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/sl/3.4.0/plugin_ref/plugman.html" class="">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    To ni najnovejša različica dokumentacije!
+                    <a href="/docs/sl/latest/plugin_ref/plugman.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Uporaba Plugman za upravljanje Plugins</h1>
+
+<p>Od različice 3.0 naprej, Cordova izvaja vse naprave API kot plugins, in nanje privzeto onemogočene. Podpira tudi dva različna načina za dodajanje in odstranjevanje plugins. Prvi je s pomočjo na <code>cordova</code> CLI, opisane v vmesnik ukazne vrstice. Drugi je z uporabo nižje ravni <a href="https://github.com/apache/cordova-plugman/">Plugman</a> vmesnik ukazne vrstice (potek dela &quot;Native platformo dev&quot;.) Glavna razlika med teh dveh razvojnih poti je, da Plugman lahko samo dodati plugins eno platformo naenkrat, ker CLI bo dodati plugins vse platforme, ki jih ciljate. Zaradi tega je bolj smiselno uporabiti Plugman, ko delate tesno z enotno platformo, zato ime &quot;Native platformo Dev&quot; potek dela.</p>
+
+<p>Več informacij na Plugman, še posebej, če ste zainteresirani za uživanje Plugman kot vozlišče modul ali taksist na šifro Plugman, glejte <a href="https://github.com/apache/cordova-plugman/blob/master/README.md">README datoteko v svojem skladišču</a>.</p>
+
+<h2>Namestitev Plugman</h2>
+
+<p>Namestite plugman, morate imeti <a href="http://nodejs.org/">sečišče</a> nameščen v vašem računalniku. Potem vi moči prost dostop sledeč zapoved od kjerkoli v vašem okolju namestiti plugman globalno, tako da je na voljo od poljuben imenik v računalniku:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ npm install -g plugman
+</code></pre></div>
+<p>Vi življati imeti tudi <code>git</code> na vaš <code>PATH</code> biti sposobni namestiti plugins neposredno iz oddaljenih kreten URLs.</p>
+
+<p><strong>Nasvet:</strong> Če ugotovite, da po namestitvi plugman z npm ste še vedno nezmožen teči poljuben <code>plugman</code> ukaze, se prepričajte, da ste dodali v <code>/npm/</code> imenik v vaš<code>PATH</code>.</p>
+
+<p><strong>Opomba:</strong> Ta korak lahko preskočite, če ne želite, da onesnažujejo globalni npm namespace z namestitvijo Plugman na svetovni ravni. Če je temu tako, potem ko ustvarite Cordova projekt z lupino orodja, bo na <code>node_modules</code> imenik znotraj vašega projekta, ki vsebuje Plugman. Ker si ne instally globalno, boste morali sklicevati vozlišča za vsak Plugman ukaz, na primer <code>node ./node_modules/plugman/main.js -version</code> . Preostanek ta vodnik prevzame ste namestili Plugman globalno, kar pomeni, da lahko zaženete s samo<code>plugman</code>.</p>
+
+<h2>Ustvarjanje Cordova projekta</h2>
+
+<p>Preden lahko uporabite Plugman, morate ustvariti projekt Cordova. To storite z bodisi z ukazno vrstico ali nižji ravni lupine skripte. Navodila za uporabo lupine skripte, da ustvarite svoj projekt se nahajajo v različnih &quot;Ukazne vrstice orodja&quot; vodniki, navedena na platformo vodniki.</p>
+
+<h2>Dodal Plugin</h2>
+
+<p>Nekoč vi življati umestiti Plugman ter ustvarili projekt Cordova, lahko začnete dodajanje plugins platformo z:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ plugman --platform &lt;ios|amazon-fireos|android|blackberry10|wp7|wp8&gt; --project &lt;directory&gt; --plugin &lt;name|url|path&gt; [--plugins_dir &lt;directory&gt;] [--www &lt;directory&gt;] [--variable &lt;name&gt;=&lt;value&gt; [--variable &lt;name&gt;=&lt;value&gt; ...]]
+</code></pre></div>
+<p>Z uporabo minimalne parametrov, ta ukaz namesti plugin v projektu cordova. Navesti morate mesto platformo in cordova projekta za to platformo. Prav tako morate navesti plugin, z različnimi <code>--plugin</code> parameter oblike bitje:</p>
+
+<ul>
+<li>  <code>name</code>: Ime imenika, kjer obstaja plugin vsebino. To mora biti obstoječ imenik pod na <code>--plugins_dir</code> poti (glej spodaj za več info) ali plugin v registru Cordova.</li>
+<li>  <code>url</code>: URL začne z https:// ali kreten: / /, če pokažete veljavno git skladišče, ki je clonable in vsebuje a <code>plugin.xml</code> pila. Bi program kopira vsebino tega skladišča v na<code>--plugins_dir</code>.</li>
+<li>  <code>path</code>: Pot do imenika, ki vsebuje veljavne plugin, ki vključuje a <code>plugin.xml</code> pila. Ta pot vsebine bodo kopirani v na<code>--plugins_dir</code>.</li>
+</ul>
+
+<p>Drugi parametri:</p>
+
+<ul>
+<li>  <code>--plugins_dir</code>privzeto <code>&lt;project&gt;/cordova/plugins</code> , vendar je lahko poljuben imenik, ki vsebuje podimenik za vsako nerealne plugin.</li>
+<li>  <code>--www</code>privzete nastavitve v projekt <code>www</code> mesto mape, vendar lahko naslovnik, ki se uporablja kot cordova projekt uporabe spletnih sredstev.</li>
+<li>  <code>--variable</code>omogoča, da določite nekatere spremenljivke v napeljati čas, potreben za nekatere plugins, ki zahteva API tipke ali drugih parametrov, po meri, uporabniško definirane. Oglejte si <a href="plugin_spec.md">specifikacije plugin</a> za več informacij.</li>
+</ul>
+
+<h2>Odstranite Plugin</h2>
+
+<p>V uninstall plugin, da preprosto prenesti na <code>--uninstall</code> zastava ter zagotoviti plugin ID.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ plugman --uninstall --platform &lt;ios|amazon-fireos|android|blackberry10|wp7|wp8&gt; --project &lt;directory&gt; --plugin &lt;id&gt; [--www &lt;directory&gt;] [--plugins_dir &lt;directory&gt;]
+</code></pre></div>
+<h2>Pomoč ukazov</h2>
+
+<p>Plugman značilnosti globalnih pomoč ukaz, ki vam lahko pomagajo, če vi zaslužiti zaljubljen ali so težave. Prikaže seznam vseh ukazov Plugman in svoje sintakse:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">plugman -help
+plugman  # same as above
+</code></pre></div>
+<p><strong>Opomba</strong>: <code>plugman -help</code> lahko kažejo nekatere dodatne ukaze povezan z registrom. Ti ukazi so plugin za razvijalce in ne smejo izvajati na tretji plugin registrov.</p>
+
+<p>Lahko tudi dodate v <code>--debug|-d</code> zastave Plugman ukaz, da zaženete ta ukaz v podrobnem načinu, ki bo prikazal vse notranje informacije o iskanju napak, saj so oddane in vam lahko pomagajo izslediti težave, kot so manjkajoče datoteke.</p>
+<div class="highlight"><pre><code class="language-" data-lang=""># Adding Android battery-status plugin to "myProject":
+plugman -d --platform android --project myProject --plugin org.apache.cordova.battery-status
+</code></pre></div>
+<p>Končno, lahko uporabite na <code>--version|-v</code> zastavo, da vidite, katera različica Plugman, ki ga uporabljate.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">plugman -v
+</code></pre></div>
+<h2>Registracija dejavnosti</h2>
+
+<p>Obstajajo številne plugman ukazov, ki se lahko uporabijo za interakcijo s <a href="http://plugins.cordova.io">registracija Plugin</a>. Prosimo, upoštevajte, da ti ukazi register posebej za register <em>plugins.cordova.io</em> plugin, ne smejo izvajati tretji plugin registri.</p>
+
+<h3>Iščete Plugin</h3>
+
+<p>Plugman lahko uporabite za iskanje <a href="http://plugins.cordova.io">registracija Plugin</a> za plugin id&#39;s, ki ustreza dani prostor ločen seznam ključnih besed.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">plugman search &lt;plugin keywords&gt;
+</code></pre></div>
+<h3>Sprememba Plugin registracija</h3>
+
+<p>Lahko dobite ali pa nastavite URL sedanji registracija plugin, ki uporablja plugman. Na splošno mora zapustiti ta nastavljena na http://registry.cordova.io, razen če vi biti brez rabiti a tretji stranka plugin registra.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">plugman config set registry &lt;url-to-registry&gt;
+plugman config get registry
+</code></pre></div>
+<h3>Get Plugin informacije</h3>
+
+<p>Lahko dobite informacije o posebnih plugin shranjeni v plugin skladišču:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">plugman info &lt;id&gt;
+</code></pre></div>
+<p>To bo stik plugin registracija ter puščati podatke, kot so številka različice je plugin.</p>
+
+<h2>Namestitvi Plugins jedro</h2>
+
+<p>Spodnji primeri kažejo, kako dodati plugins, kot je potrebno, da vse Cordova API uporabljate v vašem projektu še vedno dela, ko nadgradite na različico 3.0. Za vsak ukaz, morate izbrati ciljni platformi, in referenčno platformo imenik projekta.</p>
+
+<ul>
+<li><p>cordova-plugin-battery-status</p>
+
+<p>plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.battery-status</p></li>
+<li><p>cordova-plugin-camera plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.camera</p></li>
+<li><p>cordova-plugin-console plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.console</p></li>
+<li><p>cordova-plugin-contacts plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.contacts</p></li>
+<li><p>cordova-plugin-device plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.device</p></li>
+<li><p>cordova-plugin-device-motion (accelerometer) plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.device-motion</p></li>
+<li><p>cordova-plugin-device-orientation (compass) plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.device-orientation</p></li>
+<li><p>cordova-plugin-dialogs plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.dialogs</p></li>
+<li><p>cordova-plugin-file plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.file</p></li>
+<li><p>cordova-plugin-file-transfer plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.file-transfer</p></li>
+<li><p>cordova-plugin-geolocation plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.geolocation</p></li>
+<li><p>cordova-plugin-globalization plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.globalization</p></li>
+<li><p>cordova-plugin-inappbrowser plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.inappbrowser</p></li>
+<li><p>cordova-plugin-media plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.media</p></li>
+<li><p>cordova-plugin-media-capture plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.media-capture</p></li>
+<li><p>cordova-plugin-network-information plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.network-information</p></li>
+<li><p>cordova-plugin-splashscreen plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.splashscreen</p></li>
+<li><p>cordova-plugin-vibration plugman --platform <ios|amazon-fireos|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.vibration</p></li>
+</ul>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://issues.apache.org/jira/browse/CB/">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2012, 2013, 2015 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  5.4.0", "language: sl"] }
+    });
+</script>
+
+</body>
+</html>
