@@ -2423,6 +2423,28 @@ Most of these instructions apply to projects created with an older set
 of command-line tools that precede the <code>cordova</code> CLI utility. See <a href="../../cli/index.html">The Command-Line Interface</a> for information how to update the
 version of the CLI.</p>
 
+<h2>Upgrading to 10.x.x</h2>
+
+<p>The best way to upgrade to 10.X.X is to simply remove the Android platform from
+your project and re-add it with the new version. For example,</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform remove android
+cordova platform add android@10.X.X
+</code></pre></div>
+<p>If you use the above method, be aware that any changes you made to the android
+platform folder will be lost (editing the contents of this folder is
+discouraged).</p>
+
+<h3>Breaking changes</h3>
+
+<p>Version 10.0.0 introduces a signinificant change how URLs are loaded within the app.
+Prior versions load the apps web files like <code>index.html</code> via the file protocol.
+Which means the app starts with the URL <code>file:///android_asset/www/index.html</code>. Loading <code>file:///</code> URLs is considered insecure
+and <a href="https://developer.android.com/reference/android/webkit/WebSettings#setAllowUniversalAccessFromFileURLs(boolean)">Android has deprecated support</a>.
+Cordova Android 10.0.0 now uses an Android API called <code>WebViewAssetLoader</code> to load web content via the HTTP(S) scheme (<code>https://localhost</code>) by default.
+Therefore the app now starts with the URL <code>https://localhost/</code> instead of <code>file:///android_asset/www/index.html</code>. Because this is a new origin you might encouter data loss and you need to migrate your web data (Localstorage, IndexedDB etc).</p>
+
+<p>You can use the <code>config.xml</code> preference <code>&lt;preference name=&quot;AndroidInsecureFileModeEnabled&quot; value=&quot;true&quot; /&gt;</code> to opt-out of the new WebViewAssetLoader and switch back to file URLs.</p>
+
 <h2>Upgrading to 7.X.X</h2>
 
 <p>The best way to upgrade to 7.X.X is to simply remove the Android platform from

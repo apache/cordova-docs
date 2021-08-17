@@ -2795,6 +2795,10 @@ and will be indicated as such.</p>
 <td><em>Default: singleTop</em> <br/> Allowed values: standard, singleTop, singleTask, singleInstance <br/>  Sets the Activity android:launchMode attribute. This changes what happens when the app is launched from app icon or intent and is already running.</td>
 </tr>
 <tr>
+<td>AndroidInsecureFileModeEnabled(boolean) <br/> <mark>Android</mark></td>
+<td><em>Default: false</em> <br/>  If set to <code>true</code> loading <code>file:///</code> URLs is allowed. <strong>Note</strong>: Enabling this setting allows malicious scripts loaded in a file:// context to launch cross-site scripting attacks, either accessing arbitrary local files including WebView cookies, app private data or even credentials used on arbitrary web sites.</td>
+</tr>
+<tr>
 <td>android-maxSdkVersion(integer) <br/> <mark>Android</mark></td>
 <td><em>Default: Not Specified</em> <br/>  Sets the <code>maxSdkVersion</code> attribute of the <code>&lt;uses-sdk&gt;</code> tag in the project&#39;s <code>AndroidManifest.xml</code> (see <a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html">here</a>).</td>
 </tr>
@@ -3075,6 +3079,7 @@ and will be indicated as such.</p>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"ShowTitle"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"LogLevel"</span> <span class="na">value=</span><span class="s">"VERBOSE"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AndroidLaunchMode"</span> <span class="na">value=</span><span class="s">"singleTop"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AndroidInsecureFileModeEnabled"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"DefaultVolumeStream"</span> <span class="na">value=</span><span class="s">"call"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"OverrideUserAgent"</span> <span class="na">value=</span><span class="s">"Mozilla/5.0 My Browser"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AppendUserAgent"</span> <span class="na">value=</span><span class="s">"My Browser"</span> <span class="nt">/&gt;</span>
