@@ -6,11 +6,12 @@
     "doc": "doc"
   },
   "scripts": {
-    "test": "npm run eslint && gulp build",
+    "test": "npm run eslint",
     "serve": "gulp serve --prod",
     "clean": "gulp clean",
     "update-docs": "gulp snapshot",
-    "build": "gulp build --prod",
+    "build": "gulp build",
+    "build:prod": "gulp build --prod",
     "eslint": "eslint tools *.js"
   },
   "author": "Apache Software Foundation",
