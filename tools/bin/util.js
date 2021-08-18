@@ -18,12 +18,10 @@
 'use strict';
 
 module.exports = (function () {
-
     var fs = require('fs');
     var path = require('path');
 
     function stripFrontMatter (text) {
-
         // get and replace front matter if it's there
         // NOTE:
         //      String.replace() replaces only the first occurrence
@@ -39,7 +37,6 @@ module.exports = (function () {
     function getFrontMatterString (text) {
         var rawFrontMatterString = getRawFrontMatterString(text);
         if (rawFrontMatterString !== null) {
-
             // strip out front matter markers
             var frontMatterString = rawFrontMatterString.replace(/^---\s*$/gm, '');
             return frontMatterString;

@@ -18,7 +18,6 @@
 'use strict';
 
 function getNextVersion (previousVersion) {
-
     // get previous version number
     // NOTE:
     //      only versions of the form N.x are accepted
@@ -38,7 +37,6 @@ function getNextVersion (previousVersion) {
 }
 
 function main () {
-
     // get arg
     var previousVersion = process.argv[2];
     if (!previousVersion) {

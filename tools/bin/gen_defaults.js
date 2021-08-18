@@ -39,7 +39,6 @@ var DEV_CHANGE_FREQUENCY = 'daily';
 var DEV_PAGE_PRIORITY = LATEST_PAGE_PRIORITY / 4;
 
 function main () {
-
     var rootDir = process.argv[2];
     var latestVersionName = process.argv[3];
 
@@ -56,11 +55,10 @@ function main () {
     }
 
     // create defaults config
-    var config = { 'defaults': [] };
+    var config = { defaults: [] };
 
     // set defaults for each language
     util.listdirsSync(rootDir).forEach(function (langName) {
-
         var langPath = path.join(rootDir, langName);
         var languageDefaults = {
             scope: {
@@ -76,7 +74,6 @@ function main () {
 
         // set defaults for each version
         util.listdirsSync(langPath).forEach(function (versionName) {
-
             var tocfile = util.genTocfileName(langName, versionName);
 
             var changeFrequency = DEFAULT_CHANGE_FREQUENCY;

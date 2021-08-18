@@ -153,14 +153,12 @@ function jekyllBuild (done) {
 }
 
 function copyDocsVersion (oldVersion, newVersion, cb) {
-
     // copying a folder and a ToC file for each language
     var numCopyOperations = LANGUAGES.length * 2;
 
     // pseudo-CV (condition variable)
     var numCopied = 0;
     function doneCopying (error) {
-
         if (error) {
             cb(error);
             return;
@@ -175,7 +173,6 @@ function copyDocsVersion (oldVersion, newVersion, cb) {
 
     // create a new version for each language
     LANGUAGES.forEach(function (languageName) {
-
         // get files to copy
         var oldVersionDocs = path.join(DOCS_DIR, languageName, oldVersion);
         var oldVersionToc = path.join(TOC_DIR, util.srcTocfileName(languageName, oldVersion));
@@ -240,7 +237,7 @@ module.exports.help = module.exports.default = function help () {
     gutil.log('');
 };
 
-let fetch = module.exports.fetch = function fetch (done) {
+const fetch = module.exports.fetch = function fetch (done) {
     // skip fetching if --nofetch was passed
     if (gutil.env.nofetch) {
         gutil.log(gutil.colors.yellow(
@@ -252,11 +249,11 @@ let fetch = module.exports.fetch = function fetch (done) {
     exec('node', [bin('fetch_docs.js'), '--config', FETCH_CONFIG, '--docsRoot', DOCS_DIR], done);
 };
 
-let toc = module.exports.toc = gulp.series(fetch, function toc (done) {
+const toc = module.exports.toc = gulp.series(fetch, function toc (done) {
     exec('node', [bin('toc.js'), DOCS_DIR, TOC_DIR], done);
 });
 
-let version = module.exports.version = function version () {
+const version = module.exports.version = function version () {
     // this code is stupid; it's basically the line:
     //      cat VERSION | sed -e 's/^/VERSION_VAR_NAME: /' > _version.yml
     // however we're in Gulp, and we need to support Windows...
@@ -268,17 +265,17 @@ let version = module.exports.version = function version () {
         .pipe(gulp.dest('.'));
 };
 
-let defaults = module.exports.defaults = function defaults () {
+const defaults = module.exports.defaults = function defaults () {
     return execPiped('node', [bin('gen_defaults.js'), DOCS_DIR, LATEST_DOCS_VERSION], DEFAULTS_CONFIG_FILE)
         .pipe(gulp.dest(ROOT_DIR));
 };
 
-let docsVersion = module.exports['docs-version'] = function docsVersion () {
+const docsVersion = module.exports['docs-version'] = function docsVersion () {
     return execPiped('node', [bin('gen_versions.js'), DOCS_DIR], DOCS_VERSION_FILE)
         .pipe(gulp.dest(ROOT_DIR));
 };
 
-let pagesDict = module.exports['pages-dict'] = function pagesDict () {
+const pagesDict = module.exports['pages-dict'] = function pagesDict () {
     var args = [
         bin('gen_pages_dict.js'),
         '--siteRoot', SOURCE_DIR,
@@ -294,7 +291,7 @@ module.exports.reload = function reload () {
     browsersync.reload();
 };
 
-let jekyll = module.exports.jekyll = function jekyll (done) {
+const jekyll = module.exports.jekyll = function jekyll (done) {
     jekyllBuild(done);
 };
 
@@ -302,7 +299,7 @@ module.exports.regen = gulp.series(jekyll, function regen () {
     browsersync.reload();
 });
 
-let less = module.exports.less = function less () {
+const less = module.exports.less = function less () {
     return gulp.src(path.join(CSS_SRC_DIR, '**', '*.less'))
         .pipe(Less())
         .pipe(header(YAML_FRONT_MATTER))
@@ -311,7 +308,7 @@ let less = module.exports.less = function less () {
         .pipe(browsersync.reload({ stream: true }));
 };
 
-let css = module.exports.css = function css () {
+const css = module.exports.css = function css () {
     return gulp.src(path.join(CSS_SRC_DIR, '**', '*.css'))
         .pipe(header(YAML_FRONT_MATTER))
         .pipe(gulp.dest(CSS_OUT_DIR))
@@ -319,7 +316,7 @@ let css = module.exports.css = function css () {
         .pipe(browsersync.reload({ stream: true }));
 };
 
-let sass = module.exports.sass = function sass () {
+const sass = module.exports.sass = function sass () {
     return gulp.src(path.join(CSS_SRC_DIR, '**', '*.scss'))
         .pipe(Sass().on('error', Sass.logError))
         .pipe(header(YAML_FRONT_MATTER))
@@ -328,16 +325,16 @@ let sass = module.exports.sass = function sass () {
         .pipe(browsersync.reload({ stream: true }));
 };
 
-let styles = module.exports.styles = gulp.series(less, css, sass);
-let data = module.exports.data = gulp.series(toc, docsVersion, pagesDict);
-let configs = module.exports.configs = gulp.series(defaults, version);
+const styles = module.exports.styles = gulp.series(less, css, sass);
+const data = module.exports.data = gulp.series(toc, docsVersion, pagesDict);
+const configs = module.exports.configs = gulp.series(defaults, version);
 
-let asf = module.exports.asf = function asf () {
+const asf = module.exports.asf = function asf () {
     return gulp.src(path.join(ROOT_DIR, '.asf.yaml'))
         .pipe(gulp.dest(path.join(PROD_DIR)));
 };
 
-let plugins = module.exports.plugins = function plugins () {
+const plugins = module.exports.plugins = function plugins () {
     if (gutil.env.prod) {
         process.env.NODE_ENV = 'production';
     }
@@ -346,7 +343,7 @@ let plugins = module.exports.plugins = function plugins () {
         .transform(babelify, {
             presets: ['react'],
             plugins: [
-                ['transform-react-jsx', { 'pragma': 'h' }]
+                ['transform-react-jsx', { pragma: 'h' }]
             ]
         })
         .transform(envify)
@@ -377,11 +374,11 @@ let plugins = module.exports.plugins = function plugins () {
         .pipe(gulp.dest(JS_DIR));
 };
 
-let build = module.exports.build = gulp.series(configs, data, styles, plugins, function build (done) {
+const build = module.exports.build = gulp.series(configs, data, styles, plugins, function build (done) {
     jekyllBuild(done);
 }, asf);
 
-let serve = module.exports.serve = gulp.series(build, function serve () {
+const serve = module.exports.serve = gulp.series(build, function serve () {
     var route = {};
 
     // set site root for browsersync
@@ -443,7 +440,7 @@ module.exports['link-bugs'] = function linkBugs (done) {
     exec(bin('linkify-bugs.sh'), [path.join(SOURCE_DIR, '_posts')], done);
 };
 
-module.exports['lint'] = function lint () {
+module.exports.lint = function lint () {
     return gulp.src(path.join('./', '**', '*.html'))
         .pipe(htmllint());
 };

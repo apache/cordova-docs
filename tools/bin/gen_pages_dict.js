@@ -41,7 +41,6 @@ function pagesFromRedirects (redirects, languages) {
     // add docs redirects
     if (typeof redirects.docs !== 'undefined') {
         for (var redirectSource in redirects.docs) {
-
             // add an entry for the redirect's source, once for each language
             for (var i = 0; i < languages.length; i++) {
                 var language = languages[i];
@@ -61,7 +60,6 @@ function isInLatestDocs (uri, latestVersion) {
 
 // main
 function main () {
-
     // get args
     var argv = optimist
         .usage('Usage: $0 [options]')
@@ -81,7 +79,6 @@ function main () {
 
     // add pages for redirects if a redirects file was passed
     if (redirectsFilePath !== null) {
-
         var redirectsString = fs.readFileSync(redirectsFilePath);
         var redirects = yaml.load(redirectsString);
         var redirectsPages = pagesFromRedirects(redirects, languages);
