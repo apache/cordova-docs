@@ -23,7 +23,7 @@ function getNextVersion (previousVersion) {
     //      only versions of the form N.x are accepted
     var previousVersionMatch = previousVersion.match(/^(\d+)\.x$/);
     if (!previousVersionMatch) {
-        throw 'invalid version';
+        throw Error('invalid version');
     }
 
     // get next major version
