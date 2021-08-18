@@ -80,7 +80,8 @@ function main () {
     // add pages for redirects if a redirects file was passed
     if (redirectsFilePath !== null) {
         var redirectsString = fs.readFileSync(redirectsFilePath);
-        var redirects = yaml.load(redirectsString);
+        const schema = yaml.DEFAULT_SAFE_SCHEMA;
+        var redirects = yaml.load(redirectsString, { schema });
         var redirectsPages = pagesFromRedirects(redirects, languages);
 
         pages = redirectsPages;
@@ -108,7 +109,8 @@ function main () {
 
         // print output
         console.log(util.generatedBy(__filename));
-        console.log(yaml.dump(pages));
+        const schema = yaml.DEFAULT_SAFE_SCHEMA;
+        console.log(yaml.dump(pages, { schema }));
     });
 }
 
