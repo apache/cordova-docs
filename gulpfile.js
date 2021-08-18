@@ -23,7 +23,7 @@ var babelify = require('babelify');
 var uglify = require('gulp-uglify');
 var envify = require('envify');
 var htmllint = require('gulp-htmllint');
-var crawler = require('simplecrawler');
+var Crawler = require('simplecrawler');
 var ncp = require('ncp');
 
 var nextversion = require('./tools/bin/nextversion');
@@ -469,18 +469,19 @@ module.exports.snapshot = gulp.series(fetch, function snapshot (done) {
 });
 
 module.exports.checklinks = function checkLinks (done) {
-    crawler
-        .crawl('http://localhost:3000/')
-        .on('fetch404', function (queueItem, response) {
-            gutil.log(
-                'Resource not found linked from ' +
-                queueItem.referrer + ' to', queueItem.url
-            );
-            gutil.log('Status code: ' + response.statusCode);
-        })
-        .on('complete', function (queueItem) {
-            done();
-        });
+    const crawler = new Crawler('http://localhost:3000/');
+
+    crawler.on('fetch404', function (queueItem, response) {
+        gutil.log(
+            'Resource not found linked from ' +
+            queueItem.referrer + ' to', queueItem.url
+        );
+        gutil.log('Status code: ' + response.statusCode);
+    }).on('complete', function () {
+        done();
+    });
+
+    crawler.start();
 };
 
 module.exports.clean = function clean (done) {

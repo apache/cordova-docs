@@ -50,7 +50,7 @@
     "glob": "^7.0.3",
     "gulp-htmllint": "^0.0.5",
     "semver": "^7.3.4",
-    "simplecrawler": "^0.5.2"
+    "simplecrawler": "^1.1.9"
   },
   "repository": "github:apache/cordova-docs",
   "bugs": "https://github.com/apache/cordova-docs/issues",
