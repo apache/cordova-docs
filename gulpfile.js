@@ -9,7 +9,7 @@ var child_process = require('child_process');
 // var gulp = require('gulp');
 var gutil = require('gulp-util');
 var Less = require('gulp-less');
-var Sass = require('gulp-sass');
+var Sass = require('gulp-sass')(require('sass'));
 var replace = require('gulp-replace');
 var header = require('gulp-header');
 var footer = require('gulp-footer');
@@ -23,7 +23,7 @@ var babelify = require('babelify');
 var uglify = require('gulp-uglify');
 var envify = require('envify');
 var htmllint = require('gulp-htmllint');
-var crawler = require('simplecrawler');
+var Crawler = require('simplecrawler');
 var ncp = require('ncp');
 
 var nextversion = require('./tools/bin/nextversion');
@@ -341,9 +341,11 @@ const plugins = module.exports.plugins = function plugins () {
 
     var stream = browserify(PLUGINS_SRC_FILE, { debug: !gutil.env.prod })
         .transform(babelify, {
-            presets: ['react'],
+            presets: ['@babel/preset-react'],
+
+            // @todo should remove the plugins block? It can build without it.
             plugins: [
-                ['transform-react-jsx', { pragma: 'h' }]
+                ['@babel/plugin-transform-react-jsx', { pragma: 'h' }]
             ]
         })
         .transform(envify)
@@ -469,18 +471,19 @@ module.exports.snapshot = gulp.series(fetch, function snapshot (done) {
 });
 
 module.exports.checklinks = function checkLinks (done) {
-    crawler
-        .crawl('http://localhost:3000/')
-        .on('fetch404', function (queueItem, response) {
-            gutil.log(
-                'Resource not found linked from ' +
-                queueItem.referrer + ' to', queueItem.url
-            );
-            gutil.log('Status code: ' + response.statusCode);
-        })
-        .on('complete', function (queueItem) {
-            done();
-        });
+    const crawler = new Crawler('http://localhost:3000/');
+
+    crawler.on('fetch404', function (queueItem, response) {
+        gutil.log(
+            'Resource not found linked from ' +
+            queueItem.referrer + ' to', queueItem.url
+        );
+        gutil.log('Status code: ' + response.statusCode);
+    }).on('complete', function () {
+        done();
+    });
+
+    crawler.start();
 };
 
 module.exports.clean = function clean (done) {
