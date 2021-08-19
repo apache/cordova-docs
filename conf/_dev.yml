@@ -9,6 +9,3 @@ exclude:
 
 include:
     - docs/en/dev
-    - docs/ru/dev
-    - docs/fr/dev
-    
