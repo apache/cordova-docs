@@ -24,22 +24,21 @@ var util = require('./util');
 
 // constants
 var LANGUAGE_MAP = {
-    'de': 'Deutsch',
-    'en': 'English',
-    'es': 'Español',
-    'fr': 'Français',
-    'it': 'Italiano',
-    'ja': '日本語',
-    'ko': '한국어',
-    'pl': 'Polski',
-    'ru': 'Русский',
-    'sl': 'Slovene',
+    de: 'Deutsch',
+    en: 'English',
+    es: 'Español',
+    fr: 'Français',
+    it: 'Italiano',
+    ja: '日本語',
+    ko: '한국어',
+    pl: 'Polski',
+    ru: 'Русский',
+    sl: 'Slovene',
     'zh-cn': '简体中文',
     'zh-tw': '繁體中文'
 };
 
 function main () {
-
     var scriptName = process.argv[1];
     var rootDir = process.argv[2];
     var config = {};
@@ -51,7 +50,6 @@ function main () {
 
     // go through directory that contains all languages
     util.listdirsSync(rootDir).forEach(function (langId) {
-
         var langPath = path.join(rootDir, langId);
         var versionNames = util.listdirsSync(langPath);
 
@@ -60,9 +58,9 @@ function main () {
 
         // semver doesn't like a value of 10.x, so we'll coerce the values into proper 10.0.0,
         // and store a map to easily convert map our sorted away back to our desired text.
-        let coercionMap = {};
+        const coercionMap = {};
         versionNames = versionNames.map((v) => {
-            let coerced = semver.coerce(v).toString();
+            const coerced = semver.coerce(v).toString();
             coercionMap[coerced] = v;
             return coerced;
         });
@@ -84,8 +82,8 @@ function main () {
 
         // set the language name and the versions it has
         config[langId] = {
-            'name': langName,
-            'versions': versionNames
+            name: langName,
+            versions: versionNames
         };
     });
 

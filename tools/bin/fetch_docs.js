@@ -58,7 +58,6 @@ function packageNameFromRepoName (repoName) {
 }
 
 function getFetchedFileConfig (entry) {
-
     // get entry components
     var srcConfig = entry.src;
     var destConfig = entry.dest;
@@ -139,7 +138,6 @@ function setFrontMatter (text, frontMatter, options) {
 
 function dumpEntries (downloadPrefix, entries) {
     entries.forEach(function (entry) {
-
         // validate entry's dest config
         if (!entry.dest) {
             console.error("entry '" + entry.toString() + "' missing 'dest'");
@@ -166,7 +164,6 @@ function dumpEntries (downloadPrefix, entries) {
 
 function downloadEntries (downloadPrefix, entries) {
     entries.forEach(function (entry) {
-
         // verify and process entry
         var fetchedFileConfig = getFetchedFileConfig(entry);
         if (!fetchedFileConfig) {
@@ -190,7 +187,6 @@ function downloadEntries (downloadPrefix, entries) {
 
         // open an HTTP request for the file
         https.get(fetchURI, function (response) {
-
             if (response.statusCode !== 200) {
                 console.error('Failed to download ' + fetchURI + ': got ' + response.statusCode);
                 process.exit(1);
@@ -205,7 +201,6 @@ function downloadEntries (downloadPrefix, entries) {
 
             // process the response when it finishes
             response.on('end', function () {
-
                 // merge new front matter and file's own front matter (if it had any)
                 //
                 // NOTE:
@@ -222,7 +217,6 @@ function downloadEntries (downloadPrefix, entries) {
 
                 // write out the file
                 outFile.end(augmentedContents);
-
             }).on('error', function (e) {
                 console.error(e);
             });
@@ -232,7 +226,6 @@ function downloadEntries (downloadPrefix, entries) {
 
 // main
 function main () {
-
     // get args
     var argv = optimist
         .usage('Usage: $0 [options]')

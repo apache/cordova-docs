@@ -18,13 +18,12 @@
 'use strict';
 
 function getNextVersion (previousVersion) {
-
     // get previous version number
     // NOTE:
     //      only versions of the form N.x are accepted
     var previousVersionMatch = previousVersion.match(/^(\d+)\.x$/);
     if (!previousVersionMatch) {
-        throw 'invalid version';
+        throw Error('invalid version');
     }
 
     // get next major version
@@ -38,7 +37,6 @@ function getNextVersion (previousVersion) {
 }
 
 function main () {
-
     // get arg
     var previousVersion = process.argv[2];
     if (!previousVersion) {

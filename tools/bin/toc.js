@@ -26,7 +26,6 @@ var augment = require('./augment_toc');
 var util = require('./util');
 
 function main () {
-
     var docsRoot = argv._[0];
     var tocRoot = argv._[1];
 

@@ -6,13 +6,13 @@
     "doc": "doc"
   },
   "scripts": {
-    "test": "npm run eslint",
+    "test": "npm run lint",
     "serve": "gulp serve --prod",
     "clean": "gulp clean",
     "update-docs": "gulp snapshot",
     "build": "gulp build",
     "build:prod": "gulp build --prod",
-    "eslint": "eslint tools *.js"
+    "lint": "eslint tools *.js"
   },
   "author": "Apache Software Foundation",
   "license": "Apache-2.0",
@@ -42,17 +42,11 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "devDependencies": {
+    "@cordova/eslint-config": "^3.0.0",
     "babel-plugin-transform-h-jsx": "^1.0.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babelify": "^7.3.0",
-    "eslint": "^5.16.0",
-    "eslint-config-semistandard": "^13.0.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^9.0.1",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0",
     "glob": "^7.0.3",
     "gulp-htmllint": "^0.0.5",
     "semver": "^7.3.4",

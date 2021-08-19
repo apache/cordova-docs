@@ -66,7 +66,6 @@ function augmentEntry (originalEntry, prefix) {
 }
 
 function decideOnName (originalEntry, frontMatter) {
-
     // raise a warning for old-style ToC entry names
     if (originalEntry.name && verbose === true) {
         console.warn("'name' property will be ignored");
@@ -83,7 +82,6 @@ function decideOnName (originalEntry, frontMatter) {
 
 // public API
 function augmentToc (originalToc, prefix) {
-
     var augmentedToc = [];
 
     if (typeof prefix === 'undefined') {
@@ -98,7 +96,6 @@ function augmentToc (originalToc, prefix) {
         // recurse for entries with children, replacing their children with
         // their augmented equivalents
         if (originalEntry.children) {
-
             if (typeof originalEntry.name === 'undefined') {
                 throw new Error('entries with children must have a name');
             }
@@ -126,7 +123,6 @@ function augmentString (srcTocString, prefix) {
 }
 
 function main () {
-
     // get args
     var argv = optimist
         .usage('Usage: $0 [options]')
