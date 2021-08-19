@@ -32,7 +32,7 @@
     "chalk": "^4.1.2",
     "envify": "^4.1.0",
     "fs-extra": "^10.0.0",
-    "glob": "^7.0.3",
+    "glob": "^7.1.7",
     "gulp": "^4.0.2",
     "gulp-footer": "^2.0.2",
     "gulp-header": "^2.0.9",
@@ -47,7 +47,7 @@
     "ncp": "^2.0.0",
     "optimist": "^0.6.1",
     "sass": "^1.38.0",
-    "semver": "^7.3.4",
+    "semver": "^7.3.5",
     "simplecrawler": "^1.1.9",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
