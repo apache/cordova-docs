@@ -17,23 +17,21 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
           bundler-cache: true
 
-      - name: Environment Configure
-        run: |
-          npm install
+      - name: Run npm install
+        run: npm install
 
-      - name: Test
+      - name: Run npm test
         run: npm test
 
-      - name: Build
+      - name: Run build
         run: npm run build:prod
 
-      - name: Deploy
+      - name: Run deploy
         uses: JamesIves/github-pages-deploy-action@5dc1d5a192aeb5ab5b7d5a77b7d36aea4a7f5c92
         with:
           BRANCH: asf-site
