@@ -53,8 +53,7 @@ function augmentEntry (originalEntry, prefix) {
     // read in the referenced file and get its front matter
     var fileContents = fs.readFileSync(filePath).toString();
     var frontMatterString = util.getFrontMatterString(fileContents);
-    const schema = yaml.DEFAULT_SAFE_SCHEMA;
-    var frontMatter = yaml.load(frontMatterString, { schema });
+    var frontMatter = yaml.load(frontMatterString);
 
     augmentedEntry.name = decideOnName(originalEntry, frontMatter);
     augmentedEntry.url = originalEntry.url;
@@ -116,10 +115,9 @@ function augmentToc (originalToc, prefix) {
 }
 
 function augmentString (srcTocString, prefix) {
-    const schema = yaml.DEFAULT_SAFE_SCHEMA;
-    var srcToc = yaml.load(srcTocString, { schema });
+    var srcToc = yaml.load(srcTocString);
     var augmentedToc = augmentToc(srcToc, prefix);
-    var augmentedTocString = yaml.dump(augmentedToc, { indent: 4, schema });
+    var augmentedTocString = yaml.dump(augmentedToc, { indent: 4 });
 
     return augmentedTocString;
 }

@@ -126,8 +126,7 @@ function getFetchedFileConfig (entry) {
 function getFrontMatter (text) {
     var frontMatterString = util.getFrontMatterString(text);
     if (frontMatterString !== null) {
-        const schema = yaml.DEFAULT_SAFE_SCHEMA;
-        return yaml.load(frontMatterString, { schema });
+        return yaml.load(frontMatterString);
     }
     return {};
 }
@@ -263,8 +262,7 @@ function main () {
 
     // get config
     var fetchConfig = fs.readFileSync(configFile);
-    const schema = yaml.DEFAULT_SAFE_SCHEMA;
-    var configEntries = yaml.load(fetchConfig, { schema });
+    var configEntries = yaml.load(fetchConfig);
 
     // just dump entries if --dump was passed
     if (printOnly === true) {

@@ -88,8 +88,7 @@ function main () {
     });
 
     console.log(util.generatedBy(__filename));
-    const schema = yaml.DEFAULT_SAFE_SCHEMA;
-    console.log(yaml.dump(config, { indent: 4, schema }));
+    console.log(yaml.dump(config, { indent: 4 }));
 }
 
 main();
