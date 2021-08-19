@@ -6,13 +6,13 @@
     "doc": "doc"
   },
   "scripts": {
-    "test": "npm run eslint",
+    "test": "npm run lint",
     "serve": "gulp serve --prod",
     "clean": "gulp clean",
     "update-docs": "gulp snapshot",
     "build": "gulp build",
     "build:prod": "gulp build --prod",
-    "eslint": "eslint tools *.js"
+    "lint": "eslint tools *.js"
   },
   "author": "Apache Software Foundation",
   "license": "Apache-2.0",
