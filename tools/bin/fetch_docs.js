@@ -131,8 +131,7 @@ function getFrontMatter (text) {
     return {};
 }
 
-function setFrontMatter (text, frontMatter, options = {}) {
-    options.schema = yaml.DEFAULT_SAFE_SCHEMA;
+function setFrontMatter (text, frontMatter, options) {
     var frontMatterString = yaml.dump(frontMatter, options);
     return util.setFrontMatterString(text, frontMatterString);
 }
