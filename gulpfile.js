@@ -341,9 +341,11 @@ const plugins = module.exports.plugins = function plugins () {
 
     var stream = browserify(PLUGINS_SRC_FILE, { debug: !gutil.env.prod })
         .transform(babelify, {
-            presets: ['react'],
+            presets: ['@babel/preset-react'],
+
+            // @todo should remove the plugins block? It can build without it.
             plugins: [
-                ['transform-react-jsx', { pragma: 'h' }]
+                ['@babel/plugin-transform-react-jsx', { pragma: 'h' }]
             ]
         })
         .transform(envify)
