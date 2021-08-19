@@ -2,7 +2,7 @@ var Preact = require('preact');
 var h = require('preact').h;
 var findDOMNode = require('preact-compat').findDOMNode;
 var createClass = require('preact-compat').createClass;
-var Bacon = require('baconjs').Bacon;
+var Bacon = require('baconjs');
 
 var SearchBar = createClass({
 
