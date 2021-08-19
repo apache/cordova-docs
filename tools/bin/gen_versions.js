@@ -24,18 +24,7 @@ var util = require('./util');
 
 // constants
 var LANGUAGE_MAP = {
-    de: 'Deutsch',
-    en: 'English',
-    es: 'Español',
-    fr: 'Français',
-    it: 'Italiano',
-    ja: '日本語',
-    ko: '한국어',
-    pl: 'Polski',
-    ru: 'Русский',
-    sl: 'Slovene',
-    'zh-cn': '简体中文',
-    'zh-tw': '繁體中文'
+    en: 'English'
 };
 
 function main () {
