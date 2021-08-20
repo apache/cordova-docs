@@ -1,6 +1,6 @@
 name: build test
 
-on: [pull_request]
+on: [ pull_request ]
 
 jobs:
   build:
@@ -8,18 +8,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
+          bundler-cache: true
 
-      - name: Environment Configure
-        run: |
-          npm install
-          bundle instal
+      - name: Run npm install
+        run: npm install
 
-      - name: Test
+      - name: Run npm test
         run: npm test
 
-      - name: Dev Build
+      - name: Run dev build
         run: npm run build
