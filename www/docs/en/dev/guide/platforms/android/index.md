@@ -37,7 +37,7 @@ the CLI, see [Cordova CLI Reference][cli_reference].
 Cordova for Android requires the Android SDK which can be installed
 on OS X, Linux or Windows. See the Android SDK's
 [System Requirements](http://developer.android.com/sdk/index.html#Requirements).
-Cordova's latest Android package supports up to Android [API Level](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels) 30.
+Cordova's latest Android package supports up to Android [API Level](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels) 30.
 The supported Android API Levels and Android Versions for the past
 few cordova-android releases can be found in this table:
 
@@ -67,7 +67,7 @@ they dip below 5% on Google's
 
 ### Java Development Kit (JDK)
 
-Install [Java Development Kit (JDK) 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+Install [Java Development Kit (JDK) 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 or you can install [Java Development Kit (JDK) 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 if using `cordova-android` version 10+.
 
