@@ -113,45 +113,6 @@ NOTE:
                     {% endif %}
                 {% endif %}
 
-                <!-- Language dropdown -->
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        {{ site.data.docs-versions[page.language].name }}
-                        <span class="caret"></span>
-                    </button>
-
-                    <!-- List all languages -->
-                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                        {% for other_language_entry in site.data.docs-versions %}
-
-                        {% assign other_language_id       = other_language_entry[0] %}
-                        {% assign other_language          = other_language_entry[1] %}
-                        {% assign other_language_versions = other_language.versions %}
-                        {% assign other_language_name     = other_language.name %}
-
-                        {% capture other_language_root %}/docs/{{ other_language_id }}/{% endcapture %}
-
-                        {% comment %}
-                        Replace only the language part of the URI, thereby redirecting to the same page
-                        in the other language. The page will exist because translations are clones of each other.
-                        {% endcomment %}
-                        {% assign other_language_url = page.url | replace:LANGUAGE_ROOT,other_language_root %}
-
-                        <li>
-                            <a href="{{ site.baseurl }}{{ other_language_url }}" class="{% unless other_language_versions contains page.version %}missing-page{% endunless %}">
-                                {% if page.language == other_language_id %}
-                                    <span class="selected">
-                                        {{ other_language_name }}
-                                    </span>
-                                {% else %}
-                                    {{ other_language_name }}
-                                {% endif %}
-                            </a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-
                 <!-- Version dropdown -->
                 <div class="dropdown">
                     <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
