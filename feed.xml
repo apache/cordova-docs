@@ -6,9 +6,89 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Aug 2021 02:08:37 +0000</pubDate>
-    <lastBuildDate>Fri, 20 Aug 2021 02:08:37 +0000</lastBuildDate>
+    <pubDate>Mon, 23 Aug 2021 16:43:45 +0000</pubDate>
+    <lastBuildDate>Mon, 23 Aug 2021 16:43:45 +0000</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>Camera Plugin 6.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released an update to our Camera plugin!&lt;/p&gt;
+
+&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;Cordova Camera Plugin (6.0.0)&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-camera&quot;&gt;cordova-plugin-camera@6.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cordova plugin remove cordova-plugin-camera
+cordova plugin add cordova-plugin-camera@6.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Requires &lt;strong&gt;&lt;code&gt;Cordova-Android&lt;/code&gt; 10.x of higher&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This major release has bumped the minimum Cordova-Android requirement to 10.x or higher. This requirement change was made for the &lt;strong&gt;AndroidX Only Support&lt;/strong&gt; initiative.&lt;/p&gt;
+
+&lt;p&gt;If your project is using an older Cordova-Android release, please upgrade the Android platform before using it.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cordova platform remove android
+cordova platform add android@10.x
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;AndroidX&lt;/code&gt; Only Support&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In this release, we have completely migrated to the AndroidX library and no longer support the Android Support Library. &lt;/p&gt;
+
+&lt;p&gt;If you were using the &lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-androidx-adapter&quot;&gt;cordova-plugin-androidx-adapter&lt;/a&gt; plugin to migrate the Camera&amp;#39;s legacy Android Support Library references to the new AndroidX references, it can be removed unless your project is using other third-party plugins that have not migrated to AndroidX.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;HEIC&lt;/strong&gt; Support&lt;/p&gt;
+
+&lt;p&gt;We introduced support to encode the HEIC file formats to the defined &lt;code&gt;EncodingType&lt;/code&gt; for WebView display.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Package Visibility Support&lt;/p&gt;
+
+&lt;p&gt;We have updated this plugin to support the breaking changes that were introduced in Android 11 around package visibility.&lt;/p&gt;
+
+&lt;p&gt;For more information on package visibility, please check out the following Google&amp;#39;s resources:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;ttps://medium.com/androiddevelopers/package-visibility-in-android-11-cc857f221cd9&quot;&gt;Package visibility in Android 11&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.android.com/training/package-visibility&quot;&gt;Package visibility filtering on Android&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Feature:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/751&quot;&gt;GH-751&lt;/a&gt; feat(android)!: support &lt;strong&gt;AndroidX&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/750&quot;&gt;GH-750&lt;/a&gt; feat(android): bump &lt;code&gt;cordova-android&lt;/code&gt; requirements for &lt;code&gt;10.x&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/731&quot;&gt;GH-731&lt;/a&gt; feat(android): encode &lt;code&gt;heic&lt;/code&gt; format to &lt;code&gt;EncodingType&lt;/code&gt; for webview display &lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/issues/711&quot;&gt;#711&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/684&quot;&gt;GH-684&lt;/a&gt; feat(android): &lt;code&gt;sdk-30&lt;/code&gt; package visibility support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fix:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/687&quot;&gt;GH-687&lt;/a&gt; fix(android): return exception message (where it exists)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/585&quot;&gt;GH-585&lt;/a&gt; fix(android): file path correction if &lt;code&gt;Uri&lt;/code&gt; authority is &lt;code&gt;FileProvider&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/news/2021/08/23/camera-plugin-6.0.0-release.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/news/2021/08/23/camera-plugin-6.0.0-release.html</guid>
+        
+        <category>release</category>
+        
+        <category>plugins</category>
+        
+        
+        <category>news</category>
+        
+      </item>
     
       <item>
         <title>Cordova Android 10.1.0 Released!</title>
@@ -658,64 +738,6 @@ cordova platform add android@9.1.0
         <link>https://cordova.apache.org/2021/02/07/deprecate-wkwebview-engine.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/2021/02/07/deprecate-wkwebview-engine.html</guid>
         
-        
-      </item>
-    
-      <item>
-        <title>Cordova iOS 6.2.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova iOS 6.2.0&lt;/code&gt;! This is Cordova&amp;#39;s official platform for building iOS mobile applications.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@6.2.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;This release contains small bug fixes, dependency updates and resolves some splashscreen issues. Plugin developers can now hook into the &lt;code&gt;WKURLSchemeHandler&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1030&quot;&gt;learn more&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cordova platform remove ios
-cordova platform add ios@6.2.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1069&quot;&gt;GH-1069&lt;/a&gt; (chore): update dependencies for minor release&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1067&quot;&gt;GH-1067&lt;/a&gt; fix: plugin podspec with no config elements&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1014&quot;&gt;GH-1014&lt;/a&gt; fix(splashscreen): Don&amp;#39;t show splashscreen when used as a lib&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1030&quot;&gt;GH-1030&lt;/a&gt; Allow plugins to hook into the WKURLSchemeHandler&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1036&quot;&gt;GH-1036&lt;/a&gt; (ios): add console output for simulator selectio&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1060&quot;&gt;GH-1060&lt;/a&gt; GH-1059: Add VALIDATE_WORKSPACE setting to XcodeProj&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1031&quot;&gt;GH-1031&lt;/a&gt; Set CDVWebViewProcessPoolFactory to public&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1041&quot;&gt;GH-1041&lt;/a&gt; Document breaking changes in 4.3.0 &amp;amp; 4.4.0&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1035&quot;&gt;GH-1035&lt;/a&gt; (ios): nil check in didReceiveData in schemehandler&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1023&quot;&gt;GH-1023&lt;/a&gt; Reinstate verification of main navigation in case of navigationType other&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1018&quot;&gt;GH-1018&lt;/a&gt; (iOS) Skip Cocoapods checkTool on non-darwin platform&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1015&quot;&gt;GH-1015&lt;/a&gt; Project changes to allow consuming cordova as submodule&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1006&quot;&gt;GH-1006&lt;/a&gt; Hide splash sceen immediately on .hide()&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1005&quot;&gt;GH-1005&lt;/a&gt; Fix BackgroundColor parsing for lowercase letters&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1002&quot;&gt;GH-1002&lt;/a&gt; chore(asf): Update GitHub repo metadata&lt;/li&gt;
-&lt;li&gt;Add release notes from version 6.1.1&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/976&quot;&gt;GH-976&lt;/a&gt; chore: Update npm dependencies&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/973&quot;&gt;GH-973&lt;/a&gt; fix: Append startURL to the initial url loaded&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/936&quot;&gt;GH-936&lt;/a&gt; (ios) issue-912: fix deployment to device&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/932&quot;&gt;GH-932&lt;/a&gt; ci: add node 14 to workflow&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2021/02/04/cordova-ios-release-6.2.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2021/02/04/cordova-ios-release-6.2.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
         
       </item>
     
