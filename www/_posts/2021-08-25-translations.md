@@ -1,4 +1,13 @@
-### Declaring Translation Bankruptcy
+---
+layout: post
+author:
+    name: Jesse MacFadyen
+    url: https://twitter.com/purplecabbage
+title:  "Declaring Translation Bankruptcy"
+categories: announcements
+tags: news
+---
+
 
 It has been talked about for years, and even though we [agreed to do it](https://lists.apache.org/thread.html/4768b193b66d75d1c0c7c08303c54eb0fa15894c60e99b607f7e3e5d%40%3Cdev.cordova.apache.org%3E), we never really moved on it.
 Taking things away is always harder than adding things.
