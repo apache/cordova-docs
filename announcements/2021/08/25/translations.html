@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released an update to our Camera plugin!We are happy to announce that we have just released an update for Cordova ...">
+    <meta name="description" content="It has been talked about for years, and even though we agreed to do it, we never really moved on it.Taking things away is always harder than adding things.Ba...">
 
     <title>
         
             
-                Camera Plugin 6.0.0 Released! - Apache Cordova
+                Declaring Translation Bankruptcy - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/news/2021/08/23/camera-plugin-6.0.0-release.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2021/08/25/translations.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -121,80 +121,34 @@
 
 <div class="post">
     <header>
-        <div class="title">Camera Plugin 6.0.0 Released!</div>
+        <div class="title">Declaring Translation Bankruptcy</div>
         <div class="author">By:
             
-              Bryan Ellis
+              <a href="https://twitter.com/purplecabbage">Jesse MacFadyen</a>
             
         </div>
-        <div class="date">23 Aug 2021</div>
+        <div class="date">25 Aug 2021</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released an update to our Camera plugin!</p>
+            <p>It has been talked about for years, and even though we <a href="https://lists.apache.org/thread.html/4768b193b66d75d1c0c7c08303c54eb0fa15894c60e99b607f7e3e5d%40%3Cdev.cordova.apache.org%3E">agreed to do it</a>, we never really moved on it.
+Taking things away is always harder than adding things.</p>
 
-<p>We are happy to announce that we have just released an update for <code>Cordova Camera Plugin (6.0.0)</code>!</p>
+<p>Back in the day, we had active contributions from the community to translate our documentation, and we had a pretty robust system to pull them all together and publish the html site.  This system has run flawlessly for years, however, the community translations slowed, then stopped, while the system still carefully churned through it all. We have been providing translated docs since Cordova CLI 3.1.0 while the maintenance of these translated docs started to diverge around Cordova CLI 6.x</p>
+
+<p>Over the next few weeks we will be making aggessive changes to the documentation system.
+including:</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-plugin-camera">cordova-plugin-camera@6.0.0</a></li>
+<li>archive all existing translated documentation to a new static <code>archive</code> site</li>
+<li>remove all translations from the main repo, and update build tooling to only publish the main version</li>
 </ul>
 
-<p><strong>To upgrade:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova plugin remove cordova-plugin-camera
-cordova plugin add cordova-plugin-camera@6.0.0
-</code></pre></div>
-<h2>Release Highlights</h2>
+<p>We would like to thank the people who took the initiative in creating the translated docs and those who put time and effort into maintaining them.</p>
 
-<ul>
-<li><p>Requires <strong><code>Cordova-Android</code> 10.x of higher</strong></p>
+<p>We welcome you feedback and comments.</p>
 
-<p>This major release has bumped the minimum Cordova-Android requirement to 10.x or higher. This requirement change was made for the <strong>AndroidX Only Support</strong> initiative.</p>
-
-<p>If your project is using an older Cordova-Android release, please upgrade the Android platform before using it.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform remove android
-cordova platform add android@10.x
-</code></pre></div></li>
-<li><p><strong><code>AndroidX</code> Only Support</strong></p>
-
-<p>In this release, we have completely migrated to the AndroidX library and no longer support the Android Support Library. </p>
-
-<p>If you were using the <a href="https://www.npmjs.com/package/cordova-plugin-androidx-adapter">cordova-plugin-androidx-adapter</a> plugin to migrate the Camera&#39;s legacy Android Support Library references to the new AndroidX references, it can be removed unless your project is using other third-party plugins that have not migrated to AndroidX.</p></li>
-<li><p><strong>HEIC</strong> Support</p>
-
-<p>We introduced support to encode the HEIC file formats to the defined <code>EncodingType</code> for WebView display.</p></li>
-<li><p>Package Visibility Support</p>
-
-<p>We have updated this plugin to support the breaking changes that were introduced in Android 11 around package visibility.</p>
-
-<p>For more information on package visibility, please check out the following Google&#39;s resources:</p>
-
-<ul>
-<li><a href="ttps://medium.com/androiddevelopers/package-visibility-in-android-11-cc857f221cd9">Package visibility in Android 11</a></li>
-<li><a href="https://developer.android.com/training/package-visibility">Package visibility filtering on Android</a></li>
-</ul></li>
-</ul>
-
-<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
-
-<!--more-->
-
-<h1>Changes include:</h1>
-
-<p><strong>Feature:</strong></p>
-
-<ul>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/751">GH-751</a> feat(android)!: support <strong>AndroidX</strong></li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/750">GH-750</a> feat(android): bump <code>cordova-android</code> requirements for <code>10.x</code></li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/731">GH-731</a> feat(android): encode <code>heic</code> format to <code>EncodingType</code> for webview display <a href="https://github.com/apache/cordova-plugin-camera/issues/711">#711</a></li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/684">GH-684</a> feat(android): <code>sdk-30</code> package visibility support</li>
-</ul>
-
-<p><strong>Fix:</strong></p>
-
-<ul>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/687">GH-687</a> fix(android): return exception message (where it exists)</li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/585">GH-585</a> fix(android): file path correction if <code>Uri</code> authority is <code>FileProvider</code></li>
-</ul>
+<p>~ Apache Cordova Committers</p>
 
         </div>
     </section>
@@ -202,37 +156,17 @@ cordova platform add android@10.x
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2021/08/16/cordova-android-10.1.0.html">Previous</a>
+                    <a href="/news/2021/08/23/camera-plugin-6.0.0-release.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2021/08/16/cordova-android-10.1.0.html">Cordova Android 10.1.0 Released!</a>
-                    <div class="date"> 16 Aug 2021 - By Bryan Ellis </div>
+                    <a class="title" href="/news/2021/08/23/camera-plugin-6.0.0-release.html">Camera Plugin 6.0.0 Released!</a>
+                    <div class="date"> 23 Aug 2021 - By Bryan Ellis </div>
                     <p class="content">
-                        We are happy to announce that we have just released a minor...
+                        We are happy to announce that we have just released an update...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2021/08/25/translations.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2021/08/25/translations.html">Declaring Translation Bankruptcy</a>
-                    <div class="date"> 25 Aug 2021 - By Jesse MacFadyen </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        It has been talked about for years, and even though we agreed...
-                    </p>
                 
             </div>
         </div>

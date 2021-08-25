@@ -6,9 +6,41 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 24 Aug 2021 17:51:27 +0000</pubDate>
-    <lastBuildDate>Tue, 24 Aug 2021 17:51:27 +0000</lastBuildDate>
+    <pubDate>Wed, 25 Aug 2021 05:00:54 +0000</pubDate>
+    <lastBuildDate>Wed, 25 Aug 2021 05:00:54 +0000</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>Declaring Translation Bankruptcy</title>
+        <description>&lt;p&gt;It has been talked about for years, and even though we &lt;a href=&quot;https://lists.apache.org/thread.html/4768b193b66d75d1c0c7c08303c54eb0fa15894c60e99b607f7e3e5d%40%3Cdev.cordova.apache.org%3E&quot;&gt;agreed to do it&lt;/a&gt;, we never really moved on it.
+Taking things away is always harder than adding things.&lt;/p&gt;
+
+&lt;p&gt;Back in the day, we had active contributions from the community to translate our documentation, and we had a pretty robust system to pull them all together and publish the html site.  This system has run flawlessly for years, however, the community translations slowed, then stopped, while the system still carefully churned through it all. We have been providing translated docs since Cordova CLI 3.1.0 while the maintenance of these translated docs started to diverge around Cordova CLI 6.x&lt;/p&gt;
+
+&lt;p&gt;Over the next few weeks we will be making aggessive changes to the documentation system.
+including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;archive all existing translated documentation to a new static &lt;code&gt;archive&lt;/code&gt; site&lt;/li&gt;
+&lt;li&gt;remove all translations from the main repo, and update build tooling to only publish the main version&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We would like to thank the people who took the initiative in creating the translated docs and those who put time and effort into maintaining them.&lt;/p&gt;
+
+&lt;p&gt;We welcome you feedback and comments.&lt;/p&gt;
+
+&lt;p&gt;~ Apache Cordova Committers&lt;/p&gt;
+</description>
+        <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2021/08/25/translations.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2021/08/25/translations.html</guid>
+        
+        <category>news</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Camera Plugin 6.0.0 Released!</title>
@@ -719,25 +751,6 @@ cordova platform add android@9.1.0
         
         
         <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Deprecate Wkwebview Engine</title>
-        <description>&lt;h2&gt;Deprecation of the Cordova WKWebView Engine Plugin&lt;/h2&gt;
-
-&lt;p&gt;We are hereby annoucing the deprecation of &lt;a href=&quot;https://github.com/apache/cordova-plugin-wkwebview-engine/blob/master/README.md#deprecation-notice&quot;&gt;cordova-plugin-wkwebview-engine&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This means that the Cordova development community will not be doing any more work on this plugin. You can continue to use this plugin as-is in existing and new applications running &lt;code&gt;cordova-ios@5.1.1&lt;/code&gt; or earlier but any further issues will not be fixed by the Cordova team.&lt;/p&gt;
-
-&lt;p&gt;The WKWebView implementation has been moved to the core iOS platform as of &lt;code&gt;cordova-ios@6&lt;/code&gt;. We encourage everyone to update to &lt;code&gt;cordova-ios@6&lt;/code&gt; and to remove &lt;code&gt;cordova-plugin-wkwebview-engine&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Your feedback is graciously accepted and appreciated!&lt;/p&gt;
-</description>
-        <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/2021/02/07/deprecate-wkwebview-engine.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/2021/02/07/deprecate-wkwebview-engine.html</guid>
-        
         
       </item>
     
