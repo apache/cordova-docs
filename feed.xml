@@ -6,8 +6,8 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Aug 2021 21:24:15 +0000</pubDate>
-    <lastBuildDate>Mon, 30 Aug 2021 21:24:15 +0000</lastBuildDate>
+    <pubDate>Mon, 30 Aug 2021 21:30:18 +0000</pubDate>
+    <lastBuildDate>Mon, 30 Aug 2021 21:30:18 +0000</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
@@ -15,10 +15,11 @@
         <description>&lt;p&gt;It has been talked about for years, and even though we &lt;a href=&quot;https://lists.apache.org/thread.html/4768b193b66d75d1c0c7c08303c54eb0fa15894c60e99b607f7e3e5d%40%3Cdev.cordova.apache.org%3E&quot;&gt;agreed to do it&lt;/a&gt;, we never really moved on it.
 Taking things away is always harder than adding things.&lt;/p&gt;
 
-&lt;p&gt;Back in the day, we had active contributions from the community to translate our documentation, and we had a pretty robust system to pull them all together and publish the html site.  This system has run flawlessly for years, however, the community translations slowed, then stopped, while the system still carefully churned through it all. We have been providing translated docs since Cordova CLI 3.1.0 while the maintenance of these translated docs started to diverge around Cordova CLI 6.x&lt;/p&gt;
+&lt;p&gt;Back in the day, we had active contributions from the community to translate our documentation, and we had a pretty robust system to pull them all together and publish the static HTML site.  This system has run flawlessly for years, however, the community translations slowed, then stopped, while the system still carefully churned through it all. We have been providing translated docs since Cordova CLI 3.1.0 while the maintenance of these translated docs started to diverge around Cordova CLI 6.x&lt;/p&gt;
 
-&lt;p&gt;Over the next few weeks we will be making aggessive changes to the documentation system.
-including:&lt;/p&gt;
+&lt;p&gt;Over the next few weeks we will be making aggessive changes to the documentation system.&lt;/p&gt;
+
+&lt;p&gt;Including:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;archive all existing translated documentation to a new static &lt;code&gt;archive&lt;/code&gt; site&lt;/li&gt;
@@ -27,7 +28,7 @@ including:&lt;/p&gt;
 
 &lt;p&gt;We would like to thank the people who took the initiative in creating the translated docs and those who put time and effort into maintaining them.&lt;/p&gt;
 
-&lt;p&gt;We welcome you feedback and comments.&lt;/p&gt;
+&lt;p&gt;We welcome your feedback and comments.&lt;/p&gt;
 
 &lt;p&gt;~ Apache Cordova Committers&lt;/p&gt;
 </description>
