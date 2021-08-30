@@ -34,5 +34,7 @@ jobs:
       - name: Run deploy
         uses: JamesIves/github-pages-deploy-action@5dc1d5a192aeb5ab5b7d5a77b7d36aea4a7f5c92
         with:
-          BRANCH: asf-site
-          FOLDER: build-prod
+          branch: asf-site
+          folder: build-prod
+          clean-exclude: |
+            archive
