@@ -6,9 +6,142 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 05 Sep 2021 02:56:10 +0000</pubDate>
-    <lastBuildDate>Sun, 05 Sep 2021 02:56:10 +0000</lastBuildDate>
+    <pubDate>Mon, 06 Sep 2021 04:25:23 +0000</pubDate>
+    <lastBuildDate>Mon, 06 Sep 2021 04:25:23 +0000</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>Cordova Electron 3.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Electron 3.0.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Electron applications.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-electron&quot;&gt;cordova-electron@3.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cordova platform remove electron
+cordova platform add electron@3.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cordova platform add electron@3.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Some of the notable breaking changes &amp;amp; new features in this release are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &lt;strong&gt;Electron&lt;/strong&gt; core dependencies have been updated.
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Electron&lt;/strong&gt;: 14.0.0&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chromium&lt;/strong&gt;: 93.0.4577.58&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Node&lt;/strong&gt;: v14.17.0&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;V8&lt;/strong&gt;: v9.3&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Node.js&lt;/strong&gt; 10 is no longer supported. This release requires the development environment to have &lt;strong&gt;Node.js&lt;/strong&gt; 12.x or higher. It is recommended to use the current LTS, which is &lt;code&gt;14.17.6&lt;/code&gt; at the time of this release.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cordova Plugin Support&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the earlier releases of Cordova Electron, we didn&amp;#39;t have a proper plugin system in place.&lt;/p&gt;
+
+&lt;p&gt;There was a temporary workaround solution, &lt;code&gt;nodeIntegration&lt;/code&gt;, that allowed app developers and plugin developers to have access to node modules. This was meant to be temporary and is not highly recommended because it can lead to &lt;a href=&quot;https://www.electronjs.org/docs/latest/tutorial/security#2-do-not-enable-nodejs-integration-for-remote-content&quot;&gt;security issues&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;With the new support, the plugin will be preloaded and runs in a separate context from the web app. This feature is known as &lt;a href=&quot;https://www.electronjs.org/docs/latest/tutorial/context-isolation/&quot;&gt;Context Isolation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Additionally, this system follows our pre-existing plugin structure. This means the app code does not need to make any special calls for Electron vs any other platform.&lt;/p&gt;
+
+&lt;p&gt;For a quick start guide and in-depth configuration setup, please check out our &lt;a href=&quot;https://github.com/apache/cordova-electron/blob/rel/2.0.0/DOCUMENTATION.md&quot;&gt;Cordova Electron Documentation&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;h4&gt;Project Dependencies&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cordova-common@^4.0.2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;electron@14.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;electron-builder@^22.11.7&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;electron-devtools-installer@^3.2.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;execa@^5.1.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fs-extra@^10.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Breaking Changes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/205&quot;&gt;GH-205&lt;/a&gt; feat!(Api): remove unused locations data&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/203&quot;&gt;GH-203&lt;/a&gt; feat!(electron): bump to &lt;code&gt;14.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/202&quot;&gt;GH-202&lt;/a&gt; feat!: remove old VERSION file&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/199&quot;&gt;GH-199&lt;/a&gt; feat!: update node support&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/198&quot;&gt;GH-198&lt;/a&gt; feat!(dependencies): update other packages
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;execa@5.1.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fs-extra@10.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;jasmine@3.9.0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/197&quot;&gt;GH-197&lt;/a&gt; feat!(dependencies): bump &lt;strong&gt;Electron&lt;/strong&gt; packages
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;electron-builder@22.11.7&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;electron-devtools-installer@3.2.0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/175&quot;&gt;GH-175&lt;/a&gt; breaking: add plugin support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Features&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/200&quot;&gt;GH-200&lt;/a&gt; feat: update supported platform options&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/184&quot;&gt;GH-184&lt;/a&gt; feat: forward &lt;strong&gt;Electron&lt;/strong&gt;&amp;#39;s process &lt;code&gt;stdio&lt;/code&gt; to terminal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Fixes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/183&quot;&gt;GH-183&lt;/a&gt; fix(npm): change prepack script to prepare&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/180&quot;&gt;GH-180&lt;/a&gt; fix(windows): &lt;strong&gt;Electron&lt;/strong&gt; window not displaying&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/182&quot;&gt;GH-182&lt;/a&gt; fix: restrict deep merging on reserved keys&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/172&quot;&gt;GH-172&lt;/a&gt; fix(pkg): typo in field &amp;quot;&lt;code&gt;keywords&lt;/code&gt;&amp;quot;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/169&quot;&gt;GH-169&lt;/a&gt; fix(Api): do not depend on globals&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Refactor Changes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/181&quot;&gt;GH-181&lt;/a&gt; refactor: use class static&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Chores&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/201&quot;&gt;GH-201&lt;/a&gt; chore(asf-license): add to header&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/171&quot;&gt;GH-171&lt;/a&gt; chore: clean up &lt;code&gt;package.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Test &amp;amp; Other Changes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/194&quot;&gt;GH-194&lt;/a&gt; build: build &lt;code&gt;cordova.js&lt;/code&gt; on &lt;code&gt;prepare&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/204&quot;&gt;GH-204&lt;/a&gt; test: cleanup and remove unneeded code&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/90&quot;&gt;GH-90&lt;/a&gt; test(create): fix, clean up &amp;amp; extend&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2021/09/06/cordova-electron-release-3.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2021/09/06/cordova-electron-release-3.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Declaring Translation Bankruptcy</title>
@@ -698,57 +831,6 @@ cordova platform add android@9.1.0
         <category>news</category>
         
         <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Plugin InAppBrowser 5.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released an update to &lt;code&gt;cordova-plugin-inappbrowser&lt;/code&gt;! &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-inappbrowser&quot;&gt;cordova-plugin-inappbrowser@5.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;This is a new major version with breaking changes which requires at least &lt;code&gt;cordova-android@9.0.0&lt;/code&gt; and &lt;code&gt;cordova-ios@6.0.0&lt;/code&gt;. Make sure to check and update your platforms.&lt;/p&gt;
-
-&lt;p&gt;The most notable improvements in this major release are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The InAppBrowser and main webview now share web resources again (like cookies, sessions etc.).&lt;/li&gt;
-&lt;li&gt;You can now set &lt;code&gt;InAppBrowserStatusBarStyle&lt;/code&gt; to &amp;#39;darkcontent&amp;#39;.&lt;/li&gt;
-&lt;li&gt;The Android part got some code cleanup.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/828&quot;&gt;GH-828&lt;/a&gt; feat(ios): add &lt;code&gt;InAppBrowserStatusBarStyle&lt;/code&gt; &amp;#39;darkcontent&amp;#39; configuration option&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/823&quot;&gt;GH-823&lt;/a&gt; chore: bump engines requirements&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/824&quot;&gt;GH-824&lt;/a&gt; breaking: cleanup code for old &lt;strong&gt;Android&lt;/strong&gt; versions&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/825&quot;&gt;GH-825&lt;/a&gt; (ios): rename CDVWKProcessPoolFactory&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/826&quot;&gt;GH-826&lt;/a&gt; ci: add node-14.x to workflow&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/821&quot;&gt;GH-821&lt;/a&gt; breaking(android): replace magic numbers with &lt;strong&gt;Android&lt;/strong&gt;.os.Build constants&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/717&quot;&gt;GH-717&lt;/a&gt; ci(ios): remove wkwebview plugin&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2021/02/16/inappbrowser-release-5.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2021/02/16/inappbrowser-release-5.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        <category>plugins</category>
         
         
         <category>announcements</category>
