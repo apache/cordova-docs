@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released Cordova Electron 3.0.0! This is one of Cordova&#39;s supported platforms for building Electron applicatio...">
+    <meta name="description" content="We are happy to announce that we have just released Cordova Android 10.1.1! This is one of Cordova&#39;s supported platforms for building Android application...">
 
     <title>
         
             
-                Cordova Electron 3.0.0 Released! - Apache Cordova
+                Cordova Android 10.1.1 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2021/09/06/cordova-electron-release-3.0.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2021/09/15/cordova-android-release-10.1.1.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -121,55 +121,32 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova Electron 3.0.0 Released!</div>
+        <div class="title">Cordova Android 10.1.1 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">06 Sep 2021</div>
+        <div class="date">15 Sep 2021</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released <code>Cordova Electron 3.0.0</code>! This is one of Cordova&#39;s supported platforms for building Electron applications.</p>
+            <p>We are happy to announce that we have just released <code>Cordova Android 10.1.1</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-electron">cordova-electron@3.0.0</a></li>
+<li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@10.1.1</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
 
 <p><strong>To upgrade:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform remove electron
-cordova platform add electron@3.0.0
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform remove android
+cordova platform add android@10.1.1
 </code></pre></div>
 <p><strong>To install:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform add electron@3.0.0
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform add android@10.1.1
 </code></pre></div>
-<p>Some of the notable breaking changes &amp; new features in this release are:</p>
-
-<ul>
-<li>The <strong>Electron</strong> core dependencies have been updated.
-
-<ul>
-<li><strong>Electron</strong>: 14.0.0</li>
-<li><strong>Chromium</strong>: 93.0.4577.58</li>
-<li><strong>Node</strong>: v14.17.0</li>
-<li><strong>V8</strong>: v9.3</li>
-</ul></li>
-<li><strong>Node.js</strong> 10 is no longer supported. This release requires the development environment to have <strong>Node.js</strong> 12.x or higher. It is recommended to use the current LTS, which is <code>14.17.6</code> at the time of this release.</li>
-<li><strong>Cordova Plugin Support</strong></li>
-</ul>
-
-<p>In the earlier releases of Cordova Electron, we didn&#39;t have a proper plugin system in place.</p>
-
-<p>There was a temporary workaround solution, <code>nodeIntegration</code>, that allowed app developers and plugin developers to have access to node modules. This was meant to be temporary and is not highly recommended because it can lead to <a href="https://www.electronjs.org/docs/latest/tutorial/security#2-do-not-enable-nodejs-integration-for-remote-content">security issues</a>.</p>
-
-<p>With the new support, the plugin will be preloaded and runs in a separate context from the web app. This feature is known as <a href="https://www.electronjs.org/docs/latest/tutorial/context-isolation/">Context Isolation</a>.</p>
-
-<p>Additionally, this system follows our pre-existing plugin structure. This means the app code does not need to make any special calls for Electron vs any other platform.</p>
-
-<p>For a quick start guide and in-depth configuration setup, please check out our <a href="https://github.com/apache/cordova-electron/blob/rel/2.0.0/DOCUMENTATION.md">Cordova Electron Documentation</a>!</p>
+<p>The notable fixes in this release are around the handling of the default policy for the Allow Navigation &amp; Allow Bridge Access, which also covers the scheme &amp; hostname use cases.</p>
 
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
@@ -177,76 +154,12 @@ cordova platform add electron@3.0.0
 
 <h1>Changes include:</h1>
 
-<h4>Project Dependencies</h4>
-
-<ul>
-<li><code>cordova-common@^4.0.2</code></li>
-<li><code>electron@14.0.0</code></li>
-<li><code>electron-builder@^22.11.7</code></li>
-<li><code>electron-devtools-installer@^3.2.0</code></li>
-<li><code>execa@^5.1.1</code></li>
-<li><code>fs-extra@^10.0.0</code></li>
-</ul>
-
-<h4>Breaking Changes</h4>
-
-<ul>
-<li><a href="https://github.com/apache/cordova-electron/pull/205">GH-205</a> feat!(Api): remove unused locations data</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/203">GH-203</a> feat!(electron): bump to <code>14.0.0</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/202">GH-202</a> feat!: remove old VERSION file</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/199">GH-199</a> feat!: update node support</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/198">GH-198</a> feat!(dependencies): update other packages
-
-<ul>
-<li><code>execa@5.1.1</code></li>
-<li><code>fs-extra@10.0.0</code></li>
-<li><code>jasmine@3.9.0</code></li>
-</ul></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/197">GH-197</a> feat!(dependencies): bump <strong>Electron</strong> packages
-
-<ul>
-<li><code>electron-builder@22.11.7</code></li>
-<li><code>electron-devtools-installer@3.2.0</code></li>
-</ul></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/175">GH-175</a> breaking: add plugin support</li>
-</ul>
-
-<h4>Features</h4>
-
-<ul>
-<li><a href="https://github.com/apache/cordova-electron/pull/200">GH-200</a> feat: update supported platform options</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/184">GH-184</a> feat: forward <strong>Electron</strong>&#39;s process <code>stdio</code> to terminal</li>
-</ul>
-
 <h4>Fixes</h4>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-electron/pull/183">GH-183</a> fix(npm): change prepack script to prepare</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/180">GH-180</a> fix(windows): <strong>Electron</strong> window not displaying</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/182">GH-182</a> fix: restrict deep merging on reserved keys</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/172">GH-172</a> fix(pkg): typo in field &quot;<code>keywords</code>&quot;</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/169">GH-169</a> fix(Api): do not depend on globals</li>
-</ul>
-
-<h4>Refactor Changes</h4>
-
-<ul>
-<li><a href="https://github.com/apache/cordova-electron/pull/181">GH-181</a> refactor: use class static</li>
-</ul>
-
-<h4>Chores</h4>
-
-<ul>
-<li><a href="https://github.com/apache/cordova-electron/pull/201">GH-201</a> chore(asf-license): add to header</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/171">GH-171</a> chore: clean up <code>package.json</code></li>
-</ul>
-
-<h4>Test &amp; Other Changes</h4>
-
-<ul>
-<li><a href="https://github.com/apache/cordova-electron/pull/194">GH-194</a> build: build <code>cordova.js</code> on <code>prepare</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/204">GH-204</a> test: cleanup and remove unneeded code</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/90">GH-90</a> test(create): fix, clean up &amp; extend</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1349">GH-1349</a> fix(<code>PluginManager</code>): <code>AllowNavigation</code> default policy to handle scheme &amp; hostname</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1342">GH-1342</a> fix(<code>AllowListPlugin</code>): Safely handle default allow navigation policy in allow request</li>
+<li><a href="https://github.com/apache/cordova-android/pull/1332">GH-1332</a> fix(<code>PluginManager</code>): <code>AllowBridgeAccess</code> default policy to handle scheme &amp; hostname</li>
 </ul>
 
         </div>
@@ -255,37 +168,17 @@ cordova platform add electron@3.0.0
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2021/08/25/translations.html">Previous</a>
+                    <a href="/announcements/2021/09/06/cordova-electron-release-3.0.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2021/08/25/translations.html">Declaring Translation Bankruptcy</a>
-                    <div class="date"> 25 Aug 2021 - By Jesse MacFadyen </div>
+                    <a class="title" href="/announcements/2021/09/06/cordova-electron-release-3.0.0.html">Cordova Electron 3.0.0 Released!</a>
+                    <div class="date"> 06 Sep 2021 - By Bryan Ellis </div>
                     <p class="content">
-                        It has been talked about for years, and even though we agreed...
+                        We are happy to announce that we have just released Cordova Electron...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2021/09/15/cordova-android-release-10.1.1.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2021/09/15/cordova-android-release-10.1.1.html">Cordova Android 10.1.1 Released!</a>
-                    <div class="date"> 15 Sep 2021 - By Bryan Ellis </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released Cordova Android...
-                    </p>
                 
             </div>
         </div>

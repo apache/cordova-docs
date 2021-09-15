@@ -6,9 +6,55 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 06 Sep 2021 04:25:23 +0000</pubDate>
-    <lastBuildDate>Mon, 06 Sep 2021 04:25:23 +0000</lastBuildDate>
+    <pubDate>Wed, 15 Sep 2021 13:47:47 +0000</pubDate>
+    <lastBuildDate>Wed, 15 Sep 2021 13:47:47 +0000</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>Cordova Android 10.1.1 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Android 10.1.1&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Android applications.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@10.1.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cordova platform remove android
+cordova platform add android@10.1.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cordova platform add android@10.1.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The notable fixes in this release are around the handling of the default policy for the Allow Navigation &amp;amp; Allow Bridge Access, which also covers the scheme &amp;amp; hostname use cases.&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;h4&gt;Fixes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1349&quot;&gt;GH-1349&lt;/a&gt; fix(&lt;code&gt;PluginManager&lt;/code&gt;): &lt;code&gt;AllowNavigation&lt;/code&gt; default policy to handle scheme &amp;amp; hostname&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1342&quot;&gt;GH-1342&lt;/a&gt; fix(&lt;code&gt;AllowListPlugin&lt;/code&gt;): Safely handle default allow navigation policy in allow request&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1332&quot;&gt;GH-1332&lt;/a&gt; fix(&lt;code&gt;PluginManager&lt;/code&gt;): &lt;code&gt;AllowBridgeAccess&lt;/code&gt; default policy to handle scheme &amp;amp; hostname&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2021/09/15/cordova-android-release-10.1.1.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2021/09/15/cordova-android-release-10.1.1.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova Electron 3.0.0 Released!</title>
@@ -713,127 +759,6 @@ This crash did occur when the main activity was destroyed by the Android OS to f
         
         
         <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Android 9.1.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Android 9.1.0&lt;/code&gt;!  This is one of Cordova&amp;#39;s supported platforms for building Android mobile applications.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@9.1.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cordova platform remove android
-cordova platform add android@9.1.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;In this minor release, there are various refactoring and bug fixes. Additionally, there were a few new features.&lt;/p&gt;
-
-&lt;p&gt;Some of the new feature highlights are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Added Custom Gradle Repositories Support&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Sometimes there are third-party libraries that do not exist in the repositories that we have defined. With this feature, developers now have an easier way to override the default repository list that we have defined in the Gradle build scripts.&lt;/p&gt;
-
-&lt;p&gt;Additionally, as JFrog is sunsetting the JCenter repository, developers can remove it, at their own risk. Since this a minor release, we have not removed JCenter as one of the default repositories as it would be considered a breaking change.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Support &lt;code&gt;webp&lt;/code&gt; Images for SplashScreen&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Previously we only supported &lt;code&gt;png&lt;/code&gt; file formats for splash screens as &lt;code&gt;webp&lt;/code&gt; support was only introduced starting from API 17. Since &lt;code&gt;cordova-android@9.x&lt;/code&gt; minimum SDK version was raised to 22, the introduction of &lt;code&gt;webp&lt;/code&gt; support became possible.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;webp&lt;/code&gt; file formats are known to support transparency and provide the same or similar quality as &lt;code&gt;png&lt;/code&gt; files, but its greatest benefit is that it can reduce the image file size by around 25%.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2&gt;Full Changelog&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1104&quot;&gt;GH-1104&lt;/a&gt; feat: support &lt;code&gt;gzip&lt;/code&gt; encoding requests &amp;amp; use &lt;code&gt;GZIPInputStream&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1167&quot;&gt;GH-1167&lt;/a&gt; feat: handle &lt;code&gt;intent://&lt;/code&gt; scheme links with &lt;code&gt;browser_fallback_url&lt;/code&gt; param&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1179&quot;&gt;GH-1179&lt;/a&gt; feat: add &lt;code&gt;repositories&lt;/code&gt; support&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1173&quot;&gt;GH-1173&lt;/a&gt; feat(android-studio): display app name as project name&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1113&quot;&gt;GH-1113&lt;/a&gt; feat: &lt;code&gt;webp&lt;/code&gt; support for splashscreen&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1125&quot;&gt;GH-1125&lt;/a&gt; feat(Adb): list &lt;code&gt;devices&lt;/code&gt; &lt;em&gt;and&lt;/em&gt; &lt;code&gt;emulators&lt;/code&gt; in one go&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1186&quot;&gt;GH-1186&lt;/a&gt; fix: copy &lt;code&gt;repositories.gradle&lt;/code&gt; to project on create&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1184&quot;&gt;GH-1184&lt;/a&gt; fix: unit-test failure&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/733&quot;&gt;GH-733&lt;/a&gt; fix(splashscreen): nav &amp;amp; title bar showing in fullscreen mode&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1157&quot;&gt;GH-1157&lt;/a&gt; fix: restore key event handlers when DOM element is fullscreen&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1073&quot;&gt;GH-1073&lt;/a&gt; fix(android): Avoid Crash Report: ConcurrentModificationException&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1148&quot;&gt;GH-1148&lt;/a&gt; fix: add not null checks to prevent running on destroyed activity&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1091&quot;&gt;GH-1091&lt;/a&gt; fix: concurrent modification exception (#924)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1153&quot;&gt;GH-1153&lt;/a&gt; fix: optional arch parameter&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1136&quot;&gt;GH-1136&lt;/a&gt; fix(prepare): &lt;code&gt;mapImageResources&lt;/code&gt; always returning &lt;code&gt;[]&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1111&quot;&gt;GH-1111&lt;/a&gt; fix(android): allow file access for existing behavior&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1045&quot;&gt;GH-1045&lt;/a&gt; fix: Reflect minimum required NodeJS&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1084&quot;&gt;GH-1084&lt;/a&gt; fix(prepare): fix pattern used to collect image resources&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1014&quot;&gt;GH-1014&lt;/a&gt; fix(&lt;code&gt;pluginHandlers&lt;/code&gt;): properly check if path is inside another&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1018&quot;&gt;GH-1018&lt;/a&gt; fix: gradle ignore properties&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1185&quot;&gt;GH-1185&lt;/a&gt; fix(regression): Cannot read version of undefined caused by Java refactor&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1117&quot;&gt;GH-1117&lt;/a&gt; fix: allow changing min sdk version&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Refactors:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1101&quot;&gt;GH-1101&lt;/a&gt; refactor: unify target resolution for devices &amp;amp; emulators&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1130&quot;&gt;GH-1130&lt;/a&gt; refactor: java checks&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1099&quot;&gt;GH-1099&lt;/a&gt; refactor(&lt;code&gt;ProjectBuilder&lt;/code&gt;): clean up output file collection code&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1123&quot;&gt;GH-1123&lt;/a&gt; refactor: unify installation on devices &amp;amp; emulators&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1102&quot;&gt;GH-1102&lt;/a&gt; refactor(&lt;code&gt;check_reqs&lt;/code&gt;): cleanup default Java location detection on &lt;strong&gt;Windows&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1103&quot;&gt;GH-1103&lt;/a&gt; refactor: do not kill adb on UNIX-like systems&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1086&quot;&gt;GH-1086&lt;/a&gt; refactor(retry): simplify retryPromise using modern JS&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1085&quot;&gt;GH-1085&lt;/a&gt; refactor(utils): reduce number of utils&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1046&quot;&gt;GH-1046&lt;/a&gt; refactor: Stop suppressing un-needed TruelyRandom lints&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1016&quot;&gt;GH-1016&lt;/a&gt; refactor: save &lt;code&gt;ProjectBuilder&lt;/code&gt; instance in Api instance&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1108&quot;&gt;GH-1108&lt;/a&gt; refactor: remove copied Adb.install from &lt;code&gt;emulator.install&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1196&quot;&gt;GH-1196&lt;/a&gt; chore: add missing header license&lt;/li&gt;
-&lt;li&gt;chore(asf): Update GitHub repo metadata&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1183&quot;&gt;GH-1183&lt;/a&gt; chore: rebuilt package-lock&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1015&quot;&gt;GH-1015&lt;/a&gt; chore: remove unnecessary stuff&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1081&quot;&gt;GH-1081&lt;/a&gt; chore(pkg): remove deprecated &lt;code&gt;no-op&lt;/code&gt; field &lt;code&gt;&amp;quot;engineStrict&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1019&quot;&gt;GH-1019&lt;/a&gt; chore: remove unused &lt;code&gt;emulator.create_image&lt;/code&gt; and its dependencies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Tests &amp;amp; CI:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1017&quot;&gt;GH-1017&lt;/a&gt; test(java): fix, improve and move clean script&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1012&quot;&gt;GH-1012&lt;/a&gt; test: fix missing stack traces in jasmine output&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1013&quot;&gt;GH-1013&lt;/a&gt; test(&lt;code&gt;pluginHandlers/common&lt;/code&gt;): better setup &amp;amp; teardown&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1094&quot;&gt;GH-1094&lt;/a&gt; test: fix unit test failures for certain random orders&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1094&quot;&gt;GH-1094&lt;/a&gt; test: ensure single top-level describe block in test file&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1129&quot;&gt;GH-1129&lt;/a&gt; test(java): remove duplicate code in &lt;code&gt;BackButtonMultipageTest&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/975&quot;&gt;GH-975&lt;/a&gt; ci: Added Node 14.x&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2021/04/13/cordova-android-9.1.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2021/04/13/cordova-android-9.1.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
         
       </item>
     
