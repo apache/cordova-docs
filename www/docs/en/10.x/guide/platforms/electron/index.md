@@ -275,7 +275,7 @@ The configuration example below will generate `tar.gz`, `dmg` and `zip` packages
 | default      |    -    | `dmg`<br />`zip` |             -              |
 | dmg          |    -    |     &#9989;      |             -              |
 | mas          |    -    |     &#9989;      |             -              |
-| mas-dev      | &#9989; |        -         |             -              |
+| mas-dev      |    -    |     &#9989;      |             -              |
 | pkg          |    -    |     &#9989;      |             -              |
 | 7z           | &#9989; |     &#9989;      |          &#9989;           |
 | zip          | &#9989; |     &#9989;      |          &#9989;           |
