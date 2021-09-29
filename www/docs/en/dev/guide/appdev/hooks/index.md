@@ -411,7 +411,3 @@ cordova build
 ..
 Size of path\to\app\platforms\android\build\outputs\apk\android-debug.apk is 1821193 bytes
 ```
-
-More good usage examples could be found in [Three Hooks Your Cordova Phone Gap Project needs][Devgirl_Hooks_Link]
-
-[Devgirl_Hooks_Link]: http://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/

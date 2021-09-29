@@ -62,7 +62,6 @@ Most Android versions no longer impose this delay, but iOS by default still does
 
 **Additional Performance Articles and Resources**
 
-* ["Top Ten Performance Tips for PhoneGap and Hybrid Apps"](http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/)
 * ["Fast Apps and Sites with JavaScript"](https://channel9.msdn.com/Events/Build/2013/4-313)
 
 ## 3) Recognize and Handle Offline Status
@@ -70,7 +69,7 @@ Most Android versions no longer impose this delay, but iOS by default still does
 See the previous tip about networks. Not only can you be on a slow network, it is entirely possible for your application to be completely offline. Your application should handle this in an intelligent manner. If your application does not, people will think your application is broken. Given how easy it is to handle (Cordova supports listening for both an offline and online event), there is absolutely no reason for your application to not respond well when run offline. Be sure to test (see the Testing section below) your application and be sure to test how your application handles when you start in one state and then switch to another.
 
 Note that the online and offline events, as well as the Network Connection API, is not perfect. You may need to rely on using an XHR request to see if the device is truly offline or online. At the end of the day, be sure add some form of support for network issues - in fact, the Apple store (and probably other stores) will reject apps that don't properly handle offline/online states. For more discussion on this topic, see
-["Is This Thing On?"](https://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29)
+["Is This Thing On?"](https://www.telerik.com/blogs/is-this-thing-on-%28part-1%29)
 
 # Handling Upgrades
 
@@ -140,10 +139,6 @@ To inspect, simply open up the URL `chrome://inspect` in Chrome on your desktop.
 If you can see your device in the inspect devices section, but you can't see the Cordova webview you may need to add `android:debuggable="true"` in the `<application>` node of your `AndroidManifest.xml`.
 
 It is also possible to use Chrome Dev Tools to inspect iOS apps, through a WebKit proxy: [https://github.com/google/ios-webkit-debug-proxy/](https://github.com/google/ios-webkit-debug-proxy/)
-
-## Other Options
-
-* For more examples and explanation of the above debugging tips, see: [httpa://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/](https://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/)
 
 # User Interface
 

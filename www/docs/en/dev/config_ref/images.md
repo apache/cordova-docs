@@ -140,7 +140,7 @@ In the `config.xml`, we will add `resource-file` to copy the `colors.xml` into t
 ```
 
 ### See Also
-- [Android icon guide](https://www.google.com/design/spec/style/icons.html)
+- [Android icon guide](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive)
 - [Android - Supporting multiple screens](http://developer.android.com/guide/practices/screens_support.html)
 
 ## Browser
