@@ -131,4 +131,4 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Redirect all docs translations to their English version
 RewriteCond $1 !=en
-RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/(.*)$ {{site.baseurl}}/docs/en/$2 [R=301,L]
+RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/(.*)$ {{site.baseurl}}/docs/en/$2 [R=302,L]
