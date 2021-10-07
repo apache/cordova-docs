@@ -168,7 +168,7 @@ reopen any command prompt windows after making changes to see them reflected.
 
     ```
     C:\Users\[your user]\AppData\Local\Android\Sdk\platform-tools
-    C:\Users\[your user]\AppData\Local\Android\Sdk\tools\bin
+    C:\Users\[your user]\AppData\Local\Android\Sdk\cmdline-tools\latest\bin
     C:\Users\[your user]\AppData\Local\Android\Sdk\tools\emulator
     ```
 
