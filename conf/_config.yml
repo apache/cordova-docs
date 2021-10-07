@@ -53,9 +53,17 @@ markdown: kramdown
 highlighter: rouge
 
 kramdown:
+    auto_ids: false
     input: GFM
     hard_wrap: false
     syntax_highlighter: rouge
+    syntax_highlighter_opts:
+        span:
+            disable: true
+    entity_output: numeric
+    smart_quotes: [apos, apos, quot, quot]
+    typographic_symbols:
+        ndash: --
 
 # exclude these directories from the build
 exclude:
