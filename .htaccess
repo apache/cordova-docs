@@ -596,3 +596,6 @@ RewriteCond %{HTTPS} !=on
 # Redirect to https version
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Redirect all docs translations to their English version
+RewriteCond $1 !=en
+RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/(.*)$ /docs/en/$2 [R=302,L]
