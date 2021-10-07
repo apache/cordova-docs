@@ -134,7 +134,9 @@ To update your `PATH`, add a line resembling the following (substitute the paths
 with your local Android SDK installation's location):
 
 ```bash
-export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools/bin:/Development/android-sdk/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
+export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator/
 ```
 
 Reload your terminal to see this change reflected or run the following command:
