@@ -2343,8 +2343,9 @@ should be updated:</p>
 installation</li>
 <li>Set the <code>ANDROID_SDK_ROOT</code> environment variable to the location of your Android
 SDK installation</li>
-<li>It is also recommended that you add the Android SDK&#39;s <code>tools</code>, <code>tools/bin</code>,
+<li>It is also recommended that you add the Android SDK&#39;s <code>cmdline-tools/latest/bin</code>, <code>emulator</code>
 and <code>platform-tools</code> directories to your <code>PATH</code></li>
+<li>For apksigner and zipalign, the Android SDK&#39;s <code>build-tools</code> must also be added to your <code>PATH</code></li>
 </ol>
 
 <h4>OS X and Linux</h4>
@@ -2356,7 +2357,9 @@ and <code>platform-tools</code> directories to your <code>PATH</code></li>
 </code></pre></div>
 <p>To update your <code>PATH</code>, add a line resembling the following (substitute the paths
 with your local Android SDK installation&#39;s location):</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_SDK_ROOT</span>/platform-tools/
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_SDK_ROOT</span>/cmdline-tools/latest/bin/
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_SDK_ROOT</span>/emulator/
 </code></pre></div>
 <p>Reload your terminal to see this change reflected or run the following command:</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">source</span> ~/.bash_profile
@@ -2386,7 +2389,8 @@ system Environment Variables</strong> from the options that appear</p></li>
 <li><p>Add entries for the relevant locations to the <strong>PATH</strong>. For example
 (substitute the paths with your local Android SDK installation&#39;s location):</p>
 <div class="highlight"><pre><code class="language-" data-lang="">C:\Users\[your user]\AppData\Local\Android\Sdk\platform-tools
-C:\Users\[your user]\AppData\Local\Android\Sdk\tools
+C:\Users\[your user]\AppData\Local\Android\Sdk\cmdline-tools\latest\bin
+C:\Users\[your user]\AppData\Local\Android\Sdk\tools\emulator
 </code></pre></div></li>
 </ol>
 
