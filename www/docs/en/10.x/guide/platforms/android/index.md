@@ -116,8 +116,9 @@ should be updated:
    installation
 2. Set the `ANDROID_SDK_ROOT` environment variable to the location of your Android
    SDK installation
-3. It is also recommended that you add the Android SDK's `tools`, `tools/bin`,
+3. It is also recommended that you add the Android SDK's `cmdline-tools/latest/bin`, `emulator`
    and `platform-tools` directories to your `PATH`
+4. For apksigner and zipalign, the Android SDK's `build-tools` must also be added to your `PATH`
 
 #### OS X and Linux
 
@@ -133,7 +134,9 @@ To update your `PATH`, add a line resembling the following (substitute the paths
 with your local Android SDK installation's location):
 
 ```bash
-export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
+export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator/
 ```
 
 Reload your terminal to see this change reflected or run the following command:
@@ -167,7 +170,8 @@ reopen any command prompt windows after making changes to see them reflected.
 
     ```
     C:\Users\[your user]\AppData\Local\Android\Sdk\platform-tools
-    C:\Users\[your user]\AppData\Local\Android\Sdk\tools
+    C:\Users\[your user]\AppData\Local\Android\Sdk\cmdline-tools\latest\bin
+    C:\Users\[your user]\AppData\Local\Android\Sdk\tools\emulator
     ```
 
 ## Project Configuration
