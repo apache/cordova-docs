@@ -1451,34 +1451,50 @@ plugins.</p>
 <p>Run the <code>create</code> command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app&#39;s display
 name.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
+</code></pre></div></div>
+
 <h2>Build a Project</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/my_new_project/cordova/build
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/my_new_project/cordova/build
+</code></pre></div></div>
+
 <h2>Run App on an Emulator</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/my_new_project/cordova/run --emulator
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/my_new_project/cordova/run --emulator
+</code></pre></div></div>
+
 <h2>Run App on a Device</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/my_new_project/cordova/run --device
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/my_new_project/cordova/run --device
+</code></pre></div></div>
+
 <h2>Signing the App</h2>
 
 <p>You can learn more about signing, distributing iOS apps, creating a certificate and provisioning profile on the <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html">iOS Developer Library</a>.</p>
 
 <p>To sign the app in Cordova you need the following:</p>
-
 <ul>
-<li><p>Code signing identity (<code>--codeSignIdentity</code>): <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6">Using XCode</a> you can create a new iOS signing identity and add it to your keychain. The type of of the code signing identity - typically distribution or development, needs to be specified here.</p></li>
-<li><p>Provisioning profile (<code>--provisioningProfile</code>):  <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61">Using the Apple Member Center</a> you can create a provisioning profile. Download the provisioning profile onto your machine and launch it in XCode to register it. It is copied here on your Mac: ~/Library/MobileDevice/Provisioning\ Profiles/. Opening it in a text editor, you can find the UUID which needs to be specified here.</p></li>
-<li><p>Code signing resource rules(<code>--codeSignResourceRules</code>) (Optional): Allows you to specify custom signing resource rules.</p></li>
+  <li>
+    <p>Code signing identity (<code>--codeSignIdentity</code>): <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6">Using XCode</a> you can create a new iOS signing identity and add it to your keychain. The type of of the code signing identity - typically distribution or development, needs to be specified here.</p>
+  </li>
+  <li>
+    <p>Provisioning profile (<code>--provisioningProfile</code>):  <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61">Using the Apple Member Center</a> you can create a provisioning profile. Download the provisioning profile onto your machine and launch it in XCode to register it. It is copied here on your Mac: ~/Library/MobileDevice/Provisioning\ Profiles/. Opening it in a text editor, you can find the UUID which needs to be specified here.</p>
+  </li>
+  <li>
+    <p>Code signing resource rules(<code>--codeSignResourceRules</code>) (Optional): Allows you to specify custom signing resource rules.</p>
+  </li>
 </ul>
 
 <p>These parameters can be specified using the command line arguments above to <code>build</code> or <code>run</code> scripts:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/my_new_project/cordova/build --codeSignIdentity="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/my_new_project/cordova/build --codeSignIdentity="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
+</code></pre></div></div>
+
 <p>Alternatively, you could specify them in a build configuration file (build.json) using (<code>--buildConfig</code>) argument. Here&#39;s a sample of a build configuration file:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">{
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
      "ios": {
          "debug": {
              "codeSignIdentity": "iPhone Development",
@@ -1490,12 +1506,16 @@ name.</p>
          }
      }
  }
-</code></pre></div>
-<p>There is also support to mix and match command line arguments and parameters in build.json file. Values from the command line arguments will get precedence. </p>
+</code></pre></div></div>
+
+<p>There is also support to mix and match command line arguments and parameters in build.json file. Values from the command line arguments will get precedence.</p>
 
 <h2>Logging</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/my_new_project/cordova/log
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/my_new_project/cordova/log
+</code></pre></div></div>
+
+
 
             </div>
         </div>

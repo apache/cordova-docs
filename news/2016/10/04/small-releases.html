@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The following were recently released:cordova-plugin-geolocation: 2.4.0cordova-create: 1.0.1cordova-app-hello-world: 3.11.0Google recently sent out warnings t...">
+    <meta name="description" content="The following were recently released:  cordova-plugin-geolocation: 2.4.0  cordova-create: 1.0.1  cordova-app-hello-world: 3.11.0Google recently sent out warn...">
 
     <title>
         
@@ -134,50 +134,46 @@
             <p>The following were recently released:</p>
 
 <ul>
-<li>cordova-plugin-geolocation: 2.4.0</li>
-<li>cordova-create: 1.0.1</li>
-<li>cordova-app-hello-world: 3.11.0</li>
+  <li>cordova-plugin-geolocation: 2.4.0</li>
+  <li>cordova-create: 1.0.1</li>
+  <li>cordova-app-hello-world: 3.11.0</li>
 </ul>
 
-<p><strong>Google</strong> recently sent out warnings to everyone who uses <code>cordova-plugin-geolocation</code> about having to include <code>android.hardware.location.gps</code> to their <code>AndroidManifest.xml</code>. We updated <code>cordova-plugin-geolocation</code> plugin to auto add this setting to your project&#39;s <code>AndroidManifest.xml</code> when installing the plugin. This means that the geolocation plugin will only work on <strong>android</strong> devices that have a <code>GPS</code>. Let us know if this restriction affects you negatively. </p>
+<p><strong>Google</strong> recently sent out warnings to everyone who uses <code>cordova-plugin-geolocation</code> about having to include <code>android.hardware.location.gps</code> to their <code>AndroidManifest.xml</code>. We updated <code>cordova-plugin-geolocation</code> plugin to auto add this setting to your project&#39;s <code>AndroidManifest.xml</code> when installing the plugin. This means that the geolocation plugin will only work on <strong>android</strong> devices that have a <code>GPS</code>. Let us know if this restriction affects you negatively.</p>
 
 <p>Release Highlights:</p>
-
 <ul>
-<li><code>cordova-app-hello-world</code>: Updated default <code>CSP</code> to include <code>img-src</code> and add <code>content:</code> to it for <a href="https://issues.apache.org/jira/browse/CB-4078">CB-4078</a></li>
+  <li><code>cordova-app-hello-world</code>: Updated default <code>CSP</code> to include <code>img-src</code> and add <code>content:</code> to it for <a href="https://issues.apache.org/jira/browse/CB-4078">CB-4078</a></li>
 </ul>
 
-<hr>
-
+<hr />
 <p>You can update any plugin by removing it, and then re-adding it.</p>
 
 <p>E.g. To update your geolocation plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm cordova-plugin-geolocation --save
-cordova plugin add cordova-plugin-geolocation@latest --save
-</code></pre></div>
-<p>Changes include:</p>
 
-<!--more-->
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm cordova-plugin-geolocation --save
+cordova plugin add cordova-plugin-geolocation@latest --save
+</code></pre></div></div>
+
+<p>Changes include:
+<!--more--></p>
 
 <p>cordova-plugin-geolocation@2.4.0</p>
-
 <ul>
-<li><strong>Ubuntu</strong> Fix altitude &amp; accuracies retrieval</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11875">CB-11875</a> added <code>android.hardware.location.gps</code> <code>uses-feature</code>.</li>
+  <li><strong>Ubuntu</strong> Fix altitude &amp; accuracies retrieval</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11875">CB-11875</a> added <code>android.hardware.location.gps</code> <code>uses-feature</code>.</li>
 </ul>
 
 <p>cordova-create@1.0.1</p>
-
 <ul>
-<li>removed stripping eventlisteners</li>
+  <li>removed stripping eventlisteners</li>
 </ul>
 
 <p>cordova-app-hello-world@3.11.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-11938">CB-11938</a> updated <code>csp</code> to include <code>content:</code> for <code>img-src</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11412">CB-11412</a> Update templates to designate template source dir</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10522">CB-10522</a> Event binding in Hello World is misleading</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11938">CB-11938</a> updated <code>csp</code> to include <code>content:</code> for <code>img-src</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11412">CB-11412</a> Update templates to designate template source dir</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10522">CB-10522</a> Event binding in Hello World is misleading</li>
 </ul>
 
         </div>

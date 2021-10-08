@@ -1402,35 +1402,46 @@ plugins.</p>
 <p>Run the <code>create</code> command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app&#39;s display
 name.  Here is the syntax for both Mac/Linux and Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
 
     C:\&gt;\path\to\cordova-android\bin\create.bat \path\to\project com.example.project_name ProjectName
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Build</h2>
 
 <p>This cleans then builds a project.</p>
 
 <p>Debug, on Mac/Linux or Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/build --debug
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/build --debug
 
     C:\&gt;\path\to\project\cordova\build.bat --debug
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Release, on Mac/Linux or Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/build --release
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/build --release
 
     C:\&gt;\path\to\project\cordova\build.bat --release
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Run the App</h2>
 
 <p>The <code>run</code> command accepts the following <em>optional</em> parameters:</p>
 
 <ul>
-<li><p>Target specification. This includes <code>--emulator</code>, <code>--device</code>, or <code>--target=&lt;targetID&gt;</code>.</p></li>
-<li><p>Build specification. This includes <code>--debug</code>, <code>--release</code>, or <code>--nobuild</code>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/project/cordova/run [Target] [Build]
+  <li>
+    <p>Target specification. This includes <code>--emulator</code>, <code>--device</code>, or <code>--target=&lt;targetID&gt;</code>.</p>
+  </li>
+  <li>
+    <p>Build specification. This includes <code>--debug</code>, <code>--release</code>, or <code>--nobuild</code>.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/project/cordova/run [Target] [Build]
 
 C:\&gt;\path\to\project\cordova\run.bat [Target] [Build]
-</code></pre></div></li>
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>Make sure you create at least one Android Virtual Device, otherwise
@@ -1440,22 +1451,28 @@ default the <code>run</code> command detects a connected device, or a currently
 running emulator if no device is found.</p>
 
 <h2>Logging</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/log
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/log
 
     C:\&gt;\path\to\project\cordova\log.bat
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Cleaning</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/clean
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/clean
 
     C:\&gt;\path\to\project\cordova\clean.bat
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Manual Use of Ant</h2>
 
 <p>If you wish to call Ant directly from the command line such as
 <code>ant debug install</code>, you need to specify additional parameters to the ant
 command:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
+</code></pre></div></div>
+
 <p>This is because the directories used by Cordova&#39;s Ant scripts are different
 than the default. This is done to avoid conflicts when Ant is run from the
 command line versus inside Eclipse/ADT.</p>
@@ -1464,6 +1481,7 @@ command line versus inside Eclipse/ADT.</p>
 the <code>cordova/build</code> and <code>cordova/run</code> scripts described above. For this
 reason it is recommended to use the <code>cordova/build</code> and <code>cordova/run</code> scripts
 instead of calling Ant directly from the command line.</p>
+
 
 
             </div>

@@ -2170,7 +2170,7 @@
                 <h1>iOS Plugin Development Guide</h1>
 
 <p>This section provides details for how to implement native plugin code
-on the iOS platform. </p>
+on the iOS platform.</p>
 
 <p>Before reading this, see <a href="../../hybrid/plugins/index.html">Plugin Development Guide</a> for
 an overview of the plugin&#39;s structure and its common JavaScript
@@ -2188,8 +2188,10 @@ registered as a <code>&lt;feature&gt;</code> tag in the named application direct
 
 <p>The JavaScript portion of a plugin uses the <code>cordova.exec</code> method as
 follows:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">exec</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">successFunction</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">failFunction</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">service</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">action</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">[</span><span class="o">&lt;</span><span class="nx">args</span><span class="o">&gt;</span><span class="p">]);</span>
-</code></pre></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">exec</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">successFunction</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">failFunction</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">service</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">action</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">[</span><span class="o">&lt;</span><span class="nx">args</span><span class="o">&gt;</span><span class="p">]);</span>
+</code></pre></div></div>
+
 <p>This marshals a request from the <code>UIWebView</code> to the iOS native side,
 effectively calling the <code>action</code> method on the <code>service</code> class, with
 the arguments passed in the <code>args</code> array.</p>
@@ -2197,10 +2199,12 @@ the arguments passed in the <code>args</code> array.</p>
 <p>Specify the plugin as a <code>&lt;feature&gt;</code> tag in your Cordova-iOS
 application&#39;s project&#39;s <code>config.xml</code> file, using the <code>plugin.xml</code> file
 to inject this markup automatically, as described in <a href="../../hybrid/plugins/index.html">Plugin Development Guide</a>:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"LocalStorage"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"LocalStorage"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"ios-package"</span> <span class="na">value=</span><span class="s">"CDVLocalStorage"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/feature&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The feature&#39;s <code>name</code> attribute should match what you specify as the
 JavaScript <code>exec</code> call&#39;s <code>service</code> parameter. The <code>value</code> attribute
 should match the name of the plugin&#39;s Objective-C class. The <code>&lt;param&gt;</code>
@@ -2213,12 +2217,14 @@ able to access it.</p>
 <p>One instance of a plugin object is created for the life of each
 <code>UIWebView</code>. Plugins are not instantiated until they are first
 referenced by a call from JavaScript, unless <code>&lt;param&gt;</code> with an <code>onload</code>
-<code>name</code> attribute is set to <code>&quot;true&quot;</code> in <code>config.xml</code>. For example,</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"Echo"</span><span class="nt">&gt;</span>
+<code>name</code> attribute is set to <code>"true"</code> in <code>config.xml</code>. For example,</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"Echo"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"ios-package"</span> <span class="na">value=</span><span class="s">"Echo"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"onload"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/feature&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Plugins should use the <code>pluginInitialize</code> method for their startup logic.</p>
 
 <p>Plugins with long-running requests or background activities such as media
@@ -2236,7 +2242,8 @@ the corresponding iOS Objective-C plugin is mapped properly in the
 class look like?  Whatever is dispatched to the plugin with
 JavaScript&#39;s <code>exec</code> function is passed into the corresponding plugin
 class&#39;s <code>action</code> method. A plugin method has this signature:</p>
-<div class="highlight"><pre><code class="language-objective_c" data-lang="objective_c"><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">myMethod</span><span class="p">:(</span><span class="n">CDVInvokedUrlCommand</span><span class="o">*</span><span class="p">)</span><span class="nv">command</span>
+
+<div class="language-objective_c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">myMethod</span><span class="p">:(</span><span class="n">CDVInvokedUrlCommand</span><span class="o">*</span><span class="p">)</span><span class="nv">command</span>
 <span class="p">{</span>
     <span class="n">CDVPluginResult</span><span class="o">*</span> <span class="n">pluginResult</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
     <span class="n">NSString</span><span class="o">*</span> <span class="n">myarg</span> <span class="o">=</span> <span class="p">[</span><span class="n">command</span><span class="p">.</span><span class="n">arguments</span> <span class="nf">objectAtIndex</span><span class="p">:</span><span class="mi">0</span><span class="p">];</span>
@@ -2248,7 +2255,8 @@ class&#39;s <code>action</code> method. A plugin method has this signature:</p>
     <span class="p">}</span>
     <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">commandDelegate</span> <span class="nf">sendPluginResult</span><span class="p">:</span><span class="n">pluginResult</span> <span class="nf">callbackId</span><span class="p">:</span><span class="n">command</span><span class="p">.</span><span class="n">callbackId</span><span class="p">];</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>For more details, see
  <a href="https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVInvokedUrlCommand.h">CDVInvokedUrlCommand.h</a>, <a href="https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPluginResult.h">CDVPluginResult.h</a>,
 and <a href="https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVCommandDelegate.h">CDVCommandDelegate.h</a>.</p>
@@ -2257,8 +2265,10 @@ and <a href="https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classe
 
 <p>You can use <code>CDVPluginResult</code> to return a variety of result types back to
 the JavaScript callbacks, using class methods that follow this pattern:</p>
-<div class="highlight"><pre><code class="language-objective_c" data-lang="objective_c"><span class="k">+</span> <span class="p">(</span><span class="n">CDVPluginResult</span><span class="o">*</span><span class="p">)</span><span class="nf">resultWithStatus</span><span class="p">:(</span><span class="n">CDVCommandStatus</span><span class="p">)</span><span class="nv">statusOrdinal</span> <span class="n">messageAs</span><span class="p">...</span>
-</code></pre></div>
+
+<div class="language-objective_c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">CDVPluginResult</span><span class="o">*</span><span class="p">)</span><span class="nf">resultWithStatus</span><span class="p">:(</span><span class="n">CDVCommandStatus</span><span class="p">)</span><span class="nv">statusOrdinal</span> <span class="n">messageAs</span><span class="p">...</span>
+</code></pre></div></div>
+
 <p>You can create <code>String</code>, <code>Int</code>, <code>Double</code>, <code>Bool</code>, <code>Array</code>,
 <code>Dictionary</code>, <code>ArrayBuffer</code>, and <code>Multipart</code> types. You can also leave
 out any arguments to send a status, or return an error, or even choose
@@ -2267,15 +2277,19 @@ not to send any plugin result, in which case neither callback fires.</p>
 <p>Note the following for complex return values:</p>
 
 <ul>
-<li><p><code>messageAsArrayBuffer</code> expects <code>NSData*</code> and converts to an
+  <li>
+    <p><code>messageAsArrayBuffer</code> expects <code>NSData*</code> and converts to an
 <code>ArrayBuffer</code> in the JavaScript callback. Likewise, any
 <code>ArrayBuffer</code> the JavaScript sends to a plugin are converted to
-<code>NSData*</code>.</p></li>
-<li><p><code>messageAsMultipart</code> expects an <code>NSArray*</code> containing any of the
+<code>NSData*</code>.</p>
+  </li>
+  <li>
+    <p><code>messageAsMultipart</code> expects an <code>NSArray*</code> containing any of the
 other supported types, and sends the entire array as the <code>arguments</code>
 to your JavaScript callback.  This way, all of the arguments are
 serialized or deserialized as necessary, so it is safe to return
-<code>NSData*</code> as multipart, but not as <code>Array</code>/<code>Dictionary</code>.</p></li>
+<code>NSData*</code> as multipart, but not as <code>Array</code>/<code>Dictionary</code>.</p>
+  </li>
 </ul>
 
 <h2>Echo iOS Plugin Example</h2>
@@ -2283,17 +2297,20 @@ serialized or deserialized as necessary, so it is safe to return
 <p>To match the JavaScript interface&#39;s <em>echo</em> feature described in
 Application Plugins, use the <code>plugin.xml</code> to inject a <code>feature</code>
 specification to the local platform&#39;s <code>config.xml</code> file:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;config-file</span> <span class="na">target=</span><span class="s">"config.xml"</span> <span class="na">parent=</span><span class="s">"/*"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"Echo"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"ios-package"</span> <span class="na">value=</span><span class="s">"Echo"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;/feature&gt;</span>
     <span class="nt">&lt;/config-file&gt;</span>
 <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Then we would add the following <code>Echo.h</code> and <code>Echo.m</code> files to the
 <code>Plugins</code> folder within the Cordova-iOS application directory:</p>
-<div class="highlight"><pre><code class="language-objective_c" data-lang="objective_c"><span class="cm">/********* Echo.h Cordova Plugin Header *******/</span>
+
+<div class="language-objective_c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/********* Echo.h Cordova Plugin Header *******/</span>
 
 <span class="cp">#import &lt;Cordova/CDVPlugin.h&gt;
 </span>
@@ -2325,7 +2342,8 @@ specification to the local platform&#39;s <code>config.xml</code> file:</p>
 <span class="p">}</span>
 
 <span class="k">@end</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The necessary imports at the top of the file extends the class from
 <code>CDVPlugin</code>.  In this case, the plugin only supports a single <code>echo</code>
 action. It obtains the echo string by calling the <code>objectAtIndex</code>
@@ -2355,18 +2373,20 @@ classes for guidance.</p>
 interface. If your plugin requires a great deal of processing or
 requires a blocking call, you should use a background thread. For
 example:</p>
-<div class="highlight"><pre><code class="language-objective_c" data-lang="objective_c"><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">myPluginMethod</span><span class="p">:(</span><span class="n">CDVInvokedUrlCommand</span><span class="o">*</span><span class="p">)</span><span class="nv">command</span>
+
+<div class="language-objective_c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">myPluginMethod</span><span class="p">:(</span><span class="n">CDVInvokedUrlCommand</span><span class="o">*</span><span class="p">)</span><span class="nv">command</span>
 <span class="p">{</span>
-    <span class="c1">// Check command.arguments here.
-</span>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">commandDelegate</span> <span class="nf">runInBackground</span><span class="p">:</span><span class="o">^</span><span class="p">{</span>
+    <span class="c1">// Check command.arguments here.</span>
+    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">commandDelegate</span> <span class="nf">runInBackground</span><span class="p">:</span><span class="o">^</span><span class="p">{</span>
         <span class="n">NSString</span><span class="o">*</span> <span class="n">payload</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
-        <span class="c1">// Some blocking logic...
-</span>        <span class="n">CDVPluginResult</span><span class="o">*</span> <span class="n">pluginResult</span> <span class="o">=</span> <span class="p">[</span><span class="n">CDVPluginResult</span> <span class="nf">resultWithStatus</span><span class="p">:</span><span class="n">CDVCommandStatus_OK</span> <span class="nf">messageAsString</span><span class="p">:</span><span class="n">payload</span><span class="p">];</span>
-        <span class="c1">// The sendPluginResult method is thread-safe.
-</span>        <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">commandDelegate</span> <span class="nf">sendPluginResult</span><span class="p">:</span><span class="n">pluginResult</span> <span class="nf">callbackId</span><span class="p">:</span><span class="n">command</span><span class="p">.</span><span class="n">callbackId</span><span class="p">];</span>
+        <span class="c1">// Some blocking logic...</span>
+        <span class="n">CDVPluginResult</span><span class="o">*</span> <span class="n">pluginResult</span> <span class="o">=</span> <span class="p">[</span><span class="n">CDVPluginResult</span> <span class="nf">resultWithStatus</span><span class="p">:</span><span class="n">CDVCommandStatus_OK</span> <span class="nf">messageAsString</span><span class="p">:</span><span class="n">payload</span><span class="p">];</span>
+        <span class="c1">// The sendPluginResult method is thread-safe.</span>
+        <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">commandDelegate</span> <span class="nf">sendPluginResult</span><span class="p">:</span><span class="n">pluginResult</span> <span class="nf">callbackId</span><span class="p">:</span><span class="n">command</span><span class="p">.</span><span class="n">callbackId</span><span class="p">];</span>
     <span class="p">}];</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Debugging iOS Plugins</h2>
 
 <p>To debug on the Objective-C side, you need Xcode&#39;s built-in debugger.
@@ -2375,12 +2395,17 @@ For JavaScript, you can attach Safari to the app running within the iOS Simulato
 <h2>Common Pitfalls</h2>
 
 <ul>
-<li><p>Don&#39;t forget to add your plugin&#39;s mapping to <code>config.xml</code>. If you
-forget, an error is logged in the Xcode console.</p></li>
-<li><p>Don&#39;t forget to add any hosts you connect to in the whitelist, as
+  <li>
+    <p>Don&#39;t forget to add your plugin&#39;s mapping to <code>config.xml</code>. If you
+forget, an error is logged in the Xcode console.</p>
+  </li>
+  <li>
+    <p>Don&#39;t forget to add any hosts you connect to in the whitelist, as
 described in Domain <a href="../../appdev/whitelist/index.html">Whitelist Guide</a>. If you forget, an error is
-logged in the Xcode console.</p></li>
+logged in the Xcode console.</p>
+  </li>
 </ul>
+
 
 
             </div>

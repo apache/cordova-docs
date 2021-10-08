@@ -1585,14 +1585,20 @@ their workflow.</p>
 
 <p>To install plugman, you must have <a href="http://nodejs.org/">node</a> installed
 on your machine:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g plugman
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g plugman
+</code></pre></div></div>
+
 <p>Here is the syntax to add a plugin for each platform:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project &lt;directory&gt; --plugin &lt;name|url|path&gt; [--plugins_dir &lt;directory&gt;] [--www &lt;directory&gt;] [--variable &lt;name&gt;=&lt;value&gt; [--variable &lt;name&gt;=&lt;value&gt; ...]]
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project &lt;directory&gt; --plugin &lt;name|url|path&gt; [--plugins_dir &lt;directory&gt;] [--www &lt;directory&gt;] [--variable &lt;name&gt;=&lt;value&gt; [--variable &lt;name&gt;=&lt;value&gt; ...]]
+</code></pre></div></div>
+
 <p>To uninstall a plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">plugman --uninstall --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project &lt;directory&gt; --plugin &lt;id&gt; [--www &lt;directory&gt;] [--plugins_dir &lt;directory&gt;]
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugman --uninstall --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project &lt;directory&gt; --plugin &lt;id&gt; [--www &lt;directory&gt;] [--plugins_dir &lt;directory&gt;]
+</code></pre></div></div>
+
 <h2>Installing Core Plugins</h2>
 
 <p>The examples below <a href="../cordova/inappbrowser/inappbrowser.html">show</a> how to add plugins as needed so that any
@@ -1601,42 +1607,78 @@ version 3.0.  For each command, you need to select the target
 platform, and reference the platform&#39;s project directory.</p>
 
 <ul>
-<li><p>cordova-plugin-battery-status
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.battery-status</p></li>
-<li><p>cordova-plugin-camera
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.camera</p></li>
-<li><p>cordova-plugin-console
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.console</p></li>
-<li><p>cordova-plugin-contacts
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.contacts</p></li>
-<li><p>cordova-plugin-device
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.device</p></li>
-<li><p>cordova-plugin-device-motion (accelerometer)
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.device-motion</p></li>
-<li><p>cordova-plugin-device-orientation (compass)
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.device-orientation</p></li>
-<li><p>cordova-plugin-dialogs
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.dialogs</p></li>
-<li><p>cordova-plugin-file
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.file</p></li>
-<li><p>cordova-plugin-file-transfer
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.file-transfer</p></li>
-<li><p>cordova-plugin-geolocation
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.geolocation</p></li>
-<li><p>cordova-plugin-globalization
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.globalization</p></li>
-<li><p>cordova-plugin-inappbrowser
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.inappbrowser</p></li>
-<li><p>cordova-plugin-media
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.media</p></li>
-<li><p>cordova-plugin-media-capture
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.media-capture</p></li>
-<li><p>cordova-plugin-network-information
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.network-information</p></li>
-<li><p>cordova-plugin-splashscreen
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.splashscreen</p></li>
-<li><p>cordova-plugin-vibration
-plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.vibration</p></li>
+  <li>
+    <p>cordova-plugin-battery-status
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.battery-status</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-camera
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.camera</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-console
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.console</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-contacts
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.contacts</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-device
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.device</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-device-motion (accelerometer)
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.device-motion</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-device-orientation (compass)
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.device-orientation</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-dialogs
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.dialogs</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-file
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.file</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-file-transfer
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.file-transfer</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-geolocation
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.geolocation</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-globalization
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.globalization</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-inappbrowser
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.inappbrowser</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-media
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.media</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-media-capture
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.media-capture</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-network-information
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.network-information</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-splashscreen
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.splashscreen</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-vibration
+  plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project <directory> --plugin org.apache.cordova.vibration</directory></p>
+  </li>
 </ul>
 
 

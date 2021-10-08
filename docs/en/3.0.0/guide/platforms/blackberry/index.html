@@ -1574,10 +1574,10 @@ Guide.  See the following for more detailed platform-specific
 information:</p>
 
 <ul>
-<li><a href="config.html">BlackBerry Configuration</a></li>
-<li><a href="upgrading.html">Upgrading BlackBerry</a></li>
-<li><a href="plugin.html">BlackBerry Plugins</a></li>
-<li><a href="tools.html">BlackBerry Command-line Tools</a></li>
+  <li><a href="config.html">BlackBerry Configuration</a></li>
+  <li><a href="upgrading.html">Upgrading BlackBerry</a></li>
+  <li><a href="plugin.html">BlackBerry Plugins</a></li>
+  <li><a href="tools.html">BlackBerry Command-line Tools</a></li>
 </ul>
 
 <p>The command-line tools above refer to versions prior to Cordova 3.0.
@@ -1598,9 +1598,9 @@ Mac (OS X 10.6.4+).  WebWorks applications can <em>only</em> be deployed on
 the following BlackBerry platforms:</p>
 
 <ul>
-<li>BlackBerry OS 5.0 and higher</li>
-<li>BlackBerry PlayBook</li>
-<li>BlackBerry 10 (QNX)</li>
+  <li>BlackBerry OS 5.0 and higher</li>
+  <li>BlackBerry PlayBook</li>
+  <li>BlackBerry 10 (QNX)</li>
 </ul>
 
 <p>WebWorks requires the Java Development Kit (JDK). For Windows, use the
@@ -1620,8 +1620,12 @@ development. BlackBerry PlayBook and BlackBerry Smartphone WebWorks
 SDKs can be downloaded from the following locations.</p>
 
 <ul>
-<li><p><a href="https://developer.blackberry.com/html5/download/#playbook">BlackBerry PlayBook SDK</a> and <a href="http://www.adobe.com/devnet/air/air-sdk-download.html">Adobe Air SDK</a></p></li>
-<li><p><a href="https://developer.blackberry.com/html5/download/#smartphones">BlackBerry Smartphones SDK</a></p></li>
+  <li>
+    <p>[BlackBerry PlayBook SDK] (https://developer.blackberry.com/html5/download/#playbook) and <a href="http://www.adobe.com/devnet/air/air-sdk-download.html">Adobe Air SDK</a></p>
+  </li>
+  <li>
+    <p>[BlackBerry Smartphones SDK] (https://developer.blackberry.com/html5/download/#smartphones)</p>
+  </li>
 </ul>
 
 <h2>Register for Signing Keys</h2>
@@ -1639,30 +1643,41 @@ Once you receive your Signing Keys, they require setup. See the <a href="https:/
 <h2>Set up a New Project</h2>
 
 <ul>
-<li><p>Open up a command-line terminal and navigate to where you extracted Cordova.</p></li>
-<li><p>There is a directory for each platform that Cordova supports.
-Navigate to the <code>blackberry</code> directory.</p></li>
-<li><p>The <code>blackberry</code> directory contains several subdirectories.  The
+  <li>
+    <p>Open up a command-line terminal and navigate to where you extracted Cordova.</p>
+  </li>
+  <li>
+    <p>There is a directory for each platform that Cordova supports.
+Navigate to the <code>blackberry</code> directory.</p>
+  </li>
+  <li>
+    <p>The <code>blackberry</code> directory contains several subdirectories.  The
 <code>example</code> directory contains a complete Cordova project.  Copy the
 <code>example</code> directory to another location on your computer, and
-navigate there.</p></li>
-<li><p>Edit the <code>project.properties</code> file to specify the WebWorks SDK you
+navigate there.</p>
+  </li>
+  <li>
+    <p>Edit the <code>project.properties</code> file to specify the WebWorks SDK you
 are using. For example, here are the respective settings for
 BlackBerry PlayBook, BlackBerry Smartphone (OS5-7), or BlackBerry 10
 (QNX):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">playbook.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks SDK for TabletOS 2.1.0.6\\bbwp
-blackberry.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks Packager
-qnx.bbwp.dir=C:\\Program Files (x86)\\Research In Motion\\BlackBerry 10 WebWorks SDK 1.0.2.9
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  playbook.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks SDK for TabletOS 2.1.0.6\\bbwp
+  blackberry.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks Packager
+  qnx.bbwp.dir=C:\\Program Files (x86)\\Research In Motion\\BlackBerry 10 WebWorks SDK 1.0.2.9
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>These correspond to parameters you specify when building your
 project.  The first time you run these commands, they generate a
 &quot;HelloWorld&quot; application:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    cordova/build playbook
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cordova/build playbook
     cordova/build blackberry
     cordova/build qnx
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Along with the SDK, you also need to register for a code signing key
 and debug token. The signing key allows you to distribute apps through
 BlackBerry World. The debug token allows you to test unsigned apps on
@@ -1675,9 +1690,15 @@ sure to retain the password you specify. Then run the
 BlackBerry provides more information here:</p>
 
 <ul>
-<li><p><a href="https://www.blackberry.com/SignedKeys/codesigning.html">Register for your code signing key</a></p></li>
-<li><p><a href="http://developer.blackberry.com/html5/documentation/set_up_for_signing.html">Set up your computer for code signing</a></p></li>
-<li><p><a href="http://developer.blackberry.com/native/documentation/bb10/com.qnx.doc.native_sdk.quickstart/topic/set_up_your_environment.html">comprehensive guide to setting up your SDK environment</a></p></li>
+  <li>
+    <p><a href="https://www.blackberry.com/SignedKeys/codesigning.html">Register for your code signing key</a></p>
+  </li>
+  <li>
+    <p><a href="http://developer.blackberry.com/html5/documentation/set_up_for_signing.html">Set up your computer for code signing</a></p>
+  </li>
+  <li>
+    <p><a href="http://developer.blackberry.com/native/documentation/bb10/com.qnx.doc.native_sdk.quickstart/topic/set_up_your_environment.html">comprehensive guide to setting up your SDK environment</a></p>
+  </li>
 </ul>
 
 <h2>Deploy to Emulator</h2>
@@ -1696,15 +1717,19 @@ already be started.</p>
 <p>See the following for more information:</p>
 
 <ul>
-<li><p><a href="https://developer.blackberry.com/html5/documentation/using_the_tablet_simulator_1866980_11.html">BlackBerry PlayBook</a></p></li>
-<li><p><a href="https://developer.blackberry.com/html5/documentation/run_your_app_on_smartphone_sim_1876976_11.html">BlackBerry Smartphone</a></p></li>
+  <li>
+    <p><a href="https://developer.blackberry.com/html5/documentation/using_the_tablet_simulator_1866980_11.html">BlackBerry PlayBook</a></p>
+  </li>
+  <li>
+    <p><a href="https://developer.blackberry.com/html5/documentation/run_your_app_on_smartphone_sim_1876976_11.html">BlackBerry Smartphone</a></p>
+  </li>
 </ul>
 
 <p>For BlackBerry Playbook, edit the <code>project.properties</code> file to
 customize the <code>playbook.sim.ip</code> and <code>playbook.sim.password</code>
 properties.  The emulator&#39;s IP address is available through the
 <strong>Settings</strong> application on the home screen. Enable the <strong>Security and
-Privacy &rarr; Development Mode</strong> option to display the address. The
+Privacy &#8594; Development Mode</strong> option to display the address. The
 password can also be set in the <strong>Security and Privacy</strong> tab.</p>
 
 <p>For BlackBerry Smartphone, edit the <code>project.properties</code> file to
@@ -1715,9 +1740,11 @@ Files\\BlackBerry\\Simulator</code>.</p>
 
 <p>Once the emulator is installed and running, run either of the
 following to install an application to the home screen:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    cordova/run playbook
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cordova/run playbook
     cordova/run blackberry
-</code></pre></div>
+</code></pre></div></div>
+
 <p>If you are prompted whether a device is connected to your computer,
 answer no.</p>
 
@@ -1728,7 +1755,7 @@ answer no.</p>
 
 <p>To deploy your app to a device, it must be connected, and you must be
 registered for code signing keys as described above.  Also, to deploy
-apps on BlackBerry PlayBook, the <strong>Settings &rarr; Security &rarr;
+apps on BlackBerry PlayBook, the <strong>Settings &#8594; Security &#8594;
 Development Mode</strong> option must be enabled.</p>
 
 <p>On BlackBerry PlayBook, edit the <code>project.properties</code> file and modify
@@ -1736,16 +1763,18 @@ the following to reflect the device&#39;s IP and password as descibed
 above, along with the signing key password you set up:</p>
 
 <p>From your project directory, type <code>./cordova/run &lt;target&gt;</code>, replacing
-<code>&lt;target&gt;</code> with either <code>qnx</code>, <code>playbook</code>, or <code>blackberry</code>. </p>
+<code>&lt;target&gt;</code> with either <code>qnx</code>, <code>playbook</code>, or <code>blackberry</code>.</p>
 
 <p>On BlackBerry Smartphone (OS5-7), specify the
 <code>blackberry.sigtool.password</code> property as the signing key password.</p>
 
 <p>Then from the project&#39;s directory, run either of the commands you
 would to view the app in an emulator:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    cordova/run playbook
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cordova/run playbook
     cordova/run blackberry
-</code></pre></div>
+</code></pre></div></div>
+
 <p>If you are prompted whether a device is connected to your computer,
 answer yes.</p>
 
@@ -1758,9 +1787,14 @@ answer yes.</p>
 developing applications built for the BlackBerry WebWorks framework:</p>
 
 <ul>
-<li><p><a href="http://supportforums.blackberry.com/t5/Web-and-WebWorks-Development/Common-BlackBerry-WebWorks-development-pitfalls-that-can-be/ta-p/624712">BlackBerry WebWorks Development Pitfalls</a></p></li>
-<li><p><a href="https://bdsc.webapps.blackberrycom/html5/documentation/ww_developing/bestpractice_compiling_ww_apps_1873324_11.html">Best practices for packaging WebWorks applications</a></p></li>
+  <li>
+    <p><a href="http://supportforums.blackberry.com/t5/Web-and-WebWorks-Development/Common-BlackBerry-WebWorks-development-pitfalls-that-can-be/ta-p/624712">BlackBerry WebWorks Development Pitfalls</a></p>
+  </li>
+  <li>
+    <p><a href="https://bdsc.webapps.blackberrycom/html5/documentation/ww_developing/bestpractice_compiling_ww_apps_1873324_11.html">Best practices for packaging WebWorks applications</a></p>
+  </li>
 </ul>
+
 
 
             </div>

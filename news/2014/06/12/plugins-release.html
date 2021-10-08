@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The following plugins were updated today:cordova-plugin-camera: 0.3.0cordova-plugin-console: 0.2.9cordova-plugin-device: 0.2.10cordova-plugin-device-motion: ...">
+    <meta name="description" content="The following plugins were updated today:  cordova-plugin-camera: 0.3.0  cordova-plugin-console: 0.2.9  cordova-plugin-device: 0.2.10  cordova-plugin-device-...">
 
     <title>
         
@@ -134,249 +134,248 @@
             <p>The following plugins were updated today:</p>
 
 <ul>
-<li>cordova-plugin-camera: 0.3.0</li>
-<li>cordova-plugin-console: 0.2.9</li>
-<li>cordova-plugin-device: 0.2.10</li>
-<li>cordova-plugin-device-motion: 0.2.8</li>
-<li>cordova-plugin-device-orientation: 0.3.7</li>
-<li>cordova-plugin-dialogs: 0.2.8</li>
-<li>cordova-plugin-file: 1.2.0</li>
-<li>cordova-plugin-file-transfer: 0.4.4</li>
-<li>cordova-plugin-geolocation: 0.3.8</li>
-<li>cordova-plugin-globalization: 0.2.8</li>
-<li>cordova-plugin-inappbrowser: 0.5.0</li>
-<li>cordova-plugin-media: 0.2.11</li>
-<li>cordova-plugin-media-capture: 0.3.1</li>
-<li>cordova-plugin-network-information: 0.2.9</li>
-<li>cordova-plugin-splashscreen: 0.3.1</li>
-<li>cordova-plugin-statusbar: 0.1.6</li>
-<li>cordova-plugin-vibration: 0.3.9</li>
+  <li>cordova-plugin-camera: 0.3.0</li>
+  <li>cordova-plugin-console: 0.2.9</li>
+  <li>cordova-plugin-device: 0.2.10</li>
+  <li>cordova-plugin-device-motion: 0.2.8</li>
+  <li>cordova-plugin-device-orientation: 0.3.7</li>
+  <li>cordova-plugin-dialogs: 0.2.8</li>
+  <li>cordova-plugin-file: 1.2.0</li>
+  <li>cordova-plugin-file-transfer: 0.4.4</li>
+  <li>cordova-plugin-geolocation: 0.3.8</li>
+  <li>cordova-plugin-globalization: 0.2.8</li>
+  <li>cordova-plugin-inappbrowser: 0.5.0</li>
+  <li>cordova-plugin-media: 0.2.11</li>
+  <li>cordova-plugin-media-capture: 0.3.1</li>
+  <li>cordova-plugin-network-information: 0.2.9</li>
+  <li>cordova-plugin-splashscreen: 0.3.1</li>
+  <li>cordova-plugin-statusbar: 0.1.6</li>
+  <li>cordova-plugin-vibration: 0.3.9</li>
 </ul>
 
 <p>Notable changes include:</p>
-
 <ul>
-<li>Several File plugin changes:
-
-<ul>
-<li>Initial implementation for <strong>Firefox OS</strong></li>
-<li>Important platform-specific paths now exposed as properties on <code>cordova.file.*</code> (<strong>iOS</strong> &amp; <strong>Android</strong>, refer to docs)</li>
-<li>Several bug fixes (across most platforms)</li>
-<li>Updated support for <strong>BlackBerry 10</strong>, <strong>Ubuntu</strong> &amp; <strong>Windows 8</strong></li>
-</ul></li>
-<li>Every plugin now has its own license file and how to contribute document (<code>CONTRIBUTING.md</code>)</li>
+  <li>Several File plugin changes:
+    <ul>
+      <li>Initial implementation for <strong>Firefox OS</strong></li>
+      <li>Important platform-specific paths now exposed as properties on <code>cordova.file.*</code> (<strong>iOS</strong> &amp; <strong>Android</strong>, refer to docs)</li>
+      <li>Several bug fixes (across most platforms)</li>
+      <li>Updated support for <strong>BlackBerry 10</strong>, <strong>Ubuntu</strong> &amp; <strong>Windows 8</strong></li>
+    </ul>
+  </li>
+  <li>Every plugin now has its own license file and how to contribute document (<code>CONTRIBUTING.md</code>)</li>
 </ul>
 
 <p>The plugins have been updated on our registry at <a href="http://plugins.cordova.io/">plugins.cordova.io</a>.</p>
 
-<hr>
-
+<hr />
 <p>You can update any plugin by removing it, and then readding it. E.g. To update your file plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm org.apache.cordova.file
-cordova plugin add org.apache.cordova.file
-</code></pre></div>
-<p>Other changes include:</p>
 
-<!--more-->
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm org.apache.cordova.file
+cordova plugin add org.apache.cordova.file
+</code></pre></div></div>
+
+<p>Other changes include:
+<!--more--></p>
 
 <p><code>org.apache.cordova.camera@0.3.0</code></p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-2083">CB-2083</a>, <a href="https://issues.apache.org/jira/browse/CB-5895">CB-5895</a> documented <code>saveToPhotoAlbum</code> quirk on <strong>WP8</strong></li>
-<li>Remove deprecated symbols for iOS &lt; 6</li>
-<li><strong>Ubuntu</strong> use application directory for images</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6613">CB-6613</a> Use <code>WinJS</code> functionality to get <code>base64-encoded</code> content of image instead of File plugin functionality</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6612">CB-6612</a> <code>camera.getPicture</code> now always returns encoded JPEG image</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6576">CB-6576</a> Returns a specific error message when app has no access to library</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6546">CB-6546</a> <strong>Android</strong>: Add support for <code>allowEdit</code> Camera option</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6795">CB-6795</a> Add license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-2083">CB-2083</a>, <a href="https://issues.apache.org/jira/browse/CB-5895">CB-5895</a> documented <code>saveToPhotoAlbum</code> quirk on <strong>WP8</strong></li>
+  <li>Remove deprecated symbols for iOS &lt; 6</li>
+  <li><strong>Ubuntu</strong> use application directory for images</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6613">CB-6613</a> Use <code>WinJS</code> functionality to get <code>base64-encoded</code> content of image instead of File plugin functionality</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6612">CB-6612</a> <code>camera.getPicture</code> now always returns encoded JPEG image</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6576">CB-6576</a> Returns a specific error message when app has no access to library</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6546">CB-6546</a> <strong>Android</strong>: Add support for <code>allowEdit</code> Camera option</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6795">CB-6795</a> Add license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.console@0.2.9</code></p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6848">CB-6848</a> Add <strong>Android</strong> quirk, list applicable platforms</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6796">CB-6796</a> Add license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6848">CB-6848</a> Add <strong>Android</strong> quirk, list applicable platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6796">CB-6796</a> Add license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.device@0.2.10</code></p>
 
 <ul>
-<li>Added <strong>Firefox OS</strong> version</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6800">CB-6800</a> Add license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li>Added <strong>Firefox OS</strong> version</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6800">CB-6800</a> Add license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.device-motion@0.2.8</code></p>
 
 <ul>
-<li><strong>Firefox OS</strong> added to supported platforms</li>
-<li><strong>Ubuntu</strong> don&#39;t destroy callback after use</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6798">CB-6798</a> Add license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li><strong>Firefox OS</strong> added to supported platforms</li>
+  <li><strong>Ubuntu</strong> don&#39;t destroy callback after use</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6798">CB-6798</a> Add license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.device-orientation@0.3.7</code></p>
 
 <ul>
-<li><strong>Windows 8</strong> makes <code>getHeading</code> callback spec compliant</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6799">CB-6799</a> Add license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li><strong>Windows 8</strong> makes <code>getHeading</code> callback spec compliant</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6799">CB-6799</a> Add license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.dialogs@0.2.8</code></p>
 
 <ul>
-<li>Running original <code>windows.open</code>, <code>inAppBrowser</code> is overriding it no need to place CSS in every page anymore</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4616">CB-4616</a> Returned index 0 was not documented for <code>notification.prompt</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6528">CB-6528</a> Allow scroll on alert message content</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4966">CB-4966</a> Dialogs are in window now. No need to add anything to <code>manifest</code> or <code>index.html</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5945">CB-5945</a> <strong>Windows8</strong> do not call success callbacks until dialog is dismissed</li>
-<li>Update docs to state that <code>prompt</code> is supported on <strong>Windows Phone</strong></li>
-<li>Removing <strong>Firefox OS</strong> quirks. No need to add special permission (it&#39;s different API with the same name). <code>Notification.css</code> is added automatically</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6628">CB-6628</a> <strong>Amazon FireOS</strong> fix <code>confirm</code> and <code>prompt</code> methods</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6801">CB-6801</a> Add license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li>Running original <code>windows.open</code>, <code>inAppBrowser</code> is overriding it no need to place CSS in every page anymore</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4616">CB-4616</a> Returned index 0 was not documented for <code>notification.prompt</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6528">CB-6528</a> Allow scroll on alert message content</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4966">CB-4966</a> Dialogs are in window now. No need to add anything to <code>manifest</code> or <code>index.html</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5945">CB-5945</a> <strong>Windows8</strong> do not call success callbacks until dialog is dismissed</li>
+  <li>Update docs to state that <code>prompt</code> is supported on <strong>Windows Phone</strong></li>
+  <li>Removing <strong>Firefox OS</strong> quirks. No need to add special permission (it&#39;s different API with the same name). <code>Notification.css</code> is added automatically</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6628">CB-6628</a> <strong>Amazon FireOS</strong> fix <code>confirm</code> and <code>prompt</code> methods</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6801">CB-6801</a> Add license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.file@1.2.0</code></p>
 
 <ul>
-<li>Fix sorting order in supported platforms</li>
-<li>Fixed <code>toURL()</code> <code>toInternalURL()</code> information in the doku</li>
-<li><strong>Ubuntu</strong> increase quota value</li>
-<li><strong>Ubuntu</strong> Change FS URL scheme to <code>cdvfile</code></li>
-<li><strong>Ubuntu</strong> Return size with <code>Entry.getMetadata()</code> method</li>
-<li>Initial implementation for <strong>Firefox OS</strong></li>
-<li><strong>iOS</strong> Don&#39;t fail a write of zero-length payload</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-285">CB-285</a> Docs for <code>cordova.file.*Directory</code> properties</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-285">CB-285</a> <strong>Android</strong>, <strong>iOS</strong> Add <code>cordova.file.*Directory</code> properties</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3440">CB-3440</a> <strong>BlackBerry10</strong> Proxy based implementation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6583">CB-6583</a> <strong>iOS</strong> Fix failing to create entry when space in parent path</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6571">CB-6571</a> <strong>Android</strong> Make <code>DirectoryEntry.toURL()</code> have a trailing <code>/</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6525">CB-6525</a> <strong>Android</strong>, <strong>iOS</strong> Allow <code>file:</code> URLs in all APIs; fixes <code>FileTransfer.download</code> not being called</li>
-<li>Fix the <strong>Windows 8</strong> implementation of the <code>getFile</code> method</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6803">CB-6803</a> Add license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
-<li>Add NOTICE file</li>
+  <li>Fix sorting order in supported platforms</li>
+  <li>Fixed <code>toURL()</code> <code>toInternalURL()</code> information in the doku</li>
+  <li><strong>Ubuntu</strong> increase quota value</li>
+  <li><strong>Ubuntu</strong> Change FS URL scheme to <code>cdvfile</code></li>
+  <li><strong>Ubuntu</strong> Return size with <code>Entry.getMetadata()</code> method</li>
+  <li>Initial implementation for <strong>Firefox OS</strong></li>
+  <li><strong>iOS</strong> Don&#39;t fail a write of zero-length payload</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-285">CB-285</a> Docs for <code>cordova.file.*Directory</code> properties</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-285">CB-285</a> <strong>Android</strong>, <strong>iOS</strong> Add <code>cordova.file.*Directory</code> properties</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3440">CB-3440</a> <strong>BlackBerry10</strong> Proxy based implementation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6583">CB-6583</a> <strong>iOS</strong> Fix failing to create entry when space in parent path</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6571">CB-6571</a> <strong>Android</strong> Make <code>DirectoryEntry.toURL()</code> have a trailing <code>/</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6525">CB-6525</a> <strong>Android</strong>, <strong>iOS</strong> Allow <code>file:</code> URLs in all APIs; fixes <code>FileTransfer.download</code> not being called</li>
+  <li>Fix the <strong>Windows 8</strong> implementation of the <code>getFile</code> method</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6803">CB-6803</a> Add license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li>Add NOTICE file</li>
 </ul>
 
 <p><code>org.apache.cordova.file-transfer@0.4.4</code></p>
 
 <ul>
-<li><strong>Ubuntu</strong> support <code>cdvfile URI</code></li>
-<li>Upload progress now works also for second file</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6706">CB-6706</a> Relax dependency on file plugin</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6378">CB-6378</a> Use <code>connection.disconnect()</code> instead of <code>stream.close()</code> for thread-safety</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6466">CB-6466</a> Auto-create directories in download</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3440">CB-3440</a> <strong>BlackBerry10</strong> Update implementation to use modules from file plugin</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6494">CB-6494</a> <strong>Android</strong> Fix upload of KitKat content URIs</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6802">CB-6802</a> Add license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li><strong>Ubuntu</strong> support <code>cdvfile URI</code></li>
+  <li>Upload progress now works also for second file</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6706">CB-6706</a> Relax dependency on file plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6378">CB-6378</a> Use <code>connection.disconnect()</code> instead of <code>stream.close()</code> for thread-safety</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6466">CB-6466</a> Auto-create directories in download</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3440">CB-3440</a> <strong>BlackBerry10</strong> Update implementation to use modules from file plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6494">CB-6494</a> <strong>Android</strong> Fix upload of KitKat content URIs</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6802">CB-6802</a> Add license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.geolocation@0.3.8</code></p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-5416">CB-5416</a> Adding support for auto-managing permissions</li>
-<li>Proper implementation for <strong>Firefox OS</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6804">CB-6804</a> Add license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5416">CB-5416</a> Adding support for auto-managing permissions</li>
+  <li>Proper implementation for <strong>Firefox OS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6804">CB-6804</a> Add license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.globalization@0.2.8</code></p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-4602">CB-4602</a> Added clarification to docs</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4602">CB-4602</a> <a href="https://issues.apache.org/jira/browse/CB-6490">CB-6490</a> <a href="https://issues.apache.org/jira/browse/CB-4822">CB-4822</a> <strong>WP</strong> Globalization</li>
-<li>Android should return <code>BCP47</code> tag, not localized string</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6805">CB-6805</a> Add license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4602">CB-4602</a> Added clarification to docs</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4602">CB-4602</a> <a href="https://issues.apache.org/jira/browse/CB-6490">CB-6490</a> <a href="https://issues.apache.org/jira/browse/CB-4822">CB-4822</a> <strong>WP</strong> Globalization</li>
+  <li>Android should return <code>BCP47</code> tag, not localized string</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6805">CB-6805</a> Add license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.inappbrowser@0.5.0</code></p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-5649">CB-5649</a> <strong>iOS</strong> respect App&#39;s orientation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6474">CB-6474</a> Add <code>data:</code> URLs support to <strong>WP8</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6482">CB-6482</a> <strong>WP8</strong> call correct callback</li>
-<li>Fixed use of <strong>iOS</strong> 6 deprecated methods</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6360">CB-6360</a> Feature detection instead of <strong>iOS</strong> version detection</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6396">CB-6396</a> <strong>Firefox OS</strong> Adding basic support</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6806">CB-6806</a> Add license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5649">CB-5649</a> <strong>iOS</strong> respect App&#39;s orientation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6474">CB-6474</a> Add <code>data:</code> URLs support to <strong>WP8</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6482">CB-6482</a> <strong>WP8</strong> call correct callback</li>
+  <li>Fixed use of <strong>iOS</strong> 6 deprecated methods</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6360">CB-6360</a> Feature detection instead of <strong>iOS</strong> version detection</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6396">CB-6396</a> <strong>Firefox OS</strong> Adding basic support</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6806">CB-6806</a> Add license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.media@0.2.11</code></p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6706">CB-6706</a> Relax dependency on file plugin</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6478">CB-6478</a> Fix exception when trying to record audio file on <strong>Windows 8</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6477">CB-6477</a> Add <code>musicLibrary</code> and <code>microphone</code> capabilities to <strong>Windows 8</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6807">CB-6807</a> Add license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6706">CB-6706</a> Relax dependency on file plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6478">CB-6478</a> Fix exception when trying to record audio file on <strong>Windows 8</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6477">CB-6477</a> Add <code>musicLibrary</code> and <code>microphone</code> capabilities to <strong>Windows 8</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6807">CB-6807</a> Add license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.media-capture@0.3.1</code></p>
 
 <ul>
-<li>Fixes <code>captureTasks UI URIs</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6706">CB-6706</a> Relax dependency on file plugin</li>
-<li>Remove deprecated symbols for <strong>iOS</strong> &lt; 6</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6808">CB-6808</a> Add license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li>Fixes <code>captureTasks UI URIs</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6706">CB-6706</a> Relax dependency on file plugin</li>
+  <li>Remove deprecated symbols for <strong>iOS</strong> &lt; 6</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6808">CB-6808</a> Add license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.network-information@0.2.9</code></p>
 
 <ul>
-<li>Cached extra info to better detect changes</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6350">CB-6350</a> Fix <code>networkStatusForFlags</code> return value type to work with <code>64-bit</code> <strong>iOS</strong></li>
-<li>Initial version of <strong>Firefox OS</strong> network information plugin</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6809">CB-6809</a> Add license to CONTRIBUTING.md</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li>Cached extra info to better detect changes</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6350">CB-6350</a> Fix <code>networkStatusForFlags</code> return value type to work with <code>64-bit</code> <strong>iOS</strong></li>
+  <li>Initial version of <strong>Firefox OS</strong> network information plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6809">CB-6809</a> Add license to CONTRIBUTING.md</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.splashscreen@0.3.1</code></p>
 
 <ul>
-<li><strong>WP8</strong> updated quirk for  and combined <strong>iOS</strong>, <strong>WP8</strong>, <strong>BB10</strong> quirks as they are all the same</li>
-<li><strong>WP</strong> implemented OnInit so splash screen can be shown before cordova page is loaded</li>
-<li><strong>WP</strong> plugin must be autoloaded for <code>AutoHideSplashScreen</code> preference to work</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6483">CB-6483</a> Use splash screen image from manifest on <strong>Windows8</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6810">CB-6810</a> Add license to CONTRIBUTING.md</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li><strong>WP8</strong> updated quirk for  and combined <strong>iOS</strong>, <strong>WP8</strong>, <strong>BB10</strong> quirks as they are all the same</li>
+  <li><strong>WP</strong> implemented OnInit so splash screen can be shown before cordova page is loaded</li>
+  <li><strong>WP</strong> plugin must be autoloaded for <code>AutoHideSplashScreen</code> preference to work</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6483">CB-6483</a> Use splash screen image from manifest on <strong>Windows8</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6810">CB-6810</a> Add license to CONTRIBUTING.md</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.statusbar@0.1.6</code></p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6783">CB-6783</a> added <code>StatusBarStyle</code> config preference,  updated docs</li>
-<li>Update docs with recent <strong>WP</strong> changes, remove <code>clear</code> from the list of named colors in documentation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6513">CB-6513</a> <strong>Android</strong> Fix compiling</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6812">CB-6812</a> Add license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6783">CB-6783</a> added <code>StatusBarStyle</code> config preference,  updated docs</li>
+  <li>Update docs with recent <strong>WP</strong> changes, remove <code>clear</code> from the list of named colors in documentation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6513">CB-6513</a> <strong>Android</strong> Fix compiling</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6812">CB-6812</a> Add license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.vibration@0.3.9</code></p>
 
 <ul>
-<li>Extended <code>vibrateWithPattern</code> to allow for pattern repetition, implemented a complementary <code>cancelVibration</code> function and adapted documentation</li>
-<li>Implemented <code>vibrateWithPattern</code> (for <strong>Android</strong>) and adapted documentation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
+  <li>Extended <code>vibrateWithPattern</code> to allow for pattern repetition, implemented a complementary <code>cancelVibration</code> function and adapted documentation</li>
+  <li>Implemented <code>vibrateWithPattern</code> (for <strong>Android</strong>) and adapted documentation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add CONTRIBUTING.md</li>
 </ul>
 
         </div>

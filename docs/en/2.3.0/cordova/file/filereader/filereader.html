@@ -1548,23 +1548,23 @@
 <h2>Properties</h2>
 
 <ul>
-<li><strong>readyState:</strong> One of the three states the reader can be in EMPTY, LOADING or DONE.</li>
-<li><strong>result:</strong> The contents of the file that has been read. <em>(DOMString)</em></li>
-<li><strong>error:</strong> An object containing errors. <em>(FileError)</em></li>
-<li><strong>onloadstart:</strong> Called when the read starts. . <em>(Function)</em></li>
-<li><strong>onprogress:</strong> Called while reading the file, reports progress (progess.loaded/progress.total). <em>(Function)</em> -NOT SUPPORTED</li>
-<li><strong>onload:</strong> Called when the read has successfully completed. <em>(Function)</em></li>
-<li><strong>onabort:</strong> Called when the read has been aborted. For instance, by invoking the abort() method. <em>(Function)</em></li>
-<li><strong>onerror:</strong> Called when the read has failed. <em>(Function)</em></li>
-<li><strong>onloadend:</strong> Called when the request has completed (either in success or failure).  <em>(Function)</em></li>
+  <li><strong>readyState:</strong> One of the three states the reader can be in EMPTY, LOADING or DONE.</li>
+  <li><strong>result:</strong> The contents of the file that has been read. <em>(DOMString)</em></li>
+  <li><strong>error:</strong> An object containing errors. <em>(FileError)</em></li>
+  <li><strong>onloadstart:</strong> Called when the read starts. . <em>(Function)</em></li>
+  <li><strong>onprogress:</strong> Called while reading the file, reports progress (progess.loaded/progress.total). <em>(Function)</em> -NOT SUPPORTED</li>
+  <li><strong>onload:</strong> Called when the read has successfully completed. <em>(Function)</em></li>
+  <li><strong>onabort:</strong> Called when the read has been aborted. For instance, by invoking the abort() method. <em>(Function)</em></li>
+  <li><strong>onerror:</strong> Called when the read has failed. <em>(Function)</em></li>
+  <li><strong>onloadend:</strong> Called when the request has completed (either in success or failure).  <em>(Function)</em></li>
 </ul>
 
 <h2>Methods</h2>
 
 <ul>
-<li><strong>abort</strong>: Aborts reading file. </li>
-<li><strong>readAsDataURL</strong>: Read file and return data as a base64 encoded data url.</li>
-<li><strong>readAsText</strong>: Reads text file.</li>
+  <li><strong>abort</strong>: Aborts reading file.</li>
+  <li><strong>readAsDataURL</strong>: Read file and return data as a base64 encoded data url.</li>
+  <li><strong>readAsText</strong>: Reads text file.</li>
 </ul>
 
 <h2>Details</h2>
@@ -1574,147 +1574,153 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows 8</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
 </ul>
 
-<h2>Read As Data URL </h2>
+<h2>Read As Data URL</h2>
 
 <p><strong>Parameters:</strong></p>
-
 <ul>
-<li>file - the file object to read</li>
+  <li>file - the file object to read</li>
 </ul>
 
 <h2>Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function win(file) {
-    var reader = new FileReader();
-    reader.onloadend = function(evt) {
-        console.log("read success");
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(file) {
+	var reader = new FileReader();
+	reader.onloadend = function(evt) {
+    	console.log("read success");
         console.log(evt.target.result);
     };
-    reader.readAsDataURL(file);
+	reader.readAsDataURL(file);
 };
 
 var fail = function(evt) {
-    console.log(error.code);
+	console.log(error.code);
 };
 
 entry.file(win, fail);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Read As Text</h2>
 
 <p><strong>Parameters:</strong></p>
 
 <ul>
-<li>file - the file object to read</li>
-<li>encoding - the encoding to use to encode the file&#39;s content. Default is UTF8.</li>
+  <li>file - the file object to read</li>
+  <li>encoding - the encoding to use to encode the file&#39;s content. Default is UTF8.</li>
 </ul>
 
 <h2>Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function win(file) {
-    var reader = new FileReader();
-    reader.onloadend = function(evt) {
-        console.log("read success");
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(file) {
+	var reader = new FileReader();
+	reader.onloadend = function(evt) {
+    	console.log("read success");
         console.log(evt.target.result);
     };
-    reader.readAsText(file);
+	reader.readAsText(file);
 };
 
 var fail = function(evt) {
-    console.log(error.code);
+	console.log(error.code);
 };
 
 entry.file(win, fail);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Abort Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function win(file) {
-    var reader = new FileReader();
-    reader.onloadend = function(evt) {
-        console.log("read success");
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(file) {
+	var reader = new FileReader();
+	reader.onloadend = function(evt) {
+    	console.log("read success");
         console.log(evt.target.result);
     };
-    reader.readAsText(file);
-    reader.abort();
+	reader.readAsText(file);
+	reader.abort();
 };
 
 function fail(error) {
-    console.log(error.code);
+	console.log(error.code);
 }
 
 entry.file(win, fail);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>FileReader Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-2.3.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;FileReader Example&lt;/title&gt;
 
-    <span class="c1">// Wait for Cordova to load</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onLoad</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-    <span class="p">}</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Cordova is ready</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">([</span><span class="nx">LocalFileSystem</span><span class="p">](..</span><span class="o">/</span><span class="nx">localfilesystem</span><span class="o">/</span><span class="nx">localfilesystem</span><span class="p">.</span><span class="nx">html</span><span class="p">).</span><span class="nx">PERSISTENT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">gotFS</span><span class="p">,</span> <span class="nx">fail</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Wait for Cordova to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
 
-    <span class="kd">function</span> <span class="nx">gotFS</span><span class="p">(</span><span class="nx">fileSystem</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">fileSystem</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="s2">"readme.txt"</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">gotFileEntry</span><span class="p">,</span> <span class="nx">fail</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+		window.requestFileSystem([LocalFileSystem](../localfilesystem/localfilesystem.html).PERSISTENT, 0, gotFS, fail);
+    }
+	
+	function gotFS(fileSystem) {
+		fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
+	}
+	
+	function gotFileEntry(fileEntry) {
+		fileEntry.file(gotFile, fail);
+	}
+	
+    function gotFile(file){
+		readDataUrl(file);
+		readAsText(file);
+	}
+    
+    function readDataUrl(file) {
+        var reader = new FileReader();
+        reader.onloadend = function(evt) {
+            console.log("Read as data URL");
+            console.log(evt.target.result);
+        };
+        reader.readAsDataURL(file);
+    }
+    
+    function readAsText(file) {
+        var reader = new FileReader();
+        reader.onloadend = function(evt) {
+            console.log("Read as text");
+            console.log(evt.target.result);
+        };
+        reader.readAsText(file);
+    }
+    
+    function fail(evt) {
+        console.log(evt.target.error.code);
+    }
+    
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Read File&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
 
-    <span class="kd">function</span> <span class="nx">gotFileEntry</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">file</span><span class="p">(</span><span class="nx">gotFile</span><span class="p">,</span> <span class="nx">fail</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="kd">function</span> <span class="nx">gotFile</span><span class="p">(</span><span class="nx">file</span><span class="p">){</span>
-        <span class="nx">readDataUrl</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
-        <span class="nx">readAsText</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="kd">function</span> <span class="nx">readDataUrl</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
-        <span class="nx">reader</span><span class="p">.</span><span class="nx">onloadend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Read as data URL"</span><span class="p">);</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">evt</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
-        <span class="p">};</span>
-        <span class="nx">reader</span><span class="p">.</span><span class="nx">readAsDataURL</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="kd">function</span> <span class="nx">readAsText</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
-        <span class="nx">reader</span><span class="p">.</span><span class="nx">onloadend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Read as text"</span><span class="p">);</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">evt</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
-        <span class="p">};</span>
-        <span class="nx">reader</span><span class="p">.</span><span class="nx">readAsText</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="kd">function</span> <span class="nx">fail</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">evt</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Read File<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
 <h2>iOS Quirks</h2>
-
 <ul>
-<li><strong>encoding</strong> parameter is not supported, UTF8 encoding is always used.</li>
+  <li><strong>encoding</strong> parameter is not supported, UTF8 encoding is always used.</li>
 </ul>
 
 

@@ -1376,8 +1376,10 @@
                 <h1>volumeupbutton</h1>
 
 <p>This is an event that fires when the user presses the volume up button.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">document.addEventListener("volumeupbutton", yourCallbackFunction, false);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("volumeupbutton", yourCallbackFunction, false);
+</code></pre></div></div>
+
 <h2>Details</h2>
 
 <p>If you need to override the default volume up behaviour you can register an event listener for the &#39;volumeupbutton&#39; event.</p>
@@ -1387,54 +1389,58 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
 
 function onVolumeUpKeyDown() {
     // Handle the volume up button
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                      "http://www.w3.org/TR/html4/strict.dtd"&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Cordova Volume Up Button Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-1.8.1.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Cordova Volume Up Button Example&lt;/title&gt;
 
-    <span class="c1">// Call onDeviceReady when Cordova is loaded.</span>
-    <span class="c1">//</span>
-    <span class="c1">// At this point, the document has loaded but cordova-1.8.1.js has not.</span>
-    <span class="c1">// When Cordova is loaded and talking with the native device,</span>
-    <span class="c1">// it will call the event `deviceready`.</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onLoad</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-    <span class="p">}</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Cordova is loaded and it is now safe to make calls Cordova methods</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// Register the event listener</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"volumeupbutton"</span><span class="p">,</span> <span class="nx">onVolumeUpKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Call onDeviceReady when Cordova is loaded.
+    //
+    // At this point, the document has loaded but cordova-1.8.1.js has not.
+    // When Cordova is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
 
-    <span class="c1">// Handle the volume up button</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onVolumeUpKeyDown</span><span class="p">()</span> <span class="p">{</span>
-    <span class="p">}</span>
+    // Cordova is loaded and it is now safe to make calls Cordova methods
+    //
+    function onDeviceReady() {
+        // Register the event listener
+        document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body</span> <span class="na">onload=</span><span class="s">"onLoad()"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // Handle the volume up button
+    //
+    function onVolumeUpKeyDown() {
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="onLoad()"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 
             </div>
         </div>

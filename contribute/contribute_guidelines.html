@@ -121,7 +121,6 @@
 <p>Before contributing to Apache Cordova, it is recommended that you join the <a href="http://cordova.apache.org/contact/">mailing list</a> and send a brief introduction of yourself.</p>
 
 <h2>Working with Issues</h2>
-
 <p>Issues for all Apache Cordova components are on <a href="https://github.com/apache/cordova">GitHub</a>. When reporting issues, please follow <a href="./issues.html">these guidelines</a>.</p>
 
 <h4>Claiming Issues</h4>
@@ -137,13 +136,13 @@
 <p>The workflow for creating pull requests on Github generally follows these steps:</p>
 
 <ol>
-<li><a href="./issues.html">Open an issue</a> if one has not already been created (optional)</li>
-<li><a href="https://help.github.com/articles/fork-a-repo/">Create a local fork</a> of the appropriate Cordova repository</li>
-<li>In your local fork, create a branch dedicated to the issue you are working on</li>
-<li>Push your commits to this branch</li>
-<li><a href="http://www.git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Squashing-Commits">Squash</a> these commits into one single commit (see the section below regarding commit messages)</li>
-<li><a href="https://help.github.com/articles/using-pull-requests/">Create a pull request</a> on the Cordova repository</li>
-<li>Ask for code review</li>
+  <li><a href="./issues.html">Open an issue</a> if one has not already been created (optional)</li>
+  <li><a href="https://help.github.com/articles/fork-a-repo/">Create a local fork</a> of the appropriate Cordova repository</li>
+  <li>In your local fork, create a branch dedicated to the issue you are working on</li>
+  <li>Push your commits to this branch</li>
+  <li><a href="http://www.git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Squashing-Commits">Squash</a> these commits into one single commit (see the section below regarding commit messages)</li>
+  <li><a href="https://help.github.com/articles/using-pull-requests/">Create a pull request</a> on the Cordova repository</li>
+  <li>Ask for code review</li>
 </ol>
 
 <p>Please include the issue ID in the title of any pull requests made to Github. For more help on Git, see the <a href="http://git-scm.com/doc">Git documentation</a>.</p>
@@ -157,19 +156,18 @@
 <p>You are responsible for testing your changes and correcting any problems before submitting a pull request. Testing includes both verifying the functionality added/touched, and running the test suites to verify there are no regressions.</p>
 
 <p>When we say &quot;run the test suites&quot; this includes:</p>
-
 <ul>
-<li>All automated tests in cordova-mobilespec</li>
-<li>Manual tests in cordova-mobilespec that might be affected by the change</li>
-<li><code>npm test</code> for JS linting</li>
-<li>Any platform-specific unit tests
-
-<ul>
-<li><code>cordova-android: npm run test-build</code></li>
-<li><code>cordova-ios:  npm test</code></li>
-<li><code>cordova-js: jake test</code></li>
-<li><code>cordova-plugman: npm test</code></li>
-</ul></li>
+  <li>All automated tests in cordova-mobilespec</li>
+  <li>Manual tests in cordova-mobilespec that might be affected by the change</li>
+  <li><code>npm test</code> for JS linting</li>
+  <li>Any platform-specific unit tests
+    <ul>
+      <li><code>cordova-android: npm run test-build</code></li>
+      <li><code>cordova-ios:  npm test</code></li>
+      <li><code>cordova-js: jake test</code></li>
+      <li><code>cordova-plugman: npm test</code></li>
+    </ul>
+  </li>
 </ul>
 
 <p>Please add a comment in the issue about what testing you did with your change so a committer can understand what testing was done before they merge it in.</p>
@@ -181,17 +179,21 @@
 <h2>Git Commit Messages</h2>
 
 <p>When contributing, please start your commit messages with the the issue ID (if there is one) and relevant platform (if appropriate) followed by a description of the commit. Issue IDs on GitHub should be prefixed with <code>GH-</code>, which will allow GitHub to automatically link issues and PRs.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">GH-2345 android: Improved exec bridge by using strings instead of JSON
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GH-2345 android: Improved exec bridge by using strings instead of JSON
 GH-3456 all: Fixed plugin loading paths that start with /
-</code></pre></div>
+</code></pre></div></div>
+
 <p>You are highly encouraged to describe your git commit with enough detail for someone else to understand it. In doing so, your commit message can consist of multiple lines. However, it also is highly encouraged that the first line of your commit message not exceed 50 characters. This is because some of the tooling that sits on top of git (such as the httpd apps that let you browse the repos) assumes that the first line is top-level summary that is 50 characters or less. Thus there will be highlighting and truncating of the commit message using these assumptions and it will look weird if these assumptions are not kept. There should also be a blank line between the summary and any further description. For example, here is a good commit message:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">GH-1234 Fixed the whizbang widget
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GH-1234 Fixed the whizbang widget
 
 - added more sanity checking in the build script.
 - fixed the API to return the correct value in the scenario where there
   aren't any whizbangs present.
 - corrected the documentation.
-</code></pre></div>
+</code></pre></div></div>
+
 <p>As an alternate to a bullet list, you could put long text here in paragraph form, with each line wrapped at 72 chars and blank lines between paragraphs.</p>
 
 </div>

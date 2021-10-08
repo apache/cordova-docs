@@ -134,49 +134,50 @@
             <p>We are happy to announce that we have just released <code>Cordova Android 8.1.0</code>!  This is one of Cordova&#39;s supported platforms for building Android mobile applications.</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@8.1.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@8.1.0</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
 
 <p><strong>To upgrade:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform remove android
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
 cordova platform add android@8.1.0
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The most notable improvement in this minor release is the support to build <code>.aab</code> bundle packages.</p>
 
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-android/pull/827">GH-827</a> chore: bump dependencies for release 8.1.0</li>
-<li><a href="https://github.com/apache/cordova-android/pull/651">GH-651</a> feat: added multiple selection for filepicker</li>
-<li><a href="https://github.com/apache/cordova-android/pull/672">GH-672</a> chore: compress files in /res with tinypng.com</li>
-<li><a href="https://github.com/apache/cordova-android/pull/815">GH-815</a> fix: <code>clean</code> command</li>
-<li><a href="https://github.com/apache/cordova-android/pull/750">GH-750</a> Don&#39;t request focus explicitly if not needed</li>
-<li><a href="https://github.com/apache/cordova-android/pull/800">GH-800</a> <a href="https://github.com/apache/cordova-android/pull/799">GH-799</a> (android) Stop webview from restarting when activity resizes</li>
-<li><a href="https://github.com/apache/cordova-android/pull/764">GH-764</a> feat: Build app bundles (.aab files)</li>
-<li><a href="https://github.com/apache/cordova-android/pull/788">GH-788</a> Simplify <code>apkSorter</code> using <code>compare-func</code> package</li>
-<li><a href="https://github.com/apache/cordova-android/pull/787">GH-787</a> Simplify and fix promise handling in specs</li>
-<li><a href="https://github.com/apache/cordova-android/pull/784">GH-784</a> Properly handle promise in create script</li>
-<li><a href="https://github.com/apache/cordova-android/pull/783">GH-783</a> Do not clobber process properties with test mocks</li>
-<li><a href="https://github.com/apache/cordova-android/pull/782">GH-782</a> Do not clobber <code>console.log</code> to spy on it</li>
-<li><a href="https://github.com/apache/cordova-android/pull/724">GH-724</a> Add Node.js 12 to CI Services</li>
-<li><a href="https://github.com/apache/cordova-android/pull/777">GH-777</a> ci(travis): set <code>dist: trusty</code> in <code>.travis.yml</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/779">GH-779</a> Consistent order from <code>ProjectBuilder.apkSorter</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/778">GH-778</a> test: use verbose spec reporter</li>
-<li><a href="https://github.com/apache/cordova-android/pull/774">GH-774</a> <code>rewire</code> workaround for NodeJS 12</li>
-<li><a href="https://github.com/apache/cordova-android/pull/772">GH-772</a> <code>nyc@14</code> update in devDependencies</li>
-<li><a href="https://github.com/apache/cordova-android/pull/765">GH-765</a> ci(travis): Fix <strong>Android</strong> SDK</li>
-<li><a href="https://github.com/apache/cordova-android/pull/713">GH-713</a> Do not explicitly require modules from project directory</li>
-<li><a href="https://github.com/apache/cordova-android/pull/676">GH-676</a> Added allprojects repositories for Framework Release Builds</li>
-<li><a href="https://github.com/apache/cordova-android/pull/699">GH-699</a> Improve Gradle Build Arguments</li>
-<li><a href="https://github.com/apache/cordova-android/pull/710">GH-710</a> Fix deprecation warning in <code>SystemCookieManager</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/691">GH-691</a> <a href="https://github.com/apache/cordova-android/pull/690">GH-690</a>: Run <code>prepare</code> with the correct <code>ConfigParser</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/673">GH-673</a> Updated <code>Android_HOME</code> Test to Follow <a href="https://github.com/apache/cordova-android/pull/656">GH-656</a> Change</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/827">GH-827</a> chore: bump dependencies for release 8.1.0</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/651">GH-651</a> feat: added multiple selection for filepicker</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/672">GH-672</a> chore: compress files in /res with tinypng.com</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/815">GH-815</a> fix: <code>clean</code> command</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/750">GH-750</a> Don&#39;t request focus explicitly if not needed</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/800">GH-800</a> <a href="https://github.com/apache/cordova-android/pull/799">GH-799</a> (android) Stop webview from restarting when activity resizes</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/764">GH-764</a> feat: Build app bundles (.aab files)</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/788">GH-788</a> Simplify <code>apkSorter</code> using <code>compare-func</code> package</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/787">GH-787</a> Simplify and fix promise handling in specs</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/784">GH-784</a> Properly handle promise in create script</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/783">GH-783</a> Do not clobber process properties with test mocks</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/782">GH-782</a> Do not clobber <code>console.log</code> to spy on it</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/724">GH-724</a> Add Node.js 12 to CI Services</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/777">GH-777</a> ci(travis): set <code>dist: trusty</code> in <code>.travis.yml</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/779">GH-779</a> Consistent order from <code>ProjectBuilder.apkSorter</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/778">GH-778</a> test: use verbose spec reporter</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/774">GH-774</a> <code>rewire</code> workaround for NodeJS 12</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/772">GH-772</a> <code>nyc@14</code> update in devDependencies</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/765">GH-765</a> ci(travis): Fix <strong>Android</strong> SDK</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/713">GH-713</a> Do not explicitly require modules from project directory</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/676">GH-676</a> Added allprojects repositories for Framework Release Builds</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/699">GH-699</a> Improve Gradle Build Arguments</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/710">GH-710</a> Fix deprecation warning in <code>SystemCookieManager</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/691">GH-691</a> <a href="https://github.com/apache/cordova-android/pull/690">GH-690</a>: Run <code>prepare</code> with the correct <code>ConfigParser</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/673">GH-673</a> Updated <code>Android_HOME</code> Test to Follow <a href="https://github.com/apache/cordova-android/pull/656">GH-656</a> Change</li>
 </ul>
 
         </div>

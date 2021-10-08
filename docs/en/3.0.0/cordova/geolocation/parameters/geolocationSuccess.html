@@ -1571,18 +1571,21 @@
 becomes available (when called from <code>[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)</code>),
 or when the position changes (when called from
 <code>[geolocation.watchPosition](../geolocation.watchPosition.html)</code>).</p>
-<div class="highlight"><pre><code class="language-" data-lang="">function(position) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function(position) {
     // Do something
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Parameters</h2>
 
 <ul>
-<li><strong>position</strong>: The geolocation position returned by the device. <em>(Position)</em></li>
+  <li><strong>position</strong>: The geolocation position returned by the device. <em>(Position)</em></li>
 </ul>
 
 <h2><a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function geolocationSuccess(position) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function geolocationSuccess(position) {
     alert('Latitude: '          + position.coords.latitude          + '\n' +
           'Longitude: '         + position.coords.longitude         + '\n' +
           'Altitude: '          + position.coords.altitude          + '\n' +
@@ -1592,7 +1595,8 @@ or when the position changes (when called from
           'Speed: '             + position.coords.speed             + '\n' +
           'Timestamp: '         + position.timestamp                + '\n');
 }
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

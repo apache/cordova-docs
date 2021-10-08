@@ -1380,7 +1380,7 @@
 <h2>Properties</h2>
 
 <ul>
-<li><strong>modificationTime:</strong> This is the time at which the file or directory was last modified. <em>(Date)</em></li>
+  <li><strong>modificationTime:</strong> This is the time at which the file or directory was last modified. <em>(Date)</em></li>
 </ul>
 
 <h2>Details</h2>
@@ -1390,20 +1390,22 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 ( Mango )</li>
 </ul>
 
 <h2>Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function win(metadata) {
-    console.log("Last Modified: " + metadata.modificationTime);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(metadata) {
+	console.log("Last Modified: " + metadata.modificationTime);
 }
 
 // Request the metadata object for this entry
 entry.getMetadata(win, null);
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

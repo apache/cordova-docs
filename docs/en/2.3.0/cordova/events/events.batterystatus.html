@@ -1544,8 +1544,10 @@
                 <h1>batterystatus</h1>
 
 <p>This is an event that fires when a Cordova application detects a change in the battery status.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">window.addEventListener("batterystatus", yourCallbackFunction, false);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.addEventListener("batterystatus", yourCallbackFunction, false);
+</code></pre></div></div>
+
 <h2>Details</h2>
 
 <p>This event that fires when a Cordova application detects the percentage of battery has changed by at least 1 percent. It is also fired if the device has been plugged in or un-plugged.</p>
@@ -1553,8 +1555,8 @@
 <p>The battery status handler will be called with an object that contains two properties:</p>
 
 <ul>
-<li><strong>level:</strong> The percentage of battery (0-100). <em>(Number)</em></li>
-<li><strong>isPlugged:</strong> A boolean that represents whether or not the device is plugged in or not. <em>(Boolean)</em></li>
+  <li><strong>level:</strong> The percentage of battery (0-100). <em>(Number)</em></li>
+  <li><strong>isPlugged:</strong> A boolean that represents whether or not the device is plugged in or not. <em>(Boolean)</em></li>
 </ul>
 
 <p>Typically, you will want to attach an event listener with <code>window.addEventListener</code> once you receive the Cordova &#39;<a href="events.deviceready.html">deviceready</a>&#39; event.</p>
@@ -1562,11 +1564,11 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>iOS</li>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>Windows Phone 7 and 8</li>
-<li>Tizen</li>
+  <li>iOS</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Tizen</li>
 </ul>
 
 <h2>Windows Phone 7 and 8 Quirks</h2>
@@ -1576,50 +1578,54 @@ native APIs for determining battery level. The <code>isPlugged</code> parameter
 <em>is</em> supported.</p>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">window.addEventListener("batterystatus", onBatteryStatus, false);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.addEventListener("batterystatus", onBatteryStatus, false);
 
 function onBatteryStatus(info) {
     // Handle the online event
-    console.log("Level: " + info.level + " isPlugged: " + info.isPlugged); 
+   	console.log("Level: " + info.level + " isPlugged: " + info.isPlugged); 
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Cordova Device Ready Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-2.3.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Cordova Device Ready Example&lt;/title&gt;
 
-    <span class="c1">// Call onDeviceReady when Cordova is loaded.</span>
-    <span class="c1">//</span>
-    <span class="c1">// At this point, the document has loaded but cordova-2.3.0.js has not.</span>
-    <span class="c1">// When Cordova is loaded and talking with the native device,</span>
-    <span class="c1">// it will call the event `deviceready`.</span>
-    <span class="c1">// </span>
-    <span class="kd">function</span> <span class="nx">onLoad</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-    <span class="p">}</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Cordova is loaded and it is now safe to make calls Cordova methods</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"batterystatus"</span><span class="p">,</span> <span class="nx">onBatteryStatus</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Call onDeviceReady when Cordova is loaded.
+    //
+    // At this point, the document has loaded but cordova-2.3.0.js has not.
+    // When Cordova is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    // 
+    function onLoad() {
+	    document.addEventListener("deviceready", onDeviceReady, false);
+	}
 
-    <span class="c1">// Handle the batterystatus event</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onBatteryStatus</span><span class="p">(</span><span class="nx">info</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Level: "</span> <span class="o">+</span> <span class="nx">info</span><span class="p">.</span><span class="nx">level</span> <span class="o">+</span> <span class="s2">" isPlugged: "</span> <span class="o">+</span> <span class="nx">info</span><span class="p">.</span><span class="nx">isPlugged</span><span class="p">);</span> 
-    <span class="p">}</span>
+    // Cordova is loaded and it is now safe to make calls Cordova methods
+    //
+    function onDeviceReady() {
+	    window.addEventListener("batterystatus", onBatteryStatus, false);
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body</span> <span class="na">onload=</span><span class="s">"onLoad()"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // Handle the batterystatus event
+    //
+    function onBatteryStatus(info) {
+    	console.log("Level: " + info.level + " isPlugged: " + info.isPlugged); 
+    }
+    
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="onLoad()"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 
             </div>
         </div>

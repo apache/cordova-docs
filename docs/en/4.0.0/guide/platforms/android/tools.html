@@ -1402,35 +1402,46 @@ plugins.</p>
 <p>Run the <code>create</code> command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app&#39;s display
 name.  Here is the syntax for both Mac/Linux and Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
 
     C:\&gt;\path\to\cordova-android\bin\create.bat \path\to\project com.example.project_name ProjectName
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Build</h2>
 
 <p>This cleans then builds a project.</p>
 
 <p>Debug, on Mac/Linux or Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/build --debug
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/build --debug
 
     C:\&gt;\path\to\project\cordova\build.bat --debug
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Release, on Mac/Linux or Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/build --release
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/build --release
 
     C:\&gt;\path\to\project\cordova\build.bat --release
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Run the App</h2>
 
 <p>The <code>run</code> command accepts the following <em>optional</em> parameters:</p>
 
 <ul>
-<li><p>Target specification. This includes <code>--emulator</code>, <code>--device</code>, or <code>--target=&lt;targetID&gt;</code>.</p></li>
-<li><p>Build specification. This includes <code>--debug</code>, <code>--release</code>, or <code>--nobuild</code>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/project/cordova/run [Target] [Build]
+  <li>
+    <p>Target specification. This includes <code>--emulator</code>, <code>--device</code>, or <code>--target=&lt;targetID&gt;</code>.</p>
+  </li>
+  <li>
+    <p>Build specification. This includes <code>--debug</code>, <code>--release</code>, or <code>--nobuild</code>.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/project/cordova/run [Target] [Build]
 
 C:\&gt;\path\to\project\cordova\run.bat [Target] [Build]
-</code></pre></div></li>
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>Make sure you create at least one Android Virtual Device, otherwise
@@ -1440,22 +1451,28 @@ default the <code>run</code> command detects a connected device, or a currently
 running emulator if no device is found.</p>
 
 <h2>Logging</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/log
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/log
 
     C:\&gt;\path\to\project\cordova\log.bat
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Cleaning</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/clean
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/clean
 
     C:\&gt;\path\to\project\cordova\clean.bat
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Manual Use of Ant</h2>
 
 <p>If you wish to call Ant directly from the command line such as
 <code>ant debug install</code>, you need to specify additional parameters to the ant
 command:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
+</code></pre></div></div>
+
 <p>This is because the directories used by Cordova&#39;s Ant scripts are different
 than the default. This is done to avoid conflicts when Ant is run from the
 command line versus inside Eclipse/ADT.</p>
@@ -1483,7 +1500,7 @@ stabilizes.</p>
 <h3>Relevant Environment Variables</h3>
 
 <ul>
-<li><strong>ANDROID_BUILD</strong></li>
+  <li><strong>ANDROID_BUILD</strong></li>
 </ul>
 
 <p>This variable controls which build system is used to build the project. In
@@ -1492,7 +1509,7 @@ stabilizes.</p>
 <p>If not set, it currently defaults to <code>ant</code>, but this is expected to change.</p>
 
 <ul>
-<li><strong>BUILD_MULTIPLE_APKS</strong></li>
+  <li><strong>BUILD_MULTIPLE_APKS</strong></li>
 </ul>
 
 <p>If this is set, then multiple APK files will be generated: One per native
@@ -1503,7 +1520,7 @@ stabilizes.</p>
 <p>If not set, then a single APK will be generated which can be used on all devices.</p>
 
 <ul>
-<li><strong>BUILD_MULTIPLE_APKS</strong></li>
+  <li><strong>BUILD_MULTIPLE_APKS</strong></li>
 </ul>
 
 <p>If this is set, then multiple APK files will be generated: One per native
@@ -1514,35 +1531,36 @@ stabilizes.</p>
 <p>If not set, then a single APK will be generated which can be used on all devices.</p>
 
 <ul>
-<li><strong>ANDROID_VERSION_CODE</strong></li>
+  <li><strong>ANDROID_VERSION_CODE</strong></li>
 </ul>
 
 <p>Overrides the versionCode set in <code>AndroidManifest.xml</code></p>
 
 <ul>
-<li><strong>RELEASE_SIGNING_PROPERTIES_FILE</strong></li>
+  <li><strong>RELEASE_SIGNING_PROPERTIES_FILE</strong></li>
 </ul>
 
 <p>Path to a .properties file that contains signing information for release builds.
   The file should look like:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">  storeFile=relative/path/to/keystore.p12
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  storeFile=relative/path/to/keystore.p12
   storePassword=SECRET1
   storeType=pkcs12
   keyAlias=DebugSigningKey
   keyPassword=SECRET2
-</code></pre></div>
+</code></pre></div></div>
+
 <p><code>storePassword</code> and <code>keyPassword</code> are optional, and will be prompted for if omitted.</p>
 
 <h3>Other Environment Variables (you don&#39;t normally need to set these)</h3>
 
 <ul>
-<li><strong>ANDROID_HOME</strong></li>
+  <li><strong>ANDROID_HOME</strong></li>
 </ul>
 
 <p>This should be set to the directory containing the Android SDK.</p>
 
 <ul>
-<li><strong>JAVA_HOME</strong></li>
+  <li><strong>JAVA_HOME</strong></li>
 </ul>
 
 <p>On some machines, this will need to be set so that Gradle can find the Java
@@ -1556,8 +1574,11 @@ a sibling file named <code>build-extras.gradle</code>. This file will be include
 <code>build.gradle</code> when present.</p>
 
 <h3>Example Build</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">    ANDROID_BUILD=gradle cordova build android
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ANDROID_BUILD=gradle cordova build android
+</code></pre></div></div>
+
+
 
             </div>
         </div>

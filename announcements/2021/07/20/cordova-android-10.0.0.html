@@ -134,65 +134,75 @@
             <p>We are happy to announce that we have just released <code>Cordova Android 10.0.0</code>!  This is one of Cordova&#39;s supported platforms for building Android mobile applications.</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@10.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@10.0.0</a></li>
 </ul>
 
 <p><strong>To upgrade:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform remove android
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
 cordova platform add android@10.0.0
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Release Highlights</h2>
 
 <ul>
-<li><p><strong><code>AndroidX</code> Only Support</strong></p>
+  <li>
+    <p><strong><code>AndroidX</code> Only Support</strong></p>
 
-<p>In this release, we have completely migrated to the AndroidX library and no longer support the Android Support Library. All plugins that continue to use the Android Support Library will need to be updated to reference the new AndroidX library.</p>
+    <p>In this release, we have completely migrated to the AndroidX library and no longer support the Android Support Library. All plugins that continue to use the Android Support Library will need to be updated to reference the new AndroidX library.</p>
 
-<p>If plugins have not been updated, you can still use the <a href="https://www.npmjs.com/package/cordova-plugin-androidx-adapter">cordova-plugin-androidx-adapter</a> plugin, which can be used to migrate the legacy references to the new AndroidX references.</p></li>
-<li><p><strong><code>WebViewAssetLoader</code> Support</strong></p></li>
-</ul>
+    <p>If plugins have not been updated, you can still use the <a href="https://www.npmjs.com/package/cordova-plugin-androidx-adapter">cordova-plugin-androidx-adapter</a> plugin, which can be used to migrate the legacy references to the new AndroidX references.</p>
+  </li>
+  <li>
+    <p><strong><code>WebViewAssetLoader</code> Support</strong></p>
 
-<p>By default, the <code>WebViewAssetLoader</code> is enabled and allows apps to serve their content from a &#39;proper&#39; origin. This will makes routing work easily for frameworks like Angular.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">With no additional configurations, the app content is served from `https://localhost/`. You can configure the hostname by setting the preference option `hostname`.
+    <p>By default, the <code>WebViewAssetLoader</code> is enabled and allows apps to serve their content from a &#39;proper&#39; origin. This will makes routing work easily for frameworks like Angular.</p>
 
-```xml
-&lt;preference name="hostname" value="localhost" /&gt;
-```
+    <p>With no additional configurations, the app content is served from <code>https://localhost/</code>. You can configure the hostname by setting the preference option <code>hostname</code>.</p>
 
-The scheme, `https`, is not configurable by nature.
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"hostname"</span> <span class="na">value=</span><span class="s">"localhost"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
 
-Please note that this is a breaking change that will cause data associated with the `file://` scheme, such as cookies, local storage, local cache, and web-based databases, to be lost. You will need to handle the migration of data. If you are unable to migrate the data at this time, you can revert this setting by setting the `AndroidInsecureFileModeEnabled` preference flag.
+    <p>The scheme, <code>https</code>, is not configurable by nature.</p>
 
-```xml
-&lt;preference name="AndroidInsecureFileModeEnabled" value="true" /&gt;
-```
+    <p>Please note that this is a breaking change that will cause data associated with the <code>file://</code> scheme, such as cookies, local storage, local cache, and web-based databases, to be lost. You will need to handle the migration of data. If you are unable to migrate the data at this time, you can revert this setting by setting the <code>AndroidInsecureFileModeEnabled</code> preference flag.</p>
 
-Setting this flag will keep the content on the  `file://` scheme, which Google reports to be insecure.
-</code></pre></div>
-<ul>
-<li><p><strong>Android App Bundles <code>aab</code> Support</strong></p>
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AndroidInsecureFileModeEnabled"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
 
-<p>By default, release builds will now generate an <code>aab</code> formatted package type for release.</p>
+    <p>Setting this flag will keep the content on the  <code>file://</code> scheme, which Google reports to be insecure.</p>
+  </li>
+  <li>
+    <p><strong>Android App Bundles <code>aab</code> Support</strong></p>
 
-<p>By nature, <code>aab</code> packages can not be deployed or pushed manually to a device for testing. If you need to test a release build, you will need to change the package type back to <code>apk</code> with the <code>packageType</code> flag.</p>
+    <p>By default, release builds will now generate an <code>aab</code> formatted package type for release.</p>
 
-<p>Debug builds will continue to create an <code>apk</code> formatted package.</p></li>
-<li><p><strong>Tooling and Default Support Bump</strong></p>
+    <p>By nature, <code>aab</code> packages can not be deployed or pushed manually to a device for testing. If you need to test a release build, you will need to change the package type back to <code>apk</code> with the <code>packageType</code> flag.</p>
 
-<ul>
-<li>Target SDK (<code>targetSdk</code>): <code>30</code></li>
-<li>SDK Build Tool: <code>30.0.3</code></li>
-<li>Gradle: <code>7.1.1</code></li>
-<li>Kotlin: <code>1.5.20</code></li>
-<li>Android Gradle Plugin (AGP): <code>4.2.2</code></li>
-<li>Google Services Gradle Plugin: <code>4.3.5</code></li>
-</ul></li>
-<li><p><strong>Node Support</strong></p>
+    <p>Debug builds will continue to create an <code>apk</code> formatted package.</p>
+  </li>
+  <li>
+    <p><strong>Tooling and Default Support Bump</strong></p>
 
-<p>Since Node 10 is no longer being supported by the Node.js team, we have dropped support for Node 10.</p></li>
-<li><p><strong>Java 11 Support</strong></p>
+    <ul>
+      <li>Target SDK (<code>targetSdk</code>): <code>30</code></li>
+      <li>SDK Build Tool: <code>30.0.3</code></li>
+      <li>Gradle: <code>7.1.1</code></li>
+      <li>Kotlin: <code>1.5.20</code></li>
+      <li>Android Gradle Plugin (AGP): <code>4.2.2</code></li>
+      <li>Google Services Gradle Plugin: <code>4.3.5</code></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Node Support</strong></p>
 
-<p>With the current release of Android Studio 4.2, the Android tooling can now support running on Java 11. Please note that this does not mean you can start compiling Java 11 source code.</p></li>
+    <p>Since Node 10 is no longer being supported by the Node.js team, we have dropped support for Node 10.</p>
+  </li>
+  <li>
+    <p><strong>Java 11 Support</strong></p>
+
+    <p>With the current release of Android Studio 4.2, the Android tooling can now support running on Java 11. Please note that this does not mean you can start compiling Java 11 source code.</p>
+  </li>
 </ul>
 
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
@@ -206,96 +216,95 @@ Setting this flag will keep the content on the  `file://` scheme, which Google r
 <p>We are preparing and aiming for a patch release vote within the next three days.</p>
 
 <!--more-->
-
 <h2>Full Changelog</h2>
 
 <p><strong>Breaking:</strong></p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-android/pull/1052">GH-1052</a> feat!: only support <code>AndroidX</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1137">GH-1137</a> feat!: implement <code>WebViewAssetLoader</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1268">GH-1268</a> feat!: release build defaults to <code>aab</code> package type</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1182">GH-1182</a> feat!: bump <code>target sdk@30</code> w/ <code>build-tool@30.0.3</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1257">GH-1257</a> feat!: upgrade <code>gradle@7.1.1</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1197">GH-1197</a> feat!: upgrade <code>gradle@6.8.3</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1256">GH-1256</a> feat!: upgrade <code>kotlin@1.5.20</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1204">GH-1204</a> feat!: upgrade <code>kotlin@1.4.32</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1200">GH-1200</a> feat!: upgrade <code>kotlin@1.4.31</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1255">GH-1255</a> feat!: upgrade <code>android-gradle-plugin@4.2.2</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1232">GH-1232</a> feat!: upgrade <code>android-gradle-plugin@4.2.1</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1198">GH-1198</a> feat!: upgrade <code>android-gradle-plugin@4.1.3</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1199">GH-1199</a> feat!: upgrade <code>Google Services Gradle Plugin@4.3.5</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1262">GH-1262</a> feat!: bump <code>appcompat@1.3.0</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1258">GH-1258</a> feat!: bump <code>android.webkit@1.4.0</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1252">GH-1252</a> feat!: drop abandoned <code>com.github.dcendents:android-maven-gradle-plugin</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1212">GH-1212</a> feat!: unify &amp; fix gradle library/tooling overrides</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1138">GH-1138</a> feat(allow-list)!: integrate and refactor core plugin</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1201">GH-1201</a> feat!: upgrade jfrog <code>gradle-bintray-plugin@1.8.5</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1279">GH-1279</a> chore!: bump all dependencies</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1278">GH-1278</a> chore!: drop <code>node</code> 10 support</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1205">GH-1205</a> chore! (<code>npm</code>): update all dependencies</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1274">GH-1274</a> cleanup!: remove deprecated settings &amp; add todo comments</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1048">GH-1048</a> cleanup!: remove <code>keystore</code> password prompt</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1251">GH-1251</a> cleanup!: drop <code>jcenter</code> &amp; update dependencies</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1269">GH-1269</a> refactor!: do not copy JS lib to platform project</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1270">GH-1270</a> refactor(Api)!: use version from <code>package.json</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1266">GH-1266</a> refactor(run)!: <code>run</code> method</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1083">GH-1083</a> refactor!: drop support for <code>android</code> SDK tool</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1100">GH-1100</a> refactor!: remove most platform binaries</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1052">GH-1052</a> feat!: only support <code>AndroidX</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1137">GH-1137</a> feat!: implement <code>WebViewAssetLoader</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1268">GH-1268</a> feat!: release build defaults to <code>aab</code> package type</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1182">GH-1182</a> feat!: bump <code>target sdk@30</code> w/ <code>build-tool@30.0.3</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1257">GH-1257</a> feat!: upgrade <code>gradle@7.1.1</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1197">GH-1197</a> feat!: upgrade <code>gradle@6.8.3</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1256">GH-1256</a> feat!: upgrade <code>kotlin@1.5.20</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1204">GH-1204</a> feat!: upgrade <code>kotlin@1.4.32</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1200">GH-1200</a> feat!: upgrade <code>kotlin@1.4.31</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1255">GH-1255</a> feat!: upgrade <code>android-gradle-plugin@4.2.2</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1232">GH-1232</a> feat!: upgrade <code>android-gradle-plugin@4.2.1</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1198">GH-1198</a> feat!: upgrade <code>android-gradle-plugin@4.1.3</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1199">GH-1199</a> feat!: upgrade <code>Google Services Gradle Plugin@4.3.5</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1262">GH-1262</a> feat!: bump <code>appcompat@1.3.0</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1258">GH-1258</a> feat!: bump <code>android.webkit@1.4.0</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1252">GH-1252</a> feat!: drop abandoned <code>com.github.dcendents:android-maven-gradle-plugin</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1212">GH-1212</a> feat!: unify &amp; fix gradle library/tooling overrides</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1138">GH-1138</a> feat(allow-list)!: integrate and refactor core plugin</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1201">GH-1201</a> feat!: upgrade jfrog <code>gradle-bintray-plugin@1.8.5</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1279">GH-1279</a> chore!: bump all dependencies</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1278">GH-1278</a> chore!: drop <code>node</code> 10 support</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1205">GH-1205</a> chore! (<code>npm</code>): update all dependencies</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1274">GH-1274</a> cleanup!: remove deprecated settings &amp; add todo comments</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1048">GH-1048</a> cleanup!: remove <code>keystore</code> password prompt</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1251">GH-1251</a> cleanup!: drop <code>jcenter</code> &amp; update dependencies</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1269">GH-1269</a> refactor!: do not copy JS lib to platform project</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1270">GH-1270</a> refactor(Api)!: use version from <code>package.json</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1266">GH-1266</a> refactor(run)!: <code>run</code> method</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1083">GH-1083</a> refactor!: drop support for <code>android</code> SDK tool</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1100">GH-1100</a> refactor!: remove most platform binaries</li>
 </ul>
 
 <p><strong>Features:</strong></p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-android/pull/1241">GH-1241</a> feat: remove <code>java</code> 1.8 version check</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1254">GH-1254</a> feat: support <code>webkit</code> version override</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1229">GH-1229</a> feat: <code>CORDOVA_JAVA_HOME</code> env variable</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1222">GH-1222</a> feat: add backwards compatibility mode for <code>WebViewAssetLoader</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1166">GH-1166</a> feat: overload <code>PluginEntry</code> constructor to set onload property</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1208">GH-1208</a> feat: allow <code>appcompat</code> version to be configurable</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1047">GH-1047</a> feat: Deprecated <code>onRequestPermissionResult</code> in favour for <code>onRequestPermissionsResult</code> for consistency</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1241">GH-1241</a> feat: remove <code>java</code> 1.8 version check</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1254">GH-1254</a> feat: support <code>webkit</code> version override</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1229">GH-1229</a> feat: <code>CORDOVA_JAVA_HOME</code> env variable</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1222">GH-1222</a> feat: add backwards compatibility mode for <code>WebViewAssetLoader</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1166">GH-1166</a> feat: overload <code>PluginEntry</code> constructor to set onload property</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1208">GH-1208</a> feat: allow <code>appcompat</code> version to be configurable</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1047">GH-1047</a> feat: Deprecated <code>onRequestPermissionResult</code> in favour for <code>onRequestPermissionsResult</code> for consistency</li>
 </ul>
 
 <p><strong>Fixes:</strong></p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-android/pull/1283">GH-1283</a> fix: add missing apache-license header to <code>getASPath.bat</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1275">GH-1275</a> fix: add <code>WebViewAssetloader</code> to default allow list</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1216">GH-1216</a> fix: request focus after custom view hided</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1264">GH-1264</a> fix: missing <code>super.onRequestPermissionsResult</code> error (<code>MissingSuperCall</code>)</li>
-<li><a href="https://github.com/apache/cordova-android/pull/563">GH-563</a> fix(build): support tilde expansion on Windows</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1220">GH-1220</a> fix(<code>requirements</code> check): use regex to get java version from javac output</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1227">GH-1227</a> fix(prepare): delete splash screens if none are used</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1228">GH-1228</a> fix: java checks</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1276">GH-1276</a> fix: remove forced default <code>gradle.daemon</code> setting</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1283">GH-1283</a> fix: add missing apache-license header to <code>getASPath.bat</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1275">GH-1275</a> fix: add <code>WebViewAssetloader</code> to default allow list</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1216">GH-1216</a> fix: request focus after custom view hided</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1264">GH-1264</a> fix: missing <code>super.onRequestPermissionsResult</code> error (<code>MissingSuperCall</code>)</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/563">GH-563</a> fix(build): support tilde expansion on Windows</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1220">GH-1220</a> fix(<code>requirements</code> check): use regex to get java version from javac output</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1227">GH-1227</a> fix(prepare): delete splash screens if none are used</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1228">GH-1228</a> fix: java checks</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1276">GH-1276</a> fix: remove forced default <code>gradle.daemon</code> setting</li>
 </ul>
 
 <p><strong>Refactors:</strong></p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-android/pull/1265">GH-1265</a> refactor: do not infer project root from script location</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1267">GH-1267</a> refactor: use target SDK of built APK to determine best emulator</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1253">GH-1253</a> refactor: <code>gradle</code> cleanup</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1260">GH-1260</a> refactor(<code>check_reqs</code>): drop <code>originalError</code> param from <code>check_android_target</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1246">GH-1246</a> refactor(<code>env/java</code>): improve tests and implementation</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1265">GH-1265</a> refactor: do not infer project root from script location</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1267">GH-1267</a> refactor: use target SDK of built APK to determine best emulator</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1253">GH-1253</a> refactor: <code>gradle</code> cleanup</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1260">GH-1260</a> refactor(<code>check_reqs</code>): drop <code>originalError</code> param from <code>check_android_target</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1246">GH-1246</a> refactor(<code>env/java</code>): improve tests and implementation</li>
 </ul>
 
 <p><strong>Chores &amp; Cleanup:</strong></p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-android/pull/1273">GH-1273</a> chore: remove old <code>VERSION</code> file</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1272">GH-1272</a> cleanup: delete old ANT &amp; Eclipse files</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1141">GH-1141</a> cleanup: remove app cache settings</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1273">GH-1273</a> chore: remove old <code>VERSION</code> file</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1272">GH-1272</a> cleanup: delete old ANT &amp; Eclipse files</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1141">GH-1141</a> cleanup: remove app cache settings</li>
 </ul>
 
 <p><strong>CI, Build &amp; Testing:</strong></p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-android/pull/1218">GH-1218</a> ci: Add <code>Node16</code> to CI matrix</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1271">GH-1271</a> build: build <code>cordova.js</code> during npm prepare</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1207">GH-1207</a> test(<code>AndroidManifest</code>): update theme to <code>Theme.AppCompat.NoActionBar</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1263">GH-1263</a> test(<code>check_reqs</code>): do not hardcode <code>DEFAULT_TARGET_API</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1259">GH-1259</a> test(<code>prepare</code>): factor out common vars</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1218">GH-1218</a> ci: Add <code>Node16</code> to CI matrix</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1271">GH-1271</a> build: build <code>cordova.js</code> during npm prepare</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1207">GH-1207</a> test(<code>AndroidManifest</code>): update theme to <code>Theme.AppCompat.NoActionBar</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1263">GH-1263</a> test(<code>check_reqs</code>): do not hardcode <code>DEFAULT_TARGET_API</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1259">GH-1259</a> test(<code>prepare</code>): factor out common vars</li>
 </ul>
 
         </div>

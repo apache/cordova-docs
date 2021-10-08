@@ -1572,40 +1572,40 @@
 <h2>Properties</h2>
 
 <ul>
-<li><strong>isFile:</strong> Always true. <em>(boolean)</em></li>
-<li><strong>isDirectory:</strong> Always false. <em>(boolean)</em></li>
-<li><strong>name:</strong> The name of the FileEntry, excluding the path leading to it. <em>(DOMString)</em></li>
-<li><strong>fullPath:</strong> The full absolute path from the root to the FileEntry. <em>(DOMString)</em></li>
+  <li><strong>isFile:</strong> Always true. <em>(boolean)</em></li>
+  <li><strong>isDirectory:</strong> Always false. <em>(boolean)</em></li>
+  <li><strong>name:</strong> The name of the FileEntry, excluding the path leading to it. <em>(DOMString)</em></li>
+  <li><strong>fullPath:</strong> The full absolute path from the root to the FileEntry. <em>(DOMString)</em></li>
 </ul>
 
 <p>NOTE: The following attributes are defined by the W3C specification, but are <strong>not supported</strong> by Cordova:</p>
 
 <ul>
-<li><strong>filesystem:</strong> The file system on which the FileEntry resides. <em>(FileSystem)</em></li>
+  <li><strong>filesystem:</strong> The file system on which the FileEntry resides. <em>(FileSystem)</em></li>
 </ul>
 
 <h2>Methods</h2>
 
 <ul>
-<li><strong>getMetadata</strong>: Look up metadata about a file.</li>
-<li><strong>setMetadata</strong>: Set metadata on a file.</li>
-<li><strong>moveTo</strong>: Move a file to a different location on the file system.</li>
-<li><strong>copyTo</strong>: Copy a file to a different location on the file system.</li>
-<li><strong>toURL</strong>: Return a URL that can be used to locate a file.</li>
-<li><strong>remove</strong>: Delete a file.</li>
-<li><strong>getParent</strong>: Look up the parent directory.</li>
-<li><strong>createWriter</strong>: Creates a <a href="../filewriter/filewriter.html">FileWriter</a> object that can be used to write to a file.</li>
-<li><strong>file</strong>: Creates a <a href="../fileobj/fileobj.html">File</a> object containing file properties.</li>
+  <li><strong>getMetadata</strong>: Look up metadata about a file.</li>
+  <li><strong>setMetadata</strong>: Set metadata on a file.</li>
+  <li><strong>moveTo</strong>: Move a file to a different location on the file system.</li>
+  <li><strong>copyTo</strong>: Copy a file to a different location on the file system.</li>
+  <li><strong>toURL</strong>: Return a URL that can be used to locate a file.</li>
+  <li><strong>remove</strong>: Delete a file.</li>
+  <li><strong>getParent</strong>: Look up the parent directory.</li>
+  <li><strong>createWriter</strong>: Creates a <a href="../filewriter/filewriter.html">FileWriter</a> object that can be used to write to a file.</li>
+  <li><strong>file</strong>: Creates a <a href="../fileobj/fileobj.html">File</a> object containing file properties.</li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows 8</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2>getMetadata</h2>
@@ -1615,12 +1615,13 @@
 <p><strong>Parameters:</strong></p>
 
 <ul>
-<li><strong>successCallback</strong> - A callback that is called with a <a href="../metadata/metadata.html">Metadata</a> object. <em>(Function)</em></li>
-<li><strong>errorCallback</strong> - A callback that is called if an error occurs retrieving the <a href="../metadata/metadata.html">Metadata</a>. Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
+  <li><strong>successCallback</strong> - A callback that is called with a <a href="../metadata/metadata.html">Metadata</a> object. <em>(Function)</em></li>
+  <li><strong>errorCallback</strong> - A callback that is called if an error occurs retrieving the <a href="../metadata/metadata.html">Metadata</a>. Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
 </ul>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">function success(metadata) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success(metadata) {
     console.log("Last Modified: " + metadata.modificationTime);
 }
 
@@ -1630,7 +1631,8 @@ function fail(error) {
 
 // Request the metadata object for this entry
 entry.getMetadata(success, fail);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>setMetadata</h2>
 
 <p>Set metadata on a file.
@@ -1639,13 +1641,14 @@ entry.getMetadata(success, fail);
 <p><strong>Parameters:</strong></p>
 
 <ul>
-<li><strong>successCallback</strong> - A callback that is called when the metadata was successfully set. <em>(Function)</em></li>
-<li><strong>errorCallback</strong> - A callback that is called when the metadata was not successfully set. <em>(Function)</em></li>
-<li><strong>metadataObject</strong> - An object that contains the metadata keys and values. <em>(Object)</em></li>
+  <li><strong>successCallback</strong> - A callback that is called when the metadata was successfully set. <em>(Function)</em></li>
+  <li><strong>errorCallback</strong> - A callback that is called when the metadata was not successfully set. <em>(Function)</em></li>
+  <li><strong>metadataObject</strong> - An object that contains the metadata keys and values. <em>(Object)</em></li>
 </ul>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">function success() {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success() {
     console.log("The metadata was successfully set.");
 }
 
@@ -1654,16 +1657,16 @@ function fail() {
 }
 
 // Set the metadata
-entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
-</code></pre></div>
-<p><strong>iOS Quirk</strong></p>
+entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1}); __iOS Quirk__
+</code></pre></div></div>
 
 <ul>
-<li>only the <strong>&quot;com.apple.MobileBackup&quot;</strong> extended attribute is supported. Set the value to <strong>1</strong> to NOT enable the file to be backed up by iCloud. Set the value to <strong>0</strong> to re-enable the file to be backed up by iCloud.</li>
+  <li>only the <strong>&quot;com.apple.MobileBackup&quot;</strong> extended attribute is supported. Set the value to <strong>1</strong> to NOT enable the file to be backed up by iCloud. Set the value to <strong>0</strong> to re-enable the file to be backed up by iCloud.</li>
 </ul>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">function setFileMetadata(localFileSystem, filePath, metadataKey, metadataValue) 
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function setFileMetadata(localFileSystem, filePath, metadataKey, metadataValue) 
 {
     var onSetMetadataWin = function() {
       console.log("success setting metadata")
@@ -1686,21 +1689,22 @@ entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
     }
 
     var onFSFail = function(evt) {
-      console.log(evt.target.error.code);
+	  console.log(evt.target.error.code);
     }
 
     window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
 }
 
 setFileMetadata([LocalFileSystem](../localfilesystem/localfilesystem.html).PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>moveTo</h2>
 
 <p>Move a file to a different location on the file system. It is an error to attempt to:</p>
 
 <ul>
-<li>move a file into its parent if a name different from its current one isn&#39;t provided;</li>
-<li>move a file to a path occupied by a directory;</li>
+  <li>move a file into its parent if a name different from its current one isn&#39;t provided;</li>
+  <li>move a file to a path occupied by a directory;</li>
 </ul>
 
 <p>In addition, an attempt to move a file on top of an existing file must attempt to delete and replace that file.</p>
@@ -1708,14 +1712,15 @@ setFileMetadata([LocalFileSystem](../localfilesystem/localfilesystem.html).PERSI
 <p><strong>Parameters:</strong></p>
 
 <ul>
-<li><strong>parent</strong> - The parent directory to which to move the file. <em>(DirectoryEntry)</em></li>
-<li><strong>newName</strong> - The new name of the file. Defaults to the current name if unspecified. <em>(DOMString)</em></li>
-<li><strong>successCallback</strong> - A callback that is called with the FileEntry object of the new file. <em>(Function)</em></li>
-<li><strong>errorCallback</strong> - A callback that is called if an error occurs when attempting to move the file.  Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
+  <li><strong>parent</strong> - The parent directory to which to move the file. <em>(DirectoryEntry)</em></li>
+  <li><strong>newName</strong> - The new name of the file. Defaults to the current name if unspecified. <em>(DOMString)</em></li>
+  <li><strong>successCallback</strong> - A callback that is called with the FileEntry object of the new file. <em>(Function)</em></li>
+  <li><strong>errorCallback</strong> - A callback that is called if an error occurs when attempting to move the file.  Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
 </ul>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">function success(entry) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success(entry) {
     console.log("New Path: " + entry.fullPath);
 }
 
@@ -1731,26 +1736,28 @@ function moveFile(entry) {
     // move the file to a new directory and rename it
     entry.moveTo(parentEntry, "newFile.txt", success, fail);
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>copyTo</h2>
 
 <p>Copy a file to a new location on the file system.  It is an error to attempt to:</p>
 
 <ul>
-<li>copy a file into its parent if a name different from its current one is not provided.</li>
+  <li>copy a file into its parent if a name different from its current one is not provided.</li>
 </ul>
 
 <p><strong>Parameters:</strong></p>
 
 <ul>
-<li><strong>parent</strong> - The parent directory to which to copy the file. <em>(DirectoryEntry)</em></li>
-<li><strong>newName</strong> - The new name of the file. Defaults to the current name if unspecified. <em>(DOMString)</em></li>
-<li><strong>successCallback</strong> - A callback that is called with the FileEntry object of the new file. <em>(Function)</em></li>
-<li><strong>errorCallback</strong> - A callback that is called if an error occurs when attempting to copy the file.  Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
+  <li><strong>parent</strong> - The parent directory to which to copy the file. <em>(DirectoryEntry)</em></li>
+  <li><strong>newName</strong> - The new name of the file. Defaults to the current name if unspecified. <em>(DOMString)</em></li>
+  <li><strong>successCallback</strong> - A callback that is called with the FileEntry object of the new file. <em>(Function)</em></li>
+  <li><strong>errorCallback</strong> - A callback that is called if an error occurs when attempting to copy the file.  Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
 </ul>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">function win(entry) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(entry) {
     console.log("New Path: " + entry.fullPath);
 }
 
@@ -1766,16 +1773,19 @@ function copyFile(entry) {
     // copy the file to a new directory and rename it
     entry.copyTo(parentEntry, "file.copy", success, fail);
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>toURL</h2>
 
 <p>Returns a URL that can be used to locate the file.</p>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">// Request the URL for this entry
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Request the URL for this entry
 var fileURL = entry.toURL();
 console.log(fileURL);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>remove</h2>
 
 <p>Deletes a file.</p>
@@ -1783,12 +1793,13 @@ console.log(fileURL);
 <p><strong>Parameters:</strong></p>
 
 <ul>
-<li><strong>successCallback</strong> - A callback that is called after the file has been deleted.  Invoked with no parameters. <em>(Function)</em></li>
-<li><strong>errorCallback</strong> - A callback that is called if an error occurs when attempting to delete the file.  Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
+  <li><strong>successCallback</strong> - A callback that is called after the file has been deleted.  Invoked with no parameters. <em>(Function)</em></li>
+  <li><strong>errorCallback</strong> - A callback that is called if an error occurs when attempting to delete the file.  Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
 </ul>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">function success(entry) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success(entry) {
     console.log("Removal succeeded");
 }
 
@@ -1798,7 +1809,8 @@ function fail(error) {
 
 // remove the file
 entry.remove(success, fail);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>getParent</h2>
 
 <p>Look up the parent <a href="../directoryentry/directoryentry.html">DirectoryEntry</a> containing the file.</p>
@@ -1806,12 +1818,13 @@ entry.remove(success, fail);
 <p><strong>Parameters:</strong></p>
 
 <ul>
-<li><strong>successCallback</strong> - A callback that is called with the file&#39;s parent <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>. <em>(Function)</em></li>
-<li><strong>errorCallback</strong> - A callback that is called if an error occurs when attempting to retrieve the parent <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>.  Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
+  <li><strong>successCallback</strong> - A callback that is called with the file&#39;s parent <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>. <em>(Function)</em></li>
+  <li><strong>errorCallback</strong> - A callback that is called if an error occurs when attempting to retrieve the parent <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>.  Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
 </ul>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">function success(parent) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success(parent) {
     console.log("Parent Name: " + parent.name);
 }
 
@@ -1821,7 +1834,8 @@ function fail(error) {
 
 // Get the parent DirectoryEntry
 entry.getParent(success, fail);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>createWriter</h2>
 
 <p>Create a <a href="../filewriter/filewriter.html">FileWriter</a> object associated with the file that the FileEntry represents.</p>
@@ -1829,12 +1843,13 @@ entry.getParent(success, fail);
 <p><strong>Parameters:</strong></p>
 
 <ul>
-<li><strong>successCallback</strong> - A callback that is called with a <a href="../filewriter/filewriter.html">FileWriter</a> object. <em>(Function)</em></li>
-<li><strong>errorCallback</strong> - A callback that is called if an error occurs while attempting to create the <a href="../filewriter/filewriter.html">FileWriter</a>.  Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
+  <li><strong>successCallback</strong> - A callback that is called with a <a href="../filewriter/filewriter.html">FileWriter</a> object. <em>(Function)</em></li>
+  <li><strong>errorCallback</strong> - A callback that is called if an error occurs while attempting to create the <a href="../filewriter/filewriter.html">FileWriter</a>.  Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
 </ul>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">function success(writer) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success(writer) {
     writer.write("Some text to the file");
 }
 
@@ -1844,7 +1859,8 @@ function fail(error) {
 
 // create a FileWriter to write to the file
 entry.createWriter(success, fail);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>file</h2>
 
 <p>Return a <a href="../fileobj/fileobj.html">File</a> object that represents the current state of the file that this FileEntry represents.</p>
@@ -1852,12 +1868,13 @@ entry.createWriter(success, fail);
 <p><strong>Parameters:</strong></p>
 
 <ul>
-<li><strong>successCallback</strong> - A callback that is called with a <a href="../fileobj/fileobj.html">File</a> object. <em>(Function)</em></li>
-<li><strong>errorCallback</strong> - A callback that is called if an error occurs when creating the <a href="../fileobj/fileobj.html">File</a> object (e.g. the underlying file no longer exists).  Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
+  <li><strong>successCallback</strong> - A callback that is called with a <a href="../fileobj/fileobj.html">File</a> object. <em>(Function)</em></li>
+  <li><strong>errorCallback</strong> - A callback that is called if an error occurs when creating the <a href="../fileobj/fileobj.html">File</a> object (e.g. the underlying file no longer exists).  Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
 </ul>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">function success(file) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success(file) {
     console.log("File size: " + file.size);
 }
 
@@ -1867,7 +1884,8 @@ function fail(error) {
 
 // obtain properties of a file
 entry.file(success, fail);
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

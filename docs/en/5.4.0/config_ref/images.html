@@ -1458,57 +1458,70 @@ SDK tools (detailed in the Platform Guides).</p>
 
 <p>When working in the CLI you can define app icon(s) via <code>&lt;icon&gt;</code> element (<code>config.xml</code>).
 If you do not specify an icon then the Apache Cordova logo is used.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" /&gt;
+</code></pre></div></div>
+
 <p>src: (required) specifies the location of the image file, relative to your project directory</p>
 
 <p>platform: (optional) target platform</p>
 
 <p>width: (optional) icon width in pixels</p>
 
-<p>height: (optional) icon height in pixels </p>
+<p>height: (optional) icon height in pixels</p>
 
 <p>density: (optional) android specific, specifies icon density</p>
 
 <p>The following configuration can be used to define single default icon
 which will be used for all platforms.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;icon src="res/icon.png" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;icon src="res/icon.png" /&gt;
+</code></pre></div></div>
+
 <p>For each platform you can also define a pixel-perfect icons set to fit 
 different screen resolutions.</p>
 
 <p>Amazon Fire OS</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="amazon-fireos"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="amazon-fireos"&gt;
               &lt;icon src="res/android/ldpi.png" density="ldpi" /&gt;
               &lt;icon src="res/android/mdpi.png" density="mdpi" /&gt;
               &lt;icon src="res/android/hdpi.png" density="hdpi" /&gt;
               &lt;icon src="res/android/xhdpi.png" density="xhdpi" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Android</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="android"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="android"&gt;
               &lt;icon src="res/android/ldpi.png" density="ldpi" /&gt;
               &lt;icon src="res/android/mdpi.png" density="mdpi" /&gt;
               &lt;icon src="res/android/hdpi.png" density="hdpi" /&gt;
               &lt;icon src="res/android/xhdpi.png" density="xhdpi" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>BlackBerry10</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="blackberry10"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="blackberry10"&gt;
               &lt;icon src="res/bb10/icon-86.png" /&gt;
               &lt;icon src="res/bb10/icon-150.png" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>See BlackBerry&#39;s documentation for targeting multiple sizes and locales.
 [http://developer.blackberry.com/html5/documentation/icon_element.html]</p>
 
 <p>Firefox OS</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="firefoxos"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="firefoxos"&gt;
               &lt;icon src="res/ff/logo.png" width="60" height="60" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>iOS</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="ios"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="ios"&gt;
               &lt;!-- iOS 8.0+ --&gt;
               &lt;!-- iPhone 6 Plus  --&gt;
               &lt;icon src="res/ios/icon-60@3x.png" width="180" height="180" /&gt;
@@ -1536,26 +1549,33 @@ different screen resolutions.</p>
               &lt;icon src="res/ios/icon-50.png" width="50" height="50" /&gt;
               &lt;icon src="res/ios/icon-50@2x.png" width="100" height="100" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Tizen</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="tizen"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="tizen"&gt;
               &lt;icon src="res/tizen/icon-128.png" width="128" height="128" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Windows Phone8</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="wp8"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="wp8"&gt;
               &lt;icon src="res/wp/ApplicationIcon.png" width="99" height="99" /&gt;
               &lt;!-- tile image --&gt;
               &lt;icon src="res/wp/Background.png" width="159" height="159" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Windows8</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="windows8"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="windows8"&gt;
               &lt;icon src="res/windows8/logo.png" width="150" height="150" /&gt;
               &lt;icon src="res/windows8/smalllogo.png" width="30" height="30" /&gt;
               &lt;icon src="res/windows8/storelogo.png" width="50" height="50" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Configuring Splash Screens in the CLI</h2>
 
 <p>In the top-level <code>config.xml</code> file (not the one in <code>platforms</code>), add configuration elements like those specified here.</p>
@@ -1564,7 +1584,8 @@ different screen resolutions.</p>
 
 <p>Please notice that the value of the &quot;src&quot; attribute is relative to the project directory and not to the www directory.
 You can name the source image whatever you like. The internal name in the app are determined by Cordova.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;platform name="android"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;platform name="android"&gt;
     &lt;!-- you can use any density that exists in the Android project --&gt;
     &lt;splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/&gt;
     &lt;splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/&gt;
@@ -1609,20 +1630,24 @@ You can name the source image whatever you like. The internal name in the app ar
 
 
 &lt;preference name="SplashScreenDelay" value="10000" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h1>Supported platforms</h1>
 
 <p>As of now (Cordova 3.5.0 July 2014) the following platforms support splash screens.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">android
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>android
 ios
 wp8
 windows8
 blackberry10
-</code></pre></div>
+</code></pre></div></div>
+
 <h1>Splashscreen Plugin</h1>
 
 <p>Apache Cordova also offers special splash screen plugin which could be used to programmatically display and hide a splash screen during application launch
   https://github.com/apache/cordova-plugin-splashscreen</p>
+
 
 
             </div>

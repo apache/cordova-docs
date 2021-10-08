@@ -1548,27 +1548,29 @@
 <h2>Properties</h2>
 
 <ul>
-<li><strong>create:</strong> Used to indicate that the file or directory should be created, if it does not exist. <em>(boolean)</em></li>
-<li><strong>exclusive:</strong> By itself, exclusive has no effect. Used with create, it causes the file or directory creation to fail if the target path already exists. <em>(boolean)</em></li>
+  <li><strong>create:</strong> Used to indicate that the file or directory should be created, if it does not exist. <em>(boolean)</em></li>
+  <li><strong>exclusive:</strong> By itself, exclusive has no effect. Used with create, it causes the file or directory creation to fail if the target path already exists. <em>(boolean)</em></li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows 8</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2>Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">// Get the data directory, creating it if it doesn't exist.
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Get the data directory, creating it if it doesn't exist.
 dataDir = fileSystem.root.getDirectory("data", {create: true});
 
 // Create the lock file, if and only if it doesn't exist.
 lockFile = dataDir.getFile("lockfile.txt", {create: true, exclusive: true});
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

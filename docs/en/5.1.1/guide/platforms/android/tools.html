@@ -1450,35 +1450,46 @@ plugins.</p>
 <p>Run the <code>create</code> command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app&#39;s display
 name.  Here is the syntax for both Mac/Linux and Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
 
     C:\&gt;\path\to\cordova-android\bin\create.bat \path\to\project com.example.project_name ProjectName
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Build</h2>
 
 <p>This cleans then builds a project.</p>
 
 <p>Debug, on Mac/Linux or Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/build --debug
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/build --debug
 
     C:\&gt;\path\to\project\cordova\build.bat --debug
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Release, on Mac/Linux or Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/build --release
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/build --release
 
     C:\&gt;\path\to\project\cordova\build.bat --release
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Run the App</h2>
 
 <p>The <code>run</code> command accepts the following <em>optional</em> parameters:</p>
 
 <ul>
-<li><p>Target specification. This includes <code>--emulator</code>, <code>--device</code>, or <code>--target=&lt;targetID&gt;</code>.</p></li>
-<li><p>Build specification. This includes <code>--debug</code>, <code>--release</code>, or <code>--nobuild</code>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/project/cordova/run [Target] [Build]
+  <li>
+    <p>Target specification. This includes <code>--emulator</code>, <code>--device</code>, or <code>--target=&lt;targetID&gt;</code>.</p>
+  </li>
+  <li>
+    <p>Build specification. This includes <code>--debug</code>, <code>--release</code>, or <code>--nobuild</code>.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/project/cordova/run [Target] [Build]
 
 C:\&gt;\path\to\project\cordova\run.bat [Target] [Build]
-</code></pre></div></li>
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>Make sure you create at least one Android Virtual Device, otherwise
@@ -1492,18 +1503,18 @@ running emulator if no device is found.</p>
 <p>You can review Android app signing requirements here: http://developer.android.com/tools/publishing/app-signing.html</p>
 
 <p>To sign an app, you need the following parameters:</p>
-
 <ul>
-<li>Keystore (<code>--keystore</code>): Path to a binary file which can hold a set of keys.</li>
-<li>Keystore password (<code>--storePassword</code>): Password to the keystore</li>
-<li>Alias (<code>--alias</code>): The id specifying the private key used for singing.</li>
-<li>Password (<code>--password</code>): Password for the private key specified.</li>
-<li>Type of the keystore (<code>--keystoreType</code>): pkcs12, jks (Default: auto-detect based on file extension)
+  <li>Keystore (<code>--keystore</code>): Path to a binary file which can hold a set of keys.</li>
+  <li>Keystore password (<code>--storePassword</code>): Password to the keystore</li>
+  <li>Alias (<code>--alias</code>): The id specifying the private key used for singing.</li>
+  <li>Password (<code>--password</code>): Password for the private key specified.</li>
+  <li>Type of the keystore (<code>--keystoreType</code>): pkcs12, jks (Default: auto-detect based on file extension)
 These parameters can be specified using the command line arguments above to <code>build</code> or <code>run</code> scripts.</li>
 </ul>
 
 <p>Alternatively, you could specify them in a build configuration file (build.json) using (<code>--buildConfig</code>) argument. Here&#39;s a sample of a build configuration file:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">{
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
      "android": {
          "debug": {
              "keystore": "..\android.keystore",
@@ -1521,21 +1532,26 @@ These parameters can be specified using the command line arguments above to <cod
          }
      }
  }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>For release signing, passwords can be excluded and the build system will issue a prompt asking for the password.</p>
 
-<p>There is also support to mix and match command line arguments and parameters in build.json file. Values from the command line arguments will get precedence. This can be useful for specifying passwords on the command line. </p>
+<p>There is also support to mix and match command line arguments and parameters in build.json file. Values from the command line arguments will get precedence. This can be useful for specifying passwords on the command line.</p>
 
 <h2>Logging</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/log
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/log
 
     C:\&gt;\path\to\project\cordova\log.bat
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Cleaning</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/clean
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/clean
 
     C:\&gt;\path\to\project\cordova\clean.bat
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Building with Gradle</h2>
 
 <p>As of cordova-android@4.0.0, project build using <a href="http://www.gradle.org/">Gradle</a>.
@@ -1547,7 +1563,7 @@ For instructions on building with ANT, refer to older versions of documentation.
 can be set to customize the build:</p>
 
 <ul>
-<li><strong>cdvBuildMultipleApks</strong> (default: false)</li>
+  <li><strong>cdvBuildMultipleApks</strong> (default: false)</li>
 </ul>
 
 <p>If this is set, then multiple APK files will be generated: One per native
@@ -1558,47 +1574,48 @@ can be set to customize the build:</p>
 <p>If not set, then a single APK will be generated which can be used on all devices.</p>
 
 <ul>
-<li><strong>cdvVersionCode</strong></li>
+  <li><strong>cdvVersionCode</strong></li>
 </ul>
 
 <p>Overrides the versionCode set in <code>AndroidManifest.xml</code></p>
 
 <ul>
-<li><strong>cdvReleaseSigningPropertiesFile</strong> (default: release-signing.properties)</li>
+  <li><strong>cdvReleaseSigningPropertiesFile</strong> (default: release-signing.properties)</li>
 </ul>
 
 <p>Path to a .properties file that contains signing information for release builds.
   The file should look like:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">  storeFile=relative/path/to/keystore.p12
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  storeFile=relative/path/to/keystore.p12
   storePassword=SECRET1
   storeType=pkcs12
   keyAlias=DebugSigningKey
   keyPassword=SECRET2
-</code></pre></div>
+</code></pre></div></div>
+
 <p><code>storePassword</code> and <code>keyPassword</code> are optional, and will be prompted for if omitted.</p>
 
 <ul>
-<li><strong>cdvDebugSigningPropertiesFile</strong> (default: debug-signing.properties)</li>
+  <li><strong>cdvDebugSigningPropertiesFile</strong> (default: debug-signing.properties)</li>
 </ul>
 
 <p>Same as cdvReleaseSigningPropertiesFile, but for debug builds. Useful when you need
   to share a signing key with other developers.</p>
 
 <ul>
-<li><strong>cdvMinSdkVersion</strong></li>
+  <li><strong>cdvMinSdkVersion</strong></li>
 </ul>
 
 <p>Overrides the value of <code>minSdkVersion</code> set in <code>AndroidManifest.xml</code>. Useful when
   creating multiple APKs based on SDK version.</p>
 
 <ul>
-<li><strong>cdvBuildToolsVersion</strong></li>
+  <li><strong>cdvBuildToolsVersion</strong></li>
 </ul>
 
 <p>Override the automatically detected <code>android.buildToolsVersion</code> value.</p>
 
 <ul>
-<li><strong>cdvCompileSdkVersion</strong></li>
+  <li><strong>cdvCompileSdkVersion</strong></li>
 </ul>
 
 <p>Override the automatically detected <code>android.compileSdkVersion</code> value.</p>
@@ -1608,21 +1625,28 @@ can be set to customize the build:</p>
 <p>If you need to customize <code>build.gradle</code>, rather than edit directly, you should create
 a sibling file named <code>build-extras.gradle</code>. This file will be included by the main
 <code>build.gradle</code> when present. Here&#39;s an example:</p>
-<div class="highlight"><pre><code class="language-" data-lang=""># Example build-extras.gradle
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Example build-extras.gradle
 # This file is included at the beginning of `build.gradle`
 ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
 # When set, this function allows code to run at the end of `build.gradle`
 ext.postBuildExtras = {
     android.buildTypes.debug.applicationIdSuffix = '.debug'
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Note that plugins can also include <code>build-extras.gradle</code> files via:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="some.gradle" custom="true" type="gradleReference" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;framework src="some.gradle" custom="true" type="gradleReference" /&gt;
+</code></pre></div></div>
+
 <h3>Example Build</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">export ORG_GRADLE_PROJECT_cdvMinSdkVersion=14
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export ORG_GRADLE_PROJECT_cdvMinSdkVersion=14
 cordova build android -- --gradleArg=-PcdvBuildMultipleApks=true
-</code></pre></div>
+</code></pre></div></div>
+
+
 
             </div>
         </div>

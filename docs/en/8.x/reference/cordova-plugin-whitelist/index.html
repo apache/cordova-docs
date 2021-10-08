@@ -2177,24 +2177,26 @@
 <h2>Installation</h2>
 
 <p>You can install whitelist plugin with Cordova CLI, from npm:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cordova plugin add cordova-plugin-whitelist
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova plugin add cordova-plugin-whitelist
 $ cordova prepare
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Supported Cordova Platforms</h2>
 
 <ul>
-<li>Android 4.0.0 or above</li>
+  <li>Android 4.0.0 or above</li>
 </ul>
 
 <h2>Navigation Whitelist</h2>
-
 <p>Controls which URLs the WebView itself can be navigated to. Applies to
 top-level navigations only.</p>
 
 <p>Quirks: on Android it also applies to iframes for non-http(s) schemes.</p>
 
 <p>By default, navigations only to <code>file://</code> URLs, are allowed. To allow others URLs, you must add <code>&lt;allow-navigation&gt;</code> tags to your <code>config.xml</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;!-- Allow links to example.com --&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Allow links to example.com --&gt;
 &lt;allow-navigation href="http://example.com/*" /&gt;
 
 &lt;!-- Wildcards are allowed for the protocol, as a prefix
@@ -2210,9 +2212,9 @@ top-level navigations only.</p>
 &lt;allow-navigation href="http://*/*" /&gt;
 &lt;allow-navigation href="https://*/*" /&gt;
 &lt;allow-navigation href="data:*" /&gt;
-</code></pre></div>
-<h2>Intent Whitelist</h2>
+</code></pre></div></div>
 
+<h2>Intent Whitelist</h2>
 <p>Controls which URLs the app is allowed to ask the system to open.
 By default, no external URLs are allowed.</p>
 
@@ -2221,7 +2223,8 @@ By default, no external URLs are allowed.</p>
 <p>This whitelist does not apply to plugins, only hyperlinks and calls to <code>window.open()</code>.</p>
 
 <p>In <code>config.xml</code>, add <code>&lt;allow-intent&gt;</code> tags, like this:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;!-- Allow links to web pages to open in a browser --&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Allow links to web pages to open in a browser --&gt;
 &lt;allow-intent href="http://*/*" /&gt;
 &lt;allow-intent href="https://*/*" /&gt;
 
@@ -2244,15 +2247,16 @@ By default, no external URLs are allowed.</p>
 &lt;!-- Allow all unrecognized URLs to open installed apps
      *NOT RECOMMENDED* --&gt;
 &lt;allow-intent href="*" /&gt;
-</code></pre></div>
-<h2>Network Request Whitelist</h2>
+</code></pre></div></div>
 
+<h2>Network Request Whitelist</h2>
 <p>Controls which network requests (images, XHRs, etc) are allowed to be made (via cordova native hooks).</p>
 
 <p>Note: We suggest you use a Content Security Policy (see below), which is more secure.  This whitelist is mostly historical for webviews which do not support CSP.</p>
 
 <p>In <code>config.xml</code>, add <code>&lt;access&gt;</code> tags, like this:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;!-- Allow images, xhrs, etc. to google.com --&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Allow images, xhrs, etc. to google.com --&gt;
 &lt;access origin="http://google.com" /&gt;
 &lt;access origin="https://google.com" /&gt;
 
@@ -2267,15 +2271,15 @@ By default, no external URLs are allowed.</p>
 
 &lt;!-- Don't block any requests --&gt;
 &lt;access origin="*" /&gt;
-</code></pre></div>
-<p>Without any <code>&lt;access&gt;</code> tags, only requests to <code>file://</code> URLs are allowed. However, the default Cordova application includes <code>&lt;access origin=&quot;*&quot;&gt;</code> by default.</p>
+</code></pre></div></div>
+
+<p>Without any <code>&lt;access&gt;</code> tags, only requests to <code>file://</code> URLs are allowed. However, the default Cordova application includes <code>&lt;access origin="*"&gt;</code> by default.</p>
 
 <p>Note: Whitelist cannot block network redirects from a whitelisted remote website (i.e. http or https) to a non-whitelisted website. Use CSP rules to mitigate redirects to non-whitelisted websites for webviews that support CSP.</p>
 
 <p>Quirk: Android also allows requests to https://ssl.gstatic.com/accessibility/javascript/android/ by default, since this is required for TalkBack to function properly.</p>
 
 <h3>Content Security Policy</h3>
-
 <p>Controls which network requests (images, XHRs, etc) are allowed to be made (via webview directly).</p>
 
 <p>On Android and iOS, the network request whitelist (see above) is not able to filter all types of requests (e.g. <code>&lt;video&gt;</code> &amp; WebSockets are not blocked). So, in addition to the whitelist, you should use a <a href="http://content-security-policy.com/">Content Security Policy</a> <code>&lt;meta&gt;</code> tag on all of your pages.</p>
@@ -2283,7 +2287,8 @@ By default, no external URLs are allowed.</p>
 <p>On Android, support for CSP within the system webview starts with KitKat (but is available on all versions using Crosswalk WebView).</p>
 
 <p>Here are some example CSP declarations for your <code>.html</code> pages:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;!-- Good default declaration:
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Good default declaration:
     * gap: is required only on iOS (when using UIWebView) and is needed for JS-&gt;native communication
     * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
     * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
@@ -2306,7 +2311,8 @@ By default, no external URLs are allowed.</p>
 
 &lt;!-- Allow iframe to https://cordova.apache.org/ --&gt;
 &lt;meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://cordova.apache.org"&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

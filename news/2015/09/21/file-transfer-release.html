@@ -133,22 +133,22 @@
         <div>
             <p>A medium security issue was discovered for cordova-plugin-file-transfer plugin. We are releasing version <code>1.3.0</code> of <code>cordova-plugin-file-transfer</code> to address this security issue. We recommend that all applications currently using an older version of this plugin to upgrade as soon as possible.</p>
 
-<hr>
-
+<hr />
 <p>You can update the plugin by removing it, and then re-adding it.</p>
 
 <p>E.g. To update your file-transfer plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm cordova-plugin-file-transfer --save
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm cordova-plugin-file-transfer --save
 cordova plugin add cordova-plugin-file-transfer --save
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The security issue is CVE-2015-5204.</p>
 
 <p>For your convenience, the text of the CVE is included here:</p>
 
 <!--more-->
 
-<hr>
-
+<hr />
 <p>CVE-2015-5204: HTTP header injection vulerability in Apache Cordova File
 Transfer Plugin for Android</p>
 
@@ -183,18 +183,17 @@ Transfer Plugin for Android</p>
 <p>Credit:
  This issue was discovered by Muneaki Nishimura (Sony Digital Network Applications, Inc.)</p>
 
-<hr>
+<hr />
 
 <p>cordova-plugin-file-transfer@1.3.0</p>
-
 <ul>
-<li>Found issue where : is accepted as a valid header, this is obviously wrong</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9562">CB-9562</a> Fixed incorrect headers handling on Android</li>
-<li>Fixing headers so they don&#39;t accept non-ASCII</li>
-<li>updated tests to use cordova apache vm</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9493">CB-9493</a> Fix file paths in file-transfer manual tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8816">CB-8816</a> Add cdvfile:// support on windows</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9376">CB-9376</a> Fix FileTransfer plugin manual tests issue - &#39;undefined&#39; in paths</li>
+  <li>Found issue where : is accepted as a valid header, this is obviously wrong</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9562">CB-9562</a> Fixed incorrect headers handling on Android</li>
+  <li>Fixing headers so they don&#39;t accept non-ASCII</li>
+  <li>updated tests to use cordova apache vm</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9493">CB-9493</a> Fix file paths in file-transfer manual tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8816">CB-8816</a> Add cdvfile:// support on windows</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9376">CB-9376</a> Fix FileTransfer plugin manual tests issue - &#39;undefined&#39; in paths</li>
 </ul>
 
         </div>

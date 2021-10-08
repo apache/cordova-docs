@@ -138,32 +138,37 @@
 <p>Things to note:</p>
 
 <ul>
-<li>Added flag for Xcode-managed provisioning</li>
-<li>Fixed compile error when compile source as objective-c++</li>
-<li>Adjusted storyboard constraints</li>
+  <li>Added flag for Xcode-managed provisioning</li>
+  <li>Fixed compile error when compile source as objective-c++</li>
+  <li>Adjusted storyboard constraints</li>
 </ul>
 
 <p><strong>Note:</strong> When updating <strong>iOS</strong>, make sure to save your plugins as current unsaved plugins may not be reinstalled otherwise. Run the following command in your project to save your currently installed plugins into <code>config.xml</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin save
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin save
+</code></pre></div></div>
+
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform rm ios
 cordova platform add ios@4.5.4
-</code></pre></div>
-<p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add ios@4.5.4
-</code></pre></div>
-<!--more-->
+</code></pre></div></div>
 
+<p>To add it explicitly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@4.5.4
+</code></pre></div></div>
+
+<!--more-->
 <h2>What&#39;s new in iOS</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13579">CB-13579</a> Updated checked in node_modules</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13523">CB-13523</a> Add flag for Xcode-managed provisioning</li>
-<li>Fix compile error when compile source as objective-c++</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13505">CB-13505</a> (ios) adjust storyboard constraints</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13579">CB-13579</a> Updated checked in node_modules</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13523">CB-13523</a> Add flag for Xcode-managed provisioning</li>
+  <li>Fix compile error when compile source as objective-c++</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13505">CB-13505</a> (ios) adjust storyboard constraints</li>
 </ul>
 
         </div>

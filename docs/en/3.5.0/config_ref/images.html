@@ -1386,57 +1386,70 @@ SDK tools (detailed in the Platform Guides).</p>
 
 <p>When working in the CLI you can define app icon(s) via <code>&lt;icon&gt;</code> element (<code>config.xml</code>).
 If you do not specify an icon then the Apache Cordova logo is used.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" /&gt;
+</code></pre></div></div>
+
 <p>src: (required) specifies the location of the image file, relative to your project directory</p>
 
 <p>platform: (optional) target platform</p>
 
 <p>width: (optional) icon width in pixels</p>
 
-<p>height: (optional) icon height in pixels </p>
+<p>height: (optional) icon height in pixels</p>
 
 <p>density: (optional) android specific, specifies icon density</p>
 
 <p>The following configuration can be used to define single default icon
 which will be used for all platforms.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;icon src="res/icon.png" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;icon src="res/icon.png" /&gt;
+</code></pre></div></div>
+
 <p>For each platform you can also define a pixel-perfect icons set to fit 
 different screen resolutions.</p>
 
 <p>Amazon Fire OS</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="amazon-fireos"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="amazon-fireos"&gt;
               &lt;icon src="res/android/ldpi.png" density="ldpi" /&gt;
               &lt;icon src="res/android/mdpi.png" density="mdpi" /&gt;
               &lt;icon src="res/android/hdpi.png" density="hdpi" /&gt;
               &lt;icon src="res/android/xhdpi.png" density="xhdpi" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Android</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="android"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="android"&gt;
               &lt;icon src="res/android/ldpi.png" density="ldpi" /&gt;
               &lt;icon src="res/android/mdpi.png" density="mdpi" /&gt;
               &lt;icon src="res/android/hdpi.png" density="hdpi" /&gt;
               &lt;icon src="res/android/xhdpi.png" density="xhdpi" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>BlackBerry10</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="blackberry10"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="blackberry10"&gt;
               &lt;icon src="res/bb10/icon-86.png" /&gt;
               &lt;icon src="res/bb10/icon-150.png" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>See BlackBerry&#39;s documentation for targeting multiple sizes and locales.
 [http://developer.blackberry.com/html5/documentation/icon_element.html]</p>
 
 <p>Firefox OS</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="firefoxos"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="firefoxos"&gt;
               &lt;icon src="res/ff/logo.png" width="60" height="60" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>iOS</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="ios"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="ios"&gt;
               &lt;!-- iOS 7.0+ --&gt;
               &lt;!-- iPhone / iPod Touch  --&gt;
               &lt;icon src="res/ios/icon-60.png" width="60" height="60" /&gt;
@@ -1461,26 +1474,33 @@ different screen resolutions.</p>
               &lt;icon src="res/ios/icon-50.png" width="50" height="50" /&gt;
               &lt;icon src="res/ios/icon-50@2x.png" width="100" height="100" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Tizen</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="tizen"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="tizen"&gt;
               &lt;icon src="res/tizen/icon-128.png" width="128" height="128" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Windows Phone8</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="wp8"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="wp8"&gt;
               &lt;icon src="res/wp/ApplicationIcon.png" width="99" height="99" /&gt;
               &lt;!-- tile image --&gt;
               &lt;icon src="res/wp/Background.png" width="159" height="159" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Windows8</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;platform name="windows8"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;platform name="windows8"&gt;
               &lt;icon src="res/windows8/logo.png" width="150" height="150" /&gt;
               &lt;icon src="res/windows8/smalllogo.png" width="30" height="30" /&gt;
               &lt;icon src="res/windows8/storelogo.png" width="50" height="50" /&gt;
      &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Configuring Splash Screens in the CLI</h2>
 
 <p>Use the Splashscreen API to enable display of an app&#39;s introductory
@@ -1490,7 +1510,8 @@ subdirectory.</p>
 
 <p>Android specifies both portrait- and landscape-oriented splash screen
 images for low, medium, high, and extra-high resolutions:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    android/screen-hdpi-landscape.png
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    android/screen-hdpi-landscape.png
     android/screen-hdpi-portrait.png
     android/screen-ldpi-landscape.png
     android/screen-ldpi-portrait.png
@@ -1498,11 +1519,13 @@ images for low, medium, high, and extra-high resolutions:</p>
     android/screen-mdpi-portrait.png
     android/screen-xhdpi-landscape.png
     android/screen-xhdpi-portrait.png
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The iOS platform specifies variants for iPhone/iPod and iPad, with
 variants for retina displays and different orientations. The <em>568h</em>
 file applies to the iPhone 5&#39;s taller screen:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    ios/screen-ipad-landscape-2x.png
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ios/screen-ipad-landscape-2x.png
     ios/screen-ipad-landscape.png
     ios/screen-ipad-portrait-2x.png
     ios/screen-ipad-portrait.png
@@ -1511,10 +1534,13 @@ file applies to the iPhone 5&#39;s taller screen:</p>
     ios/screen-iphone-portrait-2x.png
     ios/screen-iphone-portrait.png
     ios/screen-iphone-portrait-568h-2x.png
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Windows Phone specifies a single splash screen image:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    windows-phone/screen-portrait.jpg
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    windows-phone/screen-portrait.jpg
+</code></pre></div></div>
+
 <p>The following sections detail how to set up splash screens when
 working with SDKs and related command-line tools described in Platform
 Guides.</p>
@@ -1530,10 +1556,10 @@ files in the Android project&#39;s <code>platforms/android/res/drawable*</code> 
 <p>The size for each should be:</p>
 
 <ul>
-<li>xlarge (xhdpi): at least 960 &times; 720</li>
-<li>large (hdpi): at least 640 &times; 480</li>
-<li>medium (mdpi): at least 470 &times; 320</li>
-<li>small (ldpi): at least 426 &times; 320</li>
+  <li>xlarge (xhdpi): at least 960 &#215; 720</li>
+  <li>large (hdpi): at least 640 &#215; 480</li>
+  <li>medium (mdpi): at least 470 &#215; 320</li>
+  <li>small (ldpi): at least 426 &#215; 320</li>
 </ul>
 
 <p>When creating a new Android project, the default splash screen images
@@ -1550,9 +1576,11 @@ supporting
 
 <p>In the top-level <code>config.xml</code> file (not the one in <code>platforms</code>), add the
 following preferences:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="SplashScreen" value="screen" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;preference name="SplashScreen" value="screen" /&gt;
 &lt;preference name="SplashScreenDelay" value="10000" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The first line sets the image to display as the splash screen. This is the
 file name of the png in the <code>drawable*</code> directories, minus the <code>.png</code>
 extension. The default value for SplashScreen is <code>screen</code> (for the file
@@ -1583,13 +1611,13 @@ directory. Only add those images for the devices you want to support,
 such as iPad or iPhone. The size of each image should be:</p>
 
 <ul>
-<li>Default-568h@2x~iphone.png (640x1136 pixels)</li>
-<li>Default-Landscape@2x~ipad.png (2048x1496 pixels)</li>
-<li>Default-Landscape~ipad.png (1024x748 pixels)</li>
-<li>Default-Portrait@2x~ipad.png (1536x2008 pixels)</li>
-<li>Default-Portrait~ipad.png (768x1004 pixels)</li>
-<li>Default@2x~iphone.png (640x960 pixels)</li>
-<li>Default~iphone.png (320x480 pixels)</li>
+  <li>Default-568h@2x~iphone.png (640x1136 pixels)</li>
+  <li>Default-Landscape@2x~ipad.png (2048x1496 pixels)</li>
+  <li>Default-Landscape~ipad.png (1024x748 pixels)</li>
+  <li>Default-Portrait@2x~ipad.png (1536x2008 pixels)</li>
+  <li>Default-Portrait~ipad.png (768x1004 pixels)</li>
+  <li>Default@2x~iphone.png (640x960 pixels)</li>
+  <li>Default~iphone.png (320x480 pixels)</li>
 </ul>
 
 <h2>Splash Screens for the BlackBerry 10 Platform</h2>

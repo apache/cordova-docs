@@ -1620,28 +1620,28 @@
 <h2>Properties</h2>
 
 <ul>
-<li><strong>id</strong>: A globally unique identifier. <em>(DOMString)</em></li>
-<li><strong>displayName</strong>: The name of this Contact, suitable for display to end-users. <em>(DOMString)</em></li>
-<li><strong>name</strong>: An object containing all components of a persons name. <em>(ContactName)</em></li>
-<li><strong>nickname</strong>: A casual name by which to address the contact. <em>(DOMString)</em></li>
-<li><strong>phoneNumbers</strong>: An array of all the contact&#39;s phone numbers. <em>(ContactField[])</em></li>
-<li><strong>emails</strong>: An array of all the contact&#39;s email addresses. <em>(ContactField[])</em></li>
-<li><strong>addresses</strong>: An array of all the contact&#39;s addresses. <em>(ContactAddress[])</em></li>
-<li><strong>ims</strong>: An array of all the contact&#39;s IM addresses. <em>(ContactField[])</em></li>
-<li><strong>organizations</strong>: An array of all the contact&#39;s organizations. <em>(ContactOrganization[])</em></li>
-<li><strong>birthday</strong>: The birthday of the contact. <em>(Date)</em></li>
-<li><strong>note</strong>: A note about the contact. <em>(DOMString)</em></li>
-<li><strong>photos</strong>: An array of the contact&#39;s photos. <em>(ContactField[])</em></li>
-<li><strong>categories</strong>:  An array of all the user-defined categories associated with the contact. <em>(ContactField[])</em></li>
-<li><strong>urls</strong>:  An array of web pages associated with the contact. <em>(ContactField[])</em></li>
+  <li><strong>id</strong>: A globally unique identifier. <em>(DOMString)</em></li>
+  <li><strong>displayName</strong>: The name of this Contact, suitable for display to end-users. <em>(DOMString)</em></li>
+  <li><strong>name</strong>: An object containing all components of a persons name. <em>(ContactName)</em></li>
+  <li><strong>nickname</strong>: A casual name by which to address the contact. <em>(DOMString)</em></li>
+  <li><strong>phoneNumbers</strong>: An array of all the contact&#39;s phone numbers. <em>(ContactField[])</em></li>
+  <li><strong>emails</strong>: An array of all the contact&#39;s email addresses. <em>(ContactField[])</em></li>
+  <li><strong>addresses</strong>: An array of all the contact&#39;s addresses. <em>(ContactAddress[])</em></li>
+  <li><strong>ims</strong>: An array of all the contact&#39;s IM addresses. <em>(ContactField[])</em></li>
+  <li><strong>organizations</strong>: An array of all the contact&#39;s organizations. <em>(ContactOrganization[])</em></li>
+  <li><strong>birthday</strong>: The birthday of the contact. <em>(Date)</em></li>
+  <li><strong>note</strong>: A note about the contact. <em>(DOMString)</em></li>
+  <li><strong>photos</strong>: An array of the contact&#39;s photos. <em>(ContactField[])</em></li>
+  <li><strong>categories</strong>:  An array of all the user-defined categories associated with the contact. <em>(ContactField[])</em></li>
+  <li><strong>urls</strong>:  An array of web pages associated with the contact. <em>(ContactField[])</em></li>
 </ul>
 
 <h2>Methods</h2>
 
 <ul>
-<li><strong>clone</strong>: Returns a new <code>Contact</code> object that is a deep copy of the calling object, with the <code>id</code> property set to <code>null</code>.</li>
-<li><strong>remove</strong>: Removes the contact from the device contacts database, otherwise executes an error callback with a <code>[ContactError](../ContactError/contactError.html)</code> object.</li>
-<li><strong>save</strong>: Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same <strong>id</strong> already exists.</li>
+  <li><strong>clone</strong>: Returns a new <code>Contact</code> object that is a deep copy of the calling object, with the <code>id</code> property set to <code>null</code>.</li>
+  <li><strong>remove</strong>: Removes the contact from the device contacts database, otherwise executes an error callback with a <code>[ContactError](../ContactError/contactError.html)</code> object.</li>
+  <li><strong>save</strong>: Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same <strong>id</strong> already exists.</li>
 </ul>
 
 <h2>Details</h2>
@@ -1658,15 +1658,16 @@ for details.</p>
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows 8</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2>Save Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function onSuccess(contact) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess(contact) {
     alert("Save Success");
 };
 
@@ -1687,16 +1688,20 @@ contact.name = name;
 
 // save to device
 contact.save(onSuccess,onError);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Clone Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">    // clone the contact object
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // clone the contact object
     var clone = contact.clone();
     clone.name.givenName = "John";
     console.log("Original contact name = " + contact.name.givenName);
     console.log("Cloned contact name = " + clone.name.givenName);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Remove Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function onSuccess() {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess() {
     alert("Removal Success");
 };
 
@@ -1706,122 +1711,126 @@ function onError(contactError) {
 
     // remove the contact from the device
     contact.remove(onSuccess,onError);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Contact Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-x.x.x.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Contact Example&lt;/title&gt;
 
-    <span class="c1">// Wait for device API libraries to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// device APIs are available</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// create</span>
-        <span class="kd">var</span> <span class="nx">contact</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">create</span><span class="p">();</span>
-        <span class="nx">contact</span><span class="p">.</span><span class="nx">displayName</span> <span class="o">=</span> <span class="s2">"Plumber"</span><span class="p">;</span>
-        <span class="nx">contact</span><span class="p">.</span><span class="nx">nickname</span> <span class="o">=</span> <span class="s2">"Plumber"</span><span class="p">;</span>                 <span class="c1">// specify both to support all devices</span>
-        <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContactName</span><span class="p">();</span>
-        <span class="nx">name</span><span class="p">.</span><span class="nx">givenName</span> <span class="o">=</span> <span class="s2">"Jane"</span><span class="p">;</span>
-        <span class="nx">name</span><span class="p">.</span><span class="nx">familyName</span> <span class="o">=</span> <span class="s2">"Doe"</span><span class="p">;</span>
-        <span class="nx">contact</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-        <span class="c1">// save</span>
-        <span class="nx">contact</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="nx">onSaveSuccess</span><span class="p">,</span><span class="nx">onSaveError</span><span class="p">);</span>
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // create
+        var contact = navigator.contacts.create();
+        contact.displayName = "Plumber";
+        contact.nickname = "Plumber";                 // specify both to support all devices
+        var name = new ContactName();
+        name.givenName = "Jane";
+        name.familyName = "Doe";
+        contact.name = name;
 
-        <span class="c1">// clone</span>
-        <span class="kd">var</span> <span class="nx">clone</span> <span class="o">=</span> <span class="nx">contact</span><span class="p">.</span><span class="nx">clone</span><span class="p">();</span>
-        <span class="nx">clone</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">givenName</span> <span class="o">=</span> <span class="s2">"John"</span><span class="p">;</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Original contact name = "</span> <span class="o">+</span> <span class="nx">contact</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">givenName</span><span class="p">);</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Cloned contact name = "</span> <span class="o">+</span> <span class="nx">clone</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">givenName</span><span class="p">);</span>
+        // save
+        contact.save(onSaveSuccess,onSaveError);
 
-        <span class="c1">// remove</span>
-        <span class="nx">contact</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="nx">onRemoveSuccess</span><span class="p">,</span><span class="nx">onRemoveError</span><span class="p">);</span>
-    <span class="p">}</span>
+        // clone
+        var clone = contact.clone();
+        clone.name.givenName = "John";
+        console.log("Original contact name = " + contact.name.givenName);
+        console.log("Cloned contact name = " + clone.name.givenName);
 
-    <span class="c1">// onSaveSuccess: Get a snapshot of the current contacts</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onSaveSuccess</span><span class="p">(</span><span class="nx">contact</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s2">"Save Success"</span><span class="p">);</span>
-    <span class="p">}</span>
+        // remove
+        contact.remove(onRemoveSuccess,onRemoveError);
+    }
 
-    <span class="c1">// onSaveError: Failed to get the contacts</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onSaveError</span><span class="p">(</span><span class="nx">contactError</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s2">"Error = "</span> <span class="o">+</span> <span class="nx">contactError</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
-    <span class="p">}</span>
+    // onSaveSuccess: Get a snapshot of the current contacts
+    //
+    function onSaveSuccess(contact) {
+        alert("Save Success");
+    }
 
-    <span class="c1">// onRemoveSuccess: Get a snapshot of the current contacts</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onRemoveSuccess</span><span class="p">(</span><span class="nx">contacts</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s2">"Removal Success"</span><span class="p">);</span>
-    <span class="p">}</span>
+    // onSaveError: Failed to get the contacts
+    //
+    function onSaveError(contactError) {
+        alert("Error = " + contactError.code);
+    }
 
-    <span class="c1">// onRemoveError: Failed to get the contacts</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onRemoveError</span><span class="p">(</span><span class="nx">contactError</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s2">"Error = "</span> <span class="o">+</span> <span class="nx">contactError</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
-    <span class="p">}</span>
+    // onRemoveSuccess: Get a snapshot of the current contacts
+    //
+    function onRemoveSuccess(contacts) {
+        alert("Removal Success");
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Find Contacts<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // onRemoveError: Failed to get the contacts
+    //
+    function onRemoveError(contactError) {
+        alert("Error = " + contactError.code);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Find Contacts&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 <h2>Android 2.X Quirks</h2>
 
 <ul>
-<li><strong>categories</strong>:  Not supported on Android 2.X devices, returning <code>null</code>.</li>
+  <li><strong>categories</strong>:  Not supported on Android 2.X devices, returning <code>null</code>.</li>
 </ul>
 
 <h2>BlackBerry WebWorks (OS 5.0 and higher) Quirks</h2>
 
 <ul>
-<li><strong>id</strong>: Supported.  Assigned by the device when saving the contact.</li>
-<li><strong>displayName</strong>: Supported.  Stored in BlackBerry <strong>user1</strong> field.</li>
-<li><strong>nickname</strong>: Not supported, returning <code>null</code>.</li>
-<li><strong>phoneNumbers</strong>: Partially supported.  Phone numbers are stored in BlackBerry fields <strong>homePhone1</strong> and <strong>homePhone2</strong> if <em>type</em> is &#39;home&#39;, <strong>workPhone1</strong> and <strong>workPhone2</strong> if <em>type</em> is &#39;work&#39;, <strong>mobilePhone</strong> if <em>type</em> is &#39;mobile&#39;, <strong>faxPhone</strong> if <em>type</em> is &#39;fax&#39;, <strong>pagerPhone</strong> if <em>type</em> is &#39;pager&#39;, and <strong>otherPhone</strong> if <em>type</em> is none of the above.</li>
-<li><strong>emails</strong>: Partially supported.  The first three email addresses are stored in the BlackBerry <strong>email1</strong>, <strong>email2</strong>, and <strong>email3</strong> fields, respectively.</li>
-<li><strong>addresses</strong>: Partially supported.  The first and second addresses are stored in the BlackBerry <strong>homeAddress</strong> and <strong>workAddress</strong> fields, respectively.</li>
-<li><strong>ims</strong>: Not supported, returning <code>null</code>.</li>
-<li><strong>organizations</strong>: Partially supported.  The <strong>name</strong> and <strong>title</strong> of the first organization are stored in the BlackBerry <strong>company</strong> and <strong>title</strong> fields, respectively.</li>
-<li><strong>photos</strong>: Partially supported.  A single thumbnail-sized photo is supported.  To set a contact&#39;s photo, pass in a either a base64-encoded image, or a URL pointing to the image.  The image is scaled down before saving to the BlackBerry contacts database.   The contact photo is returned as a base64-encoded image.</li>
-<li><strong>categories</strong>:  Partially supported.  Only <em>Business</em> and <em>Personal</em> categories are supported.</li>
-<li><strong>urls</strong>:  Partially supported. The first URL is stored in BlackBerry <strong>webpage</strong> field.</li>
+  <li><strong>id</strong>: Supported.  Assigned by the device when saving the contact.</li>
+  <li><strong>displayName</strong>: Supported.  Stored in BlackBerry <strong>user1</strong> field.</li>
+  <li><strong>nickname</strong>: Not supported, returning <code>null</code>.</li>
+  <li><strong>phoneNumbers</strong>: Partially supported.  Phone numbers are stored in BlackBerry fields <strong>homePhone1</strong> and <strong>homePhone2</strong> if <em>type</em> is &#39;home&#39;, <strong>workPhone1</strong> and <strong>workPhone2</strong> if <em>type</em> is &#39;work&#39;, <strong>mobilePhone</strong> if <em>type</em> is &#39;mobile&#39;, <strong>faxPhone</strong> if <em>type</em> is &#39;fax&#39;, <strong>pagerPhone</strong> if <em>type</em> is &#39;pager&#39;, and <strong>otherPhone</strong> if <em>type</em> is none of the above.</li>
+  <li><strong>emails</strong>: Partially supported.  The first three email addresses are stored in the BlackBerry <strong>email1</strong>, <strong>email2</strong>, and <strong>email3</strong> fields, respectively.</li>
+  <li><strong>addresses</strong>: Partially supported.  The first and second addresses are stored in the BlackBerry <strong>homeAddress</strong> and <strong>workAddress</strong> fields, respectively.</li>
+  <li><strong>ims</strong>: Not supported, returning <code>null</code>.</li>
+  <li><strong>organizations</strong>: Partially supported.  The <strong>name</strong> and <strong>title</strong> of the first organization are stored in the BlackBerry <strong>company</strong> and <strong>title</strong> fields, respectively.</li>
+  <li><strong>photos</strong>: Partially supported.  A single thumbnail-sized photo is supported.  To set a contact&#39;s photo, pass in a either a base64-encoded image, or a URL pointing to the image.  The image is scaled down before saving to the BlackBerry contacts database.   The contact photo is returned as a base64-encoded image.</li>
+  <li><strong>categories</strong>:  Partially supported.  Only <em>Business</em> and <em>Personal</em> categories are supported.</li>
+  <li><strong>urls</strong>:  Partially supported. The first URL is stored in BlackBerry <strong>webpage</strong> field.</li>
 </ul>
 
 <h2>iOS Quirks</h2>
 
 <ul>
-<li><strong>displayName</strong>: Not supported on iOS, returning <code>null</code> unless there is no <code>[ContactName](../ContactName/contactname.html)</code> specified, in which case it returns the composite name, <strong>nickname</strong> or <code>&quot;&quot;</code>, respectively.</li>
-<li><strong>birthday</strong>: Must be input as a JavaScript <code>Date</code> object, the same way it is returned.</li>
-<li><strong>photos</strong>: Returns a <a href="../../file/fileobj/fileobj.html">File</a> URL to the image, which is stored in the application&#39;s temporary directory.  Contents of the temporary directory are removed when the application exits.</li>
-<li><strong>categories</strong>:  This property is currently not supported, returning <code>null</code>.</li>
+  <li><strong>displayName</strong>: Not supported on iOS, returning <code>null</code> unless there is no <code>[ContactName](../ContactName/contactname.html)</code> specified, in which case it returns the composite name, <strong>nickname</strong> or <code>""</code>, respectively.</li>
+  <li><strong>birthday</strong>: Must be input as a JavaScript <code>Date</code> object, the same way it is returned.</li>
+  <li><strong>photos</strong>: Returns a <a href="../../file/fileobj/fileobj.html">File</a> URL to the image, which is stored in the application&#39;s temporary directory.  Contents of the temporary directory are removed when the application exits.</li>
+  <li><strong>categories</strong>:  This property is currently not supported, returning <code>null</code>.</li>
 </ul>
 
 <h2>Windows Phone 7 and 8 Quirks</h2>
 
 <ul>
-<li><strong>displayName</strong>: When creating a contact, the value provided for the display name parameter differs from the display name retrieved when finding the contact.</li>
-<li><strong>urls</strong>: When creating a contact, users can input and save more than one web address, but only one is available is available when searching the contact.</li>
-<li><strong>phoneNumbers</strong>: The <em>pref</em> option is not supported. The <em>type</em> is not supported in a <em>find</em> operation. Only one <code>phoneNumber</code> is allowed for each <em>type</em>.</li>
-<li><strong>emails</strong>: The <em>pref</em> option is not supported. Home and personal references same email entry. Only one entry is allowed for each <em>type</em>.</li>
-<li><strong>addresses</strong>: Supports only work, and home/personal <em>type</em>. The home and personal <em>type</em> reference the same address entry. Only one entry is allowed for each <em>type</em>.</li>
-<li><strong>organizations</strong>: Only one is allowed, and does not support the <em>pref</em>, <em>type</em>, and <em>department</em> attributes.</li>
-<li><strong>note</strong>: Not supported, returning <code>null</code>.</li>
-<li><strong>ims</strong>: Not supported, returning <code>null</code>.</li>
-<li><strong>birthdays</strong>: Not supported, returning <code>null</code>.</li>
-<li><strong>categories</strong>: Not supported, returning <code>null</code>.</li>
+  <li><strong>displayName</strong>: When creating a contact, the value provided for the display name parameter differs from the display name retrieved when finding the contact.</li>
+  <li><strong>urls</strong>: When creating a contact, users can input and save more than one web address, but only one is available is available when searching the contact.</li>
+  <li><strong>phoneNumbers</strong>: The <em>pref</em> option is not supported. The <em>type</em> is not supported in a <em>find</em> operation. Only one <code>phoneNumber</code> is allowed for each <em>type</em>.</li>
+  <li><strong>emails</strong>: The <em>pref</em> option is not supported. Home and personal references same email entry. Only one entry is allowed for each <em>type</em>.</li>
+  <li><strong>addresses</strong>: Supports only work, and home/personal <em>type</em>. The home and personal <em>type</em> reference the same address entry. Only one entry is allowed for each <em>type</em>.</li>
+  <li><strong>organizations</strong>: Only one is allowed, and does not support the <em>pref</em>, <em>type</em>, and <em>department</em> attributes.</li>
+  <li><strong>note</strong>: Not supported, returning <code>null</code>.</li>
+  <li><strong>ims</strong>: Not supported, returning <code>null</code>.</li>
+  <li><strong>birthdays</strong>: Not supported, returning <code>null</code>.</li>
+  <li><strong>categories</strong>: Not supported, returning <code>null</code>.</li>
 </ul>
+
 
 
             </div>

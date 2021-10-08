@@ -1452,31 +1452,32 @@
 <p>To be able to correctly package and sign Windows apps there are few things required:</p>
 
 <ul>
-<li>A signing certificate</li>
-<li>Identity details matching the provided signing certificate</li>
+  <li>A signing certificate</li>
+  <li>Identity details matching the provided signing certificate</li>
 </ul>
 
 <p>In Windows project, identity details are kept in a file named package.appxmanifest. This file is automatically populated every time a Cordova app is built. Identity holds 3 important fields.</p>
 
 <ul>
-<li>Name</li>
-<li>Publisher</li>
-<li>Version</li>
+  <li>Name</li>
+  <li>Publisher</li>
+  <li>Version</li>
 </ul>
 
 <p><em>Name</em> and <em>Version</em> can be set from <strong>config.xml</strong>. <em>Publisher</em> can be provided by a signing certificate <code>.pfx</code> as a build parameter or can be set on <strong>build.json</strong> file.</p>
 
-<p><img src="/static/img/guide/platforms/win8/packaging.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/win8/packaging.png" alt="" /></p>
 
 <p>A signing certificate can be provided from either CLI or through build.json file. The certificate related CLI flags are:</p>
 
 <ul>
-<li><code>--packageCertificateKeyFile</code> : Once a package signing certificate is created, this parameter can be used to associate the certificate with the app. This flag takes a file path as an argument. Eg. <code>&gt; cordova build -- --packageCertificateKeyFile=&quot;platforms\windows\CordovaApp_TemporaryKey.pfx&quot;</code></li>
-<li><code>--packageThumbprint</code> : Package thumbprint is used to validate the authenticity of package certificate key file. When creating a certificate key file, this value will be provided to the end user. Eg. <code>&gt; cordova build -- --packageCertificateKeyFile=&quot;platforms\windows\CordovaApp_TemporaryKey.pfx&quot; --packageThumbprint=&quot;ABCABCABCABC123123123123&quot;</code></li>
+  <li><code>--packageCertificateKeyFile</code> : Once a package signing certificate is created, this parameter can be used to associate the certificate with the app. This flag takes a file path as an argument. Eg. <code>&gt; cordova build -- --packageCertificateKeyFile="platforms\windows\CordovaApp_TemporaryKey.pfx"</code></li>
+  <li><code>--packageThumbprint</code> : Package thumbprint is used to validate the authenticity of package certificate key file. When creating a certificate key file, this value will be provided to the end user. Eg. <code>&gt; cordova build -- --packageCertificateKeyFile="platforms\windows\CordovaApp_TemporaryKey.pfx" --packageThumbprint="ABCABCABCABC123123123123"</code></li>
 </ul>
 
 <p>Alternatively, these values could be specified using a build configuration file (build.json) using CLI (--buildConfig). A sample build configuration file:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">{
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
     "windows": {
         "debug": {
             "packageCertificateKeyFile": "platforms\\windows\\CordovaApp_TemporaryKey.pfx"
@@ -1487,39 +1488,39 @@
         }
     }
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>There is also support to mix and match command line arguments and parameters in build.json file. Values from the command line arguments will get precedence.</p>
 
 <h1>How to create a certificate key and sign Cordova windows Apps</h1>
-
 <p>Signing is required for distributing and installing Windows Store apps. This process is normally handled by Visual Studio when you deploy a package for release. To do this without Visual Studio we need to create our own certificates.</p>
 
 <p>For creating certificates we need to use <a href="https://msdn.microsoft.com/en-us/library/ff548309(v=vs.85).aspx">makecert.exe</a> util. This tool ships with Windows SDK and can be found under <code>%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64</code> or <code>%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86</code>.</p>
 
 <p>The first thing we need to do is to create a root key for signing our app.</p>
 
-<p><code>makecert.exe -n &quot;CN=FakeCorp.com&quot; -r -eku &quot;1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13&quot; -e &quot;01/01/2020&quot; -h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer</code></p>
+<p><code>makecert.exe -n "CN=FakeCorp.com" -r -eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" -e "01/01/2020" -h 0 -sv FakeCorp.com.pvk FakeCorp.com.cer</code></p>
 
 <p>To understand what makecert does, here&#39;s a brief explanation of what parameters do:</p>
 
 <ul>
-<li>-n &quot;CN=FakeCorp.com&quot; : This is the certificate subject <a href="http://en.wikipedia.org/wiki/X.509">X.509</a> name. In this example it&#39;s <strong>C</strong>ommon<strong>N</strong>ame=FakeCorp.com.</li>
-<li>-r : Creates a <a href="http://en.wikipedia.org/wiki/Self-signed_certificate">self signed certificate</a>.</li>
-<li>-eku #EKU_VAL# : Comma separated enhanced key usage OIDs.
-
-<ul>
-<li>1.3.6.1.5.5.7.3.3 indicates that the certificate is valid for code signing. Always specify this value to limit the intended use for the certificate.</li>
-<li>1.3.6.1.4.1.311.10.3.13 indicates that the certificate respects lifetime signing. Typically, if a signature is time stamped, as long as the certificate was valid at the point when it was time stamped, the signature remains valid even if the certificate expires. This EKU forces the signature to expire regardless of whether the signature is time stamped.</li>
-</ul></li>
-<li>-e &quot;01/01/2020&quot; : Sets the expiration date of the certificate.</li>
-<li>-h 0 : Sets max height of the tree below this cert to 0 to prevent the certificate from being used as a Certification Authority (CA) that can issue other certificates.</li>
-<li>-sv FakeCorp.com.pvk : Output PVK file. Windows uses PVK files to store private keys for code signing.</li>
-<li>FakeCorp.com.cer : Output certificate file. CER file is used to store X.509 certificate.</li>
+  <li>-n &quot;CN=FakeCorp.com&quot; : This is the certificate subject <a href="http://en.wikipedia.org/wiki/X.509">X.509</a> name. In this example it&#39;s <strong>C</strong>ommon<strong>N</strong>ame=FakeCorp.com.</li>
+  <li>-r : Creates a <a href="http://en.wikipedia.org/wiki/Self-signed_certificate">self signed certificate</a>.</li>
+  <li>-eku #EKU_VAL# : Comma separated enhanced key usage OIDs.
+    <ul>
+      <li>1.3.6.1.5.5.7.3.3 indicates that the certificate is valid for code signing. Always specify this value to limit the intended use for the certificate.</li>
+      <li>1.3.6.1.4.1.311.10.3.13 indicates that the certificate respects lifetime signing. Typically, if a signature is time stamped, as long as the certificate was valid at the point when it was time stamped, the signature remains valid even if the certificate expires. This EKU forces the signature to expire regardless of whether the signature is time stamped.</li>
+    </ul>
+  </li>
+  <li>-e &quot;01/01/2020&quot; : Sets the expiration date of the certificate.</li>
+  <li>-h 0 : Sets max height of the tree below this cert to 0 to prevent the certificate from being used as a Certification Authority (CA) that can issue other certificates.</li>
+  <li>-sv FakeCorp.com.pvk : Output PVK file. Windows uses PVK files to store private keys for code signing.</li>
+  <li>FakeCorp.com.cer : Output certificate file. CER file is used to store X.509 certificate.</li>
 </ul>
 
 <p>After running makecert for the first time, enter the private password on the screen that pops up:</p>
 
-<p><img src="/static/img/guide/platforms/win8/createprivatekeywindow.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/win8/createprivatekeywindow.png" alt="" /></p>
 
 <p>Once pvk and cer file is created, we need to create a pfx file from these certificates. A pfx (Personal Exchange Format) file contains a variety of cryptographic information, such as certificates, root authority certificates, certificate chains and private keys. To package the certs, we will use the a tool called <a href="https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx">pvk2pfx</a>. This tool ships with Windows SDK and can be found under <code>%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64</code> or <code>%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86</code>.</p>
 
@@ -1528,11 +1529,11 @@
 <p>Where:</p>
 
 <ul>
-<li>pvk : Input pvk file name</li>
-<li>pi : pvk password</li>
-<li>spc :  Input cert file name</li>
-<li>pfx : Output pfx file name</li>
-<li>po : pfx password; same as pvk password if not provided</li>
+  <li>pvk : Input pvk file name</li>
+  <li>pi : pvk password</li>
+  <li>spc :  Input cert file name</li>
+  <li>pfx : Output pfx file name</li>
+  <li>po : pfx password; same as pvk password if not provided</li>
 </ul>
 
 <p>If we provide this pfx file to build.json file, we will have the following error: &quot;The key file may be password protected. To correct this, try to import the certificate manually into the current user&#39;s personal certificate  store.&quot;. In order to import it we have to use <a href="https://technet.microsoft.com/en-us/library/ee624045(v=ws.10).aspx">certutil</a> from an admin prompt:</p>
@@ -1542,16 +1543,17 @@
 <p>Where:</p>
 
 <ul>
-<li>user : Specifies &quot;current user&quot; personal store</li>
-<li>p : Password for pfx file</li>
-<li>importPfx : Name of pfx file</li>
+  <li>user : Specifies &quot;current user&quot; personal store</li>
+  <li>p : Password for pfx file</li>
+  <li>importPfx : Name of pfx file</li>
 </ul>
 
 <p>Once installed, next step is to add packageThumbprint and packageCertificateKeyFile to build.json. In order to find the packageThumbprint, search for the CommonName we&#39;ve associated with the certificate:</p>
 
-<p><code>powershell -Command &quot; &amp; {dir -path cert:\LocalMachine\My | where { $_.Subject -like \&quot;*FakeCorp.com*\&quot; }}&quot;</code></p>
+<p><code>powershell -Command " &amp; {dir -path cert:\LocalMachine\My | where { $_.Subject -like \"*FakeCorp.com*\" }}"</code></p>
 
 <p>Once these final values are provided. Cordova should successfully package and sign the app.</p>
+
 
 
             </div>

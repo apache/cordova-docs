@@ -1641,20 +1641,34 @@
 
 <p>Returns a pattern string to format and parse currency values according
 to the client&#39;s user preferences and ISO 4217 currency code.</p>
-<div class="highlight"><pre><code class="language-" data-lang=""> navigator.globalization.getCurrencyPattern(currencyCode, successCallback, errorCallback);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> navigator.globalization.getCurrencyPattern(currencyCode, successCallback, errorCallback);
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p>Returns the pattern to the <code>successCallback</code> with a <code>properties</code> object
 as a parameter. That object should contain the following properties:</p>
 
 <ul>
-<li><p><strong>pattern</strong>: The currency pattern to format and parse currency values.  The patterns follow <a href="http://unicode.org/reports/tr35/tr35-4.html">Unicode Technical Standard #35</a>. <em>(String)</em></p></li>
-<li><p><strong>code</strong>: The ISO 4217 currency code for the pattern. <em>(String)</em></p></li>
-<li><p><strong>fraction</strong>: The number of fractional digits to use when parsing and formatting currency. <em>(Number)</em></p></li>
-<li><p><strong>rounding</strong>: The rounding increment to use when parsing and formatting. <em>(Number)</em></p></li>
-<li><p><strong>decimal</strong>: The decimal symbol to use for parsing and formatting. <em>(String)</em></p></li>
-<li><p><strong>grouping</strong>: The grouping symbol to use for parsing and formatting. <em>(String)</em></p></li>
+  <li>
+    <p><strong>pattern</strong>: The currency pattern to format and parse currency values.  The patterns follow <a href="http://unicode.org/reports/tr35/tr35-4.html">Unicode Technical Standard #35</a>. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>code</strong>: The ISO 4217 currency code for the pattern. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>fraction</strong>: The number of fractional digits to use when parsing and formatting currency. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>rounding</strong>: The rounding increment to use when parsing and formatting. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>decimal</strong>: The decimal symbol to use for parsing and formatting. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>grouping</strong>: The grouping symbol to use for parsing and formatting. <em>(String)</em></p>
+  </li>
 </ul>
 
 <p>The inbound <code>currencyCode</code> parameter should be a <code>String</code> of one of
@@ -1667,9 +1681,9 @@ error&#39;s expected code is <code>[GlobalizationError](GlobalizationError/globa
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Amazon Fire OS</li>
-<li>Android</li>
-<li>iOS</li>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>iOS</li>
 </ul>
 
 <h2>Quick Example</h2>
@@ -1677,7 +1691,8 @@ error&#39;s expected code is <code>[GlobalizationError](GlobalizationError/globa
 <p>When the browser is set to the <code>en\_US</code> locale and the selected
 currency is United States Dollars, this example displays a popup
 dialog with text similar to the results that follow:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.globalization.getCurrencyPattern(
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getCurrencyPattern(
     'USD',
     function (pattern) {
         alert('pattern: '  + pattern.pattern  + '\n' +
@@ -1689,43 +1704,48 @@ dialog with text similar to the results that follow:</p>
     },
     function () { alert('Error getting pattern\n'); }
 );
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Expected result:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">pattern: $#,##0.##;($#,##0.##)
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pattern: $#,##0.##;($#,##0.##)
 code: USD
 fraction: 2
 rounding: 0
 decimal: .
 grouping: ,
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>getCurrencyPattern Example<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
 
-    <span class="kd">function</span> <span class="nx">checkPattern</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getCurrencyPattern</span><span class="p">(</span>
-        <span class="s1">'USD'</span><span class="p">,</span>
-        <span class="kd">function</span> <span class="p">(</span><span class="nx">pattern</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'pattern: '</span>  <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">pattern</span>  <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-                                  <span class="s1">'code: '</span>     <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">code</span>     <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-                                  <span class="s1">'fraction: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">fraction</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-                                  <span class="s1">'rounding: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">rounding</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-                                  <span class="s1">'decimal: '</span>  <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">decimal</span>  <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-                                  <span class="s1">'grouping: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">grouping</span><span class="p">);},</span>
-        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting pattern\n'</span><span class="p">);}</span>
-      <span class="p">);</span>
-    <span class="p">}</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;getCurrencyPattern Example&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"checkPattern()"</span><span class="nt">&gt;</span>Click for pattern<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    function checkPattern() {
+      navigator.globalization.getCurrencyPattern(
+        'USD',
+        function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
+                                  'code: '     + pattern.code     + '\n' +
+                                  'fraction: ' + pattern.fraction + '\n' +
+                                  'rounding: ' + pattern.rounding + '\n' +
+                                  'decimal: '  + pattern.decimal  + '\n' +
+                                  'grouping: ' + pattern.grouping);},
+        function () {alert('Error getting pattern\n');}
+      );
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkPattern()"&gt;Click for pattern&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 
             </div>
         </div>

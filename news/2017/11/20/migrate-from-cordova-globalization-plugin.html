@@ -138,48 +138,61 @@
 <h3>Migrating from the plugin to the Internationalization API</h3>
 
 <p>The cordova globalization plugin defines a global navigator.globalization object which provides various methods to access a user’s locale, language and timezone. To get the preferred language from the browser, the navigator.globalization.getPreferredLanguage method was used as shown below:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getPreferredLanguage</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">language</span><span class="p">)</span> <span class="p">{</span>          
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'language: '</span> <span class="o">+</span> <span class="nx">language</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getPreferredLanguage</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">language</span><span class="p">)</span> <span class="p">{</span>          
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">language: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">language</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">},</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> 
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Error getting language\n'</span><span class="p">);</span> 
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Error getting language</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span> 
 <span class="p">});</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The current locale could be found out using:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getLocaleName</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">locale</span><span class="p">)</span> <span class="p">{</span>          
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'locale: '</span> <span class="o">+</span> <span class="nx">locale</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getLocaleName</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">locale</span><span class="p">)</span> <span class="p">{</span>          
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">locale: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">locale</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">},</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Error getting locale\n'</span><span class="p">);</span> 
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Error getting locale</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span> 
 <span class="p">});</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The <a href="https://www.ecma-international.org/ecma-402/1.0/">ECMA Internationalization API</a> provides the <code>Intl</code> object which provides language sensitive string comparison, number formatting, and date and time formatting. 
 First we should check if the API is supported by the browser:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">Intl</span> <span class="o">&amp;&amp;</span> <span class="k">typeof</span> <span class="nb">window</span><span class="p">.</span><span class="nx">Intl</span> <span class="o">===</span> <span class="s1">'object'</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'API available'</span><span class="p">);</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">Intl</span> <span class="o">&amp;&amp;</span> <span class="k">typeof</span> <span class="nb">window</span><span class="p">.</span><span class="nx">Intl</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">object</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">API available</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The preferred language tag can be found out from the browser by using the <code>navigator</code> object:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">language</span><span class="p">);</span>
-</code></pre></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">language</span><span class="p">);</span>
+</code></pre></div></div>
+
 <p>The locale name can be found out using the <code>Intl.getCanonicalLocales(locales)</code> method. <code>locales</code> is a string value or an array of string values that has the language tag(s). The locale name can then be obtained as shown below:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Intl</span><span class="p">.</span><span class="nx">getCanonicalLocales</span><span class="p">(</span><span class="s1">'EN-US'</span><span class="p">);</span> <span class="c1">// ["en-US"]</span>
-<span class="nx">Intl</span><span class="p">.</span><span class="nx">getCanonicalLocales</span><span class="p">([</span><span class="s1">'EN-US'</span><span class="p">,</span> <span class="s1">'Fr'</span><span class="p">]);</span> <span class="c1">// ["en-US", "fr"]</span>
-</code></pre></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Intl</span><span class="p">.</span><span class="nx">getCanonicalLocales</span><span class="p">(</span><span class="dl">'</span><span class="s1">EN-US</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// ["en-US"]</span>
+<span class="nx">Intl</span><span class="p">.</span><span class="nx">getCanonicalLocales</span><span class="p">([</span><span class="dl">'</span><span class="s1">EN-US</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Fr</span><span class="dl">'</span><span class="p">]);</span> <span class="c1">// ["en-US", "fr"]</span>
+</code></pre></div></div>
+
 <p>Another instance of migrating from the cordova globalization plugin can be seen in this example: the navigator.globalization.dateToString method. This method is used in the cordova plugin as shown below:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">dateToString</span><span class="p">(</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">dateToString</span><span class="p">(</span>
     <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span>
     <span class="kd">function</span> <span class="p">(</span><span class="nx">date</span><span class="p">)</span> <span class="p">{</span> 
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'date: '</span> <span class="o">+</span> <span class="nx">date</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span> 
+        <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">date: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">date</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span> 
     <span class="p">},</span>
     <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> 
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting dateString\n'</span><span class="p">);</span> 
+        <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Error getting dateString</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span> 
     <span class="p">},</span>
-    <span class="p">{</span> <span class="na">formatLength</span><span class="p">:</span> <span class="s1">'short'</span><span class="p">,</span> <span class="na">selector</span><span class="p">:</span> <span class="s1">'date'</span> <span class="p">}</span>
+    <span class="p">{</span> <span class="na">formatLength</span><span class="p">:</span> <span class="dl">'</span><span class="s1">short</span><span class="dl">'</span><span class="p">,</span> <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">date</span><span class="dl">'</span> <span class="p">}</span>
 <span class="p">);</span>
-</code></pre></div>
+</code></pre></div></div>
 <p>Similar results can be obtained using the Internationalization API by using the following code:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">new</span> <span class="nx">Intl</span><span class="p">.</span><span class="nx">DateTimeFormat</span><span class="p">().</span><span class="nx">format</span><span class="p">(</span><span class="nx">date</span><span class="p">));</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl">Here</a> is a good resource to find out more about various methods in the <a href="https://www.ecma-international.org/ecma-402/1.0/">ECMA Internationalization API</a>.</p>
 
 <p>Your feedback is graciously accepted and appreciated!</p>

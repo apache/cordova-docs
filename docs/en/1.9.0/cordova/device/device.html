@@ -1426,69 +1426,87 @@
                 <h1>Device</h1>
 
 <blockquote>
-<p>The <code>device</code> object describes the device&#39;s hardware and software.</p>
+  <p>The <code>device</code> object describes the device&#39;s hardware and software.</p>
 </blockquote>
 
 <h2>Properties</h2>
 
 <ul>
-<li><a href="device.name.html">device.name</a></li>
-<li><a href="device.cordova.html">device.cordova</a></li>
-<li><a href="device.platform.html">device.platform</a></li>
-<li><a href="device.uuid.html">device.uuid</a></li>
-<li><a href="device.version.html">device.version</a></li>
+  <li><a href="device.name.html">device.name</a></li>
+  <li><a href="device.cordova.html">device.cordova</a></li>
+  <li><a href="device.platform.html">device.platform</a></li>
+  <li><a href="device.uuid.html">device.uuid</a></li>
+  <li><a href="device.version.html">device.version</a></li>
 </ul>
 
 <h2>Variable Scope</h2>
 
 <p>Since <code>device</code> is assigned to the <code>window</code> object, it is implicitly in the global scope.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">// These reference the same `device`
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// These reference the same `device`
 var phoneName = window.device.name;
 var phoneName = device.name;
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Permissions</h2>
 
 <h3>Android</h3>
 
 <h4>app/res/xml/plugins.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Device" value="org.apache.cordova.Device" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Device" value="org.apache.cordova.Device" /&gt;
+</code></pre></div></div>
+
 <h4>app/AndroidManifest.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;uses-permission android:name="android.permission.READ_PHONE_STATE" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;uses-permission android:name="android.permission.READ_PHONE_STATE" /&gt;
+</code></pre></div></div>
+
 <h3>Bada</h3>
 
 <h4>manifest.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;Privilege&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Privilege&gt;
     &lt;Name&gt;SYSTEM_SERVICE&lt;/Name&gt;
 &lt;/Privilege&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>BlackBerry WebWorks</h3>
 
 <h4>www/plugins.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Device" value="org.apache.cordova.device.Device" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Device" value="org.apache.cordova.device.Device" /&gt;
+</code></pre></div></div>
+
 <h4>www/config.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature id="blackberry.app" required="true" version="1.0.0.0" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;feature id="blackberry.app" required="true" version="1.0.0.0" /&gt;
 &lt;rim:permissions&gt;
     &lt;rim:permit&gt;read_device_identifying_information&lt;/rim:permit&gt;
 &lt;/rim:permissions&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>iOS</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">No permissions are required.
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
 <h3>webOS</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">No permissions are required.
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
 <h3>Windows Phone</h3>
 
 <h4>Properties/WPAppManifest.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;Capabilities&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Capabilities&gt;
     &lt;Capability Name="ID_CAP_WEBBROWSERCOMPONENT" /&gt;
     &lt;Capability Name="ID_CAP_IDENTITY_DEVICE" /&gt;
     &lt;Capability Name="ID_CAP_IDENTITY_USER" /&gt;
 &lt;/Capabilities&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
 
 

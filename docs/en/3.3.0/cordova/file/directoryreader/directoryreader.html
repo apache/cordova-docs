@@ -1647,18 +1647,18 @@ specification.</p>
 <h2>Methods</h2>
 
 <ul>
-<li><strong>readEntries</strong>: Read the entries in a directory.</li>
+  <li><strong>readEntries</strong>: Read the entries in a directory.</li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Amazon Fire OS</li>
-<li>Android</li>
-<li>BlackBerry 10</li>
-<li>iOS</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows 8</li>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2>readEntries</h2>
@@ -1668,12 +1668,17 @@ specification.</p>
 <p><strong>Parameters</strong>:</p>
 
 <ul>
-<li><p><strong>successCallback</strong>: A callback that is passed an array of <code>[FileEntry](../fileentry/fileentry.html)</code> and <code>[DirectoryEntry](../directoryentry/directoryentry.html)</code> objects. <em>(Function)</em></p></li>
-<li><p><strong>errorCallback</strong>: A callback that executes if an error occurs when retrieving the directory listing. Invoked with a <code>[FileError](../fileerror/fileerror.html)</code> object. <em>(Function)</em></p></li>
+  <li>
+    <p><strong>successCallback</strong>: A callback that is passed an array of <code>[FileEntry](../fileentry/fileentry.html)</code> and <code>[DirectoryEntry](../directoryentry/directoryentry.html)</code> objects. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>errorCallback</strong>: A callback that executes if an error occurs when retrieving the directory listing. Invoked with a <code>[FileError](../fileerror/fileerror.html)</code> object. <em>(Function)</em></p>
+  </li>
 </ul>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">function success(entries) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success(entries) {
     var i;
     for (i=0; i&lt;entries.length; i++) {
         console.log(entries[i].name);
@@ -1689,7 +1694,8 @@ var directoryReader = dirEntry.createReader();
 
 // Get a list of all the entries in the directory
 directoryReader.readEntries(success,fail);
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

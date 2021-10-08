@@ -1642,83 +1642,99 @@
                 <h1>Device</h1>
 
 <blockquote>
-<p>The <code>device</code> object describes the device&#39;s hardware and software.</p>
+  <p>The <code>device</code> object describes the device&#39;s hardware and software.</p>
 </blockquote>
 
 <h2>Properties</h2>
 
 <ul>
-<li><a href="device.model.html">device.model</a></li>
-<li><a href="device.cordova.html">device.cordova</a></li>
-<li><a href="device.platform.html">device.platform</a></li>
-<li><a href="device.uuid.html">device.uuid</a></li>
-<li><a href="device.version.html">device.version</a></li>
-<li><a href="device.name.html">device.name</a></li>
+  <li><a href="device.model.html">device.model</a></li>
+  <li><a href="device.cordova.html">device.cordova</a></li>
+  <li><a href="device.platform.html">device.platform</a></li>
+  <li><a href="device.uuid.html">device.uuid</a></li>
+  <li><a href="device.version.html">device.version</a></li>
+  <li><a href="device.name.html">device.name</a></li>
 </ul>
 
 <h2>Variable Scope</h2>
 
 <p>Since <code>device</code> is assigned to the <code>window</code> object, it is implicitly in the global scope.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">// These reference the same `device`
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// These reference the same `device`
 var phoneModel = window.device.model;
 var phoneModel = device.model;
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Accessing the Feature</h2>
 
 <p>As of version 3.0, Cordova implements device-level APIs as <em>plugins</em>.
 Use the CLI&#39;s <code>plugin</code> command, described in The Command-Line
 Interface, to add or remove this feature for a project:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add org.apache.cordova.device
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova plugin add org.apache.cordova.device
     $ cordova plugin ls
     [ 'org.apache.cordova.device' ]
     $ cordova plugin rm org.apache.cordova.device
-</code></pre></div>
+</code></pre></div></div>
+
 <p>These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:</p>
 
 <ul>
-<li><p>Amazon Fire OS</p>
-<div class="highlight"><pre><code class="language-" data-lang="">(in app/res/xml/config.xml)
-&lt;feature name="Device"&gt;
-    &lt;param name="android-package" value="org.apache.cordova.device.Device" /&gt;
-&lt;/feature&gt;
-</code></pre></div></li>
-<li><p>Android</p>
-<div class="highlight"><pre><code class="language-" data-lang="">(in app/res/xml/config.xml)
-&lt;feature name="Device"&gt;
-    &lt;param name="android-package" value="org.apache.cordova.device.Device" /&gt;
-&lt;/feature&gt;
-</code></pre></div></li>
-<li><p>BlackBerry WebWorks</p>
-<div class="highlight"><pre><code class="language-" data-lang="">(in www/plugins.xml)
-&lt;feature name="Device"&gt;
-    &lt;param name="blackberry-package" value="org.apache.cordova.device.Device" /&gt;
-&lt;/feature&gt;
+  <li>
+    <p>Amazon Fire OS</p>
 
-(in www/config.xml)
-&lt;feature id="blackberry.app" required="true" version="1.0.0.0" /&gt;
-&lt;rim:permissions&gt;
-    &lt;rim:permit&gt;read_device_identifying_information&lt;/rim:permit&gt;
-&lt;/rim:permissions&gt;
-</code></pre></div></li>
-<li><p>Windows Phone (in <code>Properties/WPAppManifest.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;Capabilities&gt;
-    &lt;Capability Name="ID_CAP_WEBBROWSERCOMPONENT" /&gt;
-    &lt;Capability Name="ID_CAP_IDENTITY_DEVICE" /&gt;
-    &lt;Capability Name="ID_CAP_IDENTITY_USER" /&gt;
-&lt;/Capabilities&gt;
-</code></pre></div></li>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in app/res/xml/config.xml)
+  &lt;feature name="Device"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.device.Device" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Android</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in app/res/xml/config.xml)
+  &lt;feature name="Device"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.device.Device" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>BlackBerry WebWorks</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in www/plugins.xml)
+  &lt;feature name="Device"&gt;
+      &lt;param name="blackberry-package" value="org.apache.cordova.device.Device" /&gt;
+  &lt;/feature&gt;
+
+  (in www/config.xml)
+  &lt;feature id="blackberry.app" required="true" version="1.0.0.0" /&gt;
+  &lt;rim:permissions&gt;
+      &lt;rim:permit&gt;read_device_identifying_information&lt;/rim:permit&gt;
+  &lt;/rim:permissions&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Windows Phone (in <code>Properties/WPAppManifest.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;Capabilities&gt;
+      &lt;Capability Name="ID_CAP_WEBBROWSERCOMPONENT" /&gt;
+      &lt;Capability Name="ID_CAP_IDENTITY_DEVICE" /&gt;
+      &lt;Capability Name="ID_CAP_IDENTITY_USER" /&gt;
+  &lt;/Capabilities&gt;
+</code></pre></div>    </div>
+
+    <p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
+  </li>
+  <li>
+    <p>Tizen (in <code>config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="http://tizen.org/api/systeminfo" required="true"/&gt;
+</code></pre></div>    </div>
+
+    <p>Reference: <a href="https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures">Application Manifest for Tizen Web Application</a></p>
+  </li>
 </ul>
-
-<p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
-
-<ul>
-<li><p>Tizen (in <code>config.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature name="http://tizen.org/api/systeminfo" required="true"/&gt;
-</code></pre></div></li>
-</ul>
-
-<p>Reference: <a href="https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures">Application Manifest for Tizen Web Application</a></p>
 
 <p>Some platforms may support this feature without requiring any special
 configuration.  See <a href="../../guide/support/index.html">Platform Support</a> for an overview.</p>

@@ -1446,15 +1446,15 @@ build and deploy for each platform.</p>
 <p>BlackBerry 10 Device Simulator:</p>
 
 <ul>
-<li>Processor: Intel dual core 2.0 GHz/AMD Athlon 4200+ or higher</li>
-<li>Disk space: 10 GB </li>
-<li>RAM Memory: 4 GB </li>
-<li>Virtualization: one of the following:
-
-<ul>
-<li><strong>Intel Virtualization Technology</strong> (VT, VT-x, vmx) &rarr; <a href="http://ark.intel.com/products/virtualizationtechnology">Intel VT-x supported processor list</a></li>
-<li><strong>AMD Virtualization</strong> (AMD-V, SVM) (Since May 2006 all AMD CPUs include AMD-V except Sempron).</li>
-</ul></li>
+  <li>Processor: Intel dual core 2.0 GHz/AMD Athlon 4200+ or higher</li>
+  <li>Disk space: 10 GB</li>
+  <li>RAM Memory: 4 GB</li>
+  <li>Virtualization: one of the following:
+    <ul>
+      <li><strong>Intel Virtualization Technology</strong> (VT, VT-x, vmx) &#8594; <a href="http://ark.intel.com/products/virtualizationtechnology">Intel VT-x supported processor list</a></li>
+      <li><strong>AMD Virtualization</strong> (AMD-V, SVM) (Since May 2006 all AMD CPUs include AMD-V except Sempron).</li>
+    </ul>
+  </li>
 </ul>
 
 <p>More information about requirements: <a href="http://developer.blackberry.com/devzone/develop/simulator/simulator_systemrequirements.html">BB10 Simulator requeriments</a>.</p>
@@ -1479,48 +1479,73 @@ system path.</p>
 <p>On Windows:</p>
 
 <ul>
-<li><p>Go to <strong>My Computer &rarr; Properties &rarr; Advanced &rarr; Environment Variables</strong>.</p></li>
-<li><p>Append the Native SDK&#39;s install directory to the PATH, for example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">;C:\bbndk\host_10_1_0_132\win32\x86\usr\bin\
-</code></pre></div></li>
+  <li>
+    <p>Go to <strong>My Computer &#8594; Properties &#8594; Advanced &#8594; Environment Variables</strong>.</p>
+  </li>
+  <li>
+    <p>Append the Native SDK&#39;s install directory to the PATH, for example:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ;C:\bbndk\host_10_1_0_132\win32\x86\usr\bin\
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>On Mac and Linux:</p>
 
 <ul>
-<li><p>Edit the <code>~/.bash_profile</code> file, adding a line such as the
+  <li>
+    <p>Edit the <code>~/.bash_profile</code> file, adding a line such as the
 following, depending on where the Native SDK was installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ export PATH=${PATH}:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
-</code></pre></div></li>
-</ul>
 
-<p>or for the 10.2 Native SDK:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
-</code></pre></div>
-<ul>
-<li><p>Run the following to apply the change in the current session:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ source ~/.bash_profile
-</code></pre></div></li>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ export PATH=${PATH}:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
+</code></pre></div>    </div>
+
+    <p>or for the 10.2 Native SDK:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Run the following to apply the change in the current session:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ source ~/.bash_profile
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>If you got any environmental problem, using the Native SDK from the command line, execute the appropriate file for your platform, located within the installation path:</p>
 
 <ul>
-<li><p>On Windows &rarr; MS-DOS shell:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">C:\&gt; \bbndk\bbndk-env_xx_xx_xx_xxxx.bat
-</code></pre></div></li>
-<li><p>On Windows &rarr; git bash shell:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
-</code></pre></div></li>
-<li><p>On Linux &rarr; Installed as root user:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-</code></pre></div></li>
-<li><p>On Linux &rarr; Installed as non-root user:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-</code></pre></div></li>
-<li><p>On Mac:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-</code></pre></div></li>
+  <li>
+    <p>On Windows &#8594; MS-DOS shell:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  C:\&gt; \bbndk\bbndk-env_xx_xx_xx_xxxx.bat
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>On Windows &#8594; git bash shell:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>On Linux &#8594; Installed as root user:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>On Linux &#8594; Installed as non-root user:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>On Mac:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <h2>Set up for Signing</h2>
@@ -1528,7 +1553,7 @@ following, depending on where the Native SDK was installed:</p>
 <p>If you wish to test on a device or distribute apps through BlackBerry
 World, your system must be setup for code signing.</p>
 
-<p>To obtain a signing key, go to the <a href="https://www.blackberry.com/SignedKeys/codesigning.html">BlackBerry Keys Order Form</a>.</p>
+<p>To obtain a signing key, go to the [BlackBerry Keys Order Form] (https://www.blackberry.com/SignedKeys/codesigning.html).</p>
 
 <p>Select the first checkbox: &quot;for BlackBerry10 apps developed using BlackBerry
 NDK&quot; and then sign in or create a BBID.</p>
@@ -1538,25 +1563,29 @@ file to the default location for your OS which will be displayed on the
 download page.</p>
 
 <p>The final step is to generate a signing certificate:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ blackberry-keytool -genkeypair -storepass &lt;password&gt; -author 'Your Name’
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ blackberry-keytool -genkeypair -storepass &lt;password&gt; -author 'Your Name’
+</code></pre></div></div>
+
 <h2>Create a Project</h2>
 
 <p>Use the <code>cordova</code> utility to set up a new project, as described in The
 Command-line Interface. For example, in a source-code directory:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova create hello com.example.hello
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova create hello com.example.hello
     $ cd hello
     $ cordova platform add blackberry10
     $ cordova build
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Deploy to Emulator</h2>
 
 <p>If you wish to run a device emulator, download and install the
 BlackBerry 10 Simulator.</p>
 
 <ul>
-<li><a href="http://developer.blackberry.com/native/download/">Download</a></li>
-<li><a href="http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html">Getting Started</a></li>
+  <li><a href="http://developer.blackberry.com/native/download/">Download</a></li>
+  <li><a href="http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html">Getting Started</a></li>
 </ul>
 
 <p>Before testing an app on either an emulator or a device, you need to
@@ -1564,12 +1593,12 @@ enable development mode.</p>
 
 <p>Launch the emulator image, then choose <strong>Settings</strong> from the home screen:</p>
 
-<p><img src="/static/img/guide/platforms/blackberry10/bb_home.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/blackberry10/bb_home.png" alt="" /></p>
 
-<p>Navigate to the <strong>Security and Privacy &rarr; Development Mode</strong>
+<p>Navigate to the <strong>Security and Privacy &#8594; Development Mode</strong>
 section and enable the option:</p>
 
-<p><img src="/static/img/guide/platforms/blackberry10/bb_devel.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/blackberry10/bb_devel.png" alt="" /></p>
 
 <p>An additional set of command-line utilities are included when you set
 up the BlackBerry 10 platform for your project.  The following
@@ -1577,59 +1606,85 @@ command, in this case invoked from the project top-level directory,
 associates a target named <em>emu</em> with the IP address displayed above.</p>
 
 <ul>
-<li><p>On Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ platforms\blackberry10\cordova\target.bat add emu 169.254.0.1 -t simulator
-</code></pre></div></li>
-<li><p>On Mac/Linux:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ platforms/blackberry10/cordova/target add emu 169.254.0.1 -t simulator
-</code></pre></div></li>
+  <li>
+    <p>On Windows:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ platforms\blackberry10\cordova\target.bat add emu 169.254.0.1 -t simulator
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>On Mac/Linux:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ platforms/blackberry10/cordova/target add emu 169.254.0.1 -t simulator
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>Then, run the <code>emulate</code> command to view the app:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova emulate blackberry10
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova emulate blackberry10
+</code></pre></div></div>
+
 <h2>Deploy to Device</h2>
 
 <p>To deploy to a device, make sure it is plugged into your computer.
 Enable development mode and obtain the IP address as desribed in the
 emulator section above. You will also need to obtain the PIN from the
-the <strong>Settings</strong> application under <strong>About &rarr; Hardware</strong>:</p>
+the <strong>Settings</strong> application under <strong>About &#8594; Hardware</strong>:</p>
 
-<p><img src="/static/img/guide/platforms/blackberry10/bb_pin.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/blackberry10/bb_pin.png" alt="" /></p>
 
 <p>Run the target command-line utility to associate a name with an IP
 address, device password and PIN.</p>
 
 <ul>
-<li><p>On Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
-</code></pre></div></li>
-<li><p>On Mac/Linux:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
-</code></pre></div></li>
+  <li>
+    <p>On Windows:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>On Mac/Linux:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>where:</p>
 
 <ul>
-<li><p><code>--password</code> refers to the password to unlock the device.</p></li>
-<li><p><code>--pin</code> refers to the device PIN obtained from the <strong>Settings</strong> application.</p></li>
+  <li>
+    <p><code>--password</code> refers to the password to unlock the device.</p>
+  </li>
+  <li>
+    <p><code>--pin</code> refers to the device PIN obtained from the <strong>Settings</strong> application.</p>
+  </li>
 </ul>
 
 <p>Then, run the <code>run</code> command to view the app:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova run blackberry10
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova run blackberry10
+</code></pre></div></div>
+
 <p>If a debug token is not yet set up for the device, an error message
 prompts you to use the platform run script with the password you
 provided when registering for signing keys.</p>
 
 <ul>
-<li><p>On Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
-</code></pre></div></li>
-<li><p>On Mac/Linux:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ platforms/blackberry10/cordova/run --device --keystorepass mysecret
-</code></pre></div></li>
+  <li>
+    <p>On Windows:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>On Mac/Linux:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ platforms/blackberry10/cordova/run --device --keystorepass mysecret
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <h2>Debugging with WebInspector</h2>
@@ -1647,8 +1702,10 @@ browser.  For more information, see
 
 <p>Use <code>--release</code> to create a release version suitable for distribution
 through BlackBerry World.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cordova build --release --keystorepass &lt;signing password&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova build --release --keystorepass &lt;signing password&gt;
+</code></pre></div></div>
+
 <p>The <code>--keystorepass</code> option specifies the password you defined when
 configuring your computer to sign applications.</p>
 
@@ -1664,18 +1721,26 @@ command, in this case invoked from the project top-level directory,
 associates a target named <em>emu</em> with an IP address.</p>
 
 <ul>
-<li><p>On Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
-</code></pre></div></li>
-<li><p>On Mac/Linux:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ platforms/blackberry10/cordova/build --release --keystorepass mysecret
-</code></pre></div></li>
+  <li>
+    <p>On Windows:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>On Mac/Linux:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>Once the target is defined, you can provide it to the run command using
 <code>--target</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cordova run blackberry10 --target=emu
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova run blackberry10 --target=emu
+</code></pre></div></div>
+
 
             </div>
         </div>

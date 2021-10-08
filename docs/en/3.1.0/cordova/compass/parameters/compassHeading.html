@@ -1572,10 +1572,18 @@
 <h2>Properties</h2>
 
 <ul>
-<li><p><strong>magneticHeading</strong>: The heading in degrees from 0-359.99 at a single moment in time. <em>(Number)</em></p></li>
-<li><p><strong>trueHeading</strong>: The heading relative to the geographic North Pole in degrees 0-359.99 at a single moment in time. A negative value indicates that the true heading cannot be determined.  <em>(Number)</em></p></li>
-<li><p><strong>headingAccuracy</strong>: The deviation in degrees between the reported heading and the true heading. <em>(Number)</em></p></li>
-<li><p><strong>timestamp</strong>: The time at which this heading was determined.  <em>(milliseconds)</em></p></li>
+  <li>
+    <p><strong>magneticHeading</strong>: The heading in degrees from 0-359.99 at a single moment in time. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>trueHeading</strong>: The heading relative to the geographic North Pole in degrees 0-359.99 at a single moment in time. A negative value indicates that the true heading cannot be determined.  <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>headingAccuracy</strong>: The deviation in degrees between the reported heading and the true heading. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>timestamp</strong>: The time at which this heading was determined.  <em>(milliseconds)</em></p>
+  </li>
 </ul>
 
 <h2>Description</h2>
@@ -1585,15 +1593,23 @@
 <h2>Android Quirks</h2>
 
 <ul>
-<li><p><code>trueHeading</code> is not supported, but reports the same value as <code>magneticHeading</code></p></li>
-<li><p><code>headingAccuracy</code> is always 0 because there is no difference between the <code>magneticHeading</code> and <code>trueHeading</code>.</p></li>
+  <li>
+    <p><code>trueHeading</code> is not supported, but reports the same value as <code>magneticHeading</code></p>
+  </li>
+  <li>
+    <p><code>headingAccuracy</code> is always 0 because there is no difference between the <code>magneticHeading</code> and <code>trueHeading</code>.</p>
+  </li>
 </ul>
 
 <h2>iOS Quirks</h2>
 
 <ul>
-<li><p><code>trueHeading</code> is only returned when location services are enabled via <code>navigator.geolocation.watchLocation()</code></p></li>
-<li><p>For iOS 4 devices and above, heading factors in the device&#39;s current orientation, not in reference to its absolute position, for apps that supports that orientation.</p></li>
+  <li>
+    <p><code>trueHeading</code> is only returned when location services are enabled via <code>navigator.geolocation.watchLocation()</code></p>
+  </li>
+  <li>
+    <p>For iOS 4 devices and above, heading factors in the device&#39;s current orientation, not in reference to its absolute position, for apps that supports that orientation.</p>
+  </li>
 </ul>
 
 

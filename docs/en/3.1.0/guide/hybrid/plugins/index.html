@@ -1593,43 +1593,59 @@ front-facing and arguably most important part of your Cordova plugin.</p>
 <p>You can structure your plugin&#39;s JavaScript however you like. The one
 thing you <em>must</em> use to communicate between the Cordova JavaScript
 and native environments is the <code>cordova.exec</code> function. Here is an example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    cordova.exec(function(winParam) {}, function(error) {}, "service",
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cordova.exec(function(winParam) {}, function(error) {}, "service",
                  "action", ["firstArgument", "secondArgument", 42,
                  false]);
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The parameters are detailed below:</p>
 
 <ul>
-<li><p><code>function(winParam) {}</code>: Success function callback. Assuming your
+  <li>
+    <p><code>function(winParam) {}</code>: Success function callback. Assuming your
 <code>exec</code> call completes successfully, this function is invoked
-(optionally with any parameters you pass back to it).</p></li>
-<li><p><code>function(error) {}</code>: Error function callback. If the operation does
+(optionally with any parameters you pass back to it).</p>
+  </li>
+  <li>
+    <p><code>function(error) {}</code>: Error function callback. If the operation does
 not complete successfully, this function is invoked (optionally with
-an error parameter).</p></li>
-<li><p><code>&quot;service&quot;</code>: The service name to call into on the native side. This
+an error parameter).</p>
+  </li>
+  <li>
+    <p><code>"service"</code>: The service name to call into on the native side. This
 is mapped to a native class, about which more information is
-available in the native guides listed below.</p></li>
-<li><p><code>&quot;action&quot;</code>: The action name to call into. This is picked up by the
+available in the native guides listed below.</p>
+  </li>
+  <li>
+    <p><code>"action"</code>: The action name to call into. This is picked up by the
 native class receiving the <code>exec</code> call, and, depending on the
 platform, essentially maps to a class&#39;s method.  The native guides
-listed below provide details.</p></li>
-<li><p><code>[/* arguments */]</code>: Arguments to pass into the native environment.</p></li>
+listed below provide details.</p>
+  </li>
+  <li>
+    <p><code>[/* arguments */]</code>: Arguments to pass into the native environment.</p>
+  </li>
 </ul>
 
 <h3>Echo Plugin JavaScript Example</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">    window.echo = function(str, callback) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    window.echo = function(str, callback) {
         cordova.exec(callback, function(err) {
             callback('Nothing to echo.');
         }, "Echo", "echo", [str]);
     };
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Let&#39;s dive into this. The plugin attaches itself to <code>window</code>,
 specifically to the <code>echo</code> function. Plugin users would then use it as
 follows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    window.echo("echome", function(echoValue) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    window.echo("echome", function(echoValue) {
         alert(echoValue == "echome"); // should alert true.
     });
-</code></pre></div>
+</code></pre></div></div>
+
 <p>First, let&#39;s take a look at the last three arguments to the <code>exec</code>
 function. We will be calling the <code>Echo</code> &quot;service&quot;, requesting the <code>echo</code>
 &quot;action&quot;, and passing an array of arguments containing the echo string,
@@ -1650,7 +1666,7 @@ adding a <code>plugin.xml</code> manifest file, you can enable users to install
 your plugin via the command-line tooling.</p>
 
 <ul>
-<li><a href="../../../plugin_ref/spec.html">Plugin Specification</a></li>
+  <li><a href="../../../plugin_ref/spec.html">Plugin Specification</a></li>
 </ul>
 
 <h2>Native</h2>
@@ -1661,11 +1677,11 @@ platform are listed below.  These guides continue to build on the
 simple Echo Plugin example discussed above.</p>
 
 <ul>
-<li><a href="../../platforms/android/plugin.html">Android Plugins</a></li>
-<li><a href="../../platforms/blackberry/plugin.html">BlackBerry Plugins</a></li>
-<li><a href="../../platforms/blackberry10/plugin.html">BlackBerry 10 Plugins</a></li>
-<li><a href="../../platforms/ios/plugin.html">iOS Plugins</a></li>
-<li><a href="../../platforms/wp8/plugin.html">Windows Phone Plugins</a></li>
+  <li><a href="../../platforms/android/plugin.html">Android Plugins</a></li>
+  <li><a href="../../platforms/blackberry/plugin.html">BlackBerry Plugins</a></li>
+  <li><a href="../../platforms/blackberry10/plugin.html">BlackBerry 10 Plugins</a></li>
+  <li><a href="../../platforms/ios/plugin.html">iOS Plugins</a></li>
+  <li><a href="../../platforms/wp8/plugin.html">Windows Phone Plugins</a></li>
 </ul>
 
 <p>The Tizen platform currently does not support plugins.</p>
@@ -1675,12 +1691,14 @@ simple Echo Plugin example discussed above.</p>
 <p>Once you developed your plugin, you might want to publish it and share it with the community. You can publish your plugin to the cordova registry (based on <a href="https://github.com/isaacs/npmjs.org">npmjs</a>) or to any other npmjs based registry. Users will be able to install it automatically using either plugman or cordova-cli.</p>
 
 <p>To publish a plugin you need to use the plugman tool and go through the following steps:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ plugman adduser # that is if you don't have an account yet
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ plugman adduser # that is if you don't have an account yet
 $ plugman publish /path/to/your/plugin
-</code></pre></div>
+</code></pre></div></div>
+
 <p>That is it!</p>
 
-<p>Other registry-based commands are available and <code>plugman --help</code> will give you a list of what commands are available and how to use them.  </p>
+<p>Other registry-based commands are available and <code>plugman --help</code> will give you a list of what commands are available and how to use them.</p>
 
 
             </div>

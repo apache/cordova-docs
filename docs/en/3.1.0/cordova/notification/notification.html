@@ -1570,17 +1570,17 @@
                 <h1>Notification</h1>
 
 <blockquote>
-<p>Visual, audible, and tactile device notifications.</p>
+  <p>Visual, audible, and tactile device notifications.</p>
 </blockquote>
 
 <h2>Methods</h2>
 
 <ul>
-<li><code>[notification.alert](notification.alert.html)</code></li>
-<li><code>[notification.confirm](notification.confirm.html)</code></li>
-<li><code>[notification.prompt](notification.prompt.html)</code></li>
-<li><code>[notification.beep](notification.beep.html)</code></li>
-<li><code>[notification.vibrate](notification.vibrate.html)</code></li>
+  <li><code>[notification.alert](notification.alert.html)</code></li>
+  <li><code>[notification.confirm](notification.confirm.html)</code></li>
+  <li><code>[notification.prompt](notification.prompt.html)</code></li>
+  <li><code>[notification.beep](notification.beep.html)</code></li>
+  <li><code>[notification.vibrate](notification.vibrate.html)</code></li>
 </ul>
 
 <h2>Accessing the Feature</h2>
@@ -1588,44 +1588,55 @@
 <p>As of version 3.0, Cordova implements device-level APIs as <em>plugins</em>.
 Use the CLI&#39;s <code>plugin</code> command, described in The Command-line
 Interface, to add or remove this feature for a project:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add org.apache.cordova.dialogs
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova plugin add org.apache.cordova.dialogs
     $ cordova plugin add org.apache.cordova.vibration
     $ cordova plugin ls
     [ 'org.apache.cordova.dialogs',
       'org.apache.cordova.vibration' ]
     $ cordova plugin rm org.apache.cordova.dialogs
     $ cordova plugin rm org.apache.cordova.vibration
-</code></pre></div>
+</code></pre></div></div>
+
 <p>These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:</p>
 
 <ul>
-<li><p>Android</p>
-<div class="highlight"><pre><code class="language-" data-lang="">(in app/res/xml/config.xml)
-&lt;feature name="Notification"&gt;
-    &lt;param name="android-package" value="org.apache.cordova.dialogs.Notification" /&gt;
-&lt;/feature&gt;
-&lt;feature name="Vibration"&gt;
-    &lt;param name="android-package" value="org.apache.cordova.vibration.Vibration" /&gt;
-&lt;/feature&gt;
+  <li>
+    <p>Android</p>
 
-(in app/AndroidManifest.xml)
-&lt;uses-permission android:name="android.permission.VIBRATE" /&gt;
-</code></pre></div></li>
-<li><p>BlackBerry WebWorks</p>
-<div class="highlight"><pre><code class="language-" data-lang="">(in www/plugins.xml)
-&lt;feature name="Notification"&gt;
-    &lt;param name="blackberry-package" value="org.apache.cordova.notification.Notification" /&gt;
-&lt;/feature&gt;
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in app/res/xml/config.xml)
+  &lt;feature name="Notification"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.dialogs.Notification" /&gt;
+  &lt;/feature&gt;
+  &lt;feature name="Vibration"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.vibration.Vibration" /&gt;
+  &lt;/feature&gt;
 
-(in www/config.xml)
-&lt;feature id="blackberry.ui.dialog" /&gt;
-</code></pre></div></li>
-<li><p>iOS (in <code>config.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature name="Notification"&gt;
-    &lt;param name="ios-package" value="CDVNotification" /&gt;
-&lt;/feature&gt;
-</code></pre></div></li>
+  (in app/AndroidManifest.xml)
+  &lt;uses-permission android:name="android.permission.VIBRATE" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>BlackBerry WebWorks</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in www/plugins.xml)
+  &lt;feature name="Notification"&gt;
+      &lt;param name="blackberry-package" value="org.apache.cordova.notification.Notification" /&gt;
+  &lt;/feature&gt;
+
+  (in www/config.xml)
+  &lt;feature id="blackberry.ui.dialog" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>iOS (in <code>config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="Notification"&gt;
+      &lt;param name="ios-package" value="CDVNotification" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>Some platforms may support this feature without requiring any special

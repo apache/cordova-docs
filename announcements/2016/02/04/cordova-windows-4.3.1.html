@@ -136,26 +136,29 @@
 <p>This is a patch release which fixes a couple of small bugs related to plugins installation, and the significant issue that caused Windows 10 Universal apps to restart instead of resume in some cases.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update windows@4.3.1
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add windows@4.3.1
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add windows@4.3.1
+</code></pre></div></div>
+
 <p>For non-CLI projects or for pre-3.0 projects, refer to the <a href="http://cordova.apache.org/docs/en/dev/guide/platforms/win8/upgrade.html">upgrade guide</a>.</p>
 
 <!--more-->
-
 <h2>What&#39;s new in Windows platform</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10487">CB-10487</a> WindowsStoreIdentityName should be lowercased in Application.StartPage</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10446">CB-10446</a> Windows 10 Cordova Application restart instead of resume</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10440">CB-10440</a> Add CSS color names support for BackgroundColor on Windows</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10394">CB-10394</a> Do not cache manifest file while getting package name</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10381">CB-10381</a> fix the bug when removing a plugin with a <code>&lt;frame&gt;</code> tag</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10234">CB-10234</a> Better error message when Windows10 requires &#39;arch&#39; flag</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10487">CB-10487</a> WindowsStoreIdentityName should be lowercased in Application.StartPage</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10446">CB-10446</a> Windows 10 Cordova Application restart instead of resume</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10440">CB-10440</a> Add CSS color names support for BackgroundColor on Windows</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10394">CB-10394</a> Do not cache manifest file while getting package name</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10381">CB-10381</a> fix the bug when removing a plugin with a <code>&lt;frame&gt;</code> tag</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10234">CB-10234</a> Better error message when Windows10 requires &#39;arch&#39; flag</li>
 </ul>
 
         </div>

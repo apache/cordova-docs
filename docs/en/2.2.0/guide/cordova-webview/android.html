@@ -1530,38 +1530,44 @@ to author Android Cordova applications. Thus the instructions are currently manu
 <h2>Prerequisites</h2>
 
 <ol>
-<li><strong>Cordova 1.9</strong> or greater</li>
-<li>Android SDK updated with 15</li>
+  <li><strong>Cordova 1.9</strong> or greater</li>
+  <li>Android SDK updated with 15</li>
 </ol>
 
 <h2>Guide to using CordovaWebView in an Android Project</h2>
 
 <ol>
-<li>Use <code>bin/create</code> to fetch the commons-codec-1.6.jar</li>
-<li><code>cd</code> into <code>/framework</code> and run <code>ant jar</code> to build the cordova jar (it
+  <li>Use <code>bin/create</code> to fetch the commons-codec-1.6.jar</li>
+  <li><code>cd</code> into <code>/framework</code> and run <code>ant jar</code> to build the cordova jar (it
 will create the .jar file in the form <code>cordova-x.x.x.jar</code> in the
 <code>/framework</code> folder)</li>
-<li>Copy the cordova jar into your Android project&#39;s <code>/libs</code> directory</li>
-<li><p>Edit your application&#39;s <code>main.xml</code> file (under <code>/res/xml</code>) to look similar the following. The <code>layout_height</code>, <code>layout_width</code> and <code>id</code> can be modified to suit your application</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;org.apache.cordova.CordovaWebView
-    android:id="@+id/tutorialView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" /&gt;
-</code></pre></div></li>
-<li><p>Modify your activity so that it implements the <code>CordovaInterface</code>.  It is recommended that you implement the methods that are included.  You may wish to copy the methods from <code>/framework/src/org/apache/cordova/DroidGap.java</code>, or you may wish to implement your own methods.  Below is a fragment of code from a basic application that uses the interface (note how the view id referenced matches the <code>id</code> attribute specified in the above XML fragment from step 4):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">public class CordovaViewTestActivity extends Activity implements CordovaInterface {
-    CordovaWebView cwv;
-    /* Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        cwv = (CordovaWebView) findViewById(R.id.tutorialView);
-        cwv.loadUrl("file:///android_asset/www/index.html");
-    }
-</code></pre></div></li>
-<li><p>Copy your application&#39;s HTML and JavaScript used to the <code>/assets/www</code> directory of your Android project</p></li>
-<li><p>Copy <code>cordova.xml</code> and <code>plugins.xml</code> from <code>/framework/res/xml</code> to the <code>/res/xml</code> folder in your project</p></li>
+  <li>Copy the cordova jar into your Android project&#39;s <code>/libs</code> directory</li>
+  <li>
+    <p>Edit your application&#39;s <code>main.xml</code> file (under <code>/res/xml</code>) to look similar the following. The <code>layout_height</code>, <code>layout_width</code> and <code>id</code> can be modified to suit your application</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;org.apache.cordova.CordovaWebView
+     android:id="@+id/tutorialView"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Modify your activity so that it implements the <code>CordovaInterface</code>.  It is recommended that you implement the methods that are included.  You may wish to copy the methods from <code>/framework/src/org/apache/cordova/DroidGap.java</code>, or you may wish to implement your own methods.  Below is a fragment of code from a basic application that uses the interface (note how the view id referenced matches the <code>id</code> attribute specified in the above XML fragment from step 4):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> public class CordovaViewTestActivity extends Activity implements CordovaInterface {
+     CordovaWebView cwv;
+     /* Called when the activity is first created. */
+     @Override
+     public void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.main);
+         cwv = (CordovaWebView) findViewById(R.id.tutorialView);
+         cwv.loadUrl("file:///android_asset/www/index.html");
+     }
+</code></pre></div>    </div>
+  </li>
+  <li>Copy your application&#39;s HTML and JavaScript used to the <code>/assets/www</code> directory of your Android project</li>
+  <li>Copy <code>cordova.xml</code> and <code>plugins.xml</code> from <code>/framework/res/xml</code> to the <code>/res/xml</code> folder in your project</li>
 </ol>
 
 

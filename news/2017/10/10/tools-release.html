@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We just released a small update to our tools!cordova@7.1.0cordova-lib@7.1.0cordova-plugman@1.5.1cordova-fetch@1.2.0cordova-common@2.1.1cordova-node-xcode@1.0...">
+    <meta name="description" content="We just released a small update to our tools!  cordova@7.1.0  cordova-lib@7.1.0  cordova-plugman@1.5.1  cordova-fetch@1.2.0  cordova-common@2.1.1  cordova-no...">
 
     <title>
         
@@ -134,129 +134,130 @@
             <p>We just released a small update to our tools!</p>
 
 <ul>
-<li><a href="https://www.npmjs.org/package/cordova">cordova@7.1.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@7.1.0</a></li>
-<li><a href="https://www.npmjs.org/package/plugman">cordova-plugman@1.5.1</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-fetch">cordova-fetch@1.2.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-common">cordova-common@2.1.1</a></li>
-<li><a href="https://www.npmjs.org/package/xcode">cordova-node-xcode@1.0.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@4.2.2</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova">cordova@7.1.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@7.1.0</a></li>
+  <li><a href="https://www.npmjs.org/package/plugman">cordova-plugman@1.5.1</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-fetch">cordova-fetch@1.2.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-common">cordova-common@2.1.1</a></li>
+  <li><a href="https://www.npmjs.org/package/xcode">cordova-node-xcode@1.0.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@4.2.2</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13303">CB-13303</a> added <code>--production</code> flag by default. This means that when the commands <code>cordova platform add android</code> or <code>cordova plugin add cordova-plugin-device</code> are run, under the hood we are running <code>npm install cordova-android --production</code>. The <code>--production</code> flag only installs <code>dependencies</code> from <code>package.json</code> and skips <code>devDependencies</code>.  This should speed up installs (especially when installing local copies of platforms and plugins). You can turn the flag off by passing the <code>--noprod</code> flag or setting it off globally via <code>cordova config set production false</code>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13353">CB-13353</a> added <code>--save-exact</code> flag. This will allow to save an exact version of a platform or plugin instead of a range. <code>cordova platform add android@6.3.0 --save-exact</code>. You can also set it true by default in your global config via <code>cordova config set save-exact true</code></li>
-<li>This is the first release of <code>cordova-node-xcode</code> under the apache cordova banner. It was originally created and used as a dependency for <code>cordova-lib</code>, but now is being used by many other projects as well. We have decided to give the project a major release to <code>1.0.0</code>. This is to represent stability for the project in terms of <code>semver</code>. No breaking change has happened from the previous release. </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13308">CB-13308</a> fixed issues with restoring plugins and platforms while using <code>npm@5+</code>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12787">CB-12787</a> Fix plugin installation with <code>--link</code> option.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13056">CB-13056</a> added deprecation notice for <strong>WebOS</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13057">CB-13057</a> added deprecation warning for <code>cordova platform save</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12901">CB-12901</a> Deprecated <code>.raw</code> from <code>cordova-lib</code> API calls. If you consume <code>cordova-lib</code> as a node module, please update your API calls! You can see an example of the change at <a href="https://github.com/apache/cordova-cli/commit/0a42092971dc8fe2f483bd42c3b9de26fdec677c">https://github.com/apache/cordova-cli/commit/0a42092971dc8fe2f483bd42c3b9de26fdec677c</a>. </li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13303">CB-13303</a> added <code>--production</code> flag by default. This means that when the commands <code>cordova platform add android</code> or <code>cordova plugin add cordova-plugin-device</code> are run, under the hood we are running <code>npm install cordova-android --production</code>. The <code>--production</code> flag only installs <code>dependencies</code> from <code>package.json</code> and skips <code>devDependencies</code>.  This should speed up installs (especially when installing local copies of platforms and plugins). You can turn the flag off by passing the <code>--noprod</code> flag or setting it off globally via <code>cordova config set production false</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13353">CB-13353</a> added <code>--save-exact</code> flag. This will allow to save an exact version of a platform or plugin instead of a range. <code>cordova platform add android@6.3.0 --save-exact</code>. You can also set it true by default in your global config via <code>cordova config set save-exact true</code></li>
+  <li>This is the first release of <code>cordova-node-xcode</code> under the apache cordova banner. It was originally created and used as a dependency for <code>cordova-lib</code>, but now is being used by many other projects as well. We have decided to give the project a major release to <code>1.0.0</code>. This is to represent stability for the project in terms of <code>semver</code>. No breaking change has happened from the previous release.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13308">CB-13308</a> fixed issues with restoring plugins and platforms while using <code>npm@5+</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12787">CB-12787</a> Fix plugin installation with <code>--link</code> option.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13056">CB-13056</a> added deprecation notice for <strong>WebOS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13057">CB-13057</a> added deprecation warning for <code>cordova platform save</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12901">CB-12901</a> Deprecated <code>.raw</code> from <code>cordova-lib</code> API calls. If you consume <code>cordova-lib</code> as a node module, please update your API calls! You can see an example of the change at <a href="https://github.com/apache/cordova-cli/commit/0a42092971dc8fe2f483bd42c3b9de26fdec677c">https://github.com/apache/cordova-cli/commit/0a42092971dc8fe2f483bd42c3b9de26fdec677c</a>.</li>
 </ul>
 
 <p>To update your cordova CLI:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova@latest
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova@latest
+</code></pre></div></div>
+
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <h2>cordova-lib</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13303">CB-13303</a> added <code>--save_exact</code>, <code>--production</code> flags</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13288">CB-13288</a> updated <code>index.js</code> and test to fix <code>cordova plugin search</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13206">CB-13206</a> fixed incorrect target being passed in to <code>plugin add</code> from <code>restore-util.js</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13145">CB-13145</a> added <code>variable-merge.js</code> to deal with <code>plugin.xml</code> variables for uninstall</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12870">CB-12870</a> catch all use cases for <code>getPlatformApiFunction</code> and update tests accordingly</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12944">CB-12944</a> Platform&#39;s spec is ignored in <code>config.xml</code> if <code>package.json</code> doesn&#39;t contain dependency for platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12361">CB-12361</a> added new unit tests for plugin tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13020">CB-13020</a> (plugman) install filters out <code>nohooks</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13056">CB-13056</a> added deprecation notice for <strong>WebOS</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13057">CB-13057</a> added deprecation warning for <code>cordova platform save</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12361">CB-12361</a> added tests for <code>save.js</code> and rebased</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> switched from <code>jshint</code> to <code>eslint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12361">CB-12361</a> updated <code>addHelper</code> tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11980">CB-11980</a> Update <code>README</code> to reflect new repos</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6143">CB-6143</a> Change <code>plugman.emit()</code> to <code>events.emit()</code></li>
-<li>Reorganized unit test directory. Changes include: - consolidate <code>spec-cordova/</code> and <code>spec-plugman/</code> into a single <code>spec/</code> dir. - put <code>jasmine config</code> and helper modules in top-level spec dir. - changed <code>package.json</code> npm run scripts to reflect purposes of tasks. remove <code>npm run ci</code>. Updated <code>README</code> to reflect <code>package.json</code> npm run script changes. </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12361">CB-12361</a> added unit tests for <code>prepare.spec.js</code></li>
-<li>Update cordova-lib api. Deprecate <code>raw</code> from api calls. </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11980">CB-11980</a> moved <code>fetch</code>, <code>common</code> and <code>serve</code> into their own repos</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12786">CB-12786</a> Improve logic for searching plugin id in case of module already exists in <code>node_modules</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12250">CB-12250</a> <a href="https://issues.apache.org/jira/browse/CB-12409">CB-12409</a> <strong>iOS</strong>: Fix bug with escaping properties from plist file</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12762">CB-12762</a> point <code>package.json</code> repo items to github mirrors instead of apache repos site</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12777">CB-12777</a> removed <strong>Android</strong>, <strong>iOS</strong>, and <strong>Windows</strong> projects fixtures</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12787">CB-12787</a> Fix plugin installation with <code>--link</code> option</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12738">CB-12738</a> Cordova ignores plugin dependency version on <strong>Windows</strong> platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12766">CB-12766</a> Consistently write JSON with 2 spaces indentation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13303">CB-13303</a> added <code>--save_exact</code>, <code>--production</code> flags</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13288">CB-13288</a> updated <code>index.js</code> and test to fix <code>cordova plugin search</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13206">CB-13206</a> fixed incorrect target being passed in to <code>plugin add</code> from <code>restore-util.js</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13145">CB-13145</a> added <code>variable-merge.js</code> to deal with <code>plugin.xml</code> variables for uninstall</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12870">CB-12870</a> catch all use cases for <code>getPlatformApiFunction</code> and update tests accordingly</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12944">CB-12944</a> Platform&#39;s spec is ignored in <code>config.xml</code> if <code>package.json</code> doesn&#39;t contain dependency for platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12361">CB-12361</a> added new unit tests for plugin tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13020">CB-13020</a> (plugman) install filters out <code>nohooks</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13056">CB-13056</a> added deprecation notice for <strong>WebOS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13057">CB-13057</a> added deprecation warning for <code>cordova platform save</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12361">CB-12361</a> added tests for <code>save.js</code> and rebased</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> switched from <code>jshint</code> to <code>eslint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12361">CB-12361</a> updated <code>addHelper</code> tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11980">CB-11980</a> Update <code>README</code> to reflect new repos</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6143">CB-6143</a> Change <code>plugman.emit()</code> to <code>events.emit()</code></li>
+  <li>Reorganized unit test directory. Changes include: - consolidate <code>spec-cordova/</code> and <code>spec-plugman/</code> into a single <code>spec/</code> dir. - put <code>jasmine config</code> and helper modules in top-level spec dir. - changed <code>package.json</code> npm run scripts to reflect purposes of tasks. remove <code>npm run ci</code>. Updated <code>README</code> to reflect <code>package.json</code> npm run script changes.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12361">CB-12361</a> added unit tests for <code>prepare.spec.js</code></li>
+  <li>Update cordova-lib api. Deprecate <code>raw</code> from api calls.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11980">CB-11980</a> moved <code>fetch</code>, <code>common</code> and <code>serve</code> into their own repos</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12786">CB-12786</a> Improve logic for searching plugin id in case of module already exists in <code>node_modules</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12250">CB-12250</a> <a href="https://issues.apache.org/jira/browse/CB-12409">CB-12409</a> <strong>iOS</strong>: Fix bug with escaping properties from plist file</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12762">CB-12762</a> point <code>package.json</code> repo items to github mirrors instead of apache repos site</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12777">CB-12777</a> removed <strong>Android</strong>, <strong>iOS</strong>, and <strong>Windows</strong> projects fixtures</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12787">CB-12787</a> Fix plugin installation with <code>--link</code> option</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12738">CB-12738</a> Cordova ignores plugin dependency version on <strong>Windows</strong> platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12766">CB-12766</a> Consistently write JSON with 2 spaces indentation</li>
 </ul>
 
 <h2>cordova-cli</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13303">CB-13303</a> added <code>--noprod</code> and <code>--production</code> flags as options, <code>--noprod</code> turns off our auto adding of <code>--production</code> flag</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13353">CB-13353</a> added <code>--save-exact</code> flag to cli and unit test</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> Added <code>eslint</code> and removed <code>jshint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12862">CB-12862</a> Added <code>searchpath</code> as a config option</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12762">CB-12762</a> point <code>package.json</code> repo items to github mirrors instead of apache repos site</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12693">CB-12693</a> Included examples for <code>Browserify</code>, <code>fetch</code>, and <code>autosave</code> and include options with a more detailed description.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12901">CB-12901</a> removed <code>.raw</code> from <code>cordova-lib</code> calls</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13303">CB-13303</a> added <code>--noprod</code> and <code>--production</code> flags as options, <code>--noprod</code> turns off our auto adding of <code>--production</code> flag</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13353">CB-13353</a> added <code>--save-exact</code> flag to cli and unit test</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> Added <code>eslint</code> and removed <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12862">CB-12862</a> Added <code>searchpath</code> as a config option</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12762">CB-12762</a> point <code>package.json</code> repo items to github mirrors instead of apache repos site</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12693">CB-12693</a> Included examples for <code>Browserify</code>, <code>fetch</code>, and <code>autosave</code> and include options with a more detailed description.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12901">CB-12901</a> removed <code>.raw</code> from <code>cordova-lib</code> calls</li>
 </ul>
 
 <h2>cordova-plugman</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13380">CB-13380</a> Updated <code>cordova-lib</code> dependency to <code>7.1.0</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> setup <code>eslint</code> and remove <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13380">CB-13380</a> Updated <code>cordova-lib</code> dependency to <code>7.1.0</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> setup <code>eslint</code> and remove <code>jshint</code></li>
 </ul>
 
 <h2>cordova-fetch</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13353">CB-13353</a> added <code>saveexact</code> as an option and updated fetch test</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13308">CB-13308</a>, <a href="https://issues.apache.org/jira/browse/CB-13252">CB-13252</a> fix issue with plugins turning into symlinks on restore</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13303">CB-13303</a> setting production flag to true by default during npm install</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> setting up <code>eslint</code> and removing <code>jshint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13010">CB-13010</a> Improve logic for searching packages which being installed from <code>git url</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11980">CB-11980</a> fixed incorrect <code>appveyor</code> image</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12786">CB-12786</a> Improve logic for searching plugin id in case of module already exists in <code>node_modules</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12762">CB-12762</a> updated <code>packageJson</code> to github mirrors</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12787">CB-12787</a> Fix plugin installation with <code>--link</code> option</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12738">CB-12738</a> Cordova ignores plugin dependency version on <strong>windows</strong> platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13353">CB-13353</a> added <code>saveexact</code> as an option and updated fetch test</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13308">CB-13308</a>, <a href="https://issues.apache.org/jira/browse/CB-13252">CB-13252</a> fix issue with plugins turning into symlinks on restore</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13303">CB-13303</a> setting production flag to true by default during npm install</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> setting up <code>eslint</code> and removing <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13010">CB-13010</a> Improve logic for searching packages which being installed from <code>git url</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11980">CB-11980</a> fixed incorrect <code>appveyor</code> image</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12786">CB-12786</a> Improve logic for searching plugin id in case of module already exists in <code>node_modules</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12762">CB-12762</a> updated <code>packageJson</code> to github mirrors</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12787">CB-12787</a> Fix plugin installation with <code>--link</code> option</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12738">CB-12738</a> Cordova ignores plugin dependency version on <strong>windows</strong> platform</li>
 </ul>
 
 <h2>cordova-common</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13145">CB-13145</a> added <code>getFrameworks</code> to unit tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13145">CB-13145</a> added variable replacing to framework tag</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13145">CB-13145</a> added <code>getFrameworks</code> to unit tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13145">CB-13145</a> added variable replacing to framework tag</li>
 </ul>
 
 <h2>cordova-node-xcode</h2>
 
 <ul>
-<li>Bump version to 1.0.0 to represent stability and follow semver more closely</li>
-<li>Fix null-access errors in <code>addTo/removeFrom*PbxGroup</code> methods</li>
-<li>Fix possible null-access error in <code>removeFromFrameworksPbxGroup</code></li>
-<li>add check for <code>isArray</code> so that strings don&#39;t cause an error when calling <code>.filter</code></li>
-<li>Updated License, Copyright, Contributors and repo url, in prep for contributing this project to Apache Cordova</li>
+  <li>Bump version to 1.0.0 to represent stability and follow semver more closely</li>
+  <li>Fix null-access errors in <code>addTo/removeFrom*PbxGroup</code> methods</li>
+  <li>Fix possible null-access error in <code>removeFromFrameworksPbxGroup</code></li>
+  <li>add check for <code>isArray</code> so that strings don&#39;t cause an error when calling <code>.filter</code></li>
+  <li>Updated License, Copyright, Contributors and repo url, in prep for contributing this project to Apache Cordova</li>
 </ul>
 
 <h2>cordova-js</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12017">CB-12017</a> updated dependencies for <code>Browserify</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12762">CB-12762</a> point <code>package.json</code> repo items to github mirrors instead of apache repos</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> to repo</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13232">CB-13232</a> added test for cordova&#39;s unique local style require</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8990">CB-8990</a> bump nodejs requirement to 4.0.0+</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12748">CB-12748</a> Update CI to test node 4 and 6</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12017">CB-12017</a> updated dependencies for <code>Browserify</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12762">CB-12762</a> point <code>package.json</code> repo items to github mirrors instead of apache repos</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> to repo</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13232">CB-13232</a> added test for cordova&#39;s unique local style require</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8990">CB-8990</a> bump nodejs requirement to 4.0.0+</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12748">CB-12748</a> Update CI to test node 4 and 6</li>
 </ul>
 
         </div>

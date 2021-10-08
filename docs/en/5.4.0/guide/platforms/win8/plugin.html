@@ -1460,7 +1460,8 @@ communicates from the Cordova webview to the native platform and back.</p>
 <p>These instructions are to create a pure JavaScript plugin. Understanding this is crucial to understanding how to add the native/managed bits.</p>
 
 <p>Windows Cordova plugins are essentially a thin wrapper around existing WinJS provided functions, but assuming you will want to define your JS common interface for multiple devices, you will typically have 1 JS file that provides the API.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">// inside file echoplugin.js
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// inside file echoplugin.js
 var EchoPlugin = {
     // the echo function calls successCallback with the provided text in strInput
     // if strInput is empty, it will call the errorCallback
@@ -1468,11 +1469,13 @@ var EchoPlugin = {
         cordova.exec(successCallback,errorCallback,"EchoPlugin","echo",[strInput]);
     }
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Inside Cordova exec on Windows</h2>
 
 <p>The cordova.exec function is defined differently on every platform, this is because each platform has it&#39;s own way of communicating between the application js code, and the native wrapper code. But in the case of Windows, there is no native wrapper, so the exec call is there for consistency. You could do your js only plugin work directly in EchoPlugin.echo, something like :</p>
-<div class="highlight"><pre><code class="language-" data-lang="">// inside file echoplugin.js ( this is what NOT to do if you want to reuse the JS API cross platform )
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// inside file echoplugin.js ( this is what NOT to do if you want to reuse the JS API cross platform )
 var EchoPlugin = {
     echo:function(successCallback,errorCallback,strInput) {
         if(!strInput || !strInput.length) {
@@ -1483,7 +1486,8 @@ var EchoPlugin = {
         }
     }
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>This would/could work fine, however it means that you will need different versions of echoPlugin.js for different platforms, and possibly you could have issues with inconsistencies in your implementations. As a best practice, we decided to mimic a native API inside cordova.exec on Windows, so we could run the same JS code, and not have to rewrite it for the platform, and also take advantage of any parameter checking, or other common code provided by developers who were working on other platforms.</p>
 
 <h2>The Cordova exec proxy</h2>
@@ -1494,14 +1498,15 @@ var EchoPlugin = {
 
 <p>cordova.commandProxy.add(&quot;Accelerometer&quot;,{
     start:function(){
-        // your code here ...
+        // your code here &#8230;
     }
     // ,
-    //  ... and the rest of the API here
+    //  &#8230; and the rest of the API here
 });</p>
 
 <p>So in our case, we will assume that the code in echoplugin.js is handling cross platform relevant JavaScript, and we can simply write a proxy for Windows</p>
-<div class="highlight"><pre><code class="language-" data-lang="">// in file echopluginProxy.js
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// in file echopluginProxy.js
 cordova.commandProxy.add("EchoPlugin",{
     echo:function(successCallback,errorCallback,strInput) {
         if(!strInput || !strInput.length) {
@@ -1512,30 +1517,33 @@ cordova.commandProxy.add("EchoPlugin",{
         }
     }
 });
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The plugin definition</p>
 
 <p>If we want users of our plugin to be able to easily install our plugin, we will need to define it according to how PlugMan defines plugins. More on this in the <a href="plugin_ref_spec.md.html#Plugin%20Specification">Plugin Spec</a></p>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="nt">&lt;plugin</span> <span class="na">xmlns=</span><span class="s">"http://apache.org/cordova/ns/plugins/1.0"</span>
-    <span class="na">id=</span><span class="s">"com.risingj.echoplugin"</span>
-    <span class="na">version=</span><span class="s">"0.1.0"</span><span class="nt">&gt;</span>
 
-    <span class="nt">&lt;js-module</span> <span class="na">src=</span><span class="s">"www/echoplugin.js"</span> <span class="na">name=</span><span class="s">"echoplugin"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;clobbers</span> <span class="na">target=</span><span class="s">"window.echoplugin"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/js-module&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.risingj.echoplugin"
+    version="0.1.0"&gt;
 
-    <span class="c">&lt;!-- windows --&gt;</span>
-    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;js-module</span> <span class="na">src=</span><span class="s">"src/windows/echopluginProxy.js"</span> <span class="na">name=</span><span class="s">"EchoProxy"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;merges</span> <span class="na">target=</span><span class="s">""</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;/js-module&gt;</span>
-    <span class="nt">&lt;/platform&gt;</span>
+    &lt;js-module src="www/echoplugin.js" name="echoplugin"&gt;
+        &lt;clobbers target="window.echoplugin" /&gt;
+    &lt;/js-module&gt;
 
-    <span class="c">&lt;!-- other platforms --&gt;</span>
+    &lt;!-- windows --&gt;
+    &lt;platform name="windows"&gt;
+        &lt;js-module src="src/windows/echopluginProxy.js" name="EchoProxy"&gt;
+            &lt;merges target="" /&gt;
+        &lt;/js-module&gt;
+    &lt;/platform&gt;
 
-<span class="nt">&lt;/plugin&gt;</span>
-</code></pre></div>
+    &lt;!-- other platforms --&gt;
+
+&lt;/plugin&gt;
+</code></pre></div></div>
+
 <p>This gives us a working Windows JavaScript plugin that uses a common file ( echoplugin.js ) and uses a proxy to provide the Windows only portion of implementation ( echopluginProxy.js ). So how do we add native/managed code to this? Well we are going to start the same, the only difference will be what we do inside in echopluginProxy methods.</p>
 
 <h1>How WinJS accesses native/managed code</h1>
@@ -1543,7 +1551,8 @@ cordova.commandProxy.add("EchoPlugin",{
 <p>In Windows, WinJS authored apps are able to interact with native code, this inter-op is available for Windows Runtime Components. The details are numerous, and this guide will only cover the basics. Microsoft provides much more info <a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh441569.aspx">here</a>.</p>
 
 <p>When you create your Windows Runtime Component, any class that is defined as &#39;public ref class sealed&#39; is considered an &#39;activatable class&#39; and will be callable from JavaScript.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">// in your header file .h
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// in your header file .h
 namespace EchoRuntimeComponent
 {
     public ref class EchoPluginRT sealed 
@@ -1568,12 +1577,14 @@ Platform::String^ EchoPluginRT::Echo(Platform::String^ input)
         return input-&gt;ToString() + "echo";
     }
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Now in order for us to call the native code, we use the namespace, classname, and lowerCamelCase the method we are calling.</p>
 
 <p>var res = EchoRuntimeComponent.EchoPluginRT.echo(&quot;boom&quot;);
 Moving this to our echopluginProxy.js file, we get this :</p>
-<div class="highlight"><pre><code class="language-" data-lang="">// in file echopluginProxy.js
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// in file echopluginProxy.js
 cordova.commandProxy.add("EchoPlugin",{
     echo:function(successCallback,errorCallback,strInput) {
         var res = EchoRuntimeComponent.EchoPluginRT.echo(strInput);
@@ -1585,42 +1596,45 @@ cordova.commandProxy.add("EchoPlugin",{
         }
     }
 });
-</code></pre></div>
+</code></pre></div></div>
+
 <p>And that&#39;s it, we have an end to end C++ backed js callable plugin for use in Apache Cordova Windows!</p>
 
 <h1>Some technical notes:</h1>
 
 <ul>
-<li>the callback is typically async, so calling the callback right away is probably not expected by the caller. In practice, if the call is not async, you should at least use a javascript timeout to force the callback to be called async.</li>
-<li>Activatable classes can do all kinds of awesome, like event dispatching, async callbacks, passing your own object types, arrays, collections, overloaded methods and much more. I recommend you do your homework.</li>
-<li>If you stick to common Windows Phone 8.0 and Windows SDK API calls, you will be able to use the same runtime component ( native or managed bits ) in a Windows Phone 8.0 Apache Cordova plugin. ~stay tuned for that post.</li>
+  <li>the callback is typically async, so calling the callback right away is probably not expected by the caller. In practice, if the call is not async, you should at least use a javascript timeout to force the callback to be called async.</li>
+  <li>Activatable classes can do all kinds of awesome, like event dispatching, async callbacks, passing your own object types, arrays, collections, overloaded methods and much more. I recommend you do your homework.</li>
+  <li>If you stick to common Windows Phone 8.0 and Windows SDK API calls, you will be able to use the same runtime component ( native or managed bits ) in a Windows Phone 8.0 Apache Cordova plugin. ~stay tuned for that post.</li>
 </ul>
 
 <h1>Defining your plugin</h1>
 
 <p>Now that we have a working plugin, we need to revisit the plugin definition from earlier so we can publish it. We can now add the runtime component as a framework.
 Note that the output type of a WindowsRuntimeComponent can be either .winmd or .dll</p>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="nt">&lt;plugin</span> <span class="na">xmlns=</span><span class="s">"http://apache.org/cordova/ns/plugins/1.0"</span>
-    <span class="na">id=</span><span class="s">"com.risingj.echoplugin"</span>
-    <span class="na">version=</span><span class="s">"0.2.0"</span><span class="nt">&gt;</span>
 
-    <span class="nt">&lt;js-module</span> <span class="na">src=</span><span class="s">"www/echoplugin.js"</span> <span class="na">name=</span><span class="s">"echoplugin"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;clobbers</span> <span class="na">target=</span><span class="s">"window.echoplugin"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/js-module&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.risingj.echoplugin"
+    version="0.2.0"&gt;
 
-    <span class="c">&lt;!-- windows --&gt;</span>
-    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;js-module</span> <span class="na">src=</span><span class="s">"src/windows/echopluginProxy.js"</span> <span class="na">name=</span><span class="s">"EchoProxy"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;merges</span> <span class="na">target=</span><span class="s">""</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;/js-module&gt;</span>
-        <span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"src/windows/EchoRuntimeComponent.winmd"</span> <span class="na">custom=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;/platform&gt;</span>
+    &lt;js-module src="www/echoplugin.js" name="echoplugin"&gt;
+        &lt;clobbers target="window.echoplugin" /&gt;
+    &lt;/js-module&gt;
 
-    <span class="c">&lt;!-- other platforms --&gt;</span>
+    &lt;!-- windows --&gt;
+    &lt;platform name="windows"&gt;
+        &lt;js-module src="src/windows/echopluginProxy.js" name="EchoProxy"&gt;
+            &lt;merges target="" /&gt;
+        &lt;/js-module&gt;
+        &lt;framework src="src/windows/EchoRuntimeComponent.winmd" custom="true"/&gt;
+    &lt;/platform&gt;
 
-<span class="nt">&lt;/plugin&gt;</span>
-</code></pre></div>
+    &lt;!-- other platforms --&gt;
+
+&lt;/plugin&gt;
+</code></pre></div></div>
+
 <p>That&#39;s it, you now have a distributable plugin that you can share with the world!
 One thing to note, support for adding frameworks to Windows Cordova project was only recently added so you will need to make sure your cordova tooling current.  The cordova-cli and cordova-plugman both support adding removing native backed plugins.</p>
 
@@ -1631,6 +1645,7 @@ One thing to note, support for adding frameworks to Windows Cordova project was 
 <p>&gt; plugman install --platform windows --plugin com.risingj.echoplugin --project .</p>
 
 <p>https://github.com/purplecabbage/cordova-runtimecomp-echoplug</p>
+
 
 
             </div>

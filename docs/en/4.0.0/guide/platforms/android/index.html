@@ -1427,78 +1427,121 @@ them, you need to include the SDK&#39;s <code>tools</code> and <code>platform-to
 directories in your <code>PATH</code>.  On a Mac, you can use a text editor to
 create or modify the <code>~/.bash_profile</code> file, adding a line such as the
 following, depending on where the SDK installs:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
+</code></pre></div></div>
+
 <p>Add the paths for <code>java</code> and <code>ant</code> if needed. This line in <code>~/.bash_profile</code>
 exposes these tools in newly opened terminal windows. If your terminal
 window is already open in OSX, or to avoid a logout/login on Linux, run
 this to make them available in the current terminal window:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ source ~/.bash_profile
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ source ~/.bash_profile
+</code></pre></div></div>
+
 <p>To modify the <code>PATH</code> environment on Windows 7:</p>
 
 <ol>
-<li><p>Click on the <strong>Start</strong> menu in the lower-left corner of the desktop,
-right-click on <strong>Computer</strong>, then select <strong>Properties</strong>.</p></li>
-<li><p>Select <strong>Advanced System Settings</strong> in the column on the left.</p></li>
-<li><p>In the resulting dialog box, press <strong>Environment Variables</strong>.</p></li>
-<li><p>Select the <strong>PATH</strong> variable and press <strong>Edit</strong>.</p></li>
-<li><p>Append the following to the <code>PATH</code> based on where you installed the
+  <li>
+    <p>Click on the <strong>Start</strong> menu in the lower-left corner of the desktop,
+right-click on <strong>Computer</strong>, then select <strong>Properties</strong>.</p>
+  </li>
+  <li>
+    <p>Select <strong>Advanced System Settings</strong> in the column on the left.</p>
+  </li>
+  <li>
+    <p>In the resulting dialog box, press <strong>Environment Variables</strong>.</p>
+  </li>
+  <li>
+    <p>Select the <strong>PATH</strong> variable and press <strong>Edit</strong>.</p>
+  </li>
+  <li>
+    <p>Append the following to the <code>PATH</code> based on where you installed the
 SDK, for example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
-</code></pre></div></li>
-<li><p>Save the value and close both dialog boxes.</p></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Save the value and close both dialog boxes.</p>
+  </li>
 </ol>
 
 <p>You may also need to enable Java and Ant. Open a command prompt and
 type <code>java</code>, and also type <code>ant</code>. Append to the <code>PATH</code> whichever of
 these fails to run:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    ;%JAVA_HOME%\bin;%ANT_HOME%\bin
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ;%JAVA_HOME%\bin;%ANT_HOME%\bin
+</code></pre></div></div>
+
 <h2>Open a New Project in the SDK</h2>
 
 <p>At this point, to create a new project you can choose between the
 cross-platform CLI tool described in <a href="../../cli/index.html">The Command-Line Interface</a>, or
 the set of Android-specific shell tools. From within a source-code
 directory, here&#39;s the CLI approach:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova create hello com.example.hello HelloWorld
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova create hello com.example.hello HelloWorld
     $ cd hello
     $ cordova platform add android
     $ cordova build
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Here&#39;s the corresponding lower-level shell-tool approach for both Unix
 and Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
     C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Here&#39;s how to use the SDK to modify it:</p>
 
 <ol>
-<li><p>Launch the <strong>Eclipse</strong> application.</p></li>
-<li><p>Select the <strong>New Project</strong> menu item.</p></li>
-<li><p>Choose <strong>Android Project from Existing Code</strong> from the resulting
-dialog box, and press <strong>Next</strong>:</p></li>
+  <li>
+    <p>Launch the <strong>Eclipse</strong> application.</p>
+  </li>
+  <li>
+    <p>Select the <strong>New Project</strong> menu item.</p>
+  </li>
+  <li>
+    <p>Choose <strong>Android Project from Existing Code</strong> from the resulting
+dialog box, and press <strong>Next</strong>:</p>
+  </li>
 </ol>
 
-<p><img src="/static/img/guide/platforms/android/eclipse_new_project.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/android/eclipse_new_project.png" alt="" /></p>
 
 <ol>
-<li><p>If you&#39;re using the CLI, navigate to the <code>hello</code> directory you
+  <li>
+    <p>If you&#39;re using the CLI, navigate to the <code>hello</code> directory you
 created for the project, then to the <code>platforms/android</code>
 subdirectory. Alternately, if you use the <code>create</code> shell utility,
-simply navigate to the <code>hello</code> directory.</p></li>
-<li><p>Press <strong>Finish</strong>.</p></li>
+simply navigate to the <code>hello</code> directory.</p>
+  </li>
+  <li>
+    <p>Press <strong>Finish</strong>.</p>
+  </li>
 </ol>
 
 <p>Once the Eclipse window opens, a red <strong>X</strong> may appear to indicate
 unresolved problems. If so, follow these additional steps:</p>
 
 <ol>
-<li><p>Right-click on the project directory.</p></li>
-<li><p>In the resulting <strong>Properties</strong> dialog, select <strong>Android</strong> from the navigation pane.</p></li>
-<li><p>For the project build target, select the highest Android API level you have installed.</p></li>
-<li><p>Click <strong>OK</strong>.</p></li>
-<li><p>Select <strong>Clean</strong> from the <strong>Project</strong> menu. This should correct all the errors in the project.</p></li>
+  <li>
+    <p>Right-click on the project directory.</p>
+  </li>
+  <li>
+    <p>In the resulting <strong>Properties</strong> dialog, select <strong>Android</strong> from the navigation pane.</p>
+  </li>
+  <li>
+    <p>For the project build target, select the highest Android API level you have installed.</p>
+  </li>
+  <li>
+    <p>Click <strong>OK</strong>.</p>
+  </li>
+  <li>
+    <p>Select <strong>Clean</strong> from the <strong>Project</strong> menu. This should correct all the errors in the project.</p>
+  </li>
 </ol>
 
 <h2>Build the Project</h2>
@@ -1506,9 +1549,11 @@ unresolved problems. If so, follow these additional steps:</p>
 <p>If you are using the CLI in development, the project directory&#39;s
 top-level <code>www</code> directory contains the source files. Run either of
 these within the project directory to rebuild the app:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova build
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova build
     $ cordova build android   # do not rebuild other platforms
-</code></pre></div>
+</code></pre></div></div>
+
 <p>If you are using the Android-specific shell tools in development,
 there is a different approach.  Once you generate the project, the
 default app&#39;s source is available in the <code>assets/www</code> subdirectory.
@@ -1518,12 +1563,14 @@ Subsequent commands are available in its <code>cordova</code> subdirectory.</p>
 the syntax for both Mac and Windows. The first pair of examples
 generate debugging information, and the second signs the apps for
 release:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/build --debug
-    C:\path\to\project\cordova\build.bat --debug
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/build --debug
+    C:\path\to\project\cordova\build.bat --debug
+    
     $ /path/to/project/cordova/build --release
     C:\path\to\project\cordova\build.bat --release
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Configure an Emulator</h2>
 
 <p>You can use either the <code>cordova</code> CLI utility or Cordova&#39;s
@@ -1533,61 +1580,73 @@ To do so, use the Android SDK Manager, a Java application that runs
 separately from Eclipse.  There are two ways to open it:</p>
 
 <ol>
-<li><p>Run <code>android</code> on the command line.</p></li>
-<li><p>From within Eclipse, press this toolbar icon:</p></li>
+  <li>
+    <p>Run <code>android</code> on the command line.</p>
+  </li>
+  <li>
+    <p>From within Eclipse, press this toolbar icon:</p>
+  </li>
 </ol>
 
-<p><img src="/static/img/guide/platforms/android/eclipse_android_sdk_button.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/android/eclipse_android_sdk_button.png" alt="" /></p>
 
 <p>Once open, the Android SDK Manager displays various runtime libraries:</p>
 
-<p><img src="/static/img/guide/platforms/android/asdk_window.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/android/asdk_window.png" alt="" /></p>
 
-<p>Choose <strong>Tools &rarr; Manage AVDs</strong> (Android Virtual Devices), then
+<p>Choose <strong>Tools &#8594; Manage AVDs</strong> (Android Virtual Devices), then
 choose any item from <strong>Device Definitions</strong> in the resulting dialog
 box:</p>
 
-<p><img src="/static/img/guide/platforms/android/asdk_device.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/android/asdk_device.png" alt="" /></p>
 
 <p>Press <strong>Create AVD</strong>, optionally modifying the name, then press <strong>OK</strong>
 to accept the changes:</p>
 
-<p><img src="/static/img/guide/platforms/android/asdk_newAVD.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/android/asdk_newAVD.png" alt="" /></p>
 
 <p>The AVD then appears in the <strong>Android Virtual Devices</strong> list:</p>
 
-<p><img src="/static/img/guide/platforms/android/asdk_avds.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/android/asdk_avds.png" alt="" /></p>
 
 <p>To open the emulator as a separate application, select the AVD and
 press <strong>Start</strong>. It launches much as it would on the device, with
 additional controls available for hardware buttons:</p>
 
-<p><img src="/static/img/guide/platforms/android/asdk_emulator.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/android/asdk_emulator.png" alt="" /></p>
 
 <h2>Deploy to Emulator</h2>
 
 <p>At this point you can use the <code>cordova</code> CLI utility to deploy the
 application to the emulator from the command line:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova emulate android
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova emulate android
+</code></pre></div></div>
+
 <p>Otherwise use the alternate shell interface:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/run --emulator
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/run --emulator
+</code></pre></div></div>
+
 <p>Instead of relying on whichever emulator is currently enabled within
 the SDK, you can refer to each by the names you supply:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/run --target=NAME
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/run --target=NAME
+</code></pre></div></div>
+
 <p>This pushes the app to the home screen and launches it:</p>
 
-<p><img src="/static/img/guide/platforms/android/emulator2x.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/android/emulator2x.png" alt="" /></p>
 
 <p>When you <code>run</code> the app, you also <code>build</code> it. You can append additional
 <code>--debug</code>, <code>--release</code>, and <code>--nobuild</code> flags to control how it is
 built, or even whether a rebuild is necessary:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/run --emulator --nobuild
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/run --emulator --nobuild
+</code></pre></div></div>
+
 <p>If instead you are working within Eclipse, right-click the project and
-choose <strong>Run As &rarr; Android Application</strong>. You may be asked to
+choose <strong>Run As &#8594; Android Application</strong>. You may be asked to
 specify an AVD if none are already open.</p>
 
 <p>For a faster experience, you can use the <code>Virtual Machine Acceleration</code> to improve 
@@ -1597,8 +1656,8 @@ Before attempting to use this type of acceleration, you need to determine if you
 current development system&#39;s CPU, supports one the following virtualization technologies:</p>
 
 <ul>
-<li><strong>Intel Virtualization Technology</strong> (VT-x, vmx) &rarr; <a href="http://ark.intel.com/products/virtualizationtechnology">Intel VT-x supported processor list</a></li>
-<li><strong>AMD Virtualization</strong> (AMD-V, SVM), only supported for Linux (Since May 2006, all CPUs AMD include AMD-V, except Sempron).</li>
+  <li><strong>Intel Virtualization Technology</strong> (VT-x, vmx) &#8594; <a href="http://ark.intel.com/products/virtualizationtechnology">Intel VT-x supported processor list</a></li>
+  <li><strong>AMD Virtualization</strong> (AMD-V, SVM), only supported for Linux (Since May 2006, all CPUs AMD include AMD-V, except Sempron).</li>
 </ul>
 
 <p>Another way to find out if your Intel processor supports VT-x Technology, it&#39;s by executing the 
@@ -1608,7 +1667,7 @@ or you can use the <a href="https://downloadcenter.intel.com/Detail_Desc.aspx?Pr
 <p>After install and execute the <code>Intel Processor Identification Utility</code> over Windows, you will get the following window, 
 in order to check if your CPU supports the Virtualization Technologies:</p>
 
-<p><img src="/static/img/guide/platforms/android/intel_pid_util_620px.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/android/intel_pid_util_620px.png" alt="" /></p>
 
 <p>In order to speed up the emulator, you need to download and install one or more <code>Intel x86 Atom</code> System Images, 
 as well as the <code>Intel Hardware Accelerated Execution Manager (HAXM)</code>.</p>
@@ -1616,7 +1675,7 @@ as well as the <code>Intel Hardware Accelerated Execution Manager (HAXM)</code>.
 <p>Open your Android SDK Manager, and select the <code>Intel x86 Atom</code> System Image, for whichever version that you want to test. Then go to <code>Extras</code> 
 and select <code>Intel x86 Emulator Accelerator (HAXM)</code>, and install those packages:</p>
 
-<p><img src="/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png" alt="" /></p>
 
 <p>After download, run the Intel installer, which is available within your
 Android SDK at <code>extras/intel/Hardware_Accelerated_Execution_Manager</code>. 
@@ -1624,14 +1683,22 @@ Android SDK at <code>extras/intel/Hardware_Accelerated_Execution_Manager</code>.
 <a href="http://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture">Intel Article</a>.</p>
 
 <ol>
-<li><p>Install one or more <code>Intel x86 Atom</code> System Images as well as the
+  <li>
+    <p>Install one or more <code>Intel x86 Atom</code> System Images as well as the
 <code>Intel Hardware Accelerated Execution Manager</code>, available under
-<strong>Extras</strong>.</p></li>
-<li><p>Run the Intel installer, which is available within your Android SDK
-at <code>extras/intel/Hardware_Accelerated_Execution_Manager</code>.</p></li>
-<li><p>Create a new AVD with the target set to an Intel image.</p></li>
-<li><p>When starting the emulator, ensure there are no error messages
-indicating a failure to load HAX modules.</p></li>
+<strong>Extras</strong>.</p>
+  </li>
+  <li>
+    <p>Run the Intel installer, which is available within your Android SDK
+at <code>extras/intel/Hardware_Accelerated_Execution_Manager</code>.</p>
+  </li>
+  <li>
+    <p>Create a new AVD with the target set to an Intel image.</p>
+  </li>
+  <li>
+    <p>When starting the emulator, ensure there are no error messages
+indicating a failure to load HAX modules.</p>
+  </li>
 </ol>
 
 <h2>Deploy to Device</h2>
@@ -1642,28 +1709,37 @@ enabled on your device as described on the
 and use a mini USB cable to plug it into your system.</p>
 
 <p>You can use this CLI command to push the app to the device:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova run android
-</code></pre></div>
-<p>...or use this Android-centered shell interface:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/run --device
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova run android
+</code></pre></div></div>
+
+<p>&#8230;or use this Android-centered shell interface:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/run --device
+</code></pre></div></div>
+
 <p>With no flags specified, the <code>run</code> command detects a connected
 device, or a currently running emulator if no device is found,
 otherwise it prompts to specify an emulator.</p>
 
 <p>To run the app from within Eclipse, right-click the project and choose
-<strong>Run As &rarr; Android Application</strong>.</p>
+<strong>Run As &#8594; Android Application</strong>.</p>
 
 <h2>Other Commands</h2>
 
 <p>The following generates a detailed log of the app as it runs:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/log
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/log
     C:\path\to\project\cordova\log.bat
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The following cleans the project files:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/project/cordova/clean
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/clean
     C:\path\to\project\cordova\clean.bat
-</code></pre></div>
+</code></pre></div></div>
+
+
 
             </div>
         </div>

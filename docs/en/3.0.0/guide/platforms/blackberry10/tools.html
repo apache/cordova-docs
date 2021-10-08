@@ -1586,14 +1586,22 @@ arguments.</p>
 <h2>create</h2>
 
 <p>The <code>create</code> command creates a new project:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">bin/create &lt;path-to-project&gt; &lt;project-package&gt; &lt;project-name&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/create &lt;path-to-project&gt; &lt;project-package&gt; &lt;project-name&gt;
+</code></pre></div></div>
+
 <p>where</p>
 
 <ul>
-<li><p><code>&lt;path-to-project&gt;</code> specifies the directory you want the project created in</p></li>
-<li><p><code>&lt;project-package&gt;</code> specifies a reverse domain style identifier</p></li>
-<li><p><code>&lt;project-name&gt;</code> specifies the apps display name</p></li>
+  <li>
+    <p><code>&lt;path-to-project&gt;</code> specifies the directory you want the project created in</p>
+  </li>
+  <li>
+    <p><code>&lt;project-package&gt;</code> specifies a reverse domain style identifier</p>
+  </li>
+  <li>
+    <p><code>&lt;project-name&gt;</code> specifies the apps display name</p>
+  </li>
 </ul>
 
 <p><strong>NOTE:</strong> the <code>create</code> command bootstraps dependency installation
@@ -1610,29 +1618,43 @@ devices that you use to test your app. You can add or remove a target,
 or set a target as the default target.</p>
 
 <h3>Add a target</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/target add &lt;name&gt; &lt;ip-address&gt; [-t | --type &lt;device | simulator&gt;] [-p | --password &lt;password&gt;] [--pin &lt;device-pin&gt;]
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/target add &lt;name&gt; &lt;ip-address&gt; [-t | --type &lt;device | simulator&gt;] [-p | --password &lt;password&gt;] [--pin &lt;device-pin&gt;]
+</code></pre></div></div>
+
 <p>where</p>
 
 <ul>
-<li><p><code>&lt;name&gt;</code> specifies a unique name for the target.</p></li>
-<li><p><code>&lt;ip-address&gt;</code> specifies the ip address of the BlackBerry device or
-simulator.</p></li>
-<li><p><code>-p | --password &lt;password&gt;</code> specifies the password for the device or
+  <li>
+    <p><code>&lt;name&gt;</code> specifies a unique name for the target.</p>
+  </li>
+  <li>
+    <p><code>&lt;ip-address&gt;</code> specifies the ip address of the BlackBerry device or
+simulator.</p>
+  </li>
+  <li>
+    <p><code>-p | --password &lt;password&gt;</code> specifies the password for the device or
 emulator. This is required only if the device or emulator is
-password protected.</p></li>
-<li><p><code>--pin &lt;device-pin&gt;</code> specifies the PIN of the BlackBerry device,
+password protected.</p>
+  </li>
+  <li>
+    <p><code>--pin &lt;device-pin&gt;</code> specifies the PIN of the BlackBerry device,
 which identifies that device as a valid host for the debug
 token. This argument is required only if you are creating a debug
-token.</p></li>
+token.</p>
+  </li>
 </ul>
 
 <h3>Remove a target</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/target remove &lt;name&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/target remove &lt;name&gt;
+</code></pre></div></div>
+
 <h3>Set a target as the default</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/target default &lt;name&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/target default &lt;name&gt;
+</code></pre></div></div>
+
 <h2>build</h2>
 
 <p>The <code>build</code> command builds the project as a .bar file. You can build
@@ -1640,60 +1662,82 @@ your app in either release mode (which produces a signed .bar file) or
 in debug mode (which produces an unsigned .bar file).</p>
 
 <h3>Build your project in release mode</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/build release [-k | --keystorepass &lt;password&gt;] [-b | --buildId &lt;number&gt;] [-p | --params &lt;params-JSON-file&gt;]
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/build release [-k | --keystorepass &lt;password&gt;] [-b | --buildId &lt;number&gt;] [-p | --params &lt;params-JSON-file&gt;]
+</code></pre></div></div>
+
 <p>where</p>
 
 <ul>
-<li><p><code>-k | --keystorepass &lt;password&gt;</code>  specifies the password you defined when you configured your computer to sign applications.</p></li>
-<li><p><code>-b | --buildId &lt;number&gt;</code>  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.</p></li>
-<li><p><code>-p | --params &lt;params-JSON-file&gt;</code>  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.</p></li>
+  <li>
+    <p><code>-k | --keystorepass &lt;password&gt;</code>  specifies the password you defined when you configured your computer to sign applications.</p>
+  </li>
+  <li>
+    <p><code>-b | --buildId &lt;number&gt;</code>  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.</p>
+  </li>
+  <li>
+    <p><code>-p | --params &lt;params-JSON-file&gt;</code>  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.</p>
+  </li>
 </ul>
 
 <h3>Build your project in debug mode</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/build debug [&lt;target&gt;] [-k | --keystorepass &lt;password&gt;] [-p | --params &lt;params-JSON-file&gt;]  [-ll | --loglevel &lt;error|warn|verbose&gt;]
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/build debug [&lt;target&gt;] [-k | --keystorepass &lt;password&gt;] [-p | --params &lt;params-JSON-file&gt;]  [-ll | --loglevel &lt;error|warn|verbose&gt;]
+</code></pre></div></div>
+
 <p>where</p>
 
 <ul>
-<li><p><code>&lt;target&gt;</code> specifies the name of a previously added target. If
+  <li>
+    <p><code>&lt;target&gt;</code> specifies the name of a previously added target. If
 <code>&lt;target&gt;</code> is not specified, the default target is used, if one has
 been created. This argument is only required if you want the script
 to deploy your app to a BlackBerry device or emulator and you have
 not created a default target. Additionally, if <code>&lt;target&gt;</code> is a
 device, then that device must be connected to your computer by USB
 connection or be connected to the same Wi-Fi network as your
-computer.</p></li>
-<li><p><code>-k | --keystorepass &lt;password&gt;</code> specifies the password you defined
+computer.</p>
+  </li>
+  <li>
+    <p><code>-k | --keystorepass &lt;password&gt;</code> specifies the password you defined
 when you configured your computer to sign applications. This
 password is also used to create your debug token. This argument is
 only required if you want the script to create and install the debug
-token for you.</p></li>
-<li><p><code>-p | --params &lt;params-JSON-file&gt;</code> specifies a JSON file containing
-additional parameters to pass to downstream tools.</p></li>
-<li><p><code>-ll | --loglevel &lt;level&gt;</code> specifies the log level. The log level may
-be one of <code>error</code>, <code>warn</code>, or <code>verbose</code>.</p></li>
+token for you.</p>
+  </li>
+  <li>
+    <p><code>-p | --params &lt;params-JSON-file&gt;</code> specifies a JSON file containing
+additional parameters to pass to downstream tools.</p>
+  </li>
+  <li>
+    <p><code>-ll | --loglevel &lt;level&gt;</code> specifies the log level. The log level may
+be one of <code>error</code>, <code>warn</code>, or <code>verbose</code>.</p>
+  </li>
 </ul>
 
 <p>If you have previously defined a default target (and previously
 installed a debug token, if that target is a BlackBerry device), you
 can run the script with no arguments, and the script will package your
 app and deploy it to the default target. For example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/build debug
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/build debug
+</code></pre></div></div>
+
 <h2>run</h2>
 
 <p>The <code>run</code> command deploys the app on the specified BlackBerry device
 or an emulator. Before deploying your app, you must first create a
 target for the device or emulator you want to deploy your app to using
 the target script. The deploy script will deploy the most recent build of your app.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/run &lt;target&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/run &lt;target&gt;
+</code></pre></div></div>
+
 <p>where</p>
 
 <ul>
-<li><code>&lt;target&gt;</code>specifies the name of a previously added target. If
-<code>&lt;target&gt;</code>is a device, then that device must be connected to your
+  <li><code>&lt;target&gt; </code>specifies the name of a previously added target. If
+<code>&lt;target&gt; </code>is a device, then that device must be connected to your
 computer by USB connection or be connected to the same Wi-Fi network
 as your computer.</li>
 </ul>
@@ -1703,17 +1747,25 @@ as your computer.</li>
 <p>The <code>target</code> command allows you to add and remove plugins</p>
 
 <h3>Fetch a locally hosted plugin</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/plugin fetch &lt;path-to-plugin&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/plugin fetch &lt;path-to-plugin&gt;
+</code></pre></div></div>
+
 <h3>View a list of installed plugins</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/plugin ls
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/plugin ls
+</code></pre></div></div>
+
 <h3>Add a plugin</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/plugin add &lt;name&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/plugin add &lt;name&gt;
+</code></pre></div></div>
+
 <h3>Remove a plugin</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/plugin rm &lt;name&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/plugin rm &lt;name&gt;
+</code></pre></div></div>
+
 
             </div>
         </div>

@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that Cordova Android 6.1.1 has been released! Run the following command in your project to save your currently installed plugins int...">
+    <meta name="description" content="We are happy to announce that Cordova Android 6.1.1 has been released!Run the following command in your project to save your currently installed plugins into...">
 
     <title>
         
@@ -131,28 +131,33 @@
     </header>
     <section>
         <div>
-            <p>We are happy to announce that <code>Cordova Android 6.1.1</code> has been released! </p>
+            <p>We are happy to announce that <code>Cordova Android 6.1.1</code> has been released!</p>
 
 <p>Run the following command in your project to save your currently installed plugins into <code>config.xml</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin save
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin save
+</code></pre></div></div>
+
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android@6.1.1
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@6.1.1
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@6.1.1
+</code></pre></div></div>
+
 <!--more-->
-
 <h2>What&#39;s new in Android</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12159">CB-12159</a> <strong>Android</strong> Keystore password prompt won&#39;t show up</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12169">CB-12169</a> Check for build directory before running a clean</li>
-<li>Fixed <code>AndroidStudio</code> tests to actually run, removed <code>app/src/main/assets/</code> as a requirement and added <code>app/src/main/res</code> instead, added placeholder for <code>build/</code> folder, Removed dupe <code>gitignore</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12159">CB-12159</a> <strong>Android</strong> Keystore password prompt won&#39;t show up</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12169">CB-12169</a> Check for build directory before running a clean</li>
+  <li>Fixed <code>AndroidStudio</code> tests to actually run, removed <code>app/src/main/assets/</code> as a requirement and added <code>app/src/main/res</code> instead, added placeholder for <code>build/</code> folder, Removed dupe <code>gitignore</code></li>
 </ul>
+
 
         </div>
     </section>

@@ -1330,38 +1330,38 @@
 <p>Contains organization properties of a <code>[Contact](../Contact/contact.html)</code> object.</p>
 
 <h2>Properties</h2>
-
 <ul>
-<li><strong>pref:</strong> Set to <code>true</code> if this <code>ContactOrganization</code> contains the user&#39;s preferred value. <em>(boolean)</em></li>
-<li><strong>type:</strong> A string that tells you what type of field this is (example: &#39;home&#39;). _(DOMString)</li>
-<li><strong>name:</strong> The <a href="../../storage/parameters/name.html">name</a> of the organization. <em>(DOMString)</em></li>
-<li><strong>department:</strong> The department the contract works for. <em>(DOMString)</em></li>
-<li><strong>title:</strong> The contacts title at the organization. <em>(DOMString)</em></li>
+  <li><strong>pref:</strong> Set to <code>true</code> if this <code>ContactOrganization</code> contains the user&#39;s preferred value. <em>(boolean)</em></li>
+  <li><strong>type:</strong> A string that tells you what type of field this is (example: &#39;home&#39;). _(DOMString)</li>
+  <li><strong>name:</strong> The <a href="../../storage/parameters/name.html">name</a> of the organization. <em>(DOMString)</em></li>
+  <li><strong>department:</strong> The department the contract works for. <em>(DOMString)</em></li>
+  <li><strong>title:</strong> The contacts title at the organization. <em>(DOMString)</em></li>
 </ul>
 
 <h2>Details</h2>
 
-<p>The <code>ContactOrganization</code> object stores a contact&#39;s organization properties.  A <code>[Contact](../Contact/contact.html)</code> object stores one or more <code>ContactOrganization</code> objects in an array. </p>
+<p>The <code>ContactOrganization</code> object stores a contact&#39;s organization properties.  A <code>[Contact](../Contact/contact.html)</code> object stores one or more <code>ContactOrganization</code> objects in an array.</p>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
 </ul>
 
 <h2>Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function onSuccess(contacts) {
-    for (var i=0; i&lt;contacts.length; i++) {
-        for (var j=0; j&lt;contacts[i].organizations.length; j++) {
-            alert("Pref: " + contacts[i].organizations[j].pref + "\n" +
-                    "Type: " + contacts[i].organizations[j].type + "\n" +
-                    "Name: " + contacts[i].organizations[j].name + "\n" + 
-                    "Department: "  + contacts[i].organizations[j].department + "\n" + 
-                    "Title: "  + contacts[i].organizations[j].title);
-        }
-    }
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess(contacts) {
+	for (var i=0; i&lt;contacts.length; i++) {
+		for (var j=0; j&lt;contacts[i].organizations.length; j++) {
+			alert("Pref: " + contacts[i].organizations[j].pref + "\n" +
+					"Type: " + contacts[i].organizations[j].type + "\n" +
+					"Name: " + contacts[i].organizations[j].name + "\n" + 
+					"Department: "  + contacts[i].organizations[j].department + "\n" + 
+					"Title: "  + contacts[i].organizations[j].title);
+		}
+	}
 };
 
 function onError(contactError) {
@@ -1372,90 +1372,92 @@ var options = new ContactFindOptions();
 options.filter="";
 filter = ["displayName","organizations"];
 navigator.contacts.find(filter, onSuccess, onError, options);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Contact Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-1.5.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Contact Example&lt;/title&gt;
 
-    <span class="c1">// Wait for PhoneGap to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// PhoneGap is ready</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="k">new</span> <span class="p">[</span><span class="nx">ContactFindOptions</span><span class="p">](..</span><span class="o">/</span><span class="nx">ContactFindOptions</span><span class="o">/</span><span class="nx">contactfindoptions</span><span class="p">.</span><span class="nx">html</span><span class="p">)();</span>
-        <span class="nx">options</span><span class="p">.</span><span class="nx">filter</span><span class="o">=</span><span class="s2">""</span><span class="p">;</span>
-        <span class="nx">filter</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"displayName"</span><span class="p">,</span><span class="s2">"organizations"</span><span class="p">];</span>
-        <span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">filter</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Wait for PhoneGap to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="c1">// onSuccess: Get a snapshot of the current contacts</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">contacts</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">organizations</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">alert</span><span class="p">(</span><span class="s2">"Pref: "</span> <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">organizations</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">pref</span> <span class="o">+</span> <span class="s2">"\n"</span> <span class="o">+</span>
-                        <span class="s2">"Type: "</span> <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">organizations</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">type</span> <span class="o">+</span> <span class="s2">"\n"</span> <span class="o">+</span>
-                        <span class="s2">"Name: "</span> <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">organizations</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">"\n"</span> <span class="o">+</span> 
-                        <span class="s2">"Department: "</span>  <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">organizations</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">department</span> <span class="o">+</span> <span class="s2">"\n"</span> <span class="o">+</span> 
-                        <span class="s2">"Title: "</span>  <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">organizations</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">title</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">};</span>
+    // PhoneGap is ready
+    //
+    function onDeviceReady() {
+		var options = new [ContactFindOptions](../ContactFindOptions/contactfindoptions.html)();
+		options.filter="";
+		filter = ["displayName","organizations"];
+		navigator.contacts.find(filter, onSuccess, onError, options);
+    }
 
-    <span class="c1">// onError: Failed to get the contacts</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">contactError</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'onError!'</span><span class="p">);</span>
-    <span class="p">}</span>
+    // onSuccess: Get a snapshot of the current contacts
+    //
+	function onSuccess(contacts) {
+		for (var i=0; i&lt;contacts.length; i++) {
+			for (var j=0; j&lt;contacts[i].organizations.length; j++) {
+				alert("Pref: " + contacts[i].organizations[j].pref + "\n" +
+						"Type: " + contacts[i].organizations[j].type + "\n" +
+						"Name: " + contacts[i].organizations[j].name + "\n" + 
+						"Department: "  + contacts[i].organizations[j].department + "\n" + 
+						"Title: "  + contacts[i].organizations[j].title);
+			}
+		}
+	};
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Find Contacts<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // onError: Failed to get the contacts
+    //
+    function onError(contactError) {
+        alert('onError!');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Find Contacts&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 <h2>Android 2.X Quirks</h2>
 
 <ul>
-<li><strong>pref:</strong> This property is not supported by Android 2.X devices and will always return <code>false</code>.</li>
+  <li><strong>pref:</strong> This property is not supported by Android 2.X devices and will always return <code>false</code>.</li>
 </ul>
 
 <h2>Android 1.X Quirks</h2>
 
 <ul>
-<li><strong>pref:</strong> This property is not supported by Android 1.X devices and will always return <code>false</code>.</li>
-<li><strong>type:</strong> This property is not supported by Android 1.X devices and will always return <code>null</code>.</li>
-<li><strong>title:</strong> This property is not supported by Android 1.X devices, and will always be returned as <code>null</code>. </li>
+  <li><strong>pref:</strong> This property is not supported by Android 1.X devices and will always return <code>false</code>.</li>
+  <li><strong>type:</strong> This property is not supported by Android 1.X devices and will always return <code>null</code>.</li>
+  <li><strong>title:</strong> This property is not supported by Android 1.X devices, and will always be returned as <code>null</code>.</li>
 </ul>
 
 <h2>BlackBerry WebWorks (OS 5.0 and higher) Quirks</h2>
-
 <ul>
-<li><strong>pref:</strong> This property is not supported by BlackBerry devices and will always return <code>false</code>.</li>
-<li><strong>type:</strong> This property is not supported by BlackBerry devices and will always return <code>null</code>.</li>
-<li><strong>name:</strong> Partially supported.  The first organization <a href="../../storage/parameters/name.html">name</a> will be stored in the BlackBerry <strong>company</strong> field.</li>
-<li><strong>department:</strong> This property is not supported, and will always be returned as <code>null</code>.</li>
-<li><strong>title:</strong> Partially supported.  The first organization title will be stored in the BlackBerry <strong>jobTitle</strong> field.</li>
+  <li><strong>pref:</strong> This property is not supported by BlackBerry devices and will always return <code>false</code>.</li>
+  <li><strong>type:</strong> This property is not supported by BlackBerry devices and will always return <code>null</code>.</li>
+  <li><strong>name:</strong> Partially supported.  The first organization <a href="../../storage/parameters/name.html">name</a> will be stored in the BlackBerry <strong>company</strong> field.</li>
+  <li><strong>department:</strong> This property is not supported, and will always be returned as <code>null</code>.</li>
+  <li><strong>title:</strong> Partially supported.  The first organization title will be stored in the BlackBerry <strong>jobTitle</strong> field.</li>
 </ul>
 
 <h2>iOS Quirks</h2>
-
 <ul>
-<li><strong>pref:</strong> This property is not supported on iOS devices and will always return <code>false</code>.</li>
-<li><strong>type:</strong> This property is not supported on iOS devices and will always return <code>null</code>.</li>
-<li><strong>name:</strong> Partially supported.  The first organization <a href="../../storage/parameters/name.html">name</a> will be stored in the iOS <strong>kABPersonOrganizationProperty</strong> field.</li>
-<li><strong>department</strong>: Partially supported.  The first department <a href="../../storage/parameters/name.html">name</a> will be stored in the iOS <strong>kABPersonDepartmentProperty</strong> field.</li>
-<li><strong>title</strong>: Partially supported.  The first title will be stored in the iOS <strong>kABPersonJobTitleProperty</strong> field.</li>
+  <li><strong>pref:</strong> This property is not supported on iOS devices and will always return <code>false</code>.</li>
+  <li><strong>type:</strong> This property is not supported on iOS devices and will always return <code>null</code>.</li>
+  <li><strong>name:</strong> Partially supported.  The first organization <a href="../../storage/parameters/name.html">name</a> will be stored in the iOS <strong>kABPersonOrganizationProperty</strong> field.</li>
+  <li><strong>department</strong>: Partially supported.  The first department <a href="../../storage/parameters/name.html">name</a> will be stored in the iOS <strong>kABPersonDepartmentProperty</strong> field.</li>
+  <li><strong>title</strong>: Partially supported.  The first title will be stored in the iOS <strong>kABPersonJobTitleProperty</strong> field.</li>
 </ul>
+
 
 
             </div>

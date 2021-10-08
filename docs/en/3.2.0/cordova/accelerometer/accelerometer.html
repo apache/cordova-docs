@@ -1642,29 +1642,29 @@
                 <h1>Accelerometer</h1>
 
 <blockquote>
-<p>Captures device motion in the <em>x</em>, <em>y</em>, and <em>z</em> direction.</p>
+  <p>Captures device motion in the <em>x</em>, <em>y</em>, and <em>z</em> direction.</p>
 </blockquote>
 
 <h2>Methods</h2>
 
 <ul>
-<li><a href="accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a></li>
-<li><a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a></li>
-<li><a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a></li>
+  <li><a href="accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a></li>
+  <li><a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a></li>
+  <li><a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a></li>
 </ul>
 
 <h2>Arguments</h2>
 
 <ul>
-<li><a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a></li>
-<li><a href="parameters/accelerometerError.html">accelerometerError</a></li>
-<li><a href="parameters/accelerometerOptions.html">accelerometerOptions</a></li>
+  <li><a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a></li>
+  <li><a href="parameters/accelerometerError.html">accelerometerError</a></li>
+  <li><a href="parameters/accelerometerOptions.html">accelerometerOptions</a></li>
 </ul>
 
 <h2>Objects (Read-Only)</h2>
 
 <ul>
-<li><a href="acceleration/acceleration.html">Acceleration</a></li>
+  <li><a href="acceleration/acceleration.html">Acceleration</a></li>
 </ul>
 
 <h2>Accessing the Feature</h2>
@@ -1672,48 +1672,65 @@
 <p>As of version 3.0, Cordova implements device-level APIs as <em>plugins</em>.
 Use the CLI&#39;s <code>plugin</code> command, described in The Command-Line
 Interface, to add or remove this feature for a project:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add org.apache.cordova.device-motion
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova plugin add org.apache.cordova.device-motion
     $ cordova plugin ls
     [ 'org.apache.cordova.device-motion' ]
     $ cordova plugin rm org.apache.cordova.device-motion
-</code></pre></div>
+</code></pre></div></div>
+
 <p>These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:</p>
 
 <ul>
-<li><p>Amazon Fire OS (in <code>res/xml/config.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature name="Accelerometer"&gt;
-    &lt;param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" /&gt;
-&lt;/feature&gt;
-</code></pre></div></li>
-<li><p>Android (in <code>res/xml/config.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature name="Accelerometer"&gt;
-    &lt;param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" /&gt;
-&lt;/feature&gt;
-</code></pre></div></li>
-<li><p>BlackBerry WebWorks</p>
-<div class="highlight"><pre><code class="language-" data-lang="">(in www/plugins.xml)
-&lt;feature name="Accelerometer"&gt;
-    &lt;param name="blackberry-package" value="org.apache.cordova.accelerometer.Accelerometer" /&gt;
-&lt;/feature&gt;
+  <li>
+    <p>Amazon Fire OS (in <code>res/xml/config.xml</code>)</p>
 
-(in www/config.xml)
-&lt;feature id="blackberry.system"  required="true" version="1.0.0.0" /&gt;
-&lt;feature id="org.apache.cordova" required="true" version="1.0.0" /&gt;
-</code></pre></div></li>
-<li><p>iOS (in the named application directory&#39;s <code>config.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature name="Accelerometer"&gt;
-    &lt;param name="ios-package" value="CDVAccelerometer" /&gt;
-&lt;/feature&gt;
-</code></pre></div></li>
-<li><p>Windows Phone (in <code>Properties/WPAppManifest.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;Capabilities&gt;
-    &lt;Capability Name="ID_CAP_SENSORS" /&gt;
-&lt;/Capabilities&gt;
-</code></pre></div></li>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="Accelerometer"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Android (in <code>res/xml/config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="Accelerometer"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>BlackBerry WebWorks</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in www/plugins.xml)
+  &lt;feature name="Accelerometer"&gt;
+      &lt;param name="blackberry-package" value="org.apache.cordova.accelerometer.Accelerometer" /&gt;
+  &lt;/feature&gt;
+
+  (in www/config.xml)
+  &lt;feature id="blackberry.system"  required="true" version="1.0.0.0" /&gt;
+  &lt;feature id="org.apache.cordova" required="true" version="1.0.0" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>iOS (in the named application directory&#39;s <code>config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="Accelerometer"&gt;
+      &lt;param name="ios-package" value="CDVAccelerometer" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Windows Phone (in <code>Properties/WPAppManifest.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;Capabilities&gt;
+      &lt;Capability Name="ID_CAP_SENSORS" /&gt;
+  &lt;/Capabilities&gt;
+</code></pre></div>    </div>
+
+    <p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
+  </li>
 </ul>
-
-<p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
 
 <p>Some platforms may support this feature without requiring any special
 configuration.  See <a href="../../guide/support/index.html">Platform Support</a> for an overview.</p>

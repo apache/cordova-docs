@@ -1376,8 +1376,10 @@
                 <h1>searchbutton</h1>
 
 <p>The event fires when the user presses the search button on Android.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">document.addEventListener("searchbutton", yourCallbackFunction, false);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("searchbutton", yourCallbackFunction, false);
+</code></pre></div></div>
+
 <h2>Details</h2>
 
 <p>If you need to override the default search button behavior on Android
@@ -1389,50 +1391,54 @@ attach an event listener once the <code>[deviceready](events.deviceready.html)</
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
+  <li>Android</li>
 </ul>
 
 <h2>Quick Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">document.addEventListener("searchbutton", onSearchKeyDown, false);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("searchbutton", onSearchKeyDown, false);
 
 function onSearchKeyDown() {
     // Handle the search button
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                      "http://www.w3.org/TR/html4/strict.dtd"&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Search Button Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Search Button Example&lt;/title&gt;
 
-    <span class="c1">// Wait for device API libraries to load</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onLoad</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-    <span class="p">}</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// device APIs are available</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// Register the event listener</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"searchbutton"</span><span class="p">,</span> <span class="nx">onSearchKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
 
-    <span class="c1">// Handle the search button</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onSearchKeyDown</span><span class="p">()</span> <span class="p">{</span>
-    <span class="p">}</span>
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Register the event listener
+        document.addEventListener("searchbutton", onSearchKeyDown, false);
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body</span> <span class="na">onload=</span><span class="s">"onLoad()"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // Handle the search button
+    //
+    function onSearchKeyDown() {
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="onLoad()"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 
             </div>
         </div>

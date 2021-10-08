@@ -2419,44 +2419,47 @@
 
 <h2>Use a Template</h2>
 
-<p>Templates allow you to use preexisting code to jumpstart your project. </p>
+<p>Templates allow you to use preexisting code to jumpstart your project.</p>
 
-<p><img src="/static/img/guide/cli/template.png" alt=""></p>
+<p><img src="/static/img/guide/cli/template.png" alt="" /></p>
 
 <p>Find a template to create your app from by seaching for the keyword <code>cordova:template</code> on <a href="https://www.npmjs.com/search?q=cordova%3Atemplate">npm</a>. You can also use local templates on your computer, or a Git repository.</p>
 
 <p>After locating a template you wish to use. Create your project using that template, by specifying the <code>--template</code> flag during the <code>create</code> command, followed by your template source.</p>
 
 <p>Creating a cordova project from an NPM package, Git repository, or local path:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cordova create hello com.example.hello HelloWorld --template &lt;npm-package-name&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova create hello com.example.hello HelloWorld --template &lt;npm-package-name&gt;
 $ cordova create hello com.example.hello HelloWorld --template &lt;git-remote-url&gt;
 $ cordova create hello com.example.hello HelloWorld --template &lt;path-to-template&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>After succesfully using a template to create your project, you&#39;ll want to indicate the platforms that you intend to target with your app. Go into your project folder and <a href="http://cordova.apache.org/docs/en/latest/guide/cli/index.html#add-platforms">add platforms</a>.</p>
 
 <h2>Create a Template</h2>
 
 <p>Begin by creating a cordova app that will become the basis for your template. Then you&#39;ll take the contents of your app and put them into the following structure. When your template is used, all of the contents within <code>template_src</code> will be used to create the new project, so be sure to include any necessary files in that folder. Reference <a href="https://github.com/apache/cordova-template-reference">this example</a> for details.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">template_package/
-├── package.json      (optional; needed to publish template on npm)
-├──   index.js        (required)
-└── template_src/     (required)
-    └── CONTENTS OF APP TEMPLATE
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>template_package/
+├── package.json   	(optional; needed to publish template on npm)
+├──	index.js 		(required)
+└── template_src/ 	(required)
+	└── CONTENTS OF APP TEMPLATE
+</code></pre></div></div>
 <blockquote>
-<p><strong>NOTE</strong>: <code>index.js</code> should export a reference to <code>template_src</code> and <code>package.json</code> should reference <code>index.js</code>. See <a href="https://github.com/carynbear/cordova-template">the example</a> for details on how that is done.</p>
+  <p><strong>NOTE</strong>: <code>index.js</code> should export a reference to <code>template_src</code> and <code>package.json</code> should reference <code>index.js</code>. See <a href="https://github.com/carynbear/cordova-template">the example</a> for details on how that is done.</p>
 </blockquote>
 
-<p>To finish off your template, edit <code>package.json</code> to contain the keyword <code>&quot;cordova:template&quot;</code>.</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+<p>To finish off your template, edit <code>package.json</code> to contain the keyword <code>"cordova:template"</code>.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
   <span class="p">...</span>
-  <span class="s2">"keywords"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">"ecosystem:cordova"</span><span class="p">,</span>
-    <span class="s2">"cordova:template"</span>
+  <span class="dl">"</span><span class="s2">keywords</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="dl">"</span><span class="s2">ecosystem:cordova</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">cordova:template</span><span class="dl">"</span>
   <span class="p">]</span>
   <span class="p">...</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Congrats! You&#39;ve made a template for creating a Cordova project. Share your template on npm so that everyone can benefit from your hard work.</p>
 
 

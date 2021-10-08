@@ -1618,27 +1618,27 @@
                 <h1><a href="fileobj/fileobj.html">File</a></h1>
 
 <blockquote>
-<p>An API to read, write and navigate file system hierarchies, based on the <a href="http://www.w3.org/TR/FileAPI">W3C <a href="fileobj/fileobj.html">File</a> API</a>.</p>
+  <p>An API to read, write and navigate file system hierarchies, based on the <a href="http://www.w3.org/TR/FileAPI">W3C [File](fileobj/fileobj.html) API</a>.</p>
 </blockquote>
 
 <h2>Objects</h2>
 
 <ul>
-<li><a href="directoryentry/directoryentry.html">DirectoryEntry</a></li>
-<li><a href="directoryreader/directoryreader.html">DirectoryReader</a></li>
-<li><a href="fileobj/fileobj.html">File</a></li>
-<li><a href="fileentry/fileentry.html">FileEntry</a></li>
-<li><a href="fileerror/fileerror.html">FileError</a></li>
-<li><a href="filereader/filereader.html">FileReader</a></li>
-<li><a href="filesystem/filesystem.html">FileSystem</a></li>
-<li><a href="filetransfer/filetransfer.html">FileTransfer</a></li>
-<li><a href="filetransfererror/filetransfererror.html">FileTransferError</a></li>
-<li><a href="fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a></li>
-<li><a href="fileuploadresult/fileuploadresult.html">FileUploadResult</a></li>
-<li><a href="filewriter/filewriter.html">FileWriter</a></li>
-<li><a href="flags/flags.html">Flags</a></li>
-<li><a href="localfilesystem/localfilesystem.html">LocalFileSystem</a></li>
-<li><a href="metadata/metadata.html">Metadata</a></li>
+  <li><a href="directoryentry/directoryentry.html">DirectoryEntry</a></li>
+  <li><a href="directoryreader/directoryreader.html">DirectoryReader</a></li>
+  <li><a href="fileobj/fileobj.html">File</a></li>
+  <li><a href="fileentry/fileentry.html">FileEntry</a></li>
+  <li><a href="fileerror/fileerror.html">FileError</a></li>
+  <li><a href="filereader/filereader.html">FileReader</a></li>
+  <li><a href="filesystem/filesystem.html">FileSystem</a></li>
+  <li><a href="filetransfer/filetransfer.html">FileTransfer</a></li>
+  <li><a href="filetransfererror/filetransfererror.html">FileTransferError</a></li>
+  <li><a href="fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a></li>
+  <li><a href="fileuploadresult/fileuploadresult.html">FileUploadResult</a></li>
+  <li><a href="filewriter/filewriter.html">FileWriter</a></li>
+  <li><a href="flags/flags.html">Flags</a></li>
+  <li><a href="localfilesystem/localfilesystem.html">LocalFileSystem</a></li>
+  <li><a href="metadata/metadata.html">Metadata</a></li>
 </ul>
 
 <h2>Permissions</h2>
@@ -1646,35 +1646,47 @@
 <h3>Android</h3>
 
 <h4>app/res/xml/config.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="File" value="org.apache.cordova.FileUtils" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="File" value="org.apache.cordova.FileUtils" /&gt;
 &lt;plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h4>app/AndroidManifest.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
+</code></pre></div></div>
+
 <h3>BlackBerry WebWorks</h3>
 
 <h4>www/plugins.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="File" value="org.apache.cordova.file.FileManager" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="File" value="org.apache.cordova.file.FileManager" /&gt;
 &lt;plugin name="FileTransfer" value="org.apache.cordova.http.FileTransfer" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h4>www/config.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature id="blackberry.io.file" required="true" version="1.0.0.0" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;feature id="blackberry.io.file" required="true" version="1.0.0.0" /&gt;
 &lt;feature id="blackberry.utils"   required="true" version="1.0.0.0" /&gt;
 &lt;feature id="blackberry.io.dir"  required="true" version="1.0.0.0" /&gt;
 &lt;rim:permissions&gt;
     &lt;rim:permit&gt;access_shared&lt;/rim:permit&gt;
 &lt;/rim:permissions&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>iOS</h3>
 
 <h4>config.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="File" value="CDVFile" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="File" value="CDVFile" /&gt;
 &lt;plugin name="FileTransfer" value="CDVFileTransfer" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Windows Phone</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">No permissions are required.
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
 
             </div>
         </div>

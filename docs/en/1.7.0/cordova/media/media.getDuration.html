@@ -1328,8 +1328,10 @@
                 <h1>media.getDuration</h1>
 
 <p>Returns the duration of an audio file.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">media.getDuration();
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>media.getDuration();
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p>Function <code>media.getDuration</code> is a synchronous function that returns the duration of the audio file in seconds, if known.  If the duration is unknown, a value of -1 is returned.</p>
@@ -1337,13 +1339,14 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 ( Mango )</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">    // Audio player
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // Audio player
     //
     var my_media = new Media(src, onSuccess, onError);
 
@@ -1360,109 +1363,112 @@
             document.getElementById('audio_duration').innerHTML = (dur) + " sec";
         }
    }, 100);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">    <span class="cp">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                          "http://www.w3.org/TR/html4/strict.dtd"&gt;</span>
-    <span class="nt">&lt;html&gt;</span>
-      <span class="nt">&lt;head&gt;</span>
-        <span class="nt">&lt;title&gt;</span>Media Example<span class="nt">&lt;/title&gt;</span>
 
-        <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-1.7.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-        <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                          "http://www.w3.org/TR/html4/strict.dtd"&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Media Example&lt;/title&gt;
+    
+        &lt;script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" charset="utf-8"&gt;
+    
+        // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+            playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
+        }
+    
+        // Audio player
+        //
+        var my_media = null;
+        var mediaTimer = null;
+    
+        // Play audio
+        //
+        function playAudio(src) {
+            // Create Media object from src
+            my_media = new Media(src, onSuccess, onError);
+    
+            // Play audio
+            my_media.play();
+    
+            // Update my_media position every second
+            if (mediaTimer == null) {
+                mediaTimer = setInterval(function() {
+                    // get my_media position
+                    my_media.getCurrentPosition(
+                        // success callback
+                        function(position) {
+                            if (position &gt; -1) {
+                                setAudioPosition((position) + " sec");
+                            }
+                        },
+                        // error callback
+                        function(e) {
+                            console.log("Error getting pos=" + e);
+                            setAudioPosition("Error: " + e);
+                        }
+                    );
+                }, 1000);
+            }
+        }
+    
+        // Pause audio
+        // 
+        function pauseAudio() {
+            if (my_media) {
+                my_media.pause();
+            }
+        }
+    
+        // Stop audio
+        // 
+        function stopAudio() {
+            if (my_media) {
+                my_media.stop();
+            }
+            clearInterval(mediaTimer);
+            mediaTimer = null;
+        }
+    
+        // onSuccess Callback
+        //
+        function onSuccess() {
+            console.log("playAudio():Audio Success");
+        }
+    
+        // onError Callback 
+        //
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' + 
+                  'message: ' + error.message + '\n');
+        }
+    
+        // Set audio position
+        // 
+        function setAudioPosition(position) {
+            document.getElementById('audio_position').innerHTML = position;
+        }
+    
+        &lt;/script&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');"&gt;Play Audio&lt;/a&gt;
+        &lt;a href="#" class="btn large" onclick="pauseAudio();"&gt;Pause Playing Audio&lt;/a&gt;
+        &lt;a href="#" class="btn large" onclick="stopAudio();"&gt;Stop Playing Audio&lt;/a&gt;
+        &lt;p id="audio_position"&gt;&lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre></div></div>
 
-        <span class="c1">// Wait for Cordova to load</span>
-        <span class="c1">//</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-
-        <span class="c1">// Cordova is ready</span>
-        <span class="c1">//</span>
-        <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">playAudio</span><span class="p">(</span><span class="s2">"http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3"</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="c1">// Audio player</span>
-        <span class="c1">//</span>
-        <span class="kd">var</span> <span class="nx">my_media</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">mediaTimer</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-
-        <span class="c1">// Play audio</span>
-        <span class="c1">//</span>
-        <span class="kd">function</span> <span class="nx">playAudio</span><span class="p">(</span><span class="nx">src</span><span class="p">)</span> <span class="p">{</span>
-            <span class="c1">// Create Media object from src</span>
-            <span class="nx">my_media</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">);</span>
-
-            <span class="c1">// Play audio</span>
-            <span class="nx">my_media</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
-
-            <span class="c1">// Update my_media position every second</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nx">mediaTimer</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">mediaTimer</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-                    <span class="c1">// get my_media position</span>
-                    <span class="nx">my_media</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span>
-                        <span class="c1">// success callback</span>
-                        <span class="kd">function</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
-                            <span class="k">if</span> <span class="p">(</span><span class="nx">position</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-                                <span class="nx">setAudioPosition</span><span class="p">((</span><span class="nx">position</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" sec"</span><span class="p">);</span>
-                            <span class="p">}</span>
-                        <span class="p">},</span>
-                        <span class="c1">// error callback</span>
-                        <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-                            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Error getting pos="</span> <span class="o">+</span> <span class="nx">e</span><span class="p">);</span>
-                            <span class="nx">setAudioPosition</span><span class="p">(</span><span class="s2">"Error: "</span> <span class="o">+</span> <span class="nx">e</span><span class="p">);</span>
-                        <span class="p">}</span>
-                    <span class="p">);</span>
-                <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-
-        <span class="c1">// Pause audio</span>
-        <span class="c1">// </span>
-        <span class="kd">function</span> <span class="nx">pauseAudio</span><span class="p">()</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nx">my_media</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">my_media</span><span class="p">.</span><span class="nx">pause</span><span class="p">();</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-
-        <span class="c1">// Stop audio</span>
-        <span class="c1">// </span>
-        <span class="kd">function</span> <span class="nx">stopAudio</span><span class="p">()</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nx">my_media</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">my_media</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
-            <span class="p">}</span>
-            <span class="nx">clearInterval</span><span class="p">(</span><span class="nx">mediaTimer</span><span class="p">);</span>
-            <span class="nx">mediaTimer</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="c1">// onSuccess Callback</span>
-        <span class="c1">//</span>
-        <span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"playAudio():Audio Success"</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="c1">// onError Callback </span>
-        <span class="c1">//</span>
-        <span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">alert</span><span class="p">(</span><span class="s1">'code: '</span>    <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span>    <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span> 
-                  <span class="s1">'message: '</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="c1">// Set audio position</span>
-        <span class="c1">// </span>
-        <span class="kd">function</span> <span class="nx">setAudioPosition</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'audio_position'</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">position</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="nt">&lt;/script&gt;</span>
-      <span class="nt">&lt;/head&gt;</span>
-      <span class="nt">&lt;body&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn large"</span> <span class="na">onclick=</span><span class="s">"playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');"</span><span class="nt">&gt;</span>Play Audio<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn large"</span> <span class="na">onclick=</span><span class="s">"pauseAudio();"</span><span class="nt">&gt;</span>Pause Playing Audio<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn large"</span> <span class="na">onclick=</span><span class="s">"stopAudio();"</span><span class="nt">&gt;</span>Stop Playing Audio<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"audio_position"</span><span class="nt">&gt;&lt;/p&gt;</span>
-      <span class="nt">&lt;/body&gt;</span>
-    <span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
 
             </div>
         </div>

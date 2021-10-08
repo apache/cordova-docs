@@ -2168,26 +2168,31 @@
 #         under the License.
 -->
 
-<table><thead>
-<tr>
-<th style="text-align: center">AppVeyor</th>
-<th style="text-align: center">Travis CI</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: center"><a href="https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-console"><img src="https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-console?branch=master" alt="Build status"></a></td>
-<td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-console"><img src="https://travis-ci.org/apache/cordova-plugin-console.svg?branch=master" alt="Build Status"></a></td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">AppVeyor</th>
+      <th style="text-align: center">Travis CI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-console"><img src="https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-console?branch=master" alt="Build status" /></a></td>
+      <td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-console"><img src="https://travis-ci.org/apache/cordova-plugin-console.svg?branch=master" alt="Build Status" /></a></td>
+    </tr>
+  </tbody>
+</table>
 
 <h1>cordova-plugin-console</h1>
 
 <h2>Deprecated</h2>
 
 <blockquote>
-<p>This plugin is no longer being worked on as the functionality provided by this plugin is now included in cordova-ios 4.5.0 or greater, and support is already built in to cordova-windows &gt; 5.0.0. You should remove this plugin from your applications.</p>
+  <p>This plugin is no longer being worked on as the functionality provided by this plugin is now included in cordova-ios 4.5.0 or greater, and support is already built in to cordova-windows &gt; 5.0.0. You should remove this plugin from your applications.</p>
+</blockquote>
 
-<p>Please file issues for this plugin against their respective platforms (cordova-ios, cordova-windows).</p>
+<blockquote>
+  <p>Please file issues for this plugin against their respective platforms (cordova-ios, cordova-windows).</p>
 </blockquote>
 
 <h2>Description</h2>
@@ -2201,16 +2206,20 @@ don&#39;t need this plugin.</p>
 
 <p>Although the object is in the global scope, features provided by this plugin
 are not available until after the <code>deviceready</code> event.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">document.addEventListener("deviceready", onDeviceReady, false);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
     console.log("console.log works well");
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>:warning: Report issues on the <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20Console%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC">Apache Cordova issue tracker</a></p>
 
 <h2>Installation</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add cordova-plugin-console
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-console
+</code></pre></div></div>
+
 <h3>Android Quirks</h3>
 
 <p>On some platforms other than Android, console.log() will act on multiple
@@ -2223,18 +2232,18 @@ This plugin is not the cause of that, it is a limitation of Android itself.</p>
 <p>The plugin support following methods of the <code>console</code> object:</p>
 
 <ul>
-<li><code>console.log</code></li>
-<li><code>console.error</code></li>
-<li><code>console.exception</code></li>
-<li><code>console.warn</code></li>
-<li><code>console.info</code></li>
-<li><code>console.debug</code></li>
-<li><code>console.assert</code></li>
-<li><code>console.dir</code></li>
-<li><code>console.dirxml</code></li>
-<li><code>console.time</code></li>
-<li><code>console.timeEnd</code></li>
-<li><code>console.table</code></li>
+  <li><code>console.log</code></li>
+  <li><code>console.error</code></li>
+  <li><code>console.exception</code></li>
+  <li><code>console.warn</code></li>
+  <li><code>console.info</code></li>
+  <li><code>console.debug</code></li>
+  <li><code>console.assert</code></li>
+  <li><code>console.dir</code></li>
+  <li><code>console.dirxml</code></li>
+  <li><code>console.time</code></li>
+  <li><code>console.timeEnd</code></li>
+  <li><code>console.table</code></li>
 </ul>
 
 <h2>Partially supported Methods</h2>
@@ -2242,8 +2251,8 @@ This plugin is not the cause of that, it is a limitation of Android itself.</p>
 <p>Methods of the <code>console</code> object which implemented, but behave different from browser implementation:</p>
 
 <ul>
-<li><code>console.group</code></li>
-<li><code>console.groupCollapsed</code></li>
+  <li><code>console.group</code></li>
+  <li><code>console.groupCollapsed</code></li>
 </ul>
 
 <p>The grouping methods are just log name of the group and don&#39;t actually indicate grouping for later
@@ -2254,13 +2263,13 @@ calls to <code>console</code> object methods.</p>
 <p>Methods of the <code>console</code> object which are implemented, but do nothing:</p>
 
 <ul>
-<li><code>console.clear</code></li>
-<li><code>console.trace</code></li>
-<li><code>console.groupEnd</code></li>
-<li><code>console.timeStamp</code></li>
-<li><code>console.profile</code></li>
-<li><code>console.profileEnd</code></li>
-<li><code>console.count</code></li>
+  <li><code>console.clear</code></li>
+  <li><code>console.trace</code></li>
+  <li><code>console.groupEnd</code></li>
+  <li><code>console.timeStamp</code></li>
+  <li><code>console.profile</code></li>
+  <li><code>console.profileEnd</code></li>
+  <li><code>console.count</code></li>
 </ul>
 
 <h2>Supported formatting</h2>
@@ -2270,10 +2279,10 @@ calls to <code>console</code> object methods.</p>
 <p>Format chars:</p>
 
 <ul>
-<li> <code>%j</code> - format arg as JSON</li>
-<li> <code>%o</code> - format arg as JSON</li>
-<li> <code>%c</code> - format arg as <code>&#39;&#39;</code>. No color formatting could be done.</li>
-<li> <code>%%</code> - replace with <code>&#39;%&#39;</code></li>
+  <li><code>%j</code> - format arg as JSON</li>
+  <li><code>%o</code> - format arg as JSON</li>
+  <li><code>%c</code> - format arg as <code>''</code>. No color formatting could be done.</li>
+  <li><code>%%</code> - replace with <code>'%'</code></li>
 </ul>
 
 <p>Any other char following <code>%</code> will format its arg via <code>toString()</code>.</p>

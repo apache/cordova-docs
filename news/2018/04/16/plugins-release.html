@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The following plugins were updated today:cordova-pluin-vibration@3.1.0cordova-plugin-statusbar@2.4.2cordova-plugin-media-capture@3.0.2cordova-plugin-inappbro...">
+    <meta name="description" content="The following plugins were updated today:  cordova-pluin-vibration@3.1.0  cordova-plugin-statusbar@2.4.2  cordova-plugin-media-capture@3.0.2  cordova-plugin-...">
 
     <title>
         
@@ -134,97 +134,87 @@
             <p>The following plugins were updated today:</p>
 
 <ul>
-<li>cordova-pluin-vibration@3.1.0</li>
-<li>cordova-plugin-statusbar@2.4.2</li>
-<li>cordova-plugin-media-capture@3.0.2</li>
-<li>cordova-plugin-inappbrowser@3.0.0</li>
-<li>cordova-plugin-globalization@1.11.0</li>
-<li>cordova-plugin-device@2.0.2</li>
-<li>cordova-plugin-camera@4.0.3</li>
-<li>cordova-plugin-battery-status@2.0.2</li>
-<li>cordova-plugin-device-motion@2.0.1</li>
-<li>cordova-plugin-device-orientation@2.0.1</li>
+  <li>cordova-pluin-vibration@3.1.0</li>
+  <li>cordova-plugin-statusbar@2.4.2</li>
+  <li>cordova-plugin-media-capture@3.0.2</li>
+  <li>cordova-plugin-inappbrowser@3.0.0</li>
+  <li>cordova-plugin-globalization@1.11.0</li>
+  <li>cordova-plugin-device@2.0.2</li>
+  <li>cordova-plugin-camera@4.0.3</li>
+  <li>cordova-plugin-battery-status@2.0.2</li>
+  <li>cordova-plugin-device-motion@2.0.1</li>
+  <li>cordova-plugin-device-orientation@2.0.1</li>
 </ul>
 
-<hr>
-
+<hr />
 <p>You can update any plugin by removing it, and then re-adding it.</p>
 
 <p>E.g. To update your camera plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm cordova-plugin-camera
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm cordova-plugin-camera
 cordova plugin add cordova-plugin-camera@latest
-</code></pre></div>
-<p>Changes include:</p>
+</code></pre></div></div>
 
+<p>Changes include:
 <!--more-->
-
-<p>cordova-plugin-camera@4.0.2</p>
-
+cordova-plugin-camera@4.0.2</p>
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12593">CB-12593</a> <strong>Android</strong> Fix potential <code>FileProvider</code> conflicts</li>
-<li>Fix a mistake in the examples of usage descriptions (#313)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13854">CB-13854</a>: fix Camera opens in portrait orientation on iphones</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13415">CB-13415</a> <strong>Android</strong> Importing corrupt images using the Camera plugin crashes the app</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12593">CB-12593</a> <strong>Android</strong> Fix potential <code>FileProvider</code> conflicts</li>
+  <li>Fix a mistake in the examples of usage descriptions (#313)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13854">CB-13854</a>: fix Camera opens in portrait orientation on iphones</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13415">CB-13415</a> <strong>Android</strong> Importing corrupt images using the Camera plugin crashes the app</li>
 </ul>
 
 <p>cordova-plugin-vibration@3.1.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-14022">CB-14022</a> documented <strong>Android</strong> quirk with vibration</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13892">CB-13892</a>: Remove <code>navigator.notification</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-14022">CB-14022</a> documented <strong>Android</strong> quirk with vibration</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13892">CB-13892</a>: Remove <code>navigator.notification</code></li>
 </ul>
 
 <p>cordova-plugin-statusbar@2.4.2</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12679">CB-12679</a> Remove Permissions section</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12679">CB-12679</a> Remove Permissions section</li>
 </ul>
 
 <p>cordova-plugin-media-capture@3.0.2</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13866">CB-13866</a>: <strong>iOS</strong> fix Camera opens in portrait orientation on iphones</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13866">CB-13866</a>: <strong>iOS</strong> fix Camera opens in portrait orientation on iphones</li>
 </ul>
 
 <p>cordova-plugin-inappbrowser@3.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13659">CB-13659</a> <strong>iOS</strong> Add hidespinner option</li>
-<li>In file <code>AppBrowser.java</code>: New code within <code>shouldOverrideUrlLoading()</code> to check for whitelisting custom schemes via a new <code>AllowedSchemes</code> preference configuration item.  Allows custom schemes like <code>mycoolapp://</code> or <code>wevotetwitterscheme://</code></li>
-<li><code>InAppBrowser.java</code>: New method <code>isURLWhileListed</code> to check for whitelisting of <code>AllowedSchemes</code> in a new preference configuration item. There is a new check in <code>shouldOverrideUrlLoading</code>, to allow whitelisted custom schemes like &quot;mycoolapp://&quot;</li>
-<li>Add customisation of the navigation buttons for <strong>iOS</strong></li>
-<li>Fix navigation buttons on <strong>iOS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13659">CB-13659</a> <strong>iOS</strong> Add hidespinner option</li>
+  <li>In file <code>AppBrowser.java</code>: New code within <code>shouldOverrideUrlLoading()</code> to check for whitelisting custom schemes via a new <code>AllowedSchemes</code> preference configuration item.  Allows custom schemes like <code>mycoolapp://</code> or <code>wevotetwitterscheme://</code></li>
+  <li><code>InAppBrowser.java</code>: New method <code>isURLWhileListed</code> to check for whitelisting of <code>AllowedSchemes</code> in a new preference configuration item. There is a new check in <code>shouldOverrideUrlLoading</code>, to allow whitelisted custom schemes like &quot;mycoolapp://&quot;</li>
+  <li>Add customisation of the navigation buttons for <strong>iOS</strong></li>
+  <li>Fix navigation buttons on <strong>iOS</strong></li>
 </ul>
 
 <p>cordova-plugin-globalization@1.11.0</p>
-
 <ul>
-<li>Updating <code>moment.js</code> to version 2.20.1 (#64)</li>
+  <li>Updating <code>moment.js</code> to version 2.20.1 (#64)</li>
 </ul>
 
 <p>cordova-plugin-device@2.0.2</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13893">CB-13893</a> <strong>iOS</strong> delete <code>libz.tbd</code> from device plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13893">CB-13893</a> <strong>iOS</strong> delete <code>libz.tbd</code> from device plugin</li>
 </ul>
 
 <p>cordova-plugin-battery-status@2.0.2</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10645">CB-10645</a> The battery status handler doesn&#39;t reinitialize on <strong>Android</strong> after <code>window.location.reload()</code>. Instead of throwing an error, rather remove the status handler and re-initialize.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10645">CB-10645</a> The battery status handler doesn&#39;t reinitialize on <strong>Android</strong> after <code>window.location.reload()</code>. Instead of throwing an error, rather remove the status handler and re-initialize.</li>
 </ul>
 
 <p>cordova-plugin-device-motion@2.0.1</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-14001">CB-14001</a>: Fix <code>cordovaDependencies</code> to allow plugin install</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-14001">CB-14001</a>: Fix <code>cordovaDependencies</code> to allow plugin install</li>
 </ul>
 
 <p>cordova-plugin-device-orientation@2.0.1</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-14001">CB-14001</a>: Fix <code>cordovaDependencies</code> to allow plugin install</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-14001">CB-14001</a>: Fix <code>cordovaDependencies</code> to allow plugin install</li>
 </ul>
+
 
         </div>
     </section>

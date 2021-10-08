@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="It&#39;s been a long time since our last tools release, but it&#39;s certainly no sign of stagnation. Today&#39;s release is action packed!plugman@0.19.0cord...">
+    <meta name="description" content="It&#39;s been a long time since our last tools release, but it&#39;s certainly no sign of stagnation. Today&#39;s release is action packed!  plugman@0.19.0  ...">
 
     <title>
         
@@ -134,21 +134,23 @@
             <p>It&#39;s been a long time since our last tools release, but it&#39;s certainly no sign of stagnation. Today&#39;s release is action packed!</p>
 
 <ul>
-<li>plugman@0.19.0</li>
-<li>cordova@3.3.1-0.3.1</li>
+  <li>plugman@0.19.0</li>
+  <li>cordova@3.3.1-0.3.1</li>
 </ul>
 
 <p>To update your tools:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm update -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm update -g cordova
 npm update -g plugman
-</code></pre></div>
+</code></pre></div></div>
+
 <p>This release brings with it a plethora of bug fixes as well as some new features! Notably:</p>
 
 <ul>
-<li><code>config.xml</code> now lives at the project root by default (instead of within <code>www/</code>)</li>
-<li><code>hooks</code> now lives at the project root by default (instead of within <code>.cordova</code>)</li>
-<li>Specify a <code>www/</code> to use when creating a new project with <code>--link-to</code> or <code>--copy-from</code></li>
-<li>When installing by plugin ID, tell <code>cordova</code> and <code>plugman</code> to search for plugins locally using <code>--searchpath</code></li>
+  <li><code>config.xml</code> now lives at the project root by default (instead of within <code>www/</code>)</li>
+  <li><code>hooks</code> now lives at the project root by default (instead of within <code>.cordova</code>)</li>
+  <li>Specify a <code>www/</code> to use when creating a new project with <code>--link-to</code> or <code>--copy-from</code></li>
+  <li>When installing by plugin ID, tell <code>cordova</code> and <code>plugman</code> to search for plugins locally using <code>--searchpath</code></li>
 </ul>
 
 <p>Full list of release notes:</p>
@@ -158,41 +160,42 @@ npm update -g plugman
 <h2>cordova</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-5006">CB-5006</a> Add --searchpath to <code>cordova plugin add</code> so that installing by ID will search local paths before hitting the registry.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4153">CB-4153</a> Add --copy-from &amp; --link-to to <code>cordova create</code>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5687">CB-5687</a> Make cordova commands work when CWD is inside of a symlink&#39;ed <code>www/</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4910">CB-4910</a> Default <code>config.xml</code> to the root instead of within <code>www/</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5764">CB-5764</a> Move <code>hooks/</code> to top-level instead of under <code>.cordova</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5763">CB-5763</a> Don&#39;t create <code>.cordova/</code> by default</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4871">CB-4871</a> Reduced package size significantly.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4976">CB-4976</a> Don&#39;t add cache entries for local platforms.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5777">CB-5777</a> Fix <code>cordova platform update</code> not updating <code>cordova.js</code>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5728">CB-5728</a> Files in merges must remain intact when removing platform.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5493">CB-5493</a> lazy_load now downloads to a temp dir and then moves.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5782">CB-5782</a> Hide stack trace for explicitly handled error conditions</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5590">CB-5590</a> Have config.xml version map to CFBundleShortVersionString instead of CFBundleVersion</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5913">CB-5913</a> Fail more gracefully on Windows when symlinks fail.</li>
-<li>Fix isWindows check in util.js to support win64</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5907">CB-5907</a> Make <code>cordova update</code> get version from platform&#39;s version script</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3612">CB-3612</a> Don&#39;t pass --device to &quot;run&quot; command by default.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5299">CB-5299</a> Cache pbxproj to avoid re-parsing it for each plugin.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5813">CB-5813</a> Fix missing quotes on update and ls commands</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5808">CB-5808</a> Fix lazy_load stripping off windows drive letters</li>
-<li>Expose util.isCordova as cordova.findProjectRoot()</li>
-<li>Allow lazy_load libs to work without an id and version for local paths.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5006">CB-5006</a> Add --searchpath to <code>cordova plugin add</code> so that installing by ID will search local paths before hitting the registry.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4153">CB-4153</a> Add --copy-from &amp; --link-to to <code>cordova create</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5687">CB-5687</a> Make cordova commands work when CWD is inside of a symlink&#39;ed <code>www/</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4910">CB-4910</a> Default <code>config.xml</code> to the root instead of within <code>www/</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5764">CB-5764</a> Move <code>hooks/</code> to top-level instead of under <code>.cordova</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5763">CB-5763</a> Don&#39;t create <code>.cordova/</code> by default</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4871">CB-4871</a> Reduced package size significantly.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4976">CB-4976</a> Don&#39;t add cache entries for local platforms.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5777">CB-5777</a> Fix <code>cordova platform update</code> not updating <code>cordova.js</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5728">CB-5728</a> Files in merges must remain intact when removing platform.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5493">CB-5493</a> lazy_load now downloads to a temp dir and then moves.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5782">CB-5782</a> Hide stack trace for explicitly handled error conditions</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5590">CB-5590</a> Have config.xml version map to CFBundleShortVersionString instead of CFBundleVersion</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5913">CB-5913</a> Fail more gracefully on Windows when symlinks fail.</li>
+  <li>Fix isWindows check in util.js to support win64</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5907">CB-5907</a> Make <code>cordova update</code> get version from platform&#39;s version script</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3612">CB-3612</a> Don&#39;t pass --device to &quot;run&quot; command by default.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5299">CB-5299</a> Cache pbxproj to avoid re-parsing it for each plugin.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5813">CB-5813</a> Fix missing quotes on update and ls commands</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5808">CB-5808</a> Fix lazy_load stripping off windows drive letters</li>
+  <li>Expose util.isCordova as cordova.findProjectRoot()</li>
+  <li>Allow lazy_load libs to work without an id and version for local paths.</li>
 </ul>
 
 <h2>plugman</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-5770">CB-5770</a> Plugman prepare script content wrapping no longer allows ending parens/braces to be commented out from end of line comment</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4871">CB-4871</a> Reduced package size significantly</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5720">CB-5720</a> Allow <code>&lt;resource-file&gt;</code> on Android</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5006">CB-5006</a> Add --searchpath option for local plugin search path</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5701">CB-5701</a> Reference custom frameworks using relative paths</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5495">CB-5495</a>, <a href="https://issues.apache.org/jira/browse/CB-5568">CB-5568</a> Fix config.xml path for iOS</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5804">CB-5804</a> Added repo &amp; issue information into <code>plugman publish</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5770">CB-5770</a> Plugman prepare script content wrapping no longer allows ending parens/braces to be commented out from end of line comment</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4871">CB-4871</a> Reduced package size significantly</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5720">CB-5720</a> Allow <code>&lt;resource-file&gt;</code> on Android</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5006">CB-5006</a> Add --searchpath option for local plugin search path</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5701">CB-5701</a> Reference custom frameworks using relative paths</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5495">CB-5495</a>, <a href="https://issues.apache.org/jira/browse/CB-5568">CB-5568</a> Fix config.xml path for iOS</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5804">CB-5804</a> Added repo &amp; issue information into <code>plugman publish</code></li>
 </ul>
+
 
         </div>
     </section>

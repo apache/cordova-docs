@@ -1659,31 +1659,41 @@ for an overview.</p>
 <p>Run the <code>create</code> command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app&#39;s display
 name.  Here is the syntax for both Mac and Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
 $ C:\path\to\cordova-android\bin\create.bat C:\path\to\project com.example.project_name ProjectName
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Build</h2>
 
 <p>This cleans then builds a project.</p>
 
 <p>Debug, on Mac or Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/project/cordova/build --debug
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/project/cordova/build --debug
 $ C:\path\to\project\cordova\build.bat --debug
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Release, on Mac or Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/project/cordova/build --release
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/project/cordova/build --release
 $ C:\path\to\project\cordova\build.bat --release
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Run the App</h2>
 
 <p>The <code>run</code> command accepts the following <em>optional</em> parameters:</p>
 
 <ul>
-<li><p>Target specification. This includes <code>--emulator</code>, <code>--device</code>, or <code>--target=&lt;targetID&gt;</code>.</p></li>
-<li><p>Build specification. This includes <code>--debug</code>, <code>--release</code>, or <code>--nobuild</code>.</p>
+  <li>
+    <p>Target specification. This includes <code>--emulator</code>, <code>--device</code>, or <code>--target=&lt;targetID&gt;</code>.</p>
+  </li>
+  <li>
+    <p>Build specification. This includes <code>--debug</code>, <code>--release</code>, or <code>--nobuild</code>.</p>
 
-<p>$ /path/to/project/cordova/run [Target] [Build]
-$ C:\path\to\project\cordova\run.bat [Target] [Build]</p></li>
+    <p>$ /path/to/project/cordova/run [Target] [Build]
+  $ C:\path\to\project\cordova\run.bat [Target] [Build]</p>
+  </li>
 </ul>
 
 <p>Make sure you create at least one Android Virtual <a href="../../../cordova/device/device.html">Device</a>, otherwise
@@ -1693,13 +1703,17 @@ default the <code>run</code> command detects a connected device, or a currently
 running emulator if no device is found.</p>
 
 <h2>Logging</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/project/cordova/log
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/project/cordova/log
 $ C:\path\to\project\cordova\log.bat
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Cleaning</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/project/cordova/clean
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/project/cordova/clean
 $ C:\path\to\project\cordova\clean.bat
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

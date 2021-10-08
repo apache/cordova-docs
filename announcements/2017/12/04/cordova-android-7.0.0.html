@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that Cordova Android 7.0.0 has been released! With this release, we have changed the default project structure for Android projects....">
+    <meta name="description" content="We are happy to announce that Cordova Android 7.0.0 has been released!With this release, we have changed the default project structure for Android projects. ...">
 
     <title>
         
@@ -131,64 +131,68 @@
     </header>
     <section>
         <div>
-            <p>We are happy to announce that <code>Cordova Android 7.0.0</code> has been released! </p>
+            <p>We are happy to announce that <code>Cordova Android 7.0.0</code> has been released!</p>
 
-<p>With this release, we have changed the default project structure for Android projects.  People who currently use the CLI and treat everything in the platforms directory as a build artifact should not notice a difference. </p>
+<p>With this release, we have changed the default project structure for Android projects.  People who currently use the CLI and treat everything in the platforms directory as a build artifact should not notice a difference.</p>
 
-<p>However this a major breaking change for people creating standalone Cordova Android projects.  This also means that the locations of files have changed and have been brought in line to the structure used by Android Studio.<br>
-This may affect plugin.xml files and config.xml files that use edit-config, and make it so plugins that use edit-config will not be able to be compatible with both Android 6.x and Android 7.x.  To fix this issue, please do the following in your XML files: </p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;!-- An existing config.xml --&gt;
+<p>However this a major breaking change for people creating standalone Cordova Android projects.  This also means that the locations of files have changed and have been brought in line to the structure used by Android Studio.<br />
+This may affect plugin.xml files and config.xml files that use edit-config, and make it so plugins that use edit-config will not be able to be compatible with both Android 6.x and Android 7.x.  To fix this issue, please do the following in your XML files:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- An existing config.xml --&gt;
 &lt;edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge"&gt;
 
 &lt;!-- needs to change to --&gt;
 &lt;edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application" mode="merge"&gt;
-</code></pre></div>
-<h2>Major Changes include:</h2>
+</code></pre></div></div>
 
+<h2>Major Changes include:</h2>
 <ul>
-<li>Support for Java 1.8 language features in Cordova Plugins</li>
-<li>CordovaInterface now has a Context getter so that contexts can be retrieved without an Activity</li>
-<li>Cordova can now build for x86_64, arm64 and armeabi architecture when building plugins that use the NDK</li>
-<li>The minimum Android API version supported is now API Level 19</li>
-<li>Due to the directory structure change, we no longer support in-line upgrading, bringing us in line with iOS</li>
-<li>ANT builds are no longer supported and the functionality has been removed.</li>
+  <li>Support for Java 1.8 language features in Cordova Plugins</li>
+  <li>CordovaInterface now has a Context getter so that contexts can be retrieved without an Activity</li>
+  <li>Cordova can now build for x86_64, arm64 and armeabi architecture when building plugins that use the NDK</li>
+  <li>The minimum Android API version supported is now API Level 19</li>
+  <li>Due to the directory structure change, we no longer support in-line upgrading, bringing us in line with iOS</li>
+  <li>ANT builds are no longer supported and the functionality has been removed.</li>
 </ul>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform remove android
 cordova platform add android@7.0.0
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@7.0.0
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@7.0.0
+</code></pre></div></div>
+
 <!--more-->
-
 <h2>Curated Changelog</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13612">CB-13612</a> Fix the remapper so that XML files copy over and the Camera works again.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13741">CB-13741</a> Bump <code>package.json</code> so we can install plugins</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13610">CB-13610</a> Compress the default app assets</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12835">CB-12835</a> add a Context getter in CordovaInterface</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8976">CB-8976</a> Added the <code>cdvVersionCodeForceAbiDigit</code> flag to the template build.gradle that appends 0 to the versionCode when <code>cdvBuildMultipleApks</code> is not set</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12291">CB-12291</a> (android) Add x86_64, arm64 and armeabi architecture flavors</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13602">CB-13602</a> We were setting the path wrong, this is hacky but it works</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13601">CB-13601</a> Fixing the standalone run scripts to make sure this works without using the CLI</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13580">CB-13580</a> fix build for multiple apks (different product flavors)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13558">CB-13558</a> Upgrading the gradle so we can upload the AAR</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13297">CB-13297</a> This just works once you bump the project structure.  Java 1.8 compatibility baked-in</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11244">CB-11244</a> <strong>Android</strong> Studio 3 work, things have changed with how the platform is built</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11244">CB-11244</a> Found bug where the gradle subproject changes weren&#39;t actually getting written to the correct gradle file</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13470">CB-13470</a> Fix Clean so that it cleans the <strong>Android</strong> Studio structure</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11244">CB-11244</a> Adding specs for resource files inside an <strong>Android</strong> Studio Project</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11244">CB-11244</a> Added remapping for drawables</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11244">CB-11244</a> Found bug in Api.js where xml/strings.xml is used instead of values/strings.xml</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11244">CB-11244</a> Setup Api.js to support multiple builders based on project structure</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11244">CB-11244</a> Changing directory creation, will most likely hide this behind a flag for the next release of <code>cordova-android</code>, and then make it default in the next major pending feedback</li>
-<li>Adding the Studio Builder to build a project based on <strong>Android</strong> Studio, and deleting Ant, since Google does not support Ant Builds anymore. Sorry!</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13612">CB-13612</a> Fix the remapper so that XML files copy over and the Camera works again.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13741">CB-13741</a> Bump <code>package.json</code> so we can install plugins</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13610">CB-13610</a> Compress the default app assets</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12835">CB-12835</a> add a Context getter in CordovaInterface</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8976">CB-8976</a> Added the <code>cdvVersionCodeForceAbiDigit</code> flag to the template build.gradle that appends 0 to the versionCode when <code>cdvBuildMultipleApks</code> is not set</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12291">CB-12291</a> (android) Add x86_64, arm64 and armeabi architecture flavors</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13602">CB-13602</a> We were setting the path wrong, this is hacky but it works</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13601">CB-13601</a> Fixing the standalone run scripts to make sure this works without using the CLI</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13580">CB-13580</a> fix build for multiple apks (different product flavors)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13558">CB-13558</a> Upgrading the gradle so we can upload the AAR</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13297">CB-13297</a> This just works once you bump the project structure.  Java 1.8 compatibility baked-in</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11244">CB-11244</a> <strong>Android</strong> Studio 3 work, things have changed with how the platform is built</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11244">CB-11244</a> Found bug where the gradle subproject changes weren&#39;t actually getting written to the correct gradle file</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13470">CB-13470</a> Fix Clean so that it cleans the <strong>Android</strong> Studio structure</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11244">CB-11244</a> Adding specs for resource files inside an <strong>Android</strong> Studio Project</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11244">CB-11244</a> Added remapping for drawables</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11244">CB-11244</a> Found bug in Api.js where xml/strings.xml is used instead of values/strings.xml</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11244">CB-11244</a> Setup Api.js to support multiple builders based on project structure</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11244">CB-11244</a> Changing directory creation, will most likely hide this behind a flag for the next release of <code>cordova-android</code>, and then make it default in the next major pending feedback</li>
+  <li>Adding the Studio Builder to build a project based on <strong>Android</strong> Studio, and deleting Ant, since Google does not support Ant Builds anymore. Sorry!</li>
 </ul>
+
 
         </div>
     </section>

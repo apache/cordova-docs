@@ -1642,27 +1642,27 @@
                 <h1>Events</h1>
 
 <blockquote>
-<p>Cordova lifecycle events.</p>
+  <p>Cordova lifecycle events.</p>
 </blockquote>
 
 <h2>Event Types</h2>
 
 <ul>
-<li><a href="events.deviceready.html">deviceready</a></li>
-<li><a href="events.pause.html">pause</a></li>
-<li><a href="events.resume.html">resume</a></li>
-<li><a href="events.online.html">online</a></li>
-<li><a href="events.offline.html">offline</a></li>
-<li><a href="events.backbutton.html">backbutton</a></li>
-<li><a href="events.batterycritical.html">batterycritical</a></li>
-<li><a href="events.batterylow.html">batterylow</a></li>
-<li><a href="events.batterystatus.html">batterystatus</a></li>
-<li><a href="events.menubutton.html">menubutton</a></li>
-<li><a href="events.searchbutton.html">searchbutton</a></li>
-<li><a href="events.startcallbutton.html">startcallbutton</a></li>
-<li><a href="events.endcallbutton.html">endcallbutton</a></li>
-<li><a href="events.volumedownbutton.html">volumedownbutton</a></li>
-<li><a href="events.volumeupbutton.html">volumeupbutton</a></li>
+  <li><a href="events.deviceready.html">deviceready</a></li>
+  <li><a href="events.pause.html">pause</a></li>
+  <li><a href="events.resume.html">resume</a></li>
+  <li><a href="events.online.html">online</a></li>
+  <li><a href="events.offline.html">offline</a></li>
+  <li><a href="events.backbutton.html">backbutton</a></li>
+  <li><a href="events.batterycritical.html">batterycritical</a></li>
+  <li><a href="events.batterylow.html">batterylow</a></li>
+  <li><a href="events.batterystatus.html">batterystatus</a></li>
+  <li><a href="events.menubutton.html">menubutton</a></li>
+  <li><a href="events.searchbutton.html">searchbutton</a></li>
+  <li><a href="events.startcallbutton.html">startcallbutton</a></li>
+  <li><a href="events.endcallbutton.html">endcallbutton</a></li>
+  <li><a href="events.volumedownbutton.html">volumedownbutton</a></li>
+  <li><a href="events.volumeupbutton.html">volumeupbutton</a></li>
 </ul>
 
 <h2>Accessing the Feature</h2>
@@ -1672,49 +1672,66 @@ device-level APIs as <em>plugins</em>. Access to all other events not related
 to battery status are enabled by default.  Use the CLI&#39;s <code>plugin</code>
 command, described in <a href="../../guide/cli/index.html">The Command-Line Interface</a>, to enable or disable
 battery events:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add org.apache.cordova.battery-status
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova plugin add org.apache.cordova.battery-status
     $ cordova plugin ls
     [ 'org.apache.cordova.battery-status' ]
     $ cordova plugin rm org.apache.cordova.battery-status
-</code></pre></div>
+</code></pre></div></div>
+
 <p>These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:</p>
 
 <ul>
-<li><p>Amazon Fire OS</p>
-<div class="highlight"><pre><code class="language-" data-lang="">(in app/res/xml/config.xml)
-&lt;feature name="Battery"&gt;
-    &lt;param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" /&gt;
-&lt;/feature&gt;
-</code></pre></div></li>
-<li><p>Android</p>
-<div class="highlight"><pre><code class="language-" data-lang="">(in app/res/xml/config.xml)
-&lt;feature name="Battery"&gt;
-    &lt;param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" /&gt;
-&lt;/feature&gt;
-</code></pre></div></li>
-<li><p>BlackBerry 10</p>
-<div class="highlight"><pre><code class="language-" data-lang="">(in www/plugins.xml)
-&lt;feature name="Battery"&gt;
-    &lt;param name="blackberry-package" value="org.apache.cordova.battery.Battery" /&gt;
-&lt;/feature&gt;
+  <li>
+    <p>Amazon Fire OS</p>
 
-(in www/config.xml)
-&lt;feature id="blackberry.app"          required="true" version="1.0.0.0" /&gt;
-&lt;feature id="blackberry.app.event"    required="true" version="1.0.0.0" /&gt;
-&lt;feature id="blackberry.system.event" required="true" version="1.0.0.0" /&gt;
-</code></pre></div></li>
-<li><p>iOS (in the named application directory&#39;s <code>config.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature name="Battery"&gt;
-    &lt;param name="ios-package" value="CDVBattery" /&gt;
-&lt;/feature&gt;
-</code></pre></div></li>
-<li><p>Tizen (in <code>config.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature name="http://tizen.org/api/systeminfo" required="true"/&gt;
-</code></pre></div></li>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in app/res/xml/config.xml)
+  &lt;feature name="Battery"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Android</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in app/res/xml/config.xml)
+  &lt;feature name="Battery"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>BlackBerry 10</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in www/plugins.xml)
+  &lt;feature name="Battery"&gt;
+      &lt;param name="blackberry-package" value="org.apache.cordova.battery.Battery" /&gt;
+  &lt;/feature&gt;
+
+  (in www/config.xml)
+  &lt;feature id="blackberry.app"          required="true" version="1.0.0.0" /&gt;
+  &lt;feature id="blackberry.app.event"    required="true" version="1.0.0.0" /&gt;
+  &lt;feature id="blackberry.system.event" required="true" version="1.0.0.0" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>iOS (in the named application directory&#39;s <code>config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="Battery"&gt;
+      &lt;param name="ios-package" value="CDVBattery" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Tizen (in <code>config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="http://tizen.org/api/systeminfo" required="true"/&gt;
+</code></pre></div>    </div>
+
+    <p>Reference: <a href="https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures">Application Manifest for Tizen Web Application</a></p>
+  </li>
 </ul>
-
-<p>Reference: <a href="https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures">Application Manifest for Tizen Web Application</a></p>
 
 <p>Some platforms may support this feature without requiring any special
 configuration.  See <a href="../../guide/support/index.html">Platform Support</a> for an overview.</p>

@@ -138,40 +138,45 @@
 <p>Things to note:</p>
 
 <ul>
-<li>For iPhone X&#39;s new screen size, you must use Launch Storyboards to take full advantage of it</li>
-<li>Current Splash Screen images will result in letterboxing</li>
+  <li>For iPhone X&#39;s new screen size, you must use Launch Storyboards to take full advantage of it</li>
+  <li>Current Splash Screen images will result in letterboxing</li>
 </ul>
 
 <p>Apple has also made some changes that could effect your current apps, specifically around the viewport. Here are a few resources that could help with your transition to iOS 11:</p>
 
 <ol>
-<li><a href="https://webkit.org/blog/7929/designing-websites-for-iphone-x/">Designing Websites for iPhone X</a></li>
-<li><a href="https://ayogo.com/blog/ios11-viewport/">Understanding the WebView Viewport in iOS 11</a></li>
-<li><a href="http://stephenradford.me/removing-the-white-bars-in-safari-on-iphone-x/">Removing the White Bars in Safari on iPhone X</a></li>
+  <li><a href="https://webkit.org/blog/7929/designing-websites-for-iphone-x/">Designing Websites for iPhone X</a></li>
+  <li><a href="https://ayogo.com/blog/ios11-viewport/">Understanding the WebView Viewport in iOS 11</a></li>
+  <li><a href="http://stephenradford.me/removing-the-white-bars-in-safari-on-iphone-x/">Removing the White Bars in Safari on iPhone X</a></li>
 </ol>
 
 <p>We are also aware that there are specific issues related to the Status Bar plugin. The team is working to resolve these for the next release of the plugin.</p>
 
 <p><strong>Note:</strong> When updating <strong>iOS</strong>, make sure to save your plugins as current unsaved plugins may not be reinstalled otherwise. Run the following command in your project to save your currently installed plugins into <code>config.xml</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin save
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin save
+</code></pre></div></div>
+
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform rm ios
 cordova platform add ios@4.5.1
-</code></pre></div>
-<p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add ios@4.5.1
-</code></pre></div>
-<!--more-->
+</code></pre></div></div>
 
+<p>To add it explicitly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@4.5.1
+</code></pre></div></div>
+
+<!--more-->
 <h2>What&#39;s new in iOS</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13310">CB-13310</a> Updated checked-in node_modules</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13191">CB-13191</a> (ios) Support marketing icon (#337)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12888">CB-12888</a> - cordova emulate <strong>iOS</strong> doesn&#39;t work in <strong>iOS</strong> 11</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13310">CB-13310</a> Updated checked-in node_modules</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13191">CB-13191</a> (ios) Support marketing icon (#337)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12888">CB-12888</a> - cordova emulate <strong>iOS</strong> doesn&#39;t work in <strong>iOS</strong> 11</li>
 </ul>
 
         </div>

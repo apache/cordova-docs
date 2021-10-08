@@ -1448,13 +1448,15 @@
                 <h1><a href="MediaFile.html">MediaFile</a>.getFormatData</h1>
 
 <blockquote>
-<p>Retrieves format information about the media capture file.</p>
+  <p>Retrieves format information about the media capture file.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">mediaFile.getFormatData( 
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mediaFile.getFormatData( 
     MediaFileDataSuccessCB successCallback, 
     [MediaFileDataErrorCB errorCallback]
 );
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p>This function asynchronously attempts to retrieve the format information for the media file.  If successful, it invokes the MediaFileDataSuccessCB callback with a <a href="MediaFileData.html">MediaFileData</a> object.  If the attempt fails, this function will invoke the MediaFileDataErrorCB callback.</p>
@@ -1462,22 +1464,19 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 ( Mango )</li>
 </ul>
 
 <h2>BlackBerry WebWorks Quirks</h2>
-
 <p>There is no API that provides format information of media files.  Therefore, all <a href="MediaFileData.html">MediaFileData</a> objects will be returned with default values.  See <a href="MediaFileData.html">MediaFileData</a> documentation.</p>
 
 <h2>Android Quirks</h2>
-
 <p>The API for retrieving media file format information is limited.  Therefore, not all <a href="MediaFileData.html">MediaFileData</a> properties are supported.  See <a href="MediaFileData.html">MediaFileData</a> documentation.</p>
 
 <h2>iOS Quirks</h2>
-
 <p>The API for retrieving media file format information is limited.  Therefore, not all <a href="MediaFileData.html">MediaFileData</a> properties are supported.  See <a href="MediaFileData.html">MediaFileData</a> documentation.</p>
 
 

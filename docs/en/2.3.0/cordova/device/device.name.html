@@ -1542,12 +1542,13 @@
 
             <div id="page-toc-source">
                 <h1>device.name</h1>
-
 <p>WARNING: device.name is deprecated as of version 2.3.0, use <a href="device.model.html">device.model</a> instead</p>
 
 <p>Get the device&#39;s model name.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">var string = device.name;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var string = device.name;
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p><code>device.name</code> returns the name of the device&#39;s model or product. This value is set by the device manufacturer and may be different across versions of the same product.</p>
@@ -1555,84 +1556,86 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7 and 8</li>
-<li>Bada 1.2 &amp; 2.x</li>
-<li>webOS</li>
-<li>Tizen</li>
-<li>Windows 8</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Bada 1.2 &amp; 2.x</li>
+  <li>webOS</li>
+  <li>Tizen</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">// Android:    Nexus One       returns "Passion" (Nexus One code name)
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Android:    Nexus One       returns "Passion" (Nexus One code name)
 //             Motorola Droid  returns "voles"
 // BlackBerry: Torch 9800      returns "9800"
 // iOS:     All devices     returns either "iPhone", "iPod Touch", "iPhone Simulator", "iPad", "iPad Simulator"
 //
 var name = device.name;
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Device Properties Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-2.3.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Device Properties Example&lt;/title&gt;
 
-    <span class="c1">// Wait for Cordova to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Cordova is ready</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'deviceProperties'</span><span class="p">);</span>
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-        <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">'Device Name: '</span>     <span class="o">+</span> <span class="nx">device</span><span class="p">.</span><span class="nx">name</span>     <span class="o">+</span> <span class="err">'</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="s1">' + 
-                            '</span><span class="nx">Device</span> <span class="nx">Cordova</span><span class="p">:</span> <span class="s1">'  + device.cordova + '</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="s1">' + 
-                            '</span><span class="nx">Device</span> <span class="nx">Platform</span><span class="p">:</span> <span class="s1">' + device.platform + '</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="s1">' + 
-                            '</span><span class="nx">Device</span> <span class="nx">UUID</span><span class="p">:</span> <span class="s1">'     + device.uuid     + '</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="s1">' + 
-                            '</span><span class="nx">Device</span> <span class="nx">Model</span><span class="p">:</span> <span class="s1">'    + device.model     + '</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="s1">' + 
-                            '</span><span class="nx">Device</span> <span class="nx">Version</span><span class="p">:</span> <span class="s1">'  + device.version  + '</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="err">'</span><span class="p">;</span>
-    <span class="p">}</span>
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        var element = document.getElementById('deviceProperties');
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"deviceProperties"</span><span class="nt">&gt;</span>Loading device properties...<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+        element.innerHTML = 'Device Name: '     + device.name     + '&lt;br /&gt;' + 
+                            'Device Cordova: '  + device.cordova + '&lt;br /&gt;' + 
+                            'Device Platform: ' + device.platform + '&lt;br /&gt;' + 
+                            'Device UUID: '     + device.uuid     + '&lt;br /&gt;' + 
+                            'Device Model: '    + device.model     + '&lt;br /&gt;' + 
+                            'Device Version: '  + device.version  + '&lt;br /&gt;';
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p id="deviceProperties"&gt;Loading device properties...&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 <h2>Android Quirks</h2>
 
 <ul>
-<li>Gets the <a href="http://developer.android.com/reference/android/os/Build.html#PRODUCT">product name</a> instead of the <a href="http://developer.android.com/reference/android/os/Build.html#MODEL">model name</a>.
-
-<ul>
-<li>The product name is often the code name given during production.</li>
-<li>e.g. Nexus One returns &quot;Passion&quot;, Motorola Droid returns &quot;voles&quot;</li>
-</ul></li>
+  <li>Gets the <a href="http://developer.android.com/reference/android/os/Build.html#PRODUCT">product name</a> instead of the <a href="http://developer.android.com/reference/android/os/Build.html#MODEL">model name</a>.
+    <ul>
+      <li>The product name is often the code name given during production.</li>
+      <li>e.g. Nexus One returns &quot;Passion&quot;, Motorola Droid returns &quot;voles&quot;</li>
+    </ul>
+  </li>
 </ul>
 
 <h2>Windows Phone 7 and 8 Quirks</h2>
 
 <ul>
-<li>returns the manufacturer specified device name, for example, the Samsung Focus returns &#39;SGH-i917&#39;</li>
+  <li>returns the manufacturer specified device name, for example, the Samsung Focus returns &#39;SGH-i917&#39;</li>
 </ul>
 
 <h2>Bada Quirks</h2>
-
 <ul>
-<li>returns the manufacturer model name. For example &#39;Samsung Wave S8500&#39;</li>
+  <li>returns the manufacturer model name. For example &#39;Samsung Wave S8500&#39;</li>
 </ul>
 
 <h2>Tizen Quirks</h2>
-
 <ul>
-<li>returns the <a href="device.model.html">device.model</a> assigned by the vendor. For example &#39;TIZEN&#39;</li>
+  <li>returns the <a href="device.model.html">device.model</a> assigned by the vendor. For example &#39;TIZEN&#39;</li>
 </ul>
 
 

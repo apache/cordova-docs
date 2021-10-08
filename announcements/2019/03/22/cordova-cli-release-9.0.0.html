@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released cordova 9.0.0!cordova@9.0.0To upgrade:npm uninstall -g cordovanpm install -g cordova@9.0.0Release Highlig...">
+    <meta name="description" content="We are happy to announce that we have just released cordova 9.0.0!  cordova@9.0.0To upgrade:npm uninstall -g cordovanpm install -g cordova@9.0.0Release Highl...">
 
     <title>
         
@@ -134,26 +134,28 @@
             <p>We are happy to announce that we have just released <code>cordova 9.0.0</code>!</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova">cordova@9.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova">cordova@9.0.0</a></li>
 </ul>
 
 <p><strong>To upgrade:</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm uninstall -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm uninstall -g cordova
 npm install -g cordova@9.0.0
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Release Highlights</h2>
 
-<p>In addition to various improvements and fixes, this release has updated its core library. </p>
+<p>In addition to various improvements and fixes, this release has updated its core library.</p>
 
 <p>All of the latest platform releases are available by default.</p>
 
 <ul>
-<li><code>cordova-android@^8.0.0</code></li>
-<li><code>cordova-browser@^6.0.0</code></li>
-<li><code>cordova-electron@^1.0.0</code></li>
-<li><code>cordova-ios@^5.0.0</code></li>
-<li><code>cordova-osx@^5.0.0</code></li>
-<li><code>cordova-windows@^7.0.0</code></li>
+  <li><code>cordova-android@^8.0.0</code></li>
+  <li><code>cordova-browser@^6.0.0</code></li>
+  <li><code>cordova-electron@^1.0.0</code></li>
+  <li><code>cordova-ios@^5.0.0</code></li>
+  <li><code>cordova-osx@^5.0.0</code></li>
+  <li><code>cordova-windows@^7.0.0</code></li>
 </ul>
 
 <p>Additionally, Cordova Electron, one of the newest supported platfroms, is available!</p>
@@ -165,40 +167,45 @@ npm install -g cordova@9.0.0
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-cli/pull/414">GH-414</a> Cordova CLI Release Preparation (Cordova 9)
-
-<ul>
-<li><strong>Bumped Dependencies</strong></li>
-<li><code>cordova-lib@^9.0.0</code></li>
-<li><code>cordova-common@^3.1.0</code></li>
-<li><code>editor@^1.0.0</code> (Prepended <code>^</code> only)</li>
-<li><code>loud-rejection@^2.0.0</code></li>
-<li><strong>Bumped Dev Dependencies</strong></li>
-<li><code>jasmine@^3.3.1</code></li>
-<li><code>eslint-plugin-promise@^4.0.1</code></li>
-<li><code>eslint-plugin-node@^8.0.1</code></li>
-<li><code>eslint-plugin-import@^2.16.0</code></li>
-<li><code>eslint-config-standard@^12.0.0</code></li>
-<li><code>eslint-config-semistandard@^13.0.0</code></li>
-<li><code>eslint@^5.15.2</code></li>
-<li>Fix <code>logger[level]</code> spy in Jasmine</li>
-</ul></li>
-<li><a href="https://github.com/apache/cordova-cli/pull/397">GH-397</a> Update Node.js Deprecation Notice Message</li>
-<li><a href="https://github.com/apache/cordova-cli/pull/395">GH-395</a> Fix typo: &quot;esecially&quot; to especially</li>
-<li><a href="https://github.com/apache/cordova-cli/pull/364">GH-364</a> Fix spec label for build tests</li>
-<li><a href="https://github.com/apache/cordova-cli/pull/344">GH-344</a> Check that <code>bin/cordova</code> works on Travis CI</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13740">CB-13740</a> gracefully handle platforms that don&#39;t pass back requirements to check</li>
-<li><a href="https://github.com/apache/cordova-cli/pull/327">GH-327</a> Stub telemetry calls during all tests</li>
-<li><a href="https://github.com/apache/cordova-cli/pull/322">GH-322</a> Remove support for <code>fetch</code> option</li>
-<li><a href="https://github.com/apache/cordova-cli/pull/321">GH-321</a> Remove support for <code>browserify</code></li>
-<li><a href="https://github.com/apache/cordova-cli/pull/317">GH-317</a> cli.spec: Telemetry-Related Improvements</li>
-<li><a href="https://github.com/apache/cordova-cli/pull/316">GH-316</a> Remove <code>callback</code> parameter of main CLI function</li>
-<li><a href="https://github.com/apache/cordova-cli/pull/298">GH-298</a> Remove support for deprecated <code>--copy-from</code></li>
-<li><a href="https://github.com/apache/cordova-cli/pull/298">GH-298</a> Cleanup code calling <code>cordova-create</code></li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/414">GH-414</a> Cordova CLI Release Preparation (Cordova 9)
+    <ul>
+      <li><strong>Bumped Dependencies</strong>
+        <ul>
+          <li><code>cordova-lib@^9.0.0</code></li>
+          <li><code>cordova-common@^3.1.0</code></li>
+          <li><code>editor@^1.0.0</code> (Prepended <code>^</code> only)</li>
+          <li><code>loud-rejection@^2.0.0</code></li>
+        </ul>
+      </li>
+      <li><strong>Bumped Dev Dependencies</strong>
+        <ul>
+          <li><code>jasmine@^3.3.1</code></li>
+          <li><code>eslint-plugin-promise@^4.0.1</code></li>
+          <li><code>eslint-plugin-node@^8.0.1</code></li>
+          <li><code>eslint-plugin-import@^2.16.0</code></li>
+          <li><code>eslint-config-standard@^12.0.0</code></li>
+          <li><code>eslint-config-semistandard@^13.0.0</code></li>
+          <li><code>eslint@^5.15.2</code></li>
+        </ul>
+      </li>
+      <li>Fix <code>logger[level]</code> spy in Jasmine</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/397">GH-397</a> Update Node.js Deprecation Notice Message</li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/395">GH-395</a> Fix typo: &quot;esecially&quot; to especially</li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/364">GH-364</a> Fix spec label for build tests</li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/344">GH-344</a> Check that <code>bin/cordova</code> works on Travis CI</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13740">CB-13740</a> gracefully handle platforms that don&#39;t pass back requirements to check</li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/327">GH-327</a> Stub telemetry calls during all tests</li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/322">GH-322</a> Remove support for <code>fetch</code> option</li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/321">GH-321</a> Remove support for <code>browserify</code></li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/317">GH-317</a> cli.spec: Telemetry-Related Improvements</li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/316">GH-316</a> Remove <code>callback</code> parameter of main CLI function</li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/298">GH-298</a> Remove support for deprecated <code>--copy-from</code></li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/298">GH-298</a> Cleanup code calling <code>cordova-create</code></li>
 </ul>
 
         </div>

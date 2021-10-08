@@ -1456,36 +1456,38 @@
 <h2>Prerequisites</h2>
 
 <ol>
-<li><strong>Cordova 2.0.0</strong> or greater</li>
-<li><strong>Xcode 4.3</strong> or greater</li>
-<li><code>Cordova.plist</code> file</li>
+  <li><strong>Cordova 2.0.0</strong> or greater</li>
+  <li><strong>Xcode 4.3</strong> or greater</li>
+  <li><code>Cordova.plist</code> file</li>
 </ol>
 
 <h2>Adding Cleaver to your Xcode project (CordovaLib sub-project)</h2>
 
 <ol>
-<li><strong>Install</strong> Cordova</li>
-<li><strong>Copy</strong> the <code>Cordova.plist</code> file into your project folder on disk</li>
-<li><strong>Drag and drop</strong> the <code>Cordova.plist</code> file into the Project Navigator of Xcode</li>
-<li><strong>Choose</strong> the radio-button <strong>&quot;Create groups for any added folders&quot;</strong></li>
-<li>Press the key combination <strong>Option-Command-A</strong>, which should drop down a sheet to add files to your project (the <strong>&quot;Add Files...&quot; sheet</strong>). Make sure the <strong>&quot;Created groups for any added folders&quot;</strong> radio-button is selected</li>
-<li>Press the key combination <strong>Shift-Command-G</strong>, which should drop down another sheet for you to go to a folder (the <strong>&quot;Go to the folder:&quot; sheet</strong>)</li>
-<li>Enter <code>~/Documents/CordovaLib/</code> in the <strong>&quot;Go to the folder:&quot; sheet</strong> and then press the <strong>&quot;Go&quot;</strong> button</li>
-<li>Select the <code>VERSION</code> file in the the <strong>&quot;Add Files...&quot; sheet</strong></li>
-<li>Press the <strong>&quot;Add&quot;</strong> button in the <strong>&quot;Add Files...&quot; sheet</strong></li>
-<li>Press the key combination <strong>Option-Command-A</strong>, which should drop down a sheet to add files to your project (the <strong>&quot;Add Files...&quot; sheet</strong>). Make sure the <strong>&quot;Created groups for any added folders&quot;</strong> radio-button is selected</li>
-<li>Press the key combination <strong>Shift-Command-G</strong>, which should drop down another sheet for you to go to a folder (the <strong>&quot;Go to the folder:&quot; sheet</strong>)</li>
-<li>Enter <code>~/Documents/CordovaLib/CordovaLib.xcodeproj</code> in the <strong>&quot;Go to the folder:&quot; sheet</strong> and then press the <strong>&quot;Go&quot;</strong> button</li>
-<li>Press the <strong>&quot;Add&quot;</strong> button in the <strong>&quot;Add Files...&quot; sheet</strong></li>
-<li>Select <code>CordovaLib.xcodeproj</code> in the Project Navigator</li>
-<li>Press the key combination <strong>Option-Command-1</strong> to show the <strong>File Inspector</strong></li>
-<li>Choose <strong>&quot;Relative to CORDOVALIB&quot;</strong> in the <strong>File Inspector</strong> for the drop-down menu for <strong>Location</strong> </li>
-<li>Click on the <strong>project icon</strong> in the Project Navigator, select your <strong>Project</strong>, then select the <strong>&quot;Build Settings&quot;</strong> tab</li>
-<li>Add <code>-all_load</code> and <code>-Obj-C</code> - for the <strong>&quot;Other Linker <a href="../../cordova/file/flags/flags.html">Flags</a>&quot;</strong> value</li>
-<li>Click on the <strong>project icon</strong> in the Project Navigator, select your <strong>Target</strong>, then select the <strong>&quot;Build Phases&quot;</strong> tab</li>
-<li>Expand <strong>&quot;Link Binaries with Libraries&quot;</strong> </li>
-<li><p>Click on the <strong>&quot;+&quot; button</strong>, and add these <strong>frameworks</strong> (and optionally in the Project Navigator, <strong>move</strong> them under the Frameworks group):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">AddressBook.framework
+  <li><strong>Install</strong> Cordova</li>
+  <li><strong>Copy</strong> the <code>Cordova.plist</code> file into your project folder on disk</li>
+  <li><strong>Drag and drop</strong> the <code>Cordova.plist</code> file into the Project Navigator of Xcode</li>
+  <li><strong>Choose</strong> the radio-button <strong>&quot;Create groups for any added folders&quot;</strong></li>
+  <li>Press the key combination <strong>Option-Command-A</strong>, which should drop down a sheet to add files to your project (the <strong>&quot;Add Files&#8230;&quot; sheet</strong>). Make sure the <strong>&quot;Created groups for any added folders&quot;</strong> radio-button is selected</li>
+  <li>Press the key combination <strong>Shift-Command-G</strong>, which should drop down another sheet for you to go to a folder (the <strong>&quot;Go to the folder:&quot; sheet</strong>)</li>
+  <li>Enter <code>~/Documents/CordovaLib/</code> in the <strong>&quot;Go to the folder:&quot; sheet</strong> and then press the <strong>&quot;Go&quot;</strong> button</li>
+  <li>Select the <code>VERSION</code> file in the the <strong>&quot;Add Files&#8230;&quot; sheet</strong></li>
+  <li>Press the <strong>&quot;Add&quot;</strong> button in the <strong>&quot;Add Files&#8230;&quot; sheet</strong></li>
+  <li>Press the key combination <strong>Option-Command-A</strong>, which should drop down a sheet to add files to your project (the <strong>&quot;Add Files&#8230;&quot; sheet</strong>). Make sure the <strong>&quot;Created groups for any added folders&quot;</strong> radio-button is selected</li>
+  <li>Press the key combination <strong>Shift-Command-G</strong>, which should drop down another sheet for you to go to a folder (the <strong>&quot;Go to the folder:&quot; sheet</strong>)</li>
+  <li>Enter <code>~/Documents/CordovaLib/CordovaLib.xcodeproj</code> in the <strong>&quot;Go to the folder:&quot; sheet</strong> and then press the <strong>&quot;Go&quot;</strong> button</li>
+  <li>Press the <strong>&quot;Add&quot;</strong> button in the <strong>&quot;Add Files&#8230;&quot; sheet</strong></li>
+  <li>Select <code>CordovaLib.xcodeproj</code> in the Project Navigator</li>
+  <li>Press the key combination <strong>Option-Command-1</strong> to show the <strong>File Inspector</strong></li>
+  <li>Choose <strong>&quot;Relative to CORDOVALIB&quot;</strong> in the <strong>File Inspector</strong> for the drop-down menu for <strong>Location</strong></li>
+  <li>Click on the <strong>project icon</strong> in the Project Navigator, select your <strong>Project</strong>, then select the <strong>&quot;Build Settings&quot;</strong> tab</li>
+  <li>Add <code>-all_load</code> and <code>-Obj-C</code> - for the <strong>&quot;Other Linker <a href="../../cordova/file/flags/flags.html">Flags</a>&quot;</strong> value</li>
+  <li>Click on the <strong>project icon</strong> in the Project Navigator, select your <strong>Target</strong>, then select the <strong>&quot;Build Phases&quot;</strong> tab</li>
+  <li>Expand <strong>&quot;Link Binaries with Libraries&quot;</strong></li>
+  <li>
+    <p>Click on the <strong>&quot;+&quot; button</strong>, and add these <strong>frameworks</strong> (and optionally in the Project Navigator, <strong>move</strong> them under the Frameworks group):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AddressBook.framework
 AddressBookUI.framework
 AudioToolbox.framework
 AVFoundation.framework
@@ -1495,57 +1497,83 @@ QuartzCore.framework
 SystemConfiguration.framework
 MobileCoreServices.framework
 CoreMedia.framework
-</code></pre></div></li>
-<li><p>Expand <strong>&quot;Target Dependencies&quot;</strong> - the top box labeled like this if you have multiple boxes!</p></li>
-<li><p>Click on the <strong>&quot;+&quot; button</strong>, and add the <code>CordovaLib</code> build product</p></li>
-<li><p>Expand <strong>&quot;Link Binaries with Libraries&quot;</strong> - the top box labeled like
-this if you have multiple boxes!</p></li>
-<li><p>Click on the <strong>&quot;+&quot; button</strong>, and add <code>libCordova.a</code></p></li>
+</code></pre></div>    </div>
+  </li>
+  <li>Expand <strong>&quot;Target Dependencies&quot;</strong> - the top box labeled like this if you have multiple boxes!</li>
+  <li>Click on the <strong>&quot;+&quot; button</strong>, and add the <code>CordovaLib</code> build product</li>
+  <li>Expand <strong>&quot;Link Binaries with Libraries&quot;</strong> - the top box labeled like
+this if you have multiple boxes!</li>
+  <li>Click on the <strong>&quot;+&quot; button</strong>, and add <code>libCordova.a</code></li>
 </ol>
 
 <h2>Using CDVViewController in your code</h2>
 
 <ol>
-<li><p>Add this <strong>header</strong>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">#import &lt;Cordova/CDVViewController.h&gt;
-</code></pre></div></li>
-<li><p>Instantiate a <strong>new</strong> <code>CDVViewController</code>, and retain it somewhere: </p>
-<div class="highlight"><pre><code class="language-" data-lang="">CDVViewController* viewController = [CDVViewController new];
-</code></pre></div></li>
-<li><p>(<em>OPTIONAL</em>) Set the <code>wwwFolderName</code> property (defaults to <code>&quot;www&quot;</code>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">viewController.wwwFolderName = @"myfolder";
-</code></pre></div></li>
-<li><p>(<em>OPTIONAL</em>) Set the <code>startPage</code> property (defaults to <code>&quot;index.html&quot;</code>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">viewController.startPage = @"mystartpage.html";
-</code></pre></div></li>
-<li><p>(<em>OPTIONAL</em>) Set the <code>useSplashScreen</code> property (defaults to <code>NO</code>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">viewController.useSplashScreen = YES;
-</code></pre></div></li>
-<li><p>Set the <strong>view frame</strong> (always set this as the last property):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">viewController.view.frame = CGRectMake(0, 0, 320, 480);
-</code></pre></div></li>
-<li><p><strong>Add</strong> Cleaver to your view:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">[myView addSubview:viewController.view];
-</code></pre></div></li>
+  <li>
+    <p>Add this <strong>header</strong>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> #import &lt;Cordova/CDVViewController.h&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Instantiate a <strong>new</strong> <code>CDVViewController</code>, and retain it somewhere:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> CDVViewController* viewController = [CDVViewController new];
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>(<em>OPTIONAL</em>) Set the <code>wwwFolderName</code> property (defaults to <code>"www"</code>):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> viewController.wwwFolderName = @"myfolder";
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>(<em>OPTIONAL</em>) Set the <code>startPage</code> property (defaults to <code>"index.html"</code>):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> viewController.startPage = @"mystartpage.html";
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>(<em>OPTIONAL</em>) Set the <code>useSplashScreen</code> property (defaults to <code>NO</code>):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> viewController.useSplashScreen = YES;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Set the <strong>view frame</strong> (always set this as the last property):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> viewController.view.frame = CGRectMake(0, 0, 320, 480);
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Add</strong> Cleaver to your view:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [myView addSubview:viewController.view];
+</code></pre></div>    </div>
+  </li>
 </ol>
 
 <h2>Adding your HTML, CSS and JavaScript assets</h2>
 
 <ol>
-<li>Create a <strong>new folder</strong> in your project <strong>on disk</strong>, for example, name it <code>www</code></li>
-<li>Put your <strong>HTML, CSS and JavaScript assets</strong> into this folder</li>
-<li><strong>Drag and drop</strong> the folder into the Project Navigator of Xcode</li>
-<li><strong>Choose</strong> the radio-button <strong>&quot;Create folder references for any added folders&quot;</strong></li>
-<li><p><strong>Set the appropriate <code>wwwFolderName</code> and <code>startPage</code> properties</strong> for the folder you created in <strong>(1)</strong> or use the defaults (see previous section) when you instantiate the <code>CDVViewController</code>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">/*
- if you created a folder called 'myfolder' and
- you want the file 'mypage.html' in it to be 
- the startPage
-*/
-viewController.wwwFolderName = @"myfolder";
-viewController.startPage = @"mypage.html"
-</code></pre></div></li>
+  <li>Create a <strong>new folder</strong> in your project <strong>on disk</strong>, for example, name it <code>www</code></li>
+  <li>Put your <strong>HTML, CSS and JavaScript assets</strong> into this folder</li>
+  <li><strong>Drag and drop</strong> the folder into the Project Navigator of Xcode</li>
+  <li><strong>Choose</strong> the radio-button <strong>&quot;Create folder references for any added folders&quot;</strong></li>
+  <li>
+    <p><strong>Set the appropriate <code>wwwFolderName</code> and <code>startPage</code> properties</strong> for the folder you created in <strong>(1)</strong> or use the defaults (see previous section) when you instantiate the <code>CDVViewController</code>.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> /*
+  if you created a folder called 'myfolder' and
+  you want the file 'mypage.html' in it to be 
+  the startPage
+ */
+ viewController.wwwFolderName = @"myfolder";
+ viewController.startPage = @"mypage.html"
+</code></pre></div>    </div>
+  </li>
 </ol>
+
 
 
             </div>

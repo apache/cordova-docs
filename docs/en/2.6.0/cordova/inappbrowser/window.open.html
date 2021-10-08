@@ -1544,78 +1544,90 @@
                 <h1>window.open</h1>
 
 <p>Opens a URL in a new <a href="inappbrowser.html">InAppBrowser</a> instance, the current browser instance, or the system browser.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">var ref = window.open(url, target, options);
-</code></pre></div>
-<ul>
-<li><strong>ref:</strong> reference to the <a href="inappbrowser.html">InAppBrowser</a> window (<code>[InAppBrowser](inappbrowser.html)</code>)</li>
-<li><strong>url:</strong> the URL to load (<code>String</code>). Call encodeURI() on this if you have Unicode characters in your URL.</li>
-<li><p><strong>target:</strong> the target to load the URL in (<code>String</code>) (Optional, Default: &quot;_self&quot;)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">_self - opens in the Cordova WebView if url is in the white-list, else it opens in the InAppBrowser 
-_blank - always open in the InAppBrowser 
-_system - always open in the system web browser 
-</code></pre></div></li>
-<li><p><strong>options:</strong> options for the <a href="inappbrowser.html">InAppBrowser</a> (<code>String</code>) (Optional, Default: &quot;location=yes&quot;)</p>
 
-<p>The options string must not contain any blank space, each feature name and value must be separated by a comma. Feature names are case insensitive. Only the value below is supported on all platforms:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = window.open(url, target, options);
+</code></pre></div></div>
 
 <ul>
-<li><strong>location</strong> - set to &#39;yes&#39; or &#39;no&#39; to turn the location bar on or off for the InAppBrowser</li>
-</ul>
+  <li><strong>ref:</strong> reference to the <a href="inappbrowser.html">InAppBrowser</a> window (<code>[InAppBrowser](inappbrowser.html)</code>)</li>
+  <li><strong>url:</strong> the URL to load (<code>String</code>). Call encodeURI() on this if you have Unicode characters in your URL.</li>
+  <li>
+    <p><strong>target:</strong> the target to load the URL in (<code>String</code>) (Optional, Default: &quot;_self&quot;)</p>
 
-<h2>iOS only</h2>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  _self - opens in the Cordova WebView if url is in the white-list, else it opens in the InAppBrowser 
+  _blank - always open in the InAppBrowser 
+  _system - always open in the system web browser 
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>options:</strong> options for the <a href="inappbrowser.html">InAppBrowser</a> (<code>String</code>) (Optional, Default: &quot;location=yes&quot;)</p>
 
-<ul>
-<li><strong>enableViewportScale</strong> -  set to &#39;yes&#39; or &#39;no&#39; to prevent viewport scaling through a meta tag (defaults to &#39;no&#39;)</li>
-<li><strong>mediaPlaybackRequiresUserAction</strong> - set to &#39;yes&#39; or &#39;no&#39; to not allow autoplayed HTML5 video (defaults to &#39;no&#39;)</li>
-<li><strong>allowInlineMediaPlayback</strong> - set to &#39;yes&#39; or &#39;no&#39; to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute (defaults to &#39;no&#39;)</li>
-<li><strong>keyboardDisplayRequiresUserAction</strong> - set to &#39;yes&#39; or &#39;no&#39; to open the keyboard when form elements get focus via the JavaScript focus() call (defaults to &#39;yes&#39;)</li>
-<li><strong>suppressesIncrementalRendering</strong> - set to &#39;yes&#39; or &#39;no&#39; to wait until all new view content has been received before it is rendered (defaults to &#39;no&#39;)</li>
-<li><strong>presentationstyle</strong> -  set to &#39;pagesheet&#39;, &#39;formsheet&#39; or &#39;fullscreen&#39; to set the <a href="http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle">presentation style</a> (defaults to &#39;fullscreen&#39;)</li>
-<li><strong>transitionstyle</strong> - set to &#39;fliphorizontal&#39;, &#39;crossdissolve&#39; or &#39;coververtical&#39; to set the <a href="http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle">transition style</a> (defaults to &#39;coververtical&#39;)</li>
-</ul></li>
+    <p>The options string must not contain any blank space, each feature name and value must be separated by a comma. Feature names are case insensitive. Only the value below is supported on all platforms:</p>
+
+    <ul>
+      <li><strong>location</strong> - set to &#39;yes&#39; or &#39;no&#39; to turn the location bar on or off for the InAppBrowser</li>
+    </ul>
+
+    <p>iOS only
+  &#8212;&#8212;--</p>
+    <ul>
+      <li><strong>enableViewportScale</strong> -  set to &#39;yes&#39; or &#39;no&#39; to prevent viewport scaling through a meta tag (defaults to &#39;no&#39;)</li>
+      <li><strong>mediaPlaybackRequiresUserAction</strong> - set to &#39;yes&#39; or &#39;no&#39; to not allow autoplayed HTML5 video (defaults to &#39;no&#39;)</li>
+      <li><strong>allowInlineMediaPlayback</strong> - set to &#39;yes&#39; or &#39;no&#39; to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute (defaults to &#39;no&#39;)</li>
+      <li><strong>keyboardDisplayRequiresUserAction</strong> - set to &#39;yes&#39; or &#39;no&#39; to open the keyboard when form elements get focus via the JavaScript focus() call (defaults to &#39;yes&#39;)</li>
+      <li><strong>suppressesIncrementalRendering</strong> - set to &#39;yes&#39; or &#39;no&#39; to wait until all new view content has been received before it is rendered (defaults to &#39;no&#39;)</li>
+      <li><strong>presentationstyle</strong> -  set to &#39;pagesheet&#39;, &#39;formsheet&#39; or &#39;fullscreen&#39; to set the <a href="http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle">presentation style</a> (defaults to &#39;fullscreen&#39;)</li>
+      <li><strong>transitionstyle</strong> - set to &#39;fliphorizontal&#39;, &#39;crossdissolve&#39; or &#39;coververtical&#39; to set the <a href="http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle">transition style</a> (defaults to &#39;coververtical&#39;)</li>
+    </ul>
+  </li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>iOS</li>
-<li>BlackBerry 10</li>
-<li>Windows Phone 7 + 8</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>BlackBerry 10</li>
+  <li>Windows Phone 7 + 8</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">var ref = window.open('http://apache.org', '_blank', 'location=yes');
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = window.open('http://apache.org', '_blank', 'location=yes');
 var ref2 = window.open(encodeURI('http://ja.m.wikipedia.org/wiki/ハングル'), '_blank', 'location=yes');
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>window.open Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-2.6.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;window.open Example&lt;/title&gt;
 
-    <span class="c1">// Wait for Cordova to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Cordova is ready</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// external url</span>
-        <span class="kd">var</span> <span class="nx">ref</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nb">encodeURI</span><span class="p">(</span><span class="s1">'http://apache.org'</span><span class="p">),</span> <span class="s1">'_blank'</span><span class="p">,</span> <span class="s1">'location=yes'</span><span class="p">);</span>
-        <span class="c1">// relative document</span>
-        <span class="nx">ref</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'next.html'</span><span class="p">,</span> <span class="s1">'_self'</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        // external url
+        var ref = window.open(encodeURI('http://apache.org'), '_blank', 'location=yes');
+        // relative document
+        ref = window.open('next.html', '_self');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+
 
             </div>
         </div>

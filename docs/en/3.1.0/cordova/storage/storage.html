@@ -1570,21 +1570,25 @@
                 <h1>Storage</h1>
 
 <blockquote>
-<p>Provides access to the device&#39;s storage options.</p>
+  <p>Provides access to the device&#39;s storage options.</p>
 </blockquote>
 
 <p>This API offers storage options based on two different W3C
 specifications:</p>
 
 <ul>
-<li><p>The
+  <li>
+    <p>The
 <a href="http://dev.w3.org/html5/webstorage/">Web Storage API Specification</a>
 allows you to access data via simple key/value pairs.  See the
-section on <a href="localstorage/localstorage.html">localStorage</a> for complete details on this interface.</p></li>
-<li><p>The
-<a href="http://dev.w3.org/html5/webdatabase/">Web SQL <a href="database/database.html">Database</a> Specification</a>
+section on <a href="localstorage/localstorage.html">localStorage</a> for complete details on this interface.</p>
+  </li>
+  <li>
+    <p>The
+<a href="http://dev.w3.org/html5/webdatabase/">Web SQL [Database](database/database.html) Specification</a>
 offers more full-featured database tables accessed via SQL queries.
-A summary of this interface appears immediately below.</p></li>
+A summary of this interface appears immediately below.</p>
+  </li>
 </ul>
 
 <p>Cordova provides access to both interfaces for the minority of devices
@@ -1594,26 +1598,26 @@ implementations apply.</p>
 <h2>Methods</h2>
 
 <ul>
-<li><a href="storage.opendatabase.html">openDatabase</a></li>
+  <li><a href="storage.opendatabase.html">openDatabase</a></li>
 </ul>
 
 <h2>Arguments</h2>
 
 <ul>
-<li><a href="parameters/name.html">database_name</a></li>
-<li><a href="parameters/version.html">database_version</a></li>
-<li><a href="parameters/display_name.html">database_displayname</a></li>
-<li><a href="parameters/size.html">database_size</a></li>
+  <li><a href="parameters/name.html">database_name</a></li>
+  <li><a href="parameters/version.html">database_version</a></li>
+  <li><a href="parameters/display_name.html">database_displayname</a></li>
+  <li><a href="parameters/size.html">database_size</a></li>
 </ul>
 
 <h2>Objects</h2>
 
 <ul>
-<li><a href="database/database.html">Database</a></li>
-<li><a href="sqltransaction/sqltransaction.html">SQLTransaction</a></li>
-<li><a href="sqlresultset/sqlresultset.html">SQLResultSet</a></li>
-<li><a href="sqlresultsetrowlist/sqlresultsetrowlist.html">SQLResultSetRowList</a></li>
-<li><a href="sqlerror/sqlerror.html">SQLError</a></li>
+  <li><a href="database/database.html">Database</a></li>
+  <li><a href="sqltransaction/sqltransaction.html">SQLTransaction</a></li>
+  <li><a href="sqlresultset/sqlresultset.html">SQLResultSet</a></li>
+  <li><a href="sqlresultsetrowlist/sqlresultsetrowlist.html">SQLResultSetRowList</a></li>
+  <li><a href="sqlerror/sqlerror.html">SQLError</a></li>
 </ul>
 
 <h2>Accessing the Feature</h2>
@@ -1627,14 +1631,20 @@ the following platform-specific configuration settings are still
 required:</p>
 
 <ul>
-<li><p>Android (in <code>app/res/xml/config.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature name="Storage"&gt;
-    &lt;param name="android-package" value="org.apache.cordova.Storage" /&gt;
-&lt;/feature&gt;
-</code></pre></div></li>
-<li><p>BlackBerry WebWorks (in <code>www/config.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature id="blackberry.widgetcache" required="true" version="1.0.0.0" /&gt;
-</code></pre></div></li>
+  <li>
+    <p>Android (in <code>app/res/xml/config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="Storage"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.Storage" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>BlackBerry WebWorks (in <code>www/config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature id="blackberry.widgetcache" required="true" version="1.0.0.0" /&gt;
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>Some platforms may support this feature without requiring any special

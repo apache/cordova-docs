@@ -141,30 +141,30 @@
 
 <p>Many, many years ago, a small company named Tiny Hippos created the Ripple Emulator, a browser-based emulator for many mobile devices. Ripple was interesting in many ways, but for the scope of this article, one of the interesting features was its implementation of emulators for many of the core Cordova plugins. As you ran your Cordova application in one pane, a separate pane opened with options to control many aspects of the simulated environment as shown in the following figure.</p>
 
-<p><img src="/static/img/blog/2018/cordova-simulate-1.png" alt="Figure 1"></p>
+<p><img src="/static/img/blog/2018/cordova-simulate-1.png" alt="Figure 1" /></p>
 
 <p>Well, shortening a long story a bit, the folks at Research In Motion (BlackBerry) purchased Tiny Hippos and maintained Ripple for a while before finally contributing it to the Apache Foundation as an incubator project. Many companies got involved, including Adobe, Microsoft, and others, but the project never really took off, or ever became a stable product. It never actually made it out of beta.</p>
 
 <p>Anyway, fast forward to today and you&#39;ll find that Microsoft took the Ripple project and rebuilt it. We kept some of the original code (some of the plugin simulation panels and supporting utility functions), rewrote some parts, created some new code, then released it as an open source project called Cordova Simulate (<a href="https://github.com/Microsoft/cordova-simulate">https://github.com/Microsoft/cordova-simulate</a>). We chose this approach, rather than investing in Ripple, because:</p>
 
 <ul>
-<li>We had regular reports of issues with Ripple starting and Visual Studio not being able to connect to it successfully, so we wanted a simpler architecture for rendering the Cordova web app (a separate browser window that just hosted the app, and nothing else).</li>
-<li>Debugging Ripple was a challenge since you were effectively debugging both the app and Ripple itself (you had to drill down into the Ripple UI&#39;s HTML to find the hosted Cordova web app, and Ripple&#39;s JavaScript code could easily be a part of your stack when debugging).</li>
-<li>Since Ripple and the Cordova web app render in the same browser window, if the Cordova web app froze for any reason, Ripple also froze (or, in less severe cases, the Ripple UI could look unresponsive when the Cordova web app is busy).</li>
+  <li>We had regular reports of issues with Ripple starting and Visual Studio not being able to connect to it successfully, so we wanted a simpler architecture for rendering the Cordova web app (a separate browser window that just hosted the app, and nothing else).</li>
+  <li>Debugging Ripple was a challenge since you were effectively debugging both the app and Ripple itself (you had to drill down into the Ripple UI&#39;s HTML to find the hosted Cordova web app, and Ripple&#39;s JavaScript code could easily be a part of your stack when debugging).</li>
+  <li>Since Ripple and the Cordova web app render in the same browser window, if the Cordova web app froze for any reason, Ripple also froze (or, in less severe cases, the Ripple UI could look unresponsive when the Cordova web app is busy).</li>
 </ul>
 
 <p>Cordova Simulate solves these issues:</p>
 
 <ul>
-<li>The app window doesn&#39;t also host the simulation UI - just the app (and a small bit of code to enable communication with the simulation UI). This solves the first two problems identified above.</li>
-<li>The simulation UI renders in a separate window, and all communication is asynchronous, so an unresponsive app won&#39;t interfere with the simulation UI. This solves the third problem.</li>
+  <li>The app window doesn&#39;t also host the simulation UI - just the app (and a small bit of code to enable communication with the simulation UI). This solves the first two problems identified above.</li>
+  <li>The simulation UI renders in a separate window, and all communication is asynchronous, so an unresponsive app won&#39;t interfere with the simulation UI. This solves the third problem.</li>
 </ul>
 
 <p>Another driving purpose for Cordova Simulate was that we wanted to make it extensible; allowing plugins to define their own simulation functionality (as you&#39;ll soon learn about).</p>
 
-<p>To my previous point about Ripple never making it out of beta, not only is Cordova Simulate a complete, robust, and released solution, it&#39;s even part of several Microsoft offerings (both commercial and open source). Its bundled into Visual Studio Tools for Apache Cordova (TACO - <a href="http://taco.visualstudio.com/">http://taco.visualstudio.com/</a>) in Visual Studio 2017. It&#39;s also included as part of the Apache Cordova extension for Visual Studio Code (<a href="https://github.com/Microsoft/vscode-cordova">https://github.com/Microsoft/vscode-cordova</a>). </p>
+<p>To my previous point about Ripple never making it out of beta, not only is Cordova Simulate a complete, robust, and released solution, it&#39;s even part of several Microsoft offerings (both commercial and open source). Its bundled into Visual Studio Tools for Apache Cordova (TACO - <a href="http://taco.visualstudio.com/">http://taco.visualstudio.com/</a>) in Visual Studio 2017. It&#39;s also included as part of the Apache Cordova extension for Visual Studio Code (<a href="https://github.com/Microsoft/vscode-cordova">https://github.com/Microsoft/vscode-cordova</a>).</p>
 
-<p>Why is this important to you? Well, let me explain...</p>
+<p>Why is this important to you? Well, let me explain&#8230;</p>
 
 <p>With Cordova Simulate, you now have access to a complete solution for testing your apps against simulated versions of the core Cordova plugins. This eliminates the need to hack up your code to simulate plugin responses as Cordova Simulate takes care of that for you.</p>
 
@@ -179,8 +179,10 @@
 <p>As I mentioned before, Visual Studio Tools for Apache Cordova and the Cordova extension for Visual Studio Code both include Cordova Simulate, so there&#39;s no extra installation instructions to follow - just install the tools, and you&#39;ll have what you need.</p>
 
 <p>You can also invoke Cordova Simulate from the command line, or from third party IDEs. To install Cordova Simulate for those scenarios, open a terminal window, and execute the following command:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova-simulate
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova-simulate
+</code></pre></div></div>
+
 <p>That&#39;s it, that&#39;s all there is to it. When the process completes, you&#39;ll now have a <code>simulate</code> command at your disposal to launch Cordova Simulate.</p>
 
 <h2>Launching Cordova Simulate</h2>
@@ -198,22 +200,26 @@
 <h3>Command-line</h3>
 
 <p>To launch Cordova Simulate from the command-line, open a terminal window, navigate to a Cordova project folder, and execute the following command:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">simulate \[platform\]
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>simulate \[platform\]
+</code></pre></div></div>
+
 <p>Platform refers to one of the supported target platforms (for example: <code>android</code>, <code>ios</code>, or <code>browser</code>). For example, to simulate the Android version of your Cordova application, you would use the following:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">simulate android
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>simulate android
+</code></pre></div></div>
+
 <p>Cordova Simulate will open the Chrome browser with two tabs, one running the Cordova app web app, and the other displaying the simulator control window shown in the following figure.</p>
 
-<p><img src="/static/img/blog/2018/cordova-simulate-2.png" alt="Figure 2"></p>
+<p><img src="/static/img/blog/2018/cordova-simulate-2.png" alt="Figure 2" /></p>
 
 <p>By default, Cordova Simulate loads a default set of plugin simulators:</p>
 
 <ul>
-<li>Since HTML has native support for geolocation, Cordova Simulate automatically loads the Geolocation simulator pane.</li>
-<li>The event simulator pane loads automatically to enable developers to trigger Cordova and device events as needed</li>
-<li>Persisted Exec Calls pane enables basic simulator support for third-party plugins that don&#39;t include support for Cordova Simulate.</li>
-<li>The Device simulator loads automatically to enable you to change the target device used for rendering the web app.</li>
+  <li>Since HTML has native support for geolocation, Cordova Simulate automatically loads the Geolocation simulator pane.</li>
+  <li>The event simulator pane loads automatically to enable developers to trigger Cordova and device events as needed</li>
+  <li>Persisted Exec Calls pane enables basic simulator support for third-party plugins that don&#39;t include support for Cordova Simulate.</li>
+  <li>The Device simulator loads automatically to enable you to change the target device used for rendering the web app.</li>
 </ul>
 
 <p>If I&#39;d added other Cordova core plugins to my project, Cordova Simulate would load simulators for each, if available.</p>
@@ -225,13 +231,13 @@
 <p>Alright, it&#39;s time to show you how to add Cordova Simulate support to your own plugins. First, you must add a <code>simulation</code> folder to your plugin&#39;s <code>src</code> folder (so <code>src/simulation/</code>). Inside that folder, you&#39;ll create one or more of the following files based on the needs of your plugin:</p>
 
 <ul>
-<li><code>app-host-clobbers.js</code></li>
-<li><code>app-host-handlers.js</code></li>
-<li><code>app-host.js</code></li>
-<li><code>sim-host-dialogs.html</code></li>
-<li><code>sim-host-handlers.js</code></li>
-<li><code>sim-host-panels.html</code></li>
-<li><code>sim-host.js</code></li>
+  <li><code>app-host-clobbers.js</code></li>
+  <li><code>app-host-handlers.js</code></li>
+  <li><code>app-host.js</code></li>
+  <li><code>sim-host-dialogs.html</code></li>
+  <li><code>sim-host-handlers.js</code></li>
+  <li><code>sim-host-panels.html</code></li>
+  <li><code>sim-host.js</code></li>
 </ul>
 
 <p>For my simple example, I&#39;m only going to need three files, but refer to the Cordova Simulate documentation at <a href="https://github.com/Microsoft/cordova-simulate">https://github.com/Microsoft/cordova-simulate</a> for details about each of these files.</p>
@@ -239,12 +245,13 @@
 <p>The plugin I used for my example is a simple Carrier plugin I created many years ago for one of my Cordova books: <a href="https://www.npmjs.com/package/johnwargo-cordova-plugin-carrier">https://www.npmjs.com/package/johnwargo-cordova-plugin-carrier</a>. It exposes two methods:</p>
 
 <ul>
-<li><code>getCarrierName</code>: An asynchronous method that retrieves the current carrier for the device running the application.</li>
-<li><code>getCountryCode</code>: An asynchronous method that retrieves the country code for the device running the application</li>
+  <li><code>getCarrierName</code>: An asynchronous method that retrieves the current carrier for the device running the application.</li>
+  <li><code>getCountryCode</code>: An asynchronous method that retrieves the country code for the device running the application</li>
 </ul>
 
 <p>When exercising this plugin, I&#39;ll need the ability to validate my app&#39;s code against different carrier and country code values. To simulate this, I&#39;ll need an HTML panel that offers multiple carrier and country code choices. For this, I created a <code>sim-host.panels.html</code> file in the plugin project&#39;s <code>src/simulation/</code> folder. The file creates a simple panel with two drop-down lists containing some country and carrier values:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;cordova-panel id="johnwargo-cordova-plugin-carrier" caption="Carrier" 
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;cordova-panel id="johnwargo-cordova-plugin-carrier" caption="Carrier" 
   spoken-text="Carrier"&gt;
     &lt;cordova-panel-row&gt;
         Select carrier and country code options from the drop-down lists below.
@@ -274,11 +281,13 @@
     &lt;/cordova-panel-row&gt;
     &lt;cordova-checkbox id="is-error" spoken=""&gt;Error condition&lt;/cordova-checkbox&gt;
 &lt;/cordova-panel&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>As you can see from the code, the panel makes use of special HTML element types supported by Cordova Simulate. The simulator code for most of the core Cordova plugins is included with the Cordova Simulate Github repository, so you can find examples there of the available UI elements in use.</p>
 
 <p>Next, I added a <code>sim-host.js</code> file to the folder. This file isn&#39;t necessary, but it provides an opportunity to initialize the simulated plugin, and I use it to update the console whenever the user makes a change in the simulation panel. Not critically important, but useful as I sorted out what was happening as I built the simulation.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">module.exports = {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module.exports = {
     initialize: function() {
         //Get access to the carrier selection drop-down
         var carrierSel = document.getElementById('carrier-select');
@@ -292,17 +301,19 @@
         function carrierChange() {
             console.log("Carrier selection changed to " + this.value);
         }
-
+ 
         function ccChange() {
             console.log("Country code selection changed to " + this.value);
         }
     }
 };
-</code></pre></div>
+</code></pre></div></div>
+
 <p>If you study the source code for the simulator capabilities in the core Cordova plugins, you&#39;ll see that many of them use change events like the ones just shown in the code to update properties for objects exposed by the plugins. As developers change values in the simulator panel, the change events register the change and updates a local object. Then, when a Cordova application accesses one of those properties, the code returns the value from the local object.</p>
 
 <p>Finally, I added a <code>sim-host-handlers.js</code> file to the project. The code in this file overrides the <code>cordova.exec</code> calls from the plugin in the simulated environment. Here, I export the native methods supported by the plugin and pull the selected values from the simulator panel and return them to the calling application.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">module.exports = function(messages) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module.exports = function(messages) {
     return {
         carrier: {
             getCarrierName: function(successCallback, errorCallback) {
@@ -328,25 +339,29 @@
         }
     };
 };
-</code></pre></div>
+</code></pre></div></div>
+
 <p>This is a very simple example of what you can do, be sure to check out the source code for the simulator capabilities included with core Cordova plugins for more sophisticated examples.</p>
 
 <p>Now, when you create a Cordova application that uses this plugin, then execute Cordova Simulate, you&#39;ll see the following panel exposed on the Cordova Simulate Simulator Control window:</p>
 
-<p><img src="/static/img/blog/2018/cordova-simulate-3.png" alt="Figure 3"></p>
+<p><img src="/static/img/blog/2018/cordova-simulate-3.png" alt="Figure 3" /></p>
 
 <p>Make the appropriate changes to the panel, then call the associated APIs from the Cordova application to see the selected results.</p>
 
 <p>If you think about what we&#39;ve done so far, we&#39;ve only addressed success scenarios - changing the behavior of the plugin in the simulated environment so we can test the app with different API results. Most plugins also report error conditions, and in order to properly exercise the plugin or an app using the plugin, you must be able to simulate error conditions as well. Let me show you how to do that.</p>
 
 <p>First, I added a new row to the <code>sim-host.panels.html</code> file:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;cordova-panel-row&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;cordova-panel-row&gt;
   Enable the error checkbox to execute the error callback instead of the success callback on plugin API calls.
 &lt;/cordova-panel-row&gt;
 &lt;cordova-checkbox id="is-error" spoken=""&gt;Error condition&lt;/cordova-checkbox&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>This adds an Error checkbox to the panel, enabling developers to return an error from each plugin API call. The updated <code>sim-host.panels.html</code> file looks like this:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;cordova-panel id="johnwargo-cordova-plugin-carrier" caption="Carrier" 
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;cordova-panel id="johnwargo-cordova-plugin-carrier" caption="Carrier" 
   spoken-text="Carrier"&gt;
     &lt;cordova-panel-row&gt;
         Select carrier and country code options from the drop-down lists below.
@@ -376,50 +391,53 @@
     &lt;/cordova-panel-row&gt;
     &lt;cordova-checkbox id="is-error" spoken=""&gt;Error condition&lt;/cordova-checkbox&gt;
 &lt;/cordova-panel&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Now, in the <code>sim-host-handlers.js</code> file, I added a check for the checkbox status in each of the methods exposed in the file. For my plugin, with the checkbox checked, the method calls the error callback function returning a dummy JSON object containing a simple error message and code. For your plugins, you&#39;ll likely want to expand this so you can simulate different error conditions.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">module.exports = function(messages) {
-    return {
-        carrier: {
-            getCarrierName: function(successCallback, errorCallback) {
-                console.log("Cordova-Simulate: getCarrierName invoked");
-                if (document.getElementById('is-error').checked) {
-                    console.error("Error condition enabled");
-                    errorCallback({ code: 1, msg: "Simulated error condition" });
-                } else {
-                    //Get access to the carrier selection drop-down
-                    var carrierSel = document.getElementById('carrier-select');
-                    //Pull the value from the selected item
-                    var selValue = carrierSel.options[carrierSel.selectedIndex].value;
-                    console.log('Simulating carrier: ' + selValue);
-                    //And return it to the calling method
-                    successCallback(selValue);
-                }
-            },
-            getCountryCode: function(successCallback, errorCallback) {
-                if (document.getElementById('is-error').checked) {
-                    console.error("Error condition enabled");
-                    errorCallback({ code: 2, msg: "Simulated error condition" });
-                } else {
-                    console.log("Cordova-Simulate: getCountryCode invoked");
-                    //Get access to the country code selection drop-down
-                    var ccSel = document.getElementById('country-code-select');
-                    //Pull the value from the selected item
-                    var selValue = ccSel.options[ccSel.selectedIndex].value;
-                    console.log('Simulating country code: ' + selValue);
-                    //And return it to the calling method
-                    successCallback(selValue);
-                }
-            }
-        }
-    };
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module.exports = function(messages) {
+	return {
+		carrier: {
+			getCarrierName: function(successCallback, errorCallback) {
+				console.log("Cordova-Simulate: getCarrierName invoked");
+				if (document.getElementById('is-error').checked) {
+					console.error("Error condition enabled");
+					errorCallback({ code: 1, msg: "Simulated error condition" });
+				} else {
+					//Get access to the carrier selection drop-down
+					var carrierSel = document.getElementById('carrier-select');
+					//Pull the value from the selected item
+					var selValue = carrierSel.options[carrierSel.selectedIndex].value;
+					console.log('Simulating carrier: ' + selValue);
+					//And return it to the calling method
+					successCallback(selValue);
+				}
+			},
+			getCountryCode: function(successCallback, errorCallback) {
+				if (document.getElementById('is-error').checked) {
+					console.error("Error condition enabled");
+					errorCallback({ code: 2, msg: "Simulated error condition" });
+				} else {
+					console.log("Cordova-Simulate: getCountryCode invoked");
+					//Get access to the country code selection drop-down
+					var ccSel = document.getElementById('country-code-select');
+					//Pull the value from the selected item
+					var selValue = ccSel.options[ccSel.selectedIndex].value;
+					console.log('Simulating country code: ' + selValue);
+					//And return it to the calling method
+					successCallback(selValue);
+				}
+			}
+		}
+	};
 };
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Now, when I execute Cordova simulate I&#39;ll see the slightly different panel shown below.</p>
 
-<p><img src="/static/img/blog/2018/cordova-simulate-4.png" alt="Figure 4"></p>
+<p><img src="/static/img/blog/2018/cordova-simulate-4.png" alt="Figure 4" /></p>
 
-<p>That&#39;s it, that&#39;s all there is to enable simulation in your own plugins. As you can hopefully see, Cordova Simulate gives developers (plugin developers and developers who use those developer&#39;s plugins in their applications) an easier way to exercise the plugin and test applications using the plugin. </p>
+<p>That&#39;s it, that&#39;s all there is to enable simulation in your own plugins. As you can hopefully see, Cordova Simulate gives developers (plugin developers and developers who use those developer&#39;s plugins in their applications) an easier way to exercise the plugin and test applications using the plugin.</p>
 
 <p>Cordova Simulate is an open source project from Microsoft, but we&#39;d love to have your help enhancing it and fixing issues as they arise. Please follow the project on Github and take a look at how you can help enhance this project.</p>
 

@@ -2168,17 +2168,20 @@
 #         under the License.
 -->
 
-<table><thead>
-<tr>
-<th style="text-align: center">AppVeyor</th>
-<th style="text-align: center">Travis CI</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: center"><a href="https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-media-capture"><img src="https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-media-capture?branch=master" alt="Build status"></a></td>
-<td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-media-capture"><img src="https://travis-ci.org/apache/cordova-plugin-media-capture.svg?branch=master" alt="Build Status"></a></td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">AppVeyor</th>
+      <th style="text-align: center">Travis CI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-media-capture"><img src="https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-media-capture?branch=master" alt="Build status" /></a></td>
+      <td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-media-capture"><img src="https://travis-ci.org/apache/cordova-plugin-media-capture.svg?branch=master" alt="Build Status" /></a></td>
+    </tr>
+  </tbody>
+</table>
 
 <h1>cordova-plugin-media-capture</h1>
 
@@ -2202,65 +2205,77 @@ see the Privacy Guide.</p>
 <p>This plugin defines global <code>navigator.device.capture</code> object.</p>
 
 <p>Although in the global scope, it is not available until after the <code>deviceready</code> event.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">document.addEventListener("deviceready", onDeviceReady, false);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
     console.log(navigator.device.capture);
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Report issues with this plugin on the <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22cordova-plugin-media-capture%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC">Apache Cordova issue tracker</a></p>
 
 <h2>Installation</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add cordova-plugin-media-capture
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-media-capture
+</code></pre></div></div>
+
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>Browser</li>
-<li>iOS</li>
-<li>Windows</li>
+  <li>Android</li>
+  <li>Browser</li>
+  <li>iOS</li>
+  <li>Windows</li>
 </ul>
 
 <h2>Objects</h2>
 
 <ul>
-<li>Capture</li>
-<li>CaptureAudioOptions</li>
-<li>CaptureImageOptions</li>
-<li>CaptureVideoOptions</li>
-<li>CaptureCallback</li>
-<li>CaptureErrorCB</li>
-<li>ConfigurationData</li>
-<li>MediaFile</li>
-<li>MediaFileData</li>
+  <li>Capture</li>
+  <li>CaptureAudioOptions</li>
+  <li>CaptureImageOptions</li>
+  <li>CaptureVideoOptions</li>
+  <li>CaptureCallback</li>
+  <li>CaptureErrorCB</li>
+  <li>ConfigurationData</li>
+  <li>MediaFile</li>
+  <li>MediaFileData</li>
 </ul>
 
 <h2>Methods</h2>
 
 <ul>
-<li>capture.captureAudio</li>
-<li>capture.captureImage</li>
-<li>capture.captureVideo</li>
-<li>MediaFile.getFormatData</li>
+  <li>capture.captureAudio</li>
+  <li>capture.captureImage</li>
+  <li>capture.captureVideo</li>
+  <li>MediaFile.getFormatData</li>
 </ul>
 
 <h2>Properties</h2>
 
 <ul>
-<li><p><strong>supportedAudioModes</strong>: The audio recording formats supported by the device. (ConfigurationData[])</p></li>
-<li><p><strong>supportedImageModes</strong>: The recording image sizes and formats supported by the device. (ConfigurationData[])</p></li>
-<li><p><strong>supportedVideoModes</strong>: The recording video resolutions and formats supported by the device. (ConfigurationData[])</p></li>
+  <li>
+    <p><strong>supportedAudioModes</strong>: The audio recording formats supported by the device. (ConfigurationData[])</p>
+  </li>
+  <li>
+    <p><strong>supportedImageModes</strong>: The recording image sizes and formats supported by the device. (ConfigurationData[])</p>
+  </li>
+  <li>
+    <p><strong>supportedVideoModes</strong>: The recording video resolutions and formats supported by the device. (ConfigurationData[])</p>
+  </li>
 </ul>
 
 <h2>capture.captureAudio</h2>
 
 <blockquote>
-<p>Start the audio recorder application and return information about captured audio clip files.</p>
+  <p>Start the audio recorder application and return information about captured audio clip files.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.device.capture.captureAudio(
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.device.capture.captureAudio(
     CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
 );
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Description</h3>
 
 <p>Starts an asynchronous operation to capture audio recordings using the
@@ -2283,13 +2298,14 @@ code.</p>
 <h3>Supported Platforms</h3>
 
 <ul>
-<li>Android</li>
-<li>iOS</li>
-<li>Windows</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows</li>
 </ul>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">// capture callback
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// capture callback
 var captureSuccess = function(mediaFiles) {
     var i, path, len;
     for (i = 0, len = mediaFiles.length; i &lt; len; i += 1) {
@@ -2305,28 +2321,31 @@ var captureError = function(error) {
 
 // start audio capture
 navigator.device.capture.captureAudio(captureSuccess, captureError, {limit:2});
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>iOS Quirks</h3>
 
 <ul>
-<li>iOS does not have a default audio recording application, so a simple user interface is provided.</li>
+  <li>iOS does not have a default audio recording application, so a simple user interface is provided.</li>
 </ul>
 
 <h3>Windows Phone 7 and 8 Quirks</h3>
 
 <ul>
-<li>Windows Phone 7 does not have a default audio recording application, so a simple user interface is provided.</li>
+  <li>Windows Phone 7 does not have a default audio recording application, so a simple user interface is provided.</li>
 </ul>
 
 <h2>capture.captureImage</h2>
 
 <blockquote>
-<p>Start the camera application and return information about captured image files.</p>
+  <p>Start the camera application and return information about captured image files.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.device.capture.captureImage(
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.device.capture.captureImage(
     CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
 );
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Description</h3>
 
 <p>Starts an asynchronous operation to capture images using the device&#39;s
@@ -2348,10 +2367,10 @@ object featuring a <code>CaptureError.CAPTURE_NO_MEDIA_FILES</code> error code.<
 <h3>Supported Platforms</h3>
 
 <ul>
-<li>Android</li>
-<li>Browser</li>
-<li>iOS</li>
-<li>Windows</li>
+  <li>Android</li>
+  <li>Browser</li>
+  <li>iOS</li>
+  <li>Windows</li>
 </ul>
 
 <h3>iOS Quirks</h3>
@@ -2361,22 +2380,28 @@ object featuring a <code>CaptureError.CAPTURE_NO_MEDIA_FILES</code> error code.<
 <p>This plugins requires the following usage descriptions:</p>
 
 <ul>
-<li><code>NSCameraUsageDescription</code> describes the reason the app accesses the user&#39;s camera.</li>
-<li><code>NSMicrophoneUsageDescription</code> describes the reason the app accesses the user&#39;s microphone.</li>
-<li><code>NSPhotoLibraryUsageDescriptionentry</code> describes the reason the app accesses the user&#39;s photo library.</li>
+  <li><code>NSCameraUsageDescription</code> describes the reason the app accesses the user&#39;s camera.</li>
+  <li><code>NSMicrophoneUsageDescription</code> describes the reason the app accesses the user&#39;s microphone.</li>
+  <li><code>NSPhotoLibraryUsageDescriptionentry</code> describes the reason the app accesses the user&#39;s photo library.</li>
 </ul>
 
 <p>To add these entries into the <code>info.plist</code>, you can use the <code>edit-config</code> tag in the <code>config.xml</code> like this:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge"&gt;
     &lt;string&gt;need camera access to take pictures&lt;/string&gt;
 &lt;/edit-config&gt;
-</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">&lt;edit-config target="NSMicrophoneUsageDescription" file="*-Info.plist" mode="merge"&gt;
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;edit-config target="NSMicrophoneUsageDescription" file="*-Info.plist" mode="merge"&gt;
     &lt;string&gt;need microphone access to record sounds&lt;/string&gt;
 &lt;/edit-config&gt;
-</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">&lt;edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge"&gt;
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge"&gt;
     &lt;string&gt;need to photo library access to get pictures from there&lt;/string&gt;
 &lt;/edit-config&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Browser Quirks</h3>
 
 <p>Works in Chrome, Firefox and Opera only (since IE and Safari doesn&#39;t supports
@@ -2387,7 +2412,8 @@ Firefox stores captured images in IndexedDB storage (see File plugin documentati
 and due to this the only way to show captured image is to read it and show using its DataURL.</p>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">// capture callback
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// capture callback
 var captureSuccess = function(mediaFiles) {
     var i, path, len;
     for (i = 0, len = mediaFiles.length; i &lt; len; i += 1) {
@@ -2403,16 +2429,19 @@ var captureError = function(error) {
 
 // start image capture
 navigator.device.capture.captureImage(captureSuccess, captureError, {limit:2});
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>capture.captureVideo</h2>
 
 <blockquote>
-<p>Start the video recorder application and return information about captured video clip files.</p>
+  <p>Start the video recorder application and return information about captured video clip files.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.device.capture.captureVideo(
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.device.capture.captureVideo(
     CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
 );
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Description</h3>
 
 <p>Starts an asynchronous operation to capture video recordings using the
@@ -2435,13 +2464,14 @@ capturing a video clip, the <code>CaptureErrorCB</code> callback executes with a
 <h3>Supported Platforms</h3>
 
 <ul>
-<li>Android</li>
-<li>iOS</li>
-<li>Windows</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows</li>
 </ul>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">// capture callback
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// capture callback
 var captureSuccess = function(mediaFiles) {
     var i, path, len;
     for (i = 0, len = mediaFiles.length; i &lt; len; i += 1) {
@@ -2457,106 +2487,125 @@ var captureError = function(error) {
 
 // start video capture
 navigator.device.capture.captureVideo(captureSuccess, captureError, {limit:2});
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>CaptureAudioOptions</h2>
 
 <blockquote>
-<p>Encapsulates audio capture configuration options.</p>
+  <p>Encapsulates audio capture configuration options.</p>
 </blockquote>
 
 <h3>Properties</h3>
 
 <ul>
-<li><p><strong>limit</strong>: The maximum number of audio clips the device user can record in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).</p></li>
-<li><p><strong>duration</strong>: The maximum duration of an audio sound clip, in seconds.</p></li>
+  <li>
+    <p><strong>limit</strong>: The maximum number of audio clips the device user can record in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: The maximum duration of an audio sound clip, in seconds.</p>
+  </li>
 </ul>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">// limit capture operation to 3 media files, no longer than 10 seconds each
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// limit capture operation to 3 media files, no longer than 10 seconds each
 var options = { limit: 3, duration: 10 };
 
 navigator.device.capture.captureAudio(captureSuccess, captureError, options);
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Android Quirks</h3>
 
 <ul>
-<li>The <code>duration</code> parameter is not supported.  Recording lengths can&#39;t be limited programmatically.</li>
+  <li>The <code>duration</code> parameter is not supported.  Recording lengths can&#39;t be limited programmatically.</li>
 </ul>
 
 <h3>iOS Quirks</h3>
 
 <ul>
-<li>The <code>limit</code> parameter is not supported, so only one recording can be created for each invocation.</li>
+  <li>The <code>limit</code> parameter is not supported, so only one recording can be created for each invocation.</li>
 </ul>
 
 <h2>CaptureImageOptions</h2>
 
 <blockquote>
-<p>Encapsulates image capture configuration options.</p>
+  <p>Encapsulates image capture configuration options.</p>
 </blockquote>
 
 <h3>Properties</h3>
 
 <ul>
-<li><strong>limit</strong>: The maximum number of images the user can capture in a single capture operation. The value must be greater than or equal to 1 (defaults to 1).</li>
+  <li><strong>limit</strong>: The maximum number of images the user can capture in a single capture operation. The value must be greater than or equal to 1 (defaults to 1).</li>
 </ul>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">// limit capture operation to 3 images
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// limit capture operation to 3 images
 var options = { limit: 3 };
 
 navigator.device.capture.captureImage(captureSuccess, captureError, options);
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>iOS Quirks</h3>
 
 <ul>
-<li>The <strong>limit</strong> parameter is not supported, and only one image is taken per invocation.</li>
+  <li>The <strong>limit</strong> parameter is not supported, and only one image is taken per invocation.</li>
 </ul>
 
 <h2>CaptureVideoOptions</h2>
 
 <blockquote>
-<p>Encapsulates video capture configuration options.</p>
+  <p>Encapsulates video capture configuration options.</p>
 </blockquote>
 
 <h3>Properties</h3>
 
 <ul>
-<li><p><strong>limit</strong>: The maximum number of video clips the device&#39;s user can capture in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).</p></li>
-<li><p><strong>duration</strong>: The maximum duration of a video clip, in seconds.</p></li>
+  <li>
+    <p><strong>limit</strong>: The maximum number of video clips the device&#39;s user can capture in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: The maximum duration of a video clip, in seconds.</p>
+  </li>
 </ul>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">// limit capture operation to 3 video clips
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// limit capture operation to 3 video clips
 var options = { limit: 3 };
 
 navigator.device.capture.captureVideo(captureSuccess, captureError, options);
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>iOS Quirks</h3>
 
 <ul>
-<li>The <strong>limit</strong> property is ignored.  Only one video is recorded per invocation.</li>
+  <li>The <strong>limit</strong> property is ignored.  Only one video is recorded per invocation.</li>
 </ul>
 
 <h3>Android Quirks</h3>
 
 <ul>
-<li>Android supports an additional <strong>quality</strong> property, to allow capturing video at different qualities.  A value of <code>1</code> ( the default ) means high quality and value of <code>0</code> means low quality, suitable for MMS messages.
+  <li>Android supports an additional <strong>quality</strong> property, to allow capturing video at different qualities.  A value of <code>1</code> ( the default ) means high quality and value of <code>0</code> means low quality, suitable for MMS messages.
 See <a href="http://developer.android.com/reference/android/provider/MediaStore.html#EXTRA_VIDEO_QUALITY">here</a> for more details.</li>
 </ul>
 
 <h3>Example ( Android w/ quality )</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">// limit capture operation to 1 video clip of low quality
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// limit capture operation to 1 video clip of low quality
 var options = { limit: 1, quality: 0 };
 navigator.device.capture.captureVideo(captureSuccess, captureError, options);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>CaptureCB</h2>
 
 <blockquote>
-<p>Invoked upon a successful media capture operation.</p>
+  <p>Invoked upon a successful media capture operation.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">function captureSuccess( MediaFile[] mediaFiles ) { ... };
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function captureSuccess( MediaFile[] mediaFiles ) { ... };
+</code></pre></div></div>
+
 <h3>Description</h3>
 
 <p>This function executes after a successful capture operation completes.
@@ -2567,7 +2616,8 @@ reached.</p>
 <p>Each <code>MediaFile</code> object describes a captured media file.</p>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">// capture callback
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// capture callback
 function captureSuccess(mediaFiles) {
     var i, path, len;
     for (i = 0, len = mediaFiles.length; i &lt; len; i += 1) {
@@ -2575,37 +2625,52 @@ function captureSuccess(mediaFiles) {
         // do something interesting with the file
     }
 };
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>CaptureError</h2>
 
 <blockquote>
-<p>Encapsulates the error code resulting from a failed media capture operation.</p>
+  <p>Encapsulates the error code resulting from a failed media capture operation.</p>
 </blockquote>
 
 <h3>Properties</h3>
 
 <ul>
-<li><strong>code</strong>: One of the pre-defined error codes listed below.</li>
+  <li><strong>code</strong>: One of the pre-defined error codes listed below.</li>
 </ul>
 
 <h3>Constants</h3>
 
 <ul>
-<li><p><code>CaptureError.CAPTURE_INTERNAL_ERR</code>: The camera or microphone failed to capture image or sound.</p></li>
-<li><p><code>CaptureError.CAPTURE_APPLICATION_BUSY</code>: The camera or audio capture application is currently serving another capture request.</p></li>
-<li><p><code>CaptureError.CAPTURE_INVALID_ARGUMENT</code>: Invalid use of the API (e.g., the value of <code>limit</code> is less than one).</p></li>
-<li><p><code>CaptureError.CAPTURE_NO_MEDIA_FILES</code>: The user exits the camera or audio capture application before capturing anything.</p></li>
-<li><p><code>CaptureError.CAPTURE_PERMISSION_DENIED</code>: The user denied a permission required to perform the given capture request.</p></li>
-<li><p><code>CaptureError.CAPTURE_NOT_SUPPORTED</code>: The requested capture operation is not supported.</p></li>
+  <li>
+    <p><code>CaptureError.CAPTURE_INTERNAL_ERR</code>: The camera or microphone failed to capture image or sound.</p>
+  </li>
+  <li>
+    <p><code>CaptureError.CAPTURE_APPLICATION_BUSY</code>: The camera or audio capture application is currently serving another capture request.</p>
+  </li>
+  <li>
+    <p><code>CaptureError.CAPTURE_INVALID_ARGUMENT</code>: Invalid use of the API (e.g., the value of <code>limit</code> is less than one).</p>
+  </li>
+  <li>
+    <p><code>CaptureError.CAPTURE_NO_MEDIA_FILES</code>: The user exits the camera or audio capture application before capturing anything.</p>
+  </li>
+  <li>
+    <p><code>CaptureError.CAPTURE_PERMISSION_DENIED</code>: The user denied a permission required to perform the given capture request.</p>
+  </li>
+  <li>
+    <p><code>CaptureError.CAPTURE_NOT_SUPPORTED</code>: The requested capture operation is not supported.</p>
+  </li>
 </ul>
 
 <h2>CaptureErrorCB</h2>
 
 <blockquote>
-<p>Invoked if an error occurs during a media capture operation.</p>
+  <p>Invoked if an error occurs during a media capture operation.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">function captureError( CaptureError error ) { ... };
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function captureError( CaptureError error ) { ... };
+</code></pre></div></div>
+
 <h3>Description</h3>
 
 <p>This function executes if an error occurs when trying to launch a
@@ -2617,15 +2682,17 @@ the user cancels the operation before any media files are captured.</p>
 appropriate error <code>code</code>.</p>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">// capture error callback
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// capture error callback
 var captureError = function(error) {
     navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
 };
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>ConfigurationData</h2>
 
 <blockquote>
-<p>Encapsulates a set of media capture parameters that a device supports.</p>
+  <p>Encapsulates a set of media capture parameters that a device supports.</p>
 </blockquote>
 
 <h3>Description</h3>
@@ -2637,23 +2704,30 @@ video or image capture.</p>
 <p>The MIME types should adhere to <a href="http://www.ietf.org/rfc/rfc2046.txt">RFC2046</a>.  Examples:</p>
 
 <ul>
-<li><code>video/3gpp</code></li>
-<li><code>video/quicktime</code></li>
-<li><code>image/jpeg</code></li>
-<li><code>audio/amr</code></li>
-<li><code>audio/wav</code></li>
+  <li><code>video/3gpp</code></li>
+  <li><code>video/quicktime</code></li>
+  <li><code>image/jpeg</code></li>
+  <li><code>audio/amr</code></li>
+  <li><code>audio/wav</code></li>
 </ul>
 
 <h3>Properties</h3>
 
 <ul>
-<li><p><strong>type</strong>: The ASCII-encoded lowercase string representing the media type. (DOMString)</p></li>
-<li><p><strong>height</strong>: The height of the image or video in pixels.  The value is zero for sound clips. (Number)</p></li>
-<li><p><strong>width</strong>: The width of the image or video in pixels.  The value is zero for sound clips. (Number)</p></li>
+  <li>
+    <p><strong>type</strong>: The ASCII-encoded lowercase string representing the media type. (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>height</strong>: The height of the image or video in pixels.  The value is zero for sound clips. (Number)</p>
+  </li>
+  <li>
+    <p><strong>width</strong>: The width of the image or video in pixels.  The value is zero for sound clips. (Number)</p>
+  </li>
 </ul>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">// retrieve supported image modes
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// retrieve supported image modes
 var imageModes = navigator.device.capture.supportedImageModes;
 
 // Select mode that has the highest horizontal resolution
@@ -2665,19 +2739,22 @@ for each (var mode in imageModes) {
         selectedmode = mode;
     }
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Not supported by any platform.  All configuration data arrays are empty.</p>
 
 <h2>MediaFile.getFormatData</h2>
 
 <blockquote>
-<p>Retrieves format information about the media capture file.</p>
+  <p>Retrieves format information about the media capture file.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">mediaFile.getFormatData(
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mediaFile.getFormatData(
     MediaFileDataSuccessCB successCallback,
     [MediaFileDataErrorCB errorCallback]
 );
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Description</h3>
 
 <p>This function asynchronously attempts to retrieve the format
@@ -2689,9 +2766,9 @@ callback.</p>
 <h3>Supported Platforms</h3>
 
 <ul>
-<li>Android</li>
-<li>iOS</li>
-<li>Windows</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows</li>
 </ul>
 
 <h3>Android Quirks</h3>
@@ -2707,39 +2784,59 @@ callback.</p>
 <h2>MediaFile</h2>
 
 <blockquote>
-<p>Encapsulates properties of a media capture file.</p>
+  <p>Encapsulates properties of a media capture file.</p>
 </blockquote>
 
 <h3>Properties</h3>
 
 <ul>
-<li><p><strong>name</strong>: The name of the file, without path information. (DOMString)</p></li>
-<li><p><strong>fullPath</strong>: The full path of the file, including the name. (DOMString)</p></li>
-<li><p><strong>type</strong>: The file&#39;s mime type (DOMString)</p></li>
-<li><p><strong>lastModifiedDate</strong>: The date and time when the file was last modified. (Date)</p></li>
-<li><p><strong>size</strong>: The size of the file, in bytes. (Number)</p></li>
+  <li>
+    <p><strong>name</strong>: The name of the file, without path information. (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>fullPath</strong>: The full path of the file, including the name. (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>type</strong>: The file&#39;s mime type (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>lastModifiedDate</strong>: The date and time when the file was last modified. (Date)</p>
+  </li>
+  <li>
+    <p><strong>size</strong>: The size of the file, in bytes. (Number)</p>
+  </li>
 </ul>
 
 <h3>Methods</h3>
 
 <ul>
-<li><strong>MediaFile.getFormatData</strong>: Retrieves the format information of the media file.</li>
+  <li><strong>MediaFile.getFormatData</strong>: Retrieves the format information of the media file.</li>
 </ul>
 
 <h2>MediaFileData</h2>
 
 <blockquote>
-<p>Encapsulates format information about a media file.</p>
+  <p>Encapsulates format information about a media file.</p>
 </blockquote>
 
 <h3>Properties</h3>
 
 <ul>
-<li><p><strong>codecs</strong>: The actual format of the audio and video content. (DOMString)</p></li>
-<li><p><strong>bitrate</strong>: The average bitrate of the content.  The value is zero for images. (Number)</p></li>
-<li><p><strong>height</strong>: The height of the image or video in pixels. The value is zero for audio clips. (Number)</p></li>
-<li><p><strong>width</strong>: The width of the image or video in pixels. The value is zero for audio clips. (Number)</p></li>
-<li><p><strong>duration</strong>: The length of the video or sound clip in seconds. The value is zero for images. (Number)</p></li>
+  <li>
+    <p><strong>codecs</strong>: The actual format of the audio and video content. (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>bitrate</strong>: The average bitrate of the content.  The value is zero for images. (Number)</p>
+  </li>
+  <li>
+    <p><strong>height</strong>: The height of the image or video in pixels. The value is zero for audio clips. (Number)</p>
+  </li>
+  <li>
+    <p><strong>width</strong>: The width of the image or video in pixels. The value is zero for audio clips. (Number)</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: The length of the video or sound clip in seconds. The value is zero for images. (Number)</p>
+  </li>
 </ul>
 
 <h3>Android Quirks</h3>
@@ -2747,11 +2844,21 @@ callback.</p>
 <p>Supports the following <code>MediaFileData</code> properties:</p>
 
 <ul>
-<li><p><strong>codecs</strong>: Not supported, and returns <code>null</code>.</p></li>
-<li><p><strong>bitrate</strong>: Not supported, and returns zero.</p></li>
-<li><p><strong>height</strong>: Supported: image and video files only.</p></li>
-<li><p><strong>width</strong>: Supported: image and video files only.</p></li>
-<li><p><strong>duration</strong>: Supported: audio and video files only.</p></li>
+  <li>
+    <p><strong>codecs</strong>: Not supported, and returns <code>null</code>.</p>
+  </li>
+  <li>
+    <p><strong>bitrate</strong>: Not supported, and returns zero.</p>
+  </li>
+  <li>
+    <p><strong>height</strong>: Supported: image and video files only.</p>
+  </li>
+  <li>
+    <p><strong>width</strong>: Supported: image and video files only.</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: Supported: audio and video files only.</p>
+  </li>
 </ul>
 
 <h3>iOS Quirks</h3>
@@ -2759,11 +2866,21 @@ callback.</p>
 <p>Supports the following <code>MediaFileData</code> properties:</p>
 
 <ul>
-<li><p><strong>codecs</strong>: Not supported, and returns <code>null</code>.</p></li>
-<li><p><strong>bitrate</strong>: Supported on iOS4 devices for audio only. Returns zero for images and videos.</p></li>
-<li><p><strong>height</strong>: Supported: image and video files only.</p></li>
-<li><p><strong>width</strong>: Supported: image and video files only.</p></li>
-<li><p><strong>duration</strong>: Supported: audio and video files only.</p></li>
+  <li>
+    <p><strong>codecs</strong>: Not supported, and returns <code>null</code>.</p>
+  </li>
+  <li>
+    <p><strong>bitrate</strong>: Supported on iOS4 devices for audio only. Returns zero for images and videos.</p>
+  </li>
+  <li>
+    <p><strong>height</strong>: Supported: image and video files only.</p>
+  </li>
+  <li>
+    <p><strong>width</strong>: Supported: image and video files only.</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: Supported: audio and video files only.</p>
+  </li>
 </ul>
 
 <h2>Android Lifecycle Quirks</h2>
@@ -2776,26 +2893,29 @@ to the capture method will not be fired and instead the results of the call will
 delivered via a document event that fires after the Cordova <a href="http://cordova.apache.org/docs/en/latest/cordova/events/events.html#resume">resume event</a>.</p>
 
 <p>In your app, you should subscribe to the two possible events like so:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// pendingcaptureresult is fired if the capture call is successful</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'pendingcaptureresult'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">mediaFiles</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">pendingcaptureresult</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">mediaFiles</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// Do something with result</span>
     <span class="p">});</span>
 
     <span class="c1">// pendingcaptureerror is fired if the capture call is unsuccessful</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'pendingcaptureerror'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">pendingcaptureerror</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// Handle error case</span>
     <span class="p">});</span>
 <span class="p">}</span>
 
 <span class="c1">// Only subscribe to events after deviceready fires</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'deviceready'</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">);</span>
-</code></pre></div>
+<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">deviceready</span><span class="dl">'</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">);</span>
+</code></pre></div></div>
+
 <p>It is up you to track what part of your code these results are coming from. Be sure to
 save and restore your app&#39;s state as part of the <a href="http://cordova.apache.org/docs/en/latest/cordova/events/events.html#pause">pause</a> and
 <a href="http://cordova.apache.org/docs/en/latest/cordova/events/events.html#resume">resume</a> events as appropriate. Please note that these events will only
 fire on the Android platform and only when the Webview was destroyed during a capture
 operation.</p>
+
 
 
             </div>

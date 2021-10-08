@@ -1455,103 +1455,130 @@
 structure of the plugin.</p>
 
 <p>A sample plugin element:</p>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="nt">&lt;plugin</span> <span class="na">xmlns=</span><span class="s">"http://apache.org/cordova/ns/plugins/1.0"</span>
-    <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
-    <span class="na">id=</span><span class="s">"com.alunny.foo"</span>
-    <span class="na">version=</span><span class="s">"1.0.2"</span><span class="nt">&gt;</span>
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.alunny.foo"
+    version="1.0.2"&gt;
+</code></pre></div></div>
+
 <h2><em>plugin</em> Element</h2>
 
 <p>The <code>plugin</code> element is the plugin manifest&#39;s top-level element. It
 features the following attributes:</p>
 
 <ul>
-<li><p><code>xmlns</code> (required):
+  <li>
+    <p><code>xmlns</code> (required):
 The plugin namespace, <code>http://apache.org/cordova/ns/plugins/1.0</code>. If
 the document contains XML from other namespaces, such as tags to be
 added to the <code>AndroidManifest.xml</code> file, those namespaces should
-also be included in the top-level element.</p></li>
-<li><p><code>id</code> (required):
+also be included in the top-level element.</p>
+  </li>
+  <li>
+    <p><code>id</code> (required):
 A reverse-domain style identifier for the plugin, such as
-<code>com.alunny.foo</code></p></li>
-<li><p><code>version</code> (required):
+<code>com.alunny.foo</code></p>
+  </li>
+  <li>
+    <p><code>version</code> (required):
 A version number for the plugin, that matches the following
 major-minor-patch style regular expression:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">^\d+[.]\d+[.]\d+$
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ^\d+[.]\d+[.]\d+$
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <h2><em>engines</em> and <em>engine</em> Elements</h2>
 
 <p>The child elements of the <code>&lt;engines&gt;</code> element specify versions of
 Apache Cordova-based frameworks that this plugin supports. An example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;engines&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;engines&gt;
     &lt;engine name="cordova" version="1.7.0" /&gt;
     &lt;engine name="cordova" version="1.8.1" /&gt;
     &lt;engine name="worklight" version="1.0.0" platform="android" scriptSrc="worklight_version"/&gt;
 &lt;/engines&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Similar to the <code>&lt;plugin&gt;</code> element&#39;s <code>version</code> attribute, the specified
 version string should match a major-minor-patch string conforming to
 the regular expression:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    ^\d+[.]\d+[.]\d+$
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ^\d+[.]\d+[.]\d+$
+</code></pre></div></div>
+
 <p>Engine elements may also specify fuzzy matches to avoid repetition,
 and to reduce maintenance when the underlying platform is updated.
 Tools should support a minimum of <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code> and <code>&lt;=</code>, for
 example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;engines&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;engines&gt;
     &lt;engine name="cordova" version="&gt;=1.7.0" /&gt;
     &lt;engine name="cordova" version="&lt;1.8.1" /&gt;
 &lt;/engines&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The <code>&lt;engine&gt;</code> tags also has default support for all of the main platforms Cordova exists on.
 Specifying the <code>cordova</code> engine tag means that all versions of Cordova on any platform must
 satisfy the engine version attribute. You may also list specific platforms and their versions
 in order to override the catch-all <code>cordova</code> engine:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;engines&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;engines&gt;
     &lt;engine name="cordova" version="&gt;=1.7.0" /&gt;
     &lt;engine name="cordova-android" version="&gt;=1.8.0" /&gt;
     &lt;engine name="cordova-ios" version="&gt;=1.7.1" /&gt;
 &lt;/engines&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Here&#39;s a list of the default engines that the <code>&lt;engine&gt;</code> tag supports:</p>
 
 <ul>
-<li><code>cordova</code></li>
-<li><code>cordova-plugman</code></li>
-<li><code>cordova-amazon-fireos</code></li>
-<li><code>cordova-android</code></li>
-<li><code>cordova-ios</code></li>
-<li><code>cordova-blackberry10</code></li>
-<li><code>cordova-wp8</code></li>
-<li><code>cordova-windows8</code></li>
-<li><code>android-sdk</code> // returns the highest Android api level installed</li>
-<li><code>apple-xcode</code> // returns the xcode version</li>
-<li><code>apple-ios</code> // returns the highest iOS version installed</li>
-<li><code>apple-osx</code> // returns the OSX version</li>
-<li><code>blackberry-ndk</code> // returns the native blackberry SDK version</li>
+  <li><code>cordova</code></li>
+  <li><code>cordova-plugman</code></li>
+  <li><code>cordova-amazon-fireos</code></li>
+  <li><code>cordova-android</code></li>
+  <li><code>cordova-ios</code></li>
+  <li><code>cordova-blackberry10</code></li>
+  <li><code>cordova-wp8</code></li>
+  <li><code>cordova-windows8</code></li>
+  <li><code>android-sdk</code> // returns the highest Android api level installed</li>
+  <li><code>apple-xcode</code> // returns the xcode version</li>
+  <li><code>apple-ios</code> // returns the highest iOS version installed</li>
+  <li><code>apple-osx</code> // returns the OSX version</li>
+  <li><code>blackberry-ndk</code> // returns the native blackberry SDK version</li>
 </ul>
 
 <p>Specifying custom Apache Cordova-based frameworks should be listed under the engine tag like so:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;engines&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;engines&gt;
     &lt;engine name="my_custom_framework" version="1.0.0" platform="android" scriptSrc="path_to_my_custom_framework_version"/&gt;
     &lt;engine name="another_framework" version="&gt;0.2.0" platform="ios|android" scriptSrc="path_to_another_framework_version"/&gt;
     &lt;engine name="even_more_framework" version="&gt;=2.2.0" platform="*" scriptSrc="path_to_even_more_framework_version"/&gt;
 &lt;/engines&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>A custom Apache Cordova-based framework requires that an engine element includes the following attributes:
 <code>name</code>, <code>version</code>, <code>scriptSrc</code>, and <code>platform</code>.</p>
 
 <ul>
-<li><p><code>name</code> (required): A human-readable name for your custom framework.</p></li>
-<li><p><code>version</code> (required): The version that your framework must have in order to install.</p></li>
-<li><p><code>scriptSrc</code> (required): The script file that tells plugman what version of the custom framework is.
-Ideally, this file should be within the top level directory of your plugin directory.</p></li>
-<li><p><code>platform</code> (required): Which platforms that your framework supports. You may use the wildcard <code>*</code>
+  <li>
+    <p><code>name</code> (required): A human-readable name for your custom framework.</p>
+  </li>
+  <li>
+    <p><code>version</code> (required): The version that your framework must have in order to install.</p>
+  </li>
+  <li>
+    <p><code>scriptSrc</code> (required): The script file that tells plugman what version of the custom framework is.
+Ideally, this file should be within the top level directory of your plugin directory.</p>
+  </li>
+  <li>
+    <p><code>platform</code> (required): Which platforms that your framework supports. You may use the wildcard <code>*</code>
 to say supported for all platforms, specify multiple with a pipe character like <code>android|ios|blackberry10</code>
-or just a single platform like <code>android</code>.</p></li>
+or just a single platform like <code>android</code>.</p>
+  </li>
 </ul>
 
 <p>plugman aborts with a non-zero code for any plugin whose target
@@ -1564,69 +1591,87 @@ the specified cordova project directory blindly.</p>
 
 <p>A human-readable name for the plugin, whose text content contains the
 name of the plugin. For example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;name&gt;Foo&lt;/name&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;name&gt;Foo&lt;/name&gt;
+</code></pre></div></div>
+
 <p>This element does not (yet) handle localization.</p>
 
 <h2><em>description</em> Element</h2>
 
 <p>A human-readable description for the plugin. The text content of the element contains
 the description of the plugin. An example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;description&gt;Foo plugin description&lt;/description&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;description&gt;Foo plugin description&lt;/description&gt;
+</code></pre></div></div>
+
 <p>This element does not (yet) handle localization.</p>
 
 <h2><em>author</em> Element</h2>
 
 <p>Plugin author name. The text content of the element contains
 the name of the plugin author. An example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;author&gt;Foo plugin description&lt;/author&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;author&gt;Foo plugin description&lt;/author&gt;
+</code></pre></div></div>
+
 <h2><em>keywords</em> Element</h2>
 
 <p>Plugin keywords. The text content of the element contains comma separated keywords to describe the plugin. An example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;keywords&gt;foo,bar&lt;/keywords&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;keywords&gt;foo,bar&lt;/keywords&gt;
+</code></pre></div></div>
+
 <h2><em>license</em> Element</h2>
 
 <p>Plugin license. The text content of the element contains the plugin license. An example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;license&gt;Apache 2.0 License&lt;/license&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;license&gt;Apache 2.0 License&lt;/license&gt;
+</code></pre></div></div>
+
 <h2><em>asset</em> Element</h2>
 
 <p>One or more elements listing the files or directories to be copied
 into a Cordova app&#39;s <code>www</code> directory. Examples:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;!-- a single file, to be copied in the root directory --&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- a single file, to be copied in the root directory --&gt;
 &lt;asset src="www/foo.js" target="foo.js" /&gt;
 &lt;!-- a directory, also to be copied in the root directory --&gt;
 &lt;asset src="www/foo" target="foo" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>All <code>&lt;asset&gt;</code> tags require both <code>src</code> and <code>target</code> attributes.
 Web-only plugins contains mostly <code>&lt;asset&gt;</code> elements. Any <code>&lt;asset&gt;</code>
 elements that are nested within <code>&lt;platform&gt;</code> elements specify
 platform-specific web assets, as described below. Attributes include:</p>
 
 <ul>
-<li><p><code>src</code> (required):
+  <li>
+    <p><code>src</code> (required):
 Where the file or directory is located in the plugin package,
 relative to the <code>plugin.xml</code> document.  If a file does not exist at
 the specified <code>src</code> location, plugman stops and reverses the
 installation process, issues a notification about the conflict, and
-exits with a non-zero code.</p></li>
-<li><p><code>target</code> (required):</p></li>
-</ul>
+exits with a non-zero code.</p>
+  </li>
+  <li>
+    <p><code>target</code> (required):</p>
 
-<p>Where the file or directory should be located in the Cordova app,
-  relative to the <code>www</code> directory.
-  Assets can be targeted to subdirectories, for example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;asset src="www/new-foo.js" target="js/experimental/foo.js" /&gt;
-</code></pre></div>
-<p>creates the <code>js/experimental</code> directory within the <code>www</code> directory,
-  unless already present, then copies the <code>new-foo.js</code> file and
-  renames it <code>foo.js</code>.  If a file already exists at the target
-  location, plugman stops and reverses the installation process,
-  issues a notification about the conflict, and exits with a non-zero
-  code.</p>
+    <p>Where the file or directory should be located in the Cordova app,
+relative to the <code>www</code> directory.
+Assets can be targeted to subdirectories, for example:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;asset src="www/new-foo.js" target="js/experimental/foo.js" /&gt;
+</code></pre></div>    </div>
+
+    <p>creates the <code>js/experimental</code> directory within the <code>www</code> directory,
+unless already present, then copies the <code>new-foo.js</code> file and
+renames it <code>foo.js</code>.  If a file already exists at the target
+location, plugman stops and reverses the installation process,
+issues a notification about the conflict, and exits with a non-zero
+code.</p>
+  </li>
+</ul>
 
 <h2><em>js-module</em> Element</h2>
 
@@ -1635,10 +1680,12 @@ tag corresponds to a JavaScript file, and prevents the plugin&#39;s users
 from having to add a <code>&lt;script&gt;</code> tag for each file.  While <code>&lt;asset&gt;</code>
 tags simply copy a file from the plugin subdirectory into <code>www</code>,
 <code>&lt;js-module&gt;</code> tags are much more sophisticated. They look like this:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;js-module src="socket.js" name="Socket"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;js-module src="socket.js" name="Socket"&gt;
     &lt;clobbers target="chrome.socket" /&gt;
 &lt;/js-module&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>When installing a plugin with the example above, <code>socket.js</code> is copied
 to <code>www/plugins/my.plugin.id/socket.js</code>, and added as an entry to
 <code>www/cordova_plugins.js</code>. At load time, code in <code>cordova.js</code> uses XHR
@@ -1652,37 +1699,51 @@ automatically. The module is wrapped in a closure, with <code>module</code>,
 <p>Details for the <code>&lt;js-module&gt;</code> tag:</p>
 
 <ul>
-<li><p>The <code>src</code> references a file in the plugin directory relative to the
-<code>plugin.xml</code> file.</p></li>
-<li><p>The <code>name</code> provides the last part of the module name. It can
+  <li>
+    <p>The <code>src</code> references a file in the plugin directory relative to the
+<code>plugin.xml</code> file.</p>
+  </li>
+  <li>
+    <p>The <code>name</code> provides the last part of the module name. It can
 generally be whatever you like, and it only matters if you want to
 use <code>cordova.require</code> to import other parts of your plugins in your
 JavaScript code. The module name for a <code>&lt;js-module&gt;</code> is your
 plugin&#39;s <code>id</code> followed by the value of <code>name</code>. For the example
 above, with an <code>id</code> of <code>chrome.socket</code>, the module name is
-<code>chrome.socket.Socket</code>.</p></li>
-<li><p>Three tags are allowed within <code>&lt;js-module&gt;</code>:</p>
+<code>chrome.socket.Socket</code>.</p>
+  </li>
+  <li>
+    <p>Three tags are allowed within <code>&lt;js-module&gt;</code>:</p>
 
-<ul>
-<li><code>&lt;clobbers target=&quot;some.value&quot;/&gt;</code> indicates that the
+    <ul>
+      <li>
+        <p><code>&lt;clobbers target="some.value"/&gt;</code> indicates that the
 <code>module.exports</code> is inserted into the <code>window</code> object as
 <code>window.some.value</code>. You can have as many <code>&lt;clobbers&gt;</code> as you
-like. Any object not available on <code>window</code> is created.</li>
-<li><code>&lt;merges target=&quot;some.value&quot;/&gt;</code> indicates that the module
+like. Any object not available on <code>window</code> is created.</p>
+      </li>
+      <li>
+        <p><code>&lt;merges target="some.value"/&gt;</code> indicates that the module
 should be merged with any existing value at <code>window.some.value</code>.
 If any key already exists, the module&#39;s version overrides the
 original. You can have as many <code>&lt;merges&gt;</code> as you like. Any
-object not available on <code>window</code> is created.</li>
-<li><code>&lt;runs/&gt;</code> means that your code should be specified with
+object not available on <code>window</code> is created.</p>
+      </li>
+      <li>
+        <p><code>&lt;runs/&gt;</code> means that your code should be specified with
 <code>cordova.require</code>, but not installed on the <code>window</code>
 object. This is useful when initializing the module, attaching
 event handlers or otherwise. You can only have up to one
 <code>&lt;runs/&gt;</code> tag. Note that including a <code>&lt;runs/&gt;</code> with
 <code>&lt;clobbers/&gt;</code> or <code>&lt;merges/&gt;</code> is redundant, since they also
-<code>cordova.require</code> your module.</li>
-<li>An empty <code>&lt;js-module&gt;</code> still loads and can be accessed in other
-modules via <code>cordova.require</code>.</li>
-</ul></li>
+<code>cordova.require</code> your module.</p>
+      </li>
+      <li>
+        <p>An empty <code>&lt;js-module&gt;</code> still loads and can be accessed in other
+modules via <code>cordova.require</code>.</p>
+      </li>
+    </ul>
+  </li>
 </ul>
 
 <p>If <code>src</code> does not resolve to an existing file, plugman stops and
@@ -1698,21 +1759,31 @@ platform-specific JavaScript module bindings.</p>
 current plugin depends. While future versions will access them from
 plugin repositories, in the short term plugins are directly referenced
 as URLs by <code>&lt;dependency&gt;</code> tags. They are formatted as follows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" /&gt;
+</code></pre></div></div>
+
 <ul>
-<li><p><code>id</code>: provides the ID of the plugin. It should be globally unique,
+  <li>
+    <p><code>id</code>: provides the ID of the plugin. It should be globally unique,
 and expressed in reverse-domain style. While neither of these
-restrictions is currently enforced, they may be in the future.</p></li>
-<li><p><code>url</code>: A URL for the plugin. This should reference a git repository,
-which plugman attempts to clone.</p></li>
-<li><p><code>commit</code>: This is any git reference understood by <code>git checkout</code>: a
+restrictions is currently enforced, they may be in the future.</p>
+  </li>
+  <li>
+    <p><code>url</code>: A URL for the plugin. This should reference a git repository,
+which plugman attempts to clone.</p>
+  </li>
+  <li>
+    <p><code>commit</code>: This is any git reference understood by <code>git checkout</code>: a
 branch or tag name (e.g., <code>master</code>, <code>0.3.1</code>), or a commit hash (e.g.,
-<code>975ddb228af811dd8bb37ed1dfd092a3d05295f9</code>).</p></li>
-<li><p><code>subdir</code>: Specifies that the targeted plugin dependency exists as a
+<code>975ddb228af811dd8bb37ed1dfd092a3d05295f9</code>).</p>
+  </li>
+  <li>
+    <p><code>subdir</code>: Specifies that the targeted plugin dependency exists as a
 subdirectory of the git repository. This is helpful because it
 allows the repository to contain several related plugins, each
-specified individually.</p></li>
+specified individually.</p>
+  </li>
 </ul>
 
 <p>In the future, version constraints will be introduced, and a plugin
@@ -1721,7 +1792,7 @@ URLs.</p>
 
 <h3>Relative Dependency Paths</h3>
 
-<p>If you set the <code>url</code> of a <code>&lt;dependency&gt;</code> tag to <code>&quot;.&quot;</code> and provide a
+<p>If you set the <code>url</code> of a <code>&lt;dependency&gt;</code> tag to <code>"."</code> and provide a
 <code>subdir</code>, the dependent plugin is installed from the same local or
 remote git repository as the parent plugin that specifies the
 <code>&lt;dependency&gt;</code> tag.</p>
@@ -1743,13 +1814,15 @@ the code into Cordova projects.</p>
 and therefore installable on any and all platforms.</p>
 
 <p>A sample platform tag:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;platform name="android"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;platform name="android"&gt;
     &lt;!-- android-specific elements --&gt;
 &lt;/platform&gt;
 &lt;platform name="ios"&gt;
     &lt;!-- ios-specific elements --&gt;
 &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The required <code>name</code> attribute identifies a platform as supported,
 associating the element&#39;s children with that platform.</p>
 
@@ -1757,54 +1830,61 @@ associating the element&#39;s children with that platform.</p>
 chosen, are listed:</p>
 
 <ul>
-<li>amazon-fireos</li>
-<li>android</li>
-<li>blackberry10</li>
-<li>ios</li>
-<li>wp8</li>
-<li>windows8</li>
+  <li>amazon-fireos</li>
+  <li>android</li>
+  <li>blackberry10</li>
+  <li>ios</li>
+  <li>wp8</li>
+  <li>windows8</li>
 </ul>
 
 <h2><em>source-file</em> Element</h2>
 
 <p>The <code>&lt;source-file&gt;</code> element identifies executable source code that
 should be installed into a project. Examples:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;!-- android --&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- android --&gt;
 &lt;source-file src="src/android/Foo.java"
                 target-dir="src/com/alunny/foo" /&gt;
 &lt;!-- ios --&gt;
 &lt;source-file src="src/ios/CDVFoo.m" /&gt;
 &lt;source-file src="src/ios/someLib.a" framework="true" /&gt;
 &lt;source-file src="src/ios/someLib.a" compiler-flags="-fno-objc-arc" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>It supports the following attributes:</p>
 
 <ul>
-<li><p><code>src</code> (required):
+  <li>
+    <p><code>src</code> (required):
 Location of the file relative to <code>plugin.xml</code>.  If the <code>src</code> file
 can&#39;t be found, plugman stops and reverses the installation, issues
-a notification about the problem, and exits with a non-zero code.</p></li>
-<li><p><code>target-dir</code>:
+a notification about the problem, and exits with a non-zero code.</p>
+  </li>
+  <li>
+    <p><code>target-dir</code>:
 A directory into which the files should be copied, relative to the
 root of the Cordova project.  In practice, this is most important
 for Java-based platforms, where a file in the <code>com.alunny.foo</code>
 package must be located within the <code>com/alunny/foo</code> directory. For
 platforms where the source directory is not important, this
-attribute should be omitted.</p></li>
-</ul>
+attribute should be omitted.</p>
 
-<p>As with assets, if the <code>target</code> of a <code>source-file</code> would overwrite
-  an existing file, plugman stops and reverses the installation,
-  issues a notification about the problem, and exits with a non-zero
-  code.</p>
-
-<ul>
-<li><p><code>framework</code> (iOS only):
+    <p>As with assets, if the <code>target</code> of a <code>source-file</code> would overwrite
+an existing file, plugman stops and reverses the installation,
+issues a notification about the problem, and exits with a non-zero
+code.</p>
+  </li>
+  <li>
+    <p><code>framework</code> (iOS only):
 If set to <code>true</code>, also adds the specified file as a framework to the
-project.</p></li>
-<li><p><code>compiler-flags</code> (iOS only):
+project.</p>
+  </li>
+  <li>
+    <p><code>compiler-flags</code> (iOS only):
 If set, assigns the specified compiler flags for the particular
-source file.</p></li>
+source file.</p>
+  </li>
 </ul>
 
 <h2><em>config-file</em> Element</h2>
@@ -1821,15 +1901,18 @@ XML document tree. The children are XML literals to be inserted in the
 target document.</p>
 
 <p>Example for XML:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;config-file target="AndroidManifest.xml" parent="/manifest/application"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;config-file target="AndroidManifest.xml" parent="/manifest/application"&gt;
     &lt;activity android:name="com.foo.Foo" android:label="@string/app_name"&gt;
         &lt;intent-filter&gt;
         &lt;/intent-filter&gt;
     &lt;/activity&gt;
 &lt;/config-file&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Example for <code>plist</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;config-file target="*-Info.plist" parent="CFBundleURLTypes"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;config-file target="*-Info.plist" parent="CFBundleURLTypes"&gt;
     &lt;array&gt;
         &lt;dict&gt;
             &lt;key&gt;PackageName&lt;/key&gt;
@@ -1837,43 +1920,44 @@ target document.</p>
         &lt;/dict&gt;
     &lt;/array&gt;
 &lt;/config-file&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>It supports the following attributes:</p>
 
 <ul>
-<li><code>target</code>:</li>
-</ul>
+  <li>
+    <p><code>target</code>:</p>
 
-<p>The file to be modified, and the path relative to the root of the
-  Cordova project.</p>
+    <p>The file to be modified, and the path relative to the root of the
+Cordova project.</p>
 
-<p>The target can include wildcard (<code>*</code>) elements. In this case,
-  plugman recursively searches through the project directory structure
-  and uses the first match.</p>
+    <p>The target can include wildcard (<code>*</code>) elements. In this case,
+plugman recursively searches through the project directory structure
+and uses the first match.</p>
 
-<p>On iOS, the location of configuration files relative to the project
-  directory root is not known, so specifying a target of <code>config.xml</code>
-  resolves to <code>cordova-ios-project/MyAppName/config.xml</code>.</p>
+    <p>On iOS, the location of configuration files relative to the project
+directory root is not known, so specifying a target of <code>config.xml</code>
+resolves to <code>cordova-ios-project/MyAppName/config.xml</code>.</p>
 
-<p>If the specified file does not exist, the tool ignores the
-  configuration change and continues installation.</p>
-
-<ul>
-<li><code>parent</code>: An XPath selector referencing the parent of the elements
+    <p>If the specified file does not exist, the tool ignores the
+configuration change and continues installation.</p>
+  </li>
+  <li>
+    <p><code>parent</code>: An XPath selector referencing the parent of the elements
 to be added to the config file. If you use absolute selectors, you
 can use a wildcard (<code>*</code>) to specify the root element,
-e.g., <code>/*/plugins</code>.</li>
-</ul>
+e.g., <code>/*/plugins</code>.</p>
 
-<p>For <code>plist</code> files, the <code>parent</code> determines under what parent key the
-  specified XML should be inserted.</p>
+    <p>For <code>plist</code> files, the <code>parent</code> determines under what parent key the
+specified XML should be inserted.</p>
 
-<p>If the selector does not resolve to a child of the specified
-  document, the tool stops and reverses the installation process,
-  issues a warning, and exits with a non-zero code.</p>
-
-<ul>
-<li><code>after</code>: A prioritized list of accepted siblings after which to add the XML snippet. Useful for specifying changes in files which require strict ordering of XML elements like <a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement">http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement</a></li>
+    <p>If the selector does not resolve to a child of the specified
+document, the tool stops and reverses the installation process,
+issues a warning, and exits with a non-zero code.</p>
+  </li>
+  <li>
+    <p><code>after</code>: A prioritized list of accepted siblings after which to add the XML snippet. Useful for specifying changes in files which require strict ordering of XML elements like <a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement">http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement</a></p>
+  </li>
 </ul>
 
 <p>The Windows platform supports two additional attributes (both optional) when affecting the meta-name <code>package.appxmanifest</code>:</p>
@@ -1885,14 +1969,16 @@ type. Supported values are <code>win</code>, <code>phone</code>, or <code>all</c
 specified version string. Value can be any valid node semantic version range string.</p>
 
 <p>Examples of using these Windows specific attributes:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="&lt;8.1.0"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="&lt;8.1.0"&gt;
     &lt;Capability Name="picturesLibrary" /&gt;
     &lt;DeviceCapability Name="webcam" /&gt;
 &lt;/config-file&gt;
 &lt;config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="&gt;=8.1.0" device-target="phone"&gt;
     &lt;DeviceCapability Name="webcam" /&gt;
 &lt;/config-file&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The above example will set pre-8.1 platforms (Windows 8, specifically) to require the <code>webcam</code> device capability and the <code>picturesLibrary</code> general capability, and apply the <code>webcam</code> device capability only to Windows 8.1 projects that build for Windows Phone.  Windows desktop 8.1 systems are unmodified.</p>
 
 <h2><em>plugins-plist</em> Element</h2>
@@ -1901,45 +1987,59 @@ specified version string. Value can be any valid node semantic version range str
 below. Use the <code>&lt;config-file&gt;</code> tag for newer versions of Cordova.</p>
 
 <p>Example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;config-file target="config.xml" parent="/widget/plugins"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;config-file target="config.xml" parent="/widget/plugins"&gt;
     &lt;feature name="ChildBrowser"&gt;
         &lt;param name="ios-package" value="ChildBrowserCommand"/&gt;
     &lt;/feature&gt;
 &lt;/config-file&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Specifies a key and value to append to the correct <code>AppInfo.plist</code>
 file in an iOS Cordova project. For example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugins-plist key="Foo" string="CDVFoo" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugins-plist key="Foo" string="CDVFoo" /&gt;
+</code></pre></div></div>
+
 <h2><em>resource-file</em> and <em>header-file</em> Elements</h2>
 
 <p>Like source files, but specifically for platforms such as iOS that
 distinguish between source files, headers, and resources. iOS Examples:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;resource-file src="CDVFoo.bundle" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;resource-file src="CDVFoo.bundle" /&gt;
 &lt;resource-file src="CDVFooViewController.xib" /&gt;
 &lt;header-file src="CDVFoo.h" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Android example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" /&gt;
+</code></pre></div></div>
+
 <h2><em>lib-file</em> Element</h2>
 
 <p>Like source, resource, and header files, but specifically for
 platforms such as BlackBerry 10 that use user-generated libraries.
 Examples:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" /&gt;
 &lt;lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Supported attributes:</p>
 
 <ul>
-<li><p><code>src</code> (required):
+  <li>
+    <p><code>src</code> (required):
 The location of the file relative to <code>plugin.xml</code>.
 If <code>src</code> can&#39;t be found, plugman stops and reverses the
 installation, issues a warning about the problem, and exits with a
-non-zero code.</p></li>
-<li><p><code>arch</code>: The architecture for which the <code>.so</code> file has been built,
-either <code>device</code> or <code>simulator</code>.</p></li>
+non-zero code.</p>
+  </li>
+  <li>
+    <p><code>arch</code>: The architecture for which the <code>.so</code> file has been built,
+either <code>device</code> or <code>simulator</code>.</p>
+  </li>
 </ul>
 
 <p>For the Windows platform, the <code>&lt;lib-file&gt;</code> element allows the inclusion of an <code>&lt;SDKReference&gt;</code> in the generated Windows
@@ -1948,23 +2048,33 @@ project files.</p>
 <p>Supported attributes:</p>
 
 <ul>
-<li><p><code>src</code> (required):
+  <li>
+    <p><code>src</code> (required):
 The name of the SDK to include (which will be used as value of the <code>Include</code> attribute of the generated
-<code>&lt;SDKReference&gt;</code> element).</p></li>
-<li><p><code>arch</code>: Indicates that the <code>&lt;SDKReference&gt;</code> should only be included when building for the specified architecture.
-Supported values are <code>x86</code>, <code>x64</code> or <code>ARM</code>.</p></li>
-<li><p><code>device-target</code>: Indicates that the <code>&lt;SDKReference&gt;</code> should only be included when building for the specified target device
-type. Supported values are <code>win</code> (or <code>windows</code>), <code>phone</code> or <code>all</code>.</p></li>
-<li><p><code>versions</code>: Indicates that the <code>&lt;SDKReference&gt;</code> should only be included when building for versions that match the specified version
-string. Value can be any valid node semantic version range string.</p></li>
+<code>&lt;SDKReference&gt;</code> element).</p>
+  </li>
+  <li>
+    <p><code>arch</code>: Indicates that the <code>&lt;SDKReference&gt;</code> should only be included when building for the specified architecture.
+Supported values are <code>x86</code>, <code>x64</code> or <code>ARM</code>.</p>
+  </li>
+  <li>
+    <p><code>device-target</code>: Indicates that the <code>&lt;SDKReference&gt;</code> should only be included when building for the specified target device
+type. Supported values are <code>win</code> (or <code>windows</code>), <code>phone</code> or <code>all</code>.</p>
+  </li>
+  <li>
+    <p><code>versions</code>: Indicates that the <code>&lt;SDKReference&gt;</code> should only be included when building for versions that match the specified version
+string. Value can be any valid node semantic version range string.</p>
+  </li>
 </ul>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" /&gt;
 &lt;lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions="&gt;=8.1" /&gt;
 &lt;lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" /&gt;
 &lt;lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="win" versions="8.0" arch="x86" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h2><em>framework</em> Element</h2>
 
 <p>Identifies a framework (usually part of the OS/platform) on which the plugin depends.</p>
@@ -1973,10 +2083,12 @@ string. Value can be any valid node semantic version range string.</p></li>
 plugin files (thus it is not a system framework).</p>
 
 <h3><em>framework</em> for iOS</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="libsqlite3.dylib" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;framework src="libsqlite3.dylib" /&gt;
 &lt;framework src="social.framework" weak="true" /&gt;
 &lt;framework src="relative/path/to/my.framework" custom="true" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The optional <code>weak</code> attribute is a boolean indicating whether the
 framework should be weakly linked. The default is <code>false</code>.</p>
 
@@ -1985,20 +2097,24 @@ framework should be weakly linked. The default is <code>false</code>.</p>
 <p>On Android (as of cordova-android@4.0.0), <em>framework</em> tags are used to include Maven dependencies, or to include bundled library projects.</p>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;!-- Depend on latest version of GCM from play services --&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Depend on latest version of GCM from play services --&gt;
 &lt;framework src="com.google.android.gms:play-services-gcm:+" /&gt;
 &lt;!-- Depend on v21 of appcompat-v7 support library --&gt;
 &lt;framework src="com.android.support:appcompat-v7:21+" /&gt;
 &lt;!-- Depend on library project included in plugin --&gt;
 &lt;framework src="relative/path/FeedbackLib" custom="true" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p><em>framework</em>  can also be used to have custom .gradle files sub-included into the main project&#39;s .gradle file:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="relative/path/rules.gradle" custom="true" type="gradleReference" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;framework src="relative/path/rules.gradle" custom="true" type="gradleReference" /&gt;
+</code></pre></div></div>
+
 <p>For pre-android@4.0.0 (ANT-based projects):</p>
 
 <p>The optional <code>type</code> attribute is a string indicating the type of framework to add. Currently only <code>projectReference</code> is
-supported and only for Windows.  Using <code>custom=&#39;true&#39;</code> and <code>type=&#39;projectReference&#39;</code> will add a reference to the project
+supported and only for Windows.  Using <code>custom='true'</code> and <code>type='projectReference'</code> will add a reference to the project
 which will be added to the compile+link steps of the cordova project.  This essentially is the only way currently that a
 &#39;custom&#39; framework can target multiple architectures as they are explicitly built as a dependency by the referencing
 cordova application.</p>
@@ -2006,13 +2122,17 @@ cordova application.</p>
 <p>The optional <code>parent</code> sets the relative path to the directory containing the
 sub-project to which to add the reference. The default is <code>.</code>, i.e. the
 application project. It allows to add references between sub projects like in this example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" /&gt;
+</code></pre></div></div>
+
 <h3><em>framework</em> for Windows</h3>
 
 <p>The Windows platform supports three additional attributes (all optional) to refine when the framework should be included:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/&gt;
+</code></pre></div></div>
+
 <p>The <code>arch</code> attribute indicates that the framework should only be included when building for the specified architecture.
 Supported values are <code>x86</code>, <code>x64</code> or <code>ARM</code>.</p>
 
@@ -2023,46 +2143,56 @@ type. Supported values are <code>win</code> (or <code>windows</code>), <code>pho
 specified version string. Value can be any valid node semantic version range string.</p>
 
 <p>Examples of using these Windows specific attributes:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;framework src="src/windows/example.dll" arch="x64" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;framework src="src/windows/example.dll" arch="x64" /&gt;
 &lt;framework src="src/windows/example.dll" versions="&gt;=8.0" /&gt;
 &lt;framework src="src/windows/example.vcxproj" type="projectReference" target="win" /&gt;
 &lt;framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h2><em>info</em> Element</h2>
 
 <p>Additional information provided to users. This is useful when you
 require extra steps that can&#39;t be easily automated or are beyond
 plugman&#39;s scope.  Examples:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;info&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;info&gt;
 You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
 
 You need to add the following line to the `local.properties`:
 
 android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
 &lt;/info&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h2><em>hook</em> Element</h2>
 
 <p>Represents your custom script which will be called by Cordova when
 certain action occurs (for example, after plugin is added or platform
 prepare logic is invoked). This is useful when you need to extend
 default Cordova functionality. See <a href="../guide/appdev/hooks/index.html">Hooks Guide</a> for more information.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;hook type="after_plugin_install" src="scripts/afterPluginInstall.js" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;hook type="after_plugin_install" src="scripts/afterPluginInstall.js" /&gt;
+</code></pre></div></div>
+
 <h2>Variables</h2>
 
 <p>In certain cases, a plugin may need to make configuration changes
 dependent on the target application. For example, to register for C2DM
 on Android, an app whose package id is <code>com.alunny.message</code> would
 require a permission such as:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;uses-permission android:name="com.alunny.message.permission.C2D_MESSAGE"/&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;uses-permission android:name="com.alunny.message.permission.C2D_MESSAGE"/&gt;
+</code></pre></div></div>
+
 <p>In such cases where the content inserted from the <code>plugin.xml</code> file is
 not known ahead of time, variables can be indicated by a dollar-sign
 followed by a series of capital letters, digits, or underscores. For
 the above example, the <code>plugin.xml</code> file would include this tag:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/&gt;
+</code></pre></div></div>
+
 <p>plugman replaces variable references with the specified value, or the
 empty string if not found. The value of the variable reference may be
 detected (in this case, from the <code>AndroidManifest.xml</code> file) or
@@ -2072,12 +2202,16 @@ the particular tool.</p>
 <p>plugman can request users to specify a plugin&#39;s required
 variables. For example, API keys for C2M and Google Maps can be
 specified as a command-line argument:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
+</code></pre></div></div>
+
 <p>To make the variable mandatory, the <code>&lt;platform&gt;</code> tag needs to contain
 a <code>&lt;preference&gt;</code> tag. For example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="API_KEY" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;preference name="API_KEY" /&gt;
+</code></pre></div></div>
+
 <p>plugman checks that these required preferences are passed in.  If not,
 it should warn the user how to pass the variable in and exit with a
 non-zero code.</p>

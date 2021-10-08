@@ -134,36 +134,43 @@
             <p>We are happy to announce that we have just released <code>Cordova Electron 2.0.0</code>!  This is one of Cordova&#39;s supported platforms for building Electron applications.</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-electron">cordova-electron@2.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-electron">cordova-electron@2.0.0</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
 
 <p><strong>To upgrade:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform remove electron
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove electron
 cordova platform add electron@2.0.0
-</code></pre></div>
+</code></pre></div></div>
+
 <p><strong>To install:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform add electron@2.0.0
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add electron@2.0.0
+</code></pre></div></div>
+
 <p>Some of the notable breaking changes &amp; new features in this release are:</p>
 
 <ul>
-<li>The <strong>Electron</strong> core dependencies have been updated.
+  <li>The <strong>Electron</strong> core dependencies have been updated.
+    <ul>
+      <li><strong>Electron</strong>: 10.1.2</li>
+      <li><strong>Chromium</strong>: 85.0.4183.98</li>
+      <li><strong>Node</strong>: v12.16.3</li>
+      <li><strong>V8</strong>: v8.5</li>
+    </ul>
+  </li>
+  <li><strong>NodeJS</strong> 6 and 8 is no longer supported. This release requires the development environment to have <strong>NodeJS</strong> 10.x or higher. It is recommended to use the current LTS, which is <code>12.18.4</code> at the time of this release.</li>
+  <li>DevTool extensions can now be added to debug builds to improve debugging capabilities. <a href="https://github.com/apache/cordova-electron/pull/160">GH-160</a></li>
+  <li>
+    <p>Support for using the custom <code>scheme</code> and <code>hostname</code> <code>preference</code> flags is now available. It can be easily configured in your Cordova project by setting the preference options <code>scheme</code> and <code>hostname</code> in the <code>config.xml</code> file.</p>
 
-<ul>
-<li><strong>Electron</strong>: 10.1.2</li>
-<li><strong>Chromium</strong>: 85.0.4183.98</li>
-<li><strong>Node</strong>: v12.16.3</li>
-<li><strong>V8</strong>: v8.5</li>
-</ul></li>
-<li><strong>NodeJS</strong> 6 and 8 is no longer supported. This release requires the development environment to have <strong>NodeJS</strong> 10.x or higher. It is recommended to use the current LTS, which is <code>12.18.4</code> at the time of this release.</li>
-<li>DevTool extensions can now be added to debug builds to improve debugging capabilities. <a href="https://github.com/apache/cordova-electron/pull/160">GH-160</a></li>
-<li><p>Support for using the custom <code>scheme</code> and <code>hostname</code> <code>preference</code> flags is now available. It can be easily configured in your Cordova project by setting the preference options <code>scheme</code> and <code>hostname</code> in the <code>config.xml</code> file.</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"scheme"</span> <span class="na">value=</span><span class="s">"app"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"hostname"</span> <span class="na">value=</span><span class="s">"localhost"</span> <span class="nt">/&gt;</span>
-</code></pre></div></li>
-<li><p>Support passing of <strong>Electron</strong> arguments to the <code>cordova run</code> command. This is useful to pass the inspect flag to debug the main process.</p></li>
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"scheme"</span> <span class="na">value=</span><span class="s">"app"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"hostname"</span> <span class="na">value=</span><span class="s">"localhost"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Support passing of <strong>Electron</strong> arguments to the <code>cordova run</code> command. This is useful to pass the inspect flag to debug the main process.</li>
 </ul>
 
 <p>For a quick start guide and in-depth configuration setup, please check out our <a href="https://github.com/apache/cordova-electron/blob/rel/2.0.0/DOCUMENTATION.md">Cordova Electron Documentation</a>!</p>
@@ -171,87 +178,86 @@ cordova platform add electron@2.0.0
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <h2>Project Dependencies</h2>
 
 <ul>
-<li><code>cordova-common@^4.0.2</code></li>
-<li><code>electron@10.1.2</code></li>
-<li><code>electron-builder@^22.8.1</code></li>
-<li><code>electron-devtools-installer@^3.1.1</code></li>
-<li><code>execa@^4.0.3</code></li>
-<li><code>fs-extra@^9.0.1</code></li>
+  <li><code>cordova-common@^4.0.2</code></li>
+  <li><code>electron@10.1.2</code></li>
+  <li><code>electron-builder@^22.8.1</code></li>
+  <li><code>electron-devtools-installer@^3.1.1</code></li>
+  <li><code>execa@^4.0.3</code></li>
+  <li><code>fs-extra@^9.0.1</code></li>
 </ul>
 
 <h2>Breaking Changes</h2>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-electron/pull/162">GH-162</a> breaking: use platform config parser</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/152">GH-152</a> breaking: bump <code>electron</code> &amp; <code>electron-builder</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/151">GH-151</a> breaking: bump <code>cordova-common@4.0.1</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/145">GH-145</a> breaking(<code>npm</code>): update dependencies</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/142">GH-142</a> breaking: restructure the platform lib code</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/138">GH-138</a> breaking: remove platform-centered workflow</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/69">GH-69</a> breaking: drop <code>node</code> 6 and 8 support</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/162">GH-162</a> breaking: use platform config parser</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/152">GH-152</a> breaking: bump <code>electron</code> &amp; <code>electron-builder</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/151">GH-151</a> breaking: bump <code>cordova-common@4.0.1</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/145">GH-145</a> breaking(<code>npm</code>): update dependencies</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/142">GH-142</a> breaking: restructure the platform lib code</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/138">GH-138</a> breaking: remove platform-centered workflow</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/69">GH-69</a> breaking: drop <code>node</code> 6 and 8 support</li>
 </ul>
 
 <h2>Features</h2>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-electron/pull/160">GH-160</a> feat: install devtool extensions for debug builds</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/154">GH-154</a> feature: support custom <code>scheme</code> &amp; <code>hostname</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/148">GH-148</a> feat: support <strong>Electron</strong> arguments on run command</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/112">GH-112</a> feat: move ci to gh-actions</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/81">GH-81</a> feat: Support Loading Local HTML Files or Remote URL in the <code>BrowserWindow</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/160">GH-160</a> feat: install devtool extensions for debug builds</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/154">GH-154</a> feature: support custom <code>scheme</code> &amp; <code>hostname</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/148">GH-148</a> feat: support <strong>Electron</strong> arguments on run command</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/112">GH-112</a> feat: move ci to gh-actions</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/81">GH-81</a> feat: Support Loading Local HTML Files or Remote URL in the <code>BrowserWindow</code></li>
 </ul>
 
 <h2>Refactor</h2>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-electron/pull/156">GH-156</a> refactor: remove more platform-centered files &amp; update code</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/153">GH-153</a> refactor: cleanup unused code</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/129">GH-129</a> refactor (<code>create</code>): simplify project creation</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/124">GH-124</a> refactor: transform <code>for</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/123">GH-123</a> refactor: transform <code>template</code> strings</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/122">GH-122</a> refactor: transform <code>object</code> shorthand</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/121">GH-121</a> refactor: transform <code>arrow</code> functions &amp; <code>arrow</code> returns</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/120">GH-120</a> refactor: transform <code>var</code> to <code>let</code>/<code>const</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/116">GH-116</a> refactor: remove <code>shelljs</code> and update tests</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/118">GH-118</a> refator: replace <code>shelljs</code>/<code>spawn</code> with <code>execa</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/113">GH-113</a> refactor: <code>eslint</code> setup</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/156">GH-156</a> refactor: remove more platform-centered files &amp; update code</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/153">GH-153</a> refactor: cleanup unused code</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/129">GH-129</a> refactor (<code>create</code>): simplify project creation</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/124">GH-124</a> refactor: transform <code>for</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/123">GH-123</a> refactor: transform <code>template</code> strings</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/122">GH-122</a> refactor: transform <code>object</code> shorthand</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/121">GH-121</a> refactor: transform <code>arrow</code> functions &amp; <code>arrow</code> returns</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/120">GH-120</a> refactor: transform <code>var</code> to <code>let</code>/<code>const</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/116">GH-116</a> refactor: remove <code>shelljs</code> and update tests</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/118">GH-118</a> refator: replace <code>shelljs</code>/<code>spawn</code> with <code>execa</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/113">GH-113</a> refactor: <code>eslint</code> setup</li>
 </ul>
 
 <h2>Fix</h2>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-electron/pull/158">GH-158</a> fix(build): format <code>top-level</code> key for <code>nsis-web</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/136">GH-136</a> fix(npm-script): prepack</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/158">GH-158</a> fix(build): format <code>top-level</code> key for <code>nsis-web</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/136">GH-136</a> fix(npm-script): prepack</li>
 </ul>
 
 <h2>Chore, CI, &amp; Test</h2>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-electron/pull/168">GH-168</a> chore: bump dependencies &amp; related usage</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/165">GH-165</a> chore: bump dependencies to latest</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/164">GH-164</a> chore: bump <strong>Electron</strong> related dependencies</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/147">GH-147</a> chore: various cleanup</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/144">GH-144</a> chore(npm): bump <code>@cordova/eslint-config@^3.0.0</code> w/ lint fix</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/125">GH-125</a> chore: configure app rel dependencies as abs paths</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/117">GH-117</a> chore: update <strong>Electron</strong> dependencies</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/128">GH-128</a> chore: update <code>package.json</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/114">GH-114</a> chore: update <code>jasmine</code> dependency</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/110">GH-110</a> chore: bump version to 2.0.0-dev</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/96">GH-96</a> chore: fix typo</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/67">GH-67</a> chore: update development dependencies</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/68">GH-68</a> chore: bump <strong>Electron</strong> dependencies</li>
-<li>chore(asf): update git notification settings</li>
-<li>Update CONTRIBUTING.md</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/157">GH-157</a> ci: add node 14 to workflow</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/146">GH-146</a> ci: update workflow</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/141">GH-141</a> test (node-12.16.x): fix failures caused by shebang and rewire lint</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/131">GH-131</a> test: refactor with minor fixes &amp; improvements</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/168">GH-168</a> chore: bump dependencies &amp; related usage</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/165">GH-165</a> chore: bump dependencies to latest</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/164">GH-164</a> chore: bump <strong>Electron</strong> related dependencies</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/147">GH-147</a> chore: various cleanup</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/144">GH-144</a> chore(npm): bump <code>@cordova/eslint-config@^3.0.0</code> w/ lint fix</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/125">GH-125</a> chore: configure app rel dependencies as abs paths</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/117">GH-117</a> chore: update <strong>Electron</strong> dependencies</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/128">GH-128</a> chore: update <code>package.json</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/114">GH-114</a> chore: update <code>jasmine</code> dependency</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/110">GH-110</a> chore: bump version to 2.0.0-dev</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/96">GH-96</a> chore: fix typo</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/67">GH-67</a> chore: update development dependencies</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/68">GH-68</a> chore: bump <strong>Electron</strong> dependencies</li>
+  <li>chore(asf): update git notification settings</li>
+  <li>Update CONTRIBUTING.md</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/157">GH-157</a> ci: add node 14 to workflow</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/146">GH-146</a> ci: update workflow</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/141">GH-141</a> test (node-12.16.x): fix failures caused by shebang and rewire lint</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/131">GH-131</a> test: refactor with minor fixes &amp; improvements</li>
 </ul>
 
         </div>

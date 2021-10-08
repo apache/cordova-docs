@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="New versions of cordova tools are now live!cordova-lib@4.1.2cordova@4.1.2plugman@0.22.16cordova-js@3.7.2To update your tools:If you have cordova installed:np...">
+    <meta name="description" content="New versions of cordova tools are now live!  cordova-lib@4.1.2  cordova@4.1.2  plugman@0.22.16  cordova-js@3.7.2To update your tools:      If you have cordov...">
 
     <title>
         
@@ -134,77 +134,79 @@
             <p>New versions of cordova tools are now live!</p>
 
 <ul>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@4.1.2</a></li>
-<li><a href="https://www.npmjs.org/package/cordova">cordova@4.1.2</a></li>
-<li><a href="https://www.npmjs.org/package/plugman">plugman@0.22.16</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@3.7.2</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@4.1.2</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova">cordova@4.1.2</a></li>
+  <li><a href="https://www.npmjs.org/package/plugman">plugman@0.22.16</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@3.7.2</a></li>
 </ul>
 
 <p>To update your tools:</p>
 
 <ul>
-<li><p>If you have <code>cordova</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
-</code></pre></div></li>
-<li><p>If you have <code>plugman</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g plugman
-</code></pre></div></li>
+  <li>
+    <p>If you have <code>cordova</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you have <code>plugman</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g plugman
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <!--more-->
-
 <h1>Changes include</h1>
 
 <h2>Platform updates</h2>
-
 <p>When adding these platforms to your project, the following versions are now used by default.
 These platform versions were released recently, and the tools&#39; defaults were updated:</p>
 
 <ul>
-<li><a href="http://cordova.apache.org/announcements/2014/11/06/cordova-ios-3.7.0.html">Cordova iOS 3.7.0</a></li>
-<li><a href="http://cordova.apache.org/announcements/2014/11/06/cordova-wp-windows-3.7.0.html">Cordova WP8 3.7.0</a></li>
-<li><strong>Cordova Windows 3.7.1</strong> - see <a href="http://cordova.apache.org/announcements/2014/11/06/cordova-wp-windows-3.7.0.html">3.7.0 release</a> and the <a href="http://cordova.apache.org/news/2014/11/11/windows-cert.html">3.7.1 update</a> posts</li>
+  <li><a href="http://cordova.apache.org/announcements/2014/11/06/cordova-ios-3.7.0.html">Cordova iOS 3.7.0</a></li>
+  <li><a href="http://cordova.apache.org/announcements/2014/11/06/cordova-wp-windows-3.7.0.html">Cordova WP8 3.7.0</a></li>
+  <li><strong>Cordova Windows 3.7.1</strong> - see <a href="http://cordova.apache.org/announcements/2014/11/06/cordova-wp-windows-3.7.0.html">3.7.0 release</a> and the <a href="http://cordova.apache.org/news/2014/11/11/windows-cert.html">3.7.1 update</a> posts</li>
 </ul>
 
 <h2>cordova-lib</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-7079">CB-7079</a> Allow special characters and digits in <code>id</code> when publishing to <em>plugins registry</em></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8004">CB-8004</a> Use <strong>Windows 3.7.1</strong> Release</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7988">CB-7988</a> Update platform versions for <strong>iOS</strong>, <strong>WP8</strong> &amp; <strong>Windows</strong> to <strong>3.7.0</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7846">CB-7846</a> Fix plugin deletion when a dependent plugin does not exist</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6992">CB-6992</a> Fix build issue on <strong>iOS</strong> when app name contains accented characters</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7890">CB-7890</a> validate file copy operations in <strong>plugman</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7884">CB-7884</a> moved platform metadata to <code>platformsConfig.json</code></li>
-<li>Amazon Specific changes: Added support for <code>SdkVersion</code></li>
-<li>Expose <code>PluginInfo</code> from cordova-lib</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7839">CB-7839</a> android: Fix <code>versionCode</code> logic when version is less than 3 digits</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7033">CB-7033</a> Improve <code>cordova platform check</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7311">CB-7311</a> Fix <strong>Xcode</strong> project manipulation on <strong>Windows</strong> host</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7820">CB-7820</a> Make <code>cordova platfrom restore</code> not stop if a platform fails to restore</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7649">CB-7649</a> Support iPhone 6 Plus Icon in CLI <code>config.xml</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7647">CB-7647</a> Support new iPhone 6 and 6 Plus Images in the CLI config.xml</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7909">CB-7909</a> <code>plugman platform add</code> fixes</li>
-<li>Enable platform-specific id for <strong>Android</strong> and <strong>iOS</strong></li>
-<li>Check for a <code>CORDOVA_HOME</code> environment variable to create a global config path</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7079">CB-7079</a> Allow special characters and digits in <code>id</code> when publishing to <em>plugins registry</em></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8004">CB-8004</a> Use <strong>Windows 3.7.1</strong> Release</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7988">CB-7988</a> Update platform versions for <strong>iOS</strong>, <strong>WP8</strong> &amp; <strong>Windows</strong> to <strong>3.7.0</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7846">CB-7846</a> Fix plugin deletion when a dependent plugin does not exist</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6992">CB-6992</a> Fix build issue on <strong>iOS</strong> when app name contains accented characters</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7890">CB-7890</a> validate file copy operations in <strong>plugman</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7884">CB-7884</a> moved platform metadata to <code>platformsConfig.json</code></li>
+  <li>Amazon Specific changes: Added support for <code>SdkVersion</code></li>
+  <li>Expose <code>PluginInfo</code> from cordova-lib</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7839">CB-7839</a> android: Fix <code>versionCode</code> logic when version is less than 3 digits</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7033">CB-7033</a> Improve <code>cordova platform check</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7311">CB-7311</a> Fix <strong>Xcode</strong> project manipulation on <strong>Windows</strong> host</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7820">CB-7820</a> Make <code>cordova platfrom restore</code> not stop if a platform fails to restore</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7649">CB-7649</a> Support iPhone 6 Plus Icon in CLI <code>config.xml</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7647">CB-7647</a> Support new iPhone 6 and 6 Plus Images in the CLI config.xml</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7909">CB-7909</a> <code>plugman platform add</code> fixes</li>
+  <li>Enable platform-specific id for <strong>Android</strong> and <strong>iOS</strong></li>
+  <li>Check for a <code>CORDOVA_HOME</code> environment variable to create a global config path</li>
 </ul>
 
 <h2>cordova</h2>
-
 <ul>
-<li>Expose cordova-lib and the cli from cordova-cli</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7636">CB-7636</a> Allow using <code>--nobuild</code> flag without screening</li>
+  <li>Expose cordova-lib and the cli from cordova-cli</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7636">CB-7636</a> Allow using <code>--nobuild</code> flag without screening</li>
 </ul>
 
 <h2>cordova-js</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-7868">CB-7868</a> Make <code>&lt;clobbers&gt;</code> on <code>navigator</code> not break on some versions of <strong>Android</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7868">CB-7868</a> Use <code>utils.defineGetterSetter</code> instead of <code>Object.defineProperty</code></li>
-<li>Upleveled <strong>amazon-fireos</strong> bridge</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7735">CB-7735</a> Fix <strong>iOS</strong> bridge race condition when using <code>innerHTML</code> on <code>&lt;body&gt;</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-2520">CB-2520</a> User agent-related changes for custom user agents in <strong>iOS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7868">CB-7868</a> Make <code>&lt;clobbers&gt;</code> on <code>navigator</code> not break on some versions of <strong>Android</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7868">CB-7868</a> Use <code>utils.defineGetterSetter</code> instead of <code>Object.defineProperty</code></li>
+  <li>Upleveled <strong>amazon-fireos</strong> bridge</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7735">CB-7735</a> Fix <strong>iOS</strong> bridge race condition when using <code>innerHTML</code> on <code>&lt;body&gt;</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-2520">CB-2520</a> User agent-related changes for custom user agents in <strong>iOS</strong></li>
 </ul>
+
 
         </div>
     </section>

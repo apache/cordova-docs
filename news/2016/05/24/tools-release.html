@@ -131,147 +131,154 @@
     </header>
     <section>
         <div>
-            <p>New updates of <code>cordova</code>, <code>cordova-lib</code>, <code>plugman</code> and <code>cordova-common</code> are now live! We have also released the first version of <code>cordova-fetch</code>, a module used by <code>cordova-lib</code> to fetch plugins and platforms via <code>npm install</code>. </p>
+            <p>New updates of <code>cordova</code>, <code>cordova-lib</code>, <code>plugman</code> and <code>cordova-common</code> are now live! We have also released the first version of <code>cordova-fetch</code>, a module used by <code>cordova-lib</code> to fetch plugins and platforms via <code>npm install</code>.</p>
 
 <ul>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@6.2.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova">cordova@6.2.0</a></li>
-<li><a href="https://www.npmjs.org/package/plugman">plugman@1.3.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-common@1.3.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-fetch@1.0.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@6.2.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova">cordova@6.2.0</a></li>
+  <li><a href="https://www.npmjs.org/package/plugman">plugman@1.3.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-common@1.3.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-fetch@1.0.0</a></li>
 </ul>
 
 <p>Release Highlights:</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> added <code>--fetch</code> option</li>
-<li><a href="https://github.com/apache/cordova-cli/pull/247">Telemetry</a> Added telemetry to <code>cordova</code> to collect data for data driven development. Goal is use data to help guide the development of <code>cordova</code>. <code>cordova</code> will issue a prompt on first use providing an option for the user to disable it. Type <code>cordova telemetry -h</code> for more info. </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11194">CB-11194</a> Improve cordova load time</li>
-<li>Added support for <strong>node 6</strong> via <a href="https://issues.apache.org/jira/browse/CB-11200">CB-11200</a> Bump <code>node-xcode</code> dependency and update tests to past.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> added <code>--fetch</code> option</li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/247">Telemetry</a> Added telemetry to <code>cordova</code> to collect data for data driven development. Goal is use data to help guide the development of <code>cordova</code>. <code>cordova</code> will issue a prompt on first use providing an option for the user to disable it. Type <code>cordova telemetry -h</code> for more info.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11194">CB-11194</a> Improve cordova load time</li>
+  <li>Added support for <strong>node 6</strong> via <a href="https://issues.apache.org/jira/browse/CB-11200">CB-11200</a> Bump <code>node-xcode</code> dependency and update tests to past.</li>
 </ul>
 
 <p>The new <code>cordova-fetch</code> feature is behind the <code>--fetch</code> flag. Use it when adding and removing plugins and platforms.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add/rm PLUGINID --fetch
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add/rm PLUGINID --fetch
 cordova platform add/rm PLATFORM --fetch
-</code></pre></div>
-<p>This will fetch the plugin/platform and <code>npm install</code> it to your application. You should see a new <code>node_modules</code> directory. This is the first step towards us eventually supporting a <code>package.json</code> in your cordova applications. </p>
+</code></pre></div></div>
+
+<p>This will fetch the plugin/platform and <code>npm install</code> it to your application. You should see a new <code>node_modules</code> directory. This is the first step towards us eventually supporting a <code>package.json</code> in your cordova applications.</p>
 
 <p>To update your tools:</p>
 
 <ul>
-<li><p>If you have <code>cordova</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova@latest
-</code></pre></div></li>
-<li><p>If you have <code>plugman</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g plugman@latest
-</code></pre></div></li>
+  <li>
+    <p>If you have <code>cordova</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova@latest
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you have <code>plugman</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g plugman@latest
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>Make sure to report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <h2>cordova-lib</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-11259">CB-11259</a> Improving prepare and build logging</li>
-<li>Resolve npm run jshint failure due to npm/npm#10343</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11200">CB-11200</a> Bump <code>node-xcode</code> dependency and update tests to pass</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11240">CB-11240</a> added <code>--fetch</code> support to <code>cordova prepare</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> merging initial <code>--fetch</code> work for plugin and platform fetching</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11194">CB-11194</a> Improve cordova load time</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11174">CB-11174</a> Resolve <code>symlinked</code> path before getting <code>PlatformApi</code> instance</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11036">CB-11036</a> <code>args.slice is not a function</code> when building <strong>Windows</strong> with other platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10761">CB-10761</a> Resore plugins saved without spec attribute</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10981">CB-10981</a> Remove <code>cordova-common</code> from bundled dependencies</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11042">CB-11042</a> Add cordova run option to skip prepare</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11022">CB-11022</a> Respect result returned by plugin installation and skip prepare if it is truthy</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10975">CB-10975</a> Allow plugin path to be relative to current directory</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10986">CB-10986</a> Adding support for scoped npm package plugins</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10770">CB-10770</a> Remove <code>cache-min</code> when adding platforms</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10921">CB-10921</a> Emit warning in case of plugin restoration failure</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11259">CB-11259</a> Improving prepare and build logging</li>
+  <li>Resolve npm run jshint failure due to npm/npm#10343</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11200">CB-11200</a> Bump <code>node-xcode</code> dependency and update tests to pass</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11240">CB-11240</a> added <code>--fetch</code> support to <code>cordova prepare</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> merging initial <code>--fetch</code> work for plugin and platform fetching</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11194">CB-11194</a> Improve cordova load time</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11174">CB-11174</a> Resolve <code>symlinked</code> path before getting <code>PlatformApi</code> instance</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11036">CB-11036</a> <code>args.slice is not a function</code> when building <strong>Windows</strong> with other platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10761">CB-10761</a> Resore plugins saved without spec attribute</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10981">CB-10981</a> Remove <code>cordova-common</code> from bundled dependencies</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11042">CB-11042</a> Add cordova run option to skip prepare</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11022">CB-11022</a> Respect result returned by plugin installation and skip prepare if it is truthy</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10975">CB-10975</a> Allow plugin path to be relative to current directory</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10986">CB-10986</a> Adding support for scoped npm package plugins</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10770">CB-10770</a> Remove <code>cache-min</code> when adding platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10921">CB-10921</a> Emit warning in case of plugin restoration failure</li>
 </ul>
 
 <h2>cordova-cli</h2>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-cli/pull/247">Telemetry</a> Added telemetry to cordova-cli to collect data for data driven development</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11250">CB-11250</a> Fix CLI tests verifying the version</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> added <code>--fetch</code> option</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10986">CB-10986</a> Adding note about scoped npm packages for plugins</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11042">CB-11042</a> Add cordova run option to skip prepare</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10062">CB-10062</a> Error: <code>EACCES: permission denied - update-notifier-cordova.json</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10679">CB-10679</a> Documenting how the CLI chooses plugin versions</li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/247">Telemetry</a> Added telemetry to cordova-cli to collect data for data driven development</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11250">CB-11250</a> Fix CLI tests verifying the version</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> added <code>--fetch</code> option</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10986">CB-10986</a> Adding note about scoped npm packages for plugins</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11042">CB-11042</a> Add cordova run option to skip prepare</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10062">CB-10062</a> Error: <code>EACCES: permission denied - update-notifier-cordova.json</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10679">CB-10679</a> Documenting how the CLI chooses plugin versions</li>
 </ul>
 
 <h2>plugman</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> added <code>--fetch</code> option to plugman</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> added <code>--fetch</code> option to plugman</li>
 </ul>
 
 <h2>cordova-common</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-11259">CB-11259</a>: Improving prepare and build logging</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11194">CB-11194</a> Improve cordova load time</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-1117">CB-1117</a> Add <code>FileUpdater</code> module to <code>cordova-common</code>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11131">CB-11131</a> Fix <code>TypeError: message.toUpperCase</code> is not a function in <code>CordovaLogger</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11259">CB-11259</a>: Improving prepare and build logging</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11194">CB-11194</a> Improve cordova load time</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-1117">CB-1117</a> Add <code>FileUpdater</code> module to <code>cordova-common</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11131">CB-11131</a> Fix <code>TypeError: message.toUpperCase</code> is not a function in <code>CordovaLogger</code></li>
 </ul>
 
 <h2>cordova-fetch</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> Added jasmine tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> Added <code>npm uninstall</code> method to cordova-fetch</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> Initial implementation of <code>cordova-fetch</code> module</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> Added jasmine tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> Added <code>npm uninstall</code> method to cordova-fetch</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> Initial implementation of <code>cordova-fetch</code> module</li>
 </ul>
 
 <h2>Pinned Platform Versions for <strong>Cordova CLI 6.2.0</strong></h2>
 
 <ul>
-<li>Cordova Amazon-FireOS: ~3.6.3</li>
-<li>Cordova Android: ~5.1.1</li>
-<li>Cordova BlackBerry10: ~3.8.0</li>
-<li>Cordova Browser: ~4.1.0</li>
-<li>Cordova FirefoxOS: ~3.6.3</li>
-<li>Cordova iOS: ~4.1.0</li>
-<li>Cordova OSX: ~4.0.1</li>
-<li>Cordova Ubuntu: ~4.3.3</li>
-<li>Cordova Windows: ~4.3.1</li>
-<li>Cordova WebOS: ~3.7.0</li>
-<li>Cordova WP8: ~3.8.2</li>
+  <li>Cordova Amazon-FireOS: ~3.6.3</li>
+  <li>Cordova Android: ~5.1.1</li>
+  <li>Cordova BlackBerry10: ~3.8.0</li>
+  <li>Cordova Browser: ~4.1.0</li>
+  <li>Cordova FirefoxOS: ~3.6.3</li>
+  <li>Cordova iOS: ~4.1.0</li>
+  <li>Cordova OSX: ~4.0.1</li>
+  <li>Cordova Ubuntu: ~4.3.3</li>
+  <li>Cordova Windows: ~4.3.1</li>
+  <li>Cordova WebOS: ~3.7.0</li>
+  <li>Cordova WP8: ~3.8.2</li>
 </ul>
 
 <h2>Plugin Versions tested with <strong>Cordova CLI 6.2.0</strong></h2>
 
 <ul>
-<li>cordova-plugin-battery-status: 1.1.2</li>
-<li>cordova-plugin-camera: 2.2.0</li>
-<li>cordova-plugin-console: 1.0.3</li>
-<li>cordova-plugin-contacts: 2.1.0</li>
-<li>cordova-plugin-compat: 1.0.0</li>
-<li>cordova-plugin-device: 1.1.2</li>
-<li>cordova-plugin-device-motion: 1.2.1</li>
-<li>cordova-plugin-device-orientation: 1.0.3</li>
-<li>cordova-plugin-dialogs: 1.2.1</li>
-<li>cordova-plugin-file: 4.2.0</li>
-<li>cordova-plugin-file-transfer: 1.5.1</li>
-<li>cordova-plugin-geolocation: 2.2.0</li>
-<li>cordova-plugin-globalization: 1.0.3</li>
-<li>cordova-plugin-inappbrowser: 1.4.0</li>
-<li>cordova-plugin-legacy-whitelist: 1.1.1</li>
-<li>cordova-plugin-media: 2.3.0</li>
-<li>cordova-plugin-media-capture: 1.3.0</li>
-<li>cordova-plugin-network-information: 1.2.1</li>
-<li>cordova-plugin-splashscreen: 3.2.2</li>
-<li>cordova-plugin-statusbar: 2.1.3</li>
-<li>cordova-plugin-test-framework: 1.1.2</li>
-<li>cordova-plugin-vibration: 2.1.1</li>
-<li>cordova-plugin-whitelist: 1.2.2</li>
-<li>cordova-plugin-wkwebview-engine: 1.0.3</li>
+  <li>cordova-plugin-battery-status: 1.1.2</li>
+  <li>cordova-plugin-camera: 2.2.0</li>
+  <li>cordova-plugin-console: 1.0.3</li>
+  <li>cordova-plugin-contacts: 2.1.0</li>
+  <li>cordova-plugin-compat: 1.0.0</li>
+  <li>cordova-plugin-device: 1.1.2</li>
+  <li>cordova-plugin-device-motion: 1.2.1</li>
+  <li>cordova-plugin-device-orientation: 1.0.3</li>
+  <li>cordova-plugin-dialogs: 1.2.1</li>
+  <li>cordova-plugin-file: 4.2.0</li>
+  <li>cordova-plugin-file-transfer: 1.5.1</li>
+  <li>cordova-plugin-geolocation: 2.2.0</li>
+  <li>cordova-plugin-globalization: 1.0.3</li>
+  <li>cordova-plugin-inappbrowser: 1.4.0</li>
+  <li>cordova-plugin-legacy-whitelist: 1.1.1</li>
+  <li>cordova-plugin-media: 2.3.0</li>
+  <li>cordova-plugin-media-capture: 1.3.0</li>
+  <li>cordova-plugin-network-information: 1.2.1</li>
+  <li>cordova-plugin-splashscreen: 3.2.2</li>
+  <li>cordova-plugin-statusbar: 2.1.3</li>
+  <li>cordova-plugin-test-framework: 1.1.2</li>
+  <li>cordova-plugin-vibration: 2.1.1</li>
+  <li>cordova-plugin-whitelist: 1.2.2</li>
+  <li>cordova-plugin-wkwebview-engine: 1.0.3</li>
 </ul>
 
         </div>

@@ -1544,41 +1544,44 @@
                 <h1>globalization.getNumberPattern</h1>
 
 <p>Returns a pattern string for formatting and parsing numbers according to the client&#39;s user preferences.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.globalization.getNumberPattern(successCB, errorCB, options);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getNumberPattern(successCB, errorCB, options);
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p>It returns the pattern to the successCB callback with a properties object as a parameter. That object should have the following properties:</p>
 
 <ul>
-<li>pattern {String}: The number pattern for formatting and parsing numbers.  The patterns follow Unicode Technical Standard #35. <a href="http://unicode.org/reports/tr35/tr35-4.html">http://unicode.org/reports/tr35/tr35-4.html</a></li>
-<li>symbol {String}: The symbol to be used when formatting and parsing e.g., percent or currency symbol.</li>
-<li>fraction {Number}: The number of fractional digits to use when parsing and formatting numbers.</li>
-<li>rounding {Number}: The rounding increment to use when parsing and formatting.</li>
-<li>positive {String}: The symbol to use for positive numbers when parsing and formatting.</li>
-<li>negative: {String}: The symbol to use for negative numbers when parsing and formatting.</li>
-<li>decimal: {String}: The decimal symbol to use for parsing and formatting.</li>
-<li>grouping: {String}: The grouping symbol to use for parsing and formatting.</li>
+  <li>pattern {String}: The number pattern for formatting and parsing numbers.  The patterns follow Unicode Technical Standard #35. <a href="http://unicode.org/reports/tr35/tr35-4.html">http://unicode.org/reports/tr35/tr35-4.html</a></li>
+  <li>symbol {String}: The symbol to be used when formatting and parsing e.g., percent or currency symbol.</li>
+  <li>fraction {Number}: The number of fractional digits to use when parsing and formatting numbers.</li>
+  <li>rounding {Number}: The rounding increment to use when parsing and formatting.</li>
+  <li>positive {String}: The symbol to use for positive numbers when parsing and formatting.</li>
+  <li>negative: {String}: The symbol to use for negative numbers when parsing and formatting.</li>
+  <li>decimal: {String}: The decimal symbol to use for parsing and formatting.</li>
+  <li>grouping: {String}: The grouping symbol to use for parsing and formatting.</li>
 </ul>
 
 <p>If there is an error obtaining the pattern, then the errorCB callback is invoked with a <a href="GlobalizationError/globalizationerror.html">GlobalizationError</a> object as a parameter. The expected code for this error is <a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PATTERN_ERROR.</p>
 
 <p><code>options.type</code> can be &#39;decimal&#39;, &#39;percent&#39;, or &#39;currency&#39;.
-The default options are <code>{type:&#39;decimal&#39;}</code>. The <code>options</code> parameter is optional.</p>
+The default options are <code>{type:'decimal'}</code>. The <code>options</code> parameter is optional.</p>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iPhone</li>
-<li>Windows Phone 8</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iPhone</li>
+  <li>Windows Phone 8</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
 
 <p>In the case when the browser is set to the en_US locale, this should display a popup dialog with text similar to:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">pattern: #,##0.###
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pattern: #,##0.###
 symbol: .
 fraction: 0
 rounding: 0
@@ -1586,9 +1589,11 @@ positive:
 negative: -
 decimal: .
 grouping: ,
-</code></pre></div>
+</code></pre></div></div>
+
 <p>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.globalization.getNumberPattern(
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getNumberPattern(
   function (pattern) {alert('pattern: ' + pattern.pattern + '\n' +
                             'symbol: ' + pattern.symbol + '\n' +
                             'fraction: ' + pattern.fraction + '\n' +
@@ -1600,43 +1605,46 @@ grouping: ,
   function () {alert('Error getting pattern\n');},
   {type:'decimal'}
 );
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Cordova<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-2.4.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
 
-    <span class="kd">function</span> <span class="nx">checkPattern</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getNumberPattern</span><span class="p">(</span>
-        <span class="kd">function</span> <span class="p">(</span><span class="nx">pattern</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'pattern: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">pattern</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-                                  <span class="s1">'symbol: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">symbol</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-                                  <span class="s1">'fraction: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">fraction</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-                                  <span class="s1">'rounding: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">rounding</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-                                  <span class="s1">'positive: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">positive</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-                                  <span class="s1">'negative: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">negative</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-                                  <span class="s1">'decimal: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">decimal</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-                                  <span class="s1">'grouping: '</span> <span class="o">+</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">grouping</span><span class="p">);},</span>
-        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting pattern\n'</span><span class="p">);},</span>
-        <span class="p">{</span><span class="na">type</span><span class="p">:</span><span class="s1">'decimal'</span><span class="p">}</span>
-      <span class="p">);</span>
-    <span class="p">}</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Cordova&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.4.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+                  
+    function checkPattern() {
+      navigator.globalization.getNumberPattern(
+        function (pattern) {alert('pattern: ' + pattern.pattern + '\n' +
+                                  'symbol: ' + pattern.symbol + '\n' +
+                                  'fraction: ' + pattern.fraction + '\n' +
+                                  'rounding: ' + pattern.rounding + '\n' +
+                                  'positive: ' + pattern.positive + '\n' +
+                                  'negative: ' + pattern.negative + '\n' +
+                                  'decimal: ' + pattern.decimal + '\n' +
+                                  'grouping: ' + pattern.grouping);},
+        function () {alert('Error getting pattern\n');},
+        {type:'decimal'}
+      );
+    }
+                                        
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkPattern()"&gt;Click for pattern&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"checkPattern()"</span><span class="nt">&gt;</span>Click for pattern<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
 <h2>Windows Phone 8 Quirks</h2>
-
 <ul>
-<li><code>pattern</code> property is not supported; empty string is always returned.</li>
-<li><code>fraction</code> property is not supported; zero is always returned.</li>
+  <li><code>pattern</code> property is not supported; empty string is always returned.</li>
+  <li><code>fraction</code> property is not supported; zero is always returned.</li>
 </ul>
+
 
 
             </div>

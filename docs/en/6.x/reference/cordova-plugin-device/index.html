@@ -2432,51 +2432,58 @@
 #         under the License.
 -->
 
-<table><thead>
-<tr>
-<th style="text-align: center">Android</th>
-<th style="text-align: center">iOS</th>
-<th style="text-align: center">Windows 8.1 Store</th>
-<th style="text-align: center">Windows 8.1 Phone</th>
-<th style="text-align: center">Windows 10 Store</th>
-<th style="text-align: center">Travis CI</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-device/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-device" alt="Build Status"></a></td>
-<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-device/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-device" alt="Build Status"></a></td>
-<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-device/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-device" alt="Build Status"></a></td>
-<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-device/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-device" alt="Build Status"></a></td>
-<td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-device/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-device" alt="Build Status"></a></td>
-<td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-device"><img src="https://travis-ci.org/apache/cordova-plugin-device.svg?branch=master" alt="Build Status"></a></td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Android</th>
+      <th style="text-align: center">iOS</th>
+      <th style="text-align: center">Windows 8.1 Store</th>
+      <th style="text-align: center">Windows 8.1 Phone</th>
+      <th style="text-align: center">Windows 10 Store</th>
+      <th style="text-align: center">Travis CI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-device/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-device" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-device/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-device" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-device/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-device" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-device/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-device" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-device/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-device" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-device"><img src="https://travis-ci.org/apache/cordova-plugin-device.svg?branch=master" alt="Build Status" /></a></td>
+    </tr>
+  </tbody>
+</table>
 
 <h1>cordova-plugin-device</h1>
 
 <p>This plugin defines a global <code>device</code> object, which describes the device&#39;s hardware and software.
 Although the object is in the global scope, it is not available until after the <code>deviceready</code> event.</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">device</span><span class="p">.</span><span class="nx">cordova</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Report issues with this plugin on the <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20Device%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC">Apache Cordova issue tracker</a></p>
 
 <h2>Installation</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add cordova-plugin-device
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-device
+</code></pre></div></div>
+
 <h2>Properties</h2>
 
 <ul>
-<li>device.cordova</li>
-<li>device.model</li>
-<li>device.platform</li>
-<li>device.uuid</li>
-<li>device.version</li>
-<li>device.manufacturer</li>
-<li>device.isVirtual</li>
-<li>device.serial</li>
+  <li>device.cordova</li>
+  <li>device.model</li>
+  <li>device.platform</li>
+  <li>device.uuid</li>
+  <li>device.version</li>
+  <li>device.manufacturer</li>
+  <li>device.isVirtual</li>
+  <li>device.serial</li>
 </ul>
 
 <h2>device.cordova</h2>
@@ -2486,16 +2493,16 @@ Although the object is in the global scope, it is not available until after the 
 <h3>Supported Platforms</h3>
 
 <ul>
-<li>Amazon Fire OS</li>
-<li>Android</li>
-<li>BlackBerry 10</li>
-<li>Browser</li>
-<li>Firefox OS</li>
-<li>iOS</li>
-<li>Tizen</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows</li>
-<li>OSX</li>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Browser</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows</li>
+  <li>OSX</li>
 </ul>
 
 <h2>device.model</h2>
@@ -2507,18 +2514,19 @@ different across versions of the same product.</p>
 <h3>Supported Platforms</h3>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry 10</li>
-<li>Browser</li>
-<li>iOS</li>
-<li>Tizen</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows</li>
-<li>OSX</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Browser</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows</li>
+  <li>OSX</li>
 </ul>
 
 <h3>Quick Example</h3>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Android:    Nexus One       returns "Passion" (Nexus One code name)</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Android:    Nexus One       returns "Passion" (Nexus One code name)</span>
 <span class="c1">//             Motorola Droid  returns "voles"</span>
 <span class="c1">// BlackBerry: Torch 9800      returns "9800"</span>
 <span class="c1">// Browser:    Google Chrome   returns "Chrome"</span>
@@ -2527,46 +2535,49 @@ different across versions of the same product.</p>
 <span class="c1">// OSX:                        returns "x86_64"</span>
 <span class="c1">//</span>
 <span class="kd">var</span> <span class="nx">model</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">model</span><span class="p">;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Android Quirks</h3>
 
 <ul>
-<li>Gets the <a href="http://developer.android.com/reference/android/os/Build.html#PRODUCT">product name</a> instead of the <a href="http://developer.android.com/reference/android/os/Build.html#MODEL">model name</a>, which is often the production code name. For example, the Nexus One returns <code>Passion</code>, and Motorola Droid returns <code>voles</code>.</li>
+  <li>Gets the <a href="http://developer.android.com/reference/android/os/Build.html#PRODUCT">product name</a> instead of the <a href="http://developer.android.com/reference/android/os/Build.html#MODEL">model name</a>, which is often the production code name. For example, the Nexus One returns <code>Passion</code>, and Motorola Droid returns <code>voles</code>.</li>
 </ul>
 
 <h3>Tizen Quirks</h3>
 
 <ul>
-<li>Returns the device model assigned by the vendor, for example, <code>TIZEN</code></li>
+  <li>Returns the device model assigned by the vendor, for example, <code>TIZEN</code></li>
 </ul>
 
 <h3>Windows Phone 7 and 8 Quirks</h3>
 
 <ul>
-<li>Returns the device model specified by the manufacturer. For example, the Samsung Focus returns <code>SGH-i917</code>.</li>
+  <li>Returns the device model specified by the manufacturer. For example, the Samsung Focus returns <code>SGH-i917</code>.</li>
 </ul>
 
 <h2>device.platform</h2>
 
 <p>Get the device&#39;s operating system name.</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">platform</span><span class="p">;</span>
-</code></pre></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">platform</span><span class="p">;</span>
+</code></pre></div></div>
 <h3>Supported Platforms</h3>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry 10</li>
-<li>Browser</li>
-<li>Firefox OS</li>
-<li>iOS</li>
-<li>Tizen</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows</li>
-<li>OSX</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Browser</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows</li>
+  <li>OSX</li>
 </ul>
 
 <h3>Quick Example</h3>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Depending on the device, a few examples are:</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Depending on the device, a few examples are:</span>
 <span class="c1">//   - "Android"</span>
 <span class="c1">//   - "BlackBerry 10"</span>
 <span class="c1">//   - "browser"</span>
@@ -2575,7 +2586,8 @@ different across versions of the same product.</p>
 <span class="c1">//   - "Tizen"</span>
 <span class="c1">//   - "Mac OS X"</span>
 <span class="kd">var</span> <span class="nx">devicePlatform</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">platform</span><span class="p">;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Windows Phone 7 Quirks</h3>
 
 <p>Windows Phone 7 devices report the platform as <code>WinCE</code>.</p>
@@ -2587,8 +2599,10 @@ different across versions of the same product.</p>
 <h2>device.uuid</h2>
 
 <p>Get the device&#39;s Universally Unique Identifier (<a href="http://en.wikipedia.org/wiki/Universally_Unique_Identifier">UUID</a>).</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">uuid</span><span class="p">;</span>
-</code></pre></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">uuid</span><span class="p">;</span>
+</code></pre></div></div>
+
 <h3>Description</h3>
 
 <p>The details of how a UUID is generated are determined by the device manufacturer and are specific to the device&#39;s platform or model.</p>
@@ -2596,17 +2610,18 @@ different across versions of the same product.</p>
 <h3>Supported Platforms</h3>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry 10</li>
-<li>iOS</li>
-<li>Tizen</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows</li>
-<li>OSX</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows</li>
+  <li>OSX</li>
 </ul>
 
 <h3>Quick Example</h3>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Android: Returns a random 64-bit integer (as a string, again!)</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Android: Returns a random 64-bit integer (as a string, again!)</span>
 <span class="c1">//          The integer is generated on the device's first boot</span>
 <span class="c1">//</span>
 <span class="c1">// BlackBerry: Returns the PIN number of the device</span>
@@ -2619,7 +2634,8 @@ different across versions of the same product.</p>
 <span class="c1">// Tizen: returns the device IMEI (International Mobile Equipment Identity or IMEI is a number</span>
 <span class="c1">// unique to every GSM and UMTS mobile phone.</span>
 <span class="kd">var</span> <span class="nx">deviceID</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">uuid</span><span class="p">;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>iOS Quirk</h3>
 
 <p>The <code>uuid</code> on iOS uses the identifierForVendor property. It is unique to the device across the same vendor, but will be different for different vendors and will change if all apps from the vendor are deleted and then reinstalled.
@@ -2641,23 +2657,26 @@ application&#39;s installation on the device.</p>
 <h2>device.version</h2>
 
 <p>Get the operating system version.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">var string = device.version;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var string = device.version;
+</code></pre></div></div>
+
 <h3>Supported Platforms</h3>
 
 <ul>
-<li>Android 2.1+</li>
-<li>BlackBerry 10</li>
-<li>Browser</li>
-<li>iOS</li>
-<li>Tizen</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows</li>
-<li>OSX</li>
+  <li>Android 2.1+</li>
+  <li>BlackBerry 10</li>
+  <li>Browser</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows</li>
+  <li>OSX</li>
 </ul>
 
 <h3>Quick Example</h3>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Android:    Froyo OS would return "2.2"</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Android:    Froyo OS would return "2.2"</span>
 <span class="c1">//             Eclair OS would return "2.1", "2.0.1", or "2.0"</span>
 <span class="c1">//             Version can also return update level "2.1-update1"</span>
 <span class="c1">//</span>
@@ -2673,42 +2692,49 @@ application&#39;s installation on the device.</p>
 <span class="c1">// OSX:        El Capitan would return "10.11.2"</span>
 <span class="c1">//</span>
 <span class="kd">var</span> <span class="nx">deviceVersion</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">version</span><span class="p">;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>device.manufacturer</h2>
 
 <p>Get the device&#39;s manufacturer.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">var string = device.manufacturer;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var string = device.manufacturer;
+</code></pre></div></div>
+
 <h3>Supported Platforms</h3>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry 10</li>
-<li>iOS</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows</li>
 </ul>
 
 <h3>Quick Example</h3>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Android:    Motorola XT1032 would return "motorola"</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Android:    Motorola XT1032 would return "motorola"</span>
 <span class="c1">// BlackBerry: returns "BlackBerry"</span>
 <span class="c1">// iPhone:     returns "Apple"</span>
 <span class="c1">//</span>
 <span class="kd">var</span> <span class="nx">deviceManufacturer</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">manufacturer</span><span class="p">;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>device.isVirtual</h2>
 
 <p>whether the device is running on a simulator.</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">isSim</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">isVirtual</span><span class="p">;</span>
-</code></pre></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">isSim</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">isVirtual</span><span class="p">;</span>
+</code></pre></div></div>
+
 <h3>Supported Platforms</h3>
 
 <ul>
-<li>Android 2.1+</li>
-<li>iOS</li>
-<li>Windows Phone 8</li>
-<li>Windows</li>
-<li>OSX</li>
+  <li>Android 2.1+</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+  <li>OSX</li>
 </ul>
 
 <h3>OSX Quirk</h3>
@@ -2718,14 +2744,17 @@ application&#39;s installation on the device.</p>
 <h2>device.serial</h2>
 
 <p>Get the device hardware serial number (<a href="http://developer.android.com/reference/android/os/Build.html#SERIAL">SERIAL</a>).</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">serial</span><span class="p">;</span>
-</code></pre></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">serial</span><span class="p">;</span>
+</code></pre></div></div>
+
 <h3>Supported Platforms</h3>
 
 <ul>
-<li>Android</li>
-<li>OSX</li>
+  <li>Android</li>
+  <li>OSX</li>
 </ul>
+
 
 
             </div>

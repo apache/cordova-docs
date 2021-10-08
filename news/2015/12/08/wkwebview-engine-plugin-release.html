@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The following plugins were updated today:cordova-plugin-wkwebview-engine@1.0.0This is the initial release of this plugin. This plugin requires cordova-ios@4....">
+    <meta name="description" content="The following plugins were updated today:  cordova-plugin-wkwebview-engine@1.0.0This is the initial release of this plugin. This plugin requires cordova-ios@...">
 
     <title>
         
@@ -134,37 +134,39 @@
             <p>The following plugins were updated today:</p>
 
 <ul>
-<li>cordova-plugin-wkwebview-engine@1.0.0</li>
+  <li>cordova-plugin-wkwebview-engine@1.0.0</li>
 </ul>
 
-<p>This is the initial release of this plugin. This plugin requires <code>cordova-ios@4.0.0</code>. Please read the <a href="http://cordova.apache.org/announcements/2015/12/08/cordova-ios-4.0.0.html">iOS 4.0.0 release blog</a> for instructions to update. </p>
+<p>This is the initial release of this plugin. This plugin requires <code>cordova-ios@4.0.0</code>. Please read the <a href="http://cordova.apache.org/announcements/2015/12/08/cordova-ios-4.0.0.html">iOS 4.0.0 release blog</a> for instructions to update.</p>
 
 <p>To install:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add cordova-plugin-wkwebview-engine --save
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-wkwebview-engine --save
+</code></pre></div></div>
+
 <p>If you are thinking of migrating from using the UIWebView on iOS, please read the <a href="https://github.com/apache/cordova-plugin-wkwebview-engine/blob/master/README.md">README</a> and also take note of the <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20labels%20%3D%20wkwebview-known-issues">limitations of this plugin</a>.</p>
 
-<p>Changes include:</p>
-
-<!--more-->
+<p>Changes include:
+<!--more--></p>
 
 <p>cordova-plugin-wkwebview-engine@1.0.0</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10146">CB-10146</a> - Add to README <code>WKWebViewEngine</code> quirks that will affect migration from <code>UIWebView</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10133">CB-10133</a> - DataClone DOM Exception 25 thrown for postMessage</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10106">CB-10106</a> - added bridge proxy</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10107">CB-10107</a> - <code>nativeEvalAndFetch</code> called for all bridges</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10106">CB-10106</a> - <strong>iOS</strong> bridges need to take into account bridge changes</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10073">CB-10073</a> - <code>WKWebViewEngine</code> should post <code>CDVPluginResetNotification</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10035">CB-10035</a> - Updated RELEASENOTES to be newest to oldest</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10002">CB-10002</a> - <code>WKWebView</code> should propagate shouldOverrideLoadWithRequest to plugins</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9979">CB-9979</a> <a href="https://issues.apache.org/jira/browse/CB-9972">CB-9972</a> Change <strong>ATS</strong> link to new link</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9636">CB-9636</a> - Plugin should detect at runtime <strong>iOS</strong> 8 and use of <code>file://</code> url and present an error</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8839">CB-8839</a> - <code>WKWebView</code> ignores <code>DisallowOverscroll</code> preference</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8556">CB-8556</a> - fix <code>handleOpenURL</code> for <code>WKWebViewEngine</code> plugin</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8666">CB-8666</a> - Update <code>CDVWKWebViewEngine</code> plugin to use 4.0.x branch code</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10146">CB-10146</a> - Add to README <code>WKWebViewEngine</code> quirks that will affect migration from <code>UIWebView</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10133">CB-10133</a> - DataClone DOM Exception 25 thrown for postMessage</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10106">CB-10106</a> - added bridge proxy</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10107">CB-10107</a> - <code>nativeEvalAndFetch</code> called for all bridges</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10106">CB-10106</a> - <strong>iOS</strong> bridges need to take into account bridge changes</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10073">CB-10073</a> - <code>WKWebViewEngine</code> should post <code>CDVPluginResetNotification</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10035">CB-10035</a> - Updated RELEASENOTES to be newest to oldest</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10002">CB-10002</a> - <code>WKWebView</code> should propagate shouldOverrideLoadWithRequest to plugins</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9979">CB-9979</a> <a href="https://issues.apache.org/jira/browse/CB-9972">CB-9972</a> Change <strong>ATS</strong> link to new link</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9636">CB-9636</a> - Plugin should detect at runtime <strong>iOS</strong> 8 and use of <code>file://</code> url and present an error</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8839">CB-8839</a> - <code>WKWebView</code> ignores <code>DisallowOverscroll</code> preference</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8556">CB-8556</a> - fix <code>handleOpenURL</code> for <code>WKWebViewEngine</code> plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8666">CB-8666</a> - Update <code>CDVWKWebViewEngine</code> plugin to use 4.0.x branch code</li>
 </ul>
+
 
         </div>
     </section>

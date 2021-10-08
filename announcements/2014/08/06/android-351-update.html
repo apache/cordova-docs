@@ -142,8 +142,10 @@
 <p>In order not to break existing applications, Cordova 3.5.1 disallows clearly malicious URLs, but will still open links like <code>sms:</code>, <code>mailto:</code>, or <code>geo:</code> in their default applications. (It is, after all, a useful feature, and there are many published applications which rely on that behaviour.) If you want to restrict that even further, you can use Cordova plugins to customize which URLs can be loaded, and which URLs will be blocked completely.</p>
 
 <p>As a very simple example of this, I have published a sample plugin which blocks all external applications from loading. To use it, install it like</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add net.iclelland.external-app-block
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add net.iclelland.external-app-block
+</code></pre></div></div>
+
 <p>or feel free to clone it from <a href="https://github.com/clelland/cordova-plugin-external-app-block">GitHub</a> and tweak it to suit your needs.</p>
 
 <p>We&#39;re hoping to have a more flexible solution built in to Cordova with the next release, but in the meantime, the plugin system is powerful enough to allow you to control this for your apps yourself.</p>

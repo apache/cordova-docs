@@ -1568,12 +1568,14 @@
                 <h1>BlackBerry 10 Plugins</h1>
 
 <p>This is a continuation of the <a href="../../hybrid/plugins/index.html">Plugin Development Guide</a> for Cordova. Once you have reviewed that content, now let&#39;s look at things we need to have the Echo plugin for the BlackBerry 10 platform. Recall that the Echo plugin basically returns whatever string a user provides to the <code>window.echo</code> function:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">window.echo = function(str, callback) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.echo = function(str, callback) {
         cordova.exec(callback, function(err) {
             callback('Nothing to echo.');
         }, "Echo", "echo", [str]);
     };
-</code></pre></div>
+</code></pre></div></div>
+
 <p>A native BlackBerry 10 plugin for Cordova contains JavaScript code and may also contain native code. The Echo plugin example demonstrates how to invoke native functionality from JavaScript. The native and JavaScript code communicate with each other through a framework provided by JNEXT. Every plugin must also include a <code>plugin.xml</code> file.</p>
 
 <h2>Creating the native part of your plugin</h2>
@@ -1583,12 +1585,17 @@
 <p>The project created by the IDE contains sample code for a memory plugin. You may replace or modify these files to include your own functionality.</p>
 
 <ul>
-<li><p><code>*name*_js.hpp</code>: C++ header for the JNEXT code.</p></li>
-<li><p><code>*name*_js.cpp</code>: C++ code for JNEXT.</p></li>
+  <li>
+    <p><code>*name*_js.hpp</code>: C++ header for the JNEXT code.</p>
+  </li>
+  <li>
+    <p><code>*name*_js.cpp</code>: C++ code for JNEXT.</p>
+  </li>
 </ul>
 
 <p>The native interface for the JNEXT extension can be viewed in the plugin header file located in the public directory of your project. It also contains constants and utility functions that can be used in your native code. Your plugin must be derived from JSExt which is defined in plugin.h. That is, you must implement the following class:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">class JSExt
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class JSExt
 {
 public:
     virtual ~JSExt() {};
@@ -1597,9 +1604,11 @@ public:
 private:
     std::string m_id;
 };
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Therefore, your extension should include the plugin.h header file. In the Echo example, you use JSExt as follows in the echo_js.hpp file:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">#include "../public/plugin.h"
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include "../public/plugin.h"
 #include &lt;string&gt;
 
 #ifndef ECHO_JS_H_
@@ -1617,12 +1626,14 @@ private:
 };
 
 #endif // ECHO_JS_H_
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The <code>m_id</code> is an attribute that contains the JNEXT id for this object. The id is passed to the class as an argument to the constructor. It is needed to trigger events on the JavaScript side from native.
 The CanDelete method is used by JNEXT to determine whether your native object can be deleted.
 The InvokeMethod function is called as a result from a request from JavaScript to invoke a method of this particular object. The only argument to this function is a string passed from JavaScript that this method should parse in order to determine which method of the native object should be executed.
 Now we implement these functions in echo_js.cpp. For the Echo example, we implement InvokeMethod function as follows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">string Echo::InvokeMethod(const string&amp; command) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>string Echo::InvokeMethod(const string&amp; command) {
 
     //parse command and args from string
     int index = command.find_first_of(" ");
@@ -1636,39 +1647,53 @@ Now we implement these functions in echo_js.cpp. For the Echo example, we implem
         return "Unsupported Method";
     }
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Your native plugin must also implement the following callback functions:</p>
 
 <ul>
-<li><p><code>extern char* onGetObjList( void );</code></p></li>
-<li><p><code>extern JSExt* onCreateObject( const string&amp; strClassName, const string&amp; strObjId );</code></p></li>
+  <li>
+    <p><code>extern char* onGetObjList( void );</code></p>
+  </li>
+  <li>
+    <p><code>extern JSExt* onCreateObject( const string&amp; strClassName, const string&amp; strObjId );</code></p>
+  </li>
 </ul>
 
 <p>The <code>onGetObjList</code> function returns a comma separated list of classes supported by JNEXT. JNEXT uses this function to determine the set of classes that JNEXT can instantiate. In our Echo plugin, we have the following in <code>echo_js.cpp</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">char* onGetObjList() {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>char* onGetObjList() {
     static char name[] = "Echo";
     return name;
 }
-</code></pre></div>
-<p>The <code>onCreateObject</code> function takes two parameters. The first parameter is the name of the class requested to be created from the JavaScript side. Valid names are those that are returned in <code>onGetObjList</code>. The second parameter is the unique object id for the class. This method returns a pointer to the created plugin object. In our Echo plugin, we have the following in <code>echo_js.cpp</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">JSExt* onCreateObject(const string&amp; className, const string&amp; id) {
+</code></pre></div></div>
+
+<p>The <code>onCreateObject </code> function takes two parameters. The first parameter is the name of the class requested to be created from the JavaScript side. Valid names are those that are returned in <code>onGetObjList</code>. The second parameter is the unique object id for the class. This method returns a pointer to the created plugin object. In our Echo plugin, we have the following in <code>echo_js.cpp</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>JSExt* onCreateObject(const string&amp; className, const string&amp; id) {
     if (className == "Echo") {
         return new Echo(id);
     }
     return NULL;
 }
-</code></pre></div>
-<h2>Creating the JavaScript part of your plugin</h2>
+</code></pre></div></div>
+
+<p>##Creating the JavaScript part of your plugin##</p>
 
 <p>The JavaScript portion of your plugin must contain the following files:</p>
 
 <ul>
-<li><p><code>client.js</code>: This is considered the client side and contains the API that a Cordova application can call. The API in <code>client.js</code> calls makes calls to <code>index.js</code>. The API in <code>client.js</code> also connects callback functions to the events that fire the callbacks.</p></li>
-<li><p><code>index.js</code>: Cordova loads <code>index.js</code> and makes it accessible through the cordova.exec bridge. The <code>client.js</code> file makes calls to the API in the <code>index.js</code> file, which in turn makes call to JNEXT to communicate with the native side.</p></li>
+  <li>
+    <p><code>client.js</code>: This is considered the client side and contains the API that a Cordova application can call. The API in <code>client.js</code> calls makes calls to <code>index.js</code>. The API in <code>client.js</code> also connects callback functions to the events that fire the callbacks.</p>
+  </li>
+  <li>
+    <p><code>index.js</code>: Cordova loads <code>index.js</code> and makes it accessible through the cordova.exec bridge. The <code>client.js</code> file makes calls to the API in the <code>index.js</code> file, which in turn makes call to JNEXT to communicate with the native side.</p>
+  </li>
 </ul>
 
-<p>The client and server side (<code>client.js</code> and <code>index.js</code>) interacts through the <code>Cordova.exec</code>function. So, in <code>client.js</code> you invoke the <code>exec</code> function and provide the necessary arguments. In the Echo plugin, we have the following in the <code>client.js</code> file:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">var service = "org.apache.cordova.blackberry.echo",
+<p>The client and server side (<code>client.js</code> and <code>index.js</code>) interacts through the <code>Cordova.exec </code>function. So, in <code>client.js</code> you invoke the <code>exec</code> function and provide the necessary arguments. In the Echo plugin, we have the following in the <code>client.js</code> file:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var service = "org.apache.cordova.blackberry.echo",
     exec = cordova.require("cordova/exec");
 
 module.exports = {
@@ -1676,17 +1701,18 @@ module.exports = {
         exec(success, fail, service, "echo", { data: data });
     }
 };
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Now, <code>index.js</code> interacts with the native side using JNEXT. So you attach a constructor function named Echo to JNEXT. Within the constructor you perform the following key operations using the init function:</p>
 
 <ul>
-<li>Specify the required module exported by the native side. The name of the required module must match the name of a shared library file (.so file).</li>
+  <li>Specify the required module exported by the native side. The name of the required module must match the name of a shared library file (.so file).</li>
 </ul>
 
-<p><code>JNEXT.require(&quot;libecho&quot;)</code></p>
+<p><code>JNEXT.require("libecho")</code></p>
 
 <ul>
-<li>Create an object by using an acquired module and save the ID that&#39;s returned by the call.
+  <li>Create an object by using an acquired module and save the ID that&#39;s returned by the call.
 self.m_id = JNEXT.createObject(&quot;libecho.Echo&quot;);
 When your application calls the echo function in <code>client.js</code>, that call in turn calls the echo function in <code>index.js</code>, where the PluginResult object sends a response (data) back to <code>client.js</code>. Since the args argument passed into the functions was converted by JSON.stringfy() and encoded as a URIcomponent, you must call the following:</li>
 </ul>
@@ -1694,7 +1720,8 @@ When your application calls the echo function in <code>client.js</code>, that ca
 <p><code>data = JSON.parse(decodeURIComponent(args.data));</code></p>
 
 <p>You can now send the data back. Let’s put it all together:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">module.exports = {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module.exports = {
 
     echo: function (success, fail, args, env) {
 
@@ -1704,7 +1731,8 @@ When your application calls the echo function in <code>client.js</code>, that ca
         result.ok(response, false);
     }
 };
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Architecture of the plugin</h2>
 
 <p>You can place the artifacts of the plugin, which includes the
@@ -1713,17 +1741,17 @@ files (<code>.so</code>) within any directory structure, as long as you correctl
 specify the file locations in the <code>plugin.xml</code> file. A typical structure
 looks like this:</p>
 
-<p><strong><em>your<em>project</em>directory</em></strong> (&gt;plugin.xml)</p>
+<p><strong><em>your_project_directory</em></strong> (&gt;plugin.xml)</p>
 
 <ul>
-<li><strong>www</strong> (&gt;client.js)</li>
-<li><strong>src</strong>
-
-<ul>
-<li><strong>blackberry10</strong> (&gt;index.js, <strong>native</strong> &gt;*.cpp, *.hpp)</li>
-<li><strong>device</strong> (&gt;<em>binary file</em> *.so)</li>
-<li><strong>simulator</strong> (&gt;<em>binary file</em> *.so)</li>
-</ul></li>
+  <li><strong>www</strong> (&gt;client.js)</li>
+  <li><strong>src</strong>
+    <ul>
+      <li><strong>blackberry10</strong> (&gt;index.js, <strong>native</strong> &gt;*.cpp, *.hpp)</li>
+      <li><strong>device</strong> (&gt;<em>binary file</em> *.so)</li>
+      <li><strong>simulator</strong> (&gt;<em>binary file</em> *.so)</li>
+    </ul>
+  </li>
 </ul>
 
 <p>(The list shows the hierarchical relationship among the top-level
@@ -1731,12 +1759,13 @@ folders. The parenthesis shows the contents of a given directory. All
 directory names appear in bold text. <a href="../../../cordova/file/fileobj/fileobj.html">File</a> names are preceded by the <code>&gt;</code>
 sign.)</p>
 
-<h2>Contents of the <code>plugin.xml</code> file</h2>
+<h2>Contents of the <code>plugin.xml</code> file##</h2>
 
 <p>The <code>plugin.xml</code> file contains the namespace of the extension and other
 metadata. Define the namespace and specify other metadata for the Echo
 plugin as follows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     id="org.apache.cordova.blackberry.echo"
     version="1.0.0"&gt;
     &lt;js-module src="www/client.js"&gt;
@@ -1751,7 +1780,8 @@ plugin as follows:</p>
         &lt;/config-file&gt;
     &lt;/platform&gt;
 &lt;/plugin&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

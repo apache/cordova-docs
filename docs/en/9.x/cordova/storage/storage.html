@@ -2220,40 +2220,42 @@ platforms.</p>
 
 <p>Local storage can be accessed via <code>window.localStorage</code>. The following code
 snippet shows the most important methods exposed by the returned <code>Storage</code> object:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">storage</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">;</span>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">storage</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">storage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span> <span class="c1">// Pass a key name to get its value.</span>
 <span class="nx">storage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="c1">// Pass a key name and its value to add or update that key.</span>
 <span class="nx">storage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="c1">// Pass a key name to remove that key from storage.</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>For more information, see:</p>
 
 <ul>
-<li><a href="https://html.spec.whatwg.org/multipage/webstorage.html">W3C: Spec</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage">MDN: Storage API</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">MDN: Storage Guide</a></li>
+  <li><a href="https://html.spec.whatwg.org/multipage/webstorage.html">W3C: Spec</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage">MDN: Storage API</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">MDN: Storage Guide</a></li>
 </ul>
 
 <h3>Advantages</h3>
 
 <ul>
-<li>Supported by all Cordova platforms.</li>
-<li>Its simple, synchronous API means it is easy to use.</li>
+  <li>Supported by all Cordova platforms.</li>
+  <li>Its simple, synchronous API means it is easy to use.</li>
 </ul>
 
 <h3>Disadvantages</h3>
 
 <ul>
-<li>Only stores strings, so complex data structures have to be serialized,
+  <li>Only stores strings, so complex data structures have to be serialized,
 and only data that can be serialized can be stored.</li>
-<li>Performs poorly with large amounts of data. In particular:
-
-<ul>
-<li>The lack of indexing means searches require manually iterating all data.</li>
-<li>Storing large or complex items is slow due to the need to serialize/de-serialize.</li>
-<li>Synchronous API means calls will lock up the user interface.</li>
-</ul></li>
-<li>Limited total amount of storage (typically around 5MB).</li>
-<li>iOS stores <code>localStorage</code> data in a location that may be cleaned out by
+  <li>Performs poorly with large amounts of data. In particular:
+    <ul>
+      <li>The lack of indexing means searches require manually iterating all data.</li>
+      <li>Storing large or complex items is slow due to the need to serialize/de-serialize.</li>
+      <li>Synchronous API means calls will lock up the user interface.</li>
+    </ul>
+  </li>
+  <li>Limited total amount of storage (typically around 5MB).</li>
+  <li>iOS stores <code>localStorage</code> data in a location that may be cleaned out by
 the OS when space is required.</li>
 </ul>
 
@@ -2266,29 +2268,32 @@ As such, it provides all the power (and complexity) of SQL.</p>
 <p>It is supported by the underlying WebView on the following Cordova platforms:</p>
 
 <ul>
-<li>Android</li>
-<li>iOS</li>
+  <li>Android</li>
+  <li>iOS</li>
 </ul>
 
 <h3>Usage Summary</h3>
 
 <p>The entry point into creating or opening a database is the <code>window.openDatabase()</code> method:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">db</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">openDatabase</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">version</span><span class="p">,</span> <span class="nx">displayName</span><span class="p">,</span> <span class="nx">estimatedSize</span><span class="p">);</span>
-</code></pre></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">db</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">openDatabase</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">version</span><span class="p">,</span> <span class="nx">displayName</span><span class="p">,</span> <span class="nx">estimatedSize</span><span class="p">);</span>
+</code></pre></div></div>
+
 <ul>
-<li><strong>name</strong> (string): The unique name of the database, as it will be stored in disk.</li>
-<li><strong>version</strong> (string): The version of the database.</li>
-<li><strong>displayName</strong> (string): A human friendly name for the database, which
+  <li><strong>name</strong> (string): The unique name of the database, as it will be stored in disk.</li>
+  <li><strong>version</strong> (string): The version of the database.</li>
+  <li><strong>displayName</strong> (string): A human friendly name for the database, which
 the system will use if it needs to describe your database to the user
 (for example, when requesting permission to increase the size of the database).</li>
-<li><strong>estimatedSize</strong> (number): The expected maximum size of the database, in bytes.
+  <li><strong>estimatedSize</strong> (number): The expected maximum size of the database, in bytes.
 As the database increases in size, the user may be prompted for permission. If
 you make a reasonable first guess, the user is likely to be prompted less often.</li>
 </ul>
 
 <p>The returned <code>Database</code> object provides a <code>transaction()</code> method (or <code>readTransaction()</code>
 to optimize read-only transactions) that let&#39;s you create a failure-safe transaction:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">db</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">openDatabase</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">version</span><span class="p">,</span> <span class="nx">displayName</span><span class="p">,</span> <span class="nx">estimatedSize</span><span class="p">);</span>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">db</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">openDatabase</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">version</span><span class="p">,</span> <span class="nx">displayName</span><span class="p">,</span> <span class="nx">estimatedSize</span><span class="p">);</span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">transaction</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">tx</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">tx</span><span class="p">.</span><span class="nx">executeSql</span><span class="p">(</span><span class="nx">sqlStatement</span><span class="p">,</span> <span class="nx">valueArray</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">tx</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
@@ -2296,18 +2301,19 @@ to optimize read-only transactions) that let&#39;s you create a failure-safe tra
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
     <span class="p">});</span>
 <span class="p">});</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>For more information, see:</p>
 
 <ul>
-<li><a href="http://dev.w3.org/html5/webdatabase/">W3C: Spec</a></li>
-<li><a href="http://www.tutorialspoint.com/html5/html5_web_sql.htm">TutorialsPoint: WebSQL Guide</a></li>
+  <li><a href="http://dev.w3.org/html5/webdatabase/">W3C: Spec</a></li>
+  <li><a href="http://www.tutorialspoint.com/html5/html5_web_sql.htm">TutorialsPoint: WebSQL Guide</a></li>
 </ul>
 
 <p>For a good introduction to the SQL language, see:</p>
 
 <ul>
-<li><a href="http://www.w3schools.com/sql/sql_intro.asp">w3schools: Introduction to SQL</a></li>
+  <li><a href="http://www.w3schools.com/sql/sql_intro.asp">w3schools: Introduction to SQL</a></li>
 </ul>
 
 <h3>Working with database versions</h3>
@@ -2322,21 +2328,21 @@ being created, it will be created with its version set to an empty string.</p>
 <h3>Advantages</h3>
 
 <ul>
-<li>Good performance - data can be indexed to provide fast searches, and
+  <li>Good performance - data can be indexed to provide fast searches, and
 asynchronous API means it doesn&#39;t lock up the user interface.</li>
-<li>Robustness from using a transactional database model.</li>
-<li>Support for versioning.</li>
+  <li>Robustness from using a transactional database model.</li>
+  <li>Support for versioning.</li>
 </ul>
 
 <h3>Disadvantages</h3>
 
 <ul>
-<li>Not supported by all Cordova platforms.</li>
-<li>More complex to work with than <em>LocalStorage</em> or <em>IndexedDB</em>.</li>
-<li>The API is deprecated. It is unlikely to ever be supported on platforms
+  <li>Not supported by all Cordova platforms.</li>
+  <li>More complex to work with than <em>LocalStorage</em> or <em>IndexedDB</em>.</li>
+  <li>The API is deprecated. It is unlikely to ever be supported on platforms
 that don&#39;t currently support it, and it may be removed from platforms that do.</li>
-<li>Imposes a rigid structure that must be defined up-front.</li>
-<li>Limited total amount of storage (typically around 5MB).</li>
+  <li>Imposes a rigid structure that must be defined up-front.</li>
+  <li>Limited total amount of storage (typically around 5MB).</li>
 </ul>
 
 <h2>IndexedDB</h2>
@@ -2354,8 +2360,8 @@ database, and its asynchronous API and search indexes provide performance benefi
 <p>IndexedDB is supported by the underlying WebView on the following Cordova platforms:</p>
 
 <ul>
-<li>Windows (with some limitations)</li>
-<li>Android (4.4 and above)</li>
+  <li>Windows (with some limitations)</li>
+  <li>Android (4.4 and above)</li>
 </ul>
 
 <h3>Windows Limitations</h3>
@@ -2364,25 +2370,26 @@ database, and its asynchronous API and search indexes provide performance benefi
 the following features:</p>
 
 <ul>
-<li>Not available in web workers.</li>
-<li>Doesn&#39;t support array keyPaths.</li>
-<li>Doesn&#39;t support array keys.</li>
-<li>Doesn&#39;t support object lookup via compound index.</li>
+  <li>Not available in web workers.</li>
+  <li>Doesn&#39;t support array keyPaths.</li>
+  <li>Doesn&#39;t support array keys.</li>
+  <li>Doesn&#39;t support object lookup via compound index.</li>
 </ul>
 
 <h3>Usage Summary</h3>
 
 <ul>
-<li>IndexedDB works asynchronously - you request a particular database
+  <li>IndexedDB works asynchronously - you request a particular database
 operation, then get notified of the result via a DOM event.</li>
-<li>When you make a request, you get a request object, which provides <code>onerror</code>
+  <li>When you make a request, you get a request object, which provides <code>onerror</code>
 and <code>onsuccess</code> events, as well as properties such as <code>result</code>, <code>error</code>
 and <code>readyState</code>.</li>
 </ul>
 
 <p>The following code snippet demonstrates some simple usage of IndexedDB:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">db</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">databaseName</span> <span class="o">=</span> <span class="s1">'myDB'</span><span class="p">;</span>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">db</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">databaseName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">myDB</span><span class="dl">'</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">databaseVersion</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">openRequest</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">indexedDB</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">databaseName</span><span class="p">,</span> <span class="nx">databaseVersion</span><span class="p">);</span>
 <span class="nx">openRequest</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
@@ -2406,7 +2413,7 @@ and <code>readyState</code>.</li>
     <span class="c1">// the key is stored. If a key path is specified, the store can only contain</span>
     <span class="c1">// JavaScript objects, and each object stored must have a property with the</span>
     <span class="c1">// same name as the key path (unless the autoIncrement option is true).</span>
-    <span class="kd">var</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">createObjectStore</span><span class="p">(</span><span class="s1">'customers'</span><span class="p">,</span> <span class="p">{</span> <span class="na">keyPath</span><span class="p">:</span> <span class="s1">'customerId'</span> <span class="p">});</span>
+    <span class="kd">var</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">createObjectStore</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">keyPath</span><span class="p">:</span> <span class="dl">'</span><span class="s1">customerId</span><span class="dl">'</span> <span class="p">});</span>
 
     <span class="c1">// Define the indexes we want to use. Objects we add to the store don't need</span>
     <span class="c1">// to contain these properties, but they will only appear in the specified</span>
@@ -2415,12 +2422,12 @@ and <code>readyState</code>.</li>
     <span class="c1">// syntax: store.createIndex(indexName, keyPath[, parameters]);</span>
     <span class="c1">//</span>
     <span class="c1">// All these values could have duplicates, so set unique to false</span>
-    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="s1">'firstName'</span><span class="p">,</span> <span class="s1">'firstName'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
-    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="s1">'lastName'</span><span class="p">,</span> <span class="s1">'lastName'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
-    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="s1">'street'</span><span class="p">,</span> <span class="s1">'street'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
-    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="s1">'city'</span><span class="p">,</span> <span class="s1">'city'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
-    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="s1">'zipCode'</span><span class="p">,</span> <span class="s1">'zipCode'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
-    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="s1">'country'</span><span class="p">,</span> <span class="s1">'country'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">firstName</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">firstName</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">lastName</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">lastName</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">street</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">street</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">city</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">city</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">zipCode</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">zipCode</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">country</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">country</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
 
     <span class="c1">// Once the store is created, populate it</span>
     <span class="nx">store</span><span class="p">.</span><span class="nx">transaction</span><span class="p">.</span><span class="nx">oncomplete</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
@@ -2431,7 +2438,7 @@ and <code>readyState</code>.</li>
         <span class="c1">// It returns a transaction object, which provides an objectStore method</span>
         <span class="c1">// to access one of the object stores that are in the scope of this</span>
         <span class="c1">//transaction.</span>
-        <span class="kd">var</span> <span class="nx">customerStore</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">transaction</span><span class="p">(</span><span class="s1">'customers'</span><span class="p">,</span> <span class="s1">'readwrite'</span><span class="p">).</span><span class="nx">objectStore</span><span class="p">(</span><span class="s1">'customers'</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">customerStore</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">transaction</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">readwrite</span><span class="dl">'</span><span class="p">).</span><span class="nx">objectStore</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers</span><span class="dl">'</span><span class="p">);</span>
         <span class="nx">customers</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">customer</span><span class="p">)</span> <span class="p">{</span>
             <span class="nx">customerStore</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">customer</span><span class="p">);</span>
         <span class="p">});</span>
@@ -2440,34 +2447,35 @@ and <code>readyState</code>.</li>
 
 <span class="kd">function</span> <span class="nx">displayData</span><span class="p">()</span> <span class="p">{</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>For more information, see:</p>
 
 <ul>
-<li><a href="http://www.w3.org/TR/IndexedDB/">W3C: Spec</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">MDN: IndexedDB API Reference</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB">MDN: IndexedDB Basic Concepts</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">MDN: Using IndexedDB Guide</a></li>
+  <li><a href="http://www.w3.org/TR/IndexedDB/">W3C: Spec</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">MDN: IndexedDB API Reference</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB">MDN: IndexedDB Basic Concepts</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">MDN: Using IndexedDB Guide</a></li>
 </ul>
 
 <h3>Advantages</h3>
 
 <ul>
-<li>Good performance - asynchronous API won&#39;t block the UI, and indexing provides
+  <li>Good performance - asynchronous API won&#39;t block the UI, and indexing provides
 good search performance.</li>
-<li>Simple data model easier to learn than SQL.</li>
-<li>More flexible structure than WebSQL.</li>
-<li>Multiple databases and object stores provides more structure than LocalStorage.</li>
-<li>Robustness from using a transactional database model.</li>
-<li>Support for versioning.</li>
+  <li>Simple data model easier to learn than SQL.</li>
+  <li>More flexible structure than WebSQL.</li>
+  <li>Multiple databases and object stores provides more structure than LocalStorage.</li>
+  <li>Robustness from using a transactional database model.</li>
+  <li>Support for versioning.</li>
 </ul>
 
 <h3>Disadvantages</h3>
 
 <ul>
-<li>Not supported on iOS.</li>
-<li>Complex API with nested callbacks.</li>
-<li>Limited total amount of storage (typically around 5MB).</li>
+  <li>Not supported on iOS.</li>
+  <li>Complex API with nested callbacks.</li>
+  <li>Limited total amount of storage (typically around 5MB).</li>
 </ul>
 
 <h2>Plugin-Based Options</h2>
@@ -2486,17 +2494,17 @@ provides an extensive implementation that is available across all Cordova platfo
 The main differences are:</p>
 
 <ul>
-<li>It is available with support for the Windows platform.</li>
-<li>It effectively has no size limitations.</li>
+  <li>It is available with support for the Windows platform.</li>
+  <li>It effectively has no size limitations.</li>
 </ul>
 
 <p>It is available in the following variations:</p>
 
 <ul>
-<li><strong><a href="https://github.com/litehelpers/Cordova-sqlite-storage#readme">cordova-sqlite-storage</a></strong> - core version that includes its own sqlite3 implementation. It supports iOS, Android &amp; Windows platforms.</li>
-<li><strong><a href="https://github.com/litehelpers/cordova-sqlite-ext#readme">cordova-sqlite-ext</a></strong> - extended version with additional
+  <li><strong><a href="https://github.com/litehelpers/Cordova-sqlite-storage#readme">cordova-sqlite-storage</a></strong> - core version that includes its own sqlite3 implementation. It supports iOS, Android &amp; Windows platforms.</li>
+  <li><strong><a href="https://github.com/litehelpers/cordova-sqlite-ext#readme">cordova-sqlite-ext</a></strong> - extended version with additional
 features including REGEXP support on Android and iOS.</li>
-<li><strong><a href="https://github.com/litehelpers/Cordova-sqlite-enterprise-free#readme">cordova-sqlite-evfree</a></strong> - similar to <em>cordova-sqlite-ext</em>
+  <li><strong><a href="https://github.com/litehelpers/Cordova-sqlite-enterprise-free#readme">cordova-sqlite-evfree</a></strong> - similar to <em>cordova-sqlite-ext</em>
 but with improved memory handling. Available under GPL v3 or commercial license.</li>
 </ul>
 
@@ -2504,6 +2512,7 @@ but with improved memory handling. Available under GPL v3 or commercial license.
 
 <p>Search <a href="/plugins">Cordova plugins</a> for other plugins that provide
 alternative storage options.</p>
+
 
 
             </div>

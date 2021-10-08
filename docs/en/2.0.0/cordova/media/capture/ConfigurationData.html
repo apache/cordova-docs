@@ -1448,33 +1448,34 @@
                 <h1>ConfigurationData</h1>
 
 <blockquote>
-<p>Encapsulates a set of media capture parameters that a device supports.</p>
+  <p>Encapsulates a set of media capture parameters that a device supports.</p>
 </blockquote>
 
 <h2>Description</h2>
 
-<p>This object is used to describe media capture modes supported by the device.  The configuration data includes the MIME type, and capture dimensions (for video or image capture).  </p>
+<p>This object is used to describe media capture modes supported by the device.  The configuration data includes the MIME type, and capture dimensions (for video or image capture).</p>
 
 <p>The MIME types should adhere to <a href="http://www.ietf.org/rfc/rfc2046.txt">RFC2046</a>.  Examples:</p>
 
 <ul>
-<li>video/3gpp</li>
-<li>video/quicktime</li>
-<li>image/jpeg</li>
-<li>audio/amr</li>
-<li>audio/wav </li>
+  <li>video/3gpp</li>
+  <li>video/quicktime</li>
+  <li>image/jpeg</li>
+  <li>audio/amr</li>
+  <li>audio/wav</li>
 </ul>
 
 <h2>Properties</h2>
 
 <ul>
-<li><strong>type:</strong> The ASCII-encoded string in lower case representing the media type. (DOMString)</li>
-<li><strong>height:</strong> The height of the image or video in pixels.  In the case of a sound clip, this attribute has value 0. (Number)</li>
-<li><strong>width:</strong> The width of the image or video in pixels.  In the case of a sound clip, this attribute has value 0. (Number)</li>
+  <li><strong>type:</strong> The ASCII-encoded string in lower case representing the media type. (DOMString)</li>
+  <li><strong>height:</strong> The height of the image or video in pixels.  In the case of a sound clip, this attribute has value 0. (Number)</li>
+  <li><strong>width:</strong> The width of the image or video in pixels.  In the case of a sound clip, this attribute has value 0. (Number)</li>
 </ul>
 
 <h2>Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">// retrieve supported image modes
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// retrieve supported image modes
 var imageModes = navigator.device.capture.supportedImageModes;
 
 // Select mode that has the highest horizontal resolution
@@ -1486,7 +1487,8 @@ for each (var mode in imageModes) {
         selectedmode = mode;
     }
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Not supported by any platform.  All configuration data arrays are empty.</p>
 
 

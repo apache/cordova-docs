@@ -137,13 +137,13 @@
 
 <p>Cordova iOS, starting with version 4, has anticipated this by moving the webview that is used by the platform into a plugin. The default webview that is used is still UIWebView, but you had the option to use WKWebView instead, with the <a href="https://github.com/apache/cordova-plugin-wkwebview-engine">cordova-plugin-wkwebview-engine</a> plugin. Both the UIWebView and WKWebView webviews are plugins themselves, with the former included in the cordova-ios platform.</p>
 
-<p><img src="/static/img/blog/2018/arch-webview-engine.png" alt="Figure 1"></p>
+<p><img src="/static/img/blog/2018/arch-webview-engine.png" alt="Figure 1" /></p>
 
 <h2>Future Cordova iOS with WKWebView</h2>
 
 <p>Starting with a future Cordova iOS release, we will ship both webview plugins with the cordova-ios platform, to enable developers to test and transition users to the new WKWebView component. This future Cordova iOS version will ship with a bridge webview plugin that can switch usage of the webview plugin used at runtime. Previously, you could only choose which webview you would use at build time.</p>
 
-<p><img src="/static/img/blog/2018/bridge-webview-engine.png" alt="Figure 2"></p>
+<p><img src="/static/img/blog/2018/bridge-webview-engine.png" alt="Figure 2" /></p>
 
 <!--more-->
 
@@ -155,63 +155,66 @@
 
 <p>When UIWebView support has been removed in a future iOS SDK, we will aim to release a future Cordova iOS version, which will remove UIWebView support, and WKWebView will then be the default webview engine.</p>
 
-<table><thead>
-<tr>
-<th>Cordova iOS 4 &gt;&gt;&gt;</th>
-<th>Future Cordova iOS &gt;&gt;&gt;</th>
-<th>&quot;More Future&quot; Cordova iOS</th>
-</tr>
-</thead><tbody>
-<tr>
-<td></td>
-<td>UIWebView deprecated</td>
-<td>UIWebView removed</td>
-</tr>
-<tr>
-<td></td>
-<td>WKWebView Engine Plugin Integrated Into Platform</td>
-<td>WKWebView Engine Plugin only</td>
-</tr>
-<tr>
-<td></td>
-<td>Bridge WebView Plugin Added</td>
-<td>Bridge WebView Plugin Removed</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Cordova iOS 4&#160;&#187;&gt;</th>
+      <th>Future Cordova iOS&#160;&#187;&gt;</th>
+      <th>&quot;More Future&quot; Cordova iOS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&#160;</td>
+      <td>UIWebView deprecated</td>
+      <td>UIWebView removed</td>
+    </tr>
+    <tr>
+      <td>&#160;</td>
+      <td>WKWebView Engine Plugin Integrated Into Platform</td>
+      <td>WKWebView Engine Plugin only</td>
+    </tr>
+    <tr>
+      <td>&#160;</td>
+      <td>Bridge WebView Plugin Added</td>
+      <td>Bridge WebView Plugin Removed</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2>Limitations of WKWebView</h2>
 
 <p>There are <a href="https://mjtsai.com/blog/2018/06/20/webview-and-uiwebview-deprecated-in-favor-of-wkwebview/">many limitations</a> of WKWebview, especially if you were using UIWebView previously. The limitations are:</p>
 
 <ol>
-<li>Cookies don&#39;t persist. This is a WebKit bug, but someone has
+  <li>Cookies don&#39;t persist. This is a WebKit bug, but someone has
 created a plugin for a workaround. See
 <a href="https://issues.apache.org/jira/browse/CB-12074">CB-12074</a></li>
-<li>Can&#39;t delete cookies. This is/was a WebKit bug (2015), we need to test
+  <li>Can&#39;t delete cookies. This is/was a WebKit bug (2015), we need to test
 for the iOS 11/12. See <a href="https://issues.apache.org/jira/browse/CB-11297">CB-11297</a></li>
-<li>Can&#39;t execute JavaScript code in the background. There are several
+  <li>Can&#39;t execute JavaScript code in the background. There are several
 issues related to this. See
 <a href="https://issues.apache.org/jira/browse/CB-12815">CB-12815</a></li>
-<li>XmlHttpRequests don&#39;t work, because of Cross-Origin Resource
+  <li>XmlHttpRequests don&#39;t work, because of Cross-Origin Resource
 Sharing issue (CORS). There is a workaround plugin created by Oracle
 (UPL licensed, which is Apache-2.0 compatible). See
 <a href="https://issues.apache.org/jira/browse/CB-10143">CB-10143</a></li>
-<li>Migration of localStorage from UIWebView. There is a migration
+  <li>Migration of localStorage from UIWebView. There is a migration
 plugin available. See <a href="https://issues.apache.org/jira/browse/CB-11974">CB-11974</a></li>
-<li>iframes will not be supported any longer (they are now CORS restricted in WKWebView), and may be partially or completely broken. This may lead to incompatibilities with the same code in other Cordova platforms.</li>
-<li>Known issues with WKWebView on iOS pre-11 which will be deprecated and dropped in a future Cordova release</li>
+  <li>iframes will not be supported any longer (they are now CORS restricted in WKWebView), and may be partially or completely broken. This may lead to incompatibilities with the same code in other Cordova platforms.</li>
+  <li>Known issues with WKWebView on iOS pre-11 which will be deprecated and dropped in a future Cordova release</li>
 </ol>
 
 <p>There are several bugs that need to be resolved as well. The full list
 here: <a href="https://s.apache.org/QfsF">https://s.apache.org/QfsF</a></p>
 
-<p>As you can see, WKWebView is not a direct drop-in replacement for UIWebView, you will need several plugins to patch functionality that is missing. There is also the <a href="https://github.com/apache/cordova-plugins/tree/wkwebview-engine-localhost">local-webserver experimental plugin option</a>, which will not be graduated to a full plugin -- we will concentrate our efforts on supporting the main WKWebView engine plugin. </p>
+<p>As you can see, WKWebView is not a direct drop-in replacement for UIWebView, you will need several plugins to patch functionality that is missing. There is also the <a href="https://github.com/apache/cordova-plugins/tree/wkwebview-engine-localhost">local-webserver experimental plugin option</a>, which will not be graduated to a full plugin -- we will concentrate our efforts on supporting the main WKWebView engine plugin.</p>
 
 <p>Hopefully with more testing, and filing of bug reports with Apple for missing features, the WKWebView can be a full replacement for Cordova users.</p>
 
-<hr>
-
+<hr />
 <p><strong>UPDATE 2019-02-16</strong>: This blog post has been updated to remove references to these changes going to be included in Cordova iOS 5, as <a href="https://cordova.apache.org/announcements/2019/02/09/cordova-ios-release-5.0.0.html">Cordova iOS 5 was released</a> without them and the planned implementation has been moved to a future release of Cordova iOS.</p>
+
 
         </div>
     </section>

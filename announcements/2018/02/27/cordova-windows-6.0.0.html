@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce the release of cordova-windows 6.0.0. This is a major release that changes functionality you might rely on, so please make sure to r...">
+    <meta name="description" content="We are happy to announce the release of cordova-windows 6.0.0.This is a major release that changes functionality you might rely on, so please make sure to re...">
 
     <title>
         
@@ -131,39 +131,41 @@
     </header>
     <section>
         <div>
-            <p>We are happy to announce the release of <code>cordova-windows 6.0.0</code>. </p>
+            <p>We are happy to announce the release of <code>cordova-windows 6.0.0</code>.</p>
 
 <p>This is a major release that changes functionality you might rely on, so please make sure to read the following list of changes:</p>
 
 <h2>Changes</h2>
 
 <ul>
-<li><strong>Windows 10 / UWP</strong> builds are now default, meaning <code>cordova build windows</code> will now build a Windows 10 UWP app by default.<br>
+  <li><strong>Windows 10 / UWP</strong> builds are now default, meaning <code>cordova build windows</code> will now build a Windows 10 UWP app by default.<br />
 Windows (Phone) 8.1 is still supported, of course, just use <code>cordova build windows -- --appx=8.1-win</code>, <code>cordova build windows -- --appx=8.1-phone</code> or an equivalent configuration option.</li>
-<li>You can now build apps with a current installation of <strong>Visual Studio 2017</strong> (<code>15.5.x</code> at the time of writing) without any additional configuration or hacks (like the environment variable <code>VSINSTALLDIR</code> that was required for 5.0.0). (Note: <a href="https://docs.microsoft.com/en-us/visualstudio/productinfo/vs2017-compatibility-vs#windows-store-and-windows-phone-apps">Visual Studio 2017 doesn&#39;t support Windows 8.1 apps anymore</a>, so you can only build these apps with Visual Studio 2015 installed.)</li>
-<li>New <strong>ENV variable <code>MSBUILDDIR</code></strong> allows to directly configure the MSBuild Tools to be used to build the app. While <code>VSINSTALLDIR</code> always has been a hack that accidentally also worked to switch between different MSBuildTools versions, we now make this functionality explicit: Just set the ENV var to a your desired MSBuild folder (e.g. <code>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin</code> or <code>C:\Program Files (x86)\MSBuild\14.0\bin\</code>) and it will be used to build your project. 
-
-<ul>
-<li>If you have Visual Studio 2017 and Visual Studio 2015 installed at the same time, the normal logic would always choose Visual Studio 2017&#39;s MSBuild 15 - and fail on a Windows (Phone) 8.1 project. If you set the environment variable to MSBuild 14, it can successfully build your 8.1 apps.</li>
-<li>If the supplied path is invalid or doesn&#39;t contain a working MSBuild, the normal MSBuild selection logic will be triggered</li>
-</ul></li>
-<li>Fixes several bugs</li>
+  <li>You can now build apps with a current installation of <strong>Visual Studio 2017</strong> (<code>15.5.x</code> at the time of writing) without any additional configuration or hacks (like the environment variable <code>VSINSTALLDIR</code> that was required for 5.0.0). (Note: <a href="https://docs.microsoft.com/en-us/visualstudio/productinfo/vs2017-compatibility-vs#windows-store-and-windows-phone-apps">Visual Studio 2017 doesn&#39;t support Windows 8.1 apps anymore</a>, so you can only build these apps with Visual Studio 2015 installed.)</li>
+  <li>New <strong>ENV variable <code>MSBUILDDIR</code></strong> allows to directly configure the MSBuild Tools to be used to build the app. While <code>VSINSTALLDIR</code> always has been a hack that accidentally also worked to switch between different MSBuildTools versions, we now make this functionality explicit: Just set the ENV var to a your desired MSBuild folder (e.g. <code>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin</code> or <code>C:\Program Files (x86)\MSBuild\14.0\bin\</code>) and it will be used to build your project.
+    <ul>
+      <li>If you have Visual Studio 2017 and Visual Studio 2015 installed at the same time, the normal logic would always choose Visual Studio 2017&#39;s MSBuild 15 - and fail on a Windows (Phone) 8.1 project. If you set the environment variable to MSBuild 14, it can successfully build your 8.1 apps.</li>
+      <li>If the supplied path is invalid or doesn&#39;t contain a working MSBuild, the normal MSBuild selection logic will be triggered</li>
+    </ul>
+  </li>
+  <li>Fixes several bugs</li>
 </ul>
 
 <h2>Installation</h2>
 
 <p>As usual, this new version will be added as the default <code>cordova-windows</code> version for <code>cordova platform add windows</code> only with the next release of Cordova CLI. Until then, please use these commands to remove and re-add the <code>windows</code> platform:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform rm windows
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform rm windows
 cordova platform add windows@6.0.0
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Known limitations</h2>
 
 <p>As it&#39;s often the case, the <code>6.0.0</code> release of cordova-windows is not perfect and has some known limitations:</p>
 
 <ul>
-<li>If you only have Visual Studio 2017 installed on your machine, you can not build Windows (Phone) 8.1 apps.</li>
-<li>As with earlier versions, Windows 10 Mobile emulators are not supported by the CLI but require Visual Studio to be used to build the app</li>
-<li>Some <a href="https://github.com/apache/cordova-windows/issues/266">build</a> and <a href="https://github.com/apache/cordova-windows/issues/267">requirements error messages</a> are not optimal</li>
+  <li>If you only have Visual Studio 2017 installed on your machine, you can not build Windows (Phone) 8.1 apps.</li>
+  <li>As with earlier versions, Windows 10 Mobile emulators are not supported by the CLI but require Visual Studio to be used to build the app</li>
+  <li>Some <a href="https://github.com/apache/cordova-windows/issues/266">build</a> and <a href="https://github.com/apache/cordova-windows/issues/267">requirements error messages</a> are not optimal</li>
 </ul>
 
 <h2>Feedback</h2>
@@ -176,47 +178,46 @@ cordova platform add windows@6.0.0
 
 <p>As Microsoft recently ended mainstream support for all <strong>Windows 8.1</strong> variants, total market share recedes below 6% and Visual Studio 2017 doesn&#39;t support 8.1 development anymore, we don&#39;t expect any future changes that would require updates to <code>cordova-windows</code>&#39; 8.1 support. Same for <strong>Windows 10 Mobile</strong>, which is not under active development by Microsoft anymore and will not receive any other updates than security fixes.</p>
 
-<p>Because of that, we decided to <strong>deprecate all &quot;mobile&quot; and &quot;phone&quot; build targets of <code>cordova-windows</code></strong>. In the near future, we will release a <code>7.0.0</code> version that will remove support for those platform variants and focus on Windows 10 UWP - which will greatly reduce complexity and simplify future maintenance.<br>
+<p>Because of that, we decided to <strong>deprecate all &quot;mobile&quot; and &quot;phone&quot; build targets of <code>cordova-windows</code></strong>. In the near future, we will release a <code>7.0.0</code> version that will remove support for those platform variants and focus on Windows 10 UWP - which will greatly reduce complexity and simplify future maintenance.<br />
 <code>cordova-windows 6.0.0</code> with support for these platforms, of course, will stay available and receive bugfixes if necessary (Similar to how <code>cordova-windows@4</code> was the last version to support Windows 8.0).</p>
 
 <p>Please tell us in the comments to this blog post if you have any objections or comments to these plans.</p>
 
 <!--more-->
-
 <h2>Curated Changelog</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13889">CB-13889</a> Allow test failures for Visual Studio 2017 environments (#263)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13878">CB-13878</a> <code>MSBUILDDIR</code> env variable (#262)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13883">CB-13883</a> Visual Studio 2017 support (#261)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13877">CB-13877</a> Clean up <code>MSBuildTools.js</code> (#259)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13870">CB-13870</a> Improve <code>check_reqs</code> (#258)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13877">CB-13877</a> more env information about msbuild and visual studio on appveyor (#257)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13877">CB-13877</a> First <code>MSBuildTools.js</code> work: Debug output, move misplaced method, comments (#255)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13875">CB-13875</a> add <code>prepare</code> script that can be called in e2e tests (#254)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13817">CB-13817</a> Add new alias <code>uwp</code> for <code>--appx</code> param including tests (#251)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13870">CB-13870</a> change default from UAP to 10.0 (#253)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13829">CB-13829</a> Fix tests that were broken since <a href="https://issues.apache.org/jira/browse/CB-13237">CB-13237</a> (#246)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11968">CB-11968</a> Add support for config-file in <code>config.xml</code> (#235)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13799">CB-13799</a> updated npm test for <code>cordova-windows</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13812">CB-13812</a> run tests on AppVeyor with VS 2017 as well</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13641">CB-13641</a> support transparent splash screen background color. (#245)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13175">CB-13175</a> fixing Windows8.1 crash on startup</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13422">CB-13422</a> (windows) Fix typo in build error message</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> ignoring <code>cordova.js</code> for eslint &amp; removing comments and references to jshint</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13237">CB-13237</a> Default to UAP</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13155">CB-13155</a> Improved target parsing</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13022">CB-13022</a> Correct a VS installation warning during <code>check_reqs</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12636">CB-12636</a> Fix <code>check_reqs</code> to properly find VS 2017</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> setup eslint and removed jshint</li>
-<li>Allow build when using --bundle and multiple architectures. This closes #175</li>
-<li>README: Fix broken Markdown headings</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12617">CB-12617</a> Removed node 0.x from CI</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> fixed <code>bugs</code> entry in <code>package.json</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12784">CB-12784</a> Fixed a crash on Windows 10 Creators Update</li>
-<li>Add support for uap3.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12018">CB-12018</a> updated tests to work with jasmine instead of jasmine-node</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12499">CB-12499</a> UWP: Dependent external libraries specified as resource-file not being referenced in Release mode</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13889">CB-13889</a> Allow test failures for Visual Studio 2017 environments (#263)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13878">CB-13878</a> <code>MSBUILDDIR</code> env variable (#262)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13883">CB-13883</a> Visual Studio 2017 support (#261)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13877">CB-13877</a> Clean up <code>MSBuildTools.js</code> (#259)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13870">CB-13870</a> Improve <code>check_reqs</code> (#258)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13877">CB-13877</a> more env information about msbuild and visual studio on appveyor (#257)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13877">CB-13877</a> First <code>MSBuildTools.js</code> work: Debug output, move misplaced method, comments (#255)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13875">CB-13875</a> add <code>prepare</code> script that can be called in e2e tests (#254)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13817">CB-13817</a> Add new alias <code>uwp</code> for <code>--appx</code> param including tests (#251)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13870">CB-13870</a> change default from UAP to 10.0 (#253)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13829">CB-13829</a> Fix tests that were broken since <a href="https://issues.apache.org/jira/browse/CB-13237">CB-13237</a> (#246)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11968">CB-11968</a> Add support for config-file in <code>config.xml</code> (#235)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13799">CB-13799</a> updated npm test for <code>cordova-windows</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13812">CB-13812</a> run tests on AppVeyor with VS 2017 as well</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13641">CB-13641</a> support transparent splash screen background color. (#245)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13175">CB-13175</a> fixing Windows8.1 crash on startup</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13422">CB-13422</a> (windows) Fix typo in build error message</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> ignoring <code>cordova.js</code> for eslint &amp; removing comments and references to jshint</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13237">CB-13237</a> Default to UAP</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13155">CB-13155</a> Improved target parsing</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13022">CB-13022</a> Correct a VS installation warning during <code>check_reqs</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12636">CB-12636</a> Fix <code>check_reqs</code> to properly find VS 2017</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> setup eslint and removed jshint</li>
+  <li>Allow build when using --bundle and multiple architectures. This closes #175</li>
+  <li>README: Fix broken Markdown headings</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12617">CB-12617</a> Removed node 0.x from CI</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> fixed <code>bugs</code> entry in <code>package.json</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12784">CB-12784</a> Fixed a crash on Windows 10 Creators Update</li>
+  <li>Add support for uap3.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12018">CB-12018</a> updated tests to work with jasmine instead of jasmine-node</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12499">CB-12499</a> UWP: Dependent external libraries specified as resource-file not being referenced in Release mode</li>
 </ul>
 
         </div>

@@ -1548,17 +1548,17 @@
 <h2>Properties</h2>
 
 <ul>
-<li><strong>name:</strong> The name of the file. <em>(DOMString)</em></li>
-<li><strong>fullPath:</strong> The full path of the file including the file name. <em>(DOMString)</em></li>
-<li><strong>type:</strong> The mime type of the file. <em>(DOMString)</em></li>
-<li><strong>lastModifiedDate:</strong> The last time the file was modified. <em>(Date)</em></li>
-<li><strong>size:</strong> The size of the file in bytes. <em>(long)</em></li>
+  <li><strong>name:</strong> The name of the file. <em>(DOMString)</em></li>
+  <li><strong>fullPath:</strong> The full path of the file including the file name. <em>(DOMString)</em></li>
+  <li><strong>type:</strong> The mime type of the file. <em>(DOMString)</em></li>
+  <li><strong>lastModifiedDate:</strong> The last time the file was modified. <em>(Date)</em></li>
+  <li><strong>size:</strong> The size of the file in bytes. <em>(long)</em></li>
 </ul>
 
 <h2>Methods</h2>
 
 <ul>
-<li><strong>slice</strong>: Select only a portion of the file to be read.</li>
+  <li><strong>slice</strong>: Select only a portion of the file to be read.</li>
 </ul>
 
 <h2>Details</h2>
@@ -1568,11 +1568,11 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows 8</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2>slice</h2>
@@ -1584,25 +1584,29 @@ The indexes are always relative to the current slice (see the full example).</p>
 <p><strong>Parameters:</strong></p>
 
 <ul>
-<li><strong>start</strong> - The index of the first byte to read, inclusive.</li>
-<li><strong>end</strong> - The index of the byte after the last one to read.</li>
+  <li><strong>start</strong> - The index of the first byte to read, inclusive.</li>
+  <li><strong>end</strong> - The index of the byte after the last one to read.</li>
 </ul>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">var slicedFile = file.slice(10, 30);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var slicedFile = file.slice(10, 30);
+</code></pre></div></div>
+
 <p><strong>Full Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">var slice1 = file.slice(100, 400);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var slice1 = file.slice(100, 400);
 var slice2 = slice1.slice(20, 35);
 
 var slice3 = file.slice(120, 135);
 // slice2 and slice3 are equivalent.
-</code></pre></div>
+</code></pre></div></div>
+
 <p><strong>Supported Platforms:</strong></p>
 
 <ul>
-<li>Android</li>
-<li>iOS</li>
+  <li>Android</li>
+  <li>iOS</li>
 </ul>
 
 

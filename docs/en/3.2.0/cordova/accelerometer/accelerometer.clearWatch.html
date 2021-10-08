@@ -1640,97 +1640,103 @@
                 <h1>accelerometer.clearWatch</h1>
 
 <p>Stop watching the <code>[Acceleration](acceleration/acceleration.html)</code> referenced by the <code>watchID</code> parameter.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.accelerometer.clearWatch(watchID);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.accelerometer.clearWatch(watchID);
+</code></pre></div></div>
+
 <ul>
-<li><strong>watchID</strong>: The ID returned by <code>[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)</code>.</li>
+  <li><strong>watchID</strong>: The ID returned by <code>[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)</code>.</li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Amazon Fire OS</li>
-<li>Android</li>
-<li>BlackBerry WebWorks 5.0+</li>
-<li>iOS</li>
-<li>Tizen</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows 8</li>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks 5.0+</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2>Quick Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 
 // ... later on ...
 
 navigator.accelerometer.clearWatch(watchID);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Acceleration Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Acceleration Example&lt;/title&gt;
 
-    <span class="c1">// The watch id references the current `watchAcceleration`</span>
-    <span class="kd">var</span> <span class="nx">watchID</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Wait for device API libraries to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    // The watch id references the current `watchAcceleration`
+    var watchID = null;
 
-    <span class="c1">// device APIs are available</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">startWatch</span><span class="p">();</span>
-    <span class="p">}</span>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="c1">// Start watching the acceleration</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">startWatch</span><span class="p">()</span> <span class="p">{</span>
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        startWatch();
+    }
 
-        <span class="c1">// Update acceleration every 3 seconds</span>
-        <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span> <span class="na">frequency</span><span class="p">:</span> <span class="mi">3000</span> <span class="p">};</span>
+    // Start watching the acceleration
+    //
+    function startWatch() {
 
-        <span class="nx">watchID</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">accelerometer</span><span class="p">.</span><span class="nx">watchAcceleration</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-    <span class="p">}</span>
+        // Update acceleration every 3 seconds
+        var options = { frequency: 3000 };
 
-    <span class="c1">// Stop watching the acceleration</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">stopWatch</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">watchID</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nb">navigator</span><span class="p">.</span><span class="nx">accelerometer</span><span class="p">.</span><span class="nx">clearWatch</span><span class="p">(</span><span class="nx">watchID</span><span class="p">);</span>
-            <span class="nx">watchID</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+        watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    }
 
-    <span class="c1">// onSuccess: Get a snapshot of the current acceleration</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">acceleration</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'accelerometer'</span><span class="p">);</span>
+    // Stop watching the acceleration
+    //
+    function stopWatch() {
+        if (watchID) {
+            navigator.accelerometer.clearWatch(watchID);
+            watchID = null;
+        }
+    }
 
-        <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">'Acceleration X: '</span> <span class="o">+</span> <span class="nx">acceleration</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="err">'</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="s1">' +
-                            '</span><span class="nx">Acceleration</span> <span class="nx">Y</span><span class="p">:</span> <span class="s1">' + acceleration.y + '</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="s1">' +
-                            '</span><span class="nx">Acceleration</span> <span class="nx">Z</span><span class="p">:</span> <span class="s1">' + acceleration.z + '</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="s1">' +
-                            '</span><span class="nx">Timestamp</span><span class="p">:</span> <span class="s1">'      + acceleration.timestamp + '</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="s1">';
+    // onSuccess: Get a snapshot of the current acceleration
+    //
+    function onSuccess(acceleration) {
+        var element = document.getElementById('accelerometer');
+
+        element.innerHTML = 'Acceleration X: ' + acceleration.x + '&lt;br /&gt;' +
+                            'Acceleration Y: ' + acceleration.y + '&lt;br /&gt;' +
+                            'Acceleration Z: ' + acceleration.z + '&lt;br /&gt;' +
+                            'Timestamp: '      + acceleration.timestamp + '&lt;br /&gt;';
     }
 
     // onError: Failed to get the acceleration
     //
     function onError() {
-        alert('</span><span class="nx">onError</span><span class="o">!</span><span class="err">'</span><span class="p">);</span>
-    <span class="p">}</span>
+        alert('onError!');
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"accelerometer"</span><span class="nt">&gt;</span>Waiting for accelerometer...<span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"stopWatch();"</span><span class="nt">&gt;</span>Stop Watching<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="accelerometer"&gt;Waiting for accelerometer...&lt;/div&gt;
+        &lt;button onclick="stopWatch();"&gt;Stop Watching&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 
             </div>
         </div>

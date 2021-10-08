@@ -1663,22 +1663,30 @@ system path.</p>
 <p>On Windows:</p>
 
 <ul>
-<li><p>Go to <strong>My Computer &rarr; Properties &rarr; Advanced &rarr; Environment Variables</strong>.</p></li>
-<li><p>Append the Native SDK&#39;s install directory to the PATH, for example:</p>
+  <li>
+    <p>Go to <strong>My Computer &#8594; Properties &#8594; Advanced &#8594; Environment Variables</strong>.</p>
+  </li>
+  <li>
+    <p>Append the Native SDK&#39;s install directory to the PATH, for example:</p>
 
-<p>;C:\bbndk\host<em>10</em>2<em>0</em>132\darwin\x86\usr\bin\</p></li>
+    <p>;C:\bbndk\host_10_2_0_132\darwin\x86\usr\bin\</p>
+  </li>
 </ul>
 
 <p>On Mac and Linux:</p>
 
 <ul>
-<li><p>Edit the <code>~/.bash_profile</code> file, adding a line such as the
+  <li>
+    <p>Edit the <code>~/.bash_profile</code> file, adding a line such as the
 following, depending on where the Native SDK was installed:</p>
 
-<p>$ export PATH=${PATH}:/Applications/Momentics.app/host<em>10</em>2<em>0</em>15/darwin/x86/usr/bin/</p></li>
-<li><p>Run the following to apply the change in the current session:</p>
+    <p>$ export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/</p>
+  </li>
+  <li>
+    <p>Run the following to apply the change in the current session:</p>
 
-<p>$ source ~/.bash_profile</p></li>
+    <p>$ source ~/.bash_profile</p>
+  </li>
 </ul>
 
 <h2>Set up for Signing</h2>
@@ -1686,7 +1694,7 @@ following, depending on where the Native SDK was installed:</p>
 <p>If you wish to test on a device or distribute apps through BlackBerry
 World, your system must be setup for code signing.</p>
 
-<p>To obtain a signing key, go to the <a href="https://www.blackberry.com/SignedKeys/codesigning.html">BlackBerry Keys Order Form</a>.</p>
+<p>To obtain a signing key, go to the [BlackBerry Keys Order Form] (https://www.blackberry.com/SignedKeys/codesigning.html).</p>
 
 <p>Select the first checkbox: &quot;for BlackBerry10 apps developed using BlackBerry 
 NDK&quot; and then sign in or create a BBID.</p>
@@ -1696,25 +1704,29 @@ file to the default location for your OS which will be displayed on the
 download page.</p>
 
 <p>The final step is to generate a signing certificate:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ blackberry-keytool -genkeypair -storepass &lt;password&gt; -author 'Your Name’
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ blackberry-keytool -genkeypair -storepass &lt;password&gt; -author 'Your Name’
+</code></pre></div></div>
+
 <h2>Create a Project</h2>
 
 <p>Use the <code>cordova</code> utility to set up a new project, as described in The
 Command-Line Interface. For example, in a source-code directory:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cordova create hello com.example.hello
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova create hello com.example.hello
 $ cd hello
 $ cordova platform add blackberry10
 $ cordova build
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Deploy to Emulator</h2>
 
 <p>If you wish to run a device emulator, download and install the
 BlackBerry 10 Simulator.</p>
 
 <ul>
-<li><a href="http://developer.blackberry.com/native/download/">Download</a></li>
-<li><a href="http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html">Getting Started</a></li>
+  <li><a href="http://developer.blackberry.com/native/download/">Download</a></li>
+  <li><a href="http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html">Getting Started</a></li>
 </ul>
 
 <p>Before testing an app on either an emulator or a device, you need to
@@ -1722,29 +1734,35 @@ enable development mode.</p>
 
 <p>Launch the emulator image, then choose <strong>Settings</strong> from the home screen:</p>
 
-<p><img src="/static/img/guide/platforms/blackberry10/bb_home.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/blackberry10/bb_home.png" alt="" /></p>
 
-<p>Navigate to the <strong>Security and Privacy &rarr; Development Mode</strong>
+<p>Navigate to the <strong>Security and Privacy &#8594; Development Mode</strong>
 section and enable the option:</p>
 
-<p><img src="/static/img/guide/platforms/blackberry10/bb_devel.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/blackberry10/bb_devel.png" alt="" /></p>
 
 <p>Then, run the <code>emulate</code> command to view the app:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cordova emulate blackberry10 --devicepass &lt;password&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova emulate blackberry10 --devicepass &lt;password&gt;
+</code></pre></div></div>
+
 <h2>Deploy to Device</h2>
 
 <p>To deploy to a device, make sure it is plugged into your computer and
 development mode is enabled.</p>
 
 <p>Then, run the <code>run</code> command to view the app:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cordova run blackberry10 --devicepass &lt;password&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova run blackberry10 --devicepass &lt;password&gt;
+</code></pre></div></div>
+
 <p>If a debug token is not yet set up for the device, an error message
 prompts you to provide the password you defined when configuring your
 computer to sign applications.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cordova run blackberry10 --devicepass &lt;password&gt; --keystorepass &lt;signing password&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova run blackberry10 --devicepass &lt;password&gt; --keystorepass &lt;signing password&gt;
+</code></pre></div></div>
+
 <h2>Debugging with WebInspector</h2>
 
 <p>When debugging on the device or an emulator, you may run WebInspector
@@ -1760,8 +1778,10 @@ browser.  For more information, see
 
 <p>Use <code>--release</code> to create a release version suitable for distribution
 through BlackBerry World.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cordova build --release --keystorepass &lt;signing password&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova build --release --keystorepass &lt;signing password&gt;
+</code></pre></div></div>
+
 <p>The <code>--keystorepass</code> option specifies the password you defined when
 configuring your computer to sign applications.</p>
 
@@ -1777,18 +1797,24 @@ command, in this case invoked from the project top-level directory,
 associates a target named <em>emu</em> with an IP address.</p>
 
 <ul>
-<li><p>On Windows:</p>
+  <li>
+    <p>On Windows:</p>
 
-<p>$ platforms\blackberry10\cordova\target.bat add emu 192.168.2.24 -t simulator</p></li>
-<li><p>On Mac/Linux:</p>
+    <p>$ platforms\blackberry10\cordova\target.bat add emu 192.168.2.24 -t simulator</p>
+  </li>
+  <li>
+    <p>On Mac/Linux:</p>
 
-<p>$ platforms/blackberry10/cordova/target add emu 192.168.2.24 -t simulator</p></li>
+    <p>$ platforms/blackberry10/cordova/target add emu 192.168.2.24 -t simulator</p>
+  </li>
 </ul>
 
 <p>Once the target is defined, you can provide it to the run command using
 <code>--target</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cordova run blackberry10 --target=emu
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova run blackberry10 --target=emu
+</code></pre></div></div>
+
 
             </div>
         </div>

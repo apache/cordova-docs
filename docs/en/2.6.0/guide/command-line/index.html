@@ -1555,10 +1555,10 @@ Cordova projects.</p>
 <h2>Supported Platforms</h2>
 
 <ul>
-<li><a href="#Command-Line%20Usage_ios">iOS</a></li>
-<li><a href="#Command-Line%20Usage_android">Android</a></li>
-<li><a href="#Command-Line%20Usage_blackberry">BlackBerry</a></li>
-<li><a href="#Command-Line%20Usage_wp8">Windows Phone 8</a></li>
+  <li><a href="#Command-Line%20Usage_ios">iOS</a></li>
+  <li><a href="#Command-Line%20Usage_android">Android</a></li>
+  <li><a href="#Command-Line%20Usage_blackberry">BlackBerry</a></li>
+  <li><a href="#Command-Line%20Usage_wp8">Windows Phone 8</a></li>
 </ul>
 
 <h2>Windows Phone 8</h2>
@@ -1570,14 +1570,16 @@ Cordova projects.</p>
 <p>Run the <code>create</code> command with the following parameters:</p>
 
 <ul>
-<li>Path to your new Cordova WP8 project</li>
-<li>Package Name, following reverse-domain style convention ( this becomes the default Namespace )</li>
-<li>Project name</li>
+  <li>Path to your new Cordova WP8 project</li>
+  <li>Package Name, following reverse-domain style convention ( this becomes the default Namespace )</li>
+  <li>Project name</li>
 </ul>
 
 <!-- -->
-<div class="highlight"><pre><code class="language-" data-lang="">$ ./path/to/cordova-wp8/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./path/to/cordova-wp8/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+</code></pre></div></div>
+
 <h2>iOS</h2>
 
 <p>The iOS command-line tools are built upon shell scripts and rely on
@@ -1588,26 +1590,36 @@ Xcode command-line tools such as <code>xcode-select</code> and <code>xcodebuild<
 <p>Run the <code>create</code> command with the following parameters:</p>
 
 <ul>
-<li>Path to your new Cordova iOS project</li>
-<li>Package name, following reverse-domain style convention</li>
-<li>Project name</li>
+  <li>Path to your new Cordova iOS project</li>
+  <li>Package name, following reverse-domain style convention</li>
+  <li>Project name</li>
 </ul>
 
 <!-- -->
-<div class="highlight"><pre><code class="language-" data-lang="">$ ./path/to/cordova-ios/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./path/to/cordova-ios/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+</code></pre></div></div>
+
 <h3>Build a project</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/build
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/build
+</code></pre></div></div>
+
 <h3>Run app on emulator</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/run
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/run
+</code></pre></div></div>
+
 <h3>Releasing</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/release
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/release
+</code></pre></div></div>
+
 <h3>Logging</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/log
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/log
+</code></pre></div></div>
+
 <h2>Android</h2>
 
 <p>The Android command-line tools are built upon shell scripts. You <em>must</em>
@@ -1619,50 +1631,74 @@ PATH!</p>
 <p>Run the <code>create</code> command with the following parameters:</p>
 
 <ul>
-<li>Path to your new Cordova Android project</li>
-<li>Package name, following reverse-domain style convention</li>
-<li>Main Activity name</li>
+  <li>Path to your new Cordova Android project</li>
+  <li>Package name, following reverse-domain style convention</li>
+  <li>Main Activity name</li>
 </ul>
 
 <!-- -->
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/cordova-android/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/cordova-android/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+</code></pre></div></div>
+
 <p>or, on <strong>Windows</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/cordova-android/bin/create.bat /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/cordova-android/bin/create.bat /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+</code></pre></div></div>
+
 <h3>Build a project</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/build
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/build
+</code></pre></div></div>
+
 <p>or, on <strong>Windows</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/build.bat
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/build.bat
+</code></pre></div></div>
+
 <h3>Run app on emulator/device</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/run
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/run
+</code></pre></div></div>
+
 <p>or, on <strong>Windows</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/run.bat
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/run.bat
+</code></pre></div></div>
+
 <p>Make sure you have created at least one Android Virtual <a href="../../cordova/device/device.html">Device</a>. If you did not it will ask you to create one with the <code>android</code> command.
 If you have multiple AVDs, it will prompt you to select an AVD.</p>
 
 <h3>Logging</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/log
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/log
+</code></pre></div></div>
+
 <p>or, on <strong>Windows</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/log.bat
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/log.bat
+</code></pre></div></div>
+
 <h3>Cleaning</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/clean
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/clean
+</code></pre></div></div>
+
 <p>or, on <strong>Windows</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/clean.bat
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/clean.bat
+</code></pre></div></div>
+
 <h3>Releasing</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/release
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/release
+</code></pre></div></div>
+
 <p>or, on <strong>Windows</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/release.bat
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/release.bat
+</code></pre></div></div>
+
 <h2>BlackBerry</h2>
 
 <p>The BlackBerry command-line tools are built upon shell scripts.</p>
@@ -1672,18 +1708,22 @@ If you have multiple AVDs, it will prompt you to select an AVD.</p>
 <p>Run the <code>create</code> command with the following parameters:</p>
 
 <ul>
-<li>Path to your new Cordova BlackBerry project</li>
-<li>Placeholder package name</li>
-<li>Application name</li>
+  <li>Path to your new Cordova BlackBerry project</li>
+  <li>Placeholder package name</li>
+  <li>Application name</li>
 </ul>
 
 <!-- -->
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+</code></pre></div></div>
+
 <p>or, on <strong>Windows</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
-</code></pre></div>
-<p>Note: the package name placeholder (com.example.cordova<em>project</em>name) is ignored on the BlackBerry platform, but is required for use of the crossplatform tools</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+</code></pre></div></div>
+
+<p>Note: the package name placeholder (com.example.cordova_project_name) is ignored on the BlackBerry platform, but is required for use of the crossplatform tools</p>
 
 <h3>Build a project</h3>
 
@@ -1692,11 +1732,15 @@ If you have multiple AVDs, it will prompt you to select an AVD.</p>
 This is necessary for things like supplying your BlackBerry signing key
 password, location of the BlackBerry WebWorks SDK, and location of
 BlackBerry simulator executables.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/build &lt;platform&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/build &lt;platform&gt;
+</code></pre></div></div>
+
 <p>or, on <strong>Windows</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/build.bat &lt;platform&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/build.bat &lt;platform&gt;
+</code></pre></div></div>
+
 <h3>Launch simulator</h3>
 
 <p>For BlackBerry projects, please make sure you customize the
@@ -1704,17 +1748,25 @@ BlackBerry simulator executables.</p>
 This is necessary for things like supplying your BlackBerry signing key
 password, location of the BlackBerry WebWorks SDK, and location of
 BlackBerry simulator executables.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/run &lt;platform&gt;
-</code></pre></div>
-<p>and then choose &#39;no&#39; when prompted with: </p>
-<div class="highlight"><pre><code class="language-" data-lang="">Do you have a BlackBerry device connected to your computer? (y/n)
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/run &lt;platform&gt;
+</code></pre></div></div>
+
+<p>and then choose &#39;no&#39; when prompted with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Do you have a BlackBerry device connected to your computer? (y/n)
+</code></pre></div></div>
+
 <p>or, on <strong>Windows</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/run &lt;platform&gt;
-</code></pre></div>
-<p>and then choose &#39;no&#39; when prompted with: </p>
-<div class="highlight"><pre><code class="language-" data-lang="">Do you have a BlackBerry device connected to your computer? (y/n)
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/run &lt;platform&gt;
+</code></pre></div></div>
+
+<p>and then choose &#39;no&#39; when prompted with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Do you have a BlackBerry device connected to your computer? (y/n)
+</code></pre></div></div>
+
 <h3>Logging</h3>
 
 <p>Unfortunately streaming logs directly from the device is not

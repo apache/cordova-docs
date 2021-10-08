@@ -1464,37 +1464,54 @@ capabilities are only provided through Ubuntu debian packages at this time.</p>
 <h2>Cordova Installation</h2>
 
 <p>Add the Ubuntu Cordova
-<a href="https://launchpad.net/%7Ecordova-ubuntu/+archive/ppa">Personal Package Archive</a>
+<a href="https://launchpad.net/~cordova-ubuntu/+archive/ppa">Personal Package Archive</a>
 to your Ubuntu system:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ sudo add-apt-repository ppa:cordova-ubuntu/ppa
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo add-apt-repository ppa:cordova-ubuntu/ppa
 $ sudo apt-get update
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Install cordova-cli package (and its dependencies):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ sudo apt-get install cordova-cli
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install cordova-cli
+</code></pre></div></div>
+
 <h2>Project Workflow</h2>
 
 <h3>Create a project</h3>
 
 <p>Creates an app in a <code>hello</code> directory whose display name is
 <code>HelloWorld</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cordova create hello com.example.hello HelloWorld
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova create hello com.example.hello HelloWorld
+</code></pre></div></div>
+
 <h3>Move into the Project Directory</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cd hello
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd hello
+</code></pre></div></div>
+
 <h3>Add the Ubuntu Platform</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cordova platform add ubuntu
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova platform add ubuntu
+</code></pre></div></div>
+
 <h3>Build for Ubuntu</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cordova build ubuntu
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova build ubuntu
+</code></pre></div></div>
+
 <h3>Run the App</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cordova run ubuntu
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova run ubuntu
+</code></pre></div></div>
+
 <h3>Add the Camera Plugin</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ cordova plugin add cordova-plugin-camera
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova plugin add cordova-plugin-camera
+</code></pre></div></div>
+
+
 
             </div>
         </div>

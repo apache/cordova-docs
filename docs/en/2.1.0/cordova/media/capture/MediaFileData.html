@@ -1448,53 +1448,50 @@
                 <h1>MediaFileData</h1>
 
 <blockquote>
-<p>Encapsulates format information about a media file.</p>
+  <p>Encapsulates format information about a media file.</p>
 </blockquote>
 
 <h2>Properties</h2>
 
 <ul>
-<li><strong>codecs:</strong> The actual format of the audio and video content. (DOMString)</li>
-<li><strong>bitrate:</strong> The average bitrate of the content.  In case of an image, this attribute has value 0. (Number)</li>
-<li><strong>height:</strong> The height of the image or video in pixels. In the case of a sound clip, this attribute has value 0. (Number)</li>
-<li><strong>width:</strong> The width of the image or video in pixels. In the case of a sound clip, this attribute has value 0. (Number)</li>
-<li><strong>duration:</strong> The length of the video or sound clip in seconds. In the case of an image, this attribute has value 0. (Number)</li>
+  <li><strong>codecs:</strong> The actual format of the audio and video content. (DOMString)</li>
+  <li><strong>bitrate:</strong> The average bitrate of the content.  In case of an image, this attribute has value 0. (Number)</li>
+  <li><strong>height:</strong> The height of the image or video in pixels. In the case of a sound clip, this attribute has value 0. (Number)</li>
+  <li><strong>width:</strong> The width of the image or video in pixels. In the case of a sound clip, this attribute has value 0. (Number)</li>
+  <li><strong>duration:</strong> The length of the video or sound clip in seconds. In the case of an image, this attribute has value 0. (Number)</li>
 </ul>
 
 <h2>BlackBerry WebWorks Quirks</h2>
-
-<p>There is no API that provides format information of media files.  So the MediaFileData object returned by the <a href="%5BMediaFile%5D(MediaFile.html).getFormatData.html">MediaFile.getFormatData</a> function will have the following default values:</p>
+<p>There is no API that provides format information of media files.  So the MediaFileData object returned by the <a href="[MediaFile](MediaFile.html).getFormatData.html">MediaFile.getFormatData</a> function will have the following default values:</p>
 
 <ul>
-<li><strong>codecs:</strong> Not supported. The attribute will always be null.</li>
-<li><strong>bitrate:</strong> Not supported.  The attribute will always be 0.</li>
-<li><strong>height:</strong> Not supported.  The attribute will always be 0.</li>
-<li><strong>width:</strong> Not supported.  The attribute will always be 0.</li>
-<li><strong>duration:</strong> Not supported.  The attribute will always be 0.</li>
+  <li><strong>codecs:</strong> Not supported. The attribute will always be null.</li>
+  <li><strong>bitrate:</strong> Not supported.  The attribute will always be 0.</li>
+  <li><strong>height:</strong> Not supported.  The attribute will always be 0.</li>
+  <li><strong>width:</strong> Not supported.  The attribute will always be 0.</li>
+  <li><strong>duration:</strong> Not supported.  The attribute will always be 0.</li>
 </ul>
 
 <h2>Android Quirks</h2>
-
 <p>Support for the MediaFileData properties is as follows:</p>
 
 <ul>
-<li><strong>codecs:</strong> Not supported.  The attribute will always be null.</li>
-<li><strong>bitrate:</strong> Not supported.  The attribute will always be 0.</li>
-<li><strong>height:</strong> Supported.  (Image and video files only).<br></li>
-<li><strong>width:</strong> Supported.  (Image and video files only). </li>
-<li><strong>duration:</strong> Supported.  (Audio and video files only).</li>
+  <li><strong>codecs:</strong> Not supported.  The attribute will always be null.</li>
+  <li><strong>bitrate:</strong> Not supported.  The attribute will always be 0.</li>
+  <li><strong>height:</strong> Supported.  (Image and video files only).</li>
+  <li><strong>width:</strong> Supported.  (Image and video files only).</li>
+  <li><strong>duration:</strong> Supported.  (Audio and video files only).</li>
 </ul>
 
 <h2>iOS Quirks</h2>
-
 <p>Support for the MediaFileData properties is as follows:</p>
 
 <ul>
-<li><strong>codecs:</strong> Not supported.  The attribute will always be null.</li>
-<li><strong>bitrate:</strong> Supported on iOS4 devices for audio only. The attribute will always be 0 for image and video.</li>
-<li><strong>height:</strong> Supported.  (Image and video files only).<br></li>
-<li><strong>width:</strong> Supported.  (Image and video files only). </li>
-<li><strong>duration:</strong> Supported.  (Audio and video files only).</li>
+  <li><strong>codecs:</strong> Not supported.  The attribute will always be null.</li>
+  <li><strong>bitrate:</strong> Supported on iOS4 devices for audio only. The attribute will always be 0 for image and video.</li>
+  <li><strong>height:</strong> Supported.  (Image and video files only).</li>
+  <li><strong>width:</strong> Supported.  (Image and video files only).</li>
+  <li><strong>duration:</strong> Supported.  (Audio and video files only).</li>
 </ul>
 
 

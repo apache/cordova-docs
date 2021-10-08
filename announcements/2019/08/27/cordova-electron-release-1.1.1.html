@@ -134,23 +134,27 @@
             <p>We are happy to announce that we have just released <code>Cordova Electron 1.1.1</code>!  This is one of Cordova&#39;s supported platforms for building Electron applications.</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-electron">cordova-electron@1.1.1</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-electron">cordova-electron@1.1.1</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
 
 <p><strong>To upgrade:</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform remove electron
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove electron
 cordova platform add electron@1.1.1
-</code></pre></div>
+</code></pre></div></div>
+
 <p><strong>To install:</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add electron@1.1.1
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add electron@1.1.1
+</code></pre></div></div>
+
 <p>Some of the notable fixes in this patch releae are:</p>
 
 <ul>
-<li>Builds no longer fails when icons with incorrect requirements are defined as long as one of the icons meet the requirements.</li>
-<li>Prepare no longer fails  when <code>package.json</code> is missing the <code>dependencies</code> property.</li>
+  <li>Builds no longer fails when icons with incorrect requirements are defined as long as one of the icons meet the requirements.</li>
+  <li>Prepare no longer fails  when <code>package.json</code> is missing the <code>dependencies</code> property.</li>
 </ul>
 
 <p>For a quick start guide and in-depth configuration setup, please check out our <a href="https://github.com/apache/cordova-electron/blob/rel/1.1.1/DOCUMENTATION.md">Cordova Electron Documentation</a>!</p>
@@ -158,15 +162,14 @@ cordova platform add electron@1.1.1
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-electron/pull/94">GH-94</a> chore: rebuilt <code>package-lock.json</code> for audit fix</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/79">GH-79</a> fix: filter icons only matching requirements</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/89">GH-89</a> fix: prepare missing dependencies failure</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/86">GH-86</a> refactor: improve create test spec speed</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/85">GH-85</a> fix: use <code>spyOn</code> for process global var</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/94">GH-94</a> chore: rebuilt <code>package-lock.json</code> for audit fix</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/79">GH-79</a> fix: filter icons only matching requirements</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/89">GH-89</a> fix: prepare missing dependencies failure</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/86">GH-86</a> refactor: improve create test spec speed</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/85">GH-85</a> fix: use <code>spyOn</code> for process global var</li>
 </ul>
 
         </div>

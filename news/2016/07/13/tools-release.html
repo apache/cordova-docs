@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="New updates of cordova, cordova-lib, cordova-common and cordova-fetch are now live!cordova@6.3.0cordova-lib@6.3.0cordova-common@1.4.0cordova-fetch@1.0.1Relea...">
+    <meta name="description" content="New updates of cordova, cordova-lib, cordova-common and cordova-fetch are now live!  cordova@6.3.0  cordova-lib@6.3.0  cordova-common@1.4.0  cordova-fetch@1....">
 
     <title>
         
@@ -134,19 +134,19 @@
             <p>New updates of <code>cordova</code>, <code>cordova-lib</code>, <code>cordova-common</code> and <code>cordova-fetch</code> are now live!</p>
 
 <ul>
-<li><a href="https://www.npmjs.org/package/cordova">cordova@6.3.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@6.3.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-common@1.4.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-fetch@1.0.1</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova">cordova@6.3.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@6.3.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-common@1.4.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-fetch@1.0.1</a></li>
 </ul>
 
 <p>Release Highlights:</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-11023">CB-11023</a> Add edit-config functionality</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11412">CB-11412</a> template support for www folders</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11349">CB-11349</a> added --fetch and cordova fetch to create --template</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11491">CB-11491</a> Introduce before_deploy hook</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11023">CB-11023</a> Add edit-config functionality</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11412">CB-11412</a> template support for www folders</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11349">CB-11349</a> added --fetch and cordova fetch to create --template</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11491">CB-11491</a> Introduce before_deploy hook</li>
 </ul>
 
 <p>Starting from this version app and plugin developers will get the ability to edit XML configuration files from <code>config.xml</code> and
@@ -154,76 +154,79 @@
 <a href="https://github.com/apache/cordova-docs/pull/614/files?short_path=05fc570#diff-05fc570968adb1e99e14d627e082f7ea">pull request</a></p>
 
 <p>Also the <code>cordova-fetch</code> feature is now available for <code>create</code> command and you can use it when creating new app from template.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova create Foo --template TEMPLATE_NAME --fetch
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova create Foo --template TEMPLATE_NAME --fetch
+</code></pre></div></div>
+
 <p>To update your cordova CLI:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova@latest
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova@latest
+</code></pre></div></div>
+
 <p>Make sure to report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <h2>cordova-lib</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-11491">CB-11491</a> Introduce before_deploy hook</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11412">CB-11412</a> template support for www folders</li>
-<li>Fix config.xml path in PlatformApi.prepare</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11412">CB-11412</a> improve template implementation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11164">CB-11164</a> Allow forced dependent plugin removal</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11339">CB-11339</a> Add a warning about prerelease platform usage</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11349">CB-11349</a> added --fetch and cordova fetch to create --template</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11337">CB-11337</a> Use latest released platform version in e2e tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11274">CB-11274</a> Platform browser: wrong path for config.xml</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11274">CB-11274</a> Make serve dashboard take config.xml -&gt; content.src entry point into account</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11261">CB-11261</a> Cut out &#39;-nightly&#39; prerelease tag when checking plugin engines</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> added fetch tests to travis</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> fixed failing travis and appveyor tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11491">CB-11491</a> Introduce before_deploy hook</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11412">CB-11412</a> template support for www folders</li>
+  <li>Fix config.xml path in PlatformApi.prepare</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11412">CB-11412</a> improve template implementation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11164">CB-11164</a> Allow forced dependent plugin removal</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11339">CB-11339</a> Add a warning about prerelease platform usage</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11349">CB-11349</a> added --fetch and cordova fetch to create --template</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11337">CB-11337</a> Use latest released platform version in e2e tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11274">CB-11274</a> Platform browser: wrong path for config.xml</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11274">CB-11274</a> Make serve dashboard take config.xml -&gt; content.src entry point into account</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11261">CB-11261</a> Cut out &#39;-nightly&#39; prerelease tag when checking plugin engines</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> added fetch tests to travis</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9858">CB-9858</a> fixed failing travis and appveyor tests</li>
 </ul>
 
 <h2>cordova-cli</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-11412">CB-11412</a> removed link-to, aliased copy-from to template</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11349">CB-11349</a> passing --fetch to create</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11284">CB-11284</a> Telemetry: Track platforms/plugins subcommands(add/rm/etc...)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11262">CB-11262</a> Add a warning about prerelease lib/cli usage</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11263">CB-11263</a> &#39;cordova telemetry help&#39; should display help text</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11412">CB-11412</a> removed link-to, aliased copy-from to template</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11349">CB-11349</a> passing --fetch to create</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11284">CB-11284</a> Telemetry: Track platforms/plugins subcommands(add/rm/etc&#8230;)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11262">CB-11262</a> Add a warning about prerelease lib/cli usage</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11263">CB-11263</a> &#39;cordova telemetry help&#39; should display help text</li>
 </ul>
 
 <h2>cordova-common</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-11023">CB-11023</a> Add edit-config functionality</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11023">CB-11023</a> Add edit-config functionality</li>
 </ul>
 
 <h2>cordova-fetch</h2>
 
 <ul>
-<li>Fixed broken fetch tests</li>
-<li>enhanced cordova-fetch to better handle multiple fetches via git urls</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11252">CB-11252</a> Fix cordova-fetch tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11252">CB-11252</a> minor fix to trimID function in cordova-fetch</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11252">CB-11252</a> Fix cordova fetch for scoped packages</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11252">CB-11252</a> added scoped package test to cordova-fetch</li>
+  <li>Fixed broken fetch tests</li>
+  <li>enhanced cordova-fetch to better handle multiple fetches via git urls</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11252">CB-11252</a> Fix cordova-fetch tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11252">CB-11252</a> minor fix to trimID function in cordova-fetch</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11252">CB-11252</a> Fix cordova fetch for scoped packages</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11252">CB-11252</a> added scoped package test to cordova-fetch</li>
 </ul>
 
 <h2>Pinned Platform Versions for <strong>Cordova CLI 6.3.0</strong></h2>
 
 <ul>
-<li>Cordova Amazon-FireOS: ~3.6.3</li>
-<li>Cordova Android: ~5.2.0</li>
-<li>Cordova BlackBerry10: ~3.8.0</li>
-<li>Cordova Browser: ~4.1.0</li>
-<li>Cordova FirefoxOS: ~3.6.3</li>
-<li>Cordova iOS: ~4.2.0</li>
-<li>Cordova OSX: ~4.0.1</li>
-<li>Cordova Ubuntu: ~4.3.4</li>
-<li>Cordova Windows: ~4.4.0</li>
-<li>Cordova WebOS: ~3.7.0</li>
-<li>Cordova WP8: ~3.8.2</li>
+  <li>Cordova Amazon-FireOS: ~3.6.3</li>
+  <li>Cordova Android: ~5.2.0</li>
+  <li>Cordova BlackBerry10: ~3.8.0</li>
+  <li>Cordova Browser: ~4.1.0</li>
+  <li>Cordova FirefoxOS: ~3.6.3</li>
+  <li>Cordova iOS: ~4.2.0</li>
+  <li>Cordova OSX: ~4.0.1</li>
+  <li>Cordova Ubuntu: ~4.3.4</li>
+  <li>Cordova Windows: ~4.4.0</li>
+  <li>Cordova WebOS: ~3.7.0</li>
+  <li>Cordova WP8: ~3.8.2</li>
 </ul>
 
         </div>

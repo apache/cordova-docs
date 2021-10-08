@@ -138,71 +138,70 @@
 <p>The most notable changes in this major release are:</p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-common/pull/94">GH-94</a> fix: <code>PluginInfoProvider</code> for scoped plugins</li>
-<li><a href="https://github.com/apache/cordova-common/pull/90">GH-90</a> chore: drop node 6 and 8 support</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/94">GH-94</a> fix: <code>PluginInfoProvider</code> for scoped plugins</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/90">GH-90</a> chore: drop node 6 and 8 support</li>
 </ul>
 
 <p>As Node.js 6.x and 8.x support has been dropped, we have raised the minimum required Node.js version for this release to 10.x.</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-common/pull/140">GH-140</a> breaking: bump all dependencies to latest
-
-<ul>
-<li>bump <code>fs-extra@^9.0.0</code></li>
-<li>bump <code>@cordova/eslint-config@^3.0.0</code></li>
-<li>bump <code>jasmine-spec-reporter@^5.0.1</code></li>
-<li>bump Github Actions <code>actions/checkout@v2</code></li>
-</ul></li>
-<li><a href="https://github.com/apache/cordova-common/pull/139">GH-139</a> chore: various cleanup tasks</li>
-<li><a href="https://github.com/apache/cordova-common/pull/138">GH-138</a> chore(dependency): update dev &amp; non-dev dependencies</li>
-<li><a href="https://github.com/apache/cordova-common/pull/137">GH-137</a> refactor: transform <code>var</code> to <code>let</code>/<code>const</code></li>
-<li><a href="https://github.com/apache/cordova-common/pull/136">GH-136</a> ci: final migration to actions</li>
-<li><a href="https://github.com/apache/cordova-common/pull/85">GH-85</a> style: improve line spacing &amp; group like items</li>
-<li><a href="https://github.com/apache/cordova-common/pull/124">GH-124</a> fix(<code>ConfigFile</code>): correctly resolve *-Info.plist file path</li>
-<li><a href="https://github.com/apache/cordova-common/pull/135">GH-135</a> fix(<code>ConfigFile</code>): Normalize globbed file paths</li>
-<li><a href="https://github.com/apache/cordova-common/pull/134">GH-134</a> test(<code>ConfigFile</code>): minor improvements</li>
-<li><a href="https://github.com/apache/cordova-common/pull/121">GH-121</a> feat(<code>CordovaError</code>): support for error cause &amp; more</li>
-<li><a href="https://github.com/apache/cordova-common/pull/133">GH-133</a> refactor(<code>ConfigParser</code>): cleanup &amp; simplify</li>
-<li><a href="https://github.com/apache/cordova-common/pull/132">GH-132</a> refactor(<code>PluginInfo</code>): cleanup &amp; simplify</li>
-<li><a href="https://github.com/apache/cordova-common/pull/131">GH-131</a> refactor(misc): cleanup &amp; simplify</li>
-<li><a href="https://github.com/apache/cordova-common/pull/130">GH-130</a> refactor(<code>ConfigChanges</code>): simplify</li>
-<li><a href="https://github.com/apache/cordova-common/pull/128">GH-128</a> refactor(<code>xml-helpers</code>): DRY &amp; simplify</li>
-<li><a href="https://github.com/apache/cordova-common/pull/129">GH-129</a> fix: broken lock file from <a href="https://github.com/apache/cordova-common/pull/95">#95</a></li>
-<li><a href="https://github.com/apache/cordova-common/pull/127">GH-127</a> refactor(<code>munge-util</code>): DRY &amp; simplify</li>
-<li><a href="https://github.com/apache/cordova-common/pull/95">GH-95</a> TEST: Test using GitHub workflows for CI</li>
-<li><a href="https://github.com/apache/cordova-common/pull/125">GH-125</a> test(<code>ConfigFile</code>): group &amp; cleanup tests</li>
-<li><a href="https://github.com/apache/cordova-common/pull/126">GH-126</a> chore!: remove main export <code>mungeUtil</code></li>
-<li><a href="https://github.com/apache/cordova-common/pull/123">GH-123</a> refactor: <code>FileUpdater</code></li>
-<li><a href="https://github.com/apache/cordova-common/pull/119">GH-119</a> refactor: use ES6 classes where applicable</li>
-<li><a href="https://github.com/apache/cordova-common/pull/118">GH-118</a> refactor: use template strings where applicable</li>
-<li><a href="https://github.com/apache/cordova-common/pull/116">GH-116</a> refactor: use property shorthand notation</li>
-<li><a href="https://github.com/apache/cordova-common/pull/115">GH-115</a> refactor: transform <code>var</code> to <code>let</code>/<code>const</code></li>
-<li><a href="https://github.com/apache/cordova-common/pull/114">GH-114</a> refactor: do not alias <code>this</code></li>
-<li><a href="https://github.com/apache/cordova-common/pull/113">GH-113</a> refactor: use arrow functions where applicable</li>
-<li><a href="https://github.com/apache/cordova-common/pull/120">GH-120</a> refactor: move <code>CordovaError</code> module up</li>
-<li><a href="https://github.com/apache/cordova-common/pull/117">GH-117</a> refactor(<code>CordovaError</code>)!: remove unused features</li>
-<li><a href="https://github.com/apache/cordova-common/pull/111">GH-111</a> chore: remove support for ubuntu platform</li>
-<li><a href="https://github.com/apache/cordova-common/pull/109">GH-109</a> chore: consolidate eslint configs</li>
-<li><a href="https://github.com/apache/cordova-common/pull/108">GH-108</a> style: drop jasmine env workaround</li>
-<li><a href="https://github.com/apache/cordova-common/pull/105">GH-105</a> refactor: eslint setup</li>
-<li><a href="https://github.com/apache/cordova-common/pull/107">GH-107</a> test: always run code coverage during <code>npm test</code></li>
-<li><a href="https://github.com/apache/cordova-common/pull/106">GH-106</a> ci(travis): run codecov using npx in <code>after_success</code></li>
-<li><a href="https://github.com/apache/cordova-common/pull/103">GH-103</a> chore: bump production dependencies</li>
-<li><a href="https://github.com/apache/cordova-common/pull/101">GH-101</a> chore: update jasmine dependencies &amp; config</li>
-<li><a href="https://github.com/apache/cordova-common/pull/100">GH-100</a> chore: replace <code>instanbul</code> w/ <code>nyc</code></li>
-<li><a href="https://github.com/apache/cordova-common/pull/102">GH-102</a> chore: drop unused &amp; unneeded dependencies</li>
-<li><a href="https://github.com/apache/cordova-common/pull/104">GH-104</a> chore: improve npm ignore list</li>
-<li><a href="https://github.com/apache/cordova-common/pull/96">GH-96</a> feat: Replace <code>addProperty</code> with ES6 getters</li>
-<li><a href="https://github.com/apache/cordova-common/pull/71">GH-71</a> chore: update <code>strip-bom@4</code></li>
-<li><a href="https://github.com/apache/cordova-common/pull/90">GH-90</a> chore: drop node 6 and 8 support</li>
-<li><a href="https://github.com/apache/cordova-common/pull/97">GH-97</a> Use <code>Array.prototype.find</code> in <code>CordovaError</code></li>
-<li><a href="https://github.com/apache/cordova-common/pull/93">GH-93</a> Re-apply fix for failing <code>CordovaError</code> test</li>
-<li><a href="https://github.com/apache/cordova-common/pull/92">GH-92</a> Remove obsolete JSHint comments</li>
-<li><a href="https://github.com/apache/cordova-common/pull/87">GH-87</a> Convert <code>CordovaError</code> to ES6 class</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/140">GH-140</a> breaking: bump all dependencies to latest
+    <ul>
+      <li>bump <code>fs-extra@^9.0.0</code></li>
+      <li>bump <code>@cordova/eslint-config@^3.0.0</code></li>
+      <li>bump <code>jasmine-spec-reporter@^5.0.1</code></li>
+      <li>bump Github Actions <code>actions/checkout@v2</code></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/apache/cordova-common/pull/139">GH-139</a> chore: various cleanup tasks</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/138">GH-138</a> chore(dependency): update dev &amp; non-dev dependencies</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/137">GH-137</a> refactor: transform <code>var</code> to <code>let</code>/<code>const</code></li>
+  <li><a href="https://github.com/apache/cordova-common/pull/136">GH-136</a> ci: final migration to actions</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/85">GH-85</a> style: improve line spacing &amp; group like items</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/124">GH-124</a> fix(<code>ConfigFile</code>): correctly resolve *-Info.plist file path</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/135">GH-135</a> fix(<code>ConfigFile</code>): Normalize globbed file paths</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/134">GH-134</a> test(<code>ConfigFile</code>): minor improvements</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/121">GH-121</a> feat(<code>CordovaError</code>): support for error cause &amp; more</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/133">GH-133</a> refactor(<code>ConfigParser</code>): cleanup &amp; simplify</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/132">GH-132</a> refactor(<code>PluginInfo</code>): cleanup &amp; simplify</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/131">GH-131</a> refactor(misc): cleanup &amp; simplify</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/130">GH-130</a> refactor(<code>ConfigChanges</code>): simplify</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/128">GH-128</a> refactor(<code>xml-helpers</code>): DRY &amp; simplify</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/129">GH-129</a> fix: broken lock file from <a href="https://github.com/apache/cordova-common/pull/95">#95</a></li>
+  <li><a href="https://github.com/apache/cordova-common/pull/127">GH-127</a> refactor(<code>munge-util</code>): DRY &amp; simplify</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/95">GH-95</a> TEST: Test using GitHub workflows for CI</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/125">GH-125</a> test(<code>ConfigFile</code>): group &amp; cleanup tests</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/126">GH-126</a> chore!: remove main export <code>mungeUtil</code></li>
+  <li><a href="https://github.com/apache/cordova-common/pull/123">GH-123</a> refactor: <code>FileUpdater</code></li>
+  <li><a href="https://github.com/apache/cordova-common/pull/119">GH-119</a> refactor: use ES6 classes where applicable</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/118">GH-118</a> refactor: use template strings where applicable</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/116">GH-116</a> refactor: use property shorthand notation</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/115">GH-115</a> refactor: transform <code>var</code> to <code>let</code>/<code>const</code></li>
+  <li><a href="https://github.com/apache/cordova-common/pull/114">GH-114</a> refactor: do not alias <code>this</code></li>
+  <li><a href="https://github.com/apache/cordova-common/pull/113">GH-113</a> refactor: use arrow functions where applicable</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/120">GH-120</a> refactor: move <code>CordovaError</code> module up</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/117">GH-117</a> refactor(<code>CordovaError</code>)!: remove unused features</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/111">GH-111</a> chore: remove support for ubuntu platform</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/109">GH-109</a> chore: consolidate eslint configs</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/108">GH-108</a> style: drop jasmine env workaround</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/105">GH-105</a> refactor: eslint setup</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/107">GH-107</a> test: always run code coverage during <code>npm test</code></li>
+  <li><a href="https://github.com/apache/cordova-common/pull/106">GH-106</a> ci(travis): run codecov using npx in <code>after_success</code></li>
+  <li><a href="https://github.com/apache/cordova-common/pull/103">GH-103</a> chore: bump production dependencies</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/101">GH-101</a> chore: update jasmine dependencies &amp; config</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/100">GH-100</a> chore: replace <code>instanbul</code> w/ <code>nyc</code></li>
+  <li><a href="https://github.com/apache/cordova-common/pull/102">GH-102</a> chore: drop unused &amp; unneeded dependencies</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/104">GH-104</a> chore: improve npm ignore list</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/96">GH-96</a> feat: Replace <code>addProperty</code> with ES6 getters</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/71">GH-71</a> chore: update <code>strip-bom@4</code></li>
+  <li><a href="https://github.com/apache/cordova-common/pull/90">GH-90</a> chore: drop node 6 and 8 support</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/97">GH-97</a> Use <code>Array.prototype.find</code> in <code>CordovaError</code></li>
+  <li><a href="https://github.com/apache/cordova-common/pull/93">GH-93</a> Re-apply fix for failing <code>CordovaError</code> test</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/92">GH-92</a> Remove obsolete JSHint comments</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/87">GH-87</a> Convert <code>CordovaError</code> to ES6 class</li>
 </ul>
 
         </div>

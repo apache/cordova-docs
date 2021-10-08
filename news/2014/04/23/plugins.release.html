@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The following plugins were updated today:org.cordova.battery-status@0.2.8org.cordova.camera@0.2.9org.cordova.console@0.2.8org.cordova.contacts@0.2.10org.cord...">
+    <meta name="description" content="The following plugins were updated today:  org.cordova.battery-status@0.2.8  org.cordova.camera@0.2.9  org.cordova.console@0.2.8  org.cordova.contacts@0.2.10...">
 
     <title>
         
@@ -134,183 +134,168 @@
             <p>The following plugins were updated today:</p>
 
 <ul>
-<li>org.cordova.battery-status@0.2.8</li>
-<li>org.cordova.camera@0.2.9</li>
-<li>org.cordova.console@0.2.8</li>
-<li>org.cordova.contacts@0.2.10</li>
-<li>org.cordova.device@0.2.9</li>
-<li>org.cordova.device-motion@0.2.7</li>
-<li>org.cordova.device-orientation@0.3.6</li>
-<li>org.cordova.dialogs@0.2.7</li>
-<li>org.cordova.file@1.1.0</li>
-<li>org.cordova.file-transfer@0.4.3</li>
-<li>org.cordova.geolocation@0.3.7</li>
-<li>org.cordova.globalization@0.2.7</li>
-<li>org.cordova.inappbrowser@0.4.0</li>
-<li>org.cordova.media@0.2.10</li>
-<li>org.cordova.media-capture@0.3.0</li>
-<li>org.cordova.network-information@0.2.8</li>
-<li>org.cordova.splashscreen@0.3.0</li>
-<li>org.cordova.statusbar@0.1.5</li>
-<li>org.cordova.vibration@0.3.8</li>
+  <li>org.cordova.battery-status@0.2.8</li>
+  <li>org.cordova.camera@0.2.9</li>
+  <li>org.cordova.console@0.2.8</li>
+  <li>org.cordova.contacts@0.2.10</li>
+  <li>org.cordova.device@0.2.9</li>
+  <li>org.cordova.device-motion@0.2.7</li>
+  <li>org.cordova.device-orientation@0.3.6</li>
+  <li>org.cordova.dialogs@0.2.7</li>
+  <li>org.cordova.file@1.1.0</li>
+  <li>org.cordova.file-transfer@0.4.3</li>
+  <li>org.cordova.geolocation@0.3.7</li>
+  <li>org.cordova.globalization@0.2.7</li>
+  <li>org.cordova.inappbrowser@0.4.0</li>
+  <li>org.cordova.media@0.2.10</li>
+  <li>org.cordova.media-capture@0.3.0</li>
+  <li>org.cordova.network-information@0.2.8</li>
+  <li>org.cordova.splashscreen@0.3.0</li>
+  <li>org.cordova.statusbar@0.1.5</li>
+  <li>org.cordova.vibration@0.3.8</li>
 </ul>
 
 <p>Many of these are minor, or only relevant to a couple of platforms. However, some notable changes include:</p>
-
 <ul>
-<li><code>statusbar</code> is now a core Cordova plugin, and now includes support for Windows Phone</li>
-<li><code>splashscreen</code> now includes support for Tizen</li>
-<li><code>file</code> now produces webview-compatible URLs (file:///) URLs by default when calling <code>.toURL</code></li>
-<li><code>file</code> includes much of the functionality of the <code>file-system-roots</code> plugin, and allows access to all files on the device (except those blocked by the OS)</li>
-<li>iOS In-App-Browser now supports <code>clearcache</code> and <code>clearsessioncache</code> like Android</li>
-<li>Fixed several issues in <code>media-capture</code> which prevented it from being used with the <code>file</code> plugin</li>
-<li>iOS warnings have been fixed when compiling for 64-bit ARM</li>
-<li>Windows8 uses the built-in cordova exec proxy for all plugins, rather than a custom proxy.</li>
+  <li><code>statusbar</code> is now a core Cordova plugin, and now includes support for Windows Phone</li>
+  <li><code>splashscreen</code> now includes support for Tizen</li>
+  <li><code>file</code> now produces webview-compatible URLs (file:///) URLs by default when calling <code>.toURL</code></li>
+  <li><code>file</code> includes much of the functionality of the <code>file-system-roots</code> plugin, and allows access to all files on the device (except those blocked by the OS)</li>
+  <li>iOS In-App-Browser now supports <code>clearcache</code> and <code>clearsessioncache</code> like Android</li>
+  <li>Fixed several issues in <code>media-capture</code> which prevented it from being used with the <code>file</code> plugin</li>
+  <li>iOS warnings have been fixed when compiling for 64-bit ARM</li>
+  <li>Windows8 uses the built-in cordova exec proxy for all plugins, rather than a custom proxy.</li>
 </ul>
 
 <p>The plugins have been updated on our registry at <a href="http://plugins.cordova.io/">plugins.cordova.io</a>.</p>
 
 <p>E.g. To update your file plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm org.apache.cordova.file
-cordova plugin add org.apache.cordova.file
-</code></pre></div>
-<p>Other changes include:</p>
 
-<!--more-->
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm org.apache.cordova.file
+cordova plugin add org.apache.cordova.file
+</code></pre></div></div>
+
+<p>Other changes include:
+<!--more--></p>
 
 <p><code>org.apache.cordova.camera@0.2.9</code></p>
-
 <ul>
-<li>[WP8] When only targetWidth or targetHeight is provided, use it as the only bound</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4027">CB-4027</a>, <a href="https://issues.apache.org/jira/browse/CB-5102">CB-5102</a>, <a href="https://issues.apache.org/jira/browse/CB-2737">CB-2737</a>, <a href="https://issues.apache.org/jira/browse/CB-2387">CB-2387</a>: [WP] Fix camera issues, cropping, memory leaks</li>
+  <li>[WP8] When only targetWidth or targetHeight is provided, use it as the only bound</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4027">CB-4027</a>, <a href="https://issues.apache.org/jira/browse/CB-5102">CB-5102</a>, <a href="https://issues.apache.org/jira/browse/CB-2737">CB-2737</a>, <a href="https://issues.apache.org/jira/browse/CB-2387">CB-2387</a>: [WP] Fix camera issues, cropping, memory leaks</li>
 </ul>
 
 <p><code>org.apache.cordova.contacts@0.2.10</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6126">CB-6126</a>: [BlackBerry10] Update docs quirks section for fields which are supported</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6126">CB-6126</a>: [BlackBerry10] Update docs quirks section for fields which are supported</li>
 </ul>
 
 <p><code>org.apache.cordova.device@0.2.9</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-5105">CB-5105</a>: [Android, windows8, WP, BlackBerry10] Removed dead code for device.version</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5105">CB-5105</a>: [Android, windows8, WP, BlackBerry10] Removed dead code for device.version</li>
 </ul>
 
 <p><code>org.apache.cordova.device-orientation@0.3.6</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6381">CB-6381</a>: [WP8] unexpected error object</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6381">CB-6381</a>: [WP8] unexpected error object</li>
 </ul>
 
 <p><code>org.apache.cordova.dialogs@0.2.7</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6411">CB-6411</a>: [BlackBerry10] Work around Audio playback issue</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6411">CB-6411</a>: [BlackBerry10] Updates to beep</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6411">CB-6411</a>: [BlackBerry10] Work around Audio playback issue</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6411">CB-6411</a>: [BlackBerry10] Updates to beep</li>
 </ul>
 
 <p><code>org.apache.cordova.file@1.1.0</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-4965">CB-4965</a>: Remove tests from file plugin</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6249">CB-6249</a>: [Android] Opportunistically resolve content urls to file</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6394">CB-6394</a>: [ios, android] Add extra filesystem roots</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6394">CB-6394</a>: [ios, android] Fix file resolution for the device root case</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6394">CB-6394</a>: [iOS] Return ENCODING_ERR when fs name is not valid</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6393">CB-6393</a>: Change behaviour of toURL and toNativeURL</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6352">CB-6352</a>: Allow FileSystem objects to be serialized to JSON</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6242">CB-6242</a>: [BlackBerry10] Add deprecated version of resolveLocalFileSystemURI</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6242">CB-6242</a>: [BlackBerry10] add file:/// prefix for toURI / toURL</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6242">CB-6242</a>: [BlackBerry10] Polyfill window.requestAnimationFrame for OS &lt; 10.2</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6242">CB-6242</a>: [BlackBerry10] Override window.resolveLocalFileSystemURL</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6212">CB-6212</a>: [iOS] fix warnings compiled under arm64 64-bit</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6199">CB-6199</a>: [iOS] Fix toNativeURL() not escaping characters properly</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6148">CB-6148</a>: Fix cross-filesystem copy and move</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4952">CB-4952</a>: ios: Resolve symlinks in file:// URLs</li>
-<li>Android: Allow file:/ URLs</li>
-<li>iOS: Fix handling of file URLs with encoded spaces</li>
-<li>iOS: Don&#39;t cache responses from CDVFile&#39;s URLProtocol</li>
-<li>Always use Android&#39;s recommended temp file location for temporary file system</li>
-<li>fixed setMetadata() to use the formatted fullPath</li>
-<li>corrected typo which leads to a &quot;comma expression&quot;</li>
-<li>Add docs about the extraFileSystems preference</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4965">CB-4965</a>: Remove tests from file plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6249">CB-6249</a>: [Android] Opportunistically resolve content urls to file</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6394">CB-6394</a>: [ios, android] Add extra filesystem roots</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6394">CB-6394</a>: [ios, android] Fix file resolution for the device root case</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6394">CB-6394</a>: [iOS] Return ENCODING_ERR when fs name is not valid</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6393">CB-6393</a>: Change behaviour of toURL and toNativeURL</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6352">CB-6352</a>: Allow FileSystem objects to be serialized to JSON</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6242">CB-6242</a>: [BlackBerry10] Add deprecated version of resolveLocalFileSystemURI</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6242">CB-6242</a>: [BlackBerry10] add file:/// prefix for toURI / toURL</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6242">CB-6242</a>: [BlackBerry10] Polyfill window.requestAnimationFrame for OS &lt; 10.2</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6242">CB-6242</a>: [BlackBerry10] Override window.resolveLocalFileSystemURL</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6212">CB-6212</a>: [iOS] fix warnings compiled under arm64 64-bit</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6199">CB-6199</a>: [iOS] Fix toNativeURL() not escaping characters properly</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6148">CB-6148</a>: Fix cross-filesystem copy and move</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4952">CB-4952</a>: ios: Resolve symlinks in file:// URLs</li>
+  <li>Android: Allow file:/ URLs</li>
+  <li>iOS: Fix handling of file URLs with encoded spaces</li>
+  <li>iOS: Don&#39;t cache responses from CDVFile&#39;s URLProtocol</li>
+  <li>Always use Android&#39;s recommended temp file location for temporary file system</li>
+  <li>fixed setMetadata() to use the formatted fullPath</li>
+  <li>corrected typo which leads to a &quot;comma expression&quot;</li>
+  <li>Add docs about the extraFileSystems preference</li>
 </ul>
 
 <p><code>org.apache.cordova.file-transfer@0.4.3</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-5175">CB-5175</a>: [iOS] CDVFileTransfer asynchronous download (Fixes #24)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5762">CB-5762</a>: [FireOS] android: Fix lengthComputable set wrong for gzip downloads</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5631">CB-5631</a>: [FireOS] Removed SimpleTrackingInputStream.read(byte[] buffer)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4907">CB-4907</a>: [FireOS] Close stream when we&#39;re finished with it</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6000">CB-6000</a>: [FireOS] Nginx rejects Content-Type without a space before &quot;boundary&quot;.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6050">CB-6050</a>: [FireOS] Use instance method on actual file plugin object to get FileEntry to return on download</li>
-<li>iOS: Fix error where files were not removed on abort</li>
-<li>iOS: Cast id references to NSURL to avoid compiler warnings (Fixes: apache/cordova-plugin-file-transfer#18)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5175">CB-5175</a>: [iOS] CDVFileTransfer asynchronous download (Fixes #24)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5762">CB-5762</a>: [FireOS] android: Fix lengthComputable set wrong for gzip downloads</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5631">CB-5631</a>: [FireOS] Removed SimpleTrackingInputStream.read(byte[] buffer)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4907">CB-4907</a>: [FireOS] Close stream when we&#39;re finished with it</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6000">CB-6000</a>: [FireOS] Nginx rejects Content-Type without a space before &quot;boundary&quot;.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6050">CB-6050</a>: [FireOS] Use instance method on actual file plugin object to get FileEntry to return on download</li>
+  <li>iOS: Fix error where files were not removed on abort</li>
+  <li>iOS: Cast id references to NSURL to avoid compiler warnings (Fixes: apache/cordova-plugin-file-transfer#18)</li>
 </ul>
 
 <p><code>org.apache.cordova.geolocation@0.3.7</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-5977">CB-5977</a>: [Android] Removing the Android Geolocation Code.  Mission Accomplished.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5977">CB-5977</a>: [Android] Removing the Android Geolocation Code.  Mission Accomplished.</li>
 </ul>
 
 <p><code>org.apache.cordova.globalization@0.2.7</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-4908">CB-4908</a>: [Android] Long.valueOf(0) instead of new Long(0)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4908">CB-4908</a>: [Android] Long.valueOf(0) instead of new Long(0)</li>
 </ul>
 
 <p><code>org.apache.cordova.inappbrowser@0.4.0</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6360">CB-6360</a>: [iOS] Fix for crash on iOS &lt; 6.0 (closes #37)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3324">CB-3324</a>: [WP8] Add support for back-button inappbrowser [WP8] if there is no history -&gt; InAppBrowser is closed</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6402">CB-6402</a>: [WP8] pass empty string instead of null for optional windowFeatures string</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6389">CB-6389</a> <a href="https://issues.apache.org/jira/browse/CB-3617">CB-3617</a>: Add clearcache and clearsessioncache options to iOS (like Android)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6253">CB-6253</a>: [WP] Add Network Capability to WMAppManifest.xml</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6212">CB-6212</a>: [iOS] fix warnings compiled under arm64 64-bit</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6218">CB-6218</a>: Update docs for BB10</li>
-<li>[WP] await async calls, resolve warnings</li>
-<li>[WP] Make InAppBrowser work with embedded files, using system behavior</li>
-<li>Doc update: event name and example param (closes #31)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6360">CB-6360</a>: [iOS] Fix for crash on iOS &lt; 6.0 (closes #37)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3324">CB-3324</a>: [WP8] Add support for back-button inappbrowser [WP8] if there is no history -&gt; InAppBrowser is closed</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6402">CB-6402</a>: [WP8] pass empty string instead of null for optional windowFeatures string</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6389">CB-6389</a> <a href="https://issues.apache.org/jira/browse/CB-3617">CB-3617</a>: Add clearcache and clearsessioncache options to iOS (like Android)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6253">CB-6253</a>: [WP] Add Network Capability to WMAppManifest.xml</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6212">CB-6212</a>: [iOS] fix warnings compiled under arm64 64-bit</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6218">CB-6218</a>: Update docs for BB10</li>
+  <li>[WP] await async calls, resolve warnings</li>
+  <li>[WP] Make InAppBrowser work with embedded files, using system behavior</li>
+  <li>Doc update: event name and example param (closes #31)</li>
 </ul>
 
 <p><code>org.apache.cordova.media@0.2.10</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6225">CB-6225</a>: Specify plugin dependency on File plugin 1.0.1</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6225">CB-6225</a>: Specify plugin dependency on File plugin 1.0.1</li>
 </ul>
 
 <p><code>org.apache.cordova.media-capture@0.3.0</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6152">CB-6152</a>: [ios, android] Make mediafile compatible with file plugin</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6385">CB-6385</a>: Specify file plugin dependency version</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6016">CB-6016</a> [BlackBerry10] Add audio capture capability</li>
-<li>[BlackBerry10] Add rim xml namespaces declaration</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6152">CB-6152</a>: [ios, android] Make mediafile compatible with file plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6385">CB-6385</a>: Specify file plugin dependency version</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6016">CB-6016</a> [BlackBerry10] Add audio capture capability</li>
+  <li>[BlackBerry10] Add rim xml namespaces declaration</li>
 </ul>
 
 <p><code>org.apache.cordova.network-information@0.3.0</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6342">CB-6342</a>: [iOS] iOS reports a cellular connection even when in Airplane mode</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6342">CB-6342</a>: [iOS] iOS reports a cellular connection even when in Airplane mode</li>
 </ul>
 
 <p><code>org.apache.cordova.splashscreen@0.3.0</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-4051">CB-4051</a>: [iOS] - Re-fix - Splashscreen rotation problem (closes #13)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4051">CB-4051</a>: [iOS] - Re-fix - Splashscreen rotation problem (closes #13)</li>
 </ul>
 
 <p><code>org.apache.cordova.statusbar@0.1.5</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6316">CB-6316</a>: Added README.md which point to the new location for docs</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6316">CB-6316</a>: Added license header to the documentation. Added README.md which point to the new location for docs</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6316">CB-6316</a>: Moved StatusBar plugin documentation to docs folder</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6314">CB-6314</a>: [Android] Add StatusBar.isVisible support to Android</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6316">CB-6316</a>: Added README.md which point to the new location for docs</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6316">CB-6316</a>: Added license header to the documentation. Added README.md which point to the new location for docs</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6316">CB-6316</a>: Moved StatusBar plugin documentation to docs folder</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6314">CB-6314</a>: [Android] Add StatusBar.isVisible support to Android</li>
 </ul>
 
         </div>

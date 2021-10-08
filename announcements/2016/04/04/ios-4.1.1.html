@@ -138,36 +138,39 @@
 <p>A new version of the <code>cordova-cli</code> will need to be released to pin this version of <strong>cordova-ios</strong> as the default version when creating a new project. If you want to start using this version now, make sure to specify the version when doing a <code>cordova platform add/update</code>.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform rm ios
 cordova platform add ios@4.1.1
-</code></pre></div>
-<p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add ios@4.1.1
-</code></pre></div>
-<!--more-->
+</code></pre></div></div>
 
+<p>To add it explicitly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@4.1.1
+</code></pre></div></div>
+
+<!--more-->
 <h2>What&#39;s new in iOS platform</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-11006">CB-11006</a> Added license to loggingHelper.js</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11006">CB-11006</a> Updated checked-in node_modules</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10320">CB-10320</a> Fixes corrupted logo.png</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10918">CB-10918</a> Travis tests are failing sometimes for cordova-ios</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10912">CB-10912</a> Bundling ios-sim 5.0.7 to fix &#39;Invalid Device State&#39; errors</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10912">CB-10912</a> update ios-sim to 5.0.7 to fix &#39;Invalid Device State&#39; errors</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10888">CB-10888</a> Enable coverage reports collection via codecov</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10840">CB-10840</a> Use cordova-common.CordovaLogger in cordova-ios</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10846">CB-10846</a> Add status badges for Travis and AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10846">CB-10846</a> Add AppVeyor configuration</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10773">CB-10773</a> Update path delimiters in tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10769">CB-10769</a> Update specs according to actual implementation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10769">CB-10769</a> Copy raw pluginHandler tests from cordova-lib</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10828">CB-10828</a> revert bad fix for <a href="https://issues.apache.org/jira/browse/CB-10828">CB-10828</a> I blame node 5.7.0</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10828">CB-10828</a> TypeError: Cannot read property &#39;indexOf&#39; of null when allow-navigation using scheme:*</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10773">CB-10773</a> Correct FRAMEWORKS<em>SEARCH</em>PATHS on win32</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10673">CB-10673</a> fixed conflicting plugin install issue with overlapped <source-file> tag using --force option. This closes #199.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11006">CB-11006</a> Added license to loggingHelper.js</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11006">CB-11006</a> Updated checked-in node_modules</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10320">CB-10320</a> Fixes corrupted logo.png</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10918">CB-10918</a> Travis tests are failing sometimes for cordova-ios</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10912">CB-10912</a> Bundling ios-sim 5.0.7 to fix &#39;Invalid Device State&#39; errors</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10912">CB-10912</a> update ios-sim to 5.0.7 to fix &#39;Invalid Device State&#39; errors</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10888">CB-10888</a> Enable coverage reports collection via codecov</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10840">CB-10840</a> Use cordova-common.CordovaLogger in cordova-ios</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10846">CB-10846</a> Add status badges for Travis and AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10846">CB-10846</a> Add AppVeyor configuration</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10773">CB-10773</a> Update path delimiters in tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10769">CB-10769</a> Update specs according to actual implementation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10769">CB-10769</a> Copy raw pluginHandler tests from cordova-lib</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10828">CB-10828</a> revert bad fix for <a href="https://issues.apache.org/jira/browse/CB-10828">CB-10828</a> I blame node 5.7.0</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10828">CB-10828</a> TypeError: Cannot read property &#39;indexOf&#39; of null when allow-navigation using scheme:*</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10773">CB-10773</a> Correct FRAMEWORKS_SEARCH_PATHS on win32</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10673">CB-10673</a> fixed conflicting plugin install issue with overlapped <source-file> tag using --force option. This closes #199.</source-file></li>
 </ul>
 
         </div>

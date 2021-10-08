@@ -137,13 +137,17 @@
 This release also requires Xcode 6.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update ios
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add ios@3.7.0
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@3.7.0
+</code></pre></div></div>
+
 <p>For non-CLI projects or for pre-3.0 projects, refer to the <a href="http://cordova.apache.org/docs/en/dev/guide_platforms_index.md.html">upgrade guides</a>.</p>
 
 <!--more-->
@@ -151,40 +155,40 @@ cordova platform update ios
 <h2>What&#39;s new in iOS</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6510">CB-6510</a> Support for <code>ErrorUrl</code> preference</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7857">CB-7857</a> Load <code>appURL</code> after plugins have loaded</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7606">CB-7606</a> <code>handleOpenURL</code> handler firing more than necessary</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7597">CB-7597</a> <code>Localizable.strings</code> for Media Capture are in the default template, it should be in the plugin</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7818">CB-7818</a> CLI builds ignore Distribution certificates</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7813">CB-7813</a> <code>CDVWebViewDelegate</code> fails to update the webview state properly</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7643">CB-7643</a> Made <code>isValidCallbackId</code> threadsafe</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-2520">CB-2520</a> Built interim js from cordova-js for custom user agent support</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-2520">CB-2520</a> &quot;original&quot; user agent needs to be overridable</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7777">CB-7777</a> In <code>AppDelegate</code>, before calling <code>handleOpenURL</code> check whether it exists first to prevent exceptions</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7775">CB-7775</a> Add <code>component.json</code> for component and duo package managers</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7493">CB-7493</a> Adds <code>test-build</code> command to package.json</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7630">CB-7630</a> Deprecate <code>CDV_IsIPhone5</code> and <code>CDV_IsIPad</code> macro in <code>CDVAvailability.h</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7727">CB-7727</a> Add resolution part to <strong>backup to icloud</strong> warning message
+  <li><a href="https://issues.apache.org/jira/browse/CB-6510">CB-6510</a> Support for <code>ErrorUrl</code> preference</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7857">CB-7857</a> Load <code>appURL</code> after plugins have loaded</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7606">CB-7606</a> <code>handleOpenURL</code> handler firing more than necessary</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7597">CB-7597</a> <code>Localizable.strings</code> for Media Capture are in the default template, it should be in the plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7818">CB-7818</a> CLI builds ignore Distribution certificates</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7813">CB-7813</a> <code>CDVWebViewDelegate</code> fails to update the webview state properly</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7643">CB-7643</a> Made <code>isValidCallbackId</code> threadsafe</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-2520">CB-2520</a> Built interim js from cordova-js for custom user agent support</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-2520">CB-2520</a> &quot;original&quot; user agent needs to be overridable</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7777">CB-7777</a> In <code>AppDelegate</code>, before calling <code>handleOpenURL</code> check whether it exists first to prevent exceptions</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7775">CB-7775</a> Add <code>component.json</code> for component and duo package managers</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7493">CB-7493</a> Adds <code>test-build</code> command to package.json</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7630">CB-7630</a> Deprecate <code>CDV_IsIPhone5</code> and <code>CDV_IsIPad</code> macro in <code>CDVAvailability.h</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7727">CB-7727</a> Add resolution part to <strong>backup to icloud</strong> warning message
 because screen size is now orientation dependent</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7560">CB-7560</a> <code>tel:</code> and <code>mailto:</code> links don&#39;t work in <code>&lt;iframe&gt;</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7502">CB-7502</a> Default template is missing <code>CFBundleShortVersionString</code> key in <code>Info.plist</code>, prevents <strong>iTunes Connect</strong> submission</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7546">CB-7546</a> <strong>Contacts</strong> Prevent exception when index is out of range</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7648">CB-7648</a> <strong>iOS 8</strong> Add <strong>iPhone 6 Plus</strong> icon to default template</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7632">CB-7632</a> <strong>iOS 8</strong> Add launch image definitions to <code>Info.plist</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7631">CB-7631</a> <strong>iOS 8</strong> <code>CDVUrlProtocol</code> - the <code>NSHttpUrlResponse</code> is not initialized with the <code>statuscode</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7596">CB-7596</a> <strong>iOS 8</strong> <code>CDV_IsIPhone5()</code> Macro needs to be updated * <a href="https://issues.apache.org/jira/browse/CB-7882">CB-7882</a> <code>viewDidUnload</code> instance method is missing <code>[super viewDidUnload]</code> call</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7872">CB-7872</a> <strong>XCode 6.1</strong>&#39;s <code>xcrun</code> <code>PackageApplication</code> fails at packaging / resigning Cordova applications</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7729">CB-7729</a> <strong>Xcode 6</strong> Support <code>ios-sim</code> <strong>3.0</strong> and new targets (<strong>iPhone 6/6+</strong>)</li>
-<li><strong>Xcode 6</strong> Fix <code>cordova/lib/list-started-emulators</code></li>
-<li>Add <code>ios-sim</code> version check <strong>3.0</strong> to <code>cordova/lib/list-emulator-images</code></li>
-<li>Fix <code>cordova/lib/install-emulator</code> to pass in the correct prefix for <code>ios-sim --devicetypeid</code></li>
-<li>Remove non-working applescript to start emulator, use <code>Instruments</code> to start <strong>iOS Simulator</strong> now.</li>
-<li>Add support for the <strong>iPod</strong> in <code>cordova/lib/list-devices</code> script.</li>
-<li>Remove <code>Valid values for --target</code> in script headers. Use <code>cordova/lib/list-emulator-images</code> to get the list.</li>
-<li>Update <code>cordova/lib/list-emulator-images</code> for <code>ios-sim</code> <strong>3.0</strong></li>
-<li>Increment <code>ios-deploy</code> min version to <strong>1.2.0</strong> and <code>ios-sim</code> min version to <strong>3.0</strong></li>
-<li>Updated <code>cordova/build</code> script to use specific <code>SHARED_PRECOMPS_DIR</code> variable.</li>
-<li>Update <code>.gitignore</code> to not ignore <code>.xcworkspace</code> files</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7560">CB-7560</a> <code>tel:</code> and <code>mailto:</code> links don&#39;t work in <code>&lt;iframe&gt;</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7502">CB-7502</a> Default template is missing <code>CFBundleShortVersionString</code> key in <code>Info.plist</code>, prevents <strong>iTunes Connect</strong> submission</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7546">CB-7546</a> <strong>Contacts</strong> Prevent exception when index is out of range</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7648">CB-7648</a> <strong>iOS 8</strong> Add <strong>iPhone 6 Plus</strong> icon to default template</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7632">CB-7632</a> <strong>iOS 8</strong> Add launch image definitions to <code>Info.plist</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7631">CB-7631</a> <strong>iOS 8</strong> <code>CDVUrlProtocol</code> - the <code>NSHttpUrlResponse</code> is not initialized with the <code>statuscode</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7596">CB-7596</a> <strong>iOS 8</strong> <code>CDV_IsIPhone5()</code> Macro needs to be updated * <a href="https://issues.apache.org/jira/browse/CB-7882">CB-7882</a> <code>viewDidUnload</code> instance method is missing <code>[super viewDidUnload]</code> call</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7872">CB-7872</a> <strong>XCode 6.1</strong>&#39;s <code>xcrun</code> <code>PackageApplication</code> fails at packaging / resigning Cordova applications</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7729">CB-7729</a> <strong>Xcode 6</strong> Support <code>ios-sim</code> <strong>3.0</strong> and new targets (<strong>iPhone 6/6+</strong>)</li>
+  <li><strong>Xcode 6</strong> Fix <code>cordova/lib/list-started-emulators</code></li>
+  <li>Add <code>ios-sim</code> version check <strong>3.0</strong> to <code>cordova/lib/list-emulator-images</code></li>
+  <li>Fix <code>cordova/lib/install-emulator</code> to pass in the correct prefix for <code>ios-sim --devicetypeid</code></li>
+  <li>Remove non-working applescript to start emulator, use <code>Instruments</code> to start <strong>iOS Simulator</strong> now.</li>
+  <li>Add support for the <strong>iPod</strong> in <code>cordova/lib/list-devices</code> script.</li>
+  <li>Remove <code>Valid values for --target</code> in script headers. Use <code>cordova/lib/list-emulator-images</code> to get the list.</li>
+  <li>Update <code>cordova/lib/list-emulator-images</code> for <code>ios-sim</code> <strong>3.0</strong></li>
+  <li>Increment <code>ios-deploy</code> min version to <strong>1.2.0</strong> and <code>ios-sim</code> min version to <strong>3.0</strong></li>
+  <li>Updated <code>cordova/build</code> script to use specific <code>SHARED_PRECOMPS_DIR</code> variable.</li>
+  <li>Update <code>.gitignore</code> to not ignore <code>.xcworkspace</code> files</li>
 </ul>
 
         </div>

@@ -1568,8 +1568,10 @@
                 <h1>globalization.getFirstDayOfWeek</h1>
 
 <p>Returns the first day of the week according to the client&#39;s user preferences and calendar.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.globalization.getFirstDayOfWeek(successCB, errorCB);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getFirstDayOfWeek(successCB, errorCB);
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p>The days of the week are numbered starting from 1 where 1 is considered to be Sunday. It returns the day to the successCB callback with a properties object as a parameter. That object should have a <code>value</code> property with a Number value.</p>
@@ -1579,42 +1581,47 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iPhone</li>
-<li>Windows Phone 8</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iPhone</li>
+  <li>Windows Phone 8</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
 
 <p>In the case when the browser is set to the en_US locale, this should display a popup dialog with text similar to &quot;day: 1&quot;.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.globalization.getFirstDayOfWeek(
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getFirstDayOfWeek(
   function (day) {alert('day: ' + day.value + '\n');},
   function () {alert('Error getting day\n');}
 );
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Cordova<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-x.x.x.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
 
-    <span class="kd">function</span> <span class="nx">checkFirstDay</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getFirstDayOfWeek</span><span class="p">(</span>
-        <span class="kd">function</span> <span class="p">(</span><span class="nx">day</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'day: '</span> <span class="o">+</span> <span class="nx">day</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);},</span>
-        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting day\n'</span><span class="p">);}</span>
-      <span class="p">);</span>
-    <span class="p">}</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Cordova&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+                  
+    function checkFirstDay() {
+      navigator.globalization.getFirstDayOfWeek(
+        function (day) {alert('day: ' + day.value + '\n');},
+        function () {alert('Error getting day\n');}
+      );
+    }
+    
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkFirstDay()"&gt;Click for first day of week&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"checkFirstDay()"</span><span class="nt">&gt;</span>Click for first day of week<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+
 
             </div>
         </div>

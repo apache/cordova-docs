@@ -1381,29 +1381,39 @@ details preferences that only apply to BlackBerry 10 builds. See <a href="config
 File</a> for information on global configuration options.</p>
 
 <ul>
-<li><p><code>ChildBrowser</code> (<code>disable</code> or the default <code>enable</code>): Disables child
+  <li>
+    <p><code>ChildBrowser</code> (<code>disable</code> or the default <code>enable</code>): Disables child
 browser windows. By default, apps launch a secondary browser window
 to display resources accessed via <code>window.open()</code> or by specifying a
 <code>_blank</code> anchor target. Specify <code>disable</code> to override this default
 behavior.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="ChildBrowser" value="disable"/&gt;
-</code></pre></div></li>
-<li><p><code>PopupBlocker</code> (<code>enable</code> or the default <code>disable</code>): Enables the
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="ChildBrowser" value="disable"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>PopupBlocker</code> (<code>enable</code> or the default <code>disable</code>): Enables the
 popup blocker, which prevents calls to <code>window.open()</code>. By default,
 popups display in a child browser window. Setting the preference to
 <code>enable</code> prevents it from displaying at all.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="PopupBlocker" value="enable"/&gt;
-</code></pre></div></li>
-<li><p><code>WebSecurity</code> (<code>disable</code> or the default <code>enable</code>): Set to <code>disable</code>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="PopupBlocker" value="enable"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>WebSecurity</code> (<code>disable</code> or the default <code>enable</code>): Set to <code>disable</code>
 to override web security settings, allowing access to remote content
 from unknown sources. This preference is intended as a development
 convenience only, so remove it before packaging the app for
 distribution.  For the released app, all URIs should be known and
 whitelisted using the <code>&lt;access&gt;</code> element, described in the Domain
 <a href="../../appdev/whitelist/index.html">Whitelist Guide</a>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="WebSecurity" value="disable"/&gt;
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="WebSecurity" value="disable"/&gt;
+</code></pre></div>    </div>
+  </li>
 </ul>
+
 
 
             </div>

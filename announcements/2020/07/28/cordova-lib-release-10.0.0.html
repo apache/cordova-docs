@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released cordova-lib 10.0.0!cordova-lib@10.0.0Release HighlightsIn addition to various improvements and fixes, thi...">
+    <meta name="description" content="We are happy to announce that we have just released cordova-lib 10.0.0!  cordova-lib@10.0.0Release HighlightsIn addition to various improvements and fixes, t...">
 
     <title>
         
@@ -134,7 +134,7 @@
             <p>We are happy to announce that we have just released <code>cordova-lib 10.0.0</code>!</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-lib">cordova-lib@10.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-lib">cordova-lib@10.0.0</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
@@ -142,101 +142,100 @@
 <p>In addition to various improvements and fixes, this release has:</p>
 
 <ul>
-<li>Removed the <code>plugin save</code> command, which had become the default behaviour since version 7.0.</li>
-<li>Updated the pinned platforms:
-
-<ul>
-<li>cordova-android@9.0.0</li>
-<li>cordova-ios@6.1.0</li>
-<li>cordova-osx@6.0.0</li>
-</ul></li>
-<li>Raised the minimum required NodeJS version for this release to 10.x.</li>
+  <li>Removed the <code>plugin save</code> command, which had become the default behaviour since version 7.0.</li>
+  <li>Updated the pinned platforms:
+    <ul>
+      <li>cordova-android@9.0.0</li>
+      <li>cordova-ios@6.1.0</li>
+      <li>cordova-osx@6.0.0</li>
+    </ul>
+  </li>
+  <li>Raised the minimum required NodeJS version for this release to 10.x.</li>
 </ul>
 
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-lib/pull/846">GH-846</a> breaking: remove <code>cordova info</code> logic from <code>lib</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/849">GH-849</a> breaking: bump dependencies</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/847">GH-847</a> chore: update dev dependencies</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/848">GH-848</a> chore: bump <code>cordova-eslint</code> w/ automatic fixes</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/843">GH-843</a> test(<code>fixture-helper</code>): install <strong>Android</strong> platform by name again</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/844">GH-844</a> fix: remove unused dependency on <code>cordova-create</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/841">GH-841</a> chore: add <code>package-lock.json</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/840">GH-840</a> chore: use short notation in <code>package.json</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/839">GH-839</a> chore: stop testing with nightly</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/838">GH-838</a> chore: update <strong>Android</strong> platform pinning to 9.0.0</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/837">GH-837</a> chore: update <strong>OSX</strong> platform pinning to 6.0.0</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/836">GH-836</a> chore: update <strong>iOS</strong> platform pinning to 6.1.0</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/835">GH-835</a> GH-832: Look at devDeps for restoring platforms</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/833">GH-833</a> breaking: upgrade cordova dependencies for next major</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/831">GH-831</a> test: use <code>expectAsync</code> for rejections</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/825">GH-825</a> test(e2e): improve <code>HooksRunner.spec</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/828">GH-828</a> chore: consolidate eslint configs</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/803">GH-803</a> test: move <code>cordova/platform/{platform =&gt; addHelper}</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/827">GH-827</a> fix: plugin installation from <code>git</code> url w/ <code>semver</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/826">GH-826</a> test: use <code>fs.copySync</code> for increased performance</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/823">GH-823</a> test(e2e): re-enable HooksRunner#12 and move it to plugin#14</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/824">GH-824</a> style: fix linting violations</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/821">GH-821</a> feat: proper support for scoped plugins</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/822">GH-822</a> refactor: <code>eslint</code> setup</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/820">GH-820</a> refactor: remove stub interface to <code>cordova-create</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/819">GH-819</a> refactor: use <code>execa</code>&#39;s cross-platform shebang support in <code>HooksRunner</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/812">GH-812</a> chore: replace <code>superspawn</code> with <code>execa</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/781">GH-781</a> chore: remove <code>plugin save</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/780">GH-780</a> chore: deprecate <code>plugin save</code> command</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/818">GH-818</a> Extend and improve plugin tests in preparation of supporting scoped plugins</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/810">GH-810</a> chore: bump production dependencies</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/816">GH-816</a> Simplify <code>jasmine</code> configuration</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/817">GH-817</a> Remove dead code in <code>integration-tests/plugin.spec</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/815">GH-815</a> Do not spawn child process to get platform version</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/813">GH-813</a> <code>plugman_fetch.spec</code> cleanup</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/814">GH-814</a> Remove obsolete and duplicate ignore entries</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/809">GH-809</a> chore: improve npm ignore list</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/811">GH-811</a> chore: update <code>jasmine</code> dependencies</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/808">GH-808</a> Remove unused module plugman/platforms/common</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/807">GH-807</a> Break dependency cycles</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/804">GH-804</a> Fix <code>cordova/emulate.spec</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/806">GH-806</a> Remove unused exports from <code>cordova/util</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/805">GH-805</a> Remove support for obsolete <code>&lt;project&gt;/.cordova/config.json</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/802">GH-802</a> Minor code cleanup</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/797">GH-797</a> Do not run legacy hooks from dirs anymore</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/800">GH-800</a> Remove <code>platform.check</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/765">GH-765</a> Remove code to handle plugins that were added by cordova@&lt;5.4.0</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/766">GH-766</a> Remove parts of plugman that have been moved to the plugman repo</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/772">GH-772</a> Replace underscore with modern JS</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/799">GH-799</a> chore: drop node 6 and 8 support</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/798">GH-798</a> chore: bump version to 10.0.0-dev</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/770">GH-770</a> Use up-to-date fixtures in tests</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/796">GH-796</a> HooksRunner code &amp; spec cleanup</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/791">GH-791</a> fix: error message during plugin installation w/ missing engine</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/777">GH-777</a> chore: add Node.js 12 to CI services</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/786">GH-786</a> Quick workaround for e2e failure on AppVeyor CI</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/783">GH-783</a> <code>nyc@14</code> update in devDependencies</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/775">GH-775</a> chore: cleanup <code>plugman.createPackageJson</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/767">GH-767</a> Simpler and better <code>cordova/util.getPlatformApiFunction</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/774">GH-774</a> Make <code>src/plugman/init-defaults.js</code> lintable</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/773">GH-773</a> Have <code>plugman.createPackageJson</code> create file in plugin dir, not in cwd</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/771">GH-771</a> Prevent masking of errors during testing</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/768">GH-768</a> Proper async code in <code>src/plugman/createpackagejson.js</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/764">GH-764</a> chore: expressive <code>pkgJson.spec</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/763">GH-763</a> Remove unnecessary spy</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/762">GH-762</a> Remove unused fixtures</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/761">GH-761</a> chore: various test improvements
-
-<ul>
-<li>Fix some test descriptions in <code>cordova/util.spec</code></li>
-<li>Stop <code>cordova/util.spec</code> from messing with the user&#39;s home directory!</li>
-<li>Proper temp folder usage in <code>cordova/util.spec</code></li>
-<li>Remove outdated test from <code>cordova/util.spec</code></li>
-<li>Remove <code>rewire</code>/<code>revert</code> anti-pattern</li>
-<li>Remove <code>superspawn</code> faking from <code>HooksRunner.spec</code></li>
-</ul></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/760">GH-760</a> Minor cleanup of CI configs</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/846">GH-846</a> breaking: remove <code>cordova info</code> logic from <code>lib</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/849">GH-849</a> breaking: bump dependencies</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/847">GH-847</a> chore: update dev dependencies</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/848">GH-848</a> chore: bump <code>cordova-eslint</code> w/ automatic fixes</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/843">GH-843</a> test(<code>fixture-helper</code>): install <strong>Android</strong> platform by name again</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/844">GH-844</a> fix: remove unused dependency on <code>cordova-create</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/841">GH-841</a> chore: add <code>package-lock.json</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/840">GH-840</a> chore: use short notation in <code>package.json</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/839">GH-839</a> chore: stop testing with nightly</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/838">GH-838</a> chore: update <strong>Android</strong> platform pinning to 9.0.0</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/837">GH-837</a> chore: update <strong>OSX</strong> platform pinning to 6.0.0</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/836">GH-836</a> chore: update <strong>iOS</strong> platform pinning to 6.1.0</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/835">GH-835</a> GH-832: Look at devDeps for restoring platforms</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/833">GH-833</a> breaking: upgrade cordova dependencies for next major</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/831">GH-831</a> test: use <code>expectAsync</code> for rejections</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/825">GH-825</a> test(e2e): improve <code>HooksRunner.spec</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/828">GH-828</a> chore: consolidate eslint configs</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/803">GH-803</a> test: move <code>cordova/platform/{platform =&gt; addHelper}</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/827">GH-827</a> fix: plugin installation from <code>git</code> url w/ <code>semver</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/826">GH-826</a> test: use <code>fs.copySync</code> for increased performance</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/823">GH-823</a> test(e2e): re-enable HooksRunner#12 and move it to plugin#14</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/824">GH-824</a> style: fix linting violations</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/821">GH-821</a> feat: proper support for scoped plugins</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/822">GH-822</a> refactor: <code>eslint</code> setup</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/820">GH-820</a> refactor: remove stub interface to <code>cordova-create</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/819">GH-819</a> refactor: use <code>execa</code>&#39;s cross-platform shebang support in <code>HooksRunner</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/812">GH-812</a> chore: replace <code>superspawn</code> with <code>execa</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/781">GH-781</a> chore: remove <code>plugin save</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/780">GH-780</a> chore: deprecate <code>plugin save</code> command</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/818">GH-818</a> Extend and improve plugin tests in preparation of supporting scoped plugins</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/810">GH-810</a> chore: bump production dependencies</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/816">GH-816</a> Simplify <code>jasmine</code> configuration</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/817">GH-817</a> Remove dead code in <code>integration-tests/plugin.spec</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/815">GH-815</a> Do not spawn child process to get platform version</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/813">GH-813</a> <code>plugman_fetch.spec</code> cleanup</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/814">GH-814</a> Remove obsolete and duplicate ignore entries</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/809">GH-809</a> chore: improve npm ignore list</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/811">GH-811</a> chore: update <code>jasmine</code> dependencies</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/808">GH-808</a> Remove unused module plugman/platforms/common</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/807">GH-807</a> Break dependency cycles</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/804">GH-804</a> Fix <code>cordova/emulate.spec</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/806">GH-806</a> Remove unused exports from <code>cordova/util</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/805">GH-805</a> Remove support for obsolete <code>&lt;project&gt;/.cordova/config.json</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/802">GH-802</a> Minor code cleanup</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/797">GH-797</a> Do not run legacy hooks from dirs anymore</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/800">GH-800</a> Remove <code>platform.check</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/765">GH-765</a> Remove code to handle plugins that were added by cordova@&lt;5.4.0</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/766">GH-766</a> Remove parts of plugman that have been moved to the plugman repo</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/772">GH-772</a> Replace underscore with modern JS</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/799">GH-799</a> chore: drop node 6 and 8 support</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/798">GH-798</a> chore: bump version to 10.0.0-dev</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/770">GH-770</a> Use up-to-date fixtures in tests</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/796">GH-796</a> HooksRunner code &amp; spec cleanup</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/791">GH-791</a> fix: error message during plugin installation w/ missing engine</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/777">GH-777</a> chore: add Node.js 12 to CI services</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/786">GH-786</a> Quick workaround for e2e failure on AppVeyor CI</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/783">GH-783</a> <code>nyc@14</code> update in devDependencies</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/775">GH-775</a> chore: cleanup <code>plugman.createPackageJson</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/767">GH-767</a> Simpler and better <code>cordova/util.getPlatformApiFunction</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/774">GH-774</a> Make <code>src/plugman/init-defaults.js</code> lintable</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/773">GH-773</a> Have <code>plugman.createPackageJson</code> create file in plugin dir, not in cwd</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/771">GH-771</a> Prevent masking of errors during testing</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/768">GH-768</a> Proper async code in <code>src/plugman/createpackagejson.js</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/764">GH-764</a> chore: expressive <code>pkgJson.spec</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/763">GH-763</a> Remove unnecessary spy</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/762">GH-762</a> Remove unused fixtures</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/761">GH-761</a> chore: various test improvements
+    <ul>
+      <li>Fix some test descriptions in <code>cordova/util.spec</code></li>
+      <li>Stop <code>cordova/util.spec</code> from messing with the user&#39;s home directory!</li>
+      <li>Proper temp folder usage in <code>cordova/util.spec</code></li>
+      <li>Remove outdated test from <code>cordova/util.spec</code></li>
+      <li>Remove <code>rewire</code>/<code>revert</code> anti-pattern</li>
+      <li>Remove <code>superspawn</code> faking from <code>HooksRunner.spec</code></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/760">GH-760</a> Minor cleanup of CI configs</li>
 </ul>
 
         </div>

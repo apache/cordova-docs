@@ -138,53 +138,58 @@
 <p>A new version of the <code>cordova-cli</code> will need to be released to pin this version of <strong>cordova-android</strong> as the default version when creating a new project. If you want to start using this version now, make sure to specify the version when doing a <code>cordova platform add/update</code>.</p>
 
 <p><strong>Note:</strong> When updating, make sure to save your plugins as current unsaved plugins may not be reinstalled otherwise. Run the following command in your project to save your currently installed plugins into <code>config.xml</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin save
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin save
+</code></pre></div></div>
+
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android@5.2.0
-</code></pre></div>
-<p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@5.2.0
-</code></pre></div>
-<!--more-->
+</code></pre></div></div>
 
+<p>To add it explicitly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@5.2.0
+</code></pre></div></div>
+
+<!--more-->
 <h2>What&#39;s new in Android platform</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-11383">CB-11383</a> Update to gradle for using <code>jcenter</code> and correct Application plugin</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11365">CB-11365</a> fixed plugin rm issue with emit being <code>undefined</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11117">CB-11117</a> Use <code>FileUpdater</code> to optimize prepare for <strong>android</strong> platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10096">CB-10096</a> Upgrade test project to <code>Gradle Plugin 2.1.0</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11292">CB-11292</a> fix broken <code>MessageChannel</code> after plugins are recreated</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11259">CB-11259</a> Improving build output</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10096">CB-10096</a> Upgrading to <code>Gradle Plugin 2.1.0</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11198">CB-11198</a> Skip <strong>android</strong> target sdk check. This closes #303.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11138">CB-11138</a> Reuse <code>PluginManager</code> from <code>common</code> to add/rm plugins</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11133">CB-11133</a> Handle <strong>android</strong> emulator start failure</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11132">CB-11132</a> Fix Error: Cannot read property <code>match</code> of undefined in <code>cordova-android</code> <code>emulator.js</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11015">CB-11015</a> Error adding plugin with gradle extras</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11095">CB-11095</a> Fix plugin add/removal when running on <code>Node v0.10</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11022">CB-11022</a> Duplicate www files to both destinations on plugin operations</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10964">CB-10964</a> Handle <code>build.json</code> file starting with a BOM.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10963">CB-10963</a> Handle overlapping permission requests from plugins</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8582">CB-8582</a> Obscure <code>INSTALL_FAILED_VERSION_DOWNGRADE</code> error when installing app</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10862">CB-10862</a> Cannot set <code>minsdkversion</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10896">CB-10896</a> We never enabled cookies on the <code>WebView</code> proper</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10837">CB-10837</a> Support platform-specific orientation on <strong>Android</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10600">CB-10600</a> <code>cordova run android --release</code> does not use signed and zip-aligned version of <code>APK</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9710">CB-9710</a> Fixing issues parsing <code>android avd list</code> output for certain AVDs which resulted in them not being included in the selection process even if they are the best match.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10888">CB-10888</a> Enable coverage reports collection via codecov</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10846">CB-10846</a> Add Travis and AppVeyor badges to readme</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10846">CB-10846</a> Add AppVeyor configuration</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10749">CB-10749</a> Use <code>cordova-common.CordovaLogger</code> in <code>cordova-android</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10673">CB-10673</a> fixed conflicting plugin install issue with overlapped <code>&lt;source-file&gt;</code> tag. Add <code>--force</code> flag.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8976">CB-8976</a> Removing the auto-version for non-Crosswalk applications</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10768">CB-10768</a> Use <code>cordova-common.superspawn</code> in <code>GradleBuilder</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10729">CB-10729</a> Move plugin handlers tests for into platform&#39;s repo</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10669">CB-10669</a> <code>cordova run --list</code> cannot find <code>adb</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10660">CB-10660</a> fixed the exception when removing a non-existing directory.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11383">CB-11383</a> Update to gradle for using <code>jcenter</code> and correct Application plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11365">CB-11365</a> fixed plugin rm issue with emit being <code>undefined</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11117">CB-11117</a> Use <code>FileUpdater</code> to optimize prepare for <strong>android</strong> platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10096">CB-10096</a> Upgrade test project to <code>Gradle Plugin 2.1.0</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11292">CB-11292</a> fix broken <code>MessageChannel</code> after plugins are recreated</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11259">CB-11259</a> Improving build output</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10096">CB-10096</a> Upgrading to <code>Gradle Plugin 2.1.0</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11198">CB-11198</a> Skip <strong>android</strong> target sdk check. This closes #303.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11138">CB-11138</a> Reuse <code>PluginManager</code> from <code>common</code> to add/rm plugins</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11133">CB-11133</a> Handle <strong>android</strong> emulator start failure</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11132">CB-11132</a> Fix Error: Cannot read property <code>match</code> of undefined in <code>cordova-android</code> <code>emulator.js</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11015">CB-11015</a> Error adding plugin with gradle extras</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11095">CB-11095</a> Fix plugin add/removal when running on <code>Node v0.10</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11022">CB-11022</a> Duplicate www files to both destinations on plugin operations</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10964">CB-10964</a> Handle <code>build.json</code> file starting with a BOM.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10963">CB-10963</a> Handle overlapping permission requests from plugins</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8582">CB-8582</a> Obscure <code>INSTALL_FAILED_VERSION_DOWNGRADE</code> error when installing app</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10862">CB-10862</a> Cannot set <code>minsdkversion</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10896">CB-10896</a> We never enabled cookies on the <code>WebView</code> proper</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10837">CB-10837</a> Support platform-specific orientation on <strong>Android</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10600">CB-10600</a> <code>cordova run android --release</code> does not use signed and zip-aligned version of <code>APK</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9710">CB-9710</a> Fixing issues parsing <code>android avd list</code> output for certain AVDs which resulted in them not being included in the selection process even if they are the best match.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10888">CB-10888</a> Enable coverage reports collection via codecov</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10846">CB-10846</a> Add Travis and AppVeyor badges to readme</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10846">CB-10846</a> Add AppVeyor configuration</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10749">CB-10749</a> Use <code>cordova-common.CordovaLogger</code> in <code>cordova-android</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10673">CB-10673</a> fixed conflicting plugin install issue with overlapped <code>&lt;source-file&gt;</code> tag. Add <code>--force</code> flag.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8976">CB-8976</a> Removing the auto-version for non-Crosswalk applications</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10768">CB-10768</a> Use <code>cordova-common.superspawn</code> in <code>GradleBuilder</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10729">CB-10729</a> Move plugin handlers tests for into platform&#39;s repo</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10669">CB-10669</a> <code>cordova run --list</code> cannot find <code>adb</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10660">CB-10660</a> fixed the exception when removing a non-existing directory.</li>
 </ul>
 
         </div>

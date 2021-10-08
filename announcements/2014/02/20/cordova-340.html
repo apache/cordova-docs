@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that Cordova 3.4 has been released!This release has various bug fixes for all of our supported platforms. Our friends at Mozilla hav...">
+    <meta name="description" content="We are happy to announce that Cordova 3.4 has been released!This release has various bug fixes for all of our supported platforms.Our friends at Mozilla have...">
 
     <title>
         
@@ -133,15 +133,17 @@
         <div>
             <p>We are happy to announce that <code>Cordova 3.4</code> has been released!</p>
 
-<p>This release has various bug fixes for all of our supported platforms. </p>
+<p>This release has various bug fixes for all of our supported platforms.</p>
 
 <p>Our friends at <a href="http://www.mozilla.org/">Mozilla</a> have put together a blog post about getting started with <strong>Cordova Firefox OS</strong>. Check it out at <a href="https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/">https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/</a>.</p>
 
 <p>To upgrade: (replace <code>android</code> with the platform you want to update):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android
-</code></pre></div>
+</code></pre></div></div>
+
 <p>For non-CLI projects or for pre-3.0 projects, refer to the <a href="http://cordova.apache.org/docs/en/3.4.0/guide_platforms_index.md.html">upgrade guides</a>.</p>
 
 <!--more-->
@@ -152,62 +154,62 @@ cordova platform update android
 43 commits from 10 authors. Highlights include:</p>
 
 <ul>
-<li>Removing <code>addJavascriptInterface</code> support from all Android versions lower
+  <li>Removing <code>addJavascriptInterface</code> support from all Android versions lower
 than 4.2 due to security vulnerability</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5917">CB-5917</a> Add a <code>loadUrlIntoView</code> overload that doesn&#39;t recreate plugins.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5889">CB-5889</a> Make update script find project name instead of using &quot;null&quot; for
+  <li><a href="https://issues.apache.org/jira/browse/CB-5917">CB-5917</a> Add a <code>loadUrlIntoView</code> overload that doesn&#39;t recreate plugins.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5889">CB-5889</a> Make update script find project name instead of using &quot;null&quot; for
 CordovaLib</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5889">CB-5889</a> Add a message in the update script about needing to import
+  <li><a href="https://issues.apache.org/jira/browse/CB-5889">CB-5889</a> Add a message in the update script about needing to import
 CordovaLib when using an IDE.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5793">CB-5793</a> Don&#39;t clean before build and change output directory to <code>ant-build</code>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5793">CB-5793</a> Don&#39;t clean before build and change output directory to <code>ant-build</code>
 to avoid conflicts with <em>Eclipse</em>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5803">CB-5803</a> Fix <code>cordova/emulate</code> on <em>Windows</em>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5801">CB-5801</a> <code>exec</code>-&gt;<code>spawn</code> in build to make sure compile errors are shown.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5799">CB-5799</a> Update version of <code>OkHTTP</code> to 1.3</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4910">CB-4910</a> Update CLI project template to point to <code>config.xml</code> at the root
+  <li><a href="https://issues.apache.org/jira/browse/CB-5803">CB-5803</a> Fix <code>cordova/emulate</code> on <em>Windows</em>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5801">CB-5801</a> <code>exec</code>-&gt;<code>spawn</code> in build to make sure compile errors are shown.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5799">CB-5799</a> Update version of <code>OkHTTP</code> to 1.3</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4910">CB-4910</a> Update CLI project template to point to <code>config.xml</code> at the root
 now that it isn&#39;t in <code>www/</code> by default.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5504">CB-5504</a> Adding <code>onDestroy</code> to app plugin to deregister <code>telephonyReceiver</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5715">CB-5715</a> Add <em>Eclipse</em> <code>.project</code> file to create template. For CLI projects,
+  <li><a href="https://issues.apache.org/jira/browse/CB-5504">CB-5504</a> Adding <code>onDestroy</code> to app plugin to deregister <code>telephonyReceiver</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5715">CB-5715</a> Add <em>Eclipse</em> <code>.project</code> file to create template. For CLI projects,
 it adds refs for root <code>www/</code> &amp; <code>config.xml</code> and hides platform versions</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5447">CB-5447</a> Removed <code>android:debuggable=“true”</code> from project template.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5714">CB-5714</a> Fix of android build when too big output stops build with error
+  <li><a href="https://issues.apache.org/jira/browse/CB-5447">CB-5447</a> Removed <code>android:debuggable=“true”</code> from project template.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5714">CB-5714</a> Fix of android build when too big output stops build with error
 due to buffer overflow.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5592">CB-5592</a> Set MIME type for <code>openExternal</code> when scheme is file:</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5592">CB-5592</a> Set MIME type for <code>openExternal</code> when scheme is file:</li>
 </ul>
 
 <h2>What&#39;s new in iOS</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-5794">CB-5794</a> iOS build script: 1. don&#39;t clean 2. recognize <code>--emulator</code> vs <code>--device</code></li>
-<li>Don&#39;t show environment vars in build log for copy-www script</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4910">CB-4910</a> Update CLI project template to point to <code>config.xml</code> at the root now that it&#39;s not in www/ by default.</li>
-<li>Move <code>.gitignore</code> in template to gitignore (and add the dot in the script).</li>
-<li>Fix create script copying project template twice.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5740">CB-5740</a> Use <code>UIScrollViewDecelerationRateNormal</code> by default.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5420">CB-5420</a> Add device model to <code>User-Agent</code> cache key.</li>
-<li>Copy <code>config.xml</code> within copy-www-build-step.sh instead of in Copy Resoruces step</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5397">CB-5397</a> Add a <code>--cli</code> option to <code>bin/create</code> that has <code>../../www/</code> <code>../../merges/</code> within the project</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5697">CB-5697</a> Fix <code>location.reload()</code> not firing <code>deviceready</code>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4330">CB-4330</a> Fix hash changes being treated as top-level navigations</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3359">CB-3359</a> Parse large JSON payloads on a background thread, and yield when executing multiple commands is taking too long.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5134">CB-5134</a> Fix up bugs with new hash-based <code>exec()</code> bridge.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5134">CB-5134</a> Add <code>location.hash</code> based <code>exec()</code> bridge.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5658">CB-5658</a> Fix whitelist crash when URL path has a space.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5583">CB-5583</a> <code>WebView</code> doesn&#39;t properly initialize when instantiated from a xib</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5046">CB-5046</a>: Adding a <code>defaults.xml</code> template</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5290">CB-5290</a> templates: Updated launch images sizes to include the status bar region</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5276">CB-5276</a> Add ability to load start page from a place other then the bundle folder</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5298">CB-5298</a> Have <code>bin/create</code> run <code>bin/check_reqs</code>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5328">CB-5328</a> - <code>.gitignore</code> from cordova-ios excludes <code>platforms/cordova/build</code> file</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5794">CB-5794</a> iOS build script: 1. don&#39;t clean 2. recognize <code>--emulator</code> vs <code>--device</code></li>
+  <li>Don&#39;t show environment vars in build log for copy-www script</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4910">CB-4910</a> Update CLI project template to point to <code>config.xml</code> at the root now that it&#39;s not in www/ by default.</li>
+  <li>Move <code>.gitignore</code> in template to gitignore (and add the dot in the script).</li>
+  <li>Fix create script copying project template twice.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5740">CB-5740</a> Use <code>UIScrollViewDecelerationRateNormal</code> by default.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5420">CB-5420</a> Add device model to <code>User-Agent</code> cache key.</li>
+  <li>Copy <code>config.xml</code> within copy-www-build-step.sh instead of in Copy Resoruces step</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5397">CB-5397</a> Add a <code>--cli</code> option to <code>bin/create</code> that has <code>../../www/</code> <code>../../merges/</code> within the project</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5697">CB-5697</a> Fix <code>location.reload()</code> not firing <code>deviceready</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4330">CB-4330</a> Fix hash changes being treated as top-level navigations</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3359">CB-3359</a> Parse large JSON payloads on a background thread, and yield when executing multiple commands is taking too long.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5134">CB-5134</a> Fix up bugs with new hash-based <code>exec()</code> bridge.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5134">CB-5134</a> Add <code>location.hash</code> based <code>exec()</code> bridge.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5658">CB-5658</a> Fix whitelist crash when URL path has a space.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5583">CB-5583</a> <code>WebView</code> doesn&#39;t properly initialize when instantiated from a xib</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5046">CB-5046</a>: Adding a <code>defaults.xml</code> template</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5290">CB-5290</a> templates: Updated launch images sizes to include the status bar region</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5276">CB-5276</a> Add ability to load start page from a place other then the bundle folder</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5298">CB-5298</a> Have <code>bin/create</code> run <code>bin/check_reqs</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5328">CB-5328</a> - <code>.gitignore</code> from cordova-ios excludes <code>platforms/cordova/build</code> file</li>
 </ul>
 
 <h2>What&#39;s new in Windows Phone 7 &amp; 8</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6041">CB-6041</a> <code>createTemplates</code> should install theme for <em>VS-2013</em> as well</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5219">CB-5219</a> <code>weinre</code> disconnects when <code>history.replaceState</code> is used</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5951">CB-5951</a> Added namespace to <code>config.xml</code></li>
-<li>Removed wp7 template ref to non-existent file</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6041">CB-6041</a> <code>createTemplates</code> should install theme for <em>VS-2013</em> as well</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5219">CB-5219</a> <code>weinre</code> disconnects when <code>history.replaceState</code> is used</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5951">CB-5951</a> Added namespace to <code>config.xml</code></li>
+  <li>Removed wp7 template ref to non-existent file</li>
 </ul>
 
 <p><strong>Windows Phone 7 is now deprecated!</strong>  Consider upgrading your projects to
@@ -217,72 +219,72 @@ Read the retrospective here: <a href="http://www.risingj.com/archives/585">http:
 <h2>What&#39;s new in Windows 8</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-5951">CB-5951</a> Added namespace to <code>config.xml</code></li>
-<li>Remove template file after create by name</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4533">CB-4533</a> return error code 2 on fail, <a href="https://issues.apache.org/jira/browse/CB-5359">CB-5359</a> get tools version from the registry</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5951">CB-5951</a> Added namespace to <code>config.xml</code></li>
+  <li>Remove template file after create by name</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4533">CB-4533</a> return error code 2 on fail, <a href="https://issues.apache.org/jira/browse/CB-5359">CB-5359</a> get tools version from the registry</li>
 </ul>
 
 <h2>What&#39;s new in BlackBerry 10</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6021">CB-6021</a> Add <code>--release</code> to run command</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5723">CB-5723</a> Build script should accept <code>-l</code> param as it does <code>--loglevel</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6019">CB-6019</a> Supply default value of <code>--device</code> to the run script</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5660">CB-5660</a> use <code>enabledelayedexpansion</code> to handle )s in path</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5909">CB-5909</a> Fixed issue where <code>check-reqs</code> skipped checking logic on second pass-through - Removed depend</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6021">CB-6021</a> Add <code>--release</code> to run command</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5723">CB-5723</a> Build script should accept <code>-l</code> param as it does <code>--loglevel</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6019">CB-6019</a> Supply default value of <code>--device</code> to the run script</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5660">CB-5660</a> use <code>enabledelayedexpansion</code> to handle )s in path</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5909">CB-5909</a> Fixed issue where <code>check-reqs</code> skipped checking logic on second pass-through - Removed depend</li>
 </ul>
 
 <h2>What&#39;s new in FirefoxOS</h2>
 
 <ul>
-<li>No significant Changes</li>
+  <li>No significant Changes</li>
 </ul>
 
 <h2>What&#39;s new in Ubuntu (touch)</h2>
 
 <ul>
-<li>No significant Changes</li>
+  <li>No significant Changes</li>
 </ul>
 
 <h2>What&#39;s new in Amazon FireOS</h2>
 
 <ul>
-<li>Upleveled changes from Cordova Android</li>
+  <li>Upleveled changes from Cordova Android</li>
 </ul>
 
 <h2>What&#39;s new in Cordova-CLI</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-5638">CB-5638</a> Clean-up: remove unreachable <code>info</code> case from function</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5937">CB-5937</a> Add <code>platform check</code> command: Shows platforms that are out of date</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5634">CB-5634</a> Minor refactoring + tests for Android&#39;s orientation preference.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5634">CB-5634</a> Set Android orientation from <code>config.xml</code></li>
-<li>Upleveled amazon<em>fireos</em>parser. Making it at par with <code>android_parser.js</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5947">CB-5947</a> Throw when trying to create project inside custom www.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4153">CB-4153</a> Update help.txt about <code>--source</code> -&gt; <code>--copy-from</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5638">CB-5638</a> Clean-up: remove unreachable <code>info</code> case from function</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5937">CB-5937</a> Add <code>platform check</code> command: Shows platforms that are out of date</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5634">CB-5634</a> Minor refactoring + tests for Android&#39;s orientation preference.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5634">CB-5634</a> Set Android orientation from <code>config.xml</code></li>
+  <li>Upleveled amazon_fireos_parser. Making it at par with <code>android_parser.js</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5947">CB-5947</a> Throw when trying to create project inside custom www.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4153">CB-4153</a> Update help.txt about <code>--source</code> -&gt; <code>--copy-from</code></li>
 </ul>
 
 <h2>Plugin versions tested with this release</h2>
 
 <ul>
-<li>cordova-plugin-battery-status: 0.2.7</li>
-<li>cordova-plugin-camera: 0.2.7</li>
-<li>cordova-plugin-console: 0.2.7</li>
-<li>cordova-plugin-contacts: 0.2.8</li>
-<li>cordova-plugin-device: 0.2.8</li>
-<li>cordova-plugin-device-motion: 0.2.6</li>
-<li>cordova-plugin-device-orientation: 0.3.5</li>
-<li>cordova-plugin-dialogs: 0.2.6</li>
-<li>cordova-plugin-file: 1.0.0</li>
-<li>cordova-plugin-file-transfer: 0.4.1</li>
-<li>cordova-plugin-geolocation: 0.3.6</li>
-<li>cordova-plugin-globalization: 0.2.6</li>
-<li>cordova-plugin-inappbrowser: 0.3.1</li>
-<li>cordova-plugin-media: 0.2.8</li>
-<li>cordova-plugin-media-capture: 0.2.7</li>
-<li>cordova-plugin-network-information: 0.2.7</li>
-<li>cordova-plugin-splashscreen: 0.2.7</li>
-<li>cordova-plugin-vibration: 0.3.7</li>
+  <li>cordova-plugin-battery-status: 0.2.7</li>
+  <li>cordova-plugin-camera: 0.2.7</li>
+  <li>cordova-plugin-console: 0.2.7</li>
+  <li>cordova-plugin-contacts: 0.2.8</li>
+  <li>cordova-plugin-device: 0.2.8</li>
+  <li>cordova-plugin-device-motion: 0.2.6</li>
+  <li>cordova-plugin-device-orientation: 0.3.5</li>
+  <li>cordova-plugin-dialogs: 0.2.6</li>
+  <li>cordova-plugin-file: 1.0.0</li>
+  <li>cordova-plugin-file-transfer: 0.4.1</li>
+  <li>cordova-plugin-geolocation: 0.3.6</li>
+  <li>cordova-plugin-globalization: 0.2.6</li>
+  <li>cordova-plugin-inappbrowser: 0.3.1</li>
+  <li>cordova-plugin-media: 0.2.8</li>
+  <li>cordova-plugin-media-capture: 0.2.7</li>
+  <li>cordova-plugin-network-information: 0.2.7</li>
+  <li>cordova-plugin-splashscreen: 0.2.7</li>
+  <li>cordova-plugin-vibration: 0.3.7</li>
 </ul>
 
         </div>

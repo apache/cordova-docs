@@ -1640,44 +1640,50 @@
                 <h1>CaptureAudioOptions</h1>
 
 <blockquote>
-<p>Encapsulates audio capture configuration options.</p>
+  <p>Encapsulates audio capture configuration options.</p>
 </blockquote>
 
 <h2>Properties</h2>
 
 <ul>
-<li><p><strong>limit</strong>: The maximum number of audio clips the device user can record in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).</p></li>
-<li><p><strong>duration</strong>: The maximum duration of an audio sound clip, in seconds.</p></li>
+  <li>
+    <p><strong>limit</strong>: The maximum number of audio clips the device user can record in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: The maximum duration of an audio sound clip, in seconds.</p>
+  </li>
 </ul>
 
 <h2>Quick Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">// limit capture operation to 3 media files, no longer than 10 seconds each
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// limit capture operation to 3 media files, no longer than 10 seconds each
 var options = { limit: 3, duration: 10 };
 
 navigator.device.capture.captureAudio(captureSuccess, captureError, options);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Amazon Fire OS Quirks</h2>
 
 <ul>
-<li>The <code>duration</code> parameter is not supported.  Recording lengths cannot be limited programmatically.</li>
+  <li>The <code>duration</code> parameter is not supported.  Recording lengths cannot be limited programmatically.</li>
 </ul>
 
 <h2>Android Quirks</h2>
 
 <ul>
-<li>The <code>duration</code> parameter is not supported.  Recording lengths can&#39;t be limited programmatically.</li>
+  <li>The <code>duration</code> parameter is not supported.  Recording lengths can&#39;t be limited programmatically.</li>
 </ul>
 
 <h2>BlackBerry WebWorks Quirks</h2>
 
 <ul>
-<li>The <code>duration</code> parameter is not supported.  Recording lengths can&#39;t be limited programmatically.</li>
+  <li>The <code>duration</code> parameter is not supported.  Recording lengths can&#39;t be limited programmatically.</li>
 </ul>
 
 <h2>iOS Quirks</h2>
 
 <ul>
-<li>The <code>limit</code> parameter is not supported, so only one recording can be created for each invocation.</li>
+  <li>The <code>limit</code> parameter is not supported, so only one recording can be created for each invocation.</li>
 </ul>
 
 

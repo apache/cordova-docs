@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released an update to our camera plugin!cordova-plugin-camera@5.0.0Release HighlightsIn this major release, we hav...">
+    <meta name="description" content="We are happy to announce that we have just released an update to our camera plugin!  cordova-plugin-camera@5.0.0Release HighlightsIn this major release, we h...">
 
     <title>
         
@@ -134,7 +134,7 @@
             <p>We are happy to announce that we have just released an update to our camera plugin!</p>
 
 <ul>
-<li><a href="https://www.npmjs.org/package/cordova-plugin-camera">cordova-plugin-camera@5.0.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-plugin-camera">cordova-plugin-camera@5.0.0</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
@@ -142,68 +142,67 @@
 <p>In this major release, we have:</p>
 
 <ul>
-<li>removed the <code>DestinationType</code> of <code>NATIVE_URI</code> that was used only in the iOS and Windows platform. For iOS, the <code>NATIVE_URI</code> returned an <code>ALAssetsLibrary</code> that had been deprecated and does not work with the <code>WKWevView</code>.</li>
-<li>removed the <code>CordovaUri</code> class helper that used fuzzy logic to guess the image path from the content URL. This process was not necessary as we know the file path beforehand.</li>
-<li>bumped the project requirement definition. This plugin version requires Cordova CLI &gt;= 9.0.0. If building for Android, this plugin version will also require the Cordova Android platform &gt;= 9.0.0.</li>
-<li>changed the location of the temporary saved images from external to internal cache.</li>
+  <li>removed the <code>DestinationType</code> of <code>NATIVE_URI</code> that was used only in the iOS and Windows platform. For iOS, the <code>NATIVE_URI</code> returned an <code>ALAssetsLibrary</code> that had been deprecated and does not work with the <code>WKWevView</code>.</li>
+  <li>removed the <code>CordovaUri</code> class helper that used fuzzy logic to guess the image path from the content URL. This process was not necessary as we know the file path beforehand.</li>
+  <li>bumped the project requirement definition. This plugin version requires Cordova CLI &gt;= 9.0.0. If building for Android, this plugin version will also require the Cordova Android platform &gt;= 9.0.0.</li>
+  <li>changed the location of the temporary saved images from external to internal cache.</li>
 </ul>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <h2>Breaking</h2>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/637">GH-637</a> breaking: remove <code>NATIVE_URI</code> DestinationType</li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/628">GH-628</a> breaking: bump project requirements</li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/627">GH-627</a> breaking: bump version 5.0.0-dev</li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/617">GH-617</a> breaking(android): stop using <code>CordovaUri</code> helper class</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/637">GH-637</a> breaking: remove <code>NATIVE_URI</code> DestinationType</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/628">GH-628</a> breaking: bump project requirements</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/627">GH-627</a> breaking: bump version 5.0.0-dev</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/617">GH-617</a> breaking(android): stop using <code>CordovaUri</code> helper class</li>
 </ul>
 
 <h2>Feature</h2>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/629">GH-629</a> feat: migrate to <code>@cordova/eslint-config@3.x</code></li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/588">GH-588</a> feat(android): Cache images in device storage, devices have enough space now.</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/629">GH-629</a> feat: migrate to <code>@cordova/eslint-config@3.x</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/588">GH-588</a> feat(android): Cache images in device storage, devices have enough space now.</li>
 </ul>
 
 <h2>Fix</h2>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/632">GH-632</a> fix(android): return error if file url is null</li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/510">GH-510</a> fix(android): use provider prefix to avoid conflicts other plugin providers</li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/612">GH-612</a> fix(ios): <code>tempFilePath</code> called twice if using <code>CameraUsesGeolocation</code></li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/580">GH-580</a> fix(ios): return copy of video when picking from gallery on iOS 13</li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/551">GH-551</a> fix: UI API called on a background thread (<a href="https://github.com/apache/cordova-plugin-camera/pull/550">#550</a>, <a href="https://github.com/apache/cordova-plugin-camera/pull/530">#530</a>, <a href="https://github.com/apache/cordova-plugin-camera/pull/447">#447</a>)</li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/306">GH-306</a> fix: ImagePicker returning same image</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/632">GH-632</a> fix(android): return error if file url is null</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/510">GH-510</a> fix(android): use provider prefix to avoid conflicts other plugin providers</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/612">GH-612</a> fix(ios): <code>tempFilePath</code> called twice if using <code>CameraUsesGeolocation</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/580">GH-580</a> fix(ios): return copy of video when picking from gallery on iOS 13</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/551">GH-551</a> fix: UI API called on a background thread (<a href="https://github.com/apache/cordova-plugin-camera/pull/550">#550</a>, <a href="https://github.com/apache/cordova-plugin-camera/pull/530">#530</a>, <a href="https://github.com/apache/cordova-plugin-camera/pull/447">#447</a>)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/306">GH-306</a> fix: ImagePicker returning same image</li>
 </ul>
 
 <h2>Chore</h2>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/634">GH-634</a> chore: remove deprecated <code>file-transfer</code> plugin</li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/630">GH-630</a> chore: add <code>package-lock.json</code></li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/631">GH-631</a> chore(package): use short notation</li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/575">GH-575</a> chore(npm): adds ignore list</li>
-<li>chore(asf): update git notification settings</li>
-<li>chore: Update CONTRIBUTING.md</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/634">GH-634</a> chore: remove deprecated <code>file-transfer</code> plugin</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/630">GH-630</a> chore: add <code>package-lock.json</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/631">GH-631</a> chore(package): use short notation</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/575">GH-575</a> chore(npm): adds ignore list</li>
+  <li>chore(asf): update git notification settings</li>
+  <li>chore: Update CONTRIBUTING.md</li>
 </ul>
 
 <h2>CI</h2>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/648">GH-648</a> ci(travis): update osx xcode image</li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/626">GH-626</a> ci: fix additional tests</li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/576">GH-576</a> ci: updates Node.js versions</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/648">GH-648</a> ci(travis): update osx xcode image</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/626">GH-626</a> ci: fix additional tests</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/576">GH-576</a> ci: updates Node.js versions</li>
 </ul>
 
 <h1>Docs</h1>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/508">GH-508</a> docs(readme): app renamed to Google Photos</li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/513">GH-513</a> docs(README): remove confusing comment</li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/512">GH-512</a> docs(README): remove orphan Windows phone 7 note</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/508">GH-508</a> docs(readme): app renamed to Google Photos</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/513">GH-513</a> docs(README): remove confusing comment</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/512">GH-512</a> docs(README): remove orphan Windows phone 7 note</li>
 </ul>
 
         </div>

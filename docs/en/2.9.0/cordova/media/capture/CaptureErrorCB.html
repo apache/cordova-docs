@@ -1616,10 +1616,12 @@
                 <h1>CaptureErrorCB</h1>
 
 <blockquote>
-<p>Invoked if an error occurs during a media capture operation.</p>
+  <p>Invoked if an error occurs during a media capture operation.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">function captureError( CaptureError error ) { ... };
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function captureError( CaptureError error ) { ... };
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p>This function executes if an error occurs when trying to launch a
@@ -1631,11 +1633,13 @@ the user cancels the operation before any media files are captured.</p>
 appropriate error <code>code</code>.</p>
 
 <h2>Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">// capture error callback
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// capture error callback
 var captureError = function(error) {
     navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
 };
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

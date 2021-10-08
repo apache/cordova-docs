@@ -141,53 +141,58 @@ default Windows version after next <code>cordova-cli</code> release.</p>
 <p>Finally, user-configurable packaging parameters are now fully baked, so that Windows code signing requirements don&#39;t overwrite code signing requirements for other platforms.  Use the <code>windows-packageVersion</code> attribute of <code>&lt;widget&gt;</code> in config.xml to specify an independent version for Windows Store submission, and to incorporate the name of the application which is assigned by the Windows Store, set the <code>&lt;preference&gt;</code> named <code>WindowsStoreIdentityName</code>.</p>
 
 <p>Now there is support to see console.log messages and exceptions from your app in the console. This can be useful for quick diagnostics. In an admin command prompt, you can run:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">platforms\windows\cordova\log
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>platforms\windows\cordova\log
+</code></pre></div></div>
+
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update windows@4.1.0
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add windows@4.1.0 --save
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add windows@4.1.0 --save
+</code></pre></div></div>
+
 <p>For non-CLI projects or for pre-3.0 projects, refer to the <a href="http://cordova.apache.org/docs/en/dev/guide_platforms_index.md.html">upgrade guides</a>.</p>
 
 <!--more-->
 
 <h2>What&#39;s new in the Windows platform</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9499">CB-9499</a>: Run failure targeting x64 with an x86 version of Node</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8936">CB-8936</a>: Logs: Stability and formatting improvements</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8936">CB-8936</a>: Windows logs: Improvements</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9482">CB-9482</a>: Mobile deployment failure</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9482">CB-9482</a>: Mobile emulator deployment failure</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8936">CB-8936</a>: Added logging functionality</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9458">CB-9458</a>: Updated the baseline version of Universal Windows to 10240.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9456">CB-9456</a>: Fixed windows app crash on startup</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9450">CB-9450</a>: <code>WindowsStoreIdentityName</code> preference for Store publishing</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9455">CB-9455</a>: Fixed requirements check failure</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8965">CB-8965</a>: Wait for project creation before adding to it.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8965">CB-8965</a>: Copy cordova-js-src directory to platform folder during create</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9359">CB-9359</a>: Adds support for .appxbundle creation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9410">CB-9410</a>: Added preferences for Windows Store ingestion.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9408">CB-9408</a>: Added a <code>windows-packageVersion</code> attribute to the <code>&lt;widget&gt;</code> element</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9283">CB-9283</a>: Add support for Windows 10 WinAppDeployCmd for deployment to remote devices.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9239">CB-9239</a>: Fixes issue with windows prepare on posix platforms.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9235">CB-9235</a>: Adds more checks based on the windows-target-version</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9159">CB-9159</a>: Fix WP8.1 deploy when &#39;window-target-version&#39; is 10.0.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9335">CB-9335</a>: Windows quality-of-life improvements.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9271">CB-9271</a>: Removed the unnecessary device capabilities from the Windows 10 app manifest.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9252">CB-9252</a>: Migrate WinJS to an NPM dependency</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9164">CB-9164</a>: Better error message when deploying to Windows10 phone emulator</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9097">CB-9097</a>: fail with a more descriptive error if run as admin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9499">CB-9499</a>: Run failure targeting x64 with an x86 version of Node</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8936">CB-8936</a>: Logs: Stability and formatting improvements</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8936">CB-8936</a>: Windows logs: Improvements</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9482">CB-9482</a>: Mobile deployment failure</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9482">CB-9482</a>: Mobile emulator deployment failure</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8936">CB-8936</a>: Added logging functionality</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9458">CB-9458</a>: Updated the baseline version of Universal Windows to 10240.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9456">CB-9456</a>: Fixed windows app crash on startup</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9450">CB-9450</a>: <code>WindowsStoreIdentityName</code> preference for Store publishing</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9455">CB-9455</a>: Fixed requirements check failure</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8965">CB-8965</a>: Wait for project creation before adding to it.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8965">CB-8965</a>: Copy cordova-js-src directory to platform folder during create</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9359">CB-9359</a>: Adds support for .appxbundle creation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9410">CB-9410</a>: Added preferences for Windows Store ingestion.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9408">CB-9408</a>: Added a <code>windows-packageVersion</code> attribute to the <code>&lt;widget&gt;</code> element</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9283">CB-9283</a>: Add support for Windows 10 WinAppDeployCmd for deployment to remote devices.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9239">CB-9239</a>: Fixes issue with windows prepare on posix platforms.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9235">CB-9235</a>: Adds more checks based on the windows-target-version</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9159">CB-9159</a>: Fix WP8.1 deploy when &#39;window-target-version&#39; is 10.0.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9335">CB-9335</a>: Windows quality-of-life improvements.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9271">CB-9271</a>: Removed the unnecessary device capabilities from the Windows 10 app manifest.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9252">CB-9252</a>: Migrate WinJS to an NPM dependency</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9164">CB-9164</a>: Better error message when deploying to Windows10 phone emulator</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9097">CB-9097</a>: fail with a more descriptive error if run as admin</li>
 </ul>
 
 <p><strong>Known Issues with 4.1.0 and Windows 10</strong></p>
 
 <ul>
-<li>The Windows 10 SDK includes a tool which can deploy to Windows 10 Phone, but not to a Windows 10 Phone Emulator.  To deploy to an emulator, open your solution file in Visual Studio.</li>
+  <li>The Windows 10 SDK includes a tool which can deploy to Windows 10 Phone, but not to a Windows 10 Phone Emulator.  To deploy to an emulator, open your solution file in Visual Studio.</li>
 </ul>
 
         </div>

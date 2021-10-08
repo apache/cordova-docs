@@ -2425,7 +2425,7 @@
 
 <p>Developing Cordova apps requires a system running Ubuntu.</p>
 
-<p>The recommended environment is Ubuntu 16.04 LTS, running NodeJS 4.2.x and NPM 2.15.x. </p>
+<p>The recommended environment is Ubuntu 16.04 LTS, running NodeJS 4.2.x and NPM 2.15.x.</p>
 
 <p>Packages are still available for systems running the previous LTS release (14.04) but some components like NodeJS or phablet-shell may not support all of the latest options.</p>
 
@@ -2461,12 +2461,14 @@ see <a href="http://wiki.ubuntu.com/Cordova">wiki.ubuntu.com/Cordova</a>.</p>
 <h3>Node and NPM</h3>
 
 <p>Ubuntu 16.04 LTS comes with the required versions of both NodeJS and NPM. To install simlpy do:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo </span>apt-get install nodejs npm
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>nodejs npm
 <span class="nv">$ </span>node <span class="nt">-v</span>
 v.4.2.6
 <span class="nv">$ </span>npm <span class="nt">-v</span>
 2.15.6
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Cordova CLI</h3>
 
 <p>The Cordova command line interface can be installed either via npm, or you can use a pre-packaged version available specifically for Ubuntu.</p>
@@ -2474,17 +2476,18 @@ v.4.2.6
 <p>The recommended installation path is to use the pre-packaged version for Ubuntu, as it generally contains Ubuntu specific fixes which may not all have been merged upstream.</p>
 
 <p>Installing the cordova-cli deb package requires to:</p>
-
 <ol>
-<li>Add the Ubuntu Cordova
-<a href="https://launchpad.net/%7Ecordova-ubuntu/+archive/ppa">Personal Package Archive</a>
+  <li>Add the Ubuntu Cordova
+<a href="https://launchpad.net/~cordova-ubuntu/+archive/ppa">Personal Package Archive</a>
 to your Ubuntu system</li>
-<li>Install the cordova-cli package (and its dependencies)</li>
+  <li>Install the cordova-cli package (and its dependencies)</li>
 </ol>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo </span>apt-add-repository ppa:cordova-ubuntu/ppa
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-add-repository ppa:cordova-ubuntu/ppa
 <span class="nv">$ </span><span class="nb">sudo </span>apt-get update
-<span class="nv">$ </span><span class="nb">sudo </span>apt-get install cordova-cli
-</code></pre></div>
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>cordova-cli
+</code></pre></div></div>
+
 <h3>Add an Ubuntu &quot;click chroot&quot;</h3>
 
 <p>The build environment needs to be separated from the developer&#39;s environment, to prevent unwanted side effects and provide a clean, repeatable process.</p>
@@ -2500,15 +2503,19 @@ to your Ubuntu system</li>
 <p>Ubuntu devices will support the ubuntu-sdk-15.04 framework or later versions.</p>
 
 <h3>Create a click chroot environment</h3>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo </span>apt-add-repository ppa:ubuntu-sdk-team/ppa
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-add-repository ppa:ubuntu-sdk-team/ppa
 <span class="nv">$ </span><span class="nb">sudo </span>apt-get update
 <span class="c"># this will create a clean click chroot build environment</span>
-<span class="nb">sudo </span>apt-get install click-dev phablet-tools ubuntu-sdk-api-15.04
-</code></pre></div>
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>click-dev phablet-tools ubuntu-sdk-api-15.04
+</code></pre></div></div>
+
 <h3>Add build dependencies for Cordova</h3>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># add build dependencies inside the click chroot</span>
-<span class="nb">sudo </span>click chroot <span class="nt">-a</span> armhf <span class="nt">-f</span> ubuntu-sdk-15.04 install cmake libicu-dev:armhf pkg-config qtbase5-dev:armhf qtchooser qtdeclarative5-dev:armhf qtfeedback5-dev:armhf qtlocation5-dev:armhf qtmultimedia5-dev:armhf qtpim5-dev:armhf libqt5sensors5-dev:armhf qtsystems5-dev:armhf
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># add build dependencies inside the click chroot</span>
+<span class="nb">sudo </span>click <span class="nb">chroot</span> <span class="nt">-a</span> armhf <span class="nt">-f</span> ubuntu-sdk-15.04 <span class="nb">install </span>cmake libicu-dev:armhf pkg-config qtbase5-dev:armhf qtchooser qtdeclarative5-dev:armhf qtfeedback5-dev:armhf qtlocation5-dev:armhf qtmultimedia5-dev:armhf qtpim5-dev:armhf libqt5sensors5-dev:armhf qtsystems5-dev:armhf
+</code></pre></div></div>
+
 <h3>Ubuntu IDE (optional)</h3>
 
 <p>You may also want to install the Ubuntu QtCreator development environment. See
@@ -2524,45 +2531,56 @@ app.)</p>
 
 <p>Creates an app in a <code>hello</code> directory whose display name is
 <code>HelloWorld</code>:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova create helloworld helloworld.ubuntudeveloper HelloWorld
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova create helloworld helloworld.ubuntudeveloper HelloWorld
 <span class="nv">$ </span><span class="nb">cd </span>hello
 <span class="nv">$ </span>cordova platform add ubuntu
-</code></pre></div>
-<p>Note that Ubuntu applications use a pair <appname>.<username> as a naming convention.</p>
+</code></pre></div></div>
+
+<p>Note that Ubuntu applications use a pair <appname>.<username> as a naming convention.</username></appname></p>
 
 <h3>Add a Plugin</h3>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova plugin add cordova-plugin-camera
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova plugin add cordova-plugin-camera
+</code></pre></div></div>
+
 <h3>Build for Ubuntu devices</h3>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova build <span class="nt">--device</span>
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova build <span class="nt">--device</span>
+</code></pre></div></div>
+
 <p>You can see detailed build logs with the following options:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova <span class="nt">-d</span> build <span class="nt">--device</span> <span class="nt">--</span> <span class="nt">--verbose</span>
-</code></pre></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova <span class="nt">-d</span> build <span class="nt">--device</span> <span class="nt">--</span> <span class="nt">--verbose</span>
+</code></pre></div></div>
+
 <p>You can build your app for a different target framework by specifying the option below:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova <span class="nt">-d</span> build <span class="nt">--device</span> <span class="nt">--</span> <span class="nt">--framework</span><span class="o">=</span>ubuntu-sdk-16.04
-</code></pre></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova <span class="nt">-d</span> build <span class="nt">--device</span> <span class="nt">--</span> <span class="nt">--framework</span><span class="o">=</span>ubuntu-sdk-16.04
+</code></pre></div></div>
+
 <p>Note that for the latter to work, you will need to have a corresponding click chroot installed on your build system.</p>
 
 <h3>Run the App on an Ubuntu device</h3>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova run <span class="nt">--device</span>
-</code></pre></div>
-<p>This will:</p>
 
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova run <span class="nt">--device</span>
+</code></pre></div></div>
+
+<p>This will:</p>
 <ol>
-<li>build the app for the device target</li>
-<li>package it using the click packaging system</li>
-<li>transfer the app on the device</li>
-<li>stop the app if it was already running</li>
-<li>install the app</li>
-<li>start the app</li>
+  <li>build the app for the device target</li>
+  <li>package it using the click packaging system</li>
+  <li>transfer the app on the device</li>
+  <li>stop the app if it was already running</li>
+  <li>install the app</li>
+  <li>start the app</li>
 </ol>
 
 <h2>Debugging</h2>
 
 <p>You can enable chrome devtools support to debug your app, by adding the --debug flag:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova run <span class="nt">--device</span> <span class="nt">--debug</span>
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova run <span class="nt">--device</span> <span class="nt">--debug</span>
+</code></pre></div></div>
+
 <p>Then simply connect to the URL mentioned in the logs.</p>
 
 <h2>Publishing your app</h2>
@@ -2572,12 +2590,16 @@ app.)</p>
 <h3>Generate and verify the package</h3>
 
 <p>Your app is already packaged in a format compatible with the app store. Just find the .click package generate by the cordova-ubuntu build system:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova build <span class="nt">--device</span>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova build <span class="nt">--device</span>
 <span class="nv">$ </span>find <span class="nt">-name</span> <span class="s2">"*.click"</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>You can manually verify that the package passes all verification steps enforced by the Ubuntu App Store system, by using the click-reviewer-tools:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>click review <span class="nt">-v</span> &lt;click file&gt;
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>click review <span class="nt">-v</span> &lt;click file&gt;
+</code></pre></div></div>
+
 <p>Note: this step is done automatically by the build system as well.</p>
 
 <h3>Sign up and upload to the app store</h3>
@@ -2587,6 +2609,7 @@ app.)</p>
 <p>Then you will be able to upload your package to the store and make it available to all users of Ubuntu devices.</p>
 
 <p>The full process is documented online at https://developer.ubuntu.com/en/publish/</p>
+
 
 
             </div>

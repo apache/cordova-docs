@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released Cordova iOS 6.1.0! This is Cordova&#39;s official platform for building iOS mobile applications.cordova-i...">
+    <meta name="description" content="We are happy to announce that we have just released Cordova iOS 6.1.0! This is Cordova&#39;s official platform for building iOS mobile applications.  cordova...">
 
     <title>
         
@@ -134,77 +134,96 @@
             <p>We are happy to announce that we have just released <code>Cordova iOS 6.1.0</code>! This is Cordova&#39;s official platform for building iOS mobile applications.</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@6.1.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@6.1.0</a></li>
 </ul>
 
 <p><strong>To upgrade:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform remove ios
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove ios
 cordova platform add ios@6.1.0
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Release Highlights</h2>
 
 <p>This release contains primarily fixes for issues with the 6.0.0 release.</p>
 
 <ul>
-<li><p><strong>Resolve CocoaPods publishing issues</strong> <em>(since 6.0.0)</em></p>
+  <li>
+    <p><strong>Resolve CocoaPods publishing issues</strong> <em>(since 6.0.0)</em></p>
 
-<p>The Cordova iOS 6.0.0 release was unable to be published to CocoaPods due to issues with the Pod spec. These have been addressed and Cordova iOS 6.1.0 is available.</p></li>
-<li><p><strong>Fix landscape orientation defaults</strong> <em>(since 6.0.0)</em></p>
+    <p>The Cordova iOS 6.0.0 release was unable to be published to CocoaPods due to issues with the Pod spec. These have been addressed and Cordova iOS 6.1.0 is available.</p>
+  </li>
+  <li>
+    <p><strong>Fix landscape orientation defaults</strong> <em>(since 6.0.0)</em></p>
 
-<p>A change made in Cordova iOS 6.0.0 had the side effect of disabling landscape orientation for any apps that didn&#39;t specify an <code>Orientation</code> preference in <code>config.xml</code>. We&#39;ve reverted that change and new apps will match Xcode defaults (allowing both portrait and landscape orientations).</p>
+    <p>A change made in Cordova iOS 6.0.0 had the side effect of disabling landscape orientation for any apps that didn&#39;t specify an <code>Orientation</code> preference in <code>config.xml</code>. We&#39;ve reverted that change and new apps will match Xcode defaults (allowing both portrait and landscape orientations).</p>
 
-<p>To ensure your app properly supports the orientations you want, we encourage setting <a href="https://cordova.apache.org/docs/en/latest/config_ref/index.html#preference">the <code>Orientation</code> preference</a>.</p></li>
-<li><p><strong>Fix invisible SplashScreen bugs</strong> <em>(since 6.0.0)</em></p>
+    <p>To ensure your app properly supports the orientations you want, we encourage setting <a href="https://cordova.apache.org/docs/en/latest/config_ref/index.html#preference">the <code>Orientation</code> preference</a>.</p>
+  </li>
+  <li>
+    <p><strong>Fix invisible SplashScreen bugs</strong> <em>(since 6.0.0)</em></p>
 
-<p>A bug in Cordova iOS 6.0.0 would cause the splashscreen to be invisible unless a <code>BackgroundColor</code> preference was set in <code>config.xml</code>. This was not the intended behaviour, and caused a lot of confusion about not being able to interact with the webview behind the splashscreen.</p>
+    <p>A bug in Cordova iOS 6.0.0 would cause the splashscreen to be invisible unless a <code>BackgroundColor</code> preference was set in <code>config.xml</code>. This was not the intended behaviour, and caused a lot of confusion about not being able to interact with the webview behind the splashscreen.</p>
 
-<p>In Cordova iOS 6.1.0, we&#39;ve fixed the splashscreen so that it will always have a background colour (defaulting to the system background colour) and so that the launch storyboard image should remain visible.</p>
+    <p>In Cordova iOS 6.1.0, we&#39;ve fixed the splashscreen so that it will always have a background colour (defaulting to the system background colour) and so that the launch storyboard image should remain visible.</p>
 
-<p>To customize the background colour of your app and its splashscreen, use <a href="https://cordova.apache.org/docs/en/latest/config_ref/index.html#preference">the <code>BackgroundColor</code> preference</a> in <code>config.xml</code>.</p></li>
-<li><p><strong>Add support for dark mode splashscreens</strong> <em>(New Feature)</em></p>
+    <p>To customize the background colour of your app and its splashscreen, use <a href="https://cordova.apache.org/docs/en/latest/config_ref/index.html#preference">the <code>BackgroundColor</code> preference</a> in <code>config.xml</code>.</p>
+  </li>
+  <li>
+    <p><strong>Add support for dark mode splashscreens</strong> <em>(New Feature)</em></p>
 
-<p>It is now possible to use optionally different splashscreen images when your app is running in dark mode. You can configure these images in <code>config.xml</code> with the <code>~dark</code> suffix (and <code>~light</code> is also supported).</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="c">&lt;!-- Default image to be used for all modes --&gt;</span>
-<span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~anyany.png"</span> <span class="nt">/&gt;</span>
+    <p>It is now possible to use optionally different splashscreen images when your app is running in dark mode. You can configure these images in <code>config.xml</code> with the <code>~dark</code> suffix (and <code>~light</code> is also supported).</p>
 
-<span class="c">&lt;!-- Image to use specifically for dark mode devices --&gt;</span>
-<span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~anyany~dark.png"</span> <span class="nt">/&gt;</span>
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c">&lt;!-- Default image to be used for all modes --&gt;</span>
+  <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~anyany.png"</span> <span class="nt">/&gt;</span>
 
-<span class="c">&lt;!-- Image to use specifically for light mode devices --&gt;</span>
-<span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~anyany~light.png"</span> <span class="nt">/&gt;</span>
-</code></pre></div></li>
-<li><p><strong>Add preference for iPad desktop layout behaviour</strong> <em>(New Feature)</em></p>
+  <span class="c">&lt;!-- Image to use specifically for dark mode devices --&gt;</span>
+  <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~anyany~dark.png"</span> <span class="nt">/&gt;</span>
 
-<p>iPadOS 13 defaults to using a desktop layout in webviews rather than a mobile layout. You can now control this behaviour in your apps with <a href="https://cordova.apache.org/docs/en/latest/config_ref/index.html#preference">the <code>PreferredContentMode</code> preference</a> in <code>config.xml</code>. Valid options are <code>mobile</code> and <code>desktop</code>.</p></li>
-<li><p><strong>Add preference for webview window handling</strong> <em>(New Feature)</em></p>
+  <span class="c">&lt;!-- Image to use specifically for light mode devices --&gt;</span>
+  <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~anyany~light.png"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Add preference for iPad desktop layout behaviour</strong> <em>(New Feature)</em></p>
 
-<p>Historically, Cordova iOS has not supported the creation of new webview windows with APIs like <code>window.open</code> or links with <code>target=&quot;_blank&quot;</code>. The default behaviour was inconsistent, with some links opening externally in Safari and some links being unclickable. There is now <a href="https://cordova.apache.org/docs/en/latest/config_ref/index.html#preference">an <code>AllowNewWindows</code> preference</a> in <code>config.xml</code> to control the behaviour of new windows within the application.</p>
+    <p>iPadOS 13 defaults to using a desktop layout in webviews rather than a mobile layout. You can now control this behaviour in your apps with <a href="https://cordova.apache.org/docs/en/latest/config_ref/index.html#preference">the <code>PreferredContentMode</code> preference</a> in <code>config.xml</code>. Valid options are <code>mobile</code> and <code>desktop</code>.</p>
+  </li>
+  <li>
+    <p><strong>Add preference for webview window handling</strong> <em>(New Feature)</em></p>
 
-<ul>
-<li>When <strong>false</strong> (the default behaviour), links that would open a new window are instead opened in the same webview as if they had not requested a new window.</li>
-<li>When <strong>true</strong>, links that would open a new window will create a new webview overtop of the app. This new webview provides no controls, so you must include a way to dismiss it with <code>window.close()</code>.</li>
-</ul>
+    <p>Historically, Cordova iOS has not supported the creation of new webview windows with APIs like <code>window.open</code> or links with <code>target="_blank"</code>. The default behaviour was inconsistent, with some links opening externally in Safari and some links being unclickable. There is now <a href="https://cordova.apache.org/docs/en/latest/config_ref/index.html#preference">an <code>AllowNewWindows</code> preference</a> in <code>config.xml</code> to control the behaviour of new windows within the application.</p>
 
-<p>Links that are outside the list of <a href="https://cordova.apache.org/docs/en/latest/config_ref/index.html#allow-navigation"><code>allow-navigation</code></a> URLs will continue to open in Safari.</p></li>
+    <ul>
+      <li>
+        <p>When <strong>false</strong> (the default behaviour), links that would open a new window are instead opened in the same webview as if they had not requested a new window.</p>
+      </li>
+      <li>
+        <p>When <strong>true</strong>, links that would open a new window will create a new webview overtop of the app. This new webview provides no controls, so you must include a way to dismiss it with <code>window.close()</code>.</p>
+      </li>
+    </ul>
+
+    <p>Links that are outside the list of <a href="https://cordova.apache.org/docs/en/latest/config_ref/index.html#allow-navigation"><code>allow-navigation</code></a> URLs will continue to open in Safari.</p>
+  </li>
 </ul>
 
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h2>Full Changelog</h2>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-ios/pull/910">GH-910</a> Set <code>$PROJECT_NAME</code> properly when installing plugins</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/885">GH-885</a> Don&#39;t silently ignore creation of new windows</li>
-<li><a href="https://github.com/apache/cordova-ios/issues/899">GH-889</a> Revert &quot;(ios) Don&#39;t pre-fill orientation&quot; (<a href="https://github.com/apache/cordova-ios/pull/901">#901</a>)</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/902">GH-902</a> chore: fix eslint failure</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/808">GH-808</a> Dark mode splashscreen storyboard images</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/886">GH-886</a> Add PreferredContentMode preference</li>
-<li><a href="https://github.com/apache/cordova-ios/issues/890">GH-890</a> Fix SplashScreen issues &amp; refactor BackgroundColor (<a href="https://github.com/apache/cordova-ios/pull/896">#896</a>)</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/888">GH-888</a> fix: author and tag podspec errors</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/882">GH-882</a> fix: Properly get version from <code>package.json</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/910">GH-910</a> Set <code>$PROJECT_NAME</code> properly when installing plugins</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/885">GH-885</a> Don&#39;t silently ignore creation of new windows</li>
+  <li><a href="https://github.com/apache/cordova-ios/issues/899">GH-889</a> Revert &quot;(ios) Don&#39;t pre-fill orientation&quot; (<a href="https://github.com/apache/cordova-ios/pull/901">#901</a>)</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/902">GH-902</a> chore: fix eslint failure</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/808">GH-808</a> Dark mode splashscreen storyboard images</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/886">GH-886</a> Add PreferredContentMode preference</li>
+  <li><a href="https://github.com/apache/cordova-ios/issues/890">GH-890</a> Fix SplashScreen issues &amp; refactor BackgroundColor (<a href="https://github.com/apache/cordova-ios/pull/896">#896</a>)</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/888">GH-888</a> fix: author and tag podspec errors</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/882">GH-882</a> fix: Properly get version from <code>package.json</code></li>
 </ul>
+
 
         </div>
     </section>

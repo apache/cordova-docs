@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="New versions of cordova tools are now live!cordova-lib@4.3.0cordova@4.3.0plugman@0.23.0cordova-js@3.8.0To update your tools:If you have cordova installed:npm...">
+    <meta name="description" content="New versions of cordova tools are now live!  cordova-lib@4.3.0  cordova@4.3.0  plugman@0.23.0  cordova-js@3.8.0To update your tools:      If you have cordova...">
 
     <title>
         
@@ -134,135 +134,135 @@
             <p>New versions of cordova tools are now live!</p>
 
 <ul>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@4.3.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova">cordova@4.3.0</a></li>
-<li><a href="https://www.npmjs.org/package/plugman">plugman@0.23.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@3.8.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@4.3.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova">cordova@4.3.0</a></li>
+  <li><a href="https://www.npmjs.org/package/plugman">plugman@0.23.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@3.8.0</a></li>
 </ul>
 
 <p>To update your tools:</p>
 
 <ul>
-<li><p>If you have <code>cordova</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
-</code></pre></div></li>
-<li><p>If you have <code>plugman</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g plugman
-</code></pre></div></li>
+  <li>
+    <p>If you have <code>cordova</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you have <code>plugman</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g plugman
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>Release highlights:</p>
 
 <ul>
-<li><strong>Cordova-iOS</strong> developers will need to update their <code>iOS-deploy</code> dependency to launch on <strong>iOS</strong> devices. Please run <code>npm install -g ios-deploy</code> to install the latest version <code>1.4.0</code>.</li>
-<li>You can now save your list of installed plugins and platforms using the <code>--save</code> command when adding platforms and plugins to your project.
+  <li><strong>Cordova-iOS</strong> developers will need to update their <code>iOS-deploy</code> dependency to launch on <strong>iOS</strong> devices. Please run <code>npm install -g ios-deploy</code> to install the latest version <code>1.4.0</code>.</li>
+  <li>You can now save your list of installed plugins and platforms using the <code>--save</code> command when adding platforms and plugins to your project.
 Saved platforms and plugins are automagically restored during prepare.
 Ex. <code>cordova platform add android --save</code>.
 This should make it easier developing cordova projects among a team.</li>
-<li>Plugin authors can use the new command <code>plugman createpackagejson &lt;plugin_path&gt;</code> to add a <code>package.json</code> file to their plugins.</li>
-<li>We are preparing to transition our plugin hosting over to npm.  We will be doing a detailed blog post soon.
+  <li>Plugin authors can use the new command <code>plugman createpackagejson &lt;plugin_path&gt;</code> to add a <code>package.json</code> file to their plugins.</li>
+  <li>We are preparing to transition our plugin hosting over to npm.  We will be doing a detailed blog post soon.
 <strong>Stay tuned</strong>.</li>
 </ul>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <h2>Platform updates</h2>
-
 <p>When adding these platforms to your project, the following versions are now used by default.
 These platform versions were released recently, and the tools&#39; defaults were updated:</p>
 
 <ul>
-<li><a href="http://cordova.apache.org/announcements/2015/02/25/cordova-ios-3.8.0.html">Cordova iOS 3.8.0</a></li>
-<li><a href="http://cordova.apache.org/announcements/2015/02/27/cordova-windows-3.8.0.html">Cordova Windows 3.8.0</a></li>
-<li><a href="http://cordova.apache.org/announcements/2015/02/06/cordova-android-3.7.1.html">Cordova Android 3.7.1</a></li>
+  <li><a href="http://cordova.apache.org/announcements/2015/02/25/cordova-ios-3.8.0.html">Cordova iOS 3.8.0</a></li>
+  <li><a href="http://cordova.apache.org/announcements/2015/02/27/cordova-windows-3.8.0.html">Cordova Windows 3.8.0</a></li>
+  <li><a href="http://cordova.apache.org/announcements/2015/02/06/cordova-android-3.7.1.html">Cordova Android 3.7.1</a></li>
 </ul>
 
 <h2>cordova-lib</h2>
-
 <ul>
-<li>Updated pinned versions of <strong>iOS</strong> to 3.8.0 and <strong>Android</strong> to 3.7.1</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8284">CB-8284</a> Revert <code>npm</code> dependency due to issues with registry</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8524">CB-8524</a> Switched to the latest <strong>Windows</strong> release</li>
-<li>changed <code>createpackage.json</code> keyword to <code>ecosystem:cordova</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8448">CB-8448</a> Add support for activities</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8482">CB-8482</a> Rename: <code>platformId</code> -&gt; <code>platformName</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8482">CB-8482</a> Update engine syntax within config.xml</li>
-<li><code>--save</code> flag for plugins</li>
-<li>Restore plugins and platforms on prepare</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8472">CB-8472</a> Can&#39;t find <code>config.xml</code> error installing browser platform after plugin</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8469">CB-8469</a> <strong>Android</strong>: Call into platform&#39;s <code>build.js</code> after <code>plugin add</code> so that <strong>Android Studio</strong> will work without needing an explicit command-line build first</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8123">CB-8123</a> Plugin references can target specific <strong>Windows</strong> platforms</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8420">CB-8420</a> Make <code>cordova plugin add FOO</code> use version from config.xml</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8239">CB-8239</a> Fix <code>cordova platform add PATH</code> when <em>PATH</em> is relative and <em>CWD</em> != <em>project root</em></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8227">CB-8227</a> CB8237 <a href="https://issues.apache.org/jira/browse/CB-8238">CB-8238</a> Add <code>--save</code> flag and autosave to <code>cordova platform add</code>, <code>cordova platform remove</code> and <code>cordova platform update</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8409">CB-8409</a> <code>compile</code>: bubble failures</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8239">CB-8239</a> Fix <code>cordova platform update</code> should ignore <code>&lt;cdv:engine&gt;</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8390">CB-8390</a> <strong>Android</strong>: Make <code>&lt;framework custom=false&gt;</code> work with <strong>Gradle</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8416">CB-8416</a> Updated <code>plugman publish</code> to temporarily rename existing <code>package.json</code> files</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8416">CB-8416</a> Added <code>plugman createpackagejson .</code> command to create a <code>package.json</code> from <code>plugin.xml</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8377">CB-8377</a> Fixed <code>&lt;runs&gt;</code> tag parsing</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5696">CB-5696</a> Find <strong>iOS</strong> project directory using the xcode project file</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8373">CB-8373</a> <strong>Android</strong>: Add <strong>Gradle</strong> references to project.properties rather than build.gradle</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8370">CB-8370</a> Make <code>plugman publish</code> without args default to <em>CWD</em></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8366">CB-8366</a> <strong>Android</strong>: Remove empty <code>&lt;framework&gt;</code> directory upon uninstall</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6973">CB-6973</a> Enable JSHint for spec-cordova</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8239">CB-8239</a> Add support for git urls to &#39;cordova platform add&#39;</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8358">CB-8358</a> Add <code>--link</code> for <code>platform add</code> and <code>platform update</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6973">CB-6973</a> Remove base rules from individual files in <code>src</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8354">CB-8354</a> Add --link support for <strong>iOS</strong> source and header files</li>
-<li>Make all ad-hoc <code>plugin.xml</code> parsing use <code>PluginInfo</code> instead</li>
-<li>Make all usages of <code>PluginInfo</code> use <code>PluginInfoProvider</code> instead</li>
-<li>Add <code>PluginInfoProvider</code> for better caching of <code>PluginInfo</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8223">CB-8223</a> Expose <code>config.xml</code> in the Browser platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8168">CB-8168</a> <code>--list</code> support for cordova-lib</li>
-<li><strong>FireOS</strong> Improve error message when <code>&lt;source-file&gt;</code> is missing <code>target-dir</code></li>
-<li>Make <code>addUninstalledPluginToPrepareQueue</code> take <code>pluginId</code> rather than <code>dirName</code></li>
+  <li>Updated pinned versions of <strong>iOS</strong> to 3.8.0 and <strong>Android</strong> to 3.7.1</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8284">CB-8284</a> Revert <code>npm</code> dependency due to issues with registry</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8524">CB-8524</a> Switched to the latest <strong>Windows</strong> release</li>
+  <li>changed <code>createpackage.json</code> keyword to <code>ecosystem:cordova</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8448">CB-8448</a> Add support for activities</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8482">CB-8482</a> Rename: <code>platformId</code> -&gt; <code>platformName</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8482">CB-8482</a> Update engine syntax within config.xml</li>
+  <li><code>--save</code> flag for plugins</li>
+  <li>Restore plugins and platforms on prepare</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8472">CB-8472</a> Can&#39;t find <code>config.xml</code> error installing browser platform after plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8469">CB-8469</a> <strong>Android</strong>: Call into platform&#39;s <code>build.js</code> after <code>plugin add</code> so that <strong>Android Studio</strong> will work without needing an explicit command-line build first</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8123">CB-8123</a> Plugin references can target specific <strong>Windows</strong> platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8420">CB-8420</a> Make <code>cordova plugin add FOO</code> use version from config.xml</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8239">CB-8239</a> Fix <code>cordova platform add PATH</code> when <em>PATH</em> is relative and <em>CWD</em> != <em>project root</em></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8227">CB-8227</a> CB8237 <a href="https://issues.apache.org/jira/browse/CB-8238">CB-8238</a> Add <code>--save</code> flag and autosave to <code>cordova platform add</code>, <code>cordova platform remove</code> and <code>cordova platform update</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8409">CB-8409</a> <code>compile</code>: bubble failures</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8239">CB-8239</a> Fix <code>cordova platform update</code> should ignore <code>&lt;cdv:engine&gt;</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8390">CB-8390</a> <strong>Android</strong>: Make <code>&lt;framework custom=false&gt;</code> work with <strong>Gradle</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8416">CB-8416</a> Updated <code>plugman publish</code> to temporarily rename existing <code>package.json</code> files</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8416">CB-8416</a> Added <code>plugman createpackagejson .</code> command to create a <code>package.json</code> from <code>plugin.xml</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8377">CB-8377</a> Fixed <code>&lt;runs&gt;</code> tag parsing</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5696">CB-5696</a> Find <strong>iOS</strong> project directory using the xcode project file</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8373">CB-8373</a> <strong>Android</strong>: Add <strong>Gradle</strong> references to project.properties rather than build.gradle</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8370">CB-8370</a> Make <code>plugman publish</code> without args default to <em>CWD</em></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8366">CB-8366</a> <strong>Android</strong>: Remove empty <code>&lt;framework&gt;</code> directory upon uninstall</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6973">CB-6973</a> Enable JSHint for spec-cordova</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8239">CB-8239</a> Add support for git urls to &#39;cordova platform add&#39;</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8358">CB-8358</a> Add <code>--link</code> for <code>platform add</code> and <code>platform update</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6973">CB-6973</a> Remove base rules from individual files in <code>src</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8354">CB-8354</a> Add --link support for <strong>iOS</strong> source and header files</li>
+  <li>Make all ad-hoc <code>plugin.xml</code> parsing use <code>PluginInfo</code> instead</li>
+  <li>Make all usages of <code>PluginInfo</code> use <code>PluginInfoProvider</code> instead</li>
+  <li>Add <code>PluginInfoProvider</code> for better caching of <code>PluginInfo</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8223">CB-8223</a> Expose <code>config.xml</code> in the Browser platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8168">CB-8168</a> <code>--list</code> support for cordova-lib</li>
+  <li><strong>FireOS</strong> Improve error message when <code>&lt;source-file&gt;</code> is missing <code>target-dir</code></li>
+  <li>Make <code>addUninstalledPluginToPrepareQueue</code> take <code>pluginId</code> rather than <code>dirName</code></li>
 </ul>
 
 <h2>cordova-cli</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8439">CB-8439</a> Fix <code>cordova platform update</code> documentation to include <code>&lt;plat-spec&gt;</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8379">CB-8379</a> Have <code>--version</code> print out <strong>cordova-lib</strong> version if it&#39;s not the same as CLI&#39;s version</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8211">CB-8211</a>, <a href="https://issues.apache.org/jira/browse/CB-8358">CB-8358</a> Update <code>--link</code> help text</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8168">CB-8168</a> <code>--list</code> support for CLI</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8227">CB-8227</a> <a href="https://issues.apache.org/jira/browse/CB-8237">CB-8237</a> <a href="https://issues.apache.org/jira/browse/CB-8238">CB-8238</a> Add <code>--save</code> option to <code>cordova platform add</code>, <code>cordova platform remove</code> and <code>cordova platform update</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5316">CB-5316</a> Spell Cordova as a brand unless it&#39;s a command or script</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7950">CB-7950</a> CLI make <code>CordovaCliCreate.prototype.run</code> vaguely correct</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8439">CB-8439</a> Fix <code>cordova platform update</code> documentation to include <code>&lt;plat-spec&gt;</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8379">CB-8379</a> Have <code>--version</code> print out <strong>cordova-lib</strong> version if it&#39;s not the same as CLI&#39;s version</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8211">CB-8211</a>, <a href="https://issues.apache.org/jira/browse/CB-8358">CB-8358</a> Update <code>--link</code> help text</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8168">CB-8168</a> <code>--list</code> support for CLI</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8227">CB-8227</a> <a href="https://issues.apache.org/jira/browse/CB-8237">CB-8237</a> <a href="https://issues.apache.org/jira/browse/CB-8238">CB-8238</a> Add <code>--save</code> option to <code>cordova platform add</code>, <code>cordova platform remove</code> and <code>cordova platform update</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5316">CB-5316</a> Spell Cordova as a brand unless it&#39;s a command or script</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7950">CB-7950</a> CLI make <code>CordovaCliCreate.prototype.run</code> vaguely correct</li>
 </ul>
 
 <h2>cordova-js</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8378">CB-8378</a> <strong>Android</strong>: Deleted <code>hidekeyboard</code> &amp; <code>showkeyboard</code> events</li>
-<li><strong>Android</strong>: Use correct plugin name for <code>navigator.app</code> <code>exec()</code> calls</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8158">CB-8158</a> Fixed <code>symbolList</code> require</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8298">CB-8298</a> <strong>Android</strong>: Execute <code>exec</code> callbacks within their own stack frames</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8210">CB-8210</a> Remove unused <code>onDestroy</code> channel</li>
-<li>Fixed <code>callbackFromNative</code> method</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8378">CB-8378</a> <strong>Android</strong>: Deleted <code>hidekeyboard</code> &amp; <code>showkeyboard</code> events</li>
+  <li><strong>Android</strong>: Use correct plugin name for <code>navigator.app</code> <code>exec()</code> calls</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8158">CB-8158</a> Fixed <code>symbolList</code> require</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8298">CB-8298</a> <strong>Android</strong>: Execute <code>exec</code> callbacks within their own stack frames</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8210">CB-8210</a> Remove unused <code>onDestroy</code> channel</li>
+  <li>Fixed <code>callbackFromNative</code> method</li>
 </ul>
 
 <h2>plugman</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8416">CB-8416</a> Added <code>plugman createpackagejson .</code> command to generate a <code>package.json</code> file from <code>plugin.xml</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8370">CB-8370</a> Update documentation for <code>plugman publish</code> without args</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8416">CB-8416</a> Added <code>plugman createpackagejson .</code> command to generate a <code>package.json</code> file from <code>plugin.xml</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8370">CB-8370</a> Update documentation for <code>plugman publish</code> without args</li>
 </ul>
 
 <h2>Pinned Platform Versions for Cordova CLI 4.2.0</h2>
 
 <ul>
-<li>Cordova Amazon-FireOS: 3.6.3</li>
-<li>Cordova Android: 3.7.1</li>
-<li>Cordova BlackBerry10: 3.7.0</li>
-<li>Cordova Browser: 3.6.0</li>
-<li>Cordova FirefoxOS: 3.6.3</li>
-<li>Cordova iOS: 3.8.0</li>
-<li>Cordova Ubuntu: 4.0.0</li>
-<li>Cordova Windows: 3.8.0</li>
-<li>Cordova WP8: 3.7.1</li>
+  <li>Cordova Amazon-FireOS: 3.6.3</li>
+  <li>Cordova Android: 3.7.1</li>
+  <li>Cordova BlackBerry10: 3.7.0</li>
+  <li>Cordova Browser: 3.6.0</li>
+  <li>Cordova FirefoxOS: 3.6.3</li>
+  <li>Cordova iOS: 3.8.0</li>
+  <li>Cordova Ubuntu: 4.0.0</li>
+  <li>Cordova Windows: 3.8.0</li>
+  <li>Cordova WP8: 3.7.1</li>
 </ul>
 
         </div>

@@ -1644,7 +1644,7 @@
 <h2>Properties</h2>
 
 <ul>
-<li><strong>modificationTime</strong>: The time when the file or directory was last modified. <em>(Date)</em></li>
+  <li><strong>modificationTime</strong>: The time when the file or directory was last modified. <em>(Date)</em></li>
 </ul>
 
 <h2>Details</h2>
@@ -1656,22 +1656,24 @@ or directory.  Calling a <code>[DirectoryEntry](../directoryentry/directoryentry
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Amazon Fire OS</li>
-<li>Android</li>
-<li>BlackBerry 10</li>
-<li>iOS</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows 8</li>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2>Quick Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function win(metadata) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(metadata) {
     console.log("Last Modified: " + metadata.modificationTime);
 }
 
 // Request the metadata object for this entry
 entry.getMetadata(win, null);
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

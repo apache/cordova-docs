@@ -2174,81 +2174,89 @@ File</a> for information on global configuration options.</p>
 
 <h2>Overview</h2>
 
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Default</th>
-<th>Version</th>
-<th>Comment</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>HideMousePointer</code></td>
-<td><em>disabled</em></td>
-<td>4.0.0</td>
-<td>Sets the timeout for hiding the mouse pointer</td>
-</tr>
-<tr>
-<td><code>OSXLocalStoragePath</code></td>
-<td><code>~/Library/Application Support/{bundle.id}</code></td>
-<td>4.0.0</td>
-<td>Sets the local storage path</td>
-</tr>
-<tr>
-<td><code>WindowSize</code></td>
-<td><code>auto</code></td>
-<td>4.0.0</td>
-<td>Sets the size of the application window.</td>
-</tr>
-<tr>
-<td><code>EnableWebGL</code></td>
-<td><code>false</code></td>
-<td>4.0.0</td>
-<td>Enables WebGL on the web view.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Version</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>HideMousePointer</code></td>
+      <td><em>disabled</em></td>
+      <td>4.0.0</td>
+      <td>Sets the timeout for hiding the mouse pointer</td>
+    </tr>
+    <tr>
+      <td><code>OSXLocalStoragePath</code></td>
+      <td><code>~/Library/Application Support/{bundle.id}</code></td>
+      <td>4.0.0</td>
+      <td>Sets the local storage path</td>
+    </tr>
+    <tr>
+      <td><code>WindowSize</code></td>
+      <td><code>auto</code></td>
+      <td>4.0.0</td>
+      <td>Sets the size of the application window.</td>
+    </tr>
+    <tr>
+      <td><code>EnableWebGL</code></td>
+      <td><code>false</code></td>
+      <td>4.0.0</td>
+      <td>Enables WebGL on the web view.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2>Details</h2>
 
 <h3>HideMousePointer</h3>
-
 <p>(integer, defaults to <em>disabled</em>)
 Idle duration in seconds after which the mouse pointer should be hidden.
 Set it to <code>0</code> for immediate.</p>
 
 <p>Example: hide mouse pointer after 5 seconds:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"HideMousePointer"</span> <span class="na">value=</span><span class="s">"5"</span><span class="nt">/&gt;</span>
-</code></pre></div>
-<h3>OSXLocalStoragePath</h3>
 
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"HideMousePointer"</span> <span class="na">value=</span><span class="s">"5"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h3>OSXLocalStoragePath</h3>
 <p>(string, defaults to <code>~/Library/Application Support/{bundle.id}</code>)
 Sets the directory for the local storage path.</p>
 
 <p>Example: use custom path:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"OSXLocalStoragePath"</span> <span class="na">value=</span><span class="s">"~/.myapp/database"</span><span class="nt">/&gt;</span>
-</code></pre></div>
-<h3>WindowSize</h3>
 
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"OSXLocalStoragePath"</span> <span class="na">value=</span><span class="s">"~/.myapp/database"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h3>WindowSize</h3>
 <p>(string, defaults to <code>auto</code>)
 Defines the size of the application window in the format <code>WxH</code> or the special values <code>auto</code> and
 <code>fullscreen</code>. The latter will open a borderless window spanning the entire desktop area. Please note,
 that this is different from the <em>normal</em> OS X fullscreen mode, which would never span multiple displays.</p>
 
 <p>Example: set the window size to 800 x 400:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"WindowSize"</span> <span class="na">value=</span><span class="s">"800x400"</span><span class="nt">/&gt;</span>
-</code></pre></div>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"WindowSize"</span> <span class="na">value=</span><span class="s">"800x400"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
 <blockquote>
-<p><strong>Note</strong>: The global cordova <code>fullscreen</code> preference is not supported.</p>
+  <p><strong>Note</strong>: The global cordova <code>fullscreen</code> preference is not supported.</p>
 </blockquote>
 
 <h3>EnableWebGL</h3>
-
 <p>(boolean, defaults to <code>false</code>)
 If set to <code>true</code> it enables WebGL on the webview.</p>
 
 <p>Example: enable WebGL</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"EnableWebGL"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"EnableWebGL"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+
 
             </div>
         </div>

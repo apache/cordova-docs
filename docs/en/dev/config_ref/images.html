@@ -2207,40 +2207,45 @@
 
 <p>When working in the CLI you can define application icon(s) via the <code>&lt;icon&gt;</code> element (<code>config.xml</code>).
 If you do not specify an icon, the Apache Cordova logo is used.</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon.png"</span> <span class="na">platform=</span><span class="s">"ios"</span> <span class="na">width=</span><span class="s">"57"</span> <span class="na">height=</span><span class="s">"57"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
-<table><thead>
-<tr>
-<th>Attributes</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>src</td>
-<td><em>Required</em> <br/> Location of the image file, relative to your project directory.</td>
-</tr>
-<tr>
-<td>platform</td>
-<td><em>Optional</em> <br/> Target platform</td>
-</tr>
-<tr>
-<td>width</td>
-<td><em>Optional</em> <br/> Icon width in pixels</td>
-</tr>
-<tr>
-<td>height</td>
-<td><em>Optional</em> <br/> Icon height in pixels</td>
-</tr>
-<tr>
-<td>target</td>
-<td><em>Optional</em> <br/> <mark>Windows</mark> <br/> Destination filename for the image file and all its MRT companions</td>
-</tr>
-</tbody></table>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon.png"</span> <span class="na">platform=</span><span class="s">"ios"</span> <span class="na">width=</span><span class="s">"57"</span> <span class="na">height=</span><span class="s">"57"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>src</td>
+      <td><em>Required</em> <br /> Location of the image file, relative to your project directory.</td>
+    </tr>
+    <tr>
+      <td>platform</td>
+      <td><em>Optional</em> <br /> Target platform</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td><em>Optional</em> <br /> Icon width in pixels</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td><em>Optional</em> <br /> Icon height in pixels</td>
+    </tr>
+    <tr>
+      <td>target</td>
+      <td><em>Optional</em> <br /> ==Windows== <br /> Destination filename for the image file and all its MRT companions</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>The following configuration can be used to define a single default icon
 which will be used for all platforms.</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/icon.png"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/icon.png"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
 <p>For each platform, you can also define a pixel-perfect icon set to fit
 different screen resolutions.</p>
 
@@ -2248,32 +2253,35 @@ different screen resolutions.</p>
 
 <p>On Android, instead of using a single image for an icon, you can use two images (background and foreground) to create an <strong>Adaptive Icon</strong>. To use Adaptive Icons, you need to have installed at least version 9.0.0 of <strong>Cordova</strong> and version 8.0.0 of <strong>Cordova-Android</strong>.</p>
 
-<table><thead>
-<tr>
-<th>Attributes</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>background</td>
-<td><em>Required for Adaptive</em> <br/> Location of the image (png or vector) relative to your project directory, or color reference</td>
-</tr>
-<tr>
-<td>foreground</td>
-<td><em>Required for Adaptive</em> <br/> Location of the image (png or vector) relative to your project directory, or color reference</td>
-</tr>
-<tr>
-<td>density</td>
-<td><em>Required</em> <br/> Specified icon density</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>background</td>
+      <td><em>Required for Adaptive</em> <br /> Location of the image (png or vector) relative to your project directory, or color reference</td>
+    </tr>
+    <tr>
+      <td>foreground</td>
+      <td><em>Required for Adaptive</em> <br /> Location of the image (png or vector) relative to your project directory, or color reference</td>
+    </tr>
+    <tr>
+      <td>density</td>
+      <td><em>Required</em> <br /> Specified icon density</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3>Adaptive Icons</h3>
 
 <p>To use the adaptive icons the <code>background</code> and <code>foreground</code> attributes must be defined in place of the <code>src</code> attribute. The <code>src</code> attribute is not used for adaptive icons.</p>
 
 <h4>Adaptive Icon with Images:</h4>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/ldpi-background.png"</span> <span class="na">density=</span><span class="s">"ldpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/ldpi-foreground.png"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/mdpi-background.png"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/mdpi-foreground.png"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/hdpi-background.png"</span> <span class="na">density=</span><span class="s">"hdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/hdpi-foreground.png"</span> <span class="nt">/&gt;</span>
@@ -2281,11 +2289,12 @@ different screen resolutions.</p>
   <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/xxhdpi-background.png"</span> <span class="na">density=</span><span class="s">"xxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/xxxhdpi-background.png"</span> <span class="na">density=</span><span class="s">"xxxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxxhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p><strong>Note:</strong> In this example, the foreground image will also be used as the fallback icon for Android devices that do not support the adaptive icons. The fallback icon can be overridden by setting the src attribute.</p>
 
 <h4>Adaptive Icon with Vectors:</h4>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/ldpi-background.xml"</span> <span class="na">density=</span><span class="s">"ldpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/ldpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/ldpi.png"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/mdpi-background.xml"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/mdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/mdpi.png"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/hdpi-background.xml"</span> <span class="na">density=</span><span class="s">"hdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/hdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/hdpi.png"</span> <span class="nt">/&gt;</span>
@@ -2293,19 +2302,21 @@ different screen resolutions.</p>
   <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/xxhdpi-background.xml"</span> <span class="na">density=</span><span class="s">"xxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxhdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/xxhdpi.png"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/xxxhdpi-background.xml"</span> <span class="na">density=</span><span class="s">"xxxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxxhdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/xxxhdpi.png"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p><strong>Note:</strong> In this example, the src attribute must be defined when then foreground attribute is defined with a vector or color.</p>
 
 <h4>Adaptive Icon with Colors:</h4>
-
 <p>Create a <code>res/values/colors.xml</code> resource file in your project directory to store the app&#39;s color definitions.</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 <span class="nt">&lt;resources&gt;</span>
     <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"background"</span><span class="nt">&gt;</span>#FF0000<span class="nt">&lt;/color&gt;</span>
 <span class="nt">&lt;/resources&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>In the <code>config.xml</code>, we will add <code>resource-file</code> to copy the <code>colors.xml</code> into the approprate location so that the colors are available during build time.</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;resource-file</span> <span class="na">src=</span><span class="s">"res/values/colors.xml"</span> <span class="na">target=</span><span class="s">"/app/src/main/res/values/colors.xml"</span> <span class="nt">/&gt;</span>
 
   <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"@color/background"</span> <span class="na">density=</span><span class="s">"ldpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/ldpi-foreground.png"</span> <span class="nt">/&gt;</span>
@@ -2315,9 +2326,11 @@ different screen resolutions.</p>
   <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"@color/background"</span> <span class="na">density=</span><span class="s">"xxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"@color/background"</span> <span class="na">density=</span><span class="s">"xxxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxxhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Standard Icons</h3>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
         <span class="c">&lt;!--
             ldpi    : 36x36 px
             mdpi    : 48x48 px
@@ -2333,20 +2346,19 @@ different screen resolutions.</p>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/android/xxhdpi.png"</span> <span class="na">density=</span><span class="s">"xxhdpi"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/android/xxxhdpi.png"</span> <span class="na">density=</span><span class="s">"xxxhdpi"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
-<h3>See Also</h3>
+</code></pre></div></div>
 
+<h3>See Also</h3>
 <ul>
-<li><a href="https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive">Android icon guide</a></li>
-<li><a href="http://developer.android.com/guide/practices/screens_support.html">Android - Supporting multiple screens</a></li>
+  <li><a href="https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive">Android icon guide</a></li>
+  <li><a href="http://developer.android.com/guide/practices/screens_support.html">Android - Supporting multiple screens</a></li>
 </ul>
 
 <h2>Browser</h2>
-
 <p>Icons are not applicable to the Browser platform.</p>
 
 <h2>iOS</h2>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
         <span class="c">&lt;!-- iOS 8.0+ --&gt;</span>
         <span class="c">&lt;!-- iPhone 6 Plus  --&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-60@3x.png"</span> <span class="na">width=</span><span class="s">"180"</span> <span class="na">height=</span><span class="s">"180"</span> <span class="nt">/&gt;</span>
@@ -2381,17 +2393,17 @@ different screen resolutions.</p>
         <span class="c">&lt;!-- iTunes Marketing Image --&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-1024.png"</span> <span class="na">width=</span><span class="s">"1024"</span> <span class="na">height=</span><span class="s">"1024"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
 <h3>See Also</h3>
-
 <ul>
-<li><a href="https://developer.apple.com/library/content/qa/qa1686/_index.html">App Icons on iPad and iPhone</a></li>
+  <li><a href="https://developer.apple.com/library/content/qa/qa1686/_index.html">App Icons on iPad and iPhone</a></li>
 </ul>
 
 <h2>Windows</h2>
 
 <p>For Windows the recommended approach to define application icons is to use the <code>target</code> attribute.</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/storelogo.png"</span> <span class="na">target=</span><span class="s">"StoreLogo"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/smalllogo.png"</span> <span class="na">target=</span><span class="s">"Square30x30Logo"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.png"</span> <span class="na">target=</span><span class="s">"Square44x44Logo"</span> <span class="nt">/&gt;</span>
@@ -2401,34 +2413,35 @@ different screen resolutions.</p>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square310x310Logo.png"</span> <span class="na">target=</span><span class="s">"Square310x310Logo"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Wide310x150Logo.png"</span> <span class="na">target=</span><span class="s">"Wide310x150Logo"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>where <code>src</code> is the path to the icon which needs to be added.</p>
 
-<p>The Windows platform handles MRT icons automatically, so if you specify <code>src=&quot;res/windows/storelogo.png&quot;</code> the following files will be copied into the application&#39;s <code>images</code> folder: <code>res/windows/storelogo.scale-100.png</code>, <code>res/windows/storelogo.scale-200.png</code>, etc.</p>
+<p>The Windows platform handles MRT icons automatically, so if you specify <code>src="res/windows/storelogo.png"</code> the following files will be copied into the application&#39;s <code>images</code> folder: <code>res/windows/storelogo.scale-100.png</code>, <code>res/windows/storelogo.scale-200.png</code>, etc.</p>
 
 <p>TODO Define what MRT is.</p>
 
-<p>The <code>target</code> attribute specifies the base name for the resultant icons. For every icon file, its destination filename is calculated as <code>target + &#39;.&#39; + MRT_qualifiers + extension(src)</code>. For the icons to display properly in the application, every <code>target</code> value should be one of the icon filenames defined in the application&#39;s <code>.appxmanifest</code> file.</p>
+<p>The <code>target</code> attribute specifies the base name for the resultant icons. For every icon file, its destination filename is calculated as <code>target + '.' + MRT_qualifiers + extension(src)</code>. For the icons to display properly in the application, every <code>target</code> value should be one of the icon filenames defined in the application&#39;s <code>.appxmanifest</code> file.</p>
 
-<p>Summarizing the above... using the <code>target</code> attribute it is possible to:</p>
+<p>Summarizing the above&#8230; using the <code>target</code> attribute it is possible to:</p>
 
 <ul>
-<li>define a group of icons for different device scale factors using a single <code>&lt;icon ...&gt;</code> element, for example:
-<code>xml
-&lt;icon src=&quot;res/windows/AppListIcon.png&quot; target=&quot;Square44x44Logo&quot; /&gt;
-</code>
-which is equivalent to the following lines:
-<code>xml
-&lt;icon src=&quot;res/windows/Square44x44Logo.scale-100.png&quot; width=&quot;44&quot; height=&quot;44&quot; /&gt;
-&lt;icon src=&quot;res/windows/Square44x44Logo.scale-150.png&quot; width=&quot;66&quot; height=&quot;66&quot; /&gt;
-&lt;icon src=&quot;res/windows/Square44x44Logo.scale-200.png&quot; width=&quot;88&quot; height=&quot;88&quot; /&gt;
-&lt;icon src=&quot;res/windows/Square44x44Logo.scale-240.png&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-</code></li>
-<li>define icons with scale factors other than <code>scale-100</code> and <code>scale-240</code> (and any other MRT qualifiers)</li>
+  <li>define a group of icons for different device scale factors using a single <code>&lt;icon ...&gt;</code> element, for example:
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/AppListIcon.png"</span> <span class="na">target=</span><span class="s">"Square44x44Logo"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+    <p>which is equivalent to the following lines:</p>
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.scale-100.png"</span> <span class="na">width=</span><span class="s">"44"</span> <span class="na">height=</span><span class="s">"44"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.scale-150.png"</span> <span class="na">width=</span><span class="s">"66"</span> <span class="na">height=</span><span class="s">"66"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.scale-200.png"</span> <span class="na">width=</span><span class="s">"88"</span> <span class="na">height=</span><span class="s">"88"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.scale-240.png"</span> <span class="na">width=</span><span class="s">"106"</span> <span class="na">height=</span><span class="s">"106"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>define icons with scale factors other than <code>scale-100</code> and <code>scale-240</code> (and any other MRT qualifiers)</li>
 </ul>
 
 <p>Although it is not recommended, it is also possible to define icons using the <code>width</code> and <code>height</code> attributes:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/logo.png"</span> <span class="na">width=</span><span class="s">"150"</span> <span class="na">height=</span><span class="s">"150"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/smalllogo.png"</span> <span class="na">width=</span><span class="s">"30"</span> <span class="na">height=</span><span class="s">"30"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/storelogo.png"</span> <span class="na">width=</span><span class="s">"50"</span> <span class="na">height=</span><span class="s">"50"</span> <span class="nt">/&gt;</span>
@@ -2442,52 +2455,58 @@ which is equivalent to the following lines:
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Wide310x150Logo.scale-100.png"</span> <span class="na">width=</span><span class="s">"310"</span> <span class="na">height=</span><span class="s">"150"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Wide310x150Logo.scale-240.png"</span> <span class="na">width=</span><span class="s">"744"</span> <span class="na">height=</span><span class="s">"360"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
-<h3>See Also:</h3>
+</code></pre></div></div>
 
+<h3>See Also:</h3>
 <ul>
-<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/mt412102.aspx">Windows 10 platform guidelines for icons</a>.</li>
-<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh781198.aspx">Windows 8.1 tiles and icons sizes</a></li>
+  <li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/mt412102.aspx">Windows 10 platform guidelines for icons</a>.</li>
+  <li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh781198.aspx">Windows 8.1 tiles and icons sizes</a></li>
 </ul>
 
 <h2>Electron</h2>
 
 <h3>Customizing the Application&#39;s Icon</h3>
 
-<p>Customized icon(s) can be declared with the <code>&lt;icon&gt;</code> element(s) in the <code>config.xml</code> file. There are two types of icons that can be defined, the application icon and the package installer icon. These icons should be defined in the Electron&#39;s platform node <code>&lt;platform name=&quot;electron&quot;&gt;</code>.</p>
+<p>Customized icon(s) can be declared with the <code>&lt;icon&gt;</code> element(s) in the <code>config.xml</code> file. There are two types of icons that can be defined, the application icon and the package installer icon. These icons should be defined in the Electron&#39;s platform node <code>&lt;platform name="electron"&gt;</code>.</p>
 
 <p>One icon can be used for the application and installer, but this icon should be at least <strong>512x512</strong> pixels to work across all operating systems.</p>
 
 <p><em>Notice: If a customized icon is not provided, the Apache Cordova default icons are used.</em></p>
 
 <p><em>Notice: macOS does not display custom icons when using <code>cordova run</code>. It defaults to the Electron&#39;s icon.</em></p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"electron"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"electron"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/electron/icon.png"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>You can supply unique icons for the application and installer by setting the <code>target</code> attribute. As mentioned above, the installer image should be <strong>512x512</strong> pixels to work across all platforms.</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"electron"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"electron"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/electron/app.png"</span> <span class="na">target=</span><span class="s">"app"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/electron/installer.png"</span> <span class="na">target=</span><span class="s">"installer"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>For devices that support high-DPI resolutions, such as Apple&#39;s Retina display, you can create a set of images with the same base filename but suffix with its multiplier.</p>
 
 <p>For example, if the base image&#39;s filename <code>icon.png</code> and is the standard resolution, then <code>icon@2x.png</code> will be treated as a high-resolution image that with a DPI doubled from the base.</p>
 
 <ul>
-<li>icon.png (256px x 256px)</li>
-<li>icon@2x.png (512px x 512px)</li>
+  <li>icon.png (256px x 256px)</li>
+  <li>icon@2x.png (512px x 512px)</li>
 </ul>
 
 <p>If you want to support displays with different DPI densities at the same time, you can put images with different sizes in the same folder and use the filename without DPI suffixes. For example:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"electron"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"electron"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/electron/icon.png"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/electron/icon@1.5x.png"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/electron/icon@2x.png"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/electron/icon@4x.png"</span> <span class="na">target=</span><span class="s">"installer"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

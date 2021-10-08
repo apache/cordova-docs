@@ -136,7 +136,7 @@
 <p>This should solve the warning after uploading the app to App Store connect:</p>
 
 <blockquote>
-<p>ITMS-90809: Deprecated API Usage - Apple will stop accepting submissions of apps that use UIWebView APIs.</p>
+  <p>ITMS-90809: Deprecated API Usage - Apple will stop accepting submissions of apps that use UIWebView APIs.</p>
 </blockquote>
 
 <p>A new <code>preference</code> flag <code>WKWebViewOnly</code> was introduced to remove all <code>UIWebView</code> references from Cordova&#39;s code during compile-time. It is recommended to upgrade the <code>cordova-ios</code> platform to version <code>5.1.1</code>.</p>
@@ -148,14 +148,15 @@
 <p>The following example uses the <code>[cordova-plugin-wkwebview-engine](https://github.com/apache/cordova-plugin-wkwebview-engine)</code> plugin:</p>
 
 <ul>
-<li>Add plugin <code>cordova-plugin-wkwebview-engine</code>, preferably the latest version <strong>1.2.1</strong></li>
-<li>Add <code>preference</code> attribute <code>CordovaWebViewEngine</code> to the <code>config.xml</code>.</li>
-<li>Add <code>feature</code> attribute <code>CDVWKWebViewEngine</code> to the <code>config.xml</code>.</li>
-<li>Add <code>preference</code> <code>WKWebViewOnly</code> to the <code>config.xml</code>.</li>
+  <li>Add plugin <code>cordova-plugin-wkwebview-engine</code>, preferably the latest version <strong>1.2.1</strong></li>
+  <li>Add <code>preference</code> attribute <code>CordovaWebViewEngine</code> to the <code>config.xml</code>.</li>
+  <li>Add <code>feature</code> attribute <code>CDVWKWebViewEngine</code> to the <code>config.xml</code>.</li>
+  <li>Add <code>preference</code> <code>WKWebViewOnly</code> to the <code>config.xml</code>.</li>
 </ul>
 
 <p><strong>Example <code>config.xml</code> with <code>cordova-plugin-wkwebview-engine</code> plugin</strong></p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"WKWebViewOnly"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
 
     <span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"CDVWKWebViewEngine"</span><span class="nt">&gt;</span>
@@ -164,7 +165,8 @@
 
     <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"CordovaWebViewEngine"</span> <span class="na">value=</span><span class="s">"CDVWKWebViewEngine"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Still getting the warning?</h2>
 
 <p>If you are still getting the warning, it is most likely one or more plugins in your project are still references <code>UIWebView</code>. You will need to identify which plugins and contact those plugin&#39;s developers through their support channel (plugin&#39;s repo). They will need to fix their plugins by either remove the references or wrap them with the new flag.</p>
@@ -176,6 +178,7 @@
 <h2>Future Roadmap</h2>
 
 <p>The next major release of <code>cordova-ios</code> will remove all references of <code>UIWebView</code> from code. The flag will also be removed in the next major release as <code>WKWebView</code> will be Cordova&#39;s default webview. There is currently <em>no ETA</em> for the next major release.</p>
+
 
         </div>
     </section>

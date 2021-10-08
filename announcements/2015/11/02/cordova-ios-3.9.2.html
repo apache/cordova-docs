@@ -136,38 +136,44 @@
 <p>This release addresses multiple iOS 9/9.1 and XCode 7/7.1 issues. It also deprecates a number of APIs, which will be removed in <code>Cordova iOS 4.0.0</code>. For a full list of API changes see <a href="https://github.com/apache/cordova-ios/blob/master/guides/API%20changes%20in%204.0.md">API changes in 4.0.md</a></p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update ios@3.9.2
-</code></pre></div>
-<!--more-->    
+</code></pre></div></div>
 
+<!--more-->
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add ios@3.9.2 --save
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@3.9.2 --save
+</code></pre></div></div>
+
 <p>For non-CLI projects or for pre-3.0 projects, refer to the <a href="http://cordova.apache.org/docs/en/dev/guide_platforms_index.md.html">upgrade guides</a>.</p>
 
 <p>Warning: Some people are seeing the following error when adding the new platform:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">CordovaError: Failed to fetch platform ios@~3.9.1
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CordovaError: Failed to fetch platform ios@~3.9.1
 Probably this is either a connection problem, or platform spec is incorrect.
 Check your connection and platform name/version/URL.
 Error: version not found: cordova-ios@3.9.2
-</code></pre></div>
+</code></pre></div></div>
+
 <p>If you see this, you will need to clear your cache. Run the following command to do so.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">rm -rf ~/.cordova
-</code></pre></div>
-<p>Please report any issues at <a href="http://issues.cordova.io">issues.cordova.io</a>. </p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -rf ~/.cordova
+</code></pre></div></div>
+
+<p>Please report any issues at <a href="http://issues.cordova.io">issues.cordova.io</a>.</p>
 
 <h2>What&#39;s new in iOS platform</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9690">CB-9690</a> Can&#39;t submit iPad apps to the App Store for iOS 9</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9679">CB-9679</a> Resource rules issue with iOS 9</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9656">CB-9656</a> Xcode can&#39;t find CDVViewController.h when archiving in Xcode 7.1 beta</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9721">CB-9721</a> Set ENABLE_BITCODE to NO in build.xcconfig</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9610">CB-9610</a> Fix warning in cordova-ios under Xcode 7</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9046">CB-9046</a> <code>cordova run ios --emulator --target &quot;iPhone-5, 7.1&quot;</code> (target with runtime) does not work</li>
-<li>Adds deprecation warnings for upcoming 4.0.0 release</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9690">CB-9690</a> Can&#39;t submit iPad apps to the App Store for iOS 9</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9679">CB-9679</a> Resource rules issue with iOS 9</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9656">CB-9656</a> Xcode can&#39;t find CDVViewController.h when archiving in Xcode 7.1 beta</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9721">CB-9721</a> Set ENABLE_BITCODE to NO in build.xcconfig</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9610">CB-9610</a> Fix warning in cordova-ios under Xcode 7</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9046">CB-9046</a> <code>cordova run ios --emulator --target "iPhone-5, 7.1"</code> (target with runtime) does not work</li>
+  <li>Adds deprecation warnings for upcoming 4.0.0 release</li>
 </ul>
 
         </div>

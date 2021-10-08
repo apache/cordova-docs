@@ -1452,11 +1452,11 @@ deploy Cordova apps for iOS devices such as iPhone and iPad. See the
 following for more detailed platform-specific information:</p>
 
 <ul>
-<li><a href="config.html">iOS Configuration</a></li>
-<li><a href="upgrade.html">Upgrading iOS</a></li>
-<li><a href="webview.html">iOS WebViews</a></li>
-<li><a href="plugin.html">iOS Plugins</a></li>
-<li><a href="tools.html">iOS Shell Tool Guide</a></li>
+  <li><a href="config.html">iOS Configuration</a></li>
+  <li><a href="upgrade.html">Upgrading iOS</a></li>
+  <li><a href="webview.html">iOS WebViews</a></li>
+  <li><a href="plugin.html">iOS Plugins</a></li>
+  <li><a href="tools.html">iOS Shell Tool Guide</a></li>
 </ul>
 
 <p>The command-line tools above refer to versions prior to Cordova 3.0.
@@ -1493,10 +1493,14 @@ to launch iOS apps into the iOS Simulator and iOS Device from the command-line.<
 <p>There are two ways to download Xcode:</p>
 
 <ul>
-<li><p>from the <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">App Store</a>,
-available by searching for &quot;Xcode&quot; in the <strong>App Store</strong> application.</p></li>
-<li><p>from <a href="https://developer.apple.com/downloads/index.action">Apple Developer Downloads</a>,
-which requires registration as an Apple Developer.</p></li>
+  <li>
+    <p>from the <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">App Store</a>,
+available by searching for &quot;Xcode&quot; in the <strong>App Store</strong> application.</p>
+  </li>
+  <li>
+    <p>from <a href="https://developer.apple.com/downloads/index.action">Apple Developer Downloads</a>,
+which requires registration as an Apple Developer.</p>
+  </li>
 </ul>
 
 <p>Once Xcode is installed, several command-line tools need to be enabled
@@ -1507,29 +1511,34 @@ then the <strong>Downloads</strong> tab. From the <strong>Components</strong> pa
 <h2>Install Deploy Tools</h2>
 
 <p>Run from command-line terminal:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ npm install -g ios-sim
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ npm install -g ios-sim
     $ npm install -g ios-deploy
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Create a New Project</h2>
 
 <p>Use the <code>cordova</code> utility to set up a new project, as described in The
 Cordova <a href="../../cli/index.html">The Command-Line Interface</a>. For example, in a source-code directory:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova create hello com.example.hello "HelloWorld"
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello
     $ cordova platform add ios
     $ cordova prepare              # or "cordova build"
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Deploy the app</h2>
 
 <p>To deploy the app on a connected iOS device:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova run ios --device
-</code></pre></div>
-<p>To deploy the app on a default iOS emulator:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova emulate ios
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova run ios --device To deploy the app on a default iOS emulator:
+
+    $ cordova emulate ios
+</code></pre></div></div>
+
 <p>You can use <strong>cordova run ios --list</strong> to see all available targets and 
 <strong>cordova run ios --target=target_name</strong> to run application on a specific 
-device or emulator (for example,  <code>cordova run ios --target=&quot;iPhone-6&quot;</code>).</p>
+device or emulator (for example,  <code>cordova run ios --target="iPhone-6"</code>).</p>
 
 <p>You can also use <strong>cordova run --help</strong> to see additional build and run
 options.</p>
@@ -1540,37 +1549,42 @@ options.</p>
 within Xcode. Double-click to open the <code>hello/platforms/ios/hello.xcodeproj</code>
 file. The screen should look like this:</p>
 
-<p><img src="/static/img/guide/platforms/ios/helloworld_project.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/ios/helloworld_project.png" alt="" /></p>
 
 <h2>Deploy to Emulator</h2>
 
 <p>To preview the app in the iOS emulator:</p>
 
 <ol>
-<li><p>Make sure the <em>.xcodeproj</em> file is selected in the left panel.</p></li>
-<li><p>Select the <strong>hello</strong> app in the panel immediately to the right.</p></li>
-<li><p>Select the intended device from the toolbar&#39;s <strong>Scheme</strong> menu, such
-as the iPhone 6.0 Simulator as highlighted here:</p></li>
-</ol>
+  <li>
+    <p>Make sure the <em>.xcodeproj</em> file is selected in the left panel.</p>
+  </li>
+  <li>
+    <p>Select the <strong>hello</strong> app in the panel immediately to the right.</p>
+  </li>
+  <li>
+    <p>Select the intended device from the toolbar&#39;s <strong>Scheme</strong> menu, such
+as the iPhone 6.0 Simulator as highlighted here:</p>
 
-<p><img src="/static/img/guide/platforms/ios/select_xcode_scheme.png" alt=""></p>
-
-<ol>
-<li>Press the <strong>Run</strong> button that appears in the same toolbar to the
+    <p><img src="/static/img/guide/platforms/ios/select_xcode_scheme.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Press the <strong>Run</strong> button that appears in the same toolbar to the
 left of the <strong>Scheme</strong>. That builds, deploys and runs the
 application in the emulator. A separate emulator application opens
-to display the app:</li>
+to display the app:</p>
+
+    <p><img src="/static/img/guide/platforms/ios/HelloWorldStandard.png" alt="" /></p>
+
+    <p>Only one emulator may run at a time, so if you want to test the app
+in a different emulator, you need to quit the emulator application
+and run a different target within Xcode.</p>
+  </li>
 </ol>
 
-<p><img src="/static/img/guide/platforms/ios/HelloWorldStandard.png" alt=""></p>
-
-<p>Only one emulator may run at a time, so if you want to test the app
-   in a different emulator, you need to quit the emulator application
-   and run a different target within Xcode.</p>
-
 <p>Xcode comes bundled with emulators for the latest versions of iPhone
-and iPad. Older versions may be available from the <strong>Xcode &rarr;
-Preferences &rarr; Downloads &rarr; Components</strong> panel.</p>
+and iPad. Older versions may be available from the <strong>Xcode &#8594;
+Preferences &#8594; Downloads &#8594; Components</strong> panel.</p>
 
 <h2>Deploy to Device</h2>
 
@@ -1581,27 +1595,41 @@ Apple&#39;s
 Briefly, you need to do the following before deploying:</p>
 
 <ol>
-<li><p>Join the Apple iOS Developer Program.</p></li>
-<li><p>Create a <em>Provisioning Profile</em> within the
+  <li>
+    <p>Join the Apple iOS Developer Program.</p>
+  </li>
+  <li>
+    <p>Create a <em>Provisioning Profile</em> within the
 <a href="https://developer.apple.com/ios/manage/overview/index.action">iOS Provisioning Portal</a>.
 You can use its <em>Development Provisioning Assistant</em> to create and
-install the profile and certificate Xcode requires.</p></li>
-<li><p>Verify that the <em>Code Signing</em> section&#39;s <em>Code Signing Identity</em>
+install the profile and certificate Xcode requires.</p>
+  </li>
+  <li>
+    <p>Verify that the <em>Code Signing</em> section&#39;s <em>Code Signing Identity</em>
 within the project settings is set to your provisioning profile
-name.</p></li>
+name.</p>
+  </li>
 </ol>
 
 <p>To deploy to the device:</p>
 
 <ol>
-<li><p>Use the USB cable to plug the device into your Mac.</p></li>
-<li><p>Select the name of the project in the Xcode window&#39;s <strong>Scheme</strong>
-drop-down list.</p></li>
-<li><p>Select your device from the <strong>Device</strong> drop-down list. If it is
+  <li>
+    <p>Use the USB cable to plug the device into your Mac.</p>
+  </li>
+  <li>
+    <p>Select the name of the project in the Xcode window&#39;s <strong>Scheme</strong>
+drop-down list.</p>
+  </li>
+  <li>
+    <p>Select your device from the <strong>Device</strong> drop-down list. If it is
 plugged in via USB but still does not appear, press the
-<strong>Organizer</strong> button to resolve any errors.</p></li>
-<li><p>Press the <strong>Run</strong> button to build, deploy and run the application
-on your device.</p></li>
+<strong>Organizer</strong> button to resolve any errors.</p>
+  </li>
+  <li>
+    <p>Press the <strong>Run</strong> button to build, deploy and run the application
+on your device.</p>
+  </li>
 </ol>
 
 <h2>Common Problems</h2>
@@ -1622,32 +1650,40 @@ warnings can be ignored.  To prevent these warnings from appearing,
 remove the code that references the deprecated invokeString API:</p>
 
 <ul>
-<li><p>Edit the <em>Classes/MainViewController.m</em> file, surround the following
+  <li>
+    <p>Edit the <em>Classes/MainViewController.m</em> file, surround the following
 block of code with <code>/*</code> and <code>*/</code> comments as shown below, then type
 <strong>Command-s</strong> to save the file:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">(void)webViewDidFinishLoad:(UIWebView*)theWebView
-{
-// only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
-/*
-if (self.invokeString) {
-  // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
-  NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
-  NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
-  [theWebView stringByEvaluatingJavaScriptFromString:jsString];
-}
-*/
-// Black base color for background matches the native apps
-theWebView.backgroundColor = [UIColor blackColor];
 
-return [super webViewDidFinishLoad:theWebView];
-}
-</code></pre></div></li>
-<li><p>Edit the <em>Classes/AppViewDelegate.m</em> file, comment out the following
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (void)webViewDidFinishLoad:(UIWebView*)theWebView
+  {
+  // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
+  /*
+  if (self.invokeString) {
+    // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
+    NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
+    NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
+    [theWebView stringByEvaluatingJavaScriptFromString:jsString];
+  }
+  */
+  // Black base color for background matches the native apps
+  theWebView.backgroundColor = [UIColor blackColor];
+
+  return [super webViewDidFinishLoad:theWebView];
+  }
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Edit the <em>Classes/AppViewDelegate.m</em> file, comment out the following
 line by inserting a double slash as shown below, then type
 <strong>Command-s</strong> to save the file:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">//self.viewController.invokeString = invokeString;
-</code></pre></div></li>
-<li><p>Press <strong>Command-b</strong> to rebuild the project and eliminate the warnings.</p></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  //self.viewController.invokeString = invokeString;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Press <strong>Command-b</strong> to rebuild the project and eliminate the warnings.</p>
+  </li>
 </ul>
 
 <!-- Does this fix only last until the next "cordova prepare"? -->
@@ -1657,12 +1693,16 @@ result from problems with the build location, and can be fixed
 via Xcode preferences:</p>
 
 <ol>
-<li><p>Select <strong>Xcode &rarr; Preferences &rarr; Locations</strong>.</p></li>
-<li><p>In the <strong>Derived Data</strong> section, press the <strong>Advanced</strong> button and
-select <strong>Unique</strong> as the <strong>Build Location</strong> as shown here:</p></li>
-</ol>
+  <li>
+    <p>Select <strong>Xcode &#8594; Preferences &#8594; Locations</strong>.</p>
+  </li>
+  <li>
+    <p>In the <strong>Derived Data</strong> section, press the <strong>Advanced</strong> button and
+select <strong>Unique</strong> as the <strong>Build Location</strong> as shown here:</p>
 
-<p><img src="/static/img/guide/platforms/ios/xcode_build_location.png" alt=""></p>
+    <p><img src="/static/img/guide/platforms/ios/xcode_build_location.png" alt="" /></p>
+  </li>
+</ol>
 
 <p>This is the default setting for a new Xcode install, but it may be set
 differently following an upgrade from an older version of Xcode.</p>
@@ -1670,20 +1710,33 @@ differently following an upgrade from an older version of Xcode.</p>
 <p>For further information, consult Apple&#39;s documentation:</p>
 
 <ul>
-<li><p><a href="http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343">Start Developing iOS Apps Today</a> provides a quick overview of steps for developing iOS Apps.</p></li>
-<li><p><a href="https://developer.apple.com/membercenter/index.action">Member Center home page</a>
-provides links to several iOS technical resources including
-technical resources, the provisioning portal, distribution guides
-and community forums.</p></li>
-<li><p><a href="http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959">Tools Workflow Guide for iOS</a></p></li>
-<li><p><a href="http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215">Xcode User Guide</a></p></li>
-<li><p><a href="https://developer.apple.com/videos/wwdc/2012/">Session Videos</a> from
-the Apple World Wide Developer Conference 2012 (WWDC2012)</p></li>
-<li><p>The <a href="http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html">xcode-select command</a>,
-which helps specify the correct version of Xcode if more than one is installed.</p></li>
+  <li>
+    <p><a href="http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343">Start Developing iOS Apps Today</a> provides a quick overview of steps for developing iOS Apps.</p>
+  </li>
+  <li>
+    <p><a href="https://developer.apple.com/membercenter/index.action">Member Center home page</a>
+ provides links to several iOS technical resources including
+ technical resources, the provisioning portal, distribution guides
+ and community forums.</p>
+  </li>
+  <li>
+    <p><a href="http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959">Tools Workflow Guide for iOS</a></p>
+  </li>
+  <li>
+    <p><a href="http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215">Xcode User Guide</a></p>
+  </li>
+  <li>
+    <p><a href="https://developer.apple.com/videos/wwdc/2012/">Session Videos</a> from
+the Apple World Wide Developer Conference 2012 (WWDC2012)</p>
+  </li>
+  <li>
+    <p>The <a href="http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html">xcode-select command</a>,
+which helps specify the correct version of Xcode if more than one is installed.</p>
+  </li>
 </ul>
 
 <p>(Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)</p>
+
 
 
             </div>

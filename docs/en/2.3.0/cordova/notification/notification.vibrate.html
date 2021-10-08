@@ -1544,84 +1544,93 @@
                 <h1>notification.vibrate</h1>
 
 <p>Vibrates the device for the specified amount of time.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.notification.vibrate(milliseconds)
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.notification.vibrate(milliseconds)
+</code></pre></div></div>
+
 <ul>
-<li><strong>time:</strong> Milliseconds to vibrate the device. 1000 milliseconds equals 1 second (<code>Number</code>)</li>
+  <li><strong>time:</strong> Milliseconds to vibrate the device. 1000 milliseconds equals 1 second (<code>Number</code>)</li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry OS 5 - 7 (not supported for BlackBerry 10)</li>
-<li>iPhone</li>
-<li>Windows Phone 7 and 8</li>
-<li>Bada 1.2 &amp; 2.x</li>
+  <li>Android</li>
+  <li>BlackBerry OS 5 - 7 (not supported for BlackBerry 10)</li>
+  <li>iPhone</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Bada 1.2 &amp; 2.x</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">// Vibrate for 2.5 seconds
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Vibrate for 2.5 seconds
 //
 navigator.notification.vibrate(2500);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Notification Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-2.3.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Notification Example&lt;/title&gt;
 
-    <span class="c1">// Wait for Cordova to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Cordova is ready</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// Empty</span>
-    <span class="p">}</span>
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="c1">// Show a custom alert</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">showAlert</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">navigator</span><span class="p">.</span><span class="nx">notification</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span>
-            <span class="s1">'You are the winner!'</span><span class="p">,</span>  <span class="c1">// message</span>
-            <span class="s1">'Game Over'</span><span class="p">,</span>            <span class="c1">// title</span>
-            <span class="s1">'Done'</span>                  <span class="c1">// buttonName</span>
-        <span class="p">);</span>
-    <span class="p">}</span>
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        // Empty
+    }
 
-    <span class="c1">// Beep three times</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">playBeep</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">navigator</span><span class="p">.</span><span class="nx">notification</span><span class="p">.</span><span class="nx">beep</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Show a custom alert
+    //
+    function showAlert() {
+	    navigator.notification.alert(
+	        'You are the winner!',  // message
+	        'Game Over',            // title
+	        'Done'                  // buttonName
+	    );
+    }
 
-    <span class="c1">// Vibrate for 2 seconds</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">vibrate</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">navigator</span><span class="p">.</span><span class="nx">notification</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Beep three times
+    //
+    function playBeep() {
+        navigator.notification.beep(3);
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">onclick=</span><span class="s">"showAlert(); return false;"</span><span class="nt">&gt;</span>Show Alert<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">onclick=</span><span class="s">"playBeep(); return false;"</span><span class="nt">&gt;</span>Play Beep<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">onclick=</span><span class="s">"vibrate(); return false;"</span><span class="nt">&gt;</span>Vibrate<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // Vibrate for 2 seconds
+    //
+    function vibrate() {
+        navigator.notification.vibrate(2000);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;a href="#" onclick="showAlert(); return false;"&gt;Show Alert&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href="#" onclick="playBeep(); return false;"&gt;Play Beep&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href="#" onclick="vibrate(); return false;"&gt;Vibrate&lt;/a&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 <h2>iPhone Quirks</h2>
 
 <ul>
-<li><p><strong>time:</strong> Ignores the time and vibrates for a pre-set amount of time.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.notification.vibrate();
-navigator.notification.vibrate(2500);   // 2500 is ignored
-</code></pre></div></li>
+  <li>
+    <p><strong>time:</strong> Ignores the time and vibrates for a pre-set amount of time.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  navigator.notification.vibrate();
+  navigator.notification.vibrate(2500);   // 2500 is ignored
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 

@@ -138,36 +138,39 @@
 <p>Two core plugins support this new API and have been updated to fix longstanding bugs:</p>
 
 <ul>
-<li><code>cordova-plugin-camera@2.1.0</code> (fixes <a href="https://issues.apache.org/jira/browse/CB-9189">CB-9189</a>)</li>
-<li><code>cordova-plugin-contacts@2.0.1</code> (fixes <a href="https://issues.apache.org/jira/browse/CB-9189">CB-10159</a>)</li>
+  <li><code>cordova-plugin-camera@2.1.0</code> (fixes <a href="https://issues.apache.org/jira/browse/CB-9189">CB-9189</a>)</li>
+  <li><code>cordova-plugin-contacts@2.0.1</code> (fixes <a href="https://issues.apache.org/jira/browse/CB-9189">CB-10159</a>)</li>
 </ul>
 
 <p>Application authors are encouraged to update both their plugin and cordova-android versions to take advantage of these bug fixes. Please note that the aforementioned fixes require changes to your application as well. More information can be found in the READMEs of each of those plugins and in the new <a href="http://cordova.apache.org/docs/en/dev/guide/platforms/android/lifecycle.html">Android lifecycle guide</a> that has been published to the Cordova documentation. This guide provides explanations and guidance on how to handle low memory scenarios on the Android platform as well as integrate the new resume APIs into your application.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android@5.1.0
-</code></pre></div>
-<p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@5.1.0
-</code></pre></div>
-<!--more-->
+</code></pre></div></div>
 
+<p>To add it explicitly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@5.1.0
+</code></pre></div></div>
+
+<!--more-->
 <h2>What&#39;s new in Android platform</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10386">CB-10386</a> Add <code>android.useDeprecatedNdk=true</code> to support <code>NDK</code> in <code>gradle</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8864">CB-8864</a>: Fixing this to mitigate <a href="https://issues.apache.org/jira/browse/CB-8685">CB-8685</a> and <a href="https://issues.apache.org/jira/browse/CB-10104">CB-10104</a></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10105">CB-10105</a>: Spot fix for tilde errors on paths.</li>
-<li>Update theme to <code>Theme.DeviceDefault.NoActionBar</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10014">CB-10014</a>: Set gradle <code>applicationId</code> to <code>package name</code>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9949">CB-9949</a>: Fixing menu button event not fired in <strong>Android</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9479">CB-9479</a>: Fixing the conditionals again, we should </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8917">CB-8917</a>: New Plugin API for passing results on resume after Activity destruction</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9971">CB-9971</a> Suppress <code>gradlew _JAVA_OPTIONS</code> output during build</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9836">CB-9836</a> Add <code>.gitattributes</code> to prevent <code>CRLF</code> line endings in repos</li>
-<li>added node_modules back into <code>.gitignore</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10386">CB-10386</a> Add <code>android.useDeprecatedNdk=true</code> to support <code>NDK</code> in <code>gradle</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8864">CB-8864</a>: Fixing this to mitigate <a href="https://issues.apache.org/jira/browse/CB-8685">CB-8685</a> and <a href="https://issues.apache.org/jira/browse/CB-10104">CB-10104</a></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10105">CB-10105</a>: Spot fix for tilde errors on paths.</li>
+  <li>Update theme to <code>Theme.DeviceDefault.NoActionBar</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10014">CB-10014</a>: Set gradle <code>applicationId</code> to <code>package name</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9949">CB-9949</a>: Fixing menu button event not fired in <strong>Android</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9479">CB-9479</a>: Fixing the conditionals again, we should</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8917">CB-8917</a>: New Plugin API for passing results on resume after Activity destruction</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9971">CB-9971</a> Suppress <code>gradlew _JAVA_OPTIONS</code> output during build</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9836">CB-9836</a> Add <code>.gitattributes</code> to prevent <code>CRLF</code> line endings in repos</li>
+  <li>added node_modules back into <code>.gitignore</code></li>
 </ul>
 
         </div>

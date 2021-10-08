@@ -1568,8 +1568,10 @@
                 <h1>globalization.dateToString</h1>
 
 <p>Returns a date formatted as a string according to the client&#39;s locale and timezone.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.globalization.dateToString(date, successCB, errorCB, options);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.dateToString(date, successCB, errorCB, options);
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p>It returns the formatted date string to the successCB callback with a properties object as a parameter. That object should have a <code>value</code> property with a String value.</p>
@@ -1581,55 +1583,58 @@
 <p><code>options.formatLength</code> can be &#39;short&#39;, &#39;medium&#39;, &#39;long&#39;, or &#39;full&#39;.
 <code>options.selector</code> can be &#39;date&#39;, &#39;time&#39; or &#39;date and time&#39;.</p>
 
-<p>The default options are <code>{formatLength:&#39;short&#39;, selector:&#39;date and time&#39;}</code>.
+<p>The default options are <code>{formatLength:'short', selector:'date and time'}</code>.
 The <code>options</code> parameter is optional.</p>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iPhone</li>
-<li>Windows Phone 8</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iPhone</li>
+  <li>Windows Phone 8</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
 
 <p>In the case when the browser is set to the en_US locale, this should display a popup dialog with text similar to &quot;date: 9/25/2012 4:21PM&quot; using the default options.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.globalization.dateToString(
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.dateToString(
   new Date(),
   function (date) {alert('date:' + date.value + '\n');},
   function () {alert('Error getting dateString\n');},
   {formatLength:'short', selector:'date and time'}
 );
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Cordova<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-x.x.x.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
 
-    <span class="kd">function</span> <span class="nx">checkDateString</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">dateToString</span><span class="p">(</span>
-        <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span>
-        <span class="kd">function</span> <span class="p">(</span><span class="nx">date</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'date: '</span> <span class="o">+</span> <span class="nx">date</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);},</span>
-        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting dateString\n'</span><span class="p">);,</span>
-        <span class="p">{</span><span class="na">formatLength</span><span class="p">:</span><span class="s1">'short'</span><span class="p">,</span> <span class="na">selector</span><span class="p">:</span><span class="s1">'date and time'</span><span class="p">}}</span>
-      <span class="p">);</span>
-    <span class="p">}</span>
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"checkDateString()"</span><span class="nt">&gt;</span>Click for date string<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Cordova&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    function checkDateString() {
+      navigator.globalization.dateToString(
+        new Date(),
+        function (date) {alert('date: ' + date.value + '\n');},
+        function () {alert('Error getting dateString\n');,
+        {formatLength:'short', selector:'date and time'}}
+      );
+    }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkDateString()"&gt;Click for date string&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 <h2>Windows Phone 8 Quirks</h2>
-
 <ul>
-<li><code>formatLength</code> option supports only short and full values</li>
+  <li><code>formatLength</code> option supports only short and full values</li>
 </ul>
 
 

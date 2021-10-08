@@ -1584,46 +1584,62 @@ its whitelist and declare access to specific network domains and subdomains.</p>
 <h2>Syntax</h2>
 
 <p>Access to all resources at <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">http://google.com/*
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://google.com/*
+</code></pre></div></div>
+
 <p>Access to all resources at the secure <a href="https://google.com">google.com</a> (<code>https://</code>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">https://google.com/*
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://google.com/*
+</code></pre></div></div>
+
 <p>Access to the specific subdomain <a href="http://maps.google.com">maps.google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">http://maps.google.com/*
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://maps.google.com/*
+</code></pre></div></div>
+
 <p>Access to all the subdomains on <a href="http://google.com">google.com</a> (e.g., <a href="http://mail.google.com">mail.google.com</a> and <a href="http://docs.google.com">docs.google.com</a>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">http://*.google.com/*
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://*.google.com/*
+</code></pre></div></div>
+
 <p>Access to all resources on <a href="http://www.google.com">www.google.com</a> under the &quot;/mobile&quot; path:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">http://www.google.com/mobile/*
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://www.google.com/mobile/*
+</code></pre></div></div>
+
 <p>Access to <a href="http://google.com">google.com</a> on any protocol (e.g., HTTP, HTTPS, FTP, etc):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">*://google.com/*
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*://google.com/*
+</code></pre></div></div>
+
 <p>Access to all resouces on the Internet (e.g., <a href="http://google.com">google.com</a> and <a href="http://developer.mozilla.org">developer.mozilla.org</a>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">*
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*
+</code></pre></div></div>
+
 <h2>Android</h2>
 
 <h3>Details</h3>
 
 <p>The whitelisting rules are found in <code>res/xml/config.xml</code> and declared
-with the element <code>&lt;access origin=&quot;...&quot; /&gt;</code>.</p>
+with the element <code>&lt;access origin="..." /&gt;</code>.</p>
 
 <p>Android fully supports whitelisting syntax.</p>
 
 <h3>Syntax</h3>
 
 <p>Access to <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com/*" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="http://google.com/*" /&gt;
+</code></pre></div></div>
+
 <h2>BlackBerry 10</h2>
 
 <h3>Details</h3>
 
 <p>The whitelisting rules are found in <code>www/config.xml</code> and declared with 
-the element <code>&lt;access origin=&quot;...&quot; /&gt;</code>.</p>
+the element <code>&lt;access origin="..." /&gt;</code>.</p>
 
 <p>BlackBerry 10 handles wildcards differently than other platforms in two ways:</p>
 
@@ -1636,25 +1652,35 @@ the element <code>&lt;access origin=&quot;...&quot; /&gt;</code>.</p>
 <h3>Syntax</h3>
 
 <p>Access to <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" subdomains="false" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="http://google.com" subdomains="false" /&gt;
+</code></pre></div></div>
+
 <p>Access to  <a href="http://maps.google.com">maps.google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://maps.google.com" subdomains="false" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="http://maps.google.com" subdomains="false" /&gt;
+</code></pre></div></div>
+
 <p>Access to all the subdomains on <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" subdomains="true" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="http://google.com" subdomains="true" /&gt;
+</code></pre></div></div>
+
 <p>Access to all domains, including <code>file://</code> protocol:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="*" subdomains="true" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="*" subdomains="true" /&gt;
+</code></pre></div></div>
+
 <p>Disable all web security:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="websecurity" value="disable" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;preference name="websecurity" value="disable" /&gt;
+</code></pre></div></div>
+
 <h2>iOS</h2>
 
 <h3>Details</h3>
 
-<p>The whitelisting rules are found in <code>AppName/config.xml</code> and declared with the element <code>&lt;access origin=&quot;...&quot; /&gt;</code>.</p>
+<p>The whitelisting rules are found in <code>AppName/config.xml</code> and declared with the element <code>&lt;access origin="..." /&gt;</code>.</p>
 
 <p>iOS fully supports whitelisting syntax.</p>
 
@@ -1665,47 +1691,66 @@ the element <code>&lt;access origin=&quot;...&quot; /&gt;</code>.</p>
 <p>Specifically, these patterns need to be updated:</p>
 
 <ul>
-<li><p>&quot;<code>apache.org</code>&quot; (no protocol): This would previously match <code>http</code>, <code>https</code>, <code>ftp</code>, and <code>ftps</code> protocols. Change to &quot;<code>*://apache.org/*</code>&quot; to include all protocols, or include a line for each protocol you need to support.</p></li>
-<li><p>&quot;<code>http://apache.*</code>&quot; (wildcard at end of domain): This would previously match all top-level-domains, including all possible two-letter TLDs (but not useful domains like .co.uk). Include a line for each TLD which you actually control, and need to whitelist.</p></li>
-<li><p>&quot;<code>h*t*://ap*he.o*g</code>&quot; (wildcards for random missing letters): These are no longer supported; change to include a line for each domain and protocol that you actually need to whitelist.</p></li>
+  <li>
+    <p>&quot;<code>apache.org</code>&quot; (no protocol): This would previously match <code>http</code>, <code>https</code>, <code>ftp</code>, and <code>ftps</code> protocols. Change to &quot;<code>*://apache.org/*</code>&quot; to include all protocols, or include a line for each protocol you need to support.</p>
+  </li>
+  <li>
+    <p>&quot;<code>http://apache.*</code>&quot; (wildcard at end of domain): This would previously match all top-level-domains, including all possible two-letter TLDs (but not useful domains like .co.uk). Include a line for each TLD which you actually control, and need to whitelist.</p>
+  </li>
+  <li>
+    <p>&quot;<code>h*t*://ap*he.o*g</code>&quot; (wildcards for random missing letters): These are no longer supported; change to include a line for each domain and protocol that you actually need to whitelist.</p>
+  </li>
 </ul>
 
 <h3>Syntax</h3>
 
 <p>Access to <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com/*" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="http://google.com/*" /&gt;
+</code></pre></div></div>
+
 <h2>Windows Phone (7 &amp; 8)</h2>
 
-<p>The whitelisting rules are found in <code>config.xml</code> and declared with the element <code>&lt;access origin=&quot;...&quot; /&gt;</code>.</p>
+<p>The whitelisting rules are found in <code>config.xml</code> and declared with the element <code>&lt;access origin="..." /&gt;</code>.</p>
 
 <h3>Syntax</h3>
 
 <p>Access to <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="http://google.com" /&gt;
+</code></pre></div></div>
+
 <h2>Tizen</h2>
 
 <h3>Details</h3>
 
 <p>The application root directory&#39;s <code>config.xml</code> file specifies domain
-whitelisting rules, using the <code>&lt;access origin=&quot;...&quot; /&gt;</code> element.
+whitelisting rules, using the <code>&lt;access origin="..." /&gt;</code> element.
 For a complete reference, see the <a href="https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources">Tizen Accessing External Network Resources documentation</a>.</p>
 
 <h3>Syntax</h3>
 
 <p>Access to <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" subdomains="false" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="http://google.com" subdomains="false" /&gt;
+</code></pre></div></div>
+
 <p>Access to the secure <a href="https://google.com">google.com</a> (<code>https://</code>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="https://google.com" subdomains="false" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="https://google.com" subdomains="false" /&gt;
+</code></pre></div></div>
+
 <p>Access to all the subdomains on <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" subdomains="true" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="http://google.com" subdomains="true" /&gt;
+</code></pre></div></div>
+
 <p>Access to all domains, including <code>file://</code> protocol:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="*" subdomains="true" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="*" subdomains="true" /&gt;
+</code></pre></div></div>
+
+
 
             </div>
         </div>

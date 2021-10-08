@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The following plugins were updated today:cordova-plugin-battery-status@0.2.12cordova-plugin-camera@0.3.5cordova-plugin-console@0.2.13cordova-plugin-contacts@...">
+    <meta name="description" content="The following plugins were updated today:  cordova-plugin-battery-status@0.2.12  cordova-plugin-camera@0.3.5  cordova-plugin-console@0.2.13  cordova-plugin-c...">
 
     <title>
         
@@ -134,198 +134,180 @@
             <p>The following plugins were updated today:</p>
 
 <ul>
-<li>cordova-plugin-battery-status@0.2.12</li>
-<li>cordova-plugin-camera@0.3.5</li>
-<li>cordova-plugin-console@0.2.13</li>
-<li>cordova-plugin-contacts@0.2.16</li>
-<li>cordova-plugin-device-motion@0.2.11</li>
-<li>cordova-plugin-device-orientation@0.3.11</li>
-<li>cordova-plugin-device@0.3.0</li>
-<li>cordova-plugin-dialogs@0.3.0</li>
-<li>cordova-plugin-file-transfer@0.5.0</li>
-<li>cordova-plugin-file@1.3.3</li>
-<li>cordova-plugin-geolocation@0.3.12</li>
-<li>cordova-plugin-globalization@0.3.4</li>
-<li>cordova-plugin-inappbrowser@0.6.0</li>
-<li>cordova-plugin-media@0.2.16</li>
-<li>cordova-plugin-media-capture@0.3.6</li>
-<li>cordova-plugin-network-information@0.2.15</li>
-<li>cordova-plugin-splashscreen@1.0.0</li>
-<li>cordova-plugin-vibration@0.3.13</li>
-<li>cordova-plugin-statusbar@0.1.10</li>
-<li>cordova-plugins@file-system-roots-0.1.0</li>
-<li>cordova-plugin-test-framework@0.0.1</li>
+  <li>cordova-plugin-battery-status@0.2.12</li>
+  <li>cordova-plugin-camera@0.3.5</li>
+  <li>cordova-plugin-console@0.2.13</li>
+  <li>cordova-plugin-contacts@0.2.16</li>
+  <li>cordova-plugin-device-motion@0.2.11</li>
+  <li>cordova-plugin-device-orientation@0.3.11</li>
+  <li>cordova-plugin-device@0.3.0</li>
+  <li>cordova-plugin-dialogs@0.3.0</li>
+  <li>cordova-plugin-file-transfer@0.5.0</li>
+  <li>cordova-plugin-file@1.3.3</li>
+  <li>cordova-plugin-geolocation@0.3.12</li>
+  <li>cordova-plugin-globalization@0.3.4</li>
+  <li>cordova-plugin-inappbrowser@0.6.0</li>
+  <li>cordova-plugin-media@0.2.16</li>
+  <li>cordova-plugin-media-capture@0.3.6</li>
+  <li>cordova-plugin-network-information@0.2.15</li>
+  <li>cordova-plugin-splashscreen@1.0.0</li>
+  <li>cordova-plugin-vibration@0.3.13</li>
+  <li>cordova-plugin-statusbar@0.1.10</li>
+  <li>cordova-plugins@file-system-roots-0.1.0</li>
+  <li>cordova-plugin-test-framework@0.0.1</li>
 </ul>
 
 <p>The plugins have been updated on our registry at <a href="http://plugins.cordova.io/">plugins.cordova.io</a>.</p>
 
-<hr>
-
+<hr />
 <p>You can update any plugin by removing it, and then re-adding it.</p>
 
 <p>E.g. To update your camera plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm org.apache.cordova.camera
-cordova plugin add org.apache.cordova.camera
-</code></pre></div>
-<p>Changes include:</p>
 
-<!--more-->
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm org.apache.cordova.camera
+cordova plugin add org.apache.cordova.camera
+</code></pre></div></div>
+
+<p>Changes include:
+<!--more--></p>
 
 <p>org.apache.cordova.camera@0.3.5</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Stop using now-deprecated <code>[NSData base65EncodedString]</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Stop using now-deprecated integerValueForKey: class extension</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8032">CB-8032</a> ios: Add nativeURL external method support for CDVFileSystem-&gt;makeEntryForPath:isDirectory:</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7938">CB-7938</a> ios: Added XCTest unit tests project, with stubs (adapted from SplashScreen unit test setup)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7937">CB-7937</a> ios: Re-factor iOS Camera plugin so that it is testable</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Stop using now-deprecated <code>[NSData base65EncodedString]</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Stop using now-deprecated integerValueForKey: class extension</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8032">CB-8032</a> ios: Add nativeURL external method support for CDVFileSystem-&gt;makeEntryForPath:isDirectory:</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7938">CB-7938</a> ios: Added XCTest unit tests project, with stubs (adapted from SplashScreen unit test setup)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7937">CB-7937</a> ios: Re-factor iOS Camera plugin so that it is testable</li>
 </ul>
 
 <p>org.apache.cordova.console@0.2.13</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
 </ul>
 
 <p>org.apache.cordova.contacts@0.2.16</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Stop using (newly) deprecated CordovaLib functions</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
-<li>android: Update ContactName support</li>
-<li>Updated the comments for ContactOrganization constructor.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Stop using (newly) deprecated CordovaLib functions</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
+  <li>android: Update ContactName support</li>
+  <li>Updated the comments for ContactOrganization constructor.</li>
 </ul>
 
 <p>org.apache.cordova.device@0.3.0</p>
-
 <ul>
-<li>Added device.manufacturer property for Android, iOS, Blackberry, WP8</li>
-<li>Support for Windows Phone 8 ANID2 ANID is only supported up to Windows Phone 7.5</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> Use a local copy of uniqueAppInstanceIdentifier rather than CordovaLib&#39;s version</li>
-<li>browser: Fixed a bug that caused an &quot;cannot call method of undefined&quot; error if the browser&#39;s user agent wasn&#39;t recognized</li>
+  <li>Added device.manufacturer property for Android, iOS, Blackberry, WP8</li>
+  <li>Support for Windows Phone 8 ANID2 ANID is only supported up to Windows Phone 7.5</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> Use a local copy of uniqueAppInstanceIdentifier rather than CordovaLib&#39;s version</li>
+  <li>browser: Fixed a bug that caused an &quot;cannot call method of undefined&quot; error if the browser&#39;s user agent wasn&#39;t recognized</li>
 </ul>
 
 <p>org.apache.cordova.device-orientation@0.3.11</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
 </ul>
 
 <p>org.apache.cordova.dialogs@0.3.0</p>
-
 <ul>
-<li>Correct way to specify Windows platform in config.xml</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7955">CB-7955</a> Add support &quot;browser&quot; platform</li>
+  <li>Correct way to specify Windows platform in config.xml</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7955">CB-7955</a> Add support &quot;browser&quot; platform</li>
 </ul>
 
 <p>org.apache.cordova.file@1.3.3</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-7927">CB-7927</a> Encoding data to bytes instead of chars when writing a file.</li>
-<li>ios: Fix compile warning about implicit int conversion</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use base64EncodedStringWithOptions instead of CordovaLib&#39;s class extension</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use a local copy of valueForKeyIsNumber rather than CordovaLib&#39;s version</li>
-<li>windows: Handle url&#39;s containing absolute windows path starting with drive letter and colon (encoded as %3A) through root FS</li>
-<li>windows: Rework to use normal url form</li>
-<li>android: refactor: Make Filesystem base class store its own name, rootUri, and rootEntry</li>
-<li>android: Simplify code a bit by making makeEntryForPath not throw JSONException</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6431">CB-6431</a> android: Fix plugin breaking content: URLs</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7375">CB-7375</a> Never create new FileSystem instances (except on windows since they don&#39;t implement requestAllFileSystems())</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7927">CB-7927</a> Encoding data to bytes instead of chars when writing a file.</li>
+  <li>ios: Fix compile warning about implicit int conversion</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use base64EncodedStringWithOptions instead of CordovaLib&#39;s class extension</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use a local copy of valueForKeyIsNumber rather than CordovaLib&#39;s version</li>
+  <li>windows: Handle url&#39;s containing absolute windows path starting with drive letter and colon (encoded as %3A) through root FS</li>
+  <li>windows: Rework to use normal url form</li>
+  <li>android: refactor: Make Filesystem base class store its own name, rootUri, and rootEntry</li>
+  <li>android: Simplify code a bit by making makeEntryForPath not throw JSONException</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6431">CB-6431</a> android: Fix plugin breaking content: URLs</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7375">CB-7375</a> Never create new FileSystem instances (except on windows since they don&#39;t implement requestAllFileSystems())</li>
 </ul>
 
 <p>org.apache.cordova.file-transfer@0.5.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8407">CB-8407</a> windows: Fix download of <code>ms-appdata:///</code> URIs</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8095">CB-8095</a> windows: Rewrite upload method to support progress events properly</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5059">CB-5059</a> android: Add a CookieManager abstraction for pluggable webviews</li>
-<li>ios: Fix compile warning about implicity int conversion</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use a local copy of DLog macro rather than CordovaLib version</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8296">CB-8296</a> ios: Fix crash when upload fails and file is not yet created (close #57)</li>
-<li>Document &quot;body&quot; property on FileTransferError</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7912">CB-7912</a> ios, android: Update to work with whitelist plugins in Cordova 4.x</li>
-<li>Error callback should always be called with the FileTransferError object, and not just the code</li>
-<li>windows: alias appData to Windows.Storage.ApplicationData.current</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8093">CB-8093</a> Fixes incorrect FileTransferError returned in case of download failure</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8407">CB-8407</a> windows: Fix download of <code>ms-appdata:///</code> URIs</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8095">CB-8095</a> windows: Rewrite upload method to support progress events properly</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5059">CB-5059</a> android: Add a CookieManager abstraction for pluggable webviews</li>
+  <li>ios: Fix compile warning about implicity int conversion</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use a local copy of DLog macro rather than CordovaLib version</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8296">CB-8296</a> ios: Fix crash when upload fails and file is not yet created (close #57)</li>
+  <li>Document &quot;body&quot; property on FileTransferError</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7912">CB-7912</a> ios, android: Update to work with whitelist plugins in Cordova 4.x</li>
+  <li>Error callback should always be called with the FileTransferError object, and not just the code</li>
+  <li>windows: alias appData to Windows.Storage.ApplicationData.current</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8093">CB-8093</a> Fixes incorrect FileTransferError returned in case of download failure</li>
 </ul>
 
 <p>org.apache.cordova.geolocation@0.3.12</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
 </ul>
 
 <p>org.apache.cordova.globalization@0.3.4</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7972">CB-7972</a> Add cordova-plugin-globalization support for Windows platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7972">CB-7972</a> Add cordova-plugin-globalization support for Windows platform</li>
 </ul>
 
 <p>org.apache.cordova.inappbrowser@0.6.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8270">CB-8270</a> ios: Remove usage of <code>[arr JSONString]</code>, since it&#39;s been renamed to <code>cdv_JSONString</code></li>
-<li>ubuntu: implement inject* functions</li>
-<li>ubuntu: port to oxide</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7897">CB-7897</a> ios, android: Update to work with whilelist plugins in Cordova 4.x</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8270">CB-8270</a> ios: Remove usage of <code>[arr JSONString]</code>, since it&#39;s been renamed to <code>cdv_JSONString</code></li>
+  <li>ubuntu: implement inject* functions</li>
+  <li>ubuntu: port to oxide</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7897">CB-7897</a> ios, android: Update to work with whilelist plugins in Cordova 4.x</li>
 </ul>
 
 <p>org.apache.cordova.media@0.2.16</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Stop using (newly) deprecated CDVJSON.h</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8252">CB-8252</a> android: Fire audio events from native via message channel</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8152">CB-8152</a> ios: Remove deprecated methods in Media plugin (deprecated since 2.5)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Stop using (newly) deprecated CDVJSON.h</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8252">CB-8252</a> android: Fire audio events from native via message channel</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8152">CB-8152</a> ios: Remove deprecated methods in Media plugin (deprecated since 2.5)</li>
 </ul>
 
 <p>org.apache.cordova.media-capture@0.3.6</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use inline copies of deprecated CDV<em>IsIpad and CDV</em>IsIphone5</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Stop using (newly) deprecated CDVJSON.h</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7977">CB-7977</a> Mention deviceready in plugin docs</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use inline copies of deprecated CDV_IsIpad and CDV_IsIphone5</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Stop using (newly) deprecated CDVJSON.h</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7977">CB-7977</a> Mention deviceready in plugin docs</li>
 </ul>
 
 <p>org.apache.cordova.network-information@0.2.15</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8384">CB-8384</a> Network status change support on Windows</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8384">CB-8384</a> Fixes the way we detect online status on Windows</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8384">CB-8384</a> Add Windows platform quirks</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8384">CB-8384</a> Add Windows section to Network Information plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8384">CB-8384</a> Network status change support on Windows</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8384">CB-8384</a> Fixes the way we detect online status on Windows</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8384">CB-8384</a> Add Windows platform quirks</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8384">CB-8384</a> Add Windows section to Network Information plugin</li>
 </ul>
 
 <p>org.apache.cordova.splashscreen@1.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Stop using deprecated IsIpad macro</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3679">CB-3679</a> Add engine tag for Android &gt;= 3.6.0 due to use of <code>preferences</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3679">CB-3679</a> Make SplashScreen plugin compatible with cordova-android@4.0.x</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Stop using deprecated IsIpad macro</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3679">CB-3679</a> Add engine tag for Android &gt;= 3.6.0 due to use of <code>preferences</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3679">CB-3679</a> Make SplashScreen plugin compatible with cordova-android@4.0.x</li>
 </ul>
 
 <p>org.apache.cordova.statusbar@0.1.10</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> ios: Use argumentForIndex rather than NSArray extension</li>
 </ul>
 
 <p>org.apache.cordova.test-framework@0.0.1</p>
-
 <ul>
-<li>Initial release</li>
+  <li>Initial release</li>
 </ul>
 
 <p>org.apache.cordova.vibration@0.3.13</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8243">CB-8243</a> cordova-plugin-vibration documentation translation: cordova-plugin-vibration</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8243">CB-8243</a> cordova-plugin-vibration documentation translation: cordova-plugin-vibration</li>
 </ul>
 
         </div>

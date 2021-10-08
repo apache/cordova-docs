@@ -1328,8 +1328,10 @@
                 <h1>backbutton</h1>
 
 <p>This is an event that fires when the user presses the back button.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">document.addEventListener("backbutton", yourCallbackFunction, false);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("backbutton", yourCallbackFunction, false);
+</code></pre></div></div>
+
 <h2>Details</h2>
 
 <p>If you need to override the default back button behaviour you can register an event listener for the &#39;backbutton&#39; event.  It is no longer necessary to call any other method to over ride the back button behaviour.  Now, you only need to register an event listener for &#39;backbutton&#39;.</p>
@@ -1339,55 +1341,59 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>Windows Phone 7 ( Mango )</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>Windows Phone 7 ( Mango )</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">document.addEventListener("backbutton", onBackKeyDown, false);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("backbutton", onBackKeyDown, false);
 
 function onBackKeyDown() {
     // Handle the back button
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Cordova Back Button Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-1.7.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Cordova Back Button Example&lt;/title&gt;
 
-    <span class="c1">// Call onDeviceReady when Cordova is loaded.</span>
-    <span class="c1">//</span>
-    <span class="c1">// At this point, the document has loaded but cordova-1.7.0.js has not.</span>
-    <span class="c1">// When Cordova is loaded and talking with the native device,</span>
-    <span class="c1">// it will call the event `deviceready`.</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onLoad</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-    <span class="p">}</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Cordova is loaded and it is now safe to call Cordova methods</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// Register the event listener</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"backbutton"</span><span class="p">,</span> <span class="nx">onBackKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Call onDeviceReady when Cordova is loaded.
+    //
+    // At this point, the document has loaded but cordova-1.7.0.js has not.
+    // When Cordova is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
 
-    <span class="c1">// Handle the back button</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onBackKeyDown</span><span class="p">()</span> <span class="p">{</span>
-    <span class="p">}</span>
+    // Cordova is loaded and it is now safe to call Cordova methods
+    //
+    function onDeviceReady() {
+        // Register the event listener
+        document.addEventListener("backbutton", onBackKeyDown, false);
+    }
+    
+    // Handle the back button
+    //
+    function onBackKeyDown() {
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body</span> <span class="na">onload=</span><span class="s">"onLoad()"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="onLoad()"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 
             </div>
         </div>

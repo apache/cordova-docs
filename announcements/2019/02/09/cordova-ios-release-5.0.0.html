@@ -134,24 +134,25 @@
             <p>We are happy to announce that we have just released <code>Cordova iOS 5.0.0</code>!  This is one of Cordova&#39;s supported platforms for building iOS mobile applications.</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@5.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@5.0.0</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
 
 <p><strong>To upgrade:</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform remove ios
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove ios
 cordova platform add ios@5.0.0
-</code></pre></div>
+</code></pre></div></div>
+
 <p>In addition to the various improvements and bug fixes, this release also comes packed with some major features.</p>
 
 <p>Some of the key features are:</p>
-
 <ul>
-<li><a href="https://github.com/apache/cordova-ios/pull/409">GH-409</a> <a href="https://github.com/apache/cordova-ios/pull/489">GH-489</a> Supports Xcode 10 New Build System</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/405">GH-405</a> Improved Cocoapods Support</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/395">GH-395</a> Improved Swift Support</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/508">GH-508</a> Improved Automatic Provisioning Profile Signing</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/409">GH-409</a> <a href="https://github.com/apache/cordova-ios/pull/489">GH-489</a> Supports Xcode 10 New Build System</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/405">GH-405</a> Improved Cocoapods Support</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/395">GH-395</a> Improved Swift Support</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/508">GH-508</a> Improved Automatic Provisioning Profile Signing</li>
 </ul>
 
 <p>This release only supports Xcode 9 and up. It is important to know that starting March 2019, Apple requires all new apps submitted to the App store to be built with the iOS 12.1 SDK or later (Xcode 10). <a href="https://developer.apple.com/ios/submit/">source</a></p>
@@ -161,54 +162,53 @@ cordova platform add ios@5.0.0
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-ios/pull/515">GH-515</a> Remove Deprecated Local and Remote Push Notification Constants</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/512">GH-512</a> AppIcon and LaunchImage Updates</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/254">GH-254</a> Expose <code>CDVCommandStatus</code> enum to Swift</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/508">GH-508</a> Remove removing certificates functions in xcode post scripts</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/489">GH-489</a> CordovaLib.xcodeproj file upgraded for Xcode 10</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/501">GH-501</a> <code>cordova-common</code> backwards compatability for <code>getPodSpecs</code> function</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/496">GH-496</a> iOS Platform Release Preparation (Cordova 9)</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/494">GH-494</a> Fixes <code>$(PRODUCT_BUNDLE_IDENTIFIER)</code> not being resolved for a product archive</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/481">GH-481</a> Add warning that function in spawn.js is deprecated</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/461">GH-461</a> <code>cordova run --list --device</code> fails for Virtualhere devices</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/355">GH-355</a> <a href="https://issues.apache.org/jira/browse/CB-13927">CB-13927</a> - Modified xcodeProjDir to filter out files/folders that contain &quot;._&quot;</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/483">GH-483</a> Restore stdio behavior from previous spawn approach</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/479">GH-479</a> emit xcodebuild &amp; other spawned CLI commands</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/482">GH-482</a> Copy node_modules if the directory exists</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/478">GH-478</a> Use <code>cross-spawn</code> &amp; <code>shelljs</code> instead of <code>child-process</code></li>
-<li><a href="https://github.com/apache/cordova-ios/pull/409">GH-409</a> Update project files for Xcode 10</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/474">GH-474</a> Fix issue after updating to macOS 10.14.2.</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/405">GH-405</a> Cocoapods support improvement, using podspec tag in <code>plugin.xml</code></li>
-<li><a href="https://github.com/apache/cordova-ios/pull/451">GH-451</a> Fix running <code>cordova build ios</code> for emulators with Xcode 10.1 RELEASE</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/406">GH-406</a> Added missing <code>unorm</code> dependency</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/398">GH-398</a> Removal of xcconfig build flag</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-14141">CB-14141</a> Don&#39;t duplicate resource files in xcodeproj</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/397">GH-397</a> Update Objc-Test for Local &amp; TravisCI</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/395">GH-395</a> Implement Swift Support and Testing</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-14242">CB-14242</a> remove committed node_modules</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-14242">CB-14242</a> <code>package.json</code> remove bundledDependencies</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-14074">CB-14074</a> Remove Node 4 from CI</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-14244">CB-14244</a> <a href="https://issues.apache.org/jira/browse/CB-9366">CB-9366</a> log error.stack in cordova.js</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/376">GH-376</a> Fixed Get Apple OSX Version method</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13581">CB-13581</a> open <strong>iOS</strong> simulator by using child_process</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-14045">CB-14045</a> Reinit url after app freezes</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-14076">CB-14076</a> Setting UIWebViewDelegate on CDVWebViewEngineProtocol doesn&#39;t work</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-14039">CB-14039</a> Inputs type text don&#39;t work on <strong>iOS</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13921">CB-13921</a> Update Xcode requirement to Xcode 9</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13382">CB-13382</a> dealloc the webViewEngine</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13523">CB-13523</a> Pass automaticProvisioning to build step</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12940">CB-12940</a> Use deployment-target from <code>config.xml</code> for platform version in Podfile</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13824">CB-13824</a> Xcode 9/Swift 4 support</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/354">GH-354</a> exec purgeProjectFileCache when pod install</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/356">GH-356</a> Fix prototype declaration warnings</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13510">CB-13510</a> Removed clipboard workaround, which was braking copy/paste functional <strong>iOS</strong> 11</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/343">GH-343</a> <a href="https://issues.apache.org/jira/browse/CB-13513">CB-13513</a> Declare ProvisioningStyle as Automatic in project.pbxproj template.</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/351">GH-351</a> Prevent a memory leak when converting to JSON</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13597">CB-13597</a> update podfile with <strong>iOS</strong> version 9.0</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/515">GH-515</a> Remove Deprecated Local and Remote Push Notification Constants</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/512">GH-512</a> AppIcon and LaunchImage Updates</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/254">GH-254</a> Expose <code>CDVCommandStatus</code> enum to Swift</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/508">GH-508</a> Remove removing certificates functions in xcode post scripts</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/489">GH-489</a> CordovaLib.xcodeproj file upgraded for Xcode 10</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/501">GH-501</a> <code>cordova-common</code> backwards compatability for <code>getPodSpecs</code> function</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/496">GH-496</a> iOS Platform Release Preparation (Cordova 9)</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/494">GH-494</a> Fixes <code>$(PRODUCT_BUNDLE_IDENTIFIER)</code> not being resolved for a product archive</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/481">GH-481</a> Add warning that function in spawn.js is deprecated</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/461">GH-461</a> <code>cordova run --list --device</code> fails for Virtualhere devices</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/355">GH-355</a> <a href="https://issues.apache.org/jira/browse/CB-13927">CB-13927</a> - Modified xcodeProjDir to filter out files/folders that contain &quot;._&quot;</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/483">GH-483</a> Restore stdio behavior from previous spawn approach</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/479">GH-479</a> emit xcodebuild &amp; other spawned CLI commands</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/482">GH-482</a> Copy node_modules if the directory exists</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/478">GH-478</a> Use <code>cross-spawn</code> &amp; <code>shelljs</code> instead of <code>child-process</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/409">GH-409</a> Update project files for Xcode 10</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/474">GH-474</a> Fix issue after updating to macOS 10.14.2.</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/405">GH-405</a> Cocoapods support improvement, using podspec tag in <code>plugin.xml</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/451">GH-451</a> Fix running <code>cordova build ios</code> for emulators with Xcode 10.1 RELEASE</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/406">GH-406</a> Added missing <code>unorm</code> dependency</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/398">GH-398</a> Removal of xcconfig build flag</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-14141">CB-14141</a> Don&#39;t duplicate resource files in xcodeproj</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/397">GH-397</a> Update Objc-Test for Local &amp; TravisCI</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/395">GH-395</a> Implement Swift Support and Testing</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-14242">CB-14242</a> remove committed node_modules</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-14242">CB-14242</a> <code>package.json</code> remove bundledDependencies</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-14074">CB-14074</a> Remove Node 4 from CI</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-14244">CB-14244</a> <a href="https://issues.apache.org/jira/browse/CB-9366">CB-9366</a> log error.stack in cordova.js</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/376">GH-376</a> Fixed Get Apple OSX Version method</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13581">CB-13581</a> open <strong>iOS</strong> simulator by using child_process</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-14045">CB-14045</a> Reinit url after app freezes</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-14076">CB-14076</a> Setting UIWebViewDelegate on CDVWebViewEngineProtocol doesn&#39;t work</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-14039">CB-14039</a> Inputs type text don&#39;t work on <strong>iOS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13921">CB-13921</a> Update Xcode requirement to Xcode 9</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13382">CB-13382</a> dealloc the webViewEngine</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13523">CB-13523</a> Pass automaticProvisioning to build step</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12940">CB-12940</a> Use deployment-target from <code>config.xml</code> for platform version in Podfile</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13824">CB-13824</a> Xcode 9/Swift 4 support</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/354">GH-354</a> exec purgeProjectFileCache when pod install</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/356">GH-356</a> Fix prototype declaration warnings</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13510">CB-13510</a> Removed clipboard workaround, which was braking copy/paste functional <strong>iOS</strong> 11</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/343">GH-343</a> <a href="https://issues.apache.org/jira/browse/CB-13513">CB-13513</a> Declare ProvisioningStyle as Automatic in project.pbxproj template.</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/351">GH-351</a> Prevent a memory leak when converting to JSON</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13597">CB-13597</a> update podfile with <strong>iOS</strong> version 9.0</li>
 </ul>
 
         </div>

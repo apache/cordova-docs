@@ -138,75 +138,75 @@ of breaking changes. Mostly though, it adds first-class support for <a href="htt
 
 <p><code>cordova-android@4.0.0</code> will be the default android version in the next
 version of <code>cordova</code>. If you just can&#39;t wait though, you can try it out now:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cd my_project
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd my_project
 cordova platform update android@4.0.0
 cordova plugin add https://github.com/apache/cordova-plugin-whitelist.git#r1.0.0
 # To install Crosswalk (optional):
 cordova plugin add https://github.com/MobileChromeApps/cordova-plugin-crosswalk-webview.git#1.0.0
-</code></pre></div>
+</code></pre></div></div>
+
 <!--more-->
 
 <h2>Major Changes</h2>
-
 <ul>
-<li>Support for pluggable WebViews!
-
-<ul>
-<li><a href="https://crosswalk-project.org/">Crosswalk</a> can be added by installing the <a href="https://github.com/MobileChromeApps/cordova-crosswalk-engine">cordova-plugin-crosswalk-webview</a> plugin.</li>
-</ul></li>
-<li>Splash screen functionality is now provided via plugin
-
-<ul>
-<li>You will need to add the new <a href="https://github.com/apache/cordova-plugin-splashscreen">cordova-plugin-splashscreen</a> plugin to continue using a splash screen</li>
-</ul></li>
-<li>Whitelist functionality is revamped
-
-<ul>
-<li>You will need to add the new <a href="https://github.com/apache/cordova-plugin-whitelist">cordova-plugin-whitelist</a> plugin to continue using a whitelist</li>
-<li>Setting a Content-Security-Policy (CSP) is now supported and is the recommended way to whitelist (see details in plugin readme)</li>
-<li>Network requests are <em>blocked</em> by default without the plugin, so install this plugin even to allow all requests, and even if you are using CSP.</li>
-<li>This new whitelist is enhanced to be more secure and configurable, but the Legacy whitelist behaviour is still available via a separate plugin (not recommended).</li>
-<li>Note: while not strictly part of this release, the latest default app created by cordova-cli will include this plugin by default.</li>
-</ul></li>
+  <li>Support for pluggable WebViews!
+    <ul>
+      <li><a href="https://crosswalk-project.org/">Crosswalk</a> can be added by installing the <a href="https://github.com/MobileChromeApps/cordova-crosswalk-engine">cordova-plugin-crosswalk-webview</a> plugin.</li>
+    </ul>
+  </li>
+  <li>Splash screen functionality is now provided via plugin
+    <ul>
+      <li>You will need to add the new <a href="https://github.com/apache/cordova-plugin-splashscreen">cordova-plugin-splashscreen</a> plugin to continue using a splash screen</li>
+    </ul>
+  </li>
+  <li>Whitelist functionality is revamped
+    <ul>
+      <li>You will need to add the new <a href="https://github.com/apache/cordova-plugin-whitelist">cordova-plugin-whitelist</a> plugin to continue using a whitelist</li>
+      <li>Setting a Content-Security-Policy (CSP) is now supported and is the recommended way to whitelist (see details in plugin readme)</li>
+      <li>Network requests are <em>blocked</em> by default without the plugin, so install this plugin even to allow all requests, and even if you are using CSP.</li>
+      <li>This new whitelist is enhanced to be more secure and configurable, but the Legacy whitelist behaviour is still available via a separate plugin (not recommended).</li>
+      <li>Note: while not strictly part of this release, the latest default app created by cordova-cli will include this plugin by default.</li>
+    </ul>
+  </li>
 </ul>
 
 <h2>Changes For Plugin Developers:</h2>
 
 <ul>
-<li>Develop in Android Studio
-
-<ul>
-<li>Android Studio is now fully supported, and recommended over Eclipse</li>
-<li>Use <code>cordova plugin add ../path/to/my-plugin --link</code> to symlink .java files for development</li>
-</ul></li>
-<li>Build using Gradle
-
-<ul>
-<li>All builds <a href="https://cordova.apache.org/docs/en/dev/guide_platforms_android_tools.md.html#Android%20Shell%20Tool%20Guide_building_with_gradle">use Gradle by default</a>, instead of Ant</li>
-<li>Plugins can add their own gradle build steps!</li>
-<li>Plugins can depend on Maven libraries using <code>&lt;framework&gt;</code> tags</li>
-</ul></li>
-<li>New APIs: <code>onStart</code>, <code>onStop</code>, <code>onConfigurationChanged</code></li>
-<li><code>&quot;onScrollChanged&quot;</code> message removed. Use <code>view.getViewTreeObserver().addOnScrollChangedListener(...)</code> instead</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8702">CB-8702</a> New API for plugins to override <code>shouldInterceptRequest</code> with a stream</li>
+  <li>Develop in Android Studio
+    <ul>
+      <li>Android Studio is now fully supported, and recommended over Eclipse</li>
+      <li>Use <code>cordova plugin add ../path/to/my-plugin --link</code> to symlink .java files for development</li>
+    </ul>
+  </li>
+  <li>Build using Gradle
+    <ul>
+      <li>All builds <a href="https://cordova.apache.org/docs/en/dev/guide_platforms_android_tools.md.html#Android%20Shell%20Tool%20Guide_building_with_gradle">use Gradle by default</a>, instead of Ant</li>
+      <li>Plugins can add their own gradle build steps!</li>
+      <li>Plugins can depend on Maven libraries using <code>&lt;framework&gt;</code> tags</li>
+    </ul>
+  </li>
+  <li>New APIs: <code>onStart</code>, <code>onStop</code>, <code>onConfigurationChanged</code></li>
+  <li><code>"onScrollChanged"</code> message removed. Use <code>view.getViewTreeObserver().addOnScrollChangedListener(...)</code> instead</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8702">CB-8702</a> New API for plugins to override <code>shouldInterceptRequest</code> with a stream</li>
 </ul>
 
 <h2>Other Changes</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8378">CB-8378</a> Removed <code>hidekeyboard</code> and <code>showkeyboard</code> events (apps should use a plugin instead)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8735">CB-8735</a> <code>bin/create</code> regex relaxed / better support for numbers</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8699">CB-8699</a> Fix CordovaResourceApi <code>copyResource</code> creating zero-length files when src=uncompressed asset</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8693">CB-8693</a> CordovaLib should not contain icons / splashscreens</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8592">CB-8592</a> Fix NPE if lifecycle events reach CordovaWebView before <code>init()</code> has been called</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8588">CB-8588</a> Add CATEGORY_BROWSABLE to intents from showWebPage openExternal=true</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8587">CB-8587</a> Don&#39;t allow WebView navigations within showWebPage that are not whitelisted</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7827">CB-7827</a> Add <code>--activity-name</code> for <code>bin/create</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8548">CB-8548</a> Use debug-signing.properties and release-signing.properties when they exist</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8545">CB-8545</a> Don&#39;t add a layout as a parent of the WebView</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7159">CB-7159</a> BackgroundColor not used when <code>&lt;html style=&quot;opacity:0&quot;&gt;</code>, nor during screen rotation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6630">CB-6630</a> Removed OkHttp from core library. It&#39;s now available as a plugin: <a href="https://github.com/MobileChromeApps/cordova-plugin-okhttp">cordova-plugin-okhttp</a></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8484">CB-8484</a> Support for creating signed archive for Android</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8378">CB-8378</a> Removed <code>hidekeyboard</code> and <code>showkeyboard</code> events (apps should use a plugin instead)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8735">CB-8735</a> <code>bin/create</code> regex relaxed / better support for numbers</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8699">CB-8699</a> Fix CordovaResourceApi <code>copyResource</code> creating zero-length files when src=uncompressed asset</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8693">CB-8693</a> CordovaLib should not contain icons / splashscreens</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8592">CB-8592</a> Fix NPE if lifecycle events reach CordovaWebView before <code>init()</code> has been called</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8588">CB-8588</a> Add CATEGORY_BROWSABLE to intents from showWebPage openExternal=true</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8587">CB-8587</a> Don&#39;t allow WebView navigations within showWebPage that are not whitelisted</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7827">CB-7827</a> Add <code>--activity-name</code> for <code>bin/create</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8548">CB-8548</a> Use debug-signing.properties and release-signing.properties when they exist</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8545">CB-8545</a> Don&#39;t add a layout as a parent of the WebView</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7159">CB-7159</a> BackgroundColor not used when <code>&lt;html style="opacity:0"&gt;</code>, nor during screen rotation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6630">CB-6630</a> Removed OkHttp from core library. It&#39;s now available as a plugin: <a href="https://github.com/MobileChromeApps/cordova-plugin-okhttp">cordova-plugin-okhttp</a></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8484">CB-8484</a> Support for creating signed archive for Android</li>
 </ul>
 
         </div>

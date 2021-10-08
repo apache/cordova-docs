@@ -1333,40 +1333,62 @@ details preferences that only apply to  Amazon Fire OS builds. See The
 config.xml File for information on global configuration options.</p>
 
 <ul>
-<li><p><code>KeepRunning</code> (boolean, defaults to <code>true</code>): Determines whether the
+  <li>
+    <p><code>KeepRunning</code> (boolean, defaults to <code>true</code>): Determines whether the
 application stays running in the background even after a <a href="../../../cordova/events/events.pause.html"><code>pause</code></a>
 event fires.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="KeepRunning" value="false"/&gt;
-</code></pre></div></li>
-<li><p><code>ErrorUrl</code>: Specifies an error page that displays in response to
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="KeepRunning" value="false"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>ErrorUrl</code>: Specifies an error page that displays in response to
 standard HTTP errors in the 400-500 range. Place the specified file
 in the top-level directory containing the home page and other web
 assets.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="ErrorUrl" value="error.html"/&gt;
-</code></pre></div></li>
-<li><p><code>LoadingDialog</code>: Display a native dialog when loading the app. The
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="ErrorUrl" value="error.html"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>LoadingDialog</code>: Display a native dialog when loading the app. The
 value&#39;s format is <em>Title, Message</em></p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="LoadingDialog" value="Please wait, the app is loading"/&gt;
-</code></pre></div></li>
-<li><p><code>LoadingPageDialog</code>: Display a native dialog when loading sub-pages
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="LoadingDialog" value="Please wait, the app is loading"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>LoadingPageDialog</code>: Display a native dialog when loading sub-pages
 within an app. The value&#39;s format is <em>Title, Message</em></p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="LoadingPageDialog" value="Please wait, the data is loading"/&gt;
-</code></pre></div></li>
-<li><p><code>LoadUrlTimeoutValue</code> (number, default is <code>20000</code>): When loading a
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="LoadingPageDialog" value="Please wait, the data is loading"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>LoadUrlTimeoutValue</code> (number, default is <code>20000</code>): When loading a
 page, the amount of time to wait before throwing a timeout error.
 This example specifies 10 seconds rather than 20:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="LoadUrlTimeoutValue" value="10000"/&gt;
-</code></pre></div></li>
-<li><p><code>SplashScreen</code>: The name of the file minus its extension in the
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="LoadUrlTimeoutValue" value="10000"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>SplashScreen</code>: The name of the file minus its extension in the
 <code>res/drawable</code> directory.  Various assets must share this common
 name in various subdirectories.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="SplashScreen" value="splash"/&gt;
-</code></pre></div></li>
-<li><p><code>SplashScreenDelay</code> (number, defaults to <code>5000</code>): The amount of
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="SplashScreen" value="splash"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>SplashScreenDelay</code> (number, defaults to <code>5000</code>): The amount of
 time the splash screen image displays.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="SplashScreenDelay" value="10000"/&gt;
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="SplashScreenDelay" value="10000"/&gt;
+</code></pre></div>    </div>
+  </li>
 </ul>
+
 
 
             </div>

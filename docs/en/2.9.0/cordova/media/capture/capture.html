@@ -1618,7 +1618,7 @@
                 <h1>Capture</h1>
 
 <blockquote>
-<p>Provides access to the device&#39;s audio, image, and video capture capabilities.</p>
+  <p>Provides access to the device&#39;s audio, image, and video capture capabilities.</p>
 </blockquote>
 
 <p><strong>Important privacy note:</strong> Collection and use of images, video, or audio from the device&#39;s camera or microphone raises important privacy issues.  Your app&#39;s <a href="guide_getting-started_index.md.html">privacy policy</a> should discuss how the app uses such sensors and whether the data recorded is shared with any other parties.  In addition, if the app&#39;s use of the camera or microphone is not apparent in the user interface, you should provide a just-in-time notice prior to your app accessing the camera or microphone (if the device operating system doesn&#39;t do so already). That notice should provide the same information noted above, as well as obtaining the user&#39;s permission (e.g., by presenting choices for &quot;OK&quot; and &quot;No Thanks&quot;).  Note that some app marketplaces may require your app to provide just-in-time notice and obtain permission from the user prior to accessing the camera or microphone.  For more information, please see the <a href="../../../guide/privacy/index.html">Privacy Guide</a>.</p>
@@ -1626,57 +1626,59 @@
 <h2>Objects</h2>
 
 <ul>
-<li>Capture</li>
-<li><a href="captureAudioOptions.html">CaptureAudioOptions</a></li>
-<li><a href="captureImageOptions.html">CaptureImageOptions</a></li>
-<li><a href="captureVideoOptions.html">CaptureVideoOptions</a></li>
-<li>CaptureCallback</li>
-<li><a href="CaptureErrorCB.html">CaptureErrorCB</a></li>
-<li><a href="ConfigurationData.html">ConfigurationData</a></li>
-<li><a href="MediaFile.html">MediaFile</a></li>
-<li><a href="MediaFileData.html">MediaFileData</a></li>
+  <li>Capture</li>
+  <li><a href="captureAudioOptions.html">CaptureAudioOptions</a></li>
+  <li><a href="captureImageOptions.html">CaptureImageOptions</a></li>
+  <li><a href="captureVideoOptions.html">CaptureVideoOptions</a></li>
+  <li>CaptureCallback</li>
+  <li><a href="CaptureErrorCB.html">CaptureErrorCB</a></li>
+  <li><a href="ConfigurationData.html">ConfigurationData</a></li>
+  <li><a href="MediaFile.html">MediaFile</a></li>
+  <li><a href="MediaFileData.html">MediaFileData</a></li>
 </ul>
 
 <h2>Methods</h2>
 
 <ul>
-<li><a href="captureAudio.html">capture.captureAudio</a></li>
-<li><a href="captureImage.html">capture.captureImage</a></li>
-<li><a href="captureVideo.html">capture.captureVideo</a></li>
-<li><a href="%5BMediaFile%5D(MediaFile.html).getFormatData.html">MediaFile.getFormatData</a></li>
+  <li><a href="captureAudio.html">capture.captureAudio</a></li>
+  <li><a href="captureImage.html">capture.captureImage</a></li>
+  <li><a href="captureVideo.html">capture.captureVideo</a></li>
+  <li><a href="[MediaFile](MediaFile.html).getFormatData.html">MediaFile.getFormatData</a></li>
 </ul>
 
 <h2>Scope</h2>
 
 <p>The <code>capture</code> object is assigned to the <code>navigator.device</code> object, and
 therefore has global scope.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">// The global capture object
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// The global capture object
 var capture = navigator.device.capture;
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Properties</h2>
 
 <ul>
-<li><strong>supportedAudioModes</strong>: The audio recording formats supported by the device. (ConfigurationData[])</li>
-<li><strong>supportedImageModes</strong>: The recording image sizes and formats supported by the device. (ConfigurationData[])</li>
-<li><strong>supportedVideoModes</strong>: The recording video resolutions and formats supported by the device. (ConfigurationData[])</li>
+  <li><strong>supportedAudioModes</strong>: The audio recording formats supported by the device. (ConfigurationData[])</li>
+  <li><strong>supportedImageModes</strong>: The recording image sizes and formats supported by the device. (ConfigurationData[])</li>
+  <li><strong>supportedVideoModes</strong>: The recording video resolutions and formats supported by the device. (ConfigurationData[])</li>
 </ul>
 
 <h2>Methods</h2>
 
 <ul>
-<li><code>[capture.captureAudio](captureAudio.html)</code>: Launch the device&#39;s audio recording application to record audio clips.</li>
-<li><code>[capture.captureImage](captureImage.html)</code>: Launch the device&#39;s camera application to take photos.</li>
-<li><code>[capture.captureVideo](captureVideo.html)</code>: Launch the device&#39;s video recorder application to record videos.</li>
+  <li><code>[capture.captureAudio](captureAudio.html)</code>: Launch the device&#39;s audio recording application to record audio clips.</li>
+  <li><code>[capture.captureImage](captureImage.html)</code>: Launch the device&#39;s camera application to take photos.</li>
+  <li><code>[capture.captureVideo](captureVideo.html)</code>: Launch the device&#39;s video recorder application to record videos.</li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows 8</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2>Permissions</h2>
@@ -1684,37 +1686,49 @@ var capture = navigator.device.capture;
 <h3>Android</h3>
 
 <h4>app/res/xml/config.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Capture" value="org.apache.cordova.Capture"/&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Capture" value="org.apache.cordova.Capture"/&gt;
+</code></pre></div></div>
+
 <h4>app/AndroidManifest.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;uses-permission android:name="android.permission.RECORD_AUDIO" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;uses-permission android:name="android.permission.RECORD_AUDIO" /&gt;
 &lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>BlackBerry WebWorks</h3>
 
 <h4>www/plugins.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture" /&gt;
+</code></pre></div></div>
+
 <h4>www/config.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature id="blackberry.system"  required="true" version="1.0.0.0" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;feature id="blackberry.system"  required="true" version="1.0.0.0" /&gt;
 &lt;feature id="blackberry.io.file" required="true" version="1.0.0.0" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>iOS</h3>
 
 <h4>config.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Capture" value="CDVCapture" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Capture" value="CDVCapture" /&gt;
+</code></pre></div></div>
+
 <h3>Windows Phone</h3>
 
 <h4>Properties/WPAppManifest.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;Capabilities&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Capabilities&gt;
     &lt;Capability Name="ID_CAP_MEDIALIB" /&gt;
     &lt;Capability Name="ID_CAP_MICROPHONE" /&gt;
     &lt;Capability Name="ID_HW_FRONTCAMERA" /&gt;
     &lt;Capability Name="ID_CAP_ISV_CAMERA" /&gt;
     &lt;Capability Name="ID_CAP_CAMERA" /&gt;
 &lt;/Capabilities&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

@@ -1578,54 +1578,84 @@ directory.</p>
 existing apps. The available preferences are:</p>
 
 <ul>
-<li><p><code>DisallowOverscroll</code> (boolean, defaults to <code>false</code>): set to <code>true</code> if
-you don&#39;t want the WebView to rubber-band.</p></li>
-<li><p><code>TopActivityIndicator</code> (string, defaults to <code>gray</code>): this is the top
+  <li>
+    <p><code>DisallowOverscroll</code> (boolean, defaults to <code>false</code>): set to <code>true</code> if
+you don&#39;t want the WebView to rubber-band.</p>
+  </li>
+  <li>
+    <p><code>TopActivityIndicator</code> (string, defaults to <code>gray</code>): this is the top
 spinning throbber in the status/battery bar, valid values are
-<code>whiteLarge</code>, <code>white</code>, and <code>gray</code>.</p></li>
-<li><p><code>EnableLocation</code> (boolean, defaults to <code>false</code>): set to <code>true</code>, to
+<code>whiteLarge</code>, <code>white</code>, and <code>gray</code>.</p>
+  </li>
+  <li>
+    <p><code>EnableLocation</code> (boolean, defaults to <code>false</code>): set to <code>true</code>, to
 initialize the <a href="../../../cordova/geolocation/geolocation.html">Geolocation</a> plugin at start-up (so the fix on your
 location can be more accurate) <strong>DEPRECATED</strong>: please set the
 <code>onload</code> attribute of the <code>[Geolocation](../../../cordova/geolocation/geolocation.html)</code> plugin to <code>true</code>
-instead.</p></li>
-<li><p><code>EnableViewportScale</code> (boolean, defaults to <code>false</code>): set to <code>true</code> to
-prevent viewport scaling through a meta tag.</p></li>
-<li><p><code>AutoHideSplashScreen</code> (boolean, defaults to <code>true</code>): set to <code>false</code> to
-control when the splashscreen is hidden through a JavaScript API.</p></li>
-<li><p><code>FadeSplashScreen</code> (boolean, defaults to <code>true</code>): set to <code>false</code> to
+instead.</p>
+  </li>
+  <li>
+    <p><code>EnableViewportScale</code> (boolean, defaults to <code>false</code>): set to <code>true</code> to
+prevent viewport scaling through a meta tag.</p>
+  </li>
+  <li>
+    <p><code>AutoHideSplashScreen</code> (boolean, defaults to <code>true</code>): set to <code>false</code> to
+control when the splashscreen is hidden through a JavaScript API.</p>
+  </li>
+  <li>
+    <p><code>FadeSplashScreen</code> (boolean, defaults to <code>true</code>): set to <code>false</code> to
 prevent the splash-screen to fade in and out when showing or hiding
-it.</p></li>
-<li><p><code>FadeSplashScreenDuration</code> (float, defaults to 2): The splash-screen
-Fade duration in seconds.</p></li>
-<li><p><code>ShowSplashScreenSpinner</code> (boolean, defaults to <code>true</code>): set to <code>false</code>
-to hide the splash-screen spinner.</p></li>
-<li><p><code>MediaPlaybackRequiresUserAction</code> (boolean, defaults to <code>false</code>): set
-to true to not allow autoplayed HTML5 video.</p></li>
-<li><p><code>AllowInlineMediaPlayback</code> (boolean, defaults to <code>false</code>): set to
+it.</p>
+  </li>
+  <li>
+    <p><code>FadeSplashScreenDuration</code> (float, defaults to 2): The splash-screen
+Fade duration in seconds.</p>
+  </li>
+  <li>
+    <p><code>ShowSplashScreenSpinner</code> (boolean, defaults to <code>true</code>): set to <code>false</code>
+to hide the splash-screen spinner.</p>
+  </li>
+  <li>
+    <p><code>MediaPlaybackRequiresUserAction</code> (boolean, defaults to <code>false</code>): set
+to true to not allow autoplayed HTML5 video.</p>
+  </li>
+  <li>
+    <p><code>AllowInlineMediaPlayback</code> (boolean, defaults to <code>false</code>): set to
 true to allow inline HTML5 media playback, also, the video element
 in the HTML document must also include the webkit-playsinline
-attribute.</p></li>
-<li><p><code>BackupWebStorage</code> (string, defaults to <code>cloud</code>): valid values are
+attribute.</p>
+  </li>
+  <li>
+    <p><code>BackupWebStorage</code> (string, defaults to <code>cloud</code>): valid values are
 <code>none</code>, <code>cloud</code> and <code>local</code>. Set to <code>cloud</code> to allow the web
 storage data to be backed up to iCloud, and set to <code>local</code> to only
 allow local backups (iTunes sync). Set to <code>none</code> to not allow any
-backups of web storage.</p></li>
-<li><p><code>KeyboardDisplayRequiresUserAction</code> (boolean, defaults to <code>true</code>):
+backups of web storage.</p>
+  </li>
+  <li>
+    <p><code>KeyboardDisplayRequiresUserAction</code> (boolean, defaults to <code>true</code>):
 set to false to open the keyboard when form elements get focus via
-the JavaScript focus() call.</p></li>
-<li><p><code>SuppressesIncrementalRendering</code> (boolean, defaults to <code>false</code>): set
+the JavaScript focus() call.</p>
+  </li>
+  <li>
+    <p><code>SuppressesIncrementalRendering</code> (boolean, defaults to <code>false</code>): set
 to true to wait until all new view content has been received
-before it is rendered.</p></li>
-<li><p><code>HideKeyboardFormAccessoryBar</code> (boolean, defaults to <code>false</code>): set to
+before it is rendered.</p>
+  </li>
+  <li>
+    <p><code>HideKeyboardFormAccessoryBar</code> (boolean, defaults to <code>false</code>): set to
 true to hide the additional toolbar that is on top of the
 keyboard. This toolbar features the <strong>Prev</strong>, <strong>Next</strong>, and <strong>Done</strong>
-buttons.</p></li>
-<li><p><code>KeyboardShrinksView</code> (boolean, defaults to <code>false</code>): set to <code>true</code> to
+buttons.</p>
+  </li>
+  <li>
+    <p><code>KeyboardShrinksView</code> (boolean, defaults to <code>false</code>): set to <code>true</code> to
 shrink the WebView when the keyboard comes up. The WebView shrinks
 instead of the viewport shrinking and the page scrollable. This
 applies to apps that position their elements relative to the bottom
 of the WebView. This is the default behaviour on Android, and makes
-a lot of sense when building apps as opposed to webpages.</p></li>
+a lot of sense when building apps as opposed to webpages.</p>
+  </li>
 </ul>
 
 

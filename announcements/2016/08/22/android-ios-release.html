@@ -136,47 +136,52 @@
 <p>These release fixes issues with the new <code>edit-config</code> functionality in <code>plugin.xml</code>. Read more about <code>edit-config</code> at <a href="http://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#edit-config">http://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#edit-config</a>.</p>
 
 <p><strong>Note:</strong> When updating <strong>iOS</strong>, make sure to save your plugins as current unsaved plugins may not be reinstalled otherwise. Run the following command in your project to save your currently installed plugins into <code>config.xml</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin save
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin save
+</code></pre></div></div>
+
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android@5.2.2
 cordova platform rm ios
 cordova platform add ios@4.2.1
-</code></pre></div>
-<p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@5.2.2
-cordova platform add ios@4.2.1
-</code></pre></div>
-<!--more-->
+</code></pre></div></div>
 
+<p>To add it explicitly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@5.2.2
+cordova platform add ios@4.2.1
+</code></pre></div></div>
+
+<!--more-->
 <h2>What&#39;s new in Android</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-11615">CB-11615</a> updated <code>cordova-common</code> to <code>^1.4.0</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11615">CB-11615</a> updated <code>cordova-common</code> to <code>^1.4.0</code></li>
 </ul>
 
 <h2>What&#39;s new in iOS</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-11627">CB-11627</a> updated <code>CDVAvailability.h</code> with new version</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11627">CB-11627</a> added missing license header</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11627">CB-11627</a> Updated checked-in <code>node_modules</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9371">CB-9371</a> Fix how prepare handles orientation on <strong>ios</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11431">CB-11431</a> Document ways to update delegates, preferences and script message handlers in <code>WebViewEngines</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11475">CB-11475</a> Ignore unsupported 60x60 icon</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11426">CB-11426</a> Hardcoded path should not be in tests project.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11627">CB-11627</a> updated <code>CDVAvailability.h</code> with new version</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11627">CB-11627</a> added missing license header</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11627">CB-11627</a> Updated checked-in <code>node_modules</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9371">CB-9371</a> Fix how prepare handles orientation on <strong>ios</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11431">CB-11431</a> Document ways to update delegates, preferences and script message handlers in <code>WebViewEngines</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11475">CB-11475</a> Ignore unsupported 60x60 icon</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11426">CB-11426</a> Hardcoded path should not be in tests project.</li>
 </ul>
 
 <h2>Cordova Common Changes</h2>
 
 <ul>
-<li>Added general purpose <code>ConfigParser.getAttribute</code> API</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11653">CB-11653</a> moved <code>findProjectRoot</code> from <code>cordova-lib</code> to <code>cordova-common</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11636">CB-11636</a> Handle attributes with quotes correctly</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11645">CB-11645</a> added check to see if <code>getEditConfig</code> exists before trying to use it</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9825">CB-9825</a> framework tag spec parsing</li>
+  <li>Added general purpose <code>ConfigParser.getAttribute</code> API</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11653">CB-11653</a> moved <code>findProjectRoot</code> from <code>cordova-lib</code> to <code>cordova-common</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11636">CB-11636</a> Handle attributes with quotes correctly</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11645">CB-11645</a> added check to see if <code>getEditConfig</code> exists before trying to use it</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9825">CB-9825</a> framework tag spec parsing</li>
 </ul>
 
         </div>

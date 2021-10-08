@@ -1568,10 +1568,12 @@
                 <h1>CaptureCB</h1>
 
 <blockquote>
-<p>Invoked upon a successful media capture operation.</p>
+  <p>Invoked upon a successful media capture operation.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">function captureSuccess( MediaFile[] mediaFiles ) { ... };
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function captureSuccess( MediaFile[] mediaFiles ) { ... };
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p>This function executes after a successful capture operation completes.
@@ -1582,7 +1584,8 @@ reached.</p>
 <p>Each <code>[MediaFile](MediaFile.html)</code> object describes a captured media file.</p>
 
 <h2>Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">// capture callback
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// capture callback
 function captureSuccess(mediaFiles) {
     var i, path, len;
     for (i = 0, len = mediaFiles.length; i &lt; len; i += 1) {
@@ -1590,7 +1593,8 @@ function captureSuccess(mediaFiles) {
         // do something interesting with the file
     }
 };
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

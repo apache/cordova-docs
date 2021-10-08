@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The following plugins were updated today:cordova-plugin-battery-status@2.0.0cordova-plugin-camera@4.0.0cordova-plugin-contacts@3.0.1cordova-plugin-device@2.0...">
+    <meta name="description" content="The following plugins were updated today:  cordova-plugin-battery-status@2.0.0  cordova-plugin-camera@4.0.0  cordova-plugin-contacts@3.0.1  cordova-plugin-de...">
 
     <title>
         
@@ -134,139 +134,122 @@
             <p>The following plugins were updated today:</p>
 
 <ul>
-<li>cordova-plugin-battery-status@2.0.0</li>
-<li>cordova-plugin-camera@4.0.0</li>
-<li>cordova-plugin-contacts@3.0.1</li>
-<li>cordova-plugin-device@2.0.0</li>
-<li>cordova-plugin-dialogs@2.0.0</li>
-<li>cordova-plugin-file@6.0.0</li>
-<li>cordova-plugin-geolocation@4.0.0</li>
-<li>cordova-plugin-globalization@1.0.9</li>
-<li>cordova-plugin-inappbrowser@2.0.0</li>
-<li>cordova-plugin-media@5.0.0</li>
-<li>cordova-plugin-media-capture@3.0.0</li>
-<li>cordova-plugin-network-information@2.0.0</li>
-<li>cordova-plugin-splashscreen@5.0.0</li>
-<li>cordova-plugin-statusbar@2.4.0</li>
-<li>cordova-plugin-screen-orientation@3.0.0</li>
-<li>cordova-plugin-vibration@3.0.0</li>
+  <li>cordova-plugin-battery-status@2.0.0</li>
+  <li>cordova-plugin-camera@4.0.0</li>
+  <li>cordova-plugin-contacts@3.0.1</li>
+  <li>cordova-plugin-device@2.0.0</li>
+  <li>cordova-plugin-dialogs@2.0.0</li>
+  <li>cordova-plugin-file@6.0.0</li>
+  <li>cordova-plugin-geolocation@4.0.0</li>
+  <li>cordova-plugin-globalization@1.0.9</li>
+  <li>cordova-plugin-inappbrowser@2.0.0</li>
+  <li>cordova-plugin-media@5.0.0</li>
+  <li>cordova-plugin-media-capture@3.0.0</li>
+  <li>cordova-plugin-network-information@2.0.0</li>
+  <li>cordova-plugin-splashscreen@5.0.0</li>
+  <li>cordova-plugin-statusbar@2.4.0</li>
+  <li>cordova-plugin-screen-orientation@3.0.0</li>
+  <li>cordova-plugin-vibration@3.0.0</li>
 </ul>
 
-<p>In the recent <code>cordova@8</code> tools release, we dropped support for deprecated platforms (Ubuntu, BlackBerry10, Windows Phone 8, FirefoxOS). The main focus of this plugins release was to drop support for those platforms as well. That is why many of the plugins have had major version increases. </p>
+<p>In the recent <code>cordova@8</code> tools release, we dropped support for deprecated platforms (Ubuntu, BlackBerry10, Windows Phone 8, FirefoxOS). The main focus of this plugins release was to drop support for those platforms as well. That is why many of the plugins have had major version increases.</p>
 
 <p><code>cordova-plugin-contacts</code> and <code>cordova-plugin-globalization</code> have officially been deprecated. Read about our decision to deprecate <code>cordova-plugin-contacts</code> at https://cordova.apache.org/news/2017/11/27/Deprecation-of-cordova-contacts-plugin.html. For <code>cordova-plugin-globalization</code>, we have written a migration guide over to the built-in <a href="https://www.ecma-international.org/ecma-402/1.0/">ECMA Internationalization API</a> at https://cordova.apache.org/news/2017/11/20/migrate-from-cordova-globalization-plugin.html.</p>
 
-<hr>
-
+<hr />
 <p>You can update any plugin by removing it, and then re-adding it.</p>
 
 <p>E.g. To update your camera plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm cordova-plugin-camera
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm cordova-plugin-camera
 cordova plugin add cordova-plugin-camera@latest
-</code></pre></div>
-<p>Changes include:</p>
+</code></pre></div></div>
 
+<p>Changes include:
 <!--more-->
-
-<p>cordova-plugin-battery-status@2.0.0</p>
-
+cordova-plugin-battery-status@2.0.0</p>
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
 </ul>
 
 <p>cordova-plugin-camera@4.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
 </ul>
 
 <p>cordova-plugin-contacts@3.0.1</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13062">CB-13062</a>: Deprecated this plugin. Added notice to <code>README.md</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13062">CB-13062</a>: Deprecated this plugin. Added notice to <code>README.md</code></li>
 </ul>
 
 <p>cordova-plugin-device@2.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
 </ul>
 
 <p>cordova-plugin-dialogs@2.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13555">CB-13555</a> (ios) Present notification view controller by <code>InAppBrowser</code> view controller</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13555">CB-13555</a> (ios) Present notification view controller by <code>InAppBrowser</code> view controller</li>
 </ul>
 
 <p>cordova-plugin-file@6.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
 </ul>
 
 <p>cordova-plugin-geolocation@4.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
 </ul>
 
 <p>cordova-plugin-globalization@1.0.9</p>
-
 <ul>
-<li>Deprecated this plugin. Read our migration guide at https://cordova.apache.org/news/2017/11/20/migrate-from-cordova-globalization-plugin.html</li>
-<li>Update moment.js to version <code>2.19.1</code></li>
+  <li>Deprecated this plugin. Read our migration guide at https://cordova.apache.org/news/2017/11/20/migrate-from-cordova-globalization-plugin.html</li>
+  <li>Update moment.js to version <code>2.19.1</code></li>
 </ul>
 
 <p>cordova-plugin-inappbrowser@2.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
 </ul>
 
 <p>cordova-plugin-media@5.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
 </ul>
 
 <p>cordova-plugin-media-capture@3.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
 </ul>
 
 <p>cordova-plugin-network-information@2.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
 </ul>
 
 <p>cordova-plugin-splashscreen@5.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
 </ul>
 
 <p>cordova-plugin-statusbar@2.4.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13623">CB-13623</a> (iOS): Remove <strong>iOS</strong> 6-7 code</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13623">CB-13623</a> (iOS): Remove <strong>iOS</strong> 6-7 code</li>
 </ul>
 
 <p>cordova-plugin-screen-orientation@3.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13405">CB-13405</a> (ios) undo lock when resetting</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13405">CB-13405</a> (ios) Screen unlock bug fix</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13405">CB-13405</a> (ios) undo lock when resetting</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13405">CB-13405</a> (ios) Screen unlock bug fix</li>
 </ul>
 
 <p>cordova-plugin-vibration@3.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13045">CB-13045</a> Removed <strong>Android</strong> implementation and Updated <code>README</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13667">CB-13667</a>: Remove deprecated platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13045">CB-13045</a> Removed <strong>Android</strong> implementation and Updated <code>README</code></li>
 </ul>
 
         </div>

@@ -2182,14 +2182,14 @@
 <p>Examples of SPA libraries you can use in your Cordova applications are:</p>
 
 <ul>
-<li><a href="https://reactjs.org">ReactJS</a></li>
-<li><a href="https://vuejs.org/">Vue</a></li>
-<li><a href="https://angular.io/">Angular</a></li>
-<li><a href="https://emberjs.com">EmberJS</a></li>
-<li><a href="https://backbonejs.org">Backbone</a></li>
-<li><a href="https://www.telerik.com/kendo-ui">Kendo UI</a></li>
-<li><a href="https://onsen.io">Onsen UI</a></li>
-<li><a href="https://www.sencha.com/products/extjs/">Sencha Ext JS</a></li>
+  <li><a href="https://reactjs.org">ReactJS</a></li>
+  <li><a href="https://vuejs.org/">Vue</a></li>
+  <li><a href="https://angular.io/">Angular</a></li>
+  <li><a href="https://emberjs.com">EmberJS</a></li>
+  <li><a href="https://backbonejs.org">Backbone</a></li>
+  <li><a href="https://www.telerik.com/kendo-ui">Kendo UI</a></li>
+  <li><a href="https://onsen.io">Onsen UI</a></li>
+  <li><a href="https://www.sencha.com/products/extjs/">Sencha Ext JS</a></li>
 </ul>
 
 <p>And many, many, more.</p>
@@ -2209,8 +2209,8 @@
 <p><strong>Additional Performance Articles and Resources</strong></p>
 
 <ul>
-<li><a href="http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/">&quot;Top Ten Performance Tips for PhoneGap and Hybrid Apps&quot;</a></li>
-<li><a href="https://channel9.msdn.com/Events/Build/2013/4-313">&quot;Fast Apps and Sites with JavaScript&quot;</a></li>
+  <li><a href="http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/">&quot;Top Ten Performance Tips for PhoneGap and Hybrid Apps&quot;</a></li>
+  <li><a href="https://channel9.msdn.com/Events/Build/2013/4-313">&quot;Fast Apps and Sites with JavaScript&quot;</a></li>
 </ul>
 
 <h2>3) Recognize and Handle Offline Status</h2>
@@ -2225,19 +2225,21 @@
 <h2>Upgrading Cordova Projects</h2>
 
 <p>There is no upgrade command for Cordova projects. Instead, remove the platform from your project, and re-add it to get the latest version:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform rm android
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform rm android
 cordova platform add android
-</code></pre></div>
+</code></pre></div></div>
+
 <p>It is absolutely critical that you read up on what was changed in the updated version, as the update may break your code. The best place to find this information will be in the release notes published both in the repositories and on the Cordova blog. You will want to test your app thoroughly in order to verify that it is working correctly after you perform the update.</p>
 
 <p>Note: some plugins may not be compatible with the new version of Cordova. If a plugin is not compatible, you may be able to find a replacement plugin that does what you need, or you may need to delay upgrading your project. Alternatively, alter the plugin so that it does work under the new version and contribute back to the community.</p>
 
 <h2>Plugin Upgrades</h2>
-
 <p>Upgrading plugins involves the same process as platforms - remove it, then re-add it.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm some-plugin
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm some-plugin
 cordova plugin add some-plugin
-</code></pre></div>
+</code></pre></div></div>
 <p>Refer to <a href="../../platform_plugin_versioning_ref/index.html">Manage versions and platforms</a> for more details.</p>
 
 <p>Be sure to check the updated plugin&#39;s documentation, as you may need to adjust your code to work with the new version. Also, double check that the new version of the plugin works with your project&#39;s version of Cordova.</p>
@@ -2255,11 +2257,11 @@ cordova plugin add some-plugin
 <p>It&#39;s not uncommon to use desktop browsers and device simulators/emulators when developing a Cordova application. However, it is incredibly important that you test your app on as many physical devices as you possibly can:</p>
 
 <ul>
-<li>Simulators are just that: simulators. For example, your app may work in the iOS simulator without a problem, but it may fail on a real device (especially in certain circumstances, such as a low memory state). Or, your app may actually fail on the simulator while it works just fine on a real device.</li>
-<li>Emulators are just that: emulators. They do not represent how well your app will run on a physical device. For example, some emulators may render your app with a garbled display, while a real device has no problem. (If you do encounter this problem, disable the host GPU in the emulator.)</li>
-<li>Simulators are generally faster than your physical device. Emulators, on the other hand, are generally slower. Do not judge the performance of your app by how it performs in a simulator or an emulator. Do judge the performance of your app by how it runs on a spectrum of real devices.</li>
-<li>It&#39;s impossible to get a good feel for how your app responds to your touch by using a simulator or an emulator. Instead, running the app on a real device can point out problems with the sizes of user interface elements, responsiveness, etc.</li>
-<li>Although it would be nice to be able to test only on one device per platform, it is best to test on many devices sporting many different OS versions. For example, what works on your particular Android smartphone may fail on another Android device. What works on the latest iOS device may fail on an older one.</li>
+  <li>Simulators are just that: simulators. For example, your app may work in the iOS simulator without a problem, but it may fail on a real device (especially in certain circumstances, such as a low memory state). Or, your app may actually fail on the simulator while it works just fine on a real device.</li>
+  <li>Emulators are just that: emulators. They do not represent how well your app will run on a physical device. For example, some emulators may render your app with a garbled display, while a real device has no problem. (If you do encounter this problem, disable the host GPU in the emulator.)</li>
+  <li>Simulators are generally faster than your physical device. Emulators, on the other hand, are generally slower. Do not judge the performance of your app by how it performs in a simulator or an emulator. Do judge the performance of your app by how it runs on a spectrum of real devices.</li>
+  <li>It&#39;s impossible to get a good feel for how your app responds to your touch by using a simulator or an emulator. Instead, running the app on a real device can point out problems with the sizes of user interface elements, responsiveness, etc.</li>
+  <li>Although it would be nice to be able to test only on one device per platform, it is best to test on many devices sporting many different OS versions. For example, what works on your particular Android smartphone may fail on another Android device. What works on the latest iOS device may fail on an older one.</li>
 </ul>
 
 <p>It is, of course, impossible to test on every possible device on the market. For this reason, it&#39;s wise to recruit many testers who have different devices. Although they won&#39;t catch every problem, chances are good that they will discover quirks and issues that you would never find alone.</p>
@@ -2271,29 +2273,26 @@ cordova plugin add some-plugin
 <h2>iOS Debugging</h2>
 
 <h3>Xcode</h3>
-
 <p>With Xcode you can debug the iOS native side of your Cordova application. Make sure the Debug Area is showing (View -&gt; Debug Area). Once your app is running on the device (or simulator), you can view log output in the debug area. This is where any errors or warnings will print. You can also set breakpoints within the source files. This will allow you to step through the code one line at a time and view the state of the variables at that time. The state of the variables is shown in the debug area when a breakpoint is hit. Once your app is up and running on the device, you can bring up Safari&#39;s web inspector (as described below) to debug the webview and JS side of your application. For more details refer to the <a href="https://developer.apple.com/support/debugging/">Apple Debugging Support</a> docs.</p>
 
 <h3>Safari Remote Debugging with Web Inspector</h3>
-
 <p>With Safari&#39;s web inspector you can debug the webview and js code in your Cordova application. This works only on macOS. It uses Safari to connect to your device (or the simulator) and will connect the browser&#39;s dev tools to the Cordova application. You get what you expect from dev tools - DOM inspection/manipulation, a JavaScript debugger, network inspection, the console, and more. Like Xcode, with Safari&#39;s web inspector you can set breakpoints in the JavaScript code and view the state of the variables at that time. You can view any errors, warnings or messages that are printed to the console. You can also run JavaScript commands directly from the console as your app is running.</p>
 
 <p>To start inspecting, first enable it on device at <code>Settings &gt; Safari &gt; Advanced &gt; Web Inspector</code>. On your desktop, enable the developer tools from <code>Safari &gt; Preferences &gt; Advanced &gt; Show Develop menu in menu bar</code>. In the <code>Develop</code> menu, you will now be able to select the connected device, and the app you want to inspect.</p>
 
 <h2>Chrome Remote Debugging</h2>
-
 <p>Virtually the same as the Safari version, this works with Android only but can be used from any desktop operating system. Once connected, you get the same Chrome Dev Tools experience for your mobile applications as you do with your desktop applications. Even better, the Chrome Dev Tools have a mirror option that shows your app running on the mobile device. This is more than just a view - you can scroll and click from dev tools and it updates on the mobile device.</p>
 
 <p>To inspect, simply open up the URL <code>chrome://inspect</code> in Chrome on your desktop. Here you will see a list of connected devices and inspectable apps. Your device must be set up for USB debugging for this to work. Full instructions on getting set up can be found at <a href="https://developers.google.com/chrome/mobile/docs/debugging">https://developers.google.com/chrome/mobile/docs/debugging</a>.</p>
 
-<p>If you can see your device in the inspect devices section, but you can&#39;t see the Cordova webview you may need to add <code>android:debuggable=&quot;true&quot;</code> in the <code>&lt;application&gt;</code> node of your <code>AndroidManifest.xml</code>.</p>
+<p>If you can see your device in the inspect devices section, but you can&#39;t see the Cordova webview you may need to add <code>android:debuggable="true"</code> in the <code>&lt;application&gt;</code> node of your <code>AndroidManifest.xml</code>.</p>
 
 <p>It is also possible to use Chrome Dev Tools to inspect iOS apps, through a WebKit proxy: <a href="https://github.com/google/ios-webkit-debug-proxy/">https://github.com/google/ios-webkit-debug-proxy/</a></p>
 
 <h2>Other Options</h2>
 
 <ul>
-<li>For more examples and explanation of the above debugging tips, see: <a href="https://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/">httpa://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/</a></li>
+  <li>For more examples and explanation of the above debugging tips, see: <a href="https://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/">httpa://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/</a></li>
 </ul>
 
 <h1>User Interface</h1>
@@ -2301,20 +2300,20 @@ cordova plugin add some-plugin
 <p>Building a Cordova application that looks nice on mobile can be a challenge, especially for developers. Many people chose to use a UI framework to make this easier. Here is a short list of options you may want to consider.</p>
 
 <ul>
-<li><a href="https://ionicframework.com/">Ionic</a> - This powerful UI framework actually has its own CLI to handle project creation.</li>
-<li><a href="http://goratchet.com/">Ratchet</a> - Brought to you by the people who created Bootstrap.</li>
-<li><a href="https://www.telerik.com/kendo-ui">Kendo UI</a> - Open source UI and application framework from Telerik.</li>
-<li><a href="https://onsen.io">Onsen UI</a> - Open source UI framework for both websites and Cordova apps</li>
-<li><a href="http://topcoat.io">Topcoat</a></li>
-<li><a href="https://reactjs.org/">ReactJS</a></li>
+  <li><a href="https://ionicframework.com/">Ionic</a> - This powerful UI framework actually has its own CLI to handle project creation.</li>
+  <li><a href="http://goratchet.com/">Ratchet</a> - Brought to you by the people who created Bootstrap.</li>
+  <li><a href="https://www.telerik.com/kendo-ui">Kendo UI</a> - Open source UI and application framework from Telerik.</li>
+  <li><a href="https://onsen.io">Onsen UI</a> - Open source UI framework for both websites and Cordova apps</li>
+  <li><a href="http://topcoat.io">Topcoat</a></li>
+  <li><a href="https://reactjs.org/">ReactJS</a></li>
 </ul>
 
 <p>When building your user interface, it is important to think about all platforms that you are targeting and the differences between the user&#39;s expectations. For example, an Android application that has an iOS-style UI will probably not go over well with users. This sometimes is even enforced by the various application stores. Because of this, it is important that you respect the conventions of each platform and therefore are familiar with the various Human Interface Guidelines:</p>
 
 <ul>
-<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/">iOS</a></li>
-<li><a href="https://developer.android.com/design/">Android</a></li>
-<li><a href="https://developer.microsoft.com/en-us/windows/apps/design">Windows Phone</a></li>
+  <li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/">iOS</a></li>
+  <li><a href="https://developer.android.com/design/">Android</a></li>
+  <li><a href="https://developer.microsoft.com/en-us/windows/apps/design">Windows Phone</a></li>
 </ul>
 
 <h1>Special Considerations</h1>
@@ -2336,8 +2335,8 @@ cordova plugin add some-plugin
 <p>Here are a few ways to keep up to date with Cordova.</p>
 
 <ul>
-<li>Subscribe to the <a href="https://cordova.apache.org/blog/">Cordova blog</a>.</li>
-<li>Subscribe to the <a href="https://cordova.apache.org/contact/">developer list</a>. Note - this is not a support group, but a place where development of Cordova is discussed.</li>
+  <li>Subscribe to the <a href="https://cordova.apache.org/blog/">Cordova blog</a>.</li>
+  <li>Subscribe to the <a href="https://cordova.apache.org/contact/">developer list</a>. Note - this is not a support group, but a place where development of Cordova is discussed.</li>
 </ul>
 
 <h1>Getting Help</h1>
@@ -2345,14 +2344,15 @@ cordova plugin add some-plugin
 <p>The following links are the best places to get help for Cordova:</p>
 
 <ul>
-<li>Slack: <a href="http://slack.cordova.io/">http://slack.cordova.io/</a> The official Cordova Slack channel is a great way to get help from the community, and the place you are most likely to get answers to your questions</li>
-<li>StackOverflow: <a href="https://stackoverflow.com/questions/tagged/cordova">https://stackoverflow.com/questions/tagged/cordova</a>
+  <li>Slack: <a href="http://slack.cordova.io/">http://slack.cordova.io/</a> The official Cordova Slack channel is a great way to get help from the community, and the place you are most likely to get answers to your questions</li>
+  <li>StackOverflow: <a href="https://stackoverflow.com/questions/tagged/cordova">https://stackoverflow.com/questions/tagged/cordova</a>
 By using the Cordova tag, you can view and browse all Cordova questions. Note that StackOverflow automatically converts the &quot;Phonegap&quot; tag to &quot;Cordova&quot;, so this way you will be able to access historical questions as well</li>
-<li>PhoneGap Google Group: <a href="https://groups.google.com/forum/#!forum/phonegap">https://groups.google.com/forum/#!forum/phonegap</a>
+  <li>PhoneGap Google Group: <a href="https://groups.google.com/forum/#!forum/phonegap">https://groups.google.com/forum/#!forum/phonegap</a>
 This Google Group was the old support forum when Cordova was still called PhoneGap. While there are still a lot of Cordova users that frequently visit this group, the Cordova community has expressed an interest in focusing less on this group and instead using StackOverflow for support</li>
-<li>Meetup: <a href="https://phonegap.meetup.com">http://phonegap.meetup.com</a> -
+  <li>Meetup: <a href="https://phonegap.meetup.com">http://phonegap.meetup.com</a> -
 Consider finding a local Cordova/PhoneGap meetup group</li>
 </ul>
+
 
 
             </div>

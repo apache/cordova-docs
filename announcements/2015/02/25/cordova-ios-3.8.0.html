@@ -131,7 +131,7 @@
     </header>
     <section>
         <div>
-            <p><strong>UPDATE:</strong> To deploy to iOS devices, developers will have to update their <code>ios-deploy</code> dependency to the latest release. Run <code>npm install ios-deploy -g</code> to download the latest release of version <code>1.4.0</code>. </p>
+            <p><strong>UPDATE:</strong> To deploy to iOS devices, developers will have to update their <code>ios-deploy</code> dependency to the latest release. Run <code>npm install ios-deploy -g</code> to download the latest release of version <code>1.4.0</code>.</p>
 
 <p>We are happy to announce that <code>Cordova iOS 3.8.0</code> has been released!</p>
 
@@ -139,13 +139,17 @@
 This release also requires Xcode 6.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update ios
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add ios@3.8.0
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@3.8.0
+</code></pre></div></div>
+
 <p>For non-CLI projects or for pre-3.0 projects, refer to the <a href="http://cordova.apache.org/docs/en/dev/guide_platforms_index.md.html">upgrade guides</a>.</p>
 
 <!--more-->
@@ -153,28 +157,28 @@ cordova platform update ios
 <h2>What&#39;s new in iOS</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8436">CB-8436</a> Remove more bad quotes from build command</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8436">CB-8436</a> Remove unneeded &quot;&quot; when composing xcodebuild arguments (closes #130)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8084">CB-8084</a> Allow for a way to disable push notification delegate methods (through xcconfig). Style fixup using uncrustify.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7606">CB-7606</a> handleOpenURL not working correctly on cold start (handler not evaluated yet) and warm start</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8435">CB-8435</a> Enable jshint for iOS platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8417">CB-8417</a> moved platform specific js into platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8336">CB-8336</a> Remove plugin prefs from iOS defaults.xml</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8254">CB-8254</a> Enable use of .xcconfig when building for emulator</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> Deprecate all non-prefixed class extensions</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8358">CB-8358</a> Make --link an alias for --shared plus some code simplification.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8197">CB-8197</a> Convert all bash scripts to node.js (closes #126)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8314">CB-8314</a> Speed up Travis CI (close #125)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8036">CB-8036</a> Don&#39;t exclude bin/node_modules from npm pack (via .gitignore)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7872">CB-7872</a> Fix CODE<em>SIGN</em>RESOURCE<em>RULES</em>PATH being set wrong in xcconfig (closes #120)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8168">CB-8168</a> <code>cordova/run --list</code> support for iOS (closes #122)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8044">CB-8044</a> support for --nobuild flag in run script</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6637">CB-6637</a> Removed - request:isFragmentIdentifierToRequest: deprecated method in CDVWebViewDelegate (closes #121)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8002">CB-8002</a> (CB-7735) Update cordova.js to include bridge fix</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5706">CB-5706</a> convert some of the bash scripts to nodejs (closes #118)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8506">CB-8506</a> Use npm version of uncrustify in cordova-ios (devDependency only)</li>
-<li>Have CordovaLib classes import CDVJSON_private.h rather than CDVJSON.h</li>
-<li>Trim down checked-in node_module files to minimal set</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8436">CB-8436</a> Remove more bad quotes from build command</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8436">CB-8436</a> Remove unneeded &quot;&quot; when composing xcodebuild arguments (closes #130)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8084">CB-8084</a> Allow for a way to disable push notification delegate methods (through xcconfig). Style fixup using uncrustify.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7606">CB-7606</a> handleOpenURL not working correctly on cold start (handler not evaluated yet) and warm start</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8435">CB-8435</a> Enable jshint for iOS platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8417">CB-8417</a> moved platform specific js into platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8336">CB-8336</a> Remove plugin prefs from iOS defaults.xml</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8254">CB-8254</a> Enable use of .xcconfig when building for emulator</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8351">CB-8351</a> Deprecate all non-prefixed class extensions</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8358">CB-8358</a> Make --link an alias for --shared plus some code simplification.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8197">CB-8197</a> Convert all bash scripts to node.js (closes #126)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8314">CB-8314</a> Speed up Travis CI (close #125)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8036">CB-8036</a> Don&#39;t exclude bin/node_modules from npm pack (via .gitignore)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7872">CB-7872</a> Fix CODE_SIGN_RESOURCE_RULES_PATH being set wrong in xcconfig (closes #120)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8168">CB-8168</a> <code>cordova/run --list</code> support for iOS (closes #122)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8044">CB-8044</a> support for --nobuild flag in run script</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6637">CB-6637</a> Removed - request:isFragmentIdentifierToRequest: deprecated method in CDVWebViewDelegate (closes #121)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8002">CB-8002</a> (CB-7735) Update cordova.js to include bridge fix</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5706">CB-5706</a> convert some of the bash scripts to nodejs (closes #118)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8506">CB-8506</a> Use npm version of uncrustify in cordova-ios (devDependency only)</li>
+  <li>Have CordovaLib classes import CDVJSON_private.h rather than CDVJSON.h</li>
+  <li>Trim down checked-in node_module files to minimal set</li>
 </ul>
 
         </div>

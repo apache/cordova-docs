@@ -140,46 +140,52 @@
 <p>The plugin incorporates these major updates:</p>
 
 <ol>
-<li>Locking/unlocking the screen orientation.</li>
-<li>Accessing the current screen orientation.</li>
-<li>Addition of &#39;onchange&#39; event handler to the screen.orientation object.</li>
-<li>A Demo App.</li>
+  <li>Locking/unlocking the screen orientation.</li>
+  <li>Accessing the current screen orientation.</li>
+  <li>Addition of &#39;onchange&#39; event handler to the screen.orientation object.</li>
+  <li>A Demo App.</li>
 </ol>
 
 <h3>Locking/unlocking the screen orientation</h3>
 
 <p>The screen orientation can be locked to a particular orientation, say, for example, landscape, using :</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">lock</span><span class="p">(</span><span class="s1">'landscape'</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="nx">success</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Successfully locked the orientation"</span><span class="p">);</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">lock</span><span class="p">(</span><span class="dl">'</span><span class="s1">landscape</span><span class="dl">'</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="nx">success</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successfully locked the orientation</span><span class="dl">"</span><span class="p">);</span>
 <span class="p">},</span> <span class="kd">function</span> <span class="nx">error</span><span class="p">(</span><span class="nx">errMsg</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Error locking the orientation :: "</span> <span class="o">+</span> <span class="nx">errMsg</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Error locking the orientation :: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">errMsg</span><span class="p">);</span>
 <span class="p">});</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The code above sets the screen orientation device to any landscape mode
 ( landscape-primary or landscape-secondary) depending upon the rotation.
 The screen.orientation.lock(OrientationLockType); method returns a promise.On successfully setting the orientation, it resolves a promise. If the screen is not locked successfully, the promise rejects with &#39;NotSupportedError&#39; .
 The screen orientation can be unlocked by using:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">unlock</span><span class="p">();</span>
-</code></pre></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">unlock</span><span class="p">();</span>
+</code></pre></div></div>
+
 <p>The code above makes the screen adapt to the default orientation of the device. The unlock method does not return a promise.</p>
 
 <h3>Accessing the current screen orientation</h3>
 
 <p>The current screen orientation can be accessed as :</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Orientation is'</span> <span class="o">+</span> <span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
-</code></pre></div>
-<h3>Addition of &#39;onchange&#39; attribute to the screen.orientation object</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Orientation is</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
+</code></pre></div></div>
 
+<h3>Addition of &#39;onchange&#39; attribute to the screen.orientation object</h3>
 <p>An example usage of the &#39;onchange&#39; event handler:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">onchange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">onchange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+ 	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
 <span class="p">};</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The &#39;change&#39; event can also be added to the screen.orientation object :</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'change'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">change</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+ 	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
 <span class="p">});</span>
-</code></pre></div>
+</code></pre></div></div>
 <h3>The Demo Application</h3>
 
 <p>The demo application is included on the github repository. Once the plugin has been added to it, the demo application allows the user to test the orientation types with the screen.orientation.lock() method. The demo application is explained in detail <a href="https://www.youtube.com/watch?v=P4Ulb9SQllA&amp;t=5s">here</a>.</p>

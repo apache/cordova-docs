@@ -133,34 +133,37 @@
         <div>
             <p>We are happy to announce that <code>Cordova Android 5.1.1</code> has been released.</p>
 
-<p>Cordova CLI 6.0.0 will automatically start using this version of <strong>Cordova-Android</strong> when creating new projects. </p>
+<p>Cordova CLI 6.0.0 will automatically start using this version of <strong>Cordova-Android</strong> when creating new projects.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android@5.1.1
-</code></pre></div>
-<p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@5.1.1
-</code></pre></div>
-<!--more-->
+</code></pre></div></div>
 
+<p>To add it explicitly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@5.1.1
+</code></pre></div></div>
+
+<!--more-->
 <h2>What&#39;s new in Android platform</h2>
 
 <ul>
-<li>updated <code>cordova-common</code> dependenecy to <code>1.1.0</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10628">CB-10628</a> Fix <code>emulate android --target</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10618">CB-10618</a> Handle gradle frameworks on plugin installation/uninstallation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10510">CB-10510</a>: Add an optional timeout to <code>emu</code> start script</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10498">CB-10498</a>: Resume event should be sticky if it has a plugin result</li>
-<li>fix <code>HtmlNotFoundTest</code> so that it passes when file not found is handled correctly</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10472">CB-10472</a> <code>NullPointerException</code>: <code>org.apache.cordova.PluginManager.onSaveInstanceState</code> check if <code>pluginManager</code> is <code>null</code> before using it</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10138">CB-10138</a> Adds missing plugin metadata to <code>plugin_list</code> module.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10443">CB-10443</a> Pass original options instead of remaining</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10443">CB-10443</a> Fix <code>this.root</code> <code>null</code> reference</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10421">CB-10421</a> Fixes exception when calling run script with <code>--help</code> option</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10406">CB-10406</a> Fixes an exception, thrown when building using <code>Ant</code>. </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10157">CB-10157</a> Uninstall app from device/emulator only when signed apk is already installed</li>
+  <li>updated <code>cordova-common</code> dependenecy to <code>1.1.0</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10628">CB-10628</a> Fix <code>emulate android --target</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10618">CB-10618</a> Handle gradle frameworks on plugin installation/uninstallation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10510">CB-10510</a>: Add an optional timeout to <code>emu</code> start script</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10498">CB-10498</a>: Resume event should be sticky if it has a plugin result</li>
+  <li>fix <code>HtmlNotFoundTest</code> so that it passes when file not found is handled correctly</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10472">CB-10472</a> <code>NullPointerException</code>: <code>org.apache.cordova.PluginManager.onSaveInstanceState</code> check if <code>pluginManager</code> is <code>null</code> before using it</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10138">CB-10138</a> Adds missing plugin metadata to <code>plugin_list</code> module.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10443">CB-10443</a> Pass original options instead of remaining</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10443">CB-10443</a> Fix <code>this.root</code> <code>null</code> reference</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10421">CB-10421</a> Fixes exception when calling run script with <code>--help</code> option</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10406">CB-10406</a> Fixes an exception, thrown when building using <code>Ant</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10157">CB-10157</a> Uninstall app from device/emulator only when signed apk is already installed</li>
 </ul>
 
         </div>

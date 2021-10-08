@@ -136,64 +136,74 @@
 <p>We are happy to announce that we have just released an update for <code>Cordova Camera Plugin (6.0.0)</code>!</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-plugin-camera">cordova-plugin-camera@6.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-camera">cordova-plugin-camera@6.0.0</a></li>
 </ul>
 
 <p><strong>To upgrade:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova plugin remove cordova-plugin-camera
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-camera
 cordova plugin add cordova-plugin-camera@6.0.0
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Release Highlights</h2>
 
 <ul>
-<li><p>Requires <strong><code>Cordova-Android</code> 10.x of higher</strong></p>
+  <li>
+    <p>Requires <strong><code>Cordova-Android</code> 10.x of higher</strong></p>
 
-<p>This major release has bumped the minimum Cordova-Android requirement to 10.x or higher. This requirement change was made for the <strong>AndroidX Only Support</strong> initiative.</p>
+    <p>This major release has bumped the minimum Cordova-Android requirement to 10.x or higher. This requirement change was made for the <strong>AndroidX Only Support</strong> initiative.</p>
 
-<p>If your project is using an older Cordova-Android release, please upgrade the Android platform before using it.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform remove android
-cordova platform add android@10.x
-</code></pre></div></li>
-<li><p><strong><code>AndroidX</code> Only Support</strong></p>
+    <p>If your project is using an older Cordova-Android release, please upgrade the Android platform before using it.</p>
 
-<p>In this release, we have completely migrated to the AndroidX library and no longer support the Android Support Library. </p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform remove android
+  cordova platform add android@10.x
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong><code>AndroidX</code> Only Support</strong></p>
 
-<p>If you were using the <a href="https://www.npmjs.com/package/cordova-plugin-androidx-adapter">cordova-plugin-androidx-adapter</a> plugin to migrate the Camera&#39;s legacy Android Support Library references to the new AndroidX references, it can be removed unless your project is using other third-party plugins that have not migrated to AndroidX.</p></li>
-<li><p><strong>HEIC</strong> Support</p>
+    <p>In this release, we have completely migrated to the AndroidX library and no longer support the Android Support Library.</p>
 
-<p>We introduced support to encode the HEIC file formats to the defined <code>EncodingType</code> for WebView display.</p></li>
-<li><p>Package Visibility Support</p>
+    <p>If you were using the <a href="https://www.npmjs.com/package/cordova-plugin-androidx-adapter">cordova-plugin-androidx-adapter</a> plugin to migrate the Camera&#39;s legacy Android Support Library references to the new AndroidX references, it can be removed unless your project is using other third-party plugins that have not migrated to AndroidX.</p>
+  </li>
+  <li>
+    <p><strong>HEIC</strong> Support</p>
 
-<p>We have updated this plugin to support the breaking changes that were introduced in Android 11 around package visibility.</p>
+    <p>We introduced support to encode the HEIC file formats to the defined <code>EncodingType</code> for WebView display.</p>
+  </li>
+  <li>
+    <p>Package Visibility Support</p>
 
-<p>For more information on package visibility, please check out the following Google&#39;s resources:</p>
+    <p>We have updated this plugin to support the breaking changes that were introduced in Android 11 around package visibility.</p>
 
-<ul>
-<li><a href="ttps://medium.com/androiddevelopers/package-visibility-in-android-11-cc857f221cd9">Package visibility in Android 11</a></li>
-<li><a href="https://developer.android.com/training/package-visibility">Package visibility filtering on Android</a></li>
-</ul></li>
+    <p>For more information on package visibility, please check out the following Google&#39;s resources:</p>
+
+    <ul>
+      <li><a href="ttps://medium.com/androiddevelopers/package-visibility-in-android-11-cc857f221cd9">Package visibility in Android 11</a></li>
+      <li><a href="https://developer.android.com/training/package-visibility">Package visibility filtering on Android</a></li>
+    </ul>
+  </li>
 </ul>
 
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <p><strong>Feature:</strong></p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/751">GH-751</a> feat(android)!: support <strong>AndroidX</strong></li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/750">GH-750</a> feat(android): bump <code>cordova-android</code> requirements for <code>10.x</code></li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/731">GH-731</a> feat(android): encode <code>heic</code> format to <code>EncodingType</code> for webview display <a href="https://github.com/apache/cordova-plugin-camera/issues/711">#711</a></li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/684">GH-684</a> feat(android): <code>sdk-30</code> package visibility support</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/751">GH-751</a> feat(android)!: support <strong>AndroidX</strong></li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/750">GH-750</a> feat(android): bump <code>cordova-android</code> requirements for <code>10.x</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/731">GH-731</a> feat(android): encode <code>heic</code> format to <code>EncodingType</code> for webview display <a href="https://github.com/apache/cordova-plugin-camera/issues/711">#711</a></li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/684">GH-684</a> feat(android): <code>sdk-30</code> package visibility support</li>
 </ul>
 
 <p><strong>Fix:</strong></p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/687">GH-687</a> fix(android): return exception message (where it exists)</li>
-<li><a href="https://github.com/apache/cordova-plugin-camera/pull/585">GH-585</a> fix(android): file path correction if <code>Uri</code> authority is <code>FileProvider</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/687">GH-687</a> fix(android): return exception message (where it exists)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/585">GH-585</a> fix(android): file path correction if <code>Uri</code> authority is <code>FileProvider</code></li>
 </ul>
 
         </div>

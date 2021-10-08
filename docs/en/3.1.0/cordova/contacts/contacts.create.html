@@ -1568,8 +1568,10 @@
                 <h1>contacts.create</h1>
 
 <p>Returns a new <a href="Contact/contact.html">Contact</a> object.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">var contact = navigator.contacts.create(properties);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var contact = navigator.contacts.create(properties);
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p>The <code>contacts.create</code> method is synchronous, and returns a new <code>[Contact](Contact/contact.html)</code> object.</p>
@@ -1580,44 +1582,48 @@ database, for which you need to invoke the <code>[Contact](Contact/contact.html)
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7 and 8</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
 </ul>
 
 <h2>Quick Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">var myContact = navigator.contacts.create({"displayName": "Test User"});
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var myContact = navigator.contacts.create({"displayName": "Test User"});
+</code></pre></div></div>
+
 <h2>Full Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Contact Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Contact Example&lt;/title&gt;
 
-    <span class="c1">// Wait for device API libraries to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// device APIs are available</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">myContact</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span><span class="s2">"displayName"</span><span class="p">:</span> <span class="s2">"Test User"</span><span class="p">});</span>
-        <span class="nx">myContact</span><span class="p">.</span><span class="nx">note</span> <span class="o">=</span> <span class="s2">"This contact has a note."</span><span class="p">;</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"The contact, "</span> <span class="o">+</span> <span class="nx">myContact</span><span class="p">.</span><span class="nx">displayName</span> <span class="o">+</span> <span class="s2">", note: "</span> <span class="o">+</span> <span class="nx">myContact</span><span class="p">.</span><span class="nx">note</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Create Contact<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        var myContact = navigator.contacts.create({"displayName": "Test User"});
+        myContact.note = "This contact has a note.";
+        console.log("The contact, " + myContact.displayName + ", note: " + myContact.note);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Create Contact&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 
             </div>
         </div>

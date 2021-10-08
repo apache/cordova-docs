@@ -1329,48 +1329,64 @@
 
 <p>Cordova for BlackBerry makes use of the <a href="https://bdsc.webapps.blackberry.com/html5">BlackBerry WebWorks framework</a>. BlackBerry WebWorks tooling is available for Windows or Mac environments. WebWorks applications can ONLY be deployed to BlackBerry devices running OS 5.0 and higher or the BlackBerry PlayBook operating system.</p>
 
-<h2>1.  Requirements</h2>
+<ol>
+  <li>
+    <h2>Requirements</h2>
+  </li>
+</ol>
 
 <ul>
-<li>Windows XP (32-bit) or Windows 7 (32-bit and 64-bit) or Mac OSX 10.6.4+</li>
-<li>Java Development Kit (JDK)
-
-<ul>
-<li>Windows: <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html#jdk">Oracle JDK</a> (32-Bit Version)</li>
-<li>Mac OS X: Versions prior to Mac OS X 10.7 provided Java by default.  OS X 10.7+ requires installation of <a href="http://support.apple.com/kb/DL1421">Java</a>.</li>
-</ul></li>
-<li>  Apache Ant
-
-<ul>
-<li>Windows: <a href="http://ant.apache.org/bindownload.cgi">Apache Ant</a>.</li>
-<li>Mac OS X: Apache Ant is bundled with Java install.</li>
-</ul></li>
+  <li>Windows XP (32-bit) or Windows 7 (32-bit and 64-bit) or Mac OSX 10.6.4+</li>
+  <li>Java Development Kit (JDK)
+    <ul>
+      <li>Windows: <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html#jdk">Oracle JDK</a> (32-Bit Version)</li>
+      <li>Mac OS X: Versions prior to Mac OS X 10.7 provided Java by default.  OS X 10.7+ requires installation of <a href="http://support.apple.com/kb/DL1421">Java</a>.</li>
+    </ul>
+  </li>
+  <li>Apache Ant
+    <ul>
+      <li>Windows: <a href="http://ant.apache.org/bindownload.cgi">Apache Ant</a>.</li>
+      <li>Mac OS X: Apache Ant is bundled with Java install.</li>
+    </ul>
+  </li>
 </ul>
 
-<h2>2.  Install SDK + Cordova</h2>
+<ol>
+  <li>
+    <h2>Install SDK + Cordova</h2>
+  </li>
+</ol>
 
 <ul>
-<li>PlayBook development requires the <a href="http://www.adobe.com/devnet/air/air-sdk-download.html">Adobe Air SDK</a></li>
-<li>Download and install one or more of the WebWorks SDKs. Keep note of the install directory.
-
-<ul>
-<li>Smartphone Development: <a href="https://bdsc.webapps.blackberry.com/html5/download/sdk">BlackBerry WebWorks Smartphone SDK</a></li>
-<li>PlayBook Development: <a href="https://bdsc.webapps.blackberry.com/html5/download/sdk">BlackBerry WebWorks Tablet OS SDK</a></li>
-</ul></li>
-<li>Download the latest copy of <a href="http://phonegap.com/download">Cordova</a> and extract its contents.</li>
+  <li>PlayBook development requires the <a href="http://www.adobe.com/devnet/air/air-sdk-download.html">Adobe Air SDK</a></li>
+  <li>Download and install one or more of the WebWorks SDKs. Keep note of the install directory.
+    <ul>
+      <li>Smartphone Development: <a href="https://bdsc.webapps.blackberry.com/html5/download/sdk">BlackBerry WebWorks Smartphone SDK</a></li>
+      <li>PlayBook Development: <a href="https://bdsc.webapps.blackberry.com/html5/download/sdk">BlackBerry WebWorks Tablet OS SDK</a></li>
+    </ul>
+  </li>
+  <li>Download the latest copy of <a href="http://phonegap.com/download">Cordova</a> and extract its contents.</li>
 </ul>
 
-<h2>3.  Setup New Project</h2>
+<ol>
+  <li>
+    <h2>Setup New Project</h2>
+  </li>
+</ol>
 
 <ul>
-<li>Open up a command prompt/terminal and navigate to where you extracted Cordova.</li>
-<li>There is a directory for each platform that Cordova supports.  CD into the blackberry directory.</li>
-<li>The blackberry directory contains two directories, <code>sample</code> and <code>www</code>.  The <code>sample</code> folder contains a complete Cordova project.  Copy the <code>sample</code> folder to another location on your computer.</li>
-<li>Change to the newly created directory.</li>
-<li>Open up the project.properties file with your favorite editor and edit the entries for <code>blackberry.bbwp.dir=</code> and/or <code>playbook.bbwp.dir=</code>. Set the  value(s) to the directory containing the <code>bbwp</code> binary in the WebWorks SDK(s) installed earlier.</li>
+  <li>Open up a command prompt/terminal and navigate to where you extracted Cordova.</li>
+  <li>There is a directory for each platform that Cordova supports.  CD into the blackberry directory.</li>
+  <li>The blackberry directory contains two directories, <code>sample</code> and <code>www</code>.  The <code>sample</code> folder contains a complete Cordova project.  Copy the <code>sample</code> folder to another location on your computer.</li>
+  <li>Change to the newly created directory.</li>
+  <li>Open up the project.properties file with your favorite editor and edit the entries for <code>blackberry.bbwp.dir=</code> and/or <code>playbook.bbwp.dir=</code>. Set the  value(s) to the directory containing the <code>bbwp</code> binary in the WebWorks SDK(s) installed earlier.</li>
 </ul>
 
-<h2>4.  <a href="../webos/index.html">Hello World</a></h2>
+<ol>
+  <li>
+    <h2><a href="../webos/index.html">Hello World</a></h2>
+  </li>
+</ol>
 
 <p>Build the Cordova sample project by typing <code>ant target build</code> in your command prompt/terminal while you are in your project&#39;s directory. Replace <code>target</code> with either <code>blackberry</code> or <code>playbook</code>. Note this is a sample Cordova project and not a basic hello world application. The provided index.html in the www contains example usages of many of the Cordova API.</p>
 
@@ -1379,60 +1395,60 @@
 <p>BlackBerry smartphone simulators are only available on Windows. PlayBook simulators require VMWare Player (Windows) or VMWare Fusion (Mac OS X). The WebWorks SDK provides a default simulator. Additional simulators are <a href="http://us.blackberry.com/developers/resources/simulators.jsp">available</a>.</p>
 
 <ul>
-<li>Open the project.properties file with your favorite editor and customize the following properties.
-
-<ul>
-<li>Smartphone (Optional)
-
-<ul>
-<li><code>blackberry.sim.dir</code> : Path to directory containing simulator. On windows file separator &#39;\&#39; must be escaped &#39;\\&#39;.</li>
-<li><code>blackberry.sim.bin</code> : Name of the simulator executable in the specified directory.</li>
-</ul></li>
-<li>Playbook
-
-<ul>
-<li><code>playbook.sim.ip</code> : IP address of simulator obtained when placing the simulator in developer mode through simulator security settings.</li>
-<li><code>playbook.sim.password</code> : Simulator password which can be set through simulator security settings.</li>
-</ul></li>
-</ul></li>
-<li>While in your project directory, in command prompt/terminal type <code>ant target load-simulator</code>. Replace <code>target</code> with either <code>blackberry</code> or <code>playbook</code>.  Note, for PlayBook the simulator virtual image must already be started.</li>
-<li>The application will be installed in the All Applications section in the simulator.  Note, on BlackBerry OS 5 the application is installed in the Downloads folder.</li>
+  <li>Open the project.properties file with your favorite editor and customize the following properties.
+    <ul>
+      <li>Smartphone (Optional)
+        <ul>
+          <li><code>blackberry.sim.dir</code> : Path to directory containing simulator. On windows file separator &#39;' must be escaped &#39;\'.</li>
+          <li><code>blackberry.sim.bin</code> : Name of the simulator executable in the specified directory.</li>
+        </ul>
+      </li>
+      <li>Playbook
+        <ul>
+          <li><code>playbook.sim.ip</code> : IP address of simulator obtained when placing the simulator in developer mode through simulator security settings.</li>
+          <li><code>playbook.sim.password</code> : Simulator password which can be set through simulator security settings.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>While in your project directory, in command prompt/terminal type <code>ant target load-simulator</code>. Replace <code>target</code> with either <code>blackberry</code> or <code>playbook</code>.  Note, for PlayBook the simulator virtual image must already be started.</li>
+  <li>The application will be installed in the All Applications section in the simulator.  Note, on BlackBerry OS 5 the application is installed in the Downloads folder.</li>
 </ul>
 
 <h2>5B.  Deploy to <a href="../../../cordova/device/device.html">Device</a> (Windows and Mac)</h2>
 
 <ul>
-<li>Deploying to a device requires signing keys which can be obtained from RIM.
-
-<ul>
-<li>Fill out this <a href="https://bdsc.webapps.blackberry.com/html5/signingkey">form</a>. to request signing keys.</li>
-<li>Install the signing keys once they have been received:
-
-<ul>
-<li><a href="https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_smartphone_apps_1920010_11.html">Setup Smartphone Signing keys</a></li>
-<li><a href="https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_tablet_apps_1920009_11.html">Setup Tablet Signing keys</a></li>
-</ul></li>
-</ul></li>
-<li>Install <a href="http://us.blackberry.com/apps-software/desktop/">BlackBerry Desktop Software</a> to be able to install a signed application to a smartphone device attached via USB.</li>
-<li>Open the project.properties file with your favorite editor and customize the following properties:
-
-<ul>
-<li>Smartphone (Optional)
-
-<ul>
-<li><code>blackberry.sigtool.password</code> : Password used when code signing keys were registered.  If not specified, a prompt will occur.</li>
-</ul></li>
-<li>Playbook (Required)
-
-<ul>
-<li><code>playbook.sigtool.csk.password</code> : Signing key password.</li>
-<li><code>playbook.sigtool.p12.password</code> : Signing key password.</li>
-<li><code>playbook.device.ip</code> : IP address of device obtained when placing the device in developer mode through device security settings.</li>
-<li><code>playbook.device.password</code> : Device password which is set through device security settings.</li>
-</ul></li>
-</ul></li>
-<li>While in your project directory, in command prompt/terminal type <code>ant target load-device</code>. Replace <code>target</code> with either <code>blackberry</code> or <code>playbook</code>.</li>
-<li>The application will be installed in the All Applications section in the device.  Note, on BlackBerry OS 5 the application is installed in the Downloads folder.</li>
+  <li>Deploying to a device requires signing keys which can be obtained from RIM.
+    <ul>
+      <li>Fill out this <a href="https://bdsc.webapps.blackberry.com/html5/signingkey">form</a>. to request signing keys.</li>
+      <li>Install the signing keys once they have been received:
+        <ul>
+          <li><a href="https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_smartphone_apps_1920010_11.html">Setup Smartphone Signing keys</a></li>
+          <li><a href="https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_tablet_apps_1920009_11.html">Setup Tablet Signing keys</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Install <a href="http://us.blackberry.com/apps-software/desktop/">BlackBerry Desktop Software</a> to be able to install a signed application to a smartphone device attached via USB.</li>
+  <li>Open the project.properties file with your favorite editor and customize the following properties:
+    <ul>
+      <li>Smartphone (Optional)
+        <ul>
+          <li><code>blackberry.sigtool.password</code> : Password used when code signing keys were registered.  If not specified, a prompt will occur.</li>
+        </ul>
+      </li>
+      <li>Playbook (Required)
+        <ul>
+          <li><code>playbook.sigtool.csk.password</code> : Signing key password.</li>
+          <li><code>playbook.sigtool.p12.password</code> : Signing key password.</li>
+          <li><code>playbook.device.ip</code> : IP address of device obtained when placing the device in developer mode through device security settings.</li>
+          <li><code>playbook.device.password</code> : Device password which is set through device security settings.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>While in your project directory, in command prompt/terminal type <code>ant target load-device</code>. Replace <code>target</code> with either <code>blackberry</code> or <code>playbook</code>.</li>
+  <li>The application will be installed in the All Applications section in the device.  Note, on BlackBerry OS 5 the application is installed in the Downloads folder.</li>
 </ul>
 
 <h2>Additional Information</h2>
@@ -1440,9 +1456,10 @@
 <p>The following articles provide help to issues you may encounter when developing a Cordova application which is based on the BlackBerry WebWorks framework.</p>
 
 <ul>
-<li><a href="http://supportforums.blackberry.com/t5/Web-and-WebWorks-Development/Common-BlackBerry-WebWorks-development-pitfalls-that-can-be/ta-p/624712">BlackBerry WebWorks Development Pitfalls</a></li>
-<li><a href="https://bdsc.webapps.blackberry.com/html5/documentation/ww_developing/bestpractice_compiling_ww_apps_1873324_11.html">Best practices for packaging WebWorks applications</a></li>
+  <li><a href="http://supportforums.blackberry.com/t5/Web-and-WebWorks-Development/Common-BlackBerry-WebWorks-development-pitfalls-that-can-be/ta-p/624712">BlackBerry WebWorks Development Pitfalls</a></li>
+  <li><a href="https://bdsc.webapps.blackberry.com/html5/documentation/ww_developing/bestpractice_compiling_ww_apps_1873324_11.html">Best practices for packaging WebWorks applications</a></li>
 </ul>
+
 
 
             </div>

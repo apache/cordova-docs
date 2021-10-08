@@ -1640,7 +1640,8 @@
                 <h1>cameraOptions</h1>
 
 <p>Optional parameters to customize the camera settings.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">{ quality : 75,
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ quality : 75,
   destinationType : Camera.DestinationType.DATA_URL,
   sourceType : Camera.PictureSourceType.CAMERA,
   allowEdit : true,
@@ -1649,101 +1650,172 @@
   targetHeight: 100,
   popoverOptions: CameraPopoverOptions,
   saveToPhotoAlbum: false };
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Options</h2>
 
 <ul>
-<li><p><strong>quality</strong>: Quality of the saved image, expressed as a range of 0-100, where 100 is typically full resolution with no loss from file compression. <em>(Number)</em> (Note that information about the camera&#39;s resolution is unavailable.)</p></li>
-<li><p><strong>destinationType</strong>: Choose the format of the return value. Defined in <code>navigator.camera.DestinationType</code> <em>(Number)</em></p>
-<div class="highlight"><pre><code class="language-" data-lang="">Camera.DestinationType = {
-    DATA_URL : 0,      // Return image as base64-encoded string
-    FILE_URI : 1,      // Return image file URI
-    NATIVE_URI : 2     // Return image native URI (e.g., assets-library:// on iOS or content:// on Android)
-};
-</code></pre></div></li>
-<li><p><strong>sourceType</strong>: Set the source of the picture.  Defined in <code>navigator.camera.PictureSourceType</code> <em>(Number)</em></p>
-<div class="highlight"><pre><code class="language-" data-lang="">Camera.PictureSourceType = {
-    PHOTOLIBRARY : 0,
-    CAMERA : 1,
-    SAVEDPHOTOALBUM : 2
-};
-</code></pre></div></li>
-<li><p><strong>allowEdit</strong>: Allow simple editing of image before selection. <em>(Boolean)</em></p></li>
-<li><p><strong>encodingType</strong>: Choose the  returned image file&#39;s encoding.  Defined in <code>navigator.camera.EncodingType</code> <em>(Number)</em></p>
-<div class="highlight"><pre><code class="language-" data-lang="">Camera.EncodingType = {
-    JPEG : 0,               // Return JPEG encoded image
-    PNG : 1                 // Return PNG encoded image
-};
-</code></pre></div></li>
-<li><p><strong>targetWidth</strong>: Width in pixels to scale image. Must be used with <strong>targetHeight</strong>.  Aspect ratio remains constant. <em>(Number)</em></p></li>
-<li><p><strong>targetHeight</strong>: Height in pixels to scale image. Must be used with <strong>targetWidth</strong>. Aspect ratio remains constant. <em>(Number)</em></p></li>
-<li><p><strong>mediaType</strong>: Set the type of media to select from.  Only works when <code>PictureSourceType</code> is <code>PHOTOLIBRARY</code> or <code>SAVEDPHOTOALBUM</code>. Defined in <code>nagivator.camera.MediaType</code> <em>(Number)</em></p>
-<div class="highlight"><pre><code class="language-" data-lang="">Camera.MediaType = {
-    PICTURE: 0,    // allow selection of still pictures only. DEFAULT. Will return format specified via DestinationType
-    VIDEO: 1,      // allow selection of video only, WILL ALWAYS RETURN FILE_URI
-    ALLMEDIA : 2   // allow selection from all media types
-</code></pre></div>
-<p>};</p></li>
-<li><p><strong>correctOrientation</strong>: Rotate the image to correct for the orientation of the device during capture. <em>(Boolean)</em></p></li>
-<li><p><strong>saveToPhotoAlbum</strong>: Save the image to the photo album on the device after capture. <em>(Boolean)</em></p></li>
-<li><p><strong>popoverOptions</strong>: iOS-only options that specify popover location in iPad.  Defined in <code>[CameraPopoverOptions](CameraPopoverOptions.html)</code>.</p></li>
-<li><p><strong>cameraDirection</strong>: Choose the camera to use (front- or back-facing).  Defined in <code>navigator.camera.Direction</code> <em>(Number)</em></p>
-<div class="highlight"><pre><code class="language-" data-lang="">Camera.Direction = {
-    BACK : 0,      // Use the back-facing camera
-    FRONT : 1      // Use the front-facing camera
-};
-</code></pre></div></li>
+  <li>
+    <p><strong>quality</strong>: Quality of the saved image, expressed as a range of 0-100, where 100 is typically full resolution with no loss from file compression. <em>(Number)</em> (Note that information about the camera&#39;s resolution is unavailable.)</p>
+  </li>
+  <li>
+    <p><strong>destinationType</strong>: Choose the format of the return value. Defined in <code>navigator.camera.DestinationType</code> <em>(Number)</em></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Camera.DestinationType = {
+      DATA_URL : 0,      // Return image as base64-encoded string
+      FILE_URI : 1,      // Return image file URI
+      NATIVE_URI : 2     // Return image native URI (e.g., assets-library:// on iOS or content:// on Android)
+  };
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>sourceType</strong>: Set the source of the picture.  Defined in <code>navigator.camera.PictureSourceType</code> <em>(Number)</em></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Camera.PictureSourceType = {
+      PHOTOLIBRARY : 0,
+      CAMERA : 1,
+      SAVEDPHOTOALBUM : 2
+  };
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>allowEdit</strong>: Allow simple editing of image before selection. <em>(Boolean)</em></p>
+  </li>
+  <li>
+    <p><strong>encodingType</strong>: Choose the  returned image file&#39;s encoding.  Defined in <code>navigator.camera.EncodingType</code> <em>(Number)</em></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Camera.EncodingType = {
+      JPEG : 0,               // Return JPEG encoded image
+      PNG : 1                 // Return PNG encoded image
+  };
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>targetWidth</strong>: Width in pixels to scale image. Must be used with <strong>targetHeight</strong>.  Aspect ratio remains constant. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>targetHeight</strong>: Height in pixels to scale image. Must be used with <strong>targetWidth</strong>. Aspect ratio remains constant. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>mediaType</strong>: Set the type of media to select from.  Only works when <code>PictureSourceType</code> is <code>PHOTOLIBRARY</code> or <code>SAVEDPHOTOALBUM</code>. Defined in <code>nagivator.camera.MediaType</code> <em>(Number)</em></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Camera.MediaType = {
+      PICTURE: 0,    // allow selection of still pictures only. DEFAULT. Will return format specified via DestinationType
+      VIDEO: 1,      // allow selection of video only, WILL ALWAYS RETURN FILE_URI
+      ALLMEDIA : 2   // allow selection from all media types };
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>correctOrientation</strong>: Rotate the image to correct for the orientation of the device during capture. <em>(Boolean)</em></p>
+  </li>
+  <li>
+    <p><strong>saveToPhotoAlbum</strong>: Save the image to the photo album on the device after capture. <em>(Boolean)</em></p>
+  </li>
+  <li>
+    <p><strong>popoverOptions</strong>: iOS-only options that specify popover location in iPad.  Defined in <code>[CameraPopoverOptions](CameraPopoverOptions.html)</code>.</p>
+  </li>
+  <li>
+    <p><strong>cameraDirection</strong>: Choose the camera to use (front- or back-facing).  Defined in <code>navigator.camera.Direction</code> <em>(Number)</em></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Camera.Direction = {
+      BACK : 0,      // Use the back-facing camera
+      FRONT : 1      // Use the front-facing camera
+  };
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <h2>Amazon Fire OSQuirks</h2>
 
 <ul>
-<li><p>Any <code>cameraDirection</code> value results in a back-facing photo.</p></li>
-<li><p>Ignores the <code>allowEdit</code> parameter.</p></li>
-<li><p><code>[Camera](../camera.html).PictureSourceType.PHOTOLIBRARY</code> and <code>[Camera](../camera.html).PictureSourceType.SAVEDPHOTOALBUM</code> both display the same photo album.</p></li>
+  <li>
+    <p>Any <code>cameraDirection</code> value results in a back-facing photo.</p>
+  </li>
+  <li>
+    <p>Ignores the <code>allowEdit</code> parameter.</p>
+  </li>
+  <li>
+    <p><code>[Camera](../camera.html).PictureSourceType.PHOTOLIBRARY</code> and <code>[Camera](../camera.html).PictureSourceType.SAVEDPHOTOALBUM</code> both display the same photo album.</p>
+  </li>
 </ul>
 
 <h2>Android Quirks</h2>
 
 <ul>
-<li><p>Any <code>cameraDirection</code> value results in a back-facing photo.</p></li>
-<li><p>Ignores the <code>allowEdit</code> parameter.</p></li>
-<li><p><code>[Camera](../camera.html).PictureSourceType.PHOTOLIBRARY</code> and <code>[Camera](../camera.html).PictureSourceType.SAVEDPHOTOALBUM</code> both display the same photo album.</p></li>
+  <li>
+    <p>Any <code>cameraDirection</code> value results in a back-facing photo.</p>
+  </li>
+  <li>
+    <p>Ignores the <code>allowEdit</code> parameter.</p>
+  </li>
+  <li>
+    <p><code>[Camera](../camera.html).PictureSourceType.PHOTOLIBRARY</code> and <code>[Camera](../camera.html).PictureSourceType.SAVEDPHOTOALBUM</code> both display the same photo album.</p>
+  </li>
 </ul>
 
 <h2>BlackBerry Quirks</h2>
 
 <ul>
-<li><p>Ignores the <code>quality</code> parameter.</p></li>
-<li><p>Ignores the <code>sourceType</code> parameter.</p></li>
-<li><p>Ignores the <code>allowEdit</code> parameter.</p></li>
-<li><p>Application must have key injection permissions to <a href="../../inappbrowser/inappbrowser.html">close</a> the native <a href="../camera.html">Camera</a> application after the user snaps the photo.</p></li>
-<li><p>Using large image sizes may result in the inability to encode images on later-model devices (e.g., Torch 9800) that feature high-resolution cameras.</p></li>
-<li><p><code>[Camera](../camera.html).MediaType</code> is not supported.</p></li>
-<li><p>Ignores the <code>correctOrientation</code> parameter.</p></li>
-<li><p>Ignores the <code>cameraDirection</code> parameter.</p></li>
+  <li>
+    <p>Ignores the <code>quality</code> parameter.</p>
+  </li>
+  <li>
+    <p>Ignores the <code>sourceType</code> parameter.</p>
+  </li>
+  <li>
+    <p>Ignores the <code>allowEdit</code> parameter.</p>
+  </li>
+  <li>
+    <p>Application must have key injection permissions to <a href="../../inappbrowser/inappbrowser.html">close</a> the native <a href="../camera.html">Camera</a> application after the user snaps the photo.</p>
+  </li>
+  <li>
+    <p>Using large image sizes may result in the inability to encode images on later-model devices (e.g., Torch 9800) that feature high-resolution cameras.</p>
+  </li>
+  <li>
+    <p><code>[Camera](../camera.html).MediaType</code> is not supported.</p>
+  </li>
+  <li>
+    <p>Ignores the <code>correctOrientation</code> parameter.</p>
+  </li>
+  <li>
+    <p>Ignores the <code>cameraDirection</code> parameter.</p>
+  </li>
 </ul>
 
 <h2>iOS Quirks</h2>
 
 <ul>
-<li><p>Set <code>quality</code> below 50 to avoid memory errors on some devices.</p></li>
-<li><p>When using <code>destinationType.FILE_URI</code>, photos are saved in the application&#39;s temporary directory.  You may delete the contents of this directory using the <code>navigator.fileMgr</code> APIs if storage space is a concern.</p></li>
+  <li>
+    <p>Set <code>quality</code> below 50 to avoid memory errors on some devices.</p>
+  </li>
+  <li>
+    <p>When using <code>destinationType.FILE_URI</code>, photos are saved in the application&#39;s temporary directory.  You may delete the contents of this directory using the <code>navigator.fileMgr</code> APIs if storage space is a concern.</p>
+  </li>
 </ul>
 
 <h2>Tizen Quirks</h2>
 
 <ul>
-<li><p>options not supported</p></li>
-<li><p>always returns a FILE URI</p></li>
+  <li>
+    <p>options not supported</p>
+  </li>
+  <li>
+    <p>always returns a FILE URI</p>
+  </li>
 </ul>
 
 <h2>Windows Phone 7 and 8 Quirks</h2>
 
 <ul>
-<li><p>Ignores the <code>allowEdit</code> parameter.</p></li>
-<li><p>Ignores the <code>correctOrientation</code> parameter.</p></li>
-<li><p>Ignores the <code>cameraDirection</code> parameter.</p></li>
+  <li>
+    <p>Ignores the <code>allowEdit</code> parameter.</p>
+  </li>
+  <li>
+    <p>Ignores the <code>correctOrientation</code> parameter.</p>
+  </li>
+  <li>
+    <p>Ignores the <code>cameraDirection</code> parameter.</p>
+  </li>
 </ul>
 
 

@@ -1640,8 +1640,10 @@
                 <h1>device.cordova</h1>
 
 <p>Get the version of Cordova running on the device.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">var string = device.cordova;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var string = device.cordova;
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p><code>device.cordova</code> returns the version of Cordova running on the device.</p>
@@ -1649,49 +1651,54 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Amazon Fire OS</li>
-<li>Android</li>
-<li>BlackBerry 10</li>
-<li>iOS</li>
-<li>Tizen</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows 8</li>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2>Quick Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">var name = device.cordova;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var name = device.cordova;
+</code></pre></div></div>
+
 <h2>Full Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Device Properties Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Device Properties Example&lt;/title&gt;
 
-    <span class="c1">// Wait for device API libraries to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// device APIs are available</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'deviceProperties'</span><span class="p">);</span>
-        <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">'Device Model: '</span>    <span class="o">+</span> <span class="nx">device</span><span class="p">.</span><span class="nx">model</span>    <span class="o">+</span> <span class="err">'</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="s1">' +
-                            '</span><span class="nx">Device</span> <span class="nx">Cordova</span><span class="p">:</span> <span class="s1">'  + device.cordova  + '</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="s1">' +
-                            '</span><span class="nx">Device</span> <span class="nx">Platform</span><span class="p">:</span> <span class="s1">' + device.platform + '</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="s1">' +
-                            '</span><span class="nx">Device</span> <span class="nx">UUID</span><span class="p">:</span> <span class="s1">'     + device.uuid     + '</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="s1">' +
-                            '</span><span class="nx">Device</span> <span class="nx">Version</span><span class="p">:</span> <span class="s1">'  + device.version  + '</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="err">'</span><span class="p">;</span>
-    <span class="p">}</span>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"deviceProperties"</span><span class="nt">&gt;</span>Loading device properties...<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        var element = document.getElementById('deviceProperties');
+        element.innerHTML = 'Device Model: '    + device.model    + '&lt;br /&gt;' +
+                            'Device Cordova: '  + device.cordova  + '&lt;br /&gt;' +
+                            'Device Platform: ' + device.platform + '&lt;br /&gt;' +
+                            'Device UUID: '     + device.uuid     + '&lt;br /&gt;' +
+                            'Device Version: '  + device.version  + '&lt;br /&gt;';
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p id="deviceProperties"&gt;Loading device properties...&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+
 
             </div>
         </div>

@@ -140,49 +140,55 @@ the latest release.</p>
 
 <p>Apart from a number of bug fixes, there is now support for checking system
 requirements for iOS platform:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$&gt;cordova requirements ios
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$&gt;cordova requirements ios
 
 Requirements check results for ios:
 Apple OS X: installed darwin
 Xcode: installed 6.3
 ios-deploy: installed 1.7.0
 ios-sim: installed 4.1.1
-</code></pre></div>
+</code></pre></div></div>
+
 <p>and support for <a href="http://cordova.apache.org/docs/en/dev/guide_platforms_ios_tools.md.html#signing-the-app">Signing the App for iOS platform</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$&gt;/path/to/my/project/cordova/build --codeSignIdentity="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954"
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$&gt;/path/to/my/project/cordova/build --codeSignIdentity="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954"
+</code></pre></div></div>
+
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update ios@3.9.0
-</code></pre></div>
-<!--more-->    
+</code></pre></div></div>
 
+<!--more-->
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add ios@3.9.0 --save
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@3.9.0 --save
+</code></pre></div></div>
+
 <p>For non-CLI projects or for pre-3.0 projects, refer to the <a href="http://cordova.apache.org/docs/en/dev/guide_platforms_index.md.html">upgrade guides</a>.</p>
 
 <h2>What&#39;s new in iOS platform</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8586">CB-8586</a> Update ios-deploy minimum version to 1.4.0</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8485">CB-8485</a> Support for signed archive for iOS</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8197">CB-8197</a> Switch to nodejs for ios platform scripts</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7747">CB-7747</a> Update project template with new whitelist settings</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8954">CB-8954</a> Adds <code>requirements</code> command support to check_reqs module</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8907">CB-8907</a> Cordova ios emulate --list it shows duplicates when ios simulators are present for 7.x and 8.x</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9013">CB-9013</a> Fix listing of multiple devices in list-devices for iOS</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3360">CB-3360</a> Set custom User-Agent</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8710">CB-8710</a> Cordova-ios jasmine tests do not clean up build products, tests can only be run once</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8785">CB-8785</a> Add try/catch for evalJS</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8948">CB-8948</a> Clipboard fix for iOS Safari copy</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8855">CB-8855</a> Fix display ios devices with --list</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8295">CB-8295</a> Update app template with fix to CSP string</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8965">CB-8965</a> Copy cordova-js-src directory to platform folder during create</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9273">CB-9273</a> &quot;Copy www build phase&quot; node is not found</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9088">CB-9088</a> Sms urls won&#39;t open in iframe</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8621">CB-8621</a> Fix Q require in list-devices (Q -&gt; q)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8586">CB-8586</a> Update ios-deploy minimum version to 1.4.0</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8485">CB-8485</a> Support for signed archive for iOS</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8197">CB-8197</a> Switch to nodejs for ios platform scripts</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7747">CB-7747</a> Update project template with new whitelist settings</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8954">CB-8954</a> Adds <code>requirements</code> command support to check_reqs module</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8907">CB-8907</a> Cordova ios emulate --list it shows duplicates when ios simulators are present for 7.x and 8.x</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9013">CB-9013</a> Fix listing of multiple devices in list-devices for iOS</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3360">CB-3360</a> Set custom User-Agent</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8710">CB-8710</a> Cordova-ios jasmine tests do not clean up build products, tests can only be run once</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8785">CB-8785</a> Add try/catch for evalJS</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8948">CB-8948</a> Clipboard fix for iOS Safari copy</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8855">CB-8855</a> Fix display ios devices with --list</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8295">CB-8295</a> Update app template with fix to CSP string</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8965">CB-8965</a> Copy cordova-js-src directory to platform folder during create</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9273">CB-9273</a> &quot;Copy www build phase&quot; node is not found</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9088">CB-9088</a> Sms urls won&#39;t open in iframe</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8621">CB-8621</a> Fix Q require in list-devices (Q -&gt; q)</li>
 </ul>
 
         </div>

@@ -1569,19 +1569,28 @@
 
 <p>Optional parameters to customize the retrieval of the geolocation
 <code>[Position](../Position/position.html)</code>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">{ maximumAge: 3000, timeout: 5000, enableHighAccuracy: true };
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ maximumAge: 3000, timeout: 5000, enableHighAccuracy: true };
+</code></pre></div></div>
+
 <h2>Options</h2>
 
 <ul>
-<li><p><strong>enableHighAccuracy</strong>: Provides a hint that the application needs the best possible results. By default, the device attempts to retrieve a <code>[Position](../Position/position.html)</code> using network-based methods. Setting this property to <code>true</code> tells the framework to use more accurate methods, such as satellite positioning. <em>(Boolean)</em></p></li>
-<li><p><strong>timeout</strong>: The maximum length of time (milliseconds) that is allowed to pass from the call to <code>[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)</code> or <code>[geolocation.watchPosition](../geolocation.watchPosition.html)</code> until the corresponding <code>[geolocationSuccess](geolocationSuccess.html)</code> callback executes. If the <code>[geolocationSuccess](geolocationSuccess.html)</code> callback is not invoked within this time, the <code>[geolocationError](geolocationError.html)</code> callback is passed a <code>[PositionError](../PositionError/positionError.html).TIMEOUT</code> error code. (Note that when used in conjunction with <code>[geolocation.watchPosition](../geolocation.watchPosition.html)</code>, the <code>[geolocationError](geolocationError.html)</code> callback could be called on an interval every <code>timeout</code> milliseconds!) <em>(Number)</em></p></li>
-<li><p><strong>maximumAge</strong>: Accept a cached position whose age is no greater than the specified time in milliseconds. <em>(Number)</em></p></li>
+  <li>
+    <p><strong>enableHighAccuracy</strong>: Provides a hint that the application needs the best possible results. By default, the device attempts to retrieve a <code>[Position](../Position/position.html)</code> using network-based methods. Setting this property to <code>true</code> tells the framework to use more accurate methods, such as satellite positioning. <em>(Boolean)</em></p>
+  </li>
+  <li>
+    <p><strong>timeout</strong>: The maximum length of time (milliseconds) that is allowed to pass from the call to <code>[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)</code> or <code>[geolocation.watchPosition](../geolocation.watchPosition.html)</code> until the corresponding <code>[geolocationSuccess](geolocationSuccess.html)</code> callback executes. If the <code>[geolocationSuccess](geolocationSuccess.html)</code> callback is not invoked within this time, the <code>[geolocationError](geolocationError.html)</code> callback is passed a <code>[PositionError](../PositionError/positionError.html).TIMEOUT</code> error code. (Note that when used in conjunction with <code>[geolocation.watchPosition](../geolocation.watchPosition.html)</code>, the <code>[geolocationError](geolocationError.html)</code> callback could be called on an interval every <code>timeout</code> milliseconds!) <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>maximumAge</strong>: Accept a cached position whose age is no greater than the specified time in milliseconds. <em>(Number)</em></p>
+  </li>
 </ul>
 
 <h2>Android Quirks</h2>
 
 <p>Android 2.x emulators do not return a geolocation result unless the <code>enableHighAccuracy</code> option is set to <code>true</code>.</p>
+
 
 
             </div>

@@ -1627,12 +1627,12 @@ Cordova projects.</p>
 <h2>Supported Platforms</h2>
 
 <ul>
-<li><a href="#Command-Line%20Usage_ios">iOS</a></li>
-<li><a href="#Command-Line%20Usage_android">Android</a></li>
-<li><a href="#Command-Line%20Usage_blackberry">BlackBerry</a></li>
-<li><a href="#Command-Line%20Usage_blackberry_10">BlackBerry 10</a></li>
-<li><a href="#Command-Line%20Usage_windows_phone">Windows Phone</a></li>
-<li><a href="#Command-Line%20Usage_windows_8">Windows 8</a></li>
+  <li><a href="#Command-Line%20Usage_ios">iOS</a></li>
+  <li><a href="#Command-Line%20Usage_android">Android</a></li>
+  <li><a href="#Command-Line%20Usage_blackberry">BlackBerry</a></li>
+  <li><a href="#Command-Line%20Usage_blackberry_10">BlackBerry 10</a></li>
+  <li><a href="#Command-Line%20Usage_windows_phone">Windows Phone</a></li>
+  <li><a href="#Command-Line%20Usage_windows_8">Windows 8</a></li>
 </ul>
 
 <h2>Windows Phone</h2>
@@ -1648,51 +1648,61 @@ The repo has subfolders for each: wp7/ and wp8/</p>
 <p>Run the <code>create</code> command with the following parameters:</p>
 
 <ul>
-<li>Path to your new Cordova Windows Phone project</li>
-<li>Package Name, following reverse-domain style convention ( this becomes the default Namespace )</li>
-<li>Project name</li>
+  <li>Path to your new Cordova Windows Phone project</li>
+  <li>Package Name, following reverse-domain style convention ( this becomes the default Namespace )</li>
+  <li>Project name</li>
 </ul>
 
 <!-- -->
-<div class="highlight"><pre><code class="language-" data-lang="">// create a new wp8 Cordova project
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// create a new wp8 Cordova project
 $ C:\path\to\cordova-wp8\wp8\bin\create C:\path\to\my_new_cordova_project com.example.cordova_project_name CordovaProjectName
 
 // create a new wp7 Cordova project
 $ C:\path\to\cordova-wp8\wp7\bin\create C:\path\to\my_new_cordova_project com.example.cordova_project_name CordovaProjectName
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Building your project (cleans then builds)</h3>
 
 <ul>
-<li>Debug</li>
+  <li>Debug</li>
 </ul>
 
 <!-- -->
-<div class="highlight"><pre><code class="language-" data-lang="">$ C:\path\to\my_new_cordova_project\cordova\build --debug
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ C:\path\to\my_new_cordova_project\cordova\build --debug
+</code></pre></div></div>
+
 <ul>
-<li>Release</li>
+  <li>Release</li>
 </ul>
 
 <!-- -->
-<div class="highlight"><pre><code class="language-" data-lang="">$ C:\path\to\my_new_cordova_project\cordova\build --release
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ C:\path\to\my_new_cordova_project\cordova\build --release
+</code></pre></div></div>
+
 <h3>Running your application</h3>
 
 <p>Run the &#39;run&#39; command with the following <em>optional</em> parameters</p>
 
 <ul>
-<li>Target specification. This includes <code>--emulator</code>, <code>--device</code>, or <code>--target=&lt;targetID&gt;</code>.</li>
-<li>Build specification. This includes <code>--debug</code>, <code>--release</code>, or <code>--nobuild</code>.</li>
+  <li>Target specification. This includes <code>--emulator</code>, <code>--device</code>, or <code>--target=&lt;targetID&gt;</code>.</li>
+  <li>Build specification. This includes <code>--debug</code>, <code>--release</code>, or <code>--nobuild</code>.</li>
 </ul>
 
 <!-- -->
-<div class="highlight"><pre><code class="language-" data-lang="">$ C:\path\to\my_new_cordova_project\cordova\run [Target] [Build]
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ C:\path\to\my_new_cordova_project\cordova\run [Target] [Build]
+</code></pre></div></div>
+
 <p>By default the <code>run</code> command will look for a connected device, if no device is found it will look for any started emulators. If you have multiple emulators, you can specify a target ID.</p>
 
 <h3>Cleaning</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ C:\path\to\my_new_cordova_project\cordova\clean
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ C:\path\to\my_new_cordova_project\cordova\clean
+</code></pre></div></div>
+
 <h2>iOS</h2>
 
 <p>The iOS command-line tools are built upon shell scripts and rely on
@@ -1703,26 +1713,36 @@ Xcode command-line tools such as <code>xcode-select</code> and <code>xcodebuild<
 <p>Run the <code>create</code> command with the following parameters:</p>
 
 <ul>
-<li>Path to your new Cordova iOS project</li>
-<li>Package name, following reverse-domain style convention</li>
-<li>Project name</li>
+  <li>Path to your new Cordova iOS project</li>
+  <li>Package name, following reverse-domain style convention</li>
+  <li>Project name</li>
 </ul>
 
 <!-- -->
-<div class="highlight"><pre><code class="language-" data-lang="">$ ./path/to/cordova-ios/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./path/to/cordova-ios/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+</code></pre></div></div>
+
 <h3>Build a project</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/build
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/build
+</code></pre></div></div>
+
 <h3>Run app on emulator</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/run
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/run
+</code></pre></div></div>
+
 <h3>Releasing</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/release
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/release
+</code></pre></div></div>
+
 <h3>Logging</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/log
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/log
+</code></pre></div></div>
+
 <h2>Android</h2>
 
 <p>The Android command-line tools are built upon shell scripts. You <em>must</em>
@@ -1734,54 +1754,69 @@ PATH!</p>
 <p>Run the <code>create</code> command with the following parameters:</p>
 
 <ul>
-<li>Path to your new Cordova Android project</li>
-<li>Package name, following reverse-domain style convention</li>
-<li>Main Activity name</li>
+  <li>Path to your new Cordova Android project</li>
+  <li>Package name, following reverse-domain style convention</li>
+  <li>Main Activity name</li>
 </ul>
 
 <!-- -->
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/cordova-android/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/cordova-android/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+</code></pre></div></div>
+
 <p>or, on <em>Windows</em></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ C:\path\to\cordova-android\bin\create.bat C:\path\to\my_new_cordova_project com.example.cordova_project_name CordovaProjectName
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ C:\path\to\cordova-android\bin\create.bat C:\path\to\my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+</code></pre></div></div>
+
 <h3>Building your project (cleans then builds)</h3>
 
 <ul>
-<li><strong>Debug</strong></li>
+  <li><strong>Debug</strong></li>
 </ul>
 
 <!-- -->
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/build --debug
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/build --debug
+</code></pre></div></div>
+
 <p>or, on <em>Windows</em></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ C:\path\to\my_new_cordova_project\cordova\build.bat --debug
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ C:\path\to\my_new_cordova_project\cordova\build.bat --debug
+</code></pre></div></div>
+
 <ul>
-<li><strong>Release</strong></li>
+  <li><strong>Release</strong></li>
 </ul>
 
 <!-- -->
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/build --release
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/build --release
+</code></pre></div></div>
+
 <p>or, on <em>Windows</em></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ C:\path\to\my_new_cordova_project\cordova\build.bat --release
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ C:\path\to\my_new_cordova_project\cordova\build.bat --release
+</code></pre></div></div>
+
 <h3>Running your application</h3>
 
 <p>Run the &#39;run&#39; command with the following <em>optional</em> parameters</p>
 
 <ul>
-<li>Target specification. This includes <code>--emulator</code>, <code>--device</code>, or <code>--target=&lt;targetID&gt;</code>.</li>
-<li>Build specification. This includes <code>--debug</code>, <code>--release</code>, or <code>--nobuild</code>.</li>
+  <li>Target specification. This includes <code>--emulator</code>, <code>--device</code>, or <code>--target=&lt;targetID&gt;</code>.</li>
+  <li>Build specification. This includes <code>--debug</code>, <code>--release</code>, or <code>--nobuild</code>.</li>
 </ul>
 
 <!-- -->
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/run [Target] [Build]
-</code></pre></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/run [Target] [Build]
+</code></pre></div></div>
+
 <p>or, on <em>Windows</em></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ C:\path\to\my_new_cordova_project\cordova\run.bat [Target] [Build]
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ C:\path\to\my_new_cordova_project\cordova\run.bat [Target] [Build]
+</code></pre></div></div>
+
 <p>Make sure you create at least one Android Virtual <a href="../../cordova/device/device.html">Device</a>, otherwise
 you&#39;re prompted to do so with the <code>android</code> command.  If you have
 multiple AVDs, you&#39;re prompted to select one. By default the <code>run</code>
@@ -1789,17 +1824,25 @@ command will detect a connected device. When no device is found,
 it will detect a running emulator.</p>
 
 <h3>Logging</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/log
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/log
+</code></pre></div></div>
+
 <p>or, on <em>Windows</em></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ C:\path\to\my_new_cordova_project\cordova\log.bat
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ C:\path\to\my_new_cordova_project\cordova\log.bat
+</code></pre></div></div>
+
 <h3>Cleaning</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/clean
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/clean
+</code></pre></div></div>
+
 <p>or, on <em>Windows</em></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ C:\path\to\my_new_cordova_project\cordova\clean.bat
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ C:\path\to\my_new_cordova_project\cordova\clean.bat
+</code></pre></div></div>
+
 <h2>BlackBerry</h2>
 
 <p>The BlackBerry command-line tools are built upon shell scripts.</p>
@@ -1809,17 +1852,21 @@ it will detect a running emulator.</p>
 <p>Run the <code>create</code> command with the following parameters:</p>
 
 <ul>
-<li>Path to your new Cordova BlackBerry project</li>
-<li>Placeholder package name</li>
-<li>Application name</li>
+  <li>Path to your new Cordova BlackBerry project</li>
+  <li>Placeholder package name</li>
+  <li>Application name</li>
 </ul>
 
 <!-- -->
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+</code></pre></div></div>
+
 <p>or, on <strong>Windows</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+</code></pre></div></div>
+
 <p><strong>NOTE:</strong> The BlackBerry platform ignores the package name placeholder
 (<code>com.example.cordova_project_name</code>), but it&#39;s still required for use by
 cross-platform tools.</p>
@@ -1831,11 +1878,15 @@ cross-platform tools.</p>
 You need to do so to supply your BlackBerry signing key password, and
 specify locations for the BlackBerry WebWorks SDK and BlackBerry
 simulator executables.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/build &lt;platform&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/build &lt;platform&gt;
+</code></pre></div></div>
+
 <p>or, on <strong>Windows</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/build.bat &lt;platform&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/build.bat &lt;platform&gt;
+</code></pre></div></div>
+
 <h3>Launch simulator</h3>
 
 <p>For BlackBerry projects, please make sure you customize the
@@ -1843,17 +1894,25 @@ simulator executables.</p>
 You need to do so to supply your BlackBerry signing key password, and
 specify locations for the BlackBerry WebWorks SDK and BlackBerry
 simulator executables.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/run &lt;platform&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/run &lt;platform&gt;
+</code></pre></div></div>
+
 <p>and then choose &#39;no&#39; when prompted with:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">Do you have a BlackBerry device connected to your computer? (y/n)
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Do you have a BlackBerry device connected to your computer? (y/n)
+</code></pre></div></div>
+
 <p>or, on <strong>Windows</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ /path/to/my_new_cordova_project/cordova/run &lt;platform&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_cordova_project/cordova/run &lt;platform&gt;
+</code></pre></div></div>
+
 <p>and then choose &#39;no&#39; when prompted with:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">Do you have a BlackBerry device connected to your computer? (y/n)
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Do you have a BlackBerry device connected to your computer? (y/n)
+</code></pre></div></div>
+
 <h3>Logging</h3>
 
 <p>Unfortunately, streaming logs directly from the device is currently
@@ -1872,69 +1931,83 @@ key from the home screen and typing &#39;&#39;lglg&#39;&#39; keys.</p>
 <h2>create</h2>
 
 <p>The &#39;create&#39; command creates a new project:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">bin/create &lt;path-to-project&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/create &lt;path-to-project&gt;
+</code></pre></div></div>
+
 <h2>target</h2>
 
 <p>The <code>target</code> command allows you to manage the BlackBerry device(s) or simulator that you will use to test your app. You can add or remove a target, or set a target as the default target.</p>
 
 <h3>Add a target</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/target  add  &lt;name&gt;  &lt;ip-address&gt;  &lt;device | simulator&gt;  [-p | --password &lt;password&gt;]  [--pin &lt;device-pin&gt;]
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/target  add  &lt;name&gt;  &lt;ip-address&gt;  &lt;device | simulator&gt;  [-p | --password &lt;password&gt;]  [--pin &lt;device-pin&gt;]
+</code></pre></div></div>
+
 <p>where</p>
 
 <ul>
-<li>  <code>&lt;name&gt;</code>  specifies a unique name for the target.</li>
-<li>  <code>&lt;ip-address&gt;</code>  specifies the ip address of the BlackBerry device or simulator.</li>
-<li>  <code>-p|--password &lt;password&gt;</code>  specifies the password for the device or simulator. This is required only if the device or simulator is password protected.</li>
-<li>  <code>--pin &lt;device-pin&gt;</code>  specifies the PIN of the BlackBerry device, which identifies that device as a valid host for the debug token. This argument is required only if you are creating a debug token.</li>
+  <li><code>&lt;name&gt;</code>  specifies a unique name for the target.</li>
+  <li><code>&lt;ip-address&gt;</code>  specifies the ip address of the BlackBerry device or simulator.</li>
+  <li><code>-p|--password &lt;password&gt;</code>  specifies the password for the device or simulator. This is required only if the device or simulator is password protected.</li>
+  <li><code>--pin &lt;device-pin&gt;</code>  specifies the PIN of the BlackBerry device, which identifies that device as a valid host for the debug token. This argument is required only if you are creating a debug token.</li>
 </ul>
 
 <h3>Remove a target</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/target  remove  &lt;name&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/target  remove  &lt;name&gt;
+</code></pre></div></div>
+
 <h3>Set a target as the default</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/target  default  &lt;name&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/target  default  &lt;name&gt;
+</code></pre></div></div>
+
 <h2>build</h2>
 
 <p>The <code>build</code> command builds the project as a .bar file. You can build your app in either release mode (which produces a signed .bar file) or in debug mode (which produces an unsigned .bar file).</p>
 
 <h3>Build your project in release mode</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/build  release  -k|--keystorepass &lt;password&gt;  [-b|--buildId &lt;number&gt;]  [-p|--params &lt;params-JSON-file&gt;]
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/build  release  -k|--keystorepass &lt;password&gt;  [-b|--buildId &lt;number&gt;]  [-p|--params &lt;params-JSON-file&gt;]
+</code></pre></div></div>
 <p>where</p>
 
 <ul>
-<li>  <code>-k|--keystorepass &lt;password&gt;</code>  specifies the password you defined when you configured your computer to sign applications.</li>
-<li>  <code>-b|--buildId &lt;number&gt;</code>  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.</li>
-<li>  <code>-p|--params &lt;params-JSON-file&gt;</code>  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.</li>
+  <li><code>-k|--keystorepass &lt;password&gt;</code>  specifies the password you defined when you configured your computer to sign applications.</li>
+  <li><code>-b|--buildId &lt;number&gt;</code>  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.</li>
+  <li><code>-p|--params &lt;params-JSON-file&gt;</code>  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.</li>
 </ul>
 
 <h3>Build your project in debug mode</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/build  debug  [&lt;target&gt;]  [-k|--keystorepass &lt;password&gt;]  [-p|--params &lt;params-JSON-file&gt;]  [-ll|--loglevel &lt;error|warn|verbose&gt;]
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/build  debug  [&lt;target&gt;]  [-k|--keystorepass &lt;password&gt;]  [-p|--params &lt;params-JSON-file&gt;]  [-ll|--loglevel &lt;error|warn|verbose&gt;]
+</code></pre></div></div>
+
 <p>where</p>
 
 <ul>
-<li>  <code>&lt;target&gt;</code>  specifies the name of a previously added target. If <code>&lt;target&gt;</code>  is not specified, the default target is used, if one has been created. This argument is only required if you want the script to deploy your app to a BlackBerry device or simulator and you have not created a default target. Additionally, if <code>&lt;target&gt;</code>  is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.</li>
-<li>  <code>-k|--keystorepass &lt;password&gt;</code>  specifies the password you defined when you configured your computer to sign applications. This password is also used to create your debug token. This argument is only required if you want the script to create and install the debug token for you.</li>
-<li>  <code>-p|--params &lt;params-JSON-file&gt;</code>  specifies a JSON file containing additional parameters to pass to downstream tools.</li>
-<li>  <code>-ll|--loglevel &lt;level&gt;</code>  specifies the log level. The log level may be one of <code>error</code>, <code>warn</code>, or <code>verbose</code>.</li>
+  <li><code>&lt;target&gt;</code>  specifies the name of a previously added target. If <code>&lt;target&gt;</code>  is not specified, the default target is used, if one has been created. This argument is only required if you want the script to deploy your app to a BlackBerry device or simulator and you have not created a default target. Additionally, if <code>&lt;target&gt;</code>  is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.</li>
+  <li><code>-k|--keystorepass &lt;password&gt;</code>  specifies the password you defined when you configured your computer to sign applications. This password is also used to create your debug token. This argument is only required if you want the script to create and install the debug token for you.</li>
+  <li><code>-p|--params &lt;params-JSON-file&gt;</code>  specifies a JSON file containing additional parameters to pass to downstream tools.</li>
+  <li><code>-ll|--loglevel &lt;level&gt;</code>  specifies the log level. The log level may be one of <code>error</code>, <code>warn</code>, or <code>verbose</code>.</li>
 </ul>
 
 <p>If you have previously defined a default target (and previously installed a debug token, if that target is a BlackBerry device), you can run the script with no arguments, and the script will package your app and deploy it to the default target. For example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/build debug
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/build debug
+</code></pre></div></div>
+
 <h2>run</h2>
 
 <p>The <code>run</code> command deploys the app on the specified BlackBerry device or a simulator. Before deploying your app, you must first create a target for the device or simulator you want to deploy your app to. The deploy script will deploy the most recent build of your app.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/run &lt;target&gt;
-</code></pre></div>
-<p>where</p>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/run &lt;target&gt;
+</code></pre></div></div>
+
+<p>where</p>
 <ul>
-<li>  <code>&lt;target&gt;</code>specifies the name of a previously added target. If <code>&lt;target&gt;</code>is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.</li>
+  <li><code>&lt;target&gt; </code>specifies the name of a previously added target. If <code>&lt;target&gt; </code>is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.</li>
 </ul>
 
 <h2>plugin</h2>
@@ -1942,17 +2015,25 @@ key from the home screen and typing &#39;&#39;lglg&#39;&#39; keys.</p>
 <p>The <code>target</code> command allows you to add and remove plugins</p>
 
 <h3>Fetch a locally-hosted plugin</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/plugin fetch &lt;path-to-plugin&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/plugin fetch &lt;path-to-plugin&gt;
+</code></pre></div></div>
+
 <h3>View a list of installed plugins</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/plugin ls
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/plugin ls
+</code></pre></div></div>
+
 <h3>Add a plugin</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/plugin add &lt;name&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/plugin add &lt;name&gt;
+</code></pre></div></div>
+
 <h3>Remove a plugin</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;path-to-project&gt;/cordova/plugin rm &lt;name&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/plugin rm &lt;name&gt;
+</code></pre></div></div>
+
 <h2>Windows 8</h2>
 
 <p>The Windows 8 command line tools support creating new projects only.
@@ -1963,9 +2044,9 @@ Commands must be run from a cmd or powershell prompt.</p>
 <p>Run the <code>create</code> command with the following parameters:</p>
 
 <ul>
-<li>Path to your new Cordova Windows 8 project</li>
-<li>Package Name, following reverse-domain style convention ( this becomes the default Namespace )</li>
-<li>Project name</li>
+  <li>Path to your new Cordova Windows 8 project</li>
+  <li>Package Name, following reverse-domain style convention ( this becomes the default Namespace )</li>
+  <li>Project name</li>
 </ul>
 
 

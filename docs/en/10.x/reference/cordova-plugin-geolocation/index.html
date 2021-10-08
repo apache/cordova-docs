@@ -2184,17 +2184,20 @@
 #         under the License.
 -->
 
-<table><thead>
-<tr>
-<th style="text-align: center">AppVeyor</th>
-<th style="text-align: center">Travis CI</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: center"><a href="https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-geolocation"><img src="https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-geolocation?branch=master" alt="Build status"></a></td>
-<td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-geolocation"><img src="https://travis-ci.org/apache/cordova-plugin-geolocation.svg?branch=master" alt="Build Status"></a></td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">AppVeyor</th>
+      <th style="text-align: center">Travis CI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-geolocation"><img src="https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-geolocation?branch=master" alt="Build status" /></a></td>
+      <td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-geolocation"><img src="https://travis-ci.org/apache/cordova-plugin-geolocation.svg?branch=master" alt="Build Status" /></a></td>
+    </tr>
+  </tbody>
+</table>
 
 <h1>cordova-plugin-geolocation</h1>
 
@@ -2208,7 +2211,7 @@ and GSM/CDMA cell IDs. There is no guarantee that the API returns the
 device&#39;s actual location.</p>
 
 <blockquote>
-<p>To get a few ideas, check out the <a href="#sample">sample</a> at the bottom of this page or go straight to the <a href="#reference">reference</a> content.</p>
+  <p>To get a few ideas, check out the <a href="#sample">sample</a> at the bottom of this page or go straight to the <a href="#reference">reference</a> content.</p>
 </blockquote>
 
 <p>This API is based on the
@@ -2234,46 +2237,54 @@ where it is otherwise missing).</p>
 
 <p>Although the object is in the global scope, features provided by this plugin
 are not available until after the <code>deviceready</code> event.</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
     <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"navigator.geolocation works well"</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">navigator.geolocation works well</span><span class="dl">"</span><span class="p">);</span>
     <span class="p">}</span>
 
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Installation</h2>
 
 <p>This requires cordova 5.0+ ( current stable 1.0.0 )</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add cordova-plugin-geolocation
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-geolocation
+</code></pre></div></div>
+
 <p>Older versions of cordova can still install via the deprecated id ( stale 0.3.12 )</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add org.apache.cordova.geolocation
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add org.apache.cordova.geolocation
+</code></pre></div></div>
+
 <p>It is also possible to install via repo url directly ( unstable )</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add https://github.com/apache/cordova-plugin-geolocation.git
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add https://github.com/apache/cordova-plugin-geolocation.git
+</code></pre></div></div>
+
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>iOS</li>
-<li>Windows</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows</li>
 </ul>
 
 <h2>Methods</h2>
 
 <ul>
-<li>navigator.geolocation.getCurrentPosition</li>
-<li>navigator.geolocation.watchPosition</li>
-<li>navigator.geolocation.clearWatch</li>
+  <li>navigator.geolocation.getCurrentPosition</li>
+  <li>navigator.geolocation.watchPosition</li>
+  <li>navigator.geolocation.clearWatch</li>
 </ul>
 
 <h2>Objects (Read-Only)</h2>
 
 <ul>
-<li>Position</li>
-<li>PositionError</li>
-<li>Coordinates</li>
+  <li>Position</li>
+  <li>PositionError</li>
+  <li>Coordinates</li>
 </ul>
 
 <h2>navigator.geolocation.getCurrentPosition</h2>
@@ -2282,45 +2293,55 @@ are not available until after the <code>deviceready</code> event.</p>
 callback with a <code>Position</code> object as the parameter.  If there is an
 error, the <code>geolocationError</code> callback is passed a
 <code>PositionError</code> object.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.geolocation.getCurrentPosition(geolocationSuccess,
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.geolocation.getCurrentPosition(geolocationSuccess,
                                          [geolocationError],
                                          [geolocationOptions]);
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Parameters</h3>
 
 <ul>
-<li><p><strong>geolocationSuccess</strong>: The callback that is passed the current position.</p></li>
-<li><p><strong>geolocationError</strong>: <em>(Optional)</em> The callback that executes if an error occurs.</p></li>
-<li><p><strong>geolocationOptions</strong>: <em>(Optional)</em> The geolocation options.</p></li>
+  <li>
+    <p><strong>geolocationSuccess</strong>: The callback that is passed the current position.</p>
+  </li>
+  <li>
+    <p><strong>geolocationError</strong>: <em>(Optional)</em> The callback that executes if an error occurs.</p>
+  </li>
+  <li>
+    <p><strong>geolocationOptions</strong>: <em>(Optional)</em> The geolocation options.</p>
+  </li>
 </ul>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
     <span class="c1">// onSuccess Callback</span>
     <span class="c1">// This method accepts a Position object, which contains the</span>
     <span class="c1">// current GPS coordinates</span>
     <span class="c1">//</span>
     <span class="kd">var</span> <span class="nx">onSuccess</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'Latitude: '</span>          <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span>          <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-              <span class="s1">'Longitude: '</span>         <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span>         <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-              <span class="s1">'Altitude: '</span>          <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">altitude</span>          <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-              <span class="s1">'Accuracy: '</span>          <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">accuracy</span>          <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-              <span class="s1">'Altitude Accuracy: '</span> <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">altitudeAccuracy</span>  <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-              <span class="s1">'Heading: '</span>           <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">heading</span>           <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-              <span class="s1">'Speed: '</span>             <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">speed</span>             <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-              <span class="s1">'Timestamp: '</span>         <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">timestamp</span>                <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Latitude: </span><span class="dl">'</span>          <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span>          <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+              <span class="dl">'</span><span class="s1">Longitude: </span><span class="dl">'</span>         <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span>         <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+              <span class="dl">'</span><span class="s1">Altitude: </span><span class="dl">'</span>          <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">altitude</span>          <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+              <span class="dl">'</span><span class="s1">Accuracy: </span><span class="dl">'</span>          <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">accuracy</span>          <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+              <span class="dl">'</span><span class="s1">Altitude Accuracy: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">altitudeAccuracy</span>  <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+              <span class="dl">'</span><span class="s1">Heading: </span><span class="dl">'</span>           <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">heading</span>           <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+              <span class="dl">'</span><span class="s1">Speed: </span><span class="dl">'</span>             <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">speed</span>             <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+              <span class="dl">'</span><span class="s1">Timestamp: </span><span class="dl">'</span>         <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">timestamp</span>                <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
     <span class="p">};</span>
 
     <span class="c1">// onError Callback receives a PositionError object</span>
     <span class="c1">//</span>
     <span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'code: '</span>    <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span>    <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-              <span class="s1">'message: '</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span>    <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span>    <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+              <span class="dl">'</span><span class="s1">message: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">);</span>
 
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>iOS Quirks</h3>
 
 <p>Since iOS 10 it&#39;s mandatory to provide an usage description in the <code>info.plist</code> if trying to access privacy-sensitive data. When the system prompts the user to allow access, this usage description string will displayed as part of the permission dialog box, but if you didn&#39;t provide the usage description, the app will crash before showing the dialog. Also, Apple will reject apps that access private data but don&#39;t provide an usage description.</p>
@@ -2328,28 +2349,34 @@ error, the <code>geolocationError</code> callback is passed a
 <p>This plugins requires the following usage description:</p>
 
 <ul>
-<li><code>NSLocationWhenInUseUsageDescription</code> describes the reason that the app accesses the user&#39;s location, this is used while the app is running in the foreground.</li>
-<li><code>NSLocationAlwaysAndWhenInUseUsageDescription</code> describes the reason that the app is requesting access to the user’s location information at all times. Use this key if your iOS app accesses location information while running in the background and foreground. </li>
-<li><code>NSLocationAlwaysUsageDescription</code> describes the reason that the app is requesting access to the user&#39;s location at all times. Use this key if your app accesses location information in the background and you deploy to a target earlier than iOS 11. For iOS 11 and later, add both <code>NSLocationAlwaysUsageDescription</code> and <code>NSLocationAlwaysAndWhenInUseUsageDescription</code> to your app’s <code>Info.plist</code> file with the same message.</li>
+  <li><code>NSLocationWhenInUseUsageDescription</code> describes the reason that the app accesses the user&#39;s location, this is used while the app is running in the foreground.</li>
+  <li><code>NSLocationAlwaysAndWhenInUseUsageDescription</code> describes the reason that the app is requesting access to the user’s location information at all times. Use this key if your iOS app accesses location information while running in the background and foreground.</li>
+  <li><code>NSLocationAlwaysUsageDescription</code> describes the reason that the app is requesting access to the user&#39;s location at all times. Use this key if your app accesses location information in the background and you deploy to a target earlier than iOS 11. For iOS 11 and later, add both <code>NSLocationAlwaysUsageDescription</code> and <code>NSLocationAlwaysAndWhenInUseUsageDescription</code> to your app’s <code>Info.plist</code> file with the same message.</li>
 </ul>
 
 <p>To add these entries into the <code>info.plist</code>, you can use the <code>edit-config</code> tag in the <code>config.xml</code> like this:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge"&gt;
     &lt;string&gt;need location access to find things nearby&lt;/string&gt;
 &lt;/edit-config&gt;
-</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">&lt;edit-config target="NSLocationAlwaysAndWhenInUseUsageDescription" file="*-Info.plist" mode="merge"&gt;
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;edit-config target="NSLocationAlwaysAndWhenInUseUsageDescription" file="*-Info.plist" mode="merge"&gt;
     &lt;string&gt;need location access to find things nearby&lt;/string&gt;
 &lt;/edit-config&gt;
-</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">&lt;edit-config target="NSLocationAlwaysUsageDescription" file="*-Info.plist" mode="merge"&gt;
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;edit-config target="NSLocationAlwaysUsageDescription" file="*-Info.plist" mode="merge"&gt;
     &lt;string&gt;need location access to find things nearby&lt;/string&gt;
 &lt;/edit-config&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Android Quirks</h3>
 
 <p>For historic reasons, this plugin requires GPS Hardware on Android devices, so your app will not be able to run on devices without.
 If you want to use this plugin in your app, but you do not require actual GPS Hardware on the device, install the plugin using the variable <em>GPS_REQUIRED</em> set to false:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add cordova-plugin-geolocation --variable GPS_REQUIRED="false"
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-geolocation --variable GPS_REQUIRED="false"
+</code></pre></div></div>
+
 <p>If Geolocation service is turned off the <code>onError</code> callback is invoked after <code>timeout</code> interval (if specified).
 If <code>timeout</code> parameter is not specified then no callback is called.</p>
 
@@ -2360,61 +2387,79 @@ When the device retrieves a new location, the <code>geolocationSuccess</code>
 callback executes with a <code>Position</code> object as the parameter.  If
 there is an error, the <code>geolocationError</code> callback executes with a
 <code>PositionError</code> object as the parameter.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
                                                   [geolocationError],
                                                   [geolocationOptions]);
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Parameters</h3>
 
 <ul>
-<li><p><strong>geolocationSuccess</strong>: The callback that is passed the current position.</p></li>
-<li><p><strong>geolocationError</strong>: (Optional) The callback that executes if an error occurs.</p></li>
-<li><p><strong>geolocationOptions</strong>: (Optional) The geolocation options.</p></li>
+  <li>
+    <p><strong>geolocationSuccess</strong>: The callback that is passed the current position.</p>
+  </li>
+  <li>
+    <p><strong>geolocationError</strong>: (Optional) The callback that executes if an error occurs.</p>
+  </li>
+  <li>
+    <p><strong>geolocationOptions</strong>: (Optional) The geolocation options.</p>
+  </li>
 </ul>
 
 <h3>Returns</h3>
 
 <ul>
-<li><strong>String</strong>: returns a watch id that references the watch position interval. The watch id should be used with <code>navigator.geolocation.clearWatch</code> to stop watching for changes in position.</li>
+  <li><strong>String</strong>: returns a watch id that references the watch position interval. The watch id should be used with <code>navigator.geolocation.clearWatch</code> to stop watching for changes in position.</li>
 </ul>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
     <span class="c1">// onSuccess Callback</span>
     <span class="c1">//   This method accepts a `Position` object, which contains</span>
     <span class="c1">//   the current GPS coordinates</span>
     <span class="c1">//</span>
     <span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'geolocation'</span><span class="p">);</span>
-        <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">'Latitude: '</span>  <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span>      <span class="o">+</span> <span class="s1">'&lt;br /&gt;'</span> <span class="o">+</span>
-                            <span class="s1">'Longitude: '</span> <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span>     <span class="o">+</span> <span class="s1">'&lt;br /&gt;'</span> <span class="o">+</span>
-                            <span class="s1">'&lt;hr /&gt;'</span>      <span class="o">+</span> <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">geolocation</span><span class="dl">'</span><span class="p">);</span>
+        <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Latitude: </span><span class="dl">'</span>  <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span>      <span class="o">+</span> <span class="dl">'</span><span class="s1">&lt;br /&gt;</span><span class="dl">'</span> <span class="o">+</span>
+                            <span class="dl">'</span><span class="s1">Longitude: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span>     <span class="o">+</span> <span class="dl">'</span><span class="s1">&lt;br /&gt;</span><span class="dl">'</span> <span class="o">+</span>
+                            <span class="dl">'</span><span class="s1">&lt;hr /&gt;</span><span class="dl">'</span>      <span class="o">+</span> <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="c1">// onError Callback receives a PositionError object</span>
     <span class="c1">//</span>
     <span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'code: '</span>    <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span>    <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-              <span class="s1">'message: '</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span>    <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span>    <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+              <span class="dl">'</span><span class="s1">message: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="c1">// Options: throw an error if no update is received every 30 seconds.</span>
     <span class="c1">//</span>
     <span class="kd">var</span> <span class="nx">watchID</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">watchPosition</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="p">{</span> <span class="na">timeout</span><span class="p">:</span> <span class="mi">30000</span> <span class="p">});</span>
 
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>geolocationOptions</h2>
 
 <p>Optional parameters to customize the retrieval of the geolocation
 <code>Position</code>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">{ maximumAge: 3000, timeout: 5000, enableHighAccuracy: true };
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ maximumAge: 3000, timeout: 5000, enableHighAccuracy: true };
+</code></pre></div></div>
+
 <h3>Options</h3>
 
 <ul>
-<li><p><strong>enableHighAccuracy</strong>: Provides a hint that the application needs the best possible results. By default, the device attempts to retrieve a <code>Position</code> using network-based methods. Setting this property to <code>true</code> tells the framework to use more accurate methods, such as satellite positioning. <em>(Boolean)</em></p></li>
-<li><p><strong>timeout</strong>: The maximum length of time (milliseconds) that is allowed to pass from the call to <code>navigator.geolocation.getCurrentPosition</code> or <code>geolocation.watchPosition</code> until the corresponding <code>geolocationSuccess</code> callback executes. If the <code>geolocationSuccess</code> callback is not invoked within this time, the <code>geolocationError</code> callback is passed a <code>PositionError.TIMEOUT</code> error code. (Note that when used in conjunction with <code>geolocation.watchPosition</code>, the <code>geolocationError</code> callback could be called on an interval every <code>timeout</code> milliseconds!) <em>(Number)</em></p></li>
-<li><p><strong>maximumAge</strong>: Accept a cached position whose age is no greater than the specified time in milliseconds. <em>(Number)</em></p></li>
+  <li>
+    <p><strong>enableHighAccuracy</strong>: Provides a hint that the application needs the best possible results. By default, the device attempts to retrieve a <code>Position</code> using network-based methods. Setting this property to <code>true</code> tells the framework to use more accurate methods, such as satellite positioning. <em>(Boolean)</em></p>
+  </li>
+  <li>
+    <p><strong>timeout</strong>: The maximum length of time (milliseconds) that is allowed to pass from the call to <code>navigator.geolocation.getCurrentPosition</code> or <code>geolocation.watchPosition</code> until the corresponding <code>geolocationSuccess</code> callback executes. If the <code>geolocationSuccess</code> callback is not invoked within this time, the <code>geolocationError</code> callback is passed a <code>PositionError.TIMEOUT</code> error code. (Note that when used in conjunction with <code>geolocation.watchPosition</code>, the <code>geolocationError</code> callback could be called on an interval every <code>timeout</code> milliseconds!) <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>maximumAge</strong>: Accept a cached position whose age is no greater than the specified time in milliseconds. <em>(Number)</em></p>
+  </li>
 </ul>
 
 <h3>Android Quirks</h3>
@@ -2426,16 +2471,19 @@ If <code>timeout</code> parameter is not specified then no callback is called.</
 
 <p>Stop watching for changes to the device&#39;s location referenced by the
 <code>watchID</code> parameter.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.geolocation.clearWatch(watchID);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.geolocation.clearWatch(watchID);
+</code></pre></div></div>
+
 <h3>Parameters</h3>
 
 <ul>
-<li><strong>watchID</strong>: The id of the <code>watchPosition</code> interval to clear. (String)</li>
+  <li><strong>watchID</strong>: The id of the <code>watchPosition</code> interval to clear. (String)</li>
 </ul>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
     <span class="c1">// Options: watch for changes in position, and use the most</span>
     <span class="c1">// accurate position acquisition method available.</span>
     <span class="c1">//</span>
@@ -2445,7 +2493,8 @@ If <code>timeout</code> parameter is not specified then no callback is called.</
 
     <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">clearWatch</span><span class="p">(</span><span class="nx">watchID</span><span class="p">);</span>
 
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Position</h2>
 
 <p>Contains <code>Position</code> coordinates and timestamp, created by the geolocation API.</p>
@@ -2453,8 +2502,12 @@ If <code>timeout</code> parameter is not specified then no callback is called.</
 <h3>Properties</h3>
 
 <ul>
-<li><p><strong>coords</strong>: A set of geographic coordinates. <em>(Coordinates)</em></p></li>
-<li><p><strong>timestamp</strong>: Creation timestamp for <code>coords</code>. <em>(DOMTimeStamp)</em></p></li>
+  <li>
+    <p><strong>coords</strong>: A set of geographic coordinates. <em>(Coordinates)</em></p>
+  </li>
+  <li>
+    <p><strong>timestamp</strong>: Creation timestamp for <code>coords</code>. <em>(DOMTimeStamp)</em></p>
+  </li>
 </ul>
 
 <h2>Coordinates</h2>
@@ -2466,13 +2519,27 @@ It contains a set of properties that describe the geographic coordinates of a po
 <h3>Properties</h3>
 
 <ul>
-<li><p><strong>latitude</strong>: Latitude in decimal degrees. <em>(Number)</em></p></li>
-<li><p><strong>longitude</strong>: Longitude in decimal degrees. <em>(Number)</em></p></li>
-<li><p><strong>altitude</strong>: Height of the position in meters above the ellipsoid. <em>(Number)</em></p></li>
-<li><p><strong>accuracy</strong>: Accuracy level of the latitude and longitude coordinates in meters. <em>(Number)</em></p></li>
-<li><p><strong>altitudeAccuracy</strong>: Accuracy level of the altitude coordinate in meters. <em>(Number)</em></p></li>
-<li><p><strong>heading</strong>: Direction of travel, specified in degrees counting clockwise relative to the true north. <em>(Number)</em></p></li>
-<li><p><strong>speed</strong>: Current ground speed of the device, specified in meters per second. <em>(Number)</em></p></li>
+  <li>
+    <p><strong>latitude</strong>: Latitude in decimal degrees. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>longitude</strong>: Longitude in decimal degrees. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>altitude</strong>: Height of the position in meters above the ellipsoid. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>accuracy</strong>: Accuracy level of the latitude and longitude coordinates in meters. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>altitudeAccuracy</strong>: Accuracy level of the altitude coordinate in meters. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>heading</strong>: Direction of travel, specified in degrees counting clockwise relative to the true north. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>speed</strong>: Current ground speed of the device, specified in meters per second. <em>(Number)</em></p>
+  </li>
 </ul>
 
 <h3>Android Quirks</h3>
@@ -2487,28 +2554,32 @@ callback function when an error occurs with navigator.geolocation.</p>
 <h3>Properties</h3>
 
 <ul>
-<li><p><strong>code</strong>: One of the predefined error codes listed below.</p></li>
-<li><p><strong>message</strong>: Error message describing the details of the error encountered.</p></li>
+  <li>
+    <p><strong>code</strong>: One of the predefined error codes listed below.</p>
+  </li>
+  <li>
+    <p><strong>message</strong>: Error message describing the details of the error encountered.</p>
+  </li>
 </ul>
 
 <h3>Constants</h3>
 
 <ul>
-<li><code>PositionError.PERMISSION_DENIED</code>
-
-<ul>
-<li>Returned when users do not allow the app to retrieve position information. This is dependent on the platform.</li>
-</ul></li>
-<li><code>PositionError.POSITION_UNAVAILABLE</code>
-
-<ul>
-<li>Returned when the device is unable to retrieve a position. In general, this means the device is not connected to a network or can&#39;t get a satellite fix.</li>
-</ul></li>
-<li><code>PositionError.TIMEOUT</code>
-
-<ul>
-<li>Returned when the device is unable to retrieve a position within the time specified by the <code>timeout</code> included in <code>geolocationOptions</code>. When used with <code>navigator.geolocation.watchPosition</code>, this error could be repeatedly passed to the <code>geolocationError</code> callback every <code>timeout</code> milliseconds.</li>
-</ul></li>
+  <li><code>PositionError.PERMISSION_DENIED</code>
+    <ul>
+      <li>Returned when users do not allow the app to retrieve position information. This is dependent on the platform.</li>
+    </ul>
+  </li>
+  <li><code>PositionError.POSITION_UNAVAILABLE</code>
+    <ul>
+      <li>Returned when the device is unable to retrieve a position. In general, this means the device is not connected to a network or can&#39;t get a satellite fix.</li>
+    </ul>
+  </li>
+  <li><code>PositionError.TIMEOUT</code>
+    <ul>
+      <li>Returned when the device is unable to retrieve a position within the time specified by the <code>timeout</code> included in <code>geolocationOptions</code>. When used with <code>navigator.geolocation.watchPosition</code>, this error could be repeatedly passed to the <code>geolocationError</code> callback every <code>timeout</code> milliseconds.</li>
+    </ul>
+  </li>
 </ul>
 
 <h2><a id="sample"></a>Sample: Get the weather, find stores, and see photos of things nearby with Geolocation</h2>
@@ -2518,25 +2589,27 @@ callback function when an error occurs with navigator.geolocation.</p>
 <p>Here&#39;s a &quot;cookbook&quot; of ideas to get you started. In the snippets below, we&#39;ll show you some basic ways to add these features to your app.</p>
 
 <ul>
-<li><a href="#coords">Get your coordinates</a>.</li>
-<li><a href="#weather">Get the weather forecast</a>.</li>
-<li><a href="#receive">Receive updated weather forecasts as you drive around</a>.</li>
-<li><a href="#see">See where you are on a map</a>.</li>
-<li><a href="#find">Find stores near you</a>.</li>
-<li><a href="#see">See pictures of things around you</a>.</li>
+  <li><a href="#coords">Get your coordinates</a>.</li>
+  <li><a href="#weather">Get the weather forecast</a>.</li>
+  <li><a href="#receive">Receive updated weather forecasts as you drive around</a>.</li>
+  <li><a href="#see">See where you are on a map</a>.</li>
+  <li><a href="#find">Find stores near you</a>.</li>
+  <li><a href="#see">See pictures of things around you</a>.</li>
 </ul>
 
 <h2><a id="coord"></a>Get your geolocation coordinates</h2>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="kd">function</span> <span class="nx">getWeatherLocation</span><span class="p">()</span> <span class="p">{</span>
 
     <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span>
     <span class="p">(</span><span class="nx">onWeatherSuccess</span><span class="p">,</span> <span class="nx">onWeatherError</span><span class="p">,</span> <span class="p">{</span> <span class="na">enableHighAccuracy</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
 <span class="p">}</span>
 
-</code></pre></div>
+</code></pre></div></div>
 <h2><a id="weather"></a>Get the weather forecast</h2>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="c1">// Success callback for get geo coordinates</span>
 
 <span class="kd">var</span> <span class="nx">onWeatherSuccess</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
@@ -2552,11 +2625,11 @@ callback function when an error occurs with navigator.geolocation.</p>
 <span class="kd">function</span> <span class="nx">getWeather</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="c1">// Get a free key at http://openweathermap.org/. Replace the "Your_Key_Here" string with that key.</span>
-    <span class="kd">var</span> <span class="nx">OpenWeatherAppKey</span> <span class="o">=</span> <span class="s2">"Your_Key_Here"</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">OpenWeatherAppKey</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Your_Key_Here</span><span class="dl">"</span><span class="p">;</span>
 
     <span class="kd">var</span> <span class="nx">queryString</span> <span class="o">=</span>
-      <span class="s1">'http://api.openweathermap.org/data/2.5/weather?lat='</span>
-      <span class="o">+</span> <span class="nx">latitude</span> <span class="o">+</span> <span class="s1">'&amp;lon='</span> <span class="o">+</span> <span class="nx">longitude</span> <span class="o">+</span> <span class="s1">'&amp;appid='</span> <span class="o">+</span> <span class="nx">OpenWeatherAppKey</span> <span class="o">+</span> <span class="s1">'&amp;units=imperial'</span><span class="p">;</span>
+      <span class="dl">'</span><span class="s1">http://api.openweathermap.org/data/2.5/weather?lat=</span><span class="dl">'</span>
+      <span class="o">+</span> <span class="nx">latitude</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">&amp;lon=</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">longitude</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">&amp;appid=</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">OpenWeatherAppKey</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">&amp;units=imperial</span><span class="dl">'</span><span class="p">;</span>
 
     <span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="nx">queryString</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
 
@@ -2566,36 +2639,38 @@ callback function when an error occurs with navigator.geolocation.</p>
 
                 <span class="k">if</span> <span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">weather</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
 
-                    <span class="nx">$</span><span class="p">(</span><span class="s1">'#description'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-                    <span class="nx">$</span><span class="p">(</span><span class="s1">'#temp'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">temp</span><span class="p">);</span>
-                    <span class="nx">$</span><span class="p">(</span><span class="s1">'#wind'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">wind</span><span class="p">.</span><span class="nx">speed</span><span class="p">);</span>
-                    <span class="nx">$</span><span class="p">(</span><span class="s1">'#humidity'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">humidity</span><span class="p">);</span>
-                    <span class="nx">$</span><span class="p">(</span><span class="s1">'#visibility'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">weather</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">main</span><span class="p">);</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#description</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#temp</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">temp</span><span class="p">);</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#wind</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">wind</span><span class="p">.</span><span class="nx">speed</span><span class="p">);</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#humidity</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">humidity</span><span class="p">);</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#visibility</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">weather</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">main</span><span class="p">);</span>
 
                     <span class="kd">var</span> <span class="nx">sunriseDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">sys</span><span class="p">.</span><span class="nx">sunrise</span><span class="p">);</span>
-                    <span class="nx">$</span><span class="p">(</span><span class="s1">'#sunrise'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">sunriseDate</span><span class="p">.</span><span class="nx">toLocaleTimeString</span><span class="p">());</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#sunrise</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">sunriseDate</span><span class="p">.</span><span class="nx">toLocaleTimeString</span><span class="p">());</span>
 
                     <span class="kd">var</span> <span class="nx">sunsetDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">sys</span><span class="p">.</span><span class="nx">sunrise</span><span class="p">);</span>
-                    <span class="nx">$</span><span class="p">(</span><span class="s1">'#sunset'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">sunsetDate</span><span class="p">.</span><span class="nx">toLocaleTimeString</span><span class="p">());</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#sunset</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">sunsetDate</span><span class="p">.</span><span class="nx">toLocaleTimeString</span><span class="p">());</span>
                 <span class="p">}</span>
 
             <span class="p">});</span>
         <span class="p">}</span>
     <span class="p">}).</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"error getting location"</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">error getting location</span><span class="dl">"</span><span class="p">);</span>
     <span class="p">});</span>
 <span class="p">}</span>
 
 <span class="c1">// Error callback</span>
 
 <span class="kd">function</span> <span class="nx">onWeatherError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'code: '</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-        <span class="s1">'message: '</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+        <span class="dl">'</span><span class="s1">message: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">}</span>
 
-</code></pre></div>
+</code></pre></div></div>
+
 <h2><a id="receive"></a>Receive updated weather forecasts as you drive around</h2>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="c1">// Watch your changing position</span>
 
 <span class="kd">function</span> <span class="nx">watchWeatherPosition</span><span class="p">()</span> <span class="p">{</span>
@@ -2621,18 +2696,21 @@ callback function when an error occurs with navigator.geolocation.</p>
     <span class="p">}</span>
 <span class="p">}</span>
 
-</code></pre></div>
+</code></pre></div></div>
+
 <h2><a id="see"></a>See where you are on a map</h2>
 
 <p>Both Bing and Google have map services. We&#39;ll use Google&#39;s. You&#39;ll need a key but it&#39;s free if you&#39;re just trying things out.</p>
 
 <p>Add a reference to the <strong>maps</strong> service.</p>
-<div class="highlight"><pre><code class="language-HTML" data-lang="HTML">
+
+<pre><code class="language-HTML">
  &lt;script src="https://maps.googleapis.com/maps/api/js?key=Your_API_Key"&gt;&lt;/script&gt;
 
-</code></pre></div>
+</code></pre>
 <p>Then, add code to use it.</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="kd">var</span> <span class="nx">Latitude</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">Longitude</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
 
@@ -2666,7 +2744,7 @@ callback function when an error occurs with navigator.geolocation.</p>
     <span class="p">};</span>
 
     <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nb">Map</span>
-    <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"map"</span><span class="p">),</span> <span class="nx">mapOptions</span><span class="p">);</span>
+    <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">map</span><span class="dl">"</span><span class="p">),</span> <span class="nx">mapOptions</span><span class="p">);</span>
 
 
     <span class="kd">var</span> <span class="nx">latLong</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">LatLng</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">);</span>
@@ -2699,8 +2777,8 @@ callback function when an error occurs with navigator.geolocation.</p>
 <span class="c1">// Error callback</span>
 
 <span class="kd">function</span> <span class="nx">onMapError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'code: '</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-        <span class="s1">'message: '</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+        <span class="dl">'</span><span class="s1">message: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// Watch your changing position</span>
@@ -2711,20 +2789,24 @@ callback function when an error occurs with navigator.geolocation.</p>
     <span class="p">(</span><span class="nx">onMapWatchSuccess</span><span class="p">,</span> <span class="nx">onMapError</span><span class="p">,</span> <span class="p">{</span> <span class="na">enableHighAccuracy</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
 <span class="p">}</span>
 
-</code></pre></div>
+</code></pre></div></div>
+
 <h2><a id="find"></a>Find stores near you</h2>
 
 <p>You can use the same Google key for this.</p>
 
 <p>Add a reference to the <strong>places</strong> service.</p>
-<div class="highlight"><pre><code class="language-HTML" data-lang="HTML">
+
+<pre><code class="language-HTML">
 &lt;script src=
 "https://maps.googleapis.com/maps/api/js?key=Your_API_Key&amp;libraries=places"&gt;
 &lt;/script&gt;
 
-</code></pre></div>
+</code></pre>
+
 <p>Then, add code to use it.</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="kd">var</span> <span class="nb">Map</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">Infowindow</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">Latitude</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
@@ -2762,7 +2844,7 @@ callback function when an error occurs with navigator.geolocation.</p>
 
     <span class="p">};</span>
 
-    <span class="nb">Map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nb">Map</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"places"</span><span class="p">),</span> <span class="nx">mapOptions</span><span class="p">);</span>
+    <span class="nb">Map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nb">Map</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">places</span><span class="dl">"</span><span class="p">),</span> <span class="nx">mapOptions</span><span class="p">);</span>
 
     <span class="nx">Infowindow</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">InfoWindow</span><span class="p">();</span>
 
@@ -2771,7 +2853,7 @@ callback function when an error occurs with navigator.geolocation.</p>
 
         <span class="na">location</span><span class="p">:</span> <span class="nx">latLong</span><span class="p">,</span>
         <span class="na">radius</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
-        <span class="na">type</span><span class="p">:</span> <span class="p">[</span><span class="s1">'store'</span><span class="p">]</span>
+        <span class="na">type</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">store</span><span class="dl">'</span><span class="p">]</span>
     <span class="p">},</span> <span class="nx">foundStoresCallback</span><span class="p">);</span>
 
 <span class="p">}</span>
@@ -2817,7 +2899,7 @@ callback function when an error occurs with navigator.geolocation.</p>
         <span class="na">position</span><span class="p">:</span> <span class="nx">place</span><span class="p">.</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">location</span>
     <span class="p">});</span>
 
-    <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">event</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="nx">marker</span><span class="p">,</span> <span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">event</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="nx">marker</span><span class="p">,</span> <span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
 
         <span class="nx">Infowindow</span><span class="p">.</span><span class="nx">setContent</span><span class="p">(</span><span class="nx">place</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
         <span class="nx">Infowindow</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nb">Map</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
@@ -2828,8 +2910,8 @@ callback function when an error occurs with navigator.geolocation.</p>
 <span class="c1">// Error callback</span>
 
 <span class="kd">function</span> <span class="nx">onPlacesError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'code: '</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-        <span class="s1">'message: '</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+        <span class="dl">'</span><span class="s1">message: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// Watch your changing position</span>
@@ -2840,13 +2922,15 @@ callback function when an error occurs with navigator.geolocation.</p>
     <span class="p">(</span><span class="nx">onPlacesWatchSuccess</span><span class="p">,</span> <span class="nx">onPlacesError</span><span class="p">,</span> <span class="p">{</span> <span class="na">enableHighAccuracy</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
 <span class="p">}</span>
 
-</code></pre></div>
+</code></pre></div></div>
+
 <h2><a id="pictures"></a>See pictures of things around you</h2>
 
 <p>Digital photos can contain geo coordinates that identify where the picture was taken.</p>
 
 <p>Use Flickr API&#39;s to find pictures that folks have taken near you. Like Google services, you&#39;ll need a key, but it&#39;s free if you just want to try things out.</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="kd">var</span> <span class="nx">Latitude</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">Longitude</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
 
@@ -2873,19 +2957,19 @@ callback function when an error occurs with navigator.geolocation.</p>
 
 <span class="kd">function</span> <span class="nx">getPictures</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'#pictures'</span><span class="p">).</span><span class="nx">empty</span><span class="p">();</span>
+    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#pictures</span><span class="dl">'</span><span class="p">).</span><span class="nx">empty</span><span class="p">();</span>
 
     <span class="kd">var</span> <span class="nx">queryString</span> <span class="o">=</span>
-    <span class="s2">"https://api.flickr.com/services/rest/?method=flickr.photos.search&amp;api_key=Your_API_Key&amp;lat="</span>
-    <span class="o">+</span> <span class="nx">latitude</span> <span class="o">+</span> <span class="s2">"&amp;lon="</span> <span class="o">+</span> <span class="nx">longitude</span> <span class="o">+</span> <span class="s2">"&amp;format=json&amp;jsoncallback=?"</span><span class="p">;</span>
+    <span class="dl">"</span><span class="s2">https://api.flickr.com/services/rest/?method=flickr.photos.search&amp;api_key=Your_API_Key&amp;lat=</span><span class="dl">"</span>
+    <span class="o">+</span> <span class="nx">latitude</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">&amp;lon=</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">longitude</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">&amp;format=json&amp;jsoncallback=?</span><span class="dl">"</span><span class="p">;</span>
 
     <span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="nx">queryString</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">photos</span><span class="p">.</span><span class="nx">photo</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
 
-            <span class="kd">var</span> <span class="nx">photoURL</span> <span class="o">=</span> <span class="s2">"http://farm"</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">farm</span> <span class="o">+</span> <span class="s2">".static.flickr.com/"</span> <span class="o">+</span>
-                <span class="nx">item</span><span class="p">.</span><span class="nx">server</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">id</span> <span class="o">+</span> <span class="s2">"_"</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">secret</span> <span class="o">+</span> <span class="s2">"_m.jpg"</span><span class="p">;</span>
+            <span class="kd">var</span> <span class="nx">photoURL</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">http://farm</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">farm</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">.static.flickr.com/</span><span class="dl">"</span> <span class="o">+</span>
+                <span class="nx">item</span><span class="p">.</span><span class="nx">server</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">id</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">_</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">secret</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">_m.jpg</span><span class="dl">"</span><span class="p">;</span>
 
-            <span class="nx">$</span><span class="p">(</span><span class="s1">'#pictures'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">"&lt;img /&gt;"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"src"</span><span class="p">,</span> <span class="nx">photoURL</span><span class="p">));</span>
+            <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#pictures</span><span class="dl">'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">&lt;img /&gt;</span><span class="dl">"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">,</span> <span class="nx">photoURL</span><span class="p">));</span>
 
            <span class="p">});</span>
         <span class="p">}</span>
@@ -2912,8 +2996,8 @@ callback function when an error occurs with navigator.geolocation.</p>
 
 <span class="kd">function</span> <span class="nx">onPicturesError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'code: '</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-        <span class="s1">'message: '</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+        <span class="dl">'</span><span class="s1">message: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// Watch your changing position</span>
@@ -2924,7 +3008,8 @@ callback function when an error occurs with navigator.geolocation.</p>
     <span class="p">(</span><span class="nx">onPicturesWatchSuccess</span><span class="p">,</span> <span class="nx">onPicturesError</span><span class="p">,</span> <span class="p">{</span> <span class="na">enableHighAccuracy</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
 <span class="p">}</span>
 
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

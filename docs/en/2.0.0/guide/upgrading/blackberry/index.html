@@ -1454,51 +1454,61 @@
 <p>Updating just the www folder:</p>
 
 <ol>
-<li>Open your <code>www/</code> folder, which contains your app.</li>
-<li>Remove and update the .jar file in the <code>ext/</code> folder.</li>
-<li>Update the contents of the <code>ext-air/</code> folder.</li>
-<li>Copy the new <code>cordova-2.0.0.js</code> into your project.
-
-<ul>
-<li>If playbook, then update the .js file in the <code>playbook/</code> folder.</li>
-</ul></li>
-<li>Update your HTML to use the new <code>cordova-2.0.0.js</code> file.</li>
-<li><p>Update your <code>www/plugins.xml</code> file. Two plugins changed their
+  <li>Open your <code>www/</code> folder, which contains your app.</li>
+  <li>Remove and update the .jar file in the <code>ext/</code> folder.</li>
+  <li>Update the contents of the <code>ext-air/</code> folder.</li>
+  <li>Copy the new <code>cordova-2.0.0.js</code> into your project.
+    <ul>
+      <li>If playbook, then update the .js file in the <code>playbook/</code> folder.</li>
+    </ul>
+  </li>
+  <li>Update your HTML to use the new <code>cordova-2.0.0.js</code> file.</li>
+  <li>
+    <p>Update your <code>www/plugins.xml</code> file. Two plugins changed their
 namespace/service label. Change the old entries for the <a href="../../../cordova/media/capture/capture.html">Capture</a> and
 <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
-&lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
+ &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+
+    <p>To:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
+ &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+  </li>
 </ol>
 
-<p>To:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
-    &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div>
 <p>Updating the sample folder (ie, updating using the ant tools):</p>
 
 <ol>
-<li>Open the <code>sample/lib/</code> folder.</li>
-<li>Update the .jar file in the <code>cordova.1.9.0/ext/</code> folder.</li>
-<li>Update the contents of the <code>cordova.1.9.0/ext-air/</code> folder.</li>
-<li>Update the .js file in the <code>cordova.1.9.0/javascript/</code> folder.</li>
-<li>Open the <code>sample/lib/</code> folder and rename the <code>cordova.1.9.0/</code> folder to <code>cordova.2.0.0/</code>.</li>
-<li>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www/</code> folder with updated Cordova.</li>
-<li>Open the <code>www/</code> folder and update your HTML to use the new <code>cordova-2.0.0.js</code> file.</li>
-<li><p>Open the <code>www/</code> folder and update the <code>plugins.xml</code> file. Two plugins
+  <li>Open the <code>sample/lib/</code> folder.</li>
+  <li>Update the .jar file in the <code>cordova.1.9.0/ext/</code> folder.</li>
+  <li>Update the contents of the <code>cordova.1.9.0/ext-air/</code> folder.</li>
+  <li>Update the .js file in the <code>cordova.1.9.0/javascript/</code> folder.</li>
+  <li>Open the <code>sample/lib/</code> folder and rename the <code>cordova.1.9.0/</code> folder to <code>cordova.2.0.0/</code>.</li>
+  <li>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www/</code> folder with updated Cordova.</li>
+  <li>Open the <code>www/</code> folder and update your HTML to use the new <code>cordova-2.0.0.js</code> file.</li>
+  <li>
+    <p>Open the <code>www/</code> folder and update the <code>plugins.xml</code> file. Two plugins
 changed their namespace/service label. Change the old entries for the
 <a href="../../../cordova/media/capture/capture.html">Capture</a> and <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:</p>
-<div class="highlight"><pre><code class="language-" data-lang=""> &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
- &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
+  &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+
+    <p>To:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
+  &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+  </li>
 </ol>
 
-<p>To:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
-     &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div>
 <ul>
-<li>To upgrade to 1.8.0, please go from 1.7.0</li>
+  <li>To upgrade to 1.8.0, please go from 1.7.0</li>
 </ul>
 
 <h2>Upgrade to 1.8.0 from 1.7.0</h2>
@@ -1506,49 +1516,60 @@ changed their namespace/service label. Change the old entries for the
 <p>Updating just the www folder:</p>
 
 <ol>
-<li>Open your <code>www/</code> folder, which contains your app.</li>
-<li>Remove and update the .jar file in the <code>ext/</code> folder.</li>
-<li>Update the contents of the <code>ext-air/</code> folder.</li>
-<li>Copy the new <code>cordova-1.8.0.js</code> into your project.
-
-<ul>
-<li>If playbook, then update the .js file in the <code>playbook/</code> folder.</li>
-</ul></li>
-<li>Update your HTML to use the new <code>cordova-1.8.0.js</code> file.</li>
-<li><p>Update your <code>www/plugins.xml</code> file. Two plugins changed their
+  <li>Open your <code>www/</code> folder, which contains your app.</li>
+  <li>Remove and update the .jar file in the <code>ext/</code> folder.</li>
+  <li>Update the contents of the <code>ext-air/</code> folder.</li>
+  <li>Copy the new <code>cordova-1.8.0.js</code> into your project.
+    <ul>
+      <li>If playbook, then update the .js file in the <code>playbook/</code> folder.</li>
+    </ul>
+  </li>
+  <li>Update your HTML to use the new <code>cordova-1.8.0.js</code> file.</li>
+  <li>
+    <p>Update your <code>www/plugins.xml</code> file. Two plugins changed their
 namespace/service label. Change the old entries for the <a href="../../../cordova/media/capture/capture.html">Capture</a> and
 <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
-&lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
+ &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+
+    <p>To:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
+ &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+  </li>
 </ol>
 
-<p>To:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
-    &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div>
 <p>Updating the sample folder (ie, updating using the ant tools):</p>
 
 <ol>
-<li>Open the <code>sample/lib/</code> folder.</li>
-<li>Update the .jar file in the <code>cordova.1.7.0/ext/</code> folder.</li>
-<li>Update the contents of the <code>cordova.1.7.0/ext-air/</code> folder.</li>
-<li>Update the .js file in the <code>cordova.1.7.0/javascript/</code> folder.</li>
-<li>Open the <code>sample/lib/</code> folder and rename the <code>cordova.1.7.0/</code> folder to <code>cordova.1.8.0/</code>.</li>
-<li>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www/</code> folder with updated Cordova.</li>
-<li>Open the <code>www/</code> folder and update your HTML to use the new <code>cordova-1.8.0.js</code> file.</li>
-<li><p>Open the <code>www/</code> folder and update the <code>plugins.xml</code> file. Two plugins
+  <li>Open the <code>sample/lib/</code> folder.</li>
+  <li>Update the .jar file in the <code>cordova.1.7.0/ext/</code> folder.</li>
+  <li>Update the contents of the <code>cordova.1.7.0/ext-air/</code> folder.</li>
+  <li>Update the .js file in the <code>cordova.1.7.0/javascript/</code> folder.</li>
+  <li>Open the <code>sample/lib/</code> folder and rename the <code>cordova.1.7.0/</code> folder to <code>cordova.1.8.0/</code>.</li>
+  <li>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www/</code> folder with updated Cordova.</li>
+  <li>Open the <code>www/</code> folder and update your HTML to use the new <code>cordova-1.8.0.js</code> file.</li>
+  <li>
+    <p>Open the <code>www/</code> folder and update the <code>plugins.xml</code> file. Two plugins
 changed their namespace/service label. Change the old entries for the
 <a href="../../../cordova/media/capture/capture.html">Capture</a> and <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:</p>
-<div class="highlight"><pre><code class="language-" data-lang=""> &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
- &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
+  &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+
+    <p>To:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
+  &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+  </li>
 </ol>
 
-<p>To:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
-     &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div>
+
 
             </div>
         </div>

@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released Cordova iOS 6.1.1! This is Cordova&#39;s official platform for building iOS mobile applications.cordova-i...">
+    <meta name="description" content="We are happy to announce that we have just released Cordova iOS 6.1.1! This is Cordova&#39;s official platform for building iOS mobile applications.  cordova...">
 
     <title>
         
@@ -134,49 +134,56 @@
             <p>We are happy to announce that we have just released <code>Cordova iOS 6.1.1</code>! This is Cordova&#39;s official platform for building iOS mobile applications.</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@6.1.1 on npm</a></li>
-<li><a href="https://cocoapods.org/pods/Cordova">Cordova@6.1.1 on CocoaPods</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@6.1.1 on npm</a></li>
+  <li><a href="https://cocoapods.org/pods/Cordova">Cordova@6.1.1 on CocoaPods</a></li>
 </ul>
 
 <p><strong>To upgrade:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform remove ios
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove ios
 cordova platform add ios@6.1.1
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Release Highlights</h2>
 
 <p>This release contains primarily a fix for deploying to devices, as well as an update to the cordova-common library which we hope will address several issues around <code>Info.plist</code> modifications.</p>
 
 <ul>
-<li><p><strong>Resolve deploying to a connected device</strong> <em>(since 6.0.0)</em></p>
+  <li>
+    <p><strong>Resolve deploying to a connected device</strong> <em>(since 6.0.0)</em></p>
 
-<p>The Cordova iOS 6.0.0 release was unable to deploy apps to connected iPhone and iPad devices. Thanks to first-time contributor imgos for tracking down the source of the problem and providing a fix.</p></li>
-<li><p><strong>Fix for identifying the correct <code>Info.plist</code> file</strong></p>
+    <p>The Cordova iOS 6.0.0 release was unable to deploy apps to connected iPhone and iPad devices. Thanks to first-time contributor imgos for tracking down the source of the problem and providing a fix.</p>
+  </li>
+  <li>
+    <p><strong>Fix for identifying the correct <code>Info.plist</code> file</strong></p>
 
-<p>This has been a long-standing pain point for Cordova iOS users, particularly when plugins attempt to use <code>edit-config</code> or <code>config-file</code> to add directives to the <code>Info.plist</code> file. In some cases, depending on which plugins and CocoaPods were installed, those config changes would end up in the wrong plist file.</p>
+    <p>This has been a long-standing pain point for Cordova iOS users, particularly when plugins attempt to use <code>edit-config</code> or <code>config-file</code> to add directives to the <code>Info.plist</code> file. In some cases, depending on which plugins and CocoaPods were installed, those config changes would end up in the wrong plist file.</p>
 
-<p>This issue was fixed in Cordova Common 4.0.2, and we&#39;ve pulled that dependency into this release.  More details can be found in the <a href="https://github.com/apache/cordova-common/pull/148">pull request</a> and <a href="https://github.com/apache/cordova-common/issues/144">original bug ticket</a>.</p></li>
-<li><p><strong>Append <code>startURL</code> to the initial URL when using custom schemes</strong> <em>(since 6.0.0)</em></p>
+    <p>This issue was fixed in Cordova Common 4.0.2, and we&#39;ve pulled that dependency into this release.  More details can be found in the <a href="https://github.com/apache/cordova-common/pull/148">pull request</a> and <a href="https://github.com/apache/cordova-common/issues/144">original bug ticket</a>.</p>
+  </li>
+  <li>
+    <p><strong>Append <code>startURL</code> to the initial URL when using custom schemes</strong> <em>(since 6.0.0)</em></p>
 
-<p>When using a custom scheme in Cordova iOS 6.0.0 and a <code>config.xml</code> <code>content</code> path that pointed to a subfolder of <code>www</code>, that subfolder would be treated as the root of the custom scheme.  While this is not a common situation, it turns out that is how the <a href="https://github.com/apache/cordova-mobile-spec">mobilespec</a> test suite is implemented.</p>
+    <p>When using a custom scheme in Cordova iOS 6.0.0 and a <code>config.xml</code> <code>content</code> path that pointed to a subfolder of <code>www</code>, that subfolder would be treated as the root of the custom scheme.  While this is not a common situation, it turns out that is how the <a href="https://github.com/apache/cordova-mobile-spec">mobilespec</a> test suite is implemented.</p>
 
-<p>The fix here is that the root of the custom scheme will always map to the <code>www</code> folder. More details can be found in the <a href="https://github.com/apache/cordova-ios/pull/973">pull request</a>.</p></li>
+    <p>The fix here is that the root of the custom scheme will always map to the <code>www</code> folder. More details can be found in the <a href="https://github.com/apache/cordova-ios/pull/973">pull request</a>.</p>
+  </li>
 </ul>
 
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h2>Full Changelog</h2>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-ios/pull/976">GH-976</a> Update npm dependencies to pull in <code>cordova-common@4.0.2</code>
-
-<ul>
-<li>This should resolve several issues affecting Info.plist files, including <a href="https://github.com/apache/cordova-ios/issues/764">#764</a> and <a href="https://github.com/apache/cordova-ios/issues/775">#775</a></li>
-</ul></li>
-<li><a href="https://github.com/apache/cordova-ios/pull/973">GH-973</a> Append <code>startURL</code> to the initial url loaded</li>
-<li><a href="https://github.com/apache/cordova-ios/issues/912">GH-912</a> fix deployment to device (<a href="https://github.com/apache/cordova-ios/pull/936">#936</a>)</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/932">GH-932</a> add node 14 to CI workflow</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/976">GH-976</a> Update npm dependencies to pull in <code>cordova-common@4.0.2</code>
+    <ul>
+      <li>This should resolve several issues affecting Info.plist files, including <a href="https://github.com/apache/cordova-ios/issues/764">#764</a> and <a href="https://github.com/apache/cordova-ios/issues/775">#775</a></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/973">GH-973</a> Append <code>startURL</code> to the initial url loaded</li>
+  <li><a href="https://github.com/apache/cordova-ios/issues/912">GH-912</a> fix deployment to device (<a href="https://github.com/apache/cordova-ios/pull/936">#936</a>)</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/932">GH-932</a> add node 14 to CI workflow</li>
 </ul>
 
         </div>

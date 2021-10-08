@@ -138,30 +138,35 @@
 <p>Things to note:</p>
 
 <ul>
-<li>Updated splash screen mapping for new and missing devices</li>
-<li>Re-added an icon mapping that was accidentally removed</li>
+  <li>Updated splash screen mapping for new and missing devices</li>
+  <li>Re-added an icon mapping that was accidentally removed</li>
 </ul>
 
 <p><strong>Note:</strong> When updating <strong>iOS</strong>, make sure to save your plugins as current unsaved plugins may not be reinstalled otherwise. Run the following command in your project to save your currently installed plugins into <code>config.xml</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin save
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin save
+</code></pre></div></div>
+
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform rm ios
 cordova platform add ios@4.5.3
-</code></pre></div>
-<p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add ios@4.5.3
-</code></pre></div>
-<!--more-->
+</code></pre></div></div>
 
+<p>To add it explicitly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@4.5.3
+</code></pre></div></div>
+
+<!--more-->
 <h2>What&#39;s new in iOS</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13493">CB-13493</a> Updated checked-in node_modules</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13290">CB-13290</a> (ios) Update splash screen mapping for missing devices</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13454">CB-13454</a> (ios) re-add icon-40@2x.png that was accidentally removed</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13493">CB-13493</a> Updated checked-in node_modules</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13290">CB-13290</a> (ios) Update splash screen mapping for missing devices</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13454">CB-13454</a> (ios) re-add icon-40@2x.png that was accidentally removed</li>
 </ul>
 
         </div>

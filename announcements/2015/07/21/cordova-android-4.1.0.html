@@ -134,71 +134,75 @@
             <p>We are happy to announce that <code>Cordova Android 4.1.0</code> has been released.</p>
 
 <p>With this release, there is now support for checking system requirements for Android platform:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$&gt;cordova requirements android
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$&gt;cordova requirements android
 
 Requirements check results for android:
 Java JDK: installed 1.7.0
 Android SDK: installed
 Android target: installed android-19,android-21,android-22,Google Inc.:Google APIs:19,Google Inc.:Google APIs (x86 System Image):19,Google Inc.:Google APIs:21
 Gradle: installed 1.12
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Apart from a number of bug fixes, mininumSdkTarget has also been switched to 14 from 7. The minimum supported Android OS for Cordova is now Ice Cream Sandwich.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android@4.1.0
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@4.1.0
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@4.1.0
+</code></pre></div></div>
+
 <!--more-->
-
 <h2>What&#39;s new in Android platform</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9392">CB-9392</a> Fixed printing flavored versions. This closes #184.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9382">CB-9382</a> [Android] Fix KeepRunning setting when Plugin activity is showed. This closes #200</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9391">CB-9391</a> Fixes cdvBuildMultipleApks option casting</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9343">CB-9343</a> Split the Content-Type to obtain a clean mimetype</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9255">CB-9255</a> Make getUriType case insensitive.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9149">CB-9149</a> Fixes JSHint issue introduced by 899daa9</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9372">CB-9372</a>: Remove unused files: &#39;main.js&#39; &amp; &#39;master.css&#39;. This closes #198</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9149">CB-9149</a> Make gradle alias subprojects in order to handle libs that depend on libs. This closes #182</li>
-<li>Update min SDK version to 14</li>
-<li>Update licenses. This closes #190</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9185">CB-9185</a> Fix signed release build exception. This closes #193.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9286">CB-9286</a> Fixes build failure when ANDROID_HOME is not set.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9284">CB-9284</a> Fix for handling absolute path for keystore in build.json</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9260">CB-9260</a> Install Android-22 on Travis-CI</li>
-<li>Adding .ratignore file.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9119">CB-9119</a> Adding lib/retry.js for retrying promise-returning functions. Retrying &#39;adb install&#39; in emulator.js because it sometimes hangs.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9115">CB-9115</a> android: Grant Lollipop permission req</li>
-<li>Remove extra console message</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8898">CB-8898</a> Report expected gradle location properly</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8898">CB-8898</a> Fixes gradle check failure due to missing quotes</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9080">CB-9080</a>: -d option is not supported on Android 4.1.1 and lower, removing</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8954">CB-8954</a> Adds <code>requirements</code> command support to check_reqs module</li>
-<li>Update JS snapshot to version 4.1.0-dev (via coho)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8417">CB-8417</a> updated platform specific files from cordova.js repo</li>
-<li>Adding tests to confirm that preferences aren&#39;t changed by Intents</li>
-<li>Forgot to remove the method that copied over the intent data</li>
-<li>Getting around to removing this old Intent code</li>
-<li>Update JS snapshot to version 4.1.0-dev (via coho)</li>
-<li>Fix CordovaPluginTest on KitKat (start-up events seem to change)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3360">CB-3360</a> Allow setting a custom User-Agent (close #162)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8902">CB-8902</a> Use immersive mode when available when going fullscreen (close #175)</li>
-<li>Make BridgeMode methods public (they were always supposed to be)</li>
-<li>Simplify: EncodingUtils.getBytes(str) -&gt; str.getBytes()</li>
-<li>Don&#39;t show warning when gradlew file is read-only</li>
-<li>Don&#39;t show warning when prepEnv copies gradlew and it&#39;s read-only</li>
-<li>Make gradle wrapper prepEnv code work even when android-sdk is read-only</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8897">CB-8897</a> Delete drawable/icon.png since it duplicates drawable-mdpi/icon.png</li>
-<li>Updating the template to target mininumSdkTarget=14</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8894">CB-8894</a>: Updating the template to target mininumSdkTarget=14</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8891">CB-8891</a> Add a note about when the gradle helpers were added</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8891">CB-8891</a> Add a gradle helper for retrieving config.xml preference values</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8884">CB-8884</a> Delete Eclipse tweaks from create script</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9392">CB-9392</a> Fixed printing flavored versions. This closes #184.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9382">CB-9382</a> [Android] Fix KeepRunning setting when Plugin activity is showed. This closes #200</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9391">CB-9391</a> Fixes cdvBuildMultipleApks option casting</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9343">CB-9343</a> Split the Content-Type to obtain a clean mimetype</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9255">CB-9255</a> Make getUriType case insensitive.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9149">CB-9149</a> Fixes JSHint issue introduced by 899daa9</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9372">CB-9372</a>: Remove unused files: &#39;main.js&#39; &amp; &#39;master.css&#39;. This closes #198</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9149">CB-9149</a> Make gradle alias subprojects in order to handle libs that depend on libs. This closes #182</li>
+  <li>Update min SDK version to 14</li>
+  <li>Update licenses. This closes #190</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9185">CB-9185</a> Fix signed release build exception. This closes #193.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9286">CB-9286</a> Fixes build failure when ANDROID_HOME is not set.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9284">CB-9284</a> Fix for handling absolute path for keystore in build.json</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9260">CB-9260</a> Install Android-22 on Travis-CI</li>
+  <li>Adding .ratignore file.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9119">CB-9119</a> Adding lib/retry.js for retrying promise-returning functions. Retrying &#39;adb install&#39; in emulator.js because it sometimes hangs.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9115">CB-9115</a> android: Grant Lollipop permission req</li>
+  <li>Remove extra console message</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8898">CB-8898</a> Report expected gradle location properly</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8898">CB-8898</a> Fixes gradle check failure due to missing quotes</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9080">CB-9080</a>: -d option is not supported on Android 4.1.1 and lower, removing</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8954">CB-8954</a> Adds <code>requirements</code> command support to check_reqs module</li>
+  <li>Update JS snapshot to version 4.1.0-dev (via coho)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8417">CB-8417</a> updated platform specific files from cordova.js repo</li>
+  <li>Adding tests to confirm that preferences aren&#39;t changed by Intents</li>
+  <li>Forgot to remove the method that copied over the intent data</li>
+  <li>Getting around to removing this old Intent code</li>
+  <li>Update JS snapshot to version 4.1.0-dev (via coho)</li>
+  <li>Fix CordovaPluginTest on KitKat (start-up events seem to change)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3360">CB-3360</a> Allow setting a custom User-Agent (close #162)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8902">CB-8902</a> Use immersive mode when available when going fullscreen (close #175)</li>
+  <li>Make BridgeMode methods public (they were always supposed to be)</li>
+  <li>Simplify: EncodingUtils.getBytes(str) -&gt; str.getBytes()</li>
+  <li>Don&#39;t show warning when gradlew file is read-only</li>
+  <li>Don&#39;t show warning when prepEnv copies gradlew and it&#39;s read-only</li>
+  <li>Make gradle wrapper prepEnv code work even when android-sdk is read-only</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8897">CB-8897</a> Delete drawable/icon.png since it duplicates drawable-mdpi/icon.png</li>
+  <li>Updating the template to target mininumSdkTarget=14</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8894">CB-8894</a>: Updating the template to target mininumSdkTarget=14</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8891">CB-8891</a> Add a note about when the gradle helpers were added</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8891">CB-8891</a> Add a gradle helper for retrieving config.xml preference values</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8884">CB-8884</a> Delete Eclipse tweaks from create script</li>
 </ul>
 
         </div>

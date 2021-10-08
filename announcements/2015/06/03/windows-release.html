@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that Cordova Windows 4.0.0 has been released!Key featuresThe default Windows target version is now 8.1. Windows 8.0 support is depre...">
+    <meta name="description" content="We are happy to announce that Cordova Windows 4.0.0 has been released!##Key features  The default Windows target version is now 8.1. Windows 8.0 support is d...">
 
     <title>
         
@@ -133,60 +133,60 @@
         <div>
             <p>We are happy to announce that Cordova Windows 4.0.0 has been released!</p>
 
-<h2>Key features</h2>
-
+<p>##Key features</p>
 <ul>
-<li>The default Windows target version is now 8.1. Windows 8.0 support is deprecated and a warning will be issued when building for Windows 8.0. The support for Windows 8.0 will be removed in 6 months. If you have <code>windows-target-version</code> preference in config.xml set to 8.0, you will see this warning and you should consider changing it to 8.1.</li>
-<li><code>windows8</code> platform keyword is deprecated. For all plugins, use <code>windows</code> as the platform keyword.<br></li>
-<li>Support for Windows 10 Insider Preview and building using Visual Studio 2015 RC. More details can be found below. This support will evolve as Windows 10 release comes along.</li>
-<li>Support for specifying parameters for signing Windows apps - like signing certificate, publisher identity etc. More details can be found in <a href="http://cordova.apache.org/docs/en/dev/guide_platforms_win8_packaging.md.html#Windows%20Plugins">docs</a></li>
+  <li>The default Windows target version is now 8.1. Windows 8.0 support is deprecated and a warning will be issued when building for Windows 8.0. The support for Windows 8.0 will be removed in 6 months. If you have <code>windows-target-version</code> preference in config.xml set to 8.0, you will see this warning and you should consider changing it to 8.1.</li>
+  <li><code>windows8</code> platform keyword is deprecated. For all plugins, use <code>windows</code> as the platform keyword.</li>
+  <li>Support for Windows 10 Insider Preview and building using Visual Studio 2015 RC. More details can be found below. This support will evolve as Windows 10 release comes along.</li>
+  <li>Support for specifying parameters for signing Windows apps - like signing certificate, publisher identity etc. More details can be found in <a href="http://cordova.apache.org/docs/en/dev/guide_platforms_win8_packaging.md.html#Windows%20Plugins">docs</a></li>
 </ul>
 
-<h2>What&#39;s new in Windows 10</h2>
-
+<p>##What&#39;s new in Windows 10</p>
 <ul>
-<li>Windows 10 Insider Preview introduces the <a href="https://msdn.microsoft.com/en-us/library/windows/apps/dn894631.aspx">Universal Windows Platform (UWP)</a> which provides a guaranteed core API layer across devices. You can create a single app package that can be installed onto a wide range of devices. A single store makes it easy to publish apps across all device types - desktop, mobile, Xbox, iOT.</li>
-<li>In Windows 8 and 8.1, the app was loaded in the ms-appx  context. In Windows 10 for Cordova, by default the app is loaded in ms-appx-web  and have access to most Windows Runtime APIs. This allows you to <a href="https://msdn.microsoft.com/en-us/library/windows/apps/dn705792.aspx">host remote content</a> in your Windows Cordova app. More details on how to customize this behavior can be found <a href="http://cordova.apache.org/docs/en/dev/guide_platforms_win8_win10-support.md.html#Cordova%20for%20Windows%2010">here</a>.</li>
-<li>Some JavaScript libraries could not run in Windows 8/8.1 due to the safeHTML restriction and we needed to use winstore-jscompat. In Windows 10 Cordova apps, the security can be applied using <a href="http://content-security-policy.com/">Content Security Policies</a>.</li>
+  <li>Windows 10 Insider Preview introduces the <a href="https://msdn.microsoft.com/en-us/library/windows/apps/dn894631.aspx">Universal Windows Platform (UWP)</a> which provides a guaranteed core API layer across devices. You can create a single app package that can be installed onto a wide range of devices. A single store makes it easy to publish apps across all device types - desktop, mobile, Xbox, iOT.</li>
+  <li>In Windows 8 and 8.1, the app was loaded in the ms-appx  context. In Windows 10 for Cordova, by default the app is loaded in ms-appx-web  and have access to most Windows Runtime APIs. This allows you to <a href="https://msdn.microsoft.com/en-us/library/windows/apps/dn705792.aspx">host remote content</a> in your Windows Cordova app. More details on how to customize this behavior can be found <a href="http://cordova.apache.org/docs/en/dev/guide_platforms_win8_win10-support.md.html#Cordova%20for%20Windows%2010">here</a>.</li>
+  <li>Some JavaScript libraries could not run in Windows 8/8.1 due to the safeHTML restriction and we needed to use winstore-jscompat. In Windows 10 Cordova apps, the security can be applied using <a href="http://content-security-policy.com/">Content Security Policies</a>.</li>
 </ul>
 
 <!--more-->
-
-<h2>Install</h2>
-
-<p>You will need to update to cordova-cli 5.1.1 or higher to use this version of the Windows platform:</p>
+<p>##Install
+You will need to update to cordova-cli 5.1.1 or higher to use this version of the Windows platform:</p>
 
 <p>To add it to an existing project:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cordova platform update windows
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Alternatively, to add it to a new project:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cordova platform add windows
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Changes include:</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8954">CB-8954</a> Adds <code>requirements</code> command support to check_reqs module</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9073">CB-9073</a> Fixes build error when path to project contains <code>&amp;</code> symbol</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8889">CB-8889</a> Persist app/package name and product ID during platform update.</li>
-<li>Updating appx manifest to a large extent now happens in the <code>prepare</code> step as opposed to the <code>build</code> step. This change implies that cordova-windows 4.0.0 can only work with with cordova CLI &gt; 5.0</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8486">CB-8486</a> Support for creating signed package and build.json for Windows</li>
-<li>Add preview support for Windows 10 Universal Apps. To target Windows 10, add <code>&lt;preference name=&quot;windows-target-version&quot; value=&quot;10.0&quot; /&gt;</code> to config.xml.</li>
-<li>The default windows target version is now 8.1.</li>
-<li>Support for <code>--appx</code> command line argument to override the windows target version</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8946">CB-8946</a>: Added the <code>WindowsToastCapable</code> preference to indicate that the app can support toasts.  This is to support the Local Notifications plugin.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8856">CB-8856</a> Fix &#39;Id&#39; attribute is invalid when creating Windows Store submission build</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8307">CB-8307</a>: Adding a 25-year expiration temporary certificate.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8760">CB-8760</a> platform list doesn&#39;t show version for windows platform.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8954">CB-8954</a> Adds <code>requirements</code> command support to check_reqs module</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9073">CB-9073</a> Fixes build error when path to project contains <code>&amp;</code> symbol</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8889">CB-8889</a> Persist app/package name and product ID during platform update.</li>
+  <li>Updating appx manifest to a large extent now happens in the <code>prepare</code> step as opposed to the <code>build</code> step. This change implies that cordova-windows 4.0.0 can only work with with cordova CLI &gt; 5.0</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8486">CB-8486</a> Support for creating signed package and build.json for Windows</li>
+  <li>Add preview support for Windows 10 Universal Apps. To target Windows 10, add <code>&lt;preference name="windows-target-version" value="10.0" /&gt;</code> to config.xml.</li>
+  <li>The default windows target version is now 8.1.</li>
+  <li>Support for <code>--appx</code> command line argument to override the windows target version</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8946">CB-8946</a>: Added the <code>WindowsToastCapable</code> preference to indicate that the app can support toasts.  This is to support the Local Notifications plugin.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8856">CB-8856</a> Fix &#39;Id&#39; attribute is invalid when creating Windows Store submission build</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8307">CB-8307</a>: Adding a 25-year expiration temporary certificate.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8760">CB-8760</a> platform list doesn&#39;t show version for windows platform.</li>
 </ul>
 
-<h2>Known Issues with 4.0.0 and Windows 10</h2>
+<p>##Known Issues with 4.0.0 and Windows 10</p>
 
 <ul>
-<li>Windows 10 Insider Preview does not have a command-line compatible emulator deployment scenario.  To deploy to an emulator, open your solution file in Visual Studio.</li>
-<li>The Windows SDK included with Visual Studio 2015 RC does not include a tool to deploy to a Windows 10 Phone.  To deploy to a phone, open your solution file in Visual Studio.</li>
-<li>WinJS is included inline in the package.  In the future, it might be migrated to an NPM dependency. WinJS UI functionality is not included and should be add by you. (see <a href="http://github.com/winjs/winjs">WinJS on Github</a>)</li>
+  <li>Windows 10 Insider Preview does not have a command-line compatible emulator deployment scenario.  To deploy to an emulator, open your solution file in Visual Studio.</li>
+  <li>The Windows SDK included with Visual Studio 2015 RC does not include a tool to deploy to a Windows 10 Phone.  To deploy to a phone, open your solution file in Visual Studio.</li>
+  <li>WinJS is included inline in the package.  In the future, it might be migrated to an NPM dependency. WinJS UI functionality is not included and should be add by you. (see <a href="http://github.com/winjs/winjs">WinJS on Github</a>)</li>
 </ul>
 
         </div>

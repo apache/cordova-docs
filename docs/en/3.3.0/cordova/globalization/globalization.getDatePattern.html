@@ -1641,18 +1641,28 @@
 
 <p>Returns a pattern string to format and parse dates according to the
 client&#39;s user preferences.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.globalization.getDatePattern(successCallback, errorCallback, options);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getDatePattern(successCallback, errorCallback, options);
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p>Returns the pattern to the <code>successCallback</code>. The object passed in as
 a parameter contains the following properties:</p>
 
 <ul>
-<li><p><strong>pattern</strong>: The date and time pattern to format and parse dates. The patterns follow <a href="http://unicode.org/reports/tr35/tr35-4.html">Unicode Technical Standard #35</a>. <em>(String)</em></p></li>
-<li><p><strong>timezone</strong>: The abbreviated name of the time zone on the client. <em>(String)</em></p></li>
-<li><p><strong>utc_offset</strong>: The current difference in seconds between the client&#39;s time zone and coordinated universal time. <em>(Number)</em></p></li>
-<li><p><strong>dst_offset</strong>: The current daylight saving time offset in seconds between the client&#39;s non-daylight saving&#39;s time zone and the client&#39;s daylight saving&#39;s time zone. <em>(Number)</em></p></li>
+  <li>
+    <p><strong>pattern</strong>: The date and time pattern to format and parse dates. The patterns follow <a href="http://unicode.org/reports/tr35/tr35-4.html">Unicode Technical Standard #35</a>. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>timezone</strong>: The abbreviated name of the time zone on the client. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>utc_offset</strong>: The current difference in seconds between the client&#39;s time zone and coordinated universal time. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>dst_offset</strong>: The current daylight saving time offset in seconds between the client&#39;s non-daylight saving&#39;s time zone and the client&#39;s daylight saving&#39;s time zone. <em>(Number)</em></p>
+  </li>
 </ul>
 
 <p>If there is an error obtaining the pattern, the <code>errorCallback</code>
@@ -1660,8 +1670,10 @@ executes with a <code>[GlobalizationError](GlobalizationError/globalizationerror
 error&#39;s expected code is <code>[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR</code>.</p>
 
 <p>The <code>options</code> parameter is optional, and defaults to the following values:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">{formatLength:'short', selector:'date and time'}
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{formatLength:'short', selector:'date and time'}
+</code></pre></div></div>
+
 <p>The <code>options.formatLength</code> can be <code>short</code>, <code>medium</code>, <code>long</code>, or
 <code>full</code>.  The <code>options.selector</code> can be <code>date</code>, <code>time</code> or <code>date and
 time</code>.</p>
@@ -1669,55 +1681,68 @@ time</code>.</p>
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Amazon Fire OS</li>
-<li>Android</li>
-<li>iOS</li>
-<li>Windows Phone 8</li>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
 </ul>
 
 <h2>Quick Example</h2>
 
 <p>When the browser is set to the <code>en\_US</code> locale, this example displays
 a popup dialog with text such as <code>pattern: M/d/yyyy h:mm a</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">function checkDatePattern() {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function checkDatePattern() {
     navigator.globalization.getDatePattern(
         function (date) { alert('pattern: ' + date.pattern + '\n'); },
         function () { alert('Error getting pattern\n'); },
         { formatLength: 'short', selector: 'date and time' }
     );
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>getDatePattern Example<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
 
-    <span class="kd">function</span> <span class="nx">checkDatePattern</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nb">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getDatePattern</span><span class="p">(</span>
-        <span class="kd">function</span> <span class="p">(</span><span class="nx">date</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'pattern: '</span> <span class="o">+</span> <span class="nx">date</span><span class="p">.</span><span class="nx">pattern</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);},</span>
-        <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Error getting pattern\n'</span><span class="p">);},</span>
-        <span class="p">{</span><span class="na">formatLength</span><span class="p">:</span><span class="s1">'short'</span><span class="p">,</span> <span class="na">selector</span><span class="p">:</span><span class="s1">'date and time'</span><span class="p">}</span>
-      <span class="p">);</span>
-    <span class="p">}</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;getDatePattern Example&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"checkDatePattern()"</span><span class="nt">&gt;</span>Click for pattern<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    function checkDatePattern() {
+      navigator.globalization.getDatePattern(
+        function (date) {alert('pattern: ' + date.pattern + '\n');},
+        function () {alert('Error getting pattern\n');},
+        {formatLength:'short', selector:'date and time'}
+      );
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkDatePattern()"&gt;Click for pattern&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 <h2>Windows Phone 8 Quirks</h2>
 
 <ul>
-<li><p>The <code>formatLength</code> supports only <code>short</code> and <code>full</code> values.</p></li>
-<li><p>The <code>pattern</code> for <code>date and time</code> pattern returns only full datetime format.</p></li>
-<li><p>The <code>timezone</code> returns the full time zone name.</p></li>
-<li><p>The <code>dst_offset</code> property is not supported, and always returns zero.</p></li>
+  <li>
+    <p>The <code>formatLength</code> supports only <code>short</code> and <code>full</code> values.</p>
+  </li>
+  <li>
+    <p>The <code>pattern</code> for <code>date and time</code> pattern returns only full datetime format.</p>
+  </li>
+  <li>
+    <p>The <code>timezone</code> returns the full time zone name.</p>
+  </li>
+  <li>
+    <p>The <code>dst_offset</code> property is not supported, and always returns zero.</p>
+  </li>
 </ul>
+
 
 
             </div>

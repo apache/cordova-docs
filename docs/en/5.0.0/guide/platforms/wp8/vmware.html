@@ -1384,31 +1384,34 @@ provides general instructions for how to run Windows under VMWare
 Fusion.  After installing Windows, follow these steps:</p>
 
 <ol>
-<li><p>Within VMWare Fusion, select the Windows 8 disk image you have
-prepared and choose <strong>Settings</strong>.</p></li>
-<li><p>Choose the <strong>Processors &amp; Memory</strong> configuration options. Make sure
+  <li>
+    <p>Within VMWare Fusion, select the Windows 8 disk image you have
+prepared and choose <strong>Settings</strong>.</p>
+  </li>
+  <li>
+    <p>Choose the <strong>Processors &amp; Memory</strong> configuration options. Make sure
 to specify <em>two</em> processor cores, and to <strong>Enable hypervisor
-applications in this Virtual machine</strong>:</p></li>
-</ol>
+applications in this Virtual machine</strong>:</p>
 
-<p><img src="/static/img/guide/platforms/wp8/vmware_memory_opts.png" alt=""></p>
+    <p><img src="/static/img/guide/platforms/wp8/vmware_memory_opts.png" alt="" /></p>
 
-<p>The Windows Phone Emulator alone uses half a gigabyte of memory, so
-   overall you should reserve at least 2GB for VMWare.</p>
+    <p>The Windows Phone Emulator alone uses half a gigabyte of memory, so
+overall you should reserve at least 2GB for VMWare.</p>
+  </li>
+  <li>
+    <p>Choose the <strong>Advanced</strong> settings. Enable the <strong>Preferred
+virtualization engine: Intel VT-x with EPT</strong> option:</p>
 
-<ol>
-<li>Choose the <strong>Advanced</strong> settings. Enable the <strong>Preferred
-virtualization engine: Intel VT-x with EPT</strong> option:</li>
-</ol>
+    <p><img src="/static/img/guide/platforms/wp8/vmware_advanced_opts.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Modify the <em>.vmx</em> file to add or modify the following settings:</p>
 
-<p><img src="/static/img/guide/platforms/wp8/vmware_advanced_opts.png" alt=""></p>
-
-<ol>
-<li><p>Modify the <em>.vmx</em> file to add or modify the following settings:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">hypervisor.cpuid.v0 = "FALSE"
-mce.enable = "TRUE"
-vhv.enable = "TRUE"
-</code></pre></div></li>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> hypervisor.cpuid.v0 = "FALSE"
+ mce.enable = "TRUE"
+ vhv.enable = "TRUE"
+</code></pre></div>    </div>
+  </li>
 </ol>
 
 <p>Once you complete these steps, you are then ready to install the

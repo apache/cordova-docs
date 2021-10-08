@@ -1330,7 +1330,7 @@
                 <h1>Connection</h1>
 
 <blockquote>
-<p>The <code>connection</code> object gives access to the device&#39;s cellular and wifi connection information.</p>
+  <p>The <code>connection</code> object gives access to the device&#39;s cellular and wifi connection information.</p>
 </blockquote>
 
 <p>This object is accessed under the <code>navigator.network</code> interface.</p>
@@ -1338,40 +1338,39 @@
 <h2>Properties</h2>
 
 <ul>
-<li><a href="connection.type.html">connection.type</a></li>
+  <li><a href="connection.type.html">connection.type</a></li>
 </ul>
 
 <h2>Constants</h2>
 
 <ul>
-<li>Connection.UNKNOWN</li>
-<li>Connection.ETHERNET</li>
-<li>Connection.WIFI</li>
-<li>Connection.CELL_2G</li>
-<li>Connection.CELL_3G</li>
-<li>Connection.CELL_4G</li>
-<li>Connection.NONE</li>
+  <li>Connection.UNKNOWN</li>
+  <li>Connection.ETHERNET</li>
+  <li>Connection.WIFI</li>
+  <li>Connection.CELL_2G</li>
+  <li>Connection.CELL_3G</li>
+  <li>Connection.CELL_4G</li>
+  <li>Connection.NONE</li>
 </ul>
 
 <h2>WP7 Quirk</h2>
 
 <ul>
-<li><strong>type:</strong>
+  <li><strong>type:</strong>
 Windows Phone Emulator always reports navigator.network.connection.type is Connection.UNKNOWN</li>
 </ul>
 
 <h2>iOS Quirk</h2>
 
 <ul>
-<li><strong>type:</strong>
+  <li><strong>type:</strong>
 iOS can only report whether the device is on a cellular connection, not
 of what type, thus it will always report as CELL_2G</li>
 </ul>
 
 <h2>Bada Quirk</h2>
-
 <ul>
-<li>Bada can only report if device is on Wifi or connected to cellular connection CELL_2G ( type not reported )</li>
+  <li>Bada can only report if device is on Wifi or connected to cellular connection CELL_2G ( type not reported )</li>
 </ul>
 
 

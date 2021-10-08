@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The following plugins were updated today:cordova-plugin-camera@2.1.1cordova-plugin-statusbar@2.1.2cordova-plugin-globalization@1.0.3cordova-plugin-splashscre...">
+    <meta name="description" content="The following plugins were updated today:  cordova-plugin-camera@2.1.1  cordova-plugin-statusbar@2.1.2  cordova-plugin-globalization@1.0.3  cordova-plugin-sp...">
 
     <title>
         
@@ -134,80 +134,76 @@
             <p>The following plugins were updated today:</p>
 
 <ul>
-<li>cordova-plugin-camera@2.1.1</li>
-<li>cordova-plugin-statusbar@2.1.2</li>
-<li>cordova-plugin-globalization@1.0.3</li>
-<li>cordova-plugin-splashscreen@3.2.1</li>
+  <li>cordova-plugin-camera@2.1.1</li>
+  <li>cordova-plugin-statusbar@2.1.2</li>
+  <li>cordova-plugin-globalization@1.0.3</li>
+  <li>cordova-plugin-splashscreen@3.2.1</li>
 </ul>
 
-<hr>
-
+<hr />
 <p>You can update any plugin by removing it, and then re-adding it.</p>
 
 <p>E.g. To update your camera plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm cordova-plugin-camera --save
-cordova plugin add cordova-plugin-camera@2.1.1 --save
-</code></pre></div>
-<p>Changes include:</p>
 
-<!--more-->
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm cordova-plugin-camera --save
+cordova plugin add cordova-plugin-camera@2.1.1 --save
+</code></pre></div></div>
+
+<p>Changes include:
+<!--more--></p>
 
 <p>cordova-plugin-camera@2.1.1</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10825">CB-10825</a> <strong>Android</strong> should request READ permission for gallery source</li>
-<li>added apache license header to appium files</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10720">CB-10720</a> Fixed spelling, capitalization, and other small issues.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10414">CB-10414</a> Adding focus handler to resume video when user comes back on leaving the app while preview was running</li>
-<li>Appium tests: adjust swipe distance on <strong>Android</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10750">CB-10750</a> Appium tests: fail fast if session is irrecoverable</li>
-<li>Adding missing semi colon</li>
-<li>Adding focus handler to make sure filepicker gets launched when app is active on <strong>Windows</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10128">CB-10128</a> <strong>iOS</strong> Fixed how checks access authorization to camera &amp; library. This closes #146</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add JSHint for plugins</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10639">CB-10639</a> Appium tests: Added some timeouts, Taking a screenshot on failure, Retry taking a picture up to 3 times, Try to restart the Appium session if it&#39;s lost</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10552">CB-10552</a> Replacing images in README.md.</li>
-<li>Added a lot of more cases to get the real path on <strong>Android</strong> </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10625">CB-10625</a> <strong>Android</strong> getPicture fails when getting a photo from the Photo Library - Google Photos</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10619">CB-10619</a> Appium tests: Properly switch to webview on <strong>Android</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10397">CB-10397</a> Added Appium tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10576">CB-10576</a> MobileSpec can&#39;t get results for <strong>Windows</strong>-Store 8.1 Builds</li>
-<li>chore: edit package.json license to match SPDX id</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10539">CB-10539</a> Commenting out the verySmallQvga maxResolution option on <strong>Windows</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10541">CB-10541</a> Changing default maxResoltion to be highestAvailable for CameraCaptureUI on <strong>Windows</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10113">CB-10113</a> <strong>Browser</strong> - Layer camera UI on top of all! </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10502">CB-10502</a> <strong>Browser</strong> - Fix camera plugin exception in Chrome when click capture.</li>
-<li>Adding comments</li>
-<li>Camera tapping fix on <strong>Windows</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10825">CB-10825</a> <strong>Android</strong> should request READ permission for gallery source</li>
+  <li>added apache license header to appium files</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10720">CB-10720</a> Fixed spelling, capitalization, and other small issues.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10414">CB-10414</a> Adding focus handler to resume video when user comes back on leaving the app while preview was running</li>
+  <li>Appium tests: adjust swipe distance on <strong>Android</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10750">CB-10750</a> Appium tests: fail fast if session is irrecoverable</li>
+  <li>Adding missing semi colon</li>
+  <li>Adding focus handler to make sure filepicker gets launched when app is active on <strong>Windows</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10128">CB-10128</a> <strong>iOS</strong> Fixed how checks access authorization to camera &amp; library. This closes #146</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add JSHint for plugins</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10639">CB-10639</a> Appium tests: Added some timeouts, Taking a screenshot on failure, Retry taking a picture up to 3 times, Try to restart the Appium session if it&#39;s lost</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10552">CB-10552</a> Replacing images in README.md.</li>
+  <li>Added a lot of more cases to get the real path on <strong>Android</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10625">CB-10625</a> <strong>Android</strong> getPicture fails when getting a photo from the Photo Library - Google Photos</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10619">CB-10619</a> Appium tests: Properly switch to webview on <strong>Android</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10397">CB-10397</a> Added Appium tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10576">CB-10576</a> MobileSpec can&#39;t get results for <strong>Windows</strong>-Store 8.1 Builds</li>
+  <li>chore: edit package.json license to match SPDX id</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10539">CB-10539</a> Commenting out the verySmallQvga maxResolution option on <strong>Windows</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10541">CB-10541</a> Changing default maxResoltion to be highestAvailable for CameraCaptureUI on <strong>Windows</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10113">CB-10113</a> <strong>Browser</strong> - Layer camera UI on top of all!</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10502">CB-10502</a> <strong>Browser</strong> - Fix camera plugin exception in Chrome when click capture.</li>
+  <li>Adding comments</li>
+  <li>Camera tapping fix on <strong>Windows</strong></li>
 </ul>
 
 <p>cordova-plugin-statusbar@2.1.2</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10752">CB-10752</a> for for status bar overlays the webview on <strong>iOS</strong> 6 in some cases</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10683">CB-10683</a> Fix wrong StatusBar.isVisible initial value on <strong>Window</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add JSHint for plugins</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10047">CB-10047</a> fix <strong>iOS</strong> 8 deprecated warnings</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10752">CB-10752</a> for for status bar overlays the webview on <strong>iOS</strong> 6 in some cases</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10683">CB-10683</a> Fix wrong StatusBar.isVisible initial value on <strong>Window</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add JSHint for plugins</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10047">CB-10047</a> fix <strong>iOS</strong> 8 deprecated warnings</li>
 </ul>
 
 <p>cordova-plugin-globalization@1.0.3</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10792">CB-10792</a> -Cannot install cordova-plugin-globalization with cordova-windows on Ubuntu</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add JSHint for plugins</li>
-<li>Minor changes to readme</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10605">CB-10605</a> fix deprecation warnings on <strong>iOS</strong></li>
-<li>chore: edit package.json license to match SPDX id</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10792">CB-10792</a> -Cannot install cordova-plugin-globalization with cordova-windows on Ubuntu</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add JSHint for plugins</li>
+  <li>Minor changes to readme</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10605">CB-10605</a> fix deprecation warnings on <strong>iOS</strong></li>
+  <li>chore: edit package.json license to match SPDX id</li>
 </ul>
 
 <p>cordova-plugin-splashscreen@3.2.1</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10764">CB-10764</a> Remove emoji in cordova-plugin-splashscreen</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10650">CB-10650</a> Non-index content.src causes Splashscreen to be not displayed on <strong>Browser</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add JSHint for plugins</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10606">CB-10606</a> fix deprecation warning for interfaceOrientation on <strong>iOS</strong></li>
-<li>chore: edit package.json license to match SPDX id</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10764">CB-10764</a> Remove emoji in cordova-plugin-splashscreen</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10650">CB-10650</a> Non-index content.src causes Splashscreen to be not displayed on <strong>Browser</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10636">CB-10636</a> Add JSHint for plugins</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10606">CB-10606</a> fix deprecation warning for interfaceOrientation on <strong>iOS</strong></li>
+  <li>chore: edit package.json license to match SPDX id</li>
 </ul>
 
         </div>

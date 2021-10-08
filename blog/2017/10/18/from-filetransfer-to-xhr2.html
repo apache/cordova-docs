@@ -150,11 +150,11 @@ see regular web APIs be able to handle these use cases.</p>
 What does &quot;sunsetting&quot; mean? In summary:</p>
 
 <ul>
-<li>No more work will be done on the file-transfer plugin by the Cordova development
+  <li>No more work will be done on the file-transfer plugin by the Cordova development
 community.</li>
-<li>You can continue to use the file-transfer plugin if you wish - it should work
+  <li>You can continue to use the file-transfer plugin if you wish - it should work
 fine as-is for the foreseeable future.</li>
-<li>We highly suggest Cordova users transition to using the
+  <li>We highly suggest Cordova users transition to using the
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data">standards-compliant way of sending and receiving binary data</a>.</li>
 </ul>
 
@@ -179,10 +179,10 @@ on the following Cordova-supported platforms without requiring any additional
 plugins:</p>
 
 <ul>
-<li>Android 4.4 or newer.</li>
-<li>iOS 10 or newer.</li>
-<li>Windows UWP (8.1, 10 or newer all work).</li>
-<li>Windows Phone 8 or newer.</li>
+  <li>Android 4.4 or newer.</li>
+  <li>iOS 10 or newer.</li>
+  <li>Windows UWP (8.1, 10 or newer all work).</li>
+  <li>Windows Phone 8 or newer.</li>
 </ul>
 
 <p>As always, check <a href="https://caniuse.com">caniuse.com</a> for detailed support for the
@@ -197,45 +197,48 @@ the previous FileTransfer examples? We have you covered:</p>
 
 <p>Here&#39;s a replacement for
 <a href="https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file-transfer/index.html#download-a-binary-file-to-the-application-cache">FileTransfer&#39;s &quot;Download a Binary File&quot; example</a>:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">(</span><span class="nx">LocalFileSystem</span><span class="p">.</span><span class="nx">PERSISTENT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'file system open: '</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-    <span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="s1">'bot.png'</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'fileEntry is file? '</span> <span class="o">+</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">isFile</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">(</span><span class="nx">LocalFileSystem</span><span class="p">.</span><span class="nx">PERSISTENT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">file system open: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="dl">'</span><span class="s1">bot.png</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">fileEntry is file? </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">isFile</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
         <span class="kd">var</span> <span class="nx">oReq</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
         <span class="c1">// Make sure you add the domain name to the Content-Security-Policy &lt;meta&gt; element.</span>
-        <span class="nx">oReq</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="s2">"http://cordova.apache.org/static/img/cordova_bot.png"</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+        <span class="nx">oReq</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://cordova.apache.org/static/img/cordova_bot.png</span><span class="dl">"</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
         <span class="c1">// Define how you want the XHR data to come back</span>
-        <span class="nx">oReq</span><span class="p">.</span><span class="nx">responseType</span> <span class="o">=</span> <span class="s2">"blob"</span><span class="p">;</span>
+        <span class="nx">oReq</span><span class="p">.</span><span class="nx">responseType</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">blob</span><span class="dl">"</span><span class="p">;</span>
         <span class="nx">oReq</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">oEvent</span><span class="p">)</span> <span class="p">{</span>
             <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="nx">oReq</span><span class="p">.</span><span class="nx">response</span><span class="p">;</span> <span class="c1">// Note: not oReq.responseText</span>
             <span class="k">if</span> <span class="p">(</span><span class="nx">blob</span><span class="p">)</span> <span class="p">{</span>
                 <span class="c1">// Create a URL based on the blob, and set an &lt;img&gt; tag's src to it.</span>
                 <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
-                <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'bot-img'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+                <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">bot-img</span><span class="dl">'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
                 <span class="c1">// Or read the data with a FileReader</span>
                 <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
-                <span class="nx">reader</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"loadend"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                <span class="nx">reader</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">loadend</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
                    <span class="c1">// reader.result contains the contents of blob as text</span>
                 <span class="p">});</span>
                 <span class="nx">reader</span><span class="p">.</span><span class="nx">readAsText</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'we didnt get an XHR response!'</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="dl">'</span><span class="s1">we didnt get an XHR response!</span><span class="dl">'</span><span class="p">);</span>
         <span class="p">};</span>
         <span class="nx">oReq</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-    <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'error getting file! '</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span> <span class="p">});</span>
-<span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'error getting persistent fs! '</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span> <span class="p">});</span>
-</code></pre></div>
+    <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="dl">'</span><span class="s1">error getting file! </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span> <span class="p">});</span>
+<span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="dl">'</span><span class="s1">error getting persistent fs! </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span> <span class="p">});</span>
+</code></pre></div></div>
+
 <p>Here&#39;s a similar replacement for
 <a href="https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file-transfer/index.html#uploadFile">FileTransfer&#39;s &quot;Upload a File&quot; example</a>:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">(</span><span class="nx">LocalFileSystem</span><span class="p">.</span><span class="nx">PERSISTENT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'file system open: '</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-    <span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="s1">'bot.png'</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">(</span><span class="nx">LocalFileSystem</span><span class="p">.</span><span class="nx">PERSISTENT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">file system open: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="dl">'</span><span class="s1">bot.png</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">file</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
             <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
             <span class="nx">reader</span><span class="p">.</span><span class="nx">onloadend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
                 <span class="c1">// Create a blob based on the FileReader "result", which we asked to be retrieved as an ArrayBuffer</span>
-                <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="k">new</span> <span class="nb">Uint8Array</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">)],</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"image/png"</span> <span class="p">});</span>
+                <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="k">new</span> <span class="nb">Uint8Array</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">)],</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">image/png</span><span class="dl">"</span> <span class="p">});</span>
                 <span class="kd">var</span> <span class="nx">oReq</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-                <span class="nx">oReq</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">"POST"</span><span class="p">,</span> <span class="s2">"http://mysweeturl.com/upload_handler"</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+                <span class="nx">oReq</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://mysweeturl.com/upload_handler</span><span class="dl">"</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
                 <span class="nx">oReq</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">oEvent</span><span class="p">)</span> <span class="p">{</span>
                     <span class="c1">// all done!</span>
                 <span class="p">};</span>
@@ -244,10 +247,11 @@ the previous FileTransfer examples? We have you covered:</p>
             <span class="p">};</span>
             <span class="c1">// Read the file as an ArrayBuffer</span>
             <span class="nx">reader</span><span class="p">.</span><span class="nx">readAsArrayBuffer</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
-        <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'error getting fileentry file!'</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span> <span class="p">});</span>
-    <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'error getting file! '</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span> <span class="p">});</span>
-<span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'error getting persistent fs! '</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span> <span class="p">});</span>
-</code></pre></div>
+        <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="dl">'</span><span class="s1">error getting fileentry file!</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span> <span class="p">});</span>
+    <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="dl">'</span><span class="s1">error getting file! </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span> <span class="p">});</span>
+<span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="dl">'</span><span class="s1">error getting persistent fs! </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span> <span class="p">});</span>
+</code></pre></div></div>
+
 <p>Note that both the above examples rely on the File plugin, so if you remove the
 FileTransfer plugin from your app, make sure to add the File plugin!</p>
 

@@ -2168,30 +2168,35 @@
 #         under the License.
 -->
 
-<table><thead>
-<tr>
-<th style="text-align: center">AppVeyor</th>
-<th style="text-align: center">Travis CI</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: center"><a href="https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-file-transfer"><img src="https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-file-transfer?branch=master" alt="Build status"></a></td>
-<td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-file-transfer"><img src="https://travis-ci.org/apache/cordova-plugin-file-transfer.svg?branch=master" alt="Build Status"></a></td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">AppVeyor</th>
+      <th style="text-align: center">Travis CI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-file-transfer"><img src="https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-file-transfer?branch=master" alt="Build status" /></a></td>
+      <td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-file-transfer"><img src="https://travis-ci.org/apache/cordova-plugin-file-transfer.svg?branch=master" alt="Build Status" /></a></td>
+    </tr>
+  </tbody>
+</table>
 
 <h1>cordova-plugin-file-transfer</h1>
 
 <p>This plugin allows you to upload and download files.</p>
 
 <p>This plugin defines global <code>FileTransfer</code>, <code>FileUploadOptions</code> constructors. Although in the global scope, they are not available until after the <code>deviceready</code> event.</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">FileTransfer</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <blockquote>
-<p>To get a few ideas, check out the <a href="#sample">sample</a> at the bottom of this page.</p>
+  <p>To get a few ideas, check out the <a href="#sample">sample</a> at the bottom of this page.</p>
 </blockquote>
 
 <p>Report issues with this plugin on the <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20File%20Transfer%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC">Apache Cordova issue tracker</a></p>
@@ -2201,19 +2206,21 @@
 <p>With the new features introduced in <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, this plugin is not needed any more. Migrating from this plugin to using the new features of <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, is explained in this <a href="https://cordova.apache.org/blog/2017/10/18/from-filetransfer-to-xhr2.html">Cordova blog post</a>.</p>
 
 <h2>Installation</h2>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova plugin add cordova-plugin-file-transfer
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-file-transfer
+</code></pre></div></div>
+
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Amazon Fire OS</li>
-<li>Android</li>
-<li>BlackBerry 10</li>
-<li>Browser</li>
-<li>Firefox OS**</li>
-<li>iOS</li>
-<li>Windows Phone 7 and 8*</li>
-<li>Windows</li>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Browser</li>
+  <li>Firefox OS**</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8*</li>
+  <li>Windows</li>
 </ul>
 
 <p>* <em>Do not support <code>onprogress</code> nor <code>abort()</code></em></p>
@@ -2228,15 +2235,21 @@ multi-part POST or PUT request, and to download files.</p>
 <h2>Properties</h2>
 
 <ul>
-<li><strong>onprogress</strong>: Called with a <code>ProgressEvent</code> whenever a new chunk of data is transferred. <em>(Function)</em></li>
+  <li><strong>onprogress</strong>: Called with a <code>ProgressEvent</code> whenever a new chunk of data is transferred. <em>(Function)</em></li>
 </ul>
 
 <h2>Methods</h2>
 
 <ul>
-<li><p><strong>upload</strong>: Sends a file to a server.</p></li>
-<li><p><strong>download</strong>: Downloads a file from server.</p></li>
-<li><p><strong>abort</strong>: Aborts an in-progress transfer.</p></li>
+  <li>
+    <p><strong>upload</strong>: Sends a file to a server.</p>
+  </li>
+  <li>
+    <p><strong>download</strong>: Downloads a file from server.</p>
+  </li>
+  <li>
+    <p><strong>abort</strong>: Aborts an in-progress transfer.</p>
+  </li>
 </ul>
 
 <h2>upload</h2>
@@ -2244,75 +2257,86 @@ multi-part POST or PUT request, and to download files.</p>
 <p><strong>Parameters</strong>:</p>
 
 <ul>
-<li><p><strong>fileURL</strong>: Filesystem URL representing the file on the device or a <a href="https://en.wikipedia.org/wiki/Data_URI_scheme">data URI</a>. For backwards compatibility, this can also be the full path of the file on the device. (See <a href="#backwards-compatibility-notes">Backwards Compatibility Notes</a> below)</p></li>
-<li><p><strong>server</strong>: URL of the server to receive the file, as encoded by <code>encodeURI()</code>.</p></li>
-<li><p><strong>successCallback</strong>: A callback that is passed a <code>FileUploadResult</code> object. <em>(Function)</em></p></li>
-<li><p><strong>errorCallback</strong>: A callback that executes if an error occurs retrieving the <code>FileUploadResult</code>. Invoked with a <code>FileTransferError</code> object. <em>(Function)</em></p></li>
-<li><p><strong>options</strong>: Optional parameters <em>(Object)</em>. Valid keys:</p>
-
-<ul>
-<li><strong>fileKey</strong>: The name of the form element.  Defaults to <code>file</code>. (DOMString)</li>
-<li><strong>fileName</strong>: The file name to use when saving the file on the server.  Defaults to <code>image.jpg</code>. (DOMString)</li>
-<li><strong>httpMethod</strong>: The HTTP method to use - either <code>PUT</code> or <code>POST</code>. Defaults to <code>POST</code>. (DOMString)</li>
-<li><strong>mimeType</strong>: The mime type of the data to upload.  Defaults to <code>image/jpeg</code>. (DOMString)</li>
-<li><strong>params</strong>: A set of optional key/value pairs to pass in the HTTP request. (Object, key/value - DOMString)</li>
-<li><strong>chunkedMode</strong>: Whether to upload the data in chunked streaming mode. Defaults to <code>true</code>. (Boolean)</li>
-<li><strong>headers</strong>: A map of header name/header values. Use a hash to specify one or more than one value.  On iOS, FireOS, and Android, if a header named Content-Type is present, multipart form data will NOT be used. (Object)</li>
-</ul></li>
-<li><p><strong>trustAllHosts</strong>: Optional parameter, defaults to <code>false</code>. If set to <code>true</code>, it accepts all security certificates. Not recommended for production use. Supported on iOS. <em>(boolean)</em></p></li>
+  <li>
+    <p><strong>fileURL</strong>: Filesystem URL representing the file on the device or a <a href="https://en.wikipedia.org/wiki/Data_URI_scheme">data URI</a>. For backwards compatibility, this can also be the full path of the file on the device. (See <a href="#backwards-compatibility-notes">Backwards Compatibility Notes</a> below)</p>
+  </li>
+  <li>
+    <p><strong>server</strong>: URL of the server to receive the file, as encoded by <code>encodeURI()</code>.</p>
+  </li>
+  <li>
+    <p><strong>successCallback</strong>: A callback that is passed a <code>FileUploadResult</code> object. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>errorCallback</strong>: A callback that executes if an error occurs retrieving the <code>FileUploadResult</code>. Invoked with a <code>FileTransferError</code> object. <em>(Function)</em></p>
+  </li>
+  <li><strong>options</strong>: Optional parameters <em>(Object)</em>. Valid keys:
+    <ul>
+      <li><strong>fileKey</strong>: The name of the form element.  Defaults to <code>file</code>. (DOMString)</li>
+      <li><strong>fileName</strong>: The file name to use when saving the file on the server.  Defaults to <code>image.jpg</code>. (DOMString)</li>
+      <li><strong>httpMethod</strong>: The HTTP method to use - either <code>PUT</code> or <code>POST</code>. Defaults to <code>POST</code>. (DOMString)</li>
+      <li><strong>mimeType</strong>: The mime type of the data to upload.  Defaults to <code>image/jpeg</code>. (DOMString)</li>
+      <li><strong>params</strong>: A set of optional key/value pairs to pass in the HTTP request. (Object, key/value - DOMString)</li>
+      <li><strong>chunkedMode</strong>: Whether to upload the data in chunked streaming mode. Defaults to <code>true</code>. (Boolean)</li>
+      <li><strong>headers</strong>: A map of header name/header values. Use a hash to specify one or more than one value.  On iOS, FireOS, and Android, if a header named Content-Type is present, multipart form data will NOT be used. (Object)</li>
+    </ul>
+  </li>
+  <li><strong>trustAllHosts</strong>: Optional parameter, defaults to <code>false</code>. If set to <code>true</code>, it accepts all security certificates. Not recommended for production use. Supported on iOS. <em>(boolean)</em></li>
 </ul>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// !! Assumes variable fileURL contains a valid URL to a text file on the device,</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// !! Assumes variable fileURL contains a valid URL to a text file on the device,</span>
 <span class="c1">//    for example, cdvfile://localhost/persistent/path/to/file.txt</span>
 
 <span class="kd">var</span> <span class="nx">win</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Code = "</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">responseCode</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Response = "</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Sent = "</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">bytesSent</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Code = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">responseCode</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Response = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Sent = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">bytesSent</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kd">var</span> <span class="nx">fail</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="s2">"An error has occurred: Code = "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"upload error source "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">source</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"upload error target "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">An error has occurred: Code = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">upload error source </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">source</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">upload error target </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileUploadOptions</span><span class="p">();</span>
-<span class="nx">options</span><span class="p">.</span><span class="nx">fileKey</span> <span class="o">=</span> <span class="s2">"file"</span><span class="p">;</span>
-<span class="nx">options</span><span class="p">.</span><span class="nx">fileName</span> <span class="o">=</span> <span class="nx">fileURL</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">fileURL</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-<span class="nx">options</span><span class="p">.</span><span class="nx">mimeType</span> <span class="o">=</span> <span class="s2">"text/plain"</span><span class="p">;</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">fileKey</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">file</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">fileName</span> <span class="o">=</span> <span class="nx">fileURL</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">fileURL</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">mimeType</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">text/plain</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{};</span>
-<span class="nx">params</span><span class="p">.</span><span class="nx">value1</span> <span class="o">=</span> <span class="s2">"test"</span><span class="p">;</span>
-<span class="nx">params</span><span class="p">.</span><span class="nx">value2</span> <span class="o">=</span> <span class="s2">"param"</span><span class="p">;</span>
+<span class="nx">params</span><span class="p">.</span><span class="nx">value1</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">test</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">params</span><span class="p">.</span><span class="nx">value2</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">param</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="nx">options</span><span class="p">.</span><span class="nx">params</span> <span class="o">=</span> <span class="nx">params</span><span class="p">;</span>
 
 <span class="kd">var</span> <span class="nx">ft</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileTransfer</span><span class="p">();</span>
-<span class="nx">ft</span><span class="p">.</span><span class="nx">upload</span><span class="p">(</span><span class="nx">fileURL</span><span class="p">,</span> <span class="nb">encodeURI</span><span class="p">(</span><span class="s2">"http://some.server.com/upload.php"</span><span class="p">),</span> <span class="nx">win</span><span class="p">,</span> <span class="nx">fail</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-</code></pre></div>
+<span class="nx">ft</span><span class="p">.</span><span class="nx">upload</span><span class="p">(</span><span class="nx">fileURL</span><span class="p">,</span> <span class="nb">encodeURI</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://some.server.com/upload.php</span><span class="dl">"</span><span class="p">),</span> <span class="nx">win</span><span class="p">,</span> <span class="nx">fail</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</code></pre></div></div>
+
 <h3>Example with Upload Headers and Progress Events (Android and iOS only)</h3>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">win</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Code = "</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">responseCode</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Response = "</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Sent = "</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">bytesSent</span><span class="p">);</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">win</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Code = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">responseCode</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Response = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Sent = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">bytesSent</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">fail</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="s2">"An error has occurred: Code = "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"upload error source "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">source</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"upload error target "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">An error has occurred: Code = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">upload error source </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">source</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">upload error target </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kd">var</span> <span class="nx">uri</span> <span class="o">=</span> <span class="nb">encodeURI</span><span class="p">(</span><span class="s2">"http://some.server.com/upload.php"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">uri</span> <span class="o">=</span> <span class="nb">encodeURI</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://some.server.com/upload.php</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileUploadOptions</span><span class="p">();</span>
-<span class="nx">options</span><span class="p">.</span><span class="nx">fileKey</span><span class="o">=</span><span class="s2">"file"</span><span class="p">;</span>
-<span class="nx">options</span><span class="p">.</span><span class="nx">fileName</span><span class="o">=</span><span class="nx">fileURL</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">fileURL</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
-<span class="nx">options</span><span class="p">.</span><span class="nx">mimeType</span><span class="o">=</span><span class="s2">"text/plain"</span><span class="p">;</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">fileKey</span><span class="o">=</span><span class="dl">"</span><span class="s2">file</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">fileName</span><span class="o">=</span><span class="nx">fileURL</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">fileURL</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">mimeType</span><span class="o">=</span><span class="dl">"</span><span class="s2">text/plain</span><span class="dl">"</span><span class="p">;</span>
 
-<span class="kd">var</span> <span class="nx">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">'headerParam'</span><span class="p">:</span><span class="s1">'headerValue'</span><span class="p">,</span> <span class="s1">'headerParam2'</span><span class="p">:</span><span class="s1">'headerValue2'</span><span class="p">};</span>
+<span class="kd">var</span> <span class="nx">headers</span><span class="o">=</span><span class="p">{</span><span class="dl">'</span><span class="s1">headerParam</span><span class="dl">'</span><span class="p">:</span><span class="dl">'</span><span class="s1">headerValue</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">headerParam2</span><span class="dl">'</span><span class="p">:</span><span class="dl">'</span><span class="s1">headerValue2</span><span class="dl">'</span><span class="p">};</span>
 
 <span class="nx">options</span><span class="p">.</span><span class="nx">headers</span> <span class="o">=</span> <span class="nx">headers</span><span class="p">;</span>
 
@@ -2325,7 +2349,8 @@ multi-part POST or PUT request, and to download files.</p>
     <span class="p">}</span>
 <span class="p">};</span>
 <span class="nx">ft</span><span class="p">.</span><span class="nx">upload</span><span class="p">(</span><span class="nx">fileURL</span><span class="p">,</span> <span class="nx">uri</span><span class="p">,</span> <span class="nx">win</span><span class="p">,</span> <span class="nx">fail</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>FileUploadResult</h2>
 
 <p>A <code>FileUploadResult</code> object is passed to the success callback of the
@@ -2334,34 +2359,49 @@ multi-part POST or PUT request, and to download files.</p>
 <h3>Properties</h3>
 
 <ul>
-<li><p><strong>bytesSent</strong>: The number of bytes sent to the server as part of the upload. (long)</p></li>
-<li><p><strong>responseCode</strong>: The HTTP response code returned by the server. (long)</p></li>
-<li><p><strong>response</strong>: The HTTP response returned by the server. (DOMString)</p></li>
-<li><p><strong>headers</strong>: The HTTP response headers by the server. (Object)</p>
-
-<ul>
-<li>Currently supported on iOS only.</li>
-</ul></li>
+  <li>
+    <p><strong>bytesSent</strong>: The number of bytes sent to the server as part of the upload. (long)</p>
+  </li>
+  <li>
+    <p><strong>responseCode</strong>: The HTTP response code returned by the server. (long)</p>
+  </li>
+  <li>
+    <p><strong>response</strong>: The HTTP response returned by the server. (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>headers</strong>: The HTTP response headers by the server. (Object)</p>
+    <ul>
+      <li>Currently supported on iOS only.</li>
+    </ul>
+  </li>
 </ul>
 
 <h3>iOS Quirks</h3>
 
 <ul>
-<li><p>Does not support <code>responseCode</code> or <code>bytesSent</code>.</p></li>
-<li><p>Does not support uploads of an empty file with <strong>chunkedMode=true</strong> and <code>multipartMode=false</code>.</p></li>
+  <li>
+    <p>Does not support <code>responseCode</code> or <code>bytesSent</code>.</p>
+  </li>
+  <li>
+    <p>Does not support uploads of an empty file with <strong>chunkedMode=true</strong> and <code>multipartMode=false</code>.</p>
+  </li>
 </ul>
 
 <h3>Browser Quirks</h3>
 
 <ul>
-<li><strong>withCredentials</strong>: <em>boolean</em> that tells the browser to set the withCredentials flag on the XMLHttpRequest</li>
+  <li><strong>withCredentials</strong>: <em>boolean</em> that tells the browser to set the withCredentials flag on the XMLHttpRequest</li>
 </ul>
 
 <h3>Windows Quirks</h3>
 
 <ul>
-<li><p>An option parameter with empty/null value is excluded in the upload operation due to the Windows API design.</p></li>
-<li><p><strong>chunkedMode</strong> is not supported and all uploads are set to non-chunked mode.</p></li>
+  <li>
+    <p>An option parameter with empty/null value is excluded in the upload operation due to the Windows API design.</p>
+  </li>
+  <li>
+    <p><strong>chunkedMode</strong> is not supported and all uploads are set to non-chunked mode.</p>
+  </li>
 </ul>
 
 <h2>download</h2>
@@ -2369,50 +2409,64 @@ multi-part POST or PUT request, and to download files.</p>
 <p><strong>Parameters</strong>:</p>
 
 <ul>
-<li><p><strong>source</strong>: URL of the server to download the file, as encoded by <code>encodeURI()</code>.</p></li>
-<li><p><strong>target</strong>: Filesystem url representing the file on the device. For backwards compatibility, this can also be the full path of the file on the device. (See <a href="#backwards-compatibility-notes">Backwards Compatibility Notes</a> below)</p></li>
-<li><p><strong>successCallback</strong>: A callback that is passed  a <code>FileEntry</code> object. <em>(Function)</em></p></li>
-<li><p><strong>errorCallback</strong>: A callback that executes if an error occurs when retrieving the <code>FileEntry</code>. Invoked with a <code>FileTransferError</code> object. <em>(Function)</em></p></li>
-<li><p><strong>trustAllHosts</strong>: Optional parameter, defaults to <code>false</code>. If set to <code>true</code>, it accepts all security certificates. Not recommended for production use. Supported on iOS. <em>(boolean)</em></p></li>
-<li><p><strong>options</strong>: Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).</p></li>
+  <li>
+    <p><strong>source</strong>: URL of the server to download the file, as encoded by <code>encodeURI()</code>.</p>
+  </li>
+  <li>
+    <p><strong>target</strong>: Filesystem url representing the file on the device. For backwards compatibility, this can also be the full path of the file on the device. (See <a href="#backwards-compatibility-notes">Backwards Compatibility Notes</a> below)</p>
+  </li>
+  <li>
+    <p><strong>successCallback</strong>: A callback that is passed  a <code>FileEntry</code> object. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>errorCallback</strong>: A callback that executes if an error occurs when retrieving the <code>FileEntry</code>. Invoked with a <code>FileTransferError</code> object. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>trustAllHosts</strong>: Optional parameter, defaults to <code>false</code>. If set to <code>true</code>, it accepts all security certificates. Not recommended for production use. Supported on iOS. <em>(boolean)</em></p>
+  </li>
+  <li>
+    <p><strong>options</strong>: Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).</p>
+  </li>
 </ul>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// !! Assumes variable fileURL contains a valid URL to a path on the device,</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// !! Assumes variable fileURL contains a valid URL to a path on the device,</span>
 <span class="c1">//    for example, cdvfile://localhost/persistent/path/to/downloads/</span>
 
 <span class="kd">var</span> <span class="nx">fileTransfer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileTransfer</span><span class="p">();</span>
-<span class="kd">var</span> <span class="nx">uri</span> <span class="o">=</span> <span class="nb">encodeURI</span><span class="p">(</span><span class="s2">"http://some.server.com/download.php"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">uri</span> <span class="o">=</span> <span class="nb">encodeURI</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://some.server.com/download.php</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="nx">fileTransfer</span><span class="p">.</span><span class="nx">download</span><span class="p">(</span>
     <span class="nx">uri</span><span class="p">,</span>
     <span class="nx">fileURL</span><span class="p">,</span>
     <span class="kd">function</span><span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"download complete: "</span> <span class="o">+</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">());</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">download complete: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">());</span>
     <span class="p">},</span>
     <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"download error source "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">source</span><span class="p">);</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"download error target "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"download error code"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">download error source </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">source</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">download error target </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">download error code</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
     <span class="p">},</span>
     <span class="kc">false</span><span class="p">,</span>
     <span class="p">{</span>
         <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">"Authorization"</span><span class="p">:</span> <span class="s2">"Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="</span>
+            <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA==</span><span class="dl">"</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">);</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>WP8 Quirks</h3>
 
 <ul>
-<li>Download requests is being cached by native implementation. To avoid caching, pass <code>if-Modified-Since</code> header to download method.</li>
+  <li>Download requests is being cached by native implementation. To avoid caching, pass <code>if-Modified-Since</code> header to download method.</li>
 </ul>
 
 <h3>Browser Quirks</h3>
 
 <ul>
-<li><strong>withCredentials</strong>: <em>boolean</em> that tells the browser to set the withCredentials flag on the XMLHttpRequest</li>
+  <li><strong>withCredentials</strong>: <em>boolean</em> that tells the browser to set the withCredentials flag on the XMLHttpRequest</li>
 </ul>
 
 <h2>abort</h2>
@@ -2420,29 +2474,31 @@ multi-part POST or PUT request, and to download files.</p>
 <p>Aborts an in-progress transfer. The onerror callback is passed a FileTransferError object which has an error code of <code>FileTransferError.ABORT_ERR</code>.</p>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// !! Assumes variable fileURL contains a valid URL to a text file on the device,</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// !! Assumes variable fileURL contains a valid URL to a text file on the device,</span>
 <span class="c1">//    for example, cdvfile://localhost/persistent/path/to/file.txt</span>
 
 <span class="kd">var</span> <span class="nx">win</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Should not be called."</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Should not be called.</span><span class="dl">"</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kd">var</span> <span class="nx">fail</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// error.code == FileTransferError.ABORT_ERR</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="s2">"An error has occurred: Code = "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"upload error source "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">source</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"upload error target "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">An error has occurred: Code = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">upload error source </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">source</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">upload error target </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileUploadOptions</span><span class="p">();</span>
-<span class="nx">options</span><span class="p">.</span><span class="nx">fileKey</span><span class="o">=</span><span class="s2">"file"</span><span class="p">;</span>
-<span class="nx">options</span><span class="p">.</span><span class="nx">fileName</span><span class="o">=</span><span class="s2">"myphoto.jpg"</span><span class="p">;</span>
-<span class="nx">options</span><span class="p">.</span><span class="nx">mimeType</span><span class="o">=</span><span class="s2">"image/jpeg"</span><span class="p">;</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">fileKey</span><span class="o">=</span><span class="dl">"</span><span class="s2">file</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">fileName</span><span class="o">=</span><span class="dl">"</span><span class="s2">myphoto.jpg</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">mimeType</span><span class="o">=</span><span class="dl">"</span><span class="s2">image/jpeg</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">var</span> <span class="nx">ft</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileTransfer</span><span class="p">();</span>
-<span class="nx">ft</span><span class="p">.</span><span class="nx">upload</span><span class="p">(</span><span class="nx">fileURL</span><span class="p">,</span> <span class="nb">encodeURI</span><span class="p">(</span><span class="s2">"http://some.server.com/upload.php"</span><span class="p">),</span> <span class="nx">win</span><span class="p">,</span> <span class="nx">fail</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+<span class="nx">ft</span><span class="p">.</span><span class="nx">upload</span><span class="p">(</span><span class="nx">fileURL</span><span class="p">,</span> <span class="nb">encodeURI</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://some.server.com/upload.php</span><span class="dl">"</span><span class="p">),</span> <span class="nx">win</span><span class="p">,</span> <span class="nx">fail</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
 <span class="nx">ft</span><span class="p">.</span><span class="nx">abort</span><span class="p">();</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>FileTransferError</h2>
 
 <p>A <code>FileTransferError</code> object is passed to an error callback when an error occurs.</p>
@@ -2450,12 +2506,24 @@ multi-part POST or PUT request, and to download files.</p>
 <h3>Properties</h3>
 
 <ul>
-<li><p><strong>code</strong>: One of the predefined error codes listed below. (Number)</p></li>
-<li><p><strong>source</strong>: URL to the source. (String)</p></li>
-<li><p><strong>target</strong>: URL to the target. (String)</p></li>
-<li><p><strong>http_status</strong>: HTTP status code.  This attribute is only available when a response code is received from the HTTP connection. (Number)</p></li>
-<li><p><strong>body</strong> Response body. This attribute is only available when a response is received from the HTTP connection. (String)</p></li>
-<li><p><strong>exception</strong>: Either e.getMessage or e.toString (String)</p></li>
+  <li>
+    <p><strong>code</strong>: One of the predefined error codes listed below. (Number)</p>
+  </li>
+  <li>
+    <p><strong>source</strong>: URL to the source. (String)</p>
+  </li>
+  <li>
+    <p><strong>target</strong>: URL to the target. (String)</p>
+  </li>
+  <li>
+    <p><strong>http_status</strong>: HTTP status code.  This attribute is only available when a response code is received from the HTTP connection. (Number)</p>
+  </li>
+  <li>
+    <p><strong>body</strong> Response body. This attribute is only available when a response is received from the HTTP connection. (String)</p>
+  </li>
+  <li>
+    <p><strong>exception</strong>: Either e.getMessage or e.toString (String)</p>
+  </li>
 </ul>
 
 <h3>iOS Quirks</h3>
@@ -2465,25 +2533,27 @@ multi-part POST or PUT request, and to download files.</p>
 <h3>Constants</h3>
 
 <ul>
-<li>1 = <code>FileTransferError.FILE_NOT_FOUND_ERR</code></li>
-<li>2 = <code>FileTransferError.INVALID_URL_ERR</code></li>
-<li>3 = <code>FileTransferError.CONNECTION_ERR</code></li>
-<li>4 = <code>FileTransferError.ABORT_ERR</code></li>
-<li>5 = <code>FileTransferError.NOT_MODIFIED_ERR</code></li>
+  <li>1 = <code>FileTransferError.FILE_NOT_FOUND_ERR</code></li>
+  <li>2 = <code>FileTransferError.INVALID_URL_ERR</code></li>
+  <li>3 = <code>FileTransferError.CONNECTION_ERR</code></li>
+  <li>4 = <code>FileTransferError.ABORT_ERR</code></li>
+  <li>5 = <code>FileTransferError.NOT_MODIFIED_ERR</code></li>
 </ul>
 
 <h2>Windows Quirks</h2>
 
 <ul>
-<li>The plugin implementation is based on <a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.backgroundtransfer.backgrounddownloader.aspx">BackgroundDownloader</a>/<a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.backgroundtransfer.backgrounduploader.aspx">BackgroundUploader</a>, which entails the latency issues on Windows devices (creation/starting of an operation can take up to a few seconds). You can use XHR or <a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.web.http.httpclient.aspx">HttpClient</a> as a quicker alternative for small downloads.</li>
+  <li>The plugin implementation is based on <a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.backgroundtransfer.backgrounddownloader.aspx">BackgroundDownloader</a>/<a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.backgroundtransfer.backgrounduploader.aspx">BackgroundUploader</a>, which entails the latency issues on Windows devices (creation/starting of an operation can take up to a few seconds). You can use XHR or <a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.web.http.httpclient.aspx">HttpClient</a> as a quicker alternative for small downloads.</li>
 </ul>
 
 <h2>Backwards Compatibility Notes</h2>
 
 <p>Previous versions of this plugin would only accept device-absolute-file-paths as the source for uploads, or as the target for downloads. These paths would typically be of the form:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">/var/mobile/Applications/&lt;application UUID&gt;/Documents/path/to/file  (iOS)
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/var/mobile/Applications/&lt;application UUID&gt;/Documents/path/to/file  (iOS)
 /storage/emulated/0/path/to/file                                    (Android)
-</code></pre></div>
+</code></pre></div></div>
+
 <p>For backwards compatibility, these paths are still accepted, and if your application has recorded paths like these in persistent storage, then they can continue to be used.</p>
 
 <p>These paths were previously exposed in the <code>fullPath</code> property of <code>FileEntry</code> and <code>DirectoryEntry</code> objects returned by the File plugin. New versions of the File plugin however, no longer expose these paths to JavaScript.</p>
@@ -2491,8 +2561,10 @@ multi-part POST or PUT request, and to download files.</p>
 <p>If you are upgrading to a new (1.0.0 or newer) version of File, and you have previously been using <code>entry.fullPath</code> as arguments to <code>download()</code> or <code>upload()</code>, then you will need to change your code to use filesystem URLs instead.</p>
 
 <p><code>FileEntry.toURL()</code> and <code>DirectoryEntry.toURL()</code> return a filesystem URL of the form:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cdvfile://localhost/persistent/path/to/file
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cdvfile://localhost/persistent/path/to/file
+</code></pre></div></div>
+
 <p>which can be used in place of the absolute file path in both <code>download()</code> and <code>upload()</code> methods.</p>
 
 <h2>Sample: Download and Upload Files <a name="sample"></a></h2>
@@ -2500,34 +2572,37 @@ multi-part POST or PUT request, and to download files.</p>
 <p>Use the File-Transfer plugin to upload and download files. In these examples, we demonstrate several tasks like:</p>
 
 <ul>
-<li><a href="#binaryFile">Downloading a binary file to the application cache</a></li>
-<li><a href="#uploadFile">Uploading a file created in your application&#39;s root</a></li>
-<li><a href="#downloadFile">Downloading the uploaded file</a></li>
+  <li><a href="#binaryFile">Downloading a binary file to the application cache</a></li>
+  <li><a href="#uploadFile">Uploading a file created in your application&#39;s root</a></li>
+  <li><a href="#downloadFile">Downloading the uploaded file</a></li>
 </ul>
 
 <h2>Download a Binary File to the application cache <a name="binaryFile"></a></h2>
 
 <p>Use the File plugin with the File-Transfer plugin to provide a target for the files that you download (the target must be a FileEntry object). Before you download the file, create a DirectoryEntry object by using <code>resolveLocalFileSystemURL</code> and calling <code>fs.root</code> in the success callback. Use the <code>getFile</code> method of DirectoryEntry to create the target file.</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">TEMPORARY</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'file system open: '</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">TEMPORARY</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">file system open: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
 
     <span class="c1">// Make sure you add the domain name to the Content-Security-Policy &lt;meta&gt; element.</span>
-    <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">'http://cordova.apache.org/static/img/cordova_bot.png'</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">http://cordova.apache.org/static/img/cordova_bot.png</span><span class="dl">'</span><span class="p">;</span>
     <span class="c1">// Parameters passed to getFile create a new file or return the file if it already exists.</span>
-    <span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="s1">'downloaded-image.png'</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="dl">'</span><span class="s1">downloaded-image.png</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">download</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
 
     <span class="p">},</span> <span class="nx">onErrorCreateFile</span><span class="p">);</span>
 
 <span class="p">},</span> <span class="nx">onErrorLoadFs</span><span class="p">);</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <blockquote>
-<p><em>Note</em> For persistent storage, pass LocalFileSystem.PERSISTENT to requestFileSystem.</p>
+  <p><em>Note</em> For persistent storage, pass LocalFileSystem.PERSISTENT to requestFileSystem.</p>
 </blockquote>
 
 <p>When you have the FileEntry object, download the file using the <code>download</code> method of the FileTransfer object. The 3rd argument to the <code>download</code> function of FileTransfer is the success callback, which you can use to call the app&#39;s <code>readBinaryFile</code> function. In this code example, the <code>entry</code> variable is a new FileEntry object that receives the result of the download operation.</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">download</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">uri</span><span class="p">,</span> <span class="nx">readBinaryData</span><span class="p">)</span> <span class="p">{</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">download</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">uri</span><span class="p">,</span> <span class="nx">readBinaryData</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">fileTransfer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileTransfer</span><span class="p">();</span>
     <span class="kd">var</span> <span class="nx">fileURL</span> <span class="o">=</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">();</span>
@@ -2536,8 +2611,8 @@ multi-part POST or PUT request, and to download files.</p>
         <span class="nx">uri</span><span class="p">,</span>
         <span class="nx">fileURL</span><span class="p">,</span>
         <span class="kd">function</span> <span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Successful download..."</span><span class="p">);</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"download complete: "</span> <span class="o">+</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">());</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful download...</span><span class="dl">"</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">download complete: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">());</span>
             <span class="k">if</span> <span class="p">(</span><span class="nx">readBinaryData</span><span class="p">)</span> <span class="p">{</span>
               <span class="c1">// Read the file...</span>
               <span class="nx">readBinaryFile</span><span class="p">(</span><span class="nx">entry</span><span class="p">);</span>
@@ -2548,9 +2623,9 @@ multi-part POST or PUT request, and to download files.</p>
             <span class="p">}</span>
         <span class="p">},</span>
         <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"download error source "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">source</span><span class="p">);</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"download error target "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"upload error code"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">download error source </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">source</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">download error target </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">upload error code</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
         <span class="p">},</span>
         <span class="kc">null</span><span class="p">,</span> <span class="c1">// or, pass false</span>
         <span class="p">{</span>
@@ -2560,24 +2635,28 @@ multi-part POST or PUT request, and to download files.</p>
         <span class="p">}</span>
     <span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>If you just need to display the image, take the FileEntry to call its toURL() function.</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">displayImageByFileURL</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'imageElement'</span><span class="p">);</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">displayImageByFileURL</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">imageElement</span><span class="dl">'</span><span class="p">);</span>
     <span class="nx">elem</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">();</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Depending on your app requirements, you may want to read the file. To support operations with binary files, FileReader supports two methods, <code>readAsBinaryString</code> and <code>readAsArrayBuffer</code>. In this example, use <code>readAsArrayBuffer</code> and pass the FileEntry object to the method. Once you read the file successfully, construct a Blob object using the result of the read.</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">readBinaryFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">readBinaryFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">file</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
 
         <span class="nx">reader</span><span class="p">.</span><span class="nx">onloadend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Successful file read: "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file read: </span><span class="dl">"</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
             <span class="c1">// displayFileData(fileEntry.fullPath + ": " + this.result);</span>
 
-            <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="k">new</span> <span class="nb">Uint8Array</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">)],</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"image/png"</span> <span class="p">});</span>
+            <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="k">new</span> <span class="nb">Uint8Array</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">)],</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">image/png</span><span class="dl">"</span> <span class="p">});</span>
             <span class="nx">displayImage</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
         <span class="p">};</span>
 
@@ -2585,28 +2664,32 @@ multi-part POST or PUT request, and to download files.</p>
 
     <span class="p">},</span> <span class="nx">onErrorReadFile</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Once you read the file successfully, you can create a DOM URL string using <code>createObjectURL</code>, and then display the image.</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">displayImage</span><span class="p">(</span><span class="nx">blob</span><span class="p">)</span> <span class="p">{</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">displayImage</span><span class="p">(</span><span class="nx">blob</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="c1">// Note: Use window.URL.revokeObjectURL when finished with image.</span>
     <span class="kd">var</span> <span class="nx">objURL</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
 
     <span class="c1">// Displays image if result is a valid DOM string for an image.</span>
-    <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'imageElement'</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">imageElement</span><span class="dl">'</span><span class="p">);</span>
     <span class="nx">elem</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">objURL</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>As you saw previously, you can call FileEntry.toURL() instead to just display the downloaded image (skip the file read).</p>
 
 <h2>Upload a File <a name="uploadFile"></a></h2>
 
 <p>When you upload a File using the File-Transfer plugin, use the File plugin to provide files for upload (again, they must be FileEntry objects). Before you can upload anything, create a file for upload using the <code>getFile</code> method of DirectoryEntry. In this example, create the file in the application&#39;s cache (fs.root). Then call the app&#39;s writeFile function so you have some content to upload.</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">onUploadFile</span><span class="p">()</span> <span class="p">{</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onUploadFile</span><span class="p">()</span> <span class="p">{</span>
     <span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">TEMPORARY</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'file system open: '</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-        <span class="kd">var</span> <span class="nx">fileName</span> <span class="o">=</span> <span class="s2">"uploadSource.txt"</span><span class="p">;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">file system open: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">fileName</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">uploadSource.txt</span><span class="dl">"</span><span class="p">;</span>
         <span class="kd">var</span> <span class="nx">dirEntry</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">;</span>
         <span class="nx">dirEntry</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="nx">fileName</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
 
@@ -2617,52 +2700,56 @@ multi-part POST or PUT request, and to download files.</p>
 
     <span class="p">},</span> <span class="nx">onErrorLoadFs</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>In this example, create some simple content, and then call the app&#39;s upload function.</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">dataObj</span><span class="p">)</span> <span class="p">{</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">dataObj</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Create a FileWriter object for our FileEntry (log.txt).</span>
     <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">createWriter</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">fileWriter</span><span class="p">)</span> <span class="p">{</span>
 
         <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onwriteend</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Successful file write..."</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file write...</span><span class="dl">"</span><span class="p">);</span>
             <span class="nx">upload</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
         <span class="p">};</span>
 
         <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Failed file write: "</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Failed file write: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
         <span class="p">};</span>
 
         <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">dataObj</span><span class="p">)</span> <span class="p">{</span>
-          <span class="nx">dataObj</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="s1">'file data to upload'</span><span class="p">],</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="s1">'text/plain'</span> <span class="p">});</span>
+          <span class="nx">dataObj</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="dl">'</span><span class="s1">file data to upload</span><span class="dl">'</span><span class="p">],</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">text/plain</span><span class="dl">'</span> <span class="p">});</span>
         <span class="p">}</span>
 
         <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">dataObj</span><span class="p">);</span>
     <span class="p">});</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Forward the FileEntry object to the upload function. To perform the actual upload, use the upload function of the FileTransfer object.</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">upload</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">upload</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// !! Assumes variable fileURL contains a valid URL to a text file on the device,</span>
     <span class="kd">var</span> <span class="nx">fileURL</span> <span class="o">=</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">();</span>
 
     <span class="kd">var</span> <span class="nx">success</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Successful upload..."</span><span class="p">);</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Code = "</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">responseCode</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful upload...</span><span class="dl">"</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Code = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">responseCode</span><span class="p">);</span>
         <span class="c1">// displayFileData(fileEntry.fullPath + " (content uploaded to server)");</span>
     <span class="p">}</span>
 
     <span class="kd">var</span> <span class="nx">fail</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s2">"An error has occurred: Code = "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">An error has occurred: Code = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileUploadOptions</span><span class="p">();</span>
-    <span class="nx">options</span><span class="p">.</span><span class="nx">fileKey</span> <span class="o">=</span> <span class="s2">"file"</span><span class="p">;</span>
-    <span class="nx">options</span><span class="p">.</span><span class="nx">fileName</span> <span class="o">=</span> <span class="nx">fileURL</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">fileURL</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-    <span class="nx">options</span><span class="p">.</span><span class="nx">mimeType</span> <span class="o">=</span> <span class="s2">"text/plain"</span><span class="p">;</span>
+    <span class="nx">options</span><span class="p">.</span><span class="nx">fileKey</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">file</span><span class="dl">"</span><span class="p">;</span>
+    <span class="nx">options</span><span class="p">.</span><span class="nx">fileName</span> <span class="o">=</span> <span class="nx">fileURL</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">fileURL</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="nx">options</span><span class="p">.</span><span class="nx">mimeType</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">text/plain</span><span class="dl">"</span><span class="p">;</span>
 
     <span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{};</span>
-    <span class="nx">params</span><span class="p">.</span><span class="nx">value1</span> <span class="o">=</span> <span class="s2">"test"</span><span class="p">;</span>
-    <span class="nx">params</span><span class="p">.</span><span class="nx">value2</span> <span class="o">=</span> <span class="s2">"param"</span><span class="p">;</span>
+    <span class="nx">params</span><span class="p">.</span><span class="nx">value1</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">test</span><span class="dl">"</span><span class="p">;</span>
+    <span class="nx">params</span><span class="p">.</span><span class="nx">value2</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">param</span><span class="dl">"</span><span class="p">;</span>
 
     <span class="nx">options</span><span class="p">.</span><span class="nx">params</span> <span class="o">=</span> <span class="nx">params</span><span class="p">;</span>
 
@@ -2671,11 +2758,13 @@ multi-part POST or PUT request, and to download files.</p>
     <span class="c1">// http://some.server.com/upload.php</span>
     <span class="nx">ft</span><span class="p">.</span><span class="nx">upload</span><span class="p">(</span><span class="nx">fileURL</span><span class="p">,</span> <span class="nb">encodeURI</span><span class="p">(</span><span class="nx">SERVER</span><span class="p">),</span> <span class="nx">success</span><span class="p">,</span> <span class="nx">fail</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
 <span class="p">};</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Download the uploaded file <a name="downloadFile"></a></h2>
 
 <p>To download the image you just uploaded, you will need a valid URL that can handle the request, for example, http://some.server.com/download.php. Again, the success handler for the FileTransfer.download method receives a FileEntry object. The main difference here from previous examples is that we call FileReader.readAsText to read the result of the download operation, because we uploaded a file with text content.</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">download</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">uri</span><span class="p">)</span> <span class="p">{</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">download</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">uri</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">fileTransfer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileTransfer</span><span class="p">();</span>
     <span class="kd">var</span> <span class="nx">fileURL</span> <span class="o">=</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">();</span>
@@ -2684,14 +2773,14 @@ multi-part POST or PUT request, and to download files.</p>
         <span class="nx">uri</span><span class="p">,</span>
         <span class="nx">fileURL</span><span class="p">,</span>
         <span class="kd">function</span> <span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Successful download..."</span><span class="p">);</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"download complete: "</span> <span class="o">+</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">());</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful download...</span><span class="dl">"</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">download complete: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">());</span>
             <span class="nx">readFile</span><span class="p">(</span><span class="nx">entry</span><span class="p">);</span>
         <span class="p">},</span>
         <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"download error source "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">source</span><span class="p">);</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"download error target "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"upload error code"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">download error source </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">source</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">download error target </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">upload error code</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
         <span class="p">},</span>
         <span class="kc">null</span><span class="p">,</span> <span class="c1">// or, pass false</span>
         <span class="p">{</span>
@@ -2701,15 +2790,17 @@ multi-part POST or PUT request, and to download files.</p>
         <span class="p">}</span>
     <span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>In the readFile function, call the <code>readAsText</code> method of the FileReader object.</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">file</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
 
         <span class="nx">reader</span><span class="p">.</span><span class="nx">onloadend</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
 
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Successful file read: "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file read: </span><span class="dl">"</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
             <span class="c1">// displayFileData(fileEntry.fullPath + ": " + this.result);</span>
 
         <span class="p">};</span>
@@ -2718,7 +2809,8 @@ multi-part POST or PUT request, and to download files.</p>
 
     <span class="p">},</span> <span class="nx">onErrorReadFile</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

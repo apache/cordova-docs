@@ -133,39 +133,42 @@
         <div>
             <p>We are happy to announce that <code>Cordova Windows 4.4.3</code> has been released!</p>
 
-<p>This release fixes some major issues with application activation, splashscreen and VS project generation.<br>
+<p>This release fixes some major issues with application activation, splashscreen and VS project generation.<br />
 See release notes below for more detals and the rest of the changes.</p>
 
 <p>Cordova CLI starting from version 6.3.0 will automatically start using this version of <strong>cordova-windows</strong> when creating new projects.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update windows@4.4.3
-</code></pre></div>
-<p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add windows@4.4.3
-</code></pre></div>
-<!--more-->
+</code></pre></div></div>
 
+<p>To add it explicitly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add windows@4.4.3
+</code></pre></div></div>
+
+<!--more-->
 <h2>What&#39;s new in Windows platform</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12044">CB-12044</a> Fix splashscreen image path for ms-appx on Windows</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12042">CB-12042</a> Copy base.js to www directory at create</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11933">CB-11933</a> Add uap prefixes for capabilities at plugin install</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11933">CB-11933</a> Remove capabilities from manifest</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11825">CB-11825</a> Windows dll file won&#39;t be copied as resource while adding custom plugin to a UWP project</li>
-<li>output message, catch exception if require fails, change eventEmitter to events to be consistent with ios+android</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11522">CB-11522</a> [windows] Make cordova-js handle &#39;unknown&#39; type</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11857">CB-11857</a> Fixed VS 2015 detection on Windows 10 Anniversary</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10738">CB-10738</a> Use hardcoded Id attribute in Win10 manifest</li>
-<li>Update bundled cordova-common dependency to 1.4.1</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11658">CB-11658</a> activated event is not fired on Windows 10 RS1</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11657">CB-11657</a> Add bom to www after plugin operations</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11478">CB-11478</a> Parse --archs option consistently</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11558">CB-11558</a> Make windows plugin rm remove ProjectReference items</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11579">CB-11579</a> windows: fix bug with &#39;cordova clean windows&#39;</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12044">CB-12044</a> Fix splashscreen image path for ms-appx on Windows</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12042">CB-12042</a> Copy base.js to www directory at create</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11933">CB-11933</a> Add uap prefixes for capabilities at plugin install</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11933">CB-11933</a> Remove capabilities from manifest</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11825">CB-11825</a> Windows dll file won&#39;t be copied as resource while adding custom plugin to a UWP project</li>
+  <li>output message, catch exception if require fails, change eventEmitter to events to be consistent with ios+android</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11522">CB-11522</a> [windows] Make cordova-js handle &#39;unknown&#39; type</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11857">CB-11857</a> Fixed VS 2015 detection on Windows 10 Anniversary</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10738">CB-10738</a> Use hardcoded Id attribute in Win10 manifest</li>
+  <li>Update bundled cordova-common dependency to 1.4.1</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11658">CB-11658</a> activated event is not fired on Windows 10 RS1</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11657">CB-11657</a> Add bom to www after plugin operations</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11478">CB-11478</a> Parse --archs option consistently</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11558">CB-11558</a> Make windows plugin rm remove ProjectReference items</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11579">CB-11579</a> windows: fix bug with &#39;cordova clean windows&#39;</li>
 </ul>
 
         </div>

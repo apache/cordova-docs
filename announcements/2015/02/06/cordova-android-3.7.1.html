@@ -136,13 +136,17 @@
 <p>This release has numerous bug fixes, and sets the target-sdk to android-21 (which yields a pretty good graphics speed-up on Lollipop devices!). It will be the default Android version when the cordova-cli 4.1.0 is released.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android@3.7.1
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@3.7.1
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@3.7.1
+</code></pre></div></div>
+
 <p>For non-CLI projects or for pre-3.0 projects, refer to the <a href="http://cordova.apache.org/docs/en/dev/guide_platforms_index.md.html">upgrade guides</a>.</p>
 
 <!--more-->
@@ -150,32 +154,33 @@ cordova platform update android@3.7.1
 <h2>What&#39;s new in Android</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8411">CB-8411</a> Fixed regression with view hierarchy not being initialized before plugins.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8328">CB-8328</a> Allow plugins to handle certificate challenges</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8201">CB-8201</a> Add support for auth dialogs into Cordova Android</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8017">CB-8017</a> Add support for <code>&lt;input type=file&gt;</code> for Lollipop</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8239">CB-8329</a> Cancel outstanding <code>ActivityResult</code> requests when a new <code>startActivityForResult</code> occurs</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8026">CB-8026</a> Bumping up Android Version and setting it up to allow third-party cookies <em>This might change later</em></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8210">CB-8210</a> Eliminate usages of <code>sendJavascript()</code> to be CSP compliant</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8143">CB-8143</a> Numerous gradle changes. Try it out with <code>cordova build android -- --gradle</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8079">CB-8079</a> Use activity class package name, but fallback to application package name when looking for splash screen drawable</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8147">CB-8147</a> Have <code>cordova/build</code> warn about unrecognized flags rather than fail</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8119">CB-8119</a> Restart <code>adb</code> when we detect it&#39;s hung</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8112">CB-8112</a> Turn off <code>mediaPlaybackRequiresUserGesture</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6153">CB-6153</a> Add a preference for controlling hardware button audio stream (<code>DefaultVolumeStream</code>)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8081">CB-8081</a> Allow gradle builds to use <strong>Java 6</strong> instead of requiring <strong>Java 7</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8031">CB-8031</a> Fix race condition that shows as <code>ConcurrentModificationException</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7976">CB-7976</a> Use <code>webView</code>&#39;s context rather than <code>Activity</code>&#39;s context for intent receiver</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7974">CB-7974</a> Cancel timeout timer if view is destroyed</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7940">CB-7940</a> Disable exec bridge if bridgeSecret is wrong</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7758">CB-7758</a> Allow content-url-hosted pages to access the bridge</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6511">CB-6511</a> Fixes build for android when app name contains unicode characters</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7707">CB-7707</a> Added multipart <code>PluginResult</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6837">CB-6837</a> Fix leaked window when hitting back button while alert being rendered</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7674">CB-7674</a>  Move preference activation back into <code>onCreate()</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7499">CB-7499</a>  Support RTL text direction</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7511">CB-7511</a> Vastly improve auto-detection of Android SDK and JDK instll locations</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8411">CB-8411</a> Fixed regression with view hierarchy not being initialized before plugins.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8328">CB-8328</a> Allow plugins to handle certificate challenges</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8201">CB-8201</a> Add support for auth dialogs into Cordova Android</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8017">CB-8017</a> Add support for <code>&lt;input type=file&gt;</code> for Lollipop</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8239">CB-8329</a> Cancel outstanding <code>ActivityResult</code> requests when a new <code>startActivityForResult</code> occurs</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8026">CB-8026</a> Bumping up Android Version and setting it up to allow third-party cookies <em>This might change later</em></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8210">CB-8210</a> Eliminate usages of <code>sendJavascript()</code> to be CSP compliant</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8143">CB-8143</a> Numerous gradle changes. Try it out with <code>cordova build android -- --gradle</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8079">CB-8079</a> Use activity class package name, but fallback to application package name when looking for splash screen drawable</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8147">CB-8147</a> Have <code>cordova/build</code> warn about unrecognized flags rather than fail</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8119">CB-8119</a> Restart <code>adb</code> when we detect it&#39;s hung</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8112">CB-8112</a> Turn off <code>mediaPlaybackRequiresUserGesture</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6153">CB-6153</a> Add a preference for controlling hardware button audio stream (<code>DefaultVolumeStream</code>)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8081">CB-8081</a> Allow gradle builds to use <strong>Java 6</strong> instead of requiring <strong>Java 7</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8031">CB-8031</a> Fix race condition that shows as <code>ConcurrentModificationException</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7976">CB-7976</a> Use <code>webView</code>&#39;s context rather than <code>Activity</code>&#39;s context for intent receiver</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7974">CB-7974</a> Cancel timeout timer if view is destroyed</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7940">CB-7940</a> Disable exec bridge if bridgeSecret is wrong</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7758">CB-7758</a> Allow content-url-hosted pages to access the bridge</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6511">CB-6511</a> Fixes build for android when app name contains unicode characters</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7707">CB-7707</a> Added multipart <code>PluginResult</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6837">CB-6837</a> Fix leaked window when hitting back button while alert being rendered</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7674">CB-7674</a>  Move preference activation back into <code>onCreate()</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7499">CB-7499</a>  Support RTL text direction</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7511">CB-7511</a> Vastly improve auto-detection of Android SDK and JDK instll locations</li>
 </ul>
+
 
         </div>
     </section>

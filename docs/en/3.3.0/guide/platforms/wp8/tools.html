@@ -1677,26 +1677,33 @@ repo has subdirectories for each: <code>wp7/</code> and <code>wp8/</code>.</p>
 <h3>Run the Batch File to Create and Install the Templates</h3>
 
 <ul>
-<li><p>The root of the repo contains a <code>createTemplates.bat</code> file.
+  <li>
+    <p>The root of the repo contains a <code>createTemplates.bat</code> file.
 Double-clicking it generates two <code>.zip</code> files:
 <code>CordovaWP7_x_x_x.zip</code> and <code>CordovaWP8_x_x_x.zip</code>, where <em>3.3.0</em>
 represents the current version number. To easily use these files in
 Visual Studio, copy them to <code>My Documents\Visual Studio
 2012\Templates\ProjectTemplates\</code>. You are then able to create
 new Apache Cordova Windows Phone apps from Visual Studio&#39;s
-<strong>File &rarr; New Project</strong> menu.</p></li>
-<li><p>If you run the batch file from the command line, you can also call with a parameter to install automatically</p></li>
+<strong>File &#8594; New Project</strong> menu.</p>
+  </li>
+  <li>
+    <p>If you run the batch file from the command line, you can also call with a parameter to install automatically</p>
+  </li>
 </ul>
 
 <p>Run the script :</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &gt;createTemplates.bat -install
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &gt;createTemplates.bat -install
+</code></pre></div></div>
+
 <h3>Use the Create Scripts on the Command Line</h3>
 
 <p>Run the <code>create</code> command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app&#39;s display
 name.  Here is the syntax for both Windows Phone 7 and 8:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &gt;.\wp7\bin\create PathToNewProject [ PackageName ] [ AppName ]
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &gt;.\wp7\bin\create PathToNewProject [ PackageName ] [ AppName ]
     &gt;.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
 
     &gt;PathToNewProject : The path to where you wish to create the project
@@ -1706,20 +1713,27 @@ name.  Here is the syntax for both Windows Phone 7 and 8:</p>
     &gt;examples:
     &gt;.\wp7\bin\create C:\path\to\my_new_project
     &gt;.\wp8\bin\create C:\path\to\my_new_project io.cordova.example CordovaWP8App
-</code></pre></div>
-<p>Launch Visual Studio and open Solution file (.sln) in (C:\path\to\my<em>new</em>project)</p>
+</code></pre></div></div>
+
+<p>Launch Visual Studio and open Solution file (.sln) in (C:\path\to\my_new_project)</p>
 
 <p>Build and Run it</p>
 
 <h2>Building the Project (Clean, then Build)</h2>
 
 <ul>
-<li><p>Debug</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ C:\path\to\my_new_project\cordova\build --debug
-</code></pre></div></li>
-<li><p>Release</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ C:\path\to\my_new_project\cordova\build --release
-</code></pre></div></li>
+  <li>
+    <p>Debug</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ C:\path\to\my_new_project\cordova\build --debug
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Release</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ C:\path\to\my_new_project\cordova\build --release
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <h2>Running the App</h2>
@@ -1727,17 +1741,25 @@ name.  Here is the syntax for both Windows Phone 7 and 8:</p>
 <p>Run the &#39;run&#39; command with the following <em>optional</em> parameters</p>
 
 <ul>
-<li><p>Target specification. This includes <code>--emulator</code>, <code>--device</code>, or <code>--target=&lt;targetID&gt;</code>.</p></li>
-<li><p>Build specification. This includes <code>--debug</code>, <code>--release</code>, or <code>--nobuild</code>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ C:\path\to\my_new_project\cordova\run [Target] [Build]
-</code></pre></div></li>
+  <li>
+    <p>Target specification. This includes <code>--emulator</code>, <code>--device</code>, or <code>--target=&lt;targetID&gt;</code>.</p>
+  </li>
+  <li>
+    <p>Build specification. This includes <code>--debug</code>, <code>--release</code>, or <code>--nobuild</code>.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ C:\path\to\my_new_project\cordova\run [Target] [Build]
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>By default the <code>run</code> command is called with <code>--emulator --debug</code> if flags are not provided.</p>
 
 <h2>Cleaning</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ C:\path\to\my_new_project\cordova\clean
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ C:\path\to\my_new_project\cordova\clean
+</code></pre></div></div>
+
+
 
             </div>
         </div>

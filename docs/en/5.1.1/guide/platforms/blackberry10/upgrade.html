@@ -1431,45 +1431,71 @@ version of the CLI.</p>
 <h2>Upgrading 3.6.0 Projects to 4.0.0</h2>
 
 <p>For non-CLI projects, run:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    bin/update path/to/project
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bin/update path/to/project
+</code></pre></div></div>
+
 <p>For CLI projects:</p>
 
 <ol>
-<li><p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p></li>
-<li><p>Run <code>cordova platform update blackberry</code> in your existing projects.</p></li>
+  <li>
+    <p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Run <code>cordova platform update blackberry</code> in your existing projects.</p>
+  </li>
 </ol>
 
 <h2>Upgrading to 3.2.0 from 3.1.0</h2>
 
-<p>For projects that were created with the cordova CLI: </p>
+<p>For projects that were created with the cordova CLI:</p>
 
 <ol>
-<li><p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p></li>
-<li><p>Run <code>cordova platform update blackberry</code></p></li>
+  <li>
+    <p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Run <code>cordova platform update blackberry</code></p>
+  </li>
 </ol>
 
 <p>For projects not created with the cordova CLI, run:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    bin/update &lt;project_path&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bin/update &lt;project_path&gt;
+</code></pre></div></div>
+
 <h2>Upgrade to 3.1.0 from 3.0.0</h2>
 
 <ol>
-<li><p>Create a new Apache Cordova 3.1.0 project using the cordova CLI, as
-described in <a href="../../cli/index.html">The Command-Line Interface</a>.</p></li>
-<li><p>Add your platforms to the cordova project, for example: <code>cordova
-platform add blackberry10</code>.</p></li>
-<li><p>Copy the contents of the original project&#39;s <code>www</code> directory to the <code>www</code> directory
-at the root of the cordova project you just created.</p></li>
-<li><p>Copy or overwrite any native assets from your original project
-(<code>Resources</code>, etc.)</p></li>
-<li><p>Copy the <code>config.xml</code> file into the <code>www</code> directory, and remove any
+  <li>
+    <p>Create a new Apache Cordova 3.1.0 project using the cordova CLI, as
+described in <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Add your platforms to the cordova project, for example: <code>cordova
+platform add blackberry10</code>.</p>
+  </li>
+  <li>
+    <p>Copy the contents of the original project&#39;s <code>www</code> directory to the <code>www</code> directory
+at the root of the cordova project you just created.</p>
+  </li>
+  <li>
+    <p>Copy or overwrite any native assets from your original project
+(<code>Resources</code>, etc.)</p>
+  </li>
+  <li>
+    <p>Copy the <code>config.xml</code> file into the <code>www</code> directory, and remove any
 plugin definitions. You need to modify settings here rather than
-within the platform directory.</p></li>
-<li><p>Use the cordova CLI tool to install any plugins you need. Note that
+within the platform directory.</p>
+  </li>
+  <li>
+    <p>Use the cordova CLI tool to install any plugins you need. Note that
 the CLI handles all core APIs as plugins, so they may need to be
-added. Only plugins marked 3.0.0 and above are compatible with the CLI.</p></li>
-<li><p>Build and test.</p></li>
+added. Only plugins marked 3.0.0 and above are compatible with the CLI.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
 </ol>
 
 <p>Please note that the CLI supports the BlackBerry10 platform exclusively. For PlayBook and BBOS, please see Cordova version 2.9.0 and below.</p>
@@ -1477,21 +1503,35 @@ added. Only plugins marked 3.0.0 and above are compatible with the CLI.</p></li>
 <h2>Upgrade to the CLI (3.0.0) from 2.9.0</h2>
 
 <ol>
-<li><p>Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-described in <a href="../../cli/index.html">The Command-Line Interface</a>.</p></li>
-<li><p>Add your platforms to the cordova project, for example: <code>cordova
-platform add blackberry10</code>.</p></li>
-<li><p>Copy the contents of the original project&#39;s <code>www</code> directory to the <code>www</code> directory
-at the root of the cordova project you just created.</p></li>
-<li><p>Copy or overwrite any native assets from your original project
-(<code>Resources</code>, etc.)</p></li>
-<li><p>Copy the <code>config.xml</code> file into the <code>www</code> directory, and remove any
+  <li>
+    <p>Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
+described in <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Add your platforms to the cordova project, for example: <code>cordova
+platform add blackberry10</code>.</p>
+  </li>
+  <li>
+    <p>Copy the contents of the original project&#39;s <code>www</code> directory to the <code>www</code> directory
+at the root of the cordova project you just created.</p>
+  </li>
+  <li>
+    <p>Copy or overwrite any native assets from your original project
+(<code>Resources</code>, etc.)</p>
+  </li>
+  <li>
+    <p>Copy the <code>config.xml</code> file into the <code>www</code> directory, and remove any
 plugin definitions. You need to modify settings here rather than
-within the platform directory.</p></li>
-<li><p>Use the cordova CLI tool to install any plugins you need. Note that
+within the platform directory.</p>
+  </li>
+  <li>
+    <p>Use the cordova CLI tool to install any plugins you need. Note that
 the CLI handles all core APIs as plugins, so they may need to be
-added. Only 3.0.0 plugins are compatible with the CLI.</p></li>
-<li><p>Build and test.</p></li>
+added. Only 3.0.0 plugins are compatible with the CLI.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
 </ol>
 
 <h2>Upgrading 2.8.0 Projects to 2.9.0</h2>
@@ -1499,26 +1539,56 @@ added. Only 3.0.0 plugins are compatible with the CLI.</p></li>
 <p>For BlackBerry 10:</p>
 
 <ol>
-<li><p>Download and extract the Cordova 2.9.0 source to a permanent directory location on your hard drive, for example to <code>~/Cordova-2.9.0</code>.</p></li>
-<li><p>Quit any running SDK tools: Eclipse, Momentics and the like.</p></li>
-<li><p>Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.</p></li>
-<li><p>Create a new project, as described in BlackBerry Shell Tool Guide. This becomes the home of your updated project.</p></li>
-<li><p>Copy your projects source from the old project&#39;s <code>/www</code> directory to the new project&#39;s <code>/www</code> directory.</p></li>
-<li><p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova.js</code> file.</p></li>
+  <li>
+    <p>Download and extract the Cordova 2.9.0 source to a permanent directory location on your hard drive, for example to <code>~/Cordova-2.9.0</code>.</p>
+  </li>
+  <li>
+    <p>Quit any running SDK tools: Eclipse, Momentics and the like.</p>
+  </li>
+  <li>
+    <p>Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in BlackBerry Shell Tool Guide. This becomes the home of your updated project.</p>
+  </li>
+  <li>
+    <p>Copy your projects source from the old project&#39;s <code>/www</code> directory to the new project&#39;s <code>/www</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova.js</code> file.</p>
+  </li>
 </ol>
 
 <p>For BlackBerryOS/Playbook:</p>
 
 <ol>
-<li><p>Download and extract the Cordova 2.9.0 source to a permanent directory location on your hard drive, for example to <code>~/Cordova-2.9.0</code>.</p></li>
-<li><p>Quit any running SDK tools: Eclipse, Momentics and the like.</p></li>
-<li><p>Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.</p></li>
-<li><p>Create a new project, as described in BlackBerry Shell Tool Guide. You need the assets from this new project.</p></li>
-<li><p>Copy the <code>www/cordova.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova.js</code> file.</p></li>
-<li><p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova.js</code> file.</p></li>
-<li><p>Copy the <code>native</code> directory from the new project into the existing project, overwriting the old <code>native</code> directory.</p></li>
-<li><p>Copy the <code>lib</code> directory from the new project into the existing project, overwriting the old <code>lib</code> directory.</p></li>
-<li><p>Copy the <code>cordova</code> directory from the new project into the existing project, overwriting the old <code>cordova</code> directory.</p></li>
+  <li>
+    <p>Download and extract the Cordova 2.9.0 source to a permanent directory location on your hard drive, for example to <code>~/Cordova-2.9.0</code>.</p>
+  </li>
+  <li>
+    <p>Quit any running SDK tools: Eclipse, Momentics and the like.</p>
+  </li>
+  <li>
+    <p>Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in BlackBerry Shell Tool Guide. You need the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code>native</code> directory from the new project into the existing project, overwriting the old <code>native</code> directory.</p>
+  </li>
+  <li>
+    <p>Copy the <code>lib</code> directory from the new project into the existing project, overwriting the old <code>lib</code> directory.</p>
+  </li>
+  <li>
+    <p>Copy the <code>cordova</code> directory from the new project into the existing project, overwriting the old <code>cordova</code> directory.</p>
+  </li>
 </ol>
 
 <h2>Upgrading 2.7.0 Projects to 2.8.0</h2>
@@ -1527,40 +1597,88 @@ added. Only 3.0.0 plugins are compatible with the CLI.</p></li>
 Also note that the cordova js script file is now called &#39;cordova.js&#39; and no longer contains a version string.</p>
 
 <ol>
-<li><p>Download and extract the Cordova 2.8.0 source to a permanent directory location on your hard drive, for example to <code>~/Cordova-2.8.0</code>.</p></li>
-<li><p>Quit any running SDK tools: Eclipse, Momentics and the like.</p></li>
-<li><p>Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.</p></li>
-<li><p>Create a new project, as described in BlackBerry Shell Tool Guide. This becomes the home of your updated project.</p></li>
-<li><p>Copy your projects source from the old project&#39;s <code>/www</code> directory to the new project&#39;s <code>/www</code> directory.</p></li>
-<li><p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova.js</code> file.</p></li>
+  <li>
+    <p>Download and extract the Cordova 2.8.0 source to a permanent directory location on your hard drive, for example to <code>~/Cordova-2.8.0</code>.</p>
+  </li>
+  <li>
+    <p>Quit any running SDK tools: Eclipse, Momentics and the like.</p>
+  </li>
+  <li>
+    <p>Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in BlackBerry Shell Tool Guide. This becomes the home of your updated project.</p>
+  </li>
+  <li>
+    <p>Copy your projects source from the old project&#39;s <code>/www</code> directory to the new project&#39;s <code>/www</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova.js</code> file.</p>
+  </li>
 </ol>
 
 <p>For BlackBerryOS/Playbook:</p>
 
 <ol>
-<li><p>Download and extract the Cordova 2.8.0 source to a permanent directory location on your hard drive, for example to <code>~/Cordova-2.8.0</code>.</p></li>
-<li><p>Quit any running SDK tools: Eclipse, Momentics and the like.</p></li>
-<li><p>Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.</p></li>
-<li><p>Create a new project, as described in <a href="../ios/tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.</p></li>
-<li><p>Copy the <code>www/cordova.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova.js</code> file.</p></li>
-<li><p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova.js</code> file.</p></li>
-<li><p>Copy the <code>native</code> directory from the new project into the existing project, overwriting the old <code>native</code> directory.</p></li>
-<li><p>Copy the <code>lib</code> directory from the new project into the existing project, overwriting the old <code>lib</code> directory.</p></li>
-<li><p>Copy the <code>cordova</code> directory from the new project into the existing project, overwriting the old <code>cordova</code> directory.</p></li>
+  <li>
+    <p>Download and extract the Cordova 2.8.0 source to a permanent directory location on your hard drive, for example to <code>~/Cordova-2.8.0</code>.</p>
+  </li>
+  <li>
+    <p>Quit any running SDK tools: Eclipse, Momentics and the like.</p>
+  </li>
+  <li>
+    <p>Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in <a href="../ios/tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code>native</code> directory from the new project into the existing project, overwriting the old <code>native</code> directory.</p>
+  </li>
+  <li>
+    <p>Copy the <code>lib</code> directory from the new project into the existing project, overwriting the old <code>lib</code> directory.</p>
+  </li>
+  <li>
+    <p>Copy the <code>cordova</code> directory from the new project into the existing project, overwriting the old <code>cordova</code> directory.</p>
+  </li>
 </ol>
 
 <h2>Upgrading 2.6.0 Projects to 2.7.0</h2>
 
 <ol>
-<li><p>Download and extract the Cordova 2.7.0 source to a permanent directory location on your hard drive, for example to <code>~/Cordova-2.7.0</code>.</p></li>
-<li><p>Quit any running SDK tools: Eclipse, Momentics and the like.</p></li>
-<li><p>Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.</p></li>
-<li><p>Create a new project, as described in BlackBerry Shell Tool Guide. You need the assets from this new project.</p></li>
-<li><p>Copy the <code>www/cordova-2.7.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova-2.6.0.js</code> file.</p></li>
-<li><p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova-2.7.0.js</code> file.</p></li>
-<li><p>Copy the <code>native</code> directory from the new project into the existing project, overwriting the old <code>native</code> directory.</p></li>
-<li><p>Copy the <code>lib</code> directory from the new project into the existing project, overwriting the old <code>lib</code> directory.</p></li>
-<li><p>Copy the <code>cordova</code> directory from the new project into the existing project, overwriting the old <code>cordova</code> directory.</p></li>
+  <li>
+    <p>Download and extract the Cordova 2.7.0 source to a permanent directory location on your hard drive, for example to <code>~/Cordova-2.7.0</code>.</p>
+  </li>
+  <li>
+    <p>Quit any running SDK tools: Eclipse, Momentics and the like.</p>
+  </li>
+  <li>
+    <p>Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in BlackBerry Shell Tool Guide. You need the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova-2.7.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova-2.6.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova-2.7.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code>native</code> directory from the new project into the existing project, overwriting the old <code>native</code> directory.</p>
+  </li>
+  <li>
+    <p>Copy the <code>lib</code> directory from the new project into the existing project, overwriting the old <code>lib</code> directory.</p>
+  </li>
+  <li>
+    <p>Copy the <code>cordova</code> directory from the new project into the existing project, overwriting the old <code>cordova</code> directory.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 2.6.0 from 2.5.0</h2>
@@ -1572,22 +1690,44 @@ Also note that the cordova js script file is now called &#39;cordova.js&#39; and
 <p>However, here are the new parts needed for the piecemeal update:</p>
 
 <ol>
-<li><p>Update the cordova.blackberry.js file in the <code>Phonegap-2.6.0/lib/blackberry/javascript</code> directory.</p></li>
-<li><p>Update the <code>ext</code>, <code>ext-air</code>, and <code>ext-qnx</code> in the <code>Phonegap-2.6.0/lib/blackberry/framework</code> directory.</p></li>
-<li><p>Update the <code>build.xml</code> file in the <code>Phonegap-2.6.0/lib/blackberry</code> directory.</p></li>
-<li><p>Update the <code>Phonegap-2.6.0/lib/blackberry/bin</code> directory.</p></li>
-<li><p>Update the <code>VERSION</code> file in the <code>Phonegap-2.6.0/lib/blackberry</code> directory.</p></li>
+  <li>
+    <p>Update the cordova.blackberry.js file in the <code>Phonegap-2.6.0/lib/blackberry/javascript</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the <code>ext</code>, <code>ext-air</code>, and <code>ext-qnx</code> in the <code>Phonegap-2.6.0/lib/blackberry/framework</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the <code>build.xml</code> file in the <code>Phonegap-2.6.0/lib/blackberry</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the <code>Phonegap-2.6.0/lib/blackberry/bin</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the <code>VERSION</code> file in the <code>Phonegap-2.6.0/lib/blackberry</code> directory.</p>
+  </li>
 </ol>
 
 <p>Updating the example/ directory or migrating an existing project:</p>
 
 <ol>
-<li><p>Open the <code>www</code> directory, which contains the app.</p></li>
-<li><p>Remove and update the .jar file in the <code>ext/</code> directory.</p></li>
-<li><p>Update the contents of the <code>ext-air/</code> directory.</p></li>
-<li><p>Update the contents of the <code>ext-qnx/</code> directory.</p></li>
-<li><p>Copy the new <code>cordova-2.6.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-2.6.0.js</code> file.</p></li>
+  <li>
+    <p>Open the <code>www</code> directory, which contains the app.</p>
+  </li>
+  <li>
+    <p>Remove and update the .jar file in the <code>ext/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>ext-air/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>ext-qnx/</code> directory.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-2.6.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-2.6.0.js</code> file.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 2.5.0 from 2.4.0</h2>
@@ -1599,22 +1739,44 @@ Also note that the cordova js script file is now called &#39;cordova.js&#39; and
 <p>However, here are the new parts needed for the piecemeal update:</p>
 
 <ol>
-<li><p>Update the cordova.blackberry.js file in the <code>Phonegap-2.5.0/lib/blackberry/javascript</code> directory.</p></li>
-<li><p>Update the <code>ext</code>, <code>ext-air</code>, and <code>ext-qnx</code> in the <code>Phonegap-2.5.0/lib/blackberry/framework</code> directory.</p></li>
-<li><p>Update the <code>build.xml</code> file in the <code>Phonegap-2.5.0/lib/blackberry</code> directory.</p></li>
-<li><p>Update the <code>Phonegap-2.5.0/lib/blackberry/bin</code> directory.</p></li>
-<li><p>Update the <code>VERSION</code> file in the <code>Phonegap-2.5.0/lib/blackberry</code> directory.</p></li>
+  <li>
+    <p>Update the cordova.blackberry.js file in the <code>Phonegap-2.5.0/lib/blackberry/javascript</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the <code>ext</code>, <code>ext-air</code>, and <code>ext-qnx</code> in the <code>Phonegap-2.5.0/lib/blackberry/framework</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the <code>build.xml</code> file in the <code>Phonegap-2.5.0/lib/blackberry</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the <code>Phonegap-2.5.0/lib/blackberry/bin</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the <code>VERSION</code> file in the <code>Phonegap-2.5.0/lib/blackberry</code> directory.</p>
+  </li>
 </ol>
 
 <p>Updating the example/ directory or migrating an existing project:</p>
 
 <ol>
-<li><p>Open the <code>www</code> directory, which contains the app.</p></li>
-<li><p>Remove and update the .jar file in the <code>ext/</code> directory.</p></li>
-<li><p>Update the contents of the <code>ext-air/</code> directory.</p></li>
-<li><p>Update the contents of the <code>ext-qnx/</code> directory.</p></li>
-<li><p>Copy the new <code>cordova-2.5.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-2.5.0.js</code> file.</p></li>
+  <li>
+    <p>Open the <code>www</code> directory, which contains the app.</p>
+  </li>
+  <li>
+    <p>Remove and update the .jar file in the <code>ext/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>ext-air/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>ext-qnx/</code> directory.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-2.5.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-2.5.0.js</code> file.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 2.4.0 from 2.3.0</h2>
@@ -1622,29 +1784,51 @@ Also note that the cordova js script file is now called &#39;cordova.js&#39; and
 <p>Updating just the <code>www</code> directory:</p>
 
 <ol>
-<li><p>Open the <code>www</code> directory, which contains the app.</p></li>
-<li><p>Remove and update the .jar file in the <code>ext/</code> directory.</p></li>
-<li><p>Update the contents of the <code>ext-air/</code> directory.</p></li>
-<li><p>Copy the new <code>cordova-2.4.0.js</code> into your project.</p>
-
-<ul>
-<li>If playbook, then update the .js file in the <code>playbook/</code> directory.</li>
-<li>If BlackBerry 10, then update the .js file in the <code>qnx/</code> directory.</li>
-</ul></li>
-<li><p>Update your HTML to use the new <code>cordova-2.4.0.js</code> file.</p></li>
+  <li>
+    <p>Open the <code>www</code> directory, which contains the app.</p>
+  </li>
+  <li>
+    <p>Remove and update the .jar file in the <code>ext/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>ext-air/</code> directory.</p>
+  </li>
+  <li>Copy the new <code>cordova-2.4.0.js</code> into your project.
+    <ul>
+      <li>If playbook, then update the .js file in the <code>playbook/</code> directory.</li>
+      <li>If BlackBerry 10, then update the .js file in the <code>qnx/</code> directory.</li>
+    </ul>
+  </li>
+  <li>Update your HTML to use the new <code>cordova-2.4.0.js</code> file.</li>
 </ol>
 
 <p>Updating the sample directory (i.e., updating using the ant tools):</p>
 
 <ol>
-<li><p>Open the <code>sample/lib/</code> directory.</p></li>
-<li><p>Update the .jar file in the <code>cordova.2.3.0/ext/</code> directory.</p></li>
-<li><p>Update the contents of the <code>cordova.2.3.0/ext-air/</code> directory.</p></li>
-<li><p>Update the contents of the <code>cordova.2.3.0/ext-qnx/</code> directory.</p></li>
-<li><p>Update the .js file in the <code>cordova.2.3.0/javascript/</code> directory.</p></li>
-<li><p>Open the <code>sample/lib/</code> directory and rename the <code>cordova.2.3.0/</code> directory to <code>cordova.2.4.0/</code>.</p></li>
-<li><p>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www</code> directory with updated Cordova.</p></li>
-<li><p>Open the <code>www</code> directory and update your HTML to use the new <code>cordova-2.4.0.js</code> file.</p></li>
+  <li>
+    <p>Open the <code>sample/lib/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the .jar file in the <code>cordova.2.3.0/ext/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>cordova.2.3.0/ext-air/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>cordova.2.3.0/ext-qnx/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the .js file in the <code>cordova.2.3.0/javascript/</code> directory.</p>
+  </li>
+  <li>
+    <p>Open the <code>sample/lib/</code> directory and rename the <code>cordova.2.3.0/</code> directory to <code>cordova.2.4.0/</code>.</p>
+  </li>
+  <li>
+    <p>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www</code> directory with updated Cordova.</p>
+  </li>
+  <li>
+    <p>Open the <code>www</code> directory and update your HTML to use the new <code>cordova-2.4.0.js</code> file.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 2.3.0 from 2.2.0</h2>
@@ -1652,29 +1836,51 @@ Also note that the cordova js script file is now called &#39;cordova.js&#39; and
 <p>Updating just the <code>www</code> directory:</p>
 
 <ol>
-<li><p>Open the <code>www</code> directory, which contains the app.</p></li>
-<li><p>Remove and update the .jar file in the <code>ext/</code> directory.</p></li>
-<li><p>Update the contents of the <code>ext-air/</code> directory.</p></li>
-<li><p>Copy the new <code>cordova-2.3.0.js</code> into your project.</p>
-
-<ul>
-<li>If playbook, then update the .js file in the <code>playbook/</code> directory.</li>
-<li>If BlackBerry 10, then update the .js file in the <code>qnx/</code> directory.</li>
-</ul></li>
-<li><p>Update your HTML to use the new <code>cordova-2.3.0.js</code> file.</p></li>
+  <li>
+    <p>Open the <code>www</code> directory, which contains the app.</p>
+  </li>
+  <li>
+    <p>Remove and update the .jar file in the <code>ext/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>ext-air/</code> directory.</p>
+  </li>
+  <li>Copy the new <code>cordova-2.3.0.js</code> into your project.
+    <ul>
+      <li>If playbook, then update the .js file in the <code>playbook/</code> directory.</li>
+      <li>If BlackBerry 10, then update the .js file in the <code>qnx/</code> directory.</li>
+    </ul>
+  </li>
+  <li>Update your HTML to use the new <code>cordova-2.3.0.js</code> file.</li>
 </ol>
 
 <p>Updating the sample directory (i.e., updating using the ant tools):</p>
 
 <ol>
-<li><p>Open the <code>sample/lib/</code> directory.</p></li>
-<li><p>Update the .jar file in the <code>cordova.2.2.0/ext/</code> directory.</p></li>
-<li><p>Update the contents of the <code>cordova.2.2.0/ext-air/</code> directory.</p></li>
-<li><p>Update the contents of the <code>cordova.2.2.0/ext-qnx/</code> directory.</p></li>
-<li><p>Update the .js file in the <code>cordova.2.2.0/javascript/</code> directory.</p></li>
-<li><p>Open the <code>sample/lib/</code> directory and rename the <code>cordova.2.2.0/</code> directory to <code>cordova.2.3.0/</code>.</p></li>
-<li><p>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www</code> directory with updated Cordova.</p></li>
-<li><p>Open the <code>www</code> directory and update your HTML to use the new <code>cordova-2.3.0.js</code> file.</p></li>
+  <li>
+    <p>Open the <code>sample/lib/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the .jar file in the <code>cordova.2.2.0/ext/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>cordova.2.2.0/ext-air/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>cordova.2.2.0/ext-qnx/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the .js file in the <code>cordova.2.2.0/javascript/</code> directory.</p>
+  </li>
+  <li>
+    <p>Open the <code>sample/lib/</code> directory and rename the <code>cordova.2.2.0/</code> directory to <code>cordova.2.3.0/</code>.</p>
+  </li>
+  <li>
+    <p>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www</code> directory with updated Cordova.</p>
+  </li>
+  <li>
+    <p>Open the <code>www</code> directory and update your HTML to use the new <code>cordova-2.3.0.js</code> file.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 2.2.0 from 2.1.0</h2>
@@ -1682,29 +1888,51 @@ Also note that the cordova js script file is now called &#39;cordova.js&#39; and
 <p>Updating just the www directory:</p>
 
 <ol>
-<li><p>Open the <code>www</code> directory, which contains the app.</p></li>
-<li><p>Remove and update the .jar file in the <code>ext/</code> directory.</p></li>
-<li><p>Update the contents of the <code>ext-air/</code> directory.</p></li>
-<li><p>Copy the new <code>cordova-2.2.0.js</code> into your project.</p>
-
-<ul>
-<li>If playbook, then update the .js file in the <code>playbook/</code> directory.</li>
-<li>If BlackBerry 10, then update the .js file in the <code>qnx/</code> directory.</li>
-</ul></li>
-<li><p>Update your HTML to use the new <code>cordova-2.2.0.js</code> file.</p></li>
+  <li>
+    <p>Open the <code>www</code> directory, which contains the app.</p>
+  </li>
+  <li>
+    <p>Remove and update the .jar file in the <code>ext/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>ext-air/</code> directory.</p>
+  </li>
+  <li>Copy the new <code>cordova-2.2.0.js</code> into your project.
+    <ul>
+      <li>If playbook, then update the .js file in the <code>playbook/</code> directory.</li>
+      <li>If BlackBerry 10, then update the .js file in the <code>qnx/</code> directory.</li>
+    </ul>
+  </li>
+  <li>Update your HTML to use the new <code>cordova-2.2.0.js</code> file.</li>
 </ol>
 
 <p>Updating the sample directory (i.e., updating using the ant tools):</p>
 
 <ol>
-<li><p>Open the <code>sample/lib/</code> directory.</p></li>
-<li><p>Update the .jar file in the <code>cordova.2.1.0/ext/</code> directory.</p></li>
-<li><p>Update the contents of the <code>cordova.2.1.0/ext-air/</code> directory.</p></li>
-<li><p>Update the contents of the <code>cordova.2.1.0/ext-qnx/</code> directory.</p></li>
-<li><p>Update the .js file in the <code>cordova.2.1.0/javascript/</code> directory.</p></li>
-<li><p>Open the <code>sample/lib/</code> directory and rename the <code>cordova.2.1.0/</code> directory to <code>cordova.2.2.0/</code>.</p></li>
-<li><p>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www</code> directory with updated Cordova.</p></li>
-<li><p>Open the <code>www</code> directory and update your HTML to use the new <code>cordova-2.2.0.js</code> file.</p></li>
+  <li>
+    <p>Open the <code>sample/lib/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the .jar file in the <code>cordova.2.1.0/ext/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>cordova.2.1.0/ext-air/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>cordova.2.1.0/ext-qnx/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the .js file in the <code>cordova.2.1.0/javascript/</code> directory.</p>
+  </li>
+  <li>
+    <p>Open the <code>sample/lib/</code> directory and rename the <code>cordova.2.1.0/</code> directory to <code>cordova.2.2.0/</code>.</p>
+  </li>
+  <li>
+    <p>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www</code> directory with updated Cordova.</p>
+  </li>
+  <li>
+    <p>Open the <code>www</code> directory and update your HTML to use the new <code>cordova-2.2.0.js</code> file.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 2.1.0 from 2.0.0</h2>
@@ -1712,27 +1940,47 @@ Also note that the cordova js script file is now called &#39;cordova.js&#39; and
 <p>Updating just the <code>www</code> directory:</p>
 
 <ol>
-<li><p>Open the <code>www</code> directory, which contains the app.</p></li>
-<li><p>Remove and update the .jar file in the <code>ext/</code> directory.</p></li>
-<li><p>Update the contents of the <code>ext-air/</code> directory.</p></li>
-<li><p>Copy the new <code>cordova-2.1.0.js</code> into your project.</p>
-
-<ul>
-<li>If playbook, then update the .js file in the <code>playbook/</code> directory.</li>
-</ul></li>
-<li><p>Update your HTML to use the new <code>cordova-2.1.0.js</code> file.</p></li>
+  <li>
+    <p>Open the <code>www</code> directory, which contains the app.</p>
+  </li>
+  <li>
+    <p>Remove and update the .jar file in the <code>ext/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>ext-air/</code> directory.</p>
+  </li>
+  <li>Copy the new <code>cordova-2.1.0.js</code> into your project.
+    <ul>
+      <li>If playbook, then update the .js file in the <code>playbook/</code> directory.</li>
+    </ul>
+  </li>
+  <li>Update your HTML to use the new <code>cordova-2.1.0.js</code> file.</li>
 </ol>
 
 <p>Updating the sample directory (i.e., updating using the ant tools):</p>
 
 <ol>
-<li><p>Open the <code>sample/lib/</code> directory.</p></li>
-<li><p>Update the .jar file in the <code>cordova.2.0.0/ext/</code> directory.</p></li>
-<li><p>Update the contents of the <code>cordova.2.0.0/ext-air/</code> directory.</p></li>
-<li><p>Update the .js file in the <code>cordova.2.0.0/javascript/</code> directory.</p></li>
-<li><p>Open the <code>sample/lib/</code> directory and rename the <code>cordova.2.0.0/</code> directory to <code>cordova.2.1.0/</code>.</p></li>
-<li><p>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www</code> directory with updated Cordova.</p></li>
-<li><p>Open the <code>www</code> directory and update your HTML to use the new <code>cordova-2.1.0.js</code> file.</p></li>
+  <li>
+    <p>Open the <code>sample/lib/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the .jar file in the <code>cordova.2.0.0/ext/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>cordova.2.0.0/ext-air/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the .js file in the <code>cordova.2.0.0/javascript/</code> directory.</p>
+  </li>
+  <li>
+    <p>Open the <code>sample/lib/</code> directory and rename the <code>cordova.2.0.0/</code> directory to <code>cordova.2.1.0/</code>.</p>
+  </li>
+  <li>
+    <p>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www</code> directory with updated Cordova.</p>
+  </li>
+  <li>
+    <p>Open the <code>www</code> directory and update your HTML to use the new <code>cordova-2.1.0.js</code> file.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 2.0.0 from 1.9.0</h2>
@@ -1740,51 +1988,83 @@ Also note that the cordova js script file is now called &#39;cordova.js&#39; and
 <p>Updating just the <code>www</code> directory:</p>
 
 <ol>
-<li><p>Open the <code>www</code> directory, which contains the app.</p></li>
-<li><p>Remove and update the .jar file in the <code>ext/</code> directory.</p></li>
-<li><p>Update the contents of the <code>ext-air/</code> directory.</p></li>
-<li><p>Copy the new <code>cordova-2.0.0.js</code> into your project.</p>
-
-<ul>
-<li>If playbook, then update the .js file in the <code>playbook/</code> directory.</li>
-</ul></li>
-<li><p>Update your HTML to use the new <code>cordova-2.0.0.js</code> file.</p></li>
-<li><p>Update the <code>www/plugins.xml</code> file. Two plugins changed their
+  <li>
+    <p>Open the <code>www</code> directory, which contains the app.</p>
+  </li>
+  <li>
+    <p>Remove and update the .jar file in the <code>ext/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>ext-air/</code> directory.</p>
+  </li>
+  <li>Copy the new <code>cordova-2.0.0.js</code> into your project.
+    <ul>
+      <li>If playbook, then update the .js file in the <code>playbook/</code> directory.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-2.0.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the <code>www/plugins.xml</code> file. Two plugins changed their
 namespace/service label. Change the old entries for the Capture and
 Contact plugins from:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
-&lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
+ &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+
+    <p>To:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
+ &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+  </li>
 </ol>
 
-<p>To:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
-    &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div>
 <p>Updating the sample directory (i.e., updating using the ant tools):</p>
 
 <ol>
-<li><p>Open the <code>sample/lib/</code> directory.</p></li>
-<li><p>Update the .jar file in the <code>cordova.1.9.0/ext/</code> directory.</p></li>
-<li><p>Update the contents of the <code>cordova.1.9.0/ext-air/</code> directory.</p></li>
-<li><p>Update the .js file in the <code>cordova.1.9.0/javascript/</code> directory.</p></li>
-<li><p>Open the <code>sample/lib/</code> directory and rename the <code>cordova.1.9.0/</code> directory to <code>cordova.2.0.0/</code>.</p></li>
-<li><p>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www</code> directory with updated Cordova.</p></li>
-<li><p>Open the <code>www</code> directory and update your HTML to use the new <code>cordova-2.0.0.js</code> file.</p></li>
-<li><p>Open the <code>www</code> directory and update the <code>plugins.xml</code> file. Two plugins
+  <li>
+    <p>Open the <code>sample/lib/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the .jar file in the <code>cordova.1.9.0/ext/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>cordova.1.9.0/ext-air/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the .js file in the <code>cordova.1.9.0/javascript/</code> directory.</p>
+  </li>
+  <li>
+    <p>Open the <code>sample/lib/</code> directory and rename the <code>cordova.1.9.0/</code> directory to <code>cordova.2.0.0/</code>.</p>
+  </li>
+  <li>
+    <p>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www</code> directory with updated Cordova.</p>
+  </li>
+  <li>
+    <p>Open the <code>www</code> directory and update your HTML to use the new <code>cordova-2.0.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Open the <code>www</code> directory and update the <code>plugins.xml</code> file. Two plugins
 changed their namespace/service label. Change the old entries for the
 Capture and Contact plugins from:</p>
-<div class="highlight"><pre><code class="language-" data-lang=""> &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
- &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
+  &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+
+    <p>To:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
+  &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+  </li>
 </ol>
 
-<p>To:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
-     &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div>
 <ul>
-<li>To upgrade to 1.8.0, please go from 1.7.0</li>
+  <li>To upgrade to 1.8.0, please go from 1.7.0</li>
 </ul>
 
 <h2>Upgrade to 1.8.0 from 1.7.0</h2>
@@ -1792,49 +2072,82 @@ Capture and Contact plugins from:</p>
 <p>Updating just the <code>www</code> directory:</p>
 
 <ol>
-<li><p>Open the <code>www</code> directory, which contains the app.</p></li>
-<li><p>Remove and update the .jar file in the <code>ext/</code> directory.</p></li>
-<li><p>Update the contents of the <code>ext-air/</code> directory.</p></li>
-<li><p>Copy the new <code>cordova-1.8.0.js</code> into your project.</p>
-
-<ul>
-<li>If playbook, then update the .js file in the <code>playbook/</code> directory.</li>
-</ul></li>
-<li><p>Update your HTML to use the new <code>cordova-1.8.0.js</code> file.</p></li>
-<li><p>Update the <code>www/plugins.xml</code> file. Two plugins changed their
+  <li>
+    <p>Open the <code>www</code> directory, which contains the app.</p>
+  </li>
+  <li>
+    <p>Remove and update the .jar file in the <code>ext/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>ext-air/</code> directory.</p>
+  </li>
+  <li>Copy the new <code>cordova-1.8.0.js</code> into your project.
+    <ul>
+      <li>If playbook, then update the .js file in the <code>playbook/</code> directory.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-1.8.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the <code>www/plugins.xml</code> file. Two plugins changed their
 namespace/service label. Change the old entries for the Capture and
 Contact plugins from:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
-&lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
+ &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+
+    <p>To:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
+ &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+  </li>
 </ol>
 
-<p>To:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
-    &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div>
 <p>Updating the sample directory (i.e., updating using the ant tools):</p>
 
 <ol>
-<li><p>Open the <code>sample/lib/</code> directory.</p></li>
-<li><p>Update the .jar file in the <code>cordova.1.7.0/ext/</code> directory.</p></li>
-<li><p>Update the contents of the <code>cordova.1.7.0/ext-air/</code> directory.</p></li>
-<li><p>Update the .js file in the <code>cordova.1.7.0/javascript/</code> directory.</p></li>
-<li><p>Open the <code>sample/lib/</code> directory and rename the <code>cordova.1.7.0/</code> directory to <code>cordova.1.8.0/</code>.</p></li>
-<li><p>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www</code> directory with updated Cordova.</p></li>
-<li><p>Open the <code>www</code> directory and update your HTML to use the new <code>cordova-1.8.0.js</code> file.</p></li>
-<li><p>Open the <code>www</code> directory and update the <code>plugins.xml</code> file. Two plugins
+  <li>
+    <p>Open the <code>sample/lib/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the .jar file in the <code>cordova.1.7.0/ext/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the contents of the <code>cordova.1.7.0/ext-air/</code> directory.</p>
+  </li>
+  <li>
+    <p>Update the .js file in the <code>cordova.1.7.0/javascript/</code> directory.</p>
+  </li>
+  <li>
+    <p>Open the <code>sample/lib/</code> directory and rename the <code>cordova.1.7.0/</code> directory to <code>cordova.1.8.0/</code>.</p>
+  </li>
+  <li>
+    <p>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www</code> directory with updated Cordova.</p>
+  </li>
+  <li>
+    <p>Open the <code>www</code> directory and update your HTML to use the new <code>cordova-1.8.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Open the <code>www</code> directory and update the <code>plugins.xml</code> file. Two plugins
 changed their namespace/service label. Change the old entries for the
 Capture and Contact plugins from:</p>
-<div class="highlight"><pre><code class="language-" data-lang=""> &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
- &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
+  &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+
+    <p>To:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
+  &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+  </li>
 </ol>
 
-<p>To:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">     &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
-     &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
-</code></pre></div>
+
 
             </div>
         </div>

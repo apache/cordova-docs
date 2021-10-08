@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce a minor version of Cordova iOS 4.5.0 has been released!Three new features were added:CB-12937 - Plugins can receive handleOpenURLWit...">
+    <meta name="description" content="We are happy to announce a minor version of Cordova iOS 4.5.0 has been released!Three new features were added:  CB-12937 - Plugins can receive handleOpenURLW...">
 
     <title>
         
@@ -134,68 +134,74 @@
             <p>We are happy to announce a minor version of <code>Cordova iOS 4.5.0</code> has been released!</p>
 
 <p>Three new features were added:</p>
-
 <ol>
-<li><a href="https://issues.apache.org/jira/browse/CB-12937">CB-12937</a> - Plugins can receive <code>handleOpenURLWithApplicationSourceAndAnnotation:</code> now (new selector, that sends the URL with additional metadata) </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13164">CB-13164</a> - Integrated cordova-plugin-console to build in support for window.console. </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10916">CB-10916</a> - Support <a href="/docs/en/dev/config_ref/index.html#name">display name</a> for <strong>iOS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12937">CB-12937</a> - Plugins can receive <code>handleOpenURLWithApplicationSourceAndAnnotation:</code> now (new selector, that sends the URL with additional metadata)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13164">CB-13164</a> - Integrated cordova-plugin-console to build in support for window.console.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10916">CB-10916</a> - Support <a href="/docs/en/dev/config_ref/index.html#name">display name</a> for <strong>iOS</strong></li>
 </ol>
 
 <p><strong>Important!</strong> If you have included <code>cordova-plugin-console</code> in your project, you must <strong>remove</strong> it, otherwise your project will not build.</p>
 
 <p>If you ever needed to disable the built in console plugin, comment out or remove the <code>Console</code> <code>&lt;feature&gt;</code> tag in your platform specific <code>config.xml</code>, and/or call this right after the <code>deviceready</code> event:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova.require('cordova/plugin/ios/logger').useLogger(false);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova.require('cordova/plugin/ios/logger').useLogger(false);
+</code></pre></div></div>
+
 <p>Other notable issues:</p>
 
 <ol>
-<li>Updated <code>ios-deploy</code> dependency to v1.9.2, which contains a fix for Xcode 9</li>
-<li>Updated the bundled <code>ios-sim</code> to v6.0.0 with support for newer iPads (and this fixes some related bugs)</li>
-<li>New <code>&lt;access&gt;</code> tag attribute <code>allows-arbitrary-loads-for-media</code> (which reflects the correct App Transport Security value). The old attribute <code>allows-arbitrary-loads-in-media</code> is deprecated.
+  <li>Updated <code>ios-deploy</code> dependency to v1.9.2, which contains a fix for Xcode 9</li>
+  <li>Updated the bundled <code>ios-sim</code> to v6.0.0 with support for newer iPads (and this fixes some related bugs)</li>
+  <li>New <code>&lt;access&gt;</code> tag attribute <code>allows-arbitrary-loads-for-media</code> (which reflects the correct App Transport Security value). The old attribute <code>allows-arbitrary-loads-in-media</code> is deprecated.
 <br /></li>
 </ol>
 
 <p><strong>Note:</strong> When updating <strong>iOS</strong>, make sure to save your plugins as current unsaved plugins may not be reinstalled otherwise. Run the following command in your project to save your currently installed plugins into <code>config.xml</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin save
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin save
+</code></pre></div></div>
+
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform rm ios
 cordova platform add ios@4.5.0
-</code></pre></div>
-<p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add ios@4.5.0
-</code></pre></div>
-<!--more-->
+</code></pre></div></div>
 
+<p>To add it explicitly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@4.5.0
+</code></pre></div></div>
+
+<!--more-->
 <h2>What&#39;s new in iOS</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13247">CB-13247</a> updated checked-in node_modules</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13212">CB-13212</a> - Update <code>cordova-ios</code> with new cordova-common that parses new attribute for access tag</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13240">CB-13240</a> - Update <strong>iOS</strong>-deploy dependency to 1.9.2</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12830">CB-12830</a> - cordova emulate <strong>iOS</strong> with --target throws undefined error (#332)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13210">CB-13210</a> - App Transport Security Key is wrong (#331)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13164">CB-13164</a> fixed local require, updated cordova.js (#333)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13222">CB-13222</a> - (iOS) Infinite Loop when a &quot;NSURLErrorCancelled -999&quot; is received on didFailLoadWithError (#334)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12937">CB-12937</a> - (iOS) added new method handleOpenURLWithApplicationSourceAndAnno… (#321)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13164">CB-13164</a> Integrated cordova-plugin-console to build in support for window.console. (#330)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13112">CB-13112</a> - <resource-file> should not create a new file reference on each &quot;cordova prepare&quot; (#329)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13093">CB-13093</a> (iOS) Infinite looping when stressing navigation (#328)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12966">CB-12966</a> (ios) Fix bug by escaping project name in podfile template</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> : removed jshint and added eslint</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12960">CB-12960</a> Run tests on Node 4.x and 6.x This closes #323</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12948">CB-12948</a> - Add a warning to updateProject for <strong>iOS</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10916">CB-10916</a> Support display name for <strong>iOS</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12887">CB-12887</a> - cordova run --list does not show virtual devices in <strong>iOS</strong> 11</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12762">CB-12762</a> : point <code>package.json</code> repo items to github mirrors instead of apache repos site</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12675">CB-12675</a> - Travis xcode 8.3. os-x image fails an e2e test</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12869">CB-12869</a> - Update bundled <strong>iOS</strong>-sim to 6.0.0</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12856">CB-12856</a> - Skip CocoaPods check_reqs if on non-darwin (macOS) platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8980">CB-8980</a> Ensure copied resource-files are cleaned</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
-<li>Updated cordova-common to 2.1.0 and other bundled node_modules</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13247">CB-13247</a> updated checked-in node_modules</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13212">CB-13212</a> - Update <code>cordova-ios</code> with new cordova-common that parses new attribute for access tag</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13240">CB-13240</a> - Update <strong>iOS</strong>-deploy dependency to 1.9.2</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12830">CB-12830</a> - cordova emulate <strong>iOS</strong> with --target throws undefined error (#332)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13210">CB-13210</a> - App Transport Security Key is wrong (#331)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13164">CB-13164</a> fixed local require, updated cordova.js (#333)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13222">CB-13222</a> - (iOS) Infinite Loop when a &quot;NSURLErrorCancelled -999&quot; is received on didFailLoadWithError (#334)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12937">CB-12937</a> - (iOS) added new method handleOpenURLWithApplicationSourceAndAnno… (#321)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13164">CB-13164</a> Integrated cordova-plugin-console to build in support for window.console. (#330)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13112">CB-13112</a> - <resource-file> should not create a new file reference on each "cordova prepare" (#329)</resource-file></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13093">CB-13093</a> (iOS) Infinite looping when stressing navigation (#328)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12966">CB-12966</a> (ios) Fix bug by escaping project name in podfile template</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> : removed jshint and added eslint</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12960">CB-12960</a> Run tests on Node 4.x and 6.x This closes #323</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12948">CB-12948</a> - Add a warning to updateProject for <strong>iOS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10916">CB-10916</a> Support display name for <strong>iOS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12887">CB-12887</a> - cordova run --list does not show virtual devices in <strong>iOS</strong> 11</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12762">CB-12762</a> : point <code>package.json</code> repo items to github mirrors instead of apache repos site</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12675">CB-12675</a> - Travis xcode 8.3. os-x image fails an e2e test</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12869">CB-12869</a> - Update bundled <strong>iOS</strong>-sim to 6.0.0</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12856">CB-12856</a> - Skip CocoaPods check_reqs if on non-darwin (macOS) platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8980">CB-8980</a> Ensure copied resource-files are cleaned</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li>Updated cordova-common to 2.1.0 and other bundled node_modules</li>
 </ul>
 
         </div>

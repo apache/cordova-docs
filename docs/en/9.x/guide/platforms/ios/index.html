@@ -2229,24 +2229,31 @@ minimum iOS version supported since the release of cordova-ios v4.4.0.</p>
 <p>There are two ways to download Xcode:</p>
 
 <ul>
-<li><p>from the <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">App Store</a>,
-available by searching for &quot;Xcode&quot; in the <strong>App Store</strong> application.</p></li>
-<li><p>from <a href="https://developer.apple.com/downloads/index.action">Apple Developer Downloads</a>,
-which requires registration as an Apple Developer.</p></li>
+  <li>
+    <p>from the <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">App Store</a>,
+available by searching for &quot;Xcode&quot; in the <strong>App Store</strong> application.</p>
+  </li>
+  <li>
+    <p>from <a href="https://developer.apple.com/downloads/index.action">Apple Developer Downloads</a>,
+which requires registration as an Apple Developer.</p>
+  </li>
 </ul>
 
 <p>Once Xcode is installed, several command-line tools need to be enabled
 for Cordova to run. From the command line, run:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>xcode-select <span class="nt">--install</span>
-</code></pre></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>xcode-select <span class="nt">--install</span>
+</code></pre></div></div>
+
 <h3>Deployment Tools</h3>
 
 <p>The <a href="https://www.npmjs.org/package/ios-deploy">ios-deploy</a> tools allow you
 to launch iOS apps on an iOS Device from the command-line.</p>
 
 <p>To install it, run the following from command-line terminal:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>npm install <span class="nt">-g</span> ios-deploy
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm <span class="nb">install</span> <span class="nt">-g</span> ios-deploy
+</code></pre></div></div>
+
 <h2>Project Configuration</h2>
 
 <p>Installing Xcode will mostly set everything needed to get started with the native side of things.
@@ -2258,32 +2265,38 @@ For more details on installing and using the CLI, refer to <a href="../../cli/in
 <p>To preview the app in the iOS simulator:</p>
 
 <ol>
-<li><p>Open the workspace file (<code>platforms/ios/HelloWorld.xcworkspace</code>) from Xcode, <em>or</em> from the command line:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>open ./platforms/ios/HelloWorld.xcworkspace/
-</code></pre></div></li>
-<li><p>Make sure the <code>HelloWorld</code> project is selected in the left panel (1).</p></li>
-</ol>
+  <li>
+    <p>Open the workspace file (<code>platforms/ios/HelloWorld.xcworkspace</code>) from Xcode, <em>or</em> from the command line:</p>
 
-<p><img src="/static/img/guide/platforms/ios/xcode10-run-project.png" alt=""></p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>open ./platforms/ios/HelloWorld.xcworkspace/
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Make sure the <code>HelloWorld</code> project is selected in the left panel (1).</p>
 
-<ol>
-<li><p>Select the intended device from the toolbar&#39;s <strong>Scheme</strong> menu, such
-as the iPhone XR Simulator as highlighted in (2)</p></li>
-<li><p>Press the <strong>Run</strong> button (3) in the same toolbar to the
+    <p><img src="/static/img/guide/platforms/ios/xcode10-run-project.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Select the intended device from the toolbar&#39;s <strong>Scheme</strong> menu, such
+as the iPhone XR Simulator as highlighted in (2)</p>
+  </li>
+  <li>
+    <p>Press the <strong>Run</strong> button (3) in the same toolbar to the
 left of the <strong>Scheme</strong>. That builds, deploys, and runs the
 application in the simulator. A separate simulator application opens
-to display the app:</p></li>
+to display the app:</p>
+
+    <p><img src="/static/img/guide/platforms/ios/HelloWorld-running-xr.png" alt="" /></p>
+
+    <p>Only one simulator may run at a time, so if you want to test the app
+in a different simulator, you need to quit the simulator application
+and run a different target within Xcode.</p>
+  </li>
 </ol>
 
-<p><img src="/static/img/guide/platforms/ios/HelloWorld-running-xr.png" alt=""></p>
-
-<p>Only one simulator may run at a time, so if you want to test the app
-   in a different simulator, you need to quit the simulator application
-   and run a different target within Xcode.</p>
-
 <p>Xcode comes bundled with simulators for the latest versions of iPhone
-and iPad. Older versions may be available from the <strong>Xcode &rarr;
-Preferences... &rarr; Components</strong> panel.</p>
+and iPad. Older versions may be available from the <strong>Xcode &#8594;
+Preferences&#8230; &#8594; Components</strong> panel.</p>
 
 <h3>Deploying to Device</h3>
 
@@ -2294,26 +2307,38 @@ Apple&#39;s
 Briefly, you need to do the following before deploying:</p>
 
 <ol>
-<li><p>Create a <em>Provisioning Profile</em> within the
+  <li>
+    <p>Create a <em>Provisioning Profile</em> within the
 <a href="https://developer.apple.com/ios/manage/overview/index.action">iOS Provisioning Portal</a>.
 You can use its <em>Development Provisioning Assistant</em> to create and
-install the profile and certificate Xcode requires.</p></li>
-<li><p>Verify that the <em>Code Signing Identity</em> setting within the <em>Code Signing</em> section
+install the profile and certificate Xcode requires.</p>
+  </li>
+  <li>
+    <p>Verify that the <em>Code Signing Identity</em> setting within the <em>Code Signing</em> section
 within the build settings is set to your provisioning profile
-name.</p></li>
+name.</p>
+  </li>
 </ol>
 
 <p>To deploy to the device:</p>
 
 <ol>
-<li><p>Use the USB cable to plug the device into your Mac.</p></li>
-<li><p>Select the name of the project in the Xcode window&#39;s <strong>Scheme</strong>
-drop-down list.</p></li>
-<li><p>Select your device from the <strong>Device</strong> drop-down list. If it is
+  <li>
+    <p>Use the USB cable to plug the device into your Mac.</p>
+  </li>
+  <li>
+    <p>Select the name of the project in the Xcode window&#39;s <strong>Scheme</strong>
+drop-down list.</p>
+  </li>
+  <li>
+    <p>Select your device from the <strong>Device</strong> drop-down list. If it is
 plugged in via USB but still does not appear, press the
-<strong>Organizer</strong> button to resolve any errors.</p></li>
-<li><p>Press the <strong>Run</strong> button to build, deploy and run the application
-on your device.</p></li>
+<strong>Organizer</strong> button to resolve any errors.</p>
+  </li>
+  <li>
+    <p>Press the <strong>Run</strong> button to build, deploy and run the application
+on your device.</p>
+  </li>
 </ol>
 
 <h2>Signing an App</h2>
@@ -2325,44 +2350,47 @@ and the <a href="https://developer.apple.com/library/prerelease/ios/documentatio
 
 <p>To sign an app, you need the following parameters:</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Flag</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Code Sign Identity</td>
-<td><code>--codeSignIdentity</code></td>
-<td>Code signing identity to use for signing. It can be created with Xcode and added to your keychain. Starting with Xcode 8 you should use <code>--codeSignIdentity=&quot;iPhone Developer&quot;</code> both for <code>debug</code> and <code>release</code>.</td>
-</tr>
-<tr>
-<td>Development Team</td>
-<td><code>--developmentTeam</code></td>
-<td>The development team (<a href="https://developer.apple.com/account/#/membership/">Team ID</a>) to use for code signing. You would use this setting and a simplified Code Sign Identity (i.e. just &#39;iPhone Developer&#39;) to sign your apps, you do not need to provide a Provisioning Profile.</td>
-</tr>
-<tr>
-<td>Packaging Type</td>
-<td><code>--packageType</code></td>
-<td>This will determine what type of build is generated by Xcode. Valid options are <code>development</code> (the default), <code>enterprise</code>, <code>ad-hoc</code>, and <code>app-store</code>.</td>
-</tr>
-<tr>
-<td>Provisioning Profile</td>
-<td><code>--provisioningProfile</code></td>
-<td>(Optional) GUID of the provisioning profile to be used for manual signing. It is copied here on your Mac: <code>~/Library/MobileDevice/Provisioning\ Profiles/</code>. Opening it in a text editor, you can find the GUID which needs to be specified here if using manual signing.</td>
-</tr>
-<tr>
-<td>Code Sign Resource Rules</td>
-<td><code>--codesignResourceRules</code></td>
-<td>(Optional) Used to control which files in a bundle should be sealed by a code signature. For more details, read <a href="https://developer.apple.com/library/mac/technotes/tn2206/_index.html#//apple_ref/doc/uid/DTS40007919-CH1-TNTAG206">The OS X Code Signing In Depth article</a></td>
-</tr>
-<tr>
-<td>Automatic Provisioning</td>
-<td><code>--automaticProvisioning</code></td>
-<td>(Optional) Enable to allow Xcode to automatically manage provisioning profiles. Valid options are <code>false</code> (the default) and <code>true</code>.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Flag</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Code Sign Identity</td>
+      <td><code>--codeSignIdentity</code></td>
+      <td>Code signing identity to use for signing. It can be created with Xcode and added to your keychain. Starting with Xcode 8 you should use <code>--codeSignIdentity="iPhone Developer"</code> both for <code>debug</code> and <code>release</code>.</td>
+    </tr>
+    <tr>
+      <td>Development Team</td>
+      <td><code>--developmentTeam</code></td>
+      <td>The development team (<a href="https://developer.apple.com/account/#/membership/">Team ID</a>) to use for code signing. You would use this setting and a simplified Code Sign Identity (i.e. just &#39;iPhone Developer&#39;) to sign your apps, you do not need to provide a Provisioning Profile.</td>
+    </tr>
+    <tr>
+      <td>Packaging Type</td>
+      <td><code>--packageType</code></td>
+      <td>This will determine what type of build is generated by Xcode. Valid options are <code>development</code> (the default), <code>enterprise</code>, <code>ad-hoc</code>, and <code>app-store</code>.</td>
+    </tr>
+    <tr>
+      <td>Provisioning Profile</td>
+      <td><code>--provisioningProfile</code></td>
+      <td>(Optional) GUID of the provisioning profile to be used for manual signing. It is copied here on your Mac: <code>~/Library/MobileDevice/Provisioning\ Profiles/</code>. Opening it in a text editor, you can find the GUID which needs to be specified here if using manual signing.</td>
+    </tr>
+    <tr>
+      <td>Code Sign Resource Rules</td>
+      <td><code>--codesignResourceRules</code></td>
+      <td>(Optional) Used to control which files in a bundle should be sealed by a code signature. For more details, read <a href="https://developer.apple.com/library/mac/technotes/tn2206/_index.html#//apple_ref/doc/uid/DTS40007919-CH1-TNTAG206">The OS X Code Signing In Depth article</a></td>
+    </tr>
+    <tr>
+      <td>Automatic Provisioning</td>
+      <td><code>--automaticProvisioning</code></td>
+      <td>(Optional) Enable to allow Xcode to automatically manage provisioning profiles. Valid options are <code>false</code> (the default) and <code>true</code>.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3>Using build.json</h3>
 
@@ -2371,25 +2399,26 @@ using the <code>--buildConfig</code> argument to the same commands. Here&#39;s a
 build configuration file:</p>
 
 <p>For automatic signing, where provisioning profiles are managed automatically by Xcode (recommended):</p>
-<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="s2">"ios"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"codeSignIdentity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iPhone Developer"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"developmentTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FG35JLLMXX4A"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"development"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"automaticProvisioning"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"buildFlag"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"ios"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"codeSignIdentity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iPhone Developer"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"developmentTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FG35JLLMXX4A"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"development"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"automaticProvisioning"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"buildFlag"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                 </span><span class="s2">"EMBEDDED_CONTENT_CONTAINS_SWIFT = YES"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES=NO"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"LD_RUNPATH_SEARCH_PATHS = </span><span class="se">\"</span><span class="s2">@executable_path/Frameworks</span><span class="se">\"</span><span class="s2">"</span><span class="w">
             </span><span class="p">]</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"codeSignIdentity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iPhone Developer"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"developmentTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FG35JLLMXX4A"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app-store"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"automaticProvisioning"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"buildFlag"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="nl">"release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"codeSignIdentity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iPhone Developer"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"developmentTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FG35JLLMXX4A"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app-store"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"automaticProvisioning"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"buildFlag"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                 </span><span class="s2">"EMBEDDED_CONTENT_CONTAINS_SWIFT = YES"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES=NO"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"LD_RUNPATH_SEARCH_PATHS = </span><span class="se">\"</span><span class="s2">@executable_path/Frameworks</span><span class="se">\"</span><span class="s2">"</span><span class="w">
@@ -2397,31 +2426,36 @@ build configuration file:</p>
         </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div>
+</span></code></pre></div></div>
+
 <p>For manual signing, specifying the provisioning profiles by UUID:</p>
-<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="s2">"ios"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"codeSignIdentity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iPhone Development"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"provisioningProfile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"926c2bd6-8de9-4c2f-8407-1016d2d12954"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"developmentTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FG35JLLMXX4A"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"development"</span><span class="w">
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"ios"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"codeSignIdentity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iPhone Development"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"provisioningProfile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"926c2bd6-8de9-4c2f-8407-1016d2d12954"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"developmentTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FG35JLLMXX4A"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"development"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"codeSignIdentity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iPhone Distribution"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"provisioningProfile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"70f699ad-faf1-4adE-8fea-9d84738fb306"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"developmentTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FG35JLLMXX4A"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app-store"</span><span class="w">
+        </span><span class="nl">"release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"codeSignIdentity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iPhone Distribution"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"provisioningProfile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"70f699ad-faf1-4adE-8fea-9d84738fb306"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"developmentTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FG35JLLMXX4A"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app-store"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div>
+</span></code></pre></div></div>
+
 <h2>Xcode Build Flags</h2>
 
 <p>If you have a custom situation where you need to pass additional build flags to Xcode you would use one or more <code>--buildFlag</code> options to pass these flags to <code>xcodebuild</code>. If you use an <code>xcodebuild</code> built-in flag, it will show a warning.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova build --device --buildFlag="MYSETTING=myvalue" --buildFlag="MY_OTHER_SETTING=othervalue"
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build --device --buildFlag="MYSETTING=myvalue" --buildFlag="MY_OTHER_SETTING=othervalue"
 cordova run --device --buildFlag="DEVELOPMENT_TEAM=FG35JLLMXX4A" --buildFlag="-scheme TestSchemeFlag"
-</code></pre></div>
+</code></pre></div></div>
+
 <p>You can also specify a <code>buildFlag</code> option in <a href="#using-buildjson"><code>build.json</code> above</a> (the value for the <code>buildFlag</code> key is a string or an array of strings).</p>
 
 <h2>Debugging</h2>
@@ -2445,11 +2479,13 @@ platforms folder are reflected in your plugin&#39;s source folder (and vice vers
 <p>Once the ios platform is added to your project and built using <code>cordova build</code>, you can open it from
 within Xcode. Double-click to open the <code>${PROJECT_NAME}/platforms/ios/${PROJECT_NAME}.xcworkspace</code>
 file or open Xcode from your terminal:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>open <span class="nt">-a</span> Xcode platforms/ios
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>open <span class="nt">-a</span> Xcode platforms/ios
+</code></pre></div></div>
+
 <p>The screen should look like this:</p>
 
-<p><img src="/static/img/guide/platforms/ios/xcode10-review-settings.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/ios/xcode10-review-settings.png" alt="" /></p>
 
 <h2>Platform Centered Workflow</h2>
 
@@ -2474,11 +2510,15 @@ command. For example, <code>cordova-ios/bin/create</code> is equivalent to
 
 <p>To create a project using this package, run the <code>create</code> script in the <code>bin</code>
 folder:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova-ios/bin/create ...
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova-ios/bin/create ...
+</code></pre></div></div>
+
 <p>To run the app, use the <code>run</code> script in the <code>bin</code> folder:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova-ios/bin/run
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova-ios/bin/run
+</code></pre></div></div>
+
 <p>The created project will have a folder named <code>cordova</code> inside that contains
 scripts for the project-specific Cordova commands (e.g. <code>run</code>, <code>build</code>, etc.).</p>
 
@@ -2489,6 +2529,7 @@ scripts for the project-specific Cordova commands (e.g. <code>run</code>, <code>
 <p>Refer to <a href="./upgrade.html">this</a> article for instructions to upgrade your <code>cordova-ios</code> version.</p>
 
 <p>(Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)</p>
+
 
 
             </div>

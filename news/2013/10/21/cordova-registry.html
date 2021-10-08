@@ -138,19 +138,27 @@
 <!--more-->
 
 <p>From anywhere within an app&#39;s directory, plugins can be added to a project with</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add [PLUGIN_ID]
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add [PLUGIN_ID]
+</code></pre></div></div>
+
 <p>where PLUGIN_ID is the id (typically reverse-domain style) shown on the plugin registry website.  You can also download a specific version of a plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add [PLUGIN_ID]@[VERSION]
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add [PLUGIN_ID]@[VERSION]
+</code></pre></div></div>
+
 <p>How do these plugins get there?  Using plugman, plugin developers can easily send their plugins out into the world to be discovered by app developers.</p>
 
 <p>First, if you don&#39;t have a plugman account, you need to create one.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">plugman adduser
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugman adduser
+</code></pre></div></div>
+
 <p>Then, you&#39;re free to publish!</p>
-<div class="highlight"><pre><code class="language-" data-lang="">plugman publish [PATH_TO_YOUR_PLUGIN]
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugman publish [PATH_TO_YOUR_PLUGIN]
+</code></pre></div></div>
+
 <p>There&#39;s more you can do (such as search for a plugin by keyword)—you can find more information using <code>plugman --help</code>.</p>
 
 <p>For general plugin development help, you can find a guide <a href="http://cordova.apache.org/docs/en/3.1.0/guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide">here</a>.</p>

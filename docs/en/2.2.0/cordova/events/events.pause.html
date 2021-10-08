@@ -1520,76 +1520,83 @@
                 <h1>pause</h1>
 
 <p>This is an event that fires when a Cordova application is put into the background.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">document.addEventListener("pause", yourCallbackFunction, false);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("pause", yourCallbackFunction, false);
+</code></pre></div></div>
+
 <h2>Details</h2>
 
-<p>Cordova consists of two code bases: native and JavaScript. While the native code puts the application into the background the pause event is fired.  </p>
+<p>Cordova consists of two code bases: native and JavaScript. While the native code puts the application into the background the pause event is fired.</p>
 
 <p>Typically, you will want to attach an event listener with <code>document.addEventListener</code> once you receive the Cordova &#39;<a href="events.deviceready.html">deviceready</a>&#39; event.</p>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">document.addEventListener("pause", onPause, false);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("pause", onPause, false);
 
 function onPause() {
     // Handle the pause event
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Cordova Pause Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-2.2.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Cordova Pause Example&lt;/title&gt;
 
-    <span class="c1">// Call onDeviceReady when Cordova is loaded.</span>
-    <span class="c1">//</span>
-    <span class="c1">// At this point, the document has loaded but cordova-2.2.0.js has not.</span>
-    <span class="c1">// When Cordova is loaded and talking with the native device,</span>
-    <span class="c1">// it will call the event `deviceready`.</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onLoad</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-    <span class="p">}</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Cordova is loaded and it is now safe to make calls Cordova methods</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"pause"</span><span class="p">,</span> <span class="nx">onPause</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Call onDeviceReady when Cordova is loaded.
+    //
+    // At this point, the document has loaded but cordova-2.2.0.js has not.
+    // When Cordova is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
 
-    <span class="c1">// Handle the pause event</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onPause</span><span class="p">()</span> <span class="p">{</span>
-    <span class="p">}</span>
+    // Cordova is loaded and it is now safe to make calls Cordova methods
+    //
+    function onDeviceReady() {
+	    document.addEventListener("pause", onPause, false);
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body</span> <span class="na">onload=</span><span class="s">"onLoad()"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // Handle the pause event
+    //
+    function onPause() {
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="onLoad()"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 <h2>iOS Quirks</h2>
-
 <p>In the pause handler, any calls that go through Objective-C will not work, nor will any calls that are interactive, like alerts. This means that you cannot call console.log (and its variants), or any calls from Plugins or the Cordova API. These will only be processed when the app resumes (processed on the next run-loop).</p>
 
 <ul>
-<li><p><strong>resign</strong> event </p>
+  <li>
+    <p><strong>resign</strong> event</p>
 
-<p>This iOS specific event is available as a variant of the <strong>pause</strong> event, and is often used to detect when the &quot;Lock&quot; button has been pressed to lock the device when your app is the foreground app. If your app (and device) is enabled for multi-tasking, this will be paired with a subsequent <strong>pause</strong> event, but only under iOS 5 (effectively all &quot;locked&quot; apps in iOS 5 that have multi-tasking enabled are put to the background). </p>
+    <p>This iOS specific event is available as a variant of the <strong>pause</strong> event, and is often used to detect when the &quot;Lock&quot; button has been pressed to lock the device when your app is the foreground app. If your app (and device) is enabled for multi-tasking, this will be paired with a subsequent <strong>pause</strong> event, but only under iOS 5 (effectively all &quot;locked&quot; apps in iOS 5 that have multi-tasking enabled are put to the background).</p>
 
-<p>Under iOS 5, if you want your app to still run when the device is locked, you will have to disable multi-tasking (UIApplicationExitsOnSuspend - YES) for your app. This is different when you are on iOS 4 - to have your app run when the device is locked, the multi-tasking setting for your app does not matter.</p></li>
+    <p>Under iOS 5, if you want your app to still run when the device is locked, you will have to disable multi-tasking (UIApplicationExitsOnSuspend - YES) for your app. This is different when you are on iOS 4 - to have your app run when the device is locked, the multi-tasking setting for your app does not matter.</p>
+  </li>
 </ul>
 
 

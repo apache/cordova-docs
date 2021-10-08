@@ -1474,44 +1474,50 @@ front-facing and arguably most important part of your Cordova plugin.</p>
 <p>You can structure your plugin&#39;s JavaScript however you like. The one
 thing you <em>must</em> use to communicate between the Cordova JavaScript
  and native environments is the <code>cordova.exec</code> function. Here is an example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova.exec(function(winParam) {}, function(error) {}, "service",
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova.exec(function(winParam) {}, function(error) {}, "service",
              "action", ["firstArgument", "secondArgument", 42,
              false]);
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The parameters explained in more detail:</p>
 
 <ol>
-<li><code>function(winParam) {}</code> - Success function callback. Assuming your
+  <li><code>function(winParam) {}</code> - Success function callback. Assuming your
 <code>exec</code> call completes successfully, this function will be invoked
-(optionally with any parameters you pass back to it)</li>
-<li><code>function(error) {}</code> - Error function callback. If the operation does
+ (optionally with any parameters you pass back to it)</li>
+  <li><code>function(error) {}</code> - Error function callback. If the operation does
 not complete successfully, this function will be invoked (optionally
 with an error parameter)</li>
-<li><code>&quot;service&quot;</code> - The service name to call into on the native side. This
+  <li><code>"service"</code> - The service name to call into on the native side. This
 will be mapped to a native class. More on this in the native guides
 below</li>
-<li><code>&quot;action&quot;</code> - The action name to call into. This is picked up by the
+  <li><code>"action"</code> - The action name to call into. This is picked up by the
 native class receiving the <code>exec</code> call, and, depending on the
 platform, essentially maps to a class&#39;s method. For more detail
 please check out the native guides located at the end of this article.</li>
-<li><code>[/* arguments */]</code> - Arguments to get passed into the native
+  <li><code>[/* arguments */]</code> - Arguments to get passed into the native
 environment</li>
 </ol>
 
 <h3>Echo Plugin JavaScript Example</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">window.echo = function(str, callback) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.echo = function(str, callback) {
     cordova.exec(callback, function(err) {
         callback('Nothing to echo.');
     }, "Echo", "echo", [str]);
 };
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Let&#39;s dive into this. The plugin attaches itself to <code>window</code>,
 specifically to the <code>echo</code> function. Plugin users would then use it as
 follows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">window.echo("echome", function(echoValue) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.echo("echome", function(echoValue) {
     alert(echoValue == "echome"); // should alert true.
 });
-</code></pre></div>
+</code></pre></div></div>
+
 <p>First, let&#39;s take a look at the last three arguments to the <code>exec</code>
 function. We will be calling the <code>Echo</code> &quot;service&quot;, requesting the <code>echo</code>
 &quot;action&quot;, and passing an array of arguments containing the echo string,
@@ -1531,12 +1537,12 @@ will continue on building the simple Echo Plugin example we started in
 this guide.</p>
 
 <ul>
-<li><a href="android/index.html">Developing a Plugin on Android</a></li>
-<li><a href="bada/index.html">Developing a Plugin on Bada</a></li>
-<li><a href="blackberry/index.html">Developing a Plugin on BlackBerry</a></li>
-<li><a href="ios/index.html">Developing a Plugin on iOS</a></li>
-<li><a href="webos/index.html">Developing a Plugin on webOS</a></li>
-<li><a href="windows-phone/index.html">Developing a Plugin on Windows Phone</a></li>
+  <li><a href="android/index.html">Developing a Plugin on Android</a></li>
+  <li><a href="bada/index.html">Developing a Plugin on Bada</a></li>
+  <li><a href="blackberry/index.html">Developing a Plugin on BlackBerry</a></li>
+  <li><a href="ios/index.html">Developing a Plugin on iOS</a></li>
+  <li><a href="webos/index.html">Developing a Plugin on webOS</a></li>
+  <li><a href="windows-phone/index.html">Developing a Plugin on Windows Phone</a></li>
 </ul>
 
 

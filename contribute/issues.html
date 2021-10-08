@@ -121,10 +121,10 @@
 <p>Find the repository of the component which your issue applies to. To figure out which repository to report your issue to, you can take a look at the <a href="https://github.com/apache?q=cordova">full list of Cordova repositories</a>. Some of the most popular repositories are:</p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-android">cordova-android</a>: core Android functionality</li>
-<li><a href="https://github.com/apache/cordova-ios">cordova-ios</a>: core iOS functionality</li>
-<li><a href="https://github.com/apache/cordova-cli">cordova-cli</a>: command-line tool (the <code>cordova</code> command)</li>
-<li><a href="https://github.com/apache/cordova-docs">cordova-docs</a>: the Cordova website and documentation</li>
+  <li><a href="https://github.com/apache/cordova-android">cordova-android</a>: core Android functionality</li>
+  <li><a href="https://github.com/apache/cordova-ios">cordova-ios</a>: core iOS functionality</li>
+  <li><a href="https://github.com/apache/cordova-cli">cordova-cli</a>: command-line tool (the <code>cordova</code> command)</li>
+  <li><a href="https://github.com/apache/cordova-docs">cordova-docs</a>: the Cordova website and documentation</li>
 </ul>
 
 <p>Once you have found the correct repository to create your issue in, go to the <em>Issues</em> tab, and click <em>New issue</em>. Simply fill out the issue template, and submit your issue.</p>
@@ -132,12 +132,11 @@
 <h1>Issue Priority</h1>
 
 <p>We gauge issue priority on the following scale:</p>
-
 <ul>
-<li><strong>Minor/Trivial:</strong> The feature or bug is very specific or only affects a few people</li>
-<li><strong>Major:</strong> The feature or bug is important and impacts many people</li>
-<li><strong>Critical:</strong> Bugs (not features) that block the main function of a component and affect a large number of people (e.g. the camera plugin can&#39;t take pictures in iOS version x.x)</li>
-<li><strong>Blocker:</strong>  Catastrophic bugs that prevent projects from building or cause basic projects to crash immediately. It is very unlikely that a bug is a Blocker</li>
+  <li><strong>Minor/Trivial:</strong> The feature or bug is very specific or only affects a few people</li>
+  <li><strong>Major:</strong> The feature or bug is important and impacts many people</li>
+  <li><strong>Critical:</strong> Bugs (not features) that block the main function of a component and affect a large number of people (e.g. the camera plugin can&#39;t take pictures in iOS version x.x)</li>
+  <li><strong>Blocker:</strong>  Catastrophic bugs that prevent projects from building or cause basic projects to crash immediately. It is very unlikely that a bug is a Blocker</li>
 </ul>
 
 <p>If you aren&#39;t sure about the priority, leave the default (major) selected. Please be aware that as our contributors triage issues, they may change the priority based on our criteria.</p>
@@ -145,17 +144,24 @@
 <h1>Finding out versions</h1>
 
 <p>You can quickly find out versions of platforms/plugins you&#39;re using by running:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform ls
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform ls
+</code></pre></div></div>
+
 <p>or</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin ls
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin ls
+</code></pre></div></div>
+
 <p>in your project respectively. You can find out the version of the Cordova CLI you&#39;re using by running:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova --version
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova --version
+</code></pre></div></div>
+
 <h1>Generating CLI logs</h1>
 
 <p>You can use <code>--verbose</code> flag to generate detailed logs for cordova build-time bugs related with the CLI. This helps significantly in debugging.</p>
+
 
 </div>
 

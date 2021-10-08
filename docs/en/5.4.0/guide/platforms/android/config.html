@@ -1453,87 +1453,131 @@ details preferences that only apply to Android builds. See <a href="config_ref_i
 File</a> for information on global configuration options.</p>
 
 <ul>
-<li><p><code>KeepRunning</code> (boolean, defaults to <code>true</code>): Determines whether the
+  <li>
+    <p><code>KeepRunning</code> (boolean, defaults to <code>true</code>): Determines whether the
 application stays running in the background even after a <a href="../../../cordova/events/events.pause.html"><code>pause</code></a>
 event fires. Setting this to <code>false</code> does not kill the app after a
 <a href="../../../cordova/events/events.pause.html"><code>pause</code></a> event, but simply halts execution of code within the cordova
 webview while the app is in the background.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="KeepRunning" value="false"/&gt;
-</code></pre></div></li>
-<li><p><code>LoadUrlTimeoutValue</code> (number in milliseconds, default to <code>20000</code>,
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="KeepRunning" value="false"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>LoadUrlTimeoutValue</code> (number in milliseconds, default to <code>20000</code>,
 20 seconds): When loading a page, the amount of time to wait before throwing
 a timeout error. This example specifies 10 seconds rather than 20:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="LoadUrlTimeoutValue" value="10000"/&gt;
-</code></pre></div></li>
-<li><p><code>SplashScreen</code> (string, defaults to <code>splash</code>): The name of the file minus
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="LoadUrlTimeoutValue" value="10000"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>SplashScreen</code> (string, defaults to <code>splash</code>): The name of the file minus
 its extension in the <code>res/drawable</code> directory.  Various assets must share
 this common name in various subdirectories.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="SplashScreen" value="mySplash"/&gt;
-</code></pre></div></li>
-<li><p><code>SplashScreenDelay</code> (number in milliseconds, defaults to <code>3000</code>): The amount
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="SplashScreen" value="mySplash"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>SplashScreenDelay</code> (number in milliseconds, defaults to <code>3000</code>): The amount
 of time the splash screen image displays.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="SplashScreenDelay" value="10000"/&gt;
-</code></pre></div></li>
-<li><p><code>InAppBrowserStorageEnabled</code> (boolean, defaults to <code>true</code>): Controls
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="SplashScreenDelay" value="10000"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>InAppBrowserStorageEnabled</code> (boolean, defaults to <code>true</code>): Controls
 whether pages opened within an InAppBrowser can access the same
 localStorage and WebSQL storage as pages opened with the default
 browser.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="InAppBrowserStorageEnabled" value="true"/&gt;
-</code></pre></div></li>
-<li><p><code>LoadingDialog</code> (string, defaults to <code>null</code>): If set, displays a dialog with
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="InAppBrowserStorageEnabled" value="true"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>LoadingDialog</code> (string, defaults to <code>null</code>): If set, displays a dialog with
 the specified title and message, and a spinner, when loading the first
 page of an application. The title and message are separated by a comma
 in this value string, and that comma is removed before the dialog is
 displayed.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="LoadingDialog" value="My Title,My Message"/&gt;
-</code></pre></div></li>
-<li><p><code>LoadingPageDialog</code> (string, defaults to <code>null</code>): The same as <code>LoadingDialog</code>,
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="LoadingDialog" value="My Title,My Message"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>LoadingPageDialog</code> (string, defaults to <code>null</code>): The same as <code>LoadingDialog</code>,
 but for loading every page after the first page in the application.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="LoadingPageDialog" value="My Title,My Message"/&gt;
-</code></pre></div></li>
-<li><p><code>ErrorUrl</code> (URL, defaults to <code>null</code>):
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="LoadingPageDialog" value="My Title,My Message"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>ErrorUrl</code> (URL, defaults to <code>null</code>):
 If set, will display the referenced page upon an error in the application
 instead of a dialog with the title &quot;Application Error&quot;.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="ErrorUrl" value="myErrorPage.html"/&gt;
-</code></pre></div></li>
-<li><p><code>ShowTitle</code> (boolean, defaults to <code>false</code>): Show the title at the top
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="ErrorUrl" value="myErrorPage.html"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>ShowTitle</code> (boolean, defaults to <code>false</code>): Show the title at the top
 of the screen.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="ShowTitle" value="true"/&gt;
-</code></pre></div></li>
-<li><p><code>LogLevel</code> (string, defaults to <code>ERROR</code>): Sets the minimum log level
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="ShowTitle" value="true"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>LogLevel</code> (string, defaults to <code>ERROR</code>): Sets the minimum log level
 through which log messages from your application will be filtered. Valid
 values are <code>ERROR</code>, <code>WARN</code>, <code>INFO</code>, <code>DEBUG</code>, and <code>VERBOSE</code>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="LogLevel" value="VERBOSE"/&gt;
-</code></pre></div></li>
-<li><p><code>SetFullscreen</code> (boolean, defaults to <code>false</code>): Same as the <code>Fullscreen</code>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="LogLevel" value="VERBOSE"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>SetFullscreen</code> (boolean, defaults to <code>false</code>): Same as the <code>Fullscreen</code>
 parameter in the global configuration of this xml file. This Android-specific
 element is deprecated in favor of the global <code>Fullscreen</code> element, and will
-be removed in a future version.</p></li>
-<li><p><code>AndroidLaunchMode</code> (string, defaults to <code>singleTop</code>): Sets the Activity
+be removed in a future version.</p>
+  </li>
+  <li>
+    <p><code>AndroidLaunchMode</code> (string, defaults to <code>singleTop</code>): Sets the Activity
 <code>android:launchMode</code> attribute.  This changes what happens when the app is
 launched from app icon or intent and is already running.
 Valid values are <code>standard</code>, <code>singleTop</code>, <code>singleTask</code>, <code>singleInstance</code>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="AndroidLaunchMode" value="singleTop"/&gt;
-</code></pre></div></li>
-<li><p><code>DefaultVolumeStream</code> (string, defaults to <code>default</code>, added in cordova-android 3.7.0): Sets which volume
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="AndroidLaunchMode" value="singleTop"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>DefaultVolumeStream</code> (string, defaults to <code>default</code>, added in cordova-android 3.7.0): Sets which volume
 the hardware volume buttons link to. By default this is &quot;call&quot; for phones
 and &quot;media&quot; for tablets. Set this to &quot;media&quot; to have your app&#39;s volume
 buttons always change the media volume. Note that when using Cordova&#39;s
 media plugin, the volume buttons will dynamically change to controlling
-the media volume when any Media objects are active.</p></li>
-<li><p><code>OverrideUserAgent</code> (string, not set by default):
+the media volume when any Media objects are active.</p>
+  </li>
+  <li>
+    <p><code>OverrideUserAgent</code> (string, not set by default):
 If set, the value will replace the old UserAgent of webview.
 It is helpful to identify the request from app/browser when requesting remote pages.
 Use with caution, this may causes compitiable issue with web servers.
 For most cases, use AppendUserAgent instead.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" /&gt;
-</code></pre></div></li>
-<li><p><code>AppendUserAgent</code> (string, not set by default):
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>AppendUserAgent</code> (string, not set by default):
 If set, the value will append to the end of old UserAgent of webview.
 When using with OverrideUserAgent, this value will be ignored.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="AppendUserAgent" value="My Browser" /&gt;
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="AppendUserAgent" value="My Browser" /&gt;
+</code></pre></div>    </div>
+  </li>
 </ul>
+
 
 
             </div>

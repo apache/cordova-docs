@@ -1618,10 +1618,12 @@
                 <h1>InAppBrowser</h1>
 
 <blockquote>
-<p>The <code>InAppBrowser</code> is a web browser that displays in the app when calling <code>[window.open](window.open.html)</code>.</p>
+  <p>The <code>InAppBrowser</code> is a web browser that displays in the app when calling <code>[window.open](window.open.html)</code>.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">var ref = window.open('http://apache.org', '_blank', 'location=yes');
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = window.open('http://apache.org', '_blank', 'location=yes');
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p>The object returned from a call to <code>[window.open](window.open.html)</code>.</p>
@@ -1629,11 +1631,11 @@
 <h2>Methods</h2>
 
 <ul>
-<li>addEventListener</li>
-<li>removeEventListener</li>
-<li>close</li>
-<li>executeScript</li>
-<li>insertCSS</li>
+  <li>addEventListener</li>
+  <li>removeEventListener</li>
+  <li>close</li>
+  <li>executeScript</li>
+  <li>insertCSS</li>
 </ul>
 
 <h2>Permissions</h2>
@@ -1641,379 +1643,419 @@
 <h3>Android</h3>
 
 <h4>app/res/xml/config.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" /&gt;
+</code></pre></div></div>
+
 <h3>iOS</h3>
 
 <h4>config.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="InAppBrowser" value="CDVInAppBrowser" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="InAppBrowser" value="CDVInAppBrowser" /&gt;
+</code></pre></div></div>
+
 <h3>Windows Phone 7 + 8</h3>
 
 <h4>config.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="InAppBrowser" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="InAppBrowser" /&gt;
+</code></pre></div></div>
+
 <h1>addEventListener</h1>
 
 <blockquote>
-<p>Adds a listener for an event from the <code>InAppBrowser</code>.</p>
+  <p>Adds a listener for an event from the <code>InAppBrowser</code>.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">ref.addEventListener(eventname, callback);
-</code></pre></div>
-<ul>
-<li><strong>ref</strong>: reference to the <code>InAppBrowser</code> window <em>(InAppBrowser)</em></li>
-<li><p><strong>eventname</strong>: the event to listen for <em>(String)</em></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ref.addEventListener(eventname, callback);
+</code></pre></div></div>
 
 <ul>
-<li><strong>loadstart</strong>: event fires when the <code>InAppBrowser</code> starts to load a URL.</li>
-<li><strong>loadstop</strong>: event fires when the <code>InAppBrowser</code> finishes loading a URL.</li>
-<li><strong>loaderror</strong>: event fires when the <code>InAppBrowser</code> encounters an error when loading a URL.</li>
-<li><strong>exit</strong>: event fires when the <code>InAppBrowser</code> window is closed.</li>
-</ul></li>
-<li><p><strong>callback</strong>: the function that executes when the event fires. The function is passed an <code>InAppBrowserEvent</code> object as a parameter.</p></li>
+  <li><strong>ref</strong>: reference to the <code>InAppBrowser</code> window <em>(InAppBrowser)</em></li>
+  <li>
+    <p><strong>eventname</strong>: the event to listen for <em>(String)</em></p>
+
+    <ul>
+      <li><strong>loadstart</strong>: event fires when the <code>InAppBrowser</code> starts to load a URL.</li>
+      <li><strong>loadstop</strong>: event fires when the <code>InAppBrowser</code> finishes loading a URL.</li>
+      <li><strong>loaderror</strong>: event fires when the <code>InAppBrowser</code> encounters an error when loading a URL.</li>
+      <li><strong>exit</strong>: event fires when the <code>InAppBrowser</code> window is closed.</li>
+    </ul>
+  </li>
+  <li><strong>callback</strong>: the function that executes when the event fires. The function is passed an <code>InAppBrowserEvent</code> object as a parameter.</li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>iOS</li>
-<li>Windows Phone 7 + 8</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 + 8</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">var ref = window.open('http://apache.org', '_blank', 'location=yes');
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = window.open('http://apache.org', '_blank', 'location=yes');
 ref.addEventListener('loadstart', function() { alert(event.url); });
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>InAppBrowser.addEventListener Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-x.x.x.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;InAppBrowser.addEventListener Example&lt;/title&gt;
 
-    <span class="c1">// Wait for device API libraries to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// device APIs are available</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-         <span class="kd">var</span> <span class="nx">ref</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'http://apache.org'</span><span class="p">,</span> <span class="s1">'_blank'</span><span class="p">,</span> <span class="s1">'location=yes'</span><span class="p">);</span>
-         <span class="nx">ref</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'loadstart'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s1">'start: '</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span> <span class="p">});</span>
-         <span class="nx">ref</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'loadstop'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s1">'stop: '</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span> <span class="p">});</span>
-         <span class="nx">ref</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'loaderror'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s1">'error: '</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span> <span class="p">});</span>
-         <span class="nx">ref</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'exit'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span> <span class="p">});</span>
-    <span class="p">}</span>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // device APIs are available
+    //
+    function onDeviceReady() {
+         var ref = window.open('http://apache.org', '_blank', 'location=yes');
+         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+         ref.addEventListener('exit', function(event) { alert(event.type); });
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 <h1>removeEventListener</h1>
 
 <blockquote>
-<p>Removes a listener for an event from the <code>InAppBrowser</code>.</p>
+  <p>Removes a listener for an event from the <code>InAppBrowser</code>.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">ref.removeEventListener(eventname, callback);
-</code></pre></div>
-<ul>
-<li><strong>ref</strong>: reference to the <code>InAppBrowser</code> window. <em>(InAppBrowser)</em></li>
-<li><p><strong>eventname</strong>: the event to stop listening for. <em>(String)</em></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ref.removeEventListener(eventname, callback);
+</code></pre></div></div>
 
 <ul>
-<li><strong>loadstart</strong>: event fires when the <code>InAppBrowser</code> starts to load a URL.</li>
-<li><strong>loadstop</strong>: event fires when the <code>InAppBrowser</code> finishes loading a URL.</li>
-<li><strong>loaderror</strong>: event fires when the <code>InAppBrowser</code> encounters an error loading a URL.</li>
-<li><strong>exit</strong>: event fires when the <code>InAppBrowser</code> window is closed.</li>
-</ul></li>
-<li><p><strong>callback</strong>: the function to execute when the event fires.
-The function is passed an <code>InAppBrowserEvent</code> object.</p></li>
+  <li><strong>ref</strong>: reference to the <code>InAppBrowser</code> window. <em>(InAppBrowser)</em></li>
+  <li>
+    <p><strong>eventname</strong>: the event to stop listening for. <em>(String)</em></p>
+
+    <ul>
+      <li><strong>loadstart</strong>: event fires when the <code>InAppBrowser</code> starts to load a URL.</li>
+      <li><strong>loadstop</strong>: event fires when the <code>InAppBrowser</code> finishes loading a URL.</li>
+      <li><strong>loaderror</strong>: event fires when the <code>InAppBrowser</code> encounters an error loading a URL.</li>
+      <li><strong>exit</strong>: event fires when the <code>InAppBrowser</code> window is closed.</li>
+    </ul>
+  </li>
+  <li><strong>callback</strong>: the function to execute when the event fires.
+The function is passed an <code>InAppBrowserEvent</code> object.</li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>iOS</li>
-<li>Windows Phone 7 + 8</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 + 8</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">var ref = window.open('http://apache.org', '_blank', 'location=yes');
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = window.open('http://apache.org', '_blank', 'location=yes');
 var myCallback = function() { alert(event.url); }
 ref.addEventListener('loadstart', myCallback);
 ref.removeEventListener('loadstart', myCallback);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>InAppBrowser.removeEventListener Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-x.x.x.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;InAppBrowser.removeEventListener Example&lt;/title&gt;
 
-    <span class="c1">// Wait for device API libraries to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Global InAppBrowser reference</span>
-    <span class="kd">var</span> <span class="nx">iabRef</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="kd">function</span> <span class="nx">iabLoadStart</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">type</span> <span class="o">+</span> <span class="s1">' - '</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Global InAppBrowser reference
+    var iabRef = null;
 
-    <span class="kd">function</span> <span class="nx">iabLoadStop</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">type</span> <span class="o">+</span> <span class="s1">' - '</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
-    <span class="p">}</span>
+    function iabLoadStart(event) {
+        alert(event.type + ' - ' + event.url);
+    }
 
-    <span class="kd">function</span> <span class="nx">iabLoadError</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">type</span> <span class="o">+</span> <span class="s1">' - '</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
-    <span class="p">}</span>
+    function iabLoadStop(event) {
+        alert(event.type + ' - ' + event.url);
+    }
 
-    <span class="kd">function</span> <span class="nx">iabClose</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-         <span class="nx">alert</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">'loadstart'</span><span class="p">,</span> <span class="nx">iabLoadStart</span><span class="p">);</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">'loadstop'</span><span class="p">,</span> <span class="nx">iabLoadStop</span><span class="p">);</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">'loaderror'</span><span class="p">,</span> <span class="nx">iabLoadError</span><span class="p">);</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">'exit'</span><span class="p">,</span> <span class="nx">iabClose</span><span class="p">);</span>
-    <span class="p">}</span>
+    function iabLoadError(event) {
+        alert(event.type + ' - ' + event.message);
+    }
 
-    <span class="c1">// device APIs are available</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-         <span class="nx">iabRef</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'http://apache.org'</span><span class="p">,</span> <span class="s1">'_blank'</span><span class="p">,</span> <span class="s1">'location=yes'</span><span class="p">);</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'loadstart'</span><span class="p">,</span> <span class="nx">iabLoadStart</span><span class="p">);</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'loadstop'</span><span class="p">,</span> <span class="nx">iabLoadStop</span><span class="p">);</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">'loaderror'</span><span class="p">,</span> <span class="nx">iabLoadError</span><span class="p">);</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'exit'</span><span class="p">,</span> <span class="nx">iabClose</span><span class="p">);</span>
-    <span class="p">}</span>
+    function iabClose(event) {
+         alert(event.type);
+         iabRef.removeEventListener('loadstart', iabLoadStart);
+         iabRef.removeEventListener('loadstop', iabLoadStop);
+         iabRef.removeEventListener('loaderror', iabLoadError);
+         iabRef.removeEventListener('exit', iabClose);
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // device APIs are available
+    //
+    function onDeviceReady() {
+         iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+         iabRef.addEventListener('loadstart', iabLoadStart);
+         iabRef.addEventListener('loadstop', iabLoadStop);
+         iabRef.removeEventListener('loaderror', iabLoadError);
+         iabRef.addEventListener('exit', iabClose);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 <h1>close</h1>
 
 <blockquote>
-<p>Closes the <code>InAppBrowser</code> window.</p>
+  <p>Closes the <code>InAppBrowser</code> window.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">ref.close();
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ref.close();
+</code></pre></div></div>
+
 <ul>
-<li><strong>ref</strong>: reference to the <code>InAppBrowser</code> window <em>(InAppBrowser)</em></li>
+  <li><strong>ref</strong>: reference to the <code>InAppBrowser</code> window <em>(InAppBrowser)</em></li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>iOS</li>
-<li>Windows Phone 7 + 8</li>
-<li>BlackBerry 10</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 + 8</li>
+  <li>BlackBerry 10</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">var ref = window.open('http://apache.org', '_blank', 'location=yes');
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = window.open('http://apache.org', '_blank', 'location=yes');
 ref.close();
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>InAppBrowser.close Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-x.x.x.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;InAppBrowser.close Example&lt;/title&gt;
 
-    <span class="c1">// Wait for device API libraries to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// device APIs are available</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-         <span class="kd">var</span> <span class="nx">ref</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'http://apache.org'</span><span class="p">,</span> <span class="s1">'_blank'</span><span class="p">,</span> <span class="s1">'location=yes'</span><span class="p">);</span>
-         <span class="c1">// close InAppBrowser after 5 seconds</span>
-         <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-             <span class="nx">ref</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
-         <span class="p">},</span> <span class="mi">5000</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // device APIs are available
+    //
+    function onDeviceReady() {
+         var ref = window.open('http://apache.org', '_blank', 'location=yes');
+         // close InAppBrowser after 5 seconds
+         setTimeout(function() {
+             ref.close();
+         }, 5000);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 <h1>executeScript</h1>
 
 <blockquote>
-<p>Injects JavaScript code into the <code>InAppBrowser</code> window</p>
+  <p>Injects JavaScript code into the <code>InAppBrowser</code> window</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">ref.executeScript(details, callback);
-</code></pre></div>
-<ul>
-<li><strong>ref</strong>: reference to the <code>InAppBrowser</code> window. <em>(InAppBrowser)</em></li>
-<li><strong>injectDetails</strong>: details of the script to run, specifying either a <code>file</code> or <code>code</code> key. <em>(Object)</em>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ref.executeScript(details, callback);
+</code></pre></div></div>
 
 <ul>
-<li><strong>file</strong>: URL of the script to inject.</li>
-<li><strong>code</strong>: Text of the script to inject.</li>
-</ul></li>
-<li><strong>callback</strong>: the function that executes after the JavaScript code is injected.
-
-<ul>
-<li>If the injected script is of type <code>code</code>, the callback executes
+  <li><strong>ref</strong>: reference to the <code>InAppBrowser</code> window. <em>(InAppBrowser)</em></li>
+  <li><strong>injectDetails</strong>: details of the script to run, specifying either a <code>file</code> or <code>code</code> key. <em>(Object)</em>
+    <ul>
+      <li><strong>file</strong>: URL of the script to inject.</li>
+      <li><strong>code</strong>: Text of the script to inject.</li>
+    </ul>
+  </li>
+  <li><strong>callback</strong>: the function that executes after the JavaScript code is injected.
+    <ul>
+      <li>If the injected script is of type <code>code</code>, the callback executes
 with a single parameter, which is the return value of the
 script, wrapped in an <code>Array</code>. For multi-line scripts, this is
 the return value of the last statement, or the last expression
 evaluated.</li>
-</ul></li>
+    </ul>
+  </li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>iOS</li>
+  <li>Android</li>
+  <li>iOS</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">var ref = window.open('http://apache.org', '_blank', 'location=yes');
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = window.open('http://apache.org', '_blank', 'location=yes');
 ref.addEventListener('loadstop', function() {
     ref.executeSript({file: "myscript.js"});
 });
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>InAppBrowser.executeScript Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-x.x.x.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;InAppBrowser.executeScript Example&lt;/title&gt;
 
-    <span class="c1">// Wait for device API libraries to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Global InAppBrowser reference</span>
-    <span class="kd">var</span> <span class="nx">iabRef</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="c1">// Inject our custom JavaScript into the InAppBrowser window</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">replaceHeaderImage</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">iabRef</span><span class="p">.</span><span class="nx">executeScript</span><span class="p">({</span>
-            <span class="na">code</span><span class="p">:</span> <span class="s2">"var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"</span>
-        <span class="p">},</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">alert</span><span class="p">(</span><span class="s2">"Image Element Successfully Hijacked"</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+    // Global InAppBrowser reference
+    var iabRef = null;
 
-    <span class="kd">function</span> <span class="nx">iabClose</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">'loadstop'</span><span class="p">,</span> <span class="nx">replaceHeaderImage</span><span class="p">);</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">'exit'</span><span class="p">,</span> <span class="nx">iabClose</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Inject our custom JavaScript into the InAppBrowser window
+    //
+    function replaceHeaderImage() {
+        iabRef.executeScript({
+            code: "var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
+        }, function() {
+            alert("Image Element Successfully Hijacked");
+        }
+    }
 
-    <span class="c1">// device APIs are available</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-         <span class="nx">iabRef</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'http://apache.org'</span><span class="p">,</span> <span class="s1">'_blank'</span><span class="p">,</span> <span class="s1">'location=yes'</span><span class="p">);</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'loadstop'</span><span class="p">,</span> <span class="nx">replaceHeaderImage</span><span class="p">);</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'exit'</span><span class="p">,</span> <span class="nx">iabClose</span><span class="p">);</span>
-    <span class="p">}</span>
+    function iabClose(event) {
+         iabRef.removeEventListener('loadstop', replaceHeaderImage);
+         iabRef.removeEventListener('exit', iabClose);
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // device APIs are available
+    //
+    function onDeviceReady() {
+         iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+         iabRef.addEventListener('loadstop', replaceHeaderImage);
+         iabRef.addEventListener('exit', iabClose);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 <h1>insertCSS</h1>
 
 <blockquote>
-<p>Injects CSS into the <code>InAppBrowser</code> window.</p>
+  <p>Injects CSS into the <code>InAppBrowser</code> window.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">ref.insertCSS(details, callback);
-</code></pre></div>
-<ul>
-<li><strong>ref</strong>: reference to the <code>InAppBrowser</code> window <em>(InAppBrowser)</em></li>
-<li><strong>injectDetails</strong>: details of the script to run, specifying either a <code>file</code> or <code>code</code> key. <em>(Object)</em>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ref.insertCSS(details, callback);
+</code></pre></div></div>
 
 <ul>
-<li><strong>file</strong>: URL of the stylesheet to inject.</li>
-<li><strong>code</strong>: Text of the stylesheet to inject.</li>
-</ul></li>
-<li><strong>callback</strong>: the function that executes after the CSS is injected.</li>
+  <li><strong>ref</strong>: reference to the <code>InAppBrowser</code> window <em>(InAppBrowser)</em></li>
+  <li><strong>injectDetails</strong>: details of the script to run, specifying either a <code>file</code> or <code>code</code> key. <em>(Object)</em>
+    <ul>
+      <li><strong>file</strong>: URL of the stylesheet to inject.</li>
+      <li><strong>code</strong>: Text of the stylesheet to inject.</li>
+    </ul>
+  </li>
+  <li><strong>callback</strong>: the function that executes after the CSS is injected.</li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>iOS</li>
+  <li>Android</li>
+  <li>iOS</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">var ref = window.open('http://apache.org', '_blank', 'location=yes');
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = window.open('http://apache.org', '_blank', 'location=yes');
 ref.addEventListener('loadstop', function() {
     ref.insertCSS({file: "mystyles.css"});
 });
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>InAppBrowser.insertCSS Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-x.x.x.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;InAppBrowser.insertCSS Example&lt;/title&gt;
 
-    <span class="c1">// Wait for device API libraries to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Global InAppBrowser reference</span>
-    <span class="kd">var</span> <span class="nx">iabRef</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="c1">// Inject our custom CSS into the InAppBrowser window</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">changeBackgroundColor</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">iabRef</span><span class="p">.</span><span class="nx">insertCSS</span><span class="p">({</span>
-            <span class="na">code</span><span class="p">:</span> <span class="s2">"body { background: #ffff00"</span>
-        <span class="p">},</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">alert</span><span class="p">(</span><span class="s2">"Styles Altered"</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+    // Global InAppBrowser reference
+    var iabRef = null;
 
-    <span class="kd">function</span> <span class="nx">iabClose</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">'loadstop'</span><span class="p">,</span> <span class="nx">changeBackgroundColor</span><span class="p">);</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">'exit'</span><span class="p">,</span> <span class="nx">iabClose</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Inject our custom CSS into the InAppBrowser window
+    //
+    function changeBackgroundColor() {
+        iabRef.insertCSS({
+            code: "body { background: #ffff00"
+        }, function() {
+            alert("Styles Altered");
+        }
+    }
 
-    <span class="c1">// device APIs are available</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-         <span class="nx">iabRef</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'http://apache.org'</span><span class="p">,</span> <span class="s1">'_blank'</span><span class="p">,</span> <span class="s1">'location=yes'</span><span class="p">);</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'loadstop'</span><span class="p">,</span> <span class="nx">changeBackgroundColor</span><span class="p">);</span>
-         <span class="nx">iabRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'exit'</span><span class="p">,</span> <span class="nx">iabClose</span><span class="p">);</span>
-    <span class="p">}</span>
+    function iabClose(event) {
+         iabRef.removeEventListener('loadstop', changeBackgroundColor);
+         iabRef.removeEventListener('exit', iabClose);
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // device APIs are available
+    //
+    function onDeviceReady() {
+         iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+         iabRef.addEventListener('loadstop', changeBackgroundColor);
+         iabRef.addEventListener('exit', iabClose);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 <h1>InAppBrowserEvent</h1>
 
 <p>The object that is passed to the callback function from an
@@ -2022,10 +2064,10 @@ ref.addEventListener('loadstop', function() {
 <h2>Properties</h2>
 
 <ul>
-<li><strong>type</strong>: the eventname, either <code>loadstart</code>, <code>loadstop</code>, <code>loaderror</code>, or <code>exit</code>. <em>(String)</em></li>
-<li><strong>url</strong>: the URL that was loaded. <em>(String)</em></li>
-<li><strong>code</strong>: the error code, only in the case of <code>loaderror</code>. <em>(Number)</em></li>
-<li><strong>message</strong>: the error message, only in the case of <code>loaderror</code>. <em>(String)</em></li>
+  <li><strong>type</strong>: the eventname, either <code>loadstart</code>, <code>loadstop</code>, <code>loaderror</code>, or <code>exit</code>. <em>(String)</em></li>
+  <li><strong>url</strong>: the URL that was loaded. <em>(String)</em></li>
+  <li><strong>code</strong>: the error code, only in the case of <code>loaderror</code>. <em>(Number)</em></li>
+  <li><strong>message</strong>: the error message, only in the case of <code>loaderror</code>. <em>(String)</em></li>
 </ul>
 
 

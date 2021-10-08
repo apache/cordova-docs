@@ -136,26 +136,30 @@
 <p>If you have been staying on Cordova Android 6.x due to compatibility issues with 3rd party plugins, we strongly encourage you to try an update to Cordova Android 7.1.3. Please <a href="https://github.com/apache/cordova-android/issues">file issues</a> if you run into any plugin compatibility issues with this new release.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform remove android
 cordova platform add android@latest
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@7.1.3
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@7.1.3
+</code></pre></div></div>
+
 <!--more-->
 
 <h2>Curated Changelog</h2>
 
 <ul>
-<li>Incorrect default sdk version issue fix (<a href="https://github.com/apache/cordova-android/pull/495">#495</a>)</li>
-<li>Update comments in <code>build.gradle</code> (<a href="https://github.com/apache/cordova-android/pull/496">#496</a>)</li>
-<li>Fix dest overwrite, in case of of plugin <code>source-file</code> element with <code>target-dir</code> that does not need remapping (<a href="https://github.com/apache/cordova-android/pull/539">#539</a>)</li>
-<li>Support plugin <code>source-file</code> element with any app <code>target-dir</code> value (<a href="https://github.com/apache/cordova-android/pull/542">#542</a>)</li>
-<li>Compatibility of old plugins with non-Java <code>source-file</code> entries (individual files) (<a href="https://github.com/apache/cordova-android/pull/550">#550</a>)</li>
-<li>add missing cast for cdvMinSdkVersion to <code>build.gradle</code> (<a href="https://github.com/apache/cordova-android/pull/551">#551</a>)</li>
-<li>Check for <code>build-extras.gradle</code> in the parent app directory (<a href="https://github.com/apache/cordova-android/pull/553">#553</a>)</li>
+  <li>Incorrect default sdk version issue fix (<a href="https://github.com/apache/cordova-android/pull/495">#495</a>)</li>
+  <li>Update comments in <code>build.gradle</code> (<a href="https://github.com/apache/cordova-android/pull/496">#496</a>)</li>
+  <li>Fix dest overwrite, in case of of plugin <code>source-file</code> element with <code>target-dir</code> that does not need remapping (<a href="https://github.com/apache/cordova-android/pull/539">#539</a>)</li>
+  <li>Support plugin <code>source-file</code> element with any app <code>target-dir</code> value (<a href="https://github.com/apache/cordova-android/pull/542">#542</a>)</li>
+  <li>Compatibility of old plugins with non-Java <code>source-file</code> entries (individual files) (<a href="https://github.com/apache/cordova-android/pull/550">#550</a>)</li>
+  <li>add missing cast for cdvMinSdkVersion to <code>build.gradle</code> (<a href="https://github.com/apache/cordova-android/pull/551">#551</a>)</li>
+  <li>Check for <code>build-extras.gradle</code> in the parent app directory (<a href="https://github.com/apache/cordova-android/pull/553">#553</a>)</li>
 </ul>
 
         </div>

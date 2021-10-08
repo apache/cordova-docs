@@ -138,39 +138,42 @@
 <p>A new version of the <code>cordova-cli</code> will need to be released to pin this version of <strong>cordova-ios</strong> as the default version when creating a new project. If you want to start using this version now, make sure to specify the version when doing a <code>cordova platform add/update</code>.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform rm ios
 cordova platform add ios@4.1.0
-</code></pre></div>
-<p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add ios@4.1.0
-</code></pre></div>
-<!--more-->
+</code></pre></div></div>
 
+<p>To add it explicitly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@4.1.0
+</code></pre></div></div>
+
+<!--more-->
 <h2>What&#39;s new in iOS platform</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10693">CB-10693</a> added missing header license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10530">CB-10530</a> App freezes sometimes directly after starting on <strong>iOS</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10668">CB-10668</a> checked in <code>node_modules</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10668">CB-10668</a> removed <code>bin/node_modules</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10668">CB-10668</a> updated <code>create.js</code> to grab <code>node_modules</code> from root, updated <code>package.json</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10138">CB-10138</a>  Adds missing plugin metadata to <code>plugin_list</code> module</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10493">CB-10493</a> <strong>iOS</strong> Missing <code>icon.png</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10184">CB-10184</a> <code>Images.xcassets</code>: A 83.5x83.5@2x app icon is required for iPad apps targeting <strong>iOS 9.0</strong> and later</li>
-<li>Disable <code>ios-deploy</code> wifi mode when deploying to a device</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10272">CB-10272</a> Improve <code>&lt;allow-intent&gt;</code> and <code>&lt;allow-navigation&gt;</code> error logs</li>
-<li>Updated bundled <code>ios-sim</code> to <code>5.0.6</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10233">CB-10233</a> Support different <code>config.xml</code> file per <code>CDVViewController</code> instance</li>
-<li>Add additional valid targets for simulation</li>
-<li>Updated CDV version macro to 4.0.1</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10185">CB-10185</a> Update <code>CordovaLib.xcodeproj</code> to recommended settings in <strong>Xcode 7.2</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10171">CB-10171</a> <code>WebKit</code> Error after migration to <strong>iOS@4.0.0</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10155">CB-10155</a> <code>DisallowOverscroll</code> not working</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10168">CB-10168</a> <code>CDVViewController</code> <code>appURL</code> is <code>nil</code> if <code>wwwFolderName</code> is the path to a resource bundle</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10162">CB-10162</a> update reference url for icon images</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10162">CB-10162</a> correct the paths for <strong>iOS</strong> icon and splashscreen resources</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10693">CB-10693</a> added missing header license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10530">CB-10530</a> App freezes sometimes directly after starting on <strong>iOS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10668">CB-10668</a> checked in <code>node_modules</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10668">CB-10668</a> removed <code>bin/node_modules</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10668">CB-10668</a> updated <code>create.js</code> to grab <code>node_modules</code> from root, updated <code>package.json</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10138">CB-10138</a>  Adds missing plugin metadata to <code>plugin_list</code> module</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10493">CB-10493</a> <strong>iOS</strong> Missing <code>icon.png</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10184">CB-10184</a> <code>Images.xcassets</code>: A 83.5x83.5@2x app icon is required for iPad apps targeting <strong>iOS 9.0</strong> and later</li>
+  <li>Disable <code>ios-deploy</code> wifi mode when deploying to a device</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10272">CB-10272</a> Improve <code>&lt;allow-intent&gt;</code> and <code>&lt;allow-navigation&gt;</code> error logs</li>
+  <li>Updated bundled <code>ios-sim</code> to <code>5.0.6</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10233">CB-10233</a> Support different <code>config.xml</code> file per <code>CDVViewController</code> instance</li>
+  <li>Add additional valid targets for simulation</li>
+  <li>Updated CDV version macro to 4.0.1</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10185">CB-10185</a> Update <code>CordovaLib.xcodeproj</code> to recommended settings in <strong>Xcode 7.2</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10171">CB-10171</a> <code>WebKit</code> Error after migration to <strong>iOS@4.0.0</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10155">CB-10155</a> <code>DisallowOverscroll</code> not working</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10168">CB-10168</a> <code>CDVViewController</code> <code>appURL</code> is <code>nil</code> if <code>wwwFolderName</code> is the path to a resource bundle</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10162">CB-10162</a> update reference url for icon images</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10162">CB-10162</a> correct the paths for <strong>iOS</strong> icon and splashscreen resources</li>
 </ul>
 
         </div>

@@ -1658,20 +1658,24 @@ handheld devices rather than tablets.</p>
 
 <p>The <code>Echo</code> plugin returns whatever message a user sends with the
 <code>window.echo</code> function on the JavaScript side:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    window.echo = function(str, callback) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    window.echo = function(str, callback) {
         cordova.exec(callback, function(err) {
             callback('Nothing to echo.');
         }, "Echo", "echo", [str]);
     };
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The project&#39;s <code>www/plugins.xml</code> file contains all of the necessary
 references to the Cordova project&#39;s plugins. Add an additional
 reference so that when <code>cordova.exec</code> is called, Cordova knows how to
 map the <code>Echo</code> argument to the native <code>Echo</code> class:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;feature name="Echo"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;feature name="Echo"&gt;
         &lt;param name="blackberry-package" value="org.apache.cordova.echo.Echo" /&gt;
     &lt;/feature&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>The Echo.java File</h2>
 
 <p>The <code>feature</code> specification&#39;s <code>value</code> attribute references a reverse
@@ -1686,39 +1690,41 @@ class. It also needs to implement an <code>execute</code> method that returns a
 within the class to execute, as well as the arguments. In this case,
 the <code>Echo</code> class&#39;s <code>echo</code> method is the action, and <code>[str]</code> is an
 additional argument to pass to the method.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    <span class="k">package</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">cordova</span><span class="p">.</span><span class="n">echo</span><span class="p">;</span>
 
-    <span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">cordova</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">Plugin</span><span class="p">;</span>
-    <span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">cordova</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">PluginResult</span><span class="p">;</span>
-    <span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">cordova</span><span class="p">.</span><span class="n">json4j</span><span class="p">.</span><span class="n">JSONArray</span><span class="p">;</span>
-    <span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">cordova</span><span class="p">.</span><span class="n">json4j</span><span class="p">.</span><span class="n">JSONException</span><span class="p">;</span>
-    <span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">cordova</span><span class="p">.</span><span class="n">json4j</span><span class="p">.</span><span class="n">JSONObject</span><span class="p">;</span>
-    <span class="p">/**</span>
-     <span class="p">*</span> <span class="n">A</span> <span class="n">simple</span> <span class="n">plugin</span> <span class="k">to</span> <span class="n">demonstrate</span> <span class="n">how</span> <span class="k">to</span> <span class="n">build</span> <span class="n">a</span> <span class="n">plugin</span> <span class="n">for</span> <span class="n">BlackBerry</span>
-     <span class="p">*</span> <span class="n">Basically</span> <span class="n">echos</span> <span class="n">back</span> <span class="n">the</span> <span class="n">msg</span> <span class="n">that</span> <span class="n">a</span> <span class="n">user</span> <span class="n">calls</span> <span class="k">to</span> <span class="n">this</span> <span class="n">plugin</span>
-     <span class="p">*/</span>
-    <span class="k">public</span> <span class="n">final</span> <span class="n">class</span> <span class="n">Echo</span> <span class="n">extends</span> <span class="n">Plugin</span> <span class="p">{</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    package org.apache.cordova.echo;
 
-        <span class="k">public</span> <span class="n">static</span> <span class="n">final</span> <span class="k">String</span> <span class="n">echo</span> <span class="p">=</span> <span class="s2">"echo"</span><span class="p">;</span>
+    import org.apache.cordova.api.Plugin;
+    import org.apache.cordova.api.PluginResult;
+    import org.apache.cordova.json4j.JSONArray;
+    import org.apache.cordova.json4j.JSONException;
+    import org.apache.cordova.json4j.JSONObject;
+    /**
+     * A simple plugin to demonstrate how to build a plugin for BlackBerry
+     * Basically echos back the msg that a user calls to this plugin
+     */
+    public final class Echo extends Plugin {
 
-        <span class="k">public</span> <span class="n">PluginResult</span> <span class="n">execute</span><span class="p">(</span><span class="k">String</span> <span class="n">action</span><span class="p">,</span> <span class="n">JSONArray</span> <span class="n">args</span><span class="p">,</span> <span class="k">String</span> <span class="n">callbackId</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">PluginResult</span> <span class="n">result</span> <span class="p">=</span> <span class="n">new</span> <span class="n">PluginResult</span><span class="p">(</span><span class="n">PluginResult</span><span class="p">.</span><span class="n">Status</span><span class="p">.</span><span class="n">INVALID_ACTION</span><span class="p">,</span> <span class="s2">"Echo: Invalid action:"</span> <span class="p">+</span> <span class="n">action</span><span class="p">);</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">action</span><span class="p">.</span><span class="n">equals</span><span class="p">(</span><span class="n">echo</span><span class="p">)){</span>
-                <span class="n">try</span> <span class="p">{</span>
-                    <span class="k">String</span> <span class="n">theMsg</span> <span class="p">=</span> <span class="n">args</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
-                    <span class="k">if</span><span class="p">(</span><span class="n">theMsg</span><span class="c1">!= null || theMsg.length()&gt;0){
-</span>                        <span class="n">result</span> <span class="p">=</span> <span class="n">new</span> <span class="n">PluginResult</span><span class="p">(</span><span class="n">PluginResult</span><span class="p">.</span><span class="n">Status</span><span class="p">.</span><span class="n">OK</span><span class="p">,</span> <span class="n">theMsg</span><span class="p">);</span>
-                    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-                        <span class="n">result</span> <span class="p">=</span> <span class="n">new</span> <span class="n">PluginResult</span><span class="p">(</span><span class="n">PluginResult</span><span class="p">.</span><span class="n">Status</span><span class="p">.</span><span class="n">ERROR</span><span class="p">,</span> <span class="s2">"Nothing to echo."</span><span class="p">);</span>
-                    <span class="p">}</span>
-                <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">JSONException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="n">result</span> <span class="p">=</span> <span class="n">new</span> <span class="n">PluginResult</span><span class="p">(</span><span class="n">PluginResult</span><span class="p">.</span><span class="n">Status</span><span class="p">.</span><span class="n">JSON_EXCEPTION</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">getMessage</span><span class="p">());</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-            <span class="n">return</span> <span class="n">result</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-</code></pre></div>
+        public static final String echo = "echo";
+
+        public PluginResult execute(String action, JSONArray args, String callbackId) {
+            PluginResult result = new PluginResult(PluginResult.Status.INVALID_ACTION, "Echo: Invalid action:" + action);
+            if(action.equals(echo)){
+                try {
+                    String theMsg = args.getString(0);
+                    if(theMsg!= null || theMsg.length()&gt;0){
+                        result = new PluginResult(PluginResult.Status.OK, theMsg);
+                    }else{
+                        result = new PluginResult(PluginResult.Status.ERROR, "Nothing to echo.");
+                    }
+                } catch (JSONException e) {
+                    result = new PluginResult(PluginResult.Status.JSON_EXCEPTION, e.getMessage());
+                }
+            }
+            return result;
+        }
+    }
+</code></pre></div></div>
+
 <p>In the code above, the <code>execute</code> method first brings in an action. In
 this case, there is only one valid <code>echo</code> action, so it simply checks
 for that value.</p>
@@ -1726,8 +1732,10 @@ for that value.</p>
 <p>The incoming message passed in as <code>[str]</code> from JavaScript is available
 to the <code>Echo</code> class as an <code>args</code> array. In this case, there is only
 one argument, accessible using a zero-based array index:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    String theMsg = args.getString(0);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    String theMsg = args.getString(0);
+</code></pre></div></div>
+
 <p>After various error-checking on the message&#39;s value, the method
 instantiates a new <code>PluginResult</code> with an <code>OK</code> status and returns the
 message.  This value, in turn, is passed back as an argument to the
@@ -1739,8 +1747,10 @@ are sent back to the JavaScript&#39;s error callback.</p>
 <p>The added <code>Echo.java</code> needs to be updated in your project.  To build
 the <code>.jar</code> file, navigate to the BlackBerry WebWorks repo&#39;s root
 directory and run the <code>ant</code> command:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    ant update -Dproject.path="~/path_to_my_project"
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ant update -Dproject.path="~/path_to_my_project"
+</code></pre></div></div>
+
 <p>This builds a new <code>.jar</code> file in the <code>build/ext</code> directory. Copy the
 <code>build/ext/cordova.jar</code> file into the <code>project/www/ext</code> directory.</p>
 

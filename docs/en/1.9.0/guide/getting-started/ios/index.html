@@ -1428,51 +1428,54 @@
 <h2>Video Tutorial</h2>
 
 <ul>
-<li><a href="http://www.youtube.com/v/R9zktJUN7AI?autoplay=1">Cordova Installer - Xcode 4 Template</a></li>
+  <li><a href="http://www.youtube.com/v/R9zktJUN7AI?autoplay=1">Cordova Installer - Xcode 4 Template</a></li>
 </ul>
 
 <h2>Requirements</h2>
-
 <ul>
-<li>Xcode 4.x</li>
-<li>Intel-based computer with Mac OS X Lion (10.7)</li>
-<li>Necessary for installing on device:
-
-<ul>
-<li>Apple iOS device (iPhone, iPad, iPod Touch)</li>
-<li>iOS developer certificate</li>
-</ul></li>
+  <li>Xcode 4.x</li>
+  <li>Intel-based computer with Mac OS X Lion (10.7)</li>
+  <li>Necessary for installing on device:
+    <ul>
+      <li>Apple iOS device (iPhone, iPad, iPod Touch)</li>
+      <li>iOS developer certificate</li>
+    </ul>
+  </li>
 </ul>
 
 <h2>Install iOS SDK and Apache Cordova</h2>
 
 <ul>
-<li>Install Xcode from the <a href="http://itunes.apple.com/us/app/xcode/id497799835?mt=12">Mac App Store</a></li>
-<li>Download the latest release of <a href="http://phonegap.com/download">Apache Cordova</a>
-
-<ul>
-<li>extract its contents</li>
-<li>Apache Cordova iOS is found under <code>lib/ios</code></li>
-</ul></li>
+  <li>Install Xcode from the <a href="http://itunes.apple.com/us/app/xcode/id497799835?mt=12">Mac App Store</a></li>
+  <li>Download the latest release of <a href="http://phonegap.com/download">Apache Cordova</a>
+    <ul>
+      <li>extract its contents</li>
+      <li>Apache Cordova iOS is found under <code>lib/ios</code></li>
+    </ul>
+  </li>
 </ul>
 
 <h2>Setup New Project</h2>
 
 <ul>
-<li>Launch Xcode</li>
-<li>Select the <em>File Menu</em></li>
-<li>Select <em>New</em> -&gt; <em>New Project...</em></li>
-<li><p>Select <em>Cordova-based Application</em> from the list of templates</p>
+  <li>Launch Xcode</li>
+  <li>Select the <em>File Menu</em></li>
+  <li>Select <em>New</em> -&gt; <em>New Project&#8230;</em></li>
+  <li>
+    <p>Select <em>Cordova-based Application</em> from the list of templates</p>
 
-<p><img src="/static/img/guide/platforms/ios/XCode4-templates.png" alt=""></p></li>
-<li><p>Select the <em>Next</em> button</p></li>
-<li><p>Fill in the <em>Product Name</em> and <em>Company Identifier</em> for your app</p>
+    <p><img src="/static/img/guide/platforms/ios/XCode4-templates.png" alt="" /></p>
+  </li>
+  <li>Select the <em>Next</em> button</li>
+  <li>
+    <p>Fill in the <em>Product Name</em> and <em>Company Identifier</em> for your app</p>
 
-<p><img src="/static/img/guide/platforms/ios/xcode4-name_your_app.png" alt=""></p></li>
-<li><p><strong>Note:</strong> Do <strong>not</strong> check <em>Use Automatic Reference Counting</em></p></li>
-<li><p>Select the <em>Next</em> button</p></li>
-<li><p>Choose a folder to save your new app</p></li>
-<li><p>Select the <em>Create</em> button</p></li>
+    <p><img src="/static/img/guide/platforms/ios/xcode4-name_your_app.png" alt="" /></p>
+  </li>
+  <li><strong>Note:</strong> Do <strong>not</strong> check <em>Use Automatic Reference Counting</em></li>
+  <li>Select the <em>Next</em> button</li>
+  <li>Choose a folder to save your new app</li>
+  <li>Select the <em>Create</em> button</li>
 </ul>
 
 <p>We&#39;ve now created an Apache Cordova project. Next, we need to associate the
@@ -1480,45 +1483,50 @@ project with a web directory. We need to do this step because of a limitation
 in Xcode project templates.</p>
 
 <ul>
-<li><p>Select the <em>Run</em> button in the top left corner. </p>
+  <li>Select the <em>Run</em> button in the top left corner.
+    <ul>
+      <li>your build should succeed and launch in the iOS Simulator</li>
+      <li>you should see an error in the iOS Simulator informing you that <em>www/index.html was not found</em></li>
+      <li>we can fix this by adding a folder to the project that references <code>www</code></li>
+    </ul>
 
-<ul>
-<li>your build should succeed and launch in the iOS Simulator</li>
-<li>you should see an error in the iOS Simulator informing you that <em>www/index.html was not found</em></li>
-<li>we can fix this by adding a folder to the project that references <code>www</code></li>
-</ul>
+    <p><img src="/static/img/guide/platforms/ios/index-not-found.png" alt="" /></p>
+  </li>
+  <li>Right-click on the project icon in the <em>Project Navigator</em> (left sidebar) and select <em>Show in Finder</em></li>
+  <li>
+    <p>Using Finder, you should see a <code>www</code> directory inside your project</p>
 
-<p><img src="/static/img/guide/platforms/ios/index-not-found.png" alt=""></p></li>
-<li><p>Right-click on the project icon in the <em>Project Navigator</em> (left sidebar) and select <em>Show in Finder</em></p></li>
-<li><p>Using Finder, you should see a <code>www</code> directory inside your project</p>
+    <p><img src="/static/img/guide/platforms/ios/www-folder.png" alt="" /></p>
+  </li>
+  <li>Drag the <code>www</code> directory into Xcode
+    <ul>
+      <li>A common mistake is to drag the <code>www</code> directory into your app&#39;s directory inside of Finder</li>
+      <li>Please follow the red highlighted section of the image below:</li>
+    </ul>
 
-<p><img src="/static/img/guide/platforms/ios/www-folder.png" alt=""></p></li>
-<li><p>Drag the <code>www</code> directory into Xcode</p>
+    <p><img src="/static/img/guide/platforms/ios/project.jpg" alt="" /></p>
+  </li>
+  <li>After dragging <code>www</code> into Xcode, you will be prompted with a few options.
+    <ul>
+      <li>Select <em>Create folder references for any added folders</em></li>
+      <li>Select the <em>Finish</em> button</li>
+    </ul>
 
-<ul>
-<li>A common mistake is to drag the <code>www</code> directory into your app&#39;s directory inside of Finder</li>
-<li>Please follow the red highlighted section of the image below:</li>
-</ul>
-
-<p><img src="/static/img/guide/platforms/ios/project.jpg" alt=""></p></li>
-<li><p>After dragging <code>www</code> into Xcode, you will be prompted with a few options.</p>
-
-<ul>
-<li>Select <em>Create folder references for any added folders</em></li>
-<li>Select the <em>Finish</em> button</li>
-</ul>
-
-<p><img src="/static/img/guide/platforms/ios/create-folder-reference.png" alt=""></p></li>
+    <p><img src="/static/img/guide/platforms/ios/create-folder-reference.png" alt="" /></p>
+  </li>
 </ul>
 
 <h2><a href="../webos/index.html">Hello World</a></h2>
 
 <ul>
-<li>Select the folder named <code>www</code> in the Xcode <em>Project Navigator</em></li>
-<li>Select the file <code>index.html</code></li>
-<li><p>Add the following after <code>&lt;body&gt;</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;h1&gt;Hello World&lt;/h1&gt;
-</code></pre></div></li>
+  <li>Select the folder named <code>www</code> in the Xcode <em>Project Navigator</em></li>
+  <li>Select the file <code>index.html</code></li>
+  <li>
+    <p>Add the following after <code>&lt;body&gt;</code>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;h1&gt;Hello World&lt;/h1&gt;
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>You can also add any associated JavaScript and CSS files there as well.</p>
@@ -1526,27 +1534,29 @@ in Xcode project templates.</p>
 <h2>Deploy to Simulator</h2>
 
 <ul>
-<li>Change the <em>Active SDK</em> in the Scheme drop-down menu on the toolbar to <em>iOS version Simulator</em></li>
-<li>Select the <em>Run</em> button in your project window&#39;s toolbar</li>
+  <li>Change the <em>Active SDK</em> in the Scheme drop-down menu on the toolbar to <em>iOS version Simulator</em></li>
+  <li>Select the <em>Run</em> button in your project window&#39;s toolbar</li>
 </ul>
 
 <h2>Deploy to <a href="../../../cordova/device/device.html">Device</a></h2>
 
 <ul>
-<li>Open <code>YourAppName-Info.plist</code>, under the <em>Supporting Files</em> group</li>
-<li>Change <em>BundleIdentifier</em> to the identifier provided by Apple or your own bundle identifier
+  <li>Open <code>YourAppName-Info.plist</code>, under the <em>Supporting Files</em> group</li>
+  <li>Change <em>BundleIdentifier</em> to the identifier provided by Apple or your own bundle identifier
+    <ul>
+      <li>If you have a developer license, you can run the <a href="http://developer.apple.com/iphone/manage/overview/index.action">Assistant</a> to register your app</li>
+    </ul>
+  </li>
+  <li>Change the <em>Active SDK</em> in the Scheme drop-down menu on the toolbar to <em>YourDeviceName</em>
+    <ul>
+      <li>You will need to have your device connected via USB</li>
+    </ul>
+  </li>
+  <li>
+    <p>Select the <em>Run</em> button in your project window&#39;s toolbar</p>
 
-<ul>
-<li>If you have a developer license, you can run the <a href="http://developer.apple.com/iphone/manage/overview/index.action">Assistant</a> to register your app</li>
-</ul></li>
-<li>Change the <em>Active SDK</em> in the Scheme drop-down menu on the toolbar to <em>YourDeviceName</em>
-
-<ul>
-<li>You will need to have your device connected via USB</li>
-</ul></li>
-<li><p>Select the <em>Run</em> button in your project window&#39;s toolbar</p>
-
-<p><img src="/static/img/guide/platforms/ios/HelloWorldiPhone4.png" alt=""></p></li>
+    <p><img src="/static/img/guide/platforms/ios/HelloWorldiPhone4.png" alt="" /></p>
+  </li>
 </ul>
 
 <h2>Build Your App</h2>

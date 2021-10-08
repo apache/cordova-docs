@@ -1473,26 +1473,41 @@ on each platform.)</p>
 <p>The following examples demonstrate <code>&lt;access&gt;</code> whitelist syntax:</p>
 
 <ul>
-<li><p>Access to <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" /&gt;
-</code></pre></div></li>
-<li><p>Access to the secure <a href="https://google.com">google.com</a> (<code>https://</code>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="https://google.com" /&gt;
-</code></pre></div></li>
-<li><p>Access to the subdomain <a href="http://maps.google.com">maps.google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://maps.google.com" /&gt;
-</code></pre></div></li>
-<li><p>Access to all the subdomains on <a href="http://google.com">google.com</a>, for example
-<a href="http://mail.google.com">mail.google.com</a> and <a href="http://docs.google.com">docs.google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://*.google.com" /&gt;
-</code></pre></div></li>
-<li><p>Access to <em>all</em> domains, for example, <a href="http://google.com">google.com</a> and
-<a href="http://developer.mozilla.org">developer.mozilla.org</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="*" /&gt;
-</code></pre></div></li>
-</ul>
+  <li>
+    <p>Access to <a href="http://google.com">google.com</a>:</p>
 
-<p>This is the default value for newly created CLI projects.</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="http://google.com" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to the secure <a href="https://google.com">google.com</a> (<code>https://</code>):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="https://google.com" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to the subdomain <a href="http://maps.google.com">maps.google.com</a>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="http://maps.google.com" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to all the subdomains on <a href="http://google.com">google.com</a>, for example
+<a href="http://mail.google.com">mail.google.com</a> and <a href="http://docs.google.com">docs.google.com</a>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="http://*.google.com" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to <em>all</em> domains, for example, <a href="http://google.com">google.com</a> and
+<a href="http://developer.mozilla.org">developer.mozilla.org</a>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="*" /&gt;
+</code></pre></div>    </div>
+
+    <p>This is the default value for newly created CLI projects.</p>
+  </li>
+</ul>
 
 <p>Be aware that some websites may automatically redirect from their home page to
 a different url, such as using https protocol or to a country-specific
@@ -1523,9 +1538,11 @@ prior to 4.0.0, see older versions of this documentation.</p>
 <p><a href="https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/">Application Transport Security (ATS)</a> is new in iOS 9 (Xcode 7). This new feature acts as a whitelist for your app. The cli will automatically convert &lt;access&gt; and &lt;allow-navigation&gt; tags to the appropriate ATS directives.</p>
 
 <p>The two tags mentioned above support these two new attributes below, which have their equivalents in ATS:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">1. minimum-tls-version (String, defaults to 'TLSv1.2')
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. minimum-tls-version (String, defaults to 'TLSv1.2')
 2. requires-forward-secrecy (Boolean, defaults to 'true')
-</code></pre></div>
+</code></pre></div></div>
+
 <p>See the <a href="https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/">ATS Technote</a> for details.</p>
 
 <h2>BlackBerry 10 Whitelisting</h2>
@@ -1536,27 +1553,37 @@ prior to 4.0.0, see older versions of this documentation.</p>
 ways:</p>
 
 <ul>
-<li><p>Any content accessed by <code>XMLHttpRequest</code> must be declared
-explicitly. Setting <code>origin=&quot;*&quot;</code> does not work in this case.
+  <li>
+    <p>Any content accessed by <code>XMLHttpRequest</code> must be declared
+explicitly. Setting <code>origin="*"</code> does not work in this case.
 Alternatively, all web security may be disabled using the
 <code>WebSecurity</code> preference described in BlackBerry Configuration:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="websecurity" value="disable" /&gt;
-</code></pre></div></li>
-<li><p>As an alternative to setting <code>*.domain</code>, set an additional
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="websecurity" value="disable" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>As an alternative to setting <code>*.domain</code>, set an additional
 <code>subdomains</code> attribute to <code>true</code>. It should be set to <code>false</code> by
 default. For example, the following allows access to <code>google.com</code>,
 <code>maps.google.com</code>, and <code>docs.google.com</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" subdomains="true" /&gt;
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="http://google.com" subdomains="true" /&gt;
+</code></pre></div>    </div>
+
+    <p>The following narrows access to <code>google.com</code>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="http://google.com" subdomains="false" /&gt;
+</code></pre></div>    </div>
+
+    <p>Specify access to all domains, including the local <code>file://</code>
+protocol:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="*" subdomains="true" /&gt;
+</code></pre></div>    </div>
+  </li>
 </ul>
 
-<p>The following narrows access to <code>google.com</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;access origin="http://google.com" subdomains="false" /&gt;
-</code></pre></div>
-<p>Specify access to all domains, including the local <code>file://</code>
-  protocol:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;access origin="*" subdomains="true" /&gt;
-</code></pre></div>
 <p>(For more information on support, see BlackBerry&#39;s documentation on the
 <a href="https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html">access element</a>.)</p>
 
@@ -1566,16 +1593,20 @@ default. For example, the following allows access to <code>google.com</code>,
 there is a special permission called 
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Permissions">SystemXHR</a>.
 There is a need to add this permission to <code>config.xml</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;platform name="firefoxos"&gt;
-    &lt;permission name="systemXHR" privileged="true" description="load data from server" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;platform name="firefoxos"&gt;
+	&lt;permission name="systemXHR" privileged="true" description="load data from server" /&gt;
 &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The <code>XMLHttpRequest</code> object needs to be instantiated with two parameters 
 <code>mozAnon</code> and <code>mozSystem</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">var request = new XMLHttpRequest({
-    mozAnon: true,
-    mozSystem: true});
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var request = new XMLHttpRequest({
+	mozAnon: true,
+	mozSystem: true});
+</code></pre></div></div>
+
 <p>This solution is transparent so there is no difference for other platforms.</p>
 
 <h2>Windows Phone Whitelisting</h2>
@@ -1590,6 +1621,7 @@ platform relies on the same <code>subdomains</code> attribute as the BlackBerry
 platform.
 (For more information on support, see Tizen&#39;s documentation on the
 <a href="https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm">access element</a>.)</p>
+
 
 
             </div>

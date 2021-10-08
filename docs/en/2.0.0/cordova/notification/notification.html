@@ -1450,16 +1450,16 @@
                 <h1>Notification</h1>
 
 <blockquote>
-<p>Visual, audible, and tactile device notifications.</p>
+  <p>Visual, audible, and tactile device notifications.</p>
 </blockquote>
 
 <h2>Methods</h2>
 
 <ul>
-<li><a href="notification.alert.html">notification.alert</a></li>
-<li><a href="notification.confirm.html">notification.confirm</a></li>
-<li><a href="notification.beep.html">notification.beep</a></li>
-<li><a href="notification.vibrate.html">notification.vibrate</a></li>
+  <li><a href="notification.alert.html">notification.alert</a></li>
+  <li><a href="notification.confirm.html">notification.confirm</a></li>
+  <li><a href="notification.beep.html">notification.beep</a></li>
+  <li><a href="notification.vibrate.html">notification.vibrate</a></li>
 </ul>
 
 <h2>Permissions</h2>
@@ -1467,41 +1467,57 @@
 <h3>Android</h3>
 
 <h4>app/res/xml/plugins.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Notification" value="org.apache.cordova.Notification"/&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Notification" value="org.apache.cordova.Notification"/&gt;
+</code></pre></div></div>
+
 <h4>app/AndroidManifest.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;uses-permission android:name="android.permission.VIBRATE" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;uses-permission android:name="android.permission.VIBRATE" /&gt;
+</code></pre></div></div>
+
 <h3>Bada</h3>
 
 <h4>manifest.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;Privilege&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Privilege&gt;
     &lt;Name&gt;SYSTEM_SERVICE&lt;/Name&gt;
 &lt;/Privilege&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>BlackBerry WebWorks</h3>
 
 <h4>www/plugins.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Notification" value="org.apache.cordova.notification.Notification" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Notification" value="org.apache.cordova.notification.Notification" /&gt;
+</code></pre></div></div>
+
 <h4>www/config.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature id="blackberry.ui.dialog" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;feature id="blackberry.ui.dialog" /&gt;
+</code></pre></div></div>
+
 <h3>iOS</h3>
 
 <h4>App/Supporting Files/Cordova.plist</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;key&gt;Plugins&lt;/key&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;key&gt;Plugins&lt;/key&gt;
 &lt;dict&gt;
     &lt;key&gt;Notification&lt;/key&gt;
     &lt;string&gt;CDVNotification&lt;/string&gt;
 &lt;/dict&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>webOS</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">No permissions are required.
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
 <h3>Windows Phone</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">No permissions are required.
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
 
             </div>
         </div>

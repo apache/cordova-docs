@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We would like to announce that Cordova Android 6.4.0 has been released! This release now uses the latest Android Gradle plugin that was released with Android...">
+    <meta name="description" content="We would like to announce that Cordova Android 6.4.0 has been released!This release now uses the latest Android Gradle plugin that was released with Android ...">
 
     <title>
         
@@ -131,34 +131,36 @@
     </header>
     <section>
         <div>
-            <p>We would like to announce that <code>Cordova Android 6.4.0</code> has been released! </p>
+            <p>We would like to announce that <code>Cordova Android 6.4.0</code> has been released!</p>
 
 <p>This release now uses the latest Android Gradle plugin that was released with Android Studio 3.0.</p>
 
-<p>Due to the recent changes Google made to Android Studio, Cordova Android now requires that Gradle is installed as a standalone dependency for Android development on all platforms. You can do so by <a href="https://gradle.org/install/">following these instructions at gradle.org</a>.<br>
+<p>Due to the recent changes Google made to Android Studio, Cordova Android now requires that Gradle is installed as a standalone dependency for Android development on all platforms. You can do so by <a href="https://gradle.org/install/">following these instructions at gradle.org</a>.<br />
 We will be removing the code that uses Android Studio to provide Gradle as a dependency in the near future.</p>
 
-<p>Google also has changed the Gradle DSL used and currently support for the Crosswalk WebView is broken in this version of Cordova as a result. Unfortunately, since Crosswalk is no longer supported by the <a href="https://crosswalk-project.org/">Crosswalk Project</a>, we do not know whether <a href="https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview/issues/183">this issue</a> will be fixed.<br>
+<p>Google also has changed the Gradle DSL used and currently support for the Crosswalk WebView is broken in this version of Cordova as a result. Unfortunately, since Crosswalk is no longer supported by the <a href="https://crosswalk-project.org/">Crosswalk Project</a>, we do not know whether <a href="https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview/issues/183">this issue</a> will be fixed.<br />
 If you require support for Crosswalk, we recommend that you continue using cordova-android 6.3.0 at this time and avoid using or upgrading your project with Android Studio.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android@6.4.0
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@6.4.0
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@6.4.0
+</code></pre></div></div>
+
 <!--more-->
-
 <h2>What&#39;s new in Android</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13289">CB-13289</a> Fixing build problems with Studio Three, but keeping <strong>Windows</strong> Gradle fix for now, will be deprecated</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13289">CB-13289</a> Fix test to work with new Google <strong>Android</strong> Gradle DSL</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13499">CB-13499</a> Remove duplicate &quot;setting&quot; in error strings</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13406">CB-13406</a> Fixed AVD API level comparison when choosing sub-par API level match. Added tests for the best_image method.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13404">CB-13404</a> add <strong>Android</strong>-versions to bundledDependencies. Ignore best emulator selection when parsed AVD information does not include API level in the target</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13289">CB-13289</a> Fixing build problems with Studio Three, but keeping <strong>Windows</strong> Gradle fix for now, will be deprecated</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13289">CB-13289</a> Fix test to work with new Google <strong>Android</strong> Gradle DSL</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13499">CB-13499</a> Remove duplicate &quot;setting&quot; in error strings</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13406">CB-13406</a> Fixed AVD API level comparison when choosing sub-par API level match. Added tests for the best_image method.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13404">CB-13404</a> add <strong>Android</strong>-versions to bundledDependencies. Ignore best emulator selection when parsed AVD information does not include API level in the target</li>
 </ul>
 
         </div>

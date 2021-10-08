@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The Apache Cordova team has just released Cordova 3.1.0. Hurray! Most notable changes include:Initial (alpha) support for Firefox OS.Windows 8 support for CL...">
+    <meta name="description" content="The Apache Cordova team has just released Cordova 3.1.0. Hurray! Most notable changes include:  Initial (alpha) support for Firefox OS.  Windows 8 support fo...">
 
     <title>
         
@@ -134,10 +134,10 @@
             <p>The <a href="http://cordova.apache.org/">Apache Cordova</a> team has just released Cordova 3.1.0. Hurray! Most notable changes include:</p>
 
 <ul>
-<li>Initial (alpha) support for Firefox OS.</li>
-<li>Windows 8 support for CLI project.</li>
-<li>Unified <a href="http://cordova.apache.org/docs/en/3.1.0/guide_appdev_whitelist_index.md.html">whitelist syntax</a> on iOS and Android</li>
-<li><a href="http://cordova.apache.org/docs/en/3.1.0/">Documentation</a> translated into several languages (<a href="http://cordova.apache.org/docs/fr/3.1.0/index.html">fr</a>
+  <li>Initial (alpha) support for Firefox OS.</li>
+  <li>Windows 8 support for CLI project.</li>
+  <li>Unified <a href="http://cordova.apache.org/docs/en/3.1.0/guide_appdev_whitelist_index.md.html">whitelist syntax</a> on iOS and Android</li>
+  <li><a href="http://cordova.apache.org/docs/en/3.1.0/">Documentation</a> translated into several languages (<a href="http://cordova.apache.org/docs/fr/3.1.0/index.html">fr</a>
 <a href="http://cordova.apache.org/docs/zh/3.1.0/index.html">zh</a>
 <a href="http://cordova.apache.org/docs/de/3.1.0/index.html">de</a>
 <a href="http://cordova.apache.org/docs/it/3.1.0/index.html">it</a>
@@ -148,10 +148,12 @@
 </ul>
 
 <p>To upgrade a 3.0 project (replace <code>android</code> with the platform you want to update):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android
-</code></pre></div>
+</code></pre></div></div>
+
 <p>For non-CLI projects or for pre-3.0 projects, refer to the <a href="http://cordova.apache.org/docs/en/3.1.0/guide_platforms_index.md.html">upgrade guides</a>.</p>
 
 <!--more-->
@@ -161,14 +163,14 @@ cordova platform update android
 <p>The Android platform saw 55 commits land since 3.0.0. Notable changes include:</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-4763">CB-4763</a> Deprecated JSONUtils.java, ExifHelper.java, DirectoryManager.java, FileHelper.java</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4725">CB-4725</a> Cordova version is now available to native plugins through <code>CordovaWebView.CORDOVA_VERSION</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4652">CB-4652</a> Support for custom application templates for the <code>create</code> command</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3819">CB-3819</a> Made it easier to set SplashScreen delay.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4013">CB-4013</a> Fixed <code>loadUrlTimeoutValue</code> preference.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4096">CB-4096</a> Implemented new unified whitelist for android</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4133">CB-4133</a> Add main thread warning for plugins that run too long</li>
-<li>Made it easier to use custom subclasses of WebChromeClient and WebViewClient</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4763">CB-4763</a> Deprecated JSONUtils.java, ExifHelper.java, DirectoryManager.java, FileHelper.java</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4725">CB-4725</a> Cordova version is now available to native plugins through <code>CordovaWebView.CORDOVA_VERSION</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4652">CB-4652</a> Support for custom application templates for the <code>create</code> command</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3819">CB-3819</a> Made it easier to set SplashScreen delay.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4013">CB-4013</a> Fixed <code>loadUrlTimeoutValue</code> preference.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4096">CB-4096</a> Implemented new unified whitelist for android</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4133">CB-4133</a> Add main thread warning for plugins that run too long</li>
+  <li>Made it easier to use custom subclasses of WebChromeClient and WebViewClient</li>
 </ul>
 
 <p>For a full list of changes, refer to the Android <a href="https://github.com/apache/cordova-android/blob/master/RELEASENOTES.md">RELEASENOTES.md</a>.</p>
@@ -178,15 +180,15 @@ cordova platform update android
 <p>There were 50 commits to iOS since 3.0.0. The focus, of course, was support for iOS 7 and Xcode 5.</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-3020">CB-3020</a> Several fixes to HideKeyboardFormAccessoryBar and KeyboardShrinksView (still not perfect though)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4801">CB-4801</a> Add new iOS 7 properties for UIWebView in the config.xml &lt;preferences&gt;</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4539">CB-4539</a> Can now create CDVViewController in Storyboard</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4654">CB-4654</a> Allow default project template to be overridden in <code>create</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4095">CB-4095</a> Unified whitelist implementations</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4486">CB-4486</a> Give iOS plugins the ability to override URL loading</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4408">CB-4408</a> Modify cordova/build script to build for device (armv7/armv7s)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3005">CB-3005</a> Add support for query parameters in StartPage url</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4355">CB-4355</a> Localstorage plugin handles options incorrectly (the settings key is specified with upper case chars)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3020">CB-3020</a> Several fixes to HideKeyboardFormAccessoryBar and KeyboardShrinksView (still not perfect though)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4801">CB-4801</a> Add new iOS 7 properties for UIWebView in the config.xml &lt;preferences&gt;</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4539">CB-4539</a> Can now create CDVViewController in Storyboard</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4654">CB-4654</a> Allow default project template to be overridden in <code>create</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4095">CB-4095</a> Unified whitelist implementations</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4486">CB-4486</a> Give iOS plugins the ability to override URL loading</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4408">CB-4408</a> Modify cordova/build script to build for device (armv7/armv7s)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3005">CB-3005</a> Add support for query parameters in StartPage url</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4355">CB-4355</a> Localstorage plugin handles options incorrectly (the settings key is specified with upper case chars)</li>
 </ul>
 
 <p>For a full list of changes, refer to the iOS <a href="https://github.com/apache/cordova-ios/blob/master/RELEASENOTES.md">RELEASENOTES.md</a>.</p>
@@ -196,13 +198,13 @@ cordova platform update android
 <p>There have been 48 commits to the BlackBerry platform since 3.0.0. Many performance and stability improvements were introduced. Other notable changes include:</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-4876">CB-4876</a> Removal of playbook implementation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4812">CB-4812</a> Support for &quot;default&quot; value in the orientation preference</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4544">CB-4544</a> Adds a --query flag to query the user for their password when we need it</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4563">CB-4563</a> Migrated blackberry.app parameters to preferences</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4344">CB-4344</a> Auto-detect started simulator</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4342">CB-4342</a> Detect USB connected device</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4076">CB-4076</a> Modified config-parser to default to the uri attribute</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4876">CB-4876</a> Removal of playbook implementation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4812">CB-4812</a> Support for &quot;default&quot; value in the orientation preference</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4544">CB-4544</a> Adds a --query flag to query the user for their password when we need it</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4563">CB-4563</a> Migrated blackberry.app parameters to preferences</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4344">CB-4344</a> Auto-detect started simulator</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4342">CB-4342</a> Detect USB connected device</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4076">CB-4076</a> Modified config-parser to default to the uri attribute</li>
 </ul>
 
 <h2>What&#39;s new in Windows Phone 7 &amp; 8</h2>
@@ -210,60 +212,65 @@ cordova platform update android
 <p>Defects closed:</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-3177">CB-3177</a> Remove <code>&lt;plugin&gt;</code> support in config.xml and remove deprecation notice in WP8</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3176">CB-3176</a> Remove <code>&lt;plugin&gt;</code> support in config.xml and remove deprecation notice in WP7</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4385">CB-4385</a> Tooling scripts fail when there are spaces in the path name</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4350">CB-4350</a> Bad errors when trying to add win* platforms on mac</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4421">CB-4421</a> WP8 Project - XHRHelper.HandleCommand failing with &#39;System.InvalidOperationException</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4807">CB-4807</a> WP7 + 8 cannot handle parsing config.xml with namespaces</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4526">CB-4526</a> Windows Phone 7+8 <code>build</code> script with no flags should call <code>clean</code> first</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4850">CB-4850</a> Apache Cordova Apache Cordova</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4850">CB-4850</a> WP7 startup optimization</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3177">CB-3177</a> Remove <code>&lt;plugin&gt;</code> support in config.xml and remove deprecation notice in WP8</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3176">CB-3176</a> Remove <code>&lt;plugin&gt;</code> support in config.xml and remove deprecation notice in WP7</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4385">CB-4385</a> Tooling scripts fail when there are spaces in the path name</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4350">CB-4350</a> Bad errors when trying to add win* platforms on mac</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4421">CB-4421</a> WP8 Project - XHRHelper.HandleCommand failing with &#39;System.InvalidOperationException</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4807">CB-4807</a> WP7 + 8 cannot handle parsing config.xml with namespaces</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4526">CB-4526</a> Windows Phone 7+8 <code>build</code> script with no flags should call <code>clean</code> first</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4850">CB-4850</a> Apache Cordova Apache Cordova</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4850">CB-4850</a> WP7 startup optimization</li>
 </ul>
 
 <p>Other changes include:</p>
 
 <ul>
-<li>Platform script improvements, removed case-sensitive ms-build version</li>
-<li>Checks affecting some international users.</li>
-<li>Added hash removal to injected js for backbone + jQuery Mobile routes</li>
+  <li>Platform script improvements, removed case-sensitive ms-build version</li>
+  <li>Checks affecting some international users.</li>
+  <li>Added hash removal to injected js for backbone + jQuery Mobile routes</li>
 </ul>
 
 <h2>What&#39;s new in Windows 8</h2>
 
 <p>Windows 8 support has been added to cordova-cli, so you can now run:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add windows8
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add windows8
+</code></pre></div></div>
+
 <p>All plugins were broken out into the respective repositories. All plugins are fully supported to be installed/uninstalled with plugman, and cordova-cli.</p>
 
 <p>Supported plugins include:</p>
 
 <ul>
-<li>org.apache.cordova.camera</li>
-<li>org.apache.cordova.console</li>
-<li>org.apache.cordova.device.motion</li>
-<li>org.apache.cordova.device.orientation</li>
-<li>org.apache.cordova.device</li>
-<li>org.apache.cordova.dialogs</li>
-<li>org.apache.cordova.file-transfer</li>
-<li>org.apache.cordova.file</li>
-<li>org.apache.cordova.geolocation</li>
-<li>org.apache.cordova.inappbrowser (some limitations because of iframe use and security model)</li>
-<li>org.apache.cordova.media-capture</li>
-<li>org.apache.cordova.network-information</li>
+  <li>org.apache.cordova.camera</li>
+  <li>org.apache.cordova.console</li>
+  <li>org.apache.cordova.device.motion</li>
+  <li>org.apache.cordova.device.orientation</li>
+  <li>org.apache.cordova.device</li>
+  <li>org.apache.cordova.dialogs</li>
+  <li>org.apache.cordova.file-transfer</li>
+  <li>org.apache.cordova.file</li>
+  <li>org.apache.cordova.geolocation</li>
+  <li>org.apache.cordova.inappbrowser (some limitations because of iframe use and security model)</li>
+  <li>org.apache.cordova.media-capture</li>
+  <li>org.apache.cordova.network-information</li>
 </ul>
 
 <h2>What&#39;s new in Firefox OS</h2>
 
 <p>Firefox OS support has been added to cordova-cli, so you can run:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add firefoxos
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add firefoxos
+</code></pre></div></div>
+
 <p>Firefox OS support is still in the very early phases of development. We will continue to work towards adding support for all of cordova&#39;s APIs. Currently, Firefox OS support only two plugins:</p>
 
 <ul>
-<li>org.apache.cordova.vibration</li>
-<li>org.apache.cordova.device</li>
+  <li>org.apache.cordova.vibration</li>
+  <li>org.apache.cordova.device</li>
 </ul>
+
 
         </div>
     </section>

@@ -138,44 +138,49 @@
 <p>A new version of the <code>cordova-cli</code> will need to be released to pin this version of <strong>cordova-ios</strong> as the default version when creating a new project. If you want to start using this version now, make sure to specify the version when doing a <code>cordova platform add/update</code>.</p>
 
 <p><strong>Note:</strong> When updating, make sure to save your plugins as current unsaved plugins may not be reinstalled otherwise. Run the following command in your project to save your currently installed plugins into <code>config.xml</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin save
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin save
+</code></pre></div></div>
+
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform rm ios
 cordova platform add ios@4.2.0
-</code></pre></div>
-<p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add ios@4.2.0
-</code></pre></div>
-<!--more-->
+</code></pre></div></div>
 
+<p>To add it explicitly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@4.2.0
+</code></pre></div></div>
+
+<!--more-->
 <h2>What&#39;s new in iOS platform</h2>
 
 <ul>
-<li><code>cordova-ios</code> now supports node 6!</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11445">CB-11445</a> Updated checked-in <code>node_modules</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11424">CB-11424</a> <code>AppVeyor</code> test failures (path separator) on <code>cordova-ios</code> platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11375">CB-11375</a> - onReset method of CDVPlugin is never called</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11366">CB-11366</a> Break out obj-c tests so they are not called from jasmine - Fix for <code>mktemp</code> variants (Linux vs Darwin)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11117">CB-11117</a> Optimize prepare for <strong>iOS</strong> platform, clean prepared files</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11265">CB-11265</a> Remove target checking for <code>cordova-ios</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11259">CB-11259</a> Improving build output</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10695">CB-10695</a> Fix issue with unable to deploy to the <strong>iOS</strong> Simulator using <code>cordova emulate ios</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10695">CB-10695</a> Replacing <code>SDK/ARCH</code> parameters by new destination parameter. Fixes issues when project has targets using different <code>SDKs</code>, i.e.: <strong>watchOS</strong> vs <strong>iOS</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11069">CB-11069</a> <code>CDVViewController</code> <code>appURL</code> is <code>nil</code> if <code>wwwFolderName</code> is the path to a framework</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11200">CB-11200</a> Bump <code>node-xcode</code> version</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11235">CB-11235</a> <code>NSInternalInconsistencyException</code> when running <strong>iOS</strong> unit tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11161">CB-11161</a> Reuse <code>PluginManager</code> from <code>cordova-common</code> to <code>add/rm</code> plugins</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11161">CB-11161</a> Bump <code>cordova-common</code> to <code>1.3.0</code>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11019">CB-11019</a> Update tests to validate project name updates</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11019">CB-11019</a> Handle changes of app name gracefully</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11022">CB-11022</a> Duplicate <code>www</code> files on plugin installtion/removal</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6992">CB-6992</a> Fix non-working create case, add new test</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10957">CB-10957</a> Remove <code>build*.xconfig</code> from build outputs: <code>*.ipa</code>, <code>*.app</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10964">CB-10964</a> Handle <code>build.json</code> file starting with a <code>BOM</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10942">CB-10942</a> - Cannot <code>&lt;allow-navigation href=&quot;https://foo.bar&quot; /&gt;</code> for links in that site, if you have <code>&lt;allow-intent href=&quot;https://*&quot; /&gt;</code></li>
+  <li><code>cordova-ios</code> now supports node 6!</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11445">CB-11445</a> Updated checked-in <code>node_modules</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11424">CB-11424</a> <code>AppVeyor</code> test failures (path separator) on <code>cordova-ios</code> platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11375">CB-11375</a> - onReset method of CDVPlugin is never called</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11366">CB-11366</a> Break out obj-c tests so they are not called from jasmine - Fix for <code>mktemp</code> variants (Linux vs Darwin)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11117">CB-11117</a> Optimize prepare for <strong>iOS</strong> platform, clean prepared files</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11265">CB-11265</a> Remove target checking for <code>cordova-ios</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11259">CB-11259</a> Improving build output</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10695">CB-10695</a> Fix issue with unable to deploy to the <strong>iOS</strong> Simulator using <code>cordova emulate ios</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10695">CB-10695</a> Replacing <code>SDK/ARCH</code> parameters by new destination parameter. Fixes issues when project has targets using different <code>SDKs</code>, i.e.: <strong>watchOS</strong> vs <strong>iOS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11069">CB-11069</a> <code>CDVViewController</code> <code>appURL</code> is <code>nil</code> if <code>wwwFolderName</code> is the path to a framework</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11200">CB-11200</a> Bump <code>node-xcode</code> version</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11235">CB-11235</a> <code>NSInternalInconsistencyException</code> when running <strong>iOS</strong> unit tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11161">CB-11161</a> Reuse <code>PluginManager</code> from <code>cordova-common</code> to <code>add/rm</code> plugins</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11161">CB-11161</a> Bump <code>cordova-common</code> to <code>1.3.0</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11019">CB-11019</a> Update tests to validate project name updates</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11019">CB-11019</a> Handle changes of app name gracefully</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11022">CB-11022</a> Duplicate <code>www</code> files on plugin installtion/removal</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6992">CB-6992</a> Fix non-working create case, add new test</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10957">CB-10957</a> Remove <code>build*.xconfig</code> from build outputs: <code>*.ipa</code>, <code>*.app</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10964">CB-10964</a> Handle <code>build.json</code> file starting with a <code>BOM</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10942">CB-10942</a> - Cannot <code>&lt;allow-navigation href="https://foo.bar" /&gt;</code> for links in that site, if you have <code>&lt;allow-intent href="https://*" /&gt;</code></li>
 </ul>
 
         </div>

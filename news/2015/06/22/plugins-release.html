@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The following plugins were updated today:cordova-plugin-battery-status@1.1.0cordova-plugin-camera@1.2.0cordova-plugin-console@1.0.1cordova-plugin-contacts@1....">
+    <meta name="description" content="The following plugins were updated today:  cordova-plugin-battery-status@1.1.0  cordova-plugin-camera@1.2.0  cordova-plugin-console@1.0.1  cordova-plugin-con...">
 
     <title>
         
@@ -134,254 +134,253 @@
             <p>The following plugins were updated today:</p>
 
 <ul>
-<li>cordova-plugin-battery-status@1.1.0</li>
-<li>cordova-plugin-camera@1.2.0</li>
-<li>cordova-plugin-console@1.0.1</li>
-<li>cordova-plugin-contacts@1.1.0</li>
-<li>cordova-plugin-device@1.0.1</li>
-<li>cordova-plugin-device-motion@1.1.1</li>
-<li>cordova-plugin-device-orientation@1.0.1</li>
-<li>cordova-plugin-dialogs@1.1.1</li>
-<li>cordova-plugin-file@2.1.0</li>
-<li>cordova-plugin-file-transfer@1.2.0</li>
-<li>cordova-plugin-geolocation@1.0.1</li>
-<li>cordova-plugin-globalization@1.0.1</li>
-<li>cordova-plugin-inappbrowser@1.0.1</li>
-<li>cordova-plugin-legacy-whitelist@1.1.0
-&lt;!--more--&gt;</li>
-<li>cordova-plugin-media@1.0.1</li>
-<li>cordova-plugin-media-capture@1.0.1</li>
-<li>cordova-plugin-network-information@1.0.1</li>
-<li>cordova-plugin-splashscreen@2.1.0</li>
-<li>cordova-plugin-statusbar@1.0.0</li>
-<li>cordova-plugin-test-framework@1.0.1</li>
-<li>cordova-plugin-vibration@1.2.0</li>
-<li>cordova-plugin-whitelist@1.1.0</li>
+  <li>cordova-plugin-battery-status@1.1.0</li>
+  <li>cordova-plugin-camera@1.2.0</li>
+  <li>cordova-plugin-console@1.0.1</li>
+  <li>cordova-plugin-contacts@1.1.0</li>
+  <li>cordova-plugin-device@1.0.1</li>
+  <li>cordova-plugin-device-motion@1.1.1</li>
+  <li>cordova-plugin-device-orientation@1.0.1</li>
+  <li>cordova-plugin-dialogs@1.1.1</li>
+  <li>cordova-plugin-file@2.1.0</li>
+  <li>cordova-plugin-file-transfer@1.2.0</li>
+  <li>cordova-plugin-geolocation@1.0.1</li>
+  <li>cordova-plugin-globalization@1.0.1</li>
+  <li>cordova-plugin-inappbrowser@1.0.1</li>
+  <li>cordova-plugin-legacy-whitelist@1.1.0
+<!--more--></li>
+  <li>cordova-plugin-media@1.0.1</li>
+  <li>cordova-plugin-media-capture@1.0.1</li>
+  <li>cordova-plugin-network-information@1.0.1</li>
+  <li>cordova-plugin-splashscreen@2.1.0</li>
+  <li>cordova-plugin-statusbar@1.0.0</li>
+  <li>cordova-plugin-test-framework@1.0.1</li>
+  <li>cordova-plugin-vibration@1.2.0</li>
+  <li>cordova-plugin-whitelist@1.1.0</li>
 </ul>
 
 <p>The plugins have been pushed to <a href="https://www.npmjs.com/"><strong>npm</strong></a>! You can search for cordova plugins on <a href="https://www.npmjs.com/search?q=ecosystem%3Acordova"><strong>npm</strong></a> or alternative <strong>npm</strong> search sites like <a href="http://node-modules.com/search?q=ecosystem%3Acordova"><strong>node-modules.com</strong></a>. We are also working on our own plugin search using <strong>npm&#39;s</strong> api. We will have more news on that soon!</p>
 
 <p>If you haven&#39;t migrated your plugins over to <strong>npm</strong>, do it soon! We will be switching <a href="http://plugins.cordova.io/"><strong>plugins.cordova.io</strong></a> to read-only sometime next month. You can learn more about migrating your plugins to <strong>npm</strong> <a href="http://cordova.apache.org/announcements/2015/04/21/plugins-release-and-move-to-npm.html">here</a>.</p>
 
-<hr>
-
+<hr />
 <p>You can update any plugin by removing it, and then re-adding it.</p>
 
 <p>E.g. To update your camera plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm org.apache.cordova.camera --save
-cordova plugin add org.apache.cordova.camera --save
-</code></pre></div>
-<p>Release Highlights:</p>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm org.apache.cordova.camera --save
+cordova plugin add org.apache.cordova.camera --save
+</code></pre></div></div>
+
+<p>Release Highlights:</p>
 <ul>
-<li>Readme files properly render on <strong>npm</strong> now!</li>
-<li><code>package.json</code> repo links now point to our <strong>Github</strong> mirrors.</li>
-<li>Updated translations for the readme. Can be found under the docs directory.</li>
+  <li>Readme files properly render on <strong>npm</strong> now!</li>
+  <li><code>package.json</code> repo links now point to our <strong>Github</strong> mirrors.</li>
+  <li>Updated translations for the readme. Can be found under the docs directory.</li>
 </ul>
 
-<p>Changes include:</p>
-
-<!--more-->
+<p>Changes include:
+<!--more--></p>
 
 <p>cordova-plugin-battery-status@1.1.0</p>
 
 <ul>
-<li>added missing license headers</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7953">CB-7953</a> Add <code>cordova-plugin-battery-status</code> support for <strong>browser</strong> platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li>added missing license headers</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7953">CB-7953</a> Add <code>cordova-plugin-battery-status</code> support for <strong>browser</strong> platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
 </ul>
 
 <p>cordova-plugin-camera@1.2.0</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
-<li>Update docs. This closes #100</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8883">CB-8883</a> fix picture rotation issue</li>
-<li>major refactor : readability</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8498">CB-8498</a> Patch, this closes #64</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8879">CB-8879</a> fix stripe issue with correct aspect ratio</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8601">CB-8601</a> - <strong>iOS</strong> camera unit tests broken</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7667">CB-7667</a> <strong>iOS8</strong>: Handle case where camera is not authorized (closes #49)</li>
-<li>add missing license header</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li>Update docs. This closes #100</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8883">CB-8883</a> fix picture rotation issue</li>
+  <li>major refactor : readability</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8498">CB-8498</a> Patch, this closes #64</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8879">CB-8879</a> fix stripe issue with correct aspect ratio</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8601">CB-8601</a> - <strong>iOS</strong> camera unit tests broken</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7667">CB-7667</a> <strong>iOS8</strong>: Handle case where camera is not authorized (closes #49)</li>
+  <li>add missing license header</li>
 </ul>
 
 <p>cordova-plugin-console@1.0.1</p>
 
 <ul>
-<li>move <code>logger.js</code> and <code>console-via-logger.js</code> to common modules, instead of the numerous repeats that were there.</li>
-<li>clean up tests, info is below log level so it does not exist by default.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9191">CB-9191</a> Add basic tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li>move <code>logger.js</code> and <code>console-via-logger.js</code> to common modules, instead of the numerous repeats that were there.</li>
+  <li>clean up tests, info is below log level so it does not exist by default.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9191">CB-9191</a> Add basic tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
 </ul>
 
 <p>cordova-plugin-contacts@1.1.0</p>
 
 <ul>
-<li>Add more install text for legacy versions of cordova tools. This closes #60</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9056">CB-9056</a> Increased timeout of failing tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8987">CB-8987</a>: Support for save and remove for <strong>Windows 10</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5278">CB-5278</a>: We must close the cursor or we take down the whole app, and the debugger doesn&#39;t catch it.</li>
+  <li>Add more install text for legacy versions of cordova tools. This closes #60</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9056">CB-9056</a> Increased timeout of failing tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8987">CB-8987</a>: Support for save and remove for <strong>Windows 10</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5278">CB-5278</a>: We must close the cursor or we take down the whole app, and the debugger doesn&#39;t catch it.</li>
 </ul>
 
 <p>cordova-plugin-device@1.0.1</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
 </ul>
 
 <p>cordova-plugin-device-motion@1.1.1</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8842">CB-8842</a> Return cached values on <strong>Android</strong> if there is no updates from sensor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8842">CB-8842</a> Return cached values on <strong>Android</strong> if there is no updates from sensor</li>
 </ul>
 
 <p>cordova-plugin-device-orientation@1.0.1</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
 </ul>
 
 <p>cordova-plugin-dialogs@1.1.1</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
 </ul>
 
 <p>cordova-plugin-file@2.1.0</p>
 
 <ul>
-<li>added missing license header</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8844">CB-8844</a> Increased timeout for asset tests</li>
-<li>Updated <code>resolveFileSystem.js</code> so it can be parsed by <code>uglifyJS</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8792">CB-8792</a> Fixes reading of json files using <code>readAsText</code></li>
+  <li>added missing license header</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8844">CB-8844</a> Increased timeout for asset tests</li>
+  <li>Updated <code>resolveFileSystem.js</code> so it can be parsed by <code>uglifyJS</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8792">CB-8792</a> Fixes reading of json files using <code>readAsText</code></li>
 </ul>
 
 <p>cordova-plugin-file-transfer@1.2.0</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6503">CB-6503</a>: <code>Null</code> pointer check for headers in upload (This closes #27)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6503">CB-6503</a>: Allow <code>payload</code> <code>content-types</code> other than <code>multipart/form-data</code> to be used for upload</li>
-<li>Fix <code>NoSuchMethodException</code> looking up cookies.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8951">CB-8951</a> <strong>WP8</strong> Handle exceptions in <code>download()</code> and <code>upload()</code> again</li>
-<li><strong>wp8</strong> Relaxed engine version requirement, using reflection to see if methods are available</li>
-<li>Check for the existence of <code>Json.net</code> assembly to determin how we deserialize our headers.</li>
-<li>relax engine requirement to allow <code>-dev</code> versions</li>
-<li>Remove verbose console log messages</li>
-<li>bump required cordova-wp8 version to 4.0.0</li>
-<li>fix failing test resulting from overlapping <code>async</code> calls</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8721">CB-8721</a> Fixes incorrect headers and upload params parsing on <strong>wp8</strong></li>
-<li>Replace all slashes in <strong>windows</strong> path</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6503">CB-6503</a>: <code>Null</code> pointer check for headers in upload (This closes #27)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6503">CB-6503</a>: Allow <code>payload</code> <code>content-types</code> other than <code>multipart/form-data</code> to be used for upload</li>
+  <li>Fix <code>NoSuchMethodException</code> looking up cookies.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8951">CB-8951</a> <strong>WP8</strong> Handle exceptions in <code>download()</code> and <code>upload()</code> again</li>
+  <li><strong>wp8</strong> Relaxed engine version requirement, using reflection to see if methods are available</li>
+  <li>Check for the existence of <code>Json.net</code> assembly to determin how we deserialize our headers.</li>
+  <li>relax engine requirement to allow <code>-dev</code> versions</li>
+  <li>Remove verbose console log messages</li>
+  <li>bump required cordova-wp8 version to 4.0.0</li>
+  <li>fix failing test resulting from overlapping <code>async</code> calls</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8721">CB-8721</a> Fixes incorrect headers and upload params parsing on <strong>wp8</strong></li>
+  <li>Replace all slashes in <strong>windows</strong> path</li>
 </ul>
 
 <p>cordova-plugin-geolocation@1.0.1</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8845">CB-8845</a> Updated comment why <strong>Android</strong> tests are currently pended</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8845">CB-8845</a> Pended tests for <strong>Android</strong></li>
-<li>Add more install text for legacy versions of cordova tools. This closes #36</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8845">CB-8845</a> Updated comment why <strong>Android</strong> tests are currently pended</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8845">CB-8845</a> Pended tests for <strong>Android</strong></li>
+  <li>Add more install text for legacy versions of cordova tools. This closes #36</li>
 </ul>
 
 <p>cordova-plugin-globalization@1.0.1</p>
 
 <ul>
-<li>added <code>moment.js</code> to <code>.ratignore</code></li>
-<li>added license headers</li>
-<li>Adding <code>.ratignore</code> file.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li>added <code>moment.js</code> to <code>.ratignore</code></li>
+  <li>added license headers</li>
+  <li>Adding <code>.ratignore</code> file.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
 </ul>
 
 <p>cordova-plugin-inappbrowser@1.0.1</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
 </ul>
 
 <p>cordova-plugin-legacy-whitelist@1.1.0</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
-<li>Fix compile error introduces by <code>6a3d2cb3567</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8739">CB-8739</a> added missing license headers</li>
-<li>Fix <code>XMl</code> parsing broken by <code>superclass</code> refactor (<code>XmlResourceParser</code>-&gt;<code>XmlPullParser</code>)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li>Fix compile error introduces by <code>6a3d2cb3567</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8739">CB-8739</a> added missing license headers</li>
+  <li>Fix <code>XMl</code> parsing broken by <code>superclass</code> refactor (<code>XmlResourceParser</code>-&gt;<code>XmlPullParser</code>)</li>
 </ul>
 
 <p>cordova-plugin-media@1.0.1</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9079">CB-9079</a> Increased timeout for playback tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8888">CB-8888</a> Makes media status reporting on <strong>windows</strong> more precise</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8793">CB-8793</a> Increased playback timeout in tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9079">CB-9079</a> Increased timeout for playback tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8888">CB-8888</a> Makes media status reporting on <strong>windows</strong> more precise</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8793">CB-8793</a> Increased playback timeout in tests</li>
 </ul>
 
 <p>cordova-plugin-media-capture@1.0.1</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
 </ul>
 
 <p>cordova-plugin-network-information@1.0.1</p>
 
 <ul>
-<li>Adding <code>.ratignore</code> file.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li>Adding <code>.ratignore</code> file.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
 </ul>
 
 <p>cordova-plugin-splashscreen@2.1.0</p>
 
 <ul>
-<li>added missing license headers</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
-<li>Fixed <strong>iOS</strong> unit tests.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3562">CB-3562</a>: Disable screen rotation for <strong>iPhone</strong> when splash screen is shown. (closes #47)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8988">CB-8988</a>: Fix rotation on <strong>iOS/iPad</strong> (closes #46)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8904">CB-8904</a>: Don&#39;t reset the static variable when it&#39;s destroyed, otherwise we might as well just have a member variable</li>
-<li>Removed <strong>wp7</strong> from <code>plugin.xml</code> and <code>package.json</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8750">CB-8750</a> <strong>wp8</strong>: Rewrite resoultion helper</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8750">CB-8750</a> <strong>wp8</strong>: Allow <code>resolution-specific</code> splashscreen images</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8758">CB-8758</a> <strong>wp8</strong>: <code>UnauthorizedAccessException</code> on <code>hide()</code></li>
+  <li>added missing license headers</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li>Fixed <strong>iOS</strong> unit tests.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3562">CB-3562</a>: Disable screen rotation for <strong>iPhone</strong> when splash screen is shown. (closes #47)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8988">CB-8988</a>: Fix rotation on <strong>iOS/iPad</strong> (closes #46)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8904">CB-8904</a>: Don&#39;t reset the static variable when it&#39;s destroyed, otherwise we might as well just have a member variable</li>
+  <li>Removed <strong>wp7</strong> from <code>plugin.xml</code> and <code>package.json</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8750">CB-8750</a> <strong>wp8</strong>: Rewrite resoultion helper</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8750">CB-8750</a> <strong>wp8</strong>: Allow <code>resolution-specific</code> splashscreen images</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8758">CB-8758</a> <strong>wp8</strong>: <code>UnauthorizedAccessException</code> on <code>hide()</code></li>
 </ul>
 
 <p>cordova-plugin-statusbar@1.0.1</p>
 
 <ul>
-<li>add auto-tests for basic api</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9180">CB-9180</a> Add correct supported check for <strong>Windows 8.1</strong> desktop</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li>add auto-tests for basic api</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9180">CB-9180</a> Add correct supported check for <strong>Windows 8.1</strong> desktop</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
 </ul>
 
 <p>cordova-plugin-test-framework@1.0.1</p>
 
 <ul>
-<li>added <code>ratignore</code> file</li>
+  <li>added <code>ratignore</code> file</li>
 </ul>
 
 <p>cordova-plugin-vibration@1.2.0</p>
 
 <ul>
-<li>Adding <code>.ratignore</code> file.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
-<li>used min/max statics in vibrate with pattern. Use <code>callbackId</code> in callbacks, catch json format exceptions</li>
-<li>static-ized <code>MIN_DURATION</code> and <code>MAX_DURATION</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7216">CB-7216</a> changed <code>cancelWasCalled</code> boolean</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7218">CB-7218</a> truncate <code>vibration</code> to 5 secs for <strong>WP8</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6916">CB-6916</a> added <code>vibrateWithPattern</code> for <strong>wp8</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6914">CB-6914</a> added <code>cancelVibration</code> for <strong>wp8</strong></li>
-<li><strong>Android</strong>: respect silent audio setting</li>
+  <li>Adding <code>.ratignore</code> file.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li>used min/max statics in vibrate with pattern. Use <code>callbackId</code> in callbacks, catch json format exceptions</li>
+  <li>static-ized <code>MIN_DURATION</code> and <code>MAX_DURATION</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7216">CB-7216</a> changed <code>cancelWasCalled</code> boolean</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7218">CB-7218</a> truncate <code>vibration</code> to 5 secs for <strong>WP8</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6916">CB-6916</a> added <code>vibrateWithPattern</code> for <strong>wp8</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6914">CB-6914</a> added <code>cancelVibration</code> for <strong>wp8</strong></li>
+  <li><strong>Android</strong>: respect silent audio setting</li>
 </ul>
 
 <p>cordova-plugin-whitelist@1.1.0</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
-<li>Usage of <code>CDVURLRequestFilter</code> protocol.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9089">CB-9089</a> - <strong>iOS</strong> whitelist plugin does not compile</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9090">CB-9090</a> - Enable whitelist plugin for <strong>cordova-ios</strong> <code>4.0.0</code></li>
-<li>Fixed error in <code>Content-Security-Policy</code> example</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9128">CB-9128</a> Updated translations for readme</li>
+  <li>Usage of <code>CDVURLRequestFilter</code> protocol.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9089">CB-9089</a> - <strong>iOS</strong> whitelist plugin does not compile</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9090">CB-9090</a> - Enable whitelist plugin for <strong>cordova-ios</strong> <code>4.0.0</code></li>
+  <li>Fixed error in <code>Content-Security-Policy</code> example</li>
 </ul>
 
         </div>

@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The following plugins were updated today:cordova-plugin-camera: 0.3.3cordova-plugin-contacts: 0.2.14cordova-plugin-file-transfer: 0.4.7cordova-plugin-globali...">
+    <meta name="description" content="The following plugins were updated today:  cordova-plugin-camera: 0.3.3  cordova-plugin-contacts: 0.2.14  cordova-plugin-file-transfer: 0.4.7  cordova-plugin...">
 
     <title>
         
@@ -134,119 +134,110 @@
             <p>The following plugins were updated today:</p>
 
 <ul>
-<li>cordova-plugin-camera: 0.3.3</li>
-<li>cordova-plugin-contacts: 0.2.14</li>
-<li>cordova-plugin-file-transfer: 0.4.7</li>
-<li>cordova-plugin-globalization: 0.3.2</li>
-<li>cordova-plugin-inappbrowser: 0.5.3</li>
-<li>cordova-plugin-media: 0.2.14</li>
-<li>cordova-plugin-media-capture: 0.3.4</li>
-<li>cordova-plugin-network-information: 0.2.13</li>
-<li>cordova-plugin-splashscreen: 0.3.4</li>
+  <li>cordova-plugin-camera: 0.3.3</li>
+  <li>cordova-plugin-contacts: 0.2.14</li>
+  <li>cordova-plugin-file-transfer: 0.4.7</li>
+  <li>cordova-plugin-globalization: 0.3.2</li>
+  <li>cordova-plugin-inappbrowser: 0.5.3</li>
+  <li>cordova-plugin-media: 0.2.14</li>
+  <li>cordova-plugin-media-capture: 0.3.4</li>
+  <li>cordova-plugin-network-information: 0.2.13</li>
+  <li>cordova-plugin-splashscreen: 0.3.4</li>
 </ul>
 
 <p>Notable changes include:</p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-7633">CB-7633</a> - Add <code>iPhone 6/6+</code> support for <code>cordova-splashscreen</code> plugin</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7595">CB-7595</a>: <strong>Android L</strong> changes the type from <code>Mobile</code> to <code>Cellular</code> for <code>cordova-network-information</code> plugin.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7429">CB-7429</a> Added <strong>Windows</strong> support for <code>cordova-media-capture</code> plugin </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7548">CB-7548</a> <strong>BlackBerry10</strong> Re-implement <code>getPreferredLanguage()</code> and <code>getLocaleName()</code> for <code>cordova-globalization</code> plugin.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7529">CB-7529</a> <strong>Windows</strong> Adds support for <code>ms-appdata URIs</code> for <code>cordova-file-transfer</code> plugin </li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7633">CB-7633</a> - Add <code>iPhone 6/6+</code> support for <code>cordova-splashscreen</code> plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7595">CB-7595</a>: <strong>Android L</strong> changes the type from <code>Mobile</code> to <code>Cellular</code> for <code>cordova-network-information</code> plugin.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7429">CB-7429</a> Added <strong>Windows</strong> support for <code>cordova-media-capture</code> plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7548">CB-7548</a> <strong>BlackBerry10</strong> Re-implement <code>getPreferredLanguage()</code> and <code>getLocaleName()</code> for <code>cordova-globalization</code> plugin.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7529">CB-7529</a> <strong>Windows</strong> Adds support for <code>ms-appdata URIs</code> for <code>cordova-file-transfer</code> plugin</li>
 </ul>
 
 <p>The plugins have been updated on our registry at <a href="http://plugins.cordova.io/">plugins.cordova.io</a>.</p>
 
-<hr>
-
+<hr />
 <p>You can update any plugin by removing it, and then readding it. E.g. To update your camera plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm org.apache.cordova.camera
-cordova plugin add org.apache.cordova.camera
-</code></pre></div>
-<p>Other changes include:</p>
 
-<!--more-->
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm org.apache.cordova.camera
+cordova plugin add org.apache.cordova.camera
+</code></pre></div></div>
+
+<p>Other changes include:
+<!--more--></p>
 
 <p><code>org.apache.cordova.camera@0.3.3</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-7600">CB-7600</a> Adds informative message to error callback in manual test.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7600">CB-7600</a> Adds informative message to error callback in manual test.</li>
 </ul>
 
 <p><code>org.apache.cordova.contacts@0.2.14</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-7373">CB-7373</a> Removes unnecessary Error object creation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7373">CB-7373</a> Adds additional output if method is not supported.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7357">CB-7357</a> Adds missing <code>capability</code> element to phone&#39;s <code>appxmanifest</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7373">CB-7373</a> Removes unnecessary Error object creation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7373">CB-7373</a> Adds additional output if method is not supported.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7357">CB-7357</a> Adds missing <code>capability</code> element to phone&#39;s <code>appxmanifest</code>.</li>
 </ul>
 
 <p><code>org.apache.cordova.file-transfer@0.4.7</code></p>
-
 <ul>
-<li>Construct proper <code>FileEntry</code> with <code>nativeURL</code> property set</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7532">CB-7532</a> Handle non-existent download dirs properly</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7529">CB-7529</a> Adds support for <code>ms-appdata URIs</code> for <strong>Windows</strong></li>
+  <li>Construct proper <code>FileEntry</code> with <code>nativeURL</code> property set</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7532">CB-7532</a> Handle non-existent download dirs properly</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7529">CB-7529</a> Adds support for <code>ms-appdata URIs</code> for <strong>Windows</strong></li>
 </ul>
 
 <p><code>org.apache.cordova.globalization@0.3.2</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-7548">CB-7548</a> <strong>BlackBerry10</strong> Re-implement <code>getPreferredLanguage()</code> and <code>getLocaleName()</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7548">CB-7548</a> <strong>BlackBerry10</strong> Re-implement <code>getPreferredLanguage()</code> and <code>getLocaleName()</code>.</li>
 </ul>
 
 <p><code>org.apache.cordova.inappbrowser@0.5.3</code></p>
-
 <ul>
-<li><strong>Windows</strong> implementation fixes and improvements</li>
-<li><code>zIndex</code> fixed</li>
-<li>renamed <code>InAppBrowser</code> back to <code>inappbrowser</code> for case sensitive operating systems</li>
-<li>Update french translation</li>
-<li>Update doc to add <strong>Windows 8</strong></li>
-<li>Update <strong>Windows</strong> <code>proxy</code> to be both compatible with <strong>Windows 8</strong> and <strong>Windows 8.1</strong></li>
-<li>Rename <strong>Windows 8.1</strong> to <strong>windows8</strong> in <code>src</code> directory</li>
-<li>Append <strong>Windows 8.1</strong> platform configuration in <code>plugin.xml</code></li>
-<li>Append <strong>Windows 8.1</strong> proxy using <code>x-ms-webview</code></li>
+  <li><strong>Windows</strong> implementation fixes and improvements</li>
+  <li><code>zIndex</code> fixed</li>
+  <li>renamed <code>InAppBrowser</code> back to <code>inappbrowser</code> for case sensitive operating systems</li>
+  <li>Update french translation</li>
+  <li>Update doc to add <strong>Windows 8</strong></li>
+  <li>Update <strong>Windows</strong> <code>proxy</code> to be both compatible with <strong>Windows 8</strong> and <strong>Windows 8.1</strong></li>
+  <li>Rename <strong>Windows 8.1</strong> to <strong>windows8</strong> in <code>src</code> directory</li>
+  <li>Append <strong>Windows 8.1</strong> platform configuration in <code>plugin.xml</code></li>
+  <li>Append <strong>Windows 8.1</strong> proxy using <code>x-ms-webview</code></li>
 </ul>
 
 <p><code>org.apache.cordova.media@0.2.14</code></p>
-
 <ul>
-<li><strong>Amazon</strong> Specific changes: Added <code>READ_PHONE_STATE</code> permission same as done in <strong>Android</strong></li>
-<li>make possible to play <code>wav</code> files</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7638">CB-7638</a> Get audio duration properly on <strong>Windows</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7454">CB-7454</a> Adds support for <code>m4a</code> audio format for <strong>Windows</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7547">CB-7547</a> Fixes audio recording on <strong>Windows</strong> platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7531">CB-7531</a> Fixes <code>play()</code> failure after <code>release()</code> call</li>
+  <li><strong>Amazon</strong> Specific changes: Added <code>READ_PHONE_STATE</code> permission same as done in <strong>Android</strong></li>
+  <li>make possible to play <code>wav</code> files</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7638">CB-7638</a> Get audio duration properly on <strong>Windows</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7454">CB-7454</a> Adds support for <code>m4a</code> audio format for <strong>Windows</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7547">CB-7547</a> Fixes audio recording on <strong>Windows</strong> platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7531">CB-7531</a> Fixes <code>play()</code> failure after <code>release()</code> call</li>
 </ul>
 
 <p><code>org.apache.cordova.media-capture@0.3.4</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-7453">CB-7453</a> Adds fallback to <code>m4a</code> audio format when <code>mp3</code> recording fails.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7429">CB-7429</a> Fixes image capture manual tests on <strong>Windows</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7429">CB-7429</a> Move <strong>Windows 8</strong> and <strong>Windows</strong> <code>Proxies</code> into one <code>file</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7429">CB-7429</a> Adds <code>media capture</code> support for <strong>Windows</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7453">CB-7453</a> Adds fallback to <code>m4a</code> audio format when <code>mp3</code> recording fails.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7429">CB-7429</a> Fixes image capture manual tests on <strong>Windows</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7429">CB-7429</a> Move <strong>Windows 8</strong> and <strong>Windows</strong> <code>Proxies</code> into one <code>file</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7429">CB-7429</a> Adds <code>media capture</code> support for <strong>Windows</strong></li>
 </ul>
 
 <p><code>org.apache.cordova.network-information@0.2.13</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-7595">CB-7595</a>: <strong>Android L</strong> changes the type from <code>Mobile</code> to <code>Cellular</code>, I&#39;m pretty sure this isn&#39;t documented</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7595">CB-7595</a>: <strong>Android L</strong> changes the type from <code>Mobile</code> to <code>Cellular</code>, I&#39;m pretty sure this isn&#39;t documented</li>
 </ul>
 
 <p><code>org.apache.cordova.splashscreen@0.3.4</code></p>
-
 <ul>
-<li>Finalized <strong>iOS</strong> splash screen (image name) tests. 176 tests in all, 44 for each type of device (<code>iPad</code>, <code>iPhone</code>, <code>iPhone5</code>, <code>iPhone6</code>, <code>iPhone 6 Plus</code>).</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7633">CB-7633</a> - (Re-fix based on updated unit tests) <code>iPhone 6</code> Plus support</li>
-<li>Updated <strong>iOS</strong> tests for locked orientations</li>
-<li>Added more <strong>iOS</strong> splash screen tests.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7633">CB-7633</a> - Add support for <code>iPhone 6/6+</code></li>
-<li>Added failing <code>iPhone 6/6</code> Plus tests.</li>
-<li>Added <code>npm test</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7663">CB-7663</a> - <strong>iOS</strong> unit tests for splash screen</li>
-<li>Properly formatted splashscreen preference docs.</li>
+  <li>Finalized <strong>iOS</strong> splash screen (image name) tests. 176 tests in all, 44 for each type of device (<code>iPad</code>, <code>iPhone</code>, <code>iPhone5</code>, <code>iPhone6</code>, <code>iPhone 6 Plus</code>).</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7633">CB-7633</a> - (Re-fix based on updated unit tests) <code>iPhone 6</code> Plus support</li>
+  <li>Updated <strong>iOS</strong> tests for locked orientations</li>
+  <li>Added more <strong>iOS</strong> splash screen tests.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7633">CB-7633</a> - Add support for <code>iPhone 6/6+</code></li>
+  <li>Added failing <code>iPhone 6/6</code> Plus tests.</li>
+  <li>Added <code>npm test</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7663">CB-7663</a> - <strong>iOS</strong> unit tests for splash screen</li>
+  <li>Properly formatted splashscreen preference docs.</li>
 </ul>
 
         </div>

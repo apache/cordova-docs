@@ -1625,22 +1625,21 @@ various platforms&#39; IDEs to develop them further.</p>
 <h2>Prerequisites</h2>
 
 <p>Before running any command-line tools, you need to install SDKs for
-each platform you wish to target.</p>
-
+each platform you wish to target.
 <!-- XREF
 (See the [Platform Guides](../getting-started/index.html) for more details.)
-XREF -->
+XREF --></p>
 
 <p>To add support or rebuild a project for any platform, you need to run
 the command-line interface from the same machine that supports the
 platform&#39;s SDK. The CLI supports the following combinations:</p>
 
 <ul>
-<li>iOS             (Mac)</li>
-<li>Android         (Mac, Linux)</li>
-<li>BlackBerry      (Mac, Windows)</li>
-<li>Windows Phone 7 (Windows)</li>
-<li>Windows Phone 8 (Windows)</li>
+  <li>iOS             (Mac)</li>
+  <li>Android         (Mac, Linux)</li>
+  <li>BlackBerry      (Mac, Windows)</li>
+  <li>Windows Phone 7 (Windows)</li>
+  <li>Windows Phone 8 (Windows)</li>
 </ul>
 
 <p>On the Mac, the command-line is available via the <em>Terminal</em>
@@ -1654,44 +1653,57 @@ whose assets you pull down to local working directories.</p>
 <p>To install the <code>cordova</code> command-line tool, follow these steps:</p>
 
 <ol>
-<li><p>Download and install <a href="http://nodejs.org/">Node.js</a>. Following
+  <li>
+    <p>Download and install <a href="http://nodejs.org/">Node.js</a>. Following
 installation, you should be able to invoke <code>node</code> or <code>npm</code> on your
-command line.</p></li>
-<li><p>Install the <code>cordova</code> utility. In Unix, prefixing the additional
+command line.</p>
+  </li>
+  <li>
+    <p>Install the <code>cordova</code> utility. In Unix, prefixing the additional
 <code>sudo</code> command may be necessary to install development utilities in
 otherwise restricted directories:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ sudo npm install -g cordova
-</code></pre></div></li>
-</ol>
 
-<p>The installation log may produce errors for any uninstalled
-   platform SDKs.  Following installation, you should be able to run
-   <code>cordova</code> on the command line.</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo npm install -g cordova
+</code></pre></div>    </div>
 
-<ol>
-<li><p>To ensure permissions are correct, run this command on Mac or
+    <p>The installation log may produce errors for any uninstalled
+platform SDKs.  Following installation, you should be able to run
+<code>cordova</code> on the command line.</p>
+  </li>
+  <li>
+    <p>To ensure permissions are correct, run this command on Mac or
 Linux, changing <em>LOGIN</em> to match your account name:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ sudo chown -R LOGIN /usr/local/lib/node_modules/cordova
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo chown -R LOGIN /usr/local/lib/node_modules/cordova
+</code></pre></div>    </div>
+  </li>
 </ol>
 
 <p>After installing the <code>cordova</code> utility, you can always update it to
 the latest version by running the following command:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ sudo npm update -g cordova
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ sudo npm update -g cordova
+</code></pre></div></div>
+
 <p>Use this syntax to install a specific version:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ sudo npm install -g cordova@2.8.0
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ sudo npm install -g cordova@2.8.0
+</code></pre></div></div>
+
 <p>Run the <code>info</code> command for a listing that includes the current version
 along with other available version numbers:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ npm info cordova
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ npm info cordova
+</code></pre></div></div>
+
 <h2>Create an App</h2>
 
 <p>Go to the directory where you maintain your source code, and run a
 command such as the following:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova create HelloWorld com.example.hello "Hello World"
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova create HelloWorld com.example.hello "Hello World"
+</code></pre></div></div>
+
 <p>The first argument specifies a <em>HelloWorld</em> directory to be generated
 for your project. Its <code>www</code> subdirectory houses your application&#39;s
 home page, along with various resources under <code>css</code>, <code>js</code>, and <code>img</code>,
@@ -1701,39 +1713,49 @@ distribute the application.</p>
 
 <p>The other two arguments are optional: the <code>com.example.hello</code> argument
 provides your project with a reverse-domain-style identifier, and the
-<code>&quot;Hello World!&quot;</code> provides the application&#39;s display text. You can edit
+<code>"Hello World!"</code> provides the application&#39;s display text. You can edit
 both of these values later in the <code>config.xml</code> file.</p>
 
 <h2>Add Platforms</h2>
 
 <p>All subsequent commands need to be run within the project&#39;s directory,
 or any subdirectories within its scope:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cd HelloWorld
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cd HelloWorld
+</code></pre></div></div>
+
 <p>Before you can build the project, you need to specify a set of target
 platforms. Your ability to run these commands depends on whether your
 machine supports each SDK, and whether you have already installed each
 SDK.  Run any of these from a Mac:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova platform add ios
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova platform add ios
     $ cordova platform add android
     $ cordova platform add blackberry
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Run any of these from a Windows machine, where <em>wp</em> refers to
 different versions of the Windows Phone operating system:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova platform add wp7
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova platform add wp7
     $ cordova platform add wp8
     $ cordova platform add android
     $ cordova platform add blackberry
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Run this to check your current set of platforms:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova platforms ls
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova platforms ls
+</code></pre></div></div>
+
 <p>(Note the <code>platform</code> and <code>platforms</code> commands are synonymous.)</p>
 
 <p>Run either of the following synonymous commands to remove a platform:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova platform remove blackberry
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova platform remove blackberry
     $ cordova platform rm android
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Running commands to add or remove platforms affects the contents of
 the project&#39;s <em>platforms</em> directory, where each specified platform
 appears as a subdirectory. The <em>www</em> source directory is reproduced
@@ -1746,13 +1768,11 @@ of Cordova&#39;s APIs.</p>
 created. However, any edits you make to the project within an SDK
 affect the derivative set of assets, not the original cross-platform
 source files. Use this approach if you simply want to initialize a
-project.</p>
-
+project.
 <!-- XREF
 (See the [Platform Guides](../getting-started/index.html) for information on how to develop applications within each SDK.)
 XREF -->
-
-<p>Read on if you wish to use command-line tools for the entire
+Read on if you wish to use command-line tools for the entire
 development cycle.</p>
 
 <h2>Build the App</h2>
@@ -1761,25 +1781,30 @@ development cycle.</p>
 application whose home page is the project&#39;s <code>www/index.html</code> file.
 Edit this application however you want, but any initialization should
 be specified as part of the <code>[deviceready](../../cordova/events/events.deviceready.html)</code> event handler, referenced by
-default from <code>www/js/index.js</code>.</p>
-
+default from <code>www/js/index.js</code>.
 <!-- XREF
 (See API and Configuration Guide for details.)
-XREF -->
+XREF --></p>
 
 <p>Run the following command to iteratively build the project:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova build
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova build
+</code></pre></div></div>
+
 <p>This generates platform-specific code within the project&#39;s <code>platforms</code>
 subdirectory.  You can optionally limit the scope of each build to
 specific platforms:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova build ios
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova build ios
+</code></pre></div></div>
+
 <p>The <code>cordova build</code> command is a shorthand for the following, which in
 this example is also targeted to a single platform:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova prepare ios
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova prepare ios
     $ cordova compile ios
-</code></pre></div>
+</code></pre></div></div>
+
 <p>In this case, once you run <code>prepare</code>, you can use Apple&#39;s Xcode SDK as
 an alternative to modify and compile the platform-specific code that
 Cordova generates within <code>platforms/ios</code>. You can use the same
@@ -1845,27 +1870,27 @@ device image, so that you can launch the app from the home screen and
 see how it interacts with many platform features.  Run a command such
 as the following to rebuild the app and view it within a specific
 platform&#39;s emulator:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova emulate android
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova emulate android
+</code></pre></div></div>
+
 <p>Some mobile platforms emulate a particular device by default, such as
 the iPhone for iOS projects. For other platforms, you may need to
-first associate a device with an emulator.</p>
-
+first associate a device with an emulator.
 <!-- XREF
 (See the [Platform Guides](../getting-started/index.html) for details.)
 XREF -->
-
-<p>For example, you may first run the <code>android</code> command to launch the
+For example, you may first run the <code>android</code> command to launch the
 Android SDK, then run a particular device image, which launches it
 according to its default behavior:</p>
 
-<p><img src="/static/img/guide/cli/android_emulate_init.png" alt=""></p>
+<p><img src="/static/img/guide/cli/android_emulate_init.png" alt="" /></p>
 
 <p>Following up with the <code>cordova emulate</code> command refreshes the emulator
 image to display the latest application, which is now available for
 launch from the home screen:</p>
 
-<p><img src="/static/img/guide/cli/android_emulate_install.png" alt=""></p>
+<p><img src="/static/img/guide/cli/android_emulate_install.png" alt="" /></p>
 
 <!--
 

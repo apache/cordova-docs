@@ -142,88 +142,89 @@
 <h2>What&#39;s new in Android</h2>
 
 <ul>
-<li>Update JS snapshot to version 2.9.1 (via coho)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5193">CB-5193</a> Fix Android WebSQL sometime throwing SECURITY_ERR.</li>
-<li>Move java files back into api/ directory.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4817">CB-4817</a> Remove unused assets in project template.</li>
-<li>Update InAppBrowser.java </li>
-<li>Update snapshot of CameraLauncher.java </li>
-<li>Update snapshot of FileTransfer.java</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5080">CB-5080</a> Find resources in a way that works with aapt&#39;s --rename-manifest-package (cherry picked fro</li>
-<li>Tweak the online bridge to not send excess online events.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4495">CB-4495</a> Modify start-emulator script to exit immediately on a fatal emulator error. (cherry picke</li>
-<li>Fix data URI decoding in CordovaResourceApi</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4466">CB-4466</a> fixed jscript check_reqs to get target from project.properties</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4463">CB-4463</a> Updated bin/check_reqs to looks for android-18 target.Also fixed an issue in unix version</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4198">CB-4198</a> bin/create script should be better at handling non-word characters in activity name. Patc</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4198">CB-4198</a> bin/create should handle spaces in activity better.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Fix thread assertion when plugins remap URIs (cherry picked from commit b915aafb5be319121</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Use the ExposedJsApi to detect webCore thread instead of IceCreamCordovaWebViewClient.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Reworked UriResolver into CordovaResourceApi.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Add a length getter for UriResolver. Change from interface -&gt; abstract class.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Make UriResolver assert that IO is not on the UI nor WebCore threads. (cherry picked from</li>
-<li>Backporting FileUtils fixes to 2.9</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4633">CB-4633</a>: Backporting to Android 2.9.x</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4013">CB-4013</a> Fixed loadUrlTimeoutValue preference.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4155">CB-4155</a>: Cordova Android - navigator.app.clearCache(); is called on (prospectively unsupported) Web</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4103">CB-4103</a> Made config parameters case-insensitive.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4038">CB-4038</a> Move non-deprecated classes from the api package into the main package. (cherry picked fr</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Rewrite of DataResource into UriResolver + UriResolvers</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3998">CB-3998</a> video duration is an int</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3927">CB-3927</a> Fix start-up race condition that could cause exec() responses to be dropped.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3949">CB-3949</a>: Adding code to mitigate broken intents with the application installer</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3854">CB-3854</a>: Added support for wildcard. </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3932">CB-3932</a> Remove baseUrl comment in handleDestroy method made redundant by <a href="https://issues.apache.org/jira/browse/CB-3766">CB-3766</a></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3902">CB-3902</a>: Explicitly add market URIs to CordovaWebViewClient so this always works, not just sometime</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3625">CB-3625</a> <a href="https://issues.apache.org/jira/browse/CB-3338">CB-3338</a> updated windows cli scripts and added version option</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3998">CB-3998</a> video duration is an int</li>
+  <li>Update JS snapshot to version 2.9.1 (via coho)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5193">CB-5193</a> Fix Android WebSQL sometime throwing SECURITY_ERR.</li>
+  <li>Move java files back into api/ directory.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4817">CB-4817</a> Remove unused assets in project template.</li>
+  <li>Update InAppBrowser.java</li>
+  <li>Update snapshot of CameraLauncher.java</li>
+  <li>Update snapshot of FileTransfer.java</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5080">CB-5080</a> Find resources in a way that works with aapt&#39;s --rename-manifest-package (cherry picked fro</li>
+  <li>Tweak the online bridge to not send excess online events.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4495">CB-4495</a> Modify start-emulator script to exit immediately on a fatal emulator error. (cherry picke</li>
+  <li>Fix data URI decoding in CordovaResourceApi</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4466">CB-4466</a> fixed jscript check_reqs to get target from project.properties</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4463">CB-4463</a> Updated bin/check_reqs to looks for android-18 target.Also fixed an issue in unix version</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4198">CB-4198</a> bin/create script should be better at handling non-word characters in activity name. Patc</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4198">CB-4198</a> bin/create should handle spaces in activity better.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Fix thread assertion when plugins remap URIs (cherry picked from commit b915aafb5be319121</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Use the ExposedJsApi to detect webCore thread instead of IceCreamCordovaWebViewClient.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Reworked UriResolver into CordovaResourceApi.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Add a length getter for UriResolver. Change from interface -&gt; abstract class.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Make UriResolver assert that IO is not on the UI nor WebCore threads. (cherry picked from</li>
+  <li>Backporting FileUtils fixes to 2.9</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4633">CB-4633</a>: Backporting to Android 2.9.x</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4013">CB-4013</a> Fixed loadUrlTimeoutValue preference.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4155">CB-4155</a>: Cordova Android - navigator.app.clearCache(); is called on (prospectively unsupported) Web</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4103">CB-4103</a> Made config parameters case-insensitive.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4038">CB-4038</a> Move non-deprecated classes from the api package into the main package. (cherry picked fr</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3384">CB-3384</a> Rewrite of DataResource into UriResolver + UriResolvers</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3998">CB-3998</a> video duration is an int</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3927">CB-3927</a> Fix start-up race condition that could cause exec() responses to be dropped.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3949">CB-3949</a>: Adding code to mitigate broken intents with the application installer</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3854">CB-3854</a>: Added support for wildcard.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3932">CB-3932</a> Remove baseUrl comment in handleDestroy method made redundant by <a href="https://issues.apache.org/jira/browse/CB-3766">CB-3766</a></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3902">CB-3902</a>: Explicitly add market URIs to CordovaWebViewClient so this always works, not just sometime</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3625">CB-3625</a> <a href="https://issues.apache.org/jira/browse/CB-3338">CB-3338</a> updated windows cli scripts and added version option</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3998">CB-3998</a> video duration is an int</li>
 </ul>
 
 <h2>What&#39;s new in iOS</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-5199">CB-5199</a> - Media Capture - UI issues under iOS 7 (uncrustify style fix-ups as well)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport of v2.9.1 - add CoreMotion.framework to the default template</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport of v2.9.1 from <a href="https://issues.apache.org/jira/browse/CB-4825">CB-4825</a>, <a href="https://issues.apache.org/jira/browse/CB-5035">CB-5035</a> (Device Motion / Accelerometer)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport of v2.9.1 from <a href="https://issues.apache.org/jira/browse/CB-4847">CB-4847</a> (Media only)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport of v2.9.1 from <a href="https://issues.apache.org/jira/browse/CB-4847">CB-4847</a> (Media Capture only)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport for v2.9.1 of <a href="https://issues.apache.org/jira/browse/CB-4806">CB-4806</a>, <a href="https://issues.apache.org/jira/browse/CB-4355">CB-4355</a> (Splashscreen)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport for v2.9.1 of <a href="https://issues.apache.org/jira/browse/CB-4930">CB-4930</a> (InAppBrowser)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport for v2.9.1 of <a href="https://issues.apache.org/jira/browse/CB-4958">CB-4958</a>, <a href="https://issues.apache.org/jira/browse/CB-3482">CB-3482</a> and <a href="https://issues.apache.org/jira/browse/CB-3453">CB-3453</a> changes</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4480">CB-4480</a> Using 64 bit ints to store file size</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3448">CB-3448</a> bin/diagnose_project script fails if CORDOVALIB variable not in prefs plist</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3567">CB-3567</a> Redirect initiated in JavaScript fails the app from loading</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4147">CB-4147</a> Fixing crash when calling show() on an already open InAppBrowser window.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4104">CB-4104</a> Made config parameters case-insensitive.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4033">CB-4033</a> Relaxed case-sensitivity of &quot;UTF-8&quot;.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4037">CB-4037</a> Unable to Archive iOS projects for upload to App Store in 2.9</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4025">CB-4025</a> iOS emulate command broken when run inside the cordova folder</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5199">CB-5199</a> - Media Capture - UI issues under iOS 7 (uncrustify style fix-ups as well)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport of v2.9.1 - add CoreMotion.framework to the default template</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport of v2.9.1 from <a href="https://issues.apache.org/jira/browse/CB-4825">CB-4825</a>, <a href="https://issues.apache.org/jira/browse/CB-5035">CB-5035</a> (Device Motion / Accelerometer)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport of v2.9.1 from <a href="https://issues.apache.org/jira/browse/CB-4847">CB-4847</a> (Media only)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport of v2.9.1 from <a href="https://issues.apache.org/jira/browse/CB-4847">CB-4847</a> (Media Capture only)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport for v2.9.1 of <a href="https://issues.apache.org/jira/browse/CB-4806">CB-4806</a>, <a href="https://issues.apache.org/jira/browse/CB-4355">CB-4355</a> (Splashscreen)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport for v2.9.1 of <a href="https://issues.apache.org/jira/browse/CB-4930">CB-4930</a> (InAppBrowser)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5189">CB-5189</a> - ios - Backport for v2.9.1 of <a href="https://issues.apache.org/jira/browse/CB-4958">CB-4958</a>, <a href="https://issues.apache.org/jira/browse/CB-3482">CB-3482</a> and <a href="https://issues.apache.org/jira/browse/CB-3453">CB-3453</a> changes</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4480">CB-4480</a> Using 64 bit ints to store file size</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3448">CB-3448</a> bin/diagnose_project script fails if CORDOVALIB variable not in prefs plist</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3567">CB-3567</a> Redirect initiated in JavaScript fails the app from loading</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4147">CB-4147</a> Fixing crash when calling show() on an already open InAppBrowser window.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4104">CB-4104</a> Made config parameters case-insensitive.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4033">CB-4033</a> Relaxed case-sensitivity of &quot;UTF-8&quot;.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4037">CB-4037</a> Unable to Archive iOS projects for upload to App Store in 2.9</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4025">CB-4025</a> iOS emulate command broken when run inside the cordova folder</li>
 </ul>
 
 <h2>What&#39;s new in Windows Phone 7 &amp; 8</h2>
 
 <ul>
-<li>support namespace, and deprecated plugin tags in config.xml</li>
-<li>Update File.write method with additional params</li>
-<li>bumped version to 2.9.1 and removed dupe geolocation from config.xml for wp7+8 <a href="https://issues.apache.org/jira/browse/CB-4090">CB-4090</a></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4090">CB-4090</a> Broken notification handling</li>
-<li>update templates to include all plugins for 2.9.1</li>
-<li>update cordova.js for 2.9.1</li>
-<li>Fix null reference exception</li>
-<li>update Audio/Media plugins</li>
-<li>add callback id to compass callbacks</li>
-<li>add callback id to callbacks</li>
-<li>update FileTransfer plug from plugin repo</li>
-<li>add plugns back, and remove dupe classes</li>
+  <li>support namespace, and deprecated plugin tags in config.xml</li>
+  <li>Update File.write method with additional params</li>
+  <li>bumped version to 2.9.1 and removed dupe geolocation from config.xml for wp7+8 <a href="https://issues.apache.org/jira/browse/CB-4090">CB-4090</a></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4090">CB-4090</a> Broken notification handling</li>
+  <li>update templates to include all plugins for 2.9.1</li>
+  <li>update cordova.js for 2.9.1</li>
+  <li>Fix null reference exception</li>
+  <li>update Audio/Media plugins</li>
+  <li>add callback id to compass callbacks</li>
+  <li>add callback id to callbacks</li>
+  <li>update FileTransfer plug from plugin repo</li>
+  <li>add plugns back, and remove dupe classes</li>
 </ul>
 
 <h2>What&#39;s new in Windows 8</h2>
 
 <ul>
-<li>Cordova JS has been updated to 2.9.1</li>
+  <li>Cordova JS has been updated to 2.9.1</li>
 </ul>
 
 <p>For a full list of changes, refer to RELEASENOTES.md included in the download.</p>
+
 
         </div>
     </section>

@@ -1575,50 +1575,57 @@ locale and timezone.</p>
 <h2>Objects</h2>
 
 <ul>
-<li><a href="GlobalizationError/globalizationerror.html">GlobalizationError</a></li>
+  <li><a href="GlobalizationError/globalizationerror.html">GlobalizationError</a></li>
 </ul>
 
 <h2>Methods</h2>
 
 <ul>
-<li><a href="globalization.getPreferredLanguage.html">globalization.getPreferredLanguage</a></li>
-<li><a href="globalization.getLocaleName.html">globalization.getLocaleName</a></li>
-<li><a href="globalization.dateToString.html">globalization.dateToString</a></li>
-<li><a href="globalization.stringToDate.html">globalization.stringToDate</a></li>
-<li><a href="globalization.getDatePattern.html">globalization.getDatePattern</a></li>
-<li><a href="globalization.getDateNames.html">globalization.getDateNames</a></li>
-<li><a href="globalization.isDayLightSavingsTime.html">globalization.isDayLightSavingsTime</a></li>
-<li><a href="globalization.getFirstDayOfWeek.html">globalization.getFirstDayOfWeek</a></li>
-<li><a href="globalization.numberToString.html">globalization.numberToString</a></li>
-<li><a href="globalization.stringToNumber.html">globalization.stringToNumber</a></li>
-<li><a href="globalization.getNumberPattern.html">globalization.getNumberPattern</a></li>
-<li><a href="globalization.getCurrencyPattern.html">globalization.getCurrencyPattern</a></li>
+  <li><a href="globalization.getPreferredLanguage.html">globalization.getPreferredLanguage</a></li>
+  <li><a href="globalization.getLocaleName.html">globalization.getLocaleName</a></li>
+  <li><a href="globalization.dateToString.html">globalization.dateToString</a></li>
+  <li><a href="globalization.stringToDate.html">globalization.stringToDate</a></li>
+  <li><a href="globalization.getDatePattern.html">globalization.getDatePattern</a></li>
+  <li><a href="globalization.getDateNames.html">globalization.getDateNames</a></li>
+  <li><a href="globalization.isDayLightSavingsTime.html">globalization.isDayLightSavingsTime</a></li>
+  <li><a href="globalization.getFirstDayOfWeek.html">globalization.getFirstDayOfWeek</a></li>
+  <li><a href="globalization.numberToString.html">globalization.numberToString</a></li>
+  <li><a href="globalization.stringToNumber.html">globalization.stringToNumber</a></li>
+  <li><a href="globalization.getNumberPattern.html">globalization.getNumberPattern</a></li>
+  <li><a href="globalization.getCurrencyPattern.html">globalization.getCurrencyPattern</a></li>
 </ul>
 
 <h2>Variable Scope</h2>
 
 <p>The <code>globalization</code> object is a child of the <code>navigator</code> object, and
 therefore has global scope.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">// The global globalization object
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// The global globalization object
 var globalization = navigator.globalization;
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Accessing the Feature</h2>
 
 <p>As of version 3.0, Cordova implements device-level APIs as <em>plugins</em>.
 Use the CLI&#39;s <code>plugin</code> command, described in The Command-line
 Interface, to add or remove this feature for a project:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
     $ cordova plugin rm org.apache.cordova.core.globalization
-</code></pre></div>
+</code></pre></div></div>
+
 <p>These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:</p>
 
 <ul>
-<li><p>Android (in <code>app/res/xml/config.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature name="Globalization"&gt;
-    &lt;param name="android-package" value="org.apache.cordova.Globalization" /&gt;
-&lt;/feature&gt;
-</code></pre></div></li>
+  <li>
+    <p>Android (in <code>app/res/xml/config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="Globalization"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.Globalization" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>Some platforms may support this feature without requiring any special

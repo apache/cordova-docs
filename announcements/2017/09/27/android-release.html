@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that Cordova Android 6.3.0 has been released! This release now targets the latest Android API level of API 26 and has fixed issues r...">
+    <meta name="description" content="We are happy to announce that Cordova Android 6.3.0 has been released!This release now targets the latest Android API level of API 26 and has fixed issues re...">
 
     <title>
         
@@ -131,38 +131,41 @@
     </header>
     <section>
         <div>
-            <p>We are happy to announce that <code>Cordova Android 6.3.0</code> has been released! </p>
+            <p>We are happy to announce that <code>Cordova Android 6.3.0</code> has been released!</p>
 
-<p>This release now targets the latest Android API level of API 26 and has fixed issues related to the <strong>Android SDK Tools 26.0.2</strong> release. <strong>Google</strong> changed how the Android emulator was executed, causing errors when deploying to the emulator. </p>
+<p>This release now targets the latest Android API level of API 26 and has fixed issues related to the <strong>Android SDK Tools 26.0.2</strong> release. <strong>Google</strong> changed how the Android emulator was executed, causing errors when deploying to the emulator.</p>
 
 <p>This release contains the integration of <code>cordova-plugin-compat</code>, so please remove that plugin from projects once you update to this version of <code>cordova-android</code>.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android@6.3.0
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@6.3.0
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@6.3.0
+</code></pre></div></div>
+
 <!--more-->
-
 <h2>What&#39;s new in Android</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6936">CB-6936</a> fix crash when calling methods on a destroyed webview</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12981">CB-12981</a> handle SDK 26.0.2 slightly different AVD list output for <strong>Android</strong> 8+ AVDs. Would cause &quot;cannot read property replace of undefined&quot; errors when trying to deploy an <strong>Android</strong> 8 emulator.</li>
-<li>Updated maven repo to include most recent lib versions</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13177">CB-13177</a> Updating to API Level 26</li>
-<li>Revert <a href="https://issues.apache.org/jira/browse/CB-12015">CB-12015</a> initial-scale values less than 1.0 are ignored on <strong>Android</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12730">CB-12730</a> The Cordova Compatibility Plugin is now integrated into <code>cordova-android</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12453">CB-12453</a> Remove unnecessary double quotes from .bat files which are the causes of crash if project path contains spaces</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13031">CB-13031</a> Fix bug with case-sensitivity of <strong>Android</strong>-packageName</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10916">CB-10916</a> Support display name for <strong>Android</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12423">CB-12423</a> make explicit JDK 1.8 or greater is needed in the <code>README</code>, we require 1.8 for compilation, but do not have 1.8 Java features yet</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12605">CB-12605</a> In <strong>Windows</strong> get <strong>Android</strong> studio path from the registry</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12617">CB-12617</a> : removed node0.x support for platforms and added engineStrict</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6936">CB-6936</a> fix crash when calling methods on a destroyed webview</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12981">CB-12981</a> handle SDK 26.0.2 slightly different AVD list output for <strong>Android</strong> 8+ AVDs. Would cause &quot;cannot read property replace of undefined&quot; errors when trying to deploy an <strong>Android</strong> 8 emulator.</li>
+  <li>Updated maven repo to include most recent lib versions</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13177">CB-13177</a> Updating to API Level 26</li>
+  <li>Revert <a href="https://issues.apache.org/jira/browse/CB-12015">CB-12015</a> initial-scale values less than 1.0 are ignored on <strong>Android</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12730">CB-12730</a> The Cordova Compatibility Plugin is now integrated into <code>cordova-android</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12453">CB-12453</a> Remove unnecessary double quotes from .bat files which are the causes of crash if project path contains spaces</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13031">CB-13031</a> Fix bug with case-sensitivity of <strong>Android</strong>-packageName</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10916">CB-10916</a> Support display name for <strong>Android</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12423">CB-12423</a> make explicit JDK 1.8 or greater is needed in the <code>README</code>, we require 1.8 for compilation, but do not have 1.8 Java features yet</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12605">CB-12605</a> In <strong>Windows</strong> get <strong>Android</strong> studio path from the registry</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12617">CB-12617</a> : removed node0.x support for platforms and added engineStrict</li>
 </ul>
+
 
         </div>
     </section>

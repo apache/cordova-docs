@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We just released an update to cordova-browser and cordova-servecordova-browser@5.0.0cordova-serve@2.0.0Release Highlights:cordova-browser: Added manifest.jso...">
+    <meta name="description" content="We just released an update to cordova-browser and cordova-serve  cordova-browser@5.0.0  cordova-serve@2.0.0Release Highlights:  cordova-browser: Added manife...">
 
     <title>
         
@@ -134,64 +134,67 @@
             <p>We just released an update to <code>cordova-browser</code> and <code>cordova-serve</code></p>
 
 <ul>
-<li><a href="https://www.npmjs.org/package/cordova-browser">cordova-browser@5.0.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-serve">cordova-serve@2.0.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-browser">cordova-browser@5.0.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-serve">cordova-serve@2.0.0</a></li>
 </ul>
 
 <p>Release Highlights:</p>
 
 <ul>
-<li><em>cordova-browser:</em> Added <code>manifest.json</code> to browser projects. This enables basic Progressive Web App support</li>
-<li><em>cordova-browser:</em> Implemented <code>PlatformApi</code>.</li>
-<li><em>cordova-serve:</em> Removed Q dependency in favor of native javascript promises. </li>
-<li><em>cordova-serve:</em> Changed default behavior of which browser is launched during serve. Now the serve command will use the system default browser instead of opening a new instance of chrome. You can still pass in a specific target</li>
+  <li><em>cordova-browser:</em> Added <code>manifest.json</code> to browser projects. This enables basic Progressive Web App support</li>
+  <li><em>cordova-browser:</em> Implemented <code>PlatformApi</code>.</li>
+  <li><em>cordova-serve:</em> Removed Q dependency in favor of native javascript promises.</li>
+  <li><em>cordova-serve:</em> Changed default behavior of which browser is launched during serve. Now the serve command will use the system default browser instead of opening a new instance of chrome. You can still pass in a specific target</li>
 </ul>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cd my_project
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd my_project
 cordova platform update browser@5.0.0
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add browser@5.0.0
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add browser@5.0.0
+</code></pre></div></div>
+
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <h2>cordova-browser</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13214">CB-13214</a> Updated <code>cordova-serve</code> dependency to 2.0.0. <code>cordova serve</code> command now opens system default browser instead of a new instance of <code>chrome</code>. A specific target can still be passed in. </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13214">CB-13214</a> Updated checked-in <code>node_modules</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13188">CB-13188</a> fixed issues with run and build scripts. </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a>: set up <code>eslint</code> and remove <code>jshint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11181">CB-11181</a> add default favicon</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11710">CB-11710</a> Add missing &#39;clean.bat&#39; file</li>
-<li>remove old <code>xhr-activex</code> <strong>Windows</strong> code, update to use <code>pagevisibility</code> instead of <code>webkitpagevisibility</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12804">CB-12804</a>: <code>manifest.json</code> added to <strong>Browser</strong> during create. Adding basic PWA support</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12762">CB-12762</a> Point repo items to github mirrors</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12617">CB-12617</a> : removed node 0.x support and added engineStrict. This closes #27</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12527">CB-12527</a> large refactor. Implemented <code>PlatformApi</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12114">CB-12114</a> added travis and appveyor files</li>
-<li>Add github pull request template</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13214">CB-13214</a> Updated <code>cordova-serve</code> dependency to 2.0.0. <code>cordova serve</code> command now opens system default browser instead of a new instance of <code>chrome</code>. A specific target can still be passed in.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13214">CB-13214</a> Updated checked-in <code>node_modules</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13188">CB-13188</a> fixed issues with run and build scripts.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a>: set up <code>eslint</code> and remove <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11181">CB-11181</a> add default favicon</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11710">CB-11710</a> Add missing &#39;clean.bat&#39; file</li>
+  <li>remove old <code>xhr-activex</code> <strong>Windows</strong> code, update to use <code>pagevisibility</code> instead of <code>webkitpagevisibility</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12804">CB-12804</a>: <code>manifest.json</code> added to <strong>Browser</strong> during create. Adding basic PWA support</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12762">CB-12762</a> Point repo items to github mirrors</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12617">CB-12617</a> : removed node 0.x support and added engineStrict. This closes #27</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12527">CB-12527</a> large refactor. Implemented <code>PlatformApi</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12114">CB-12114</a> added travis and appveyor files</li>
+  <li>Add github pull request template</li>
 </ul>
 
 <h2>cordova-serve</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13188">CB-13188</a> set serve to use default system browser if none is provided.</li>
-<li>Change to <code>eslint</code> instead of <code>jshint</code></li>
-<li>remove <code>q</code> dependence completely. Added <code>server.spec</code></li>
-<li>added browser tests</li>
-<li>Convert <code>src/browser</code> to use Promise api</li>
-<li>Add License, Contributing, Notice, pr-template, etc</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12785">CB-12785</a> added travis and appveyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12762">CB-12762</a>: updated common, fetch, and serve pkgJson to point pkgJson repo items to github mirrors</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a> removed enginestrict since it is deprecated</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11977">CB-11977</a>: updated engines and enginescript for common, fetch, and serve</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13188">CB-13188</a> set serve to use default system browser if none is provided.</li>
+  <li>Change to <code>eslint</code> instead of <code>jshint</code></li>
+  <li>remove <code>q</code> dependence completely. Added <code>server.spec</code></li>
+  <li>added browser tests</li>
+  <li>Convert <code>src/browser</code> to use Promise api</li>
+  <li>Add License, Contributing, Notice, pr-template, etc</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12785">CB-12785</a> added travis and appveyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12762">CB-12762</a>: updated common, fetch, and serve pkgJson to point pkgJson repo items to github mirrors</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a> removed enginestrict since it is deprecated</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11977">CB-11977</a>: updated engines and enginescript for common, fetch, and serve</li>
 </ul>
 
         </div>

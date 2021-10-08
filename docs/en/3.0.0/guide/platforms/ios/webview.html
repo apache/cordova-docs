@@ -1580,95 +1580,183 @@ based Cleaver implementation.</p>
 <h2>Prerequisites</h2>
 
 <ul>
-<li><p>Cordova 2.3.0 or greater</p></li>
-<li><p>Xcode 4.5 or greater</p></li>
-<li><p><code>config.xml</code> file (from a newly created iOS project)</p></li>
+  <li>
+    <p>Cordova 2.3.0 or greater</p>
+  </li>
+  <li>
+    <p>Xcode 4.5 or greater</p>
+  </li>
+  <li>
+    <p><code>config.xml</code> file (from a newly created iOS project)</p>
+  </li>
 </ul>
 
 <h2>Adding Cleaver to your Xcode project (CordovaLib sub-project)</h2>
 
 <ol>
-<li><p>Download and extract the Cordova source to a permanent folder location on your hard drive, for example to <code>~/Documents/Cordova</code>.</p></li>
-<li><p>Quit Xcode if it is running.</p></li>
-<li><p>Using Terminal.app, navigate to the directory where you put the downloaded source above.</p></li>
-<li><p>Copy the <code>config.xml</code> file into your project folder on disk (see the Prerequisites above).</p></li>
-<li><p>Drag and drop the <code>config.xml</code> file into the Project Navigator of Xcode.</p></li>
-<li><p>Choose the <strong>Create groups for any added folders</strong> radio button and press <strong>Finish</strong>.</p></li>
-<li><p>Drag and drop the <code>CordovaLib.xcodeproj</code> file into the Project Navigator of Xcode (from the permanent folder location above, and it should be in the <code>CordovaLib</code> subdirectory).</p></li>
-<li><p>Select <code>CordovaLib.xcodeproj</code> in the Project Navigator.</p></li>
-<li><p>Type the <strong>Option-Command-1</strong> key combination to <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a> the <strong>File Inspector</strong>.</p></li>
-<li><p>Choose <strong>Relative to Group</strong> in the <strong>File Inspector</strong> for the drop-down menu for <strong>Location</strong>.</p></li>
-<li><p>Select the <strong>project icon</strong> in the Project Navigator, select your <strong>Target</strong>, then select the <strong>Build Settings</strong> tab.</p></li>
-<li><p>Add <code>-all_load</code> and <code>-Obj-C</code> for the <strong>Other Linker Flags</strong> value.</p></li>
-<li><p>Click on the <strong>project icon</strong> in the Project Navigator, select your <strong>Target</strong>, then select the <strong>Build Phases</strong> tab.</p></li>
-<li><p>Expand <strong>Link Binaries with Libraries</strong>.</p></li>
-<li><p>Select the <strong>+</strong> button, and add the following <strong>frameworks</strong>. Optionally in the Project Navigator, move them under the <strong>Frameworks</strong> group):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">AssetsLibrary.framework
+  <li>
+    <p>Download and extract the Cordova source to a permanent folder location on your hard drive, for example to <code>~/Documents/Cordova</code>.</p>
+  </li>
+  <li>
+    <p>Quit Xcode if it is running.</p>
+  </li>
+  <li>
+    <p>Using Terminal.app, navigate to the directory where you put the downloaded source above.</p>
+  </li>
+  <li>
+    <p>Copy the <code>config.xml</code> file into your project folder on disk (see the Prerequisites above).</p>
+  </li>
+  <li>
+    <p>Drag and drop the <code>config.xml</code> file into the Project Navigator of Xcode.</p>
+  </li>
+  <li>
+    <p>Choose the <strong>Create groups for any added folders</strong> radio button and press <strong>Finish</strong>.</p>
+  </li>
+  <li>
+    <p>Drag and drop the <code>CordovaLib.xcodeproj</code> file into the Project Navigator of Xcode (from the permanent folder location above, and it should be in the <code>CordovaLib</code> subdirectory).</p>
+  </li>
+  <li>
+    <p>Select <code>CordovaLib.xcodeproj</code> in the Project Navigator.</p>
+  </li>
+  <li>
+    <p>Type the <strong>Option-Command-1</strong> key combination to <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a> the <strong>File Inspector</strong>.</p>
+  </li>
+  <li>
+    <p>Choose <strong>Relative to Group</strong> in the <strong>File Inspector</strong> for the drop-down menu for <strong>Location</strong>.</p>
+  </li>
+  <li>
+    <p>Select the <strong>project icon</strong> in the Project Navigator, select your <strong>Target</strong>, then select the <strong>Build Settings</strong> tab.</p>
+  </li>
+  <li>
+    <p>Add <code>-all_load</code> and <code>-Obj-C</code> for the <strong>Other Linker Flags</strong> value.</p>
+  </li>
+  <li>
+    <p>Click on the <strong>project icon</strong> in the Project Navigator, select your <strong>Target</strong>, then select the <strong>Build Phases</strong> tab.</p>
+  </li>
+  <li>
+    <p>Expand <strong>Link Binaries with Libraries</strong>.</p>
+  </li>
+  <li>
+    <p>Select the <strong>+</strong> button, and add the following <strong>frameworks</strong>. Optionally in the Project Navigator, move them under the <strong>Frameworks</strong> group):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AssetsLibrary.framework
 CoreLocation.framework
 CoreGraphics.framework
 MobileCoreServices.framework
-</code></pre></div></li>
-<li><p>Expand <strong>Target Dependencies</strong>, the top box labeled like this if you have multiple boxes!</p></li>
-<li><p>Select the <strong>+</strong> button, and add the <code>CordovaLib</code> build product.</p></li>
-<li><p>Expand <strong>Link Binaries with Libraries</strong>, the top box labeled like
-this if you have multiple boxes!</p></li>
-<li><p>Select the <strong>+</strong> button, and add <code>libCordova.a</code>.</p></li>
-<li><p>Set the Xcode preference <strong>Xcode Preferences &rarr; Locations &rarr; Derived Data &rarr; Advanced...</strong> to <strong>Unique</strong>.</p></li>
-<li><p>Select the <strong>project icon</strong> in the Project Navigator, select your <strong>Target</strong>, then select the <strong>Build Settings</strong> tab.</p></li>
-<li><p>Search for <strong>Header Search Paths</strong>. For that setting, add these three values below (with quotes):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">"$(TARGET_BUILD_DIR)/usr/local/lib/include"        
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Expand <strong>Target Dependencies</strong>, the top box labeled like this if you have multiple boxes!</p>
+  </li>
+  <li>
+    <p>Select the <strong>+</strong> button, and add the <code>CordovaLib</code> build product.</p>
+  </li>
+  <li>
+    <p>Expand <strong>Link Binaries with Libraries</strong>, the top box labeled like
+this if you have multiple boxes!</p>
+  </li>
+  <li>
+    <p>Select the <strong>+</strong> button, and add <code>libCordova.a</code>.</p>
+  </li>
+  <li>
+    <p>Set the Xcode preference <strong>Xcode Preferences &#8594; Locations &#8594; Derived Data &#8594; Advanced&#8230;</strong> to <strong>Unique</strong>.</p>
+  </li>
+  <li>
+    <p>Select the <strong>project icon</strong> in the Project Navigator, select your <strong>Target</strong>, then select the <strong>Build Settings</strong> tab.</p>
+  </li>
+  <li>
+    <p>Search for <strong>Header Search Paths</strong>. For that setting, add these three values below (with quotes):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"$(TARGET_BUILD_DIR)/usr/local/lib/include"        
 "$(OBJROOT)/UninstalledProducts/include"
 "$(BUILT_PRODUCTS_DIR)"
-</code></pre></div>
-<p>With Cordova 2.1.0, <code>CordovaLib</code> has been upgraded to use <strong>Automatic Reference Counting (ARC)</strong>. You don&#39;t need to upgrade to <strong>ARC</strong> to use CordovaLib, but if you want to upgrade your project to use <strong>ARC</strong>, please use the Xcode migration wizard from the menu: <strong>Edit &rarr; Refactor &rarr; Convert to Objective-C ARC...</strong>, <strong>de-select libCordova.a</strong>, then run the wizard to completion.</p></li>
+</code></pre></div>    </div>
+
+    <p>With Cordova 2.1.0, <code>CordovaLib</code> has been upgraded to use <strong>Automatic Reference Counting (ARC)</strong>. You don&#39;t need to upgrade to <strong>ARC</strong> to use CordovaLib, but if you want to upgrade your project to use <strong>ARC</strong>, please use the Xcode migration wizard from the menu: <strong>Edit &#8594; Refactor &#8594; Convert to Objective-C ARC&#8230;</strong>, <strong>de-select libCordova.a</strong>, then run the wizard to completion.</p>
+  </li>
 </ol>
 
 <h2>Using CDVViewController in your code</h2>
 
 <ol>
-<li><p>Add this header:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">#import &lt;Cordova/CDVViewController.h&gt;
-</code></pre></div></li>
-<li><p>Instantiate a new <code>CDVViewController</code>, and retain it somewhere (e.g., to a property in your class):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">CDVViewController* viewController = [CDVViewController new];
-</code></pre></div></li>
-<li><p>(<em>OPTIONAL</em>) Set the <code>wwwFolderName</code> property (defaults to <code>www</code>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">viewController.wwwFolderName = @"myfolder";
-</code></pre></div></li>
-<li><p>(<em>OPTIONAL</em>) Set the start page in your config.xml, the <code>&lt;content&gt;</code> tag.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;content src="index.html" /&gt;
-</code></pre></div>
-<p>OR</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;content src="http://apache.org" /&gt;
-</code></pre></div></li>
-<li><p>(<em>OPTIONAL</em>) Set the <code>useSplashScreen</code> property (defaults to <code>NO</code>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">viewController.useSplashScreen = YES;
-</code></pre></div></li>
-<li><p>Set the <strong>view frame</strong> (always set this as the last property):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">viewController.view.frame = CGRectMake(0, 0, 320, 480);
-</code></pre></div></li>
-<li><p>Add Cleaver to your view:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">[myView addSubview:viewController.view];
-</code></pre></div></li>
+  <li>
+    <p>Add this header:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> #import &lt;Cordova/CDVViewController.h&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Instantiate a new <code>CDVViewController</code>, and retain it somewhere (e.g., to a property in your class):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> CDVViewController* viewController = [CDVViewController new];
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>(<em>OPTIONAL</em>) Set the <code>wwwFolderName</code> property (defaults to <code>www</code>):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> viewController.wwwFolderName = @"myfolder";
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>(<em>OPTIONAL</em>) Set the start page in your config.xml, the <code>&lt;content&gt;</code> tag.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;content src="index.html" /&gt;
+</code></pre></div>    </div>
+
+    <p>OR</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;content src="http://apache.org" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>(<em>OPTIONAL</em>) Set the <code>useSplashScreen</code> property (defaults to <code>NO</code>):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> viewController.useSplashScreen = YES;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Set the <strong>view frame</strong> (always set this as the last property):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> viewController.view.frame = CGRectMake(0, 0, 320, 480);
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add Cleaver to your view:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [myView addSubview:viewController.view];
+</code></pre></div>    </div>
+  </li>
 </ol>
 
 <h2>Adding your HTML, CSS and JavaScript assets</h2>
 
 <ol>
-<li><p>Create a new folder in your project on disk, <code>www</code> for example.</p></li>
-<li><p>Put your HTML, CSS and JavaScript assets into this folder.</p></li>
-<li><p>Drag and drop the folder into the Project Navigator of Xcode.</p></li>
-<li><p>Choose the <strong>Create folder references for any added folders</strong> radio button.</p></li>
-<li><p>Set the appropriate <code>wwwFolderName</code> and <code>startPage</code> properties for the folder you initially created, or use the defaults (see previous section) when you instantiate the <code>CDVViewController</code>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">/*
- if you created a folder called 'myfolder' and
- you want the file 'mypage.html' in it to be
- the startPage
-*/
-viewController.wwwFolderName = @"myfolder";
-viewController.startPage = @"mypage.html"
-</code></pre></div></li>
+  <li>
+    <p>Create a new folder in your project on disk, <code>www</code> for example.</p>
+  </li>
+  <li>
+    <p>Put your HTML, CSS and JavaScript assets into this folder.</p>
+  </li>
+  <li>
+    <p>Drag and drop the folder into the Project Navigator of Xcode.</p>
+  </li>
+  <li>
+    <p>Choose the <strong>Create folder references for any added folders</strong> radio button.</p>
+  </li>
+  <li>
+    <p>Set the appropriate <code>wwwFolderName</code> and <code>startPage</code> properties for the folder you initially created, or use the defaults (see previous section) when you instantiate the <code>CDVViewController</code>.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> /*
+  if you created a folder called 'myfolder' and
+  you want the file 'mypage.html' in it to be
+  the startPage
+ */
+ viewController.wwwFolderName = @"myfolder";
+ viewController.startPage = @"mypage.html"
+</code></pre></div>    </div>
+  </li>
 </ol>
+
 
 
             </div>

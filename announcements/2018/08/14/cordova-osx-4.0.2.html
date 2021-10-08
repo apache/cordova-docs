@@ -134,31 +134,35 @@
             <p>We are happy to announce that <code>Cordova OSX 4.0.2</code> (for macOS) has been released! This release fixes various bugs releated to the previous <code>cordova-osx@4.0.1</code> release.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform rm osx
 cordova platform add osx@latest
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add osx@4.0.2
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add osx@4.0.2
+</code></pre></div></div>
+
 <!--more-->
 
 <h2>Curated Changelog</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-14145">CB-14145</a> update dependencies to resolve <code>npm audit</code> issues, pinned in 4.0.x only (<a href="https://github.com/apache/cordova-osx/pull/50">GH-50</a>)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9366">CB-9366</a> - log <code>error.stack</code> in <code>cordova.js</code> (update from <code>cordova-js@4.2.4</code>) in <code>4.0.x</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> - <code>cordova.js</code> updates to pass eslint from cordova-js@4.2.2</li>
-<li>cordova.js updates from cordova-js@4.2.0
-
-<ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-3785">CB-3785</a> enable EventListener interface support</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3785">CB-3785</a> Channel.prototype.subscribe to support EventListener interface</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9967">CB-9967</a> deleted legacy platform specific files from cordova-js</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11522">CB-11522</a> [windows] Make cordova-js handle &#39;unknown&#39; type</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11522">CB-11522</a> Make utils.clone handle properties gracefully</li>
-</ul></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-14145">CB-14145</a> update dependencies to resolve <code>npm audit</code> issues, pinned in 4.0.x only (<a href="https://github.com/apache/cordova-osx/pull/50">GH-50</a>)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9366">CB-9366</a> - log <code>error.stack</code> in <code>cordova.js</code> (update from <code>cordova-js@4.2.4</code>) in <code>4.0.x</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> - <code>cordova.js</code> updates to pass eslint from cordova-js@4.2.2</li>
+  <li>cordova.js updates from cordova-js@4.2.0
+    <ul>
+      <li><a href="https://issues.apache.org/jira/browse/CB-3785">CB-3785</a> enable EventListener interface support</li>
+      <li><a href="https://issues.apache.org/jira/browse/CB-3785">CB-3785</a> Channel.prototype.subscribe to support EventListener interface</li>
+      <li><a href="https://issues.apache.org/jira/browse/CB-9967">CB-9967</a> deleted legacy platform specific files from cordova-js</li>
+      <li><a href="https://issues.apache.org/jira/browse/CB-11522">CB-11522</a> [windows] Make cordova-js handle &#39;unknown&#39; type</li>
+      <li><a href="https://issues.apache.org/jira/browse/CB-11522">CB-11522</a> Make utils.clone handle properties gracefully</li>
+    </ul>
+  </li>
 </ul>
 
         </div>

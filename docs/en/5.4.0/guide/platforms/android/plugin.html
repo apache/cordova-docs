@@ -1471,8 +1471,10 @@ the JavaScript.</p>
 
 <p>The plugin&#39;s JavaScript interface uses the <code>cordova.exec</code> method as
 follows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    exec(&lt;successFunction&gt;, &lt;failFunction&gt;, &lt;service&gt;, &lt;action&gt;, [&lt;args&gt;]);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    exec(&lt;successFunction&gt;, &lt;failFunction&gt;, &lt;service&gt;, &lt;action&gt;, [&lt;args&gt;]);
+</code></pre></div></div>
+
 <p>This marshals a request from the WebView to the Android native side,
 effectively calling the <code>action</code> method on the <code>service</code> class, with
 additional arguments passed in the <code>args</code> array.</p>
@@ -1482,10 +1484,12 @@ own, the plugin must be specified in your Cordova-Android
 application&#39;s <code>res/xml/config.xml</code> file. See Application Plugins for
 more information on how to use the <code>plugin.xml</code> file to inject this
 <code>feature</code> element:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;feature name="&lt;service_name&gt;"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;feature name="&lt;service_name&gt;"&gt;
         &lt;param name="android-package" value="&lt;full_name_including_namespace&gt;" /&gt;
     &lt;/feature&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The service name matches the one used in the JavaScript <code>exec</code> call.
 The value is the Java class&#39;s fully qualified namespace identifier.
 Otherwise, the plugin may compile but still be unavailable to Cordova.</p>
@@ -1495,19 +1499,23 @@ Otherwise, the plugin may compile but still be unavailable to Cordova.</p>
 <p>One instance of a plugin object is created for the life of each
 <code>WebView</code>. Plugins are not instantiated until they are first
 referenced by a call from JavaScript, unless <code>&lt;param&gt;</code> with an <code>onload</code>
-<code>name</code> attribute is set to <code>&quot;true&quot;</code> in <code>config.xml</code>. E.g.:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature name="Echo"&gt;
+<code>name</code> attribute is set to <code>"true"</code> in <code>config.xml</code>. E.g.:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;feature name="Echo"&gt;
     &lt;param name="android-package" value="&lt;full_name_including_namespace&gt;" /&gt;
     &lt;param name="onload" value="true" /&gt;
 &lt;/feature&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Plugins should use the <code>initialize</code> method for their start-up logic.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">@Override
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Override
 public void initialize(CordovaInterface cordova, CordovaWebView webView) {
     super.initialize(cordova, webView);
     // your init code here
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Writing an Android Java Plugin</h2>
 
 <p>A JavaScript call fires off a plugin request to the native side, and
@@ -1516,7 +1524,8 @@ file, but what does the final Android Java Plugin class look like?
 Whatever is dispatched to the plugin with JavaScript&#39;s <code>exec</code> function
 is passed into the plugin class&#39;s <code>execute</code> method. Most <code>execute</code>
 implementations look like this:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    @Override
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if ("beep".equals(action)) {
             this.beep(args.getLong(0));
@@ -1525,7 +1534,8 @@ implementations look like this:</p>
         }
         return false;  // Returning false results in a "MethodNotFound" error.
     }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The JavaScript <code>exec</code> function&#39;s <code>action</code> parameter corresponds to a
 private class method to dispatch with optional parameters.</p>
 
@@ -1539,7 +1549,8 @@ exception names as much as possible.</p>
 <code>WebView</code> interface; instead, it runs on the <code>WebCore</code> thread, as
 does the <code>execute</code> method.  If you need to interact with the user
 interface, you should use the following variation:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    @Override
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
         if ("beep".equals(action)) {
             final long duration = args.getLong(0);
@@ -1553,10 +1564,12 @@ interface, you should use the following variation:</p>
         }
         return false;
     }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Use the following if you do not need to run on the main interface&#39;s
 thread, but do not want to block the <code>WebCore</code> thread either:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    @Override
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
         if ("beep".equals(action)) {
             final long duration = args.getLong(0);
@@ -1570,15 +1583,18 @@ thread, but do not want to block the <code>WebCore</code> thread either:</p>
         }
         return false;
     }
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Adding Dependency Libraries</h2>
 
 <p>If a plugin requires additional libraries to work, you can use
 one of the following approaches to add them via <code>config.xml</code>.</p>
 
 <p>Option A. Via <em>Gradle</em> reference, for example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;framework src="com.android.support:support-v4:+" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;framework src="com.android.support:support-v4:+" /&gt;
+</code></pre></div></div>
+
 <p>This is a recommended approach as it allows multiple plugins
 to refer to the same dependency library such as <em>gson</em>,
 <em>android-support-v4</em>, <em>google-play-services</em>, etc and
@@ -1587,8 +1603,10 @@ to refer to the same dependency library such as <em>gson</em>,
 
 <p>Option B. As <em>JAR</em> files placed to some plugin&#39;s folder and
 linked using <code>lib-file</code>, for example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;lib-file src="src/android/libs/gcm.jar"/&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;lib-file src="src/android/libs/gcm.jar"/&gt;
+</code></pre></div></div>
+
 <p>We recommend using this approach only if you are sure that
 dependency jar is plugin specific and won&#39;t be used by
 other plugins. Otherwise, there will be platform build issue.</p>
@@ -1598,49 +1616,53 @@ other plugins. Otherwise, there will be platform build issue.</p>
 <p>To match the JavaScript interface&#39;s <em>echo</em> feature described in
 Application Plugins, use the <code>plugin.xml</code> to inject a <code>feature</code>
 specification to the local platform&#39;s <code>config.xml</code> file:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;platform name="android"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;platform name="android"&gt;
         &lt;config-file target="config.xml" parent="/*"&gt;
             &lt;feature name="Echo"&gt;
                 &lt;param name="android-package" value="org.apache.cordova.plugin.Echo"/&gt;
             &lt;/feature&gt;
         &lt;/config-file&gt;
     &lt;/platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Then add the following to the
 <code>src/org/apache/cordova/plugin/Echo.java</code> file:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    <span class="k">package</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">cordova</span><span class="p">.</span><span class="n">plugin</span><span class="p">;</span>
 
-    <span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">cordova</span><span class="p">.</span><span class="n">CordovaPlugin</span><span class="p">;</span>
-    <span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">cordova</span><span class="p">.</span><span class="n">CallbackContext</span><span class="p">;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    package org.apache.cordova.plugin;
 
-    <span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">json</span><span class="p">.</span><span class="n">JSONArray</span><span class="p">;</span>
-    <span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">json</span><span class="p">.</span><span class="n">JSONException</span><span class="p">;</span>
-    <span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">json</span><span class="p">.</span><span class="n">JSONObject</span><span class="p">;</span>
+    import org.apache.cordova.CordovaPlugin;
+    import org.apache.cordova.CallbackContext;
 
-    <span class="p">/**</span>
-     <span class="p">*</span> <span class="n">This</span> <span class="n">class</span> <span class="n">echoes</span> <span class="n">a</span> <span class="k">string</span> <span class="n">called</span> <span class="k">from</span> <span class="n">JavaScript</span><span class="p">.</span>
-     <span class="p">*/</span>
-    <span class="k">public</span> <span class="n">class</span> <span class="n">Echo</span> <span class="n">extends</span> <span class="n">CordovaPlugin</span> <span class="p">{</span>
+    import org.json.JSONArray;
+    import org.json.JSONException;
+    import org.json.JSONObject;
 
-        <span class="p">@</span><span class="n">Override</span>
-        <span class="k">public</span> <span class="k">boolean</span> <span class="n">execute</span><span class="p">(</span><span class="k">String</span> <span class="n">action</span><span class="p">,</span> <span class="n">JSONArray</span> <span class="n">args</span><span class="p">,</span> <span class="n">CallbackContext</span> <span class="n">callbackContext</span><span class="p">)</span> <span class="n">throws</span> <span class="n">JSONException</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">action</span><span class="p">.</span><span class="n">equals</span><span class="p">(</span><span class="s2">"echo"</span><span class="p">))</span> <span class="p">{</span>
-                <span class="k">String</span> <span class="n">message</span> <span class="p">=</span> <span class="n">args</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
-                <span class="n">this</span><span class="p">.</span><span class="n">echo</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">callbackContext</span><span class="p">);</span>
-                <span class="n">return</span> <span class="nb">true</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="n">return</span> <span class="nb">false</span><span class="p">;</span>
-        <span class="p">}</span>
+    /**
+     * This class echoes a string called from JavaScript.
+     */
+    public class Echo extends CordovaPlugin {
 
-        <span class="n">private</span> <span class="n">void</span> <span class="n">echo</span><span class="p">(</span><span class="k">String</span> <span class="n">message</span><span class="p">,</span> <span class="n">CallbackContext</span> <span class="n">callbackContext</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">message</span> <span class="c1">!= null &amp;&amp; message.length() &gt; 0) {
-</span>                <span class="n">callbackContext</span><span class="p">.</span><span class="n">success</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="n">callbackContext</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="s2">"Expected one non-empty string argument."</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-</code></pre></div>
+        @Override
+        public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+            if (action.equals("echo")) {
+                String message = args.getString(0);
+                this.echo(message, callbackContext);
+                return true;
+            }
+            return false;
+        }
+
+        private void echo(String message, CallbackContext callbackContext) {
+            if (message != null &amp;&amp; message.length() &gt; 0) {
+                callbackContext.success(message);
+            } else {
+                callbackContext.error("Expected one non-empty string argument.");
+            }
+        }
+    }
+</code></pre></div></div>
+
 <p>The necessary imports at the top of the file extends the class from
 <code>CordovaPlugin</code>, whose <code>execute()</code> method it overrides to receive
 messages from <code>exec()</code>.  The <code>execute()</code> method first tests the value
@@ -1680,10 +1702,12 @@ of runtime.  These permissions are required to be declared on an application tha
 the permissions, and these permissions need to be added to the Android Manifest.  This can be
 accomplished by using the config.xml to inject these permissions in the AndroidManifest.xml file.
 The example below uses the Contacts permission.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;config-file target="AndroidManifest.xml" parent="/*"&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;config-file target="AndroidManifest.xml" parent="/*"&gt;
         &lt;uses-permission android:name="android.permission.READ_CONTACTS" /&gt;
     &lt;/config-file&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Android Permissions (Cordova-Android 5.0.x and greater)</h2>
 
 <p>Android 6.0 &quot;Marshmallow&quot; introduced a new permissions model where
@@ -1695,32 +1719,43 @@ was the focus of the Cordova-Android 5.0 release.</p>
 documentation <a href="http://developer.android.com/guide/topics/security/permissions.html#perm-groups">here</a>.</p>
 
 <p>As far as a plugin is concerned, the permission can be requested by calling the permission method, which signature is as follows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    cordova.reqquestPermission(CordovaPlugin plugin, int requestCode, String permission);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cordova.reqquestPermission(CordovaPlugin plugin, int requestCode, String permission);
+</code></pre></div></div>
+
 <p>To cut down on verbosity, it&#39;s standard practice to assign this to a local static variable:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">public static final String READ = Manifest.permission.READ_CONTACTS;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static final String READ = Manifest.permission.READ_CONTACTS;
+</code></pre></div></div>
+
 <p>It is also standard practice to define the requestCode as follows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">public static final int SEARCH_REQ_CODE = 0;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static final int SEARCH_REQ_CODE = 0;
+</code></pre></div></div>
+
 <p>Then, in the exec method, the permission should be checked:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">        if(cordova.hasPermission(READ)) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        if(cordova.hasPermission(READ)) {
             search(executeArgs);
         }
         else
         {
             getReadPermission(SEARCH_REQ_CODE);
         }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>In this case, we just call requestPermission:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">protected void getReadPermission(int requestCode)
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>protected void getReadPermission(int requestCode)
 {
     cordova.requestPermission(this, requestCode, READ);
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>This will call the activity and cause a prompt to appear asking for the permission.  Once the user has the permission, the result must be handled with the onRequestPermissionResult method, which
 every plugin should override.  An example of this can be found below:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">public void onRequestPermissionResult(int requestCode, String[] permissions,
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public void onRequestPermissionResult(int requestCode, String[] permissions,
                                          int[] grantResults) throws JSONException
 {
     for(int r:grantResults)
@@ -1744,15 +1779,20 @@ every plugin should override.  An example of this can be found below:</p>
             break;
     }
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The switch statement above would return from the prompt and depending on the requestCode that was passed in, it would call the method.  It should be noted that permission prompts may stack if the execution is not handled correctly, and that this should be avoided.</p>
 
 <p>In addition to asking for permission for a single permission, it is also possible to request permissions for an entire group by defining the permissions array, as what is done with the Geolocation plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">String [] permissions = { Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION };
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String [] permissions = { Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION };
+</code></pre></div></div>
+
 <p>Then when requesting the permission, all that needs to be done is the following:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova.requestPermissions(this, 0, permissions);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova.requestPermissions(this, 0, permissions);
+</code></pre></div></div>
+
 <p>This requests the permissions specified in the array.  It&#39;s a good idea to provide a publicly accessible permissions array since this can be used by plugins that use your plugin as a 
 dependency, although this is not required.</p>
 
@@ -1762,6 +1802,7 @@ dependency, although this is not required.</p>
 studio is recommended.  Since Cordova-Android is currently used as a library project,
 and plugins are supported as source code, it is possible to debug the Java code inside 
 a Cordova application just like a native Android application.</p>
+
 
 
             </div>

@@ -1644,10 +1644,10 @@
 <h2>Properties</h2>
 
 <ul>
-<li><strong>x</strong>:  Amount of acceleration on the x-axis. (in m/s^2) <em>(Number)</em></li>
-<li><strong>y</strong>:  Amount of acceleration on the y-axis. (in m/s^2) <em>(Number)</em></li>
-<li><strong>z</strong>:  Amount of acceleration on the z-axis. (in m/s^2) <em>(Number)</em></li>
-<li><strong>timestamp</strong>: Creation timestamp in milliseconds. <em>(DOMTimeStamp)</em></li>
+  <li><strong>x</strong>:  Amount of acceleration on the x-axis. (in m/s^2) <em>(Number)</em></li>
+  <li><strong>y</strong>:  Amount of acceleration on the y-axis. (in m/s^2) <em>(Number)</em></li>
+  <li><strong>z</strong>:  Amount of acceleration on the z-axis. (in m/s^2) <em>(Number)</em></li>
+  <li><strong>timestamp</strong>: Creation timestamp in milliseconds. <em>(DOMTimeStamp)</em></li>
 </ul>
 
 <h2>Description</h2>
@@ -1660,17 +1660,18 @@ gravity (9.81 m/s^2), so that when a device lies flat and facing up,
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Amazon Fire OS </li>
-<li>Android</li>
-<li>BlackBerry WebWorks 5.0+</li>
-<li>iOS</li>
-<li>Tizen</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows 8</li>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks 5.0+</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2>Quick Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function onSuccess(acceleration) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess(acceleration) {
     alert('Acceleration X: ' + acceleration.x + '\n' +
           'Acceleration Y: ' + acceleration.y + '\n' +
           'Acceleration Z: ' + acceleration.z + '\n' +
@@ -1682,49 +1683,52 @@ function onError() {
 };
 
 navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Acceleration Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Acceleration Example&lt;/title&gt;
 
-    <span class="c1">// Wait for device API libraries to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// device APIs are available</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">navigator</span><span class="p">.</span><span class="nx">accelerometer</span><span class="p">.</span><span class="nx">getCurrentAcceleration</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="c1">// onSuccess: Get a snapshot of the current acceleration</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">acceleration</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'Acceleration X: '</span> <span class="o">+</span> <span class="nx">acceleration</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-              <span class="s1">'Acceleration Y: '</span> <span class="o">+</span> <span class="nx">acceleration</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-              <span class="s1">'Acceleration Z: '</span> <span class="o">+</span> <span class="nx">acceleration</span><span class="p">.</span><span class="nx">z</span> <span class="o">+</span> <span class="s1">'\n'</span> <span class="o">+</span>
-              <span class="s1">'Timestamp: '</span>      <span class="o">+</span> <span class="nx">acceleration</span><span class="p">.</span><span class="nx">timestamp</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">);</span>
-    <span class="p">}</span>
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+    }
 
-    <span class="c1">// onError: Failed to get the acceleration</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onError</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'onError!'</span><span class="p">);</span>
-    <span class="p">}</span>
+    // onSuccess: Get a snapshot of the current acceleration
+    //
+    function onSuccess(acceleration) {
+        alert('Acceleration X: ' + acceleration.x + '\n' +
+              'Acceleration Y: ' + acceleration.y + '\n' +
+              'Acceleration Z: ' + acceleration.z + '\n' +
+              'Timestamp: '      + acceleration.timestamp + '\n');
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;p&gt;</span>getCurrentAcceleration<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // onError: Failed to get the acceleration
+    //
+    function onError() {
+        alert('onError!');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;getCurrentAcceleration&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 
             </div>
         </div>

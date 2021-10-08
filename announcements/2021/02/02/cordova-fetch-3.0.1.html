@@ -134,15 +134,17 @@
             <p>We are happy to announce that <code>cordova-fetch@3.0.1</code> was released in February 2021. This module is responsible for installing platforms and plugins from the npm package registry, and this release adds compatibility for npm version 7.</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-fetch">cordova-fetch@3.0.1 on npm</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-fetch">cordova-fetch@3.0.1 on npm</a></li>
 </ul>
 
 <p><strong>To upgrade:</strong></p>
 
 <p>Because <code>cordova-fetch</code> is a dependency of the <code>cordova</code> command-line tool, you&#39;ll need to reinstall the <code>cordova</code> package to update:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm uninstall <span class="nt">-g</span> cordova
-npm install <span class="nt">-g</span> cordova
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm uninstall <span class="nt">-g</span> cordova
+npm <span class="nb">install</span> <span class="nt">-g</span> cordova
+</code></pre></div></div>
+
 <h2>Release Highlights</h2>
 
 <p>The most notable fix in this patch release is a fix for plugin and platform installation with the newest version of npm. More details can be found in the <a href="https://github.com/apache/cordova-fetch/pull/91">pull request</a> and <a href="https://github.com/apache/cordova-lib/issues/859">original bug ticket</a>. Thanks Raphael for implementing this fix.</p>
@@ -150,15 +152,14 @@ npm install <span class="nt">-g</span> cordova
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h2>Full Changelog</h2>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-fetch/pull/91">GH-91</a> fix: cordova-fetch with npm@7</li>
-<li><a href="https://github.com/apache/cordova-fetch/pull/89">GH-89</a> refactor: use async/await where applicable</li>
-<li><a href="https://github.com/apache/cordova-fetch/pull/88">GH-88</a> fix: do not pack rejections from resolve in array</li>
-<li><a href="https://github.com/apache/cordova-fetch/pull/90">GH-90</a> fix: use POSIX-style paths for require.resolve &amp; Co</li>
-<li><a href="https://github.com/apache/cordova-fetch/pull/86">GH-86</a> ci: add node 14 to workflow</li>
+  <li><a href="https://github.com/apache/cordova-fetch/pull/91">GH-91</a> fix: cordova-fetch with npm@7</li>
+  <li><a href="https://github.com/apache/cordova-fetch/pull/89">GH-89</a> refactor: use async/await where applicable</li>
+  <li><a href="https://github.com/apache/cordova-fetch/pull/88">GH-88</a> fix: do not pack rejections from resolve in array</li>
+  <li><a href="https://github.com/apache/cordova-fetch/pull/90">GH-90</a> fix: use POSIX-style paths for require.resolve &amp; Co</li>
+  <li><a href="https://github.com/apache/cordova-fetch/pull/86">GH-86</a> ci: add node 14 to workflow</li>
 </ul>
 
         </div>

@@ -1434,69 +1434,82 @@ version of the CLI.</p>
 changes in 4.0.0.  First, the common upgrade steps are needed as below.</p>
 
 <p>For non-CLI projects, run:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    bin/update path/to/project
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bin/update path/to/project
+</code></pre></div></div>
+
 <p>For CLI projects:</p>
 
 <ol>
-<li><p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p></li>
-<li><p>Run <code>cordova platform update android</code> in your existing projects.</p></li>
+  <li>
+    <p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Run <code>cordova platform update android</code> in your existing projects.</p>
+  </li>
 </ol>
 
 <h3>Upgrading the Whitelist</h3>
-
 <p>All whitelist functionality is now implemented via plugin.  Without a plugin,
 your app is no longer protected by a whitelist after upgrading to 4.0.0.  Cordova
 has two whitelist plugins, which provide different levels of protection.</p>
 
 <ol>
-<li><p>The <code>cordova-plugin-whitelist</code> plugin <em>(RECOMMENDED)</em></p>
-
-<ul>
-<li>This plugin is highly recommended, as it is more secure and configurable
-than the whitelist in previous versions</li>
-<li>See <a href="https://github.com/apache/cordova-plugin-whitelist">cordova-plugin-whitelist</a>
-for details on the configuration changes required</li>
-<li>Run: <code>cordova plugin add cordova-plugin-crosswalk-webview</code></li>
-</ul></li>
-<li><p>The <code>cordova-plugin-legacy-whitelist</code> plugin</p>
-
-<ul>
-<li>This plugin provides the same whitelist behaviour as previous versions. See
-<a href="https://github.com/apache/cordova-plugin-legacy-whitelist">cordova-plugin-legacy-whitelist</a></li>
-<li>No configuration changes are required, but it provides less protection than
-the recommended plugin</li>
-<li>Run: <code>cordova plugin add cordova-plugin-legacy-whitelist</code></li>
-</ul></li>
+  <li>The <code>cordova-plugin-whitelist</code> plugin <em>(RECOMMENDED)</em>
+    <ul>
+      <li>This plugin is highly recommended, as it is more secure and configurable
+ than the whitelist in previous versions</li>
+      <li>See <a href="https://github.com/apache/cordova-plugin-whitelist">cordova-plugin-whitelist</a>
+ for details on the configuration changes required</li>
+      <li>Run: <code>cordova plugin add cordova-plugin-crosswalk-webview</code></li>
+    </ul>
+  </li>
+  <li>The <code>cordova-plugin-legacy-whitelist</code> plugin
+    <ul>
+      <li>This plugin provides the same whitelist behaviour as previous versions. See
+ <a href="https://github.com/apache/cordova-plugin-legacy-whitelist">cordova-plugin-legacy-whitelist</a></li>
+      <li>No configuration changes are required, but it provides less protection than
+ the recommended plugin</li>
+      <li>Run: <code>cordova plugin add cordova-plugin-legacy-whitelist</code></li>
+    </ul>
+  </li>
 </ol>
 
 <h3>Using the Crosswalk WebView</h3>
-
 <p>By default, your app will continue to use the system WebView provided by the
 device.  If you wish to use the Crosswalk WebView instead, simply add the
 Crosswalk plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add cordova-plugin-crosswalk-webview
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-crosswalk-webview
+</code></pre></div></div>
+
 <p>Upon adding the plugin, your app will get the Crosswalk WebView installed and
 configured correctly.</p>
 
 <h3>Upgrading to the Splashscreen Plugin</h3>
-
 <p>If your app makes use of a splash screen, that functionality has been moved to
 a plugin.  The configuration options for splash screens are unchanged.  The only
 upgrade step required is to add the plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add cordova-plugin-splashscreen
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-splashscreen
+</code></pre></div></div>
+
 <h2>Upgrading to 3.7.1 from 3.6.0</h2>
 
 <p>For non-CLI projects, run:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    bin/update path/to/project
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bin/update path/to/project
+</code></pre></div></div>
+
 <p>For CLI projects:</p>
 
 <ol>
-<li><p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p></li>
-<li><p>Run <code>cordova platform update android</code> in your existing projects.</p></li>
+  <li>
+    <p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Run <code>cordova platform update android</code> in your existing projects.</p>
+  </li>
 </ol>
 
 <h2>Upgrading to 3.3.0 from 3.2.0</h2>
@@ -1510,109 +1523,191 @@ their workspace.</p>
 
 <h2>Upgrading to 3.2.0 from 3.1.0</h2>
 
-<p>For projects that were created with the cordova CLI: </p>
+<p>For projects that were created with the cordova CLI:</p>
 
 <ol>
-<li><p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p></li>
-<li><p>Run <code>cordova platform update android</code></p></li>
+  <li>
+    <p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Run <code>cordova platform update android</code></p>
+  </li>
 </ol>
 
 <p>For projects not created with the cordova CLI, run:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    bin/update &lt;project_path&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bin/update &lt;project_path&gt;
+</code></pre></div></div>
+
 <p><strong>WARNING:</strong>  On Android 4.4 - Android 4.4.3, creating a file input element with type=&quot;file&quot; will not open the file picker dialog.
 This is a regression with Chromium on Android and the problem can be reproduced in the standalone Chrome browser on Android (see http://code.google.com/p/android/issues/detail?id=62220)  The suggested workaround is to use the FileTransfer and File plugins for Android 4.4. You can listen for an onClick event from the input type=&quot;file&quot; and then pop up a file picker UI. In order to tie the form data with the upload, you can use JavaScript to attach form values to the multi-part POST request that FileTransfer makes.</p>
 
 <h2>Upgrading to 3.1.0 from 3.0.0</h2>
 
-<p>For projects that were created with the cordova CLI: </p>
+<p>For projects that were created with the cordova CLI:</p>
 
 <ol>
-<li><p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p></li>
-<li><p>Run <code>cordova platform update android</code></p></li>
+  <li>
+    <p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Run <code>cordova platform update android</code></p>
+  </li>
 </ol>
 
 <p>For projects not created with the cordova CLI, run:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    bin/update &lt;project_path&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bin/update &lt;project_path&gt;
+</code></pre></div></div>
+
 <h2>Upgrade to the CLI (3.0.0) from 2.9.0</h2>
 
 <ol>
-<li><p>Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-described in <a href="../../cli/index.html">The Command-Line Interface</a>.</p></li>
-<li><p>Add your platforms the cordova project, for example: <code>cordova
-platform add android</code>.</p></li>
-<li><p>Copy the contents of your project&#39;s <code>www</code> directory to the <code>www</code> directory
-at the root of the cordova project you just created.</p></li>
-<li><p>Copy any native assets from your old project into the appropriate
+  <li>
+    <p>Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
+described in <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Add your platforms the cordova project, for example: <code>cordova
+platform add android</code>.</p>
+  </li>
+  <li>
+    <p>Copy the contents of your project&#39;s <code>www</code> directory to the <code>www</code> directory
+at the root of the cordova project you just created.</p>
+  </li>
+  <li>
+    <p>Copy any native assets from your old project into the appropriate
 directories under <code>platforms/android</code>: this directory is where your
-native cordova-android project exists.</p></li>
-<li><p>Use the cordova CLI tool to install any plugins you need. Note that
+native cordova-android project exists.</p>
+  </li>
+  <li>
+    <p>Use the cordova CLI tool to install any plugins you need. Note that
 the CLI handles all core APIs as plugins, so they may need to be
-added. Only 3.0.0 plugins are compatible with the CLI.</p></li>
+added. Only 3.0.0 plugins are compatible with the CLI.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 3.0.0 from 2.9.0</h2>
 
 <ol>
-<li><p>Create a new Apache Cordova Android project.</p></li>
-<li><p>Copy the contents of the <code>www</code> directory to the new project.</p></li>
-<li><p>Copy any native Android assets from the <code>res</code> directory to the new project.</p></li>
-<li><p>Copy over any plugins you installed from the <code>src</code> subdirectories into the new project.</p></li>
-<li><p>Make sure to upgrade any deprecated <code>&lt;plugin&gt;</code> references from your old <code>config.xml</code> file to the new <code>&lt;feature&gt;</code> specification.</p></li>
-<li><p>Update any references to the <code>org.apache.cordova.api</code> package to be <code>org.apache.cordova</code>.</p></li>
-</ol>
+  <li>
+    <p>Create a new Apache Cordova Android project.</p>
+  </li>
+  <li>
+    <p>Copy the contents of the <code>www</code> directory to the new project.</p>
+  </li>
+  <li>
+    <p>Copy any native Android assets from the <code>res</code> directory to the new project.</p>
+  </li>
+  <li>
+    <p>Copy over any plugins you installed from the <code>src</code> subdirectories into the new project.</p>
+  </li>
+  <li>
+    <p>Make sure to upgrade any deprecated <code>&lt;plugin&gt;</code> references from your old <code>config.xml</code> file to the new <code>&lt;feature&gt;</code> specification.</p>
+  </li>
+  <li>
+    <p>Update any references to the <code>org.apache.cordova.api</code> package to be <code>org.apache.cordova</code>.</p>
 
-<p><strong>NOTE</strong>: all core APIs have been removed and must be installed as plugins. Please see the <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a> Guide for details.</p>
+    <p><strong>NOTE</strong>: all core APIs have been removed and must be installed as plugins. Please see the <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a> Guide for details.</p>
+  </li>
+</ol>
 
 <h2>Upgrade to 2.9.0 from 2.8.0</h2>
 
 <ol>
-<li>Run <code>bin/update &lt;project_path&gt;</code>.</li>
+  <li>Run <code>bin/update &lt;project_path&gt;</code>.</li>
 </ol>
 
 <h2>Upgrade to 2.8.0 from 2.7.0</h2>
 
 <ol>
-<li><p>Remove <code>cordova-2.7.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-2.8.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
+  <li>
+    <p>Remove <code>cordova-2.7.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-2.8.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
 </ol>
 
 <!-- SS Eclipse -->
 
 <ol>
-<li><p>Copy the new <code>cordova.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova.js</code> file.</p></li>
-<li><p>Copy the <code>res/xml/config.xml</code> file to match <code>framework/res/xml/config.xml</code>.</p></li>
-<li><p>Update <code>framework/res/xml/config.xml</code> to have similar settings as it did previously.</p></li>
-<li><p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p></li>
+  <li>
+    <p>Copy the new <code>cordova.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code>res/xml/config.xml</code> file to match <code>framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Update <code>framework/res/xml/config.xml</code> to have similar settings as it did previously.</p>
+  </li>
+  <li>
+    <p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 2.7.0 from 2.6.0</h2>
 
 <ol>
-<li><p>Remove <code>cordova-2.6.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-2.7.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-2.7.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-2.7.0.js</code> file.</p></li>
-<li><p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p></li>
-<li><p>Update <code>framework/res/xml/config.xml</code> to have similar settings as it did previously.</p></li>
-<li><p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p></li>
+  <li>
+    <p>Remove <code>cordova-2.6.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-2.7.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-2.7.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-2.7.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Update <code>framework/res/xml/config.xml</code> to have similar settings as it did previously.</p>
+  </li>
+  <li>
+    <p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 2.6.0 from 2.5.0</h2>
 
 <ol>
-<li><p>Remove <code>cordova-2.5.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-2.6.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-2.6.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-2.6.0.js</code> file.</p></li>
-<li><p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p></li>
-<li><p>Update <code>framework/res/xml/config.xml</code> to have similar settings as it did previously.</p></li>
-<li><p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p></li>
+  <li>
+    <p>Remove <code>cordova-2.5.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-2.6.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-2.6.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-2.6.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Update <code>framework/res/xml/config.xml</code> to have similar settings as it did previously.</p>
+  </li>
+  <li>
+    <p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p>
+  </li>
 </ol>
 
 <p>Run <code>bin/update &lt;project&gt;</code> with the project path listed in the Cordova Source directory.</p>
@@ -1620,73 +1715,157 @@ added. Only 3.0.0 plugins are compatible with the CLI.</p></li>
 <h2>Upgrade to 2.5.0 from 2.4.0</h2>
 
 <ol>
-<li><p>Remove <code>cordova-2.4.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-2.5.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-2.5.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-2.5.0.js</code> file.</p></li>
-<li><p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p></li>
-<li><p>Update <code>framework/res/xml/config.xml</code> to have similar settings as it did previously.</p></li>
-<li><p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p></li>
+  <li>
+    <p>Remove <code>cordova-2.4.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-2.5.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-2.5.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-2.5.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Update <code>framework/res/xml/config.xml</code> to have similar settings as it did previously.</p>
+  </li>
+  <li>
+    <p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 2.4.0 from 2.3.0</h2>
 
 <ol>
-<li><p>Remove <code>cordova-2.3.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-2.4.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-2.4.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-2.4.0.js</code> file.</p></li>
-<li><p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p></li>
-<li><p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p></li>
+  <li>
+    <p>Remove <code>cordova-2.3.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-2.4.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-2.4.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-2.4.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 2.3.0 from 2.2.0</h2>
 
 <ol>
-<li><p>Remove <code>cordova-2.2.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-2.3.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-2.3.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-2.3.0.js</code> file.</p></li>
-<li><p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p></li>
-<li><p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p></li>
+  <li>
+    <p>Remove <code>cordova-2.2.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-2.3.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-2.3.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-2.3.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 2.2.0 from 2.1.0</h2>
 
 <ol>
-<li><p>Remove <code>cordova-2.1.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-2.2.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-2.2.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-2.2.0.js</code> file.</p></li>
-<li><p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p></li>
-<li><p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p></li>
+  <li>
+    <p>Remove <code>cordova-2.1.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-2.2.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-2.2.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-2.2.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 2.1.0 from 2.0.0</h2>
 
 <ol>
-<li><p>Remove <code>cordova-2.0.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-2.1.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-2.1.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-2.1.0.js</code> file.</p></li>
-<li><p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p></li>
-<li><p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p></li>
+  <li>
+    <p>Remove <code>cordova-2.0.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-2.1.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-2.1.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-2.1.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Copy files from <code>bin/templates/cordova</code> to the project&#39;s <code>cordova</code> directory.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 2.0.0 from 1.9.0</h2>
 
 <ol>
-<li><p>Remove <code>cordova-1.9.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-2.0.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-2.0.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-2.0.0.js</code> file.</p></li>
-<li><p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p></li>
+  <li>
+    <p>Remove <code>cordova-1.9.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-2.0.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-2.0.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-2.0.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code>res/xml/config.xml</code> to match <code>framework/res/xml/config.xml</code>.</p>
+  </li>
 </ol>
 
 <p>In the 2.0.0 release, the <code>config.xml</code> file combines and replaces
@@ -1696,12 +1875,24 @@ while they still work in 2.0.0, will stop working in a future release.</p>
 <h2>Upgrade to 1.9.0 from 1.8.1</h2>
 
 <ol>
-<li><p>Remove <code>cordova-1.8.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-1.9.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-1.9.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-1.9.0.js</code> file.</p></li>
-<li><p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p></li>
+  <li>
+    <p>Remove <code>cordova-1.8.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-1.9.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-1.9.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-1.9.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p>
+  </li>
 </ol>
 
 <p>Due to the introduction of the <code>CordovaWebView</code> in the 1.9.0 release,
@@ -1713,137 +1904,288 @@ plugin maintainer and add this task to their bug tracker.</p>
 <h2>Upgrade to 1.8.0 from 1.8.0</h2>
 
 <ol>
-<li><p>Remove <code>cordova-1.8.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-1.8.1.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-1.8.1.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-1.8.1.js</code> file.</p></li>
-<li><p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p></li>
+  <li>
+    <p>Remove <code>cordova-1.8.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-1.8.1.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-1.8.1.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-1.8.1.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 1.8.0 from 1.7.0</h2>
 
 <ol>
-<li><p>Remove <code>cordova-1.7.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-1.8.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-1.8.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-1.8.0.js</code> file.</p></li>
-<li><p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p></li>
+  <li>
+    <p>Remove <code>cordova-1.7.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-1.8.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-1.8.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-1.8.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 1.8.0 from 1.7.0</h2>
 
 <ol>
-<li><p>Remove <code>cordova-1.7.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-1.8.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-1.8.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-1.8.0.js</code> file.</p></li>
-<li><p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p></li>
+  <li>
+    <p>Remove <code>cordova-1.7.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-1.8.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-1.8.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-1.8.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 1.7.0 from 1.6.1</h2>
 
 <ol>
-<li><p>Remove <code>cordova-1.6.1.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-1.7.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-1.7.0.js</code> into your project.</p></li>
-<li><p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p></li>
+  <li>
+    <p>Remove <code>cordova-1.6.1.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-1.7.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-1.7.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 1.6.1 from 1.6.0</h2>
 
 <ol>
-<li><p>Remove <code>cordova-1.6.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-1.6.1.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-1.6.1.js</code> into your project.</p></li>
-<li><p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p></li>
+  <li>
+    <p>Remove <code>cordova-1.6.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-1.6.1.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-1.6.1.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 1.6.0 from 1.5.0</h2>
 
 <ol>
-<li><p>Remove <code>cordova-1.5.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-1.6.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-1.6.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-1.6.0.js</code> file.</p></li>
-<li><p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p></li>
-<li><p>Replace <code>res/xml/phonegap.xml</code> with <code>res/xml/cordova.xml</code> to match <code>framework/res/xml/cordova.xml</code>.</p></li>
+  <li>
+    <p>Remove <code>cordova-1.5.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-1.6.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-1.6.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-1.6.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p>
+  </li>
+  <li>
+    <p>Replace <code>res/xml/phonegap.xml</code> with <code>res/xml/cordova.xml</code> to match <code>framework/res/xml/cordova.xml</code>.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 1.5.0 from 1.4.0</h2>
 
 <ol>
-<li><p>Remove <code>phonegap-1.4.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>cordova-1.5.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>cordova-1.5.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>cordova-1.5.0.js</code> file.</p></li>
-<li><p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p></li>
-<li><p>Replace <code>res/xml/phonegap.xml</code> with <code>res/xml/cordova.xml</code> to match <code>framework/res/xml/cordova.xml</code>.</p></li>
+  <li>
+    <p>Remove <code>phonegap-1.4.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>cordova-1.5.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>cordova-1.5.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>cordova-1.5.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p>
+  </li>
+  <li>
+    <p>Replace <code>res/xml/phonegap.xml</code> with <code>res/xml/cordova.xml</code> to match <code>framework/res/xml/cordova.xml</code>.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 1.4.0 from 1.3.0</h2>
 
 <ol>
-<li><p>Remove <code>phonegap-1.3.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>phonegap-1.4.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>phonegap-1.4.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>phonegap-1.4.0.js</code> file.</p></li>
-<li><p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p></li>
-<li><p>Update <code>res/xml/phonegap.xml</code> to match <code>framework/res/xml/phonegap.xml</code>.</p></li>
+  <li>
+    <p>Remove <code>phonegap-1.3.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>phonegap-1.4.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>phonegap-1.4.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>phonegap-1.4.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p>
+  </li>
+  <li>
+    <p>Update <code>res/xml/phonegap.xml</code> to match <code>framework/res/xml/phonegap.xml</code>.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 1.3.0 from 1.2.0</h2>
 
 <ol>
-<li><p>Remove <code>phonegap-1.2.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>phonegap-1.3.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>phonegap-1.3.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>phonegap-1.2.0.js</code> file.</p></li>
-<li><p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p></li>
-<li><p>Update <code>res/xml/phonegap.xml</code> to match <code>framework/res/xml/phonegap.xml</code>.</p></li>
+  <li>
+    <p>Remove <code>phonegap-1.2.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>phonegap-1.3.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>phonegap-1.3.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>phonegap-1.2.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p>
+  </li>
+  <li>
+    <p>Update <code>res/xml/phonegap.xml</code> to match <code>framework/res/xml/phonegap.xml</code>.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 1.2.0 from 1.1.0</h2>
 
 <ol>
-<li><p>Remove <code>phonegap-1.1.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>phonegap-1.2.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>phonegap-1.2.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>phonegap-1.2.0.js</code> file.</p></li>
-<li><p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p></li>
-<li><p>Update <code>res/xml/phonegap.xml</code> to match <code>framework/res/xml/phonegap.xml</code>.</p></li>
+  <li>
+    <p>Remove <code>phonegap-1.1.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>phonegap-1.2.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>phonegap-1.2.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>phonegap-1.2.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p>
+  </li>
+  <li>
+    <p>Update <code>res/xml/phonegap.xml</code> to match <code>framework/res/xml/phonegap.xml</code>.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 1.1.0 from 1.0.0</h2>
 
 <ol>
-<li><p>Remove <code>phonegap-1.0.0.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>phonegap-1.1.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>phonegap-1.1.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>phonegap-1.1.0.js</code> file.</p></li>
-<li><p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p></li>
+  <li>
+    <p>Remove <code>phonegap-1.0.0.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>phonegap-1.1.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>phonegap-1.1.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>phonegap-1.1.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p>
+  </li>
 </ol>
 
 <h2>Upgrade to 1.0.0 from 0.9.6</h2>
 
 <ol>
-<li><p>Remove <code>phonegap-0.9.6.jar</code> from the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>Add <code>phonegap-1.0.0.jar</code> to the project&#39;s <code>libs</code> directory.</p></li>
-<li><p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p></li>
-<li><p>Copy the new <code>phonegap-1.0.0.js</code> into your project.</p></li>
-<li><p>Update your HTML to use the new <code>phonegap-1.0.0.js</code> file.</p></li>
-<li><p>Add the <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p></li>
+  <li>
+    <p>Remove <code>phonegap-0.9.6.jar</code> from the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code>phonegap-1.0.0.jar</code> to the project&#39;s <code>libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you use Eclipse, please refresh your Eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code>phonegap-1.0.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code>phonegap-1.0.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Add the <code>res/xml/plugins.xml</code> to match <code>framework/res/xml/plugins.xml</code>.</p>
+  </li>
 </ol>
+
 
 
             </div>

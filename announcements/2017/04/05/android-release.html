@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that Cordova Android 6.2.1 has been released! This release has fixed issues introduced by the Android SDK Tools 25.3.1 release. Goog...">
+    <meta name="description" content="We are happy to announce that Cordova Android 6.2.1 has been released!This release has fixed issues introduced by the Android SDK Tools 25.3.1 release. Googl...">
 
     <title>
         
@@ -131,36 +131,39 @@
     </header>
     <section>
         <div>
-            <p>We are happy to announce that <code>Cordova Android 6.2.1</code> has been released! </p>
+            <p>We are happy to announce that <code>Cordova Android 6.2.1</code> has been released!</p>
 
-<p>This release has fixed issues introduced by the <strong>Android SDK Tools 25.3.1</strong> release. <strong>Google</strong> dropped support for the <code>android</code> binary, so <code>cordova-android</code> has now adopted support for the <code>avdmanager</code> and <code>sdkmanager</code> binaries. We have also taken the opportunity to rewrite how we use gradle on the user&#39;s system. <code>cordova-android</code> now requires <em>Android Studio</em> or <em>Gradle</em> to be installed on the user&#39;s system. </p>
+<p>This release has fixed issues introduced by the <strong>Android SDK Tools 25.3.1</strong> release. <strong>Google</strong> dropped support for the <code>android</code> binary, so <code>cordova-android</code> has now adopted support for the <code>avdmanager</code> and <code>sdkmanager</code> binaries. We have also taken the opportunity to rewrite how we use gradle on the user&#39;s system. <code>cordova-android</code> now requires <em>Android Studio</em> or <em>Gradle</em> to be installed on the user&#39;s system.</p>
 
-<p>This release also adds support for the <code>&lt;resource-file&gt;</code> element in <code>config.xml</code> which copies specified files during a <code>cordova prepare</code>. This allows providing arbitrary files such as special notification-sized icons, or API configuration JSON files. </p>
+<p>This release also adds support for the <code>&lt;resource-file&gt;</code> element in <code>config.xml</code> which copies specified files during a <code>cordova prepare</code>. This allows providing arbitrary files such as special notification-sized icons, or API configuration JSON files.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android@6.2.1
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@6.2.1
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@6.2.1
+</code></pre></div></div>
+
 <p>This release will have to be explicitly added until the upcoming <code>cordova@7</code> release, where it will be pinned as the default android platform.</p>
 
 <!--more-->
-
 <h2>What&#39;s new in Android</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12621">CB-12621</a> reverted <code>elementtree</code> dep to <code>0.1.6</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12614">CB-12614</a> Adding headers to tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8978">CB-8978</a> Prepare copy <code>resource-files</code> from <code>config.xml</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12605">CB-12605</a> Fix a requirements check failure on <strong>Windows</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12595">CB-12595</a> This should find an <strong>Android Studio</strong> installation and use the sweet gradle center found inside</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12546">CB-12546</a> leverage <code>avdmanager</code> if <code>android</code> warns it is no longer useful, which happens in <strong>Android SDK Tools 25.3.1</strong>. Explicitly set the <code>CWD</code> of the spawned emulator process to workaround a recent google android sdk bug. Actually include the <code>android_sdk_version.bat</code> file in generated <code>cordova-android</code> projects for our lovely <strong>Windows</strong> users.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12524">CB-12524</a> Fix for missing gradle template error. This now fetches the template from inside of the <strong>Android Studio</strong> directory, and falls back to a locally installed Gradle instance</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12465">CB-12465</a> Writing new JUnit Test Instrumentation to replace tests and retire problematic tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12621">CB-12621</a> reverted <code>elementtree</code> dep to <code>0.1.6</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12614">CB-12614</a> Adding headers to tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8978">CB-8978</a> Prepare copy <code>resource-files</code> from <code>config.xml</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12605">CB-12605</a> Fix a requirements check failure on <strong>Windows</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12595">CB-12595</a> This should find an <strong>Android Studio</strong> installation and use the sweet gradle center found inside</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12546">CB-12546</a> leverage <code>avdmanager</code> if <code>android</code> warns it is no longer useful, which happens in <strong>Android SDK Tools 25.3.1</strong>. Explicitly set the <code>CWD</code> of the spawned emulator process to workaround a recent google android sdk bug. Actually include the <code>android_sdk_version.bat</code> file in generated <code>cordova-android</code> projects for our lovely <strong>Windows</strong> users.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12524">CB-12524</a> Fix for missing gradle template error. This now fetches the template from inside of the <strong>Android Studio</strong> directory, and falls back to a locally installed Gradle instance</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12465">CB-12465</a> Writing new JUnit Test Instrumentation to replace tests and retire problematic tests</li>
 </ul>
+
 
         </div>
     </section>

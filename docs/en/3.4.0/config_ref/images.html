@@ -1342,35 +1342,45 @@ directory. Newly created projects come with a default set of Cordova
 icons for you to replace for the platforms you wish to target.</p>
 
 <p>Android specifies icons for low, medium, high, and extra-high resolutions:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    android/icon-36-ldpi.png
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    android/icon-36-ldpi.png
     android/icon-48-mdpi.png
     android/icon-72-hdpi.png
     android/icon-96-xhdpi.png
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The iOS platform specifies 72-pixel-square icons for iPads, and
 57-pixel icons for iPhones and iPods, with high-resolution <em>2x</em>
 variants for retina displays:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    ios/icon-57-2x.png
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ios/icon-57-2x.png
     ios/icon-57.png
     ios/icon-72-2x.png
     ios/icon-72.png
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Windows Phone specifies a default 48-pixel icon, along with various
 devices&#39; background tiling images used when representing applications:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    windows-phone/icon-48.png
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    windows-phone/icon-48.png
     windows-phone/icon-62-tile.png
     windows-phone/icon-173-tile.png
-</code></pre></div>
+</code></pre></div></div>
+
 <p>BlackBerry 10 requires an icon element in config.xml:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;icon src="blackberry10/icon-86.png" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;icon src="blackberry10/icon-86.png" /&gt;
+</code></pre></div></div>
+
 <p>See BlackBerry&#39;s documentation for targeting multiple sizes and locales.</p>
 
 <p>[http://developer.blackberry.com/html5/documentation/icon_element.html]</p>
 
 <p>Tizen requires an 128-pixel icon:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    tizen/icon-128.png
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    tizen/icon-128.png
+</code></pre></div></div>
+
 <h2>Configuring Splash Screens in the CLI</h2>
 
 <p>Use the Splashscreen API to enable display of an app&#39;s introductory
@@ -1380,7 +1390,8 @@ subdirectory.</p>
 
 <p>Android specifies both portrait- and landscape-oriented splash screen
 images for low, medium, high, and extra-high resolutions:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    android/screen-hdpi-landscape.png
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    android/screen-hdpi-landscape.png
     android/screen-hdpi-portrait.png
     android/screen-ldpi-landscape.png
     android/screen-ldpi-portrait.png
@@ -1388,11 +1399,13 @@ images for low, medium, high, and extra-high resolutions:</p>
     android/screen-mdpi-portrait.png
     android/screen-xhdpi-landscape.png
     android/screen-xhdpi-portrait.png
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The iOS platform specifies variants for iPhone/iPod and iPad, with
 variants for retina displays and different orientations. The <em>568h</em>
 file applies to the iPhone 5&#39;s taller screen:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    ios/screen-ipad-landscape-2x.png
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ios/screen-ipad-landscape-2x.png
     ios/screen-ipad-landscape.png
     ios/screen-ipad-portrait-2x.png
     ios/screen-ipad-portrait.png
@@ -1401,10 +1414,13 @@ file applies to the iPhone 5&#39;s taller screen:</p>
     ios/screen-iphone-portrait-2x.png
     ios/screen-iphone-portrait.png
     ios/screen-iphone-portrait-568h-2x.png
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Windows Phone specifies a single splash screen image:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    windows-phone/screen-portrait.jpg
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    windows-phone/screen-portrait.jpg
+</code></pre></div></div>
+
 <p>The following sections detail how to set up splash screens when
 working with SDKs and related command-line tools described in Platform
 Guides.</p>
@@ -1420,10 +1436,10 @@ files in the Android project&#39;s <code>platforms/android/res/drawable*</code> 
 <p>The size for each should be:</p>
 
 <ul>
-<li>xlarge (xhdpi): at least 960 &times; 720</li>
-<li>large (hdpi): at least 640 &times; 480</li>
-<li>medium (mdpi): at least 470 &times; 320</li>
-<li>small (ldpi): at least 426 &times; 320</li>
+  <li>xlarge (xhdpi): at least 960 &#215; 720</li>
+  <li>large (hdpi): at least 640 &#215; 480</li>
+  <li>medium (mdpi): at least 470 &#215; 320</li>
+  <li>small (ldpi): at least 426 &#215; 320</li>
 </ul>
 
 <p>When creating a new Android project, the default splash screen images
@@ -1440,9 +1456,11 @@ supporting
 
 <p>In the top-level <code>config.xml</code> file (not the one in <code>platforms</code>), add the
 following preferences:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="SplashScreen" value="screen" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;preference name="SplashScreen" value="screen" /&gt;
 &lt;preference name="SplashScreenDelay" value="10000" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The first line sets the image to display as the splash screen. This is the
 file name of the png in the <code>drawable*</code> directories, minus the <code>.png</code>
 extension. The default value for SplashScreen is <code>screen</code> (for the file
@@ -1473,13 +1491,13 @@ directory. Only add those images for the devices you want to support,
 such as iPad or iPhone. The size of each image should be:</p>
 
 <ul>
-<li>Default-568h@2x~iphone.png (640x1136 pixels)</li>
-<li>Default-Landscape@2x~ipad.png (2048x1496 pixels)</li>
-<li>Default-Landscape~ipad.png (1024x748 pixels)</li>
-<li>Default-Portrait@2x~ipad.png (1536x2008 pixels)</li>
-<li>Default-Portrait~ipad.png (768x1004 pixels)</li>
-<li>Default@2x~iphone.png (640x960 pixels)</li>
-<li>Default~iphone.png (320x480 pixels)</li>
+  <li>Default-568h@2x~iphone.png (640x1136 pixels)</li>
+  <li>Default-Landscape@2x~ipad.png (2048x1496 pixels)</li>
+  <li>Default-Landscape~ipad.png (1024x748 pixels)</li>
+  <li>Default-Portrait@2x~ipad.png (1536x2008 pixels)</li>
+  <li>Default-Portrait~ipad.png (768x1004 pixels)</li>
+  <li>Default@2x~iphone.png (640x960 pixels)</li>
+  <li>Default~iphone.png (320x480 pixels)</li>
 </ul>
 
 <h2>Splash Screens for the BlackBerry 10 Platform</h2>

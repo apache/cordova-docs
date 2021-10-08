@@ -1425,109 +1425,139 @@
 
 <p>This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.</p>
 
-<h2>1. Requirements</h2>
+<ol>
+  <li>
+    <h2>Requirements</h2>
+  </li>
+</ol>
 
 <ul>
-<li>Eclipse 3.4+</li>
+  <li>Eclipse 3.4+</li>
 </ul>
 
-<h2>2. Install SDK + Cordova</h2>
+<ol>
+  <li>
+    <h2>Install SDK + Cordova</h2>
+  </li>
+</ol>
 
 <ul>
-<li>Download and install <a href="http://www.eclipse.org/downloads/">Eclipse Classic</a></li>
-<li>Download and install <a href="http://developer.android.com/sdk/index.html">Android SDK</a></li>
-<li>Download and install <a href="http://developer.android.com/sdk/eclipse-adt.html#installing">ADT Plugin</a></li>
-<li>Download the latest copy of <a href="http://phonegap.com/download">Cordova</a> and extract its contents. We will be working with the Android directory.</li>
+  <li>Download and install <a href="http://www.eclipse.org/downloads/">Eclipse Classic</a></li>
+  <li>Download and install <a href="http://developer.android.com/sdk/index.html">Android SDK</a></li>
+  <li>Download and install <a href="http://developer.android.com/sdk/eclipse-adt.html#installing">ADT Plugin</a></li>
+  <li>Download the latest copy of <a href="http://phonegap.com/download">Cordova</a> and extract its contents. We will be working with the Android directory.</li>
 </ul>
 
-<h2> 3. Setup New Project</h2>
+<ol>
+  <li>
+    <h2>Setup New Project</h2>
+  </li>
+</ol>
 
 <ul>
-<li><p>Launch Eclipse, and select menu item <strong>New &gt; Android Project</strong>.  Fill out the three panels of the <strong>New Android Project</strong> wizard shown below.</p>
+  <li>
+    <p>Launch Eclipse, and select menu item <strong>New &gt; Android Project</strong>.  Fill out the three panels of the <strong>New Android Project</strong> wizard shown below.</p>
 
-<p><img src="/static/img/guide/platforms/android/AndroidFlow.png" alt=""></p></li>
-<li><p>In the root directory of your project, create two new directories:</p>
+    <p><img src="/static/img/guide/platforms/android/AndroidFlow.png" alt="" /></p>
+  </li>
+  <li>In the root directory of your project, create two new directories:
+ 	- <strong>/libs</strong>
+ 	- <strong>assets/www</strong></li>
+  <li>Copy <strong>cordova-1.9.0.js</strong> from your Cordova download earlier to <strong>assets/www</strong></li>
+  <li>Copy <strong>cordova-1.9.0.jar</strong> from your Cordova download earlier to <strong>/libs</strong></li>
+  <li>
+    <p>Copy <strong>xml</strong> folder from your Cordova download earlier to <strong>/res</strong></p>
+  </li>
+  <li>
+    <p>Verify that <strong>cordova-1.9.0.jar</strong> is listed in the Build Path for your project. Right click on the /libs folder and go to <strong>Build Paths/ &gt; Configure Build Path&#8230;</strong>. Then, in the Libraries tab, add <strong>cordova-1.9.0.jar</strong> to the project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.</p>
 
-<ul>
-<li><strong>/libs</strong></li>
-<li><strong>assets/www</strong></li>
-</ul></li>
-<li><p>Copy <strong>cordova-1.9.0.js</strong> from your Cordova download earlier to <strong>assets/www</strong></p></li>
-<li><p>Copy <strong>cordova-1.9.0.jar</strong> from your Cordova download earlier to <strong>/libs</strong></p></li>
-<li><p>Copy <strong>xml</strong> folder from your Cordova download earlier to <strong>/res</strong></p></li>
-<li><p>Verify that <strong>cordova-1.9.0.jar</strong> is listed in the Build Path for your project. Right click on the /libs folder and go to <strong>Build Paths/ &gt; Configure Build Path...</strong>. Then, in the Libraries tab, add <strong>cordova-1.9.0.jar</strong> to the project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.</p>
+    <p><img src="/static/img/guide/platforms/android/buildPath.jpg" alt="" /></p>
+  </li>
+  <li>Edit your project&#39;s main Java file found in the <strong>src</strong> folder in Eclipse:
+    <ul>
+      <li>Add <strong>import org.apache.cordova.*;</strong></li>
+      <li>Change the class&#39;s extend from <strong>Activity</strong> to <strong>DroidGap</strong></li>
+      <li>Replace the <strong>setContentView()</strong> line with <strong>super.loadUrl(&quot;file:///android_asset/www/index.html&quot;);</strong></li>
+    </ul>
 
-<p><img src="/static/img/guide/platforms/android/buildPath.jpg" alt=""></p></li>
-<li><p>Edit your project&#39;s main Java file found in the <strong>src</strong> folder in Eclipse:</p>
+    <p><img src="/static/img/guide/platforms/android/javaSrc.jpg" alt="" /></p>
+  </li>
+  <li>Right click on AndroidManifest.xml and select <strong>Open With &gt; XML Editor</strong></li>
+  <li>
+    <p>Paste the following permissions between the <strong>&lt;uses-sdk&#8230;/&gt;</strong> and <strong>&lt;application&#8230;/&gt;</strong> tags.</p>
 
-<ul>
-<li>Add <strong>import org.apache.cordova.*;</strong></li>
-<li>Change the class&#39;s extend from <strong>Activity</strong> to <strong>DroidGap</strong></li>
-<li>Replace the <strong>setContentView()</strong> line with <strong>super.loadUrl(&quot;file:///android_asset/www/index.html&quot;);</strong> </li>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;supports-screens 
+      android:largeScreens="true" 
+      android:normalScreens="true" 
+      android:smallScreens="true" 
+      android:resizeable="true" 
+      android:anyDensity="true" /&gt;
+  &lt;uses-permission android:name="android.permission.VIBRATE" /&gt;
+  &lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /&gt;
+  &lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
+  &lt;uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /&gt;
+  &lt;uses-permission android:name="android.permission.READ_PHONE_STATE" /&gt;
+  &lt;uses-permission android:name="android.permission.INTERNET" /&gt;
+  &lt;uses-permission android:name="android.permission.RECEIVE_SMS" /&gt;
+  &lt;uses-permission android:name="android.permission.RECORD_AUDIO" /&gt;
+  &lt;uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /&gt;
+  &lt;uses-permission android:name="android.permission.READ_CONTACTS" /&gt;
+  &lt;uses-permission android:name="android.permission.WRITE_CONTACTS" /&gt;
+  &lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
+  &lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /&gt; 
+  &lt;uses-permission android:name="android.permission.GET_ACCOUNTS" /&gt;
+  &lt;uses-permission android:name="android.permission.BROADCAST_STICKY" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Support orientation changes by pasting the following inside the <strong>&lt;activity&gt;</strong> tag.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  android:configChanges="orientation|keyboardHidden|screenSize"
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Your AndroidManifest.xml file should look like</p>
+
+    <p><img src="/static/img/guide/platforms/android/manifest.jpg" alt="" /></p>
+  </li>
 </ul>
 
-<p><img src="/static/img/guide/platforms/android/javaSrc.jpg" alt=""></p></li>
-<li><p>Right click on AndroidManifest.xml and select <strong>Open With &gt; XML Editor</strong></p></li>
-<li><p>Paste the following permissions between the <strong>&lt;uses-sdk.../&gt;</strong> and <strong>&lt;application.../&gt;</strong> tags.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;supports-screens 
-    android:largeScreens="true" 
-    android:normalScreens="true" 
-    android:smallScreens="true" 
-    android:resizeable="true" 
-    android:anyDensity="true" /&gt;
-&lt;uses-permission android:name="android.permission.VIBRATE" /&gt;
-&lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /&gt;
-&lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
-&lt;uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /&gt;
-&lt;uses-permission android:name="android.permission.READ_PHONE_STATE" /&gt;
-&lt;uses-permission android:name="android.permission.INTERNET" /&gt;
-&lt;uses-permission android:name="android.permission.RECEIVE_SMS" /&gt;
-&lt;uses-permission android:name="android.permission.RECORD_AUDIO" /&gt;
-&lt;uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /&gt;
-&lt;uses-permission android:name="android.permission.READ_CONTACTS" /&gt;
-&lt;uses-permission android:name="android.permission.WRITE_CONTACTS" /&gt;
-&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
-&lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /&gt; 
-&lt;uses-permission android:name="android.permission.GET_ACCOUNTS" /&gt;
-&lt;uses-permission android:name="android.permission.BROADCAST_STICKY" /&gt;
-</code></pre></div></li>
-<li><p>Support orientation changes by pasting the following inside the <strong>&lt;activity&gt;</strong> tag.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">android:configChanges="orientation|keyboardHidden|screenSize"
-</code></pre></div></li>
-<li><p>Your AndroidManifest.xml file should look like</p>
-
-<p><img src="/static/img/guide/platforms/android/manifest.jpg" alt=""></p></li>
-</ul>
-
-<h2>4. <a href="../webos/index.html">Hello World</a></h2>
+<ol>
+  <li>
+    <h2><a href="../webos/index.html">Hello World</a></h2>
+  </li>
+</ol>
 
 <ul>
-<li><p>Create and open a new file named <strong>index.html</strong> in the <strong>assets/www</strong> directory. Paste the following code:</p>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-<span class="nt">&lt;title&gt;</span>Cordova<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-1.9.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-<span class="nt">&lt;h1&gt;</span>Hello World<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div></li>
+  <li>
+    <p>Create and open a new file named <strong>index.html</strong> in the <strong>assets/www</strong> directory. Paste the following code:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;!DOCTYPE HTML&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+  &lt;title&gt;Cordova&lt;/title&gt;
+  &lt;script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <h2>5A. Deploy to Simulator</h2>
 
 <ul>
-<li>Right click the project and go to <strong>Run As &gt; Android Application</strong></li>
-<li>Eclipse will ask you to select an appropriate AVD. If there isn&#39;t one, then you&#39;ll need to create it.</li>
+  <li>Right click the project and go to <strong>Run As &gt; Android Application</strong></li>
+  <li>Eclipse will ask you to select an appropriate AVD. If there isn&#39;t one, then you&#39;ll need to create it.</li>
 </ul>
 
 <h2>5B. Deploy to <a href="../../../cordova/device/device.html">Device</a></h2>
 
 <ul>
-<li>Make sure USB debugging is enabled on your device and plug it into your system. (<strong>Settings &gt; Applications &gt; Development</strong>)</li>
-<li>Right click the project and go to <strong>Run As &gt; Android Application</strong></li>
+  <li>Make sure USB debugging is enabled on your device and plug it into your system. (<strong>Settings &gt; Applications &gt; Development</strong>)</li>
+  <li>Right click the project and go to <strong>Run As &gt; Android Application</strong></li>
 </ul>
 
 <h2>Done!</h2>

@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce a major release forCordova Android 6.0.0 has been released! Run the following command in your project to save your currently install...">
+    <meta name="description" content="We are happy to announce a major release forCordova Android 6.0.0 has been released!Run the following command in your project to save your currently installe...">
 
     <title>
         
@@ -131,21 +131,26 @@
     </header>
     <section>
         <div>
-            <p>We are happy to announce a major release for<code>Cordova Android 6.0.0</code> has been released! </p>
+            <p>We are happy to announce a major release for<code>Cordova Android 6.0.0</code> has been released!</p>
 
 <p>Run the following command in your project to save your currently installed plugins into <code>config.xml</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin save
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin save
+</code></pre></div></div>
+
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android@6.0.0
-</code></pre></div>
-<p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@6.0.0
-</code></pre></div>
-<!--more-->
+</code></pre></div></div>
 
+<p>To add it explicitly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@6.0.0
+</code></pre></div></div>
+
+<!--more-->
 <h2>What&#39;s new in Android</h2>
 
 <p>This release adds significant functionality, and also introduces a number
@@ -153,31 +158,28 @@ of breaking changes.  Some of the changes to the code base will be of
 particular interest to third party webview plugin developers.</p>
 
 <h4>Major Changes</h4>
-
 <ul>
-<li>Primary bridge is the <code>EVAL_BRIDGE</code>, which tells the WebView to execute JS directly.  This is more stable than the <code>ONLINE_EVENT</code> bridge</li>
-<li>Full Support for <code>Android Nougat (API 24)</code></li>
-<li><code>Ice Cream Sandwich Support</code> has been <strong>deprecated</strong>.  Minimum Supported <strong>Android</strong> Version is <code>Jellybean (API 16/ Android 4.1)</code></li>
-<li>Plugin Installation now <strong>CLEANS</strong> the build directory, this speeds up gradle build times and allows for CLI develoment to be more predictable</li>
+  <li>Primary bridge is the <code>EVAL_BRIDGE</code>, which tells the WebView to execute JS directly.  This is more stable than the <code>ONLINE_EVENT</code> bridge</li>
+  <li>Full Support for <code>Android Nougat (API 24)</code></li>
+  <li><code>Ice Cream Sandwich Support</code> has been <strong>deprecated</strong>.  Minimum Supported <strong>Android</strong> Version is <code>Jellybean (API 16/ Android 4.1)</code></li>
+  <li>Plugin Installation now <strong>CLEANS</strong> the build directory, this speeds up gradle build times and allows for CLI develoment to be more predictable</li>
 </ul>
 
 <p>Changes For Third-Party <code>WebView</code> Developers:</p>
-
 <ul>
-<li><code>executeJavascript</code> method added and is an abstract method that must be implemented</li>
-<li>the <code>EVAL_BRIDGE</code> must be added to the <code>WebView</code></li>
+  <li><code>executeJavascript</code> method added and is an abstract method that must be implemented</li>
+  <li>the <code>EVAL_BRIDGE</code> must be added to the <code>WebView</code></li>
 </ul>
 
 <h4>Curated Changes from the Git Commit Logs, check release notes for a more complete list</h4>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-11083">CB-11083</a>: Fix to deal with custom frameworks with their own Gradle configuration</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8722">CB-8722</a>: Move icons from drawable to mipmap</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11964">CB-11964</a>:  Call clean after plugin install and mock it in tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11935">CB-11935</a>: Does a best-effort attempt to pause any processing that can be paused safely, such as animations and geolocation.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11640">CB-11640</a>:  Changing requirements check to ask for Java 8</li>
-<li><a href="https://issues.apahce.org/jira/browse/CB-11907">CB-11907</a>: Bumping Gradle to work with Android Studio 2.2 and the Android Gradle Plugin</li>
-<li><a href="https://issues.apahce.org/jira/browse/CB-11907">CB-11078</a>: Empty string for BackgroundColor preference crashes application This closes #316</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11083">CB-11083</a>: Fix to deal with custom frameworks with their own Gradle configuration</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8722">CB-8722</a>: Move icons from drawable to mipmap</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11964">CB-11964</a>:  Call clean after plugin install and mock it in tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11935">CB-11935</a>: Does a best-effort attempt to pause any processing that can be paused safely, such as animations and geolocation.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11640">CB-11640</a>:  Changing requirements check to ask for Java 8</li>
+  <li><a href="https://issues.apahce.org/jira/browse/CB-11907">CB-11907</a>: Bumping Gradle to work with Android Studio 2.2 and the Android Gradle Plugin</li>
+  <li><a href="https://issues.apahce.org/jira/browse/CB-11907">CB-11078</a>: Empty string for BackgroundColor preference crashes application This closes #316</li>
 </ul>
 
         </div>

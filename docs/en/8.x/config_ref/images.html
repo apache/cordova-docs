@@ -2159,49 +2159,54 @@
 
 <p>When working in the CLI you can define application icon(s) via the <code>&lt;icon&gt;</code> element (<code>config.xml</code>).
 If you do not specify an icon, the Apache Cordova logo is used.</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon.png"</span> <span class="na">platform=</span><span class="s">"ios"</span> <span class="na">width=</span><span class="s">"57"</span> <span class="na">height=</span><span class="s">"57"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
-<table><thead>
-<tr>
-<th>Attributes</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>src</td>
-<td><em>Required</em> <br/> Location of the image file, relative to your project directory</td>
-</tr>
-<tr>
-<td>platform</td>
-<td><em>Optional</em> <br/> Target platform</td>
-</tr>
-<tr>
-<td>width</td>
-<td><em>Optional</em> <br/> Icon width in pixels</td>
-</tr>
-<tr>
-<td>height</td>
-<td><em>Optional</em> <br/> Icon height in pixels</td>
-</tr>
-<tr>
-<td>density</td>
-<td><em>Optional</em> <br/> <mark>Android</mark> <br/> Specified icon density</td>
-</tr>
-<tr>
-<td>target</td>
-<td><em>Optional</em> <br/> <mark>Windows</mark> <br/> Destination filename for the image file and all its&#39; MRT companions</td>
-</tr>
-</tbody></table>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon.png"</span> <span class="na">platform=</span><span class="s">"ios"</span> <span class="na">width=</span><span class="s">"57"</span> <span class="na">height=</span><span class="s">"57"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>src</td>
+      <td><em>Required</em> <br /> Location of the image file, relative to your project directory</td>
+    </tr>
+    <tr>
+      <td>platform</td>
+      <td><em>Optional</em> <br /> Target platform</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td><em>Optional</em> <br /> Icon width in pixels</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td><em>Optional</em> <br /> Icon height in pixels</td>
+    </tr>
+    <tr>
+      <td>density</td>
+      <td><em>Optional</em> <br /> ==Android== <br /> Specified icon density</td>
+    </tr>
+    <tr>
+      <td>target</td>
+      <td><em>Optional</em> <br /> ==Windows== <br /> Destination filename for the image file and all its&#39; MRT companions</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>The following configuration can be used to define a single default icon
 which will be used for all platforms.</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/icon.png"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/icon.png"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
 <p>For each platform, you can also define a pixel-perfect icon set to fit
 different screen resolutions.</p>
 
-<h2>Android</h2>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
+<p>##Android</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
         <span class="c">&lt;!--
             ldpi    : 36x36 px
             mdpi    : 48x48 px
@@ -2217,20 +2222,18 @@ different screen resolutions.</p>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/android/xxhdpi.png"</span> <span class="na">density=</span><span class="s">"xxhdpi"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/android/xxxhdpi.png"</span> <span class="na">density=</span><span class="s">"xxxhdpi"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
-<h3>See Also</h3>
-
+</code></pre></div></div>
+<p>###See Also</p>
 <ul>
-<li><a href="https://www.google.com/design/spec/style/icons.html">Android icon guide</a></li>
-<li><a href="http://developer.android.com/guide/practices/screens_support.html">Android - Supporting multiple screens</a></li>
+  <li><a href="https://www.google.com/design/spec/style/icons.html">Android icon guide</a></li>
+  <li><a href="http://developer.android.com/guide/practices/screens_support.html">Android - Supporting multiple screens</a></li>
 </ul>
 
-<h2>Browser</h2>
+<p>##Browser
+Icons are not applicable to the Browser platform.</p>
 
-<p>Icons are not applicable to the Browser platform.</p>
-
-<h2>iOS</h2>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
+<p>##iOS</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
         <span class="c">&lt;!-- iOS 8.0+ --&gt;</span>
         <span class="c">&lt;!-- iPhone 6 Plus  --&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-60@3x.png"</span> <span class="na">width=</span><span class="s">"180"</span> <span class="na">height=</span><span class="s">"180"</span> <span class="nt">/&gt;</span>
@@ -2262,17 +2265,17 @@ different screen resolutions.</p>
         <span class="c">&lt;!-- iPad Pro --&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-83.5@2x.png"</span> <span class="na">width=</span><span class="s">"167"</span> <span class="na">height=</span><span class="s">"167"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
-<h3>See Also</h3>
-
+</code></pre></div></div>
+<p>###See Also</p>
 <ul>
-<li><a href="https://developer.apple.com/library/content/qa/qa1686/_index.html">App Icons on iPad and iPhone</a></li>
+  <li><a href="https://developer.apple.com/library/content/qa/qa1686/_index.html">App Icons on iPad and iPhone</a></li>
 </ul>
 
-<h2>Windows</h2>
+<p>##Windows</p>
 
 <p>For Windows the recommended approach to define application icons is to use the <code>target</code> attribute.</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/storelogo.png"</span> <span class="na">target=</span><span class="s">"StoreLogo"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/smalllogo.png"</span> <span class="na">target=</span><span class="s">"Square30x30Logo"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.png"</span> <span class="na">target=</span><span class="s">"Square44x44Logo"</span> <span class="nt">/&gt;</span>
@@ -2282,34 +2285,35 @@ different screen resolutions.</p>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square310x310Logo.png"</span> <span class="na">target=</span><span class="s">"Square310x310Logo"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Wide310x150Logo.png"</span> <span class="na">target=</span><span class="s">"Wide310x150Logo"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>where <code>src</code> is the path to the icon which needs to be added.</p>
 
-<p>The Windows platform handles MRT icons automatically, so if you specify <code>src=&quot;res/windows/storelogo.png&quot;</code> the following files will be copied into the application&#39;s <code>images</code> folder: <code>res/windows/storelogo.scale-100.png</code>, <code>res/windows/storelogo.scale-200.png</code>, etc.</p>
+<p>The Windows platform handles MRT icons automatically, so if you specify <code>src="res/windows/storelogo.png"</code> the following files will be copied into the application&#39;s <code>images</code> folder: <code>res/windows/storelogo.scale-100.png</code>, <code>res/windows/storelogo.scale-200.png</code>, etc.</p>
 
 <p>TODO Define what MRT is.</p>
 
-<p>The <code>target</code> attribute specifies the base name for the resultant icons. For every icon file, its destination filename is calculated as <code>target + &#39;.&#39; + MRT_qualifiers + extension(src)</code>. For the icons to display properly in the application, every <code>target</code> value should be one of the icon filenames defined in the application&#39;s <code>.appxmanifest</code> file.</p>
+<p>The <code>target</code> attribute specifies the base name for the resultant icons. For every icon file, its destination filename is calculated as <code>target + '.' + MRT_qualifiers + extension(src)</code>. For the icons to display properly in the application, every <code>target</code> value should be one of the icon filenames defined in the application&#39;s <code>.appxmanifest</code> file.</p>
 
-<p>Summarizing the above... using the <code>target</code> attribute it is possible to:</p>
+<p>Summarizing the above&#8230; using the <code>target</code> attribute it is possible to:</p>
 
 <ul>
-<li>define a group of icons for different device scale factors using a single <code>&lt;icon ...&gt;</code> element, for example:
-<code>xml
-&lt;icon src=&quot;res/windows/AppListIcon.png&quot; target=&quot;Square44x44Logo&quot; /&gt;
-</code>
-which is equivalent to the following lines:
-<code>xml
-&lt;icon src=&quot;res/windows/Square44x44Logo.scale-100.png&quot; width=&quot;44&quot; height=&quot;44&quot; /&gt;
-&lt;icon src=&quot;res/windows/Square44x44Logo.scale-150.png&quot; width=&quot;66&quot; height=&quot;66&quot; /&gt;
-&lt;icon src=&quot;res/windows/Square44x44Logo.scale-200.png&quot; width=&quot;88&quot; height=&quot;88&quot; /&gt;
-&lt;icon src=&quot;res/windows/Square44x44Logo.scale-240.png&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-</code></li>
-<li>define icons with scale factors other than <code>scale-100</code> and <code>scale-240</code> (and any other MRT qualifiers)</li>
+  <li>define a group of icons for different device scale factors using a single <code>&lt;icon ...&gt;</code> element, for example:
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/AppListIcon.png"</span> <span class="na">target=</span><span class="s">"Square44x44Logo"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+    <p>which is equivalent to the following lines:</p>
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.scale-100.png"</span> <span class="na">width=</span><span class="s">"44"</span> <span class="na">height=</span><span class="s">"44"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.scale-150.png"</span> <span class="na">width=</span><span class="s">"66"</span> <span class="na">height=</span><span class="s">"66"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.scale-200.png"</span> <span class="na">width=</span><span class="s">"88"</span> <span class="na">height=</span><span class="s">"88"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.scale-240.png"</span> <span class="na">width=</span><span class="s">"106"</span> <span class="na">height=</span><span class="s">"106"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>define icons with scale factors other than <code>scale-100</code> and <code>scale-240</code> (and any other MRT qualifiers)</li>
 </ul>
 
 <p>Although it is not recommended, it is also possible to define icons using the <code>width</code> and <code>height</code> attributes:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/logo.png"</span> <span class="na">width=</span><span class="s">"150"</span> <span class="na">height=</span><span class="s">"150"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/smalllogo.png"</span> <span class="na">width=</span><span class="s">"30"</span> <span class="na">height=</span><span class="s">"30"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/storelogo.png"</span> <span class="na">width=</span><span class="s">"50"</span> <span class="na">height=</span><span class="s">"50"</span> <span class="nt">/&gt;</span>
@@ -2323,13 +2327,14 @@ which is equivalent to the following lines:
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Wide310x150Logo.scale-100.png"</span> <span class="na">width=</span><span class="s">"310"</span> <span class="na">height=</span><span class="s">"150"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Wide310x150Logo.scale-240.png"</span> <span class="na">width=</span><span class="s">"744"</span> <span class="na">height=</span><span class="s">"360"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
-<h3>See Also:</h3>
+</code></pre></div></div>
 
+<p>###See Also:</p>
 <ul>
-<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/mt412102.aspx">Windows 10 platform guidelines for icons</a>.</li>
-<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh781198.aspx">Windows 8.1 tiles and icons sizes</a></li>
+  <li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/mt412102.aspx">Windows 10 platform guidelines for icons</a>.</li>
+  <li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh781198.aspx">Windows 8.1 tiles and icons sizes</a></li>
 </ul>
+
 
 
             </div>

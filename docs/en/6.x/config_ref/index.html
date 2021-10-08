@@ -2425,76 +2425,83 @@ platform-specific settings.</p>
 <p>For projects created with the Cordova CLI (described in <a href="../guide/cli/index.html">The
 Command-Line Interface</a>), this file can be found in the top-level
 directory:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">app/config.xml
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app/config.xml
+</code></pre></div></div>
+
 <p>Note that before version 3.3.1-0.2.0, the file existed at <code>app/www/config.xml</code>,
 and that having it here is still supported.</p>
 
 <p>When using the CLI to build a project, versions of this file are
 passively copied into various <code>platforms/</code> subdirectories.
 For example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">app/platforms/ios/AppName/config.xml
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app/platforms/ios/AppName/config.xml
 app/platforms/blackberry10/www/config.xml
 app/platforms/android/res/xml/config.xml
-</code></pre></div>
+</code></pre></div></div>
+
 <p>In addition to the various configuration options detailed below, you
 can also configure an application&#39;s core set of images for each target
 platform. See <a href="images.html">Customize icons topic</a> for more information.</p>
 
 <h1>widget</h1>
-
 <p>Root element of the config.xml document.</p>
 
-<table><thead>
-<tr>
-<th>Attributes(type) <br/> <span class="sub-header">Only for platform:</span></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>id(string)</td>
-<td><em>Required</em> <br/> Specifies the app&#39;s reverse-domain identifier, and the <code>version</code> its full version number expressed in major/minor/patch notation.</td>
-</tr>
-<tr>
-<td>version(string)</td>
-<td><em>Required</em> <br/> Full version number expressed in major/minor/patch notation.</td>
-</tr>
-<tr>
-<td>android-versionCode(string) <br/> <mark>Android</mark></td>
-<td>Alternative version for Android. Sets the <a href="http://developer.android.com/tools/publishing/versioning.html">version code</a> for the application. See <a href="../guide/platforms/android/index.html#setting-the-version-code">the Android guide</a> for information on how this attribute may be modified.</td>
-</tr>
-<tr>
-<td>defaultlocale <br /> <mark>iOS</mark></td>
-<td>Specified the default language of the app, as an IANA language code.</td>
-</tr>
-<tr>
-<td>ios-CFBundleVersion(string) <br/> <mark>iOS</mark></td>
-<td>Alternative version for iOS. For further details, see <a href="https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364">iOS versioning</a>.</td>
-</tr>
-<tr>
-<td>osx-CFBundleVersion(string) <br/> <mark>OS X</mark></td>
-<td>Alternative version for OS X. For further details, see <a href="https://developer.apple.com/library/prerelease/mac/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364">OS X versioning</a>.</td>
-</tr>
-<tr>
-<td>windows-packageVersion(string) <br/> <mark>Windows</mark></td>
-<td>Alternative version for Windows. For futher details, see <a href="https://msdn.microsoft.com/en-us/library/windows/apps/br211441.aspx">Windows versioning</a></td>
-</tr>
-<tr>
-<td>packageName(string) <br/> <mark>Windows</mark></td>
-<td><em>Default: Cordova.Example</em> <br/>  Package name for Windows.</td>
-</tr>
-<tr>
-<td>xmlns(string)</td>
-<td><em>Required</em> <br/> Namespace for the config.xml document.</td>
-</tr>
-<tr>
-<td>xmlns:cdv(string)</td>
-<td><em>Required</em> <br/> Namespace prefix.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id(string)</td>
+      <td><em>Required</em> <br /> Specifies the app&#39;s reverse-domain identifier, and the <code>version</code> its full version number expressed in major/minor/patch notation.</td>
+    </tr>
+    <tr>
+      <td>version(string)</td>
+      <td><em>Required</em> <br /> Full version number expressed in major/minor/patch notation.</td>
+    </tr>
+    <tr>
+      <td>android-versionCode(string) <br /> ==Android==</td>
+      <td>Alternative version for Android. Sets the <a href="http://developer.android.com/tools/publishing/versioning.html">version code</a> for the application. See <a href="../guide/platforms/android/index.html#setting-the-version-code">the Android guide</a> for information on how this attribute may be modified.</td>
+    </tr>
+    <tr>
+      <td>defaultlocale <br /> ==iOS==</td>
+      <td>Specified the default language of the app, as an IANA language code.</td>
+    </tr>
+    <tr>
+      <td>ios-CFBundleVersion(string) <br /> ==iOS==</td>
+      <td>Alternative version for iOS. For further details, see <a href="https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364">iOS versioning</a>.</td>
+    </tr>
+    <tr>
+      <td>osx-CFBundleVersion(string) <br /> ==OS X==</td>
+      <td>Alternative version for OS X. For further details, see <a href="https://developer.apple.com/library/prerelease/mac/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364">OS X versioning</a>.</td>
+    </tr>
+    <tr>
+      <td>windows-packageVersion(string) <br /> ==Windows==</td>
+      <td>Alternative version for Windows. For futher details, see <a href="https://msdn.microsoft.com/en-us/library/windows/apps/br211441.aspx">Windows versioning</a></td>
+    </tr>
+    <tr>
+      <td>packageName(string) <br /> ==Windows==</td>
+      <td><em>Default: Cordova.Example</em> <br />  Package name for Windows.</td>
+    </tr>
+    <tr>
+      <td>xmlns(string)</td>
+      <td><em>Required</em> <br /> Namespace for the config.xml document.</td>
+    </tr>
+    <tr>
+      <td>xmlns:cdv(string)</td>
+      <td><em>Required</em> <br /> Namespace prefix.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="c">&lt;!-- Android --&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Android --&gt;</span>
 <span class="nt">&lt;widget</span> <span class="na">id=</span><span class="s">"io.cordova.hellocordova"</span> <span class="na">version=</span><span class="s">"0.0.1"</span> <span class="na">android-versionCode=</span><span class="s">"13"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/ns/widgets"</span> <span class="na">xmlns:cdv=</span><span class="s">"http://cordova.apache.org/ns/1.0"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/widget&gt;</span>
 
@@ -2509,213 +2516,195 @@ platform. See <a href="images.html">Customize icons topic</a> for more informati
 <span class="c">&lt;!-- OS X --&gt;</span>
 <span class="nt">&lt;widget</span> <span class="na">id=</span><span class="s">"io.cordova.hellocordova"</span> <span class="na">version=</span><span class="s">"0.0.1"</span> <span class="na">osx-CFBundleVersion=</span><span class="s">"0.1.3"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/ns/widgets"</span> <span class="na">xmlns:cdv=</span><span class="s">"http://cordova.apache.org/ns/1.0"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/widget&gt;</span>
-</code></pre></div>
-<h2>name</h2>
+</code></pre></div></div>
 
+<h2>name</h2>
 <p>Specifies the app&#39;s formal name, as it appears on the device&#39;s home screen and within app-store interfaces.</p>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
    <span class="nt">&lt;name&gt;</span>HelloCordova<span class="nt">&lt;/name&gt;</span>
 <span class="nt">&lt;/widget&gt;</span>
-</code></pre></div>
-<h2>description</h2>
+</code></pre></div></div>
 
+<h2>description</h2>
 <p>Specifies metadata that may appear within app-store listings.</p>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
    <span class="nt">&lt;description&gt;</span>A sample Apache Cordova application<span class="nt">&lt;/description&gt;</span>
 <span class="nt">&lt;/widget&gt;</span>
-</code></pre></div>
-<h2>author</h2>
+</code></pre></div></div>
 
+<h2>author</h2>
 <p>Specifies contact information that may appear within app-store listings.</p>
 
-<table><thead>
-<tr>
-<th>Attributes(type) <br/> <span class="sub-header">Only for platform:</span></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>email(string)</td>
-<td><em>Required</em> <br/> Email of the author.</td>
-</tr>
-<tr>
-<td>href(string)</td>
-<td><em>Required</em> <br/> Website of the author.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>email(string)</td>
+      <td><em>Required</em> <br /> Email of the author.</td>
+    </tr>
+    <tr>
+      <td>href(string)</td>
+      <td><em>Required</em> <br /> Website of the author.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
    <span class="nt">&lt;author</span> <span class="na">email=</span><span class="s">"dev@cordova.apache.org"</span> <span class="na">href=</span><span class="s">"http://cordova.io"</span><span class="nt">&gt;&lt;/author&gt;</span>
 <span class="nt">&lt;/widget&gt;</span>
-</code></pre></div>
-<h2>content</h2>
+</code></pre></div></div>
 
+<h2>content</h2>
 <p>Defines the app&#39;s starting page in the top-level web assets directory. The default value is index.html, which customarily
 appears in a project&#39;s top-level <code>www</code> directory.</p>
 
-<table><thead>
-<tr>
-<th>Attributes(type) <br/> <span class="sub-header">Only for platform:</span></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>src(string)</td>
-<td><em>Required</em> <br/> Defines the app&#39;s starting page in the top-level web assets directory. The default value is index.html, which customarily</td>
-</tr>
-</tbody></table>
-
-<p>appears in a project&#39;s top-level <code>www</code> directory.</p>
+<p>Attributes(type) <br /> <span class="sub-header">Only for platform:</span> | Description
+&#8212;&#8212;&#8212;&#8212;&#8212;-- | &#8212;&#8212;&#8212;&#8212;
+src(string) | <em>Required</em> <br /> Defines the app&#39;s starting page in the top-level web assets directory. The default value is index.html, which customarily
+appears in a project&#39;s top-level <code>www</code> directory.</p>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
    <span class="nt">&lt;content</span> <span class="na">src=</span><span class="s">"startPage.html"</span><span class="nt">&gt;&lt;/content&gt;</span>
 <span class="nt">&lt;/widget&gt;</span>
-</code></pre></div>
-<h2>access</h2>
+</code></pre></div></div>
 
+<h2>access</h2>
 <p>Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server.
 See the Domain <a href="../guide/appdev/whitelist/index.html">Whitelist Guide</a> for details.</p>
 
-<table><thead>
-<tr>
-<th>Attributes(type) <br/> <span class="sub-header">Only for platform:</span></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>origin(string)</td>
-<td><em>Required</em> <br/> Defines the set of external domains the app is allowed to communicate with.</td>
-</tr>
-</tbody></table>
-
-<p>The default value shown above allows it to access any server.
+<p>Attributes(type) <br /> <span class="sub-header">Only for platform:</span> | Description
+&#8212;&#8212;&#8212;&#8212;&#8212;-- | &#8212;&#8212;&#8212;&#8212;
+origin(string) | <em>Required</em> <br /> Defines the set of external domains the app is allowed to communicate with.
+The default value shown above allows it to access any server.
 See the Domain <a href="../guide/appdev/whitelist/index.html">Whitelist Guide</a> for details.</p>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
    <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"*"</span><span class="nt">&gt;&lt;/access&gt;</span>
 <span class="nt">&lt;/widget&gt;</span>
 
 <span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
    <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://google.com"</span><span class="nt">&gt;&lt;/access&gt;</span>
 <span class="nt">&lt;/widget&gt;</span>
-</code></pre></div>
-<h2>allow-navigation</h2>
+</code></pre></div></div>
 
+<h2>allow-navigation</h2>
 <p>Controls which URLs the WebView itself can be navigated to. Applies to top-level navigations only.</p>
 
-<table><thead>
-<tr>
-<th>Attributes(type) <br/> <span class="sub-header">Only for platform:</span></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>href(string)</td>
-<td><em>Required</em> <br/> Defines the set of external domains the WebView is allowed to navigate to.</td>
-</tr>
-</tbody></table>
-
-<p>See the cordova-plugin-whitelist <a href="../reference/cordova-plugin-whitelist/index.html#navigation-whitelist">cordova-plugin-whitelist</a> for details.</p>
+<p>Attributes(type) <br /> <span class="sub-header">Only for platform:</span> | Description
+&#8212;&#8212;&#8212;&#8212;&#8212;-- | &#8212;&#8212;&#8212;&#8212;
+href(string) | <em>Required</em> <br /> Defines the set of external domains the WebView is allowed to navigate to.
+See the cordova-plugin-whitelist <a href="../reference/cordova-plugin-whitelist/index.html#navigation-whitelist">cordova-plugin-whitelist</a> for details.</p>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="c">&lt;!-- Allow links to example.com --&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Allow links to example.com --&gt;</span>
 <span class="nt">&lt;allow-navigation</span> <span class="na">href=</span><span class="s">"http://example.com/*"</span> <span class="nt">/&gt;</span>
 
 <span class="c">&lt;!-- Wildcards are allowed for the protocol, as a prefix to the host, or as a suffix to the path --&gt;</span>
 <span class="nt">&lt;allow-navigation</span> <span class="na">href=</span><span class="s">"*://*.example.com/*"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
-<h2>allow-intent</h2>
+</code></pre></div></div>
 
+<h2>allow-intent</h2>
 <p>Controls which URLs the app is allowed to ask the system to open. By default, no external URLs are allowed.</p>
 
-<table><thead>
-<tr>
-<th>Attributes(type) <br/> <span class="sub-header">Only for platform:</span></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>href(string)</td>
-<td><em>Required</em> <br/> Defines which URLs the app is allowed to ask the system to open.</td>
-</tr>
-</tbody></table>
-
-<p>See the cordova-plugin-whitelist <a href="../reference/cordova-plugin-whitelist/index.html#intent-whitelist">cordova-plugin-whitelist</a> for details.</p>
+<p>Attributes(type) <br /> <span class="sub-header">Only for platform:</span> | Description
+&#8212;&#8212;&#8212;&#8212;&#8212;-- | &#8212;&#8212;&#8212;&#8212;
+href(string) | <em>Required</em> <br /> Defines which URLs the app is allowed to ask the system to open.
+See the cordova-plugin-whitelist <a href="../reference/cordova-plugin-whitelist/index.html#intent-whitelist">cordova-plugin-whitelist</a> for details.</p>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"http://*/*"</span> <span class="nt">/&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"http://*/*"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"https://*/*"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"tel:*"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"sms:*"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>edit-config</h2>
 
-<p>See <a href="../plugin_ref/spec.html#edit-config"><edit-config> docs</a> for plugin.xml.</p>
+<p>See [<edit-config> docs][edit_config] for plugin.xml.</edit-config></p>
 
 <h2>config-file</h2>
 
-<p>See <a href="../plugin_ref/spec.html#config-file"><config-file> docs</a> for plugin.xml.</p>
+<p>See [<config-file> docs][config_file] for plugin.xml.</config-file></p>
 
 <h2>engine</h2>
-
 <p>Specifies details about what platform to restore during a prepare.</p>
 
-<table><thead>
-<tr>
-<th>Attributes(type) <br/> <span class="sub-header">Only for platform:</span></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name(string)</td>
-<td><em>Required</em> <br/> Name of the platform to be restored</td>
-</tr>
-<tr>
-<td>spec(string)</td>
-<td><em>Required</em> <br/> Details about the platform to be restored. This could be a <code>major.minor.patch</code> version number, a directory containing the platform or a url pointing to a git repository. This information will be used to retrieve the platform code to restore from NPM, a local directory or a git repository. See <a href="../reference/cordova-cli/index.html#platform-spec">Platform Spec</a> for further details.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name(string)</td>
+      <td><em>Required</em> <br /> Name of the platform to be restored</td>
+    </tr>
+    <tr>
+      <td>spec(string)</td>
+      <td><em>Required</em> <br /> Details about the platform to be restored. This could be a <code>major.minor.patch</code> version number, a directory containing the platform or a url pointing to a git repository. This information will be used to retrieve the platform code to restore from NPM, a local directory or a git repository. See <a href="../reference/cordova-cli/index.html#platform-spec">Platform Spec</a> for further details.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;engine</span> <span class="na">name=</span><span class="s">"android"</span> <span class="na">spec=</span><span class="s">"https://github.com/apache/cordova-android.git#5.1.1"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;engine</span> <span class="na">name=</span><span class="s">"ios"</span> <span class="na">spec=</span><span class="s">"^4.0.0"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
-<h2>plugin</h2>
 
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;engine</span> <span class="na">name=</span><span class="s">"android"</span> <span class="na">spec=</span><span class="s">"https://github.com/apache/cordova-android.git#5.1.1"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;engine</span> <span class="na">name=</span><span class="s">"ios"</span> <span class="na">spec=</span><span class="s">"^4.0.0"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h2>plugin</h2>
 <p>Specifies details about what plugin to restore during a prepare. This element
 is automatically added to a project&#39;s <code>config.xml</code> when a plugin is added using
 the <code>--save</code> flag. See the <a href="../reference/cordova-cli/index.html#cordova-plugin-command">CLI reference</a> for more information on
 adding plugins.</p>
 
-<table><thead>
-<tr>
-<th>Attributes(type) <br/> <span class="sub-header">Only for platform:</span></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name(string)</td>
-<td><em>Required</em> <br/> Name of the plugin to be restored</td>
-</tr>
-<tr>
-<td>spec(string)</td>
-<td><em>Required</em> <br/> Details about the plugin to be restored. This could be a <code>major.minor.patch</code> version number, a directory containing the plugin or a url pointing to a git repository. This information will be used to retrieve the plugin code to restore from NPM, a local directory or a git repository. See <a href="../reference/cordova-cli/index.html#plugin-spec">Plugin Spec</a> for further details.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name(string)</td>
+      <td><em>Required</em> <br /> Name of the plugin to be restored</td>
+    </tr>
+    <tr>
+      <td>spec(string)</td>
+      <td><em>Required</em> <br /> Details about the plugin to be restored. This could be a <code>major.minor.patch</code> version number, a directory containing the plugin or a url pointing to a git repository. This information will be used to retrieve the plugin code to restore from NPM, a local directory or a git repository. See <a href="../reference/cordova-cli/index.html#plugin-spec">Plugin Spec</a> for further details.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">"cordova-plugin-device"</span> <span class="na">spec=</span><span class="s">"^1.1.0"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">"cordova-plugin-device"</span> <span class="na">spec=</span><span class="s">"https://github.com/apache/cordova-plugin-device.git#1.0.0"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
-<h3>variable</h3>
 
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">"cordova-plugin-device"</span> <span class="na">spec=</span><span class="s">"^1.1.0"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">"cordova-plugin-device"</span> <span class="na">spec=</span><span class="s">"https://github.com/apache/cordova-plugin-device.git#1.0.0"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h3>variable</h3>
 <p>Persists the value of a CLI variable to be used when restoring a plugin during a
 prepare. This element is added to <code>config.xml</code> when a plugin that uses CLI variables
 is added using the <code>--save</code> flag. See the <a href="../reference/cordova-cli/index.html#cordova-plugin-command">CLI reference</a> for more
@@ -2727,270 +2716,278 @@ project. In order for changes to this value to take effect, remove the plugin fr
 project and restore it by running <code>cordova prepare</code>. See the
 <a href="../plugin_ref/spec.html#preference">preference element</a> of <code>plugin.xml</code> for more details on CLI variables.</p>
 
-<table><thead>
-<tr>
-<th>Attributes(type) <br/> <span class="sub-header">Only for platform:</span></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name(string)</td>
-<td><em>Required</em> <br/> Name of the CLI variable. Can only contain capital letters, digits, and underscores.</td>
-</tr>
-<tr>
-<td>value(string)</td>
-<td><em>Required</em> <br/> Value of the CLI variable to be used when restoring the parent plugin during a prepare.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name(string)</td>
+      <td><em>Required</em> <br /> Name of the CLI variable. Can only contain capital letters, digits, and underscores.</td>
+    </tr>
+    <tr>
+      <td>value(string)</td>
+      <td><em>Required</em> <br /> Value of the CLI variable to be used when restoring the parent plugin during a prepare.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">"cordova-plugin-device"</span> <span class="na">spec=</span><span class="s">"^1.1.0"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">"cordova-plugin-device"</span> <span class="na">spec=</span><span class="s">"^1.1.0"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;variable</span> <span class="na">name=</span><span class="s">"MY_VARIABLE"</span> <span class="na">value=</span><span class="s">"my_variable_value"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/plugin&gt;</span>
-</code></pre></div>
-<h2>preference</h2>
+</code></pre></div></div>
 
+<h2>preference</h2>
 <p>Sets various options as pairs of name/value attributes. Each preference&#39;s name is case-insensitive. Many preferences are unique to specific platforms,
 and will be indicated as such.</p>
 
-<table><thead>
-<tr>
-<th>Attributes(type) <br/> <span class="sub-header">Only for platform:</span></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>AllowInlineMediaPlayback(boolean) <br/> <mark>iOS</mark></td>
-<td><em>Default: false</em> <br/>  Set to true to allow HTML5 media playback to appear inline within the screen layout, using browser-supplied controls rather than native controls. For this to work, add the webkit-playsinline attribute to any <code>&lt;video&gt;</code> elements.</td>
-</tr>
-<tr>
-<td>AndroidLaunchMode(string) <br/> <mark>Android</mark></td>
-<td><em>Default: singleTop</em> <br/> Allowed values: standard, singleTop, singleTask, singleInstance <br/>  Sets the Activity android:launchMode attribute. This changes what happens when the app is launched from app icon or intent and is already running.</td>
-</tr>
-<tr>
-<td>android-maxSdkVersion(integer) <br/> <mark>Android</mark></td>
-<td><em>Default: Not Specified</em> <br/>  Sets the <code>maxSdkVersion</code> attribute of the <code>&lt;uses-sdk&gt;</code> tag in the project&#39;s <code>AndroidManifest.xml</code> (see <a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html">here</a>).</td>
-</tr>
-<tr>
-<td>android-minSdkVersion(integer) <br/> <mark>Android</mark></td>
-<td><em>Default: Dependent on cordova-android Version</em> <br/>  Sets the <code>minSdkVersion</code> attribute of the <code>&lt;uses-sdk&gt;</code> tag in the project&#39;s <code>AndroidManifest.xml</code> (see <a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html">here</a>).</td>
-</tr>
-<tr>
-<td>android-targetSdkVersion(integer) <br/> <mark>Android</mark></td>
-<td><em>Default: Dependent on cordova-android Version</em> <br/>  Sets the <code>targetSdkVersion</code> attribute of the <code>&lt;uses-sdk&gt;</code> tag in the project&#39;s <code>AndroidManifest.xml</code> (see <a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html">here</a>).</td>
-</tr>
-<tr>
-<td>AppendUserAgent(string) <br/> <mark>Android</mark> <mark>iOS</mark></td>
-<td>If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.</td>
-</tr>
-<tr>
-<td>BackgroundColor(string) <br/> <mark>Android</mark> <mark>BlackBerry</mark> <mark>Windows</mark></td>
-<td>Sets the app&#39;s background color. Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. <br/> For Windows, the alpha channel is ignored. <br/> <strong>Note</strong>: <code>transparent</code> value will set the application tile background to the accent color on Windows.</td>
-</tr>
-<tr>
-<td>BackupWebStorage(string) <br/> <mark>iOS</mark></td>
-<td><em>Default: cloud</em> <br/> Allowed values: none, local, cloud. <br/>   Set to cloud to allow web storage data to backup via iCloud. Set to local to allow only local backups via iTunes sync. Set to none prevent web storage backups.</td>
-</tr>
-<tr>
-<td>ChildBrowser(string) <br/> <mark>BlackBerry</mark></td>
-<td><em>Default: enable</em> <br/>  Disables child browser windows. By default, apps launch a secondary browser window to display resources accessed via window.open() or by specifying a _blank anchor target. Specify disable to override this default behavior.</td>
-</tr>
-<tr>
-<td>CordovaWebViewEngine(string) <br/> <mark>iOS</mark></td>
-<td><em>Default: CDVUIWebViewEngine</em> <br/>  This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The &#39;value&#39; here should match the &#39;feature&#39; name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.</td>
-</tr>
-<tr>
-<td>DefaultVolumeStream(string) <br/> <mark>Android</mark></td>
-<td><em>Default: default</em> <br/>  Added in cordova-android 3.7.0, This preference sets which volume the hardware volume buttons link to. By default this is &quot;call&quot; for phones and &quot;media&quot; for tablets. Set this to &quot;media&quot; to have your app&#39;s volume buttons always change the media volume. Note that when using Cordova&#39;s media plugin, the volume buttons will dynamically change to controlling the media volume when any Media objects are active.</td>
-</tr>
-<tr>
-<td>DisallowOverscroll(boolean) <br/> <mark>iOS</mark> <mark>Android</mark></td>
-<td><em>Default: false</em> <br/>  Set to <strong>true</strong> if you don&#39;t want the interface to display any feedback when users scroll past the beginning or end of content. On iOS, overscroll gestures cause content to bounce back to its original position. on Android, they produce a more subtle glowing effect along the top or bottom edge of the content. <br/></td>
-</tr>
-<tr>
-<td>EnableViewportScale(boolean) <br/> <mark>iOS</mark></td>
-<td><em>Default: false</em> <br/>   Set to true to allow a viewport meta tag to either disable or restrict the range of user scaling, which is enabled by default. Place a viewport such as the following in the HTML to disable scaling and fit content flexibly within the rendering WebView: <br/> <code>&lt;meta name=&#39;viewport&#39; content=&#39;width=device-width, initial-scale=1, user-scalable=no&#39; /&gt;</code></td>
-</tr>
-<tr>
-<td>EnableWebGL(boolean) <br/> <mark>OS X</mark></td>
-<td><em>Default: false</em> <br/>  <strong>(OS X 4.0.0+)</strong> Set to true to enable WebGL on the web view.</td>
-</tr>
-<tr>
-<td>ErrorUrl(URL) <br/> <mark>Android</mark></td>
-<td><em>Default: null</em> <br/>  If set, will display the referenced page upon an error in the application instead of a dialog with the title &quot;Application Error&quot;.</td>
-</tr>
-<tr>
-<td>ErrorUrl(string) <br/> <mark>iOS</mark></td>
-<td>If set, will display the referenced local page upon an error in the application.</td>
-</tr>
-<tr>
-<td>ForegroundText(string) <br/> <mark>Windows</mark></td>
-<td><em>Default: &quot;light&quot;</em> <br/>   Works for Windows 8.1 projects only. Allowed values: &quot;light&quot;, &quot;dark&quot;. Set to &quot;dark&quot; if you use the <code>BackgroundColor=&quot;white&quot;</code> or another light color to avoid Windows Store submissions errors.</td>
-</tr>
-<tr>
-<td>FullScreen(boolean) <br/> <mark>Android</mark></td>
-<td><em>Default: false</em> <br/>  Allows you to hide the status bar at the top of the screen. <br/> <strong>Note</strong>: Recommended platform-agnostic way to achieve this is to use the <a href="../reference/cordova-plugin-statusbar/">StatusBar plugin</a>.</td>
-</tr>
-<tr>
-<td>GapBetweenPages(float) <br/> <mark>iOS</mark></td>
-<td><em>Default: 0</em> <br/>  The size of the gap, in points, between pages.</td>
-</tr>
-<tr>
-<td>HideKeyboardFormAccessoryBar(boolean) <br/> <mark>BlackBerry</mark></td>
-<td><em>Default: false</em> <br/>  Set to true to hide the additional toolbar that appears above the keyboard, helping users navigate from one form input to another.</td>
-</tr>
-<tr>
-<td>HideMousePointer(integer) <br/> <mark>OS X</mark></td>
-<td><em>Default: -1</em> <br/> <strong>(OS X 4.0.0+)</strong> Sets the timeout for hiding the mouse pointer. Set to 0 for immediate, set to -1 for never.</td>
-</tr>
-<tr>
-<td>InAppBrowserStorageEnabled (boolean) <br/> <mark>Android</mark></td>
-<td><em>Default: true</em> <br/>  Controls whether pages opened within an InAppBrowser can access the same localStorage and WebSQL storage as pages opened with the default browser.</td>
-</tr>
-<tr>
-<td>KeepRunning(boolean) <br/> <mark>Android</mark></td>
-<td><em>Default: true</em> <br/>  Determines whether the application stays running in the background even after a <a href="../../../cordova/events/events.pause.html">pause</a> event fires. Setting this to false does not kill the app after a <a href="../../../cordova/events/events.pause.html">pause</a> event, but simply halts execution of code within the cordova webview while the app is in the background.</td>
-</tr>
-<tr>
-<td>KeyboardDisplayRequiresUserAction(boolean) <br/> <mark>iOS</mark></td>
-<td><em>Default: true</em> <br/>  Set to false to allow the keyboard to appear when calling focus() on form inputs.</td>
-</tr>
-<tr>
-<td>LoadUrlTimeoutValue(number in milliseconds) <br/> <mark>Android</mark></td>
-<td><em>Default: 20000, 20 seconds</em> <br/>  When loading a page, the amount of time to wait before throwing a timeout error.</td>
-</tr>
-<tr>
-<td>LoadingDialog(string) <br/> <mark>Android</mark></td>
-<td><em>Default: null</em> <br/>  If set, displays a dialog with the specified title and message, and a spinner, when loading the first page of an application. The title and message are separated by a comma in this value string, and that comma is removed before the dialog is displayed.</td>
-</tr>
-<tr>
-<td>LogLevel(string) <br/> <mark>Android</mark></td>
-<td><em>Default: ERROR</em> <br/> Allowed values: ERROR, WARN, INFO, DEBUG, VERBOSE <br/>  Sets the minimum log level through which log messages from your application will be filtered.</td>
-</tr>
-<tr>
-<td>MediaPlaybackAllowsAirPlay(boolean) <br/> <mark>iOS</mark></td>
-<td><em>Default: true</em> <br/>  Set to false to prevent Air Play from being used in this view. Available in default UIWebView and WKWebView.</td>
-</tr>
-<tr>
-<td>MediaPlaybackRequiresUserAction(boolean) <br/> <mark>iOS</mark></td>
-<td><em>Default: false</em> <br/>  Set to true to prevent HTML5 videos or audios from playing automatically with the autoplay attribute or via JavaScript.</td>
-</tr>
-<tr>
-<td>Min/Max Version(Regex) <br/> <mark>Windows</mark></td>
-<td>Allowed values: <strong>/(Microsoft.+? &#124; Windows.+?)-(MinVersion &#124; MaxVersionTested)/i</strong> <br/> Identifies the ecosystems and their min/max versions the app is compatible with. There are three parts to each value: the <strong>SDK</strong>, the <strong>version restriction</strong>, and the <strong>version value</strong>.  These preferences are detected by beginning with <code>Windows</code> or <code>Microsoft</code> and ending in <code>-MinVersion</code> or <code>-MaxVersionTested</code>: <ul><li>The <strong>SDK</strong> defines what specialized platform you want to target.  The default is <code>Windows.Universal</code>.  Valid values for these are defined in the AppxManifest schema, in the <code>Package/Depednencies/TargetPlatform</code> elements.</li><li>The <strong>version restriction</strong> defines application compatibility rules.  For example, if the <code>-MinVersion</code> is set to 10.1.0.0, then OS versions which don&#39;t support at least 10.1.0.0 of the corresponding SDK won&#39;t be able to load it. Similarly you can also use <code>-MaxVersionTested</code> which specifies the highest-tested version of the SDK. If a new version of the corresponding SDK is released, it will run in compatibility mode for the specified version.</li><li>The <strong>version value</strong> is a 4-integer tuple in the form of <em>major.minor.build.qfe</em>.</li></ul> If no preferences of these types are specified in your config.xml file, then Windows.Universal version 10.0.0.0 will be chosen by default. <br/> <strong>Note:</strong> These preferences are only set in the appxmanifest files of the desired target-platform and not in the jsproj files.</td>
-</tr>
-<tr>
-<td>Orientation(string)</td>
-<td><em>Default: default</em> <br/> Allowed values: default, landscape, portrait <br/> Allows you to lock orientation and prevent the interface from rotating in response to changes in orientation. <br/> <strong>NOTE:</strong> The default value means Cordova will strip the orientation preference entry from the platform&#39;s manifest/configuration file allowing the platform to fallback to its default behavior. For iOS, to specify both portrait &amp; landscape mode you would use the platform specific value &#39;all&#39;.</td>
-</tr>
-<tr>
-<td>OSXLocalStoragePath(string) <br/> <mark>OS X</mark></td>
-<td><em>Default: <code>~/Library/Application Support/{bundle.id}</code></em> <br/> <strong>(OS X 4.0.0+)</strong> Sets the directory for the local storage path.</td>
-</tr>
-<tr>
-<td>OverrideUserAgent(string) <br/> <mark>Android</mark></td>
-<td>If set, the value will replace the old UserAgent of webview. It is helpful to identify the request from app/browser when requesting remote pages. Use with caution, this may causes compitiable issue with web servers. For most cases, use AppendUserAgent instead.</td>
-</tr>
-<tr>
-<td>PageLength(float) <br/> <mark>iOS</mark></td>
-<td><em>Default: 0</em> <br/>  The size of each page, in points, in the direction that the pages flow. When PaginationMode is right to left or left to right, this property represents the width of each page. When PaginationMode is topToBottom or bottomToTop, this property represents the height of each page. The default value is 0, which means the layout uses the size of the viewport to determine the dimensions of the page.</td>
-</tr>
-<tr>
-<td>PaginationBreakingMode(string) <br/> <mark>iOS</mark></td>
-<td><em>Default: page</em> <br/> Allowed values: page, column <br/>  Valid values are page and column.The manner in which column- or page-breaking occurs. This property determines whether certain CSS properties regarding column- and page-breaking are honored or ignored. When this property is set to column, the content respects the CSS properties related to column-breaking in place of page-breaking.</td>
-</tr>
-<tr>
-<td>PaginationMode(string) <br/> <mark>iOS</mark></td>
-<td><em>Default: unpaginated</em> <br/> Allowed values: unpaginated, leftToRight, topToBottom, bottomToTop, rightToLeft <br/>  This property determines whether content in the web view is broken up into pages that fill the view one screen at a time,or shown as one long scrolling view. If set to a paginated form, this property toggles a paginated layout on the content, causing the web view to use the values of PageLength and GapBetweenPages to relayout its content.</td>
-</tr>
-<tr>
-<td>PopupBlocker(string) <br/> <mark>BlackBerry</mark></td>
-<td><em>Default: enable</em> <br/>  Enables the popup blocker, which prevents calls to window.open(). By default, popups display in a child browser window. Setting the preference to enable prevents it from displaying at all.</td>
-</tr>
-<tr>
-<td>SetFullscreen(boolean) <br/> <mark>Android</mark></td>
-<td><em>Default: false</em> <br/>  Same as the Fullscreen parameter in the global configuration of this xml file. This Android-specific element is deprecated in favor of the global Fullscreen element, and will be removed in a future version.</td>
-</tr>
-<tr>
-<td>ShowTitle(boolean) <br/> <mark>Android</mark></td>
-<td><em>Default: false</em> <br/>  Show the title at the top of the screen.</td>
-</tr>
-<tr>
-<td>SplashScreenBackgroundColor <br/> <mark>Windows</mark></td>
-<td><em>Default: #464646</em> <br/>  Sets the splashscreen background color. Supports a CSS color name or a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. <br/> The alpha channel is ignored although <code>transparent</code> value will cause black/white background color in case of Dark/Light theme accordingly.</td>
-</tr>
-<tr>
-<td>Suppresses3DTouchGesture(boolean) <br/> <mark>iOS</mark></td>
-<td><em>Default: false</em> <br/>  Set to true to avoid 3D Touch capable iOS devices rendering a magnifying glass widget when the user applies force while longpressing the webview. Test your app thoroughly since this disables onclick handlers, but plays nice with ontouchend. If this setting is true, SuppressesLongPressGesture will effectively be true as well.</td>
-</tr>
-<tr>
-<td>SuppressesIncrementalRendering(boolean) <br/> <mark>iOS</mark></td>
-<td><em>Default: false</em> <br/>  Set to true to wait until all content has been received before it renders to the screen.</td>
-</tr>
-<tr>
-<td>SuppressesLongPressGesture(boolean) <br/> <mark>iOS</mark></td>
-<td><em>Default: false</em> <br/>  Set to true to avoid iOS9+ rendering a magnifying glass widget when the user longpresses the webview. Test your app thoroughly since this may interfere with text selection capabilities.</td>
-</tr>
-<tr>
-<td>TopActivityIndicator(string) <br/> <mark>iOS</mark></td>
-<td><em>Default: gray</em> <br/> Allowed values: whiteLarge, white, gray. <br/>   <br/> Controls the appearance of the small spinning icon in the status bar that indicates significant processor activity.</td>
-</tr>
-<tr>
-<td>uap-target-min-version(string) <br/> <mark>Windows</mark></td>
-<td>This property sets the MinTargetVersion for the Windows UAP. If not specified, this is set to the initial release version 10.0.10240.0 <br/> <strong>Note:</strong> This preference is set in the jsproj file and not in the appxmanifest file. So users with OS version lower than this value would not be able to run the app.</td>
-</tr>
-<tr>
-<td>UIWebViewDecelerationSpeed(string) <br/> <mark>iOS</mark></td>
-<td><em>Default: normal</em> <br/> Allowed values: normal, fast <br/>  This property controls the deceleration speed of momentum scrolling. normal is the default speed for most native apps, and fast is the default for Mobile Safari.</td>
-</tr>
-<tr>
-<td>WebSecurity(string) <br/> <mark>BlackBerry</mark></td>
-<td><em>Default: enable</em> <br/>  Set to disable to override web security settings, allowing access to remote content from unknown sources. This preference is intended as a development convenience only, so remove it before packaging the app for distribution. For the released app, all URIs should be known and whitelisted using the <access> element, described in the Domain Whitelist Guide.</td>
-</tr>
-<tr>
-<td>WindowSize(string) <br/> <mark>OS X</mark></td>
-<td><em>Default: auto</em> <br/> <strong>(OS X 4.0.0+)</strong> Sets the size of the application window. <br/> Accepts the format <code>WxH</code> for a specific width and height or the special values <code>auto</code> and <code>fullscreen</code>. The latter will open a borderless window spanning the entire desktop area. Please note, that this is different from the <em>normal</em> OS X fullscreen mode, which would never span multiple displays. <br/> <strong>Note</strong>: The global cordova <code>fullscreen</code> preference has no effect in OS X.</td>
-</tr>
-<tr>
-<td>WindowsDefaultUriPrefix(string) <br/> <mark>Windows</mark></td>
-<td>Allowed values: <code>ms-appx://</code>, <code>ms-appx-web://</code> <br/>  Identifies whether you want your app to target the local context or remote context as its startup URI. When building for Windows 10, the default is the remote context (<code>ms-appx-web://</code>). <br/> In order to have a local-mode application that is not impacted by Remote Mode capability restrictions, you must set this preference to <code>ms-appx://</code> and not declare any <code>&lt;access&gt;</code> elements with remote URIs. The local mode is the default for Windows 8.1</td>
-</tr>
-<tr>
-<td>WindowsStoreDisplayName(string) <br/> <mark>Windows</mark></td>
-<td>A friendly name for the publisher that can be displayed to users.</td>
-</tr>
-<tr>
-<td>WindowsStoreIdentityName(string) <br/> <mark>Windows</mark></td>
-<td>Identity name used for Windows store. The identity defines a globally unique identifier for a package. A package identity is represented as a tuple of attributes of the package. See the <a href="https://msdn.microsoft.com/en-us/library/windows/apps/br211441.aspx">identity page on the package manifest schema reference</a> for further details.</td>
-</tr>
-<tr>
-<td>WindowsStorePublisherName(string) <br/> <mark>Windows</mark></td>
-<td>Publisher Display Name.</td>
-</tr>
-<tr>
-<td>WindowsToastCapable(boolean) <br/> <mark>Windows</mark></td>
-<td><em>Default: false</em> <br/>  A value of <code>true</code> indicates that the app is allowed to provide &#39;toast notifications&#39;.</td>
-</tr>
-<tr>
-<td>deployment-target(string) <br/> <mark>iOS</mark></td>
-<td>This sets the IPHONEOS<em>DEPLOYMENT</em>TARGET in the build, which ultimately tranlsates to the MinimumOSVersion in the ipa. For more details please refer to Apple&#39;s documentation on Deployment Target Settings</td>
-</tr>
-<tr>
-<td>target-device(string) <br/> <mark>iOS</mark></td>
-<td><em>Default: universal</em> <br/> Allowed values: handset, tablet, universal <br/>  This property maps directly to TARGETED<em>DEVICE</em>FAMILY in the xcode project. Note that if you target universal (which is the default) you will need to supply screen shots for both iPhone and iPad or your app may be rejected.</td>
-</tr>
-<tr>
-<td>windows-phone-target-version(string) <br/> <mark>Windows</mark></td>
-<td>Sets the version of Windows Phone for which the package (resulting from <code>cordova build</code>) will target. If none is specified, it will be set to the same version as <code>windows-target-version</code> (if found).</td>
-</tr>
-<tr>
-<td>windows-target-version(string) <br/> <mark>Windows</mark></td>
-<td>Sets the version of Windows for which the package (resulting from <code>cordova build</code>) will target. If none is specified, it will be set to &#39;8.1&#39;.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AllowInlineMediaPlayback(boolean) <br /> ==iOS==</td>
+      <td><em>Default: false</em> <br />  Set to true to allow HTML5 media playback to appear inline within the screen layout, using browser-supplied controls rather than native controls. For this to work, add the webkit-playsinline attribute to any <code>&lt;video&gt;</code> elements.</td>
+    </tr>
+    <tr>
+      <td>AndroidLaunchMode(string) <br /> ==Android==</td>
+      <td><em>Default: singleTop</em> <br /> Allowed values: standard, singleTop, singleTask, singleInstance <br />  Sets the Activity android:launchMode attribute. This changes what happens when the app is launched from app icon or intent and is already running.</td>
+    </tr>
+    <tr>
+      <td>android-maxSdkVersion(integer) <br /> ==Android==</td>
+      <td><em>Default: Not Specified</em> <br />  Sets the <code>maxSdkVersion</code> attribute of the <code>&lt;uses-sdk&gt;</code> tag in the project&#39;s <code>AndroidManifest.xml</code> (see <a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html">here</a>).</td>
+    </tr>
+    <tr>
+      <td>android-minSdkVersion(integer) <br /> ==Android==</td>
+      <td><em>Default: Dependent on cordova-android Version</em> <br />  Sets the <code>minSdkVersion</code> attribute of the <code>&lt;uses-sdk&gt;</code> tag in the project&#39;s <code>AndroidManifest.xml</code> (see <a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html">here</a>).</td>
+    </tr>
+    <tr>
+      <td>android-targetSdkVersion(integer) <br /> ==Android==</td>
+      <td><em>Default: Dependent on cordova-android Version</em> <br />  Sets the <code>targetSdkVersion</code> attribute of the <code>&lt;uses-sdk&gt;</code> tag in the project&#39;s <code>AndroidManifest.xml</code> (see <a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html">here</a>).</td>
+    </tr>
+    <tr>
+      <td>AppendUserAgent(string) <br /> ==Android== ==iOS==</td>
+      <td>If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.</td>
+    </tr>
+    <tr>
+      <td>BackgroundColor(string) <br /> ==Android== ==BlackBerry== ==Windows==</td>
+      <td>Sets the app&#39;s background color. Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. <br /> For Windows, the alpha channel is ignored. <br /> <strong>Note</strong>: <code>transparent</code> value will set the application tile background to the accent color on Windows.</td>
+    </tr>
+    <tr>
+      <td>BackupWebStorage(string) <br /> ==iOS==</td>
+      <td><em>Default: cloud</em> <br /> Allowed values: none, local, cloud. <br />   Set to cloud to allow web storage data to backup via iCloud. Set to local to allow only local backups via iTunes sync. Set to none prevent web storage backups.</td>
+    </tr>
+    <tr>
+      <td>ChildBrowser(string) <br /> ==BlackBerry==</td>
+      <td><em>Default: enable</em> <br />  Disables child browser windows. By default, apps launch a secondary browser window to display resources accessed via window.open() or by specifying a _blank anchor target. Specify disable to override this default behavior.</td>
+    </tr>
+    <tr>
+      <td>CordovaWebViewEngine(string) <br /> ==iOS==</td>
+      <td><em>Default: CDVUIWebViewEngine</em> <br />  This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The &#39;value&#39; here should match the &#39;feature&#39; name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.</td>
+    </tr>
+    <tr>
+      <td>DefaultVolumeStream(string) <br /> ==Android==</td>
+      <td><em>Default: default</em> <br />  Added in cordova-android 3.7.0, This preference sets which volume the hardware volume buttons link to. By default this is &quot;call&quot; for phones and &quot;media&quot; for tablets. Set this to &quot;media&quot; to have your app&#39;s volume buttons always change the media volume. Note that when using Cordova&#39;s media plugin, the volume buttons will dynamically change to controlling the media volume when any Media objects are active.</td>
+    </tr>
+    <tr>
+      <td>DisallowOverscroll(boolean) <br /> ==iOS== ==Android==</td>
+      <td><em>Default: false</em> <br />  Set to <strong>true</strong> if you don&#39;t want the interface to display any feedback when users scroll past the beginning or end of content. On iOS, overscroll gestures cause content to bounce back to its original position. on Android, they produce a more subtle glowing effect along the top or bottom edge of the content. <br /></td>
+    </tr>
+    <tr>
+      <td>EnableViewportScale(boolean) <br /> ==iOS==</td>
+      <td><em>Default: false</em> <br />   Set to true to allow a viewport meta tag to either disable or restrict the range of user scaling, which is enabled by default. Place a viewport such as the following in the HTML to disable scaling and fit content flexibly within the rendering WebView: <br /> <code>&lt;meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' /&gt;</code></td>
+    </tr>
+    <tr>
+      <td>EnableWebGL(boolean) <br /> ==OS X==</td>
+      <td><em>Default: false</em> <br />  <strong>(OS X 4.0.0+)</strong> Set to true to enable WebGL on the web view.</td>
+    </tr>
+    <tr>
+      <td>ErrorUrl(URL) <br /> ==Android==</td>
+      <td><em>Default: null</em> <br />  If set, will display the referenced page upon an error in the application instead of a dialog with the title &quot;Application Error&quot;.</td>
+    </tr>
+    <tr>
+      <td>ErrorUrl(string) <br /> ==iOS==</td>
+      <td>If set, will display the referenced local page upon an error in the application.</td>
+    </tr>
+    <tr>
+      <td>ForegroundText(string) <br /> ==Windows==</td>
+      <td><em>Default: &quot;light&quot;</em> <br />   Works for Windows 8.1 projects only. Allowed values: &quot;light&quot;, &quot;dark&quot;. Set to &quot;dark&quot; if you use the <code>BackgroundColor="white"</code> or another light color to avoid Windows Store submissions errors.</td>
+    </tr>
+    <tr>
+      <td>FullScreen(boolean) <br /> ==Android==</td>
+      <td><em>Default: false</em> <br />  Allows you to hide the status bar at the top of the screen. <br /> <strong>Note</strong>: Recommended platform-agnostic way to achieve this is to use the <a href="../reference/cordova-plugin-statusbar/">StatusBar plugin</a>.</td>
+    </tr>
+    <tr>
+      <td>GapBetweenPages(float) <br /> ==iOS==</td>
+      <td><em>Default: 0</em> <br />  The size of the gap, in points, between pages.</td>
+    </tr>
+    <tr>
+      <td>HideKeyboardFormAccessoryBar(boolean) <br /> ==BlackBerry==</td>
+      <td><em>Default: false</em> <br />  Set to true to hide the additional toolbar that appears above the keyboard, helping users navigate from one form input to another.</td>
+    </tr>
+    <tr>
+      <td>HideMousePointer(integer) <br /> ==OS X==</td>
+      <td><em>Default: -1</em> <br /> <strong>(OS X 4.0.0+)</strong> Sets the timeout for hiding the mouse pointer. Set to 0 for immediate, set to -1 for never.</td>
+    </tr>
+    <tr>
+      <td>InAppBrowserStorageEnabled (boolean) <br /> ==Android==</td>
+      <td><em>Default: true</em> <br />  Controls whether pages opened within an InAppBrowser can access the same localStorage and WebSQL storage as pages opened with the default browser.</td>
+    </tr>
+    <tr>
+      <td>KeepRunning(boolean) <br /> ==Android==</td>
+      <td><em>Default: true</em> <br />  Determines whether the application stays running in the background even after a <a href="../../../cordova/events/events.pause.html">pause</a> event fires. Setting this to false does not kill the app after a <a href="../../../cordova/events/events.pause.html">pause</a> event, but simply halts execution of code within the cordova webview while the app is in the background.</td>
+    </tr>
+    <tr>
+      <td>KeyboardDisplayRequiresUserAction(boolean) <br /> ==iOS==</td>
+      <td><em>Default: true</em> <br />  Set to false to allow the keyboard to appear when calling focus() on form inputs.</td>
+    </tr>
+    <tr>
+      <td>LoadUrlTimeoutValue(number in milliseconds) <br /> ==Android==</td>
+      <td><em>Default: 20000, 20 seconds</em> <br />  When loading a page, the amount of time to wait before throwing a timeout error.</td>
+    </tr>
+    <tr>
+      <td>LoadingDialog(string) <br /> ==Android==</td>
+      <td><em>Default: null</em> <br />  If set, displays a dialog with the specified title and message, and a spinner, when loading the first page of an application. The title and message are separated by a comma in this value string, and that comma is removed before the dialog is displayed.</td>
+    </tr>
+    <tr>
+      <td>LogLevel(string) <br /> ==Android==</td>
+      <td><em>Default: ERROR</em> <br /> Allowed values: ERROR, WARN, INFO, DEBUG, VERBOSE <br />  Sets the minimum log level through which log messages from your application will be filtered.</td>
+    </tr>
+    <tr>
+      <td>MediaPlaybackAllowsAirPlay(boolean) <br /> ==iOS==</td>
+      <td><em>Default: true</em> <br />  Set to false to prevent Air Play from being used in this view. Available in default UIWebView and WKWebView.</td>
+    </tr>
+    <tr>
+      <td>MediaPlaybackRequiresUserAction(boolean) <br /> ==iOS==</td>
+      <td><em>Default: false</em> <br />  Set to true to prevent HTML5 videos or audios from playing automatically with the autoplay attribute or via JavaScript.</td>
+    </tr>
+    <tr>
+      <td>Min/Max Version(Regex) <br /> ==Windows==</td>
+      <td>Allowed values: <strong>/(Microsoft.+? &#124; Windows.+?)-(MinVersion &#124; MaxVersionTested)/i</strong> <br /> Identifies the ecosystems and their min/max versions the app is compatible with. There are three parts to each value: the <strong>SDK</strong>, the <strong>version restriction</strong>, and the <strong>version value</strong>.  These preferences are detected by beginning with <code>Windows</code> or <code>Microsoft</code> and ending in <code>-MinVersion</code> or <code>-MaxVersionTested</code>: &lt;ul&gt;&lt;li&gt;The <strong>SDK</strong> defines what specialized platform you want to target.  The default is <code>Windows.Universal</code>.  Valid values for these are defined in the AppxManifest schema, in the <code>Package/Depednencies/TargetPlatform</code> elements.&lt;/li&gt;&lt;li&gt;The <strong>version restriction</strong> defines application compatibility rules.  For example, if the <code>-MinVersion</code> is set to 10.1.0.0, then OS versions which don&#39;t support at least 10.1.0.0 of the corresponding SDK won&#39;t be able to load it. Similarly you can also use <code>-MaxVersionTested</code> which specifies the highest-tested version of the SDK. If a new version of the corresponding SDK is released, it will run in compatibility mode for the specified version.&lt;/li&gt;&lt;li&gt;The <strong>version value</strong> is a 4-integer tuple in the form of <em>major.minor.build.qfe</em>.&lt;/li&gt;&lt;/ul&gt; If no preferences of these types are specified in your config.xml file, then Windows.Universal version 10.0.0.0 will be chosen by default. <br /> <strong>Note:</strong> These preferences are only set in the appxmanifest files of the desired target-platform and not in the jsproj files.</td>
+    </tr>
+    <tr>
+      <td>Orientation(string)</td>
+      <td><em>Default: default</em> <br /> Allowed values: default, landscape, portrait <br /> Allows you to lock orientation and prevent the interface from rotating in response to changes in orientation. <br /> <strong>NOTE:</strong> The default value means Cordova will strip the orientation preference entry from the platform&#39;s manifest/configuration file allowing the platform to fallback to its default behavior. For iOS, to specify both portrait &amp; landscape mode you would use the platform specific value &#39;all&#39;.</td>
+    </tr>
+    <tr>
+      <td>OSXLocalStoragePath(string) <br /> ==OS X==</td>
+      <td><em>Default: <code>~/Library/Application Support/{bundle.id}</code></em> <br /> <strong>(OS X 4.0.0+)</strong> Sets the directory for the local storage path.</td>
+    </tr>
+    <tr>
+      <td>OverrideUserAgent(string) <br /> ==Android==</td>
+      <td>If set, the value will replace the old UserAgent of webview. It is helpful to identify the request from app/browser when requesting remote pages. Use with caution, this may causes compitiable issue with web servers. For most cases, use AppendUserAgent instead.</td>
+    </tr>
+    <tr>
+      <td>PageLength(float) <br /> ==iOS==</td>
+      <td><em>Default: 0</em> <br />  The size of each page, in points, in the direction that the pages flow. When PaginationMode is right to left or left to right, this property represents the width of each page. When PaginationMode is topToBottom or bottomToTop, this property represents the height of each page. The default value is 0, which means the layout uses the size of the viewport to determine the dimensions of the page.</td>
+    </tr>
+    <tr>
+      <td>PaginationBreakingMode(string) <br /> ==iOS==</td>
+      <td><em>Default: page</em> <br /> Allowed values: page, column <br />  Valid values are page and column.The manner in which column- or page-breaking occurs. This property determines whether certain CSS properties regarding column- and page-breaking are honored or ignored. When this property is set to column, the content respects the CSS properties related to column-breaking in place of page-breaking.</td>
+    </tr>
+    <tr>
+      <td>PaginationMode(string) <br /> ==iOS==</td>
+      <td><em>Default: unpaginated</em> <br /> Allowed values: unpaginated, leftToRight, topToBottom, bottomToTop, rightToLeft <br />  This property determines whether content in the web view is broken up into pages that fill the view one screen at a time,or shown as one long scrolling view. If set to a paginated form, this property toggles a paginated layout on the content, causing the web view to use the values of PageLength and GapBetweenPages to relayout its content.</td>
+    </tr>
+    <tr>
+      <td>PopupBlocker(string) <br /> ==BlackBerry==</td>
+      <td><em>Default: enable</em> <br />  Enables the popup blocker, which prevents calls to window.open(). By default, popups display in a child browser window. Setting the preference to enable prevents it from displaying at all.</td>
+    </tr>
+    <tr>
+      <td>SetFullscreen(boolean) <br /> ==Android==</td>
+      <td><em>Default: false</em> <br />  Same as the Fullscreen parameter in the global configuration of this xml file. This Android-specific element is deprecated in favor of the global Fullscreen element, and will be removed in a future version.</td>
+    </tr>
+    <tr>
+      <td>ShowTitle(boolean) <br /> ==Android==</td>
+      <td><em>Default: false</em> <br />  Show the title at the top of the screen.</td>
+    </tr>
+    <tr>
+      <td>SplashScreenBackgroundColor <br /> ==Windows==</td>
+      <td><em>Default: #464646</em> <br />  Sets the splashscreen background color. Supports a CSS color name or a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. <br /> The alpha channel is ignored although <code>transparent</code> value will cause black/white background color in case of Dark/Light theme accordingly.</td>
+    </tr>
+    <tr>
+      <td>Suppresses3DTouchGesture(boolean) <br /> ==iOS==</td>
+      <td><em>Default: false</em> <br />  Set to true to avoid 3D Touch capable iOS devices rendering a magnifying glass widget when the user applies force while longpressing the webview. Test your app thoroughly since this disables onclick handlers, but plays nice with ontouchend. If this setting is true, SuppressesLongPressGesture will effectively be true as well.</td>
+    </tr>
+    <tr>
+      <td>SuppressesIncrementalRendering(boolean) <br /> ==iOS==</td>
+      <td><em>Default: false</em> <br />  Set to true to wait until all content has been received before it renders to the screen.</td>
+    </tr>
+    <tr>
+      <td>SuppressesLongPressGesture(boolean) <br /> ==iOS==</td>
+      <td><em>Default: false</em> <br />  Set to true to avoid iOS9+ rendering a magnifying glass widget when the user longpresses the webview. Test your app thoroughly since this may interfere with text selection capabilities.</td>
+    </tr>
+    <tr>
+      <td>TopActivityIndicator(string) <br /> ==iOS==</td>
+      <td><em>Default: gray</em> <br /> Allowed values: whiteLarge, white, gray. <br />   <br /> Controls the appearance of the small spinning icon in the status bar that indicates significant processor activity.</td>
+    </tr>
+    <tr>
+      <td>uap-target-min-version(string) <br /> ==Windows==</td>
+      <td>This property sets the MinTargetVersion for the Windows UAP. If not specified, this is set to the initial release version 10.0.10240.0 <br /> <strong>Note:</strong> This preference is set in the jsproj file and not in the appxmanifest file. So users with OS version lower than this value would not be able to run the app.</td>
+    </tr>
+    <tr>
+      <td>UIWebViewDecelerationSpeed(string) <br /> ==iOS==</td>
+      <td><em>Default: normal</em> <br /> Allowed values: normal, fast <br />  This property controls the deceleration speed of momentum scrolling. normal is the default speed for most native apps, and fast is the default for Mobile Safari.</td>
+    </tr>
+    <tr>
+      <td>WebSecurity(string) <br /> ==BlackBerry==</td>
+      <td><em>Default: enable</em> <br />  Set to disable to override web security settings, allowing access to remote content from unknown sources. This preference is intended as a development convenience only, so remove it before packaging the app for distribution. For the released app, all URIs should be known and whitelisted using the <access> element, described in the Domain Whitelist Guide.</access></td>
+    </tr>
+    <tr>
+      <td>WindowSize(string) <br /> ==OS X==</td>
+      <td><em>Default: auto</em> <br /> <strong>(OS X 4.0.0+)</strong> Sets the size of the application window. <br /> Accepts the format <code>WxH</code> for a specific width and height or the special values <code>auto</code> and <code>fullscreen</code>. The latter will open a borderless window spanning the entire desktop area. Please note, that this is different from the <em>normal</em> OS X fullscreen mode, which would never span multiple displays. <br /> <strong>Note</strong>: The global cordova <code>fullscreen</code> preference has no effect in OS X.</td>
+    </tr>
+    <tr>
+      <td>WindowsDefaultUriPrefix(string) <br /> ==Windows==</td>
+      <td>Allowed values: <code>ms-appx://</code>, <code>ms-appx-web://</code> <br />  Identifies whether you want your app to target the local context or remote context as its startup URI. When building for Windows 10, the default is the remote context (<code>ms-appx-web://</code>). <br /> In order to have a local-mode application that is not impacted by Remote Mode capability restrictions, you must set this preference to <code>ms-appx://</code> and not declare any <code>&lt;access&gt;</code> elements with remote URIs. The local mode is the default for Windows 8.1</td>
+    </tr>
+    <tr>
+      <td>WindowsStoreDisplayName(string) <br /> ==Windows==</td>
+      <td>A friendly name for the publisher that can be displayed to users.</td>
+    </tr>
+    <tr>
+      <td>WindowsStoreIdentityName(string) <br /> ==Windows==</td>
+      <td>Identity name used for Windows store. The identity defines a globally unique identifier for a package. A package identity is represented as a tuple of attributes of the package. See the <a href="https://msdn.microsoft.com/en-us/library/windows/apps/br211441.aspx">identity page on the package manifest schema reference</a> for further details.</td>
+    </tr>
+    <tr>
+      <td>WindowsStorePublisherName(string) <br /> ==Windows==</td>
+      <td>Publisher Display Name.</td>
+    </tr>
+    <tr>
+      <td>WindowsToastCapable(boolean) <br /> ==Windows==</td>
+      <td><em>Default: false</em> <br />  A value of <code>true</code> indicates that the app is allowed to provide &#39;toast notifications&#39;.</td>
+    </tr>
+    <tr>
+      <td>deployment-target(string) <br /> ==iOS==</td>
+      <td>This sets the IPHONEOS_DEPLOYMENT_TARGET in the build, which ultimately tranlsates to the MinimumOSVersion in the ipa. For more details please refer to Apple&#39;s documentation on Deployment Target Settings</td>
+    </tr>
+    <tr>
+      <td>target-device(string) <br /> ==iOS==</td>
+      <td><em>Default: universal</em> <br /> Allowed values: handset, tablet, universal <br />  This property maps directly to TARGETED_DEVICE_FAMILY in the xcode project. Note that if you target universal (which is the default) you will need to supply screen shots for both iPhone and iPad or your app may be rejected.</td>
+    </tr>
+    <tr>
+      <td>windows-phone-target-version(string) <br /> ==Windows==</td>
+      <td>Sets the version of Windows Phone for which the package (resulting from <code>cordova build</code>) will target. If none is specified, it will be set to the same version as <code>windows-target-version</code> (if found).</td>
+    </tr>
+    <tr>
+      <td>windows-target-version(string) <br /> ==Windows==</td>
+      <td>Sets the version of Windows for which the package (resulting from <code>cordova build</code>) will target. If none is specified, it will be set to &#39;8.1&#39;.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"DisallowOverscroll"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"DisallowOverscroll"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"Fullscreen"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"BackgroundColor"</span> <span class="na">value=</span><span class="s">"0xff0000ff"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"HideKeyboardFormAccessoryBar"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
@@ -3053,47 +3050,53 @@ and will be indicated as such.</p>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"OSXLocalStoragePath"</span> <span class="na">value=</span><span class="s">"~/.myapp/database"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"WindowSize"</span> <span class="na">value=</span><span class="s">"800x400"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"EnableWebGL"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>feature</h2>
-
 <p>If you use the CLI to build applications, you use the plugin command to enable device APIs. This does not modify the top-level config.xml file, so the <feature> element does not apply to your workflow. If you work directly in an SDK and using the platform-specific config.xml file as source, you use the <feature> tag to enable device-level APIs and external plugins. They often appear with custom values in platform-specific config.xml files. See the API Reference for details on how to specify each feature. See
-the <a href="../guide/hybrid/plugins/index.html">Plugin Development Guide</a> for more information on plugins.
-NOTE: Most of the time, you do NOT want to set this directly.</p>
+the [Plugin Development Guide](../guide/hybrid/plugins/index.html) for more information on plugins.
+NOTE: Most of the time, you do NOT want to set this directly.</feature></feature></p>
 
-<table><thead>
-<tr>
-<th>Attributes(type) <br/> <span class="sub-header">Only for platform:</span></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name(string)</td>
-<td><em>Required</em> <br/> The name of the plugin to enable.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name(string)</td>
+      <td><em>Required</em> <br /> The name of the plugin to enable.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3>param</h3>
-
 <p>Used to specify what certain plugin parameters such as: what package to retrieve the plugin code from, and whether the plugin code is to be initialized during the Webview&#39;s initialization.</p>
 
-<table><thead>
-<tr>
-<th>Attributes(type) <br/> <span class="sub-header">Only for platform:</span></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name(string) <br/> <mark>iOS</mark> <mark>OS X</mark> <mark>Android</mark></td>
-<td><em>Required</em> <br/> Allowed values: android-package, ios-package, osx-package, onload. <br/>  &#39;ios-package&#39;, &#39;osx-package&#39; and &#39;android-package&#39; are used to specify the name of the package (as specified by the &#39;value&#39; attribute) to be used to initialize the plugin code, while &#39;onload&#39; is used to specify whether the corresponding plugin (as specified in the &#39;value&#39; attribute) is to be instantiated when the controller is initialized.</td>
-</tr>
-<tr>
-<td>value(string or boolean) <br/> <mark>iOS</mark> <mark>OS X</mark> <mark>Android</mark></td>
-<td><em>Required</em> <br/>  Specifies the name of the package to be used to initialize the plugin code (when the &#39;name&#39; attribute is android-package, ios-package or osx-package), specifies the name of the plugin to be loaded during controller initialization (when &#39;name&#39; attribute is set to &#39;onload&#39;).</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name(string) <br /> ==iOS== ==OS X== ==Android==</td>
+      <td><em>Required</em> <br /> Allowed values: android-package, ios-package, osx-package, onload. <br />  &#39;ios-package&#39;, &#39;osx-package&#39; and &#39;android-package&#39; are used to specify the name of the package (as specified by the &#39;value&#39; attribute) to be used to initialize the plugin code, while &#39;onload&#39; is used to specify whether the corresponding plugin (as specified in the &#39;value&#39; attribute) is to be instantiated when the controller is initialized.</td>
+    </tr>
+    <tr>
+      <td>value(string or boolean) <br /> ==iOS== ==OS X== ==Android==</td>
+      <td><em>Required</em> <br />  Specifies the name of the package to be used to initialize the plugin code (when the &#39;name&#39; attribute is android-package, ios-package or osx-package), specifies the name of the plugin to be loaded during controller initialization (when &#39;name&#39; attribute is set to &#39;onload&#39;).</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="c">&lt;!-- Here is how to specify the Device API for Android projects --&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Here is how to specify the Device API for Android projects --&gt;</span>
 <span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"Device"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"android-package"</span> <span class="na">value=</span><span class="s">"org.apache.cordova.device.Device"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/feature&gt;</span>
@@ -3109,83 +3112,96 @@ NOTE: Most of the time, you do NOT want to set this directly.</p>
    <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"osx-package"</span> <span class="na">value=</span><span class="s">"CDVDevice"</span> <span class="nt">/&gt;</span>
    <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"onload"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/feature&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>platform</h2>
+<p>When using the CLI to build applications, it is sometimes necessary to specify preferences or other elements specific to a particular platform. Use the <platform> element to specify configuration that should only appear in a single platform-specific config.xml file.</platform></p>
 
-<p>When using the CLI to build applications, it is sometimes necessary to specify preferences or other elements specific to a particular platform. Use the <platform> element to specify configuration that should only appear in a single platform-specific config.xml file.</p>
-
-<table><thead>
-<tr>
-<th>Attributes(type) <br/> <span class="sub-header">Only for platform:</span></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name(string)</td>
-<td><em>Required</em> <br/> The platform whose preferences are being defined.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name(string)</td>
+      <td><em>Required</em> <br /> The platform whose preferences are being defined.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"Fullscreen"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
-<h2>hook</h2>
+</code></pre></div></div>
 
+<h2>hook</h2>
 <p>Represents your custom script which will be called by Cordova when
 certain action occurs (for example, after plugin is added or platform
 prepare logic is invoked). This is useful when you need to extend
 default Cordova functionality. See <a href="../guide/appdev/hooks/index.html">Hooks Guide</a> for more information.</p>
 
-<table><thead>
-<tr>
-<th>Attributes(type) <br/> <span class="sub-header">Only for platform:</span></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>type(string)</td>
-<td><em>Required</em> <br/> Specifies the action during which the custom script is to be called.</td>
-</tr>
-<tr>
-<td>src(string)</td>
-<td><em>Required</em> <br/> Specifies the location of the script to be called when a specific action occurs.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>type(string)</td>
+      <td><em>Required</em> <br /> Specifies the action during which the custom script is to be called.</td>
+    </tr>
+    <tr>
+      <td>src(string)</td>
+      <td><em>Required</em> <br /> Specifies the location of the script to be called when a specific action occurs.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;hook</span> <span class="na">type=</span><span class="s">"after_plugin_install"</span> <span class="na">src=</span><span class="s">"scripts/afterPluginInstall.js"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;hook</span> <span class="na">type=</span><span class="s">"after_plugin_install"</span> <span class="na">src=</span><span class="s">"scripts/afterPluginInstall.js"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
 <h2>resource-file</h2>
 
 <p>This tag installs resource files into your platform, and is similar to the same tag in plugin.xml. This tag is currently only supported on <code>cordova-ios@4.4.0</code> or greater and <code>cordova-android@6.2.1</code> or greater.</p>
 
-<table><thead>
-<tr>
-<th>Attributes(type) <br/> <span class="sub-header">Only for platform:</span></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>src(string) <br/> <mark>iOS</mark> <mark>Android</mark></td>
-<td><em>Required</em> <br/> Location of the file relative to <code>config.xml</code>.</td>
-</tr>
-<tr>
-<td>target(string)</td>
-<td>Path to where the file will be copied in your directory.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>src(string) <br /> ==iOS== ==Android==</td>
+      <td><em>Required</em> <br /> Location of the file relative to <code>config.xml</code>.</td>
+    </tr>
+    <tr>
+      <td>target(string)</td>
+      <td>Path to where the file will be copied in your directory.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
 
 <p>For Android:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;resource-file</span> <span class="na">src=</span><span class="s">"FooPluginStrings.xml"</span> <span class="na">target=</span><span class="s">"res/values/FooPluginStrings.xml"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
-<h1>Sample config.xml</h1>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;resource-file</span> <span class="na">src=</span><span class="s">"FooPluginStrings.xml"</span> <span class="na">target=</span><span class="s">"res/values/FooPluginStrings.xml"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
 
+<h1>Sample config.xml</h1>
 <p>Below is a sample config.xml file:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version='1.0' encoding='utf-8'?&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version='1.0' encoding='utf-8'?&gt;</span>
 <span class="nt">&lt;widget</span> <span class="na">id=</span><span class="s">"io.cordova.hellocordova"</span> <span class="na">version=</span><span class="s">"0.0.1"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/ns/widgets"</span> <span class="na">xmlns:cdv=</span><span class="s">"http://cordova.apache.org/ns/1.0"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;name&gt;</span>HelloCordova<span class="nt">&lt;/name&gt;</span>
   <span class="nt">&lt;description&gt;</span>
@@ -3211,7 +3227,9 @@ default Cordova functionality. See <a href="../guide/appdev/hooks/index.html">Ho
       <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"itms-apps:*"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;/platform&gt;</span>
 <span class="nt">&lt;/widget&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
+
 
             </div>
         </div>

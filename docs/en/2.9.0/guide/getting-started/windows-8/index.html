@@ -1625,42 +1625,64 @@ Windows RT. MSDN now refers to this type of app as a <em>Windows Store</em>
 app, and this guide follows that convention. Also, in this guide
 <em>Windows 8</em> signifies both Windows 8 and Windows RT.</p>
 
-<h2>1. Requirements</h2>
+<ol>
+  <li>
+    <h2>Requirements</h2>
+  </li>
+</ol>
 
 <ul>
-<li><p>Windows 8</p></li>
-<li><p>Visual Studio 2012 Professional or better, or Visual Studio 2012 Express for Windows 8</p></li>
+  <li>
+    <p>Windows 8</p>
+  </li>
+  <li>
+    <p>Visual Studio 2012 Professional or better, or Visual Studio 2012 Express for Windows 8</p>
+  </li>
 </ul>
 
 <p>Follow the instructions <a href="http://www.windowsstore.com/">here</a> to submit your apps Windows Store.</p>
 
-<h2>2. Install SDK + Cordova</h2>
+<ol>
+  <li>
+    <h2>Install SDK + Cordova</h2>
+  </li>
+</ol>
 
 <ul>
-<li>Set up your preferred variant of Visual Studio 2012. All of the product&#39;s paid versions (Professional, etc.) let you build Windows Store apps. You need <strong>Express for Windows 8</strong> to build Windows Store apps using the <a href="http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products">Express editions</a>.</li>
-<li>Download and extract the latest copy of <a href="http://phonegap.com/download">Cordova</a>. You will be working in the <code>lib\windows-8</code> subfolder.</li>
+  <li>Set up your preferred variant of Visual Studio 2012. All of the product&#39;s paid versions (Professional, etc.) let you build Windows Store apps. You need <strong>Express for Windows 8</strong> to build Windows Store apps using the <a href="http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products">Express editions</a>.</li>
+  <li>Download and extract the latest copy of <a href="http://phonegap.com/download">Cordova</a>. You will be working in the <code>lib\windows-8</code> subfolder.</li>
 </ul>
 
-<h2>3. Set up New Project</h2>
+<ol>
+  <li>
+    <h2>Set up New Project</h2>
+  </li>
+</ol>
 
 <p>You can already build Windows 8 apps using the <em>HTML/JavaScript track</em>
 available in Windows Store apps. Use Cordova in Windows Store apps to
 expose the same APIs as on other Cordova-supported platforms.</p>
 
 <ul>
-<li>Open Visual Studio 2012 and choose <strong>New Project</strong>.</li>
-<li><p>Select <strong>Installed &rarr; Template &rarr; Other Languages &rarr; JavaScript &rarr; Windows Store</strong> from the tree, and then <strong>Blank App</strong> from the projects list. Enter whatever project name you like, such as <strong>CordovaWin8Foo</strong> as in this example.</p>
+  <li>Open Visual Studio 2012 and choose <strong>New Project</strong>.</li>
+  <li>
+    <p>Select <strong>Installed &#8594; Template &#8594; Other Languages &#8594; JavaScript &#8594; Windows Store</strong> from the tree, and then <strong>Blank App</strong> from the projects list. Enter whatever project name you like, such as <strong>CordovaWin8Foo</strong> as in this example.</p>
 
-<p><img src="/static/img/guide/platforms/win8/wsnewproject.png" alt=""></p></li>
-<li><p>Microsoft continues to use <code>default.html</code> as the default home page, but most web developers use <code>index.html</code>. (Plus it&#39;s likely that in the other platform variants of your project you are using <code>index.html</code> as the name of your default page.) To fix this, in Solution Explorer rename the <code>default.html</code> file to <code>index.html</code>. Then double-click the <code>package.appxmanifest</code> file and change the <strong>Start page</strong> value to <code>index.html</code>.</p>
+    <p><img src="/static/img/guide/platforms/win8/wsnewproject.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Microsoft continues to use <code>default.html</code> as the default home page, but most web developers use <code>index.html</code>. (Plus it&#39;s likely that in the other platform variants of your project you are using <code>index.html</code> as the name of your default page.) To fix this, in Solution Explorer rename the <code>default.html</code> file to <code>index.html</code>. Then double-click the <code>package.appxmanifest</code> file and change the <strong>Start page</strong> value to <code>index.html</code>.</p>
 
-<p><img src="/static/img/guide/platforms/win8/wschangemanifest.png" alt=""></p></li>
-<li><p>To include <code>cordova.js</code> in your project, right-click on the <strong>js</strong> folder in Solution Explorer and select <strong>Add &rarr; New Item</strong>. Locate the <code>cordova.js</code> file in the <strong>lib\windows-8</strong> folder noted above.</p></li>
-<li><p>Edit the code for <code>index.html</code>. Add a reference to <code>cordova.js</code>. You can do this manually, or by dragging the file from Solution Explorer.</p></li>
+    <p><img src="/static/img/guide/platforms/win8/wschangemanifest.png" alt="" /></p>
+  </li>
+  <li>
+    <p>To include <code>cordova.js</code> in your project, right-click on the <strong>js</strong> folder in Solution Explorer and select <strong>Add &#8594; New Item</strong>. Locate the <code>cordova.js</code> file in the <strong>lib\windows-8</strong> folder noted above.</p>
+  </li>
+  <li>Edit the code for <code>index.html</code>. Add a reference to <code>cordova.js</code>. You can do this manually, or by dragging the file from Solution Explorer.</li>
 </ul>
 
-<h3>Adding the reference...</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;!-- WinJS references --&gt;
+<h3>Adding the reference&#8230;</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;!-- WinJS references --&gt;
     &lt;link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" /&gt;
     &lt;script src="//Microsoft.WinJS.1.0/js/base.js"&gt;&lt;/script&gt;
     &lt;script src="//Microsoft.WinJS.1.0/js/ui.js"&gt;&lt;/script&gt;
@@ -1671,13 +1693,14 @@ expose the same APIs as on other Cordova-supported platforms.</p>
     &lt;!-- CordovaWin8Foo references --&gt;
     &lt;link href="/css/default.css" rel="stylesheet" /&gt;
     &lt;script src="/js/default.js"&gt;&lt;/script&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <ul>
-<li>Next, add some code that demonstrates Cordova is working.</li>
+  <li>Next, add some code that demonstrates Cordova is working.</li>
 </ul>
 
-<h3>Adding a &#39;deviceready&#39; handler...</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;body&gt;
+<h3>Adding a &#39;deviceready&#39; handler&#8230;</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;body&gt;
     &lt;p&gt;Content goes here&lt;/p&gt;
 
     &lt;script type="text/javascript"&gt;
@@ -1692,18 +1715,26 @@ expose the same APIs as on other Cordova-supported platforms.</p>
     &lt;/script&gt;
 
 &lt;/body&gt;
-</code></pre></div>
-<h2>5. Test the Project</h2>
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <h2>Test the Project</h2>
+  </li>
+</ol>
 
 <ul>
-<li><p>Run the project from Visual Studio. You&#39;ll see the message box appear:</p>
+  <li>
+    <p>Run the project from Visual Studio. You&#39;ll see the message box appear:</p>
 
-<p><img src="/static/img/guide/platforms/win8/wsalert.png" alt=""></p></li>
+    <p><img src="/static/img/guide/platforms/win8/wsalert.png" alt="" /></p>
+  </li>
 </ul>
 
 <h2>Done!</h2>
 
 <p>That&#39;s it! You&#39;re now ready to build Windows Store apps with Cordova.</p>
+
 
 
             </div>

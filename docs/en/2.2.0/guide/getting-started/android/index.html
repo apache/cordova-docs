@@ -1521,117 +1521,133 @@
 
 <p>This guide describes how to set up your development environment for Cordova and run a sample application.</p>
 
-<h2>1. Requirements</h2>
+<ol>
+  <li>
+    <h2>Requirements</h2>
+  </li>
+</ol>
 
 <ul>
-<li>Eclipse 3.4+</li>
+  <li>Eclipse 3.4+</li>
 </ul>
 
-<h2>2. Install SDK + Cordova</h2>
+<ol>
+  <li>
+    <h2>Install SDK + Cordova</h2>
+  </li>
+</ol>
 
 <ul>
-<li>Download and install <a href="http://www.eclipse.org/downloads/">Eclipse Classic</a></li>
-<li>Download and install <a href="http://developer.android.com/sdk/index.html">Android SDK</a></li>
-<li>Download and install <a href="http://developer.android.com/sdk/eclipse-adt.html#installing">ADT Plugin</a></li>
-<li>Download the latest copy of <a href="http://cordova.apache.org/">Cordova</a> and extract its contents. We will be working with the Android directory.</li>
+  <li>Download and install <a href="http://www.eclipse.org/downloads/">Eclipse Classic</a></li>
+  <li>Download and install <a href="http://developer.android.com/sdk/index.html">Android SDK</a></li>
+  <li>Download and install <a href="http://developer.android.com/sdk/eclipse-adt.html#installing">ADT Plugin</a></li>
+  <li>Download the latest copy of <a href="http://cordova.apache.org/">Cordova</a> and extract its contents. We will be working with the Android directory.</li>
 </ul>
 
 <h2>3A. Setup your PATH environment variable on Mac OS</h2>
 
 <ul>
-<li>Open the Terminal program (this is in your Applications/Utilites folder by default).</li>
-<li>Run the following command</li>
+  <li>Open the Terminal program (this is in your Applications/Utilites folder by default).</li>
+  <li>Run the following command</li>
 </ul>
 
 <p><code>touch ~/.bash_profile; open ~/.bash_profile</code></p>
 
 <ul>
-<li>This will open the file in the your default text editor.</li>
-<li>You need to add the path to your Android SDK platform-tools and tools directory. In my example I will use &quot;/Development/android-sdk-macosx&quot; as the directory the SDK is installed in. Add the following line:</li>
+  <li>This will open the file in the your default text editor.</li>
+  <li>You need to add the path to your Android SDK platform-tools and tools directory. In my example I will use &quot;/Development/android-sdk-macosx&quot; as the directory the SDK is installed in. Add the following line:</li>
 </ul>
 
-<p><code>export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools</code> </p>
+<p><code>export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools</code></p>
 
 <ul>
-<li>Save the file and quit the text editor.</li>
-<li>Execute your .bash_profile to update your PATH. </li>
+  <li>Save the file and quit the text editor.</li>
+  <li>Execute your .bash_profile to update your PATH.</li>
 </ul>
 
 <p><code>source ~/.bash_profile</code></p>
 
 <ul>
-<li>Now everytime you open the Terminal program you PATH will included the Android SDK.</li>
+  <li>Now everytime you open the Terminal program you PATH will included the Android SDK.</li>
 </ul>
 
 <h2>3B. Setup your PATH environment variable on Windows</h2>
 
 <ul>
-<li>From the Desktop, right-click My Computer and click Properties.</li>
-<li>Click Advanced System Settings link in the left column.</li>
-<li>In the System Properties window click the Environment Variables button.</li>
-<li>Select the PATH variable from the System variables section.</li>
-<li>Select the Edit button.</li>
-<li>You need to add the path to your Android SDK platform-tools and tools directory. In my example I will use &quot;C:\Development\android-sdk-windows&quot; as the directory the SDK is installed in. Append the following text into the text box:</li>
+  <li>From the Desktop, right-click My Computer and click Properties.</li>
+  <li>Click Advanced System Settings link in the left column.</li>
+  <li>In the System Properties window click the Environment Variables button.</li>
+  <li>Select the PATH variable from the System variables section.</li>
+  <li>Select the Edit button.</li>
+  <li>You need to add the path to your Android SDK platform-tools and tools directory. In my example I will use &quot;C:\Development\android-sdk-windows&quot; as the directory the SDK is installed in. Append the following text into the text box:</li>
 </ul>
 
 <p><code>;C:\Development\android-sdk-windows\platform-tools;C:\Development\android-sdk-windows\tools</code></p>
 
 <ul>
-<li>Save your edit. Close the Environment Variables dialog.</li>
-<li>Additionally, you may need to include <code>%JAVA_HOME%\bin</code> to your PATH as well. To check to see if this is required, run a command prompt and type <code>java</code>. If the program can not be found add <code>%JAVA_HOME%\bin</code> to the PATH. You may need to specify the full path instead of using the <code>%JAVA_HOME%</code> environment variable.</li>
-<li>Finally, you may need to include <code>%ANT_HOME%\bin</code> to your PATH as well. To check to see if this is required, run a command prompt and type <code>ant</code>. If the program can not be found add <code>%ANT_HOME%\bin</code> to the PATH. You may need to specify the full path instead of using the <code>%ANT_HOME%</code> environment variable.</li>
+  <li>Save your edit. Close the Environment Variables dialog.</li>
+  <li>Additionally, you may need to include <code>%JAVA_HOME%\bin</code> to your PATH as well. To check to see if this is required, run a command prompt and type <code>java</code>. If the program can not be found add <code>%JAVA_HOME%\bin</code> to the PATH. You may need to specify the full path instead of using the <code>%JAVA_HOME%</code> environment variable.</li>
+  <li>Finally, you may need to include <code>%ANT_HOME%\bin</code> to your PATH as well. To check to see if this is required, run a command prompt and type <code>ant</code>. If the program can not be found add <code>%ANT_HOME%\bin</code> to the PATH. You may need to specify the full path instead of using the <code>%ANT_HOME%</code> environment variable.</li>
 </ul>
 
-<h2>4. Setup New Project</h2>
+<ol>
+  <li>
+    <h2>Setup New Project</h2>
+  </li>
+</ol>
 
 <ul>
-<li>In a terminal window, navigate to the <code>bin</code> directory within the <code>android</code> subfolder of the Cordova distribution.</li>
-<li><p>Type in <code>./create &lt;project_folder_path&gt; &lt;package_name&gt; &lt;project_name&gt;</code> then press <strong>&quot;Enter&quot;</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;project_folder_path&gt; is the path to your new Cordova Android project
-&lt;package_name&gt; is the package name, e.g. com.YourCompany.YourAppName
-&lt;project_name&gt; is the project name, e.g. YourApp (Must not contain spaces)
-</code></pre></div></li>
-<li><p>Launch Eclipse, and select menu item <strong>New Project</strong>
-<img src="/static/img/guide/platforms/android/eclipse_new_project.png" alt=""></p></li>
-<li><p>Select the directory you used for <code>&lt;project_folder_path&gt;</code></p></li>
-<li><p>Click Finish.</p></li>
+  <li>In a terminal window, navigate to the <code>bin</code> directory within the <code>android</code> subfolder of the Cordova distribution.</li>
+  <li>
+    <p>Type in <code>./create &lt;project_folder_path&gt; &lt;package_name&gt; &lt;project_name&gt;</code> then press <strong>&quot;Enter&quot;</strong></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;project_folder_path&gt; is the path to your new Cordova Android project
+  &lt;package_name&gt; is the package name, e.g. com.YourCompany.YourAppName
+  &lt;project_name&gt; is the project name, e.g. YourApp (Must not contain spaces)
+</code></pre></div>    </div>
+  </li>
+  <li>Launch Eclipse, and select menu item <strong>New Project</strong>
+  <img src="/static/img/guide/platforms/android/eclipse_new_project.png" alt="" /></li>
+  <li>Select the directory you used for <code>&lt;project_folder_path&gt;</code></li>
+  <li>Click Finish.</li>
 </ul>
 
 <p>If your project has a red X indicating there is a problem follow these additional steps:</p>
 
 <ul>
-<li>Right click on the project folder.</li>
-<li>In the Properties dialog that is displayed select Android from the navigation pane.</li>
-<li>For the project build target select the highest Android API level you have installed.</li>
-<li>Click OK</li>
-<li>Then from the Project menu bar item select Clean.</li>
-<li>This should correct all the errors in the project.</li>
+  <li>Right click on the project folder.</li>
+  <li>In the Properties dialog that is displayed select Android from the navigation pane.</li>
+  <li>For the project build target select the highest Android API level you have installed.</li>
+  <li>Click OK</li>
+  <li>Then from the Project menu bar item select Clean.</li>
+  <li>This should correct all the errors in the project.</li>
 </ul>
 
 <h2>5A. Deploy to Emulator</h2>
 
 <ul>
-<li>Right click the project and go to <strong>Run As &gt; Android Application</strong></li>
-<li>Eclipse will ask you to select an appropriate AVD. If there isn&#39;t one, then you&#39;ll need to create it.</li>
+  <li>Right click the project and go to <strong>Run As &gt; Android Application</strong></li>
+  <li>Eclipse will ask you to select an appropriate AVD. If there isn&#39;t one, then you&#39;ll need to create it.</li>
 </ul>
 
 <p><strong>Note: For a faster experience, use an Intel-based emulator image:</strong></p>
 
 <ul>
-<li>Open the Android SDK Manager
-<img src="/static/img/guide/platforms/android/eclipse_android_sdk_button.png" alt=""></li>
-<li>Install one or more <code>Intel x86 Atom</code> System Images as well as the <code>Intel Hardware Accelerated Execution Manager</code> (under Extras).</li>
-<li>Run the Intel installer, which has been downloaded to: <code>extras/intel/Hardware_Accelerated_Execution_Manager</code> within your Android SDK</li>
-<li>Create a new AVD with the Target set to an Intel image.</li>
-<li>When starting the emulator, ensure there are no error messages about the HAX module failing to load.</li>
+  <li>Open the Android SDK Manager
+<img src="/static/img/guide/platforms/android/eclipse_android_sdk_button.png" alt="" /></li>
+  <li>Install one or more <code>Intel x86 Atom</code> System Images as well as the <code>Intel Hardware Accelerated Execution Manager</code> (under Extras).</li>
+  <li>Run the Intel installer, which has been downloaded to: <code>extras/intel/Hardware_Accelerated_Execution_Manager</code> within your Android SDK</li>
+  <li>Create a new AVD with the Target set to an Intel image.</li>
+  <li>When starting the emulator, ensure there are no error messages about the HAX module failing to load.</li>
 </ul>
 
 <h2>5B. Deploy to <a href="../../../cordova/device/device.html">Device</a></h2>
 
 <ul>
-<li>Make sure USB debugging is enabled on your device and plug it into your system. (<strong>Settings &gt; Applications &gt; Development</strong>)</li>
-<li>Right click the project and go to <strong>Run As &gt; Android Application</strong></li>
+  <li>Make sure USB debugging is enabled on your device and plug it into your system. (<strong>Settings &gt; Applications &gt; Development</strong>)</li>
+  <li>Right click the project and go to <strong>Run As &gt; Android Application</strong></li>
 </ul>
+
 
 
             </div>

@@ -1330,7 +1330,7 @@
 <p>This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.</p>
 
 <ul>
-<li>To upgrade to 1.6.1, please go from 1.6.0rc1</li>
+  <li>To upgrade to 1.6.1, please go from 1.6.0rc1</li>
 </ul>
 
 <h2>Upgrade to 1.6.1 from 1.6.0rc1</h2>
@@ -1338,28 +1338,29 @@
 <p>Updating just the www folder:</p>
 
 <ol>
-<li>Open your <code>www/</code> folder, which contains your app.</li>
-<li>Remove and update the .jar file in the <code>ext/</code> folder.</li>
-<li>Update the contents of the <code>ext-air/</code> folder.</li>
-<li>Copy the new <code>cordova-1.6.1.js</code> into your project.
-
-<ul>
-<li>If playbook, then update the .js file in the <code>playbook/</code> folder.</li>
-</ul></li>
-<li>Update your HTML to use the new <code>cordova-1.6.1.js</code> file.</li>
+  <li>Open your <code>www/</code> folder, which contains your app.</li>
+  <li>Remove and update the .jar file in the <code>ext/</code> folder.</li>
+  <li>Update the contents of the <code>ext-air/</code> folder.</li>
+  <li>Copy the new <code>cordova-1.6.1.js</code> into your project.
+    <ul>
+      <li>If playbook, then update the .js file in the <code>playbook/</code> folder.</li>
+    </ul>
+  </li>
+  <li>Update your HTML to use the new <code>cordova-1.6.1.js</code> file.</li>
 </ol>
 
 <p>Updating the sample folder (ie, updating using the ant tools):</p>
 
 <ol>
-<li>Open the <code>sample/lib/</code> folder.</li>
-<li>Update the .jar file in the <code>cordova.1.6.0rc1/ext/</code> folder.</li>
-<li>Update the contents of the <code>cordova.1.6.0rc1/ext-air/</code> folder.</li>
-<li>Update the .js file in the <code>cordova.1.6.0rc1/javascript/</code> folder.</li>
-<li>Open the <code>sample/lib/</code> folder and rename the <code>cordova.1.6.0rc1/</code> folder to <code>cordova.1.6.1/</code>.</li>
-<li>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www/</code> folder with updated Cordova.</li>
-<li>Open the <code>www/</code> folder and update your HTML to use the new <code>cordova-1.6.1.js</code> file.</li>
+  <li>Open the <code>sample/lib/</code> folder.</li>
+  <li>Update the .jar file in the <code>cordova.1.6.0rc1/ext/</code> folder.</li>
+  <li>Update the contents of the <code>cordova.1.6.0rc1/ext-air/</code> folder.</li>
+  <li>Update the .js file in the <code>cordova.1.6.0rc1/javascript/</code> folder.</li>
+  <li>Open the <code>sample/lib/</code> folder and rename the <code>cordova.1.6.0rc1/</code> folder to <code>cordova.1.6.1/</code>.</li>
+  <li>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www/</code> folder with updated Cordova.</li>
+  <li>Open the <code>www/</code> folder and update your HTML to use the new <code>cordova-1.6.1.js</code> file.</li>
 </ol>
+
 
 
             </div>

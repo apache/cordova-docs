@@ -1548,15 +1548,15 @@
 <h2>Properties</h2>
 
 <ul>
-<li><strong>onprogress:</strong> Called with a ProgressEvent whenever a new chunk of data is transferred. <em>(Function)</em></li>
+  <li><strong>onprogress:</strong> Called with a ProgressEvent whenever a new chunk of data is transferred. <em>(Function)</em></li>
 </ul>
 
 <h2>Methods</h2>
 
 <ul>
-<li><strong>upload</strong>: sends a file to a server. </li>
-<li><strong>download</strong>: downloads a file from server.</li>
-<li><strong>abort</strong>: Aborts an in-progress transfer.</li>
+  <li><strong>upload</strong>: sends a file to a server.</li>
+  <li><strong>download</strong>: downloads a file from server.</li>
+  <li><strong>abort</strong>: Aborts an in-progress transfer.</li>
 </ul>
 
 <h2>Details</h2>
@@ -1567,11 +1567,11 @@ It is also possible to download a file from remote and save it on the device (on
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows 8</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2>upload</h2>
@@ -1579,19 +1579,21 @@ It is also possible to download a file from remote and save it on the device (on
 <p><strong>Parameters:</strong></p>
 
 <ul>
-<li><strong>filePath</strong> - Full path of the file on the device</li>
-<li><strong>server</strong> - URL of the server to receive the file (must already be encoded using encodeURI())</li>
-<li><strong>successCallback</strong> - A callback that is called with a <a href="../metadata/metadata.html">Metadata</a> object. <em>(Function)</em></li>
-<li><strong>errorCallback</strong> - A callback that is called if an error occurs retrieving the <a href="../metadata/metadata.html">Metadata</a>. Invoked with a <a href="../filetransfererror/filetransfererror.html">FileTransferError</a> object. <em>(Function)</em></li>
-<li><strong>options</strong> - Optional parameters such as file name and mimetype</li>
-<li><strong>trustAllHosts</strong> - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. <em>(boolean)</em></li>
+  <li><strong>filePath</strong> - Full path of the file on the device</li>
+  <li><strong>server</strong> - URL of the server to receive the file (must already be encoded using encodeURI())</li>
+  <li><strong>successCallback</strong> - A callback that is called with a <a href="../metadata/metadata.html">Metadata</a> object. <em>(Function)</em></li>
+  <li><strong>errorCallback</strong> - A callback that is called if an error occurs retrieving the <a href="../metadata/metadata.html">Metadata</a>. Invoked with a <a href="../filetransfererror/filetransfererror.html">FileTransferError</a> object. <em>(Function)</em></li>
+  <li><strong>options</strong> - Optional parameters such as file name and mimetype</li>
+  <li><strong>trustAllHosts</strong> - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. <em>(boolean)</em></li>
 </ul>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">// !! Assumes variable fileURI contains a valid URI to a text file on the device
 
-var win = function(r) {
-    console.log("Code = " + r.responseCode);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// !! Assumes variable fileURI contains a valid URI to a text file on the device
+</code></pre></div></div>
+
+  	var win = function(r) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    console.log("Code = " + r.responseCode);
     console.log("Response = " + r.response);
     console.log("Sent = " + r.bytesSent);
 }
@@ -1606,82 +1608,88 @@ var options = new [FileUploadOptions](../fileuploadoptions/fileuploadoptions.htm
 options.fileKey="file";
 options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
 options.mimeType="text/plain";
-</code></pre></div>
+</code></pre></div></div>
+
 <p>var params = {};
-    params.value1 = &quot;test&quot;;
-    params.value2 = &quot;param&quot;;</p>
-<div class="highlight"><pre><code class="language-" data-lang="">options.params = params;
+	params.value1 = &quot;test&quot;;
+	params.value2 = &quot;param&quot;;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>options.params = params;
 
 var ft = new FileTransfer();
 ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
-</code></pre></div>
+</code></pre></div></div>
+
 <p><strong>Full Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>File Transfer Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-x.x.x.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;File Transfer Example&lt;/title&gt;
 
-        <span class="c1">// Wait for Cordova to load</span>
-        <span class="c1">//</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+        
+        // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+        
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+            
+            // Retrieve image file location from specified source
+            navigator.camera.getPicture(uploadPhoto,
+                                        function(message) { alert('get picture failed'); },
+                                        { quality: 50, 
+                                        destinationType: navigator.camera.DestinationType.FILE_URI,
+                                        sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY }
+                                        );
+            
+        }
+        
+        function uploadPhoto(imageURI) {
+            var options = new FileUploadOptions();
+            options.fileKey="file";
+            options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
+            options.mimeType="image/jpeg";
+            
+            var params = {};
+            params.value1 = "test";
+            params.value2 = "param";
+            
+            options.params = params;
+            
+            var ft = new FileTransfer();
+            ft.upload(imageURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
+        }
+        
+        function win(r) {
+            console.log("Code = " + r.responseCode);
+            console.log("Response = " + r.response);
+            console.log("Sent = " + r.bytesSent);
+        }
+        
+        function fail(error) {
+            alert("An error has occurred: Code = " + error.code);
+            console.log("upload error source " + error.source);
+            console.log("upload error target " + error.target);
+        }
+        
+        &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Upload File&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
 
-        <span class="c1">// Cordova is ready</span>
-        <span class="c1">//</span>
-        <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-
-            <span class="c1">// Retrieve image file location from specified source</span>
-            <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="nx">uploadPhoto</span><span class="p">,</span>
-                                        <span class="kd">function</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s1">'get picture failed'</span><span class="p">);</span> <span class="p">},</span>
-                                        <span class="p">{</span> <span class="na">quality</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> 
-                                        <span class="na">destinationType</span><span class="p">:</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">DestinationType</span><span class="p">.</span><span class="nx">FILE_URI</span><span class="p">,</span>
-                                        <span class="na">sourceType</span><span class="p">:</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">PictureSourceType</span><span class="p">.</span><span class="nx">PHOTOLIBRARY</span> <span class="p">}</span>
-                                        <span class="p">);</span>
-
-        <span class="p">}</span>
-
-        <span class="kd">function</span> <span class="nx">uploadPhoto</span><span class="p">(</span><span class="nx">imageURI</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileUploadOptions</span><span class="p">();</span>
-            <span class="nx">options</span><span class="p">.</span><span class="nx">fileKey</span><span class="o">=</span><span class="s2">"file"</span><span class="p">;</span>
-            <span class="nx">options</span><span class="p">.</span><span class="nx">fileName</span><span class="o">=</span><span class="nx">imageURI</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">imageURI</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
-            <span class="nx">options</span><span class="p">.</span><span class="nx">mimeType</span><span class="o">=</span><span class="s2">"image/jpeg"</span><span class="p">;</span>
-
-            <span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{};</span>
-            <span class="nx">params</span><span class="p">.</span><span class="nx">value1</span> <span class="o">=</span> <span class="s2">"test"</span><span class="p">;</span>
-            <span class="nx">params</span><span class="p">.</span><span class="nx">value2</span> <span class="o">=</span> <span class="s2">"param"</span><span class="p">;</span>
-
-            <span class="nx">options</span><span class="p">.</span><span class="nx">params</span> <span class="o">=</span> <span class="nx">params</span><span class="p">;</span>
-
-            <span class="kd">var</span> <span class="nx">ft</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileTransfer</span><span class="p">();</span>
-            <span class="nx">ft</span><span class="p">.</span><span class="nx">upload</span><span class="p">(</span><span class="nx">imageURI</span><span class="p">,</span> <span class="nb">encodeURI</span><span class="p">(</span><span class="s2">"http://some.server.com/upload.php"</span><span class="p">),</span> <span class="nx">win</span><span class="p">,</span> <span class="nx">fail</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="kd">function</span> <span class="nx">win</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Code = "</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">responseCode</span><span class="p">);</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Response = "</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Sent = "</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">bytesSent</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="kd">function</span> <span class="nx">fail</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">alert</span><span class="p">(</span><span class="s2">"An error has occurred: Code = "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"upload error source "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">source</span><span class="p">);</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"upload error target "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Upload File<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
 <p><strong>Setting Upload Headers</strong></p>
 
 <p>Supported on Android and iOS</p>
-<div class="highlight"><pre><code class="language-" data-lang="">function win(r) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(r) {
     console.log("Code = " + r.responseCode);
     console.log("Response = " + r.response);
     console.log("Sent = " + r.bytesSent);
@@ -1699,14 +1707,15 @@ var options = new FileUploadOptions();
 options.fileKey="file";
 options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
 options.mimeType="text/plain";
-
+    
 var headers={'headerParam':'headerValue'};
 
 options.headers = headers;
 
 var ft = new FileTransfer();
 ft.upload(fileURI, uri, win, fail, options);    
-</code></pre></div>
+</code></pre></div></div>
+
 <p><strong>Android Quirks</strong></p>
 
 <p>If you experience problems uploading to a Nginx server then make sure you have the chunkedMode option set to false.</p>
@@ -1716,16 +1725,17 @@ ft.upload(fileURI, uri, win, fail, options);
 <p><strong>Parameters:</strong></p>
 
 <ul>
-<li><strong>source</strong> - URL of the server to download the file (must already be encoded using encodeURI())</li>
-<li><strong>target</strong> - Full path of the file on the device</li>
-<li><strong>successCallback</strong> - A callback that is called with a <a href="../fileentry/fileentry.html">FileEntry</a> object. <em>(Function)</em></li>
-<li><strong>errorCallback</strong> - A callback that is called if an error occurs retrieving the <a href="../metadata/metadata.html">Metadata</a>. Invoked with a <a href="../filetransfererror/filetransfererror.html">FileTransferError</a> object. <em>(Function)</em></li>
-<li><strong>trustAllHosts</strong> - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. <em>(boolean)</em></li>
-<li><strong>options</strong> - Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).</li>
+  <li><strong>source</strong> - URL of the server to download the file (must already be encoded using encodeURI())</li>
+  <li><strong>target</strong> - Full path of the file on the device</li>
+  <li><strong>successCallback</strong> - A callback that is called with a <a href="../fileentry/fileentry.html">FileEntry</a> object. <em>(Function)</em></li>
+  <li><strong>errorCallback</strong> - A callback that is called if an error occurs retrieving the <a href="../metadata/metadata.html">Metadata</a>. Invoked with a <a href="../filetransfererror/filetransfererror.html">FileTransferError</a> object. <em>(Function)</em></li>
+  <li><strong>trustAllHosts</strong> - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. <em>(boolean)</em></li>
+  <li><strong>options</strong> - Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).</li>
 </ul>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">// !! Assumes filePath is a valid path on the device
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// !! Assumes filePath is a valid path on the device
 
 var fileTransfer = new FileTransfer();
 var uri = encodeURI("http://some.server.com/download.php");
@@ -1748,7 +1758,8 @@ fileTransfer.download(
         }
     }
 );
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>abort</h2>
 
 <p>Aborts an in-progress transfer. The onerror callback will be called with a <a href="../filetransfererror/filetransfererror.html">FileTransferError</a> object which has an error code of <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>.ABORT_ERR.</p>
@@ -1756,15 +1767,17 @@ fileTransfer.download(
 <p><strong>Supported Platforms</strong></p>
 
 <ul>
-<li>Android</li>
-<li>iOS</li>
+  <li>Android</li>
+  <li>iOS</li>
 </ul>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">// !! Assumes variable fileURI contains a valid URI to a text file on the device
 
-var win = function(r) {
-    console.log("Code = " + r.responseCode);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// !! Assumes variable fileURI contains a valid URI to a text file on the device
+</code></pre></div></div>
+
+  	var win = function(r) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    console.log("Code = " + r.responseCode);
     console.log("Response = " + r.response);
     console.log("Sent = " + r.bytesSent);
 }
@@ -1783,13 +1796,14 @@ options.mimeType="text/plain";
 var params = {};
 params.value1 = "test";
 params.value2 = "param";
-
+	
 options.params = params;
 
 var ft = new FileTransfer();
 ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
 ft.abort(win, fail);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>onprogress</h2>
 
 <p>Called with a ProgressEvent whenever a new chunk of data is transferred.</p>
@@ -1797,12 +1811,13 @@ ft.abort(win, fail);
 <p><strong>Supported Platforms</strong></p>
 
 <ul>
-<li>Android</li>
-<li>iOS</li>
+  <li>Android</li>
+  <li>iOS</li>
 </ul>
 
 <p><strong>Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">fileTransfer.onprogress = function(progressEvent) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fileTransfer.onprogress = function(progressEvent) {
     if (progressEvent.lengthComputable) {
       loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
     } else {
@@ -1810,11 +1825,11 @@ ft.abort(win, fail);
     }
 };
 fileTransfer.download(...); // or fileTransfer.upload(...);
-</code></pre></div>
-<p><strong>Quirks</strong></p>
+</code></pre></div></div>
 
+<p><strong>Quirks</strong></p>
 <ul>
-<li>On both Android an iOS, lengthComputable is false for downloads that use gzip encoding.</li>
+  <li>On both Android an iOS, lengthComputable is false for downloads that use gzip encoding.</li>
 </ul>
 
 

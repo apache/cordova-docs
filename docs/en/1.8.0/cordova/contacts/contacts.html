@@ -1378,35 +1378,35 @@
                 <h1>Contacts</h1>
 
 <blockquote>
-<p>The <code>contacts</code> object provides access to the device contacts database.</p>
+  <p>The <code>contacts</code> object provides access to the device contacts database.</p>
 </blockquote>
 
 <h2>Methods</h2>
 
 <ul>
-<li><a href="contacts.create.html">contacts.create</a></li>
-<li><a href="contacts.find.html">contacts.find</a></li>
+  <li><a href="contacts.create.html">contacts.create</a></li>
+  <li><a href="contacts.find.html">contacts.find</a></li>
 </ul>
 
 <h2>Arguments</h2>
 
 <ul>
-<li><a href="parameters/contactFields.html">contactFields</a></li>
-<li><a href="parameters/contactSuccess.html">contactSuccess</a></li>
-<li><a href="parameters/contactError.html">contactError</a></li>
-<li><a href="parameters/contactFindOptions.html">contactFindOptions</a></li>
+  <li><a href="parameters/contactFields.html">contactFields</a></li>
+  <li><a href="parameters/contactSuccess.html">contactSuccess</a></li>
+  <li><a href="parameters/contactError.html">contactError</a></li>
+  <li><a href="parameters/contactFindOptions.html">contactFindOptions</a></li>
 </ul>
 
 <h2>Objects</h2>
 
 <ul>
-<li><a href="Contact/contact.html">Contact</a></li>
-<li><a href="ContactName/contactname.html">ContactName</a></li>
-<li><a href="ContactField/contactfield.html">ContactField</a></li>
-<li><a href="ContactAddress/contactaddress.html">ContactAddress</a></li>
-<li><a href="ContactOrganization/contactorganization.html">ContactOrganization</a></li>
-<li><a href="ContactFindOptions/contactfindoptions.html">ContactFindOptions</a></li>
-<li><a href="ContactError/contactError.html">ContactError</a></li>
+  <li><a href="Contact/contact.html">Contact</a></li>
+  <li><a href="ContactName/contactname.html">ContactName</a></li>
+  <li><a href="ContactField/contactfield.html">ContactField</a></li>
+  <li><a href="ContactAddress/contactaddress.html">ContactAddress</a></li>
+  <li><a href="ContactOrganization/contactorganization.html">ContactOrganization</a></li>
+  <li><a href="ContactFindOptions/contactfindoptions.html">ContactFindOptions</a></li>
+  <li><a href="ContactError/contactError.html">ContactError</a></li>
 </ul>
 
 <h2>Permissions</h2>
@@ -1414,50 +1414,66 @@
 <h3>Android</h3>
 
 <h4>app/res/xml/plugins.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Contacts" value="org.apache.cordova.ContactManager" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Contacts" value="org.apache.cordova.ContactManager" /&gt;
+</code></pre></div></div>
+
 <h4>app/AndroidManifest.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;uses-permission android:name="android.permission.GET_ACCOUNTS" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;uses-permission android:name="android.permission.GET_ACCOUNTS" /&gt;
 &lt;uses-permission android:name="android.permission.READ_CONTACTS" /&gt;
 &lt;uses-permission android:name="android.permission.WRITE_CONTACTS" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Bada</h3>
 
 <h4>manifest.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;Privilege&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Privilege&gt;
     &lt;Name&gt;ADDRESSBOOK&lt;/Name&gt;
 &lt;/Privilege&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>BlackBerry WebWorks</h3>
 
 <h4>www/plugins.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Contact" value="org.apache.cordova.pim.Contact" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Contact" value="org.apache.cordova.pim.Contact" /&gt;
+</code></pre></div></div>
+
 <h4>www/config.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature id="blackberry.find"        required="true" version="1.0.0.0" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;feature id="blackberry.find"        required="true" version="1.0.0.0" /&gt;
 &lt;feature id="blackberry.identity"    required="true" version="1.0.0.0" /&gt;
 &lt;feature id="blackberry.pim.Address" required="true" version="1.0.0.0" /&gt;
 &lt;feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>iOS</h3>
 
 <h4>App/Supporting Files/Cordova.plist</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;key&gt;Plugins&lt;/key&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;key&gt;Plugins&lt;/key&gt;
 &lt;dict&gt;
     &lt;key&gt;Contacts&lt;/key&gt;
     &lt;string&gt;CDVContacts&lt;/string&gt;
 &lt;/dict&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>webOS</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">No permissions are required.
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
 <h3>Windows Phone</h3>
 
 <h4>Properties/WPAppManifest.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;Capabilities&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Capabilities&gt;
     &lt;Capability Name="ID_CAP_CONTACTS" /&gt;
 &lt;/Capabilities&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
 
 

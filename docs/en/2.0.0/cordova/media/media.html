@@ -1450,53 +1450,55 @@
                 <h1>Media</h1>
 
 <blockquote>
-<p>The <code>Media</code> object provides the ability to record and play back audio files on a device.</p>
+  <p>The <code>Media</code> object provides the ability to record and play back audio files on a device.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
+</code></pre></div></div>
+
 <p>Note: The current implementation does not adhere to a W3C specification for media capture, and is provided for convenience only.  A future implementation will adhere to the latest W3C specification and may deprecate the current APIs.</p>
 
 <h2>Parameters</h2>
 
 <ul>
-<li><strong>src</strong>: A URI containing the audio content. <em>(DOMString)</em></li>
-<li><strong>mediaSuccess</strong>: (Optional) The callback that is invoked after a Media object has completed the current play/record or stop action. <em>(Function)</em></li>
-<li><strong>mediaError</strong>: (Optional) The callback that is invoked if there was an error. <em>(Function)</em></li>
-<li><strong>mediaStatus</strong>: (Optional) The callback that is invoked to indicate status changes. <em>(Function)</em></li>
+  <li><strong>src</strong>: A URI containing the audio content. <em>(DOMString)</em></li>
+  <li><strong>mediaSuccess</strong>: (Optional) The callback that is invoked after a Media object has completed the current play/record or stop action. <em>(Function)</em></li>
+  <li><strong>mediaError</strong>: (Optional) The callback that is invoked if there was an error. <em>(Function)</em></li>
+  <li><strong>mediaStatus</strong>: (Optional) The callback that is invoked to indicate status changes. <em>(Function)</em></li>
 </ul>
 
 <h2>Methods</h2>
 
 <ul>
-<li><a href="media.getCurrentPosition.html">media.getCurrentPosition</a>: Returns the current position within an audio file.</li>
-<li><a href="media.getDuration.html">media.getDuration</a>: Returns the duration of an audio file.</li>
-<li><a href="media.play.html">media.play</a>: Start or <a href="../events/events.resume.html">resume</a> playing audio file.</li>
-<li><a href="media.pause.html">media.pause</a>: Pause playing audio file.</li>
-<li><a href="media.release.html">media.release</a>: Releases the underlying OS&#39;es audio resources.</li>
-<li><a href="media.seekTo.html">media.seekTo</a>: Moves the position within the audio file.</li>
-<li><a href="media.startRecord.html">media.startRecord</a>: Start recording audio file.</li>
-<li><a href="media.stopRecord.html">media.stopRecord</a>: Stop recording audio file.</li>
-<li><a href="media.stop.html">media.stop</a>: Stop playing audio file.</li>
+  <li><a href="media.getCurrentPosition.html">media.getCurrentPosition</a>: Returns the current position within an audio file.</li>
+  <li><a href="media.getDuration.html">media.getDuration</a>: Returns the duration of an audio file.</li>
+  <li><a href="media.play.html">media.play</a>: Start or <a href="../events/events.resume.html">resume</a> playing audio file.</li>
+  <li><a href="media.pause.html">media.pause</a>: Pause playing audio file.</li>
+  <li><a href="media.release.html">media.release</a>: Releases the underlying OS&#39;es audio resources.</li>
+  <li><a href="media.seekTo.html">media.seekTo</a>: Moves the position within the audio file.</li>
+  <li><a href="media.startRecord.html">media.startRecord</a>: Start recording audio file.</li>
+  <li><a href="media.stopRecord.html">media.stopRecord</a>: Stop recording audio file.</li>
+  <li><a href="media.stop.html">media.stop</a>: Stop playing audio file.</li>
 </ul>
 
 <h2>Additional ReadOnly Parameters</h2>
 
 <ul>
-<li><strong>position</strong>: The position within the audio playback in seconds.
-
-<ul>
-<li>Not automatically updated during play, call <code>getCurrentPosition</code> to update.</li>
-</ul></li>
-<li><strong>duration</strong>: The duration of the media in seconds.</li>
+  <li><strong>position</strong>: The position within the audio playback in seconds.
+    <ul>
+      <li>Not automatically updated during play, call <code>getCurrentPosition</code> to update.</li>
+    </ul>
+  </li>
+  <li><strong>duration</strong>: The duration of the media in seconds.</li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7 (Mango)</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 (Mango)</li>
 </ul>
 
 <h2>Permissions</h2>
@@ -1504,48 +1506,62 @@
 <h3>Android</h3>
 
 <h4>app/res/xml/plugins.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Media" value="org.apache.cordova.AudioHandler" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Media" value="org.apache.cordova.AudioHandler" /&gt;
+</code></pre></div></div>
+
 <h4>app/AndroidManifest.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;uses-permission android:name="android.permission.RECORD_AUDIO" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;uses-permission android:name="android.permission.RECORD_AUDIO" /&gt;
 &lt;uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /&gt;
 &lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Bada</h3>
 
 <h4>manifest.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;Privilege&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Privilege&gt;
     &lt;Name&gt;RECORDING&lt;/Name&gt;
 &lt;/Privilege&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>BlackBerry WebWorks</h3>
 
 <h4>www/plugins.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture" /&gt;
+</code></pre></div></div>
+
 <h3>iOS</h3>
 
 <h4>App/Supporting Files/Cordova.plist</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;key&gt;Plugins&lt;/key&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;key&gt;Plugins&lt;/key&gt;
 &lt;dict&gt;
     &lt;key&gt;Media&lt;/key&gt;
     &lt;string&gt;CDVSound&lt;/string&gt;
 &lt;/dict&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>webOS</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">No permissions are required.
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
 <h3>Windows Phone</h3>
 
 <h4>Properties/WPAppManifest.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;Capabilities&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Capabilities&gt;
     &lt;Capability Name="ID_CAP_MEDIALIB" /&gt;
     &lt;Capability Name="ID_CAP_MICROPHONE" /&gt;
     &lt;Capability Name="ID_HW_FRONTCAMERA" /&gt;
     &lt;Capability Name="ID_CAP_ISV_CAMERA" /&gt;
     &lt;Capability Name="ID_CAP_CAMERA" /&gt;
 &lt;/Capabilities&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
 
 

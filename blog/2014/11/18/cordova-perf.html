@@ -137,23 +137,19 @@ Though recent WebView improvements have made smooth experiences easy to achieve,
 it is always important to watch out for code in our apps that may make the app <a href="http://jankfree.org">janky</a>.</p>
 
 <h2>Measuring Performance</h2>
-
 <p>The latest versions of <strong>Android</strong> and <strong>iOS</strong> <em>WebView</em>s can connect to and leverage developer tools in browsers for profiling rendering performance of apps.
 Developer tools provide insights into details like frames rates, repaints, layouts, etc.</p>
 
-<p><img src="https://i.imgur.com/zR2f1.gif" alt="Chrome Developer tools - profiling"></p>
+<p><img src="https://i.imgur.com/zR2f1.gif" alt="Chrome Developer tools - profiling" /></p>
 
 <p>Articles (like
 <a href="http://aerotwist.com/blog/my-performance-audit-workflow/">my performance audit workflow</a>
 and
 <a href="http://calendar.perfplanet.com/2013/the-runtime-performance-checklist/">the runtime performance checklist</a>)
 articulate the typical workflow for auditing performance of webpages.
-Similar principles can be applied to apps too.</p>
-
-<!--more-->
-
+Similar principles can be applied to apps too.
+<!--more--></p>
 <h2>Automating Performance measurements</h2>
-
 <p>With rapid development and release cycles of apps,
 it becomes hard to do regular performance audits.
 Automating the process with tools would ensure that we have a handle on the performance of the app.</p>
@@ -165,7 +161,6 @@ and supports <strong>iOS</strong> and <strong>Android</strong> based <strong>Cor
 All metrics are recorded while mimicking typical user interactions.</p>
 
 <h2>Testing iOS Apps</h2>
-
 <p>To start testing your <strong>Cordova</strong> app for <strong>iOS</strong>,
 you would need to <code>npm install appnium</code>
 (<a href="http://appium.io/">Appium</a>) and <a href="http://appium.io/getting-started.html?lang=en">set it up</a>.
@@ -176,7 +171,8 @@ Ensure that the app is built at least once and that the emulator is running.</p>
 In the example,
 a value is typed entered into a text box,
 and a button is clicked.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">var browserPerf = require('browser-perf');
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var browserPerf = require('browser-perf');
 browserPerf(undefined, function(err, res) {
     if (err) {
         console.log('An error occured');
@@ -206,7 +202,8 @@ browserPerf(undefined, function(err, res) {
         }
     ]
 });
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Additional user interactions can be used instead of typing and clicking by following the guide on <a href="https://github.com/axemclion/browser-perf/wiki/Node-Module---API#actions">this page</a>.</p>
 
 <p>The <a href="https://www.youtube.com/watch?v=TG_eTe_H-s4">video below</a> illustrates the steps.
@@ -214,10 +211,9 @@ Note that in the video,
 the config file does not specify any action.
 Hence, the default action scrolls the page and records the metrics.</p>
 
-<p><a href="https://www.youtube.com/watch?v=TG_eTe_H-s4"><img src="http://img.youtube.com/vi/TG_eTe_H-s4/0.jpg" alt="Video of steps to run perf tests in Cordova"></a></p>
+<p><a href="https://www.youtube.com/watch?v=TG_eTe_H-s4"><img src="http://img.youtube.com/vi/TG_eTe_H-s4/0.jpg" alt="Video of steps to run perf tests in Cordova" /></a></p>
 
 <h2>Testing Android Apps</h2>
-
 <p>Testing <strong>Android</strong> apps is very similar to testing <strong>iOS</strong> Apps.
 The only difference would be the use of <a href="https://sites.google.com/a/chromium.org/chromedriver/">ChromeDriver</a> instead of <strong>Appium</strong>.
 Consequently, the configuration would look something like <a href="https://github.com/axemclion/browser-perf/blob/master/test/res/android-hybrid.config.json">this</a>.</p>
@@ -228,7 +224,6 @@ with reference for <code>browser-perf</code> in the
 <a href="https://github.com/axemclion/browser-perf/wiki/Node-Module---API">axemclion wiki pages</a>.</p>
 
 <h2>Finishing touches</h2>
-
 <p><code>browser-perf</code> can record a plethora of metrics ranging from frame rates,
 to count of expensive paints or expensive events that could cause jank.
 Each of these metrics indicates how a CSS transform or an onscroll handler may have changed the performance of the app.
@@ -239,13 +234,13 @@ For example,
 stores the results in a <strong>CouchDB</strong> database, and displays the results.</p>
 
 <h2>Summary</h2>
-
 <p>In this article, we saw how to measure the rendering performance of <strong>Cordova</strong> apps.
 With the tools described, you can ensure that your apps are just as good as native apps are supposed to be.</p>
 
 <blockquote>
-<p>If you would like to run this for your Cordova app, please <a href="http://twitter.com/nparashuram">contact me</a>, and I would be glad to help you to get started or check out this <a href="http://blog.nparashuram.com/2014/10/measuring-rendering-performance-metrics.html">related blog post</a>.</p>
+  <p>If you would like to run this for your Cordova app, please <a href="http://twitter.com/nparashuram">contact me</a>, and I would be glad to help you to get started or check out this <a href="http://blog.nparashuram.com/2014/10/measuring-rendering-performance-metrics.html">related blog post</a>.</p>
 </blockquote>
+
 
         </div>
     </section>

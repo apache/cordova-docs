@@ -1627,15 +1627,19 @@ Plugins with long-running requests, background activity such as media payback, l
 <h2>Plugin Class Mapping</h2>
 
 <p>The JavaScript portion of a plugin always uses the <code>cordova.exec</code> method as follows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">exec(&lt;successFunction&gt;, &lt;failFunction&gt;, &lt;service&gt;, &lt;action&gt;, [&lt;args&gt;]);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exec(&lt;successFunction&gt;, &lt;failFunction&gt;, &lt;service&gt;, &lt;action&gt;, [&lt;args&gt;]);
+</code></pre></div></div>
+
 <p>This marshals a request from the WebView to the Android native side,
 more or less boiling down to calling the <code>action</code> method on the
 <code>service</code> class, with the arguments passed in the <code>args</code> Array.</p>
 
 <p>Whether you distribute your plugin as Java file or as a JAR of its own, the plugin must be added to the <code>config.xml</code> file in your Cordova-Android application&#39;s <code>res/xml/</code> folder.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="&lt;service_name&gt;" value="&lt;full_name_including_namespace&gt;"/&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="&lt;service_name&gt;" value="&lt;full_name_including_namespace&gt;"/&gt;
+</code></pre></div></div>
+
 <p>The service name should match the one used in the JavaScript <code>exec</code>
 call, and the value is the Java classes full name, including the
 namespace.  Otherwise the plugin may compile but still be unreachable
@@ -1650,7 +1654,8 @@ So what does the final Android Java Plugin class look like?</p>
 <p>What gets dispatched to the plugin via JavaScript&#39;s <code>exec</code> function gets
 passed into the Plugin class&#39;s <code>execute</code> method. Most <code>execute</code>
 implementations look like this:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">@Override
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Override
 public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
     if ("beep".equals(action)) {
         this.beep(args.getLong(0));
@@ -1659,7 +1664,8 @@ public boolean execute(String action, JSONArray args, CallbackContext callbackCo
     }
     return false;  // Returning false results in a "MethodNotFound" error.
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>We compare the value of the <code>action</code> parameter, and dispatch the
 request off to a (private) method in the class, optionally passing
 some of the parameters to the method.</p>
@@ -1674,7 +1680,8 @@ exception names as much as possible.</p>
 the WebCore thread. The <code>execute</code> method also runs on the WebCore thread.</p>
 
 <p>If you need to interact with the UI, you should use the following:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">@Override
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Override
 public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
     if ("beep".equals(action)) {
         final long duration = args.getLong(0);
@@ -1688,9 +1695,11 @@ public boolean execute(String action, JSONArray args, final CallbackContext call
     }
     return false;
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>If you do not need to run on the UI thread, but do not want to block the WebCore thread:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">@Override
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Override
 public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
     if ("beep".equals(action)) {
         final long duration = args.getLong(0);
@@ -1704,46 +1713,51 @@ public boolean execute(String action, JSONArray args, final CallbackContext call
     }
     return false;
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Echo Android Plugin Example</h3>
 
 <p>We would add the following to our config.xml:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Echo" value="org.apache.cordova.plugin.Echo" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Echo" value="org.apache.cordova.plugin.Echo" /&gt;
+</code></pre></div></div>
+
 <p>Then we would add the following file to
 <code>src/org/apache/cordova/plugin/Echo.java</code> inside our Cordova-Android
 application:</p>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="k">package</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">cordova</span><span class="p">.</span><span class="n">plugin</span><span class="p">;</span>
 
-<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">cordova</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">CordovaPlugin</span><span class="p">;</span>
-<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">cordova</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">PluginResult</span><span class="p">;</span>
-<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">json</span><span class="p">.</span><span class="n">JSONArray</span><span class="p">;</span>
-<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">json</span><span class="p">.</span><span class="n">JSONException</span><span class="p">;</span>
-<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">json</span><span class="p">.</span><span class="n">JSONObject</span><span class="p">;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package org.apache.cordova.plugin;
 
-<span class="p">/**</span>
- <span class="p">*</span> <span class="n">This</span> <span class="n">class</span> <span class="n">echoes</span> <span class="n">a</span> <span class="k">string</span> <span class="n">called</span> <span class="k">from</span> <span class="n">JavaScript</span><span class="p">.</span>
- <span class="p">*/</span>
-<span class="k">public</span> <span class="n">class</span> <span class="n">Echo</span> <span class="n">extends</span> <span class="n">CordovaPlugin</span> <span class="p">{</span>
-    <span class="p">@</span><span class="n">Override</span>
-    <span class="k">public</span> <span class="k">boolean</span> <span class="n">execute</span><span class="p">(</span><span class="k">String</span> <span class="n">action</span><span class="p">,</span> <span class="n">JSONArray</span> <span class="n">args</span><span class="p">,</span> <span class="n">CallbackContext</span> <span class="n">callbackContext</span><span class="p">)</span> <span class="n">throws</span> <span class="n">JSONException</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">action</span><span class="p">.</span><span class="n">equals</span><span class="p">(</span><span class="s2">"echo"</span><span class="p">))</span> <span class="p">{</span>
-            <span class="k">String</span> <span class="n">message</span> <span class="p">=</span> <span class="n">args</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
-            <span class="n">this</span><span class="p">.</span><span class="n">echo</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">callbackContext</span><span class="p">);</span>
-            <span class="n">return</span> <span class="nb">true</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="n">return</span> <span class="nb">false</span><span class="p">;</span>
-    <span class="p">}</span>
+import org.apache.cordova.api.CordovaPlugin;
+import org.apache.cordova.api.PluginResult;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-    <span class="n">private</span> <span class="n">void</span> <span class="n">echo</span><span class="p">(</span><span class="k">String</span> <span class="n">message</span><span class="p">,</span> <span class="n">CallbackContext</span> <span class="n">callbackContext</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">message</span> <span class="c1">!= null &amp;&amp; message.length() &gt; 0) {
-</span>            <span class="n">callbackContext</span><span class="p">.</span><span class="n">success</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="n">callbackContext</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="s2">"Expected one non-empty string argument."</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+/**
+ * This class echoes a string called from JavaScript.
+ */
+public class Echo extends CordovaPlugin {
+    @Override
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        if (action.equals("echo")) {
+            String message = args.getString(0);
+            this.echo(message, callbackContext);
+            return true;
+        }
+        return false;
+    }
+
+    private void echo(String message, CallbackContext callbackContext) {
+        if (message != null &amp;&amp; message.length() &gt; 0) {
+            callbackContext.success(message);
+        } else {
+            callbackContext.error("Expected one non-empty string argument.");
+        }
+    }
+}
+</code></pre></div></div>
+
 <p>Let&#39;s take a look at the code. The necessary <code>imports</code> are at
 the top. Our class extends from <code>CordovaPlugin</code>. We override the
 execute() method in order to recieve messages from exec(). Our method
@@ -1769,10 +1783,10 @@ JavaScript success callback function.</p>
 <h2>Common Pitfalls</h2>
 
 <ul>
-<li>Plugins have access to a <code>CordovaInterface</code> object. This object has access to the Android <code>Activity</code> that is running the application. This is the <code>Context</code> required to launch
+  <li>Plugins have access to a <code>CordovaInterface</code> object. This object has access to the Android <code>Activity</code> that is running the application. This is the <code>Context</code> required to launch
 a new Android <code>Intent</code>. The <code>CordovaInterface</code> allows plugins to start an <code>Activity</code> for a result, and to set the callback plugin for when the <code>Intent</code> comes back to the application. This is important, since the
 <code>Intent</code>s system is how Android communicates between processes.</li>
-<li>Plugins do not have direct access to the <code>Context</code> as they have in the past. The legacy <code>ctx</code> member is deprecated, and will be removed six months after 2.0 is released. All of <code>ctx</code> methods exist on the <code>Context</code>, so both <code>getContext()</code> and <code>getActivity()</code> are capable of returning the proper object required.</li>
+  <li>Plugins do not have direct access to the <code>Context</code> as they have in the past. The legacy <code>ctx</code> member is deprecated, and will be removed six months after 2.0 is released. All of <code>ctx</code> methods exist on the <code>Context</code>, so both <code>getContext()</code> and <code>getActivity()</code> are capable of returning the proper object required.</li>
 </ul>
 
 <h2>Use the Source</h2>

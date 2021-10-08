@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The following plugins were updated today:cordova-plugin-contacts: 0.2.11cordova-plugin-network-information: 0.2.10Notable changes include:The network-informa...">
+    <meta name="description" content="The following plugins were updated today:  cordova-plugin-contacts: 0.2.11  cordova-plugin-network-information: 0.2.10Notable changes include:  The network-i...">
 
     <title>
         
@@ -134,52 +134,52 @@
             <p>The following plugins were updated today:</p>
 
 <ul>
-<li>cordova-plugin-contacts: 0.2.11</li>
-<li>cordova-plugin-network-information: 0.2.10</li>
+  <li>cordova-plugin-contacts: 0.2.11</li>
+  <li>cordova-plugin-network-information: 0.2.10</li>
 </ul>
 
 <p>Notable changes include:</p>
 
 <ul>
-<li>The network-information plugin no longer crashes immediately if no network is available</li>
-<li><code>navigator.contacts.pickContact</code> API has been added for <strong>Android</strong>, <strong>iOS</strong>, <strong>Windows Phone 8</strong> and <strong>Windows 8</strong> platforms</li>
-<li><code>navigator.contacts.find</code> API on <strong>Android</strong>, <strong>iOS</strong> and <strong>Windows Phone 8</strong> now supports <code>desiredFields</code> which specifies contact fields to be returned</li>
-<li>Contacts on <strong>Firefox OS</strong> no longer requires manual change of the application permissions</li>
+  <li>The network-information plugin no longer crashes immediately if no network is available</li>
+  <li><code>navigator.contacts.pickContact</code> API has been added for <strong>Android</strong>, <strong>iOS</strong>, <strong>Windows Phone 8</strong> and <strong>Windows 8</strong> platforms</li>
+  <li><code>navigator.contacts.find</code> API on <strong>Android</strong>, <strong>iOS</strong> and <strong>Windows Phone 8</strong> now supports <code>desiredFields</code> which specifies contact fields to be returned</li>
+  <li>Contacts on <strong>Firefox OS</strong> no longer requires manual change of the application permissions</li>
 </ul>
 
 <p>The plugins have been updated on our registry at <a href="http://plugins.cordova.io/">plugins.cordova.io</a>.</p>
 
-<hr>
-
+<hr />
 <p>You can update any plugin by removing it, and then re-adding it. E.g. To update your contacts plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm org.apache.cordova.contacts
-cordova plugin add org.apache.cordova.contacts
-</code></pre></div>
-<p>Other changes include:</p>
 
-<!--more-->
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm org.apache.cordova.contacts
+cordova plugin add org.apache.cordova.contacts
+</code></pre></div></div>
+
+<p>Other changes include:
+<!--more--></p>
 
 <p><code>org.apache.cordova.contacts@0.2.11</code></p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-5416">CB-5416</a> Adding support for auto-managing permissions</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6682">CB-6682</a> Move <strong>Windows 8</strong> command proxy into its missing platform tag</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5698">CB-5698</a> <strong>iOS</strong> Check to see if <code>photoData</code> exists before using</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7003">CB-7003</a> <strong>Android</strong> Make <code>pickContact</code> pick correct contact on Android 4.3 and 4.4.3</li>
-<li>Remove deprecated symbols for <strong>iOS</strong> &lt; 6</li>
-<li><strong>Windows Phone 8</strong> now populates contact photos</li>
-<li>Add <code>pickContact</code> functionality to Cordova contacts plugin</li>
-<li>Add <code>ContactError</code> codes to <code>index.md</code> doc</li>
-<li>Docs typo: <code>navigator.contacts.length</code> -&gt; <code>contacts.length</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6797">CB-6797</a> Add license</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> Add CONTRIBUTING.md</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5416">CB-5416</a> Adding support for auto-managing permissions</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6682">CB-6682</a> Move <strong>Windows 8</strong> command proxy into its missing platform tag</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5698">CB-5698</a> <strong>iOS</strong> Check to see if <code>photoData</code> exists before using</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7003">CB-7003</a> <strong>Android</strong> Make <code>pickContact</code> pick correct contact on Android 4.3 and 4.4.3</li>
+  <li>Remove deprecated symbols for <strong>iOS</strong> &lt; 6</li>
+  <li><strong>Windows Phone 8</strong> now populates contact photos</li>
+  <li>Add <code>pickContact</code> functionality to Cordova contacts plugin</li>
+  <li>Add <code>ContactError</code> codes to <code>index.md</code> doc</li>
+  <li>Docs typo: <code>navigator.contacts.length</code> -&gt; <code>contacts.length</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6127">CB-6127</a> Spanish and French Translations added</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6797">CB-6797</a> Add license</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> Add CONTRIBUTING.md</li>
 </ul>
 
 <p><code>org.apache.cordova.network-information@0.2.10</code></p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6907">CB-6907</a>: <strong>Android</strong> Don&#39;t crash on startup if no networks available</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6907">CB-6907</a>: <strong>Android</strong> Don&#39;t crash on startup if no networks available</li>
 </ul>
 
         </div>

@@ -1548,9 +1548,9 @@
 <h2>Properties</h2>
 
 <ul>
-<li><strong>insertId</strong>: the row ID of the row that the SQLResultSet object&#39;s SQL statement inserted into the database</li>
-<li><strong>rowsAffected</strong>: the number of rows that were changed by the SQL statement.  If the statement did not affect any rows then it is set to 0. </li>
-<li><strong>rows</strong>: a <a href="../sqlresultsetrowlist/sqlresultsetrowlist.html">SQLResultSetRowList</a> representing the rows returned.  If no rows are returned the object will be empty.</li>
+  <li><strong>insertId</strong>: the row ID of the row that the SQLResultSet object&#39;s SQL statement inserted into the database</li>
+  <li><strong>rowsAffected</strong>: the number of rows that were changed by the SQL statement.  If the statement did not affect any rows then it is set to 0.</li>
+  <li><strong>rows</strong>: a <a href="../sqlresultsetrowlist/sqlresultsetrowlist.html">SQLResultSetRowList</a> representing the rows returned.  If no rows are returned the object will be empty.</li>
 </ul>
 
 <h2>Details</h2>
@@ -1560,15 +1560,16 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 6.0 and higher)</li>
-<li>iPhone</li>
-<li>webOS</li>
-<li>Tizen</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 6.0 and higher)</li>
+  <li>iPhone</li>
+  <li>webOS</li>
+  <li>Tizen</li>
 </ul>
 
 <h2>Execute SQL Quick <a href="../storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function queryDB(tx) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function queryDB(tx) {
     tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
 }
 
@@ -1589,76 +1590,79 @@ function errorCB(err) {
 
 var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
 db.transaction(queryDB, errorCB);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Storage Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-x.x.x.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Storage Example&lt;/title&gt;
 
-    <span class="c1">// Wait for Cordova to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Populate the database </span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">populateDB</span><span class="p">(</span><span class="nx">tx</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">tx</span><span class="p">.</span><span class="nx">executeSql</span><span class="p">(</span><span class="s1">'DROP TABLE IF EXISTS DEMO'</span><span class="p">);</span>
-        <span class="nx">tx</span><span class="p">.</span><span class="nx">executeSql</span><span class="p">(</span><span class="s1">'CREATE TABLE IF NOT EXISTS DEMO (id unique, data)'</span><span class="p">);</span>
-        <span class="nx">tx</span><span class="p">.</span><span class="nx">executeSql</span><span class="p">(</span><span class="s1">'INSERT INTO DEMO (id, data) VALUES (1, "First row")'</span><span class="p">);</span>
-        <span class="nx">tx</span><span class="p">.</span><span class="nx">executeSql</span><span class="p">(</span><span class="s1">'INSERT INTO DEMO (id, data) VALUES (2, "Second row")'</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="c1">// Query the database</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">queryDB</span><span class="p">(</span><span class="nx">tx</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">tx</span><span class="p">.</span><span class="nx">executeSql</span><span class="p">(</span><span class="s1">'SELECT * FROM DEMO'</span><span class="p">,</span> <span class="p">[],</span> <span class="nx">querySuccess</span><span class="p">,</span> <span class="nx">errorCB</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Populate the database 
+    //
+    function populateDB(tx) {
+        tx.executeSql('DROP TABLE IF EXISTS DEMO');
+        tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+    }
 
-    <span class="c1">// Query the success callback</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">querySuccess</span><span class="p">(</span><span class="nx">tx</span><span class="p">,</span> <span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Returned rows = "</span> <span class="o">+</span> <span class="nx">results</span><span class="p">.</span><span class="nx">rows</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
-        <span class="c1">// this will be true since it was a select statement and so rowsAffected was 0</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">results</span><span class="p">.</span><span class="nx">rowsAffected</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'No rows affected!'</span><span class="p">);</span>
-            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="c1">// for an insert statement, this property will return the ID of the last inserted row</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Last inserted row ID = "</span> <span class="o">+</span> <span class="nx">results</span><span class="p">.</span><span class="nx">insertId</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Query the database
+    //
+    function queryDB(tx) {
+        tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+    }
 
-    <span class="c1">// Transaction error callback</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">errorCB</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Error processing SQL: "</span><span class="o">+</span><span class="nx">err</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Query the success callback
+    //
+    function querySuccess(tx, results) {
+        console.log("Returned rows = " + results.rows.length);
+        // this will be true since it was a select statement and so rowsAffected was 0
+        if (!results.rowsAffected) {
+            console.log('No rows affected!');
+            return false;
+        }
+        // for an insert statement, this property will return the ID of the last inserted row
+        console.log("Last inserted row ID = " + results.insertId);
+    }
 
-    <span class="c1">// Transaction success callback</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">successCB</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">db</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">openDatabase</span><span class="p">(</span><span class="s2">"Database"</span><span class="p">,</span> <span class="s2">"1.0"</span><span class="p">,</span> <span class="s2">"Cordova Demo"</span><span class="p">,</span> <span class="mi">200000</span><span class="p">);</span>
-        <span class="nx">db</span><span class="p">.</span><span class="nx">transaction</span><span class="p">(</span><span class="nx">queryDB</span><span class="p">,</span> <span class="nx">errorCB</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Transaction error callback
+    //
+    function errorCB(err) {
+        console.log("Error processing SQL: "+err.code);
+    }
 
-    <span class="c1">// Cordova is ready</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">db</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">openDatabase</span><span class="p">(</span><span class="s2">"Database"</span><span class="p">,</span> <span class="s2">"1.0"</span><span class="p">,</span> <span class="s2">"Cordova Demo"</span><span class="p">,</span> <span class="mi">200000</span><span class="p">);</span>
-        <span class="nx">db</span><span class="p">.</span><span class="nx">transaction</span><span class="p">(</span><span class="nx">populateDB</span><span class="p">,</span> <span class="nx">errorCB</span><span class="p">,</span> <span class="nx">successCB</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Transaction success callback
+    //
+    function successCB() {
+        var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+        db.transaction(queryDB, errorCB);
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Database<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+        db.transaction(populateDB, errorCB, successCB);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Database&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 
             </div>
         </div>

@@ -1548,8 +1548,8 @@
 <h2>Properties</h2>
 
 <ul>
-<li><strong>name:</strong> The name of the file system. <em>(DOMString)</em></li>
-<li><strong>root:</strong> The root directory of the file system. <em>(DirectoryEntry)</em></li>
+  <li><strong>name:</strong> The name of the file system. <em>(DOMString)</em></li>
+  <li><strong>root:</strong> The root directory of the file system. <em>(DirectoryEntry)</em></li>
 </ul>
 
 <h2>Details</h2>
@@ -1559,58 +1559,62 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows 8</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2><a href="../fileobj/fileobj.html">File</a> System Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function onSuccess(fileSystem) {
-    console.log(fileSystem.name);
-    console.log(fileSystem.root.name);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess(fileSystem) {
+	console.log(fileSystem.name);
+	console.log(fileSystem.root.name);
 }
 
 // request the persistent file system
 window.requestFileSystem([LocalFileSystem](../localfilesystem/localfilesystem.html).PERSISTENT, 0, onSuccess, null);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>File System Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-x.x.x.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;File System Example&lt;/title&gt;
 
-    <span class="c1">// Wait for Cordova to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Cordova is ready</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">([</span><span class="nx">LocalFileSystem</span><span class="p">](..</span><span class="o">/</span><span class="nx">localfilesystem</span><span class="o">/</span><span class="nx">localfilesystem</span><span class="p">.</span><span class="nx">html</span><span class="p">).</span><span class="nx">PERSISTENT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">onFileSystemSuccess</span><span class="p">,</span> <span class="nx">fail</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="kd">function</span> <span class="nx">onFileSystemSuccess</span><span class="p">(</span><span class="nx">fileSystem</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fileSystem</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fileSystem</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+		window.requestFileSystem([LocalFileSystem](../localfilesystem/localfilesystem.html).PERSISTENT, 0, onFileSystemSuccess, fail);
+    }
 
-    <span class="kd">function</span> <span class="nx">fail</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">evt</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
-    <span class="p">}</span>
+	function onFileSystemSuccess(fileSystem) {
+		console.log(fileSystem.name);
+		console.log(fileSystem.root.name);
+	}
+	
+	function fail(evt) {
+		console.log(evt.target.error.code);
+	}
+	
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;File System&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;p&gt;</span>File System<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
 
             </div>
         </div>

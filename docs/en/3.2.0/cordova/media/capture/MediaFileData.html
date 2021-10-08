@@ -1640,17 +1640,27 @@
                 <h1>MediaFileData</h1>
 
 <blockquote>
-<p>Encapsulates format information about a media file.</p>
+  <p>Encapsulates format information about a media file.</p>
 </blockquote>
 
 <h2>Properties</h2>
 
 <ul>
-<li><p><strong>codecs</strong>: The actual format of the audio and video content. (DOMString)</p></li>
-<li><p><strong>bitrate</strong>: The average bitrate of the content.  The value is zero for images. (Number)</p></li>
-<li><p><strong>height</strong>: The height of the image or video in pixels. The value is zero for audio clips. (Number)</p></li>
-<li><p><strong>width</strong>: The width of the image or video in pixels. The value is zero for audio clips. (Number)</p></li>
-<li><p><strong>duration</strong>: The length of the video or sound clip in seconds. The value is zero for images. (Number)</p></li>
+  <li>
+    <p><strong>codecs</strong>: The actual format of the audio and video content. (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>bitrate</strong>: The average bitrate of the content.  The value is zero for images. (Number)</p>
+  </li>
+  <li>
+    <p><strong>height</strong>: The height of the image or video in pixels. The value is zero for audio clips. (Number)</p>
+  </li>
+  <li>
+    <p><strong>width</strong>: The width of the image or video in pixels. The value is zero for audio clips. (Number)</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: The length of the video or sound clip in seconds. The value is zero for images. (Number)</p>
+  </li>
 </ul>
 
 <h2>BlackBerry WebWorks Quirks</h2>
@@ -1660,11 +1670,21 @@
 the following default values:</p>
 
 <ul>
-<li><p><strong>codecs</strong>: Not supported, and returns <code>null</code>.</p></li>
-<li><p><strong>bitrate</strong>: Not supported, and returns zero.</p></li>
-<li><p><strong>height</strong>: Not supported, and returns zero.</p></li>
-<li><p><strong>width</strong>: Not supported, and returns zero.</p></li>
-<li><p><strong>duration</strong>: Not supported, and returns zero.</p></li>
+  <li>
+    <p><strong>codecs</strong>: Not supported, and returns <code>null</code>.</p>
+  </li>
+  <li>
+    <p><strong>bitrate</strong>: Not supported, and returns zero.</p>
+  </li>
+  <li>
+    <p><strong>height</strong>: Not supported, and returns zero.</p>
+  </li>
+  <li>
+    <p><strong>width</strong>: Not supported, and returns zero.</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: Not supported, and returns zero.</p>
+  </li>
 </ul>
 
 <h2>Amazon Fire OS Quirks</h2>
@@ -1672,11 +1692,21 @@ the following default values:</p>
 <p>Supports the following <code>MediaFileData</code> properties:</p>
 
 <ul>
-<li><p><strong>codecs</strong>: Not supported, and returns <code>null</code>.</p></li>
-<li><p><strong>bitrate</strong>: Not supported, and returns zero.</p></li>
-<li><p><strong>height</strong>: Supported: image and video files only.</p></li>
-<li><p><strong>width</strong>: Supported: image and video files only.</p></li>
-<li><p><strong>duration</strong>: Supported: audio and video files only</p></li>
+  <li>
+    <p><strong>codecs</strong>: Not supported, and returns <code>null</code>.</p>
+  </li>
+  <li>
+    <p><strong>bitrate</strong>: Not supported, and returns zero.</p>
+  </li>
+  <li>
+    <p><strong>height</strong>: Supported: image and video files only.</p>
+  </li>
+  <li>
+    <p><strong>width</strong>: Supported: image and video files only.</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: Supported: audio and video files only</p>
+  </li>
 </ul>
 
 <h2>Android Quirks</h2>
@@ -1684,11 +1714,21 @@ the following default values:</p>
 <p>Supports the following <code>MediaFileData</code> properties:</p>
 
 <ul>
-<li><p><strong>codecs</strong>: Not supported, and returns <code>null</code>.</p></li>
-<li><p><strong>bitrate</strong>: Not supported, and returns zero.</p></li>
-<li><p><strong>height</strong>: Supported: image and video files only.</p></li>
-<li><p><strong>width</strong>: Supported: image and video files only.</p></li>
-<li><p><strong>duration</strong>: Supported: audio and video files only.</p></li>
+  <li>
+    <p><strong>codecs</strong>: Not supported, and returns <code>null</code>.</p>
+  </li>
+  <li>
+    <p><strong>bitrate</strong>: Not supported, and returns zero.</p>
+  </li>
+  <li>
+    <p><strong>height</strong>: Supported: image and video files only.</p>
+  </li>
+  <li>
+    <p><strong>width</strong>: Supported: image and video files only.</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: Supported: audio and video files only.</p>
+  </li>
 </ul>
 
 <h2>iOS Quirks</h2>
@@ -1696,11 +1736,21 @@ the following default values:</p>
 <p>Supports the following <code>MediaFileData</code> properties:</p>
 
 <ul>
-<li><p><strong>codecs</strong>: Not supported, and returns <code>null</code>.</p></li>
-<li><p><strong>bitrate</strong>: Supported on iOS4 devices for audio only. Returns zero for images and videos.</p></li>
-<li><p><strong>height</strong>: Supported: image and video files only.</p></li>
-<li><p><strong>width</strong>: Supported: image and video files only.</p></li>
-<li><p><strong>duration</strong>: Supported: audio and video files only.</p></li>
+  <li>
+    <p><strong>codecs</strong>: Not supported, and returns <code>null</code>.</p>
+  </li>
+  <li>
+    <p><strong>bitrate</strong>: Supported on iOS4 devices for audio only. Returns zero for images and videos.</p>
+  </li>
+  <li>
+    <p><strong>height</strong>: Supported: image and video files only.</p>
+  </li>
+  <li>
+    <p><strong>width</strong>: Supported: image and video files only.</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: Supported: audio and video files only.</p>
+  </li>
 </ul>
 
 

@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The following plugins were updated today:cordova-plugin-battery-status@1.2.5cordova-plugin-camera@3.0.0cordova-plugin-contacts@3.0.0cordova-plugin-device@1.1...">
+    <meta name="description" content="The following plugins were updated today:  cordova-plugin-battery-status@1.2.5  cordova-plugin-camera@3.0.0  cordova-plugin-contacts@3.0.0  cordova-plugin-de...">
 
     <title>
         
@@ -134,26 +134,26 @@
             <p>The following plugins were updated today:</p>
 
 <ul>
-<li>cordova-plugin-battery-status@1.2.5</li>
-<li>cordova-plugin-camera@3.0.0</li>
-<li>cordova-plugin-contacts@3.0.0</li>
-<li>cordova-plugin-device@1.1.7</li>
-<li>cordova-plugin-dialogs@1.3.4</li>
-<li>cordova-plugin-file-transfer@1.7.0</li>
-<li>cordova-plugin-file@5.0.0</li>
-<li>cordova-plugin-geolocation@3.0.0</li>
-<li>cordova-plugin-globalization@1.0.8</li>
-<li>cordova-plugin-inappbrowser@1.7.2</li>
-<li>cordova-plugin-media@4.0.0</li>
-<li>cordova-plugin-media-capture@2.0.0</li>
-<li>cordova-plugin-network-information@1.3.4</li>
-<li>cordova-plugin-splashscreen@4.1.0</li>
-<li>cordova-plugin-statusbar@2.3.0</li>
-<li>cordova-plugin-screen-orientation@2.0.2</li>
-<li>cordova-plugin-vibration@2.1.6</li>
-<li>cordova-plugin-whitelist@1.3.3</li>
-<li>cordova-plugin-wkwebview-engine@1.1.4</li>
-<li>cordova-plugin-test-framework@1.1.6</li>
+  <li>cordova-plugin-battery-status@1.2.5</li>
+  <li>cordova-plugin-camera@3.0.0</li>
+  <li>cordova-plugin-contacts@3.0.0</li>
+  <li>cordova-plugin-device@1.1.7</li>
+  <li>cordova-plugin-dialogs@1.3.4</li>
+  <li>cordova-plugin-file-transfer@1.7.0</li>
+  <li>cordova-plugin-file@5.0.0</li>
+  <li>cordova-plugin-geolocation@3.0.0</li>
+  <li>cordova-plugin-globalization@1.0.8</li>
+  <li>cordova-plugin-inappbrowser@1.7.2</li>
+  <li>cordova-plugin-media@4.0.0</li>
+  <li>cordova-plugin-media-capture@2.0.0</li>
+  <li>cordova-plugin-network-information@1.3.4</li>
+  <li>cordova-plugin-splashscreen@4.1.0</li>
+  <li>cordova-plugin-statusbar@2.3.0</li>
+  <li>cordova-plugin-screen-orientation@2.0.2</li>
+  <li>cordova-plugin-vibration@2.1.6</li>
+  <li>cordova-plugin-whitelist@1.3.3</li>
+  <li>cordova-plugin-wkwebview-engine@1.1.4</li>
+  <li>cordova-plugin-test-framework@1.1.6</li>
 </ul>
 
 <p>In our <a href="https://cordova.apache.org/news/2017/09/22/plugins-release.html">last plugins release</a>, we deprecated <code>cordova-plugin-compat</code> since it got integrated into <code>cordova-android@6.3.0</code>. So for this release cycle, we have removed the dependency from plugins that were relying on it and gave the plugins a major version jump. The follow plugins have dropped <code>cordova-plugin-compat</code>: <code>cordova-plugin-camera</code>, <code>cordova-plugin-contacts</code>, <code>cordova-plugin-file</code>, <code>cordova-plugin-geolocation</code>, <code>cordova-plugin-media</code>, and <code>cordova-plugin-media-capture</code>.</p>
@@ -164,249 +164,229 @@
 
 <p>Lastly, <code>cordova-plugin-file-transfer</code> has officially been deprecated. We recommend using the built in <code>XHR</code> apis instead. Read about transitioning off <code>cordova-plugin-file-transfer</code> at https://cordova.apache.org/blog/2017/10/18/from-filetransfer-to-xhr2.html.</p>
 
-<hr>
-
+<hr />
 <p>You can update any plugin by removing it, and then re-adding it.</p>
 
 <p>E.g. To update your camera plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm cordova-plugin-camera --save
-cordova plugin add cordova-plugin-camera@latest --save
-</code></pre></div>
-<p>Changes include:</p>
 
-<!--more-->
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm cordova-plugin-camera --save
+cordova plugin add cordova-plugin-camera@latest --save
+</code></pre></div></div>
+
+<p>Changes include:
+<!--more--></p>
 
 <p>cordova-plugin-battery-status@1.2.5</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) Added <strong>Browser</strong> platform to Travis</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12991">CB-12991</a> (CI) Updated CI badges</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) Added <strong>Browser</strong> platform to Travis</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12991">CB-12991</a> (CI) Updated CI badges</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-camera@3.0.0</p>
-
 <ul>
-<li>Added <code>cordova-OSX</code> support</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13515">CB-13515</a> (all): Add &#39;protective&#39; entry to <code>cordovaDependencies</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13332">CB-13332</a> (iOS): document <code>NSPhotoLibraryAddUsageDescription</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13264">CB-13264</a> (iOS): Remove <strong>iOS</strong> usage descriptions</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13473">CB-13473</a> (CI) Removed <strong>Browser</strong> builds from AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13446">CB-13446</a> Sync template with previous doc changes</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13294">CB-13294</a> Removed <code>cordova-plugin-compat</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12985">CB-12985</a> setup <code>eslint</code> and removed <code>jshint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13002">CB-13002</a> (Android, <strong>iOS</strong>) Fix occasional Appium tests failures</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12991">CB-12991</a> (CI) Updated CI badges</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12964">CB-12964</a> (android) Fix of bug when Pictures folder did not exist.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12982">CB-12982</a> (Android, <strong>iOS</strong>) Appium tests: try to create a session harder</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12682">CB-12682</a> (ios, <strong>Android</strong>): changes cancel error message to be consistent for <strong>iOS</strong> <strong>Android</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12764">CB-12764</a> (android) Adapt Appium tests for <strong>Android</strong> 7</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li>Added <code>cordova-OSX</code> support</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13515">CB-13515</a> (all): Add &#39;protective&#39; entry to <code>cordovaDependencies</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13332">CB-13332</a> (iOS): document <code>NSPhotoLibraryAddUsageDescription</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13264">CB-13264</a> (iOS): Remove <strong>iOS</strong> usage descriptions</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13473">CB-13473</a> (CI) Removed <strong>Browser</strong> builds from AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13446">CB-13446</a> Sync template with previous doc changes</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13294">CB-13294</a> Removed <code>cordova-plugin-compat</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12985">CB-12985</a> setup <code>eslint</code> and removed <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13002">CB-13002</a> (Android, <strong>iOS</strong>) Fix occasional Appium tests failures</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12991">CB-12991</a> (CI) Updated CI badges</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12964">CB-12964</a> (android) Fix of bug when Pictures folder did not exist.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12982">CB-12982</a> (Android, <strong>iOS</strong>) Appium tests: try to create a session harder</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12682">CB-12682</a> (ios, <strong>Android</strong>): changes cancel error message to be consistent for <strong>iOS</strong> <strong>Android</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12764">CB-12764</a> (android) Adapt Appium tests for <strong>Android</strong> 7</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-contacts@3.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13522">CB-13522</a> (iOS): Remove usage description</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13521">CB-13521</a> (all): Add &#39;protective&#39; entry to <code>cordovaDependencies</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13294">CB-13294</a> Remove <code>cordova-plugin-compat</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12991">CB-12991</a> (CI) Updated CI badges</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13522">CB-13522</a> (iOS): Remove usage description</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13521">CB-13521</a> (all): Add &#39;protective&#39; entry to <code>cordovaDependencies</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13294">CB-13294</a> Remove <code>cordova-plugin-compat</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12991">CB-12991</a> (CI) Updated CI badges</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-device@1.1.7</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> setup <code>eslint</code> and removed <code>jshint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13113">CB-13113</a> (browser) <code>device.isVirtual</code> is always false</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> setup <code>eslint</code> and removed <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13113">CB-13113</a> (browser) <code>device.isVirtual</code> is always false</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-dialogs@1.3.4</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13473">CB-13473</a> (CI) Removed <strong>Browser</strong> builds from AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> setup <code>eslint</code> and removed <code>jshint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4615">CB-4615</a> document <strong>Android</strong> quirk around maximum number of button labels supported for the <code>confirm</code> method.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13473">CB-13473</a> (CI) Removed <strong>Browser</strong> builds from AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> setup <code>eslint</code> and removed <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4615">CB-4615</a> document <strong>Android</strong> quirk around maximum number of button labels supported for the <code>confirm</code> method.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-file-transfer@1.7.0</p>
-
 <ul>
-<li>Updated <code>README</code> with Deprecated Status</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12809">CB-12809</a> Google Play Blocker: Unsafe SSL TrustManager Defined</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7995">CB-7995</a> document that <code>FileTransferError.exception</code> on <strong>iOS</strong> is never defined.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li>Updated <code>README</code> with Deprecated Status</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12809">CB-12809</a> Google Play Blocker: Unsafe SSL TrustManager Defined</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7995">CB-7995</a> document that <code>FileTransferError.exception</code> on <strong>iOS</strong> is never defined.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-file@5.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13481">CB-13481</a> (android) Don&#39;t ask for permission to read <code>file:///android_asset/</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13518">CB-13518</a> Add &#39;protective&#39; entry to <code>cordovaDependencies</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13294">CB-13294</a> Remove <code>cordova-plugin-compat</code></li>
-<li>fixing <code>README</code> in use of <code>window.resolveLocalFileSystemURL</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> setup <code>eslint</code> and took out <code>jshint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12355">CB-12355</a> (iOS) add description about the <code>mimeTypeForFileAtPath</code> method</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12355">CB-12355</a> (iOS) fix <code>FileEntry.file.type</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13481">CB-13481</a> (android) Don&#39;t ask for permission to read <code>file:///android_asset/</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13518">CB-13518</a> Add &#39;protective&#39; entry to <code>cordovaDependencies</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13294">CB-13294</a> Remove <code>cordova-plugin-compat</code></li>
+  <li>fixing <code>README</code> in use of <code>window.resolveLocalFileSystemURL</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> setup <code>eslint</code> and took out <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12355">CB-12355</a> (iOS) add description about the <code>mimeTypeForFileAtPath</code> method</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12355">CB-12355</a> (iOS) fix <code>FileEntry.file.type</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-geolocation@3.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13267">CB-13267</a> (iOS): Remove <strong>iOS</strong> usage descriptions</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13516">CB-13516</a> (all): Add &#39;protective&#39; entry to <code>cordovaDependencies</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13294">CB-13294</a> Remove <code>cordova-plugin-compat</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13267">CB-13267</a> (iOS): Remove <strong>iOS</strong> usage descriptions</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13516">CB-13516</a> (all): Add &#39;protective&#39; entry to <code>cordovaDependencies</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13294">CB-13294</a> Remove <code>cordova-plugin-compat</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-globalization@1.0.8</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13473">CB-13473</a> (CI) Removed <strong>Browser</strong> builds from AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13473">CB-13473</a> (CI) Removed <strong>Browser</strong> builds from AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-inappbrowser@1.7.2</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13473">CB-13473</a> (CI) Removed <strong>Browser</strong> builds from AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13347">CB-13347</a> Enable thirdparty cookies on <code>&gt;=Android 5.0</code> device</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12975">CB-12975</a> (docs) Resort and reword <code>cordova.InAppBrowser.open</code> <code>options</code> lists</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12586">CB-12586</a> (iOS) fix method <code>hide</code> doesn&#39;t work</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13473">CB-13473</a> (CI) Removed <strong>Browser</strong> builds from AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13347">CB-13347</a> Enable thirdparty cookies on <code>&gt;=Android 5.0</code> device</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12975">CB-12975</a> (docs) Resort and reword <code>cordova.InAppBrowser.open</code> <code>options</code> lists</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12586">CB-12586</a> (iOS) fix method <code>hide</code> doesn&#39;t work</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-media@4.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12264">CB-12264</a> (README): fix <code>media.getCurrentAmplitude</code> definition</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13265">CB-13265</a> Remove <strong>iOS</strong> usage description from media plugin</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13517">CB-13517</a>  (all): Add &#39;protective&#39; entry to <code>cordovaDependencies</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13473">CB-13473</a> (CI) Removed <strong>Browser</strong> builds from AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13294">CB-13294</a> Remove <code>cordova-plugin-compat</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12671">CB-12671</a> <strong>iOS</strong>: Fix auto-test with stopping media that is in starting state</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12264">CB-12264</a> (README): fix <code>media.getCurrentAmplitude</code> definition</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13265">CB-13265</a> Remove <strong>iOS</strong> usage description from media plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13517">CB-13517</a>  (all): Add &#39;protective&#39; entry to <code>cordovaDependencies</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13473">CB-13473</a> (CI) Removed <strong>Browser</strong> builds from AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13294">CB-13294</a> Remove <code>cordova-plugin-compat</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12671">CB-12671</a> <strong>iOS</strong>: Fix auto-test with stopping media that is in starting state</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-media-capture@2.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13520">CB-13520</a> (all): Add &#39;protective&#39; entry to <code>cordovaDependencies</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13266">CB-13266</a> (ios): Remove <strong>iOS</strong> usage descriptions</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13473">CB-13473</a> (CI) Removed <strong>Browser</strong> builds from AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13294">CB-13294</a> Remove <code>cordova-plugin-compat</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12882">CB-12882</a> (ios): adds support for permissions checks for <code>captureVideo</code> and <code>captureImage</code> methods</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13520">CB-13520</a> (all): Add &#39;protective&#39; entry to <code>cordovaDependencies</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13266">CB-13266</a> (ios): Remove <strong>iOS</strong> usage descriptions</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13473">CB-13473</a> (CI) Removed <strong>Browser</strong> builds from AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13294">CB-13294</a> Remove <code>cordova-plugin-compat</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12882">CB-12882</a> (ios): adds support for permissions checks for <code>captureVideo</code> and <code>captureImage</code> methods</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-network-information@1.3.4</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12751">CB-12751</a> (ios) Fix connection type when airplane mode is on</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12751">CB-12751</a> (ios) Fix connection type when airplane mode is on</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13299">CB-13299</a> (CI) Fix <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-splashscreen@4.1.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13473">CB-13473</a> (CI) Removed <strong>Browser</strong> builds from AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12011">CB-12011</a> (android) added the possibility to change the spinner color on <strong>Android 5.0</strong>+ apps</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13094">CB-13094</a> (android) Don&#39;t show splash when activity being finished</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11487">CB-11487</a> (browser) Documented <code>AutoHideSplashScreen</code> for <strong>Browser</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11488">CB-11488</a> (browser) The <code>hide()</code> call became non re-entrant after the addition of fade out. This fixes the issue.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11487">CB-11487</a> (browser) The standard <code>AutoHideSplashScreen</code> <code>config.xml</code> property is now supported by the <strong>Browser</strong> platform.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11486">CB-11486</a> (browser) <code>splashScreenDelay</code> now feed through <code>parseInt</code> to ensure it is an integer by the time it&#39;s value is passed in to <code>setTimeout()</code> in <code>hide()</code>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13473">CB-13473</a> (CI) Removed <strong>Browser</strong> builds from AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12011">CB-12011</a> (android) added the possibility to change the spinner color on <strong>Android 5.0</strong>+ apps</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13094">CB-13094</a> (android) Don&#39;t show splash when activity being finished</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11487">CB-11487</a> (browser) Documented <code>AutoHideSplashScreen</code> for <strong>Browser</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11488">CB-11488</a> (browser) The <code>hide()</code> call became non re-entrant after the addition of fade out. This fixes the issue.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11487">CB-11487</a> (browser) The standard <code>AutoHideSplashScreen</code> <code>config.xml</code> property is now supported by the <strong>Browser</strong> platform.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11486">CB-11486</a> (browser) <code>splashScreenDelay</code> now feed through <code>parseInt</code> to ensure it is an integer by the time it&#39;s value is passed in to <code>setTimeout()</code> in <code>hide()</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-statusbar@2.3.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13476">CB-13476</a> (iOS): handle double size statusbar on SDK 10 for <strong>iOS 11</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13394">CB-13394</a> (iOS): fix <code>iPhone X</code> StatusBar rendering in landscape</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11858">CB-11858</a> (android) Add <code>StatusBarStyle</code> feature support for <strong>Android M+</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13311">CB-13311</a> (iOS) Statusbar does not overlay correctly on <code>iPhone X</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12812">CB-12812</a> (browser) Fix statusbar plugin with <strong>Browser</strong> platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13476">CB-13476</a> (iOS): handle double size statusbar on SDK 10 for <strong>iOS 11</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13394">CB-13394</a> (iOS): fix <code>iPhone X</code> StatusBar rendering in landscape</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11858">CB-11858</a> (android) Add <code>StatusBarStyle</code> feature support for <strong>Android M+</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13311">CB-13311</a> (iOS) Statusbar does not overlay correctly on <code>iPhone X</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12812">CB-12812</a> (browser) Fix statusbar plugin with <strong>Browser</strong> platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-screen-orientation@2.0.2</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12994">CB-12994</a> (android, <strong>BlackBerry</strong>) add <code>es6-promise-plugin</code> from <code>npm</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13472">CB-13472</a> (CI) Fixed Travis <strong>Android</strong> builds again</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on Travis and AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12994">CB-12994</a> (android, <strong>BlackBerry</strong>) add <code>es6-promise-plugin</code> from <code>npm</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-vibration@2.1.6</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-whitelist@1.3.3</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-wkwebview-engine@1.1.4</p>
-
 <ul>
-<li>added missing license header</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13519">CB-13519</a> (all): Add &#39;protective&#39; entry to <code>cordovaDependencies</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> fixed <code>bugs</code> entry in <code>package.json</code>.</li>
+  <li>added missing license header</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13519">CB-13519</a> (all): Add &#39;protective&#39; entry to <code>cordovaDependencies</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> added <code>eslint</code> and removed <code>jshint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> fixed <code>bugs</code> entry in <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-test-framework@1.1.6</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> replaced <code>jshint</code> with <code>eslint</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12895">CB-12895</a> replaced <code>jshint</code> with <code>eslint</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
         </div>

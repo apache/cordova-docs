@@ -138,14 +138,18 @@
 <p>It will be available in the next cordova-cli release (Cordova CLI 4.1.0), which is expected in a few days.</p>
 
 <p>To upgrade (once CLI update is released):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update windows
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly (available now):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add windows@3.7.0
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add windows@3.7.0
 cordova platform add wp8@3.7.0
-</code></pre></div>
+</code></pre></div></div>
+
 <p>For non-CLI projects or for pre-3.0 projects, refer to the <a href="http://cordova.apache.org/docs/en/dev/guide_platforms_index.md.html">upgrade guides</a>.</p>
 
 <!--more-->
@@ -153,33 +157,33 @@ cordova platform add wp8@3.7.0
 <h2>What&#39;s new in Windows</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-7731">CB-7731</a> Catch cli missing args error</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7493">CB-7493</a> Adds <code>space-in-path</code> and <code>unicode in name</code> tests for CI</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7656">CB-7656</a> Fixes <code>list-devices</code> and <code>list-emulators</code> commands</li>
-<li>Fixes <code>msbuild</code> failure after <strong>Windows</strong> project creation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7617">CB-7617</a> Add partial match support for <code>--target</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7666">CB-7666</a> Merge <code>node_modules</code> and move to package root</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7666">CB-7666</a> Move stuff outside of <strong>Windows</strong> subdir</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7617">CB-7617</a> Deploy on WP8.1 incorrectly handles <code>--target</code> name</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7601">CB-7601</a> Build fails due to capabilities with m: prefixes are incorrectly sorted</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7520">CB-7520</a> copy MRT images defined in config.xml</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7520">CB-7520</a> <code>.appxbundle</code> package format support</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7520">CB-7520</a> Refine image names, use wildcard to include MRT images</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7494">CB-7494</a> Fixes wrong replacements in <code>*.appxmanifest</code> files</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7452">CB-7452</a> Rewrite <code>ApplyPlatformConfig.ps1</code> using <strong>NodeJS</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7377">CB-7377</a> Removes unnecessary rules tracing which is also incorrectly handled by <strong>PS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7731">CB-7731</a> Catch cli missing args error</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7493">CB-7493</a> Adds <code>space-in-path</code> and <code>unicode in name</code> tests for CI</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7656">CB-7656</a> Fixes <code>list-devices</code> and <code>list-emulators</code> commands</li>
+  <li>Fixes <code>msbuild</code> failure after <strong>Windows</strong> project creation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7617">CB-7617</a> Add partial match support for <code>--target</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7666">CB-7666</a> Merge <code>node_modules</code> and move to package root</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7666">CB-7666</a> Move stuff outside of <strong>Windows</strong> subdir</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7617">CB-7617</a> Deploy on WP8.1 incorrectly handles <code>--target</code> name</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7601">CB-7601</a> Build fails due to capabilities with m: prefixes are incorrectly sorted</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7520">CB-7520</a> copy MRT images defined in config.xml</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7520">CB-7520</a> <code>.appxbundle</code> package format support</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7520">CB-7520</a> Refine image names, use wildcard to include MRT images</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7494">CB-7494</a> Fixes wrong replacements in <code>*.appxmanifest</code> files</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7452">CB-7452</a> Rewrite <code>ApplyPlatformConfig.ps1</code> using <strong>NodeJS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7377">CB-7377</a> Removes unnecessary rules tracing which is also incorrectly handled by <strong>PS</strong></li>
 </ul>
 
 <h2>What&#39;s new in WP8</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-7843">CB-7843</a> Fix angular routing on <strong>WP8</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7616">CB-7616</a> Add partial match support for <code>--target</code></li>
-<li>Let <code>CordovaView</code> respect <code>DisallowOverscroll</code> preference</li>
-<li>Optionally supress inertia scrolling</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7618">CB-7618</a> Fix <strong>WP8</strong> build due to missing <code>node_modules</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7616">CB-7616</a> Deploy on <strong>WP8</strong> fails to run specific target</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7493">CB-7493</a> Adds <code>space-in-path</code> and <code>unicode in name</code> tests for <code>CI</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7843">CB-7843</a> Fix angular routing on <strong>WP8</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7616">CB-7616</a> Add partial match support for <code>--target</code></li>
+  <li>Let <code>CordovaView</code> respect <code>DisallowOverscroll</code> preference</li>
+  <li>Optionally supress inertia scrolling</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7618">CB-7618</a> Fix <strong>WP8</strong> build due to missing <code>node_modules</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7616">CB-7616</a> Deploy on <strong>WP8</strong> fails to run specific target</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7493">CB-7493</a> Adds <code>space-in-path</code> and <code>unicode in name</code> tests for <code>CI</code></li>
 </ul>
 
         </div>

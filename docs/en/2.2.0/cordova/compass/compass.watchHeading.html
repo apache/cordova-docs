@@ -1520,8 +1520,10 @@
                 <h1>compass.watchHeading</h1>
 
 <p>At a regular interval, get the compass heading in degrees.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p>The compass is a sensor that detects the direction or heading that the device is pointed.  It measures the heading in degrees from 0 to 359.99.</p>
@@ -1533,16 +1535,17 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>iPhone</li>
-<li>Windows Phone 7 ( Mango ) if available in hardware</li>
-<li>Bada 1.2 &amp; 2.x</li>
-<li>webOS</li>
-<li>Tizen</li>
+  <li>Android</li>
+  <li>iPhone</li>
+  <li>Windows Phone 7 ( Mango ) if available in hardware</li>
+  <li>Bada 1.2 &amp; 2.x</li>
+  <li>webOS</li>
+  <li>Tizen</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function onSuccess(heading) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess(heading) {
     var element = document.getElementById('heading');
     element.innerHTML = 'Heading: ' + heading.magneticHeading;
 };
@@ -1554,70 +1557,73 @@ function onError(compassError) {
 var options = { frequency: 3000 };  // Update every 3 seconds
 
 var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Compass Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-2.2.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Compass Example&lt;/title&gt;
 
-    <span class="c1">// The watch id references the current `watchHeading`</span>
-    <span class="kd">var</span> <span class="nx">watchID</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Wait for Cordova to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    // The watch id references the current `watchHeading`
+    var watchID = null;
+    
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="c1">// Cordova is ready</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">startWatch</span><span class="p">();</span>
-    <span class="p">}</span>
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        startWatch();
+    }
 
-    <span class="c1">// Start watching the compass</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">startWatch</span><span class="p">()</span> <span class="p">{</span>
+    // Start watching the compass
+    //
+    function startWatch() {
+        
+        // Update compass every 3 seconds
+        var options = { frequency: 3000 };
+        
+        watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+    }
+    
+    // Stop watching the compass
+    //
+    function stopWatch() {
+        if (watchID) {
+            navigator.compass.clearWatch(watchID);
+            watchID = null;
+        }
+    }
+    
+    // onSuccess: Get the current heading
+    //
+    function onSuccess(heading) {
+        var element = document.getElementById('heading');
+        element.innerHTML = 'Heading: ' + heading.magneticHeading;
+    }
 
-        <span class="c1">// Update compass every 3 seconds</span>
-        <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span> <span class="na">frequency</span><span class="p">:</span> <span class="mi">3000</span> <span class="p">};</span>
+    // onError: Failed to get the heading
+    //
+    function onError(compassError) {
+        alert('Compass error: ' + compassError.code);
+    }
 
-        <span class="nx">watchID</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">compass</span><span class="p">.</span><span class="nx">watchHeading</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-    <span class="p">}</span>
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="heading"&gt;Waiting for heading...&lt;/div&gt;
+    &lt;button onclick="startWatch();"&gt;Start Watching&lt;/button&gt;
+    &lt;button onclick="stopWatch();"&gt;Stop Watching&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
 
-    <span class="c1">// Stop watching the compass</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">stopWatch</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">watchID</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nb">navigator</span><span class="p">.</span><span class="nx">compass</span><span class="p">.</span><span class="nx">clearWatch</span><span class="p">(</span><span class="nx">watchID</span><span class="p">);</span>
-            <span class="nx">watchID</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="c1">// onSuccess: Get the current heading</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">heading</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'heading'</span><span class="p">);</span>
-        <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">'Heading: '</span> <span class="o">+</span> <span class="nx">heading</span><span class="p">.</span><span class="nx">magneticHeading</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="c1">// onError: Failed to get the heading</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">compassError</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'Compass error: '</span> <span class="o">+</span> <span class="nx">compassError</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"heading"</span><span class="nt">&gt;</span>Waiting for heading...<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"startWatch();"</span><span class="nt">&gt;</span>Start Watching<span class="nt">&lt;/button&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"stopWatch();"</span><span class="nt">&gt;</span>Stop Watching<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
 <h2>iOS Quirks</h2>
 
 <p>In iOS <code>compass.watchHeading</code> can also get the device&#39;s current heading when it changes by a specified number of degrees. Each time the heading changes by the specified number of degrees or more, the <code>headingSuccess</code> callback function is called. Specify the degrees of change via the <code>filter</code> parameter in the <code>[compassOptions](parameters/compassOptions.html)</code> object.  Clear the watch as normal by passing the returned watch ID to <code>[compass.clearWatch](compass.clearWatch.html)</code>.  This functionality replaces the previously separate, iOS only functions, watchHeadingFilter and clearWatchFilter, which were removed in 1.6.</p>

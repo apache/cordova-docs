@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="New versions of cordova tools are now live!cordova-lib@5.2.0cordova@5.2.0plugman@1.0.0cordova-js@4.1.0Release highlights:CB-9330 Removed Plugman publish, unp...">
+    <meta name="description" content="New versions of cordova tools are now live!  cordova-lib@5.2.0  cordova@5.2.0  plugman@1.0.0  cordova-js@4.1.0Release highlights:  CB-9330 Removed Plugman pu...">
 
     <title>
         
@@ -134,144 +134,163 @@
             <p>New versions of cordova tools are now live!</p>
 
 <ul>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@5.2.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova">cordova@5.2.0</a></li>
-<li><a href="https://www.npmjs.org/package/plugman">plugman@1.0.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@4.1.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@5.2.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova">cordova@5.2.0</a></li>
+  <li><a href="https://www.npmjs.org/package/plugman">plugman@1.0.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@4.1.0</a></li>
 </ul>
 
 <p>Release highlights:</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9330">CB-9330</a> Removed <code>Plugman</code> <code>publish</code>, <code>unpublish</code>, <code>addUser</code> and <code>owner add/rm</code> commands due to <a href="http://plugins.cordova.io/#/">plugins.cordova.io</a> switching to read only. Plugin authors are encouraged to publish to <a href="https://www.npmjs.com/">npm</a> instead. Learn more at <a href="http://plugins.cordova.io/npm/authors.html">http://plugins.cordova.io/npm/authors.html</a>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5578">CB-5578</a> Adds <code>clean</code> command to <code>cordova-cli</code>. This cleans the build artifacts for your project. Run <code>cordova clean -h</code> for more information.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9177">CB-9177</a> Use tilde instead of caret when saving to <code>config.xml</code> via <code>--save</code> flag.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9225">CB-9225</a> Add <strong>Windows</strong> platform support to <code>plugman platform add</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9114">CB-9114</a>: Deprecation Warning for <code>--usegit</code> flag.</li>
-<li>Browserify flag for adding plugins at build time vs run time has all tests passings. Please try it out via <code>--browserify</code>. EX. <code>cordova run android --browserify</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9330">CB-9330</a> Removed <code>Plugman</code> <code>publish</code>, <code>unpublish</code>, <code>addUser</code> and <code>owner add/rm</code> commands due to <a href="http://plugins.cordova.io/#/">plugins.cordova.io</a> switching to read only. Plugin authors are encouraged to publish to <a href="https://www.npmjs.com/">npm</a> instead. Learn more at <a href="http://plugins.cordova.io/npm/authors.html">http://plugins.cordova.io/npm/authors.html</a>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5578">CB-5578</a> Adds <code>clean</code> command to <code>cordova-cli</code>. This cleans the build artifacts for your project. Run <code>cordova clean -h</code> for more information.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9177">CB-9177</a> Use tilde instead of caret when saving to <code>config.xml</code> via <code>--save</code> flag.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9225">CB-9225</a> Add <strong>Windows</strong> platform support to <code>plugman platform add</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9114">CB-9114</a>: Deprecation Warning for <code>--usegit</code> flag.</li>
+  <li>Browserify flag for adding plugins at build time vs run time has all tests passings. Please try it out via <code>--browserify</code>. EX. <code>cordova run android --browserify</code>.</li>
 </ul>
 
 <p>To update your tools:</p>
 
 <ul>
-<li><p>If you have <code>cordova</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
-</code></pre></div></li>
-<li><p>If you have <code>plugman</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g plugman
-</code></pre></div></li>
+  <li>
+    <p>If you have <code>cordova</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you have <code>plugman</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g plugman
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <h2>Platform updates</h2>
-
 <p>When adding these platforms to your project, the following versions are now used by default.
 These platform versions were released recently, and the tools&#39; defaults were updated:</p>
 
 <ul>
-<li><a href="http://cordova.apache.org/announcements/2015/07/21/cordova-android-4.1.0.html">Cordova Android ~4.1.0 (4.1.1)</a></li>
-<li><a href="http://cordova.apache.org/announcements/2015/08/04/cordova-ios-3.9.0.html">Cordova iOS ~3.9.0 (3.9.1)</a></li>
+  <li><a href="http://cordova.apache.org/announcements/2015/07/21/cordova-android-4.1.0.html">Cordova Android ~4.1.0 (4.1.1)</a></li>
+  <li><a href="http://cordova.apache.org/announcements/2015/08/04/cordova-ios-3.9.0.html">Cordova iOS ~3.9.0 (3.9.1)</a></li>
 </ul>
 
 <h2>cordova-lib</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9436">CB-9436</a> Removes <code>require-tr</code> bundle transformation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9278">CB-9278</a>: Restoring multiple platforms fails. This closes #266</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9421">CB-9421</a> Added a test for plugin fetch with searchpath parameter</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9421">CB-9421</a> Fixed searchpath parameter being ignored. This closes #269</li>
-<li>Update xcode dependency to latest stable version. This closes #272</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9420">CB-9420</a> Fixes malformed require calls in browserify bundle. This closes #270</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9405">CB-9405</a> limit author/description to 256 char per WMAppManifest schema</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9414">CB-9414</a> plugin fetching now defaults to npm, CPR fallback</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9384">CB-9384</a> Added tests that test plugin fetch from github branch|tag|sha</li>
-<li>added comment outlining the types of things git_ref can be : commit SHA | branch | tag</li>
-<li>actually checkout git_ref because it may be a branch OR a commit SHA</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9332">CB-9332</a> Upgrade npm and semver to actual versions</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9330">CB-9330</a> updated wording for warning messages for removal of publish/unpublish commands</li>
-<li>Adds stubs for <code>publish</code>/<code>unpublish</code> commands. This closes #254</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9330">CB-9330</a> Removes &#39;plugman publish&#39; related functionality</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9335">CB-9335</a>: Windows quality-of-life improvements.  To align with the change in Cordova-Windows which removes the Windows 8 project from the solution file used by Windows 8.1 and Windows 10, the same is done in the spec.</li>
-<li>Fix prepare to wait the promise from plugman prepare.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9362">CB-9362</a> Don&#39;t fail if superspawn can&#39;t chmod a file</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9122">CB-9122</a> Added tests for platform/plugin add/rm/update with --save flag. This closes #246</li>
-<li>Fixed ios node-xcode related tests failing on Windows according to version update</li>
-<li>Added webOS parsers for project creation/manipulation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8965">CB-8965</a> Prevent cli from copying cordova.js and cordova-js-src/ multiple times</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9114">CB-9114</a>: Log deprecation message when --usegit flag is used. This closes #234</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9126">CB-9126</a> Fix ios pbxproj&#39; resources paths when adding ios platform on non-OSX environment. </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9221">CB-9221</a> Updates <code>cordova serve</code> command to use cordova-serve module.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9225">CB-9225</a> Add windows platform support to <code>plugman platform add</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9163">CB-9163</a> when engine check isn&#39;t satisfied, skip that plugin install</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9162">CB-9162</a> Adds support for default values for plugin variables.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9188">CB-9188</a> Confusing error after delete plugin folder then prepare.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9145">CB-9145</a> prepare can lose data during config munge</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9177">CB-9177</a> Use tilde instead of caret when save to config.xml.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9147">CB-9147</a> Adding a platform via caret version adds latest rather than the latest matching.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5578">CB-5578</a> Adds <code>clean</code> module to cordova. This closes #241</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9124">CB-9124</a> Makes network-related errors&#39; messages more descriptive.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9067">CB-9067</a> fixed plugman config set registry and adduser</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8993">CB-8993</a> Plugin restore ignores search path. This closes #224</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9108">CB-9108</a> Handle version ranges when add platform with --usegit.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8898">CB-8898</a> Makes error message descriptive when <code>requirements</code> is called outside of cordova project.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8007">CB-8007</a> Two cordova plugins modifying <code>*-Info.plist</code> CFBundleURLTypes</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9065">CB-9065</a> Allow removing plugins by short name.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9001">CB-9001</a> Set WMAppManifest.xml Author, Description and Publisher attributes based on config.xml</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9073">CB-9073</a> Allow to add platform if project path contains <code>&amp;</code> symbol</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9436">CB-9436</a> Removes <code>require-tr</code> bundle transformation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9278">CB-9278</a>: Restoring multiple platforms fails. This closes #266</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9421">CB-9421</a> Added a test for plugin fetch with searchpath parameter</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9421">CB-9421</a> Fixed searchpath parameter being ignored. This closes #269</li>
+  <li>Update xcode dependency to latest stable version. This closes #272</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9420">CB-9420</a> Fixes malformed require calls in browserify bundle. This closes #270</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9405">CB-9405</a> limit author/description to 256 char per WMAppManifest schema</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9414">CB-9414</a> plugin fetching now defaults to npm, CPR fallback</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><a href="https://issues.apache.org/jira/browse/CB-9384">CB-9384</a> Added tests that test plugin fetch from github branch</td>
+          <td>tag</td>
+          <td>sha</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>added comment outlining the types of things git_ref can be : commit SHA</td>
+          <td>branch</td>
+          <td>tag</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>actually checkout git_ref because it may be a branch OR a commit SHA</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9332">CB-9332</a> Upgrade npm and semver to actual versions</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9330">CB-9330</a> updated wording for warning messages for removal of publish/unpublish commands</li>
+  <li>Adds stubs for <code>publish</code>/<code>unpublish</code> commands. This closes #254</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9330">CB-9330</a> Removes &#39;plugman publish&#39; related functionality</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9335">CB-9335</a>: Windows quality-of-life improvements.  To align with the change in Cordova-Windows which removes the Windows 8 project from the solution file used by Windows 8.1 and Windows 10, the same is done in the spec.</li>
+  <li>Fix prepare to wait the promise from plugman prepare.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9362">CB-9362</a> Don&#39;t fail if superspawn can&#39;t chmod a file</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9122">CB-9122</a> Added tests for platform/plugin add/rm/update with --save flag. This closes #246</li>
+  <li>Fixed ios node-xcode related tests failing on Windows according to version update</li>
+  <li>Added webOS parsers for project creation/manipulation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8965">CB-8965</a> Prevent cli from copying cordova.js and cordova-js-src/ multiple times</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9114">CB-9114</a>: Log deprecation message when --usegit flag is used. This closes #234</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9126">CB-9126</a> Fix ios pbxproj&#39; resources paths when adding ios platform on non-OSX environment.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9221">CB-9221</a> Updates <code>cordova serve</code> command to use cordova-serve module.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9225">CB-9225</a> Add windows platform support to <code>plugman platform add</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9163">CB-9163</a> when engine check isn&#39;t satisfied, skip that plugin install</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9162">CB-9162</a> Adds support for default values for plugin variables.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9188">CB-9188</a> Confusing error after delete plugin folder then prepare.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9145">CB-9145</a> prepare can lose data during config munge</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9177">CB-9177</a> Use tilde instead of caret when save to config.xml.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9147">CB-9147</a> Adding a platform via caret version adds latest rather than the latest matching.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5578">CB-5578</a> Adds <code>clean</code> module to cordova. This closes #241</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9124">CB-9124</a> Makes network-related errors&#39; messages more descriptive.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9067">CB-9067</a> fixed plugman config set registry and adduser</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8993">CB-8993</a> Plugin restore ignores search path. This closes #224</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9108">CB-9108</a> Handle version ranges when add platform with --usegit.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8898">CB-8898</a> Makes error message descriptive when <code>requirements</code> is called outside of cordova project.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8007">CB-8007</a> Two cordova plugins modifying <code>*-Info.plist</code> CFBundleURLTypes</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9065">CB-9065</a> Allow removing plugins by short name.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9001">CB-9001</a> Set WMAppManifest.xml Author, Description and Publisher attributes based on config.xml</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9073">CB-9073</a> Allow to add platform if project path contains <code>&amp;</code> symbol</li>
 </ul>
 
 <h2>cordova-cli</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9114">CB-9114</a>: Deprecation Warning for --usegit flag.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9171">CB-9171</a> Support Plugin Variables with =</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5578">CB-5578</a> Adds <code>clean</code> command to cordova-cli.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8993">CB-8993</a> Plugin restore ignores search path. This closes #213</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9121">CB-9121</a> Add support for build configuration to be specified using the CLI</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8898">CB-8898</a> Adds missing section about <code>requirements</code> to general cordova help</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9114">CB-9114</a>: Deprecation Warning for --usegit flag.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9171">CB-9171</a> Support Plugin Variables with =</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5578">CB-5578</a> Adds <code>clean</code> command to cordova-cli.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8993">CB-8993</a> Plugin restore ignores search path. This closes #213</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9121">CB-9121</a> Add support for build configuration to be specified using the CLI</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8898">CB-8898</a> Adds missing section about <code>requirements</code> to general cordova help</li>
 </ul>
 
 <h2>cordova-js</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9429">CB-9429</a> Removes tests from resultant bundle</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9436">CB-9436</a> Removes <code>require-tr</code> bundle transformation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9429">CB-9429</a> Enables jsdom/browser tests for browserify.</li>
-<li>Fix webOS SmartTV/wearable detection</li>
-<li>Add webOS as a platform to build from/for.</li>
-<li>Fixed issues with data transforms when using browserify</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9370">CB-9370</a> Fixes failing tests on Node 0.12 due to stale dependency</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9291">CB-9291</a> Removes the requirement for specific NodeJS version</li>
-<li>Added common &#39;activated&#39; channel</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9156">CB-9156</a> added support for absolute platform paths</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9156">CB-9156</a> platform version grabbing supports custom paths</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9156">CB-9156</a> added ability to pass in custom path via command line for platforms</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8468">CB-8468</a> - Application freezes if breakpoint hits JavaScript callback invoked from native</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9429">CB-9429</a> Removes tests from resultant bundle</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9436">CB-9436</a> Removes <code>require-tr</code> bundle transformation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9429">CB-9429</a> Enables jsdom/browser tests for browserify.</li>
+  <li>Fix webOS SmartTV/wearable detection</li>
+  <li>Add webOS as a platform to build from/for.</li>
+  <li>Fixed issues with data transforms when using browserify</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9370">CB-9370</a> Fixes failing tests on Node 0.12 due to stale dependency</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9291">CB-9291</a> Removes the requirement for specific NodeJS version</li>
+  <li>Added common &#39;activated&#39; channel</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9156">CB-9156</a> added support for absolute platform paths</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9156">CB-9156</a> platform version grabbing supports custom paths</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9156">CB-9156</a> added ability to pass in custom path via command line for platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8468">CB-8468</a> - Application freezes if breakpoint hits JavaScript callback invoked from native</li>
 </ul>
 
 <h2>plugman</h2>
-
 <ul>
-<li>updated help with changes for npm publishing</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9330">CB-9330</a> Removed Plugman <code>publish</code>, <code>unpublish</code>, <code>addUser</code> and <code>owner add/rm</code> commands due to <a href="http://plugins.cordova.io/#/">plugins.cordova.io</a> switching to read only. Plugin authors are encouraged to publish to <a href="https://www.npmjs.com/">npm</a> instead. Learn more at <a href="http://plugins.cordova.io/npm/authors.html">http://plugins.cordova.io/npm/authors.html</a>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9332">CB-9332</a> Removes unnecessary dependencies</li>
+  <li>updated help with changes for npm publishing</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9330">CB-9330</a> Removed Plugman <code>publish</code>, <code>unpublish</code>, <code>addUser</code> and <code>owner add/rm</code> commands due to <a href="http://plugins.cordova.io/#/">plugins.cordova.io</a> switching to read only. Plugin authors are encouraged to publish to <a href="https://www.npmjs.com/">npm</a> instead. Learn more at <a href="http://plugins.cordova.io/npm/authors.html">http://plugins.cordova.io/npm/authors.html</a>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9332">CB-9332</a> Removes unnecessary dependencies</li>
 </ul>
 
 <h2>Pinned Platform Versions for <strong>Cordova CLI 5.1.1</strong></h2>
 
 <ul>
-<li>Cordova Amazon-FireOS: ~3.6.3</li>
-<li>Cordova Android: ~4.1.0 (4.1.1)</li>
-<li>Cordova BlackBerry10: ~3.7.0</li>
-<li>Cordova Browser: ~3.6.0</li>
-<li>Cordova FirefoxOS: ~3.6.3</li>
-<li>Cordova iOS: ~3.9.0 (3.9.1)</li>
-<li>Cordova Ubuntu: ~4.0.0</li>
-<li>Cordova Windows: ~4.0.0</li>
-<li>Cordova WP8: ~3.8.1</li>
+  <li>Cordova Amazon-FireOS: ~3.6.3</li>
+  <li>Cordova Android: ~4.1.0 (4.1.1)</li>
+  <li>Cordova BlackBerry10: ~3.7.0</li>
+  <li>Cordova Browser: ~3.6.0</li>
+  <li>Cordova FirefoxOS: ~3.6.3</li>
+  <li>Cordova iOS: ~3.9.0 (3.9.1)</li>
+  <li>Cordova Ubuntu: ~4.0.0</li>
+  <li>Cordova Windows: ~4.0.0</li>
+  <li>Cordova WP8: ~3.8.1</li>
 </ul>
 
         </div>

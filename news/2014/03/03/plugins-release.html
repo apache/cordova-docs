@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The following plugins were updated today:org.apache.cordova.camera@0.2.8org.apache.cordova.contacts@0.2.9org.apache.cordova.file@1.0.1org.apache.cordova.file...">
+    <meta name="description" content="The following plugins were updated today:  org.apache.cordova.camera@0.2.8  org.apache.cordova.contacts@0.2.9  org.apache.cordova.file@1.0.1  org.apache.cord...">
 
     <title>
         
@@ -134,103 +134,97 @@
             <p>The following plugins were updated today:</p>
 
 <ul>
-<li>org.apache.cordova.camera@0.2.8</li>
-<li>org.apache.cordova.contacts@0.2.9</li>
-<li>org.apache.cordova.file@1.0.1</li>
-<li>org.apache.cordova.file-transfer@0.4.2</li>
-<li>org.apache.cordova.inappbrowser@0.3.2</li>
-<li>org.apache.cordova.media@0.2.9</li>
-<li>org.apache.cordova.media-capture@0.2.8</li>
+  <li>org.apache.cordova.camera@0.2.8</li>
+  <li>org.apache.cordova.contacts@0.2.9</li>
+  <li>org.apache.cordova.file@1.0.1</li>
+  <li>org.apache.cordova.file-transfer@0.4.2</li>
+  <li>org.apache.cordova.inappbrowser@0.3.2</li>
+  <li>org.apache.cordova.media@0.2.9</li>
+  <li>org.apache.cordova.media-capture@0.2.8</li>
 </ul>
 
 <p>Notable changes include:</p>
-
 <ul>
-<li>Several bugfixes to the recently overhauled <code>file</code> plugin</li>
-<li>Fixed the default value of <code>file-transfer</code> trustAllHosts on iOS (was true, is now false)</li>
-<li>Prevent malicious code within an <code>inappbrowser</code> on iOS being able to run code within the host UIWebView</li>
+  <li>Several bugfixes to the recently overhauled <code>file</code> plugin</li>
+  <li>Fixed the default value of <code>file-transfer</code> trustAllHosts on iOS (was true, is now false)</li>
+  <li>Prevent malicious code within an <code>inappbrowser</code> on iOS being able to run code within the host UIWebView</li>
 </ul>
 
 <p>The plugins have been updated on our registry at <a href="http://plugins.cordova.io/">plugins.cordova.io</a>.</p>
 
 <p>E.g. To update your file plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm org.apache.cordova.file
-cordova plugin add org.apache.cordova.file
-</code></pre></div>
-<p>Other changes include:</p>
 
-<!--more-->
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm org.apache.cordova.file
+cordova plugin add org.apache.cordova.file
+</code></pre></div></div>
+
+<p>Other changes include:
+<!--more--></p>
 
 <p><code>org.apache.cordova.camera@0.2.8</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-1826">CB-1826</a> Catch OOM on gallery image resize</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-1826">CB-1826</a> Catch OOM on gallery image resize</li>
 </ul>
 
 <p><code>org.apache.cordova.contacts@0.2.9</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6086">CB-6086</a> Fix typo in FxOS part of plugin.xml: Camera -&gt; Contacts</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5994">CB-5994</a> Switch Contact ID lookup to use Raw contact id.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6086">CB-6086</a> Fix typo in FxOS part of plugin.xml: Camera -&gt; Contacts</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5994">CB-5994</a> Switch Contact ID lookup to use Raw contact id.</li>
 </ul>
 
 <p><code>org.apache.cordova.file@1.0.1</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6116">CB-6116</a> Fix error where resolveLocalFileSystemURL would fail</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6106">CB-6106</a> Add support for nativeURL attribute on Entry objects</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6110">CB-6110</a> iOS: Fix typo in filesystemPathForURL: method</li>
-<li>Android: Use most specific FS match when resolving file: URIs</li>
-<li>iOS: Update fileSystemURLforLocalPath: to return the most match url.</li>
-<li>Allow third-party plugin registration, and the total count of fs type is not limited to just 4.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6097">CB-6097</a> Added missing files for amazon-fireos platform. Added onLoad flag to true.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6087">CB-6087</a> Android, iOS: Load file plugin on startup</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6013">CB-6013</a> BlackBerry10: wrap webkit prefixed called in requestAnimationFrame</li>
-<li>Update plugin writers&#39; documentation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6080">CB-6080</a> Fix file copy when src and dst are on different local file systems</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6057">CB-6057</a> Add methods for plugins to convert between URLs and paths</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6050">CB-6050</a> Public method for returning a FileEntry from a device file path</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-2432">CB-2432</a> <a href="https://issues.apache.org/jira/browse/CB-3185">CB-3185</a>, <a href="https://issues.apache.org/jira/browse/CB-5975">CB-5975</a>: Fix Android handling of content:// URLs</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6022">CB-6022</a> Add upgrade notes to doc</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5233">CB-5233</a> Make asset-library urls work properly on iOS</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6012">CB-6012</a> Preserve query strings on cdvfile:// URLs where necessary</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6010">CB-6010</a> Test properly for presence of URLforFilesystemPath method</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5959">CB-5959</a> Entry.getMetadata should return size attribute</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6116">CB-6116</a> Fix error where resolveLocalFileSystemURL would fail</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6106">CB-6106</a> Add support for nativeURL attribute on Entry objects</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6110">CB-6110</a> iOS: Fix typo in filesystemPathForURL: method</li>
+  <li>Android: Use most specific FS match when resolving file: URIs</li>
+  <li>iOS: Update fileSystemURLforLocalPath: to return the most match url.</li>
+  <li>Allow third-party plugin registration, and the total count of fs type is not limited to just 4.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6097">CB-6097</a> Added missing files for amazon-fireos platform. Added onLoad flag to true.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6087">CB-6087</a> Android, iOS: Load file plugin on startup</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6013">CB-6013</a> BlackBerry10: wrap webkit prefixed called in requestAnimationFrame</li>
+  <li>Update plugin writers&#39; documentation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6080">CB-6080</a> Fix file copy when src and dst are on different local file systems</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6057">CB-6057</a> Add methods for plugins to convert between URLs and paths</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6050">CB-6050</a> Public method for returning a FileEntry from a device file path</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-2432">CB-2432</a> <a href="https://issues.apache.org/jira/browse/CB-3185">CB-3185</a>, <a href="https://issues.apache.org/jira/browse/CB-5975">CB-5975</a>: Fix Android handling of content:// URLs</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6022">CB-6022</a> Add upgrade notes to doc</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5233">CB-5233</a> Make asset-library urls work properly on iOS</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6012">CB-6012</a> Preserve query strings on cdvfile:// URLs where necessary</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6010">CB-6010</a> Test properly for presence of URLforFilesystemPath method</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5959">CB-5959</a> Entry.getMetadata should return size attribute</li>
 </ul>
 
 <p><code>org.apache.cordova.file-transfer@0.4.2</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6106">CB-6106</a> Ensure that nativeURL is used by file transfer download</li>
-<li>iOS: Fix default value for trustAllHosts on iOS (YES-&gt;NO)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6059">CB-6059</a> iOS: Stop FileTransfer.download doing IO on the UI thread</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5588">CB-5588</a> iOS: Add response headers to upload result</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-2190">CB-2190</a> iOS: Make backgroundTaskId apply to downloads as well. Move backgroundTaskId to the delegate.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6050">CB-6050</a> Android: Use instance method on actual file plugin object to get FileEntry to return on download</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6000">CB-6000</a> Android: Nginx rejects Content-Type without a space before &quot;boundary&quot;.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6022">CB-6022</a> Add backwards-compatibility notes to doc</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6106">CB-6106</a> Ensure that nativeURL is used by file transfer download</li>
+  <li>iOS: Fix default value for trustAllHosts on iOS (YES-&gt;NO)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6059">CB-6059</a> iOS: Stop FileTransfer.download doing IO on the UI thread</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5588">CB-5588</a> iOS: Add response headers to upload result</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-2190">CB-2190</a> iOS: Make backgroundTaskId apply to downloads as well. Move backgroundTaskId to the delegate.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6050">CB-6050</a> Android: Use instance method on actual file plugin object to get FileEntry to return on download</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6000">CB-6000</a> Android: Nginx rejects Content-Type without a space before &quot;boundary&quot;.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6022">CB-6022</a> Add backwards-compatibility notes to doc</li>
 </ul>
 
 <p><code>org.apache.cordova.inappbrowser@0.3.2</code></p>
-
 <ul>
-<li>Validate that callbackId is correctly formed</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6035">CB-6035</a> Move js-module so it is not loaded on unsupported platforms</li>
-<li>Removed some iOS6 Deprecations</li>
+  <li>Validate that callbackId is correctly formed</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6035">CB-6035</a> Move js-module so it is not loaded on unsupported platforms</li>
+  <li>Removed some iOS6 Deprecations</li>
 </ul>
 
 <p><code>org.apache.cordova.media@0.2.9</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6051">CB-6051</a> Update media plugin to work with new cdvfile:// urls</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5748">CB-5748</a> Make sure that Media.onStatus is called when recording is started.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6051">CB-6051</a> Update media plugin to work with new cdvfile:// urls</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5748">CB-5748</a> Make sure that Media.onStatus is called when recording is started.</li>
 </ul>
 
 <p><code>org.apache.cordova.media-capture@0.2.8</code></p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-5202">CB-5202</a> Fix video capture crash on Android 4.3+</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5202">CB-5202</a> Fix video capture crash on Android 4.3+</li>
 </ul>
+
 
         </div>
     </section>

@@ -1569,8 +1569,10 @@
 
 <p>Removes intermediate photos taken by the camera from temporary
 storage.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.camera.cleanup( cameraSuccess, cameraError );
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.camera.cleanup( cameraSuccess, cameraError );
+</code></pre></div></div>
+
 <h2>Description</h2>
 
 <p>Removes intermediate image files that are kept in temporary storage
@@ -1581,11 +1583,12 @@ after calling <code>[camera.getPicture](camera.getPicture.html)</code>. Applies 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>iOS</li>
+  <li>iOS</li>
 </ul>
 
 <h2>Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.camera.cleanup(onSuccess, onFail);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.camera.cleanup(onSuccess, onFail);
 
 function onSuccess() {
     console.log("Camera cleanup success.")
@@ -1594,7 +1597,8 @@ function onSuccess() {
 function onFail(message) {
     alert('Failed because: ' + message);
 }
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

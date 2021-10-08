@@ -137,31 +137,33 @@ default BlackBerry version after next <code>cordova-cli</code> release.</p>
 <p>This release adds support for adding blackberry10 platform on any workstation OS, adds subdomain whitelisting and includes several bug fixes.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update blackberry10@3.8.0
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add blackberry10@3.8.0 --save
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add blackberry10@3.8.0 --save
+</code></pre></div></div>
+
 <p>For non-CLI projects or for pre-3.0 projects, refer to the <a href="http://cordova.apache.org/docs/en/dev/guide_platforms_index.md.html">upgrade guides</a>.</p>
 
 <!--more-->
-
 <h2>What&#39;s new in the BlackBerry platform</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8306">CB-8306</a> Fix parseUri to handle http://foo/bar?a@b.com&amp;whatever</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7807">CB-7807</a> Add BlackBerry10 platform to a project on any workstation OS</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8417">CB-8417</a> moved platform specific js into platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8417">CB-8417</a> renamed platform_modules into cordova-js-src</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8899">CB-8899</a> stick to grunt-jasmine-node@0.2.1</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9072">CB-9072</a> Fix exception logging in packager.js</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9010">CB-9010</a> Adds check_reqs implementation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8941">CB-8941</a> Adds support for subdomain whitelisting</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6768">CB-6768</a> Handle icons outside of www/.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9009">CB-9009</a> include http://localhost:8472 in Content-Security-Policy header</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6768">CB-6768</a> Default Icon is now copied into platform_www.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8306">CB-8306</a> Fix parseUri to handle http://foo/bar?a@b.com&amp;whatever</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7807">CB-7807</a> Add BlackBerry10 platform to a project on any workstation OS</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8417">CB-8417</a> moved platform specific js into platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8417">CB-8417</a> renamed platform_modules into cordova-js-src</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8899">CB-8899</a> stick to grunt-jasmine-node@0.2.1</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9072">CB-9072</a> Fix exception logging in packager.js</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9010">CB-9010</a> Adds check_reqs implementation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8941">CB-8941</a> Adds support for subdomain whitelisting</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6768">CB-6768</a> Handle icons outside of www/.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9009">CB-9009</a> include http://localhost:8472 in Content-Security-Policy header</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6768">CB-6768</a> Default Icon is now copied into platform_www.</li>
 </ul>
 
         </div>

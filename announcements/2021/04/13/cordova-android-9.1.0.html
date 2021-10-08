@@ -134,13 +134,15 @@
             <p>We are happy to announce that we have just released <code>Cordova Android 9.1.0</code>!  This is one of Cordova&#39;s supported platforms for building Android mobile applications.</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@9.1.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@9.1.0</a></li>
 </ul>
 
 <p><strong>To upgrade:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform remove android
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
 cordova platform add android@9.1.0
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Release Highlights</h2>
 
 <p>In this minor release, there are various refactoring and bug fixes. Additionally, there were a few new features.</p>
@@ -148,93 +150,96 @@ cordova platform add android@9.1.0
 <p>Some of the new feature highlights are:</p>
 
 <ul>
-<li><p><strong>Added Custom Gradle Repositories Support</strong></p>
+  <li>
+    <p><strong>Added Custom Gradle Repositories Support</strong></p>
 
-<p>Sometimes there are third-party libraries that do not exist in the repositories that we have defined. With this feature, developers now have an easier way to override the default repository list that we have defined in the Gradle build scripts.</p>
+    <p>Sometimes there are third-party libraries that do not exist in the repositories that we have defined. With this feature, developers now have an easier way to override the default repository list that we have defined in the Gradle build scripts.</p>
 
-<p>Additionally, as JFrog is sunsetting the JCenter repository, developers can remove it, at their own risk. Since this a minor release, we have not removed JCenter as one of the default repositories as it would be considered a breaking change.</p></li>
-<li><p><strong>Support <code>webp</code> Images for SplashScreen</strong></p>
+    <p>Additionally, as JFrog is sunsetting the JCenter repository, developers can remove it, at their own risk. Since this a minor release, we have not removed JCenter as one of the default repositories as it would be considered a breaking change.</p>
+  </li>
+  <li>
+    <p><strong>Support <code>webp</code> Images for SplashScreen</strong></p>
 
-<p>Previously we only supported <code>png</code> file formats for splash screens as <code>webp</code> support was only introduced starting from API 17. Since <code>cordova-android@9.x</code> minimum SDK version was raised to 22, the introduction of <code>webp</code> support became possible.</p>
+    <p>Previously we only supported <code>png</code> file formats for splash screens as <code>webp</code> support was only introduced starting from API 17. Since <code>cordova-android@9.x</code> minimum SDK version was raised to 22, the introduction of <code>webp</code> support became possible.</p>
 
-<p><code>webp</code> file formats are known to support transparency and provide the same or similar quality as <code>png</code> files, but its greatest benefit is that it can reduce the image file size by around 25%.</p></li>
+    <p><code>webp</code> file formats are known to support transparency and provide the same or similar quality as <code>png</code> files, but its greatest benefit is that it can reduce the image file size by around 25%.</p>
+  </li>
 </ul>
 
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h2>Full Changelog</h2>
 
 <p><strong>Features:</strong></p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-android/pull/1104">GH-1104</a> feat: support <code>gzip</code> encoding requests &amp; use <code>GZIPInputStream</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1167">GH-1167</a> feat: handle <code>intent://</code> scheme links with <code>browser_fallback_url</code> param</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1179">GH-1179</a> feat: add <code>repositories</code> support</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1173">GH-1173</a> feat(android-studio): display app name as project name</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1113">GH-1113</a> feat: <code>webp</code> support for splashscreen</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1125">GH-1125</a> feat(Adb): list <code>devices</code> <em>and</em> <code>emulators</code> in one go</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1104">GH-1104</a> feat: support <code>gzip</code> encoding requests &amp; use <code>GZIPInputStream</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1167">GH-1167</a> feat: handle <code>intent://</code> scheme links with <code>browser_fallback_url</code> param</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1179">GH-1179</a> feat: add <code>repositories</code> support</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1173">GH-1173</a> feat(android-studio): display app name as project name</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1113">GH-1113</a> feat: <code>webp</code> support for splashscreen</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1125">GH-1125</a> feat(Adb): list <code>devices</code> <em>and</em> <code>emulators</code> in one go</li>
 </ul>
 
 <p><strong>Fixes:</strong></p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-android/pull/1186">GH-1186</a> fix: copy <code>repositories.gradle</code> to project on create</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1184">GH-1184</a> fix: unit-test failure</li>
-<li><a href="https://github.com/apache/cordova-android/pull/733">GH-733</a> fix(splashscreen): nav &amp; title bar showing in fullscreen mode</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1157">GH-1157</a> fix: restore key event handlers when DOM element is fullscreen</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1073">GH-1073</a> fix(android): Avoid Crash Report: ConcurrentModificationException</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1148">GH-1148</a> fix: add not null checks to prevent running on destroyed activity</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1091">GH-1091</a> fix: concurrent modification exception (#924)</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1153">GH-1153</a> fix: optional arch parameter</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1136">GH-1136</a> fix(prepare): <code>mapImageResources</code> always returning <code>[]</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1111">GH-1111</a> fix(android): allow file access for existing behavior</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1045">GH-1045</a> fix: Reflect minimum required NodeJS</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1084">GH-1084</a> fix(prepare): fix pattern used to collect image resources</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1014">GH-1014</a> fix(<code>pluginHandlers</code>): properly check if path is inside another</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1018">GH-1018</a> fix: gradle ignore properties</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1185">GH-1185</a> fix(regression): Cannot read version of undefined caused by Java refactor</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1117">GH-1117</a> fix: allow changing min sdk version</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1186">GH-1186</a> fix: copy <code>repositories.gradle</code> to project on create</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1184">GH-1184</a> fix: unit-test failure</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/733">GH-733</a> fix(splashscreen): nav &amp; title bar showing in fullscreen mode</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1157">GH-1157</a> fix: restore key event handlers when DOM element is fullscreen</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1073">GH-1073</a> fix(android): Avoid Crash Report: ConcurrentModificationException</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1148">GH-1148</a> fix: add not null checks to prevent running on destroyed activity</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1091">GH-1091</a> fix: concurrent modification exception (#924)</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1153">GH-1153</a> fix: optional arch parameter</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1136">GH-1136</a> fix(prepare): <code>mapImageResources</code> always returning <code>[]</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1111">GH-1111</a> fix(android): allow file access for existing behavior</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1045">GH-1045</a> fix: Reflect minimum required NodeJS</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1084">GH-1084</a> fix(prepare): fix pattern used to collect image resources</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1014">GH-1014</a> fix(<code>pluginHandlers</code>): properly check if path is inside another</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1018">GH-1018</a> fix: gradle ignore properties</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1185">GH-1185</a> fix(regression): Cannot read version of undefined caused by Java refactor</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1117">GH-1117</a> fix: allow changing min sdk version</li>
 </ul>
 
 <p><strong>Refactors:</strong></p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-android/pull/1101">GH-1101</a> refactor: unify target resolution for devices &amp; emulators</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1130">GH-1130</a> refactor: java checks</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1099">GH-1099</a> refactor(<code>ProjectBuilder</code>): clean up output file collection code</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1123">GH-1123</a> refactor: unify installation on devices &amp; emulators</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1102">GH-1102</a> refactor(<code>check_reqs</code>): cleanup default Java location detection on <strong>Windows</strong></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1103">GH-1103</a> refactor: do not kill adb on UNIX-like systems</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1086">GH-1086</a> refactor(retry): simplify retryPromise using modern JS</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1085">GH-1085</a> refactor(utils): reduce number of utils</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1046">GH-1046</a> refactor: Stop suppressing un-needed TruelyRandom lints</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1016">GH-1016</a> refactor: save <code>ProjectBuilder</code> instance in Api instance</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1108">GH-1108</a> refactor: remove copied Adb.install from <code>emulator.install</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1101">GH-1101</a> refactor: unify target resolution for devices &amp; emulators</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1130">GH-1130</a> refactor: java checks</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1099">GH-1099</a> refactor(<code>ProjectBuilder</code>): clean up output file collection code</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1123">GH-1123</a> refactor: unify installation on devices &amp; emulators</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1102">GH-1102</a> refactor(<code>check_reqs</code>): cleanup default Java location detection on <strong>Windows</strong></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1103">GH-1103</a> refactor: do not kill adb on UNIX-like systems</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1086">GH-1086</a> refactor(retry): simplify retryPromise using modern JS</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1085">GH-1085</a> refactor(utils): reduce number of utils</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1046">GH-1046</a> refactor: Stop suppressing un-needed TruelyRandom lints</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1016">GH-1016</a> refactor: save <code>ProjectBuilder</code> instance in Api instance</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1108">GH-1108</a> refactor: remove copied Adb.install from <code>emulator.install</code></li>
 </ul>
 
 <p><strong>Chores:</strong></p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-android/pull/1196">GH-1196</a> chore: add missing header license</li>
-<li>chore(asf): Update GitHub repo metadata</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1183">GH-1183</a> chore: rebuilt package-lock</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1015">GH-1015</a> chore: remove unnecessary stuff</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1081">GH-1081</a> chore(pkg): remove deprecated <code>no-op</code> field <code>&quot;engineStrict&quot;</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/1019">GH-1019</a> chore: remove unused <code>emulator.create_image</code> and its dependencies</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1196">GH-1196</a> chore: add missing header license</li>
+  <li>chore(asf): Update GitHub repo metadata</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1183">GH-1183</a> chore: rebuilt package-lock</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1015">GH-1015</a> chore: remove unnecessary stuff</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1081">GH-1081</a> chore(pkg): remove deprecated <code>no-op</code> field <code>"engineStrict"</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1019">GH-1019</a> chore: remove unused <code>emulator.create_image</code> and its dependencies</li>
 </ul>
 
 <p><strong>Tests &amp; CI:</strong></p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-android/pull/1017">GH-1017</a> test(java): fix, improve and move clean script</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1012">GH-1012</a> test: fix missing stack traces in jasmine output</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1013">GH-1013</a> test(<code>pluginHandlers/common</code>): better setup &amp; teardown</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1094">GH-1094</a> test: fix unit test failures for certain random orders</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1094">GH-1094</a> test: ensure single top-level describe block in test file</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1129">GH-1129</a> test(java): remove duplicate code in <code>BackButtonMultipageTest</code></li>
-<li><a href="https://github.com/apache/cordova-android/pull/975">GH-975</a> ci: Added Node 14.x</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1017">GH-1017</a> test(java): fix, improve and move clean script</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1012">GH-1012</a> test: fix missing stack traces in jasmine output</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1013">GH-1013</a> test(<code>pluginHandlers/common</code>): better setup &amp; teardown</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1094">GH-1094</a> test: fix unit test failures for certain random orders</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1094">GH-1094</a> test: ensure single top-level describe block in test file</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1129">GH-1129</a> test(java): remove duplicate code in <code>BackButtonMultipageTest</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/975">GH-975</a> ci: Added Node 14.x</li>
 </ul>
 
         </div>

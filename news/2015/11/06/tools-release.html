@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="New versions of cordova tools are now live!cordova-lib@5.4.0cordova@5.4.0plugman@1.0.5cordova-js@4.1.2Release highlights:Fixed issues with using Node 4 &amp;...">
+    <meta name="description" content="New versions of cordova tools are now live!  cordova-lib@5.4.0  cordova@5.4.0  plugman@1.0.5  cordova-js@4.1.2Release highlights:  Fixed issues with using No...">
 
     <title>
         
@@ -134,134 +134,138 @@
             <p>New versions of cordova tools are now live!</p>
 
 <ul>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@5.4.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova">cordova@5.4.0</a></li>
-<li><a href="https://www.npmjs.org/package/plugman">plugman@1.0.5</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@4.1.2</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@5.4.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova">cordova@5.4.0</a></li>
+  <li><a href="https://www.npmjs.org/package/plugman">plugman@1.0.5</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@4.1.2</a></li>
 </ul>
 
 <p>Release highlights:</p>
 
 <ul>
-<li>Fixed issues with using <strong>Node 4 &amp; 5</strong> and <strong>npm 3</strong>. </li>
-<li>Cordova will now auto convert old-style plugin IDs to new style plugin IDs when doing a <code>cordova plugin add</code>. This only happens if the old-style plugin ID exists in the <a href="https://github.com/stevengill/cordova-registry-mapper">registry-mapper</a>, it will be auto converted to the new ID and fetched from <a href="https://www.npmjs.com">npm</a> instead. </li>
-<li>Cordova <code>CLI</code> will now know if a newer version is available and will prompt users to update.</li>
-<li>Some core utility methods from <code>cordova-lib</code> have been moved into a new module named <a href="https://github.com/apache/cordova-lib/tree/master/cordova-commo://github.com/apache/cordova-lib/tree/master/cordova-common"><code>cordova-common</code></a>. <code>cordova-common</code> is shared among <code>cordova-lib</code> and cordova platforms.</li>
+  <li>Fixed issues with using <strong>Node 4 &amp; 5</strong> and <strong>npm 3</strong>.</li>
+  <li>Cordova will now auto convert old-style plugin IDs to new style plugin IDs when doing a <code>cordova plugin add</code>. This only happens if the old-style plugin ID exists in the <a href="https://github.com/stevengill/cordova-registry-mapper">registry-mapper</a>, it will be auto converted to the new ID and fetched from <a href="https://www.npmjs.com">npm</a> instead.</li>
+  <li>Cordova <code>CLI</code> will now know if a newer version is available and will prompt users to update.</li>
+  <li>Some core utility methods from <code>cordova-lib</code> have been moved into a new module named <a href="https://github.com/apache/cordova-lib/tree/master/cordova-commo://github.com/apache/cordova-lib/tree/master/cordova-common"><code>cordova-common</code></a>. <code>cordova-common</code> is shared among <code>cordova-lib</code> and cordova platforms.</li>
 </ul>
 
 <p>To update your tools:</p>
 
 <ul>
-<li><p>If you have <code>cordova</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova@latest
-</code></pre></div></li>
-<li><p>If you have <code>plugman</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g plugman@latest
-</code></pre></div></li>
+  <li>
+    <p>If you have <code>cordova</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova@latest
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you have <code>plugman</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g plugman@latest
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <h2>Platform updates</h2>
-
 <p>When adding these platforms to your project, the following versions are now used by default.
 These platform versions were released recently, and the tools&#39; defaults were updated:</p>
 
 <ul>
-<li><a href="http://cordova.apache.org/announcements/2015/11/02/cordova-ios-3-9-2.html">Cordova iOS ~3.9.0 (3.9.2)</a></li>
+  <li><a href="http://cordova.apache.org/announcements/2015/11/02/cordova-ios-3-9-2.html">Cordova iOS ~3.9.0 (3.9.2)</a></li>
 </ul>
 
 <h2>cordova-lib</h2>
 
 <ul>
-<li>Updated <code>cordova-app-hello-world</code> to <code>3.10.0</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9935">CB-9935</a> Fix Cordova <code>CLI</code> silently failing with <strong>node.js v5</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9834">CB-9834</a> Introduce compat map for hook requires</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9902">CB-9902</a> Fix broken <code>cordova run --list</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9800">CB-9800</a> Fixing contribute link.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9736">CB-9736</a> Extra main activity generated when an android package name is specified</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9675">CB-9675</a> <strong>OSX</strong> App Icons are not properly copied.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9758">CB-9758</a> Mobilespec crashes adding plugins on <strong>OS X</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9782">CB-9782</a> Update <code>create/update</code> signatures for PlatformApi polyfill</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9815">CB-9815</a> Engine <code>name=&quot;cordova&quot;</code> should check tools version, not platforms. </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9824">CB-9824</a> removed plugin download counter code from lib</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9821">CB-9821</a> Fix <code>EventEmitter</code> incorrect trace level usages</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9813">CB-9813</a> Keep module-to-plugin mapping at hand.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9598">CB-9598</a> Fixes broken <code>require</code> for <strong>FFOS</strong> plugin handler</li>
-<li>Update <code>serve</code> to use <code>express</code> implementation of <code>cordova-serve</code>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9712">CB-9712</a> Fix <code>CLI 5.3</code> breaking with <strong>node 3.3.3</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9598">CB-9598</a> Fixes broken require calls that aren&#39;t covered by tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9589">CB-9589</a> auto convert old plugin ids to new npm ids using <a href="https://github.com/stevengill/cordova-registry-mapper">registry-mapper</a></li>
-<li>Pick <code>ConfigParser</code> changes from apache@0c3614e</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9743">CB-9743</a> Removes system frameworks handling from <code>ConfigChanges</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9598">CB-9598</a> Cleans out code which has been moved to <code>cordova-common</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9598">CB-9598</a> Switches LIB to use <code>cordova-common</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9569">CB-9569</a> Support <code>&lt;access&gt;</code> and <code>&lt;allow-navigation&gt;</code> tag translation to Application Transport Security (ATS) <code>Info.plist</code> directives.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8914">CB-8914</a> when project is renamed, remove userdata otherwise project is un-usable in <strong>Xcode</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9665">CB-9665</a> Support <code>.xcassets</code> for icons and splashscreens in the <code>CLI</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9407">CB-9407</a> Fixes incorrect applying of <code>plugin-provided</code> config changes.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8198">CB-8198</a> Unified console output logic for core platforms</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9408">CB-9408</a> Added support for <code>windows-packageVersion</code> on <code>&lt;widget&gt;</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9588">CB-9588</a> Add support for <code>&lt;resource-file&gt;</code> on <strong>Windows</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8615">CB-8615</a> Improves plugman tests for <strong>Windows</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8615">CB-8615</a> <strong>Windows</strong> <code>.winmd</code> files with the same names are not added properly when using framework tag with target attribute</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9297">CB-9297</a> Parse <strong>Xcode</strong> project synchronously to avoid issues with <strong>node v4</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9617">CB-9617</a> Do not restore plugins after plugin removal.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9631">CB-9631</a> Save plugin to <code>config.xml</code> only if installation succeeds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9601">CB-9601</a> Fix <code>&lt;framework&gt;.versions</code> support on <strong>Windows</strong> after <code>semver</code> update</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9617">CB-9617</a> Fixes incorrect project state after adding/removing plugins</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9560">CB-9560</a> Issue using plugin restore for plugins with common dependencies </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8993">CB-8993</a> Plugin restore ignores search path</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9587">CB-9587</a> Check if <code>browser</code> platform added properly before creating parser. </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9604">CB-9604</a> Fix error adding <code>browser</code> platform with PlatformApi polyfill.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9597">CB-9597</a> Initial Implementation of PlatformApiPoly</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9354">CB-9354</a> Fix array merging with complex items</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9556">CB-9556</a> Don&#39;t uninstall dependent plugin if it was installed as a top-level after</li>
+  <li>Updated <code>cordova-app-hello-world</code> to <code>3.10.0</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9935">CB-9935</a> Fix Cordova <code>CLI</code> silently failing with <strong>node.js v5</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9834">CB-9834</a> Introduce compat map for hook requires</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9902">CB-9902</a> Fix broken <code>cordova run --list</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9800">CB-9800</a> Fixing contribute link.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9736">CB-9736</a> Extra main activity generated when an android package name is specified</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9675">CB-9675</a> <strong>OSX</strong> App Icons are not properly copied.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9758">CB-9758</a> Mobilespec crashes adding plugins on <strong>OS X</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9782">CB-9782</a> Update <code>create/update</code> signatures for PlatformApi polyfill</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9815">CB-9815</a> Engine <code>name="cordova"</code> should check tools version, not platforms.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9824">CB-9824</a> removed plugin download counter code from lib</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9821">CB-9821</a> Fix <code>EventEmitter</code> incorrect trace level usages</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9813">CB-9813</a> Keep module-to-plugin mapping at hand.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9598">CB-9598</a> Fixes broken <code>require</code> for <strong>FFOS</strong> plugin handler</li>
+  <li>Update <code>serve</code> to use <code>express</code> implementation of <code>cordova-serve</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9712">CB-9712</a> Fix <code>CLI 5.3</code> breaking with <strong>node 3.3.3</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9598">CB-9598</a> Fixes broken require calls that aren&#39;t covered by tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9589">CB-9589</a> auto convert old plugin ids to new npm ids using <a href="https://github.com/stevengill/cordova-registry-mapper">registry-mapper</a></li>
+  <li>Pick <code>ConfigParser</code> changes from apache@0c3614e</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9743">CB-9743</a> Removes system frameworks handling from <code>ConfigChanges</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9598">CB-9598</a> Cleans out code which has been moved to <code>cordova-common</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9598">CB-9598</a> Switches LIB to use <code>cordova-common</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9569">CB-9569</a> Support <code>&lt;access&gt;</code> and <code>&lt;allow-navigation&gt;</code> tag translation to Application Transport Security (ATS) <code>Info.plist</code> directives.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8914">CB-8914</a> when project is renamed, remove userdata otherwise project is un-usable in <strong>Xcode</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9665">CB-9665</a> Support <code>.xcassets</code> for icons and splashscreens in the <code>CLI</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9407">CB-9407</a> Fixes incorrect applying of <code>plugin-provided</code> config changes.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8198">CB-8198</a> Unified console output logic for core platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9408">CB-9408</a> Added support for <code>windows-packageVersion</code> on <code>&lt;widget&gt;</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9588">CB-9588</a> Add support for <code>&lt;resource-file&gt;</code> on <strong>Windows</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8615">CB-8615</a> Improves plugman tests for <strong>Windows</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8615">CB-8615</a> <strong>Windows</strong> <code>.winmd</code> files with the same names are not added properly when using framework tag with target attribute</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9297">CB-9297</a> Parse <strong>Xcode</strong> project synchronously to avoid issues with <strong>node v4</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9617">CB-9617</a> Do not restore plugins after plugin removal.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9631">CB-9631</a> Save plugin to <code>config.xml</code> only if installation succeeds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9601">CB-9601</a> Fix <code>&lt;framework&gt;.versions</code> support on <strong>Windows</strong> after <code>semver</code> update</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9617">CB-9617</a> Fixes incorrect project state after adding/removing plugins</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9560">CB-9560</a> Issue using plugin restore for plugins with common dependencies</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8993">CB-8993</a> Plugin restore ignores search path</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9587">CB-9587</a> Check if <code>browser</code> platform added properly before creating parser.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9604">CB-9604</a> Fix error adding <code>browser</code> platform with PlatformApi polyfill.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9597">CB-9597</a> Initial Implementation of PlatformApiPoly</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9354">CB-9354</a> Fix array merging with complex items</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9556">CB-9556</a> Don&#39;t uninstall dependent plugin if it was installed as a top-level after</li>
 </ul>
 
 <h2>cordova-cli</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9903">CB-9903</a> update <code>cordova-lib</code> dependency to <code>5.4.0</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9800">CB-9800</a> Fixing contribute link.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9792">CB-9792</a> Make <code>CLI</code> logging system interrupt process on an error` event</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9788">CB-9788</a> Add support of stderr/stdout split to <code>CLI logger</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9784">CB-9784</a> Remove <code>CLI logger</code> levels prefixes</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8198">CB-8198</a> Unified console output logic for core platforms</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9523">CB-9523</a> Show out of date message for older cordova <code>CLI</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9597">CB-9597</a> Updates <code>cli</code> to pass structured args to platform methods</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9903">CB-9903</a> update <code>cordova-lib</code> dependency to <code>5.4.0</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9800">CB-9800</a> Fixing contribute link.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9792">CB-9792</a> Make <code>CLI</code> logging system interrupt process on an error` event</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9788">CB-9788</a> Add support of stderr/stdout split to <code>CLI logger</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9784">CB-9784</a> Remove <code>CLI logger</code> levels prefixes</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8198">CB-8198</a> Unified console output logic for core platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9523">CB-9523</a> Show out of date message for older cordova <code>CLI</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9597">CB-9597</a> Updates <code>cli</code> to pass structured args to platform methods</li>
 </ul>
 
 <h2>cordova-js</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9800">CB-9800</a> Fixing contribute link.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9370">CB-9370</a> Changes <code>jsdom</code> dependency to avoid package installation issues</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9800">CB-9800</a> Fixing contribute link.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9370">CB-9370</a> Changes <code>jsdom</code> dependency to avoid package installation issues</li>
 </ul>
 
 <h2>plugman</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9800">CB-9800</a> Fixing contribute link.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9903">CB-9903</a> Updated <code>cordova-lib</code> dependency to <code>5.4.0</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9800">CB-9800</a> Fixing contribute link.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9903">CB-9903</a> Updated <code>cordova-lib</code> dependency to <code>5.4.0</code></li>
 </ul>
 
 <h2>Pinned Platform Versions for <strong>Cordova CLI 5.4.0</strong></h2>
 
 <ul>
-<li>Cordova Amazon-FireOS: ~3.6.3</li>
-<li>Cordova Android: ~4.1.0 (4.1.1)</li>
-<li>Cordova BlackBerry10: ~3.8.0</li>
-<li>Cordova Browser: ~4.0.0</li>
-<li>Cordova FirefoxOS: ~3.6.3</li>
-<li>Cordova iOS: ~3.9.0 (3.9.2)</li>
-<li>Cordova OSX: ~4.0.0</li>
-<li>Cordova Ubuntu: ~4.0.0</li>
-<li>Cordova Windows: ~4.1.0</li>
-<li>Cordova WebOS: ~3.7.0</li>
-<li>Cordova WP8: ~3.8.1</li>
+  <li>Cordova Amazon-FireOS: ~3.6.3</li>
+  <li>Cordova Android: ~4.1.0 (4.1.1)</li>
+  <li>Cordova BlackBerry10: ~3.8.0</li>
+  <li>Cordova Browser: ~4.0.0</li>
+  <li>Cordova FirefoxOS: ~3.6.3</li>
+  <li>Cordova iOS: ~3.9.0 (3.9.2)</li>
+  <li>Cordova OSX: ~4.0.0</li>
+  <li>Cordova Ubuntu: ~4.0.0</li>
+  <li>Cordova Windows: ~4.1.0</li>
+  <li>Cordova WebOS: ~3.7.0</li>
+  <li>Cordova WP8: ~3.8.1</li>
 </ul>
 
         </div>

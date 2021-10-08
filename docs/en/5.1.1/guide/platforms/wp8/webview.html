@@ -1424,7 +1424,7 @@
                 <h1>Windows Phone 8.0 WebViews</h1>
 
 <p>This guide shows how to embed a Cordova-enabled WebView component
-within a larger Windows Phone 8.0 application. </p>
+within a larger Windows Phone 8.0 application.</p>
 
 <p>To follow these instructions, make sure you have the latest Cordova 
 distribution. Download it from 
@@ -1432,24 +1432,35 @@ distribution. Download it from
 Windows Phone 8.0 package (cordova-wp8-*.zip).</p>
 
 <ol>
-<li><p>Navigate to the package&#39;s <code>wp8/framework</code> directory and build
+  <li>
+    <p>Navigate to the package&#39;s <code>wp8/framework</code> directory and build
 <code>WPCordovaClassLib.sln</code>. 
-It creates the <code>Bin\Debug[Release]\WPCordovaClassLib.dll</code>.</p></li>
-<li><p>Copy the <code>WPCordovaClassLib.dll</code> file into the Windows Phone 8 project&#39;s
-<code>/libs</code> directory and include <code>WPCordovaClassLib.dll</code> to your
-project via <code>Project-&gt;References-&gt;Add Reference</code>.
-Alternatively, you can directly reference the
-<code>wp8/framework/WPCordovaClassLib.csproj</code> file.</p></li>
-<li><p>Add <code>CordovaView</code> component to your page (for example, <code>MainPage.xaml</code>).</p>
-<div class="highlight"><pre><code class="language-" data-lang="">xmlns:my="clr-namespace:WPCordovaClassLib;assembly=WPCordovaClassLib"&gt;
-...
-&lt;my:CordovaView HorizontalAlignment="Stretch" Margin="0,0,0,0" 
-StartPageUri="html/index.html" x:Name="CordovaView" VerticalAlignment="Stretch" /&gt;
-</code></pre></div></li>
-<li><p>Copy <code>common/www/cordova.js</code> along with the application&#39;s HTML 
-and JavaScript files to the Windows Phone 8 project&#39;s <code>html</code> directory
-and include new files to the project.</p></li>
-<li><p>Copy the <code>wp8/template/config.xml</code>to the project&#39;s root directory and </p></li>
+It creates the <code>Bin\Debug[Release]\WPCordovaClassLib.dll</code>.</p>
+  </li>
+  <li>
+    <p>Copy the <code>WPCordovaClassLib.dll</code> file into the Windows Phone 8 project&#39;s
+ <code>/libs</code> directory and include <code>WPCordovaClassLib.dll</code> to your
+ project via <code>Project-&gt;References-&gt;Add Reference</code>.
+ Alternatively, you can directly reference the
+ <code>wp8/framework/WPCordovaClassLib.csproj</code> file.</p>
+  </li>
+  <li>
+    <p>Add <code>CordovaView</code> component to your page (for example, <code>MainPage.xaml</code>).</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> xmlns:my="clr-namespace:WPCordovaClassLib;assembly=WPCordovaClassLib"&gt;
+ ...
+ &lt;my:CordovaView HorizontalAlignment="Stretch" Margin="0,0,0,0" 
+ StartPageUri="html/index.html" x:Name="CordovaView" VerticalAlignment="Stretch" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Copy <code>common/www/cordova.js</code> along with the application&#39;s HTML 
+ and JavaScript files to the Windows Phone 8 project&#39;s <code>html</code> directory
+ and include new files to the project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>wp8/template/config.xml</code>to the project&#39;s root directory and</p>
+  </li>
 </ol>
 
 <p>Instructions above will link core Cordova components only, 

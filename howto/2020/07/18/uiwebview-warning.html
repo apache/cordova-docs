@@ -136,7 +136,7 @@
 <p>We are talking about this warning:</p>
 
 <blockquote>
-<p>ITMS-90809: Deprecated API Usage - Apple will stop accepting submissions of apps that use UIWebView APIs.</p>
+  <p>ITMS-90809: Deprecated API Usage - Apple will stop accepting submissions of apps that use UIWebView APIs.</p>
 </blockquote>
 
 <p>Some things have changed and new versions of cordova-ios have been released since the last post.</p>
@@ -148,9 +148,11 @@
 <p>Please update to the latest <code>cordova-ios</code> version to get the best compatibility with recent iOS changes. As of this writing the current version is 6.1.0. Version 6.0.0 of cordova-ios moved <code>WKWebView</code> support into <code>cordova-ios</code> and removed <code>UIWebView</code> code. Due to this change, the <code>cordova-plugin-wkwebview-engine</code> plugin is obsolete and will not work with this release. If you have this plugin installed, it is safe to remove with <code>cordova plugin remove cordova-plugin-wkwebview-engine</code>.</p>
 
 <p>Additionaly, <code>WKURLSchemeHandler</code> support has been introduced with this release. Serving your app content through a custom scheme fixes CORS issues that exist because of the strict security policies that <code>WKWebView</code> has applied to the <code>file</code> scheme. You can easily configure your Cordova project to use a custom scheme by setting the preference options <code>scheme</code> and <code>hostname</code> in the <code>config.xml</code> file. <strong>Bear in mind that running your app with a custom URL scheme changes the origin of your web code and you will lose access to web storage, such as local storage, indexed DB, etc.</strong></p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"scheme"</span> <span class="na">value=</span><span class="s">"app"</span> <span class="nt">/&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"scheme"</span> <span class="na">value=</span><span class="s">"app"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"hostname"</span> <span class="na">value=</span><span class="s">"localhost"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>It is important to know that with the introduction of <code>WKURLSchemeHandler</code>, iOS 10 support has been dropped.</p>
 
 <h2>Still getting the warning?</h2>

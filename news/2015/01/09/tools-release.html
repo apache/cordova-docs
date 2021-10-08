@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="New versions of cordova tools are now live!cordova-lib@4.2.0cordova@4.2.0plugman@0.22.17cordova-js@3.7.3To update your tools:If you have cordova installed:np...">
+    <meta name="description" content="New versions of cordova tools are now live!  cordova-lib@4.2.0  cordova@4.2.0  plugman@0.22.17  cordova-js@3.7.3To update your tools:      If you have cordov...">
 
     <title>
         
@@ -134,108 +134,112 @@
             <p>New versions of cordova tools are now live!</p>
 
 <ul>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@4.2.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova">cordova@4.2.0</a></li>
-<li><a href="https://www.npmjs.org/package/plugman">plugman@0.22.17</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@3.7.3</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@4.2.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova">cordova@4.2.0</a></li>
+  <li><a href="https://www.npmjs.org/package/plugman">plugman@0.22.17</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@3.7.3</a></li>
 </ul>
 
 <p>To update your tools:</p>
 
 <ul>
-<li><p>If you have <code>cordova</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
-</code></pre></div></li>
-<li><p>If you have <code>plugman</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g plugman
-</code></pre></div></li>
+  <li>
+    <p>If you have <code>cordova</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you have <code>plugman</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g plugman
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <h2>Platform updates</h2>
-
 <p>When adding these platforms to your project, the following versions are now used by default.
 These platform versions were released recently, and the tools&#39; defaults were updated:</p>
 
 <ul>
-<li>Cordova Ubuntu 4.0.0</li>
-<li>Cordova WP8 3.7.1</li>
-<li>Cordova BlackBerry10  3.7.0</li>
+  <li>Cordova Ubuntu 4.0.0</li>
+  <li>Cordova WP8 3.7.1</li>
+  <li>Cordova BlackBerry10  3.7.0</li>
 </ul>
 
 <h2>cordova-lib</h2>
 
 <ul>
-<li><code>ConfigParser</code>: refactor <code>getPreference()</code></li>
-<li>Parsers: add base parser (<code>parser.js</code>) and make platform parsers inherit from it</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8230">CB-8230</a> Make <code>project.properties</code> optional for <strong>Android</strong> sub-libraries</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8215">CB-8215</a> Improve error message when <code>&lt;source-file&gt;</code> is missing <code>target-dir</code> on <strong>Android</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8217">CB-8217</a> Fix <code>plugin add --link</code> when plugin given as relative path</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8216">CB-8216</a> Resolve plugin paths relative to original <code>CWD</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7803">CB-7803</a> Allow adding any platform on any host OS</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8155">CB-8155</a> Do not fail plugin installation from <code>git url</code> with <code>--link</code></li>
-<li>Updates <code>README</code> with description of <code>npm</code> commands for this package</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8129">CB-8129</a> Adds <code>npm run cover</code> command to generate tests coverage report</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8114">CB-8114</a> Specify a <code>cache-min-time</code> for plugins</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8190">CB-8190</a> Make <code>plugman config/cache</code> directory to be customizable via <code>PLUGMAN_HOME</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7610">CB-7610</a> Fix <code>cordova plugin add d:\path</code> (or any other non-<code>c:</code> path)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8158">CB-8158</a> Added <code>hasModule</code> check to browserify code</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8173">CB-8173</a> Point to the latest <strong>Ubuntu</strong> version</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8179">CB-8179</a> Point to the latest <strong>WP8</strong> version</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8158">CB-8158</a> Adding <code>symbolList</code> to <code>cordova.js</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8154">CB-8154</a> Fix errors adding platforms or plugins</li>
-<li><code>browserify</code>: updated require to use <code>symbollist</code></li>
-<li><strong>Amazon</strong> Added a type named <code>gradleReference</code> in framework</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7736">CB-7736</a> Update <code>npm</code> dep to promote <code>qs module</code> to 1.0</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8086">CB-8086</a> Prefixed subprojects with package name</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8067">CB-8067</a> externalized <code>valid-identifier</code> it is its own module</li>
-<li>Added identifier checking for app id, searches for <code>java+C#</code> reserved words</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6472">CB-6472</a> Adding content to <code>-Info.plist</code> - Unexpected behaviour</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8053">CB-8053</a> Including a project reference in a plugin fails on <strong>Windows</strong> platform</li>
-<li>Pass the <code>searchpath</code> when installing plugins</li>
-<li>Add a type named <code>gradleReference</code> in framework</li>
+  <li><code>ConfigParser</code>: refactor <code>getPreference()</code></li>
+  <li>Parsers: add base parser (<code>parser.js</code>) and make platform parsers inherit from it</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8230">CB-8230</a> Make <code>project.properties</code> optional for <strong>Android</strong> sub-libraries</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8215">CB-8215</a> Improve error message when <code>&lt;source-file&gt;</code> is missing <code>target-dir</code> on <strong>Android</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8217">CB-8217</a> Fix <code>plugin add --link</code> when plugin given as relative path</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8216">CB-8216</a> Resolve plugin paths relative to original <code>CWD</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7803">CB-7803</a> Allow adding any platform on any host OS</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8155">CB-8155</a> Do not fail plugin installation from <code>git url</code> with <code>--link</code></li>
+  <li>Updates <code>README</code> with description of <code>npm</code> commands for this package</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8129">CB-8129</a> Adds <code>npm run cover</code> command to generate tests coverage report</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8114">CB-8114</a> Specify a <code>cache-min-time</code> for plugins</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8190">CB-8190</a> Make <code>plugman config/cache</code> directory to be customizable via <code>PLUGMAN_HOME</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7610">CB-7610</a> Fix <code>cordova plugin add d:\path</code> (or any other non-<code>c:</code> path)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8158">CB-8158</a> Added <code>hasModule</code> check to browserify code</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8173">CB-8173</a> Point to the latest <strong>Ubuntu</strong> version</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8179">CB-8179</a> Point to the latest <strong>WP8</strong> version</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8158">CB-8158</a> Adding <code>symbolList</code> to <code>cordova.js</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8154">CB-8154</a> Fix errors adding platforms or plugins</li>
+  <li><code>browserify</code>: updated require to use <code>symbollist</code></li>
+  <li><strong>Amazon</strong> Added a type named <code>gradleReference</code> in framework</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7736">CB-7736</a> Update <code>npm</code> dep to promote <code>qs module</code> to 1.0</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8086">CB-8086</a> Prefixed subprojects with package name</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8067">CB-8067</a> externalized <code>valid-identifier</code> it is its own module</li>
+  <li>Added identifier checking for app id, searches for <code>java+C#</code> reserved words</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6472">CB-6472</a> Adding content to <code>-Info.plist</code> - Unexpected behaviour</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8053">CB-8053</a> Including a project reference in a plugin fails on <strong>Windows</strong> platform</li>
+  <li>Pass the <code>searchpath</code> when installing plugins</li>
+  <li>Add a type named <code>gradleReference</code> in framework</li>
 </ul>
 
 <h2>cordova</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6756">CB-6756</a> Use <code>cordova_lib.binname</code> instead of <code>cordova</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8129">CB-8129</a> Adds <code>npm run cover</code> command to generate tests coverage report</li>
-<li><code>searchpath</code> option is added to <code>restore</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6756">CB-6756</a> Use <code>cordova_lib.binname</code> instead of <code>cordova</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8129">CB-8129</a> Adds <code>npm run cover</code> command to generate tests coverage report</li>
+  <li><code>searchpath</code> option is added to <code>restore</code></li>
 </ul>
 
 <h2>cordova-js</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8210">CB-8210</a> Use the correct plugin for <code>App/CoreAndroid</code> plugin based on platformVersion</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8210">CB-8210</a> <strong>Android</strong>: Fire events from native via message channel</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8210">CB-8210</a> <strong>Android</strong>: Add message channel for events</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8129">CB-8129</a> Adds <code>cover</code> grunt task to generate tests coverage report</li>
-<li><strong>Amazon</strong> related change: <code>base64.toArrayBuffer</code> to convert <code>base64</code> strings</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8158">CB-8158</a> Populating <code>symbolList</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8210">CB-8210</a> Use the correct plugin for <code>App/CoreAndroid</code> plugin based on platformVersion</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8210">CB-8210</a> <strong>Android</strong>: Fire events from native via message channel</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8210">CB-8210</a> <strong>Android</strong>: Add message channel for events</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8129">CB-8129</a> Adds <code>cover</code> grunt task to generate tests coverage report</li>
+  <li><strong>Amazon</strong> related change: <code>base64.toArrayBuffer</code> to convert <code>base64</code> strings</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8158">CB-8158</a> Populating <code>symbolList</code></li>
 </ul>
 
 <h2>plugman</h2>
 
 <ul>
-<li>Fix broken link to <strong>Chrome</strong> plugins</li>
+  <li>Fix broken link to <strong>Chrome</strong> plugins</li>
 </ul>
 
 <h2>Pinned Platform Versions for Cordova CLI 4.2.0</h2>
 
 <ul>
-<li>Cordova Amazon-FireOS: 3.6.3</li>
-<li>Cordova Android: 3.6.4</li>
-<li>Cordova BlackBerry10: 3.7.0</li>
-<li>Cordova Browser: 3.6.0</li>
-<li>Cordova FirefoxOS: 3.6.3</li>
-<li>Cordova iOS: 3.7.0</li>
-<li>Cordova Ubuntu: 4.0.0</li>
-<li>Cordova Windows: 3.7.1</li>
-<li>Cordova WP8: 3.7.1</li>
+  <li>Cordova Amazon-FireOS: 3.6.3</li>
+  <li>Cordova Android: 3.6.4</li>
+  <li>Cordova BlackBerry10: 3.7.0</li>
+  <li>Cordova Browser: 3.6.0</li>
+  <li>Cordova FirefoxOS: 3.6.3</li>
+  <li>Cordova iOS: 3.7.0</li>
+  <li>Cordova Ubuntu: 4.0.0</li>
+  <li>Cordova Windows: 3.7.1</li>
+  <li>Cordova WP8: 3.7.1</li>
 </ul>
 
         </div>

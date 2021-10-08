@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that Apache Cordova 7.0.0 has been released!Most notable changes include:cordova@7.0.0cordova-lib@7.0.0plugman@1.5.0cordova-app-hell...">
+    <meta name="description" content="We are happy to announce that Apache Cordova 7.0.0 has been released!Most notable changes include:  cordova@7.0.0  cordova-lib@7.0.0  plugman@1.5.0  cordova-...">
 
     <title>
         
@@ -136,140 +136,160 @@
 <p>Most notable changes include:</p>
 
 <ul>
-<li><a href="https://www.npmjs.org/package/cordova">cordova@7.0.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@7.0.0</a></li>
-<li><a href="https://www.npmjs.com/package/plugman">plugman@1.5.0</a></li>
-<li><a href="https://www.npmjs.com/package/cordova-app-hello-world">cordova-app-hello-world@3.12.0</a></li>
-<li><a href="https://www.npmjs.com/package/cordova-common">cordova-common@2.0.3</a></li>
-<li><a href="https://www.npmjs.com/package/cordova-create">cordova-create@1.1.0</a></li>
-<li><p><a href="https://www.npmjs.com/package/cordova-fetch">cordova-fetch@1.1.0</a></p></li>
-<li><p>If a <code>package.json</code> does not exist in your project, it will be auto-created for you when <code>cordova prepare</code> is called.</p></li>
-<li><p>When adding a platform or plugin, the previous default behavior of not-saving has changed to saving. Now it will automatically save that platform or plugin to your <code>config.xml</code> and <code>package.json</code>. Details about platform and plugin versions are also automatically saved in <code>config.xml</code> and <code>package.json</code>. The <code>--save</code> flag is no longer required to save. Use <code>--nosave</code> to prevent saving to <code>config.xml</code> or <code>package.json</code>.</p></li>
-<li><p>Fetch is now the default method for fetching platforms. Fetch uses your system <code>npm</code> to <code>npm install</code> modules into your project. The <code>--fetch</code> flag is no longer required. Use the <code>--nofetch</code> flag to revert to pre-<code>Cordova@7.0</code> behavior (<code>npm install</code> is not used to fetch modules).</p></li>
-<li><p>After <code>cordova prepare</code> is run, <code>package.json</code> and <code>config.xml</code> should contain identical platforms and versions.  In case of conflicts, <code>package.json</code> is given precedence over <code>config.xml</code>. For example, suppose <code>package.json</code> contains <code>cordova-android@6.0.0</code> and <code>config.xml</code> contains <code>cordova-android@4.0.0</code>. After <code>cordova prepare</code> is run, <code>config.xml</code> and <code>package.json</code> will each contain only <code>cordova-android@6.0.0</code>.</p></li>
-<li><p>Platforms and plugins are now required to have a <code>package.json</code> file.</p></li>
-<li><p>We have added support for custom platforms. This will allow future custom platforms, and modified versions of existing platforms. Example: </p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add custom-platform-name
-</code></pre></div></li>
-<li><p>A <code>cordova config</code> command has been created to <code>set</code>, <code>get</code>, <code>delete</code>, <code>edit</code>, and <code>list</code> global Cordova options. For example, you can use the following command <code>cordova config set &lt;key&gt; &lt;value&gt;</code> to set the value of <code>autosave</code> or <code>fetch</code> to <code>true</code> or <code>false</code>. </p>
+  <li><a href="https://www.npmjs.org/package/cordova">cordova@7.0.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@7.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/plugman">plugman@1.5.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-app-hello-world">cordova-app-hello-world@3.12.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-common">cordova-common@2.0.3</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-create">cordova-create@1.1.0</a></li>
+  <li>
+    <p><a href="https://www.npmjs.com/package/cordova-fetch">cordova-fetch@1.1.0</a></p>
+  </li>
+  <li>If a <code>package.json</code> does not exist in your project, it will be auto-created for you when <code>cordova prepare</code> is called.</li>
+  <li>When adding a platform or plugin, the previous default behavior of not-saving has changed to saving. Now it will automatically save that platform or plugin to your <code>config.xml</code> and <code>package.json</code>. Details about platform and plugin versions are also automatically saved in <code>config.xml</code> and <code>package.json</code>. The <code>--save</code> flag is no longer required to save. Use <code>--nosave</code> to prevent saving to <code>config.xml</code> or <code>package.json</code>.</li>
+  <li>Fetch is now the default method for fetching platforms. Fetch uses your system <code>npm</code> to <code>npm install</code> modules into your project. The <code>--fetch</code> flag is no longer required. Use the <code>--nofetch</code> flag to revert to pre-<code>Cordova@7.0</code> behavior (<code>npm install</code> is not used to fetch modules).</li>
+  <li>After <code>cordova prepare</code> is run, <code>package.json</code> and <code>config.xml</code> should contain identical platforms and versions.  In case of conflicts, <code>package.json</code> is given precedence over <code>config.xml</code>. For example, suppose <code>package.json</code> contains <code>cordova-android@6.0.0</code> and <code>config.xml</code> contains <code>cordova-android@4.0.0</code>. After <code>cordova prepare</code> is run, <code>config.xml</code> and <code>package.json</code> will each contain only <code>cordova-android@6.0.0</code>.</li>
+  <li>Platforms and plugins are now required to have a <code>package.json</code> file.</li>
+  <li>
+    <p>We have added support for custom platforms. This will allow future custom platforms, and modified versions of existing platforms. Example:</p>
 
-<p>In the following case, you are turning off <code>autosave</code> as the default setting. <code>autosave</code> is true by default in cordova. Example: </p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova config set autosave false
-</code></pre></div>
-<p>In the following case, you are turning off <code>fetch</code> as the default setting. <code>fetch</code> is <code>true</code> by default in cordova.  Example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova config set fetch false
-</code></pre></div>
-<p>In addition, the <code>cordova config</code> command supports the <code>browserify</code> setting, which allows the JavaScript of plugins to be loaded at build time compared to run time. For instance, if the <code>browserify</code> value is not explicitly passed in by the user, the <code>cordova config</code> command will automatically set the <code>browserify</code> value saved in <code>~/.config/configstore/</code> to be saved <code>globally</code>. Users can get and set <code>browserify</code>. <code>browserify</code> is <code>false</code> by deafult in cordova. Example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova config get browserify
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add custom-platform-name
+</code></pre></div>    </div>
+  </li>
+  <li>A <code>cordova config</code> command has been created to <code>set</code>, <code>get</code>, <code>delete</code>, <code>edit</code>, and <code>list</code> global Cordova options. For example, you can use the following command <code>cordova config set &lt;key&gt; &lt;value&gt;</code> to set the value of <code>autosave</code> or <code>fetch</code> to <code>true</code> or <code>false</code>.</li>
+</ul>
+
+ 	In the following case, you are turning off <code>autosave</code> as the default setting. <code>autosave</code> is true by default in cordova. Example: 
+
+ 	```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova config set autosave false
+```
+
+
+In the following case, you are turning off `fetch` as the default setting. `fetch` is `true` by default in cordova.  Example:
+
+```
+cordova config set fetch false
+```
+
+In addition, the `cordova config` command supports the `browserify` setting, which allows the JavaScript of plugins to be loaded at build time compared to run time. For instance, if the `browserify` value is not explicitly passed in by the user, the `cordova config` command will automatically set the `browserify` value saved in `~/.config/configstore/` to be saved `globally`. Users can get and set `browserify`. `browserify` is `false` by deafult in cordova. Example:
+
+```
+cordova config get browserify
 cordova config set browserify true
-</code></pre></div></li>
-<li><p>Dropped support for node 0.x. Only node versions 4.0 and up are supported.</p></li>
-<li><p>Dropped support for wp8 (windows phone 8).</p></li>
-<li><p><code>cordova-windows</code> : dropped support for any versions older than 4.0.0.</p></li>
-<li><p><code>cordova-android</code> : dropped support for any versions older than 5.0.0.</p></li>
-<li><p><code>cordova-ios</code> : dropped support for any versions older than 4.0.0.</p></li>
-<li><p><code>cordova-osx</code> : dropped support for any versions older than 4.0.0.</p></li>
+```
+</code></pre></div></div>
+
+<ul>
+  <li>Dropped support for node 0.x. Only node versions 4.0 and up are supported.</li>
+  <li>Dropped support for wp8 (windows phone 8).</li>
+  <li><code>cordova-windows</code> : dropped support for any versions older than 4.0.0.</li>
+  <li><code>cordova-android</code> : dropped support for any versions older than 5.0.0.</li>
+  <li><code>cordova-ios</code> : dropped support for any versions older than 4.0.0.</li>
+  <li><code>cordova-osx</code> : dropped support for any versions older than 4.0.0.</li>
 </ul>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova@latest
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova@latest
+</code></pre></div></div>
+
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <h2>cordova-lib</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12747">CB-12747</a>: updated pinned platforms</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12705">CB-12705</a>: Modified <code>(before|after)_plugin_(uninstall|install)</code> to always expect existence of plugin field</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12705">CB-12705</a>: Pass plugin info to project <code>*_plugin_install</code> hooks</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11242">CB-11242</a>: removed support for platforms that don&#39;t have a <code>package.json</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11242">CB-11242</a>: updated tests and fixtures</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11242">CB-11242</a>: refactored out <code>getPlatformApiFunction</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11242">CB-11242</a>: removed <code>parser</code> and <code>handler</code> files for deprecated versions of platforms</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12683">CB-12683</a>: improved error messaging for when a plugin doesn&#39;t have <code>package.json</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12674">CB-12674</a>: Added deprecation notice for <strong>blackberry10</strong> and <strong>ubuntu</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11777">CB-11777</a>: Restore plugins before preparing</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12643">CB-12643</a>: removed references to <strong>wp8</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12645">CB-12645</a>: removed references to <strong>firefoxos</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a>: removed <code>engineStrict</code> as it is no longer supported</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12612">CB-12612</a>: removing old <code>amazon-fireos</code> code</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12425">CB-12425</a>: autocreate a <code>package.json</code> if it doesn&#39;t exist during <code>cordova prepare</code> </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12517">CB-12517</a>: <code>package.json</code> <code>name</code> field is <code>config.xml</code> <code>id</code> field and <code>package.json</code> <code>displayName</code> field is <code>config.xml</code> <code>name</code> field</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12592">CB-12592</a>: added <code>requireNoCache</code> function and replaced instances of <code>delete.require cache</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12606">CB-12606</a>: Fix plugin dependency installation. Now it respects the <code>spec</code> specified for dependencies of plugins in <code>plugin.xml</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12016">CB-12016</a>: removed <code>pluginMapper</code> code from uninstall</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12337">CB-12337</a>: Resolve symbolic links in project root</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11346">CB-11346</a>: Remove known platforms check</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11977">CB-11977</a>: removed support for <code>node 0.x</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12021">CB-12021</a>: Added local path support to <code>--fetch</code> and fixed failing tests for adding a relative path</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11960">CB-11960</a>: Added support to <code>package.json</code> for platform/plugin add/rm</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12001">CB-12001</a>: Added support for platform/plugin &amp; <code>spec</code> restore to sync <code>config.xml</code> and <code>package.json</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12747">CB-12747</a>: updated pinned platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12705">CB-12705</a>: Modified <code>(before|after)_plugin_(uninstall|install)</code> to always expect existence of plugin field</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12705">CB-12705</a>: Pass plugin info to project <code>*_plugin_install</code> hooks</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11242">CB-11242</a>: removed support for platforms that don&#39;t have a <code>package.json</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11242">CB-11242</a>: updated tests and fixtures</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11242">CB-11242</a>: refactored out <code>getPlatformApiFunction</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11242">CB-11242</a>: removed <code>parser</code> and <code>handler</code> files for deprecated versions of platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12683">CB-12683</a>: improved error messaging for when a plugin doesn&#39;t have <code>package.json</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12674">CB-12674</a>: Added deprecation notice for <strong>blackberry10</strong> and <strong>ubuntu</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11777">CB-11777</a>: Restore plugins before preparing</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12643">CB-12643</a>: removed references to <strong>wp8</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12645">CB-12645</a>: removed references to <strong>firefoxos</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a>: removed <code>engineStrict</code> as it is no longer supported</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12612">CB-12612</a>: removing old <code>amazon-fireos</code> code</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12425">CB-12425</a>: autocreate a <code>package.json</code> if it doesn&#39;t exist during <code>cordova prepare</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12517">CB-12517</a>: <code>package.json</code> <code>name</code> field is <code>config.xml</code> <code>id</code> field and <code>package.json</code> <code>displayName</code> field is <code>config.xml</code> <code>name</code> field</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12592">CB-12592</a>: added <code>requireNoCache</code> function and replaced instances of <code>delete.require cache</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12606">CB-12606</a>: Fix plugin dependency installation. Now it respects the <code>spec</code> specified for dependencies of plugins in <code>plugin.xml</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12016">CB-12016</a>: removed <code>pluginMapper</code> code from uninstall</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12337">CB-12337</a>: Resolve symbolic links in project root</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11346">CB-11346</a>: Remove known platforms check</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11977">CB-11977</a>: removed support for <code>node 0.x</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12021">CB-12021</a>: Added local path support to <code>--fetch</code> and fixed failing tests for adding a relative path</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11960">CB-11960</a>: Added support to <code>package.json</code> for platform/plugin add/rm</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12001">CB-12001</a>: Added support for platform/plugin &amp; <code>spec</code> restore to sync <code>config.xml</code> and <code>package.json</code></li>
 </ul>
 
 <h2>cordova-cli</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12570">CB-12570</a>: <code>cordova-fetch</code> is true by default. Use <code>--nofetch</code> flag to fetch platforms and plugins using old fetching logic.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a>: removed <code>engineStrict</code> as it is no longer supported</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11982">CB-11982</a>: added <code>edit</code> and <code>ls</code> to <code>cordova config</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11982">CB-11982</a>: added new <code>cordova config</code> command that <code>sets</code>, <code>gets</code>, and <code>deletes</code> global environment variables.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12008">CB-12008</a>: updated docs to reflect new autosave changes and removed variables missed due to rebase</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12008">CB-12008</a>: made autosave the default for platform and plugin add/remove</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11977">CB-11977</a>: removed support for <code>node 0.x</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12570">CB-12570</a>: <code>cordova-fetch</code> is true by default. Use <code>--nofetch</code> flag to fetch platforms and plugins using old fetching logic.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a>: removed <code>engineStrict</code> as it is no longer supported</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11982">CB-11982</a>: added <code>edit</code> and <code>ls</code> to <code>cordova config</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11982">CB-11982</a>: added new <code>cordova config</code> command that <code>sets</code>, <code>gets</code>, and <code>deletes</code> global environment variables.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12008">CB-12008</a>: updated docs to reflect new autosave changes and removed variables missed due to rebase</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12008">CB-12008</a>: made autosave the default for platform and plugin add/remove</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11977">CB-11977</a>: removed support for <code>node 0.x</code></li>
 </ul>
 
 <h2>cordova-fetch</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a>: removed <code>enginestrict</code> since it is deprecated</li>
-<li>added support for dealing with local path targets</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a>: removed <code>enginestrict</code> since it is deprecated</li>
+  <li>added support for dealing with local path targets</li>
 </ul>
 
 <h2>cordova-common</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8978">CB-8978</a>: Add option to get <code>resource-file</code> from <code>root</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11908">CB-11908</a>: Add tests for <code>edit-config</code> in <code>config.xml</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a>: removed <code>enginestrict</code> since it is deprecated</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8978">CB-8978</a>: Add option to get <code>resource-file</code> from <code>root</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11908">CB-11908</a>: Add tests for <code>edit-config</code> in <code>config.xml</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a>: removed <code>enginestrict</code> since it is deprecated</li>
 </ul>
 
 <h2>plugman</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12747">CB-12747</a>: Updated <code>cordova-lib</code> dependency to <code>7.0.0</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12747">CB-12747</a>: Updated <code>cordova-lib</code> dependency to <code>7.0.0</code></li>
 </ul>
 
 <h2>cordova-create</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10681">CB-10681</a>: templates will add <code>@latest</code> when fetching from npm when no version is specified. This will ensure an older cached version of the template is not used</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12666">CB-12666</a>: Remove <code>node 0.x</code> support.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12517">CB-12517</a>: <code>package.json</code> <code>displayname</code> should equal <code>config.xml</code> name field and <code>package.json</code> <code>name</code> field should equal <code>config.xml</code> <code>id</code> field.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10681">CB-10681</a>: templates will add <code>@latest</code> when fetching from npm when no version is specified. This will ensure an older cached version of the template is not used</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12666">CB-12666</a>: Remove <code>node 0.x</code> support.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12517">CB-12517</a>: <code>package.json</code> <code>displayname</code> should equal <code>config.xml</code> name field and <code>package.json</code> <code>name</code> field should equal <code>config.xml</code> <code>id</code> field.</li>
 </ul>
 
 <h2>cordova-app-hello-world</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12684">CB-12684</a>: added <code>package.json</code> to default hello world app</li>
-<li>Add GitHub pull request template</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12684">CB-12684</a>: added <code>package.json</code> to default hello world app</li>
+  <li>Add GitHub pull request template</li>
 </ul>
 
 <h2>Pinned Platform Versions for <strong>Cordova CLI 7.0.0</strong></h2>
 
 <ul>
-<li>Cordova Android: ~6.2.2</li>
-<li>Cordova BlackBerry10: ~3.8.0</li>
-<li>Cordova Browser: ~4.1.0</li>
-<li>Cordova iOS: ~4.4.0</li>
-<li>Cordova OSX: ~4.0.1</li>
-<li>Cordova Ubuntu: ~4.3.4</li>
-<li>Cordova Windows: ~5.0.0</li>
-<li>Cordova WebOS: ~3.7.0</li>
+  <li>Cordova Android: ~6.2.2</li>
+  <li>Cordova BlackBerry10: ~3.8.0</li>
+  <li>Cordova Browser: ~4.1.0</li>
+  <li>Cordova iOS: ~4.4.0</li>
+  <li>Cordova OSX: ~4.0.1</li>
+  <li>Cordova Ubuntu: ~4.3.4</li>
+  <li>Cordova Windows: ~5.0.0</li>
+  <li>Cordova WebOS: ~3.7.0</li>
 </ul>
+
 
         </div>
     </section>

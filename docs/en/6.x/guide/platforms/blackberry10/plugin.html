@@ -2426,12 +2426,14 @@ platform and back.</p>
 
 <p>The Echo plugin basically returns whatever string the <code>window.echo</code>
 function sends from JavaScript:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">echo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">str</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">echo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">str</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">cordova</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">callback</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">callback</span><span class="p">(</span><span class="s1">'Nothing to echo.'</span><span class="p">);</span>
-    <span class="p">},</span> <span class="s2">"Echo"</span><span class="p">,</span> <span class="s2">"echo"</span><span class="p">,</span> <span class="p">[</span><span class="nx">str</span><span class="p">]);</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="dl">'</span><span class="s1">Nothing to echo.</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">},</span> <span class="dl">"</span><span class="s2">Echo</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">echo</span><span class="dl">"</span><span class="p">,</span> <span class="p">[</span><span class="nx">str</span><span class="p">]);</span>
 <span class="p">};</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>A Cordova plugin for BlackBerry 10 contains both JavaScript and native
 code, which communicate with each other through a framework provided
 by JNEXT. Every plugin must also include a <code>plugin.xml</code> file.</p>
@@ -2439,8 +2441,8 @@ by JNEXT. Every plugin must also include a <code>plugin.xml</code> file.</p>
 <h2>Creating the Native Class</h2>
 
 <p>To create the native portion of your plugin, open the BlackBerry 10
-NDK IDE and select <strong>File &rarr; New &rarr; BlackBerry Project &rarr;
-Native Extension &rarr; BlackBerry 10</strong>. Enter the desired
+NDK IDE and select <strong>File &#8594; New &#8594; BlackBerry Project &#8594;
+Native Extension &#8594; BlackBerry 10</strong>. Enter the desired
 project name and location, then press <strong>Finish</strong>.</p>
 
 <p>The project created by the IDE contains sample code for a memory
@@ -2448,8 +2450,12 @@ plugin. You may replace or modify these files to implement your own
 functionality:</p>
 
 <ul>
-<li><p><code>*name*_js.hpp</code>: C++ header for the JNEXT code.</p></li>
-<li><p><code>*name*_js.cpp</code>: C++ code for JNEXT.</p></li>
+  <li>
+    <p><code>*name*_js.hpp</code>: C++ header for the JNEXT code.</p>
+  </li>
+  <li>
+    <p><code>*name*_js.cpp</code>: C++ code for JNEXT.</p>
+  </li>
 </ul>
 
 <p>The native interface for the JNEXT extension can be viewed in the
@@ -2457,19 +2463,22 @@ plugin header file located in the project&#39;s public directory. It also
 features constants and utility functions available from within native
 code. The plugin must be derived from <code>JSExt</code>, which is defined in
 <code>plugin.h</code>. That is, you must implement the following class:</p>
-<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="k">class</span> <span class="nc">JSExt</span>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">JSExt</span>
 <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
+<span class="nl">public:</span>
     <span class="k">virtual</span> <span class="o">~</span><span class="n">JSExt</span><span class="p">()</span> <span class="p">{};</span>
     <span class="k">virtual</span> <span class="n">string</span> <span class="n">InvokeMethod</span><span class="p">(</span> <span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">strCommand</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="k">virtual</span> <span class="kt">bool</span> <span class="n">CanDelete</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="k">private</span><span class="o">:</span>
+<span class="nl">private:</span>
     <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">m_id</span><span class="p">;</span>
 <span class="p">};</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The extension should include the <code>plugin.h</code> header file. In the <code>Echo</code>
 example, you use <code>JSExt</code> as follows in the <code>echo_js.hpp</code> file:</p>
-<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#include "../public/plugin.h"
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include "../public/plugin.h"
 #include &lt;string&gt;
 </span>
 <span class="cp">#ifndef ECHO_JS_H_
@@ -2477,17 +2486,18 @@ example, you use <code>JSExt</code> as follows in the <code>echo_js.hpp</code> f
 </span>
 <span class="k">class</span> <span class="nc">Echo</span> <span class="o">:</span> <span class="k">public</span> <span class="n">JSExt</span>
 <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
+<span class="nl">public:</span>
     <span class="k">explicit</span> <span class="n">Echo</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">id</span><span class="p">);</span>
     <span class="k">virtual</span> <span class="o">~</span><span class="n">Echo</span><span class="p">();</span>
     <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">InvokeMethod</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">command</span><span class="p">);</span>
     <span class="k">virtual</span> <span class="kt">bool</span> <span class="n">CanDelete</span><span class="p">();</span>
-<span class="k">private</span><span class="o">:</span>
+<span class="nl">private:</span>
     <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">m_id</span><span class="p">;</span>
 <span class="p">};</span>
 
 <span class="cp">#endif // ECHO_JS_H_
-</span></code></pre></div>
+</span></code></pre></div></div>
+
 <p>The <code>m_id</code> attribute contains the <code>JNEXT</code> id for the object, which is
 passed to the class as an argument to the constructor. It is needed
 for the native side to trigger events on the JavaScript side.  The
@@ -2499,105 +2509,130 @@ JavaScript that this method parses to determine which of the native
 object&#39;s methods should execute.  These methods are implemented in
 <code>echo_js.cpp</code>. Here is the <code>InvokeMethod</code> function for the <code>Echo</code>
 example:</p>
-<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">string</span> <span class="n">Echo</span><span class="o">::</span><span class="n">InvokeMethod</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">command</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="c1">//parse command and args from string
-</span>    <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">command</span><span class="p">.</span><span class="n">find_first_of</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="n">Echo</span><span class="o">::</span><span class="n">InvokeMethod</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">command</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">//parse command and args from string</span>
+    <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">command</span><span class="p">.</span><span class="n">find_first_of</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
     <span class="n">string</span> <span class="n">strCommand</span> <span class="o">=</span> <span class="n">command</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">index</span><span class="p">);</span>
     <span class="n">string</span> <span class="n">strValue</span> <span class="o">=</span> <span class="n">command</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">command</span><span class="p">.</span><span class="n">length</span><span class="p">());</span>
 
-    <span class="c1">// Determine which function should be executed
-</span>    <span class="k">if</span> <span class="p">(</span><span class="n">strCommand</span> <span class="o">==</span> <span class="s">"echo"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Determine which function should be executed</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">strCommand</span> <span class="o">==</span> <span class="s">"echo"</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">strValue</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="k">return</span> <span class="s">"Unsupported Method"</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The native plugin must also implement the following callback
 functions:</p>
 
 <ul>
-<li><p><code>extern char* onGetObjList( void );</code></p></li>
-<li><p><code>extern JSExt* onCreateObject( const string&amp; strClassName, const string&amp; strObjId );</code></p></li>
+  <li>
+    <p><code>extern char* onGetObjList( void );</code></p>
+  </li>
+  <li>
+    <p><code>extern JSExt* onCreateObject( const string&amp; strClassName, const string&amp; strObjId );</code></p>
+  </li>
 </ul>
 
 <p>The <code>onGetObjList</code> function returns a comma-separated list of classes
 supported by JNEXT. JNEXT uses this function to determine the set of
 classes that JNEXT can instantiate. The <code>Echo</code> plugin implements the
 following in <code>echo_js.cpp</code>:</p>
-<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="kt">char</span><span class="o">*</span> <span class="nf">onGetObjList</span><span class="p">()</span> <span class="p">{</span>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">char</span><span class="o">*</span> <span class="nf">onGetObjList</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">static</span> <span class="kt">char</span> <span class="n">name</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"Echo"</span><span class="p">;</span>
     <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div>
-<p>The <code>onCreateObject</code> function takes two parameters. The first is the
+</code></pre></div></div>
+
+<p>The <code>onCreateObject </code> function takes two parameters. The first is the
 name of the requested class to be created from the JavaScript side,
 with valid names as those returned in <code>onGetObjList</code>. The second
 parameter is the class&#39;s unique object id. This method returns a
 pointer to the created plugin object. The <code>Echo</code> plugin implements the
 following in <code>echo_js.cpp</code>:</p>
-<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">JSExt</span><span class="o">*</span> <span class="nf">onCreateObject</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">className</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">JSExt</span><span class="o">*</span> <span class="nf">onCreateObject</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">className</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">className</span> <span class="o">==</span> <span class="s">"Echo"</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">new</span> <span class="n">Echo</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Creating the Plugin&#39;s JavaScript</h2>
 
 <p>The plugin must contain the following JavaScript files:</p>
 
 <ul>
-<li><p><code>client.js</code>: This is considered the client side and contains the API
+  <li>
+    <p><code>client.js</code>: This is considered the client side and contains the API
 available to a Cordova application. The API in <code>client.js</code> calls
 makes calls to <code>index.js</code>. The API in <code>client.js</code> also connects
-callback functions to the events that fire the callbacks.</p></li>
-<li><p><code>index.js</code>: Cordova loads <code>index.js</code> and makes it accessible through
+callback functions to the events that fire the callbacks.</p>
+  </li>
+  <li>
+    <p><code>index.js</code>: Cordova loads <code>index.js</code> and makes it accessible through
 the cordova.exec bridge. The <code>client.js</code> file makes calls to the API
 in the <code>index.js</code> file, which in turn makes call to JNEXT to
-communicate with the native side.</p></li>
+communicate with the native side.</p>
+  </li>
 </ul>
 
 <p>The client and server side (<code>client.js</code> and <code>index.js</code>) interacts
 through the <code>Cordova.exec</code> function. The <code>client.js</code> needs to invoke
 the <code>exec</code> function and provide the necessary arguments. The <code>Echo</code>
 plugin implements the following in the <code>client.js</code> file:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">service</span> <span class="o">=</span> <span class="s2">"org.apache.cordova.blackberry.echo"</span><span class="p">,</span>
-    <span class="nx">exec</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="s2">"cordova/exec"</span><span class="p">);</span>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">service</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">org.apache.cordova.blackberry.echo</span><span class="dl">"</span><span class="p">,</span>
+    <span class="nx">exec</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">cordova/exec</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
     <span class="na">echo</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">success</span><span class="p">,</span> <span class="nx">fail</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">exec</span><span class="p">(</span><span class="nx">success</span><span class="p">,</span> <span class="nx">fail</span><span class="p">,</span> <span class="nx">service</span><span class="p">,</span> <span class="s2">"echo"</span><span class="p">,</span> <span class="p">{</span> <span class="na">data</span><span class="p">:</span> <span class="nx">data</span> <span class="p">});</span>
+        <span class="nx">exec</span><span class="p">(</span><span class="nx">success</span><span class="p">,</span> <span class="nx">fail</span><span class="p">,</span> <span class="nx">service</span><span class="p">,</span> <span class="dl">"</span><span class="s2">echo</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="na">data</span><span class="p">:</span> <span class="nx">data</span> <span class="p">});</span>
     <span class="p">}</span>
 <span class="p">};</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The <code>index.js</code> component uses JNEXT to interact with the native
 side. Attaching a constructor function named <code>Echo</code> to JNEXT allows
 you to perform the following key operations using the <code>init</code> function:</p>
 
 <ul>
-<li><p>Specify the required module exported by the native side. The name of
+  <li>
+    <p>Specify the required module exported by the native side. The name of
 the required module must match the name of a shared library file
 (<code>.so</code> file):</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">JNEXT</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="s2">"libecho"</span><span class="p">)</span>
-</code></pre></div></li>
-<li><p>Create an object by using an acquired module and save the ID that&#39;s
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nx">JNEXT</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">libecho</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Create an object by using an acquired module and save the ID that&#39;s
 returned by the call:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">self</span><span class="p">.</span><span class="nx">m_id</span> <span class="o">=</span> <span class="nx">JNEXT</span><span class="p">.</span><span class="nx">createObject</span><span class="p">(</span><span class="s2">"libecho.Echo"</span><span class="p">);</span>
-</code></pre></div></li>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">self</span><span class="p">.</span><span class="nx">m_id</span> <span class="o">=</span> <span class="nx">JNEXT</span><span class="p">.</span><span class="nx">createObject</span><span class="p">(</span><span class="dl">"</span><span class="s2">libecho.Echo</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div>    </div>
+
+    <p>When the application calls the <code>echo</code> function in <code>client.js</code>, that
+call in turn calls the <code>echo</code> function in <code>index.js</code>, where the
+<code>PluginResult</code> object sends data as a response back to <code>client.js</code>.
+Since the <code>args</code> argument passed into the functions was converted by
+<code>JSON.stringfy()</code> and encoded as a <code>URIcomponent</code>, you must call the
+following:</p>
+  </li>
 </ul>
 
-<p>When the application calls the <code>echo</code> function in <code>client.js</code>, that
-  call in turn calls the <code>echo</code> function in <code>index.js</code>, where the
-  <code>PluginResult</code> object sends data as a response back to <code>client.js</code>.
-  Since the <code>args</code> argument passed into the functions was converted by
-  <code>JSON.stringfy()</code> and encoded as a <code>URIcomponent</code>, you must call the
-  following:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nb">decodeURIComponent</span><span class="p">(</span><span class="nx">args</span><span class="p">.</span><span class="nx">data</span><span class="p">));</span>
-</code></pre></div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nb">decodeURIComponent</span><span class="p">(</span><span class="nx">args</span><span class="p">.</span><span class="nx">data</span><span class="p">));</span>
+</code></pre></div></div>
+
 <p>You can now send the data back, as in the following:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
     <span class="na">echo</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">success</span><span class="p">,</span> <span class="nx">fail</span><span class="p">,</span> <span class="nx">args</span><span class="p">,</span> <span class="nx">env</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PluginResult</span><span class="p">(</span><span class="nx">args</span><span class="p">,</span> <span class="nx">env</span><span class="p">),</span>
         <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nb">decodeURIComponent</span><span class="p">(</span><span class="nx">args</span><span class="p">.</span><span class="nx">data</span><span class="p">)),</span>
@@ -2605,7 +2640,8 @@ returned by the call:</p>
         <span class="nx">result</span><span class="p">.</span><span class="nx">ok</span><span class="p">(</span><span class="nx">response</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">};</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Plugin Architecture</h2>
 
 <p>You can place the plugin&#39;s artifacts, including the <code>plugin.xml</code> file,
@@ -2616,14 +2652,14 @@ locations in the <code>plugin.xml</code> file. Here is a typical structure:</p>
 <p><strong><em>project_directory</em></strong> (&gt;plugin.xml)</p>
 
 <ul>
-<li><strong>www</strong> (&gt;client.js)</li>
-<li><strong>src</strong>
-
-<ul>
-<li><strong>blackberry10</strong> (&gt;index.js, <strong>native</strong> &gt;*.cpp, *.hpp)</li>
-<li><strong>device</strong> (&gt;<em>binary file</em> *.so)</li>
-<li><strong>simulator</strong> (&gt;<em>binary file</em> *.so)</li>
-</ul></li>
+  <li><strong>www</strong> (&gt;client.js)</li>
+  <li><strong>src</strong>
+    <ul>
+      <li><strong>blackberry10</strong> (&gt;index.js, <strong>native</strong> &gt;*.cpp, *.hpp)</li>
+      <li><strong>device</strong> (&gt;<em>binary file</em> *.so)</li>
+      <li><strong>simulator</strong> (&gt;<em>binary file</em> *.so)</li>
+    </ul>
+  </li>
 </ul>
 
 <p>The list shows the hierarchical relationship among the top-level
@@ -2635,7 +2671,8 @@ sign.</p>
 
 <p>The <code>plugin.xml</code> file contains the extension&#39;s namespace and other
 metadata. Set up the <code>Echo</code> plugin as follows:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin</span> <span class="na">xmlns=</span><span class="s">"http://www.phonegap.com/ns/plugins/1.0"</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin</span> <span class="na">xmlns=</span><span class="s">"http://www.phonegap.com/ns/plugins/1.0"</span>
     <span class="na">id=</span><span class="s">"org.apache.cordova.blackberry.echo"</span>
     <span class="na">version=</span><span class="s">"1.0.0"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;js-module</span> <span class="na">src=</span><span class="s">"www/client.js"</span><span class="nt">&gt;</span>
@@ -2650,7 +2687,8 @@ metadata. Set up the <code>Echo</code> plugin as follows:</p>
         <span class="nt">&lt;/config-file&gt;</span>
     <span class="nt">&lt;/platform&gt;</span>
 <span class="nt">&lt;/plugin&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

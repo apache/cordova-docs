@@ -1642,7 +1642,7 @@
                 <h1>Camera</h1>
 
 <blockquote>
-<p>The <code>camera</code> object provides access to the device&#39;s default camera application.</p>
+  <p>The <code>camera</code> object provides access to the device&#39;s default camera application.</p>
 </blockquote>
 
 <p><strong>WARNING</strong>: Collection and use of images from a
@@ -1660,8 +1660,8 @@ obtaining the user&#39;s permission (e.g., by presenting choices for
 <h2>Methods</h2>
 
 <ul>
-<li><a href="camera.getPicture.html">camera.getPicture</a></li>
-<li><a href="camera.cleanup.html">camera.cleanup</a></li>
+  <li><a href="camera.getPicture.html">camera.getPicture</a></li>
+  <li><a href="camera.cleanup.html">camera.cleanup</a></li>
 </ul>
 
 <h2>Accessing the Feature</h2>
@@ -1669,69 +1669,86 @@ obtaining the user&#39;s permission (e.g., by presenting choices for
 <p>As of version 3.0, Cordova implements device-level APIs as <em>plugins</em>.
 Use the CLI&#39;s <code>plugin</code> command, described in The Command-Line
 Interface, to add or remove this feature for a project:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add org.apache.cordova.camera
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova plugin add org.apache.cordova.camera
     $ cordova plugin ls
     [ 'org.apache.cordova.camera' ]
     $ cordova plugin rm org.apache.cordova.camera
-</code></pre></div>
+</code></pre></div></div>
+
 <p>These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:</p>
 
 <ul>
-<li><p>Amazon Fire OS</p>
-<div class="highlight"><pre><code class="language-" data-lang="">(in app/res/xml/config.xml)
-&lt;feature name="Camera"&gt;
-    &lt;param name="android-package" value="org.apache.cordova.camera.CameraLauncher" /&gt;
-&lt;/feature&gt;
+  <li>
+    <p>Amazon Fire OS</p>
 
-(in app/AndroidManifest)
-&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
-</code></pre></div></li>
-<li><p>Android</p>
-<div class="highlight"><pre><code class="language-" data-lang="">(in app/res/xml/config.xml)
-&lt;feature name="Camera"&gt;
-    &lt;param name="android-package" value="org.apache.cordova.camera.CameraLauncher" /&gt;
-&lt;/feature&gt;
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in app/res/xml/config.xml)
+  &lt;feature name="Camera"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.camera.CameraLauncher" /&gt;
+  &lt;/feature&gt;
 
-(in app/AndroidManifest)
-&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
-</code></pre></div></li>
-<li><p>BlackBerry WebWorks</p>
-<div class="highlight"><pre><code class="language-" data-lang="">(in www/plugins.xml)
-&lt;feature name="Camera"&gt;
-    &lt;param name="blackberry-package" value="org.apache.cordova.camera.Camera" /&gt;
-&lt;/feature&gt;
+  (in app/AndroidManifest)
+  &lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Android</p>
 
-(in www/config.xml)
-&lt;feature id="blackberry.media.camera" /&gt;
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in app/res/xml/config.xml)
+  &lt;feature name="Camera"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.camera.CameraLauncher" /&gt;
+  &lt;/feature&gt;
 
-&lt;rim:permissions&gt;
-    &lt;rim:permit&gt;use_camera&lt;/rim:permit&gt;
-&lt;/rim:permissions&gt;
-</code></pre></div></li>
-<li><p>iOS (in the named application directory&#39;s <code>config.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature name="Camera"&gt;
-    &lt;param name="ios-package" value="CDVCamera" /&gt;
-&lt;/feature&gt;
-</code></pre></div></li>
-<li><p>Windows Phone (in <code>Properties/WPAppManifest.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;Capabilities&gt;
-    &lt;Capability Name="ID_CAP_ISV_CAMERA" /&gt;
-    &lt;Capability Name="ID_HW_FRONTCAMERA" /&gt;
-&lt;/Capabilities&gt;
-</code></pre></div></li>
+  (in app/AndroidManifest)
+  &lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>BlackBerry WebWorks</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in www/plugins.xml)
+  &lt;feature name="Camera"&gt;
+      &lt;param name="blackberry-package" value="org.apache.cordova.camera.Camera" /&gt;
+  &lt;/feature&gt;
+
+  (in www/config.xml)
+  &lt;feature id="blackberry.media.camera" /&gt;
+
+  &lt;rim:permissions&gt;
+      &lt;rim:permit&gt;use_camera&lt;/rim:permit&gt;
+  &lt;/rim:permissions&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>iOS (in the named application directory&#39;s <code>config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="Camera"&gt;
+      &lt;param name="ios-package" value="CDVCamera" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Windows Phone (in <code>Properties/WPAppManifest.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;Capabilities&gt;
+      &lt;Capability Name="ID_CAP_ISV_CAMERA" /&gt;
+      &lt;Capability Name="ID_HW_FRONTCAMERA" /&gt;
+  &lt;/Capabilities&gt;
+</code></pre></div>    </div>
+
+    <p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
+  </li>
+  <li>
+    <p>Tizen (in <code>config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="http://tizen.org/api/application" required="true"/&gt;
+  &lt;feature name="http://tizen.org/api/application.launch" required="true"/&gt;
+</code></pre></div>    </div>
+
+    <p>Reference: <a href="https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures">Application Manifest for Tizen Web Application</a></p>
+  </li>
 </ul>
-
-<p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
-
-<ul>
-<li><p>Tizen (in <code>config.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature name="http://tizen.org/api/application" required="true"/&gt;
-&lt;feature name="http://tizen.org/api/application.launch" required="true"/&gt;
-</code></pre></div></li>
-</ul>
-
-<p>Reference: <a href="https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures">Application Manifest for Tizen Web Application</a></p>
 
 <p>Some platforms may support this feature without requiring any special
 configuration.  See <a href="../../guide/support/index.html">Platform Support</a> for an overview.</p>

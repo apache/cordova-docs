@@ -133,43 +133,46 @@
         <div>
             <p>We are happy to announce that <code>Cordova Windows 5.0.0</code> has been released!</p>
 
-<p>This release introduces <a href="https://issues.apache.org/jira/browse/CB-12163">a major change in resource-file behavior</a> (see <a href="https://github.com/apache/cordova-docs/pull/679">the docs</a> on how to get the previous behavior back for referenced files) and adds <a href="https://issues.apache.org/jira/browse/CB-12189">WinMD + C++ based DLL combination support for plugins</a>.<br>
-Another highlight is <a href="http://cordova.apache.org/docs/en/dev/guide/platforms/win8/index.html#msbuild-build-flags">a new feature of <code>buildFlag</code></a> similar to <code>--gradleArg</code> on Android and <code>--buildFlag</code> on iOS allowing to pass custom flags to MSBuild.<br>
-The release also fixes some issues with SplashScreen and VS project generation.<br>
+<p>This release introduces <a href="https://issues.apache.org/jira/browse/CB-12163">a major change in resource-file behavior</a> (see <a href="https://github.com/apache/cordova-docs/pull/679">the docs</a> on how to get the previous behavior back for referenced files) and adds <a href="https://issues.apache.org/jira/browse/CB-12189">WinMD + C++ based DLL combination support for plugins</a>.<br />
+Another highlight is <a href="http://cordova.apache.org/docs/en/dev/guide/platforms/win8/index.html#msbuild-build-flags">a new feature of <code>buildFlag</code></a> similar to <code>--gradleArg</code> on Android and <code>--buildFlag</code> on iOS allowing to pass custom flags to MSBuild.<br />
+The release also fixes some issues with SplashScreen and VS project generation.<br />
 See release notes below for more detals and the rest of the changes.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update windows@5.0.0
-</code></pre></div>
-<p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add windows@5.0.0
-</code></pre></div>
-<!--more-->
+</code></pre></div></div>
 
+<p>To add it explicitly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add windows@5.0.0
+</code></pre></div></div>
+
+<!--more-->
 <h2>What&#39;s new in Windows platform</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12163">CB-12163</a> Add resource-file reference functionality through a flag</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12163">CB-12163</a> Make resource-file copy files again</li>
-<li>Upgrade cordova-common to 2.0.0</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12298">CB-12298</a> [Windows] bundle.appxupload not generated for Windows 10 target</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12189">CB-12189</a> Add support for WinMD and DLL combination</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12238">CB-12238</a> [Windows] Colorize titlebar to match splash bg color</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11177">CB-11177</a> SplashScreen gets shifted on Windows devices with soft navbar</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12239">CB-12239</a> Add buildFlag option similar to iOS</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12193">CB-12193</a> cordova.js crashes windows app if there is no CoreWindow Also made confighelper to load after WinJS as it depends on it</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11751">CB-11751</a> &#39;extendedSplashScreen&#39; is undefined</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12192">CB-12192</a> No SplashScreen on Windows when content.src is subpage</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9287">CB-9287</a> Not enough Icons and Splashscreens for Windows 8.1 and Windows Phone 8.1</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11933">CB-11933</a> Do not ignore already prefixed capabilities at plugin add/rm</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11933">CB-11933</a> Fix pattern for extracting capabilities names</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12142">CB-12142</a> Move windows-specific logic from cordova-common</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12147">CB-12147</a> (windows) Fix typo in verbose output</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12124">CB-12124</a> Make available device capabilities in package.windows10.appxmanifest</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12071">CB-12071</a> Fix for <a href="https://issues.apache.org/jira/browse/CB-11825">CB-11825</a> breaks usage of InProcessServer in Cordova Windows</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12036">CB-12036</a> Fix setSplashBgColor exception when no splashscreen is found</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12163">CB-12163</a> Add resource-file reference functionality through a flag</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12163">CB-12163</a> Make resource-file copy files again</li>
+  <li>Upgrade cordova-common to 2.0.0</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12298">CB-12298</a> [Windows] bundle.appxupload not generated for Windows 10 target</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12189">CB-12189</a> Add support for WinMD and DLL combination</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12238">CB-12238</a> [Windows] Colorize titlebar to match splash bg color</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11177">CB-11177</a> SplashScreen gets shifted on Windows devices with soft navbar</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12239">CB-12239</a> Add buildFlag option similar to iOS</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12193">CB-12193</a> cordova.js crashes windows app if there is no CoreWindow Also made confighelper to load after WinJS as it depends on it</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11751">CB-11751</a> &#39;extendedSplashScreen&#39; is undefined</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12192">CB-12192</a> No SplashScreen on Windows when content.src is subpage</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9287">CB-9287</a> Not enough Icons and Splashscreens for Windows 8.1 and Windows Phone 8.1</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11933">CB-11933</a> Do not ignore already prefixed capabilities at plugin add/rm</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11933">CB-11933</a> Fix pattern for extracting capabilities names</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12142">CB-12142</a> Move windows-specific logic from cordova-common</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12147">CB-12147</a> (windows) Fix typo in verbose output</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12124">CB-12124</a> Make available device capabilities in package.windows10.appxmanifest</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12071">CB-12071</a> Fix for <a href="https://issues.apache.org/jira/browse/CB-11825">CB-11825</a> breaks usage of InProcessServer in Cordova Windows</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12036">CB-12036</a> Fix setSplashBgColor exception when no splashscreen is found</li>
 </ul>
 
         </div>

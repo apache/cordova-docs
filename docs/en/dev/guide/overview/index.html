@@ -2208,15 +2208,21 @@ access each device&#39;s capabilities such as sensors, data, network status, etc
 <p>Use Apache Cordova if you are:</p>
 
 <ul>
-<li><p>a mobile developer and want to extend an application across more
+  <li>
+    <p>a mobile developer and want to extend an application across more
 than one platform, without having to re-implement it with each
-platform&#39;s language and tool set.</p></li>
-<li><p>a web developer and want to deploy a web app that&#39;s packaged for
-distribution in various app store portals.</p></li>
-<li><p>a mobile developer interested in mixing native application
+platform&#39;s language and tool set.</p>
+  </li>
+  <li>
+    <p>a web developer and want to deploy a web app that&#39;s packaged for
+distribution in various app store portals.</p>
+  </li>
+  <li>
+    <p>a mobile developer interested in mixing native application
 components with a <em>WebView</em> (special browser window) that can access
 device-level APIs, or if you want to develop a plugin interface
-between native and WebView components.</p></li>
+between native and WebView components.</p>
+  </li>
 </ul>
 
 <h1>Architecture</h1>
@@ -2224,7 +2230,7 @@ between native and WebView components.</p></li>
 <p>There are several components to a Cordova application. The following
 diagram shows a high-level view of the Cordova application architecture.</p>
 
-<p><img src="/static/img/guide/cordovaapparchitecture.png" alt=""></p>
+<p><img src="/static/img/guide/cordovaapparchitecture.png" alt="" /></p>
 
 <h2>WebView</h2>
 
@@ -2282,7 +2288,8 @@ app. While you can often use either workflow to accomplish the same
 task, they each offer advantages:</p>
 
 <ul>
-<li><p><strong>Cross-platform (CLI) workflow</strong>: Use this workflow if you want your app
+  <li>
+    <p><strong>Cross-platform (CLI) workflow</strong>: Use this workflow if you want your app
 to run on as many different mobile operating systems as possible,
 with little need for platform-specific development. This workflow
 centers around the <code>cordova</code> CLI. The CLI is a high-level tool that allows you to build projects
@@ -2292,8 +2299,10 @@ subdirectories for each mobile platform, makes any necessary
 configuration changes for each, runs build scripts to generate
 application binaries. The CLI also provides a common interface to
 apply plugins to your app. To get started follow the steps in the
-<a href="../cli/index.html">Create your first app</a> guide. Unless you have a need for the platform-centered workflow, the cross-platform workflow is recommended.</p></li>
-<li><p><strong>Platform-centered workflow</strong>: Use this workflow if you want to
+<a href="../cli/index.html">Create your first app</a> guide. Unless you have a need for the platform-centered workflow, the cross-platform workflow is recommended.</p>
+  </li>
+  <li>
+    <p><strong>Platform-centered workflow</strong>: Use this workflow if you want to
 focus on building an app for a single platform and need to be able
 to modify it at a lower level. You need to use this approach, for
 example, if you want your app to mix custom native components with
@@ -2305,7 +2314,8 @@ each supported platform, and a separate Plugman utility that allows you to
 apply plugins. While you can use this workflow to build cross-platform
 apps, it is generally more difficult because the lack of a
 higher-level tool means separate build cycles and plugin
-modifications for each platform.</p></li>
+modifications for each platform.</p>
+  </li>
 </ul>
 
 <p>When first starting out, it may be easiest to use the cross-platform
@@ -2314,7 +2324,7 @@ You then have the option to switch to a platform-centered workflow if
 you need the greater control the SDK provides.</p>
 
 <blockquote>
-<p><strong>NOTE</strong>: Once you switch from the CLI-based workflow to one centered
+  <p><strong>NOTE</strong>: Once you switch from the CLI-based workflow to one centered
 around the platform-specific SDKs and shell tools, you can&#39;t go back.
 The CLI maintains a common set of cross-platform source code, which on
 each build it uses to write over platform-specific source code. To
@@ -2330,8 +2340,12 @@ platform-specific source code.</p>
 you choose:</p>
 
 <ul>
-<li><p>Cross-platform workflow: See <a href="../cli/index.html">Create your first app</a> guide.</p></li>
-<li><p>Platform-centered workflow.</p></li>
+  <li>
+    <p>Cross-platform workflow: See <a href="../cli/index.html">Create your first app</a> guide.</p>
+  </li>
+  <li>
+    <p>Platform-centered workflow.</p>
+  </li>
 </ul>
 
 <p>After installing Cordova, it is recommended that you review the
@@ -2339,6 +2353,7 @@ you choose:</p>
 will be developing for. It is also recommended that you also review the
 <a href="../appdev/privacy/index.html">Privacy Guide</a> and
 <a href="../appdev/security/index.html">Security Guide</a>.</p>
+
 
 
             </div>

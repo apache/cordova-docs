@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The following plugins were updated today because they are being deprecated:cordova-plugin-console: 1.1.0cordova-plugin-compat: 1.2.0cordova-plugin-device-mot...">
+    <meta name="description" content="The following plugins were updated today because they are being deprecated:  cordova-plugin-console: 1.1.0  cordova-plugin-compat: 1.2.0  cordova-plugin-devi...">
 
     <title>
         
@@ -134,76 +134,72 @@
             <p>The following plugins were updated today because they are being deprecated:</p>
 
 <ul>
-<li>cordova-plugin-console: 1.1.0</li>
-<li>cordova-plugin-compat: 1.2.0</li>
-<li>cordova-plugin-device-motion: 2.0.0</li>
-<li>cordova-plugin-device-orientation: 2.0.0 </li>
+  <li>cordova-plugin-console: 1.1.0</li>
+  <li>cordova-plugin-compat: 1.2.0</li>
+  <li>cordova-plugin-device-motion: 2.0.0</li>
+  <li>cordova-plugin-device-orientation: 2.0.0</li>
 </ul>
 
 <p><code>cordova-plugin-console</code> has been integrated into <code>cordova-ios@4.5.0+</code>. It is not needed anymore. Make sure to remove it from your projects if you plan on updating your <code>cordova-ios</code>!</p>
 
-<p>Similarly, <code>cordova-plugin-compat</code> has been integrated into the upcoming <code>cordova-android@6.3.0</code> release. Please remove it from your projects when you update to the latest version of <code>cordova-android</code>. </p>
+<p>Similarly, <code>cordova-plugin-compat</code> has been integrated into the upcoming <code>cordova-android@6.3.0</code> release. Please remove it from your projects when you update to the latest version of <code>cordova-android</code>.</p>
 
 <p><code>cordova-plugin-device-motion</code> and <code>cordova-plugin-device-orientation</code> have officially been deprecated. These plugins are being replaced by the built in <a href="https://www.w3.org/TR/2016/CR-orientation-event-20160818/">W3C Device Motion and Orientation APIs</a>, which are now supported on iOS, Android and Windows. Checkout the migration guides the PhoneGap team wrote for <a href="https://blog.phonegap.com/migrating-from-the-cordova-device-motion-plugin-ddd8176632ed">Device Motion</a> and <a href="https://blog.phonegap.com/migrating-from-the-cordova-device-orientation-plugin-8442b869e6cc">Device Orientation</a>.</p>
 
-<hr>
-
+<hr />
 <p>You can update any plugin by removing it, and then re-adding it.</p>
 
 <p>E.g. To update your camera plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm cordova-plugin-camera --save
-cordova plugin add cordova-plugin-camera@latest --save
-</code></pre></div>
-<p>Changes include:</p>
 
-<!--more-->
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm cordova-plugin-camera --save
+cordova plugin add cordova-plugin-camera@latest --save
+</code></pre></div></div>
+
+<p>Changes include:
+<!--more--></p>
 
 <p>cordova-plugin-console@1.1.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13170">CB-13170</a> Integrated this plugin into <code>cordova-ios@4.5.0</code>. This plugin will not install for <code>cordova-ios &gt;= 4.5.0</code>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on <code>Travis</code> and <code>AppVeyor</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12991">CB-12991</a> (CI) Updated CI badges</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12935">CB-12935</a> (<strong>windows</strong>) Enable paramedic builds on AppVeyor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12935">CB-12935</a> (<strong>ios</strong>, <strong>Android</strong>) Run <code>paramedic</code> builds on <code>Travis</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13170">CB-13170</a> Integrated this plugin into <code>cordova-ios@4.5.0</code>. This plugin will not install for <code>cordova-ios &gt;= 4.5.0</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on <code>Travis</code> and <code>AppVeyor</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12991">CB-12991</a> (CI) Updated CI badges</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12935">CB-12935</a> (<strong>windows</strong>) Enable paramedic builds on AppVeyor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12935">CB-12935</a> (<strong>ios</strong>, <strong>Android</strong>) Run <code>paramedic</code> builds on <code>Travis</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-compat@1.2.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12730">CB-12730</a> Integrate this plugin into <code>cordova-android@6.3.0</code> and deprecate this plugin as it is no longer needed.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12730">CB-12730</a> Prevent plugin from installing with <code>cordova-android &gt;= 6.3.0</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12730">CB-12730</a> Integrate this plugin into <code>cordova-android@6.3.0</code> and deprecate this plugin as it is no longer needed.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12730">CB-12730</a> Prevent plugin from installing with <code>cordova-android &gt;= 6.3.0</code></li>
 </ul>
 
 <p>cordova-plugin-device-orientation@2.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13076">CB-13076</a> added deprecation notice to <code>info</code> tag</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12728">CB-12728</a> Device Orientation - SUNSET</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on <code>Travis</code> and <code>AppVeyor</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12667">CB-12667</a> Reset changes for searching Samsung sensors</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12991">CB-12991</a> (CI) Updated CI badges</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12935">CB-12935</a> (<strong>windows</strong>) Enable paramedic builds on <code>AppVeyor</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12935">CB-12935</a> (<strong>ios</strong>, <strong>Android</strong>) Enable paramedic builds on <code>Travis CI</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12667">CB-12667</a> <strong>Android</strong>: Added logic for searching sensors from Samsung vendor</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13076">CB-13076</a> added deprecation notice to <code>info</code> tag</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12728">CB-12728</a> Device Orientation - SUNSET</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on <code>Travis</code> and <code>AppVeyor</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12667">CB-12667</a> Reset changes for searching Samsung sensors</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12991">CB-12991</a> (CI) Updated CI badges</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12935">CB-12935</a> (<strong>windows</strong>) Enable paramedic builds on <code>AppVeyor</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12935">CB-12935</a> (<strong>ios</strong>, <strong>Android</strong>) Enable paramedic builds on <code>Travis CI</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12667">CB-12667</a> <strong>Android</strong>: Added logic for searching sensors from Samsung vendor</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
 <p>cordova-plugin-device-motion@2.0.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-13068">CB-13068</a> added <code>info</code> tag for deprecation</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12726">CB-12726</a> Device Motion - SUNSET</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13115">CB-13115</a> <strong>Browser</strong> Fixed <code>getCurrentAcceleration()</code> on <strong>Firefox</strong>, <strong>Safari</strong> and <strong>Edge</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on <code>Travis</code> and <code>AppVeyor</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12991">CB-12991</a> (CI) Updated CI badges</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12935">CB-12935</a> (<strong>windows</strong>) Enable paramedic builds on <code>AppVeyor</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12935">CB-12935</a> (<strong>ios</strong>, <strong>Android</strong>) Enable paramedic builds on <code>Travis CI</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13068">CB-13068</a> added <code>info</code> tag for deprecation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12726">CB-12726</a> Device Motion - SUNSET</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13115">CB-13115</a> <strong>Browser</strong> Fixed <code>getCurrentAcceleration()</code> on <strong>Firefox</strong>, <strong>Safari</strong> and <strong>Edge</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13028">CB-13028</a> (CI) <strong>Browser</strong> builds on <code>Travis</code> and <code>AppVeyor</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-13000">CB-13000</a> (CI) Speed up <strong>Android</strong> builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12991">CB-12991</a> (CI) Updated CI badges</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12935">CB-12935</a> (<strong>windows</strong>) Enable paramedic builds on <code>AppVeyor</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12935">CB-12935</a> (<strong>ios</strong>, <strong>Android</strong>) Enable paramedic builds on <code>Travis CI</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12847">CB-12847</a> added <code>bugs</code> entry to <code>package.json</code>.</li>
 </ul>
 
         </div>

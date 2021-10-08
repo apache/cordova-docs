@@ -2217,49 +2217,52 @@ Cordova&#39;s latest Android package supports up to Android <a href="http://deve
 The supported Android API Levels and Android Versions for the past
 few cordova-android releases can be found in this table:</p>
 
-<table><thead>
-<tr>
-<th>cordova-android Version</th>
-<th>Supported Android API-Levels</th>
-<th>Equivalent Android Version</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>8.X.X</td>
-<td>19 - 28</td>
-<td>4.4 - 9.0.0</td>
-</tr>
-<tr>
-<td>7.X.X</td>
-<td>19 - 27</td>
-<td>4.4 - 8.1</td>
-</tr>
-<tr>
-<td>6.X.X</td>
-<td>16 - 26</td>
-<td>4.1 - 8.0.0</td>
-</tr>
-<tr>
-<td>5.X.X</td>
-<td>14 - 23</td>
-<td>4.0 - 6.0.1</td>
-</tr>
-<tr>
-<td>4.1.X</td>
-<td>14 - 22</td>
-<td>4.0 - 5.1</td>
-</tr>
-<tr>
-<td>4.0.X</td>
-<td>10 - 22</td>
-<td>2.3.3 - 5.1</td>
-</tr>
-<tr>
-<td>3.7.X</td>
-<td>10 - 21</td>
-<td>2.3.3 - 5.0.2</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>cordova-android Version</th>
+      <th>Supported Android API-Levels</th>
+      <th>Equivalent Android Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>8.X.X</td>
+      <td>19 - 28</td>
+      <td>4.4 - 9.0.0</td>
+    </tr>
+    <tr>
+      <td>7.X.X</td>
+      <td>19 - 27</td>
+      <td>4.4 - 8.1</td>
+    </tr>
+    <tr>
+      <td>6.X.X</td>
+      <td>16 - 26</td>
+      <td>4.1 - 8.0.0</td>
+    </tr>
+    <tr>
+      <td>5.X.X</td>
+      <td>14 - 23</td>
+      <td>4.0 - 6.0.1</td>
+    </tr>
+    <tr>
+      <td>4.1.X</td>
+      <td>14 - 22</td>
+      <td>4.0 - 5.1</td>
+    </tr>
+    <tr>
+      <td>4.0.X</td>
+      <td>10 - 22</td>
+      <td>2.3.3 - 5.1</td>
+    </tr>
+    <tr>
+      <td>3.7.X</td>
+      <td>10 - 21</td>
+      <td>2.3.3 - 5.0.2</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Please note that the versions listed here are for Cordova&#39;s Android package,
 <a href="https://github.com/apache/cordova-android">cordova-android</a>, and not for the
@@ -2302,9 +2305,9 @@ that your version of cordova-android supports (see <a href="#requirements-and-su
 and make sure the following are installed:</p>
 
 <ol>
-<li>Android Platform SDK for your targeted version of Android</li>
-<li>Android SDK build-tools version 19.1.0 or higher</li>
-<li>Android Support Repository (found under the &quot;SDK Tools&quot; tab)</li>
+  <li>Android Platform SDK for your targeted version of Android</li>
+  <li>Android SDK build-tools version 19.1.0 or higher</li>
+  <li>Android Support Repository (found under the &quot;SDK Tools&quot; tab)</li>
 </ol>
 
 <p>See Android&#39;s documentation on <a href="https://developer.android.com/studio/intro/update">Installing SDK Packages</a>
@@ -2318,11 +2321,11 @@ in certain cases you may need to set them manually. The following variables
 should be updated:</p>
 
 <ol>
-<li>Set the <code>JAVA_HOME</code> environment variable to the location of your JDK
+  <li>Set the <code>JAVA_HOME</code> environment variable to the location of your JDK
 installation</li>
-<li>Set the <code>ANDROID_HOME</code> environment variable to the location of your Android
+  <li>Set the <code>ANDROID_HOME</code> environment variable to the location of your Android
 SDK installation</li>
-<li>It is also recommended that you add the Android SDK&#39;s <code>tools</code>, <code>tools/bin</code>,
+  <li>It is also recommended that you add the Android SDK&#39;s <code>tools</code>, <code>tools/bin</code>,
 and <code>platform-tools</code> directories to your <code>PATH</code></li>
 </ol>
 
@@ -2331,42 +2334,59 @@ and <code>platform-tools</code> directories to your <code>PATH</code></li>
 <p>On a Mac or Linux, you can use a text editor to create or modify the
 <code>~/.bash_profile</code> file. To set an environment variable, add a line that uses
 <code>export</code> like so (substitute the path with your local installation):</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">ANDROID_HOME</span><span class="o">=</span>/Development/android-sdk/
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">ANDROID_HOME</span><span class="o">=</span>/Development/android-sdk/
+</code></pre></div></div>
+
 <p>To update your <code>PATH</code>, add a line resembling the following (substitute the paths
 with your local Android SDK installation&#39;s location):</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
+</code></pre></div></div>
+
 <p>Reload your terminal to see this change reflected or run the following command:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">source</span> ~/.bash_profile
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">source</span> ~/.bash_profile
+</code></pre></div></div>
+
 <h4>Windows</h4>
 
 <p>These steps may vary depending on your installed version of Windows. Close and
 reopen any command prompt windows after making changes to see them reflected.</p>
 
 <ol>
-<li><p>Click on the <strong>Start</strong> menu in the lower-left corner of the desktop</p></li>
-<li><p>In the search bar, search for <strong>Environment Variables</strong> and select <strong>Edit the
-system Environment Variables</strong> from the options that appear</p></li>
-<li><p>In the window that appears, click the <strong>Environment Variables</strong> button</p></li>
+  <li>
+    <p>Click on the <strong>Start</strong> menu in the lower-left corner of the desktop</p>
+  </li>
+  <li>
+    <p>In the search bar, search for <strong>Environment Variables</strong> and select <strong>Edit the
+system Environment Variables</strong> from the options that appear</p>
+  </li>
+  <li>
+    <p>In the window that appears, click the <strong>Environment Variables</strong> button</p>
+  </li>
 </ol>
 
 <h5>To create a new environment variable:</h5>
 
 <ol>
-<li>Click <strong>New...</strong> and enter the variable name and value</li>
+  <li>Click <strong>New&#8230;</strong> and enter the variable name and value</li>
 </ol>
 
 <h5>To set your <strong>PATH</strong>:</h5>
 
 <ol>
-<li><p>Select the <strong>PATH</strong> variable and press <strong>Edit</strong>.</p></li>
-<li><p>Add entries for the relevant locations to the <strong>PATH</strong>. For example
+  <li>
+    <p>Select the <strong>PATH</strong> variable and press <strong>Edit</strong>.</p>
+  </li>
+  <li>
+    <p>Add entries for the relevant locations to the <strong>PATH</strong>. For example
 (substitute the paths with your local Android SDK installation&#39;s location):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">C:\Users\[your user]\AppData\Local\Android\Sdk\platform-tools
-C:\Users\[your user]\AppData\Local\Android\Sdk\tools
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> C:\Users\[your user]\AppData\Local\Android\Sdk\platform-tools
+ C:\Users\[your user]\AppData\Local\Android\Sdk\tools
+</code></pre></div>    </div>
+  </li>
 </ol>
 
 <h2>Project Configuration</h2>
@@ -2381,8 +2401,10 @@ and <a href="https://developer.android.com/studio/run/emulator-acceleration.html
 
 <p>Once your AVD is configured correctly, you should be able to deploy your Cordova
 application to the emulator by running:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova run <span class="nt">--emulator</span>
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova run <span class="nt">--emulator</span>
+</code></pre></div></div>
+
 <h3>Configuring Gradle</h3>
 
 <p>As of <strong>cordova-android@4.0.0</strong>, Cordova for Android projects are built using
@@ -2396,63 +2418,78 @@ deprecated as of the Android SDK Tools 25.3.0.</p>
 <a href="https://docs.gradle.org/current/userguide/build_environment.html">Gradle properties</a>
 that Cordova exposes. The following properties are available to be set:</p>
 
-<table><thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>cdvBuildMultipleApks</code></td>
-<td>If this is set, then multiple APK files will be generated: One per native platform supported by library projects (x86, ARM, etc). This can be important if your project uses large native libraries, which can drastically increase the size of the generated APK. If not set, then a single APK will be generated which can be used on all devices</td>
-</tr>
-<tr>
-<td><code>cdvVersionCode</code></td>
-<td>Overrides the versionCode set in <code>AndroidManifest.xml</code></td>
-</tr>
-<tr>
-<td><code>cdvReleaseSigningPropertiesFile</code></td>
-<td><em>Default: <code>release-signing.properties</code></em><br>Path to a .properties file that contains signing information for release builds (see <a href="#signing-an-app">Signing an App</a>)</td>
-</tr>
-<tr>
-<td><code>cdvDebugSigningPropertiesFile</code></td>
-<td><em>Default: <code>debug-signing.properties</code></em><br>Path to a .properties file that contains signing information for debug builds (see <a href="#signing-an-app">Signing an App</a>). Useful when you need to share a signing key with other developers</td>
-</tr>
-<tr>
-<td><code>cdvMinSdkVersion</code></td>
-<td>Overrides the value of <code>minSdkVersion</code> set in <code>AndroidManifest.xml</code>. Useful when creating multiple APKs based on SDK version</td>
-</tr>
-<tr>
-<td><code>cdvBuildToolsVersion</code></td>
-<td>Overrides the automatically detected <code>android.buildToolsVersion</code> value</td>
-</tr>
-<tr>
-<td><code>cdvCompileSdkVersion</code></td>
-<td>Overrides the automatically detected <code>android.compileSdkVersion</code> value</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>cdvBuildMultipleApks</code></td>
+      <td>If this is set, then multiple APK files will be generated: One per native platform supported by library projects (x86, ARM, etc). This can be important if your project uses large native libraries, which can drastically increase the size of the generated APK. If not set, then a single APK will be generated which can be used on all devices</td>
+    </tr>
+    <tr>
+      <td><code>cdvVersionCode</code></td>
+      <td>Overrides the versionCode set in <code>AndroidManifest.xml</code></td>
+    </tr>
+    <tr>
+      <td><code>cdvReleaseSigningPropertiesFile</code></td>
+      <td><em>Default: <code>release-signing.properties</code></em><br />Path to a .properties file that contains signing information for release builds (see <a href="#signing-an-app">Signing an App</a>)</td>
+    </tr>
+    <tr>
+      <td><code>cdvDebugSigningPropertiesFile</code></td>
+      <td><em>Default: <code>debug-signing.properties</code></em><br />Path to a .properties file that contains signing information for debug builds (see <a href="#signing-an-app">Signing an App</a>). Useful when you need to share a signing key with other developers</td>
+    </tr>
+    <tr>
+      <td><code>cdvMinSdkVersion</code></td>
+      <td>Overrides the value of <code>minSdkVersion</code> set in <code>AndroidManifest.xml</code>. Useful when creating multiple APKs based on SDK version</td>
+    </tr>
+    <tr>
+      <td><code>cdvBuildToolsVersion</code></td>
+      <td>Overrides the automatically detected <code>android.buildToolsVersion</code> value</td>
+    </tr>
+    <tr>
+      <td><code>cdvCompileSdkVersion</code></td>
+      <td>Overrides the automatically detected <code>android.compileSdkVersion</code> value</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>You can set these properties in one of four ways:</p>
 
 <ol>
-<li><p>By setting environment variables like so:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">  <span class="nv">$ </span><span class="nb">export </span><span class="nv">ORG_GRADLE_PROJECT_cdvMinSdkVersion</span><span class="o">=</span>20
-  <span class="nv">$ </span>cordova build android
-</code></pre></div></li>
-<li><p>By using the <code>--gradleArg</code> flag in your Cordova <code>build</code> or <code>run</code> commands:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">  <span class="nv">$ </span>cordova run android <span class="nt">--</span> <span class="nt">--gradleArg</span><span class="o">=</span><span class="nt">-PcdvMinSdkVersion</span><span class="o">=</span>20
-</code></pre></div></li>
-<li><p>By placing a file called <code>gradle.properties</code> in your Android platform
-  folder (<code>&lt;your-project&gt;/platforms/android</code>) and setting the properties in it
-  like so:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">  # In &lt;your-project&gt;/platforms/android/app/gradle.properties
-  cdvMinSdkVersion=20
-</code></pre></div></li>
-<li><p>By extending <code>build.gradle</code> via a <a href="#extending-buildgradle"><code>build-extras.gradle</code> file</a>
-and setting the property like so:</p>
-<div class="highlight"><pre><code class="language-groovy" data-lang="groovy">  <span class="c1">// In &lt;your-project&gt;/platforms/android/app/build-extras.gradle</span>
-  <span class="n">ext</span><span class="o">.</span><span class="na">cdvMinSdkVersion</span> <span class="o">=</span> <span class="mi">20</span>
-</code></pre></div></li>
+  <li>
+    <p>By setting environment variables like so:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">export </span><span class="nv">ORG_GRADLE_PROJECT_cdvMinSdkVersion</span><span class="o">=</span>20
+ <span class="nv">$ </span>cordova build android
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>By using the <code>--gradleArg</code> flag in your Cordova <code>build</code> or <code>run</code> commands:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>cordova run android <span class="nt">--</span> <span class="nt">--gradleArg</span><span class="o">=</span><span class="nt">-PcdvMinSdkVersion</span><span class="o">=</span>20
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>By placing a file called <code>gradle.properties</code> in your Android platform
+ folder (<code>&lt;your-project&gt;/platforms/android</code>) and setting the properties in it
+ like so:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # In &lt;your-project&gt;/platforms/android/app/gradle.properties
+ cdvMinSdkVersion=20
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>By extending <code>build.gradle</code> via a <a href="#extending-buildgradle"><code>build-extras.gradle</code> file</a>
+    and setting the property like so:</p>
+
+    <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// In &lt;your-project&gt;/platforms/android/app/build-extras.gradle</span>
+ <span class="n">ext</span><span class="o">.</span><span class="na">cdvMinSdkVersion</span> <span class="o">=</span> <span class="mi">20</span>
+</code></pre></div>    </div>
+  </li>
 </ol>
 
 <p>The latter two options both involve including an extra file in your Android
@@ -2472,7 +2509,8 @@ so it is recommended that you copy it over via a script attached to the
 <code>before_build</code> <a href="../../appdev/hooks/index.html">hook</a>.</p>
 
 <p>Here&#39;s an example:</p>
-<div class="highlight"><pre><code class="language-groovy" data-lang="groovy"><span class="c1">// Example build-extras.gradle</span>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example build-extras.gradle</span>
 <span class="c1">// This file is included at the beginning of `build.gradle`</span>
 
 <span class="c1">// special properties (see `build.gradle`) can be set and overwrite the defaults</span>
@@ -2494,10 +2532,13 @@ so it is recommended that you copy it over via a script attached to the
 <span class="n">ext</span><span class="o">.</span><span class="na">postBuildExtras</span> <span class="o">=</span> <span class="o">{</span>
     <span class="n">android</span><span class="o">.</span><span class="na">buildTypes</span><span class="o">.</span><span class="na">debug</span><span class="o">.</span><span class="na">applicationIdSuffix</span> <span class="o">=</span> <span class="s1">'.debug'</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Note that plugins can also include <code>build-extras.gradle</code> files via:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"some.gradle"</span> <span class="na">custom=</span><span class="s">"true"</span> <span class="na">type=</span><span class="s">"gradleReference"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"some.gradle"</span> <span class="na">custom=</span><span class="s">"true"</span> <span class="na">type=</span><span class="s">"gradleReference"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
 <h3>Setting the Version Code</h3>
 
 <p>To change the <a href="https://developer.android.com/studio/publish/versioning.html">version code</a>
@@ -2505,8 +2546,10 @@ for your app&#39;s generated apk, set the <code>android-versionCode</code> attri
 element of your application&#39;s <a href="../../../config_ref/index.html">config.xml file</a>.
 If the <code>android-versionCode</code> is not set, the version code will be determined
 using the <code>version</code> attribute. For example, if the version is <code>MAJOR.MINOR.PATCH</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">versionCode = MAJOR * 10000 + MINOR * 100 + PATCH
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>versionCode = MAJOR * 10000 + MINOR * 100 + PATCH
+</code></pre></div></div>
+
 <p>If your application has enabled the <code>cdvBuildMultipleApks</code> Gradle property (see
 <a href="#setting-gradle-properties">Setting Gradle Properties</a>), the version code of
 your app will also be multiplied by 10 so that the last digit of the code can be
@@ -2532,39 +2575,42 @@ original, etc.</p>
 
 <p>To sign an app, you need the following parameters:</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Flag</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Keystore</td>
-<td><code>--keystore</code></td>
-<td>Path to a binary file which can hold a set of keys</td>
-</tr>
-<tr>
-<td>Keystore Password</td>
-<td><code>--storePassword</code></td>
-<td>Password to the keystore</td>
-</tr>
-<tr>
-<td>Alias</td>
-<td><code>--alias</code></td>
-<td>The id specifying the private key used for signing</td>
-</tr>
-<tr>
-<td>Password</td>
-<td><code>--password</code></td>
-<td>Password for the private key specified</td>
-</tr>
-<tr>
-<td>Type of the Keystore</td>
-<td><code>--keystoreType</code></td>
-<td><em>Default: auto-detect based on file extension</em><br>Either pkcs12 or jks</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Flag</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Keystore</td>
+      <td><code>--keystore</code></td>
+      <td>Path to a binary file which can hold a set of keys</td>
+    </tr>
+    <tr>
+      <td>Keystore Password</td>
+      <td><code>--storePassword</code></td>
+      <td>Password to the keystore</td>
+    </tr>
+    <tr>
+      <td>Alias</td>
+      <td><code>--alias</code></td>
+      <td>The id specifying the private key used for signing</td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><code>--password</code></td>
+      <td>Password for the private key specified</td>
+    </tr>
+    <tr>
+      <td>Type of the Keystore</td>
+      <td><code>--keystoreType</code></td>
+      <td><em>Default: auto-detect based on file extension</em><br />Either pkcs12 or jks</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>These parameters can be specified using the command line arguments above to
 the <a href="../../../reference/cordova-cli/index.html">Cordova CLI</a> <code>build</code> or <code>run</code> commands.</p>
@@ -2578,25 +2624,27 @@ the <a href="../../../reference/cordova-cli/index.html">Cordova CLI</a> <code>bu
 <p>Alternatively, you could specify them in a build configuration file (<code>build.json</code>)
 using the <code>--buildConfig</code> argument to the same commands. Here&#39;s a sample of a
 build configuration file:</p>
-<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="s2">"android"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"keystore"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../android.keystore"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"storePassword"</span><span class="p">:</span><span class="w"> </span><span class="s2">"android"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"alias"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mykey1"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"password"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"keystoreType"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"android"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"keystore"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../android.keystore"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"storePassword"</span><span class="p">:</span><span class="w"> </span><span class="s2">"android"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"alias"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mykey1"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"password"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"keystoreType"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"keystore"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../android.keystore"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"storePassword"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"alias"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mykey2"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"password"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"keystoreType"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="nl">"release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"keystore"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../android.keystore"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"storePassword"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"alias"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mykey2"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"password"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"keystoreType"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div>
+</span></code></pre></div></div>
+
 <p>For release signing, passwords can be excluded and the build system will issue a
 prompt asking for the password.</p>
 
@@ -2610,12 +2658,14 @@ This can be useful for specifying passwords on the command line.</p>
 pointing to it with the <code>cdvReleaseSigningPropertiesFile</code> and
 <code>cdvDebugSigningPropertiesFile</code> Gradle properties (see <a href="#setting-gradle-properties">Setting Gradle Properties</a>).
 The file should look like this:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">storeFile=relative/path/to/keystore.p12
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>storeFile=relative/path/to/keystore.p12
 storePassword=SECRET1
 storeType=pkcs12
 keyAlias=DebugSigningKey
 keyPassword=SECRET2
-</code></pre></div>
+</code></pre></div></div>
+
 <p><code>storePassword</code> and <code>keyPassword</code> are optional, and will be prompted for if omitted.</p>
 
 <h2>Debugging</h2>
@@ -2645,14 +2695,22 @@ folder are reflected in your plugin&#39;s source folder (and vice versa).</p>
 <p>To open a Cordova for Android project in Android Studio:</p>
 
 <ol>
-<li><p>Launch <strong>Android Studio</strong>.</p></li>
-<li><p>Select <strong>Import Project (Eclipse ADT, Gradle, etc)</strong>.</p>
+  <li>
+    <p>Launch <strong>Android Studio</strong>.</p>
+  </li>
+  <li>
+    <p>Select <strong>Import Project (Eclipse ADT, Gradle, etc)</strong>.</p>
 
-<p><img src="/static/img/guide/platforms/android/asdk_import_project.png" alt=""></p></li>
-<li><p>Select the Android platform directory in your project (<code>&lt;your-project&gt;/platforms/android</code>).</p>
+    <p><img src="/static/img/guide/platforms/android/asdk_import_project.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Select the Android platform directory in your project (<code>&lt;your-project&gt;/platforms/android</code>).</p>
 
-<p><img src="/static/img/guide/platforms/android/asdk_import_select_location.png" alt=""></p></li>
-<li><p>For the <code>Gradle Sync</code> question you can simply answer <strong>Yes</strong>.</p></li>
+    <p><img src="/static/img/guide/platforms/android/asdk_import_select_location.png" alt="" /></p>
+  </li>
+  <li>
+    <p>For the <code>Gradle Sync</code> question you can simply answer <strong>Yes</strong>.</p>
+  </li>
 </ol>
 
 <p>Once it finishes importing, you should be able to build and run the app directly
@@ -2660,7 +2718,7 @@ from <strong>Android Studio</strong>. See <a href="https://developer.android.com
 and <a href="https://developer.android.com/studio/run/index.html">Building and Running from Android Studio</a>
 for more details.</p>
 
-<p><img src="/static/img/guide/platforms/android/asdk_import_done.png" alt=""></p>
+<p><img src="/static/img/guide/platforms/android/asdk_import_done.png" alt="" /></p>
 
 <h2>Platform Centered Workflow</h2>
 
@@ -2683,8 +2741,10 @@ is equivalent to <code>cordova create</code>.</p>
 
 <p>To create a project using this package, run the <code>create</code> script in the <code>bin</code>
 folder:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova-android/bin/create
-</code></pre></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova-android/bin/create
+</code></pre></div></div>
+
 <p>The created project will have a folder named <code>cordova</code> inside that contains
 scripts for the project-specific Cordova commands (e.g. <code>run</code>, <code>build</code>, etc.).
 Additionally, the project will feature a structure different from that of a
@@ -2714,29 +2774,32 @@ fired. The events are not guaranteed to line up with Android&#39;s lifecycle, bu
 they can provide guidelines for saving and restoring your state. These events
 roughly map to Android callbacks as follows:</p>
 
-<table><thead>
-<tr>
-<th>Cordova Event</th>
-<th>Rough Android Equivalent</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>deviceready</code></td>
-<td><code>onCreate()</code></td>
-<td>Application is starting (not from background)</td>
-</tr>
-<tr>
-<td><code>pause</code></td>
-<td><code>onPause()</code></td>
-<td>Application is moving to the background</td>
-</tr>
-<tr>
-<td><code>resume</code></td>
-<td><code>onResume()</code></td>
-<td>Application is returning to the foreground</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Cordova Event</th>
+      <th>Rough Android Equivalent</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>deviceready</code></td>
+      <td><code>onCreate()</code></td>
+      <td>Application is starting (not from background)</td>
+    </tr>
+    <tr>
+      <td><code>pause</code></td>
+      <td><code>onPause()</code></td>
+      <td>Application is moving to the background</td>
+    </tr>
+    <tr>
+      <td><code>resume</code></td>
+      <td><code>onResume()</code></td>
+      <td>Application is returning to the foreground</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Most other Cordova platforms have a similar concept of lifecycles and should
 fire these same events when similar actions happen on a user&#39;s device. However,
@@ -2782,19 +2845,19 @@ to take a profile photo. The flow of events in the application when everything
 goes as planned will look something like this:</p>
 
 <ol>
-<li>The user is interacting with your app and needs to take a picture</li>
-<li>The camera plugin launches the native camera activity
-
-<ul>
-<li><em>The Cordova activity is pushed to the background (pause event is fired)</em></li>
-</ul></li>
-<li>The user takes a photo</li>
-<li>The camera activity finishes
-
-<ul>
-<li><em>The Cordova activity is moved to the foreground (resume event is fired)</em></li>
-</ul></li>
-<li>The user is returned to your application where they left off</li>
+  <li>The user is interacting with your app and needs to take a picture</li>
+  <li>The camera plugin launches the native camera activity
+    <ul>
+      <li><em>The Cordova activity is pushed to the background (pause event is fired)</em></li>
+    </ul>
+  </li>
+  <li>The user takes a photo</li>
+  <li>The camera activity finishes
+    <ul>
+      <li><em>The Cordova activity is moved to the foreground (resume event is fired)</em></li>
+    </ul>
+  </li>
+  <li>The user is returned to your application where they left off</li>
 </ol>
 
 <p>However, this flow of events can be disrupted if a device is low on memory. If
@@ -2802,19 +2865,19 @@ the Activity is killed by the OS, the above sequence of events instead plays out
 as follows:</p>
 
 <ol>
-<li>The user is interacting with your app and needs to take a picture</li>
-<li>The camera plugin launches the native camera activity
-
-<ul>
-<li><em>The OS destroys the Cordova activity (pause event is fired)</em></li>
-</ul></li>
-<li>The user takes a photo</li>
-<li>The camera activity finishes
-
-<ul>
-<li><em>The OS recreates the Cordova activity (deviceready and resume events are fired)</em></li>
-</ul></li>
-<li>The user is confused as to why they are suddenly back at your app&#39;s login screen</li>
+  <li>The user is interacting with your app and needs to take a picture</li>
+  <li>The camera plugin launches the native camera activity
+    <ul>
+      <li><em>The OS destroys the Cordova activity (pause event is fired)</em></li>
+    </ul>
+  </li>
+  <li>The user takes a photo</li>
+  <li>The camera activity finishes
+    <ul>
+      <li><em>The OS recreates the Cordova activity (deviceready and resume events are fired)</em></li>
+    </ul>
+  </li>
+  <li>The user is confused as to why they are suddenly back at your app&#39;s login screen</li>
 </ol>
 
 <p>In this instance, the OS killed the application in the background and the
@@ -2855,7 +2918,8 @@ contain any pending plugin results from the plugin request that launched the
 external activity made prior to the activity being destroyed.</p>
 
 <p>The payload for the <code>resume</code> event adheres to the following format:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">{
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
     action: "resume",
     pendingResult: {
         pluginServiceName: string,
@@ -2863,32 +2927,32 @@ external activity made prior to the activity being destroyed.</p>
         result: any
     }
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The fields of that payload are defined as follows:</p>
 
 <ul>
-<li><code>pluginServiceName</code>: The name of the plugin returning the result (e.g. &quot;Camera&quot;). This can be found in the <code>&lt;name&gt;</code> tag of a plugin&#39;s plugin.xml file</li>
-<li><code>pluginStatus</code>: The status of the plugin call (see below)</li>
-<li><code>result</code>: Whatever the result of the plugin call is</li>
+  <li><code>pluginServiceName</code>: The name of the plugin returning the result (e.g. &quot;Camera&quot;). This can be found in the <code>&lt;name&gt;</code> tag of a plugin&#39;s plugin.xml file</li>
+  <li><code>pluginStatus</code>: The status of the plugin call (see below)</li>
+  <li><code>result</code>: Whatever the result of the plugin call is</li>
 </ul>
 
 <p>The possible values for <code>pluginStatus</code> in the <code>pendingResult</code> field include the following:</p>
-
 <ul>
-<li><code>&quot;OK&quot;</code> - The plugin call was successful</li>
-<li><code>&quot;No Result&quot;</code> - The plugin call ended with no result</li>
-<li><code>&quot;Error&quot;</code> - The plugin call resulted in some general error</li>
-<li>Other miscellaneous errors
-
-<ul>
-<li><code>&quot;Class not found&quot;</code></li>
-<li><code>&quot;Illegal access&quot;</code></li>
-<li><code>&quot;Instantiation error&quot;</code></li>
-<li><code>&quot;Malformed url&quot;</code></li>
-<li><code>&quot;IO error&quot;</code></li>
-<li><code>&quot;Invalid action&quot;</code></li>
-<li><code>&quot;JSON error&quot;</code></li>
-</ul></li>
+  <li><code>"OK"</code> - The plugin call was successful</li>
+  <li><code>"No Result"</code> - The plugin call ended with no result</li>
+  <li><code>"Error"</code> - The plugin call resulted in some general error</li>
+  <li>Other miscellaneous errors
+    <ul>
+      <li><code>"Class not found"</code></li>
+      <li><code>"Illegal access"</code></li>
+      <li><code>"Instantiation error"</code></li>
+      <li><code>"Malformed url"</code></li>
+      <li><code>"IO error"</code></li>
+      <li><code>"Invalid action"</code></li>
+      <li><code>"JSON error"</code></li>
+    </ul>
+  </li>
 </ul>
 
 <p>Please note that it is up to the plugin to decide what is contained in the
@@ -2903,14 +2967,15 @@ to manage state. It uses the Apache camera plugin as an example of how to
 retrieve the results of a plugin call from the <code>resume</code> event payload. The
 portion of the code dealing with the <code>resume</code>&#39;s <code>event.pendingResult</code> object
 requires cordova-android <strong>5.1.0+</strong></p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// This state represents the state of our application and will be saved and</span>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This state represents the state of our application and will be saved and</span>
 <span class="c1">// restored by onResume() and onPause()</span>
 <span class="kd">var</span> <span class="nx">appState</span> <span class="o">=</span> <span class="p">{</span>
     <span class="na">takingPicture</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="na">imageUri</span><span class="p">:</span> <span class="s2">""</span>
+    <span class="na">imageUri</span><span class="p">:</span> <span class="dl">""</span>
 <span class="p">};</span>
 
-<span class="kd">var</span> <span class="nx">APP_STORAGE_KEY</span> <span class="o">=</span> <span class="s2">"exampleAppState"</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">APP_STORAGE_KEY</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">exampleAppState</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="p">{</span>
     <span class="na">initialize</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
@@ -2918,12 +2983,12 @@ requires cordova-android <strong>5.1.0+</strong></p>
     <span class="p">},</span>
     <span class="na">bindEvents</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="c1">// Here we register our callbacks for the lifecycle events we care about</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'deviceready'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'pause'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onPause</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'resume'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onResume</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">deviceready</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">pause</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onPause</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">resume</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onResume</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
     <span class="p">},</span>
     <span class="na">onDeviceReady</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"take-picture-button"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">take-picture-button</span><span class="dl">"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
             <span class="c1">// Because the camera plugin method launches an external Activity,</span>
             <span class="c1">// there is a chance that our application will be killed before the</span>
             <span class="c1">// success or failure callbacks are called. See onPause() and</span>
@@ -2962,7 +3027,7 @@ requires cordova-android <strong>5.1.0+</strong></p>
 
         <span class="c1">// Check to see if we need to restore an image we took</span>
         <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">appState</span><span class="p">.</span><span class="nx">takingPicture</span> <span class="o">&amp;&amp;</span> <span class="nx">appState</span><span class="p">.</span><span class="nx">imageUri</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"get-picture-result"</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">appState</span><span class="p">.</span><span class="nx">imageUri</span><span class="p">;</span>
+            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">get-picture-result</span><span class="dl">"</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">appState</span><span class="p">.</span><span class="nx">imageUri</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="c1">// Now we can check if there is a plugin result in the event object.</span>
         <span class="c1">// This requires cordova-android 5.1.0+</span>
@@ -2970,7 +3035,7 @@ requires cordova-android <strong>5.1.0+</strong></p>
             <span class="c1">// Figure out whether or not the plugin call was successful and call</span>
             <span class="c1">// the relevant callback. For the camera plugin, "OK" means a</span>
             <span class="c1">// successful result and all other statuses mean error</span>
-            <span class="k">if</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">pendingResult</span><span class="p">.</span><span class="nx">pluginStatus</span> <span class="o">===</span> <span class="s2">"OK"</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">pendingResult</span><span class="p">.</span><span class="nx">pluginStatus</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
                 <span class="c1">// The camera plugin places the same result in the resume object</span>
                 <span class="c1">// as it passes to the success callback passed to getPicture(),</span>
                 <span class="c1">// thus we can pass it to the same callback. Other plugins may</span>
@@ -2989,7 +3054,7 @@ requires cordova-android <strong>5.1.0+</strong></p>
 <span class="kd">function</span> <span class="nx">cameraSuccessCallback</span><span class="p">(</span><span class="nx">imageUri</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">appState</span><span class="p">.</span><span class="nx">takingPicture</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
     <span class="nx">appState</span><span class="p">.</span><span class="nx">imageUri</span> <span class="o">=</span> <span class="nx">imageUri</span><span class="p">;</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"get-picture-result"</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">imageUri</span><span class="p">;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">get-picture-result</span><span class="dl">"</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">imageUri</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">cameraFailureCallback</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
@@ -2998,9 +3063,11 @@ requires cordova-android <strong>5.1.0+</strong></p>
 <span class="p">}</span>
 
 <span class="nx">app</span><span class="p">.</span><span class="nx">initialize</span><span class="p">();</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The corresponding html:</p>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 
 <span class="nt">&lt;html&gt;</span>
     <span class="nt">&lt;head&gt;</span>
@@ -3022,7 +3089,8 @@ requires cordova-android <strong>5.1.0+</strong></p>
         <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"js/index.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
     <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Testing the Activity Lifecycle</h3>
 
 <p>Android provides a developer setting for testing Activity destruction on low
@@ -3030,6 +3098,7 @@ memory. Enable the &quot;Don&#39;t keep activities&quot; setting in the Develope
 on your device or emulator to simulate low memory scenarios. You should always
 do some amount of testing with this setting enabled to make sure that your
 application is properly maintaining state.</p>
+
 
 
             </div>

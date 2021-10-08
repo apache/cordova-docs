@@ -1328,35 +1328,38 @@
                 <h1>contacts.find</h1>
 
 <p>Queries the device contacts database and returns one or more <code>[Contact](Contact/contact.html)</code> objects, each containing the fields specified.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
+</code></pre></div></div>
+
 <h2>Description</h2>
 
-<p>contacts.find is an asynchronous function that queries the device contacts database and returns an array of <code>[Contact](Contact/contact.html)</code> objects.  The resulting objects are passed to the <code>[contactSuccess](parameters/contactSuccess.html)</code> callback function specified by the <strong>contactSuccess</strong> parameter.  </p>
+<p>contacts.find is an asynchronous function that queries the device contacts database and returns an array of <code>[Contact](Contact/contact.html)</code> objects.  The resulting objects are passed to the <code>[contactSuccess](parameters/contactSuccess.html)</code> callback function specified by the <strong>contactSuccess</strong> parameter.</p>
 
-<p>Users must specify the contact fields to be used as a search qualifier in the <strong>contactFields</strong> parameter.  Only the fields specified in the <strong>contactFields</strong> parameter will be returned as properties of the <code>[Contact](Contact/contact.html)</code> objects that are passed to the <strong>contactSuccess</strong> callback function.  A zero-length <strong>contactFields</strong> parameter will result in an array of <code>[Contact](Contact/contact.html)</code> objects with only the <code>id</code> property populated. A <strong>contactFields</strong> value of [&quot;*&quot;] will return all contact fields. </p>
+<p>Users must specify the contact fields to be used as a search qualifier in the <strong>contactFields</strong> parameter.  Only the fields specified in the <strong>contactFields</strong> parameter will be returned as properties of the <code>[Contact](Contact/contact.html)</code> objects that are passed to the <strong>contactSuccess</strong> callback function.  A zero-length <strong>contactFields</strong> parameter will result in an array of <code>[Contact](Contact/contact.html)</code> objects with only the <code>id</code> property populated. A <strong>contactFields</strong> value of [&quot;*&quot;] will return all contact fields.</p>
 
 <p>The <strong>contactFindOptions.filter</strong> string can be used as a search filter when querying the contacts database.  If provided, a case-insensitive, partial value match is applied to each field specified in the <strong>contactFields</strong> parameter.  If a match is found in a comparison with <em>any</em> of the specified fields, the contact is returned.</p>
 
 <h2>Parameters</h2>
 
 <ul>
-<li><strong>contactFields:</strong> <a href="Contact/contact.html">Contact</a> fields to be used as search qualifier. Only these fields will have values in the resulting <code>[Contact](Contact/contact.html)</code> objects. <em>(DOMString[])</em> [Required]</li>
-<li><strong>contactSuccess:</strong> Success callback function that is invoked with the contacts returned from the contacts database. [Required]</li>
-<li><strong>contactError:</strong> Error callback function. Invoked when error occurs. [Optional]</li>
-<li><strong>contactFindOptions:</strong> Search options to filter contacts. [Optional]</li>
+  <li><strong>contactFields:</strong> <a href="Contact/contact.html">Contact</a> fields to be used as search qualifier. Only these fields will have values in the resulting <code>[Contact](Contact/contact.html)</code> objects. <em>(DOMString[])</em> [Required]</li>
+  <li><strong>contactSuccess:</strong> Success callback function that is invoked with the contacts returned from the contacts database. [Required]</li>
+  <li><strong>contactError:</strong> Error callback function. Invoked when error occurs. [Optional]</li>
+  <li><strong>contactFindOptions:</strong> Search options to filter contacts. [Optional]</li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function onSuccess(contacts) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess(contacts) {
     alert('Found ' + contacts.length + ' contacts.');
 };
 
@@ -1369,52 +1372,56 @@ var options = new ContactFindOptions();
 options.filter="Bob"; 
 var fields = ["displayName", "name"];
 navigator.contacts.find(fields, onSuccess, onError, options);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Contact Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-1.6.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Contact Example&lt;/title&gt;
 
-    <span class="c1">// Wait for Cordova to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Cordova is ready</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// find all contacts with 'Bob' in any name field</span>
-        <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="k">new</span> <span class="p">[</span><span class="nx">ContactFindOptions</span><span class="p">](</span><span class="nx">ContactFindOptions</span><span class="o">/</span><span class="nx">contactfindoptions</span><span class="p">.</span><span class="nx">html</span><span class="p">)();</span>
-        <span class="nx">options</span><span class="p">.</span><span class="nx">filter</span><span class="o">=</span><span class="s2">"Bob"</span><span class="p">;</span> 
-        <span class="kd">var</span> <span class="nx">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"displayName"</span><span class="p">,</span> <span class="s2">"name"</span><span class="p">];</span>
-        <span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">fields</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="c1">// onSuccess: Get a snapshot of the current contacts</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">contacts</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Display Name = "</span> <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">displayName</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+	    // find all contacts with 'Bob' in any name field
+	    var options = new [ContactFindOptions](ContactFindOptions/contactfindoptions.html)();
+		options.filter="Bob"; 
+		var fields = ["displayName", "name"];
+	    navigator.contacts.find(fields, onSuccess, onError, options);
+    }
 
-    <span class="c1">// onError: Failed to get the contacts</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">contactError</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'onError!'</span><span class="p">);</span>
-    <span class="p">}</span>
+    // onSuccess: Get a snapshot of the current contacts
+    //
+    function onSuccess(contacts) {
+		for (var i=0; i&lt;contacts.length; i++) {
+			console.log("Display Name = " + contacts[i].displayName);
+		}
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Find Contacts<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // onError: Failed to get the contacts
+    //
+    function onError(contactError) {
+        alert('onError!');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Find Contacts&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+
 
             </div>
         </div>

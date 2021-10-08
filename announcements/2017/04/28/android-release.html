@@ -134,25 +134,28 @@
             <p>We are happy to announce that <code>Cordova Android 6.2.2</code> has been released! This patch release adds support for <code>android sdk tools 26.0.1</code>. We strongly recommend upgrading to this version if you are using the latest <strong>Android sdk tools</strong>. Older versions of <strong>Cordova-Android</strong> do not work with the latest <strong>Android sdk tools</strong>!</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android@6.2.2
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@6.2.2
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@6.2.2
+</code></pre></div></div>
+
 <p>This release will have to be explicitly added until the upcoming <code>cordova@7</code> release, where it will be pinned as the default android platform.</p>
 
 <!--more-->
-
 <h2>What&#39;s new in Android</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12697">CB-12697</a> Updated checked-in <code>node_modules</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12640">CB-12640</a> better handling of unrecognized commands on <strong>windows</strong>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12640">CB-12640</a> flipped avd parsing logic so that it always tries to use <code>avdmanager</code> to retrieve avds first, then falls back to <code>android</code> command if <code>avdmanager</code> cannot be found.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12640">CB-12640</a> support for <code>android sdk tools 26.0.1</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12697">CB-12697</a> Updated checked-in <code>node_modules</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12640">CB-12640</a> better handling of unrecognized commands on <strong>windows</strong>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12640">CB-12640</a> flipped avd parsing logic so that it always tries to use <code>avdmanager</code> to retrieve avds first, then falls back to <code>android</code> command if <code>avdmanager</code> cannot be found.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12640">CB-12640</a> support for <code>android sdk tools 26.0.1</code>.</li>
 </ul>
+
 
         </div>
     </section>

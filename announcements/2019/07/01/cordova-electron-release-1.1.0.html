@@ -134,25 +134,28 @@
             <p>We are happy to announce that we have just released <code>Cordova Electron 1.1.0</code>!  This is one of Cordova&#39;s supported platforms for building Electron applications.</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-electron">cordova-electron@1.1.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-electron">cordova-electron@1.1.0</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
 
 <p><strong>To upgrade:</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform remove electron
-cordova platform add electron@1.1.0
-</code></pre></div>
-<p><strong>To install:</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add electron@1.1.0
-</code></pre></div>
-<p>Some of the notable features that were introduced in this release are the ability to:</p>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove electron
+cordova platform add electron@1.1.0
+</code></pre></div></div>
+
+<p><strong>To install:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add electron@1.1.0
+</code></pre></div></div>
+
+<p>Some of the notable features that were introduced in this release are the ability to:</p>
 <ul>
-<li>Bundle node modules with your Electron app</li>
-<li>Append overridable/top-level platform and package options</li>
-<li>Append an installer icon for custom builds</li>
-<li>Use splash screens</li>
+  <li>Bundle node modules with your Electron app</li>
+  <li>Append overridable/top-level platform and package options</li>
+  <li>Append an installer icon for custom builds</li>
+  <li>Use splash screens</li>
 </ul>
 
 <p>As well, we have bumped the <code>cordova-common@^3.2.0</code> and <code>fs-extra@^8.0.1</code> dependencies to resolve an <code>fs-extra</code> defect that caused random build failures on the Windows environment. <a href="https://github.com/apache/cordova/issues/121">Read More</a></p>
@@ -162,30 +165,29 @@ cordova platform add electron@1.1.0
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-electron/pull/77">GH-77</a> fix: display correct package version in CLI</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/76">GH-76</a> Append Overridable/Top-Level per Platform Options</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/75">GH-75</a> fix: Typo in Build: <code>Singning</code> -&gt; <code>Signing</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/71">GH-71</a> Update <code>devDependencies</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/66">GH-66</a> Bump dependency <code>fs-extra@^8.0.1</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/70">GH-70</a> Bump <code>cordova-common@^3.2.0</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/65">GH-65</a> Fixed <code>package.json</code> version to <code>1.1.0-dev</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/62">GH-62</a> Fix Bundle Feature&#39;s Project Path Issue &amp; Warning Output</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/58">GH-58</a> Set Author Name and Email to <code>package.json</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/54">GH-54</a> Added Bundle Node Module Support</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/57">GH-57</a> Remove Maintainer Option from Linux Build JSON</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/59">GH-59</a> Allow Users to Set Linux App Category</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/51">GH-51</a> Append package top-level key options</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/48">GH-48</a> Implement Splash Screen handling</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/61">GH-61</a> Updated <code>DOCUMENTATION.md</code></li>
-<li><a href="https://github.com/apache/cordova-electron/pull/53">GH-53</a> Add Node.js 12 to CI Services</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/42">GH-42</a> Update the <code>config.xml</code> path in the XHR load eventListener</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/45">GH-45</a> Append Installer Icon to User Build Settings for Custom Builds</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/43">GH-43</a> Update <code>README</code>.md</li>
-<li><a href="https://github.com/apache/cordova-electron/pull/41">GH-41</a> Update System Requirements in <code>DOCUMENTATION.md</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/77">GH-77</a> fix: display correct package version in CLI</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/76">GH-76</a> Append Overridable/Top-Level per Platform Options</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/75">GH-75</a> fix: Typo in Build: <code>Singning</code> -&gt; <code>Signing</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/71">GH-71</a> Update <code>devDependencies</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/66">GH-66</a> Bump dependency <code>fs-extra@^8.0.1</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/70">GH-70</a> Bump <code>cordova-common@^3.2.0</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/65">GH-65</a> Fixed <code>package.json</code> version to <code>1.1.0-dev</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/62">GH-62</a> Fix Bundle Feature&#39;s Project Path Issue &amp; Warning Output</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/58">GH-58</a> Set Author Name and Email to <code>package.json</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/54">GH-54</a> Added Bundle Node Module Support</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/57">GH-57</a> Remove Maintainer Option from Linux Build JSON</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/59">GH-59</a> Allow Users to Set Linux App Category</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/51">GH-51</a> Append package top-level key options</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/48">GH-48</a> Implement Splash Screen handling</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/61">GH-61</a> Updated <code>DOCUMENTATION.md</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/53">GH-53</a> Add Node.js 12 to CI Services</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/42">GH-42</a> Update the <code>config.xml</code> path in the XHR load eventListener</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/45">GH-45</a> Append Installer Icon to User Build Settings for Custom Builds</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/43">GH-43</a> Update <code>README</code>.md</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/41">GH-41</a> Update System Requirements in <code>DOCUMENTATION.md</code></li>
 </ul>
 
         </div>

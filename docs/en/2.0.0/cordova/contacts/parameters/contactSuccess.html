@@ -1448,22 +1448,26 @@
                 <h1>contactSuccess</h1>
 
 <p>Success callback function that provides the <code>[Contact](../Contact/contact.html)</code> array resulting from a <code>[contacts.find](../contacts.find.html)</code> operation.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">function(contacts) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function(contacts) {
     // Do something
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Parameters</h2>
 
 <ul>
-<li><strong>contacts:</strong> The contact array resulting from a find operation. (<code>[Contact](../Contact/contact.html)</code>)</li>
+  <li><strong>contacts:</strong> The contact array resulting from a find operation. (<code>[Contact](../Contact/contact.html)</code>)</li>
 </ul>
 
 <h2><a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function contactSuccess(contacts) {
-    for (var i=0; i&lt;contacts.length; i++) {
-        console.log("Display Name = " + contacts[i].displayName;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function contactSuccess(contacts) {
+	for (var i=0; i&lt;contacts.length; i++) {
+		console.log("Display Name = " + contacts[i].displayName;
 }
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>

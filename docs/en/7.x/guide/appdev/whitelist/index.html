@@ -2440,26 +2440,41 @@ sections below.</p>
 <p>The following examples demonstrate <code>&lt;access&gt;</code> whitelist syntax:</p>
 
 <ul>
-<li><p>Access to <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://google.com"</span> <span class="nt">/&gt;</span>
-</code></pre></div></li>
-<li><p>Access to the secure <a href="https://google.com">google.com</a> (<code>https://</code>):</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"https://google.com"</span> <span class="nt">/&gt;</span>
-</code></pre></div></li>
-<li><p>Access to the subdomain <a href="http://maps.google.com">maps.google.com</a>:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://maps.google.com"</span> <span class="nt">/&gt;</span>
-</code></pre></div></li>
-<li><p>Access to all the subdomains on <a href="http://google.com">google.com</a>, for example
-<a href="http://mail.google.com">mail.google.com</a> and <a href="http://docs.google.com">docs.google.com</a>:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://*.google.com"</span> <span class="nt">/&gt;</span>
-</code></pre></div></li>
-<li><p>Access to <em>all</em> domains, for example, <a href="http://google.com">google.com</a> and
-<a href="http://developer.mozilla.org">developer.mozilla.org</a>:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"*"</span> <span class="nt">/&gt;</span>
-</code></pre></div></li>
-</ul>
+  <li>
+    <p>Access to <a href="http://google.com">google.com</a>:</p>
 
-<p>This is the default value for newly created CLI projects.</p>
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://google.com"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to the secure <a href="https://google.com">google.com</a> (<code>https://</code>):</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"https://google.com"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to the subdomain <a href="http://maps.google.com">maps.google.com</a>:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://maps.google.com"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to all the subdomains on <a href="http://google.com">google.com</a>, for example
+<a href="http://mail.google.com">mail.google.com</a> and <a href="http://docs.google.com">docs.google.com</a>:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://*.google.com"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to <em>all</em> domains, for example, <a href="http://google.com">google.com</a> and
+<a href="http://developer.mozilla.org">developer.mozilla.org</a>:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"*"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+
+    <p>This is the default value for newly created CLI projects.</p>
+  </li>
+</ul>
 
 <p>Be aware that some websites may automatically redirect from their home page to
 a different url, such as using https protocol or to a country-specific
@@ -2488,29 +2503,35 @@ prior to 4.0.0, see older versions of this documentation.</p>
 <p>The <code>&lt;access&gt;</code> and <code>&lt;allow-navigation&gt;</code> tags support these three attributes below, which have their equivalents in ATS:</p>
 
 <ol>
-<li>minimum-tls-version (String, defaults to &#39;TLSv1.2&#39;)</li>
-<li>requires-forward-secrecy (Boolean, defaults to &#39;true&#39;)</li>
-<li>requires-certificate-transparency (Boolean, defaults to &#39;false&#39;, new in iOS 10)</li>
+  <li>minimum-tls-version (String, defaults to &#39;TLSv1.2&#39;)</li>
+  <li>requires-forward-secrecy (Boolean, defaults to &#39;true&#39;)</li>
+  <li>requires-certificate-transparency (Boolean, defaults to &#39;false&#39;, new in iOS 10)</li>
 </ol>
 
 <ul>
-<li><p>example:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">'https://cordova.apache.org'</span> <span class="na">minimum-tls-version=</span><span class="s">'TLSv1.1'</span> <span class="na">requires-forward-secrecy=</span><span class="s">'false'</span> <span class="na">requires-certificate-transparency=</span><span class="s">'true'</span> <span class="nt">/&gt;</span>
-</code></pre></div></li>
+  <li>
+    <p>example:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">'https://cordova.apache.org'</span> <span class="na">minimum-tls-version=</span><span class="s">'TLSv1.1'</span> <span class="na">requires-forward-secrecy=</span><span class="s">'false'</span> <span class="na">requires-certificate-transparency=</span><span class="s">'true'</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>In iOS 10 and above, the <code>&lt;access&gt;</code> tag supports these three attributes below, when paired with the origin wildcard <code>*</code>. These attributes also have their equivalents in ATS:</p>
 
 <ol>
-<li>allows-arbitrary-loads-for-media (Boolean, defaults to &#39;false&#39;, new in iOS 10. New in cordova-ios@4.5.0, fixed to use the proper attribute name). The old attribute <code>allows-arbitrary-loads-in-media</code> is now deprecated.</li>
-<li>allows-arbitrary-loads-in-web-content (Boolean, defaults to &#39;false&#39;, new in iOS 10)</li>
-<li>allows-local-networking (Boolean, defaults to &#39;false&#39;, new in iOS 10)</li>
+  <li>allows-arbitrary-loads-for-media (Boolean, defaults to &#39;false&#39;, new in iOS 10. New in cordova-ios@4.5.0, fixed to use the proper attribute name). The old attribute <code>allows-arbitrary-loads-in-media</code> is now deprecated.</li>
+  <li>allows-arbitrary-loads-in-web-content (Boolean, defaults to &#39;false&#39;, new in iOS 10)</li>
+  <li>allows-local-networking (Boolean, defaults to &#39;false&#39;, new in iOS 10)</li>
 </ol>
 
 <ul>
-<li><p>example:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">'*'</span> <span class="na">allows-arbitrary-loads-for-media=</span><span class="s">'true'</span> <span class="na">allows-arbitrary-loads-in-web-content=</span><span class="s">'true'</span> <span class="na">allows-local-networking=</span><span class="s">'true'</span> <span class="nt">/&gt;</span>
-</code></pre></div></li>
+  <li>
+    <p>example:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">'*'</span> <span class="na">allows-arbitrary-loads-for-media=</span><span class="s">'true'</span> <span class="na">allows-arbitrary-loads-in-web-content=</span><span class="s">'true'</span> <span class="na">allows-local-networking=</span><span class="s">'true'</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>See the <a href="https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33">ATS Technote</a> for more details.</p>
@@ -2523,24 +2544,30 @@ prior to 4.0.0, see older versions of this documentation.</p>
 ways:</p>
 
 <ul>
-<li><p>Any content accessed by <code>XMLHttpRequest</code> must be declared
-explicitly. Setting <code>origin=&quot;*&quot;</code> does not work in this case.
+  <li>
+    <p>Any content accessed by <code>XMLHttpRequest</code> must be declared
+explicitly. Setting <code>origin="*"</code> does not work in this case.
 Alternatively, all web security may be disabled using the
 <code>WebSecurity</code> preference described in BlackBerry Configuration:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"websecurity"</span> <span class="na">value=</span><span class="s">"disable"</span> <span class="nt">/&gt;</span>
-</code></pre></div></li>
-<li><p>As an alternative to setting <code>*.domain</code>, set an additional
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"websecurity"</span> <span class="na">value=</span><span class="s">"disable"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>As an alternative to setting <code>*.domain</code>, set an additional
 <code>subdomains</code> attribute to <code>true</code>. It should be set to <code>false</code> by
 default.</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="c">&lt;!-- Narrows access to google.com --&gt;</span>
-<span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://google.com"</span> <span class="na">subdomains=</span><span class="s">"false"</span> <span class="nt">/&gt;</span>
 
-<span class="c">&lt;!-- Allows access to maps.google.com and docs.google.com --&gt;</span>
-<span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://google.com"</span> <span class="na">subdomains=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c">&lt;!-- Narrows access to google.com --&gt;</span>
+  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://google.com"</span> <span class="na">subdomains=</span><span class="s">"false"</span> <span class="nt">/&gt;</span>
 
-<span class="c">&lt;!-- Allows access to all domains, including the local `file://` protocol --&gt;</span>
-<span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"*"</span> <span class="na">subdomains=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-</code></pre></div></li>
+  <span class="c">&lt;!-- Allows access to maps.google.com and docs.google.com --&gt;</span>
+  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://google.com"</span> <span class="na">subdomains=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+
+  <span class="c">&lt;!-- Allows access to all domains, including the local `file://` protocol --&gt;</span>
+  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"*"</span> <span class="na">subdomains=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>For more information on support, see BlackBerry&#39;s documentation on the
@@ -2550,6 +2577,7 @@ default.</p>
 
 <p>The whitelisting rules for Windows Phone 8 are found in the
 app&#39;s <code>config.xml</code> file.</p>
+
 
 
             </div>

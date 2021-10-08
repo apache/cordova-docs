@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released an update to some plugins!cordova-plugin-inappbrowser@4.0.0cordova-plugin-splashscreen@5.0.4Release Highl...">
+    <meta name="description" content="We are happy to announce that we have just released an update to some plugins!  cordova-plugin-inappbrowser@4.0.0  cordova-plugin-splashscreen@5.0.4Release H...">
 
     <title>
         
@@ -134,8 +134,8 @@
             <p>We are happy to announce that we have just released an update to some plugins!</p>
 
 <ul>
-<li><a href="https://www.npmjs.org/package/cordova-plugin-inappbrowser">cordova-plugin-inappbrowser@4.0.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-plugin-splashscreen">cordova-plugin-splashscreen@5.0.4</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-plugin-inappbrowser">cordova-plugin-inappbrowser@4.0.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-plugin-splashscreen">cordova-plugin-splashscreen@5.0.4</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
@@ -145,9 +145,9 @@
 <p>The most notable changes in this major release are:</p>
 
 <ul>
-<li>The Cordova-iOS 6.x platform removes all <code>UIWebView</code> code and this version also removes the <code>UIWebView</code> code from the InAppBrowser plugin <a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/635">GH-635</a>.</li>
-<li>For backwards compatibility, this plugin used to hook window.open. However, the plugin-installed hook of window.open could have unintended side effects (especially if this plugin is included only as a dependency of another plugin) and it has been removed in this release.  <a href="https://github.com/apache/cordova-plugin-inappbrowser/issues/599">GH-599</a></li>
-<li>The InAppBrowser plugin used to implement its own status bar. It has been removed in this release to correctly display the content of the iOS status bar without overlapping the content in the InAppBrowser on different devices. <a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/656">GH-656</a></li>
+  <li>The Cordova-iOS 6.x platform removes all <code>UIWebView</code> code and this version also removes the <code>UIWebView</code> code from the InAppBrowser plugin <a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/635">GH-635</a>.</li>
+  <li>For backwards compatibility, this plugin used to hook window.open. However, the plugin-installed hook of window.open could have unintended side effects (especially if this plugin is included only as a dependency of another plugin) and it has been removed in this release.  <a href="https://github.com/apache/cordova-plugin-inappbrowser/issues/599">GH-599</a></li>
+  <li>The InAppBrowser plugin used to implement its own status bar. It has been removed in this release to correctly display the content of the iOS status bar without overlapping the content in the InAppBrowser on different devices. <a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/656">GH-656</a></li>
 </ul>
 
 <h3>Splash Screen</h3>
@@ -155,53 +155,51 @@
 <p>In the Cordova-iOS 6.x platform, the splash screen feature has been integrated into its core and no longer needs this plugin. This release prevents the plugin from being added to the iOS 6.x platform.</p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/261">GH-261</a> chore: add <code>cordova-ios</code> requirement &lt;6.0.0</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/261">GH-261</a> chore: add <code>cordova-ios</code> requirement &lt;6.0.0</li>
 </ul>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <h3>InAppBrowser 4.0.0 (Jun 09, 2020)</h3>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/715">GH-715</a> (ios): fix regression in <a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/656">GH-656</a></li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/685">GH-685</a> chore: update install engines</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/656">GH-656</a> (ios) Remove fake status bar with hardcoded height to fix issues in <strong>iOS</strong> devices with a notch</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/693">GH-693</a> fix(ios): Allow loading local html files</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/293">GH-293</a>  <strong>Android</strong>: SSL errors handling in <strong>Android</strong></li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/672">GH-672</a> fix(ios): prevent statusbar rotation after closing <code>InAppBrowser</code></li>
-<li>chore(asf): update git notification settings</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/669">GH-669</a> Allow App using <code>InAppBrowser</code> to be hosted in a cross-origin iframe</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/600">GH-600</a> (all platforms): remove &quot;window.open&quot; overwrite</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/670">GH-670</a> chore: bump version to 4.0.0-dev</li>
-<li>Update CONTRIBUTING.md</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/662">GH-662</a> docs: replaces outdated transition and presentation style links</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/666">GH-666</a> chore: remove deprecated orientation methods</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/515">GH-515</a> Fix incorrect TypeScript typings</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/654">GH-654</a> add check for openInSystem postNotification</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/659">GH-659</a> ci: updates Node.js versions</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/658">GH-658</a> chore(npm): improve ignore list</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/442">GH-442</a> fix(android): Reset lefttoright if not set</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/648">GH-648</a> (android) Correcting the documentation regarding lefttoright opt…</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/634">GH-634</a> (android) Added option to turn on/off fullscreen mode in <strong>Android</strong></li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/616">GH-616</a> (android) <code>InAppBrowser</code>: java.lang.IllegalArgumentException</li>
-<li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/635">GH-635</a> breaking(ios): remove UIWebView</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/715">GH-715</a> (ios): fix regression in <a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/656">GH-656</a></li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/685">GH-685</a> chore: update install engines</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/656">GH-656</a> (ios) Remove fake status bar with hardcoded height to fix issues in <strong>iOS</strong> devices with a notch</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/693">GH-693</a> fix(ios): Allow loading local html files</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/293">GH-293</a>  <strong>Android</strong>: SSL errors handling in <strong>Android</strong></li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/672">GH-672</a> fix(ios): prevent statusbar rotation after closing <code>InAppBrowser</code></li>
+  <li>chore(asf): update git notification settings</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/669">GH-669</a> Allow App using <code>InAppBrowser</code> to be hosted in a cross-origin iframe</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/600">GH-600</a> (all platforms): remove &quot;window.open&quot; overwrite</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/670">GH-670</a> chore: bump version to 4.0.0-dev</li>
+  <li>Update CONTRIBUTING.md</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/662">GH-662</a> docs: replaces outdated transition and presentation style links</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/666">GH-666</a> chore: remove deprecated orientation methods</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/515">GH-515</a> Fix incorrect TypeScript typings</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/654">GH-654</a> add check for openInSystem postNotification</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/659">GH-659</a> ci: updates Node.js versions</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/658">GH-658</a> chore(npm): improve ignore list</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/442">GH-442</a> fix(android): Reset lefttoright if not set</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/648">GH-648</a> (android) Correcting the documentation regarding lefttoright opt…</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/634">GH-634</a> (android) Added option to turn on/off fullscreen mode in <strong>Android</strong></li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/616">GH-616</a> (android) <code>InAppBrowser</code>: java.lang.IllegalArgumentException</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/635">GH-635</a> breaking(ios): remove UIWebView</li>
 </ul>
 
 <h3>Splash Screen 5.0.4 (Jun 03, 2020)</h3>
-
 <ul>
-<li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/261">GH-261</a> chore: add <code>cordova-ios</code> requirement &lt;6.0.0</li>
-<li>chore(asf): update git notification settings</li>
-<li>update CONTRIBUTING.md</li>
-<li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/251">GH-251</a> chore(npm): adds ignore list</li>
-<li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/252">GH-252</a> ci: updates Node.js versions</li>
-<li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/236">GH-236</a> update homepage to github <code>README</code> page</li>
-<li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/239">GH-239</a> update <code>README</code>.md by adding missing info</li>
-<li>ci(travis): Upgrade node from 6 to 8</li>
-<li>ci(travis): Remove <strong>Android 4.4</strong>, Add <strong>Android</strong> 9.0</li>
-<li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/212">GH-212</a> ci(travis): Add ADDITIONAL<em>TESTS</em>DIR=./tests/ios</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/261">GH-261</a> chore: add <code>cordova-ios</code> requirement &lt;6.0.0</li>
+  <li>chore(asf): update git notification settings</li>
+  <li>update CONTRIBUTING.md</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/251">GH-251</a> chore(npm): adds ignore list</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/252">GH-252</a> ci: updates Node.js versions</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/236">GH-236</a> update homepage to github <code>README</code> page</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/239">GH-239</a> update <code>README</code>.md by adding missing info</li>
+  <li>ci(travis): Upgrade node from 6 to 8</li>
+  <li>ci(travis): Remove <strong>Android 4.4</strong>, Add <strong>Android</strong> 9.0</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/212">GH-212</a> ci(travis): Add ADDITIONAL_TESTS_DIR=./tests/ios</li>
 </ul>
 
         </div>

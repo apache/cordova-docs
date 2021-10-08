@@ -1520,39 +1520,53 @@
                 <h1>CameraPopoverOptions</h1>
 
 <p>Parameters only used by iOS to specify the anchor element location and arrow direction of popover used on iPad when selecting images from the library or album.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">{ x : 0, 
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ x : 0, 
   y :  32,
   width : 320,
   height : 480,
   arrowDir : Camera.PopoverArrowDirection.ARROW_ANY
 };
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>CameraPopoverOptions</h2>
 
 <ul>
-<li><p><strong>x:</strong> x pixel coordinate of element on the screen to anchor popover onto. (<code>Number</code>)</p></li>
-<li><p><strong>y:</strong> y pixel coordinate of element on the screen to anchor popover onto. (<code>Number</code>)</p></li>
-<li><p><strong>width:</strong> width, in pixels, of the element on the screen to anchor popover onto. (<code>Number</code>)</p></li>
-<li><p><strong>height:</strong> height, in pixels, of the element on the screen to anchor popover onto. (<code>Number</code>)</p></li>
-<li><p><strong>arrowDir:</strong> Direction the arrow on the popover should point.  Defined in <a href="../camera.html">Camera</a>.PopoverArrowDirection (<code>Number</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    Camera.PopoverArrowDirection = {
-        ARROW_UP : 1,        // matches iOS UIPopoverArrowDirection constants
-        ARROW_DOWN : 2,
-        ARROW_LEFT : 4,
-        ARROW_RIGHT : 8,
-        ARROW_ANY : 15
-    };
-</code></pre></div></li>
+  <li>
+    <p><strong>x:</strong> x pixel coordinate of element on the screen to anchor popover onto. (<code>Number</code>)</p>
+  </li>
+  <li>
+    <p><strong>y:</strong> y pixel coordinate of element on the screen to anchor popover onto. (<code>Number</code>)</p>
+  </li>
+  <li>
+    <p><strong>width:</strong> width, in pixels, of the element on the screen to anchor popover onto. (<code>Number</code>)</p>
+  </li>
+  <li>
+    <p><strong>height:</strong> height, in pixels, of the element on the screen to anchor popover onto. (<code>Number</code>)</p>
+  </li>
+  <li>
+    <p><strong>arrowDir:</strong> Direction the arrow on the popover should point.  Defined in <a href="../camera.html">Camera</a>.PopoverArrowDirection (<code>Number</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      Camera.PopoverArrowDirection = {
+          ARROW_UP : 1,        // matches iOS UIPopoverArrowDirection constants
+          ARROW_DOWN : 2,
+          ARROW_LEFT : 4,
+          ARROW_RIGHT : 8,
+          ARROW_ANY : 15
+      };
+</code></pre></div>    </div>
+  </li>
 </ul>
 
-<p>Note that the size of the popover may change to adjust to the direction of the arrow and orientation of the screen.  Make sure to account for orientation changes when specifying the anchor element location. </p>
+<p>Note that the size of the popover may change to adjust to the direction of the arrow and orientation of the screen.  Make sure to account for orientation changes when specifying the anchor element location.</p>
 
 <h2>Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""> var popover = new CameraPopoverOptions(300,300,100,100,Camera.PopoverArrowDirection.ARROW_ANY);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> var popover = new CameraPopoverOptions(300,300,100,100,Camera.PopoverArrowDirection.ARROW_ANY);
  var options = { quality: 50, destinationType: Camera.DestinationType.DATA_URL,sourceType: Camera.PictureSource.SAVEDPHOTOALBUM, popoverOptions : popover };
-
+ 
  navigator.camera.getPicture(onSuccess, onFail, options);
-
+ 
  function onSuccess(imageData) {
     var image = document.getElementById('myImage');
     image.src = "data:image/jpeg;base64," + imageData;
@@ -1561,7 +1575,9 @@
 function onFail(message) {
     alert('Failed because: ' + message);
 }
-</code></pre></div>
+</code></pre></div></div>
+
+
 
             </div>
         </div>

@@ -1552,77 +1552,80 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>iOS</li>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>Windows Phone 7 and 8</li>
-<li>Bada 2.x</li>
-<li>webOS</li>
-<li>Tizen</li>
-<li>Windows 8</li>
+  <li>iOS</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Bada 2.x</li>
+  <li>webOS</li>
+  <li>Tizen</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">function checkConnection() {
-    var networkState = navigator.connection.type;
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function checkConnection() {
+    var networkState = navigator.connection.type;
+    
     var states = {};
-    states[Connection.UNKNOWN]  = 'Unknown connection';
-    states[Connection.ETHERNET] = 'Ethernet connection';
-    states[Connection.WIFI]     = 'WiFi connection';
-    states[Connection.CELL_2G]  = 'Cell 2G connection';
-    states[Connection.CELL_3G]  = 'Cell 3G connection';
-    states[Connection.CELL_4G]  = 'Cell 4G connection';
-    states[Connection.NONE]     = 'No network connection';
+    states[Connection.UNKNOWN]	= 'Unknown connection';
+    states[Connection.ETHERNET]	= 'Ethernet connection';
+    states[Connection.WIFI]   	= 'WiFi connection';
+    states[Connection.CELL_2G]	= 'Cell 2G connection';
+    states[Connection.CELL_3G]	= 'Cell 3G connection';
+    states[Connection.CELL_4G]	= 'Cell 4G connection';
+    states[Connection.NONE]   	= 'No network connection';
 
     alert('Connection type: ' + states[networkState]);
 }
 
 checkConnection();
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>navigator.connection.type Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-2.4.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;navigator.connection.type Example&lt;/title&gt;
+    
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.4.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+        
+    // Wait for Cordova to load
+    // 
+    document.addEventListener("deviceready", onDeviceReady, false);
+    
+    // Cordova is loaded and it is now safe to make calls Cordova methods
+    //
+    function onDeviceReady() {
+        checkConnection();
+    }
+    
+    function checkConnection() {
+        var networkState = navigator.connection.type;
 
-    <span class="c1">// Wait for Cordova to load</span>
-    <span class="c1">// </span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+        var states = {};
+        states[Connection.UNKNOWN]	= 'Unknown connection';
+        states[Connection.ETHERNET]	= 'Ethernet connection';
+        states[Connection.WIFI]   	= 'WiFi connection';
+        states[Connection.CELL_2G]	= 'Cell 2G connection';
+        states[Connection.CELL_3G]	= 'Cell 3G connection';
+        states[Connection.CELL_4G]	= 'Cell 4G connection';
+        states[Connection.NONE]   	= 'No network connection';
 
-    <span class="c1">// Cordova is loaded and it is now safe to make calls Cordova methods</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">checkConnection</span><span class="p">();</span>
-    <span class="p">}</span>
+        alert('[Connection](connection.html) type: ' + states[networkState]);
+    }
+    
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;A dialog box will report the network state.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
 
-    <span class="kd">function</span> <span class="nx">checkConnection</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">networkState</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">connection</span><span class="p">.</span><span class="nx">type</span><span class="p">;</span>
-
-        <span class="kd">var</span> <span class="nx">states</span> <span class="o">=</span> <span class="p">{};</span>
-        <span class="nx">states</span><span class="p">[</span><span class="nx">Connection</span><span class="p">.</span><span class="nx">UNKNOWN</span><span class="p">]</span>  <span class="o">=</span> <span class="s1">'Unknown connection'</span><span class="p">;</span>
-        <span class="nx">states</span><span class="p">[</span><span class="nx">Connection</span><span class="p">.</span><span class="nx">ETHERNET</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Ethernet connection'</span><span class="p">;</span>
-        <span class="nx">states</span><span class="p">[</span><span class="nx">Connection</span><span class="p">.</span><span class="nx">WIFI</span><span class="p">]</span>     <span class="o">=</span> <span class="s1">'WiFi connection'</span><span class="p">;</span>
-        <span class="nx">states</span><span class="p">[</span><span class="nx">Connection</span><span class="p">.</span><span class="nx">CELL_2G</span><span class="p">]</span>  <span class="o">=</span> <span class="s1">'Cell 2G connection'</span><span class="p">;</span>
-        <span class="nx">states</span><span class="p">[</span><span class="nx">Connection</span><span class="p">.</span><span class="nx">CELL_3G</span><span class="p">]</span>  <span class="o">=</span> <span class="s1">'Cell 3G connection'</span><span class="p">;</span>
-        <span class="nx">states</span><span class="p">[</span><span class="nx">Connection</span><span class="p">.</span><span class="nx">CELL_4G</span><span class="p">]</span>  <span class="o">=</span> <span class="s1">'Cell 4G connection'</span><span class="p">;</span>
-        <span class="nx">states</span><span class="p">[</span><span class="nx">Connection</span><span class="p">.</span><span class="nx">NONE</span><span class="p">]</span>     <span class="o">=</span> <span class="s1">'No network connection'</span><span class="p">;</span>
-
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'[Connection](connection.html) type: '</span> <span class="o">+</span> <span class="nx">states</span><span class="p">[</span><span class="nx">networkState</span><span class="p">]);</span>
-    <span class="p">}</span>
-
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;p&gt;</span>A dialog box will report the network state.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
 <h2>API Change</h2>
-
 <p>Before Cordova 2.3.0, the <a href="connection.html">Connection</a> object existed at: <code>navigator.network.connection</code>.</p>
 
 <p>To match the spec, this was changed to <code>navigator.connection</code> in 2.3.0.</p>
@@ -1632,43 +1635,43 @@ checkConnection();
 <h2>iOS Quirks</h2>
 
 <ul>
-<li>iOS cannot detect the type of cellular network connection.
-
-<ul>
-<li><code>navigator.connection.type</code> is set to <code>Connection.CELL_2G</code> for all cellular data.</li>
-</ul></li>
+  <li>iOS cannot detect the type of cellular network connection.
+    <ul>
+      <li><code>navigator.connection.type</code> is set to <code>Connection.CELL_2G</code> for all cellular data.</li>
+    </ul>
+  </li>
 </ul>
 
 <h2>Bada Quirks</h2>
 
 <ul>
-<li>Bada can only detect a WiFi or cellular connection.
-
-<ul>
-<li><code>navigator.connection.type</code> is set to <code>Connection.CELL_2G</code> for all cellular data.</li>
-</ul></li>
+  <li>Bada can only detect a WiFi or cellular connection.
+    <ul>
+      <li><code>navigator.connection.type</code> is set to <code>Connection.CELL_2G</code> for all cellular data.</li>
+    </ul>
+  </li>
 </ul>
 
 <h2>webOS Quirks</h2>
 
 <ul>
-<li>Only shows that a connection is available, but not which type.</li>
+  <li>Only shows that a connection is available, but not which type.</li>
 </ul>
 
 <h2>Windows Phone Quirks</h2>
 
 <ul>
-<li>When running in the emulator, always detects <code>navigator.connection.type</code> as <code>[Connection](connection.html).UNKNOWN</code>.</li>
+  <li>When running in the emulator, always detects <code>navigator.connection.type</code> as <code>[Connection](connection.html).UNKNOWN</code>.</li>
 </ul>
 
 <h2>Tizen Quirks</h2>
 
 <ul>
-<li>Tizen can only detect a WiFi or cellular connection.
-
-<ul>
-<li><code>navigator.connection.type</code> is set to <code>Connection.CELL_2G</code> for all cellular data.</li>
-</ul></li>
+  <li>Tizen can only detect a WiFi or cellular connection.
+    <ul>
+      <li><code>navigator.connection.type</code> is set to <code>Connection.CELL_2G</code> for all cellular data.</li>
+    </ul>
+  </li>
 </ul>
 
 

@@ -1659,9 +1659,11 @@ for details on how to develop plugins.</p>
 <p>Run the <code>create</code> command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app&#39;s display
 name.  Here is the syntax for both Mac and Windows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_project com.example.project_name ProjectName
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_project com.example.project_name ProjectName
     $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_project com.example.project_name ProjectName
-</code></pre></div>
+</code></pre></div></div>
+
 <p><strong>NOTE</strong>: The BlackBerry platform ignores the package name placeholder
 (<code>com.example.project_name</code>), but it&#39;s still required for use by
 cross-platform tools.</p>
@@ -1673,9 +1675,11 @@ cross-platform tools.</p>
 You need to do so to supply your BlackBerry signing key password, and
 specify locations for the BlackBerry WebWorks SDK and BlackBerry
 emulator executables.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/my_new_project/cordova/build &lt;platform&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/my_new_project/cordova/build &lt;platform&gt;
     $ /path/to/my_new_project/cordova/build.bat &lt;platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Launch Emulator</h2>
 
 <p>For BlackBerry projects, please make sure you customize the
@@ -1683,15 +1687,21 @@ emulator executables.</p>
 You need to do so to supply your BlackBerry signing key password, and
 specify locations for the BlackBerry WebWorks SDK and BlackBerry
 emulator executables.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ /path/to/my_new_project/cordova/run &lt;platform&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/my_new_project/cordova/run &lt;platform&gt;
+</code></pre></div></div>
+
 <p>and then choose &#39;no&#39; when prompted with:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    Do you have a BlackBerry device connected to your computer? (y/n)
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Do you have a BlackBerry device connected to your computer? (y/n)
     $ /path/to/my_new_project/cordova/run &lt;platform&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>and then choose &#39;no&#39; when prompted with:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    Do you have a BlackBerry device connected to your computer? (y/n)
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Do you have a BlackBerry device connected to your computer? (y/n)
+</code></pre></div></div>
+
 <h2>Logging</h2>
 
 <p>Unfortunately, streaming logs directly from the device is currently
@@ -1700,6 +1710,7 @@ for Playbook and BlackBerry smartphone devices running BlackBerry OS
 7.0 and above. You can also access your application&#39;s logs (including
 any calls to <code>console.log</code>) on your device by holding down the &#39;&#39;ALT&#39;&#39;
 key from the home screen and typing &#39;&#39;lglg&#39;&#39; keys.</p>
+
 
 
             </div>

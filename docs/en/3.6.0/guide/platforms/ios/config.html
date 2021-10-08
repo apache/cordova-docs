@@ -1381,84 +1381,120 @@ details preferences that only apply to iOS builds. See The config.xml
 File for information on global configuration options.</p>
 
 <ul>
-<li><p><code>EnableViewportScale</code> (boolean, defaults to <code>false</code>): Set to <code>true</code>
+  <li>
+    <p><code>EnableViewportScale</code> (boolean, defaults to <code>false</code>): Set to <code>true</code>
 to allow a viewport meta tag to either disable or restrict the range
 of user scaling, which is enabled by default.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="EnableViewportScale" value="true"/&gt;
-</code></pre></div></li>
-</ul>
 
-<p>Place a viewport such as the following in the HTML to disable
-  scaling and fit content flexibly within the rendering WebView:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' /&gt;
-</code></pre></div>
-<ul>
-<li><p><code>MediaPlaybackRequiresUserAction</code> (boolean, defaults to <code>false</code>):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="EnableViewportScale" value="true"/&gt;
+</code></pre></div>    </div>
+
+    <p>Place a viewport such as the following in the HTML to disable
+scaling and fit content flexibly within the rendering WebView:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>MediaPlaybackRequiresUserAction</code> (boolean, defaults to <code>false</code>):
 Set to <code>true</code> to prevent HTML5 videos or audios from playing
 automatically with the <code>autoplay</code> attribute or via JavaScript.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="MediaPlaybackRequiresUserAction" value="true"/&gt;
-</code></pre></div></li>
-<li><p><code>AllowInlineMediaPlayback</code> (boolean, defaults to <code>false</code>): Set to
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="MediaPlaybackRequiresUserAction" value="true"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>AllowInlineMediaPlayback</code> (boolean, defaults to <code>false</code>): Set to
 <code>true</code> to allow HTML5 media playback to appear <em>inline</em> within the
 screen layout, using browser-supplied controls rather than native
 controls. For this to work, add the <code>webkit-playsinline</code> attribute
 to any <code>&lt;video&gt;</code> elements.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="AllowInlineMediaPlayback" value="true"/&gt;
-</code></pre></div></li>
-<li><p><code>BackupWebStorage</code> (string, either <code>none</code>, <code>local</code>, or the default
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="AllowInlineMediaPlayback" value="true"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>BackupWebStorage</code> (string, either <code>none</code>, <code>local</code>, or the default
 <code>cloud</code>): Set to <code>cloud</code> to allow web storage data to backup via
 iCloud. Set to <code>local</code> to allow only local backups via iTunes
 sync. Set to <code>none</code> prevent web storage backups.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="BackupWebStorage" value="local"/&gt;
-</code></pre></div></li>
-<li><p><code>TopActivityIndicator</code> (string, defaults to <code>gray</code>): Controls the
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="BackupWebStorage" value="local"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>TopActivityIndicator</code> (string, defaults to <code>gray</code>): Controls the
 appearance of the small spinning icon in the status bar that
 indicates significant processor activity.  Valid values are
 <code>whiteLarge</code>, <code>white</code>, and <code>gray</code>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="TopActivityIndicator" value="white"/&gt;
-</code></pre></div></li>
-<li><p><code>KeyboardDisplayRequiresUserAction</code> (boolean, defaults to <code>true</code>):
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="TopActivityIndicator" value="white"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>KeyboardDisplayRequiresUserAction</code> (boolean, defaults to <code>true</code>):
 Set to <code>false</code> to allow the keyboard to appear when calling
 <code>focus()</code> on form inputs.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="KeyboardDisplayRequiresUserAction" value="false"/&gt;
-</code></pre></div></li>
-<li><p><code>SuppressesIncrementalRendering</code> (boolean, defaults to <code>false</code>): Set
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="KeyboardDisplayRequiresUserAction" value="false"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>SuppressesIncrementalRendering</code> (boolean, defaults to <code>false</code>): Set
 to <code>true</code> to wait until all content has been received before it
 renders to the screen.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="SuppressesIncrementalRendering" value="true"/&gt;
-</code></pre></div></li>
-<li><p><code>GapBetweenPages</code> (float, defaults to <code>0</code>): The size of the gap, in points, between pages.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="GapBetweenPages" value="0"/&gt;
-</code></pre></div></li>
-<li><p><code>PageLength</code> (float, defaults to <code>0</code>): The size of each page, in points, in the 
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="SuppressesIncrementalRendering" value="true"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>GapBetweenPages</code> (float, defaults to <code>0</code>): The size of the gap, in points, between pages.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="GapBetweenPages" value="0"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>PageLength</code> (float, defaults to <code>0</code>): The size of each page, in points, in the 
 direction that the pages flow. When PaginationMode is right to left or left to right, 
 this property represents the width of each page. When PaginationMode is topToBottom 
 or bottomToTop, this property represents the height of each page. The default value 
 is 0, which means the layout uses the size of the viewport to determine the dimensions
 of the page.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="PageLength" value="0"/&gt;
-</code></pre></div></li>
-<li><p><code>PaginationBreakingMode</code> (string, defaults to <code>page</code>): Valid values are <code>page</code> and 
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="PageLength" value="0"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>PaginationBreakingMode</code> (string, defaults to <code>page</code>): Valid values are <code>page</code> and 
 <code>column</code>.The manner in which column- or page-breaking occurs. This property 
 determines whether certain CSS properties regarding column- and page-breaking are 
 honored or ignored. When this property is set to <code>column</code>,  the content respects
 the CSS properties related to column-breaking in place of page-breaking.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="PaginationBreakingMode" value="page"/&gt;
-</code></pre></div></li>
-<li><p><code>PaginationMode</code> (string, defaults to <code>unpaginated</code>): Valid values are <code>unpaginated</code>,
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="PaginationBreakingMode" value="page"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>PaginationMode</code> (string, defaults to <code>unpaginated</code>): Valid values are <code>unpaginated</code>,
 <code>leftToRight</code>, <code>topToBottom</code>, <code>bottomToTop</code>, and <code>rightToLeft</code>. This property determines 
 whether content in the web view is broken up into pages that fill the view one screen 
 at a time, or shown as one long scrolling view. If set to a paginated form, this 
 property toggles a paginated layout on the content, causing the web view to use the 
 values of PageLength and GapBetweenPages to relayout its content.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="PaginationMode" value="unpaginated"/&gt;
-</code></pre></div></li>
-<li><p><code>UIWebViewDecelerationSpeed</code> (string, defaults to <code>normal</code>): Valid values are <code>normal</code>,
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="PaginationMode" value="unpaginated"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code>UIWebViewDecelerationSpeed</code> (string, defaults to <code>normal</code>): Valid values are <code>normal</code>,
 <code>fast</code>. This property controls the deceleration speed of momentum scrolling. <code>normal</code> is
 the default speed for most native apps, and <code>fast</code> is the default for Mobile Safari.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="UIWebViewDecelerationSpeed" value="fast" /&gt;
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="UIWebViewDecelerationSpeed" value="fast" /&gt;
+</code></pre></div>    </div>
+  </li>
 </ul>
+
 
 
             </div>

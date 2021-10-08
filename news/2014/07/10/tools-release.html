@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="New versions of plugman, cordova and cordova-lib are now live!plugman@0.22.4cordova@3.5.0-0.2.6cordova-lib@0.21.6To update your tools:npm install -g cordovan...">
+    <meta name="description" content="New versions of plugman, cordova and cordova-lib are now live!  plugman@0.22.4  cordova@3.5.0-0.2.6  cordova-lib@0.21.6To update your tools:npm install -g co...">
 
     <title>
         
@@ -134,96 +134,95 @@
             <p>New versions of <code>plugman</code>, <code>cordova</code> and <code>cordova-lib</code> are now live!</p>
 
 <ul>
-<li><a href="https://www.npmjs.org/package/plugman">plugman@0.22.4</a></li>
-<li><a href="https://www.npmjs.org/package/cordova">cordova@3.5.0-0.2.6</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@0.21.6</a></li>
+  <li><a href="https://www.npmjs.org/package/plugman">plugman@0.22.4</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova">cordova@3.5.0-0.2.6</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@0.21.6</a></li>
 </ul>
 
 <p>To update your tools:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 npm install -g plugman
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Most notable changes are:</p>
 
 <ul>
-<li>Support for splash screens</li>
-<li>Drop <strong>wp7</strong> as platform</li>
-<li>An experimental feature that allows to persist the currently added plugins to config.xml. Try it out as:
-
-<ul>
-<li><code>cordova save plugins --experimental</code></li>
-<li>and later when you check out the project without a plugins folder:</li>
-<li><code>cordova restore plugins --experimental</code></li>
-<li>Read <a href="http://www.gorkem-ercan.com/2014/06/sharing-cordova-projects-becomes-easier.html">Gorkem Ercan&#39;s post</a> for details.</li>
-</ul></li>
-<li>We are experimenting with using <code>browserify</code> to package our <code>cordova.js</code> build artifact. This is an internal change to our tooling, and is currently still off-by-default.  We would appreciate feedback since we hope to switch to on-by-default in a future release.  Try it using plugman as:
-
-<ul>
-<li><code>plugman (un)install --browserify --project [PROJECT] --plugin [PLUGIN] --platform [ios|android]</code></li>
-</ul></li>
+  <li>Support for splash screens</li>
+  <li>Drop <strong>wp7</strong> as platform</li>
+  <li>An experimental feature that allows to persist the currently added plugins to config.xml. Try it out as:
+    <ul>
+      <li><code>cordova save plugins --experimental</code></li>
+      <li>and later when you check out the project without a plugins folder:</li>
+      <li><code>cordova restore plugins --experimental</code></li>
+      <li>Read <a href="http://www.gorkem-ercan.com/2014/06/sharing-cordova-projects-becomes-easier.html">Gorkem Ercan&#39;s post</a> for details.</li>
+    </ul>
+  </li>
+  <li>We are experimenting with using <code>browserify</code> to package our <code>cordova.js</code> build artifact. This is an internal change to our tooling, and is currently still off-by-default.  We would appreciate feedback since we hope to switch to on-by-default in a future release.  Try it using plugman as:</li>
+  <li><code>plugman (un)install --browserify --project [PROJECT] --plugin [PLUGIN] --platform [ios|android]</code></li>
 </ul>
 
-<p>Other changes include:</p>
-
-<!--more-->
+<p>Other changes include:
+<!--more--></p>
 
 <h2>cordova</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-6728">CB-6728</a> Support chip architecture flag <code>--archs</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6740">CB-6740</a> <strong>amazon-fireos</strong> Clean up error reporting when AmazonWebView SDK not found</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6943">CB-6943</a> Path can include the : if it is absolute, only test for <code>http</code>. Added tests</li>
-<li>Show full stack for <code>CordovaError</code> in verbose mode</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6024">CB-6024</a> Use nopt instead of optimist in cli</li>
-<li>Add <code>--usenpm</code> flag to activate npm based <code>lazy_load</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6767">CB-6767</a> Allow <code>cordova</code> to be replaceable in error messages</li>
-<li>Add <code>--noregistry</code> flag for disabling plugin lookup in the registry</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6728">CB-6728</a> Support chip architecture flag <code>--archs</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6740">CB-6740</a> <strong>amazon-fireos</strong> Clean up error reporting when AmazonWebView SDK not found</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6943">CB-6943</a> Path can include the : if it is absolute, only test for <code>http</code>. Added tests</li>
+  <li>Show full stack for <code>CordovaError</code> in verbose mode</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6024">CB-6024</a> Use nopt instead of optimist in cli</li>
+  <li>Add <code>--usenpm</code> flag to activate npm based <code>lazy_load</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6767">CB-6767</a> Allow <code>cordova</code> to be replaceable in error messages</li>
+  <li>Add <code>--noregistry</code> flag for disabling plugin lookup in the registry</li>
 </ul>
 
 <h2>cordova-lib</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-3571">CB-3571</a>, <a href="https://issues.apache.org/jira/browse/CB-2606">CB-2606</a> support for splashscreens</li>
-<li>Fix plugin check error, when plugin dependency with specific version is given</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6709">CB-6709</a> Do not create <code>merges/</code> folder when adding a platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6140">CB-6140</a> Don&#39;t allow deletion of platform dependencies</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6698">CB-6698</a> Fix &#39;android update lib-project&#39; to work with paths containing spaces</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6973">CB-6973</a> Run JSHint on all code in <code>src/</code> via <code>npm test</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6542">CB-6542</a> Delay creating project until there&#39;s some chance that it will succeed</li>
-<li><code>folder_contents()</code> now ignores <code>.svn</code> folders</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6970">CB-6970</a> Share win project files manipulation code between cordova and plugman</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6954">CB-6954</a> Share <code>events.js</code> between <code>cordova</code> and <code>plugman</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6698">CB-6698</a> Automatically copy sub-libraries to project&#39;s directory</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6942">CB-6942</a> Describe running hooks only in verbose mode.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6512">CB-6512</a> Allow <code>cordova platform add /path/to/platform/files</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6895">CB-6895</a> Add more config properties into manifest</li>
-<li>Allow <code>cordova platform add platform@version</code></li>
-<li>Add util func for chaining promises</li>
-<li>removing <code>doWrap</code> from <code>prepare</code></li>
-<li>adding prepare-browserify</li>
-<li>adding and freezing cordova-js</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6879">CB-6879</a> config parser breakout into a cordova level module</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6698">CB-6698</a> Resolve android <code>&lt;framework&gt;</code> relative to plugin_dir when <code>custom=true</code></li>
-<li>Fix tests on node 0.11.x</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6024">CB-6024</a> Accept cli vars as part of opts param</li>
-<li>Refer properties-parser package from NPM.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6859">CB-6859</a> Removed all <strong>wp7</strong> references, tests still passing</li>
-<li>Extract <code>AndroidProject</code> class into a separate .js file</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6698">CB-6698</a> Support library references for Android via the framework tag</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6854">CB-6854</a> Strip BOM when adding <code>cordova.define()</code> to js-modules</li>
-<li>Use <code>PluginInfo</code> in <code>plugman/install.js</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6772">CB-6772</a> Provide a default for <code>AndroidLaunchMode</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6711">CB-6711</a> Use <code>parseProjectFile</code> when working with XCode projects.</li>
-<li>Start using <code>PluginInfo</code> object in <code>plugman/install.js</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6709">CB-6709</a> Remove <code>merges/</code> folder for default apps</li>
-<li>Add <code>--shrinkwrap</code> flag to save plugin versions</li>
-<li>Initial implementation for saving plugin list in config.xml and restoring from it</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6668">CB-6668</a> Use <code>&lt;description&gt;</code> for <code>cordova plugin ls</code> when <code>&lt;name&gt;</code> is missing.</li>
-<li>Add <code>--noregistry</code> flag for disabling plugin lookup in the registry</li>
-<li>Remove <code>--force</code> from default npm settings for plugin registry</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7100">CB-7100</a> Use npm for downloading plugins and later platforms</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6691">CB-6691</a> Change some instances of <code>Error()</code> to <code>CordovaError()</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3571">CB-3571</a>, <a href="https://issues.apache.org/jira/browse/CB-2606">CB-2606</a> support for splashscreens</li>
+  <li>Fix plugin check error, when plugin dependency with specific version is given</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6709">CB-6709</a> Do not create <code>merges/</code> folder when adding a platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6140">CB-6140</a> Don&#39;t allow deletion of platform dependencies</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6698">CB-6698</a> Fix &#39;android update lib-project&#39; to work with paths containing spaces</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6973">CB-6973</a> Run JSHint on all code in <code>src/</code> via <code>npm test</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6542">CB-6542</a> Delay creating project until there&#39;s some chance that it will succeed</li>
+  <li><code>folder_contents()</code> now ignores <code>.svn</code> folders</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6970">CB-6970</a> Share win project files manipulation code between cordova and plugman</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6954">CB-6954</a> Share <code>events.js</code> between <code>cordova</code> and <code>plugman</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6698">CB-6698</a> Automatically copy sub-libraries to project&#39;s directory</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6942">CB-6942</a> Describe running hooks only in verbose mode.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6512">CB-6512</a> Allow <code>cordova platform add /path/to/platform/files</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6895">CB-6895</a> Add more config properties into manifest</li>
+  <li>Allow <code>cordova platform add platform@version</code></li>
+  <li>Add util func for chaining promises</li>
+  <li>removing <code>doWrap</code> from <code>prepare</code></li>
+  <li>adding prepare-browserify</li>
+  <li>adding and freezing cordova-js</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6879">CB-6879</a> config parser breakout into a cordova level module</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6698">CB-6698</a> Resolve android <code>&lt;framework&gt;</code> relative to plugin_dir when <code>custom=true</code></li>
+  <li>Fix tests on node 0.11.x</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6024">CB-6024</a> Accept cli vars as part of opts param</li>
+  <li>Refer properties-parser package from NPM.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6859">CB-6859</a> Removed all <strong>wp7</strong> references, tests still passing</li>
+  <li>Extract <code>AndroidProject</code> class into a separate .js file</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6698">CB-6698</a> Support library references for Android via the framework tag</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6854">CB-6854</a> Strip BOM when adding <code>cordova.define()</code> to js-modules</li>
+  <li>Use <code>PluginInfo</code> in <code>plugman/install.js</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6772">CB-6772</a> Provide a default for <code>AndroidLaunchMode</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6711">CB-6711</a> Use <code>parseProjectFile</code> when working with XCode projects.</li>
+  <li>Start using <code>PluginInfo</code> object in <code>plugman/install.js</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6709">CB-6709</a> Remove <code>merges/</code> folder for default apps</li>
+  <li>Add <code>--shrinkwrap</code> flag to save plugin versions</li>
+  <li>Initial implementation for saving plugin list in config.xml and restoring from it</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6668">CB-6668</a> Use <code>&lt;description&gt;</code> for <code>cordova plugin ls</code> when <code>&lt;name&gt;</code> is missing.</li>
+  <li>Add <code>--noregistry</code> flag for disabling plugin lookup in the registry</li>
+  <li>Remove <code>--force</code> from default npm settings for plugin registry</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7100">CB-7100</a> Use npm for downloading plugins and later platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6691">CB-6691</a> Change some instances of <code>Error()</code> to <code>CordovaError()</code></li>
 </ul>
+
 
         </div>
     </section>

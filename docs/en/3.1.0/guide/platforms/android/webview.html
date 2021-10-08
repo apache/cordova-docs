@@ -1583,38 +1583,53 @@ but may be eventually be automated.</p>
 <h2>Prerequisites</h2>
 
 <ul>
-<li><p>Cordova 1.9 or greater</p></li>
-<li><p>Android SDK updated to the latest SDK</p></li>
+  <li>
+    <p>Cordova 1.9 or greater</p>
+  </li>
+  <li>
+    <p>Android SDK updated to the latest SDK</p>
+  </li>
 </ul>
 
 <h2>Guide to using CordovaWebView in an Android Project</h2>
 
 <ol>
-<li><p><code>cd</code> into <code>/framework</code> and run <code>ant jar</code> to build the cordova jar. It creates the .jar file formed as <code>cordova-3.1.0.jar</code> in the <code>/framework</code> directory.</p></li>
-<li><p>Copy the cordova jar into your Android project&#39;s <code>/libs</code> directory.</p></li>
-<li><p>Edit your application&#39;s <code>main.xml</code> file (under <code>/res/xml</code>) to look like the following, with the <code>layout_height</code>, <code>layout_width</code> and <code>id</code> modified to suit your application:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;org.apache.cordova.CordovaWebView
-    android:id="@+id/tutorialView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" /&gt;
-</code></pre></div></li>
-<li><p>Modify your activity so that it implements the <code>CordovaInterface</code>.  You should implement the included methods.  You may wish to copy them from <code>/framework/src/org/apache/cordova/CordovaActivity.java</code>, or implement them on your own.  The code fragment below shows a basic application that uses the interface. Note how the referenced view id matches the <code>id</code> attribute specified in the XML fragment shown above:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">public class CordovaViewTestActivity extends Activity implements CordovaInterface {
-    CordovaWebView cwv;
-    /* Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        cwv = (CordovaWebView) findViewById(R.id.tutorialView);
-        Config.init(this);
-        cwv.loadUrl(Config.getStartUrl());
-    }
-</code></pre></div></li>
+  <li>
+    <p><code>cd</code> into <code>/framework</code> and run <code>ant jar</code> to build the cordova jar. It creates the .jar file formed as <code>cordova-3.1.0.jar</code> in the <code>/framework</code> directory.</p>
+  </li>
+  <li>
+    <p>Copy the cordova jar into your Android project&#39;s <code>/libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Edit your application&#39;s <code>main.xml</code> file (under <code>/res/xml</code>) to look like the following, with the <code>layout_height</code>, <code>layout_width</code> and <code>id</code> modified to suit your application:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;org.apache.cordova.CordovaWebView
+     android:id="@+id/tutorialView"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Modify your activity so that it implements the <code>CordovaInterface</code>.  You should implement the included methods.  You may wish to copy them from <code>/framework/src/org/apache/cordova/CordovaActivity.java</code>, or implement them on your own.  The code fragment below shows a basic application that uses the interface. Note how the referenced view id matches the <code>id</code> attribute specified in the XML fragment shown above:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> public class CordovaViewTestActivity extends Activity implements CordovaInterface {
+     CordovaWebView cwv;
+     /* Called when the activity is first created. */
+     @Override
+     public void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.main);
+         cwv = (CordovaWebView) findViewById(R.id.tutorialView);
+         Config.init(this);
+         cwv.loadUrl(Config.getStartUrl());
+     }
+</code></pre></div>    </div>
+  </li>
 </ol>
 
 <p>If you use the camera, you should also implement this:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    @Override
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
     public void setActivityResultCallback(CordovaPlugin plugin) {
         this.activityResultCallback = plugin;
     }
@@ -1629,12 +1644,12 @@ but may be eventually be automated.</p>
     public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
         this.activityResultCallback = command;
         this.activityResultKeepRunning = this.keepRunning;
-
+        
         // If multitasking turned on, then disable it for activities that return results
         if (command != null) {
             this.keepRunning = false;
         }
-
+    
         // Start activity
         super.startActivityForResult(intent, requestCode);
     }   
@@ -1656,16 +1671,23 @@ but may be eventually be automated.</p>
             callback.onActivityResult(requestCode, resultCode, intent);
         }
     }
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Finally, remember to add the thread pool, otherwise the plugins have no threads to run on:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    @Override
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
     public ExecutorService getThreadPool() {
         return threadPool;
     }
-</code></pre></div>
+</code></pre></div></div>
+
 <ol>
-<li><p>Copy your application&#39;s HTML and JavaScript files to your Android project&#39;s <code>/assets/www</code> directory.</p></li>
-<li><p>Copy <code>config.xml</code> from <code>/framework/res/xml</code> to your project&#39;s <code>/res/xml</code> directory.</p></li>
+  <li>
+    <p>Copy your application&#39;s HTML and JavaScript files to your Android project&#39;s <code>/assets/www</code> directory.</p>
+  </li>
+  <li>
+    <p>Copy <code>config.xml</code> from <code>/framework/res/xml</code> to your project&#39;s <code>/res/xml</code> directory.</p>
+  </li>
 </ol>
 
 

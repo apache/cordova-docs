@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="New versions of cordova tools are now live!cordova-lib@6.0.0cordova@6.0.0plugman@1.1.0cordova-js@4.1.3Release Highlights include:Updated default platform ver...">
+    <meta name="description" content="New versions of cordova tools are now live!  cordova-lib@6.0.0  cordova@6.0.0  plugman@1.1.0  cordova-js@4.1.3Release Highlights include:  Updated default pl...">
 
     <title>
         
@@ -134,148 +134,151 @@
             <p>New versions of cordova tools are now live!</p>
 
 <ul>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@6.0.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova">cordova@6.0.0</a></li>
-<li><a href="https://www.npmjs.org/package/plugman">plugman@1.1.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@4.1.3</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@6.0.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova">cordova@6.0.0</a></li>
+  <li><a href="https://www.npmjs.org/package/plugman">plugman@1.1.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@4.1.3</a></li>
 </ul>
 
 <p>Release Highlights include:</p>
-
 <ul>
-<li>Updated default platform versions to <code>cordova-android@5</code>, <code>cordova-ios@4</code> and <code>cordova-windows@4.3</code>. 
-
-<ul>
-<li><code>cordova-android@5.1</code> supports <strong>Android 6.X.X (Marshmallow)</strong> </li>
-<li><code>cordova-ios@4.0</code> adds <strong>iOS9</strong> and <code>WKWebView</code> support</li>
-<li><code>cordova-windows@4.3</code> updated the platform to use the new Platform API.</li>
-</ul></li>
-<li>Added a new template feature to <code>create</code> command. E.g. <code>cordova create --template cordova-app-hello-world</code>. This can fetch templates via <strong>npm</strong>, <strong>git URL</strong> or local paths.</li>
-<li>Removed support for our old <strong>Cordova Plugins Registry</strong>. Now plugins can only be installed via <strong>npm</strong>, <strong>git URL</strong> or local paths.</li>
-<li>Added default plugin pinning to <code>cordova</code>. This means that <code>cordova plugin add cordova-plugin-camera</code> will fetch the pinned version of the plugin instead of the always grabbing the <code>latest</code>. Users can still install any version of a plugin via <code>cordova plugin add cordova-plugin-camera@VERSION</code>.</li>
-<li>Added deprecation notices for <strong>amazon-fireos</strong> and <strong>wp8</strong>. We are aiming to remove support for these platforms in 6 months. Target <strong>Android</strong> and <strong>Windows</strong> instead.</li>
+  <li>Updated default platform versions to <code>cordova-android@5</code>, <code>cordova-ios@4</code> and <code>cordova-windows@4.3</code>.
+    <ul>
+      <li><code>cordova-android@5.1</code> supports <strong>Android 6.X.X (Marshmallow)</strong></li>
+      <li><code>cordova-ios@4.0</code> adds <strong>iOS9</strong> and <code>WKWebView</code> support</li>
+      <li><code>cordova-windows@4.3</code> updated the platform to use the new Platform API.</li>
+    </ul>
+  </li>
+  <li>Added a new template feature to <code>create</code> command. E.g. <code>cordova create --template cordova-app-hello-world</code>. This can fetch templates via <strong>npm</strong>, <strong>git URL</strong> or local paths.</li>
+  <li>Removed support for our old <strong>Cordova Plugins Registry</strong>. Now plugins can only be installed via <strong>npm</strong>, <strong>git URL</strong> or local paths.</li>
+  <li>Added default plugin pinning to <code>cordova</code>. This means that <code>cordova plugin add cordova-plugin-camera</code> will fetch the pinned version of the plugin instead of the always grabbing the <code>latest</code>. Users can still install any version of a plugin via <code>cordova plugin add cordova-plugin-camera@VERSION</code>.</li>
+  <li>Added deprecation notices for <strong>amazon-fireos</strong> and <strong>wp8</strong>. We are aiming to remove support for these platforms in 6 months. Target <strong>Android</strong> and <strong>Windows</strong> instead.</li>
 </ul>
 
 <p>To update your tools:</p>
 
 <ul>
-<li><p>If you have <code>cordova</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova@latest
-</code></pre></div></li>
-<li><p>If you have <code>plugman</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g plugman@latest
-</code></pre></div></li>
+  <li>
+    <p>If you have <code>cordova</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova@latest
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you have <code>plugman</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g plugman@latest
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <!--more-->
-
 <h1>Changes include:</h1>
-
 <h2>Platform updates</h2>
 
 <p>When adding these platforms to your project, the following versions are now used by default:</p>
 
 <ul>
-<li><a href="http://cordova.apache.org/announcements/2015/12/08/cordova-ios-4.0.0.html">cordova-ios Release Notes</a></li>
-<li><a href="http://cordova.apache.org/announcements/2016/01/24/cordova-android-5.1.0.html">cordova-android Release Notes</a></li>
-<li><a href="http://cordova.apache.org/announcements/2016/01/18/cordova-windows-4.3.0.html">cordova-windows Release Notes</a></li>
+  <li><a href="http://cordova.apache.org/announcements/2015/12/08/cordova-ios-4.0.0.html">cordova-ios Release Notes</a></li>
+  <li><a href="http://cordova.apache.org/announcements/2016/01/24/cordova-android-5.1.0.html">cordova-android Release Notes</a></li>
+  <li><a href="http://cordova.apache.org/announcements/2016/01/18/cordova-windows-4.3.0.html">cordova-windows Release Notes</a></li>
 </ul>
 
 <h2>cordova-lib</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10432">CB-10432</a> Fix plugin installation for newly added platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10423">CB-10423</a> allow recursive folder copy skipping whatever .. was</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10394">CB-10394</a> updated pinned <strong>Android</strong> version to <code>~5.1.0</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10299">CB-10299</a> updated pinned <strong>windows</strong> version to <code>~4.3.0</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10274">CB-10274</a> Make www directory the default for plugman</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10121">CB-10121</a> added deprecation notice for <strong>amazon-fireos</strong> and <strong>wp8</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7183">CB-7183</a> prevent read/write/modify files outside project from plugins</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8455">CB-8455</a> Added <code>--nohooks</code> option.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10193">CB-10193</a> Add deprecation notice about <code>pre_package</code> removal</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10147">CB-10147</a> updated pinned <strong>iOS</strong> to <code>~4.0.0</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10125">CB-10125</a>: Android build fails on read-only files.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6698">CB-6698</a> Fix directory resolution of framework with parent.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9653">CB-9653</a> Adds copying of <strong>blackberry10</strong> splashscreens</li>
-<li><strong>Ubuntu</strong> support for the new plugin naming convention</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9957">CB-9957</a> removed support for fetching from Cordova Plugins Registry. Only fetch plugins from <strong>npm</strong> now.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10108">CB-10108</a> Fixes <strong>android</strong> frameworks installation/removal</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9964">CB-9964</a> Added <code>--template</code> support to <code>cordova create</code></li>
-<li>Removing the <code>--usegit</code> flag from <code>cordova platform</code>. Recommended method is to use <code>cordova platform add git_url#branch</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10081">CB-10081</a> pinned plugin versions. These are default versions fetched when adding a plugin.</li>
-<li>add missing <code>package_suffix</code> function on <strong>amazon-fireos</strong> platform for plugman installations.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10057">CB-10057</a> - removing <code>&lt;access&gt;</code> tag does not remove <code>ATS</code> entry</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10048">CB-10048</a> clobbering of <code>&lt;access&gt;</code> tags to <code>ATS</code> directives</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10432">CB-10432</a> Fix plugin installation for newly added platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10423">CB-10423</a> allow recursive folder copy skipping whatever .. was</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10394">CB-10394</a> updated pinned <strong>Android</strong> version to <code>~5.1.0</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10299">CB-10299</a> updated pinned <strong>windows</strong> version to <code>~4.3.0</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10274">CB-10274</a> Make www directory the default for plugman</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10121">CB-10121</a> added deprecation notice for <strong>amazon-fireos</strong> and <strong>wp8</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7183">CB-7183</a> prevent read/write/modify files outside project from plugins</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8455">CB-8455</a> Added <code>--nohooks</code> option.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10193">CB-10193</a> Add deprecation notice about <code>pre_package</code> removal</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10147">CB-10147</a> updated pinned <strong>iOS</strong> to <code>~4.0.0</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10125">CB-10125</a>: Android build fails on read-only files.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6698">CB-6698</a> Fix directory resolution of framework with parent.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9653">CB-9653</a> Adds copying of <strong>blackberry10</strong> splashscreens</li>
+  <li><strong>Ubuntu</strong> support for the new plugin naming convention</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9957">CB-9957</a> removed support for fetching from Cordova Plugins Registry. Only fetch plugins from <strong>npm</strong> now.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10108">CB-10108</a> Fixes <strong>android</strong> frameworks installation/removal</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9964">CB-9964</a> Added <code>--template</code> support to <code>cordova create</code></li>
+  <li>Removing the <code>--usegit</code> flag from <code>cordova platform</code>. Recommended method is to use <code>cordova platform add git_url#branch</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10081">CB-10081</a> pinned plugin versions. These are default versions fetched when adding a plugin.</li>
+  <li>add missing <code>package_suffix</code> function on <strong>amazon-fireos</strong> platform for plugman installations.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10057">CB-10057</a> - removing <code>&lt;access&gt;</code> tag does not remove <code>ATS</code> entry</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10048">CB-10048</a> clobbering of <code>&lt;access&gt;</code> tags to <code>ATS</code> directives</li>
 </ul>
 
 <h2>cordova-cli</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10424">CB-10424</a> Updated cordova-lib dependency to 6.0.0</li>
-<li>Remove browserify from experimental flags list</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8455">CB-8455</a> Added <code>--nohooks</code> option.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9964">CB-9964</a> Added <code>--template</code> support to <code>cordova create</code></li>
-<li>Removing the <code>--usegit</code> flag from <code>cordova platform</code>. Recommended method is to use <code>cordova platform add git_url#branch</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9836">CB-9836</a> Add <code>.gitattributes</code> to prevent <code>CRLF</code> line endings in repos</li>
-<li>Added message about deprecating <strong>amazon-fireos</strong> for <strong>Fire OS 5.0+</strong> devices. 2015 onwards <strong>FireOS</strong> devices should use <strong>Android</strong> platform only.</li>
-<li>Added message about deprecating <strong>wp8</strong>. Users should start targeting the <strong>windows</strong> platform instead.</li>
-<li>add <strong>JIRA</strong> issue tracker link. </li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10424">CB-10424</a> Updated cordova-lib dependency to 6.0.0</li>
+  <li>Remove browserify from experimental flags list</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8455">CB-8455</a> Added <code>--nohooks</code> option.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9964">CB-9964</a> Added <code>--template</code> support to <code>cordova create</code></li>
+  <li>Removing the <code>--usegit</code> flag from <code>cordova platform</code>. Recommended method is to use <code>cordova platform add git_url#branch</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9836">CB-9836</a> Add <code>.gitattributes</code> to prevent <code>CRLF</code> line endings in repos</li>
+  <li>Added message about deprecating <strong>amazon-fireos</strong> for <strong>Fire OS 5.0+</strong> devices. 2015 onwards <strong>FireOS</strong> devices should use <strong>Android</strong> platform only.</li>
+  <li>Added message about deprecating <strong>wp8</strong>. Users should start targeting the <strong>windows</strong> platform instead.</li>
+  <li>add <strong>JIRA</strong> issue tracker link.</li>
 </ul>
 
 <h2>cordova-plugman</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10424">CB-10424</a> Updated cordova-lib dependency to 6.0.0</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10424">CB-10424</a> Updated cordova-lib dependency to 6.0.0</li>
 </ul>
 
 <h2>cordova-js</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9883">CB-9883</a> - remove unused bridge tests</li>
-<li>add <strong>JIRA</strong> issue tracker link</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9883">CB-9883</a> - remove unused bridge tests</li>
+  <li>add <strong>JIRA</strong> issue tracker link</li>
 </ul>
 
 <h2>Pinned Platform Versions for <strong>Cordova CLI 6.0.0</strong></h2>
 
 <ul>
-<li>Cordova Amazon-FireOS: ~3.6.3</li>
-<li>Cordova Android: ~5.1.0</li>
-<li>Cordova BlackBerry10: ~3.8.0</li>
-<li>Cordova Browser: ~4.0.0</li>
-<li>Cordova FirefoxOS: ~3.6.3</li>
-<li>Cordova iOS: ~4.0.1</li>
-<li>Cordova OSX: ~4.0.0</li>
-<li>Cordova Ubuntu: ~4.3.2</li>
-<li>Cordova Windows: ~4.3.0</li>
-<li>Cordova WebOS: ~3.7.0</li>
-<li>Cordova WP8: ~3.8.2</li>
+  <li>Cordova Amazon-FireOS: ~3.6.3</li>
+  <li>Cordova Android: ~5.1.0</li>
+  <li>Cordova BlackBerry10: ~3.8.0</li>
+  <li>Cordova Browser: ~4.0.0</li>
+  <li>Cordova FirefoxOS: ~3.6.3</li>
+  <li>Cordova iOS: ~4.0.1</li>
+  <li>Cordova OSX: ~4.0.0</li>
+  <li>Cordova Ubuntu: ~4.3.2</li>
+  <li>Cordova Windows: ~4.3.0</li>
+  <li>Cordova WebOS: ~3.7.0</li>
+  <li>Cordova WP8: ~3.8.2</li>
 </ul>
 
 <h2>Pinned Plugin Versions for <strong>Cordova CLI 6.0.0</strong></h2>
 
 <ul>
-<li>cordova-plugin-battery-status: ~1.1.1</li>
-<li>cordova-plugin-camera: ~2.1.0</li>
-<li>cordova-plugin-console: ~1.0.2</li>
-<li>cordova-plugin-contacts: ~2.0.1</li>
-<li>cordova-plugin-device: ~1.1.1</li>
-<li>cordova-plugin-device-motion: ~1.2.0</li>
-<li>cordova-plugin-device-orientation: ~1.0.2</li>
-<li>cordova-plugin-dialogs: ~1.2.0</li>
-<li>cordova-plugin-file: ~4.1.0</li>
-<li>cordova-plugin-file-transfer: ~1.5.0</li>
-<li>cordova-plugin-geolocation: ~2.1.0</li>
-<li>cordova-plugin-globalization: ~1.0.2</li>
-<li>cordova-plugin-inappbrowser: ~1.2.0</li>
-<li>cordova-plugin-legacy-whitelist: ~1.1.1</li>
-<li>cordova-plugin-media: ~2.1.0</li>
-<li>cordova-plugin-media-capture: ~1.2.0</li>
-<li>cordova-plugin-network-information: ~1.2.0</li>
-<li>cordova-plugin-splashscreen: ~3.1.0</li>
-<li>cordova-plugin-statusbar: ~2.1.0</li>
-<li>cordova-plugin-test-framework: ~1.1.1</li>
-<li>cordova-plugin-vibration: ~2.1.0</li>
-<li>cordova-plugin-whitelist: ~1.2.1</li>
+  <li>cordova-plugin-battery-status: ~1.1.1</li>
+  <li>cordova-plugin-camera: ~2.1.0</li>
+  <li>cordova-plugin-console: ~1.0.2</li>
+  <li>cordova-plugin-contacts: ~2.0.1</li>
+  <li>cordova-plugin-device: ~1.1.1</li>
+  <li>cordova-plugin-device-motion: ~1.2.0</li>
+  <li>cordova-plugin-device-orientation: ~1.0.2</li>
+  <li>cordova-plugin-dialogs: ~1.2.0</li>
+  <li>cordova-plugin-file: ~4.1.0</li>
+  <li>cordova-plugin-file-transfer: ~1.5.0</li>
+  <li>cordova-plugin-geolocation: ~2.1.0</li>
+  <li>cordova-plugin-globalization: ~1.0.2</li>
+  <li>cordova-plugin-inappbrowser: ~1.2.0</li>
+  <li>cordova-plugin-legacy-whitelist: ~1.1.1</li>
+  <li>cordova-plugin-media: ~2.1.0</li>
+  <li>cordova-plugin-media-capture: ~1.2.0</li>
+  <li>cordova-plugin-network-information: ~1.2.0</li>
+  <li>cordova-plugin-splashscreen: ~3.1.0</li>
+  <li>cordova-plugin-statusbar: ~2.1.0</li>
+  <li>cordova-plugin-test-framework: ~1.1.1</li>
+  <li>cordova-plugin-vibration: ~2.1.0</li>
+  <li>cordova-plugin-whitelist: ~1.2.1</li>
 </ul>
 
         </div>

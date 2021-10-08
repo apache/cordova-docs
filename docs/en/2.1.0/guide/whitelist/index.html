@@ -1458,33 +1458,45 @@
 <h2>Syntax</h2>
 
 <p>Access to <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">http://google.com
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://google.com
+</code></pre></div></div>
+
 <p>Access to the secure <a href="https://google.com">google.com</a> (<code>https://</code>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">https://google.com
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://google.com
+</code></pre></div></div>
+
 <p>Access to the subdomain <a href="http://maps.google.com">maps.google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">http://maps.google.com
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://maps.google.com
+</code></pre></div></div>
+
 <p>Access to all the subdomains on <a href="http://google.com">google.com</a> (e.g. <a href="http://mail.google.com">mail.google.com</a> and <a href="http://docs.google.com">docs.google.com</a>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">http://*.google.com
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://*.google.com
+</code></pre></div></div>
+
 <p>Access to all domains (e.g. <a href="http://google.com">google.com</a> and <a href="http://developer.mozilla.org">developer.mozilla.org</a>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">*
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*
+</code></pre></div></div>
+
 <h2>Android</h2>
 
 <h3>Details</h3>
 
-<p>The whitelisting rules are found in <code>res/xml/config.xml</code> and declared with the element <code>&lt;access origin=&quot;...&quot; /&gt;</code>.</p>
+<p>The whitelisting rules are found in <code>res/xml/config.xml</code> and declared with the element <code>&lt;access origin="..." /&gt;</code>.</p>
 
 <p>Android has full support for the whitelisting syntax.</p>
 
 <h3>Syntax</h3>
 
 <p>Access to <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="http://google.com" /&gt;
+</code></pre></div></div>
+
 <h2>Bada</h2>
 
 <p>Domain whitelisting is unsupported on Bada. By default, all domains are accessible.</p>
@@ -1493,61 +1505,79 @@
 
 <h3>Details</h3>
 
-<p>The whitelisting rules are found in <code>www/config.xml</code> and declared with the element <code>&lt;access uri=&quot;...&quot; /&gt;</code>.</p>
+<p>The whitelisting rules are found in <code>www/config.xml</code> and declared with the element <code>&lt;access uri="..." /&gt;</code>.</p>
 
 <p>For a complete reference, see the <a href="https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html">BlackBerry WebWorks Access Element documentation</a>.</p>
 
 <h3>Syntax</h3>
 
 <p>Access to <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access uri="http://google.com" subdomains="false" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access uri="http://google.com" subdomains="false" /&gt;
+</code></pre></div></div>
+
 <p>Access to  <a href="http://maps.google.com">maps.google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access uri="http://maps.google.com" subdomains="false" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access uri="http://maps.google.com" subdomains="false" /&gt;
+</code></pre></div></div>
+
 <p>Access to all the subdomains on <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access uri="http://google.com" subdomains="true" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access uri="http://google.com" subdomains="true" /&gt;
+</code></pre></div></div>
+
 <p>Access to all domains, including <code>file://</code> protocol:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access uri="*" subdomains="true" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access uri="*" subdomains="true" /&gt;
+</code></pre></div></div>
+
 <h2>iOS</h2>
 
 <h3>Details</h3>
 
 <ol>
-<li>Open <code>Cordova.plist</code>.
-
-<ul>
-<li>In Xcode, it is found at <code>AppName/Resources/Cordova.plist</code></li>
-<li>In the directory, it is found at <code>AppName/Cordova.plist</code></li>
-</ul></li>
-<li>Add a new <code>String</code> value under the <code>ExternalHosts</code> key.
-
-<ul>
-<li>We recommend using Xcode to avoid editing raw XML.</li>
-</ul></li>
+  <li>Open <code>Cordova.plist</code>.
+    <ul>
+      <li>In Xcode, it is found at <code>AppName/Resources/Cordova.plist</code></li>
+      <li>In the directory, it is found at <code>AppName/Cordova.plist</code></li>
+    </ul>
+  </li>
+  <li>Add a new <code>String</code> value under the <code>ExternalHosts</code> key.
+    <ul>
+      <li>We recommend using Xcode to avoid editing raw XML.</li>
+    </ul>
+  </li>
 </ol>
 
 <h3>Syntax</h3>
 
 <p>Access to <a href="http://google.com">google.com</a> and the secure <a href="https://google.com">google.com</a> (<code>https://</code>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">google.com
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>google.com
+</code></pre></div></div>
+
 <p>Access to the subdomain <a href="http://maps.google.com">maps.google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">maps.google.com
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>maps.google.com
+</code></pre></div></div>
+
 <p>Access to all the subdomains on <a href="http://google.com">google.com</a> (e.g. <a href="http://mail.google.com">mail.google.com</a> and <a href="http://docs.google.com">docs.google.com</a>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">*.google.com
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*.google.com
+</code></pre></div></div>
+
 <p>Access to all domains (e.g. <a href="http://google.com">google.com</a> and <a href="http://developer.mozilla.org">developer.mozilla.org</a>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">*
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*
+</code></pre></div></div>
+
 <p>Wildcards on iOS (<code>*</code>) are more flexible than the <a href="http://www.w3.org/TR/widgets-access/">W3C Widget Access</a> specification.</p>
 
 <p>Access to all subdomains and TLDs (<code>.com</code>, <code>.net</code>, etc):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">*.google.*
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*.google.*
+</code></pre></div></div>
+
 <h2>Symbian</h2>
 
 <p>Domain whitelisting is unsupported on Symbian. By default, all domains are accessible.</p>
@@ -1565,23 +1595,32 @@
 <h3>Details</h3>
 
 <p>The domain whitelisting rules are found in <code>config.xml</code> located in your application root directory.
-They are declared with the element <code>&lt;access origin=&quot;...&quot; /&gt;</code>.
+They are declared with the element <code>&lt;access origin="..." /&gt;</code>.
 For a complete reference, see the [Tizen Accessing External Network Resources documentation][10].</p>
 
 <h3>Syntax</h3>
 
 <p>Access to <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" subdomains="false" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="http://google.com" subdomains="false" /&gt;
+</code></pre></div></div>
+
 <p>Access to the secure <a href="https://google.com">google.com</a> (<code>https://</code>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="https://google.com" subdomains="false" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="https://google.com" subdomains="false" /&gt;
+</code></pre></div></div>
+
 <p>Access to all the subdomains on <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" subdomains="true" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="http://google.com" subdomains="true" /&gt;
+</code></pre></div></div>
+
 <p>Access to all domains, including <code>file://</code> protocol:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="*" subdomains="true" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;access origin="*" subdomains="true" /&gt;
+</code></pre></div></div>
+
+
 
             </div>
         </div>

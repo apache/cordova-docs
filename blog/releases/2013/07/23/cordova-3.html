@@ -148,11 +148,13 @@
 <h2>Installing &gt; Downloading</h2>
 
 <p>First, <a href="http://nodejs.org">ensure you have NodeJS installed</a> and then simply run <code>npm install -g cordova</code>. From here its a typical comand line utility. Get started by building an iOS app!</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova create MyFunkyApp
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova create MyFunkyApp
 cd MyFunkyApp
 cordova platform add ios
 cordova emulate ios
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Cordova has to download platform files the first time <code>create</code> is run, so the first app you create might be a little slow. Just use the <code>-d</code> flag to see progress. For example, <code>cordova -d platform add ios</code>. Maybe crack a beer and chill while it goes about its business first run.</p>
 
 <p>Now let&#39;s add Android, <code>cordova platform add android</code>. Yes: that easy!</p>
@@ -160,15 +162,19 @@ cordova emulate ios
 <h1>Installing Plugins</h1>
 
 <p>If you are working with a platform project directly (one created through a Cordova platform&#39;s <code>bin/create</code> script instead of through the <code>cordova</code> tool), then <code>plugman</code> can be used standalone. Again, <a href="http://nodejs.org">ensure you have NodeJS installed</a> and then simply run <code>npm install -g plugman</code>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cd MyFunkyApp
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd MyFunkyApp
 cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
-</code></pre></div>
+</code></pre></div></div>
+
 <p>You now have geolocation enabled your project!</p>
 
 <p>If you are working with a native project directly then <code>plugman</code> can be used standalone. Again, <a href="http://nodejs.org">ensure you have NodeJS installed</a> and then simply run <code>npm install -g plugman</code>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cd MyAndroidProject
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd MyAndroidProject
 plugman --platform android --project . --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Of course, you can create your own plugins! (And we&#39;re really excited to see what you do.) You can learn how to author a plugin by <a href="http://cordova.apache.org/docs/en/3.0.0/guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide">reading the plugin development guide</a>. We are going to be writing much more documentation about this in the future. In the meantime, you can learn a great deal looking at the <a href="https://git-wip-us.apache.org/repos/asf?s=cordova-plugin">core plugins</a>.</p>
 
 <h1>Upgrading</h1>
@@ -180,14 +186,14 @@ plugman --platform android --project . --plugin https://git-wip-us.apache.org/re
 <p>Remember <em>core plugins no longer exist by default in new projects</em> and you have to manually add them using <code>plugman</code> or <code>cordova</code>. You know we release regularly so you can expect updates soon and we&#39;re going to leave a nice big window for deprecations as usual. Also remember this is an open source project so if something isn&#39;t to your liking you can always pitch in and fix it yourself!</p>
 
 <ul>
-<li>Various native IDE&#39;s show generated files when using <code>cordova</code>-based projects. Be careful not to edit them or else you may lose your work when <code>cordova</code> is next run!</li>
-<li>Whitelist (<code>&lt;access&gt;</code> tags) format is inconsistent across platforms</li>
-<li>There is no &quot;upgrade&quot; command for <code>cordova</code> yet. You will need to remove and re-add plugins/platforms for now.</li>
-<li>Not all platforms are supported by <code>cordova</code>. <em>Currently</em> only iOS, Android, BB10, and Windows Phone</li>
-<li>A plugin discovery repository is still being baked and will be available very soon</li>
+  <li>Various native IDE&#39;s show generated files when using <code>cordova</code>-based projects. Be careful not to edit them or else you may lose your work when <code>cordova</code> is next run!</li>
+  <li>Whitelist (<code>&lt;access&gt;</code> tags) format is inconsistent across platforms</li>
+  <li>There is no &quot;upgrade&quot; command for <code>cordova</code> yet. You will need to remove and re-add plugins/platforms for now.</li>
+  <li>Not all platforms are supported by <code>cordova</code>. <em>Currently</em> only iOS, Android, BB10, and Windows Phone</li>
+  <li>A plugin discovery repository is still being baked and will be available very soon</li>
 </ul>
 
-<p><br></p>
+<p><br /></p>
 
 <h1>Huge Thanks</h1>
 

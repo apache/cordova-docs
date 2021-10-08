@@ -2216,40 +2216,45 @@
 #         under the License.
 -->
 
-<table><thead>
-<tr>
-<th style="text-align: center">AppVeyor</th>
-<th style="text-align: center">Travis CI</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: center"><a href="https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-battery-status"><img src="https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-battery-status?branch=master" alt="Build status"></a></td>
-<td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-battery-status"><img src="https://travis-ci.org/apache/cordova-plugin-battery-status.svg?branch=master" alt="Build Status"></a></td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">AppVeyor</th>
+      <th style="text-align: center">Travis CI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-battery-status"><img src="https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-battery-status?branch=master" alt="Build status" /></a></td>
+      <td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-battery-status"><img src="https://travis-ci.org/apache/cordova-plugin-battery-status.svg?branch=master" alt="Build Status" /></a></td>
+    </tr>
+  </tbody>
+</table>
 
 <h1>cordova-plugin-battery-status</h1>
 
 <p>This plugin provides an implementation of an old version of the <a href="https://www.w3.org/TR/battery-status/">Battery Status Events API</a>. It adds the following three events to the <code>window</code> object:</p>
 
 <ul>
-<li>batterystatus</li>
-<li>batterycritical</li>
-<li>batterylow</li>
+  <li>batterystatus</li>
+  <li>batterycritical</li>
+  <li>batterylow</li>
 </ul>
 
 <p>Applications may use <code>window.addEventListener</code> to attach an event listener for any of the above events after the <code>deviceready</code> event fires.</p>
 
 <h2>Installation</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add cordova-plugin-battery-status
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-battery-status
+</code></pre></div></div>
+
 <h2>Status object</h2>
 
 <p>All events in this plugin return an object with the following properties:</p>
 
 <ul>
-<li><strong>level</strong>: The battery charge percentage (0-100). <em>(Number)</em></li>
-<li><strong>isPlugged</strong>: A boolean that indicates whether the device is plugged in. <em>(Boolean)</em></li>
+  <li><strong>level</strong>: The battery charge percentage (0-100). <em>(Number)</em></li>
+  <li><strong>isPlugged</strong>: A boolean that indicates whether the device is plugged in. <em>(Boolean)</em></li>
 </ul>
 
 <h2>batterystatus event</h2>
@@ -2257,19 +2262,21 @@
 <p>Fires when the battery charge percentage changes by at least 1 percent, or when the device is plugged in or unplugged. Returns an <a href="#status-object">object</a> containing battery status.</p>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">window.addEventListener("batterystatus", onBatteryStatus, false);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.addEventListener("batterystatus", onBatteryStatus, false);
 
 function onBatteryStatus(status) {
     console.log("Level: " + status.level + " isPlugged: " + status.isPlugged);
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Supported Platforms</h3>
 
 <ul>
-<li>iOS</li>
-<li>Android</li>
-<li>Windows</li>
-<li>Browser (Chrome, Firefox, Opera)</li>
+  <li>iOS</li>
+  <li>Android</li>
+  <li>Windows</li>
+  <li>Browser (Chrome, Firefox, Opera)</li>
 </ul>
 
 <h3>Quirks: Android</h3>
@@ -2281,19 +2288,21 @@ function onBatteryStatus(status) {
 <p>Fires when the battery charge percentage reaches the low charge threshold. This threshold value is device-specific. Returns an <a href="#status-object">object</a> containing battery status.</p>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">window.addEventListener("batterylow", onBatteryLow, false);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.addEventListener("batterylow", onBatteryLow, false);
 
 function onBatteryLow(status) {
     alert("Battery Level Low " + status.level + "%");
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Supported Platforms</h3>
 
 <ul>
-<li>iOS</li>
-<li>Android</li>
-<li>Windows</li>
-<li>Browser (Chrome, Firefox, Opera)</li>
+  <li>iOS</li>
+  <li>Android</li>
+  <li>Windows</li>
+  <li>Browser (Chrome, Firefox, Opera)</li>
 </ul>
 
 <h2>batterycritical event</h2>
@@ -2301,20 +2310,23 @@ function onBatteryLow(status) {
 <p>Fires when the battery charge percentage reaches the critical charge threshold. This threshold value is device-specific. Returns an <a href="#status-object">object</a> containing battery status.</p>
 
 <h3>Example</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">window.addEventListener("batterycritical", onBatteryCritical, false);
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.addEventListener("batterycritical", onBatteryCritical, false);
 
 function onBatteryCritical(status) {
     alert("Battery Level Critical " + status.level + "%\nRecharge Soon!");
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Supported Platforms</h3>
 
 <ul>
-<li>iOS</li>
-<li>Android</li>
-<li>Windows</li>
-<li>Browser (Chrome, Firefox, Opera)</li>
+  <li>iOS</li>
+  <li>Android</li>
+  <li>Windows</li>
+  <li>Browser (Chrome, Firefox, Opera)</li>
 </ul>
+
 
 
             </div>

@@ -1644,14 +1644,30 @@
 <h2>Properties</h2>
 
 <ul>
-<li><p><strong>pref</strong>: Set to <code>true</code> if this <code>ContactAddress</code> contains the user&#39;s preferred value. <em>(boolean)</em></p></li>
-<li><p><strong>type</strong>: A string indicating what type of field this is, <em>home</em> for example. <em>(DOMString)</em></p></li>
-<li><p><strong>formatted</strong>: The full address formatted for display. <em>(DOMString)</em></p></li>
-<li><p><strong>streetAddress</strong>: The full street address. <em>(DOMString)</em></p></li>
-<li><p><strong>locality</strong>: The city or locality. <em>(DOMString)</em></p></li>
-<li><p><strong>region</strong>: The state or region. <em>(DOMString)</em></p></li>
-<li><p><strong>postalCode</strong>: The zip code or postal code. <em>(DOMString)</em></p></li>
-<li><p><strong>country</strong>: The country name. <em>(DOMString)</em></p></li>
+  <li>
+    <p><strong>pref</strong>: Set to <code>true</code> if this <code>ContactAddress</code> contains the user&#39;s preferred value. <em>(boolean)</em></p>
+  </li>
+  <li>
+    <p><strong>type</strong>: A string indicating what type of field this is, <em>home</em> for example. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>formatted</strong>: The full address formatted for display. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>streetAddress</strong>: The full street address. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>locality</strong>: The city or locality. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>region</strong>: The state or region. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>postalCode</strong>: The zip code or postal code. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>country</strong>: The country name. <em>(DOMString)</em></p>
+  </li>
 </ul>
 
 <h2>Details</h2>
@@ -1663,16 +1679,17 @@ a <code>ContactAddress[]</code> array.</p>
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Amazon Fire OS</li>
-<li>Android</li>
-<li>BlackBerry WebWorks 5.0+</li>
-<li>iOS</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows 8</li>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks 5.0+</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2>Quick Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">// display the address information for all contacts
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// display the address information for all contacts
 
 function onSuccess(contacts) {
     for (var i = 0; i &lt; contacts.length; i++) {
@@ -1698,87 +1715,111 @@ var options = new ContactFindOptions();
 options.filter = "";
 var filter = ["displayName", "addresses"];
 navigator.contacts.find(filter, onSuccess, onError, options);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Contact Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Contact Example&lt;/title&gt;
 
-    <span class="c1">// Wait for device API libraries to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// device APIs are available</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// find all contacts</span>
-        <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContactFindOptions</span><span class="p">();</span>
-        <span class="nx">options</span><span class="p">.</span><span class="nx">filter</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">filter</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"displayName"</span><span class="p">,</span> <span class="s2">"addresses"</span><span class="p">];</span>
-        <span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">filter</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="c1">// onSuccess: Get a snapshot of the current contacts</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">contacts</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// display the address information for all contacts</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">contacts</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">alert</span><span class="p">(</span><span class="s2">"Pref: "</span>           <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">pref</span>          <span class="o">+</span> <span class="s2">"\n"</span> <span class="o">+</span>
-                      <span class="s2">"Type: "</span>           <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">type</span>          <span class="o">+</span> <span class="s2">"\n"</span> <span class="o">+</span>
-                      <span class="s2">"Formatted: "</span>      <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">formatted</span>     <span class="o">+</span> <span class="s2">"\n"</span> <span class="o">+</span>
-                      <span class="s2">"Street Address: "</span> <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">streetAddress</span> <span class="o">+</span> <span class="s2">"\n"</span> <span class="o">+</span>
-                      <span class="s2">"Locality: "</span>       <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">locality</span>      <span class="o">+</span> <span class="s2">"\n"</span> <span class="o">+</span>
-                      <span class="s2">"Region: "</span>         <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">region</span>        <span class="o">+</span> <span class="s2">"\n"</span> <span class="o">+</span>
-                      <span class="s2">"Postal Code: "</span>    <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">postalCode</span>    <span class="o">+</span> <span class="s2">"\n"</span> <span class="o">+</span>
-                      <span class="s2">"Country: "</span>        <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">country</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">};</span>
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // find all contacts
+        var options = new ContactFindOptions();
+        options.filter = "";
+        var filter = ["displayName", "addresses"];
+        navigator.contacts.find(filter, onSuccess, onError, options);
+    }
 
-    <span class="c1">// onError: Failed to get the contacts</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">contactError</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'onError!'</span><span class="p">);</span>
-    <span class="p">}</span>
+    // onSuccess: Get a snapshot of the current contacts
+    //
+    function onSuccess(contacts) {
+        // display the address information for all contacts
+        for (var i = 0; i &lt; contacts.length; i++) {
+            for (var j = 0; j &lt; contacts[i].addresses.length; j++) {
+                alert("Pref: "           + contacts[i].addresses[j].pref          + "\n" +
+                      "Type: "           + contacts[i].addresses[j].type          + "\n" +
+                      "Formatted: "      + contacts[i].addresses[j].formatted     + "\n" +
+                      "Street Address: " + contacts[i].addresses[j].streetAddress + "\n" +
+                      "Locality: "       + contacts[i].addresses[j].locality      + "\n" +
+                      "Region: "         + contacts[i].addresses[j].region        + "\n" +
+                      "Postal Code: "    + contacts[i].addresses[j].postalCode    + "\n" +
+                      "Country: "        + contacts[i].addresses[j].country);
+            }
+        }
+    };
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Example<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Find Contacts<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // onError: Failed to get the contacts
+    //
+    function onError(contactError) {
+        alert('onError!');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Find Contacts&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 <h2>Android 2.X Quirks</h2>
 
 <ul>
-<li><strong>pref</strong>: Not supported, returning <code>false</code> on Android 2.X devices.</li>
+  <li><strong>pref</strong>: Not supported, returning <code>false</code> on Android 2.X devices.</li>
 </ul>
 
 <h2>BlackBerry WebWorks 5.0+ Quirks</h2>
 
 <ul>
-<li><p><strong>pref</strong>: Not supported on BlackBerry devices, returning <code>false</code>.</p></li>
-<li><p><strong>type</strong>: Partially supported.  Only one each of <em>Work</em> and <em>Home</em> type addresses can be stored per contact.</p></li>
-<li><p><strong>formatted</strong>: Partially supported.  Returns a concatenation of all BlackBerry address fields.</p></li>
-<li><p><strong>streetAddress</strong>: Supported.  Returns a concatenation of BlackBerry <strong>address1</strong> and <strong>address2</strong> address fields.</p></li>
-<li><p><strong>locality</strong>: Supported.  Stored in BlackBerry <strong>city</strong> address field.</p></li>
-<li><p><strong>region</strong>: Supported.  Stored in BlackBerry <strong>stateProvince</strong> address field.</p></li>
-<li><p><strong>postalCode</strong>: Supported.  Stored in BlackBerry <strong>zipPostal</strong> address field.</p></li>
-<li><p><strong>country</strong>: Supported.</p></li>
+  <li>
+    <p><strong>pref</strong>: Not supported on BlackBerry devices, returning <code>false</code>.</p>
+  </li>
+  <li>
+    <p><strong>type</strong>: Partially supported.  Only one each of <em>Work</em> and <em>Home</em> type addresses can be stored per contact.</p>
+  </li>
+  <li>
+    <p><strong>formatted</strong>: Partially supported.  Returns a concatenation of all BlackBerry address fields.</p>
+  </li>
+  <li>
+    <p><strong>streetAddress</strong>: Supported.  Returns a concatenation of BlackBerry <strong>address1</strong> and <strong>address2</strong> address fields.</p>
+  </li>
+  <li>
+    <p><strong>locality</strong>: Supported.  Stored in BlackBerry <strong>city</strong> address field.</p>
+  </li>
+  <li>
+    <p><strong>region</strong>: Supported.  Stored in BlackBerry <strong>stateProvince</strong> address field.</p>
+  </li>
+  <li>
+    <p><strong>postalCode</strong>: Supported.  Stored in BlackBerry <strong>zipPostal</strong> address field.</p>
+  </li>
+  <li>
+    <p><strong>country</strong>: Supported.</p>
+  </li>
 </ul>
 
 <h2>iOS Quirks</h2>
 
 <ul>
-<li><p><strong>pref</strong>: Not supported on iOS devices, returning <code>false</code>.</p></li>
-<li><p><strong>formatted</strong>: Currently not supported.</p></li>
+  <li>
+    <p><strong>pref</strong>: Not supported on iOS devices, returning <code>false</code>.</p>
+  </li>
+  <li>
+    <p><strong>formatted</strong>: Currently not supported.</p>
+  </li>
 </ul>
+
 
 
             </div>

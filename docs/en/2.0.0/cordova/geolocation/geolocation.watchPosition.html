@@ -1448,22 +1448,24 @@
                 <h1>geolocation.watchPosition</h1>
 
 <p>Watches for changes to the device&#39;s current position.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
                                                   [geolocationError],
                                                   [geolocationOptions]);
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Parameters</h2>
 
 <ul>
-<li><strong>geolocationSuccess</strong>: The callback that is called with the current position.</li>
-<li><strong>geolocationError</strong>: (Optional) The callback that is called if there was an error.</li>
-<li><strong>geolocationOptions</strong>: (Optional) The geolocation options.</li>
+  <li><strong>geolocationSuccess</strong>: The callback that is called with the current position.</li>
+  <li><strong>geolocationError</strong>: (Optional) The callback that is called if there was an error.</li>
+  <li><strong>geolocationOptions</strong>: (Optional) The geolocation options.</li>
 </ul>
 
 <h2>Returns</h2>
 
 <ul>
-<li><strong>String</strong>: returns a watch id that references the watch position interval. The watch id should be used with <code>[geolocation.clearWatch](geolocation.clearWatch.html)</code> to stop watching for changes in position.</li>
+  <li><strong>String</strong>: returns a watch id that references the watch position interval. The watch id should be used with <code>[geolocation.clearWatch](geolocation.clearWatch.html)</code> to stop watching for changes in position.</li>
 </ul>
 
 <h2>Description</h2>
@@ -1473,16 +1475,17 @@
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
-<li>Bada 1.2 &amp; 2.x</li>
-<li>webOS</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 ( Mango )</li>
+  <li>Bada 1.2 &amp; 2.x</li>
+  <li>webOS</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">// onSuccess Callback
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// onSuccess Callback
 //   This method accepts a `Position` object, which contains
 //   the current GPS coordinates
 //
@@ -1503,53 +1506,56 @@ function onError(error) {
 // Options: throw an error if no update is received every 30 seconds.
 //
 var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Device Properties Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-2.0.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Device Properties Example&lt;/title&gt;
 
-    <span class="c1">// Wait for Cordova to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="kd">var</span> <span class="nx">watchID</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="c1">// Cordova is ready</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// Throw an error if no update is received every 30 seconds</span>
-        <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span> <span class="na">timeout</span><span class="p">:</span> <span class="mi">30000</span> <span class="p">};</span>
-        <span class="nx">watchID</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">watchPosition</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-    <span class="p">}</span>
+    var watchID = null;
 
-    <span class="c1">// onSuccess Geolocation</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'geolocation'</span><span class="p">);</span>
-        <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">'Latitude: '</span>  <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span>      <span class="o">+</span> <span class="err">'</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="s1">' +
-                            '</span><span class="nx">Longitude</span><span class="p">:</span> <span class="s1">' + position.coords.longitude     + '</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span><span class="s1">' +
-                            '</span><span class="o">&lt;</span><span class="nx">hr</span> <span class="o">/&gt;</span><span class="s1">'      + element.innerHTML;
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        // Throw an error if no update is received every 30 seconds
+        var options = { timeout: 30000 };
+        watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+    }
+
+    // onSuccess Geolocation
+    //
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '  + position.coords.latitude      + '&lt;br /&gt;' +
+                            'Longitude: ' + position.coords.longitude     + '&lt;br /&gt;' +
+                            '&lt;hr /&gt;'      + element.innerHTML;
     }
 
     // onError Callback receives a [PositionError](PositionError/positionError.html) object
     //
     function onError(error) {
-        alert('</span><span class="nx">code</span><span class="p">:</span> <span class="s1">'    + error.code    + '</span><span class="err">\</span><span class="nx">n</span><span class="s1">' +
-              '</span><span class="nx">message</span><span class="p">:</span> <span class="s1">' + error.message + '</span><span class="err">\</span><span class="nx">n</span><span class="err">'</span><span class="p">);</span>
-    <span class="p">}</span>
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"geolocation"</span><span class="nt">&gt;</span>Watching geolocation...<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p id="geolocation"&gt;Watching geolocation...&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 
             </div>
         </div>

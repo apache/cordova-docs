@@ -1452,48 +1452,71 @@
 <p>The Bada implementation is a full javascript implementation. Therefore, adding a custom plugin involves updating CordovaJS with your plugin code. Follow these steps to add a simple <em>Hello World</em> plugin:</p>
 
 <ol>
-<li><p>Clone the CordovaJS repository</p>
-<div class="highlight"><pre><code class="language-" data-lang="">git clone https://git-wip-us.apache.org/repos/asf/incubuator-cordova-js.git
-</code></pre></div></li>
-<li><p>Create a new javascript file under <strong>lib/bada/plugin/bada/</strong> and name it <em>HelloWorld.js</em>. Add the following content:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">function HelloWorld() {
-}
+  <li>
+    <p>Clone the CordovaJS repository</p>
 
-HelloWorld.prototype.printHello = function(success, fail, arg) {
-    alert(Osp.Core.StringHelper('Hello %1', arg[0]));
-}
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git clone https://git-wip-us.apache.org/repos/asf/incubuator-cordova-js.git
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Create a new javascript file under <strong>lib/bada/plugin/bada/</strong> and name it <em>HelloWorld.js</em>. Add the following content:</p>
 
-module.exports = new HelloWorld();
-</code></pre></div></li>
-<li><p>Add a link to your newly created plugin in <strong>lib/bada/platform.js</strong> under the objects property:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">objects: {
-    ...
-    HelloWorld: {
-        'cordova/plugin/bada/HelloWorld' 
-    },
-    ...
-}
-...
-</code></pre></div></li>
-<li><p>Update the plugin list under <strong>lib/bada/exec.js</strong> to include your plugin</p>
-<div class="highlight"><pre><code class="language-" data-lang="">var plugins = {
-    ...
-    "HelloWorld": require('cordova/plugin/bada/HelloWorld')
-};
-</code></pre></div></li>
-<li><p>Now you can write your user-facing javascript however you like but remember that in order for your plugin to execute you need to call the following method</p>
-<div class="highlight"><pre><code class="language-" data-lang="">exec(succes, fail, 'HelloWorld', 'printHello', ['Jackson!']);
-</code></pre></div>
-<p>success is the success callback that gets executed when the plugin succeeds
-fail is the failure callback that gets executed if the plugin fails
-&#39;HelloWorld&#39; is the name of your plugin
-&#39;printHello&#39; is your plugin action
-Finally, the last argument is your plugin parameters (if any).</p></li>
-<li><p>Run the following command to generate the new common javascript (make sure you have the jake npm module installed)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">jake
-</code></pre></div></li>
-<li><p>Copy the newly generated javascript under <strong>pkg/cordova.bada.js</strong> to your Bada project under <strong>Res/js</strong></p></li>
-<li><p>That is it! You can now add new Bada plugins and implement the many features that are not currently supported by Cordova Bada.</p></li>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> function HelloWorld() {
+ }
+
+ HelloWorld.prototype.printHello = function(success, fail, arg) {
+     alert(Osp.Core.StringHelper('Hello %1', arg[0]));
+ }
+
+ module.exports = new HelloWorld();
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add a link to your newly created plugin in <strong>lib/bada/platform.js</strong> under the objects property:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> objects: {
+     ...
+     HelloWorld: {
+         'cordova/plugin/bada/HelloWorld' 
+     },
+     ...
+ }
+ ...
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Update the plugin list under <strong>lib/bada/exec.js</strong> to include your plugin</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> var plugins = {
+     ...
+     "HelloWorld": require('cordova/plugin/bada/HelloWorld')
+ };
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Now you can write your user-facing javascript however you like but remember that in order for your plugin to execute you need to call the following method</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> exec(succes, fail, 'HelloWorld', 'printHello', ['Jackson!']);
+</code></pre></div>    </div>
+
+    <p>success is the success callback that gets executed when the plugin succeeds
+ fail is the failure callback that gets executed if the plugin fails
+ &#39;HelloWorld&#39; is the name of your plugin
+ &#39;printHello&#39; is your plugin action
+ Finally, the last argument is your plugin parameters (if any).</p>
+  </li>
+  <li>
+    <p>Run the following command to generate the new common javascript (make sure you have the jake npm module installed)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> jake
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Copy the newly generated javascript under <strong>pkg/cordova.bada.js</strong> to your Bada project under <strong>Res/js</strong></p>
+  </li>
+  <li>
+    <p>That is it! You can now add new Bada plugins and implement the many features that are not currently supported by Cordova Bada.</p>
+  </li>
 </ol>
 
 

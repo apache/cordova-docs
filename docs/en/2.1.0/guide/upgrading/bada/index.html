@@ -1453,29 +1453,30 @@ older version to a current version of Cordova.</p>
 <h2>Upgrade to 1.9.0 from 2.0.0</h2>
 
 <ol>
-<li>Update <code>Res/js/cordova.js</code> with the new JavaScript file.</li>
+  <li>Update <code>Res/js/cordova.js</code> with the new JavaScript file.</li>
 </ol>
 
 <h2>Upgrade to 1.9.0 from 1.8.x</h2>
 
 <ol>
-<li>Update <code>Res/js/cordova.js</code> with the new JavaScript file.</li>
+  <li>Update <code>Res/js/cordova.js</code> with the new JavaScript file.</li>
 </ol>
 
 <h2>Upgrade to 1.8.x from 1.7.0</h2>
 
 <ol>
-<li>Remove the cordova.bada.js file from the Res/js directory </li>
-<li>Add the new cordova.js file to your Res/js directory </li>
-<li>Update your Res/index.html to reference cordova.js instead of cordova.bada.js </li>
+  <li>Remove the cordova.bada.js file from the Res/js directory</li>
+  <li>Add the new cordova.js file to your Res/js directory</li>
+  <li>Update your Res/index.html to reference cordova.js instead of cordova.bada.js</li>
 </ol>
 
 <p>Change this line:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;script type="text/javascript" src="./js/cordova.bada.js"&gt;&lt;/script&gt;
-</code></pre></div>
-<p>to:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;script type="text/javascript" src="./js/cordova.js"&gt;&lt;/script&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script type="text/javascript" src="./js/cordova.bada.js"&gt;&lt;/script&gt; to:
+
+&lt;script type="text/javascript" src="./js/cordova.js"&gt;&lt;/script&gt;
+</code></pre></div></div>
+
 <p>As of Cordova 1.8, Bada 1.2 is no longer supported! The repository will be kept
 there as an archive for people who still want to use it. It contains some outdated APIs.</p>
 

@@ -2202,7 +2202,7 @@
                 <h1>Android Plugin Development Guide</h1>
 
 <p>This section provides details for how to implement native plugin code
-on the Android platform.  </p>
+on the Android platform.</p>
 
 <p>Before reading this, see the <a href="../../hybrid/plugins/index.html">Plugin Development Guide</a>
 for an overview of the plugin&#39;s structure and its common JavaScript
@@ -2221,8 +2221,8 @@ overrides one of its <code>execute</code> methods.</p>
 
 <p>The plugin&#39;s JavaScript interface uses the <code>cordova.exec</code> method as
 follows:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">exec</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">successFunction</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">failFunction</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">service</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">action</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">[</span><span class="o">&lt;</span><span class="nx">args</span><span class="o">&gt;</span><span class="p">]);</span>
-</code></pre></div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">exec</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">successFunction</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">failFunction</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">service</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">action</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">[</span><span class="o">&lt;</span><span class="nx">args</span><span class="o">&gt;</span><span class="p">]);</span>
+</code></pre></div></div>
 <p>This marshals a request from the WebView to the Android native side,
 effectively calling the <code>action</code> method on the <code>service</code> class, with
 additional arguments passed in the <code>args</code> array.</p>
@@ -2232,10 +2232,12 @@ own, the plugin must be specified in your Cordova-Android
 application&#39;s <code>res/xml/config.xml</code> file. See Application Plugins for
 more information on how to use the <code>plugin.xml</code> file to inject this
 <code>feature</code> element:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"&lt;service_name&gt;"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"&lt;service_name&gt;"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"android-package"</span> <span class="na">value=</span><span class="s">"&lt;full_name_including_namespace&gt;"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/feature&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The service name matches the one used in the JavaScript <code>exec</code> call.
 The value is the Java class&#39;s fully qualified namespace identifier.
 Otherwise, the plugin may compile but still be unavailable to Cordova.</p>
@@ -2245,19 +2247,23 @@ Otherwise, the plugin may compile but still be unavailable to Cordova.</p>
 <p>One instance of a plugin object is created for the life of each
 <code>WebView</code>. Plugins are not instantiated until they are first
 referenced by a call from JavaScript, unless <code>&lt;param&gt;</code> with an <code>onload</code>
-<code>name</code> attribute is set to <code>&quot;true&quot;</code> in <code>config.xml</code>. For example,</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"Echo"</span><span class="nt">&gt;</span>
+<code>name</code> attribute is set to <code>"true"</code> in <code>config.xml</code>. For example,</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"Echo"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"android-package"</span> <span class="na">value=</span><span class="s">"&lt;full_name_including_namespace&gt;"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"onload"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/feature&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Plugins should use the <code>initialize</code> method for their start-up logic.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">initialize</span><span class="o">(</span><span class="n">CordovaInterface</span> <span class="n">cordova</span><span class="o">,</span> <span class="n">CordovaWebView</span> <span class="n">webView</span><span class="o">)</span> <span class="o">{</span>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">initialize</span><span class="o">(</span><span class="nc">CordovaInterface</span> <span class="n">cordova</span><span class="o">,</span> <span class="nc">CordovaWebView</span> <span class="n">webView</span><span class="o">)</span> <span class="o">{</span>
     <span class="kd">super</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="n">cordova</span><span class="o">,</span> <span class="n">webView</span><span class="o">);</span>
     <span class="c1">// your init code here</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Plugins also have access to Android lifecycle events and can handle them
 by extending one of the provided methods (<code>onResume</code>, <code>onDestroy</code>, etc).
 Plugins with long-running requests, background activity such as media playback,
@@ -2273,8 +2279,9 @@ file, but what does the final Android Java Plugin class look like?
 Whatever is dispatched to the plugin with JavaScript&#39;s <code>exec</code> function
 is passed into the plugin class&#39;s <code>execute</code> method. Most <code>execute</code>
 implementations look like this:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
-<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">execute</span><span class="o">(</span><span class="n">String</span> <span class="n">action</span><span class="o">,</span> <span class="n">JSONArray</span> <span class="n">args</span><span class="o">,</span> <span class="n">CallbackContext</span> <span class="n">callbackContext</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">JSONException</span> <span class="o">{</span>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">execute</span><span class="o">(</span><span class="nc">String</span> <span class="n">action</span><span class="o">,</span> <span class="nc">JSONArray</span> <span class="n">args</span><span class="o">,</span> <span class="nc">CallbackContext</span> <span class="n">callbackContext</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">JSONException</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="s">"beep"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">action</span><span class="o">))</span> <span class="o">{</span>
         <span class="k">this</span><span class="o">.</span><span class="na">beep</span><span class="o">(</span><span class="n">args</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span>
         <span class="n">callbackContext</span><span class="o">.</span><span class="na">success</span><span class="o">();</span>
@@ -2282,7 +2289,8 @@ implementations look like this:</p>
     <span class="o">}</span>
     <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>  <span class="c1">// Returning false results in a "MethodNotFound" error.</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The JavaScript <code>exec</code> function&#39;s <code>action</code> parameter corresponds to a
 private class method to dispatch with optional parameters.</p>
 
@@ -2297,11 +2305,12 @@ exception names as much as possible.</p>
 does the <code>execute</code> method.  If you need to interact with the user
 interface, you should use the <a href="http://developer.android.com/reference/android/app/Activity.html#runOnUiThread(java.lang.Runnable)">Activity&#39;s <code>runOnUiThread</code></a>
 method like so:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
-<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">execute</span><span class="o">(</span><span class="n">String</span> <span class="n">action</span><span class="o">,</span> <span class="n">JSONArray</span> <span class="n">args</span><span class="o">,</span> <span class="kd">final</span> <span class="n">CallbackContext</span> <span class="n">callbackContext</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">JSONException</span> <span class="o">{</span>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">execute</span><span class="o">(</span><span class="nc">String</span> <span class="n">action</span><span class="o">,</span> <span class="nc">JSONArray</span> <span class="n">args</span><span class="o">,</span> <span class="kd">final</span> <span class="nc">CallbackContext</span> <span class="n">callbackContext</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">JSONException</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="s">"beep"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">action</span><span class="o">))</span> <span class="o">{</span>
         <span class="kd">final</span> <span class="kt">long</span> <span class="n">duration</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
-        <span class="n">cordova</span><span class="o">.</span><span class="na">getActivity</span><span class="o">().</span><span class="na">runOnUiThread</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">cordova</span><span class="o">.</span><span class="na">getActivity</span><span class="o">().</span><span class="na">runOnUiThread</span><span class="o">(</span><span class="k">new</span> <span class="nc">Runnable</span><span class="o">()</span> <span class="o">{</span>
             <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
                 <span class="o">...</span>
                 <span class="n">callbackContext</span><span class="o">.</span><span class="na">success</span><span class="o">();</span> <span class="c1">// Thread-safe.</span>
@@ -2311,16 +2320,18 @@ method like so:</p>
     <span class="o">}</span>
     <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>If you do not need to run on the UI thread, but do not wish to block the
 <code>WebCore</code> thread either, you should execute your code using the Cordova
 <a href="http://developer.android.com/reference/java/util/concurrent/ExecutorService.html"><code>ExecutorService</code></a> obtained with <code>cordova.getThreadPool()</code> like
 so:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
-<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">execute</span><span class="o">(</span><span class="n">String</span> <span class="n">action</span><span class="o">,</span> <span class="n">JSONArray</span> <span class="n">args</span><span class="o">,</span> <span class="kd">final</span> <span class="n">CallbackContext</span> <span class="n">callbackContext</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">JSONException</span> <span class="o">{</span>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">execute</span><span class="o">(</span><span class="nc">String</span> <span class="n">action</span><span class="o">,</span> <span class="nc">JSONArray</span> <span class="n">args</span><span class="o">,</span> <span class="kd">final</span> <span class="nc">CallbackContext</span> <span class="n">callbackContext</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">JSONException</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="s">"beep"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">action</span><span class="o">))</span> <span class="o">{</span>
         <span class="kd">final</span> <span class="kt">long</span> <span class="n">duration</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
-        <span class="n">cordova</span><span class="o">.</span><span class="na">getThreadPool</span><span class="o">().</span><span class="na">execute</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">cordova</span><span class="o">.</span><span class="na">getThreadPool</span><span class="o">().</span><span class="na">execute</span><span class="o">(</span><span class="k">new</span> <span class="nc">Runnable</span><span class="o">()</span> <span class="o">{</span>
             <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
                 <span class="o">...</span>
                 <span class="n">callbackContext</span><span class="o">.</span><span class="na">success</span><span class="o">();</span> <span class="c1">// Thread-safe.</span>
@@ -2330,7 +2341,8 @@ so:</p>
     <span class="o">}</span>
     <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Adding Dependency Libraries</h2>
 
 <p>If your Android plugin has extra dependencies, they must be listed in the
@@ -2357,7 +2369,8 @@ build errors can be especially frustrating.</p>
 <p>To match the JavaScript interface&#39;s <em>echo</em> feature described in
 Application Plugins, use the <code>plugin.xml</code> to inject a <code>feature</code>
 specification to the local platform&#39;s <code>config.xml</code> file:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;config-file</span> <span class="na">target=</span><span class="s">"config.xml"</span> <span class="na">parent=</span><span class="s">"/*"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"Echo"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"android-package"</span> <span class="na">value=</span><span class="s">"org.apache.cordova.plugin.Echo"</span><span class="nt">/&gt;</span>
@@ -2366,9 +2379,11 @@ specification to the local platform&#39;s <code>config.xml</code> file:</p>
 
     <span class="nt">&lt;source-file</span> <span class="na">src=</span><span class="s">"src/android/Echo.java"</span> <span class="na">target-dir=</span><span class="s">"src/org/apache/cordova/plugin"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Then add the following to the <code>src/android/Echo.java</code> file:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">cordova</span><span class="o">.</span><span class="na">plugin</span><span class="o">;</span>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">org.apache.cordova.plugin</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">org.apache.cordova.CordovaPlugin</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.apache.cordova.CallbackContext</span><span class="o">;</span>
@@ -2380,19 +2395,19 @@ specification to the local platform&#39;s <code>config.xml</code> file:</p>
 <span class="cm">/**
 * This class echoes a string called from JavaScript.
 */</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Echo</span> <span class="kd">extends</span> <span class="n">CordovaPlugin</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Echo</span> <span class="kd">extends</span> <span class="nc">CordovaPlugin</span> <span class="o">{</span>
 
     <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">execute</span><span class="o">(</span><span class="n">String</span> <span class="n">action</span><span class="o">,</span> <span class="n">JSONArray</span> <span class="n">args</span><span class="o">,</span> <span class="n">CallbackContext</span> <span class="n">callbackContext</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">JSONException</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">execute</span><span class="o">(</span><span class="nc">String</span> <span class="n">action</span><span class="o">,</span> <span class="nc">JSONArray</span> <span class="n">args</span><span class="o">,</span> <span class="nc">CallbackContext</span> <span class="n">callbackContext</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">JSONException</span> <span class="o">{</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">action</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"echo"</span><span class="o">))</span> <span class="o">{</span>
-            <span class="n">String</span> <span class="n">message</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+            <span class="nc">String</span> <span class="n">message</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
             <span class="k">this</span><span class="o">.</span><span class="na">echo</span><span class="o">(</span><span class="n">message</span><span class="o">,</span> <span class="n">callbackContext</span><span class="o">);</span>
             <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
         <span class="o">}</span>
         <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
     <span class="o">}</span>
 
-    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">echo</span><span class="o">(</span><span class="n">String</span> <span class="n">message</span><span class="o">,</span> <span class="n">CallbackContext</span> <span class="n">callbackContext</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">echo</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">,</span> <span class="nc">CallbackContext</span> <span class="n">callbackContext</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">message</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">message</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">callbackContext</span><span class="o">.</span><span class="na">success</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
         <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
@@ -2400,7 +2415,8 @@ specification to the local platform&#39;s <code>config.xml</code> file:</p>
         <span class="o">}</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The necessary imports at the top of the file extends the class from
 <code>CordovaPlugin</code>, whose <code>execute()</code> method it overrides to receive
 messages from <code>exec()</code>.  The <code>execute()</code> method first tests the value
@@ -2440,10 +2456,12 @@ of runtime.  These permissions are required to be declared on an application tha
 the permissions, and these permissions need to be added to the Android Manifest.  This can be
 accomplished by using the <code>config.xml</code> to inject these permissions in the <code>AndroidManifest.xml</code> file.
 The example below uses the Contacts permission.</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;config-file</span> <span class="na">target=</span><span class="s">"AndroidManifest.xml"</span> <span class="na">parent=</span><span class="s">"/*"</span><span class="nt">&gt;</span>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;config-file</span> <span class="na">target=</span><span class="s">"AndroidManifest.xml"</span> <span class="na">parent=</span><span class="s">"/*"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.READ_CONTACTS"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/config-file&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>Runtime Permissions (Cordova-Android 5.0.0+)</h3>
 
 <p>Android 6.0 &quot;Marshmallow&quot; introduced a new permissions model where
@@ -2455,40 +2473,51 @@ was the focus of the Cordova-Android 5.0.0 release.</p>
 documentation <a href="http://developer.android.com/guide/topics/security/permissions.html#perm-groups">here</a>.</p>
 
 <p>As far as a plugin is concerned, the permission can be requested by calling the permission method; the signature of which is as follows:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">cordova</span><span class="o">.</span><span class="na">requestPermission</span><span class="o">(</span><span class="n">CordovaPlugin</span> <span class="n">plugin</span><span class="o">,</span> <span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="n">String</span> <span class="n">permission</span><span class="o">);</span>
-</code></pre></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cordova</span><span class="o">.</span><span class="na">requestPermission</span><span class="o">(</span><span class="nc">CordovaPlugin</span> <span class="n">plugin</span><span class="o">,</span> <span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="nc">String</span> <span class="n">permission</span><span class="o">);</span>
+</code></pre></div></div>
+
 <p>To cut down on verbosity, it&#39;s standard practice to assign this to a local static variable:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">READ</span> <span class="o">=</span> <span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">READ_CONTACTS</span><span class="o">;</span>
-</code></pre></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">READ</span> <span class="o">=</span> <span class="nc">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">READ_CONTACTS</span><span class="o">;</span>
+</code></pre></div></div>
+
 <p>It is also standard practice to define the requestCode as follows:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">SEARCH_REQ_CODE</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-</code></pre></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="no">SEARCH_REQ_CODE</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</code></pre></div></div>
+
 <p>Then, in the exec method, the permission should be checked:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">if</span><span class="o">(</span><span class="n">cordova</span><span class="o">.</span><span class="na">hasPermission</span><span class="o">(</span><span class="n">READ</span><span class="o">))</span>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span><span class="o">(</span><span class="n">cordova</span><span class="o">.</span><span class="na">hasPermission</span><span class="o">(</span><span class="no">READ</span><span class="o">))</span>
 <span class="o">{</span>
     <span class="n">search</span><span class="o">(</span><span class="n">executeArgs</span><span class="o">);</span>
 <span class="o">}</span>
 <span class="k">else</span>
 <span class="o">{</span>
-    <span class="n">getReadPermission</span><span class="o">(</span><span class="n">SEARCH_REQ_CODE</span><span class="o">);</span>
+    <span class="n">getReadPermission</span><span class="o">(</span><span class="no">SEARCH_REQ_CODE</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>In this case, we just call requestPermission:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">protected</span> <span class="kt">void</span> <span class="nf">getReadPermission</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">)</span>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">protected</span> <span class="kt">void</span> <span class="nf">getReadPermission</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">)</span>
 <span class="o">{</span>
-    <span class="n">cordova</span><span class="o">.</span><span class="na">requestPermission</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">requestCode</span><span class="o">,</span> <span class="n">READ</span><span class="o">);</span>
+    <span class="n">cordova</span><span class="o">.</span><span class="na">requestPermission</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">requestCode</span><span class="o">,</span> <span class="no">READ</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>This will call the activity and cause a prompt to appear, asking for the permission.  Once the user has the permission, the result must be handled with the <code>onRequestPermissionResult</code> method, which
 every plugin should override.  An example of this can be found below:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRequestPermissionResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="n">String</span><span class="o">[]</span> <span class="n">permissions</span><span class="o">,</span>
-                                         <span class="kt">int</span><span class="o">[]</span> <span class="n">grantResults</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">JSONException</span>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRequestPermissionResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">permissions</span><span class="o">,</span>
+                                         <span class="kt">int</span><span class="o">[]</span> <span class="n">grantResults</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">JSONException</span>
 <span class="o">{</span>
     <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="nl">r:</span><span class="n">grantResults</span><span class="o">)</span>
     <span class="o">{</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">r</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_DENIED</span><span class="o">)</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">r</span> <span class="o">==</span> <span class="nc">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_DENIED</span><span class="o">)</span>
         <span class="o">{</span>
-            <span class="k">this</span><span class="o">.</span><span class="na">callbackContext</span><span class="o">.</span><span class="na">sendPluginResult</span><span class="o">(</span><span class="k">new</span> <span class="n">PluginResult</span><span class="o">(</span><span class="n">PluginResult</span><span class="o">.</span><span class="na">Status</span><span class="o">.</span><span class="na">ERROR</span><span class="o">,</span> <span class="n">PERMISSION_DENIED_ERROR</span><span class="o">));</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">callbackContext</span><span class="o">.</span><span class="na">sendPluginResult</span><span class="o">(</span><span class="k">new</span> <span class="nc">PluginResult</span><span class="o">(</span><span class="nc">PluginResult</span><span class="o">.</span><span class="na">Status</span><span class="o">.</span><span class="na">ERROR</span><span class="o">,</span> <span class="no">PERMISSION_DENIED_ERROR</span><span class="o">));</span>
             <span class="k">return</span><span class="o">;</span>
         <span class="o">}</span>
     <span class="o">}</span>
@@ -2505,15 +2534,20 @@ every plugin should override.  An example of this can be found below:</p>
             <span class="k">break</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The switch statement above would return from the prompt and, depending on the <code>requestCode</code> that was passed in, would call the respective method.  It should be noted that permission prompts may stack if the execution is not handled correctly, and that this should be avoided.</p>
 
 <p>In addition to asking for permission for a single permission, it is also possible to request permissions for an entire group by defining the <code>permissions</code> array, as what is done with the Geolocation plugin:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="o">[]</span> <span class="n">permissions</span> <span class="o">=</span> <span class="o">{</span> <span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">ACCESS_COARSE_LOCATION</span><span class="o">,</span> <span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">ACCESS_FINE_LOCATION</span> <span class="o">};</span>
-</code></pre></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="o">[]</span> <span class="n">permissions</span> <span class="o">=</span> <span class="o">{</span> <span class="nc">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">ACCESS_COARSE_LOCATION</span><span class="o">,</span> <span class="nc">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">ACCESS_FINE_LOCATION</span> <span class="o">};</span>
+</code></pre></div></div>
+
 <p>Then when requesting the permission, all that needs to be done is the following:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">cordova</span><span class="o">.</span><span class="na">requestPermissions</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">permissions</span><span class="o">);</span>
-</code></pre></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cordova</span><span class="o">.</span><span class="na">requestPermissions</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">permissions</span><span class="o">);</span>
+</code></pre></div></div>
+
 <p>This requests the permissions specified in the array.  It&#39;s a good idea to provide a publicly accessible <code>permissions</code> array since this can be used by plugins that use your plugin as a
 dependency, although this is not required.</p>
 
@@ -2535,7 +2569,8 @@ will be created when the Cordova <a href="http://developer.android.com/reference
 the result is obtained. However, state for the plugin will not be automatically
 saved or restored and the <code>CallbackContext</code> for the plugin will be lost. There are
 two methods that your <code>CordovaPlugin</code> may implement to handle this situation:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/**
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
  * Called when the Activity is being destroyed (e.g. if a plugin calls out to an
  * external Activity and the OS kills the CordovaActivity in the background).
  * The plugin should save its state in this method only if it is awaiting the
@@ -2546,7 +2581,7 @@ two methods that your <code>CordovaPlugin</code> may implement to handle this si
  * @return  Bundle containing the state of the plugin or null if state does not
  *          need to be saved
  */</span>
-<span class="kd">public</span> <span class="n">Bundle</span> <span class="nf">onSaveInstanceState</span><span class="o">()</span> <span class="o">{}</span>
+<span class="kd">public</span> <span class="nc">Bundle</span> <span class="nf">onSaveInstanceState</span><span class="o">()</span> <span class="o">{}</span>
 
 <span class="cm">/**
  * Called when a plugin is the recipient of an Activity result after the
@@ -2556,8 +2591,9 @@ two methods that your <code>CordovaPlugin</code> may implement to handle this si
  * @param state             Bundle containing the state of the plugin
  * @param callbackContext   Replacement Context to return the plugin result to
  */</span>
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRestoreStateForActivityResult</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">state</span><span class="o">,</span> <span class="n">CallbackContext</span> <span class="n">callbackContext</span><span class="o">)</span> <span class="o">{}</span>
-</code></pre></div>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRestoreStateForActivityResult</span><span class="o">(</span><span class="nc">Bundle</span> <span class="n">state</span><span class="o">,</span> <span class="nc">CallbackContext</span> <span class="n">callbackContext</span><span class="o">)</span> <span class="o">{}</span>
+</code></pre></div></div>
+
 <p>It is important to note that the above methods should only be used if your
 plugin launches an <a href="http://developer.android.com/reference/android/app/Activity.html">Activity</a> for a result and should only restore the state
 necessary to handle that Activity result. The state of the plugin will <em>NOT</em> be
@@ -2572,7 +2608,8 @@ original callback is lost, and will not be fired in the javascript application.
 Instead, this replacement <code>CallbackContext</code> will return the result as part of the
 <a href="../../../cordova/events/events.html#resume"><code>resume</code></a> event that is fired when the application resumes. The
 payload of the <a href="../../../cordova/events/events.html#resume"><code>resume</code></a> event follows this structure:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">{
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
     action: "resume",
     pendingResult: {
         pluginServiceName: string,
@@ -2580,14 +2617,15 @@ payload of the <a href="../../../cordova/events/events.html#resume"><code>resume
         result: any
     }
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <ul>
-<li><code>pluginServiceName</code> will match the <a href="../../../plugin_ref/spec.html#name">name element</a> from your plugin.xml.</li>
-<li><code>pluginStatus</code> will be a String describing the status of the PluginResult
-passed to the CallbackContext. See PluginResult.java for the String values
-that correspond to plugin statuses</li>
-<li><code>result</code> will be whatever result the plugin passes to the CallbackContext
-(e.g. a String, a number, a JSON object, etc.)</li>
+  <li><code>pluginServiceName</code> will match the <a href="../../../plugin_ref/spec.html#name">name element</a> from your plugin.xml.</li>
+  <li><code>pluginStatus</code> will be a String describing the status of the PluginResult
+ passed to the CallbackContext. See PluginResult.java for the String values
+ that correspond to plugin statuses</li>
+  <li><code>result</code> will be whatever result the plugin passes to the CallbackContext
+ (e.g. a String, a number, a JSON object, etc.)</li>
 </ul>
 
 <p>This <a href="../../../cordova/events/events.html#resume"><code>resume</code></a> payload will be passed to any callbacks that the javascript
@@ -2608,22 +2646,22 @@ meaning of <code>pluginStatus</code> values and what sort of data is being retur
 <p>The complete sequence of events for launching an Activity is as follows</p>
 
 <ol>
-<li>The Cordova application makes a call to your plugin</li>
-<li>Your plugin launches an Activity for a result</li>
-<li>The Android OS destroys the Cordova Activity and your plugin instance
-
-<ul>
-<li><em><code>onSaveInstanceState()</code> is called</em></li>
-</ul></li>
-<li>The user interacts with your Activity and the Activity finishes</li>
-<li>The Cordova Activity is recreated and the Activity result is received
-
-<ul>
-<li><em><code>onRestoreStateForActivityResult()</code> is called</em></li>
-</ul></li>
-<li><code>onActivityResult()</code> is called and your plugin passes a result to the new
-CallbackContext</li>
-<li>The <a href="../../../cordova/events/events.html#resume"><code>resume</code></a> event is fired and received by the Cordova application</li>
+  <li>The Cordova application makes a call to your plugin</li>
+  <li>Your plugin launches an Activity for a result</li>
+  <li>The Android OS destroys the Cordova Activity and your plugin instance
+    <ul>
+      <li><em><code>onSaveInstanceState()</code> is called</em></li>
+    </ul>
+  </li>
+  <li>The user interacts with your Activity and the Activity finishes</li>
+  <li>The Cordova Activity is recreated and the Activity result is received
+    <ul>
+      <li><em><code>onRestoreStateForActivityResult()</code> is called</em></li>
+    </ul>
+  </li>
+  <li><code>onActivityResult()</code> is called and your plugin passes a result to the new
+ CallbackContext</li>
+  <li>The <a href="../../../cordova/events/events.html#resume"><code>resume</code></a> event is fired and received by the Cordova application</li>
 </ol>
 
 <p>Android provides a developer setting for debugging Activity destruction on low
@@ -2631,6 +2669,7 @@ memory. Enable the &quot;Don&#39;t keep activities&quot; setting in the Develope
 on your device or emulator to simulate low memory scenarios. If your plugin
 launches external activities, you should always do some testing with this
 setting enabled to ensure that you are properly handling low memory scenarios.</p>
+
 
 
             </div>

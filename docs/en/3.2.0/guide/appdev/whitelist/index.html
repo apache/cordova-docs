@@ -1657,26 +1657,41 @@ on each platform.)</p>
 <p>The following examples demonstrate whitelist syntax:</p>
 
 <ul>
-<li><p>Access to <a href="http://google.com">google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" /&gt;
-</code></pre></div></li>
-<li><p>Access to the secure <a href="https://google.com">google.com</a> (<code>https://</code>):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="https://google.com" /&gt;
-</code></pre></div></li>
-<li><p>Access to the subdomain <a href="http://maps.google.com">maps.google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://maps.google.com" /&gt;
-</code></pre></div></li>
-<li><p>Access to all the subdomains on <a href="http://google.com">google.com</a>, for example
-<a href="http://mail.google.com">mail.google.com</a> and <a href="http://docs.google.com">docs.google.com</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://*.google.com" /&gt;
-</code></pre></div></li>
-<li><p>Access to <em>all</em> domains, for example, <a href="http://google.com">google.com</a> and
-<a href="http://developer.mozilla.org">developer.mozilla.org</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="*" /&gt;
-</code></pre></div></li>
-</ul>
+  <li>
+    <p>Access to <a href="http://google.com">google.com</a>:</p>
 
-<p>This is the default value for newly created CLI projects.</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="http://google.com" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to the secure <a href="https://google.com">google.com</a> (<code>https://</code>):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="https://google.com" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to the subdomain <a href="http://maps.google.com">maps.google.com</a>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="http://maps.google.com" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to all the subdomains on <a href="http://google.com">google.com</a>, for example
+<a href="http://mail.google.com">mail.google.com</a> and <a href="http://docs.google.com">docs.google.com</a>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="http://*.google.com" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to <em>all</em> domains, for example, <a href="http://google.com">google.com</a> and
+<a href="http://developer.mozilla.org">developer.mozilla.org</a>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="*" /&gt;
+</code></pre></div>    </div>
+
+    <p>This is the default value for newly created CLI projects.</p>
+  </li>
+</ul>
 
 <h2>Amazon Fire OS Whitelisting</h2>
 
@@ -1709,8 +1724,10 @@ than <code>http://www.apache.org</code>, default to all of the <code>http</code>
 <p>Wildcards on the iOS platform are more flexible than in the <a href="http://www.w3.org/TR/widgets-access/">W3C
 Widget Access</a> specification.  For example, the following accesses
 all subdomains and top-level domains such as <code>.com</code> and <code>.net</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;access origin="*.google.*" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;access origin="*.google.*" /&gt;
+</code></pre></div></div>
+
 <p>Unlike the Android platform noted above, navigating to non-whitelisted
 domains via <code>href</code> hyperlink on iOS prevents the page from opening at
 all.</p>
@@ -1723,27 +1740,36 @@ all.</p>
 ways:</p>
 
 <ul>
-<li><p>Any content accessed by <code>XMLHttpRequest</code> must be declared
-explicity. Setting <code>origin=&quot;*&quot;</code> does not work in this case.
+  <li>
+    <p>Any content accessed by <code>XMLHttpRequest</code> must be declared
+explicity. Setting <code>origin="*"</code> does not work in this case.
 Alternatively, all web security may be disabled using the
 <code>WebSecurity</code> preference described in <a href="../../platforms/blackberry10/config.html">BlackBerry Configuration</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;preference name="websecurity" value="disable" /&gt;
-</code></pre></div></li>
-<li><p>As an alternative to setting <code>*.domain</code>, set an additional
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="websecurity" value="disable" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>As an alternative to setting <code>*.domain</code>, set an additional
 <code>subdomains</code> attribute to <code>true</code>. It should be set to <code>false</code> by
 default. For example, the following allows access to <code>google.com</code>,
 <code>maps.google.com</code>, and <code>docs.google.com</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="http://google.com" subdomains="true" /&gt;
-</code></pre></div></li>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="http://google.com" subdomains="true" /&gt;
+</code></pre></div>    </div>
+
+    <p>The following narrows access to <code>google.com</code>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="http://google.com" subdomains="false" /&gt;
+</code></pre></div>    </div>
+
+    <p>Specify access to all domains, including the local <code>file://</code>
+protocol:</p>
+
+    <access origin="*" subdomains="true" />
+  </li>
 </ul>
 
-<p>The following narrows access to <code>google.com</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;access origin="http://google.com" subdomains="false" /&gt;
-</code></pre></div>
-<p>Specify access to all domains, including the local <code>file://</code>
-  protocol:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;access origin="*" subdomains="true" /&gt;
-</code></pre></div>
 <p>(For more information on support, see BlackBerry&#39;s documentation on the
 <a href="https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html">access element</a>.)</p>
 
@@ -1754,9 +1780,15 @@ default. For example, the following allows access to <code>google.com</code>,
 <p>Specifically, these patterns need to be updated:</p>
 
 <ul>
-<li><p><code>apache.org</code> (no protocol): This would previously match <code>http</code>, <code>https</code>, <code>ftp</code>, and <code>ftps</code> protocols. Change to &quot;<code>*://apache.org/*</code>&quot; to include all protocols, or include a line for each protocol you need to support.</p></li>
-<li><p><code>http://apache.*</code> (wildcard at end of domain): This would previously match all top-level-domains, including all possible two-letter TLDs (but not useful domains like .co.uk). Include a line for each TLD which you actually control, and need to whitelist.</p></li>
-<li><p><code>h*t*://ap*he.o*g</code> (wildcards for random missing letters): These are no longer supported; change to include a line for each domain and protocol that you actually need to whitelist.</p></li>
+  <li>
+    <p><code>apache.org</code> (no protocol): This would previously match <code>http</code>, <code>https</code>, <code>ftp</code>, and <code>ftps</code> protocols. Change to &quot;<code>*://apache.org/*</code>&quot; to include all protocols, or include a line for each protocol you need to support.</p>
+  </li>
+  <li>
+    <p><code>http://apache.*</code> (wildcard at end of domain): This would previously match all top-level-domains, including all possible two-letter TLDs (but not useful domains like .co.uk). Include a line for each TLD which you actually control, and need to whitelist.</p>
+  </li>
+  <li>
+    <p><code>h*t*://ap*he.o*g</code> (wildcards for random missing letters): These are no longer supported; change to include a line for each domain and protocol that you actually need to whitelist.</p>
+  </li>
 </ul>
 
 <h2>Windows Phone Whitelisting</h2>
@@ -1771,6 +1803,7 @@ platform relies on the same <code>subdomains</code> attribute as the BlackBerry
 platform.
 (For more information on support, see Tizen&#39;s documentation on the
 <a href="https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm">access element</a>.)</p>
+
 
 
             </div>

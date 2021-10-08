@@ -139,47 +139,48 @@
 
 <p>What does <code>node 6.x</code> give us? <a href="http://node.green/#ES2015" title="Node ES6 Support">99% ES2015 (ES6)</a> support, and <a href="http://node.green/#ES2016" title="Node ES7 Support">100% ES2016 (ES7)</a> support.</p>
 
-<p>JavaScript files in plugins themselves are unaffected, since the JavaScript support for them is dependent on platform browser support. For example, ES6 is supported in iOS 10, while on older iOS platforms only ES5 is supported. </p>
+<p>JavaScript files in plugins themselves are unaffected, since the JavaScript support for them is dependent on platform browser support. For example, ES6 is supported in iOS 10, while on older iOS platforms only ES5 is supported.</p>
 
 <!--more-->
 
 <h2>Timeline</h2>
 
-<p><strong>Oct 1st, 2016</strong> - deprecate use of <code>node 0.x</code>. </p>
+<p><strong>Oct 1st, 2016</strong> - deprecate use of <code>node 0.x</code>.</p>
 
 <ul>
-<li>all AppVeyor/Travis CI builds still test using <code>node 0.x</code> as well as <code>node 4.x</code> and greater</li>
-<li>add a requirements check that will print out a deprecation notice if users are using a node &lt; 4, and tell them to upgrade to a minimum of 6.</li>
+  <li>all AppVeyor/Travis CI builds still test using <code>node 0.x</code> as well as <code>node 4.x</code> and greater</li>
+  <li>add a requirements check that will print out a deprecation notice if users are using a node &lt; 4, and tell them to upgrade to a minimum of 6.</li>
 </ul>
 
-<p>The <code>node 0.x</code> deprecation period will run for <strong>3 months</strong>, and it will end on Jan 1st 2017. </p>
+<p>The <code>node 0.x</code> deprecation period will run for <strong>3 months</strong>, and it will end on Jan 1st 2017.</p>
 
-<p><strong>Jan 1st, 2017</strong> - stop <code>node 0.x</code> support. </p>
+<p><strong>Jan 1st, 2017</strong> - stop <code>node 0.x</code> support.</p>
 
 <ul>
-<li>all AppVeyor/Travis CI builds only test for <code>node 4.x</code> and greater. </li>
-<li>safe to use some ES6 features in the Apache Cordova tools and platforms, not plugins (built in Promises, let, const, arrow functions, template strings, for/of loop syntax).</li>
-<li>tools and platforms will bump up a major version</li>
+  <li>all AppVeyor/Travis CI builds only test for <code>node 4.x</code> and greater.</li>
+  <li>safe to use some ES6 features in the Apache Cordova tools and platforms, not plugins (built in Promises, let, const, arrow functions, template strings, for/of loop syntax).</li>
+  <li>tools and platforms will bump up a major version</li>
 </ul>
 
-<p><strong>Apr 1st, 2017</strong> - deprecate use of <code>node 4.x</code>. </p>
+<p><strong>Apr 1st, 2017</strong> - deprecate use of <code>node 4.x</code>.</p>
 
 <ul>
-<li>all AppVeyor/Travis CI builds still test using <code>node 4.x</code> as well as <code>node 6.x</code> and greater</li>
-<li>add a requirements check that will print out a deprecation notice if they are using a node &lt;= 4, and tell them to upgrade to a minimum of 6</li>
+  <li>all AppVeyor/Travis CI builds still test using <code>node 4.x</code> as well as <code>node 6.x</code> and greater</li>
+  <li>add a requirements check that will print out a deprecation notice if they are using a node &lt;= 4, and tell them to upgrade to a minimum of 6</li>
 </ul>
 
 <p>The <code>node 4.x</code> deprecation period will run for <strong>12 months</strong> and it will end on April 1st 2018.</p>
 
-<p><strong>Apr 1st, 2018</strong> - stop <code>node 4.x</code> support. </p>
+<p><strong>Apr 1st, 2018</strong> - stop <code>node 4.x</code> support.</p>
 
 <ul>
-<li>all AppVeyor/Travis CI builds only test for <code>node 6.x</code> and greater</li>
-<li>safe to use ES6 and ES7 features in the Apache Cordova tools and platforms (not plugins)</li>
-<li>tools and platforms will bump up a major version</li>
+  <li>all AppVeyor/Travis CI builds only test for <code>node 6.x</code> and greater</li>
+  <li>safe to use ES6 and ES7 features in the Apache Cordova tools and platforms (not plugins)</li>
+  <li>tools and platforms will bump up a major version</li>
 </ul>
 
-<p><a href="/static/img/cordova-node-timeline.svg"><img src="/static/img/cordova-node-timeline.svg" alt="cordova node deprecation timeline"></a></p>
+<p><a href="/static/img/cordova-node-timeline.svg"><img src="/static/img/cordova-node-timeline.svg" alt="cordova node deprecation timeline" /></a></p>
+
 
         </div>
     </section>

@@ -1585,9 +1585,9 @@ features are also specified in the same configuration file. Details
 are listed below:</p>
 
 <ul>
-<li><a href="../guide/platforms/ios/config.html">iOS Configuration</a></li>
-<li><a href="../guide/platforms/android/config.html">Android Configuration</a></li>
-<li><a href="../guide/platforms/blackberry/config.html">BlackBerry Configuration</a></li>
+  <li><a href="../guide/platforms/ios/config.html">iOS Configuration</a></li>
+  <li><a href="../guide/platforms/android/config.html">Android Configuration</a></li>
+  <li><a href="../guide/platforms/blackberry/config.html">BlackBerry Configuration</a></li>
 </ul>
 
 <h2>config.xml Elements</h2>
@@ -1598,13 +1598,15 @@ yourself with the <a href="http://www.w3.org/TR/widgets/">config.xml specificati
 Apache Cordova project aims to abstract and provide simple entry points for.</p>
 
 <p>An example:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    &lt;widget&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;widget&gt;
         &lt;preference name="MySetting" value="true" /&gt;
         &lt;feature name="MyPlugin" value="MyPluginClass" /&gt;
         &lt;access origin="*" /&gt;
         &lt;content src="index.html" /&gt;
     &lt;/widget&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>A list of supported elements across major platforms which are supported in Apache Cordova follow.</p>
 
 <h3><code>&lt;feature&gt;</code></h3>

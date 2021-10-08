@@ -1452,14 +1452,18 @@
 <h2>Video Tutorials:</h2>
 
 <ul>
-<li><a href="http://www.youtube.com/v/wO9xdRcNHIM?autoplay=1">Cordova and Windows Phone quick setup video</a></li>
-<li><a href="http://www.youtube.com/v/BJFX1GRUXj8?autoplay=1">Cordova and Windows Phone deep dive</a></li>
+  <li><a href="http://www.youtube.com/v/wO9xdRcNHIM?autoplay=1">Cordova and Windows Phone quick setup video</a></li>
+  <li><a href="http://www.youtube.com/v/BJFX1GRUXj8?autoplay=1">Cordova and Windows Phone deep dive</a></li>
 </ul>
 
-<h2>1. Requirements</h2>
+<ol>
+  <li>
+    <h2>Requirements</h2>
+  </li>
+</ol>
 
 <ul>
-<li>Windows 7 or Windows Vista with SP2</li>
+  <li>Windows 7 or Windows Vista with SP2</li>
 </ul>
 
 <p>Note: Running in VM has issues, if you are on a Mac, you will need to setup a bootcamp partition with Windows 7 or Vista</p>
@@ -1467,64 +1471,97 @@
 <p>Necessary for Installing on <a href="../../../cordova/device/device.html">Device</a> and Submitting to Market Place:</p>
 
 <ul>
-<li>Become an <a href="http://create.msdn.com/en-US/home/membership">App Hub member</a>.</li>
+  <li>Become an <a href="http://create.msdn.com/en-US/home/membership">App Hub member</a>.</li>
 </ul>
 
-<h2>2. Install SDK + Cordova</h2>
+<ol>
+  <li>
+    <h2>Install SDK + Cordova</h2>
+  </li>
+</ol>
 
 <ul>
-<li>Download and install <a href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;amp;id=27570">Windows Phone  SDK</a></li>
-<li>Download the latest copy of <a href="http://phonegap.com/download">Cordova</a> and extract its contents. We will be working with the subfolder: lib\windows-phone\</li>
-<li>copy the file CordovaStarter-x.x.x.zip to the folder : \My Documents\Visual Studio 2010\Templates\ProjectTemplates\
+  <li>Download and install <a href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570">Windows Phone  SDK</a></li>
+  <li>Download the latest copy of <a href="http://phonegap.com/download">Cordova</a> and extract its contents. We will be working with the subfolder: lib\windows-phone\</li>
+  <li>copy the file CordovaStarter-x.x.x.zip to the folder : \My Documents\Visual Studio 2010\Templates\ProjectTemplates<br />
 if you have just installed VisualStudio, you should launch it once to create this folder
 if you prefer, you may add the project instead to the &quot;Silverlight for Windows Phone&quot; subfolder of &quot;Visual C#&quot;. This is up to you, and only affects where the project template is shown when creating a new project. Also, You may need to create this folder.</li>
 </ul>
 
-<h2>3. Setup New Project</h2>
+<ol>
+  <li>
+    <h2>Setup New Project</h2>
+  </li>
+</ol>
 
 <ul>
-<li>Open Visual Studio Express for Windows Phone and choose <strong>New Project</strong>.</li>
-<li>Select <strong>CordovaStarter</strong>. ( the version number will be displayed in the template description )</li>
-<li>- note: If you do not see it, you may have to select the top level &#39;Visual C#&#39; to see it</li>
-<li><p>Give your project a name, and select OK.</p>
+  <li>Open Visual Studio Express for Windows Phone and choose <strong>New Project</strong>.</li>
+  <li>Select <strong>CordovaStarter</strong>. ( the version number will be displayed in the template description )</li>
+  <li>
+    <ul>
+      <li>note: If you do not see it, you may have to select the top level &#39;Visual C#&#39; to see it</li>
+    </ul>
+  </li>
+  <li>
+    <p>Give your project a name, and select OK.</p>
 
-<p><img src="/static/img/guide/platforms/wp7/wpnewproj.png" alt=""></p></li>
+    <p><img src="/static/img/guide/platforms/wp7/wpnewproj.png" alt="" /></p>
+  </li>
 </ul>
 
-<h2>4. Review the project structure</h2>
+<ol>
+  <li>
+    <h2>Review the project structure</h2>
+  </li>
+</ol>
 
 <ul>
-<li>The &#39;www&#39; folder contains your Cordova html/js/css and any other resources included in your app.</li>
-<li><p>Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content. </p>
+  <li>The &#39;www&#39; folder contains your Cordova html/js/css and any other resources included in your app.</li>
+  <li>
+    <p>Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content.</p>
 
-<p><img src="/static/img/guide/platforms/wp7/wp7projectstructure.png" alt=""></p></li>
+    <p><img src="/static/img/guide/platforms/wp7/wp7projectstructure.png" alt="" /></p>
+  </li>
 </ul>
 
-<h2>5. Build and Deploy to Emulator</h2>
+<ol>
+  <li>
+    <h2>Build and Deploy to Emulator</h2>
+  </li>
+</ol>
 
 <ul>
-<li>Make sure to have <strong>Windows Phone Emulator</strong> selected in the top drop-down menu.</li>
-<li><p>Hit the green <strong>play button</strong> beside the Windows Phone Emulator drop-down menu to start debugging or press F5.</p>
+  <li>Make sure to have <strong>Windows Phone Emulator</strong> selected in the top drop-down menu.</li>
+  <li>
+    <p>Hit the green <strong>play button</strong> beside the Windows Phone Emulator drop-down menu to start debugging or press F5.</p>
 
-<p><img src="/static/img/guide/platforms/wp7/wprun.png" alt="">
-<img src="/static/img/guide/platforms/wp7/wpfirstrun.png" alt=""></p></li>
+    <p><img src="/static/img/guide/platforms/wp7/wprun.png" alt="" />
+  <img src="/static/img/guide/platforms/wp7/wpfirstrun.png" alt="" /></p>
+  </li>
 </ul>
 
-<h2>6. Build your project for the device</h2>
+<ol>
+  <li>
+    <h2>Build your project for the device</h2>
+  </li>
+</ol>
 
 <p>In order to test your application on a device, the device must be registered. Click <a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx">here</a> to read documentation on deploying and testing on your Windows Phone.</p>
 
 <ul>
-<li>Make sure your phone is connected, and the screen is unlocked</li>
-<li>In Visual Studio, select &#39;Windows Phone <a href="../../../cordova/device/device.html">Device</a>&#39; from the top drop-down menu.</li>
-<li><p>Hit the green <strong>play button</strong> beside the drop-down menu to start debugging or press F5.</p>
+  <li>Make sure your phone is connected, and the screen is unlocked</li>
+  <li>In Visual Studio, select &#39;Windows Phone <a href="../../../cordova/device/device.html">Device</a>&#39; from the top drop-down menu.</li>
+  <li>
+    <p>Hit the green <strong>play button</strong> beside the drop-down menu to start debugging or press F5.</p>
 
-<p><img src="/static/img/guide/platforms/wp7/wpd.png" alt=""></p></li>
+    <p><img src="/static/img/guide/platforms/wp7/wpd.png" alt="" /></p>
+  </li>
 </ul>
 
 <h2>Done!</h2>
 
 <p>You can also checkout more detailed version of this guide <a href="http://wiki.phonegap.com/w/page/48672055/Getting%20Started%20with%20PhoneGap%20Windows%20Phone%207">here</a>.</p>
+
 
 
             </div>

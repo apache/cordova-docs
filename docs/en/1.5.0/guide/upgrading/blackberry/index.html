@@ -1332,7 +1332,7 @@
 Note: 1.5.0 represents a semi-major change to the PhoneGap/Cordova project! All references to PhoneGap have been changed to Cordova.</p>
 
 <ul>
-<li>To upgrade to 1.5.0, please go from 1.4.1</li>
+  <li>To upgrade to 1.5.0, please go from 1.4.1</li>
 </ul>
 
 <h2>Upgrade to 1.5.0 from 1.4.1</h2>
@@ -1340,87 +1340,88 @@ Note: 1.5.0 represents a semi-major change to the PhoneGap/Cordova project! All 
 <p>Updating just the www folder:</p>
 
 <ol>
-<li>Open your <code>www/</code> folder, which contains your app.</li>
-<li>Remove and update the old phonegap.1.4.1.jar file in the <code>ext/</code> folder and replace it with cordova.1.5.0.jar.</li>
-<li>Update the contents of the <code>ext-air/</code> folder and make sure to rename the folders with Phonegap with them to Cordova.</li>
-<li>Copy the new <code>cordova-1.5.0.js</code> into your project.
-
-<ul>
-<li>If playbook, then update the .js file in the <code>playbook/</code> folder.</li>
-</ul></li>
-<li>Update your HTML to use the new <code>cordova-1.5.0.js</code> file.</li>
-<li>Update your www/plugins.xml file - remember all of the references to PhoneGap need to be changed to Cordova:</li>
+  <li>Open your <code>www/</code> folder, which contains your app.</li>
+  <li>Remove and update the old phonegap.1.4.1.jar file in the <code>ext/</code> folder and replace it with cordova.1.5.0.jar.</li>
+  <li>Update the contents of the <code>ext-air/</code> folder and make sure to rename the folders with Phonegap with them to Cordova.</li>
+  <li>Copy the new <code>cordova-1.5.0.js</code> into your project.
+    <ul>
+      <li>If playbook, then update the .js file in the <code>playbook/</code> folder.</li>
+    </ul>
+  </li>
+  <li>Update your HTML to use the new <code>cordova-1.5.0.js</code> file.</li>
+  <li>Update your www/plugins.xml file - remember all of the references to PhoneGap need to be changed to Cordova:</li>
 </ol>
 
 <p>From:
-    <plugin name="App"            value="com.phonegap.app.App"/>
-    <plugin name="Device"         value="com.phonegap.device.Device"/>
-    <plugin name="Camera"         value="com.phonegap.camera.Camera"/>
-    <plugin name="Network Status" value="com.phonegap.network.Network"/>
-    <plugin name="Notification"   value="com.phonegap.notification.Notification"/>
-    <plugin name="Accelerometer"  value="com.phonegap.accelerometer.Accelerometer"/>
-    <plugin name="Geolocation"    value="com.phonegap.geolocation.Geolocation"/>
-    <plugin name="File"           value="com.phonegap.file.FileManager"/>
-    <plugin name="FileTransfer"   value="com.phonegap.http.FileTransfer"/>
-    <plugin name="Contact"        value="com.phonegap.pim.Contact"/>
-    <plugin name="MediaCapture"   value="com.phonegap.media.MediaCapture"/>
-    <plugin name="Battery"        value="com.phonegap.battery.Battery"/></p>
+    <plugin name="App" value="com.phonegap.app.App"></plugin>
+    <plugin name="Device" value="com.phonegap.device.Device"></plugin>
+    <plugin name="Camera" value="com.phonegap.camera.Camera"></plugin>
+    <plugin name="Network Status" value="com.phonegap.network.Network"></plugin>
+    <plugin name="Notification" value="com.phonegap.notification.Notification"></plugin>
+    <plugin name="Accelerometer" value="com.phonegap.accelerometer.Accelerometer"></plugin>
+    <plugin name="Geolocation" value="com.phonegap.geolocation.Geolocation"></plugin>
+    <plugin name="File" value="com.phonegap.file.FileManager"></plugin>
+    <plugin name="FileTransfer" value="com.phonegap.http.FileTransfer"></plugin>
+    <plugin name="Contact" value="com.phonegap.pim.Contact"></plugin>
+    <plugin name="MediaCapture" value="com.phonegap.media.MediaCapture"></plugin>
+    <plugin name="Battery" value="com.phonegap.battery.Battery"></plugin></p>
 
 <p>To:
-    <plugin name="App"            value="org.apache.cordova.app.App"/>
-    <plugin name="Device"         value="org.apache.cordova.device.Device"/>
-    <plugin name="Camera"         value="org.apache.cordova.camera.Camera"/>
-    <plugin name="Network Status" value="org.apache.cordova.network.Network"/>
-    <plugin name="Notification"   value="org.apache.cordova.notification.Notification"/>
-    <plugin name="Accelerometer"  value="org.apache.cordova.accelerometer.Accelerometer"/>
-    <plugin name="Geolocation"    value="org.apache.cordova.geolocation.Geolocation"/>
-    <plugin name="File"           value="org.apache.cordova.file.FileManager"/>
-    <plugin name="FileTransfer"   value="org.apache.cordova.http.FileTransfer"/>
-    <plugin name="Contact"        value="org.apache.cordova.pim.Contact"/>
-    <plugin name="MediaCapture"   value="org.apache.cordova.media.MediaCapture"/>
-    <plugin name="Battery"        value="org.apache.cordova.battery.Battery"/></p>
+    <plugin name="App" value="org.apache.cordova.app.App"></plugin>
+    <plugin name="Device" value="org.apache.cordova.device.Device"></plugin>
+    <plugin name="Camera" value="org.apache.cordova.camera.Camera"></plugin>
+    <plugin name="Network Status" value="org.apache.cordova.network.Network"></plugin>
+    <plugin name="Notification" value="org.apache.cordova.notification.Notification"></plugin>
+    <plugin name="Accelerometer" value="org.apache.cordova.accelerometer.Accelerometer"></plugin>
+    <plugin name="Geolocation" value="org.apache.cordova.geolocation.Geolocation"></plugin>
+    <plugin name="File" value="org.apache.cordova.file.FileManager"></plugin>
+    <plugin name="FileTransfer" value="org.apache.cordova.http.FileTransfer"></plugin>
+    <plugin name="Contact" value="org.apache.cordova.pim.Contact"></plugin>
+    <plugin name="MediaCapture" value="org.apache.cordova.media.MediaCapture"></plugin>
+    <plugin name="Battery" value="org.apache.cordova.battery.Battery"></plugin></p>
 
 <p>Updating the sample folder (ie, updating using the ant tools):</p>
 
 <ol>
-<li>Open the <code>sample/lib/</code> folder.</li>
-<li>Update the .jar file in the <code>phonegap.1.4.1/ext/</code> folder.</li>
-<li>Update the contents of the <code>phonegap.1.4.1/ext-air/</code> folder.</li>
-<li>Update the .js file in the <code>phonegap.1.4.1/javascript/</code> folder.</li>
-<li>Open the <code>sample/lib/</code> folder and rename the <code>cordova.1.4.1/</code> folder to <code>cordova.1.5.0/</code>.</li>
-<li>Update build.xml to update the ant tools.</li>
-<li>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www/</code> folder with updated Cordova.</li>
-<li>Open the <code>www/</code> folder and update your HTML to use the new <code>cordova-1.5.0.js</code> file.</li>
-<li>Update your www/plugins.xml file - remember all of the references to PhoneGap need to be changed to Cordova:</li>
+  <li>Open the <code>sample/lib/</code> folder.</li>
+  <li>Update the .jar file in the <code>phonegap.1.4.1/ext/</code> folder.</li>
+  <li>Update the contents of the <code>phonegap.1.4.1/ext-air/</code> folder.</li>
+  <li>Update the .js file in the <code>phonegap.1.4.1/javascript/</code> folder.</li>
+  <li>Open the <code>sample/lib/</code> folder and rename the <code>cordova.1.4.1/</code> folder to <code>cordova.1.5.0/</code>.</li>
+  <li>Update build.xml to update the ant tools.</li>
+  <li>Type <code>ant blackberry build</code> or <code>ant playbook build</code> to update the <code>www/</code> folder with updated Cordova.</li>
+  <li>Open the <code>www/</code> folder and update your HTML to use the new <code>cordova-1.5.0.js</code> file.</li>
+  <li>Update your www/plugins.xml file - remember all of the references to PhoneGap need to be changed to Cordova:</li>
 </ol>
 
 <p>From:
-    <plugin name="App"            value="com.phonegap.app.App"/>
-    <plugin name="Device"         value="com.phonegap.device.Device"/>
-    <plugin name="Camera"         value="com.phonegap.camera.Camera"/>
-    <plugin name="Network Status" value="com.phonegap.network.Network"/>
-    <plugin name="Notification"   value="com.phonegap.notification.Notification"/>
-    <plugin name="Accelerometer"  value="com.phonegap.accelerometer.Accelerometer"/>
-    <plugin name="Geolocation"    value="com.phonegap.geolocation.Geolocation"/>
-    <plugin name="File"           value="com.phonegap.file.FileManager"/>
-    <plugin name="FileTransfer"   value="com.phonegap.http.FileTransfer"/>
-    <plugin name="Contact"        value="com.phonegap.pim.Contact"/>
-    <plugin name="MediaCapture"   value="com.phonegap.media.MediaCapture"/>
-    <plugin name="Battery"        value="com.phonegap.battery.Battery"/></p>
+    <plugin name="App" value="com.phonegap.app.App"></plugin>
+    <plugin name="Device" value="com.phonegap.device.Device"></plugin>
+    <plugin name="Camera" value="com.phonegap.camera.Camera"></plugin>
+    <plugin name="Network Status" value="com.phonegap.network.Network"></plugin>
+    <plugin name="Notification" value="com.phonegap.notification.Notification"></plugin>
+    <plugin name="Accelerometer" value="com.phonegap.accelerometer.Accelerometer"></plugin>
+    <plugin name="Geolocation" value="com.phonegap.geolocation.Geolocation"></plugin>
+    <plugin name="File" value="com.phonegap.file.FileManager"></plugin>
+    <plugin name="FileTransfer" value="com.phonegap.http.FileTransfer"></plugin>
+    <plugin name="Contact" value="com.phonegap.pim.Contact"></plugin>
+    <plugin name="MediaCapture" value="com.phonegap.media.MediaCapture"></plugin>
+    <plugin name="Battery" value="com.phonegap.battery.Battery"></plugin></p>
 
 <p>To:
-    <plugin name="App"            value="org.apache.cordova.app.App"/>
-    <plugin name="Device"         value="org.apache.cordova.device.Device"/>
-    <plugin name="Camera"         value="org.apache.cordova.camera.Camera"/>
-    <plugin name="Network Status" value="org.apache.cordova.network.Network"/>
-    <plugin name="Notification"   value="org.apache.cordova.notification.Notification"/>
-    <plugin name="Accelerometer"  value="org.apache.cordova.accelerometer.Accelerometer"/>
-    <plugin name="Geolocation"    value="org.apache.cordova.geolocation.Geolocation"/>
-    <plugin name="File"           value="org.apache.cordova.file.FileManager"/>
-    <plugin name="FileTransfer"   value="org.apache.cordova.http.FileTransfer"/>
-    <plugin name="Contact"        value="org.apache.cordova.pim.Contact"/>
-    <plugin name="MediaCapture"   value="org.apache.cordova.media.MediaCapture"/>
-    <plugin name="Battery"        value="org.apache.cordova.battery.Battery"/></p>
+    <plugin name="App" value="org.apache.cordova.app.App"></plugin>
+    <plugin name="Device" value="org.apache.cordova.device.Device"></plugin>
+    <plugin name="Camera" value="org.apache.cordova.camera.Camera"></plugin>
+    <plugin name="Network Status" value="org.apache.cordova.network.Network"></plugin>
+    <plugin name="Notification" value="org.apache.cordova.notification.Notification"></plugin>
+    <plugin name="Accelerometer" value="org.apache.cordova.accelerometer.Accelerometer"></plugin>
+    <plugin name="Geolocation" value="org.apache.cordova.geolocation.Geolocation"></plugin>
+    <plugin name="File" value="org.apache.cordova.file.FileManager"></plugin>
+    <plugin name="FileTransfer" value="org.apache.cordova.http.FileTransfer"></plugin>
+    <plugin name="Contact" value="org.apache.cordova.pim.Contact"></plugin>
+    <plugin name="MediaCapture" value="org.apache.cordova.media.MediaCapture"></plugin>
+    <plugin name="Battery" value="org.apache.cordova.battery.Battery"></plugin></p>
+
 
 
             </div>

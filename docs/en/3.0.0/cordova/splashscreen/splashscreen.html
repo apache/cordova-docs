@@ -1570,14 +1570,14 @@
                 <h1>Splashscreen</h1>
 
 <blockquote>
-<p>Displays and hides the application&#39;s splash screen.</p>
+  <p>Displays and hides the application&#39;s splash screen.</p>
 </blockquote>
 
 <h2>Methods</h2>
 
 <ul>
-<li><a href="splashscreen.show.html">splashscreen.show</a></li>
-<li><a href="splashscreen.hide.html">splashscreen.hide</a></li>
+  <li><a href="splashscreen.show.html">splashscreen.show</a></li>
+  <li><a href="splashscreen.hide.html">splashscreen.hide</a></li>
 </ul>
 
 <h2>Accessing the Feature</h2>
@@ -1585,23 +1585,31 @@
 <p>As of version 3.0, Cordova implements device-level APIs as <em>plugins</em>.
 Use the CLI&#39;s <code>plugin</code> command, described in The Command-line
 Interface, to add or remove this feature for a project:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
     $ cordova plugin rm org.apache.cordova.core.splashscreen
-</code></pre></div>
+</code></pre></div></div>
+
 <p>These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:</p>
 
 <ul>
-<li><p>Android (in <code>app/res/xml/config.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature name="SplashScreen"&gt;
-    &lt;param name="android-package" value="org.apache.cordova.SplashScreen" /&gt;
-&lt;/feature&gt;
-</code></pre></div></li>
-<li><p>iOS (in <code>config.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature name="SplashScreen"&gt;
-    &lt;param name="ios-package" value="CDVSplashScreen" /&gt;
-&lt;/feature&gt;
-</code></pre></div></li>
+  <li>
+    <p>Android (in <code>app/res/xml/config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="SplashScreen"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.SplashScreen" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>iOS (in <code>config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="SplashScreen"&gt;
+      &lt;param name="ios-package" value="CDVSplashScreen" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <p>Some platforms may support this feature without requiring any special
@@ -1612,25 +1620,28 @@ configuration.  See Platform Support for an overview.</p>
 <h3>Android</h3>
 
 <ol>
-<li>Copy the splash screen image into the Android project&#39;s <code>res/drawable</code> directory. The size for each image should be:</li>
-</ol>
+  <li>
+    <p>Copy the splash screen image into the Android project&#39;s <code>res/drawable</code> directory. The size for each image should be:</p>
 
-<ul>
-<li>xlarge (xhdpi): at least 960 &times; 720</li>
-<li>large (hdpi): at least 640 &times; 480</li>
-<li>medium (mdpi): at least 470 &times; 320</li>
-<li>small (ldpi): at least 426 &times; 320</li>
-</ul>
+    <ul>
+      <li>xlarge (xhdpi): at least 960 &#215; 720</li>
+      <li>large (hdpi): at least 640 &#215; 480</li>
+      <li>medium (mdpi): at least 470 &#215; 320</li>
+      <li>small (ldpi): at least 426 &#215; 320</li>
+    </ul>
 
-<p>You should use a <a href="https://developer.android.com/tools/help/draw9patch.html">9-patch image</a> for your splash screen.</p>
+    <p>You should use a <a href="https://developer.android.com/tools/help/draw9patch.html">9-patch image</a> for your splash screen.</p>
+  </li>
+  <li>
+    <p>In the <code>onCreate</code> method of the class that extends <code>DroidGap</code>, add the following two lines:</p>
 
-<ol>
-<li><p>In the <code>onCreate</code> method of the class that extends <code>DroidGap</code>, add the following two lines:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">super.setIntegerProperty("splashscreen", R.drawable.splash);
-super.loadUrl(Config.getStartUrl(), 10000);
-</code></pre></div>
-<p>The first line sets the image to display as the splashscreen. If you name your image anything other than <code>splash.png</code>, you need to modify this line.
-The second line is the normal <code>super.loadUrl</code> line, but it has a second parameter that specifies a timeout value for the splash screen. In this example the splash screen displays for 10 seconds. To dismiss the splash screen once the app receives the <code>deviceready</code> event, call the <code>navigator.splashscreen.hide()</code> method.</p></li>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> super.setIntegerProperty("splashscreen", R.drawable.splash);
+ super.loadUrl(Config.getStartUrl(), 10000);
+</code></pre></div>    </div>
+
+    <p>The first line sets the image to display as the splashscreen. If you name your image anything other than <code>splash.png</code>, you need to modify this line.
+ The second line is the normal <code>super.loadUrl</code> line, but it has a second parameter that specifies a timeout value for the splash screen. In this example the splash screen displays for 10 seconds. To dismiss the splash screen once the app receives the <code>deviceready</code> event, call the <code>navigator.splashscreen.hide()</code> method.</p>
+  </li>
 </ol>
 
 <h3>iOS</h3>
@@ -1641,13 +1652,13 @@ want to support, such as iPad or iPhone. The size of each image
 should be:</p>
 
 <ul>
-<li>Default-568h@2x~iphone.png (640x1136 pixels)</li>
-<li>Default-Landscape@2x~ipad.png (2048x1496 pixels)</li>
-<li>Default-Landscape~ipad.png (1024x748 pixels)</li>
-<li>Default-Portrait@2x~ipad.png (1536x2008 pixels)</li>
-<li>Default-Portrait~ipad.png (768x1004 pixels)</li>
-<li>Default@2x~iphone.png (640x960 pixels)</li>
-<li>Default~iphone.png (320x480 pixels)</li>
+  <li>Default-568h@2x~iphone.png (640x1136 pixels)</li>
+  <li>Default-Landscape@2x~ipad.png (2048x1496 pixels)</li>
+  <li>Default-Landscape~ipad.png (1024x748 pixels)</li>
+  <li>Default-Portrait@2x~ipad.png (1536x2008 pixels)</li>
+  <li>Default-Portrait~ipad.png (768x1004 pixels)</li>
+  <li>Default@2x~iphone.png (640x960 pixels)</li>
+  <li>Default~iphone.png (320x480 pixels)</li>
 </ul>
 
 

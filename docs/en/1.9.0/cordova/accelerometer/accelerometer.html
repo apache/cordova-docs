@@ -1426,29 +1426,29 @@
                 <h1>Accelerometer</h1>
 
 <blockquote>
-<p>Captures device motion in the x, y, and z direction.</p>
+  <p>Captures device motion in the x, y, and z direction.</p>
 </blockquote>
 
 <h2>Methods</h2>
 
 <ul>
-<li><a href="accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a></li>
-<li><a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a></li>
-<li><a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a></li>
+  <li><a href="accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a></li>
+  <li><a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a></li>
+  <li><a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a></li>
 </ul>
 
 <h2>Arguments</h2>
 
 <ul>
-<li><a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a></li>
-<li><a href="parameters/accelerometerError.html">accelerometerError</a></li>
-<li><a href="parameters/accelerometerOptions.html">accelerometerOptions</a></li>
+  <li><a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a></li>
+  <li><a href="parameters/accelerometerError.html">accelerometerError</a></li>
+  <li><a href="parameters/accelerometerOptions.html">accelerometerOptions</a></li>
 </ul>
 
 <h2>Objects (Read-Only)</h2>
 
 <ul>
-<li><a href="acceleration/acceleration.html">Acceleration</a></li>
+  <li><a href="acceleration/acceleration.html">Acceleration</a></li>
 </ul>
 
 <h2>Permissions</h2>
@@ -1456,39 +1456,53 @@
 <h3>Android</h3>
 
 <h4>app/res/xml/plugins.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Accelerometer" value="org.apache.cordova.AccelListener" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Accelerometer" value="org.apache.cordova.AccelListener" /&gt;
+</code></pre></div></div>
+
 <h3>Bada</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">No permissions are required.
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
 <h3>BlackBerry WebWorks</h3>
 
 <h4>www/plugins.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;plugin name="Accelerometer" value="org.apache.cordova.accelerometer.Accelerometer" /&gt;
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Accelerometer" value="org.apache.cordova.accelerometer.Accelerometer" /&gt;
+</code></pre></div></div>
+
 <h4>www/config.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature id="blackberry.system"  required="true" version="1.0.0.0" /&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;feature id="blackberry.system"  required="true" version="1.0.0.0" /&gt;
 &lt;feature id="org.apache.cordova" required="true" version="1.0.0" /&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>iOS</h3>
 
 <h4>App/Supporting Files/Cordova.plist</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;key&gt;Plugins&lt;/key&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;key&gt;Plugins&lt;/key&gt;
 &lt;dict&gt;
     &lt;key&gt;Accelerometer&lt;/key&gt;
     &lt;string&gt;CDVAccelerometer&lt;/string&gt;
 &lt;/dict&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <h3>webOS</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">No permissions are required.
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
 <h3>Windows Phone</h3>
 
 <h4>Properties/WPAppManifest.xml</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;Capabilities&gt;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Capabilities&gt;
     &lt;Capability Name="ID_CAP_SENSORS" /&gt;
 &lt;/Capabilities&gt;
-</code></pre></div>
+</code></pre></div></div>
+
 <p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
 
 

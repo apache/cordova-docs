@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce a minor version of Cordova iOS 4.4.0 has been released!Three new features were added:&lt;resource-file&gt; tag support in config.xml...">
+    <meta name="description" content="We are happy to announce a minor version of Cordova iOS 4.4.0 has been released!Three new features were added:  &lt;resource-file&gt; tag support in config.x...">
 
     <title>
         
@@ -134,70 +134,75 @@
             <p>We are happy to announce a minor version of <code>Cordova iOS 4.4.0</code> has been released!</p>
 
 <p>Three new features were added:</p>
-
 <ol>
-<li><a href="https://cordova.apache.org/docs/en/latest/config_ref/index.html#resource-file">&lt;resource-file&gt;</a> tag support in config.xml</li>
-<li><a href="https://cordova.apache.org/docs/en/latest/guide/platforms/ios/webview.html">Carthage support</a></li>
-<li>Dynamic framework support through the <a href="https://cordova.apache.org/docs/en/dev/plugin_ref/spec.html#framework">&quot;embed&quot; attribute</a> of the &lt;framework&gt; tag in plugin.xml (needs cordova-cli@7.0.0, which is coming soon)</li>
+  <li><a href="https://cordova.apache.org/docs/en/latest/config_ref/index.html#resource-file">&lt;resource-file&gt;</a> tag support in config.xml</li>
+  <li><a href="https://cordova.apache.org/docs/en/latest/guide/platforms/ios/webview.html">Carthage support</a></li>
+  <li>Dynamic framework support through the <a href="https://cordova.apache.org/docs/en/dev/plugin_ref/spec.html#framework">&quot;embed&quot; attribute</a> of the &lt;framework&gt; tag in plugin.xml (needs cordova-cli@7.0.0, which is coming soon)</li>
 </ol>
 
 <p>Other notable issues:</p>
 
 <ol>
-<li>Fixed build error on Xcode 8.3.2</li>
-<li>Removed iOS 8 Support (only iOS 9 and greater supported now)</li>
-<li>Removed node.js 0.x support</li>
+  <li>Fixed build error on Xcode 8.3.2</li>
+  <li>Removed iOS 8 Support (only iOS 9 and greater supported now)</li>
+  <li>Removed node.js 0.x support</li>
 </ol>
 
 <p><br /></p>
 
 <p><strong>Note:</strong> When updating <strong>iOS</strong>, make sure to save your plugins as current unsaved plugins may not be reinstalled otherwise. Run the following command in your project to save your currently installed plugins into <code>config.xml</code>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin save
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin save
+</code></pre></div></div>
+
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform rm ios
 cordova platform add ios@4.4.0
-</code></pre></div>
-<p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add ios@4.4.0
-</code></pre></div>
-<!--more-->
+</code></pre></div></div>
 
+<p>To add it explicitly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@4.4.0
+</code></pre></div></div>
+
+<!--more-->
 <h2>What&#39;s new in iOS</h2>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-12009">CB-12009</a> - <resource-file> target attribute ignored on iOS when installing a Cordova plugin</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12673">CB-12673</a> - ios platform does not build on Xcode 8.3.2</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a> - removing engineStrict as it is no longer supported</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8980">CB-8980</a> - Adding resource-file element to config.xml for iOS</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11895">CB-11895</a> - openURL: is deprecated on iOS 10</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10026">CB-10026</a> - Fix warnings in Objective-C tests</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12617">CB-12617</a> - added engine strict for users with older node versions</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11233">CB-11233</a> - Support installing frameworks into &quot;Embedded Binaries&quot; section of the Xcode project</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12577">CB-12577</a> - Fix module import warnings when using Cordova.framework (Carthage)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12571">CB-12571</a> - Podfile gets overwritten and some dependencies disappear.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12050">CB-12050</a> - ios: Create shared scheme for framework target, for Carthage support</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12384">CB-12384</a> - ios: Add Cocoa Touch Framework target for CordovaLib functionality</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12309">CB-12309</a> - Missing CLI help for --developmentTeam</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12405">CB-12405</a> - .ipa is uncompressed in preparation for &#39;run&#39; command during a &#39;build&#39;, resulting in slow builds</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12523">CB-12523</a> - Remove iOS 8 support</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12522">CB-12522</a> - Remove node 0.x support in CI</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12377">CB-12377</a> - Fix bug with updating platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12473">CB-12473</a> - Delete the correct build output folder</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12402">CB-12402</a> <a href="https://issues.apache.org/jira/browse/CB-12206">CB-12206</a> - Properly encode app name to generate XML files</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12388">CB-12388</a> - Fix memory leak due to strong reference</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12287">CB-12287</a> - Remove hardcoded sim build destination</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12018">CB-12018</a> - updated pkg.json with jasmine changes to work with jasmine instead of jasmine-node and rebased off of master branch.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12018">CB-12018</a> - updated tests to function with jasmine instead of jasmine-node</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12341">CB-12341</a> - Possible crash in [CDVUserAgentUtil releaseLock:]</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12247">CB-12247</a> - Symlinking resource files leads to inability to install app on iOS 10</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-6274">CB-6274</a> - Added support for BackgroundColor preference</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-12098">CB-12098</a> - Update supportedInterfaceOrientations return type (removed spaces)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-11810">CB-11810</a> - (ios) fix unable to load index page from frameworkpath</li>
-<li>Removed no-longer-working and generally-unused <code>diagnose_project</code> script</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12009">CB-12009</a> - <resource-file> target attribute ignored on iOS when installing a Cordova plugin</resource-file></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12673">CB-12673</a> - ios platform does not build on Xcode 8.3.2</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12665">CB-12665</a> - removing engineStrict as it is no longer supported</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8980">CB-8980</a> - Adding resource-file element to config.xml for iOS</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11895">CB-11895</a> - openURL: is deprecated on iOS 10</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10026">CB-10026</a> - Fix warnings in Objective-C tests</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12617">CB-12617</a> - added engine strict for users with older node versions</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11233">CB-11233</a> - Support installing frameworks into &quot;Embedded Binaries&quot; section of the Xcode project</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12577">CB-12577</a> - Fix module import warnings when using Cordova.framework (Carthage)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12571">CB-12571</a> - Podfile gets overwritten and some dependencies disappear.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12050">CB-12050</a> - ios: Create shared scheme for framework target, for Carthage support</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12384">CB-12384</a> - ios: Add Cocoa Touch Framework target for CordovaLib functionality</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12309">CB-12309</a> - Missing CLI help for --developmentTeam</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12405">CB-12405</a> - .ipa is uncompressed in preparation for &#39;run&#39; command during a &#39;build&#39;, resulting in slow builds</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12523">CB-12523</a> - Remove iOS 8 support</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12522">CB-12522</a> - Remove node 0.x support in CI</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12377">CB-12377</a> - Fix bug with updating platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12473">CB-12473</a> - Delete the correct build output folder</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12402">CB-12402</a> <a href="https://issues.apache.org/jira/browse/CB-12206">CB-12206</a> - Properly encode app name to generate XML files</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12388">CB-12388</a> - Fix memory leak due to strong reference</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12287">CB-12287</a> - Remove hardcoded sim build destination</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12018">CB-12018</a> - updated pkg.json with jasmine changes to work with jasmine instead of jasmine-node and rebased off of master branch.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12018">CB-12018</a> - updated tests to function with jasmine instead of jasmine-node</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12341">CB-12341</a> - Possible crash in [CDVUserAgentUtil releaseLock:]</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12247">CB-12247</a> - Symlinking resource files leads to inability to install app on iOS 10</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6274">CB-6274</a> - Added support for BackgroundColor preference</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-12098">CB-12098</a> - Update supportedInterfaceOrientations return type (removed spaces)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-11810">CB-11810</a> - (ios) fix unable to load index page from frameworkpath</li>
+  <li>Removed no-longer-working and generally-unused <code>diagnose_project</code> script</li>
 </ul>
+
 
         </div>
     </section>

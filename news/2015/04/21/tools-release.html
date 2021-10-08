@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="New versions of cordova tools are now live!cordova-lib@5.0.0cordova@5.0.0plugman@0.23.1cordova-js@3.9.0Release highlights:Plugins have been renamed and the C...">
+    <meta name="description" content="New versions of cordova tools are now live!  cordova-lib@5.0.0  cordova@5.0.0  plugman@0.23.1  cordova-js@3.9.0Release highlights:  Plugins have been renamed...">
 
     <title>
         
@@ -134,152 +134,152 @@
             <p>New versions of cordova tools are now live!</p>
 
 <ul>
-<li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@5.0.0</a></li>
-<li><a href="https://www.npmjs.org/package/cordova">cordova@5.0.0</a></li>
-<li><a href="https://www.npmjs.org/package/plugman">plugman@0.23.1</a></li>
-<li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@3.9.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@5.0.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova">cordova@5.0.0</a></li>
+  <li><a href="https://www.npmjs.org/package/plugman">plugman@0.23.1</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@3.9.0</a></li>
 </ul>
 
 <p>Release highlights:</p>
 
 <ul>
-<li>Plugins have been renamed and the <strong>Cordova-CLI</strong> now supports fetching plugins from <strong>npm</strong>. We highly recommend reading about it in the <a href="http://cordova.apache.org/announcements/2015/04/21/plugins-release-and-move-to-npm.html">plugins release blog post</a>.</li>
-<li><code>&lt;feature&gt;</code> tags have been renamed to <code>&lt;plugin&gt;</code> tags in your projects <code>config.xml</code>. Adding a <code>&lt;plugin&gt;</code> tag to your <code>config.xml</code> will fetch and install it on <code>cordova prepare</code> if it isn&#39;t already installed.</li>
-<li><strong>Cordova Android@4.0.0</strong> has been released and pinned as the default version for new projects. This includes support for pluggable WebViews! Read about it in the <a href="http://cordova.apache.org/announcements/2015/04/15/cordova-android-4.0.0.html">Android 4.0.0 release blog post</a>.</li>
-<li>Our template app, <strong><a href="https://www.npmjs.com/package/cordova-app-hello-world">Cordova App Hello World</a></strong>, has been moved to <strong>npm</strong>.</li>
-<li>Added the ability to manage your plugin and platform dependencies in your project&#39;s <code>config.xml</code>. When adding plugins or platforms, use the <code>--save</code> flag to add them to <code>config.xml</code>. Ex: <code>cordova platform add android --save</code>. Existing projects can use <code>cordova plugin save</code> and <code>cordova platform save</code> commands to save all previously installed plugins and platforms into your project&#39;s <code>config.xml</code>. Platforms and plugins will be autorestored when <code>cordova prepare</code> is run. This allows developers to easily manage and share their dependenceis among different development enviroments and with their coworkers. </li>
+  <li>Plugins have been renamed and the <strong>Cordova-CLI</strong> now supports fetching plugins from <strong>npm</strong>. We highly recommend reading about it in the <a href="http://cordova.apache.org/announcements/2015/04/21/plugins-release-and-move-to-npm.html">plugins release blog post</a>.</li>
+  <li><code>&lt;feature&gt;</code> tags have been renamed to <code>&lt;plugin&gt;</code> tags in your projects <code>config.xml</code>. Adding a <code>&lt;plugin&gt;</code> tag to your <code>config.xml</code> will fetch and install it on <code>cordova prepare</code> if it isn&#39;t already installed.</li>
+  <li><strong>Cordova Android@4.0.0</strong> has been released and pinned as the default version for new projects. This includes support for pluggable WebViews! Read about it in the <a href="http://cordova.apache.org/announcements/2015/04/15/cordova-android-4.0.0.html">Android 4.0.0 release blog post</a>.</li>
+  <li>Our template app, <strong><a href="https://www.npmjs.com/package/cordova-app-hello-world">Cordova App Hello World</a></strong>, has been moved to <strong>npm</strong>.</li>
+  <li>Added the ability to manage your plugin and platform dependencies in your project&#39;s <code>config.xml</code>. When adding plugins or platforms, use the <code>--save</code> flag to add them to <code>config.xml</code>. Ex: <code>cordova platform add android --save</code>. Existing projects can use <code>cordova plugin save</code> and <code>cordova platform save</code> commands to save all previously installed plugins and platforms into your project&#39;s <code>config.xml</code>. Platforms and plugins will be autorestored when <code>cordova prepare</code> is run. This allows developers to easily manage and share their dependenceis among different development enviroments and with their coworkers.</li>
 </ul>
 
 <p>To update your tools:</p>
 
 <ul>
-<li><p>If you have <code>cordova</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
-</code></pre></div></li>
-<li><p>If you have <code>plugman</code> installed:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g plugman
-</code></pre></div></li>
+  <li>
+    <p>If you have <code>cordova</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you have <code>plugman</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g plugman
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <h2>Platform updates</h2>
-
 <p>When adding these platforms to your project, the following versions are now used by default.
 These platform versions were released recently, and the tools&#39; defaults were updated:</p>
 
 <ul>
-<li><a href="http://cordova.apache.org/announcements/2015/04/15/cordova-android-4.0.0.html">Cordova Android 4.0.0</a></li>
-<li><a href="https://github.com/apache/cordova-wp8/blob/master/RELEASENOTES.md">Cordova WP8 3.8.0</a></li>
-<li><a href="https://github.com/apache/cordova-windows/blob/master/RELEASENOTES.md">Cordova Windows 3.8.1</a></li>
+  <li><a href="http://cordova.apache.org/announcements/2015/04/15/cordova-android-4.0.0.html">Cordova Android 4.0.0</a></li>
+  <li><a href="https://github.com/apache/cordova-wp8/blob/master/RELEASENOTES.md">Cordova WP8 3.8.0</a></li>
+  <li><a href="https://github.com/apache/cordova-windows/blob/master/RELEASENOTES.md">Cordova Windows 3.8.1</a></li>
 </ul>
 
 <h2>cordova-lib</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8865">CB-8865</a> Fixed <code>plugman.help()</code></li>
-<li>Pinned <strong>Cordova-Android</strong> version <strong>4.0.0</strong></li>
-<li>Fix <code>getPlatformVersion</code> fails for paths with spaces</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8799">CB-8799</a> Save plugin/platform <code>src</code> and <code>version</code> to <code>spec</code> attribute.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8807">CB-8807</a> Platform add fails to add plugins with variables.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8832">CB-8832</a> Fix <strong>iOS</strong> icon copying logic to not use default for every size</li>
-<li>Updated pinned versions of <strong>Windows</strong> and <strong>wp8</strong>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8775">CB-8775</a> Adding a plugin will copy it to plugins folder, except if the plugin&#39;s new or old id is already installed.</li>
-<li>Fix <code>setGlobalPreference()</code> in <code>ConfigParser</code></li>
-<li>Removed mostly unused <code>relativePath</code> checking and added missing cases for <code>isAbsolutePath</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8791">CB-8791</a> Recognize <code>UAP</code> as a valid <code>TargetPlatformIdentifier</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8784">CB-8784</a> Prepare with no platforms should restore all platforms.</li>
-<li>Fix <code>plugman install</code> failure on <strong>iOS</strong> containing <code>&amp;</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8703">CB-8703</a> Add support for <code>semver</code> and <code>device-specific</code> targeting of <code>config-file</code> to <strong>Windows</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8596">CB-8596</a> Expose APIs to retrieve platforms and plugins saved in <code>config.xml</code>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8741">CB-8741</a> Make plugin <code>--save</code> work more like <code>npm install</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8755">CB-8755</a> Plugin <code>--save</code>: Multiple <code>config.xml</code> entries don&#39;t get removed</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8754">CB-8754</a> Auto-restoring a plugin fails when adding a platform.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8651">CB-8651</a> Restoring platforms causes plugin install to be triggered twice</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8731">CB-8731</a> Updated <code>app-hello-world</code> dependency to <strong>3.9.0</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8757">CB-8757</a> <strong>iOS</strong>: Make paths with <code>--link</code> relative to the real project path</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8286">CB-8286</a> Fix regression from e70432f2: Never want to link to <code>app-hello-world</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8737">CB-8737</a> Available platforms list includes extraneous values</li>
-<li>Bugfix to <code>json.parse</code> before using <code>cfg</code></li>
-<li>Add <code>merges/</code> by default, now all tests pass</li>
-<li>Move <code>cordova-app-hello-world</code> dependency to <code>cordova-lib</code></li>
-<li>Support the old 4-argument version of <code>cordova create</code> again</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8286">CB-8286</a> Update <code>create.js</code> to always require passing in a <code>www</code></li>
-<li>Show <strong>npm</strong> failure message when plugin fetch fails</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8725">CB-8725</a> Fix plugin add from <strong>npm</strong> when authenticated to CPR</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8499">CB-8499</a> Remove <code>project_dir</code> from (un)installers signature</li>
-<li>Add <code>addElement()</code> to <code>ConfigParser</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8696">CB-8696</a> Fix fetching of dependencies with semver constraints rather than exact versions</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7747">CB-7747</a> Add <code>&lt;allow-intent&gt;</code> for App Store on <strong>iOS</strong></li>
-<li>Export <code>PlatformProjectAdapter</code> from <code>platforms.js</code></li>
-<li>Allow subdirs for icons on <strong>BB10</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8670">CB-8670</a> Error when set engine name to <code>cordova-windows</code> in <code>plugin.xml</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8521">CB-8521</a> Adds <code>cordova plugin save</code> which saves all installed plugins to config.xml</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7698">CB-7698</a> BugFix: For plugins which require variables, <code>cordova plugin add FOO</code> should fail when no variables specified.</li>
-<li>Add <code>setGlobalPreference()</code> to <code>ConfigParser</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8499">CB-8499</a> Merge platforms.js from cordova and plugman</li>
-<li>Rename references to <code>feature</code> to <code>plugin</code></li>
-<li>Deprecate the old feature syntax from <code>config.xml</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8634">CB-8634</a> Adds support for custom branches for <code>cordova platform add</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8633">CB-8633</a> BugFix: Support for urls to tarballs was broken</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8499">CB-8499</a> <code>cordova platform save</code>: save installed platforms and their sources (versions/git_urls/folders) Into <code>config.xml</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8499">CB-8499</a> When deleting a platform, remove it from <code>platforms.json</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8499">CB-8499</a> When adding a platform, capture version/folder/url being added to allow us to be able to save all installed platforms and their versions later on by doing <code>cordova platform save</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7747">CB-7747</a> Add <code>&lt;allow-intent&gt;</code> to default template</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8616">CB-8616</a> Support 9-patch images for default <strong>Android</strong> splashscreen</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8551">CB-8551</a> Fixed regex in <code>isValidCprName</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8551">CB-8551</a> Merged <code>fetchNPM</code> and <code>fetchPlugReg</code> into <code>fetchPlugin</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8551">CB-8551</a> Updated regex in <code>isValidCprName</code> to exclude matching <code>@version</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8551">CB-8551</a> Split up <code>changePluginId</code> into two functions</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8457">CB-8457</a> Ignore version specifier when running hooks</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8578">CB-8578</a> <code>cordova plugin add &lt;plugin&gt;</code> should be able to restore urls and folders in addition to versions</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7827">CB-7827</a> Add support for <code>android-activityName</code> within <code>config.xml</code></li>
-<li>Add <code>org.apache.cordova.test-framework</code> to plugman publish whitelist</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8577">CB-8577</a> Read plugin variables from correct tag</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8551">CB-8551</a> Added <code>plugin-name</code> support for removing plugins.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8551">CB-8551</a> Skip <strong>CPR</strong> if <code>pluginID</code> isn&#39;t reverse domain name style</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8551">CB-8551</a> Added <strong>npm</strong> fetching as fallback</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8865">CB-8865</a> Fixed <code>plugman.help()</code></li>
+  <li>Pinned <strong>Cordova-Android</strong> version <strong>4.0.0</strong></li>
+  <li>Fix <code>getPlatformVersion</code> fails for paths with spaces</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8799">CB-8799</a> Save plugin/platform <code>src</code> and <code>version</code> to <code>spec</code> attribute.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8807">CB-8807</a> Platform add fails to add plugins with variables.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8832">CB-8832</a> Fix <strong>iOS</strong> icon copying logic to not use default for every size</li>
+  <li>Updated pinned versions of <strong>Windows</strong> and <strong>wp8</strong>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8775">CB-8775</a> Adding a plugin will copy it to plugins folder, except if the plugin&#39;s new or old id is already installed.</li>
+  <li>Fix <code>setGlobalPreference()</code> in <code>ConfigParser</code></li>
+  <li>Removed mostly unused <code>relativePath</code> checking and added missing cases for <code>isAbsolutePath</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8791">CB-8791</a> Recognize <code>UAP</code> as a valid <code>TargetPlatformIdentifier</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8784">CB-8784</a> Prepare with no platforms should restore all platforms.</li>
+  <li>Fix <code>plugman install</code> failure on <strong>iOS</strong> containing <code>&amp;</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8703">CB-8703</a> Add support for <code>semver</code> and <code>device-specific</code> targeting of <code>config-file</code> to <strong>Windows</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8596">CB-8596</a> Expose APIs to retrieve platforms and plugins saved in <code>config.xml</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8741">CB-8741</a> Make plugin <code>--save</code> work more like <code>npm install</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8755">CB-8755</a> Plugin <code>--save</code>: Multiple <code>config.xml</code> entries don&#39;t get removed</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8754">CB-8754</a> Auto-restoring a plugin fails when adding a platform.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8651">CB-8651</a> Restoring platforms causes plugin install to be triggered twice</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8731">CB-8731</a> Updated <code>app-hello-world</code> dependency to <strong>3.9.0</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8757">CB-8757</a> <strong>iOS</strong>: Make paths with <code>--link</code> relative to the real project path</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8286">CB-8286</a> Fix regression from e70432f2: Never want to link to <code>app-hello-world</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8737">CB-8737</a> Available platforms list includes extraneous values</li>
+  <li>Bugfix to <code>json.parse</code> before using <code>cfg</code></li>
+  <li>Add <code>merges/</code> by default, now all tests pass</li>
+  <li>Move <code>cordova-app-hello-world</code> dependency to <code>cordova-lib</code></li>
+  <li>Support the old 4-argument version of <code>cordova create</code> again</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8286">CB-8286</a> Update <code>create.js</code> to always require passing in a <code>www</code></li>
+  <li>Show <strong>npm</strong> failure message when plugin fetch fails</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8725">CB-8725</a> Fix plugin add from <strong>npm</strong> when authenticated to CPR</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8499">CB-8499</a> Remove <code>project_dir</code> from (un)installers signature</li>
+  <li>Add <code>addElement()</code> to <code>ConfigParser</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8696">CB-8696</a> Fix fetching of dependencies with semver constraints rather than exact versions</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7747">CB-7747</a> Add <code>&lt;allow-intent&gt;</code> for App Store on <strong>iOS</strong></li>
+  <li>Export <code>PlatformProjectAdapter</code> from <code>platforms.js</code></li>
+  <li>Allow subdirs for icons on <strong>BB10</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8670">CB-8670</a> Error when set engine name to <code>cordova-windows</code> in <code>plugin.xml</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8521">CB-8521</a> Adds <code>cordova plugin save</code> which saves all installed plugins to config.xml</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7698">CB-7698</a> BugFix: For plugins which require variables, <code>cordova plugin add FOO</code> should fail when no variables specified.</li>
+  <li>Add <code>setGlobalPreference()</code> to <code>ConfigParser</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8499">CB-8499</a> Merge platforms.js from cordova and plugman</li>
+  <li>Rename references to <code>feature</code> to <code>plugin</code></li>
+  <li>Deprecate the old feature syntax from <code>config.xml</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8634">CB-8634</a> Adds support for custom branches for <code>cordova platform add</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8633">CB-8633</a> BugFix: Support for urls to tarballs was broken</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8499">CB-8499</a> <code>cordova platform save</code>: save installed platforms and their sources (versions/git_urls/folders) Into <code>config.xml</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8499">CB-8499</a> When deleting a platform, remove it from <code>platforms.json</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8499">CB-8499</a> When adding a platform, capture version/folder/url being added to allow us to be able to save all installed platforms and their versions later on by doing <code>cordova platform save</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7747">CB-7747</a> Add <code>&lt;allow-intent&gt;</code> to default template</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8616">CB-8616</a> Support 9-patch images for default <strong>Android</strong> splashscreen</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8551">CB-8551</a> Fixed regex in <code>isValidCprName</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8551">CB-8551</a> Merged <code>fetchNPM</code> and <code>fetchPlugReg</code> into <code>fetchPlugin</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8551">CB-8551</a> Updated regex in <code>isValidCprName</code> to exclude matching <code>@version</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8551">CB-8551</a> Split up <code>changePluginId</code> into two functions</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8457">CB-8457</a> Ignore version specifier when running hooks</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8578">CB-8578</a> <code>cordova plugin add &lt;plugin&gt;</code> should be able to restore urls and folders in addition to versions</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7827">CB-7827</a> Add support for <code>android-activityName</code> within <code>config.xml</code></li>
+  <li>Add <code>org.apache.cordova.test-framework</code> to plugman publish whitelist</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8577">CB-8577</a> Read plugin variables from correct tag</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8551">CB-8551</a> Added <code>plugin-name</code> support for removing plugins.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8551">CB-8551</a> Skip <strong>CPR</strong> if <code>pluginID</code> isn&#39;t reverse domain name style</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8551">CB-8551</a> Added <strong>npm</strong> fetching as fallback</li>
 </ul>
 
 <h2>cordova-cli</h2>
-
 <ul>
-<li>Add information on <strong>Firefox OS</strong> to the <code>README</code></li>
-<li>Update link to hooks <code>README</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8634">CB-8634</a> Adds docs about support for custom branches for <code>cordova platform add</code></li>
+  <li>Add information on <strong>Firefox OS</strong> to the <code>README</code></li>
+  <li>Update link to hooks <code>README</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8634">CB-8634</a> Adds docs about support for custom branches for <code>cordova platform add</code></li>
 </ul>
 
 <h2>cordova-js</h2>
-
 <ul>
-<li>Verify that <code>window.cordova</code> does not already exist and throw error if it does</li>
-<li>Added <code>appveyor</code> badge</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8711">CB-8711</a> Wait for all callbacks before evaluating expectations</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8223">CB-8223</a> Adds <code>configparser</code> module for exposing <code>config.xml</code> in the <strong>Browser</strong> platform</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8667">CB-8667</a> <strong>Windows</strong> Handle case where checking for <code>NORESULT</code> returns falsy</li>
-<li>Add <strong>TravisCI</strong> link and banner</li>
+  <li>Verify that <code>window.cordova</code> does not already exist and throw error if it does</li>
+  <li>Added <code>appveyor</code> badge</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8711">CB-8711</a> Wait for all callbacks before evaluating expectations</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8223">CB-8223</a> Adds <code>configparser</code> module for exposing <code>config.xml</code> in the <strong>Browser</strong> platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8667">CB-8667</a> <strong>Windows</strong> Handle case where checking for <code>NORESULT</code> returns falsy</li>
+  <li>Add <strong>TravisCI</strong> link and banner</li>
 </ul>
 
 <h2>plugman</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-8637">CB-8637</a> Add <strong>Windows</strong> platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8637">CB-8637</a> Add <strong>Windows</strong> platform</li>
 </ul>
 
 <h2>Pinned Platform Versions for <strong>Cordova CLI 5.0.0</strong></h2>
 
 <ul>
-<li>Cordova Amazon-FireOS: 3.6.3</li>
-<li>Cordova Android: 4.0.0</li>
-<li>Cordova BlackBerry10: 3.7.0</li>
-<li>Cordova Browser: 3.6.0</li>
-<li>Cordova FirefoxOS: 3.6.3</li>
-<li>Cordova iOS: 3.8.0</li>
-<li>Cordova Ubuntu: 4.0.0</li>
-<li>Cordova Windows: 3.8.1</li>
-<li>Cordova WP8: 3.8.0</li>
+  <li>Cordova Amazon-FireOS: 3.6.3</li>
+  <li>Cordova Android: 4.0.0</li>
+  <li>Cordova BlackBerry10: 3.7.0</li>
+  <li>Cordova Browser: 3.6.0</li>
+  <li>Cordova FirefoxOS: 3.6.3</li>
+  <li>Cordova iOS: 3.8.0</li>
+  <li>Cordova Ubuntu: 4.0.0</li>
+  <li>Cordova Windows: 3.8.1</li>
+  <li>Cordova WP8: 3.8.0</li>
 </ul>
 
         </div>

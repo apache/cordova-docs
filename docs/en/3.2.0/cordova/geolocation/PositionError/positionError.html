@@ -1644,16 +1644,20 @@
 <h2>Properties</h2>
 
 <ul>
-<li><p><strong>code</strong>: One of the predefined error codes listed below.</p></li>
-<li><p><strong>message</strong>: Error message describing the details of the error encountered.</p></li>
+  <li>
+    <p><strong>code</strong>: One of the predefined error codes listed below.</p>
+  </li>
+  <li>
+    <p><strong>message</strong>: Error message describing the details of the error encountered.</p>
+  </li>
 </ul>
 
 <h2>Constants</h2>
 
 <ul>
-<li><code>PositionError.PERMISSION_DENIED</code></li>
-<li><code>PositionError.POSITION_UNAVAILABLE</code></li>
-<li><code>PositionError.TIMEOUT</code></li>
+  <li><code>PositionError.PERMISSION_DENIED</code></li>
+  <li><code>PositionError.POSITION_UNAVAILABLE</code></li>
+  <li><code>PositionError.TIMEOUT</code></li>
 </ul>
 
 <h2>Description</h2>
@@ -1663,17 +1667,23 @@ callback function when an error occurs with geolocation. It features
 the following error codes:</p>
 
 <ul>
-<li><p><code>PositionError.PERMISSION_DENIED</code>: Returned when users do not allow
+  <li>
+    <p><code>PositionError.PERMISSION_DENIED</code>: Returned when users do not allow
 the app to retrieve position information. This is dependent on the
-platform.</p></li>
-<li><p><code>PositionError.POSITION_UNAVAILABLE</code>: Returned when the device is
+platform.</p>
+  </li>
+  <li>
+    <p><code>PositionError.POSITION_UNAVAILABLE</code>: Returned when the device is
 unable to retrieve a position. In general, this means the device is
-not connected to a network or can&#39;t get a satellite fix.</p></li>
-<li><p><code>PositionError.TIMEOUT</code>: Returned when the device is unable to
+not connected to a network or can&#39;t get a satellite fix.</p>
+  </li>
+  <li>
+    <p><code>PositionError.TIMEOUT</code>: Returned when the device is unable to
 retrieve a position within the time specified by the <code>timeout</code>
 included in <code>[geolocationOptions](../parameters/geolocation.options.html)</code>. When used with
 <code>[geolocation.watchPosition](../geolocation.watchPosition.html)</code>, this error could be repeatedly passed
-to the <code>[geolocationError](../parameters/geolocationError.html)</code> callback every <code>timeout</code> milliseconds.</p></li>
+to the <code>[geolocationError](../parameters/geolocationError.html)</code> callback every <code>timeout</code> milliseconds.</p>
+  </li>
 </ul>
 
 

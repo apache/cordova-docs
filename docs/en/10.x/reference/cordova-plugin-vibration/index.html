@@ -2184,37 +2184,44 @@
 #         under the License.
 -->
 
-<table><thead>
-<tr>
-<th style="text-align: center">AppVeyor</th>
-<th style="text-align: center">Travis CI</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: center"><a href="https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-vibration"><img src="https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-vibration?branch=master" alt="Build status"></a></td>
-<td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-vibration"><img src="https://travis-ci.org/apache/cordova-plugin-vibration.svg?branch=master" alt="Build Status"></a></td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">AppVeyor</th>
+      <th style="text-align: center">Travis CI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-vibration"><img src="https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-vibration?branch=master" alt="Build status" /></a></td>
+      <td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-vibration"><img src="https://travis-ci.org/apache/cordova-plugin-vibration.svg?branch=master" alt="Build Status" /></a></td>
+    </tr>
+  </tbody>
+</table>
 
 <h1>cordova-plugin-vibration</h1>
 
 <p>This plugin provides a way to vibrate the device. Its API aligns with the W3C vibration specification at http://www.w3.org/TR/vibration/</p>
 
 <p>The plugin defines a global object/method <code>navigator.vibrate</code>. Although in the global scope, it is not available until after the <code>deviceready</code> event.</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Installation</h2>
-<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">cordova plugin add cordova-plugin-vibration
-</span></code></pre></div>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">cordova plugin add cordova-plugin-vibration
+</span></code></pre></div></div>
+
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>iOS</li>
-<li>Windows Phone</li>
-<li>Android<br>
+  <li>iOS</li>
+  <li>Windows Phone</li>
+  <li>Android<br />
 The Android webview (API level 19 and up) supports the <a href="https://www.w3.org/TR/vibration/">W3C Vibration API</a> natively, so no Android specific implementation in this plugin is necessary.</li>
 </ul>
 
@@ -2225,44 +2232,54 @@ The Android webview (API level 19 and up) supports the <a href="https://www.w3.o
 <h3>Standard vibrate</h3>
 
 <p>Vibrates the device for a given amount of time.</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="nx">time</span><span class="p">)</span>
-</code></pre></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="nx">time</span><span class="p">)</span>
+</code></pre></div></div>
 <p>or</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([</span><span class="nx">time</span><span class="p">])</span>
-</code></pre></div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([</span><span class="nx">time</span><span class="p">])</span>
+</code></pre></div></div>
+
 <ul>
-<li><strong>time</strong>: Milliseconds to vibrate the device. <em>(Number)</em></li>
+  <li><strong>time</strong>: Milliseconds to vibrate the device. <em>(Number)</em></li>
 </ul>
 
 <h4>Example</h4>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Vibrate for 3 seconds</span>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Vibrate for 3 seconds</span>
 <span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
 
 <span class="c1">// Vibrate for 3 seconds</span>
 <span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([</span><span class="mi">3000</span><span class="p">]);</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h4>Quirks</h4>
 
 <h5>iOS Quirks</h5>
 
 <ul>
-<li><p><strong>time</strong>: Ignores the specified time and vibrates for a pre-set amount of time.</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span> <span class="c1">// 3000 is ignored</span>
-</code></pre></div></li>
+  <li>
+    <p><strong>time</strong>: Ignores the specified time and vibrates for a pre-set amount of time.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span> <span class="c1">// 3000 is ignored</span>
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <h5>Windows Phone Quirks</h5>
 
 <ul>
-<li><p><strong>time</strong>: Max time is 5000ms (5s) and min time is 1ms</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">8000</span><span class="p">);</span> <span class="c1">// will be truncated to 5000</span>
-</code></pre></div></li>
+  <li>
+    <p><strong>time</strong>: Max time is 5000ms (5s) and min time is 1ms</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">8000</span><span class="p">);</span> <span class="c1">// will be truncated to 5000</span>
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <h5>Android Quirks</h5>
 
 <blockquote>
-<p>Calls to <code>navigator.vibrate</code> will immediately return <code>false</code> if user hasn&#39;t tapped on the frame or any embedded frame yet. </p>
+  <p>Calls to <code>navigator.vibrate</code> will immediately return <code>false</code> if user hasn&#39;t tapped on the frame or any embedded frame yet.</p>
 </blockquote>
 
 <p>See https://www.chromestatus.com/feature/5644273861001216</p>
@@ -2270,43 +2287,46 @@ The Android webview (API level 19 and up) supports the <a href="https://www.w3.o
 <h3>Vibrate with a pattern</h3>
 
 <p>Vibrates the device with a given pattern</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="nx">pattern</span><span class="p">);</span>
-</code></pre></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="nx">pattern</span><span class="p">);</span>
+</code></pre></div></div>
 <ul>
-<li><strong>pattern</strong>: Sequence of durations (in milliseconds) for which to turn on or off the vibrator. <em>(Array of Numbers)</em></li>
+  <li><strong>pattern</strong>: Sequence of durations (in milliseconds) for which to turn on or off the vibrator. <em>(Array of Numbers)</em></li>
 </ul>
 
 <h4>Example</h4>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Vibrate for 1 second</span>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Vibrate for 1 second</span>
 <span class="c1">// Wait for 1 second</span>
 <span class="c1">// Vibrate for 3 seconds</span>
 <span class="c1">// Wait for 1 second</span>
 <span class="c1">// Vibrate for 5 seconds</span>
 <span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">]);</span>
-</code></pre></div>
+</code></pre></div></div>
+
 <h4>Quirks</h4>
 
 <ul>
-<li>Not supported on iOS</li>
+  <li>Not supported on iOS</li>
 </ul>
 
 <h3>Cancel vibration</h3>
 
 <p>Immediately cancels any currently running vibration.</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
 <p>or</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([])</span>
-</code></pre></div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([])</span>
+</code></pre></div></div>
 <p>or</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
-</code></pre></div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div></div>
 <p>Passing in a parameter of 0, an empty array, or an array with one element of value 0 will cancel any vibrations.</p>
 
 <h4>Quirks</h4>
 
 <ul>
-<li>Not supported on iOS</li>
+  <li>Not supported on iOS</li>
 </ul>
 
 

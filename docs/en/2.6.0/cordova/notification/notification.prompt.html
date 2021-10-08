@@ -1544,13 +1544,15 @@
                 <h1>notification.prompt</h1>
 
 <p>Shows a customizable prompt dialog box.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.notification.prompt(message, promptCallback, [title], [buttonLabels])
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.notification.prompt(message, promptCallback, [title], [buttonLabels])
+</code></pre></div></div>
+
 <ul>
-<li><strong>message:</strong> Dialog message (<code>String</code>)</li>
-<li><strong>promptCallback:</strong> - Callback to invoke when a button is pressed (<code>Function</code>)</li>
-<li><strong>title:</strong> Dialog title (<code>String</code>) (Optional, Default: &quot;Prompt&quot;)</li>
-<li><strong>buttonLabels:</strong> Array of strings for the button labels (<code>Array</code>) (Optional, Default: [&quot;OK&quot;,&quot;Cancel&quot;])</li>
+  <li><strong>message:</strong> Dialog message (<code>String</code>)</li>
+  <li><strong>promptCallback:</strong> - Callback to invoke when a button is pressed (<code>Function</code>)</li>
+  <li><strong>title:</strong> Dialog title (<code>String</code>) (Optional, Default: &quot;Prompt&quot;)</li>
+  <li><strong>buttonLabels:</strong> Array of strings for the button labels (<code>Array</code>) (Optional, Default: [&quot;OK&quot;,&quot;Cancel&quot;])</li>
 </ul>
 
 <h2>Description</h2>
@@ -1564,19 +1566,20 @@
 <p>The callback takes the argument <code>results</code> which contains the following properties:</p>
 
 <ul>
-<li><strong>buttonIndex:</strong> (<code>Number</code>), which is the index of the pressed button. It&#39;s important to note that the index uses one-based indexing, so the value will be <code>1</code>, <code>2</code>, <code>3</code>, etc.</li>
-<li><strong>input1:</strong> (<code>String</code>), which is the text entered in the prompt dialog box.</li>
+  <li><strong>buttonIndex:</strong> (<code>Number</code>), which is the index of the pressed button. It&#39;s important to note that the index uses one-based indexing, so the value will be <code>1</code>, <code>2</code>, <code>3</code>, etc.</li>
+  <li><strong>input1:</strong> (<code>String</code>), which is the text entered in the prompt dialog box.</li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>iPhone</li>
+  <li>Android</li>
+  <li>iPhone</li>
 </ul>
 
 <h2>Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang="">// process the promp dialog results
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// process the promp dialog results
 function onPrompt(results) {
     alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
 }
@@ -1586,59 +1589,62 @@ function onPrompt(results) {
 function showPrompt() {
     navigator.notification.prompt(
         'Please enter your name',  // message
-        onPrompt,                  // callback to invoke
+        onPrompt,	               // callback to invoke
         'Registration',            // title
         ['Ok','Exit']              // buttonLabels
     );
 }
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Notification Prompt Dialog Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova-2.6.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Notification Prompt Dialog Example&lt;/title&gt;
 
-    <span class="c1">// Wait for Cordova to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// Cordova is ready</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// Empty</span>
-    <span class="p">}</span>
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="c1">// process the promptation dialog result</span>
-    <span class="kd">function</span> <span class="nx">onPrompt</span><span class="p">(</span><span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s2">"You selected button number "</span> <span class="o">+</span> <span class="nx">results</span><span class="p">.</span><span class="nx">buttonIndex</span> <span class="o">+</span> <span class="s2">" and entered "</span> <span class="o">+</span> <span class="nx">results</span><span class="p">.</span><span class="nx">input1</span><span class="p">);</span>
-    <span class="p">}</span>
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        // Empty
+    }
 
-    <span class="c1">// Show a custom prompt dialog</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">showPrompt</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">navigator</span><span class="p">.</span><span class="nx">notification</span><span class="p">.</span><span class="nx">prompt</span><span class="p">(</span>
-            <span class="s1">'Please enter your name'</span><span class="p">,</span>  <span class="c1">// message</span>
-            <span class="nx">onPrompt</span><span class="p">,</span>                  <span class="c1">// callback to invoke</span>
-            <span class="s1">'Registration'</span><span class="p">,</span>            <span class="c1">// title</span>
-            <span class="p">[</span><span class="s1">'Ok'</span><span class="p">,</span><span class="s1">'Exit'</span><span class="p">]</span>              <span class="c1">// buttonLabels</span>
-        <span class="p">);</span>
-    <span class="p">}</span>
+    // process the promptation dialog result
+    function onPrompt(results) {
+        alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
+    }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">onclick=</span><span class="s">"showPrompt(); return false;"</span><span class="nt">&gt;</span>Show Prompt<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // Show a custom prompt dialog
+    //
+    function showPrompt() {
+        navigator.notification.prompt(
+            'Please enter your name',  // message
+            onPrompt,                  // callback to invoke
+            'Registration',            // title
+            ['Ok','Exit']              // buttonLabels
+        );
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;a href="#" onclick="showPrompt(); return false;"&gt;Show Prompt&lt;/a&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 <h2>Android Quirks</h2>
 
 <ul>
-<li>Android supports up to a maximum of 3 buttons.  Additional button labels over 3 are ignored.</li>
-<li>On Android 3.0 and later, the buttons will be displayed in reverse order for devices using the Holo theme.</li>
+  <li>Android supports up to a maximum of 3 buttons.  Additional button labels over 3 are ignored.</li>
+  <li>On Android 3.0 and later, the buttons will be displayed in reverse order for devices using the Holo theme.</li>
 </ul>
 
 

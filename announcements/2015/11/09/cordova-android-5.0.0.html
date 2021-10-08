@@ -134,58 +134,61 @@
             <p>We are happy to announce that <code>Cordova Android 5.0.0</code> has been released.</p>
 
 <p>With this release, there is now support for <strong>Android Marshmallow</strong> permission checking in plugins. Due to the nature of the recent <strong>Android</strong> changes, the major version has been incremented to reflect the new API changes.  Only plugins that use certain permissions as defined by <strong>Google</strong> are affected by this change. The following core plugins needed to be updated:</p>
-
 <ul>
-<li><code>cordova-plugin-camera</code></li>
-<li><code>cordova-plugin-geolocation</code></li>
-<li><code>cordova-plugin-contacts</code></li>
-<li><code>cordova-plugin-file</code></li>
-<li><code>cordova-plugin-media</code></li>
+  <li><code>cordova-plugin-camera</code></li>
+  <li><code>cordova-plugin-geolocation</code></li>
+  <li><code>cordova-plugin-contacts</code></li>
+  <li><code>cordova-plugin-file</code></li>
+  <li><code>cordova-plugin-media</code></li>
 </ul>
 
 <p>We are in the process of releasing these plugins to <a href="https://www.npmjs.com/">npm</a>. If you decide to update to <code>cordova-android@5.0.0</code> before we release the plugins, please install these updated plugins via <code>git</code> for now.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin add https://github.com/apache/cordova-plugin-camera.git
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add https://github.com/apache/cordova-plugin-camera.git
+</code></pre></div></div>
+
 <p>Information on how to use the new <strong>Android Permission APIs</strong> can be found in the Cordova documentation, which can be found <a href="http://cordova.apache.org/docs/en/latest/guide/platforms/android/plugin.html">here</a>.</p>
 
 <p>To upgrade:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android@5.0.0
-</code></pre></div>
+</code></pre></div></div>
+
 <p>To add it explicitly:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova platform add android@5.0.0
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@5.0.0
+</code></pre></div></div>
+
 <!--more-->
-
 <h2>What&#39;s new in Android platform</h2>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-9909">CB-9909</a> Shouldn&#39;t escape spaces in paths on <strong>Windows</strong>.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9870">CB-9870</a> updated hello world template</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9880">CB-9880</a> Fixes platform update failure when upgrading from <code>android@&lt;4.1.0</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9844">CB-9844</a> Remove old <code>.java</code> after renaming activity</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9800">CB-9800</a>  Fixing contribute link.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9782">CB-9782</a>  Check in <code>cordova-common</code> dependency</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9909">CB-9835</a> Downgrade <code>properties-parser</code> to prevent failures in <strong>Node</strong> &lt; <code>4.x</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9782">CB-9782</a>  Implements PlatformApi contract for Android platform.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9826">CB-9826</a>  Fixed <code>test-build</code> script on windows.</li>
-<li>Refactor of the Cordova Plugin/Permissions API</li>
-<li>Bump up to API level 23</li>
-<li>Commiting code to handle permissions, and the special case of the Geolocation Plugin</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9608">CB-9608</a> <code>cordova-android</code> no longer builds on <strong>Node 0.10</strong> or below</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9080">CB-9080</a> <code>Cordova CLI</code> run for <strong>Android</strong> versions <code>4.1.1</code> and lower throws error</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9557">CB-9557</a> Fixes apk install failure when switching from debug to release build</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9496">CB-9496</a> removed permissions added for crosswalk</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9402">CB-9402</a>  Allow to set gradle<code>distubutionUrl</code> via <code>env variable</code> <code>CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9428">CB-9428</a>  update script now bumps up <code>minSdkVersion</code> to <code>14</code> if it is less than that.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9430">CB-9430</a>  Fixes <code>check_reqs</code> failure when <code>javac</code> returns an extra line</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9172">CB-9172</a>  Improved emulator deploy stability. </li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9409">CB-9404</a>  Fixed an exception when path contained <code>-debug</code> or <code>-release</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8320">CB-8320</a>  Setting up gradle so we can use <code>CordovaLib</code> as a standard <strong>Android</strong> Library</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9185">CB-9185</a>  Fixed an issue when unsigned apks couldn&#39;t be found.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9397">CB-9397</a>  Fixes minor issues with <code>cordova requirements android</code></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9389">CB-9389</a>  Fixes build/check_reqs hang</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9909">CB-9909</a> Shouldn&#39;t escape spaces in paths on <strong>Windows</strong>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9870">CB-9870</a> updated hello world template</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9880">CB-9880</a> Fixes platform update failure when upgrading from <code>android@&lt;4.1.0</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9844">CB-9844</a> Remove old <code>.java</code> after renaming activity</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9800">CB-9800</a>  Fixing contribute link.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9782">CB-9782</a>  Check in <code>cordova-common</code> dependency</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9909">CB-9835</a> Downgrade <code>properties-parser</code> to prevent failures in <strong>Node</strong> &lt; <code>4.x</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9782">CB-9782</a>  Implements PlatformApi contract for Android platform.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9826">CB-9826</a>  Fixed <code>test-build</code> script on windows.</li>
+  <li>Refactor of the Cordova Plugin/Permissions API</li>
+  <li>Bump up to API level 23</li>
+  <li>Commiting code to handle permissions, and the special case of the Geolocation Plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9608">CB-9608</a> <code>cordova-android</code> no longer builds on <strong>Node 0.10</strong> or below</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9080">CB-9080</a> <code>Cordova CLI</code> run for <strong>Android</strong> versions <code>4.1.1</code> and lower throws error</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9557">CB-9557</a> Fixes apk install failure when switching from debug to release build</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9496">CB-9496</a> removed permissions added for crosswalk</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9402">CB-9402</a>  Allow to set gradle<code> distubutionUrl</code> via <code>env variable</code> <code>CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9428">CB-9428</a>  update script now bumps up <code>minSdkVersion</code> to <code>14</code> if it is less than that.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9430">CB-9430</a>  Fixes <code>check_reqs</code> failure when <code>javac</code> returns an extra line</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9172">CB-9172</a>  Improved emulator deploy stability.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9409">CB-9404</a>  Fixed an exception when path contained <code>-debug</code> or <code>-release</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8320">CB-8320</a>  Setting up gradle so we can use <code>CordovaLib</code> as a standard <strong>Android</strong> Library</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9185">CB-9185</a>  Fixed an issue when unsigned apks couldn&#39;t be found.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9397">CB-9397</a>  Fixes minor issues with <code>cordova requirements android</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9389">CB-9389</a>  Fixes build/check_reqs hang</li>
 </ul>
 
         </div>

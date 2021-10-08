@@ -1640,13 +1640,23 @@
                 <h1>notification.alert</h1>
 
 <p>Shows a custom alert or dialog box.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">navigator.notification.alert(message, alertCallback, [title], [buttonName])
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.notification.alert(message, alertCallback, [title], [buttonName])
+</code></pre></div></div>
+
 <ul>
-<li><p><strong>message</strong>: Dialog message. <em>(String)</em></p></li>
-<li><p><strong>alertCallback</strong>: Callback to invoke when alert dialog is dismissed. <em>(Function)</em></p></li>
-<li><p><strong>title</strong>: Dialog title. <em>(String)</em> (Optional, defaults to <code>Alert</code>)</p></li>
-<li><p><strong>buttonName</strong>: Button name. <em>(String)</em> (Optional, defaults to <code>OK</code>)</p></li>
+  <li>
+    <p><strong>message</strong>: Dialog message. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>alertCallback</strong>: Callback to invoke when alert dialog is dismissed. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>title</strong>: Dialog title. <em>(String)</em> (Optional, defaults to <code>Alert</code>)</p>
+  </li>
+  <li>
+    <p><strong>buttonName</strong>: Button name. <em>(String)</em> (Optional, defaults to <code>OK</code>)</p>
+  </li>
 </ul>
 
 <h2>Description</h2>
@@ -1658,17 +1668,18 @@ typically less customizable.</p>
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Amazon Fire OS</li>
-<li>Android</li>
-<li>BlackBerry 10</li>
-<li>iOS</li>
-<li>Tizen</li>
-<li>Windows Phone 7 and 8</li>
-<li>Windows 8</li>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
 </ul>
 
 <h2>Quick Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">// Amazon Fire OS / Android / BlackBerry 10 (OS 5.0 and higher) / iOS / Tizen
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Amazon Fire OS / Android / BlackBerry 10 (OS 5.0 and higher) / iOS / Tizen
 //
 function alertDismissed() {
     // do something
@@ -1680,57 +1691,66 @@ navigator.notification.alert(
     'Game Over',            // title
     'Done'                  // buttonName
 );
-</code></pre></div>
+</code></pre></div></div>
+
 <h2>Full Example</h2>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Notification Example<span class="nt">&lt;/title&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">src=</span><span class="s">"cordova.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Notification Example&lt;/title&gt;
 
-    <span class="c1">// Wait for device API libraries to load</span>
-    <span class="c1">//</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
 
-    <span class="c1">// device APIs are available</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// Empty</span>
-    <span class="p">}</span>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    <span class="c1">// alert dialog dismissed</span>
-        <span class="kd">function</span> <span class="nx">alertDismissed</span><span class="p">()</span> <span class="p">{</span>
-            <span class="c1">// do something</span>
-        <span class="p">}</span>
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Empty
+    }
 
-    <span class="c1">// Show a custom alertDismissed</span>
-    <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">showAlert</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">navigator</span><span class="p">.</span><span class="nx">notification</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span>
-            <span class="s1">'You are the winner!'</span><span class="p">,</span>  <span class="c1">// message</span>
-            <span class="nx">alertDismissed</span><span class="p">,</span>         <span class="c1">// callback</span>
-            <span class="s1">'Game Over'</span><span class="p">,</span>            <span class="c1">// title</span>
-            <span class="s1">'Done'</span>                  <span class="c1">// buttonName</span>
-        <span class="p">);</span>
-    <span class="p">}</span>
+    // alert dialog dismissed
+        function alertDismissed() {
+            // do something
+        }
 
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">onclick=</span><span class="s">"showAlert(); return false;"</span><span class="nt">&gt;</span>Show Alert<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    // Show a custom alertDismissed
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;a href="#" onclick="showAlert(); return false;"&gt;Show Alert&lt;/a&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
 <h2>Windows Phone 7 and 8 Quirks</h2>
 
 <ul>
-<li><p>There is no built-in browser alert, but you can bind one as follows to call <code>alert()</code> in the global scope:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">window.alert = navigator.notification.alert;
-</code></pre></div></li>
-<li><p>Both <code>alert</code> and <code>confirm</code> are non-blocking calls, results of which are only available asynchronously.</p></li>
+  <li>
+    <p>There is no built-in browser alert, but you can bind one as follows to call <code>alert()</code> in the global scope:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  window.alert = navigator.notification.alert;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Both <code>alert</code> and <code>confirm</code> are non-blocking calls, results of which are only available asynchronously.</p>
+  </li>
 </ul>
+
 
 
             </div>

@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released cordova-lib 9.0.0!cordova-lib@9.0.0Release HighlightsIn addition to various improvements and fixes, this ...">
+    <meta name="description" content="We are happy to announce that we have just released cordova-lib 9.0.0!  cordova-lib@9.0.0Release HighlightsIn addition to various improvements and fixes, thi...">
 
     <title>
         
@@ -134,7 +134,7 @@
             <p>We are happy to announce that we have just released <code>cordova-lib 9.0.0</code>!</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-lib">cordova-lib@9.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-lib">cordova-lib@9.0.0</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
@@ -146,66 +146,77 @@
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-lib/pull/750">GH-750</a> Remove saving platforms/plugins to <code>config.xml</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/751">GH-751</a> Pass project <code>config.xml</code> path to platform&#39;s prepare</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/749">GH-749</a> Cordova Lib Release Preparation (Cordova 9)
-
-<ul>
-<li>Remove unused property <code>apiCompatibleSince</code> from <code>platformsConfig.json</code></li>
-<li>Fix plugin dependency tests when using <code>npm &gt;= 5</code></li>
-<li>Bumped Platform Pinning and Support Minor SemVer</li>
-<li><code>cordova-android@^8.0.0</code></li>
-<li><code>cordova-browser@^6.0.0</code></li>
-<li><code>cordova-electron@^1.0.0</code></li>
-<li><code>cordova-ios@^5.0.0</code></li>
-<li><code>cordova-osx@^5.0.0</code></li>
-<li><code>cordova-windows@^7.0.0</code></li>
-<li>Bumped dependencies</li>
-<li><code>jasmine@^3.3.1</code></li>
-<li><code>globby@^9.1.0</code></li>
-<li><code>underscore@^1.9.1</code></li>
-<li><code>semver@^5.6.0</code></li>
-<li><code>read-chunk@^3.1.0</code></li>
-<li><code>init-package-json@^1.10.3</code></li>
-<li><code>fs-extra@^7.0.1</code></li>
-<li>Dev Dependencies</li>
-<li>Updated <code>nyc</code> Code Coverage</li>
-<li>Updated ESlint with lint corrections</li>
-<li>Added missing module <code>shelljs</code> to fix test failures</li>
-<li>Updated Package Cordova Dependencies</li>
-<li><code>cordova-common@^3.1.0</code></li>
-<li><code>cordova-create@^2.0.0</code></li>
-<li><code>cordova-fetch@^2.0.0</code></li>
-<li><code>cordova-serve@^3.0.0</code></li>
-</ul></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/748">GH-748</a> Remove handling of legacy <code>.fetch.json</code> files</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/709">GH-709</a> <code>hooks/Context</code> Improvements</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/622">GH-622</a> <a href="https://issues.apache.org/jira/browse/CB-14166">CB-14166</a> (cli) Fixed issue when install plugins on <strong>Windows</strong></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/744">GH-744</a> Add <strong>Electron</strong> Platform</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/741">GH-741</a> Fix crash in <code>cordova requirements</code> due to an unbound function</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/710">GH-710</a> Drop <code>Q</code> Dependency and Use Native Promises</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/687">GH-687</a> Test, Fix and Cleanup <code>cordova serve</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/707">GH-707</a> Deprecate <code>requireCordovaModule</code> for non-Cordova modules</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/705">GH-705</a> Dereference possible symlinks when copying plugin</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/686">GH-686</a> Remove support for old option format</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/685">GH-685</a> Remove unused dependency <code>properties-parser</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/684">GH-684</a> Code Cleanup and Refactor (Bits and pieces)</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/683">GH-683</a> Remove unused npm utility functions</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/682">GH-682</a> GH-676 Remove Browserify</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/652">GH-652</a> Make <code>plugin.remove</code> more easily understandable</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/650">GH-650</a> Make <code>cordova/platform/check</code> more approachable</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/613">GH-613</a> Switch to using <code>fs-extra</code> in favour of <code>shelljs</code></li>
-<li><a href="https://github.com/apache/cordova-lib/pull/671">GH-671</a> Remove <code>cordova plugin search</code> command</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/666">GH-666</a> Remove deprecated and unused content</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/651">GH-651</a> Remove all usage of Q-specific methods on Promise instances</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/662">GH-662</a> Remove unused content</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/663">GH-663</a> Update <code>read-chunk</code> to properly close file descriptors on failure</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/658">GH-658</a> Remove deprecated platform support files</li>
-<li><a href="https://github.com/apache/cordova-lib/pull/616">GH-616</a> Extend and improve <code>cordova info</code> output</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/750">GH-750</a> Remove saving platforms/plugins to <code>config.xml</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/751">GH-751</a> Pass project <code>config.xml</code> path to platform&#39;s prepare</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/749">GH-749</a> Cordova Lib Release Preparation (Cordova 9)
+    <ul>
+      <li>Remove unused property <code>apiCompatibleSince</code> from <code>platformsConfig.json</code></li>
+      <li>Fix plugin dependency tests when using <code>npm &gt;= 5</code></li>
+      <li>Bumped Platform Pinning and Support Minor SemVer
+        <ul>
+          <li><code>cordova-android@^8.0.0</code></li>
+          <li><code>cordova-browser@^6.0.0</code></li>
+          <li><code>cordova-electron@^1.0.0</code></li>
+          <li><code>cordova-ios@^5.0.0</code></li>
+          <li><code>cordova-osx@^5.0.0</code></li>
+          <li><code>cordova-windows@^7.0.0</code></li>
+        </ul>
+      </li>
+      <li>Bumped dependencies
+        <ul>
+          <li><code>jasmine@^3.3.1</code></li>
+          <li><code>globby@^9.1.0</code></li>
+          <li><code>underscore@^1.9.1</code></li>
+          <li><code>semver@^5.6.0</code></li>
+          <li><code>read-chunk@^3.1.0</code></li>
+          <li><code>init-package-json@^1.10.3</code></li>
+          <li><code>fs-extra@^7.0.1</code></li>
+        </ul>
+      </li>
+      <li>Dev Dependencies
+        <ul>
+          <li>Updated <code>nyc</code> Code Coverage</li>
+          <li>Updated ESlint with lint corrections</li>
+          <li>Added missing module <code>shelljs</code> to fix test failures</li>
+        </ul>
+      </li>
+      <li>Updated Package Cordova Dependencies
+        <ul>
+          <li><code>cordova-common@^3.1.0</code></li>
+          <li><code>cordova-create@^2.0.0</code></li>
+          <li><code>cordova-fetch@^2.0.0</code></li>
+          <li><code>cordova-serve@^3.0.0</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/748">GH-748</a> Remove handling of legacy <code>.fetch.json</code> files</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/709">GH-709</a> <code>hooks/Context</code> Improvements</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/622">GH-622</a> <a href="https://issues.apache.org/jira/browse/CB-14166">CB-14166</a> (cli) Fixed issue when install plugins on <strong>Windows</strong></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/744">GH-744</a> Add <strong>Electron</strong> Platform</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/741">GH-741</a> Fix crash in <code>cordova requirements</code> due to an unbound function</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/710">GH-710</a> Drop <code>Q</code> Dependency and Use Native Promises</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/687">GH-687</a> Test, Fix and Cleanup <code>cordova serve</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/707">GH-707</a> Deprecate <code>requireCordovaModule</code> for non-Cordova modules</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/705">GH-705</a> Dereference possible symlinks when copying plugin</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/686">GH-686</a> Remove support for old option format</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/685">GH-685</a> Remove unused dependency <code>properties-parser</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/684">GH-684</a> Code Cleanup and Refactor (Bits and pieces)</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/683">GH-683</a> Remove unused npm utility functions</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/682">GH-682</a> GH-676 Remove Browserify</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/652">GH-652</a> Make <code>plugin.remove</code> more easily understandable</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/650">GH-650</a> Make <code>cordova/platform/check</code> more approachable</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/613">GH-613</a> Switch to using <code>fs-extra</code> in favour of <code>shelljs</code></li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/671">GH-671</a> Remove <code>cordova plugin search</code> command</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/666">GH-666</a> Remove deprecated and unused content</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/651">GH-651</a> Remove all usage of Q-specific methods on Promise instances</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/662">GH-662</a> Remove unused content</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/663">GH-663</a> Update <code>read-chunk</code> to properly close file descriptors on failure</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/658">GH-658</a> Remove deprecated platform support files</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/616">GH-616</a> Extend and improve <code>cordova info</code> output</li>
 </ul>
 
         </div>

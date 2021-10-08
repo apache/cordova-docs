@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released Cordova iOS 5.1.0! This is Cordova&#39;s official platform for building iOS mobile applications.cordova-i...">
+    <meta name="description" content="We are happy to announce that we have just released Cordova iOS 5.1.0! This is Cordova&#39;s official platform for building iOS mobile applications.  cordova...">
 
     <title>
         
@@ -134,46 +134,47 @@
             <p>We are happy to announce that we have just released <code>Cordova iOS 5.1.0</code>! This is Cordova&#39;s official platform for building iOS mobile applications.</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@5.1.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@5.1.0</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
 
 <p><strong>To upgrade:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform remove ios
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove ios
 cordova platform add ios@5.1.0
-</code></pre></div>
+</code></pre></div></div>
+
 <p>The most notable improvements in this minor release are:</p>
 
 <ul>
-<li>The ability to disable <code>UIWebView</code> during the compile-time.</li>
-<li>Avoid locking when adding platforms on a non-synced pods repo. (CocoaPods &gt;=1.8.0)</li>
-<li>Bumped the <code>minDeploymentTarget</code> to <code>10.0</code> in Podfile.</li>
+  <li>The ability to disable <code>UIWebView</code> during the compile-time.</li>
+  <li>Avoid locking when adding platforms on a non-synced pods repo. (CocoaPods &gt;=1.8.0)</li>
+  <li>Bumped the <code>minDeploymentTarget</code> to <code>10.0</code> in Podfile.</li>
 </ul>
 
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
-
 <h1>Changes include:</h1>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-ios/pull/719">GH-719</a> Add check for newer versions of cocoapods to avoid locking adding platforms on non synced pods repo</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/715">GH-715</a> feat: add optional compile-time decision for disabling <code>UIWebView</code></li>
-<li><a href="https://github.com/apache/cordova-ios/pull/712">GH-712</a> Update Xcode versions used in CI to latest minor release</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/710">GH-710</a> Lint everything</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/614">GH-614</a> Don&#39;t use whitespace as an indent indicator</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/704">GH-704</a> Reuse common <code>xcodebuild</code> arguments in npm scripts</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/705">GH-705</a> Let Jasmine handle <code>async</code> test results</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/703">GH-703</a> Reduce verbosity of <code>xcodebuild</code> output during tests</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/702">GH-702</a> Fix, simplify and improve tests</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/695">GH-695</a> fix: Support all valid SemVer syntax in version comparison helper</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/608">GH-608</a> chore: add Node.js 12 to CI services</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/650">GH-650</a> fix(<code>build.json</code>): spacing in error message and missing path in log</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/646">GH-646</a> <code>tmp@0.1</code> update in devDependencies</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/635">GH-635</a> Bump default <code>minDeploymentTarget</code> to 10.0 in Podfile</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/632">GH-632</a> Update jasmine &amp; fix broken tests</li>
-<li><a href="https://github.com/apache/cordova-ios/pull/622">GH-622</a> Remove outdated component/duo package manager package definition</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/719">GH-719</a> Add check for newer versions of cocoapods to avoid locking adding platforms on non synced pods repo</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/715">GH-715</a> feat: add optional compile-time decision for disabling <code>UIWebView</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/712">GH-712</a> Update Xcode versions used in CI to latest minor release</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/710">GH-710</a> Lint everything</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/614">GH-614</a> Don&#39;t use whitespace as an indent indicator</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/704">GH-704</a> Reuse common <code>xcodebuild</code> arguments in npm scripts</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/705">GH-705</a> Let Jasmine handle <code>async</code> test results</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/703">GH-703</a> Reduce verbosity of <code>xcodebuild</code> output during tests</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/702">GH-702</a> Fix, simplify and improve tests</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/695">GH-695</a> fix: Support all valid SemVer syntax in version comparison helper</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/608">GH-608</a> chore: add Node.js 12 to CI services</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/650">GH-650</a> fix(<code>build.json</code>): spacing in error message and missing path in log</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/646">GH-646</a> <code>tmp@0.1</code> update in devDependencies</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/635">GH-635</a> Bump default <code>minDeploymentTarget</code> to 10.0 in Podfile</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/632">GH-632</a> Update jasmine &amp; fix broken tests</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/622">GH-622</a> Remove outdated component/duo package manager package definition</li>
 </ul>
 
         </div>

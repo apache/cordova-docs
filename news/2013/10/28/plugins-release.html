@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="Today we are doing a plugins and tooling release in preparation for Cordova 3.2.0. Most notable changes include:Cordova CLI &amp; Plugman have been refactore...">
+    <meta name="description" content="Today we are doing a plugins and tooling release in preparation for Cordova 3.2.0. Most notable changes include:  Cordova CLI &amp; Plugman have been refacto...">
 
     <title>
         
@@ -134,13 +134,13 @@
             <p>Today we are doing a plugins and tooling release in preparation for Cordova 3.2.0. Most notable changes include:</p>
 
 <ul>
-<li>Cordova CLI &amp; Plugman have been refactored to use promises instead of callbacks</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5125">CB-5125</a> Replace shell.exec with child process spawn</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-2234">CB-2234</a> Added cordova info command</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5128">CB-5128</a> Repo &amp; Issue tags have been added to all of our core plugins plugin.xml file. This will allow us to display issue tracker and repo information on our registry.</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5184">CB-5184</a> Fix uninstall logic being too aggressive (plugman)</li>
-<li>Overhauled dependency uninstallation in regards to plugins (plugman)</li>
-<li>FirefoxOS support for device-motion, device-orientation and dialogs plugins.</li>
+  <li>Cordova CLI &amp; Plugman have been refactored to use promises instead of callbacks</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5125">CB-5125</a> Replace shell.exec with child process spawn</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-2234">CB-2234</a> Added cordova info command</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5128">CB-5128</a> Repo &amp; Issue tags have been added to all of our core plugins plugin.xml file. This will allow us to display issue tracker and repo information on our registry.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5184">CB-5184</a> Fix uninstall logic being too aggressive (plugman)</li>
+  <li>Overhauled dependency uninstallation in regards to plugins (plugman)</li>
+  <li>FirefoxOS support for device-motion, device-orientation and dialogs plugins.</li>
 </ul>
 
 <p>The plugins have been updated on our registry at <a href="http://plugins.cordova.io/">plugins.cordova.io</a>.</p>
@@ -148,33 +148,40 @@
 <!--more-->
 
 <p>E.g. To update your version of the Cordova-CLI to 3.1.0-0.2.0:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
-</code></pre></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
+</code></pre></div></div>
+
 <p>E.g. To update your vibration plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm org.apache.cordova.vibration
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm org.apache.cordova.vibration
 cordova plugin add org.apache.cordova.vibration
-</code></pre></div>
+</code></pre></div></div>
+
 <p>E.g. To upgrade a 3.0 project (replace <code>android</code> with the platform you want to update):</p>
-<div class="highlight"><pre><code class="language-" data-lang="">npm install -g cordova
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
 cd my_project
 cordova platform update android
-</code></pre></div>
+</code></pre></div></div>
+
 <p><em>Notable Changes</em></p>
 
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-5106">CB-5106</a> - Fix broken tests (Cordova-CLI)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4958">CB-4958</a> - iOS - Camera plugin should not show the status bar (camera)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5154">CB-5154</a> log formatting incorrectly to native (console)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4825">CB-4825</a> use CoreMotion framework for accelerometer (device-motion)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5129">CB-5129</a>: Add a consistent filesystem attribute to FileEntry and DirectoryEntry objects (file)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5015">CB-5015</a> BlackBerry10 Add missing dependency for File.slice (file)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4995">CB-4995</a> Fix crash when WebView is quickly opened then closed (inappbrowser)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4930">CB-4930</a> - iOS - InAppBrowser should take into account the status bar (inappbrowser)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-4858">CB-4858</a> Convert relative URLs to absolute URLs in JS (inappbrowser)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-3747">CB-3747</a> Fix back button having different dismiss logic from the close button. (inappbrowser)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5021">CB-5021</a> Expose closeDialog() as a public function and make it safe to call multiple times. (inappbrowser)</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-5199">CB-5199</a> - ios - Media Capture - UI issues under iOS 7 (media capture)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5106">CB-5106</a> - Fix broken tests (Cordova-CLI)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4958">CB-4958</a> - iOS - Camera plugin should not show the status bar (camera)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5154">CB-5154</a> log formatting incorrectly to native (console)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4825">CB-4825</a> use CoreMotion framework for accelerometer (device-motion)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5129">CB-5129</a>: Add a consistent filesystem attribute to FileEntry and DirectoryEntry objects (file)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5015">CB-5015</a> BlackBerry10 Add missing dependency for File.slice (file)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4995">CB-4995</a> Fix crash when WebView is quickly opened then closed (inappbrowser)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4930">CB-4930</a> - iOS - InAppBrowser should take into account the status bar (inappbrowser)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4858">CB-4858</a> Convert relative URLs to absolute URLs in JS (inappbrowser)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3747">CB-3747</a> Fix back button having different dismiss logic from the close button. (inappbrowser)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5021">CB-5021</a> Expose closeDialog() as a public function and make it safe to call multiple times. (inappbrowser)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5199">CB-5199</a> - ios - Media Capture - UI issues under iOS 7 (media capture)</li>
 </ul>
+
 
         </div>
     </section>

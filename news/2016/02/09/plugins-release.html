@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="The following plugins were updated today:cordova-plugin file@4.1.1cordova-plugin-inappbrowser@1.3.0cordova-plugin-media@2.2.0cordova-plugin-statusbar@2.1.1co...">
+    <meta name="description" content="The following plugins were updated today:  cordova-plugin file@4.1.1  cordova-plugin-inappbrowser@1.3.0  cordova-plugin-media@2.2.0  cordova-plugin-statusbar...">
 
     <title>
         
@@ -134,76 +134,70 @@
             <p>The following plugins were updated today:</p>
 
 <ul>
-<li>cordova-plugin file@4.1.1</li>
-<li>cordova-plugin-inappbrowser@1.3.0</li>
-<li>cordova-plugin-media@2.2.0</li>
-<li>cordova-plugin-statusbar@2.1.1</li>
-<li>cordova-plugin-splashscreen@3.2.0</li>
-<li>cordova-plugin-wkwebviewengine@1.0.2</li>
+  <li>cordova-plugin file@4.1.1</li>
+  <li>cordova-plugin-inappbrowser@1.3.0</li>
+  <li>cordova-plugin-media@2.2.0</li>
+  <li>cordova-plugin-statusbar@2.1.1</li>
+  <li>cordova-plugin-splashscreen@3.2.0</li>
+  <li>cordova-plugin-wkwebviewengine@1.0.2</li>
 </ul>
 
-<hr>
-
+<hr />
 <p>You can update any plugin by removing it, and then re-adding it.</p>
 
 <p>E.g. To update your media plugin:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">cordova plugin rm cordova-plugin-media --save
-cordova plugin add cordova-plugin-media@2.2.0 --save
-</code></pre></div>
-<p>Changes include:</p>
 
-<!--more-->
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin rm cordova-plugin-media --save
+cordova plugin add cordova-plugin-media@2.2.0 --save
+</code></pre></div></div>
+
+<p>Changes include:
+<!--more--></p>
 
 <p>cordova-plugin file@4.1.1</p>
-
 <ul>
-<li>Edit <code>package.json</code> <code>license</code> to match SPDX id</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10419">CB-10419</a> cordova-plugin-file 4.0.0 error with browserify workflow</li>
+  <li>Edit <code>package.json</code> <code>license</code> to match SPDX id</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10419">CB-10419</a> cordova-plugin-file 4.0.0 error with browserify workflow</li>
 </ul>
 
 <p>cordova-plugin-inappbrowser@1.3.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-3360">CB-3360</a> Set custom inappbrowser user agent for <strong>Android</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10538">CB-10538</a> cordova-plugin-inappbrowser timeout issue</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10395">CB-10395</a> InAppBrowser&#39;s WebView not storing cookies reliable on <strong>Android</strong></li>
-<li>Edit package.json license to match SPDX id</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10305">CB-10305</a> Gray bar appears in the wrong place on <strong>iOS</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7786">CB-7786</a> Support <code>mediaPlaybackRequiresUserAction</code> on <strong>Android</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-7500">CB-7500</a> <code>executeScript</code> with callback kills/blurs inAppBrowser window on <strong>Android</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-3360">CB-3360</a> Set custom inappbrowser user agent for <strong>Android</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10538">CB-10538</a> cordova-plugin-inappbrowser timeout issue</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10395">CB-10395</a> InAppBrowser&#39;s WebView not storing cookies reliable on <strong>Android</strong></li>
+  <li>Edit package.json license to match SPDX id</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10305">CB-10305</a> Gray bar appears in the wrong place on <strong>iOS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7786">CB-7786</a> Support <code>mediaPlaybackRequiresUserAction</code> on <strong>Android</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7500">CB-7500</a> <code>executeScript</code> with callback kills/blurs inAppBrowser window on <strong>Android</strong></li>
 </ul>
 
 <p>cordova-plugin-media@2.2.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10476">CB-10476</a> Fix problem where callbacks were not invoked on <strong>Android</strong> due to <code>messageChannel</code> being overridden by <code>callbackContext</code> in every <code>execute()</code> call</li>
-<li>Edit package.json license to match SPDX id</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10455">CB-10455</a> <strong>Android</strong>: Adding permission helper to remove cordova-android 5.0.0 constraint</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-57">CB-57</a> Updated to use <code>avplayer</code> when url starts with http:// or https:// for full streaming support</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8222">CB-8222</a> Background thread on play to prevent locking during initial load of media</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10476">CB-10476</a> Fix problem where callbacks were not invoked on <strong>Android</strong> due to <code>messageChannel</code> being overridden by <code>callbackContext</code> in every <code>execute()</code> call</li>
+  <li>Edit package.json license to match SPDX id</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10455">CB-10455</a> <strong>Android</strong>: Adding permission helper to remove cordova-android 5.0.0 constraint</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-57">CB-57</a> Updated to use <code>avplayer</code> when url starts with http:// or https:// for full streaming support</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8222">CB-8222</a> Background thread on play to prevent locking during initial load of media</li>
 </ul>
 
 <p>cordova-plugin-statusbar@2.1.1</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10102">CB-10102</a> The <code>removeObserver</code> code was wrong and it might crash on plugin deallocation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10102">CB-10102</a> The <code>removeObserver</code> code was wrong and it might crash on plugin deallocation</li>
 </ul>
 
 <p>cordova-plugin-splashscreen@3.2.0</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10422">CB-10422</a> Splashscreen displays black screen with no image on <strong>Android</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10412">CB-10412</a> <code>AutoHideSplashScreen</code> &quot;false&quot; isn&#39;t taken in account on <strong>iOS</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9516">CB-9516</a> <strong>Android</strong> SplashScreen - Spinner Does Not Display</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-9094">CB-9094</a> Smarter autohide logic on <strong>Android</strong></li>
-<li><a href="https://issues.apache.org/jira/browse/CB-8396">CB-8396</a> Add <code>AutoHideSplashScreen</code> logic to <strong>Android</strong>&#39;s Splashscreen</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10422">CB-10422</a> Splashscreen displays black screen with no image on <strong>Android</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10412">CB-10412</a> <code>AutoHideSplashScreen</code> &quot;false&quot; isn&#39;t taken in account on <strong>iOS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9516">CB-9516</a> <strong>Android</strong> SplashScreen - Spinner Does Not Display</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9094">CB-9094</a> Smarter autohide logic on <strong>Android</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8396">CB-8396</a> Add <code>AutoHideSplashScreen</code> logic to <strong>Android</strong>&#39;s Splashscreen</li>
 </ul>
 
 <p>cordova-plugin-wkwebviewengine@1.0.2</p>
-
 <ul>
-<li><a href="https://issues.apache.org/jira/browse/CB-10269">CB-10269</a> - Replace cordova exec only when present in wkwebview</li>
-<li><a href="https://issues.apache.org/jira/browse/CB-10202">CB-10202</a> - Add README quirk about WKWebview does not work with the <code>AllowInlineMediaPlayback</code> preference</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10269">CB-10269</a> - Replace cordova exec only when present in wkwebview</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-10202">CB-10202</a> - Add README quirk about WKWebview does not work with the <code>AllowInlineMediaPlayback</code> preference</li>
 </ul>
 
         </div>

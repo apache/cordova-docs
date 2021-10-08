@@ -1570,7 +1570,7 @@
                 <h1>Geolocation</h1>
 
 <blockquote>
-<p>The <code>geolocation</code> object provides access to location data based on the device&#39;s GPS sensor or inferred from network signals.</p>
+  <p>The <code>geolocation</code> object provides access to location data based on the device&#39;s GPS sensor or inferred from network signals.</p>
 </blockquote>
 
 <p><code>Geolocation</code> provides information about the device&#39;s location, such as
@@ -1602,25 +1602,25 @@ see the <a href="../../guide/appdev/privacy/index.html">Privacy Guide</a>.</p>
 <h2>Methods</h2>
 
 <ul>
-<li><a href="geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a></li>
-<li><a href="geolocation.watchPosition.html">geolocation.watchPosition</a></li>
-<li><a href="geolocation.clearWatch.html">geolocation.clearWatch</a></li>
+  <li><a href="geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a></li>
+  <li><a href="geolocation.watchPosition.html">geolocation.watchPosition</a></li>
+  <li><a href="geolocation.clearWatch.html">geolocation.clearWatch</a></li>
 </ul>
 
 <h2>Arguments</h2>
 
 <ul>
-<li><a href="parameters/geolocationSuccess.html">geolocationSuccess</a></li>
-<li><a href="parameters/geolocationError.html">geolocationError</a></li>
-<li><a href="parameters/geolocation.options.html">geolocationOptions</a></li>
+  <li><a href="parameters/geolocationSuccess.html">geolocationSuccess</a></li>
+  <li><a href="parameters/geolocationError.html">geolocationError</a></li>
+  <li><a href="parameters/geolocation.options.html">geolocationOptions</a></li>
 </ul>
 
 <h2>Objects (Read-Only)</h2>
 
 <ul>
-<li><a href="Position/position.html">Position</a></li>
-<li><a href="PositionError/positionError.html">PositionError</a></li>
-<li><a href="Coordinates/coordinates.html">Coordinates</a></li>
+  <li><a href="Position/position.html">Position</a></li>
+  <li><a href="PositionError/positionError.html">PositionError</a></li>
+  <li><a href="Coordinates/coordinates.html">Coordinates</a></li>
 </ul>
 
 <h2>Accessing the Feature</h2>
@@ -1628,49 +1628,63 @@ see the <a href="../../guide/appdev/privacy/index.html">Privacy Guide</a>.</p>
 <p>As of version 3.0, Cordova implements device-level APIs as <em>plugins</em>.
 Use the CLI&#39;s <code>plugin</code> command, described in The Command-line
 Interface, to add or remove this feature for a project:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    $ cordova plugin add org.apache.cordova.geolocation
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova plugin add org.apache.cordova.geolocation
     $ cordova plugin ls
     [ 'org.apache.cordova.geolocation' ]
     $ cordova plugin rm org.apache.cordova.geolocation
-</code></pre></div>
+</code></pre></div></div>
+
 <p>These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:</p>
 
 <ul>
-<li><p>Android</p>
-<div class="highlight"><pre><code class="language-" data-lang="">(in app/res/xml/config.xml)
-&lt;feature name="Geolocation"&gt;
-    &lt;param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" /&gt;
-&lt;/feature&gt;
+  <li>
+    <p>Android</p>
 
-(in app/AndroidManifest.xml)
-&lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /&gt;
-&lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
-</code></pre></div></li>
-<li><p>BlackBerry WebWorks</p>
-<div class="highlight"><pre><code class="language-" data-lang="">(in www/plugins.xml)
-&lt;feature name="Geolocation"&gt;
-    &lt;param name="blackberry-package" value="org.apache.cordova.geolocation.Geolocation" /&gt;
-&lt;/feature&gt;
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in app/res/xml/config.xml)
+  &lt;feature name="Geolocation"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" /&gt;
+  &lt;/feature&gt;
 
-(in www/config.xml)
-&lt;rim:permissions&gt;
-    &lt;rim:permit&gt;read_geolocation&lt;/rim:permit&gt;
-&lt;/rim:permissions&gt;
-</code></pre></div></li>
-<li><p>iOS (in <code>config.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;feature name="Geolocation"&gt;
-    &lt;param name="ios-package" value="CDVLocation" /&gt;
-&lt;/feature&gt;
-</code></pre></div></li>
-<li><p>Windows Phone (in <code>Properties/WPAppManifest.xml</code>)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;Capabilities&gt;
-    &lt;Capability Name="ID_CAP_LOCATION" /&gt;
-&lt;/Capabilities&gt;
-</code></pre></div></li>
+  (in app/AndroidManifest.xml)
+  &lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /&gt;
+  &lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>BlackBerry WebWorks</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in www/plugins.xml)
+  &lt;feature name="Geolocation"&gt;
+      &lt;param name="blackberry-package" value="org.apache.cordova.geolocation.Geolocation" /&gt;
+  &lt;/feature&gt;
+
+  (in www/config.xml)
+  &lt;rim:permissions&gt;
+      &lt;rim:permit&gt;read_geolocation&lt;/rim:permit&gt;
+  &lt;/rim:permissions&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>iOS (in <code>config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="Geolocation"&gt;
+      &lt;param name="ios-package" value="CDVLocation" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Windows Phone (in <code>Properties/WPAppManifest.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;Capabilities&gt;
+      &lt;Capability Name="ID_CAP_LOCATION" /&gt;
+  &lt;/Capabilities&gt;
+</code></pre></div>    </div>
+
+    <p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
+  </li>
 </ul>
-
-<p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
 
 <p>Some platforms may support this feature without requiring any special
 configuration.  See <em>Platform Support</em> in the <a href="../../guide/overview/index.html">Overview</a> section.</p>

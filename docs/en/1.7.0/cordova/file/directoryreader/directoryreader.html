@@ -1332,16 +1332,16 @@
 <h2>Methods</h2>
 
 <ul>
-<li><strong>readEntries</strong>: Read the entries in a directory. </li>
+  <li><strong>readEntries</strong>: Read the entries in a directory.</li>
 </ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
-<li>Android</li>
-<li>BlackBerry WebWorks (OS 5.0 and higher)</li>
-<li>iOS</li>
-<li>Windows Phone 7 ( Mango )</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 ( Mango )</li>
 </ul>
 
 <h2>readEntries</h2>
@@ -1351,12 +1351,13 @@
 <p><strong>Parameters:</strong></p>
 
 <ul>
-<li><strong>successCallback</strong> - A callback that is passed an array of <a href="../fileentry/fileentry.html">FileEntry</a> and <a href="../directoryentry/directoryentry.html">DirectoryEntry</a> objects. <em>(Function)</em></li>
-<li><strong>errorCallback</strong> - A callback that is called if an error occurs retrieving the directory listing. Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
+  <li><strong>successCallback</strong> - A callback that is passed an array of <a href="../fileentry/fileentry.html">FileEntry</a> and <a href="../directoryentry/directoryentry.html">DirectoryEntry</a> objects. <em>(Function)</em></li>
+  <li><strong>errorCallback</strong> - A callback that is called if an error occurs retrieving the directory listing. Invoked with a <a href="../fileerror/fileerror.html">FileError</a> object. <em>(Function)</em></li>
 </ul>
 
 <p><strong>Quick Example</strong></p>
-<div class="highlight"><pre><code class="language-" data-lang="">function success(entries) {
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success(entries) {
     var i;
     for (i=0; i&lt;entries.length; i++) {
         console.log(entries[i].name);
@@ -1372,7 +1373,8 @@ var directoryReader = dirEntry.createReader();
 
 // Get a list of all the entries in the directory
 directoryReader.readEntries(success,fail);
-</code></pre></div>
+</code></pre></div></div>
+
 
             </div>
         </div>
