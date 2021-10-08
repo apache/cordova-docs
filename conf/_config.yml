@@ -48,32 +48,22 @@ keep_files: [".git", ".svn", "wiki-images", "images", "downloads"]
 lsi:  false # don't produce an index for related posts
 safe: false # disables plugins
 
-markdown: redcarpet
-
-redcarpet:
-    extensions:
-        # this enables code blocks denoted by backticks, like in GFM
-        # NOTE:
-        #      this is turned on by default by Jekyll, but is still
-        #      specified explicitly here in case the defaults change
-        - fenced_code_blocks
-
-        # this allows code blocks and HTML blocks to
-        # not have a leading or trailing newline
-        - lax_spacing
-
-        # allows tables
-        - tables
-
-        # surrounds highlighted text with <mark>s
-        - highlight
+markdown: kramdown
 
 highlighter: rouge
 
 kramdown:
+    auto_ids: false
     input: GFM
     hard_wrap: false
     syntax_highlighter: rouge
+    syntax_highlighter_opts:
+        span:
+            disable: true
+    entity_output: numeric
+    smart_quotes: [apos, apos, quot, quot]
+    typographic_symbols:
+        ndash: --
 
 # exclude these directories from the build
 exclude:

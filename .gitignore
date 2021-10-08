@@ -4,6 +4,7 @@ build-*
 conf/_defaults.yml
 conf/_version.yml
 
+www/.jekyll-cache
 www/_data/docs-versions.yml
 www/_data/all-pages.yml
 www/_data/toc/*-gen.yml
