@@ -6,8 +6,8 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 08 Oct 2021 06:43:16 +0000</pubDate>
-    <lastBuildDate>Fri, 08 Oct 2021 06:43:16 +0000</lastBuildDate>
+    <pubDate>Fri, 08 Oct 2021 06:56:49 +0000</pubDate>
+    <lastBuildDate>Fri, 08 Oct 2021 06:56:49 +0000</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
@@ -77,9 +77,9 @@
 &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/877&quot;&gt;GH-877&lt;/a&gt; docs: correct linter command in &lt;code&gt;README&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2021/10/01/cordova-lib-release-10.1.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2021/10/01/cordova-lib-release-10.1.0.html</guid>
+        <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2021/10/08/cordova-lib-release-10.1.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2021/10/08/cordova-lib-release-10.1.0.html</guid>
         
         <category>news</category>
         
