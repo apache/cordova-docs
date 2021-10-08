@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released Cordova Android 10.1.1! This is one of Cordova&#39;s supported platforms for building Android application...">
+    <meta name="description" content="We are happy to announce that we have just released cordova-lib 10.1.0!cordova-lib@10.1.0Release HighlightsIn this minor release, we have introduced various ...">
 
     <title>
         
             
-                Cordova Android 10.1.1 Released! - Apache Cordova
+                Cordova Lib 10.1.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2021/09/15/cordova-android-release-10.1.1.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2021/10/01/cordova-lib-release-10.1.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -121,32 +121,36 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova Android 10.1.1 Released!</div>
+        <div class="title">Cordova Lib 10.1.0 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">15 Sep 2021</div>
+        <div class="date">01 Oct 2021</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released <code>Cordova Android 10.1.1</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
+            <p>We are happy to announce that we have just released <code>cordova-lib 10.1.0</code>!</p>
 
 <ul>
-<li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@10.1.1</a></li>
+<li><a href="https://www.npmjs.com/package/cordova-lib">cordova-lib@10.1.0</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
 
-<p><strong>To upgrade:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform remove android
-cordova platform add android@10.1.1
-</code></pre></div>
-<p><strong>To install:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">cordova platform add android@10.1.1
-</code></pre></div>
-<p>The notable fixes in this release are around the handling of the default policy for the Allow Navigation &amp; Allow Bridge Access, which also covers the scheme &amp; hostname use cases.</p>
+<p>In this minor release, we have introduced various improvements and fixes. The most notable changes within this release are:</p>
+
+<ul>
+<li>Updated the platform pinning to the latest minor/patch releases:
+
+<ul>
+<li><code>cordova-ios@^6.2.0</code></li>
+<li><code>cordova-android@^9.1.0</code></li>
+<li><code>cordova-electron@^1.1.1</code></li>
+</ul></li>
+<li>Fixed the restore process to ensure that the correct pinned platform versions in <code>package.json</code> are reinstalled.</li>
+</ul>
 
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
@@ -154,12 +158,42 @@ cordova platform add android@10.1.1
 
 <h1>Changes include:</h1>
 
-<h4>Fixes</h4>
+<p><strong>Features:</strong></p>
 
 <ul>
-<li><a href="https://github.com/apache/cordova-android/pull/1349">GH-1349</a> fix(<code>PluginManager</code>): <code>AllowNavigation</code> default policy to handle scheme &amp; hostname</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1342">GH-1342</a> fix(<code>AllowListPlugin</code>): Safely handle default allow navigation policy in allow request</li>
-<li><a href="https://github.com/apache/cordova-android/pull/1332">GH-1332</a> fix(<code>PluginManager</code>): <code>AllowBridgeAccess</code> default policy to handle scheme &amp; hostname</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/885">GH-885</a> feat: bump platform pinning</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/860">GH-860</a> feat(<code>cordova/util</code>): support loading platform API from <code>node_modules</code></li>
+</ul>
+
+<p><strong>Fixes:</strong></p>
+
+<ul>
+<li><a href="https://github.com/apache/cordova-lib/pull/880">GH-880</a> fix(<code>restore-util</code>): properly support long and short platform names</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/874">GH-874</a> fix: Platforms restored from both dev and normal dependencies.</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/871">GH-871</a> fix: remove undeclared dependency on <code>underscore</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/856">GH-856</a> fix(<code>cordova/util</code>): version detection for legacy platforms</li>
+</ul>
+
+<p><strong>Chores &amp; Refactor Changes:</strong></p>
+
+<ul>
+<li><a href="https://github.com/apache/cordova-lib/pull/886">GH-886</a> chore: update dependencies w/ <code>package-lock</code> rebuild &amp; test update</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/881">GH-881</a> chore: <code>npmrc</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/879">GH-879</a> chore: <code>package-lock</code> update</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/858">GH-858</a> chore: clean up <code>package.json</code></li>
+<li><a href="https://github.com/apache/cordova-lib/pull/882">GH-882</a> refactor(<code>addHelper</code>): more concise <code>package.json</code> spec lookup</li>
+</ul>
+
+<p><strong>CI, Test &amp; Doc Changes:</strong></p>
+
+<ul>
+<li><a href="https://github.com/apache/cordova-lib/pull/862">GH-862</a> ci: add node-14.x to workflow</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/870">GH-870</a> test(<code>plugin.spec</code>): fix version change in test fixture</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/865">GH-865</a> test(<code>pkgJson</code>): make expectations work for npm 5 to 7</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/864">GH-864</a> test(<code>pkgJson</code>): fix test after release of geolocation plugin v4.1.0</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/855">GH-855</a> test: fix missing stack traces in jasmine output</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/853">GH-853</a> test: unit test deprecated platforms</li>
+<li><a href="https://github.com/apache/cordova-lib/pull/877">GH-877</a> docs: correct linter command in <code>README</code></li>
 </ul>
 
         </div>
@@ -168,37 +202,17 @@ cordova platform add android@10.1.1
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2021/09/06/cordova-electron-release-3.0.0.html">Previous</a>
+                    <a href="/announcements/2021/09/15/cordova-android-release-10.1.1.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2021/09/06/cordova-electron-release-3.0.0.html">Cordova Electron 3.0.0 Released!</a>
-                    <div class="date"> 06 Sep 2021 - By Bryan Ellis </div>
+                    <a class="title" href="/announcements/2021/09/15/cordova-android-release-10.1.1.html">Cordova Android 10.1.1 Released!</a>
+                    <div class="date"> 15 Sep 2021 - By Bryan Ellis </div>
                     <p class="content">
-                        We are happy to announce that we have just released Cordova Electron...
+                        We are happy to announce that we have just released Cordova Android...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2021/10/01/cordova-lib-release-10.1.0.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2021/10/01/cordova-lib-release-10.1.0.html">Cordova Lib 10.1.0 Released!</a>
-                    <div class="date"> 01 Oct 2021 - By Bryan Ellis </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released cordova-lib 10.1.0!...
-                    </p>
                 
             </div>
         </div>

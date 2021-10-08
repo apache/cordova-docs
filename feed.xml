@@ -6,9 +6,89 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 07 Oct 2021 14:07:12 +0000</pubDate>
-    <lastBuildDate>Thu, 07 Oct 2021 14:07:12 +0000</lastBuildDate>
+    <pubDate>Fri, 08 Oct 2021 06:43:16 +0000</pubDate>
+    <lastBuildDate>Fri, 08 Oct 2021 06:43:16 +0000</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>Cordova Lib 10.1.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;cordova-lib 10.1.0&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-lib&quot;&gt;cordova-lib@10.1.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;In this minor release, we have introduced various improvements and fixes. The most notable changes within this release are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Updated the platform pinning to the latest minor/patch releases:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cordova-ios@^6.2.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-android@^9.1.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cordova-electron@^1.1.1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Fixed the restore process to ensure that the correct pinned platform versions in &lt;code&gt;package.json&lt;/code&gt; are reinstalled.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/885&quot;&gt;GH-885&lt;/a&gt; feat: bump platform pinning&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/860&quot;&gt;GH-860&lt;/a&gt; feat(&lt;code&gt;cordova/util&lt;/code&gt;): support loading platform API from &lt;code&gt;node_modules&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/880&quot;&gt;GH-880&lt;/a&gt; fix(&lt;code&gt;restore-util&lt;/code&gt;): properly support long and short platform names&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/874&quot;&gt;GH-874&lt;/a&gt; fix: Platforms restored from both dev and normal dependencies.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/871&quot;&gt;GH-871&lt;/a&gt; fix: remove undeclared dependency on &lt;code&gt;underscore&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/856&quot;&gt;GH-856&lt;/a&gt; fix(&lt;code&gt;cordova/util&lt;/code&gt;): version detection for legacy platforms&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores &amp;amp; Refactor Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/886&quot;&gt;GH-886&lt;/a&gt; chore: update dependencies w/ &lt;code&gt;package-lock&lt;/code&gt; rebuild &amp;amp; test update&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/881&quot;&gt;GH-881&lt;/a&gt; chore: &lt;code&gt;npmrc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/879&quot;&gt;GH-879&lt;/a&gt; chore: &lt;code&gt;package-lock&lt;/code&gt; update&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/858&quot;&gt;GH-858&lt;/a&gt; chore: clean up &lt;code&gt;package.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/882&quot;&gt;GH-882&lt;/a&gt; refactor(&lt;code&gt;addHelper&lt;/code&gt;): more concise &lt;code&gt;package.json&lt;/code&gt; spec lookup&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;CI, Test &amp;amp; Doc Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/862&quot;&gt;GH-862&lt;/a&gt; ci: add node-14.x to workflow&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/870&quot;&gt;GH-870&lt;/a&gt; test(&lt;code&gt;plugin.spec&lt;/code&gt;): fix version change in test fixture&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/865&quot;&gt;GH-865&lt;/a&gt; test(&lt;code&gt;pkgJson&lt;/code&gt;): make expectations work for npm 5 to 7&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/864&quot;&gt;GH-864&lt;/a&gt; test(&lt;code&gt;pkgJson&lt;/code&gt;): fix test after release of geolocation plugin v4.1.0&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/855&quot;&gt;GH-855&lt;/a&gt; test: fix missing stack traces in jasmine output&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/853&quot;&gt;GH-853&lt;/a&gt; test: unit test deprecated platforms&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/877&quot;&gt;GH-877&lt;/a&gt; docs: correct linter command in &lt;code&gt;README&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2021/10/01/cordova-lib-release-10.1.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2021/10/01/cordova-lib-release-10.1.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova Android 10.1.1 Released!</title>
@@ -711,47 +791,6 @@ The &lt;code&gt;online&lt;/code&gt; event was running at unexpected times.&lt;/p
         <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/news/2021/06/03/network-information-plugin-release.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/news/2021/06/03/network-information-plugin-release.html</guid>
-        
-        <category>release</category>
-        
-        <category>plugins</category>
-        
-        
-        <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Camera Plugin Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released an update to our Camera plugin!&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera&quot;&gt;cordova-plugin-camera@5.0.2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;h3&gt;Camera&lt;/h3&gt;
-
-&lt;p&gt;The 5.0.2 patch release fixes a bug on Android.
-After taking a picture with the camera plugin on Android, the app could occasionally crash. 
-This crash did occur when the main activity was destroyed by the Android OS to free up memory, when the app would resume afterwards with a PendingIntent the restoring of the state was not correctly handled.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/700&quot;&gt;GH-700&lt;/a&gt; Bugfix &lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/issues/665&quot;&gt;issue 665&lt;/a&gt; - app crashes after taking a picture due to a bug in the camera plugin when app is resumed&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/691&quot;&gt;GH-691&lt;/a&gt; ci: add node-14.x to workflow (#691)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/news/2021/05/11/camera-plugin-release.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/news/2021/05/11/camera-plugin-release.html</guid>
         
         <category>release</category>
         
