@@ -84,9 +84,7 @@ window.addEventListener("cordovacallbackerror", function (event) {
 The following table lists the cordova events and the supported platforms:
 
 <!-- START HTML -->
-
 <table class="compat" width="100%">
-
 <thead>
     <tr>
         <th>Supported Platforms/<br/>Events</td>
@@ -95,7 +93,6 @@ The following table lists the cordova events and the supported platforms:
         <th>Windows</th>
     </tr>
 </thead>
-
 <tbody>
     <tr>
         <th><a href="#deviceready">deviceready</a></th>
@@ -103,77 +100,66 @@ The following table lists the cordova events and the supported platforms:
         <td data-col="ios"        class="y"></td>
         <td data-col="win"       class="y"></td>
     </tr>
-
     <tr>
         <th><a href="#pause">pause</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="win"       class="y"></td>
     </tr>
-
     <tr>
         <th><a href="#resume">resume</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="win"       class="y"></td>
     </tr>
-
     <tr>
         <th><a href="#backbutton">backbutton</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="ios"        class="n"></td>
         <td data-col="win"       class="y"></td>
     </tr>
-
     <tr>
         <th><a href="#menubutton">menubutton</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="ios"        class="n"></td>
         <td data-col="win"       class="n"></td>
     </tr>
-
     <tr>
         <th><a href="#searchbutton">searchbutton</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="ios"        class="n"></td>
         <td data-col="win"       class="n"></td>
     </tr>
-
     <tr>
         <th><a href="#startcallbutton">startcallbutton</a></th>
         <td data-col="android"    class="n"></td>
         <td data-col="ios"        class="n"></td>
         <td data-col="win"       class="n"></td>
     </tr>
-
     <tr>
         <th><a href="#endcallbutton">endcallbutton</a></th>
         <td data-col="android"    class="n"></td>
         <td data-col="ios"        class="n"></td>
         <td data-col="win"       class="n"></td>
     </tr>
-
     <tr>
         <th><a href="#volumedownbutton">volumedownbutton</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="ios"        class="n"></td>
         <td data-col="win"       class="n"></td>
     </tr>
-
     <tr>
         <th><a href="#volumeupbutton">volumeupbutton</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="ios"        class="n"></td>
         <td data-col="win"       class="n"></td>
     </tr>
-
     <tr>
         <th><a href="#activated">activated</a></th>
         <td data-col="android"    class="n"></td>
         <td data-col="ios"        class="n"></td>
         <td data-col="win"       class="y"></td>
     </tr>
-
     <tr>
         <th><a href="#cordovacallbackerror">cordovacallbackerror</a></th>
         <td data-col="android"    class="y"></td>
@@ -182,7 +168,6 @@ The following table lists the cordova events and the supported platforms:
     </tr>
 </tbody>
 </table>
-
 <!-- END HTML -->
 
 
