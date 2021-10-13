@@ -87,7 +87,7 @@ The following table lists the cordova events and the supported platforms:
 <table class="compat" width="100%">
 <thead>
     <tr>
-        <th>Supported Platforms/<br/>Events</td>
+        <th>Supported Platforms/<br/>Events</th>
         <th>android</th>
         <th>ios</th>
         <th>Windows</th>
