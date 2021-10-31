@@ -271,13 +271,13 @@ by holding down the ALT key from the home screen and hitting "lglg"
 keys.
 
 
-##BlackBerry 10
+## BlackBerry 10
 
 Command-line tools are based on shell scripts. If you need help with a command, type the command with the `-h` or `-help` arguments, which are supported by all commands and which will provide descriptions for each of the available arguments.
 
 The following commands are available:
 
-##create
+## create
 
 The 'create' command creates a new project:
 
@@ -285,11 +285,11 @@ The 'create' command creates a new project:
 bin/create <path-to-project>
 ```
 
-##target
+## target
 
 The `target` command allows you to manage the BlackBerry device(s) or simulator that you will use to test your app. You can add or remove a target, or set a target as the default target.
 
-###Add a target
+### Add a target
 
 ```
 <path-to-project>/cordova/target  add  <name>  <ip-address>  <device | simulator>  [-p | --password <password>]  [--pin <device-pin>]
@@ -302,23 +302,23 @@ where
 -   `-p|--password <password>`  specifies the password for the device or simulator. This is required only if the device or simulator is password protected.
 -   `--pin <device-pin>`  specifies the PIN of the BlackBerry device, which identifies that device as a valid host for the debug token. This argument is required only if you are creating a debug token.
 
-###Remove a target
+### Remove a target
 
 ```
 <path-to-project>/cordova/target  remove  <name>
 ```
 
-###Set a target as the default
+### Set a target as the default
 
 ```
 <path-to-project>/cordova/target  default  <name>
 ```
 
-##build
+## build
 
 The `build` command builds the project as a .bar file. You can build your app in either release mode (which produces a signed .bar file) or in debug mode (which produces an unsigned .bar file).
 
-###Build your project in release mode
+### Build your project in release mode
 
 ```
 <path-to-project>/cordova/build  release  -k|--keystorepass <password>  [-b|--buildId <number>]  [-p|--params <params-JSON-file>]
@@ -329,7 +329,7 @@ where
 -   `-b|--buildId <number>`  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.
 -   `-p|--params <params-JSON-file>`  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.
 
-###Build your project in debug mode
+### Build your project in debug mode
 
 ```
 <path-to-project>/cordova/build  debug  [<target>]  [-k|--keystorepass <password>]  [-p|--params <params-JSON-file>]  [-ll|--loglevel <error|warn|verbose>]
@@ -348,7 +348,7 @@ If you have previously defined a default target (and previously installed a debu
 <path-to-project>/cordova/build debug
 ```
 
-##run
+## run
 
 The `run` command deploys the app on the specified BlackBerry device or a simulator. Before deploying your app, you must first create a target for the device or simulator you want to deploy your app to. The deploy script will deploy the most recent build of your app.
 
@@ -359,30 +359,30 @@ The `run` command deploys the app on the specified BlackBerry device or a simula
 where
 -   `<target> `specifies the name of a previously added target. If `<target> `is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.
 
-##plugin
+## plugin
 
 The `target` command allows you to add and remove plugins
 
-###Fetch a locally-hosted plugin
+### Fetch a locally-hosted plugin
 
 
 ```
 <path-to-project>/cordova/plugin fetch <path-to-plugin>
 ```
 
-###View a list of installed plugins
+### View a list of installed plugins
 
 ```
 <path-to-project>/cordova/plugin ls
 ```
 
-###Add a plugin
+### Add a plugin
 
 ```
 <path-to-project>/cordova/plugin add <name>
 ```
 
-###Remove a plugin
+### Remove a plugin
 
 ```
 <path-to-project>/cordova/plugin rm <name>

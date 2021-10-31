@@ -61,7 +61,7 @@ Adding and managing targets
 
 A target refers to a BlackBerry device or simulator that you will use to test your app. Targets are added directly to your project; you can add multiple targets to your project, each with a unique name. Then, when you want to deploy your app to a particular target, you can simply refer to that target by name when you run your script.
 
-###Add a target
+### Add a target
 
 To add a target, on the command line, type the following command:
 
@@ -77,7 +77,7 @@ where
 -   `-p|--password <password>`  specifies the password for the device or simulator. This is required only if the device or simulator is password protected.
 -   `--pin <device-pin>`  specifies the PIN of the BlackBerry device, which identifies that device as a valid host for the debug token. This argument is required only if you are creating a debug token.
 
-###Remove a target
+### Remove a target
 
 To remove a target, on the command line, type the following command:
 
@@ -85,7 +85,7 @@ To remove a target, on the command line, type the following command:
 <path-to-project>/cordova/target  remove  <name>
 ```
 
-###Set a target as the default
+### Set a target as the default
 
 To specify a specific target as the default, on the command line, type the following command:
 
@@ -103,7 +103,7 @@ To build your app, run the build script. You can build the app in either release
 
     Debug mode also enables Web Inspector for the app, which allows you to remotely inspect the source code. A prompt displays the URL that you can use to connect to and inspect your app. For more information on using Web Inspector, see [Debugging using Web Inspector](http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html).
 
-###Build your app in release mode
+### Build your app in release mode
 
 To build your app in release mode, on the command line, type the following command:
 
@@ -117,7 +117,7 @@ where
 -   `-b|--buildId <number>`  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.
 -   `-p|--params <params-JSON-file>`  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.
 
-###Build your app in debug mode
+### Build your app in debug mode
 
 To build your app in release mode, on the command line, type the following command:
 
@@ -163,7 +163,7 @@ To add additional functionality that is outside of the core features of Cordova,
 
 In order to use a plugin, you must first add it into your project. Once added into your project, the plugin will be bundled with your project during the build process, to ensure that your app has access to all the APIs it needs.
 
-###Add a plugin
+### Add a plugin
 
 To add a plugin, on the command line, type the following command:
 
@@ -171,7 +171,7 @@ To add a plugin, on the command line, type the following command:
 <path-to-project>/cordova/plugin add <path to plugin>
 ```
 
-###Remove a plugin
+### Remove a plugin
 
 To remove a plugin, on the command line, type the following command:
 
@@ -179,7 +179,7 @@ To remove a plugin, on the command line, type the following command:
 <path-to-project>/cordova/plugin rm <name>
 ```
 
-###View a list of installed plugins
+### View a list of installed plugins
 
 To view a list of installed plugins, on the command line, type the following command:
 

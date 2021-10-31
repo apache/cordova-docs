@@ -117,7 +117,7 @@ The `onCreateObject ` function takes two parameters. The first parameter is the 
         return NULL;
     }
 
-##Creating the JavaScript part of your plugin##
+## Creating the JavaScript part of your plugin##
 
 The JavaScript portion of your plugin must contain the following files:
 
