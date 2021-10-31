@@ -116,7 +116,7 @@ The `onCreateObject ` function takes two parameters. The first parameter is the 
         return NULL;
     }
 
-## Creating the JavaScript part of your plugin##
+## Creating the JavaScript part of your plugin ##
 
 The JavaScript portion of your plugin must contain the following files:
 
@@ -174,7 +174,7 @@ You can place the artifacts of the plugin, which includes the plugin.xml file, t
 
 (The list shows the hierarchical relationship among the top level folders. The parenthesis shows the contents of a given folder. All folder names appear in bold text. [File](../../../cordova/file/fileobj/fileobj.html) names are preceded by the '>' sign.)
 
-## Contents of the plugin.xml file##
+## Contents of the plugin.xml file ##
 The plugin.xml file contains the namespace of the extension and other metadata. Define the namespace and specify other metadata for the Echo plugin as follows:
 
     <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"

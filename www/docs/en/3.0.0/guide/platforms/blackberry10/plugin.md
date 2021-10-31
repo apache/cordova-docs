@@ -117,7 +117,7 @@ The `onCreateObject ` function takes two parameters. The first parameter is the 
         return NULL;
     }
 
-## Creating the JavaScript part of your plugin##
+## Creating the JavaScript part of your plugin ##
 
 The JavaScript portion of your plugin must contain the following files:
 
@@ -182,7 +182,7 @@ folders. The parenthesis shows the contents of a given directory. All
 directory names appear in bold text. [File](../../../cordova/file/fileobj/fileobj.html) names are preceded by the `>`
 sign.)
 
-## Contents of the `plugin.xml` file##
+## Contents of the `plugin.xml` file ##
 
 The `plugin.xml` file contains the namespace of the extension and other
 metadata. Define the namespace and specify other metadata for the Echo
