@@ -6,9 +6,51 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Oct 2021 14:10:19 +0000</pubDate>
-    <lastBuildDate>Wed, 13 Oct 2021 14:10:19 +0000</lastBuildDate>
+    <pubDate>Sun, 31 Oct 2021 06:02:46 +0000</pubDate>
+    <lastBuildDate>Sun, 31 Oct 2021 06:02:46 +0000</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>Template 6.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released a major update to our template!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-app-hello-world&quot;&gt;cordova-app-hello-world@6.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;In this release, we have removed the deprecated &lt;code&gt;cordova-plugin-whitelist&lt;/code&gt; from the default template. The functionality of the plugin was integrated into the core of Cordova Android since version 10.0.0.&lt;/p&gt;
+
+&lt;p&gt;If you create a new Cordova project and use an older version of Cordova Android (&amp;lt;10), you will need to add the &lt;code&gt;cordova-plugin-whitelist&lt;/code&gt; plugin.&lt;/p&gt;
+
+&lt;p&gt;Additionally, Cordova has removed the excessive &lt;code&gt;access&lt;/code&gt; and &lt;code&gt;allow-intent&lt;/code&gt; settings from the default &lt;code&gt;config.xml&lt;/code&gt; file. Previously, the default template assumed what defaults users needed, but not all user apps required these settings.&lt;/p&gt;
+
+&lt;p&gt;Removing these excessive defaults will help promote a more secure application by default, reduce the default project configurations to a bare minimum, and promote an opt-in approach for defining access permissions.&lt;/p&gt;
+
+&lt;p&gt;Existing projects are not affected by these changes. The default template is used only during the initial project creation.&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-app-hello-world/pull/73&quot;&gt;GH-73&lt;/a&gt; cleanup!(&lt;code&gt;config.xml&lt;/code&gt;): simplify defaults&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-app-hello-world/pull/67&quot;&gt;GH-67&lt;/a&gt; chore(ios): remove &lt;code&gt;gap&lt;/code&gt; from CSP&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-app-hello-world/pull/66&quot;&gt;GH-66&lt;/a&gt; chore!: remove whitelist plugin &amp;amp; reference&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/news/2021/10/31/template-release.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/news/2021/10/31/template-release.html</guid>
+        
+        <category>release</category>
+        
+        <category>template</category>
+        
+        
+        <category>news</category>
+        
+      </item>
     
       <item>
         <title>Cordova Lib 10.1.0 Released!</title>
@@ -787,48 +829,6 @@ The Whitelist plugin will be moved to the &lt;code&gt;cordova-android&lt;/code&g
         <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/news/2021/06/28/whitelist-plugin-release.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/news/2021/06/28/whitelist-plugin-release.html</guid>
-        
-        <category>release</category>
-        
-        <category>plugins</category>
-        
-        
-        <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Network Information Plugin Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released an update to our Network Information plugin!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-network-information&quot;&gt;cordova-plugin-network-information@3.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;h3&gt;Network Information&lt;/h3&gt;
-
-&lt;p&gt;The 3.0.0 major release fixes behaviour on Android.
-The &lt;code&gt;online&lt;/code&gt; event was running at unexpected times.&lt;/p&gt;
-
-&lt;p&gt;All references of the deprecated &lt;code&gt;navigator.network&lt;/code&gt; are removed.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-network-information/pull/114&quot;&gt;GH-114&lt;/a&gt; Bugfix &lt;a href=&quot;https://github.com/apache/cordova-plugin-network-information/issues/110&quot;&gt;issue 110&lt;/a&gt; - online event was firing at unexpected times on Android, due to a missing equals implementation on the Android JSONObject.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-network-information/pull/117&quot;&gt;GH-117&lt;/a&gt; Removes deprecated navigator.network access.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-network-information/pull/128&quot;&gt;GH-128&lt;/a&gt; ci: add node-14.x to workflow&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/news/2021/06/03/network-information-plugin-release.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/news/2021/06/03/network-information-plugin-release.html</guid>
         
         <category>release</category>
         

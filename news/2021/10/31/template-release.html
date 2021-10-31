@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released cordova-lib 10.1.0!  cordova-lib@10.1.0Release HighlightsIn this minor release, we have introduced variou...">
+    <meta name="description" content="We are happy to announce that we have just released a major update to our template!  cordova-app-hello-world@6.0.0Release HighlightsIn this release, we have ...">
 
     <title>
         
             
-                Cordova Lib 10.1.0 Released! - Apache Cordova
+                Template 6.0.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2021/10/08/cordova-lib-release-10.1.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/news/2021/10/31/template-release.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -121,78 +121,41 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova Lib 10.1.0 Released!</div>
+        <div class="title">Template 6.0.0 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">08 Oct 2021</div>
+        <div class="date">31 Oct 2021</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released <code>cordova-lib 10.1.0</code>!</p>
+            <p>We are happy to announce that we have just released a major update to our template!</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-lib">cordova-lib@10.1.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-app-hello-world">cordova-app-hello-world@6.0.0</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
 
-<p>In this minor release, we have introduced various improvements and fixes. The most notable changes within this release are:</p>
+<p>In this release, we have removed the deprecated <code>cordova-plugin-whitelist</code> from the default template. The functionality of the plugin was integrated into the core of Cordova Android since version 10.0.0.</p>
 
-<ul>
-  <li>Updated the platform pinning to the latest minor/patch releases:
-    <ul>
-      <li><code>cordova-ios@^6.2.0</code></li>
-      <li><code>cordova-android@^9.1.0</code></li>
-      <li><code>cordova-electron@^1.1.1</code></li>
-    </ul>
-  </li>
-  <li>Fixed the restore process to ensure that the correct pinned platform versions in <code>package.json</code> are reinstalled.</li>
-</ul>
+<p>If you create a new Cordova project and use an older version of Cordova Android (&lt;10), you will need to add the <code>cordova-plugin-whitelist</code> plugin.</p>
 
-<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+<p>Additionally, Cordova has removed the excessive <code>access</code> and <code>allow-intent</code> settings from the default <code>config.xml</code> file. Previously, the default template assumed what defaults users needed, but not all user apps required these settings.</p>
+
+<p>Removing these excessive defaults will help promote a more secure application by default, reduce the default project configurations to a bare minimum, and promote an opt-in approach for defining access permissions.</p>
+
+<p>Existing projects are not affected by these changes. The default template is used only during the initial project creation.</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
-<p><strong>Features:</strong></p>
-
 <ul>
-  <li><a href="https://github.com/apache/cordova-lib/pull/885">GH-885</a> feat: bump platform pinning</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/860">GH-860</a> feat(<code>cordova/util</code>): support loading platform API from <code>node_modules</code></li>
-</ul>
-
-<p><strong>Fixes:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-lib/pull/880">GH-880</a> fix(<code>restore-util</code>): properly support long and short platform names</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/874">GH-874</a> fix: Platforms restored from both dev and normal dependencies.</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/871">GH-871</a> fix: remove undeclared dependency on <code>underscore</code></li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/856">GH-856</a> fix(<code>cordova/util</code>): version detection for legacy platforms</li>
-</ul>
-
-<p><strong>Chores &amp; Refactor Changes:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-lib/pull/886">GH-886</a> chore: update dependencies w/ <code>package-lock</code> rebuild &amp; test update</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/881">GH-881</a> chore: <code>npmrc</code></li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/879">GH-879</a> chore: <code>package-lock</code> update</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/858">GH-858</a> chore: clean up <code>package.json</code></li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/882">GH-882</a> refactor(<code>addHelper</code>): more concise <code>package.json</code> spec lookup</li>
-</ul>
-
-<p><strong>CI, Test &amp; Doc Changes:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-lib/pull/862">GH-862</a> ci: add node-14.x to workflow</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/870">GH-870</a> test(<code>plugin.spec</code>): fix version change in test fixture</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/865">GH-865</a> test(<code>pkgJson</code>): make expectations work for npm 5 to 7</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/864">GH-864</a> test(<code>pkgJson</code>): fix test after release of geolocation plugin v4.1.0</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/855">GH-855</a> test: fix missing stack traces in jasmine output</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/853">GH-853</a> test: unit test deprecated platforms</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/877">GH-877</a> docs: correct linter command in <code>README</code></li>
+  <li><a href="https://github.com/apache/cordova-app-hello-world/pull/73">GH-73</a> cleanup!(<code>config.xml</code>): simplify defaults</li>
+  <li><a href="https://github.com/apache/cordova-app-hello-world/pull/67">GH-67</a> chore(ios): remove <code>gap</code> from CSP</li>
+  <li><a href="https://github.com/apache/cordova-app-hello-world/pull/66">GH-66</a> chore!: remove whitelist plugin &amp; reference</li>
 </ul>
 
         </div>
@@ -201,37 +164,17 @@
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2021/09/15/cordova-android-release-10.1.1.html">Previous</a>
+                    <a href="/announcements/2021/10/08/cordova-lib-release-10.1.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2021/09/15/cordova-android-release-10.1.1.html">Cordova Android 10.1.1 Released!</a>
-                    <div class="date"> 15 Sep 2021 - By Bryan Ellis </div>
+                    <a class="title" href="/announcements/2021/10/08/cordova-lib-release-10.1.0.html">Cordova Lib 10.1.0 Released!</a>
+                    <div class="date"> 08 Oct 2021 - By Bryan Ellis </div>
                     <p class="content">
-                        We are happy to announce that we have just released Cordova Android...
+                        We are happy to announce that we have just released cordova-lib 10.1.0!...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/news/2021/10/31/template-release.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/news/2021/10/31/template-release.html">Template 6.0.0 Released!</a>
-                    <div class="date"> 31 Oct 2021 - By Bryan Ellis </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released a major...
-                    </p>
                 
             </div>
         </div>
