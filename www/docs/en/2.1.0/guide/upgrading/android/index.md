@@ -122,7 +122,7 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 7. Replace the res/xml/phonegap.xml with res/xml/cordova.xml so that it is the same as the one found in framework/res/xml/cordova.xml
 
 
-## Upgrade to 1.5.0 from 1.4.0##
+## Upgrade to 1.5.0 from 1.4.0 ##
 1. Remove phonegap-1.4.0.jar from the libs directory in your project
 2. Add cordova-1.5.0.jar to the libs directory in your project
 3. If you are using Eclipse, please refresh your eclipse project and do a clean

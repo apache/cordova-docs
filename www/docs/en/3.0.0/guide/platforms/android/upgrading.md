@@ -329,7 +329,7 @@ maintainer and add this task to their bug tracker.
 
 7. Replace `res/xml/phonegap.xml` with `res/xml/cordova.xml` to match `framework/res/xml/cordova.xml`.
 
-## Upgrade to 1.5.0 from 1.4.0##
+## Upgrade to 1.5.0 from 1.4.0 ##
 
 1. Remove `phonegap-1.4.0.jar` from the project's `libs` directory.
 

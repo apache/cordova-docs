@@ -53,7 +53,7 @@ which will be used for all platforms.
 For each platform, you can also define a pixel-perfect icon set to fit
 different screen resolutions.
 
-##Android
+## Android
 ```xml
     <platform name="android">
         <!--
@@ -72,24 +72,24 @@ different screen resolutions.
         <icon src="res/android/xxxhdpi.png" density="xxxhdpi" />
     </platform>
 ```
-###See Also
+### See Also
 - [Android icon guide](https://www.google.com/design/spec/style/icons.html)
 - [Android - Supporting multiple screens](http://developer.android.com/guide/practices/screens_support.html)
 
-##BlackBerry10
+## BlackBerry10
 ```xml
     <platform name="blackberry10">
         <icon src="res/bb10/icon-86.png" />
         <icon src="res/bb10/icon-150.png" />
     </platform>
 ```
-###See Also
+### See Also
 - [BlackBerry's documentation][blackberry_icon] for targeting multiple sizes and locales.
 
-##Browser
+## Browser
 Icons are not applicable to the Browser platform.
 
-##iOS
+## iOS
 ```xml
     <platform name="ios">
         <!-- iOS 8.0+ -->
@@ -122,10 +122,10 @@ Icons are not applicable to the Browser platform.
         <icon src="res/ios/icon-83.5@2x.png" width="167" height="167" />
     </platform>
 ```
-###See Also
+### See Also
 - [App Icons on iPad and iPhone](https://developer.apple.com/library/content/qa/qa1686/_index.html)
 
-##Windows
+## Windows
 
 For Windows the recommended approach to define application icons is to use the `target` attribute.
 
@@ -184,11 +184,11 @@ Although it is not recommended, it is also possible to define icons using the `w
     </platform>
 ```
 
-###See Also:
+### See Also:
 - [Windows 10 platform guidelines for icons](https://msdn.microsoft.com/en-us/library/windows/apps/mt412102.aspx).
 - [Windows 8.1 tiles and icons sizes](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh781198.aspx)
 
-##Windows Phone 8 (WP8 Platform)
+## Windows Phone 8 (WP8 Platform)
 ```xml
     <platform name="wp8">
         <icon src="res/wp/ApplicationIcon.png" width="99" height="99" />

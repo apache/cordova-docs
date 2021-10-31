@@ -294,7 +294,7 @@ references the deprecated invokeString API:
         <body onload=”onLoad();”>
         .....
 
-###Code Your Application
+### Code Your Application
 
   Replace the sample code in the `www` directory of a new project with the HTML, JavaScript and CSS code for your application.  The name of the initial file to load when the app is launched should be `index.html` (advanced users can change this if necessary).  As demonstrated in the HelloWorld sample application, subdirectories within the `www` directory are permitted.  Note that the `www` directory is readonly, you can not write information to this directory during app execution.  If you need to store information use the Cordova [File](../../../cordova/file/fileobj/fileobj.html) or [Storage](../../../cordova/storage/storage.html) APIs.
 

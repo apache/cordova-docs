@@ -46,7 +46,7 @@ Add Firefox OS as a supported platform to the app with the following:
 
 This creates a Firefox OS app in platforms/firefoxos/www directory, which currently looks the same except that it has a Firefox manifest file (manifest.webapp) inside the www directory.
 
-##Developing your app
+## Developing your app
 
 At this point you are ready to go — change the code inside test-app/www to whatever you want your app to be. You can add [supported plugins]() to the app using "cordova plugin add", for example:
 
@@ -74,7 +74,7 @@ When your app code is written, deploy your changes to the Firefox OS app you've 
   	
 Note that a build step (i.e. cordova build) is not required when deploying to the Firefox OS platform, as Firefox OS apps are HTML-based, and therefore not compiled. 
 
-##Testing and Debugging
+## Testing and Debugging
 
 The app can be tested using the Firefox OS [App Manager](https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager).
 
@@ -84,7 +84,7 @@ For here you can install the app on your test device/simulator (with the "Update
 
 Note: Before attempting to publish your app you should consider validating it using the [App validator](https://marketplace.firefox.com/developers/validator).
 
-##Publishing your app on the Firefox Marketplace
+## Publishing your app on the Firefox Marketplace
 
 You can submit your app to the Firefox Marketplace, or publish it yourself. Visit the [Firefox Marketplace Zone](https://developer.mozilla.org/en-US/Marketplace) on MDN to find out more about how to do this; [App publishing options](https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options) is the best place to start.
 

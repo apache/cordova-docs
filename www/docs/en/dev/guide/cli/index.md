@@ -80,7 +80,7 @@ $ cordova create hello com.example.hello HelloWorld
 
 This creates the required directory structure for your cordova app. By default, the `cordova create` script generates a skeletal web-based application whose home page is the project's `www/index.html` file.
 
-###See Also
+### See Also
 - [Cordova create command reference documentation][cdv_create]
 - [Cordova project directory structure][cdv_dir]
 - [Cordova project templates][cdv_template]
@@ -116,10 +116,10 @@ _not_ edit any files in the `/platforms/` directory. The files
 in this directory are routinely overwritten when preparing
 applications for building, or when plugins are re-installed.
 
-###See Also
+### See Also
 - [Cordova platform command reference documentation][cdv_platform]
 
-##Install pre-requisites for building
+## Install pre-requisites for building
 To build and run apps, you need to install SDKs for each platform you wish to target. Alternatively, if you are using browser for development you can use `browser` platform which does not require any platform SDKs.
 
 To check if you satisfy requirements for building the platform:
@@ -160,10 +160,10 @@ You can optionally limit the scope of each build to specific platforms - 'ios' i
 $ cordova build ios
 ```
 
-###See Also
+### See Also
 - [Cordova build command reference documentation][cdv_build]
 
-##Test the App
+## Test the App
 
 SDKs for mobile platforms often come bundled with emulators that
 execute a device image, so that you can launch the app from the home
@@ -193,7 +193,7 @@ $ cordova run android
 Before running this command, you need to set up the device for
 testing, following procedures that vary for each platform.
 
-###See Also
+### See Also
 - [Setting up Android emulator](../../guide/platforms/android/index.html#setting-up-an-emulator)
 - [Cordova run command reference documentation][cdv_run]
 - [Cordova emulate command reference documentation][cdv_emulate]
@@ -236,7 +236,7 @@ cordova-plugin-camera 2.1.0 "Camera"
 cordova-plugin-whitelist 1.2.1 "Whitelist"
 ```
 
-###See Also
+### See Also
 - [Cordova plugin command reference documentation][cdv_plugin]
 - [Cordova plugin search page](/plugins/)
 - [Core Plugin APIs]
