@@ -1863,24 +1863,24 @@ application&#39;s logs (including any calls to <code>console.log</code>) on your
 by holding down the ALT key from the home screen and hitting &quot;lglg&quot;
 keys.</p>
 
-<p>##BlackBerry 10</p>
+<h2>BlackBerry 10</h2>
 
 <p>Command-line tools are based on shell scripts. If you need help with a command, type the command with the <code>-h</code> or <code>-help</code> arguments, which are supported by all commands and which will provide descriptions for each of the available arguments.</p>
 
 <p>The following commands are available:</p>
 
-<p>##create</p>
+<h2>create</h2>
 
 <p>The &#39;create&#39; command creates a new project:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/create &lt;path-to-project&gt;
 </code></pre></div></div>
 
-<p>##target</p>
+<h2>target</h2>
 
 <p>The <code>target</code> command allows you to manage the BlackBerry device(s) or simulator that you will use to test your app. You can add or remove a target, or set a target as the default target.</p>
 
-<p>###Add a target</p>
+<h3>Add a target</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/target  add  &lt;name&gt;  &lt;ip-address&gt;  &lt;device | simulator&gt;  [-p | --password &lt;password&gt;]  [--pin &lt;device-pin&gt;]
 </code></pre></div></div>
@@ -1894,21 +1894,21 @@ keys.</p>
   <li><code>--pin &lt;device-pin&gt;</code>  specifies the PIN of the BlackBerry device, which identifies that device as a valid host for the debug token. This argument is required only if you are creating a debug token.</li>
 </ul>
 
-<p>###Remove a target</p>
+<h3>Remove a target</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/target  remove  &lt;name&gt;
 </code></pre></div></div>
 
-<p>###Set a target as the default</p>
+<h3>Set a target as the default</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/target  default  &lt;name&gt;
 </code></pre></div></div>
 
-<p>##build</p>
+<h2>build</h2>
 
 <p>The <code>build</code> command builds the project as a .bar file. You can build your app in either release mode (which produces a signed .bar file) or in debug mode (which produces an unsigned .bar file).</p>
 
-<p>###Build your project in release mode</p>
+<h3>Build your project in release mode</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/build  release  -k|--keystorepass &lt;password&gt;  [-b|--buildId &lt;number&gt;]  [-p|--params &lt;params-JSON-file&gt;]
 </code></pre></div></div>
@@ -1920,7 +1920,7 @@ keys.</p>
   <li><code>-p|--params &lt;params-JSON-file&gt;</code>  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.</li>
 </ul>
 
-<p>###Build your project in debug mode</p>
+<h3>Build your project in debug mode</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/build  debug  [&lt;target&gt;]  [-k|--keystorepass &lt;password&gt;]  [-p|--params &lt;params-JSON-file&gt;]  [-ll|--loglevel &lt;error|warn|verbose&gt;]
 </code></pre></div></div>
@@ -1939,7 +1939,7 @@ keys.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/build debug
 </code></pre></div></div>
 
-<p>##run</p>
+<h2>run</h2>
 
 <p>The <code>run</code> command deploys the app on the specified BlackBerry device or a simulator. Before deploying your app, you must first create a target for the device or simulator you want to deploy your app to. The deploy script will deploy the most recent build of your app.</p>
 
@@ -1951,26 +1951,26 @@ keys.</p>
   <li><code>&lt;target&gt; </code>specifies the name of a previously added target. If <code>&lt;target&gt; </code>is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.</li>
 </ul>
 
-<p>##plugin</p>
+<h2>plugin</h2>
 
 <p>The <code>target</code> command allows you to add and remove plugins</p>
 
-<p>###Fetch a locally-hosted plugin</p>
+<h3>Fetch a locally-hosted plugin</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/plugin fetch &lt;path-to-plugin&gt;
 </code></pre></div></div>
 
-<p>###View a list of installed plugins</p>
+<h3>View a list of installed plugins</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/plugin ls
 </code></pre></div></div>
 
-<p>###Add a plugin</p>
+<h3>Add a plugin</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/plugin add &lt;name&gt;
 </code></pre></div></div>
 
-<p>###Remove a plugin</p>
+<h3>Remove a plugin</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/plugin rm &lt;name&gt;
 </code></pre></div></div>
