@@ -77,7 +77,7 @@ $ brew install ios-deploy
 
 ### CocoaPods
 
-The [CocoaPods](https://cocoapods.org/#install) tools is needed to build iOS apps. A minimum version of 1.8.0 is required but the latest release is always recommended.
+The [CocoaPods](https://cocoapods.org/#install) tools are needed to build iOS apps. A minimum version of 1.8.0 is required but the latest release is always recommended.
 
 To install CocoaPods, run the following from command-line terminal:
 
