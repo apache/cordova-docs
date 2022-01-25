@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released a major update to our Cordova CLI!  cordova@11.0.0In this CLI release, it will also be using the latest i...">
+    <meta name="description" content="We are happy to announce that we have just released an update for Cordova Media Plugin (5.0.4)!  cordova-plugin-media@5.0.4To upgrade:cordova plugin remove c...">
 
     <title>
         
             
-                Cordova CLI 11.0.0 Released! - Apache Cordova
+                Media Plugin 5.0.4 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/news/2021/12/21/cordova-cli-11.0.0-release.html">
+    <link rel="canonical" href="https://cordova.apache.org/news/2022/01/25/media-plugin-5.0.4-release.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -121,107 +121,71 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova CLI 11.0.0 Released!</div>
+        <div class="title">Media Plugin 5.0.4 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">21 Dec 2021</div>
+        <div class="date">25 Jan 2022</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released a major update to our Cordova CLI!</p>
+            <p>We are happy to announce that we have just released an update for <code>Cordova Media Plugin (5.0.4)</code>!</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova">cordova@11.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-media">cordova-plugin-media@5.0.4</a></li>
 </ul>
 
-<p>In this CLI release, it will also be using the latest internal libraries and template:</p>
+<p><strong>To upgrade:</strong></p>
 
-<ul>
-  <li><a href="https://www.npmjs.com/package/cordova-lib">cordova-lib@11.0.0</a></li>
-  <li><a href="https://www.npmjs.com/package/cordova-create">cordova-create@4.0.0</a></li>
-  <li><a href="https://www.npmjs.com/package/cordova-app-hello-world">cordova-app-hello-world@6.0.0</a></li>
-</ul>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-media
+cordova plugin add cordova-plugin-media@5.0.4
+</code></pre></div></div>
 
 <h2>Release Highlights</h2>
 
-<p>This release drops Nodejs 10 support. The minimum supported version which Cordova requires is 12.x.</p>
-
-<p>In all releases, we have updated all npm packages to the possible latest release in which Cordova can support.</p>
-
-<p><strong>Cordova CLI 11.0.0:</strong></p>
-
-<p>In this release, we fixed an issue where users were unable to use Cordova CLI after upgrading their macOS environment to macOS Monterey. This issue was caused by one of the package dependencies, <code>insight</code>. The previous workaround was to reinstall Cordova CLI, but now this is no longer required with this release.</p>
-
-<p><strong>Cordova Lib 11.0.0:</strong></p>
-
-<p>We have bumped all platform pinnings to use the latest released platforms. This means new Cordova app projects will now use the latest major versions of the supported platforms.</p>
-
 <ul>
-  <li><code>cordova-android@^10.1.1</code></li>
-  <li><code>cordova-electron@^3.0.0</code></li>
-  <li><code>cordova-ios@^6.2.0</code></li>
+  <li>
+    <p>Resolved Mounted Storage for <strong>Android 11</strong></p>
+
+    <p>Android 11 had deprecated the <code>Environment.getExternalStorageDirectory()</code> API that caused issues with fetching and mounting to the external directory. In this release, we changed the API with <code>context.getExternalFilesDir(null)</code>, the alternative suggested API for fetching and mounting with the external storage directory.</p>
+  </li>
 </ul>
 
-<p><strong>Cordova Create 4.0.0:</strong></p>
-
-<p>All new projects will now start with the newest App Hello World template.</p>
-
-<p><strong>Cordova App Hello World Template 6.0.0:</strong></p>
-
-<p>Please refer to the <a href="https://cordova.apache.org/news/2021/10/31/template-release.html">App Hello World Release Blog</a> post for more details.</p>
-
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
-
-<h2>Greetings</h2>
-
-<p>The Apache Cordova team wishes you Happy Holidays and a good start for the new year.</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
-<p><strong>Cordova CLI 11.0.0:</strong></p>
-
 <ul>
-  <li><a href="https://github.com/apache/cordova-cli/pull/575">GH-575</a> chore: rebuilt <code>package-lock.json</code></li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/574">GH-574</a> dep: bump <code>@cordova/eslint-config@^4.0.0</code></li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/573">GH-573</a> dep: update <code>insight</code> w/ updated code usage</li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/572">GH-572</a> dep: bump all dependencies</li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/570">GH-570</a> feat: rebuilt <code>package-lock.json</code> w/ v2</li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/571">GH-571</a> feat!: update node support</li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/564">GH-564</a> chore: <code>npmrc</code></li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/559">GH-559</a> docs: remove plugin save command from CLI help</li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/550">GH-550</a> dep: <code>systeminformation@^5.5.0</code></li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/535">GH-535</a> chore(pkg): remove deprecated <code>no-op</code> field <code>preferGlobal</code></li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/534">GH-534</a> chore: clean up <code>package.json</code></li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/533">GH-533</a> (android) Replace deprecated <code>android</code> command with <code>avdmanager</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/317">GH-317</a> fix(android): get external files directory for <strong>Android</strong> 10+</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/249">GH-249</a> fix: #248 delete javascript reference to released media</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/241">GH-241</a> fix(types): Add type definition for getCurrentAmplitude</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/283">GH-283</a> refactor(eslint): use <code>cordova-eslint</code> /w fix</li>
 </ul>
 
-<p><strong>Cordova Lib 11.0.0:</strong></p>
+<p><strong>Chores &amp; Deps:</strong></p>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-lib/pull/889">GH-889</a> bump(platform): bump <strong>Electron</strong> &amp; <strong>Android</strong> to latest release</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/890">GH-890</a> chore: rebuild <code>package-lock</code></li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/888">GH-888</a> dep(dev)!: bump <code>@cordova/eslint-config@^4.0.0</code> w/ fix</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/887">GH-887</a> dep!: update dependencies</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/873">GH-873</a> ci: switch to GitHub Actions</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/884">GH-884</a> chore!: drop support for Node.js 10</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/329">GH-329</a> dep: bump <code>@cordova/eslint-config@4.0.0</code> w/ fix &amp; <code>package-lock</code> rebuild</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/284">GH-284</a> chore: adds <code>package-lock</code> file</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/282">GH-282</a> chore(npm): use short notation in <code>package.json</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/275">GH-275</a> chore(npm): improve ignore list</li>
 </ul>
 
-<p><strong>Cordova Create 4.0.0:</strong></p>
+<p><strong>CI &amp; Tests:</strong></p>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-create/pull/68">GH-68</a> dep!: update all dependencies
-    <ul>
-      <li><code>cordova-app-hello-world@^6.0.0</code></li>
-      <li><code>cordova-common@^4.0.2</code></li>
-      <li><code>cordova-fetch@^3.0.1</code></li>
-    </ul>
-  </li>
-  <li><a href="https://github.com/apache/cordova-create/pull/67">GH-67</a> chore: clean up <code>package.json</code></li>
-  <li><a href="https://github.com/apache/cordova-create/pull/66">GH-66</a> ci: add node 14 to workflow</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/320">GH-320</a> ci(ios): update workflow w/ <strong>iOS</strong> 15</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/313">GH-313</a> ci: add action-badge</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/312">GH-312</a> ci: remove travis &amp; appveyor</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/311">GH-311</a> ci: add gh-actions workflows</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/298">GH-298</a> ci: add node-14.x to workflow</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/292">GH-292</a> ci(travis): update osx xcode image</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/291">GH-291</a> ci(travis): updates <strong>Android</strong> API level</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/274">GH-274</a> ci: updates Node.js versions</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/318">GH-318</a> test(browser): disable test cases w/ play() due to Chrome&#39;s Autoplay Policy</li>
 </ul>
 
         </div>
@@ -230,37 +194,17 @@
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/news/2021/10/31/template-release.html">Previous</a>
+                    <a href="/news/2021/12/21/cordova-cli-11.0.0-release.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/news/2021/10/31/template-release.html">Template 6.0.0 Released!</a>
-                    <div class="date"> 31 Oct 2021 - By Bryan Ellis </div>
+                    <a class="title" href="/news/2021/12/21/cordova-cli-11.0.0-release.html">Cordova CLI 11.0.0 Released!</a>
+                    <div class="date"> 21 Dec 2021 - By Bryan Ellis </div>
                     <p class="content">
                         We are happy to announce that we have just released a major...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/news/2022/01/25/media-plugin-5.0.4-release.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/news/2022/01/25/media-plugin-5.0.4-release.html">Media Plugin 5.0.4 Released!</a>
-                    <div class="date"> 25 Jan 2022 - By Bryan Ellis </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released an update...
-                    </p>
                 
             </div>
         </div>
