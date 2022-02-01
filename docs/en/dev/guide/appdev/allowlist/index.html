@@ -2322,13 +2322,12 @@
 <p>Here are some example CSP declarations for your <code>.html</code> pages:</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Good default declaration:
-    * gap: is required only on iOS (when using UIWebView) and is needed for JS-&gt;native communication
     * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
     * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
         * Enable inline JS: add 'unsafe-inline' to default-src
         * Enable eval(): add 'unsafe-eval' to default-src
 --&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Security-Policy"</span> <span class="na">content=</span><span class="s">"default-src 'self' data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Security-Policy"</span> <span class="na">content=</span><span class="s">"default-src 'self' data: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *"</span><span class="nt">&gt;</span>
 
 <span class="c">&lt;!-- Allow everything but only from the same origin and foo.com --&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Security-Policy"</span> <span class="na">content=</span><span class="s">"default-src 'self' foo.com"</span><span class="nt">&gt;</span>
