@@ -2600,11 +2600,7 @@ and will be indicated as such.</p>
     </tr>
     <tr>
       <td>CordovaWebViewEngine(string) <br /> ==iOS==</td>
-      <td><em>Default: CDVUIWebViewEngine</em> <br />  This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The &#39;value&#39; here should match the &#39;feature&#39; name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.</td>
-    </tr>
-    <tr>
-      <td>CordovaDefaultWebViewEngine(string) <br /> ==iOS==</td>
-      <td><em>Default: CDVUIWebViewEngine</em> <br /> As the previous setting, CordovaWebViewEngine, this enables you to override the default fallback WebView with a different plugin. The default WebView uses a private plugin, CDVUIWebViewEngine. You can override this if you need to use a public plugin instead. A use case for this setting is where you need to use something other than the default CDVUIWebViewEngine to render the host app. If CordovaDefaultWebViewEngine and CordovaWebViewEngine is set, CordovaWebViewEngine will be chosen to render the host app for devices running iOS9 and above, while CordovaDefaultWebViewEngine will be the fallback for iOS8. The plugin must conform to the CDVWebViewEngineProtocol protocol. The &#39;value&#39; here should match the &#39;feature&#39; name of the WebView engine plugin that is installed.</td>
+      <td><em>Default: CDVWebViewEngine</em> <br />  This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The &#39;value&#39; here should match the &#39;feature&#39; name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.</td>
     </tr>
     <tr>
       <td>DefaultVolumeStream(string) <br /> ==Android==</td>
@@ -2843,8 +2839,8 @@ and will be indicated as such.</p>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AppendUserAgent"</span> <span class="na">value=</span><span class="s">"My Browser"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"target-device"</span> <span class="na">value=</span><span class="s">"universal"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"deployment-target"</span> <span class="na">value=</span><span class="s">"7.0"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"CordovaWebViewEngine"</span> <span class="na">value=</span><span class="s">"CDVUIWebViewEngine"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"CordovaDefaultWebViewEngine"</span> <span class="na">value=</span><span class="s">"CDVUIWebViewEngine"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"CordovaWebViewEngine"</span> <span class="na">value=</span><span class="s">"CDVWebViewEngine"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"CordovaDefaultWebViewEngine"</span> <span class="na">value=</span><span class="s">"CDVWebViewEngine"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SuppressesLongPressGesture"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"Suppresses3DTouchGesture"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
 
