@@ -1,0 +1,3305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Android Platform Guide - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/11.x/guide/platforms/android/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64283057-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '11.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Introduction
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create apps
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/cli/index.html">
+                Create your first app
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/cli/template.html">
+                Templates for apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/support/index.html">
+                Platform support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/third-party/index.html">
+                Third-party Tools
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/platforms/windows/index.html">
+                Windows (deprecated)
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/platforms/osx/index.html">
+                OS X (deprecated)
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/platforms/electron/index.html">
+                Electron
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/platform_plugin_versioning_ref/index.html">
+                Manage versions and platforms
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/platform_pinning/index.html">
+                Platform pinning
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/config_ref/images.html">
+                Customize icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/cordova/storage/storage.html">
+                Store data
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/appdev/privacy/index.html">
+                Manage privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/appdev/security/index.html">
+                Manage security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/appdev/allowlist/index.html">
+                Allow List
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Create plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/hybrid/plugins/index.html">
+                Create a plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Develop for platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/platforms/windows/plugin.html">
+                Windows
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Reference
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/config_ref/index.html">
+                Config.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/reference/cordova-cli/index.html">
+                CLI Reference
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/plugin_ref/spec.html">
+                Plugin.xml
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin APIs
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/reference/cordova-plugin-battery-status/index.html">
+                Battery Status
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/reference/cordova-plugin-camera/index.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/reference/cordova-plugin-device/index.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/reference/cordova-plugin-dialogs/index.html">
+                Dialogs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/reference/cordova-plugin-file/index.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/reference/cordova-plugin-geolocation/index.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/reference/cordova-plugin-inappbrowser/index.html">
+                Inappbrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/reference/cordova-plugin-media/index.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/reference/cordova-plugin-media-capture/index.html">
+                Media Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/reference/cordova-plugin-network-information/index.html">
+                Network Information
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/reference/cordova-plugin-screen-orientation/index.html">
+                Screen Orientation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/reference/cordova-plugin-splashscreen/index.html">
+                Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/reference/cordova-plugin-statusbar/index.html">
+                Statusbar
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/11.x/reference/cordova-plugin-vibration/index.html">
+                Vibration
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/cli/index.html">
+        Create your first app
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/cli/template.html">
+        Templates for apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/support/index.html">
+        Platform support
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/third-party/index.html">
+        Third-party Tools
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/platforms/windows/index.html">
+        Windows (deprecated)
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/platforms/osx/index.html">
+        OS X (deprecated)
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/platforms/electron/index.html">
+        Electron
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/platform_plugin_versioning_ref/index.html">
+        Manage versions and platforms
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/platform_pinning/index.html">
+        Platform pinning
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/config_ref/images.html">
+        Customize icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/cordova/storage/storage.html">
+        Store data
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/appdev/privacy/index.html">
+        Manage privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/appdev/security/index.html">
+        Manage security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/appdev/allowlist/index.html">
+        Allow List
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/hybrid/plugins/index.html">
+        Create a plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/platforms/windows/plugin.html">
+        Windows
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/config_ref/index.html">
+        Config.xml
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/reference/cordova-cli/index.html">
+        CLI Reference
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/plugin_ref/spec.html">
+        Plugin.xml
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/reference/cordova-plugin-battery-status/index.html">
+        Battery Status
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/reference/cordova-plugin-camera/index.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/reference/cordova-plugin-device/index.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/reference/cordova-plugin-dialogs/index.html">
+        Dialogs
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/reference/cordova-plugin-file/index.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/reference/cordova-plugin-geolocation/index.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/reference/cordova-plugin-inappbrowser/index.html">
+        Inappbrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/reference/cordova-plugin-media/index.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/reference/cordova-plugin-media-capture/index.html">
+        Media Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/reference/cordova-plugin-network-information/index.html">
+        Network Information
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/reference/cordova-plugin-screen-orientation/index.html">
+        Screen Orientation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/reference/cordova-plugin-splashscreen/index.html">
+        Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/reference/cordova-plugin-statusbar/index.html">
+        Statusbar
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/11.x/reference/cordova-plugin-vibration/index.html">
+        Vibration
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/dev/guide/platforms/android/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        11.x
+                        
+                            (Latest)
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                11.x
+                                
+                                    (Latest)
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/10.x/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/" class="missing-page">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/" class="missing-page">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/" class="missing-page">
+                                
+                                    
+                                3.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/" class="missing-page">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/" class="missing-page">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/" class="missing-page">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Android Platform Guide</h1>
+
+<p>This guide shows how to set up your SDK environment to deploy Cordova
+apps for Android devices, and how to optionally use Android-centered
+command-line tools in your development workflow.  You need to install
+the Android SDK regardless of whether you want to use these
+platform-centered shell tools or cross-platform Cordova CLI for
+development. For a comparison of the two development paths, see the
+<a href="../../overview/index.html#development-paths">Overview</a>. For details on
+the CLI, see <a href="../../../reference/cordova-cli/index.html">Cordova CLI Reference</a>.</p>
+
+<h2>Requirements and Support</h2>
+
+<p>Cordova for Android requires the Android SDK which can be installed
+on OS X, Linux or Windows. See the Android SDK&#39;s
+<a href="http://developer.android.com/sdk/index.html#Requirements">System Requirements</a>.
+Cordova&#39;s latest Android package supports up to Android <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API Level</a> 30.
+The supported Android API Levels and Android Versions for the past
+few cordova-android releases can be found in this table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>cordova-android Version</th>
+      <th>Supported Android API-Levels</th>
+      <th>Equivalent Android Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10.X.X</td>
+      <td>22 - 30</td>
+      <td>5.1 - 11.0.0</td>
+    </tr>
+    <tr>
+      <td>9.X.X</td>
+      <td>22 - 29</td>
+      <td>5.1 - 10.0.0</td>
+    </tr>
+    <tr>
+      <td>8.X.X</td>
+      <td>19 - 28</td>
+      <td>4.4 - 9.0.0</td>
+    </tr>
+    <tr>
+      <td>7.X.X</td>
+      <td>19 - 27</td>
+      <td>4.4 - 8.1</td>
+    </tr>
+    <tr>
+      <td>6.X.X</td>
+      <td>16 - 26</td>
+      <td>4.1 - 8.0.0</td>
+    </tr>
+    <tr>
+      <td>5.X.X</td>
+      <td>14 - 23</td>
+      <td>4.0 - 6.0.1</td>
+    </tr>
+    <tr>
+      <td>4.1.X</td>
+      <td>14 - 22</td>
+      <td>4.0 - 5.1</td>
+    </tr>
+    <tr>
+      <td>4.0.X</td>
+      <td>10 - 22</td>
+      <td>2.3.3 - 5.1</td>
+    </tr>
+    <tr>
+      <td>3.7.X</td>
+      <td>10 - 21</td>
+      <td>2.3.3 - 5.0.2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Please note that the versions listed here are for Cordova&#39;s Android package,
+<a href="https://github.com/apache/cordova-android">cordova-android</a>, and not for the
+Cordova CLI. To determine what version of Cordova&#39;s Android package is installed
+in your Cordova project, run the command <code>cordova platform ls</code> in the directory
+that holds your project.</p>
+
+<p>As a general rule, Android versions become unsupported by Cordova as
+they dip below 5% on Google&#39;s
+<a href="http://developer.android.com/about/dashboards/index.html">distribution dashboard</a>.</p>
+
+<h2>Installing the Requirements</h2>
+
+<h3>Java Development Kit (JDK)</h3>
+
+<p>Install <a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">Java Development Kit (JDK) 8</a>
+or you can install <a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html">Java Development Kit (JDK) 11</a>
+if using <code>cordova-android</code> version 10+.</p>
+
+<p>When installing on Windows you also need to set <code>JAVA_HOME</code> Environment Variable
+according to your JDK installation path (see <a href="#setting-environment-variables">Setting Environment Variables</a>)</p>
+
+<h3>Gradle</h3>
+
+<p>As of Cordova-Android 6.4.0, <a href="https://gradle.org/install/">Gradle</a> is now required to be installed to build Android.</p>
+
+<p>When installing on Windows, you need to add Gradle to your path, (see <a href="#setting-environment-variables">Setting Environment Variables</a>)</p>
+
+<h3>Android SDK</h3>
+
+<p>Install <a href="https://developer.android.com/studio/index.html">Android Studio</a>. Follow the instructions at the linked Android Developer site to get started.
+Opening Android Studio for the first time will guide you through the process of installing the Android SDK.</p>
+
+<h4>Adding SDK Packages</h4>
+
+<p>After installing the Android SDK, you must also install the packages for
+whatever <a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level</a>
+you wish to target. It is recommended that you install the highest SDK version
+that your version of cordova-android supports (see <a href="#requirements-and-support">Requirements and Support</a>).</p>
+
+<p>Open the Android SDK Manager (<code>Tools &gt; SDK Manager</code> in Android Studio, or <code>sdkmanager</code> on the command line),
+and make sure the following are installed:</p>
+
+<ol>
+  <li>Android Platform SDK for your targeted version of Android</li>
+  <li>Android SDK build-tools version 29.0.2 or higher</li>
+</ol>
+
+<h4>Android SDK Tools:</h4>
+<p>In Android Studio 3.6 or later, you need to manually add the old version of the Android SDK Tools. To do this:</p>
+
+<ol>
+  <li>Open the Android Studio <strong>SDK Manager</strong></li>
+  <li>In the Android <strong>SDK Tools</strong> tab, uncheck <code>Hide Obsolete Packages</code></li>
+  <li>Check <code>Android SDK Tools (Obsolete)</code></li>
+</ol>
+
+<p>See Android&#39;s documentation on <a href="https://developer.android.com/studio/intro/update">Installing SDK Packages</a>
+for more details.</p>
+
+<h3>Setting environment variables</h3>
+
+<p>Cordova&#39;s CLI tools require some environment variables to be set in order to
+function correctly. The CLI will attempt to set these variables for you, but
+in certain cases you may need to set them manually. The following variables
+should be updated:</p>
+
+<ol>
+  <li>Set the <code>JAVA_HOME</code> environment variable to the location of your JDK
+installation</li>
+  <li>Set the <code>ANDROID_SDK_ROOT</code> environment variable to the location of your Android
+SDK installation</li>
+  <li>It is also recommended that you add the Android SDK&#39;s <code>cmdline-tools/latest/bin</code>, <code>emulator</code>
+and <code>platform-tools</code> directories to your <code>PATH</code></li>
+  <li>For apksigner and zipalign, the Android SDK&#39;s <code>build-tools</code> must also be added to your <code>PATH</code></li>
+</ol>
+
+<h4>OS X and Linux</h4>
+
+<p>On a Mac or Linux, you can use a text editor to create or modify the
+<code>~/.bash_profile</code> file. To set an environment variable, add a line that uses
+<code>export</code> like so (substitute the path with your local installation):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">ANDROID_SDK_ROOT</span><span class="o">=</span>/Development/android-sdk/
+</code></pre></div></div>
+
+<p>To update your <code>PATH</code>, add a line resembling the following (substitute the paths
+with your local Android SDK installation&#39;s location):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_SDK_ROOT</span>/platform-tools/
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_SDK_ROOT</span>/cmdline-tools/latest/bin/
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_SDK_ROOT</span>/emulator/
+</code></pre></div></div>
+
+<p>Reload your terminal to see this change reflected or run the following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">source</span> ~/.bash_profile
+</code></pre></div></div>
+
+<h4>Windows</h4>
+
+<p>These steps may vary depending on your installed version of Windows. Close and
+reopen any command prompt windows after making changes to see them reflected.</p>
+
+<ol>
+  <li>
+    <p>Click on the <strong>Start</strong> menu in the lower-left corner of the desktop</p>
+  </li>
+  <li>
+    <p>In the search bar, search for <strong>Environment Variables</strong> and select <strong>Edit the
+system Environment Variables</strong> from the options that appear</p>
+  </li>
+  <li>
+    <p>In the window that appears, click the <strong>Environment Variables</strong> button</p>
+  </li>
+</ol>
+
+<h5>To create a new environment variable:</h5>
+
+<ol>
+  <li>Click <strong>New&#8230;</strong> and enter the variable name and value</li>
+</ol>
+
+<h5>To set your <strong>PATH</strong>:</h5>
+
+<ol>
+  <li>
+    <p>Select the <strong>PATH</strong> variable and press <strong>Edit</strong>.</p>
+  </li>
+  <li>
+    <p>Add entries for the relevant locations to the <strong>PATH</strong>. For example
+(substitute the paths with your local Android SDK installation&#39;s location):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> C:\Users\[your user]\AppData\Local\Android\Sdk\platform-tools
+ C:\Users\[your user]\AppData\Local\Android\Sdk\cmdline-tools\latest\bin
+ C:\Users\[your user]\AppData\Local\Android\Sdk\tools\emulator
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2>Project Configuration</h2>
+
+<h3>Setting up an Emulator</h3>
+
+<p>If you wish to run your Cordova app on an Android emulator, you will first need
+to create an Android Virtual Device (AVD). See the Android documentation for
+<a href="https://developer.android.com/studio/run/managing-avds.html">managing AVDs</a>,
+<a href="https://developer.android.com/studio/run/emulator.html#about">configuring the emulator</a>,
+and <a href="https://developer.android.com/studio/run/emulator-acceleration.html">setting up hardware acceleration</a>.</p>
+
+<p>Once your AVD is configured correctly, you should be able to deploy your Cordova
+application to the emulator by running:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova run <span class="nt">--emulator</span>
+</code></pre></div></div>
+
+<h3>Configuring Gradle</h3>
+
+<p>As of <strong>cordova-android@4.0.0</strong>, Cordova for Android projects are built using
+<a href="http://www.gradle.org/">Gradle</a>. For instructions on building with Ant, refer
+to older versions of the documentation. Please note that Ant builds are
+deprecated as of the Android SDK Tools 25.3.0.</p>
+
+<h4>Setting Gradle Properties</h4>
+
+<p>It is possible to configure the Gradle build by setting the values of certain
+<a href="https://docs.gradle.org/current/userguide/build_environment.html">Gradle properties</a>
+that Cordova exposes. The following properties are available to be set:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>cdvBuildMultipleApks</code></td>
+      <td>If this is set, then multiple APK files will be generated: One per native platform supported by library projects (x86, ARM, etc). This can be important if your project uses large native libraries, which can drastically increase the size of the generated APK. If not set, then a single APK will be generated which can be used on all devices</td>
+    </tr>
+    <tr>
+      <td><code>cdvVersionCode</code></td>
+      <td>Overrides the versionCode set in <code>AndroidManifest.xml</code></td>
+    </tr>
+    <tr>
+      <td><code>cdvReleaseSigningPropertiesFile</code></td>
+      <td><em>Default: <code>release-signing.properties</code></em><br />Path to a .properties file that contains signing information for release builds (see <a href="#signing-an-app">Signing an App</a>)</td>
+    </tr>
+    <tr>
+      <td><code>cdvDebugSigningPropertiesFile</code></td>
+      <td><em>Default: <code>debug-signing.properties</code></em><br />Path to a .properties file that contains signing information for debug builds (see <a href="#signing-an-app">Signing an App</a>). Useful when you need to share a signing key with other developers</td>
+    </tr>
+    <tr>
+      <td><code>cdvMinSdkVersion</code></td>
+      <td>Overrides the value of <code>minSdkVersion</code> set in <code>AndroidManifest.xml</code>. Useful when creating multiple APKs based on SDK version</td>
+    </tr>
+    <tr>
+      <td><code>cdvBuildToolsVersion</code></td>
+      <td>Overrides the automatically detected <code>android.buildToolsVersion</code> value</td>
+    </tr>
+    <tr>
+      <td><code>cdvCompileSdkVersion</code></td>
+      <td>Overrides the automatically detected <code>android.compileSdkVersion</code> value</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You can set these properties in one of four ways:</p>
+
+<ol>
+  <li>
+    <p>By setting environment variables like so:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">export </span><span class="nv">ORG_GRADLE_PROJECT_cdvMinSdkVersion</span><span class="o">=</span>20
+ <span class="nv">$ </span>cordova build android
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>By using the <code>--gradleArg</code> flag in your Cordova <code>build</code> or <code>run</code> commands:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>cordova run android <span class="nt">--</span> <span class="nt">--gradleArg</span><span class="o">=</span><span class="nt">-PcdvMinSdkVersion</span><span class="o">=</span>20
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>By placing a file called <code>gradle.properties</code> in your Android platform
+ folder (<code>&lt;your-project&gt;/platforms/android</code>) and setting the properties in it
+ like so:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # In &lt;your-project&gt;/platforms/android/app/gradle.properties
+ cdvMinSdkVersion=20
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>By extending <code>build.gradle</code> via a <a href="#extending-buildgradle"><code>build-extras.gradle</code> file</a>
+    and setting the property like so:</p>
+
+    <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// In &lt;your-project&gt;/platforms/android/app/build-extras.gradle</span>
+ <span class="n">ext</span><span class="o">.</span><span class="na">cdvMinSdkVersion</span> <span class="o">=</span> <span class="mi">20</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>The latter two options both involve including an extra file in your Android
+platform folder. In general, it is discouraged that you edit the contents of
+this folder because it is easy for those changes to be lost or overwritten.
+Instead, these two files should be copied from another location into that folder
+as part of the build command by using the <code>before_build</code>
+<a href="../../appdev/hooks/index.html">hook</a>.</p>
+
+<h4>Extending build.gradle</h4>
+
+<p>If you need to customize <code>build.gradle</code>, rather than edit it directly, you
+should create a sibling file named <code>build-extras.gradle</code>. This file will be
+included by the main <code>build.gradle</code> when present. This file must be placed in
+the <code>app</code> folder of the Android platform directory (<code>&lt;your-project&gt;/platforms/android/app</code>), 
+so it is recommended that you copy it over via a script attached to the 
+<code>before_build</code> <a href="../../appdev/hooks/index.html">hook</a>.</p>
+
+<p>Here&#39;s an example:</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example build-extras.gradle</span>
+<span class="c1">// This file is included at the beginning of `build.gradle`</span>
+
+<span class="c1">// special properties (see `build.gradle`) can be set and overwrite the defaults</span>
+<span class="n">ext</span><span class="o">.</span><span class="na">cdvDebugSigningPropertiesFile</span> <span class="o">=</span> <span class="s1">'../../android-debug-keys.properties'</span>
+
+<span class="c1">// normal `build.gradle` configuration can happen</span>
+<span class="n">android</span> <span class="o">{</span>
+  <span class="n">defaultConfig</span> <span class="o">{</span>
+    <span class="n">testInstrumentationRunner</span> <span class="s1">'android.support.test.runner.AndroidJUnitRunner'</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+<span class="n">dependencies</span> <span class="o">{</span>
+  <span class="n">androidTestImplementation</span> <span class="s1">'com.android.support.test.espresso:espresso-core:2.2.2'</span><span class="o">,</span> <span class="o">{</span>
+    <span class="n">exclude</span> <span class="nl">group:</span> <span class="s1">'com.android.support'</span><span class="o">,</span> <span class="nl">module:</span> <span class="s1">'support-annotations'</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// When set, this function `ext.postBuildExtras` allows code to run at the end of `build.gradle`</span>
+<span class="n">ext</span><span class="o">.</span><span class="na">postBuildExtras</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">android</span><span class="o">.</span><span class="na">buildTypes</span><span class="o">.</span><span class="na">debug</span><span class="o">.</span><span class="na">applicationIdSuffix</span> <span class="o">=</span> <span class="s1">'.debug'</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Note that plugins can also include <code>build-extras.gradle</code> files via:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"some.gradle"</span> <span class="na">custom=</span><span class="s">"true"</span> <span class="na">type=</span><span class="s">"gradleReference"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h4>Configuring Gradle JVM Args</h4>
+
+<p>To change the Gradle JVM args, the <code>--jvmargs</code> flag can be used with both cordova build and run commands. This is mostly useful for controlling how much memory gradle is allowed to use during the build process. It is recommended to allow at least 2048 MB.</p>
+
+<p>By default, JVM args has a value of <code>-Xmx2048m</code>. To increase the max allowed memory, use the <code>-Xmx</code> JVM arg. Example given below:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build android -- --jvmargs='-Xmx4g'
+</code></pre></div></div>
+
+<p>The following units are supported:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>unit</th>
+      <th style="text-align: center">value</th>
+      <th>example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>kilobyte</td>
+      <td style="text-align: center">k</td>
+      <td><code>-Xmx2097152k</code></td>
+    </tr>
+    <tr>
+      <td>megabyte</td>
+      <td style="text-align: center">m</td>
+      <td><code>-Xmx2048m</code></td>
+    </tr>
+    <tr>
+      <td>gigabyte</td>
+      <td style="text-align: center">g</td>
+      <td><code>-Xmx2g</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Setting the Version Code</h3>
+
+<p>To change the <a href="https://developer.android.com/studio/publish/versioning.html">version code</a>
+for your app&#39;s generated apk, set the <code>android-versionCode</code> attribute in the widget
+element of your application&#39;s <a href="../../../config_ref/index.html">config.xml file</a>.
+If the <code>android-versionCode</code> is not set, the version code will be determined
+using the <code>version</code> attribute. For example, if the version is <code>MAJOR.MINOR.PATCH</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>versionCode = MAJOR * 10000 + MINOR * 100 + PATCH
+</code></pre></div></div>
+
+<p>If your application has enabled the <code>cdvBuildMultipleApks</code> Gradle property (see
+<a href="#setting-gradle-properties">Setting Gradle Properties</a>), the version code of
+your app will also be multiplied by 10 so that the last digit of the code can be
+used to indicate the architecture the apk was built for. This multiplication
+will happen regardless of whether the version code is taken from the
+<code>android-versionCode</code> attribute or generated using the <code>version</code>. Be aware that
+some plugins added to your project (including cordova-plugin-crosswalk-webview)
+may set this Gradle property automatically.</p>
+
+<p><strong>Please Note:</strong> When updating the <code>android-versionCode</code> property, it is unwise
+to increment the version code taken from built apks. Instead, you should
+increment the code based off the value in your <code>config.xml</code> file&#39;s
+<code>android-versionCode</code> attribute. This is because the <code>cdvBuildMultipleApks</code>
+property causes the version code to be multiplied by 10 in the built apks and
+thus using that value will cause your next version code to be 100 times the
+original, etc.</p>
+
+<h2>Signing an App</h2>
+
+<p>First, you should read the <a href="https://developer.android.com/studio/publish/app-signing.html">Android app signing requirements</a>.</p>
+
+<h3>Using Flags</h3>
+
+<p>To sign an app, you need the following parameters:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Flag</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Keystore</td>
+      <td><code>--keystore</code></td>
+      <td>Path to a binary file which can hold a set of keys</td>
+    </tr>
+    <tr>
+      <td>Keystore Password</td>
+      <td><code>--storePassword</code></td>
+      <td>Password to the keystore</td>
+    </tr>
+    <tr>
+      <td>Alias</td>
+      <td><code>--alias</code></td>
+      <td>The id specifying the private key used for signing</td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><code>--password</code></td>
+      <td>Password for the private key specified</td>
+    </tr>
+    <tr>
+      <td>Type of the Keystore</td>
+      <td><code>--keystoreType</code></td>
+      <td><em>Default: auto-detect based on file extension</em><br />Either pkcs12 or jks</td>
+    </tr>
+    <tr>
+      <td>Package Type</td>
+      <td><code>--packageType</code></td>
+      <td><em>Default: apk</em><br />Specify whether to build an APK or an [Android App Bundle] (https://developer.android.com/guide/app-bundle) (.aab) file.<br />Accepts either <code>apk</code> or <code>bundle</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>These parameters can be specified using the command line arguments above to
+the <a href="../../../reference/cordova-cli/index.html">Cordova CLI</a> <code>build</code> or <code>run</code> commands.</p>
+
+<p><strong>Note</strong>: You should use double <code>--</code> to indicate that these are platform-specific arguments, for example:</p>
+
+<p><code>cordova run android --release -- --keystore=../my-release-key.keystore --storePassword=password --alias=alias_name --password=password --packageType=bundle</code>.</p>
+
+<h3>Using build.json</h3>
+
+<p>Alternatively, you could specify them in a build configuration file (<code>build.json</code>)
+using the <code>--buildConfig</code> argument to the same commands. Here&#39;s a sample of a
+build configuration file:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"android"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"keystore"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../android.keystore"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"storePassword"</span><span class="p">:</span><span class="w"> </span><span class="s2">"android"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"alias"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mykey1"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"password"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"keystoreType"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"apk"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"keystore"</span><span class="p">:</span><span class="w"> </span><span class="s2">"../android.keystore"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"storePassword"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"alias"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mykey2"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"password"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"keystoreType"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bundle"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>There is also support to mix and match command line arguments and parameters in
+<code>build.json</code>. Values from the command line arguments will get precedence.
+This can be useful for specifying passwords on the command line.</p>
+
+<h3>Using Gradle</h3>
+
+<p>You can also specify signing properties by including a <code>.properties</code> file and
+pointing to it with the <code>cdvReleaseSigningPropertiesFile</code> and
+<code>cdvDebugSigningPropertiesFile</code> Gradle properties (see <a href="#setting-gradle-properties">Setting Gradle Properties</a>).
+The file should look like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>storeFile=relative/path/to/keystore.p12
+storePassword=SECRET1
+storeType=pkcs12
+keyAlias=DebugSigningKey
+keyPassword=SECRET2
+</code></pre></div></div>
+
+<p><code>storePassword</code> and <code>keyPassword</code> are required for automated signing.</p>
+
+<h2>Debugging</h2>
+
+<p>For details on the debugging tools that come packaged with the Android SDK, see
+<a href="https://developer.android.com/studio/debug/index.html">Android&#39;s developer documentation for debugging</a>.
+Additionally, Android&#39;s developer documentation for <a href="http://developer.android.com/guide/webapps/debugging.html">debugging web apps</a>
+provides an introduction for debugging the portion of your app running in the
+Webview.</p>
+
+<h3>Opening a Project in Android Studio</h3>
+
+<p>Cordova for Android projects can be opened in the Android IDE,
+<a href="https://developer.android.com/studio/index.html">Android Studio</a>.
+This can be useful if you wish to use Android Studio&#39;s built in Android
+debugging/profiling tools or if you are developing Android plugins. Please note
+that when opening your project in Android studio, it is recommended that you do
+NOT edit your code in the IDE. This will edit the code in the <code>platforms</code> folder
+of your project (not <code>www</code>), and changes are liable to be overwritten. Instead,
+edit the <code>www</code> folder and copy over your changes by running <code>cordova build</code>.</p>
+
+<p>Plugin developers wishing to edit their native code in the IDE should use the
+<code>--link</code> flag when adding their plugin to the project via <code>cordova plugin add</code>.
+This will link the files so that changes to the plugin files in the <code>platforms</code>
+folder are reflected in your plugin&#39;s source folder (and vice versa).</p>
+
+<p>To open a Cordova for Android project in Android Studio:</p>
+
+<ol>
+  <li>
+    <p>Launch <strong>Android Studio</strong>.</p>
+  </li>
+  <li>
+    <p>Select <strong>Import Project (Eclipse ADT, Gradle, etc)</strong>.</p>
+
+    <p><img src="/static/img/guide/platforms/android/asdk_import_project.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Select the Android platform directory in your project (<code>&lt;your-project&gt;/platforms/android</code>).</p>
+
+    <p><img src="/static/img/guide/platforms/android/asdk_import_select_location.png" alt="" /></p>
+  </li>
+  <li>
+    <p>For the <code>Gradle Sync</code> question you can simply answer <strong>Yes</strong>.</p>
+  </li>
+</ol>
+
+<p>Once it finishes importing, you should be able to build and run the app directly
+from <strong>Android Studio</strong>. See <a href="https://developer.android.com/studio/intro/index.html">Android Studio Overview</a>
+and <a href="https://developer.android.com/studio/run/index.html">Building and Running from Android Studio</a>
+for more details.</p>
+
+<p><img src="/static/img/guide/platforms/android/asdk_import_done.png" alt="" /></p>
+
+<h2>Platform Centered Workflow</h2>
+
+<p>cordova-android includes a number of scripts that allow the platform to be used
+without the full Cordova CLI. This development path may offer you a greater
+range of development options in certain situations than the cross-platform
+cordova CLI. For example, you need to use shell tools when deploying a custom
+Cordova WebView alongside native components. Before using this development path,
+you must still configure the Android SDK environment as described in
+<a href="#requirements-and-support">Requirements and Support</a> above.</p>
+
+<p>For each of the scripts discussed below, refer to <a href="../../../reference/cordova-cli/index.html">Cordova CLI Reference</a>
+for more information on their arguments and usage. Each script has a name that
+matches the corresponding CLI command. For example, <code>cordova-android/bin/create</code>
+is equivalent to <code>cordova create</code>.</p>
+
+<p>To get started, either download the cordova-android package from
+<a href="https://www.npmjs.com/package/cordova-android">npm</a> or
+<a href="https://github.com/apache/cordova-android">Github</a>.</p>
+
+<p>To create a project using this package, run the <code>create</code> script in the <code>bin</code>
+folder:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova-android/bin/create
+</code></pre></div></div>
+
+<p>The created project will have a folder named <code>cordova</code> inside that contains
+scripts for the project-specific Cordova commands (e.g. <code>run</code>, <code>build</code>, etc.).
+Additionally, the project will feature a structure different from that of a
+normal Cordova project. Notably, <code>/www</code> is moved to <code>/assets/www</code>.</p>
+
+<p>To install plugins in this project, use the <a href="../../../plugin_ref/plugman.html">Cordova Plugman Utility</a>.</p>
+
+<h2>Upgrading</h2>
+
+<p>Refer to <a href="./upgrade.html">this</a> article for instructions to upgrade your
+<code>cordova-android</code> version.</p>
+
+<h2>Lifecycle Guide</h2>
+
+<h3>Cordova and Android</h3>
+
+<p>Native Android apps typically consist of a series of <a href="http://developer.android.com/reference/android/app/Activity.html">activities</a> that the user
+interacts with. Activities can be thought of as the individual screens that make
+up an application; different tasks in an app will often have their own activity.
+Each activity has its own lifecycle that is maintained as the activity enters
+and leaves the foreground of a user&#39;s device.</p>
+
+<p>In contrast, Cordova applications on the Android platform are executed within a
+Webview that is embedded in a <em>single</em> Android activity. The lifecycle of this
+activity is exposed to your application through the document events that are
+fired. The events are not guaranteed to line up with Android&#39;s lifecycle, but
+they can provide guidelines for saving and restoring your state. These events
+roughly map to Android callbacks as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cordova Event</th>
+      <th>Rough Android Equivalent</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>deviceready</code></td>
+      <td><code>onCreate()</code></td>
+      <td>Application is starting (not from background)</td>
+    </tr>
+    <tr>
+      <td><code>pause</code></td>
+      <td><code>onPause()</code></td>
+      <td>Application is moving to the background</td>
+    </tr>
+    <tr>
+      <td><code>resume</code></td>
+      <td><code>onResume()</code></td>
+      <td>Application is returning to the foreground</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Most other Cordova platforms have a similar concept of lifecycles and should
+fire these same events when similar actions happen on a user&#39;s device. However,
+Android presents some unique challenges that can sometimes show up thanks to the
+native Activity lifecycle.</p>
+
+<h3>What makes Android different?</h3>
+
+<p>In Android, the OS can choose to kill activities in the background in order to
+free up resources if the device is low on memory. Unfortunately, when the
+activity holding your application is killed, the Webview in which your
+application lives will be destroyed as well. Any state that your application is
+maintaining will be lost in this case. When the user navigates back to your
+application, the Activity and Webview will be recreated by the OS, but state
+will not be automatically restored for your Cordova app. For this reason, it is
+imperative that your application be aware of the lifecycle events that are fired
+and maintain whatever state is appropriate to make sure a user&#39;s context in your
+app is not lost when they leave the application.</p>
+
+<h3>When can this happen?</h3>
+
+<p>Your application is susceptible to being destroyed by the OS whenever it leaves
+the sight of the user. There are two main situations in which this can occur.
+The first and most obvious case is when the user presses the home button or
+switches to another application.</p>
+
+<p>However, there is a second (and much more subtle) case that certain plugins can
+introduce. As noted above, Cordova applications are usually confined to the
+single activity that contains the Webview. However, there are instances in which
+other activities may be launched by plugins and temporarily push the Cordova
+activity to the background. These other Activities are typically launched in
+order to perform a specific task using a native application installed on the
+device. For example, the <a href="../../../reference/cordova-plugin-camera/index.html">Cordova camera plugin</a>
+launches whatever camera activity is natively installed on the device in order
+to take a photo. Reusing the installed camera application in this way makes your
+application feel much more like a native app when the user tries to take a
+photo. Unfortunately, when the native Activity pushes your app to the background
+there is a chance the OS will kill it.</p>
+
+<p>For a clearer understanding of this second case, let&#39;s walk through an example
+using the camera plugin. Imagine you have an application that requires the user
+to take a profile photo. The flow of events in the application when everything
+goes as planned will look something like this:</p>
+
+<ol>
+  <li>The user is interacting with your app and needs to take a picture</li>
+  <li>The camera plugin launches the native camera activity
+    <ul>
+      <li><em>The Cordova activity is pushed to the background (pause event is fired)</em></li>
+    </ul>
+  </li>
+  <li>The user takes a photo</li>
+  <li>The camera activity finishes
+    <ul>
+      <li><em>The Cordova activity is moved to the foreground (resume event is fired)</em></li>
+    </ul>
+  </li>
+  <li>The user is returned to your application where they left off</li>
+</ol>
+
+<p>However, this flow of events can be disrupted if a device is low on memory. If
+the Activity is killed by the OS, the above sequence of events instead plays out
+as follows:</p>
+
+<ol>
+  <li>The user is interacting with your app and needs to take a picture</li>
+  <li>The camera plugin launches the native camera activity
+    <ul>
+      <li><em>The OS destroys the Cordova activity (pause event is fired)</em></li>
+    </ul>
+  </li>
+  <li>The user takes a photo</li>
+  <li>The camera activity finishes
+    <ul>
+      <li><em>The OS recreates the Cordova activity (deviceready and resume events are fired)</em></li>
+    </ul>
+  </li>
+  <li>The user is confused as to why they are suddenly back at your app&#39;s login screen</li>
+</ol>
+
+<p>In this instance, the OS killed the application in the background and the
+application did not maintain its state as part of the lifecycle. When the user
+returned to the app, the Webview was recreated and the app appeared to have
+restarted from scratch (hence the user&#39;s confusion). This sequence of events is
+equivalent to what happens when the home button is pressed or the user switches
+applications. The key to preventing the above experience is subscribing to
+events and properly maintaining state as part of the activity lifecycle.</p>
+
+<h3>Respecting the Lifecycle</h3>
+
+<p>In the examples above, the javascript events that are fired are noted in
+italics. These events are your opportunity to save and restore your
+application&#39;s state. You should register callbacks in your application&#39;s
+<code>bindEvents</code> function that respond to the lifecycle events by saving state. What
+information you save and how you save it is left to your discretion, but you
+should be sure to save enough information so that you can restore the user to
+exactly where they left off when they return to your application.</p>
+
+<p>There is one additional factor in the example above that only applies in the
+second-discussed situation (i.e. when a plugin launches an external activity).
+Not only was the state of the application lost when the user finished taking a
+photo, but so was the photo that the user took. Normally, that photo would be
+delivered to your application through the callback that was registered with the
+camera plugin. However, when the Webview was destroyed that callback was lost
+forever. Luckily, cordova-android 5.1.0 and above provide a means for getting
+the result of that plugin call when your application resumes.</p>
+
+<h3>Retrieving plugin callback results (cordova-android 5.1.0+)</h3>
+
+<p>When the OS destroys the Cordova activity that was pushed into the background
+by a plugin, any pending callbacks are lost as well. This means that if you
+passed a callback to the plugin that launched the new activity (e.g. the camera
+plugin), that callback will NOT be fired when the application is recreated.
+However, starting in cordova-android <strong>5.1.0</strong>, the <code>resume</code> event&#39;s payload will
+contain any pending plugin results from the plugin request that launched the
+external activity made prior to the activity being destroyed.</p>
+
+<p>The payload for the <code>resume</code> event adheres to the following format:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    action: "resume",
+    pendingResult: {
+        pluginServiceName: string,
+        pluginStatus: string,
+        result: any
+    }
+}
+</code></pre></div></div>
+
+<p>The fields of that payload are defined as follows:</p>
+
+<ul>
+  <li><code>pluginServiceName</code>: The name of the plugin returning the result (e.g. &quot;Camera&quot;). This can be found in the <code>&lt;name&gt;</code> tag of a plugin&#39;s plugin.xml file</li>
+  <li><code>pluginStatus</code>: The status of the plugin call (see below)</li>
+  <li><code>result</code>: Whatever the result of the plugin call is</li>
+</ul>
+
+<p>The possible values for <code>pluginStatus</code> in the <code>pendingResult</code> field include the following:</p>
+<ul>
+  <li><code>"OK"</code> - The plugin call was successful</li>
+  <li><code>"No Result"</code> - The plugin call ended with no result</li>
+  <li><code>"Error"</code> - The plugin call resulted in some general error</li>
+  <li>Other miscellaneous errors
+    <ul>
+      <li><code>"Class not found"</code></li>
+      <li><code>"Illegal access"</code></li>
+      <li><code>"Instantiation error"</code></li>
+      <li><code>"Malformed url"</code></li>
+      <li><code>"IO error"</code></li>
+      <li><code>"Invalid action"</code></li>
+      <li><code>"JSON error"</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Please note that it is up to the plugin to decide what is contained in the
+<code>result</code> field and the meaning of the <code>pluginStatus</code> that is returned. Reference
+the API of the plugin you are using to see what you should expect those fields
+to contain and how to use their values.</p>
+
+<h4>Example</h4>
+
+<p>Below is a brief example application that uses the <code>resume</code> and <code>pause</code> events
+to manage state. It uses the Apache camera plugin as an example of how to
+retrieve the results of a plugin call from the <code>resume</code> event payload. The
+portion of the code dealing with the <code>resume</code>&#39;s <code>event.pendingResult</code> object
+requires cordova-android <strong>5.1.0+</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This state represents the state of our application and will be saved and</span>
+<span class="c1">// restored by onResume() and onPause()</span>
+<span class="kd">var</span> <span class="nx">appState</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">takingPicture</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">imageUri</span><span class="p">:</span> <span class="dl">""</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">APP_STORAGE_KEY</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">exampleAppState</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">initialize</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">bindEvents</span><span class="p">();</span>
+    <span class="p">},</span>
+    <span class="na">bindEvents</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// Here we register our callbacks for the lifecycle events we care about</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">deviceready</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">pause</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onPause</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">resume</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onResume</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="na">onDeviceReady</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">take-picture-button</span><span class="dl">"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="c1">// Because the camera plugin method launches an external Activity,</span>
+            <span class="c1">// there is a chance that our application will be killed before the</span>
+            <span class="c1">// success or failure callbacks are called. See onPause() and</span>
+            <span class="c1">// onResume() where we save and restore our state to handle this case</span>
+            <span class="nx">appState</span><span class="p">.</span><span class="nx">takingPicture</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+            <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="nx">cameraSuccessCallback</span><span class="p">,</span> <span class="nx">cameraFailureCallback</span><span class="p">,</span>
+                <span class="p">{</span>
+                    <span class="na">sourceType</span><span class="p">:</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">PictureSourceType</span><span class="p">.</span><span class="nx">CAMERA</span><span class="p">,</span>
+                    <span class="na">destinationType</span><span class="p">:</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">DestinationType</span><span class="p">.</span><span class="nx">FILE_URI</span><span class="p">,</span>
+                    <span class="na">targetWidth</span><span class="p">:</span> <span class="mi">250</span><span class="p">,</span>
+                    <span class="na">targetHeight</span><span class="p">:</span> <span class="mi">250</span>
+                <span class="p">}</span>
+            <span class="p">);</span>
+        <span class="p">});</span>
+    <span class="p">},</span>
+    <span class="na">onPause</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// Here, we check to see if we are in the middle of taking a picture. If</span>
+        <span class="c1">// so, we want to save our state so that we can properly retrieve the</span>
+        <span class="c1">// plugin result in onResume(). We also save if we have already fetched</span>
+        <span class="c1">// an image URI</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">appState</span><span class="p">.</span><span class="nx">takingPicture</span> <span class="o">||</span> <span class="nx">appState</span><span class="p">.</span><span class="nx">imageUri</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">APP_STORAGE_KEY</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">appState</span><span class="p">));</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="na">onResume</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Here we check for stored state and restore it if necessary. In your</span>
+        <span class="c1">// application, it's up to you to keep track of where any pending plugin</span>
+        <span class="c1">// results are coming from (i.e. what part of your code made the call)</span>
+        <span class="c1">// and what arguments you provided to the plugin if relevant</span>
+        <span class="kd">var</span> <span class="nx">storedState</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">APP_STORAGE_KEY</span><span class="p">);</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="nx">storedState</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">appState</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">storedState</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Check to see if we need to restore an image we took</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">appState</span><span class="p">.</span><span class="nx">takingPicture</span> <span class="o">&amp;&amp;</span> <span class="nx">appState</span><span class="p">.</span><span class="nx">imageUri</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">get-picture-result</span><span class="dl">"</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">appState</span><span class="p">.</span><span class="nx">imageUri</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1">// Now we can check if there is a plugin result in the event object.</span>
+        <span class="c1">// This requires cordova-android 5.1.0+</span>
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">appState</span><span class="p">.</span><span class="nx">takingPicture</span> <span class="o">&amp;&amp;</span> <span class="nx">event</span><span class="p">.</span><span class="nx">pendingResult</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Figure out whether or not the plugin call was successful and call</span>
+            <span class="c1">// the relevant callback. For the camera plugin, "OK" means a</span>
+            <span class="c1">// successful result and all other statuses mean error</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">pendingResult</span><span class="p">.</span><span class="nx">pluginStatus</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// The camera plugin places the same result in the resume object</span>
+                <span class="c1">// as it passes to the success callback passed to getPicture(),</span>
+                <span class="c1">// thus we can pass it to the same callback. Other plugins may</span>
+                <span class="c1">// return something else. Consult the documentation for</span>
+                <span class="c1">// whatever plugin you are using to learn how to interpret the</span>
+                <span class="c1">// result field</span>
+                <span class="nx">cameraSuccessCallback</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">pendingResult</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">cameraFailureCallback</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">pendingResult</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Here are the callbacks we pass to getPicture()</span>
+<span class="kd">function</span> <span class="nx">cameraSuccessCallback</span><span class="p">(</span><span class="nx">imageUri</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">appState</span><span class="p">.</span><span class="nx">takingPicture</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="nx">appState</span><span class="p">.</span><span class="nx">imageUri</span> <span class="o">=</span> <span class="nx">imageUri</span><span class="p">;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">get-picture-result</span><span class="dl">"</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">imageUri</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">cameraFailureCallback</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">appState</span><span class="p">.</span><span class="nx">takingPicture</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">initialize</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>The corresponding html:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Security-Policy"</span> <span class="na">content=</span><span class="s">"default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"format-detection"</span> <span class="na">content=</span><span class="s">"telephone=no"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"msapplication-tap-highlight"</span> <span class="na">content=</span><span class="s">"no"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"css/index.css"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Cordova Android Lifecycle Example<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"app"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div&gt;</span>
+                <span class="nt">&lt;img</span> <span class="na">id=</span><span class="s">"get-picture-result"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">id=</span><span class="s">"take-picture-button"</span><span class="nt">&gt;</span>Take Picture<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"cordova.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"js/index.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<h3>Android Quirks</h3>
+<p>The default API level in the Cordova Android platform has been upgraded. On an Android 9 device, clear text communication is now disabled by default.</p>
+
+<p>By default HTTP and FTP etc. will refuse the apps requests to use cleartext traffic. The key reason for avoiding cleartext traffic is the lack of confidentiality, authenticity, and protections against tampering; a network attacker can eavesdrop on transmitted data and also modify it without being detected. You can learn more about the <code>android:usesCleartextTraffic</code> or any other android application elements setting in the <a href="https://developer.android.com/guide/topics/manifest/application-element">documentation for Android developers</a>.</p>
+
+<p>To allow clear text communication again, set the <code>android:usesCleartextTraffic</code> on your application tag to true in <code>config.xml</code> file:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;edit-config</span> <span class="na">file=</span><span class="s">"app/src/main/AndroidManifest.xml"</span> <span class="na">mode=</span><span class="s">"merge"</span> <span class="na">target=</span><span class="s">"/manifest/application"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;application</span> <span class="na">android:usesCleartextTraffic=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/edit-config&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
+</code></pre></div></div>
+
+<p>And also you need to add Android XML namespace <code>xmlns:android="http://schemas.android.com/apk/res/android"</code> to your widget tag in the same <code>config.xml</code>, like so:
+<code>&lt;widget id="io.cordova.hellocordova" version="0.0.1" android-versionCode="13" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android"&gt;
+&lt;/widget&gt;</code></p>
+
+<h3>Android Manifest Information</h3>
+
+<p>You can learn more about the Android manifest information in the <a href="https://developer.android.com/guide/topics/manifest/manifest-intro">documentation for Android developers</a>.</p>
+
+<h3>Testing the Activity Lifecycle</h3>
+
+<p>Android provides a developer setting for testing Activity destruction on low
+memory. Enable the &quot;Don&#39;t keep activities&quot; setting in the Developer Options menu
+on your device or emulator to simulate low memory scenarios. You should always
+do some amount of testing with this setting enabled to make sure that your
+application is properly maintaining state.</p>
+
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2022 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  11.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

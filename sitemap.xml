@@ -11028,20 +11028,12 @@
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/osx/config.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/osx/config.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
@@ -11086,6 +11078,25 @@
 
     
     
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/platforms/osx/config.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/osx/config.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
     
 
     <url>
@@ -19468,6 +19479,28 @@
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/cordova/events/events.html</loc>
     <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/3.3.0/cordova/events/events.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/cordova/events/events.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
 
@@ -19482,17 +19515,6 @@
     <priority>0.9</priority>
 </url>
 
-    
-
-    <url>
-    <loc>https://cordova.apache.org/docs/en/3.3.0/cordova/events/events.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-</url>
-
-
-    
-    
     
 
     <url>
@@ -28591,6 +28613,28 @@
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/config_ref/images.html</loc>
     <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/3.3.0/config_ref/images.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/config_ref/images.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
 
@@ -28605,17 +28649,6 @@
     <priority>0.9</priority>
 </url>
 
-    
-
-    <url>
-    <loc>https://cordova.apache.org/docs/en/3.3.0/config_ref/images.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-</url>
-
-
-    
-    
     
 
     <url>
@@ -36445,647 +36478,375 @@
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/platform_pinning/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/platform_pinning/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-vibration/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-vibration/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-statusbar/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-statusbar/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-battery-status/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-battery-status/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-media-capture/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-media-capture/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-network-information/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-network-information/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-camera/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-camera/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-inappbrowser/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-inappbrowser/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-device/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-device/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-file/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-geolocation/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-geolocation/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-screen-orientation/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-screen-orientation/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/reference/cordova-cli/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-cli/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-media/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-media/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-dialogs/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-dialogs/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-splashscreen/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/config_ref/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/config_ref/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/platform_plugin_versioning_ref/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/platform_plugin_versioning_ref/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/android/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/android/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/ios/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/ios/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/electron/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/electron/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/osx/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/osx/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/windows/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/windows/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/overview/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/overview/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/appdev/hooks/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/appdev/hooks/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/appdev/privacy/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/appdev/privacy/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/appdev/security/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/appdev/security/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/appdev/allowlist/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/appdev/allowlist/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/cli/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/cli/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/support/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/support/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/next/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/next/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/hybrid/webviews/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/hybrid/webviews/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/hybrid/plugins/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/hybrid/plugins/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
@@ -37295,6 +37056,671 @@
 
     
     
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/third-party/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/third-party/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/platform_pinning/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/platform_pinning/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-vibration/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-vibration/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-statusbar/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-statusbar/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-battery-status/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-battery-status/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-media-capture/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-media-capture/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-network-information/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-network-information/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-camera/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-camera/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-inappbrowser/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-inappbrowser/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-device/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-device/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-file/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-geolocation/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-geolocation/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-screen-orientation/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-screen-orientation/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/reference/cordova-cli/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-cli/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-media/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-media/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-dialogs/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-dialogs/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-splashscreen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/config_ref/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/config_ref/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/platform_plugin_versioning_ref/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/platform_plugin_versioning_ref/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/platforms/android/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/android/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/platforms/ios/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/ios/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/platforms/electron/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/electron/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/platforms/osx/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/osx/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/platforms/windows/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/windows/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/overview/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/overview/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/appdev/hooks/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/appdev/hooks/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/appdev/privacy/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/appdev/privacy/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/appdev/security/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/appdev/security/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/appdev/allowlist/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/appdev/allowlist/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/cli/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/cli/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/support/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/support/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/next/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/next/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/hybrid/webviews/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/hybrid/webviews/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/hybrid/plugins/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/hybrid/plugins/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
     
 
     <url>
@@ -45159,77 +45585,45 @@
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/android/plugin.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/android/plugin.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/ios/plugin.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/ios/plugin.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/osx/plugin.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/osx/plugin.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/windows/plugin.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/windows/plugin.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
@@ -45285,6 +45679,82 @@
 
     
     
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/platforms/android/plugin.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/android/plugin.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/platforms/ios/plugin.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/ios/plugin.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/platforms/osx/plugin.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/osx/plugin.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/platforms/windows/plugin.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/windows/plugin.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
     
 
     <url>
@@ -45695,6 +46165,28 @@
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/plugin_ref/plugman.html</loc>
     <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/3.3.0/plugin_ref/plugman.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/plugin_ref/plugman.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
 
@@ -45709,17 +46201,6 @@
     <priority>0.9</priority>
 </url>
 
-    
-
-    <url>
-    <loc>https://cordova.apache.org/docs/en/3.3.0/plugin_ref/plugman.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-</url>
-
-
-    
-    
     
 
     <url>
@@ -46570,6 +47051,28 @@
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/plugin_ref/spec.html</loc>
     <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/3.3.0/plugin_ref/spec.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/plugin_ref/spec.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
 
@@ -46584,17 +47087,6 @@
     <priority>0.9</priority>
 </url>
 
-    
-
-    <url>
-    <loc>https://cordova.apache.org/docs/en/3.3.0/plugin_ref/spec.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-</url>
-
-
-    
-    
     
 
     <url>
@@ -48151,6 +48643,28 @@
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/cordova/storage/storage.html</loc>
     <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/3.3.0/cordova/storage/storage.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/cordova/storage/storage.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
 
@@ -48165,17 +48679,6 @@
     <priority>0.9</priority>
 </url>
 
-    
-
-    <url>
-    <loc>https://cordova.apache.org/docs/en/3.3.0/cordova/storage/storage.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-</url>
-
-
-    
-    
     
 
     <url>
@@ -48528,6 +49031,17 @@
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/cli/template.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/cli/template.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
@@ -49505,6 +50019,39 @@
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/android/upgrade.html</loc>
     <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/ios/upgrade.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/windows/upgrade.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/platforms/android/upgrade.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
 
@@ -49522,7 +50069,7 @@
     
 
     <url>
-    <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/ios/upgrade.html</loc>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/platforms/ios/upgrade.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
@@ -49541,7 +50088,7 @@
     
 
     <url>
-    <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/windows/upgrade.html</loc>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/platforms/windows/upgrade.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
@@ -50739,39 +51286,23 @@
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/android/webview.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/android/webview.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
     <loc>https://cordova.apache.org/docs/en/10.x/guide/platforms/ios/webview.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
 </url>
 
 
     
     
-    
-        
-        <url>
-    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/ios/webview.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-</url>
-
     
 
     <url>
@@ -50805,6 +51336,44 @@
 
     
     
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/platforms/android/webview.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/android/webview.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
+    
+
+    <url>
+    <loc>https://cordova.apache.org/docs/en/11.x/guide/platforms/ios/webview.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+
+    
+    
+    
+        
+        <url>
+    <loc>https://cordova.apache.org/docs/en/latest/guide/platforms/ios/webview.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+</url>
+
     
 
     <url>
