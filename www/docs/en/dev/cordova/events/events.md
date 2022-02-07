@@ -333,7 +333,7 @@ overrides the default menu button behavior.
 document.addEventListener("menubutton", onMenuKeyDown, false);
 
 function onMenuKeyDown() {
-    // Handle the back button
+    // Handle the menu button
 }
 ```
 
