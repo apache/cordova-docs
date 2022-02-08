@@ -166,8 +166,6 @@ The following classes are supported by this feature:
 |     any     |     com      |  landscape (wide) |
 |     com     |     com      | landscape (narrow)|
 
-To see the complete list of size classes associated with devices and viewports, see <http://www.sizeclasses.com>.
-
 ##### Single-image launch screen
 
 If your launch image is simple, you may be able to avoid creating a lot of different launch images and supply only one. The launch image needs to meet the following requirements:
