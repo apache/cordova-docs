@@ -246,6 +246,8 @@ is automatically added to a project's `config.xml` when a plugin is added using
 the `--save` flag. See the [CLI reference][plugin_cli] for more information on
 adding plugins.
 
+_Note: As of Cordova 9.x, this tag is obsolete. [Learn More](https://github.com/apache/cordova-lib/pull/750)_
+
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
 name(string) | *Required* <br/> Name of the plugin to be restored
