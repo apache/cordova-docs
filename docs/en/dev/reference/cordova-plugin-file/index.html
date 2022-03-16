@@ -2976,7 +2976,25 @@ This method will now return filesystem URLs of the form</p>
 
 <p>which can be used to identify the file uniquely.</p>
 
+<p>In v7.0.0 the return value of <code>toURL()</code> for Android was updated to return the absolute <code>file://</code> URL when app content is served from the <code>file://</code> scheme.</p>
+
+<p>If app content is served from the <code>http(s)://</code> scheme, a <code>cdvfile</code> formatted URL will be returned instead. The <code>cdvfile</code> formatted URL is created from the internal method <code>toInternalURL()</code>.</p>
+
+<p>An example <code>toInternalURL()</code> return filesystem URL:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://localhost/persistent/path/to/file
+</code></pre></div></div>
+
+<p><a href="//sketchviz.com/@erisu/7b05499842275be93a0581e8e3576798"><img src="https://sketchviz.com/@erisu/7b05499842275be93a0581e8e3576798/6dc71d8302cafd05b443d874a592d10fa415b8e3.sketchy.png" alt="toURL flow" /></a></p>
+
+<p>It is recommended to always use the <code>toURL()</code> to ensure that the correct URL is returned.</p>
+
 <h2>cdvfile protocol</h2>
+
+<ul>
+  <li>Not Supported on Android</li>
+</ul>
+
 <p><strong>Purpose</strong></p>
 
 <p><code>cdvfile://localhost/persistent|temporary|another-fs-root*/path/to/file</code> can be used for platform-independent file paths.
