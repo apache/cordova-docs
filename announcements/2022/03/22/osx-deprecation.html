@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released Cordova OSX 7.0.0!  This is one of Cordova&#39;s supported platforms for building macOS desktop applicati...">
+    <meta name="description" content="Deprecation of the Cordova OSX PlatformWe are hereby annoucing the deprecation of cordova-osx.This means that the Cordova development community will not be d...">
 
     <title>
         
             
-                Cordova OSX 7.0.0 released and deprecation notice - Apache Cordova
+                Deprecation of the Cordova OSX Platform - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2022/03/09/osx-release-7.0.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2022/03/22/osx-deprecation.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -121,48 +121,26 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova OSX 7.0.0 released and deprecation notice</div>
+        <div class="title">Deprecation of the Cordova OSX Platform</div>
         <div class="author">By:
             
               <a href="https://twitter.com/niklasmaerz">Niklas Merz</a>
             
         </div>
-        <div class="date">09 Mar 2022</div>
+        <div class="date">22 Mar 2022</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released <code>Cordova OSX 7.0.0</code>!  This is one of Cordova&#39;s supported platforms for building macOS desktop applications.</p>
+            <h2>Deprecation of the Cordova OSX Platform</h2>
 
-<ul>
-  <li><a href="https://www.npmjs.com/package/cordova-osx">cordova-osx@7.0.0</a></li>
-</ul>
+<p>We are hereby annoucing the deprecation of <a href="https://github.com/apache/cordova-osx#readme">cordova-osx</a>.</p>
 
-<h2>Release Highlights</h2>
+<p>This means that the Cordova development community will not be doing any more work on this platform. Please migrate to the <code>cordova-electron</code> platform or try Mac Catalyst with the <code>cordova-ios</code> platform.</p>
 
-<p>This version includes various dependency updates and makes the platform run on AppleSilicon Macs.</p>
+<p>The usage and activity around the osx platform have been quite low for a long time. Cordova&#39;s other solutions for building apps for macOS are actively maintained and especially cordova-ios offers better plugin support.</p>
 
-<p>We have raised the minimum required NodeJS version for this release to 12.x.</p>
+<p>Your feedback is graciously accepted and appreciated!</p>
 
-<h2>Deprecation Notice</h2>
-
-<p>We are planning to deprecate the <code>cordova-osx</code> platform soon. Please migrate to the <code>cordova-electron</code> platform or try Mac Catalyst with the <code>cordova-ios</code> platform.</p>
-
-<p>Feel free to check out the discussions on the mailing list <a href="https://lists.apache.org/thread/wjwx2y9roptq941gg96809fvhwt3rdto">1</a> <a href="https://lists.apache.org/thread/lqq2xoy3pjqcyl052gv0qom2f31zgg8k">2</a> for more information and leave a comment if you have anything to add.</p>
-
-<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
-
-<!--more-->
-<h1>Changes include:</h1>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-osx/pull/117">GH-117</a> Prepare release 7.0.0</li>
-  <li><a href="https://github.com/apache/cordova-osx/pull/105">GH-105</a> Fix to make Cordova OSX build successfully on AppleSilicon target.</li>
-  <li><a href="https://github.com/apache/cordova-osx/pull/115">GH-115</a> refactor!: drop q</li>
-  <li>chore: update GH description, homepage and labels</li>
-  <li><a href="https://github.com/apache/cordova-osx/pull/114">GH-114</a> refactor(versions): remove duplicated function</li>
-  <li><a href="https://github.com/apache/cordova-osx/pull/108">GH-108</a> ci: add node-14.x to workflow</li>
-  <li><a href="https://github.com/apache/cordova-osx/pull/107">GH-107</a> chore: clean up <code>package.json</code></li>
-</ul>
 
         </div>
     </section>
@@ -170,37 +148,17 @@
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/news/2022/01/25/media-plugin-5.0.4-release.html">Previous</a>
+                    <a href="/announcements/2022/03/09/osx-release-7.0.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/news/2022/01/25/media-plugin-5.0.4-release.html">Media Plugin 5.0.4 Released!</a>
-                    <div class="date"> 25 Jan 2022 - By Bryan Ellis </div>
+                    <a class="title" href="/announcements/2022/03/09/osx-release-7.0.0.html">Cordova OSX 7.0.0 released and deprecation notice</a>
+                    <div class="date"> 09 Mar 2022 - By Niklas Merz </div>
                     <p class="content">
-                        We are happy to announce that we have just released an update...
+                        We are happy to announce that we have just released Cordova OSX...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2022/03/22/osx-deprecation.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2022/03/22/osx-deprecation.html">Deprecation of the Cordova OSX Platform</a>
-                    <div class="date"> 22 Mar 2022 - By Niklas Merz </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        Deprecation of the Cordova OSX Platform We are hereby annoucing the deprecation...
-                    </p>
                 
             </div>
         </div>

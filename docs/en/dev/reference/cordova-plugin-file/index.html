@@ -2556,7 +2556,7 @@ the <code>cordova.file.*</code> properties map to physical paths on a real devic
       <td style="text-align: left"><code>&lt;sdcard&gt;/</code></td>
       <td style="text-align: left">externalRootDirectory</td>
       <td style="text-align: left">sdcard</td>
-      <td style="text-align: center">r/w</td>
+      <td style="text-align: center">r/w***</td>
       <td style="text-align: center">Yes</td>
       <td style="text-align: center">No</td>
       <td style="text-align: center">No</td>
@@ -2598,6 +2598,8 @@ the <code>cordova.file.*</code> properties map to physical paths on a real devic
 <p>** The OS does not clear this directory automatically; you are responsible for managing
      the contents yourself. Should the user purge the cache manually, the contents of the
      directory are removed.</p>
+
+<p>*** As of API 30, these directories are no longer writable.</p>
 
 <p><strong>Note</strong>: If external storage can&#39;t be mounted, the <code>cordova.file.external*</code>
 properties are <code>null</code>.</p>

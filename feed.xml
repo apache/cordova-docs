@@ -6,9 +6,33 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 16 Mar 2022 17:09:18 +0000</pubDate>
-    <lastBuildDate>Wed, 16 Mar 2022 17:09:18 +0000</lastBuildDate>
+    <pubDate>Thu, 24 Mar 2022 06:06:29 +0000</pubDate>
+    <lastBuildDate>Thu, 24 Mar 2022 06:06:29 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
+    
+      <item>
+        <title>Deprecation of the Cordova OSX Platform</title>
+        <description>&lt;h2&gt;Deprecation of the Cordova OSX Platform&lt;/h2&gt;
+
+&lt;p&gt;We are hereby annoucing the deprecation of &lt;a href=&quot;https://github.com/apache/cordova-osx#readme&quot;&gt;cordova-osx&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This means that the Cordova development community will not be doing any more work on this platform. Please migrate to the &lt;code&gt;cordova-electron&lt;/code&gt; platform or try Mac Catalyst with the &lt;code&gt;cordova-ios&lt;/code&gt; platform.&lt;/p&gt;
+
+&lt;p&gt;The usage and activity around the osx platform have been quite low for a long time. Cordova&amp;#39;s other solutions for building apps for macOS are actively maintained and especially cordova-ios offers better plugin support.&lt;/p&gt;
+
+&lt;p&gt;Your feedback is graciously accepted and appreciated!&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2022/03/22/osx-deprecation.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2022/03/22/osx-deprecation.html</guid>
+        
+        <category>news</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova OSX 7.0.0 released and deprecation notice</title>
@@ -665,89 +689,6 @@ cordova plugin add cordova-plugin-camera@6.0.0
         
         
         <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Android 10.1.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released a minor update for &lt;code&gt;Cordova Android (10.1.0)&lt;/code&gt;!  This is one of Cordova&amp;#39;s supported platforms for building Android mobile applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@10.1.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove android
-cordova platform add android@10.1.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;In this minor release, we:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Bump Core Libraries&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;AndroidX AppCompat@1.3.1&lt;/li&gt;
-      &lt;li&gt;Google Services Gradle Plugin@4.3.8&lt;/li&gt;
-      &lt;li&gt;Kotlin@1.5.21&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Added &lt;code&gt;HTTP&lt;/code&gt; Scheme Support&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;In the Cordova-Android 10.0.0 release, we introduced support for the &lt;code&gt;WebViewAssetLoader&lt;/code&gt;. By default, we only supported the &lt;code&gt;https&lt;/code&gt; scheme. Some users requested &lt;code&gt;http&lt;/code&gt; scheme support; as not all users were able to loading resources through a secure protocol.&lt;/p&gt;
-
-    &lt;p&gt;Users are now able to use either &lt;code&gt;https&lt;/code&gt; (default) or &lt;code&gt;http&lt;/code&gt; by setting the &lt;code&gt;scheme&lt;/code&gt; &lt;code&gt;preference&lt;/code&gt; flag.&lt;/p&gt;
-
-    &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;preference&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;scheme&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;The default &lt;code&gt;scheme&lt;/code&gt; will remain as &lt;code&gt;https&lt;/code&gt;, as we believe apps should be secure.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h2&gt;Full Changelog&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1213&quot;&gt;GH-1213&lt;/a&gt; feat: unify &lt;code&gt;create&lt;/code&gt; default values &amp;amp; stop project name transform&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1306&quot;&gt;GH-1306&lt;/a&gt; feat: bump &lt;code&gt;ANDROIDX_APP_COMPAT@1.3.1&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1303&quot;&gt;GH-1303&lt;/a&gt; feat: bump &lt;code&gt;Google Services Gradle Plugin@4.3.8&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1302&quot;&gt;GH-1302&lt;/a&gt; feat: bump &lt;code&gt;kotlin@1.5.21&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1298&quot;&gt;GH-1298&lt;/a&gt; feat: support &lt;code&gt;http&lt;/code&gt; w/ &lt;code&gt;content&lt;/code&gt; &lt;code&gt;src&lt;/code&gt; fix&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1214&quot;&gt;GH-1214&lt;/a&gt; fix: display project name in Android Studio&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1300&quot;&gt;GH-1300&lt;/a&gt; fix: fall back to project root &lt;code&gt;repositories.gradle&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Docs:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1308&quot;&gt;GH-1308&lt;/a&gt; doc: update &lt;code&gt;README&lt;/code&gt; about development &amp;amp; testing&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2021/08/16/cordova-android-10.1.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2021/08/16/cordova-android-10.1.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
         
       </item>
     
