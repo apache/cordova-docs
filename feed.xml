@@ -6,15 +6,15 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 24 Mar 2022 06:06:29 +0000</pubDate>
-    <lastBuildDate>Thu, 24 Mar 2022 06:06:29 +0000</lastBuildDate>
+    <pubDate>Thu, 24 Mar 2022 07:07:22 +0000</pubDate>
+    <lastBuildDate>Thu, 24 Mar 2022 07:07:22 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
         <title>Deprecation of the Cordova OSX Platform</title>
         <description>&lt;h2&gt;Deprecation of the Cordova OSX Platform&lt;/h2&gt;
 
-&lt;p&gt;We are hereby annoucing the deprecation of &lt;a href=&quot;https://github.com/apache/cordova-osx#readme&quot;&gt;cordova-osx&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We are hereby announcing the deprecation of &lt;a href=&quot;https://github.com/apache/cordova-osx#readme&quot;&gt;cordova-osx&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;This means that the Cordova development community will not be doing any more work on this platform. Please migrate to the &lt;code&gt;cordova-electron&lt;/code&gt; platform or try Mac Catalyst with the &lt;code&gt;cordova-ios&lt;/code&gt; platform.&lt;/p&gt;
 
