@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="Deprecation of the Cordova OSX PlatformWe are hereby announcing the deprecation of cordova-osx.This means that the Cordova development community will not be ...">
+    <meta name="description" content="We are happy to announce that we have just released an update to our Splash Screen plugin!  cordova-plugin-splashscreen@6.0.1Release HighlightsSplash ScreenT...">
 
     <title>
         
             
-                Deprecation of the Cordova OSX Platform - Apache Cordova
+                Splash Screen Plugin Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2022/03/22/osx-deprecation.html">
+    <link rel="canonical" href="https://cordova.apache.org/news/2022/04/06/splashscreen-plugin-release.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -121,26 +121,53 @@
 
 <div class="post">
     <header>
-        <div class="title">Deprecation of the Cordova OSX Platform</div>
+        <div class="title">Splash Screen Plugin Released!</div>
         <div class="author">By:
             
               <a href="https://twitter.com/niklasmaerz">Niklas Merz</a>
             
         </div>
-        <div class="date">22 Mar 2022</div>
+        <div class="date">06 Apr 2022</div>
     </header>
     <section>
         <div>
-            <h2>Deprecation of the Cordova OSX Platform</h2>
+            <p>We are happy to announce that we have just released an update to our Splash Screen plugin!</p>
 
-<p>We are hereby announcing the deprecation of <a href="https://github.com/apache/cordova-osx#readme">cordova-osx</a>.</p>
+<ul>
+  <li><a href="https://www.npmjs.org/package/cordova-plugin-splashscreen">cordova-plugin-splashscreen@6.0.1</a></li>
+</ul>
 
-<p>This means that the Cordova development community will not be doing any more work on this platform. Please migrate to the <code>cordova-electron</code> platform or try Mac Catalyst with the <code>cordova-ios</code> platform.</p>
+<h2>Release Highlights</h2>
 
-<p>The usage and activity around the osx platform have been quite low for a long time. Cordova&#39;s other solutions for building apps for macOS are actively maintained and especially cordova-ios offers better plugin support.</p>
+<h3>Splash Screen</h3>
 
-<p>Your feedback is graciously accepted and appreciated!</p>
+<p>This patch release fixes some bugs on Android, including an issue with the &quot;backbutton&quot; event <a href="https://github.com/apache/cordova-android/issues/1106">reported by some users</a>.</p>
 
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/314">GH-314</a> fix: refocus after webview visible (#186)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/213">GH-213</a> fix(android): Fixes nav and title bars still appearing when app is fullscreen <a href="https://github.com/apache/cordova-plugin-splashscreen/pull/180">GH-180</a></li>
+</ul>
+
+<!--more-->
+<h1>Changes include:</h1>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/325">GH-325</a> chore: update package-lock.json</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/213">GH-213</a> GH-180 (android): Fixes nav and title bars still appearing when app is fullscreen</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/320">GH-320</a> ci(ios): update workflow w/ <strong>iOS</strong> 15</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/319">GH-319</a> ci: add action-badge</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/318">GH-318</a> ci: remove travis &amp; appveyor</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/317">GH-317</a> ci: add gh-actions workflows</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/312">GH-312</a> fix: autofocus after splashscreen</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/314">GH-314</a> fix: refocus after webview visible (#186)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/304">GH-304</a> ci: add node-14.x to workflow</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/291">GH-291</a> chore(docs): Update missing  default resources for <strong>Android</strong> #689</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/293">GH-293</a> Documentation Enhancement for <strong>Android</strong> Dark Mode</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/300">GH-300</a> docs: Added <strong>iOS</strong> notes to supported platforms.</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/296">GH-296</a> chore(pkg): remove default-valued field &quot;homepage&quot;</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/292">GH-292</a> ci(travis): updates <strong>Android</strong> API level</li>
+  <li><a href="https://github.com/apache/cordova-plugin-splashscreen/pull/286">GH-286</a> (docs): Add Information about how to use Dark Mode SplashScreens</li>
+</ul>
 
         </div>
     </section>
@@ -148,37 +175,17 @@
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2022/03/09/osx-release-7.0.0.html">Previous</a>
+                    <a href="/announcements/2022/03/22/osx-deprecation.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2022/03/09/osx-release-7.0.0.html">Cordova OSX 7.0.0 released and deprecation notice</a>
-                    <div class="date"> 09 Mar 2022 - By Niklas Merz </div>
+                    <a class="title" href="/announcements/2022/03/22/osx-deprecation.html">Deprecation of the Cordova OSX Platform</a>
+                    <div class="date"> 22 Mar 2022 - By Niklas Merz </div>
                     <p class="content">
-                        We are happy to announce that we have just released Cordova OSX...
+                        Deprecation of the Cordova OSX Platform We are hereby announcing the deprecation...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/news/2022/04/06/splashscreen-plugin-release.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/news/2022/04/06/splashscreen-plugin-release.html">Splash Screen Plugin Released!</a>
-                    <div class="date"> 06 Apr 2022 - By Niklas Merz </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released an update...
-                    </p>
                 
             </div>
         </div>

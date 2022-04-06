@@ -6,9 +6,62 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Apr 2022 20:47:13 +0000</pubDate>
-    <lastBuildDate>Wed, 06 Apr 2022 20:47:13 +0000</lastBuildDate>
+    <pubDate>Wed, 06 Apr 2022 20:52:25 +0000</pubDate>
+    <lastBuildDate>Wed, 06 Apr 2022 20:52:25 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
+    
+      <item>
+        <title>Splash Screen Plugin Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released an update to our Splash Screen plugin!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/cordova-plugin-splashscreen&quot;&gt;cordova-plugin-splashscreen@6.0.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;h3&gt;Splash Screen&lt;/h3&gt;
+
+&lt;p&gt;This patch release fixes some bugs on Android, including an issue with the &amp;quot;backbutton&amp;quot; event &lt;a href=&quot;https://github.com/apache/cordova-android/issues/1106&quot;&gt;reported by some users&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/314&quot;&gt;GH-314&lt;/a&gt; fix: refocus after webview visible (#186)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/213&quot;&gt;GH-213&lt;/a&gt; fix(android): Fixes nav and title bars still appearing when app is fullscreen &lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/180&quot;&gt;GH-180&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/325&quot;&gt;GH-325&lt;/a&gt; chore: update package-lock.json&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/213&quot;&gt;GH-213&lt;/a&gt; GH-180 (android): Fixes nav and title bars still appearing when app is fullscreen&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/320&quot;&gt;GH-320&lt;/a&gt; ci(ios): update workflow w/ &lt;strong&gt;iOS&lt;/strong&gt; 15&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/319&quot;&gt;GH-319&lt;/a&gt; ci: add action-badge&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/318&quot;&gt;GH-318&lt;/a&gt; ci: remove travis &amp;amp; appveyor&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/317&quot;&gt;GH-317&lt;/a&gt; ci: add gh-actions workflows&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/312&quot;&gt;GH-312&lt;/a&gt; fix: autofocus after splashscreen&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/314&quot;&gt;GH-314&lt;/a&gt; fix: refocus after webview visible (#186)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/304&quot;&gt;GH-304&lt;/a&gt; ci: add node-14.x to workflow&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/291&quot;&gt;GH-291&lt;/a&gt; chore(docs): Update missing  default resources for &lt;strong&gt;Android&lt;/strong&gt; #689&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/293&quot;&gt;GH-293&lt;/a&gt; Documentation Enhancement for &lt;strong&gt;Android&lt;/strong&gt; Dark Mode&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/300&quot;&gt;GH-300&lt;/a&gt; docs: Added &lt;strong&gt;iOS&lt;/strong&gt; notes to supported platforms.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/296&quot;&gt;GH-296&lt;/a&gt; chore(pkg): remove default-valued field &amp;quot;homepage&amp;quot;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/292&quot;&gt;GH-292&lt;/a&gt; ci(travis): updates &lt;strong&gt;Android&lt;/strong&gt; API level&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/286&quot;&gt;GH-286&lt;/a&gt; (docs): Add Information about how to use Dark Mode SplashScreens&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/news/2022/04/06/splashscreen-plugin-release.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/news/2022/04/06/splashscreen-plugin-release.html</guid>
+        
+        <category>release</category>
+        
+        <category>plugins</category>
+        
+        
+        <category>news</category>
+        
+      </item>
     
       <item>
         <title>Deprecation of the Cordova OSX Platform</title>
@@ -599,96 +652,6 @@ Taking things away is always harder than adding things.&lt;/p&gt;
         
         
         <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Camera Plugin 6.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released an update to our Camera plugin!&lt;/p&gt;
-
-&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;Cordova Camera Plugin (6.0.0)&lt;/code&gt;!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-camera&quot;&gt;cordova-plugin-camera@6.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-camera
-cordova plugin add cordova-plugin-camera@6.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Requires &lt;strong&gt;&lt;code&gt;Cordova-Android&lt;/code&gt; 10.x of higher&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;This major release has bumped the minimum Cordova-Android requirement to 10.x or higher. This requirement change was made for the &lt;strong&gt;AndroidX Only Support&lt;/strong&gt; initiative.&lt;/p&gt;
-
-    &lt;p&gt;If your project is using an older Cordova-Android release, please upgrade the Android platform before using it.&lt;/p&gt;
-
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  cordova platform remove android
-  cordova platform add android@10.x
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;&lt;code&gt;AndroidX&lt;/code&gt; Only Support&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;In this release, we have completely migrated to the AndroidX library and no longer support the Android Support Library.&lt;/p&gt;
-
-    &lt;p&gt;If you were using the &lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-androidx-adapter&quot;&gt;cordova-plugin-androidx-adapter&lt;/a&gt; plugin to migrate the Camera&amp;#39;s legacy Android Support Library references to the new AndroidX references, it can be removed unless your project is using other third-party plugins that have not migrated to AndroidX.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;HEIC&lt;/strong&gt; Support&lt;/p&gt;
-
-    &lt;p&gt;We introduced support to encode the HEIC file formats to the defined &lt;code&gt;EncodingType&lt;/code&gt; for WebView display.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Package Visibility Support&lt;/p&gt;
-
-    &lt;p&gt;We have updated this plugin to support the breaking changes that were introduced in Android 11 around package visibility.&lt;/p&gt;
-
-    &lt;p&gt;For more information on package visibility, please check out the following Google&amp;#39;s resources:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;ttps://medium.com/androiddevelopers/package-visibility-in-android-11-cc857f221cd9&quot;&gt;Package visibility in Android 11&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://developer.android.com/training/package-visibility&quot;&gt;Package visibility filtering on Android&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Feature:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/751&quot;&gt;GH-751&lt;/a&gt; feat(android)!: support &lt;strong&gt;AndroidX&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/750&quot;&gt;GH-750&lt;/a&gt; feat(android): bump &lt;code&gt;cordova-android&lt;/code&gt; requirements for &lt;code&gt;10.x&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/731&quot;&gt;GH-731&lt;/a&gt; feat(android): encode &lt;code&gt;heic&lt;/code&gt; format to &lt;code&gt;EncodingType&lt;/code&gt; for webview display &lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/issues/711&quot;&gt;#711&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/684&quot;&gt;GH-684&lt;/a&gt; feat(android): &lt;code&gt;sdk-30&lt;/code&gt; package visibility support&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Fix:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/687&quot;&gt;GH-687&lt;/a&gt; fix(android): return exception message (where it exists)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/585&quot;&gt;GH-585&lt;/a&gt; fix(android): file path correction if &lt;code&gt;Uri&lt;/code&gt; authority is &lt;code&gt;FileProvider&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/news/2021/08/23/camera-plugin-6.0.0-release.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/news/2021/08/23/camera-plugin-6.0.0-release.html</guid>
-        
-        <category>release</category>
-        
-        <category>plugins</category>
-        
-        
-        <category>news</category>
         
       </item>
     
