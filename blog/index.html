@@ -124,6 +124,59 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Mon, 11 Apr 2022 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html">File Plugin 7.0.0 & Device Plugin 2.1.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">11 Apr 2022</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                        <a class="comment" href="/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html#disqus_thread"></a>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released an update for <code>cordova-plugin-file</code> &amp; <code>cordova-plugin-device</code>!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-file">cordova-plugin-file@7.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-device">cordova-plugin-device@2.1.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-file
+cordova plugin add cordova-plugin-file@7.0.0
+
+cordova plugin remove cordova-plugin-device
+cordova plugin add cordova-plugin-device@2.1.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<h3><code>cordova-plugin-file</code></h3>
+
+<p>For Android, a <code>WebViewAssetLoader</code> proxy handler has been added to support loading <code>cdvfile</code> URLs while using a custom scheme. It is recommended to use the <code>toURL</code> method to fetch the consumable URL. When the app is served from the <code>http</code> or <code>https</code> protocol, the <code>toURL</code> will return the appropriate consumable <code>cdvfile</code> URL. If the app is used from the <code>file</code> protocol, <code>toURL</code> will return the native <code>file</code> URL.</p>
+
+<h3><code>cordova-plugin-device</code></h3>
+
+<p>Electron native support has been added.</p>
+
+<p>For Android, the <code>sdkVersion</code> property is now included on the <code>window.device</code> object, and returned within the <code>getInfo</code> response object.</p>
+
+<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+
+</p>
+                    <div><a href="/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Wed, 06 Apr 2022 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/news/2022/04/06/splashscreen-plugin-release.html">Splash Screen Plugin Released!</a>
@@ -12199,7 +12252,7 @@ window.twttr = (function(d, s, id) {
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Wed, 06 Apr 2022 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Mon, 11 Apr 2022 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };

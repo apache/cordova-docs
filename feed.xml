@@ -6,9 +6,84 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Apr 2022 20:52:25 +0000</pubDate>
-    <lastBuildDate>Wed, 06 Apr 2022 20:52:25 +0000</lastBuildDate>
+    <pubDate>Mon, 11 Apr 2022 12:26:39 +0000</pubDate>
+    <lastBuildDate>Mon, 11 Apr 2022 12:26:39 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
+    
+      <item>
+        <title>File Plugin 7.0.0 &amp; Device Plugin 2.1.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-file&lt;/code&gt; &amp;amp; &lt;code&gt;cordova-plugin-device&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-file&quot;&gt;cordova-plugin-file@7.0.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-device&quot;&gt;cordova-plugin-device@2.1.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-file
+cordova plugin add cordova-plugin-file@7.0.0
+
+cordova plugin remove cordova-plugin-device
+cordova plugin add cordova-plugin-device@2.1.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;h3&gt;&lt;code&gt;cordova-plugin-file&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;For Android, a &lt;code&gt;WebViewAssetLoader&lt;/code&gt; proxy handler has been added to support loading &lt;code&gt;cdvfile&lt;/code&gt; URLs while using a custom scheme. It is recommended to use the &lt;code&gt;toURL&lt;/code&gt; method to fetch the consumable URL. When the app is served from the &lt;code&gt;http&lt;/code&gt; or &lt;code&gt;https&lt;/code&gt; protocol, the &lt;code&gt;toURL&lt;/code&gt; will return the appropriate consumable &lt;code&gt;cdvfile&lt;/code&gt; URL. If the app is used from the &lt;code&gt;file&lt;/code&gt; protocol, &lt;code&gt;toURL&lt;/code&gt; will return the native &lt;code&gt;file&lt;/code&gt; URL.&lt;/p&gt;
+
+&lt;h3&gt;&lt;code&gt;cordova-plugin-device&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Electron native support has been added.&lt;/p&gt;
+
+&lt;p&gt;For Android, the &lt;code&gt;sdkVersion&lt;/code&gt; property is now included on the &lt;code&gt;window.device&lt;/code&gt; object, and returned within the &lt;code&gt;getInfo&lt;/code&gt; response object.&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;h2&gt;cordova-plugin-file&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/519&quot;&gt;GH-519&lt;/a&gt; chore!: removed old platform code &amp;amp; lint cleanup&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/517&quot;&gt;GH-517&lt;/a&gt; fix(android): support cdvfile assets for custom scheme&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/516&quot;&gt;GH-516&lt;/a&gt; fix(android): create &lt;code&gt;toURL&lt;/code&gt; override to preserve other platforms&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/487&quot;&gt;GH-487&lt;/a&gt; fix(android): Request external read permission when listing external directories&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/513&quot;&gt;GH-513&lt;/a&gt; feat(android): add &lt;code&gt;WebViewAssetLoader&lt;/code&gt; proxy handler for cdvfile&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/490&quot;&gt;GH-490&lt;/a&gt; chore: &lt;code&gt;npmrc&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/489&quot;&gt;GH-489&lt;/a&gt; fix: Brought back the return statement&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/470&quot;&gt;GH-470&lt;/a&gt; fix: Remove test log&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/447&quot;&gt;GH-447&lt;/a&gt; fix(browser): typo in &lt;code&gt;preparing.js&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/439&quot;&gt;GH-439&lt;/a&gt; chore: Require &lt;strong&gt;Android&lt;/strong&gt; 9&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/433&quot;&gt;GH-433&lt;/a&gt; refactor(android): Removed obsolete copyResource function&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/417&quot;&gt;GH-417&lt;/a&gt; fix(android): Use legacy storage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;cordova-plugin-device&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-device/pull/167&quot;&gt;GH-167&lt;/a&gt; feat(ios): detect if app is running on a macOS desktop with Apple Silicon&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-device/pull/157&quot;&gt;GH-157&lt;/a&gt; feat(android): &lt;code&gt;getInfo&lt;/code&gt; response to include &lt;code&gt;sdkVersion&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-device/pull/152&quot;&gt;GH-152&lt;/a&gt; fix(osx): rename classes to fix plugin&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-device/pull/135&quot;&gt;GH-135&lt;/a&gt; feat(electron): add support&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-device/pull/109&quot;&gt;GH-109&lt;/a&gt; Log error to &lt;code&gt;console&lt;/code&gt;, not to &lt;code&gt;dialog&lt;/code&gt; box&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html</guid>
+        
+        <category>release</category>
+        
+        <category>plugins</category>
+        
+        
+        <category>news</category>
+        
+      </item>
     
       <item>
         <title>Splash Screen Plugin Released!</title>
@@ -617,38 +692,6 @@ cordova platform add electron@3.0.0
         <category>news</category>
         
         <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Declaring Translation Bankruptcy</title>
-        <description>&lt;p&gt;It has been talked about for years, and even though we &lt;a href=&quot;https://lists.apache.org/thread.html/4768b193b66d75d1c0c7c08303c54eb0fa15894c60e99b607f7e3e5d%40%3Cdev.cordova.apache.org%3E&quot;&gt;agreed to do it&lt;/a&gt;, we never really moved on it.
-Taking things away is always harder than adding things.&lt;/p&gt;
-
-&lt;p&gt;Back in the day, we had active contributions from the community to translate our documentation, and we had a pretty robust system to pull them all together and publish the static HTML site.  This system has run flawlessly for years, however, the community translations slowed, then stopped, while the system still carefully churned through it all. We have been providing translated docs since Cordova CLI 3.1.0 while the maintenance of these translated docs started to diverge around Cordova CLI 6.x&lt;/p&gt;
-
-&lt;p&gt;Over the next few weeks we will be making aggessive changes to the documentation system.&lt;/p&gt;
-
-&lt;p&gt;Including:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;archive all existing translated documentation to a new static &lt;code&gt;archive&lt;/code&gt; site&lt;/li&gt;
-  &lt;li&gt;remove all translations from the main repo, and update build tooling to only publish the main version&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We would like to thank the people who took the initiative in creating the translated docs and those who put time and effort into maintaining them.&lt;/p&gt;
-
-&lt;p&gt;We welcome your feedback and comments.&lt;/p&gt;
-
-&lt;p&gt;~ Apache Cordova Committers&lt;/p&gt;
-</description>
-        <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2021/08/25/translations.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2021/08/25/translations.html</guid>
-        
-        <category>news</category>
         
         
         <category>announcements</category>

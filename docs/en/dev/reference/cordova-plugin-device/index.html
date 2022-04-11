@@ -2525,6 +2525,20 @@ The UUID will be the same if app is restored from a backup or iCloud as it is sa
 
 <p>As of Android 9, the underlying native API that powered the <code>uuid</code> property is deprecated and will always return <code>UNKNOWN</code> without proper permissions. Cordova have never implemented handling the required permissions. As of Android 10, <strong>all</strong> non-resettable device identifiers are no longer readable by normal applications and will always return <code>UNKNOWN</code>. More information can be <a href="https://developer.android.com/about/versions/10/privacy/changes#non-resettable-device-ids">read here</a>.</p>
 
+<h2>device.isiOSAppOnMac</h2>
+
+<p>The iOS app is running on the Mac desktop (Apple Silicon ARM64 processor, M1 or newer). 
+This parameter is only returned for iOS V14.0 or later, and is not returned for Android devices.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">isiOSAppOnMac</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+  <li>iOS</li>
+</ul>
+
 
             </div>
         </div>
