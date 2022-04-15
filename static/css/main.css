@@ -8417,7 +8417,7 @@ footer strong {
 }
 footer h1 {
   font-size: 2.5em;
-  color: #3992ab;
+  color: rgb(57, 146, 171);
 }
 footer h2 {
   text-transform: uppercase;
@@ -8611,7 +8611,7 @@ html {
 #hero #hero_section .hero_content p {
   color: #e6e6e6;
   font-weight: 300;
-  color: #a6b2b4;
+  color: rgb(166, 178, 180);
 }
 #hero #hero_section .hero_content p em {
   font-style: normal;
@@ -8657,7 +8657,7 @@ html {
   }
 }
 #hero_bottom_strip {
-  background-color: #2a2a2a;
+  background-color: rgb(42, 42, 42);
   color: white;
   width: 100%;
   margin: 0;
@@ -8773,7 +8773,7 @@ img#logo_top {
   vertical-align: middle;
   white-space: nowrap;
   text-align: center;
-  background-color: #3992ab;
+  background-color: rgb(57, 146, 171);
   border-radius: 50%;
   margin-top: 20px;
 }
@@ -8976,7 +8976,7 @@ img#logo_top {
   font-weight: 400;
   margin: 0px;
   width: 100%;
-  color: #3992ab;
+  color: rgb(57, 146, 171);
 }
 .blog .blog-list ul.posts header .details {
   color: #999;
@@ -9558,7 +9558,7 @@ hr.results-divider-line {
 }
 .docs .site-toc-container .site-toc > li a.this-page {
   font-weight: bold;
-  background-color: #3992ab;
+  background-color: rgb(57, 146, 171);
 }
 .docs .site-toc-container .site-toc .toc-section-heading {
   font-size: 18px;
@@ -9690,10 +9690,10 @@ hr.results-divider-line {
 }
 .docs .content-header .dropdown button.dropdown-toggle {
   border-radius: 4px;
-  background-color: #d6d6d6;
+  background-color: rgb(214, 214, 214);
 }
 .docs .content-header .dropdown button.dropdown-toggle:hover {
-  background-color: #bfbfbf;
+  background-color: rgb(191, 191, 191);
 }
 .docs .alert.alert-warning.alert-dismissible {
   margin-top: 15px;
@@ -9869,7 +9869,7 @@ html[lang=ru] .docs #old-home ul li {
   padding: 0px;
 }
 .contribute-help .well .issue-links li a:hover, .contribute-help .well_code .issue-links li a:hover, .well_code .contribute-help div .issue-links li a:hover {
-  color: #3992ab;
+  color: rgb(57, 146, 171);
   text-decoration: underline;
 }
 .contribute-help .platforms-list li a {
@@ -10001,7 +10001,7 @@ html[lang=ru] .docs #old-home ul li {
   padding: 100px 0;
 }
 .artwork .iconset .images {
-  background-color: #dfdfdf;
+  background-color: rgb(223, 223, 223);
   border: 3px dashed white;
   padding: 20px;
 }
