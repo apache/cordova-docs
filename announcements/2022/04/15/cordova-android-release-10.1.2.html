@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-file &amp; cordova-plugin-device!  cordova-plugin-file@7.0.0  cordova-plugin...">
+    <meta name="description" content="We are happy to announce that we have just released Cordova Android 10.1.2! This is one of Cordova&#39;s supported platforms for building Android application...">
 
     <title>
         
             
-                File Plugin 7.0.0 & Device Plugin 2.1.0 Released! - Apache Cordova
+                Cordova Android 10.1.2 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2022/04/15/cordova-android-release-10.1.2.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -121,74 +121,49 @@
 
 <div class="post">
     <header>
-        <div class="title">File Plugin 7.0.0 & Device Plugin 2.1.0 Released!</div>
+        <div class="title">Cordova Android 10.1.2 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">11 Apr 2022</div>
+        <div class="date">15 Apr 2022</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released an update for <code>cordova-plugin-file</code> &amp; <code>cordova-plugin-device</code>!</p>
+            <p>We are happy to announce that we have just released <code>Cordova Android 10.1.2</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-plugin-file">cordova-plugin-file@7.0.0</a></li>
-  <li><a href="https://www.npmjs.com/package/cordova-plugin-device">cordova-plugin-device@2.1.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@10.1.2</a></li>
 </ul>
-
-<p><strong>To upgrade:</strong></p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-file
-cordova plugin add cordova-plugin-file@7.0.0
-
-cordova plugin remove cordova-plugin-device
-cordova plugin add cordova-plugin-device@2.1.0
-</code></pre></div></div>
 
 <h2>Release Highlights</h2>
 
-<h3><code>cordova-plugin-file</code></h3>
+<p><strong>To upgrade:</strong></p>
 
-<p>For Android, a <code>WebViewAssetLoader</code> proxy handler has been added to support loading <code>cdvfile</code> URLs while using a custom scheme. It is recommended to use the <code>toURL</code> method to fetch the consumable URL. When the app is served from the <code>http</code> or <code>https</code> protocol, the <code>toURL</code> will return the appropriate consumable <code>cdvfile</code> URL. If the app is used from the <code>file</code> protocol, <code>toURL</code> will return the native <code>file</code> URL.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
+cordova platform add android@10.1.2
+</code></pre></div></div>
 
-<h3><code>cordova-plugin-device</code></h3>
+<p><strong>To install:</strong></p>
 
-<p>Electron native support has been added.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@10.1.2
+</code></pre></div></div>
 
-<p>For Android, the <code>sdkVersion</code> property is now included on the <code>window.device</code> object, and returned within the <code>getInfo</code> response object.</p>
+<p>The notable fixes in this release are to detect the <code>JAVA_HOME</code> environment variable with Java 11, properly escape the app&#39;s name, and explicitly define the <code>android:exported</code> attribute on the <code>activity</code>.</p>
 
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
-<h2>cordova-plugin-file</h2>
+<p><strong>Fixes:</strong></p>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-plugin-file/pull/519">GH-519</a> chore!: removed old platform code &amp; lint cleanup</li>
-  <li><a href="https://github.com/apache/cordova-plugin-file/pull/517">GH-517</a> fix(android): support cdvfile assets for custom scheme</li>
-  <li><a href="https://github.com/apache/cordova-plugin-file/pull/516">GH-516</a> fix(android): create <code>toURL</code> override to preserve other platforms</li>
-  <li><a href="https://github.com/apache/cordova-plugin-file/pull/487">GH-487</a> fix(android): Request external read permission when listing external directories</li>
-  <li><a href="https://github.com/apache/cordova-plugin-file/pull/513">GH-513</a> feat(android): add <code>WebViewAssetLoader</code> proxy handler for cdvfile</li>
-  <li><a href="https://github.com/apache/cordova-plugin-file/pull/490">GH-490</a> chore: <code>npmrc</code></li>
-  <li><a href="https://github.com/apache/cordova-plugin-file/pull/489">GH-489</a> fix: Brought back the return statement</li>
-  <li><a href="https://github.com/apache/cordova-plugin-file/pull/470">GH-470</a> fix: Remove test log</li>
-  <li><a href="https://github.com/apache/cordova-plugin-file/pull/447">GH-447</a> fix(browser): typo in <code>preparing.js</code></li>
-  <li><a href="https://github.com/apache/cordova-plugin-file/pull/439">GH-439</a> chore: Require <strong>Android</strong> 9</li>
-  <li><a href="https://github.com/apache/cordova-plugin-file/pull/433">GH-433</a> refactor(android): Removed obsolete copyResource function</li>
-  <li><a href="https://github.com/apache/cordova-plugin-file/pull/417">GH-417</a> fix(android): Use legacy storage</li>
-</ul>
-
-<h2>cordova-plugin-device</h2>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-plugin-device/pull/167">GH-167</a> feat(ios): detect if app is running on a macOS desktop with Apple Silicon</li>
-  <li><a href="https://github.com/apache/cordova-plugin-device/pull/157">GH-157</a> feat(android): <code>getInfo</code> response to include <code>sdkVersion</code></li>
-  <li><a href="https://github.com/apache/cordova-plugin-device/pull/152">GH-152</a> fix(osx): rename classes to fix plugin</li>
-  <li><a href="https://github.com/apache/cordova-plugin-device/pull/135">GH-135</a> feat(electron): add support</li>
-  <li><a href="https://github.com/apache/cordova-plugin-device/pull/109">GH-109</a> Log error to <code>console</code>, not to <code>dialog</code> box</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1372">GH-1372</a> fix(<code>AndroidManifest</code>): explicitly define the <code>activity</code> attribute <code>android:exported</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1406">GH-1406</a> fix: detect <code>JAVA_HOME</code> with Java 11</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1401">GH-1401</a> fix(GH-1391): Reword minimum build tools version to make it more clear what is actually required.</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1384">GH-1384</a> fix: escape <code>strings.xml</code> app name</li>
 </ul>
 
         </div>
@@ -197,37 +172,17 @@ cordova plugin add cordova-plugin-device@2.1.0
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/news/2022/04/06/splashscreen-plugin-release.html">Previous</a>
+                    <a href="/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/news/2022/04/06/splashscreen-plugin-release.html">Splash Screen Plugin Released!</a>
-                    <div class="date"> 06 Apr 2022 - By Niklas Merz </div>
+                    <a class="title" href="/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html">File Plugin 7.0.0 & Device Plugin 2.1.0 Released!</a>
+                    <div class="date"> 11 Apr 2022 - By Bryan Ellis </div>
                     <p class="content">
                         We are happy to announce that we have just released an update...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2022/04/15/cordova-android-release-10.1.2.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2022/04/15/cordova-android-release-10.1.2.html">Cordova Android 10.1.2 Released!</a>
-                    <div class="date"> 15 Apr 2022 - By Bryan Ellis </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released Cordova Android...
-                    </p>
                 
             </div>
         </div>
