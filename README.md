@@ -4,8 +4,6 @@
 
 This repository contains the source code for the Cordova website at [cordova.apache.org](https://cordova.apache.org).
 
-The site is also reachable with the short domain [cordova.io](http://cordova.io), the important subareas as [docs.cordova.io](http://docs.cordova.io), [blog.cordova.io](http://blog.cordova.io) and [plugins.cordova.io](http://plugins.cordova.io).
-
 ## Technical Overview
 
 The main parts are built as a static site with [Jekyll](http://jekyllrb.com/), containing the homepage and subpages, the [blog](https://cordova.apache.org/blog) and the [docs](https://cordova.apache.org/docs).  
