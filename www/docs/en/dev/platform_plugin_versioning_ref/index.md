@@ -199,9 +199,9 @@ After running the above command, the **`package.json`** should contain something
 
 ```json
 "cordova": {
-  "plugins": [
-    "cordova-plugin-device"
-  ]
+  "plugins": {
+    "cordova-plugin-device": {}
+  }
 },
 "devDependencies": {
   "cordova-plugin-device": "^1.0.0"
@@ -301,9 +301,9 @@ Suppose you have defined in `config.xml` and `package.json` a plugin and version
 
 ```json
 "cordova": {
-  "plugins": [
-    "cordova-plugin-splashscreen"
-  ]
+  "plugins": {
+    "cordova-plugin-splashscreen": {}
+  }
 },
 "devDependencies": {
   "cordova-plugin-splashscreen": "1.0.0"
