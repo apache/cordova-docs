@@ -11,8 +11,6 @@ We are happy to announce that we have just released `Cordova Electron 3.1.0`! Th
 
 * [cordova-electron@3.1.0](https://www.npmjs.com/package/cordova-electron)
 
-## Release Highlights
-
 **To upgrade:**
 
 ```bash
@@ -25,6 +23,8 @@ cordova platform add electron@3.1.0
 ```bash
 cordova platform add electron@3.1.0
 ```
+
+## Release Highlights
 
 Some of the notable changes & new features in this release are:
 
