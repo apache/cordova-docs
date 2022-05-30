@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released Cordova Android 10.1.2! This is one of Cordova&#39;s supported platforms for building Android application...">
+    <meta name="description" content="We are happy to announce that we have just released Cordova Electron 3.1.0! This is one of Cordova&#39;s supported platforms for building Electron applicatio...">
 
     <title>
         
             
-                Cordova Android 10.1.2 Released! - Apache Cordova
+                Cordova Electron 3.1.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2022/04/15/cordova-android-release-10.1.2.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2022/05/30/cordova-electron-release-3.1.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,49 +129,90 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova Android 10.1.2 Released!</div>
+        <div class="title">Cordova Electron 3.1.0 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">15 Apr 2022</div>
+        <div class="date">30 May 2022</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released <code>Cordova Android 10.1.2</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
+            <p>We are happy to announce that we have just released <code>Cordova Electron 3.1.0</code>! This is one of Cordova&#39;s supported platforms for building Electron applications.</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@10.1.2</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-electron">cordova-electron@3.1.0</a></li>
 </ul>
-
-<h2>Release Highlights</h2>
 
 <p><strong>To upgrade:</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
-cordova platform add android@10.1.2
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove electron
+cordova platform add electron@3.1.0
 </code></pre></div></div>
 
 <p><strong>To install:</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@10.1.2
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add electron@3.1.0
 </code></pre></div></div>
 
-<p>The notable fixes in this release are to detect the <code>JAVA_HOME</code> environment variable with Java 11, properly escape the app&#39;s name, and explicitly define the <code>android:exported</code> attribute on the <code>activity</code>.</p>
+<h2>Release Highlights</h2>
+
+<p>Some of the notable changes &amp; new features in this release are:</p>
+
+<p><strong>Electron Update:</strong></p>
+
+<p>The <strong>Electron</strong> core dependencies have been updated to <code>14.2.9</code>.</p>
+
+<p><strong>Defining &amp; Pinning Electron Version</strong></p>
+
+<p>The ability to define and pin specific Electron versions has been added. This feature leveraged the usage of npm&#39;s <code>overrides</code> property, which was introduced in npm 8.</p>
+
+<p>Example:</p>
+
+<p>In the Cordova app&#39;s <code>package.json</code> file, add the following:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"overrides"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"cordova-electron"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"electron"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14.2.9"</span><span class="p">,</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>If you already have the platform added to the project, you will need to remove the platform or delete the <code>platforms</code> directory before running <code>cordova prepare electron</code> to recheckout the pinned version. If you also have in your project director the <code>package-lock.json</code> file, this will also need to be removed.</p>
+
+<p>For a quick start guide and in-depth configuration setup, please check out our <a href="https://github.com/apache/cordova-electron/blob/rel/2.0.0/DOCUMENTATION.md">Cordova Electron Documentation</a>!</p>
 
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
-<p><strong>Fixes:</strong></p>
+<h4>Features</h4>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-android/pull/1372">GH-1372</a> fix(<code>AndroidManifest</code>): explicitly define the <code>activity</code> attribute <code>android:exported</code></li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1406">GH-1406</a> fix: detect <code>JAVA_HOME</code> with Java 11</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1401">GH-1401</a> fix(GH-1391): Reword minimum build tools version to make it more clear what is actually required.</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1384">GH-1384</a> fix: escape <code>strings.xml</code> app name</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/230">GH-230</a> feat: support custom <strong>Electron</strong> version</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/228">GH-228</a> feat: bump <code>electron@^14.2.9</code></li>
+</ul>
+
+<h4>Fixes</h4>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-electron/pull/229">GH-229</a> fix: <code>npm</code> 8 does not install plugin dependencies</li>
+</ul>
+
+<h4>Chores</h4>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-electron/pull/231">GH-231</a> chore(npm): bump all dependencies to latest minor/path</li>
+</ul>
+
+<h4>Other Changes</h4>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-electron/pull/226">GH-226</a> dep(npm): bump <code>@cordova/eslint-config@^4.0.0</code> w/ fix</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/221">GH-221</a> dep(npm): bump <code>minimist</code> from 1.2.5 to 1.2.6</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/207">GH-207</a> doc: <code>mas-dev</code> is macOS package</li>
 </ul>
 
         </div>
@@ -180,22 +221,22 @@ cordova platform add android@10.1.2
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html">Previous</a>
+                    <a href="/announcements/2022/04/15/cordova-android-release-10.1.2.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html">File Plugin 7.0.0 & Device Plugin 2.1.0 Released!</a>
-                    <div class="date"> 11 Apr 2022 - By Bryan Ellis </div>
+                    <a class="title" href="/announcements/2022/04/15/cordova-android-release-10.1.2.html">Cordova Android 10.1.2 Released!</a>
+                    <div class="date"> 15 Apr 2022 - By Bryan Ellis </div>
                     <p class="content">
-                        We are happy to announce that we have just released an update...
+                        We are happy to announce that we have just released Cordova Android...
                     </p>
                 
             </div>
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2022/05/30/cordova-electron-release-3.1.0.html">Next</a>
+                    <a href="/news/2022/05/30/media-plugin-6.0.0-media-capture-plugin-4.0.0-release.html">Next</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2022/05/30/cordova-electron-release-3.1.0.html">Cordova Electron 3.1.0 Released!</a>
+                    <a class="title" href="/news/2022/05/30/media-plugin-6.0.0-media-capture-plugin-4.0.0-release.html">Media Plugin 6.0.0 & Media Capture Plugin 4.0.0 Released!</a>
                     <div class="date"> 30 May 2022 - By Bryan Ellis </div>
                     <p class="content">
                         <!--
@@ -209,7 +250,7 @@ cordova platform add android@10.1.2
 
                             Reference: https://github.com/jekyll/jekyll/issues/2860
                         -->
-                        We are happy to announce that we have just released Cordova Electron...
+                        We are happy to announce that we have just released an update...
                     </p>
                 
             </div>

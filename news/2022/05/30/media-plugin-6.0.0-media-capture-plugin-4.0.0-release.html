@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released Cordova Android 10.1.2! This is one of Cordova&#39;s supported platforms for building Android application...">
+    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-media &amp; cordova-plugin-media-capture!  cordova-plugin-media@6.0.0  cordo...">
 
     <title>
         
             
-                Cordova Android 10.1.2 Released! - Apache Cordova
+                Media Plugin 6.0.0 & Media Capture Plugin 4.0.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2022/04/15/cordova-android-release-10.1.2.html">
+    <link rel="canonical" href="https://cordova.apache.org/news/2022/05/30/media-plugin-6.0.0-media-capture-plugin-4.0.0-release.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,49 +129,94 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova Android 10.1.2 Released!</div>
+        <div class="title">Media Plugin 6.0.0 & Media Capture Plugin 4.0.0 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">15 Apr 2022</div>
+        <div class="date">30 May 2022</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released <code>Cordova Android 10.1.2</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
+            <p>We are happy to announce that we have just released an update for <code>cordova-plugin-media</code> &amp; <code>cordova-plugin-media-capture</code>!</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@10.1.2</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-media">cordova-plugin-media@6.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-media-capture">cordova-plugin-media-capture@4.0.0</a></li>
 </ul>
-
-<h2>Release Highlights</h2>
 
 <p><strong>To upgrade:</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
-cordova platform add android@10.1.2
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-media
+cordova plugin add cordova-plugin-media@6.0.0
+
+cordova plugin remove cordova-plugin-media-capture
+cordova plugin add cordova-plugin-media-capture@4.0.0
 </code></pre></div></div>
 
-<p><strong>To install:</strong></p>
+<h2>Release Highlights</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@10.1.2
-</code></pre></div></div>
+<h3><code>cordova-plugin-media</code></h3>
 
-<p>The notable fixes in this release are to detect the <code>JAVA_HOME</code> environment variable with Java 11, properly escape the app&#39;s name, and explicitly define the <code>android:exported</code> attribute on the <code>activity</code>.</p>
+<p>For Android, the <code>WRITE_EXTERNAL_STORAGE</code> and <code>READ_PHONE_STATE</code> permissions have a protection level of dangerous. Because of this, we removed the declaration of these permissions.</p>
+
+<p>The <code>cordova-plugin-file</code> dependency was updated to use version <code>^7.0.0</code>.</p>
+
+<p>The <code>setRate</code> functionality, which was previously only supported on the iOS platform, is now supported on the Android platform. There was also a fix around this functionality for iOS.</p>
+
+<h3><code>cordova-plugin-media-capture</code></h3>
+
+<p>For Android, the <code>RECORD_VIDEO</code> permission definition was removed as it was never used and appears to never exist.</p>
+
+<p>The <code>cordova-plugin-file</code> dependency was updated to use version <code>^7.0.0</code>.</p>
+
+<p>Permission checks, for Android, has been unified to fix inconsistencies between the different capture methods.</p>
 
 <p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
-<p><strong>Fixes:</strong></p>
+<h2>cordova-plugin-media</h2>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-android/pull/1372">GH-1372</a> fix(<code>AndroidManifest</code>): explicitly define the <code>activity</code> attribute <code>android:exported</code></li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1406">GH-1406</a> fix: detect <code>JAVA_HOME</code> with Java 11</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1401">GH-1401</a> fix(GH-1391): Reword minimum build tools version to make it more clear what is actually required.</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1384">GH-1384</a> fix: escape <code>strings.xml</code> app name</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/344">GH-344</a> feat(android): drop <code>WRITE_EXTERNAL_STORAGE</code> permission</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/195">GH-195</a> feat(ios): Add error call for <code>stalled_playback</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/341">GH-341</a> feat(android): add <code>setRate</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/340">GH-340</a> fix(ios): set rate with current playback rate</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/197">GH-197</a> feat: add <code>durationUpdate</code> callback</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/232">GH-232</a> fix(android): remove <code>READ_PHONE_STATE</code> permission</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/285">GH-285</a> fix: remove deprecated platform code snippets</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/338">GH-338</a> fix: missing parenthesis from #328</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/328">GH-328</a> fix(android): issue #325</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/334">GH-334</a> dep!: bump <code>cordova-plugin-file@^7.0.0</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/337">GH-337</a> chore: bump <code>cordovaDependencies</code> next next major cordova requirement</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/336">GH-336</a> chore: rebuilt <code>package-lock</code></li>
+</ul>
+
+<h2>cordova-plugin-media-capture</h2>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/238">GH-238</a> dep!: bump <code>cordova-plugin-file@^7.0.0</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/248">GH-248</a> test: remove <code>cordova-plugin-media</code> dependency</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/247">GH-247</a> chore: bump <code>cordovaDependencies</code> next next major cordova requirement</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/246">GH-246</a> chore: rebuilt <code>package-lock</code> w/ v2</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/192">GH-192</a> fix(android): Unify and fix permission check</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/231">GH-231</a> ci(ios): update workflow w/ <strong>iOS</strong> 15</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/230">GH-230</a> ci: add <code>action-badge</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/229">GH-229</a> ci: remove <code>travis</code> &amp; <code>appveyor</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/228">GH-228</a> ci: add <code>gh-actions</code> workflows</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/200">GH-200</a> fix(android): remove unknown permission <code>android.permission.RECORD_VIDEO</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/203">GH-203</a> ci: add node-14.x to workflow</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/193">GH-193</a> chore: clean up <code>package.json</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/177">GH-177</a> breaking(ios): remove code warnings</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/180">GH-180</a> chore: adds <code>package-lock</code> file</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/179">GH-179</a> refactor(eslint): use <code>cordova-eslint</code> /w fix</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/178">GH-178</a> chore(npm): use short notation in <code>package.json</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/165">GH-165</a> ci: updates Node.js versions</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/164">GH-164</a> chore(npm): improve ignore list</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/161">GH-161</a> Small javadoc fix</li>
 </ul>
 
         </div>
@@ -180,37 +225,17 @@ cordova platform add android@10.1.2
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html">Previous</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html">File Plugin 7.0.0 & Device Plugin 2.1.0 Released!</a>
-                    <div class="date"> 11 Apr 2022 - By Bryan Ellis </div>
-                    <p class="content">
-                        We are happy to announce that we have just released an update...
-                    </p>
-                
-            </div>
-            <div class="col-sm-6">
-                
-                    <a href="/announcements/2022/05/30/cordova-electron-release-3.1.0.html">Next</a>
+                    <a href="/announcements/2022/05/30/cordova-electron-release-3.1.0.html">Previous</a>
                     <br>
                     <br>
                     <a class="title" href="/announcements/2022/05/30/cordova-electron-release-3.1.0.html">Cordova Electron 3.1.0 Released!</a>
                     <div class="date"> 30 May 2022 - By Bryan Ellis </div>
                     <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
                         We are happy to announce that we have just released Cordova Electron...
                     </p>
+                
+            </div>
+            <div class="col-sm-6">
                 
             </div>
         </div>

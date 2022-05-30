@@ -132,6 +132,134 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Mon, 30 May 2022 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/news/2022/05/30/media-plugin-6.0.0-media-capture-plugin-4.0.0-release.html">Media Plugin 6.0.0 & Media Capture Plugin 4.0.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">30 May 2022</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                        <a class="comment" href="/news/2022/05/30/media-plugin-6.0.0-media-capture-plugin-4.0.0-release.html#disqus_thread"></a>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released an update for <code>cordova-plugin-media</code> &amp; <code>cordova-plugin-media-capture</code>!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-media">cordova-plugin-media@6.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-media-capture">cordova-plugin-media-capture@4.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-media
+cordova plugin add cordova-plugin-media@6.0.0
+
+cordova plugin remove cordova-plugin-media-capture
+cordova plugin add cordova-plugin-media-capture@4.0.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<h3><code>cordova-plugin-media</code></h3>
+
+<p>For Android, the <code>WRITE_EXTERNAL_STORAGE</code> and <code>READ_PHONE_STATE</code> permissions have a protection level of dangerous. Because of this, we removed the declaration of these permissions.</p>
+
+<p>The <code>cordova-plugin-file</code> dependency was updated to use version <code>^7.0.0</code>.</p>
+
+<p>The <code>setRate</code> functionality, which was previously only supported on the iOS platform, is now supported on the Android platform. There was also a fix around this functionality for iOS.</p>
+
+<h3><code>cordova-plugin-media-capture</code></h3>
+
+<p>For Android, the <code>RECORD_VIDEO</code> permission definition was removed as it was never used and appears to never exist.</p>
+
+<p>The <code>cordova-plugin-file</code> dependency was updated to use version <code>^7.0.0</code>.</p>
+
+<p>Permission checks, for Android, has been unified to fix inconsistencies between the different capture methods.</p>
+
+<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+
+</p>
+                    <div><a href="/news/2022/05/30/media-plugin-6.0.0-media-capture-plugin-4.0.0-release.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
+                    <div class="adorner" blogTime="Mon, 30 May 2022 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2022/05/30/cordova-electron-release-3.1.0.html">Cordova Electron 3.1.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">30 May 2022</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                        <a class="comment" href="/announcements/2022/05/30/cordova-electron-release-3.1.0.html#disqus_thread"></a>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released <code>Cordova Electron 3.1.0</code>! This is one of Cordova&#39;s supported platforms for building Electron applications.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-electron">cordova-electron@3.1.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove electron
+cordova platform add electron@3.1.0
+</code></pre></div></div>
+
+<p><strong>To install:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add electron@3.1.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<p>Some of the notable changes &amp; new features in this release are:</p>
+
+<p><strong>Electron Update:</strong></p>
+
+<p>The <strong>Electron</strong> core dependencies have been updated to <code>14.2.9</code>.</p>
+
+<p><strong>Defining &amp; Pinning Electron Version</strong></p>
+
+<p>The ability to define and pin specific Electron versions has been added. This feature leveraged the usage of npm&#39;s <code>overrides</code> property, which was introduced in npm 8.</p>
+
+<p>Example:</p>
+
+<p>In the Cordova app&#39;s <code>package.json</code> file, add the following:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"overrides"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"cordova-electron"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"electron"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14.2.9"</span><span class="p">,</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>If you already have the platform added to the project, you will need to remove the platform or delete the <code>platforms</code> directory before running <code>cordova prepare electron</code> to recheckout the pinned version. If you also have in your project director the <code>package-lock.json</code> file, this will also need to be removed.</p>
+
+<p>For a quick start guide and in-depth configuration setup, please check out our <a href="https://github.com/apache/cordova-electron/blob/rel/2.0.0/DOCUMENTATION.md">Cordova Electron Documentation</a>!</p>
+
+<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+
+</p>
+                    <div><a href="/announcements/2022/05/30/cordova-electron-release-3.1.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Fri, 15 Apr 2022 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/announcements/2022/04/15/cordova-android-release-10.1.2.html">Cordova Android 10.1.2 Released!</a>
@@ -12306,7 +12434,7 @@ window.twttr = (function(d, s, id) {
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Fri, 15 Apr 2022 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Mon, 30 May 2022 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };
