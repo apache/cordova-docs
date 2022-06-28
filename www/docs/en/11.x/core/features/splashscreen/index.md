@@ -26,6 +26,8 @@ This core feature gives the ability to configure and control the platform's spla
 - [Supported Platforms](#supported-platforms)
 - [Platform Splash Screen Image Configuration](#platform-splash-screen-image-configuration)
   - [Example Configuration](#example-configuration)
+  - [Android-specific Information](#android-specific-information)
+    - [Example Android Configuration](#example-android-configuration)
   - [iOS-specific Information](#ios-specific-information)
     - [Launch Storyboard Images](#launch-storyboard-images)
       - [Designing Launch Storyboard Images](#designing-launch-storyboard-images)
@@ -41,14 +43,22 @@ This core feature gives the ability to configure and control the platform's spla
   - [`FadeSplashScreenDuration`](#fadesplashscreenduration)
   - [`ShowSplashScreenSpinner`](#showsplashscreenspinner)
   - [`SplashScreenDelay`](#splashscreendelay)
+  - [`AndroidPostSplashScreenTheme`](#androidpostsplashscreentheme)
+  - [`AndroidWindowSplashScreenAnimatedIcon`](#androidwindowsplashscreenanimatedicon)
+  - [`AndroidWindowSplashScreenAnimationDuration`](#androidwindowsplashscreenanimationduration)
+  - [`AndroidWindowSplashScreenBackground`](#androidwindowsplashscreenbackground)
+  - [`AndroidWindowSplashScreenBrandingImage`](#androidwindowsplashscreenbrandingimage)
+  - [`AndroidWindowSplashScreenIconBackgroundColor`](#androidwindowsplashscreeniconbackgroundcolor)
 - [JavaScript Public APIs](#javascript-public-apis)
   - [`navigator.splashscreen.hide`](#navigatorsplashscreenhide)
   - [`navigator.splashscreen.show`](#navigatorsplashscreenshow)
 - [Quirks & Known Issues](#quirks--known-issues)
   - [iOS](#ios)
+  - [Android](#android)
 
 ## Supported Platforms
 
+- Android
 - iOS
 
 For other platforms, check the `cordova-plugin-splashscreen` for support.
@@ -70,12 +80,17 @@ projectRoot
     www
     res
         screen
+            android
             ios
 ```
 
 **Config.xml:**
 
 ```xml
+<platform name="android">
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/screen/android/splashscreen.xml" />
+</platform>
+
 <!--
   Storyboard (supports all devices):
   Note: images are determined by scale, idiom, and size traits. The following
@@ -88,6 +103,26 @@ projectRoot
     <splash src="res/screen/ios/Default@3x~universal~anyany.png" />
     <splash src="res/screen/ios/Default@3x~universal~anycom.png" />
     <splash src="res/screen/ios/Default@3x~universal~comany.png" />
+</platform>
+```
+
+### Android-specific Information
+
+Starting in Android 12, Google has implemented a new SplashScreen API to controls the app launch animation which runs on a device with Android 12 and higher. For backwards compatability, Cordova has included the `core-splashscreen` compatability library which extends this features back to Android API 21 and higher.
+
+To effectively create your own Android SplashScreen assets, it is important to understand the requirements of an Adaptive Icon.
+
+**Resource:**
+
+- [Splash Screen dimensions](https://developer.android.com/guide/topics/ui/splash-screen#splash_screen_dimensions)
+- [Adaptive icons](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive)
+
+#### Example Android Configuration
+
+```xml
+<platform name="android">
+    <!-- Default -->
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/screen/android/splashscreen.xml" />
 </platform>
 ```
 
@@ -262,6 +297,7 @@ Indicates whether to hide splash screen automatically or not. The splash screen 
 
 **Supported Platforms:**
 
+- Android
 - iOS
 
 **Data Type:** `Boolean`
@@ -278,8 +314,11 @@ Indicates whether to hide splash screen automatically or not. The splash screen 
 
 Controlls the ability of the fade in and out of the splash screen.
 
+For Android, it controlls only the fade out.
+
 **Supported Platforms:**
 
+- Android
 - iOS
 
 **Data Type:** `Boolean`
@@ -298,6 +337,7 @@ Controlls the length of the the splash screen fade effect.
 
 **Supported Platforms:**
 
+- Android
 - iOS
 
 **Data Type:** `Float`, in milliseconds
@@ -351,11 +391,15 @@ Amount of time in milliseconds to wait before automatically hide splash screen.
 
 **Supported Platforms:**
 
+- Android
 - iOS
 
 **Data Type:** `Number`, in milliseconds
 
 **Default Value:** `true`
+
+- Android
+  `-1`: The splash screen will automatticly hide when the `onPageFinished` has been triggered.
 
 - iOS
   `3000`: The splash screen will automatticly hide in 3 seconds.
@@ -366,6 +410,120 @@ Amount of time in milliseconds to wait before automatically hide splash screen.
 <preference name="SplashScreenDelay" value="3000" />
 ```
 
+### `AndroidPostSplashScreenTheme`
+
+Sets the post-theme of the activity after splash screen hides.
+
+_Note:_ This setting is available but use at your own risk.
+
+**Supported Platforms:**
+
+- Android
+
+**Data Type:** `String`
+
+**Default Value:** `@style/Theme.AppCompat.NoActionBar`
+
+**Usage Example:**
+
+```xml
+<preference name="AndroidPostSplashScreenTheme" value="@style/Theme.AppCompat.NoActionBar"/>
+```
+
+### `AndroidWindowSplashScreenAnimatedIcon`
+
+The splash screen image. This preference is used for both animated and non-animated icons. The current acceptable asset files can either be an XML Vector Drwable or PNG.
+
+**Supported Platforms:**
+
+- Android
+
+**Data Type:** `String`, file path to the asset file
+
+**Default Value:** If not supplied, the Cordova's default asset is used.
+
+**Usage Example:**
+
+```xml
+<preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/screen/android/splashscreen.xml" />
+```
+
+### `AndroidWindowSplashScreenAnimationDuration`
+
+Defines the duration of the icon's animation if an Animated Vector Drwable is supplied as the splash screen image.
+
+**Supported Platforms:**
+
+- Android
+
+**Data Type:** `Number`, in milliseconds
+
+**Default Value:** `undefined`
+
+**Usage Example:**
+
+```xml
+<preference name="AndroidWindowSplashScreenAnimationDuration" value="3000"/>
+```
+
+### `AndroidWindowSplashScreenBackground`
+
+The splash screen background color.
+
+**Supported Platforms:**
+
+- Android
+
+**Data Type:** `String`, color hex code value.
+
+**Default Value:** `#ffffff`
+
+**Usage Example:**
+
+```xml
+<preference name="AndroidWindowSplashScreenBackground" value="#ffffff" />
+```
+
+### `AndroidWindowSplashScreenBrandingImage`
+
+> :warning: this setting is currently unsupported by the Android's Splash Screen compatability library. [See Google Android Issue Tracker](https://issuetracker.google.com/issues/194301890)
+
+<!--
+The splash screen's branding image.
+
+**Supported Platforms:**
+
+- Android
+
+**Data Type:** `String`, file path to the asset file
+
+**Default Value:** `undefined`
+
+**Usage Example:**
+
+```xml
+<preference name="AndroidWindowSplashScreenBrandingImage" value="res/screen/android/splashscreen_branding.xml" />
+```
+-->
+
+### `AndroidWindowSplashScreenIconBackgroundColor`
+
+The splash screen's icons background color. Useful to seperate increase the contrast seperation between the background and icon.
+
+**Supported Platforms:**
+
+- Android
+
+**Data Type:** `String`, color hex code value.
+
+**Default Value:** `undefined`
+
+**Usage Example:**
+
+```xml
+<preference name="AndroidWindowSplashScreenIconBackgroundColor" value="#c0c0c0" />
+```
+
 ## JavaScript Public APIs
 
 ### `navigator.splashscreen.hide`
@@ -374,6 +532,7 @@ Dismiss the splash screen.
 
 **Supported Platforms:**
 
+- Android
 - iOS
 
 **Usage Example:**
@@ -429,3 +588,8 @@ screen visible for application startup.
 
 4. **`anyany` must be provided for other variations to be used**
    If you don't provide an `anyany` version of the launch image for a specific scale and idiom, the other variations (like `anycom`, `comany`, and `comcom`) will ignored.
+
+### Android
+
+1. **Simulator does not show the splash screen when launching the application from Android Studio or Cordova CLI.**
+   This is a known Android simulator issue. After uploading the app to the simulator, exiting and opening the app will display show the Splash Screen. If changes are not showen, try also performing a clean build.
