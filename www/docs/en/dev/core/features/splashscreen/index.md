@@ -108,7 +108,7 @@ projectRoot
 
 ### Android-specific Information
 
-Starting in Android 12, Google has implemented a new SplashScreen API to controls the app launch animation which runs on a device with Android 12 and higher. For backwards compatability, Cordova has included the `core-splashscreen` compatability library which extends this features back to Android API 21 and higher.
+Starting in Android 12, Google has implemented a new SplashScreen API to controls the app launch animation which runs on a device with Android 12 and higher. For backwards compatibility, Cordova has included the `core-splashscreen` compatibility library which extends this features back to Android API 21 and higher.
 
 To effectively create your own Android SplashScreen assets, it is important to understand the requirements of an Adaptive Icon.
 
@@ -486,7 +486,7 @@ The splash screen background color.
 
 ### `AndroidWindowSplashScreenBrandingImage`
 
-> :warning: this setting is currently unsupported by the Android's Splash Screen compatability library. [See Google Android Issue Tracker](https://issuetracker.google.com/issues/194301890)
+> :warning: this setting is currently unsupported by the Android's Splash Screen compatibility library. [See Google Android Issue Tracker](https://issuetracker.google.com/issues/194301890)
 
 <!--
 The splash screen's branding image.
@@ -592,4 +592,4 @@ screen visible for application startup.
 ### Android
 
 1. **Simulator does not show the splash screen when launching the application from Android Studio or Cordova CLI.**
-   This is a known Android simulator issue. After uploading the app to the simulator, exiting and opening the app will display show the Splash Screen. If changes are not showen, try also performing a clean build.
+   This is a known Android simulator issue. After uploading the app to the simulator, exiting and opening the app will display show the Splash Screen. If changes are not shown, try also performing a clean build.
