@@ -486,7 +486,7 @@ The splash screen background color.
 
 ### `AndroidWindowSplashScreenBrandingImage`
 
-> :warning: this setting is currently unsupported by the Android's Splash Screen compatibility library. [See Google Android Issue Tracker](https://issuetracker.google.com/issues/194301890)
+> :warning: this setting is currently unsupported. The core-splashscreen compatibility library, that Cordova Android relies on for providing backwards support, has not implemented this functionality. [See Google Android Issue Tracker](https://issuetracker.google.com/issues/194301890)
 
 <!--
 The splash screen's branding image.
