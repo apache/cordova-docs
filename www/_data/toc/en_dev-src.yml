@@ -49,7 +49,7 @@
         - url: guide/appdev/hooks/index.html
         - url: plugin_ref/spec.html
         -
-            name: Plugin APIs
+            name: Plugins
             children:
                 - url: reference/cordova-plugin-battery-status/index.html
                 - url: reference/cordova-plugin-camera/index.html
