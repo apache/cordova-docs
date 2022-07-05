@@ -47,6 +47,10 @@
         - url: cordova/events/events.html
         - url: reference/cordova-cli/index.html
         - url: guide/appdev/hooks/index.html
+        -
+            name: Core Features
+            children:
+                - url: core/features/splashscreen/index.html
         - url: plugin_ref/spec.html
         -
             name: Plugins
