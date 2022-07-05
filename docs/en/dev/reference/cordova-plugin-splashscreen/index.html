@@ -689,6 +689,40 @@
 
     <li>
         
+            <span class="toc-section-heading">
+                Core Features
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/dev/core/features/splashscreen/index.html">
+                Splash Screen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
             <a class="" href="/docs/en/dev/plugin_ref/spec.html">
                 Plugin.xml
             </a>
@@ -1240,6 +1274,21 @@
         Hooks
     </a>
 </li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/dev/core/features/splashscreen/index.html">
+        Splash Screen
+    </a>
+</li>
+
+
+
 
 
 
@@ -2327,7 +2376,10 @@ cordova plugin add https://github.com/apache/cordova-plugin-splashscreen.git
 <h2>Supported Platforms</h2>
 
 <ul>
-  <li>Android</li>
+  <li>Android
+<strong>Note</strong>: Android implementation has been moved to the core framework.
+  If using <code>cordova-android@10.x</code> or earlier, use <code>cordova-plugin-splashscreen@6.x</code>
+  If using <code>cordova-android@11.x</code> or later and exclusively developing for Android, this plugin can be uninstalled.</li>
   <li>iOS<br />
 <strong>Note</strong>: iOS implementation has been moved to the core framework.<br />
   If using <code>cordova-ios@5</code> or earlier, use <code>cordova-plugin-splashscreen@5</code><br />

@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="Vibrate the device. ">
+    <meta name="description" content=" ">
 
     <title>
         
             
-                Vibration - Apache Cordova
+                Splash Screen - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/docs/en/11.x/reference/cordova-plugin-vibration/">
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/11.x/core/features/splashscreen/">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -1442,9 +1442,21 @@
 
                 
                 
-                    <a class="edit hidden-xs hidden-sm" href="https://github.com/apache/cordova-plugin-vibration/blob/master/README.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
 
-                
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/dev/core/features/splashscreen/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
                 
 
                 <!-- Version dropdown -->
@@ -2254,170 +2266,643 @@
 
             <!-- plugin version warning -->
             
-                <div class="alert alert-warning docs-alert" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                     master.
-                    <a href="https://github.com/apache/cordova-plugin-vibration/releases">
-                        
-                    </a>
-                </div>
-            
 
             <div id="page-toc-source">
-                <!-- WARNING: This file is generated. See fetch_docs.js. -->
+                <p>This core feature gives the ability to configure and control the platform&#39;s splash screen while your web application is launching.</p>
 
-<!--
-# license: Licensed to the Apache Software Foundation (ASF) under one
-#         or more contributor license agreements.  See the NOTICE file
-#         distributed with this work for additional information
-#         regarding copyright ownership.  The ASF licenses this file
-#         to you under the Apache License, Version 2.0 (the
-#         "License"); you may not use this file except in compliance
-#         with the License.  You may obtain a copy of the License at
-#
-#           http://www.apache.org/licenses/LICENSE-2.0
-#
-#         Unless required by applicable law or agreed to in writing,
-#         software distributed under the License is distributed on an
-#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-#         KIND, either express or implied.  See the License for the
-#         specific language governing permissions and limitations
-#         under the License.
--->
-
-<h1>cordova-plugin-vibration</h1>
-
-<p><a href="https://github.com/apache/cordova-plugin-vibration/actions/workflows/android.yml"><img src="https://github.com/apache/cordova-plugin-vibration/actions/workflows/android.yml/badge.svg" alt="Android Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-vibration/actions/workflows/chrome.yml"><img src="https://github.com/apache/cordova-plugin-vibration/actions/workflows/chrome.yml/badge.svg" alt="Chrome Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-vibration/actions/workflows/ios.yml"><img src="https://github.com/apache/cordova-plugin-vibration/actions/workflows/ios.yml/badge.svg" alt="iOS Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-vibration/actions/workflows/lint.yml"><img src="https://github.com/apache/cordova-plugin-vibration/actions/workflows/lint.yml/badge.svg" alt="Lint Test" /></a></p>
-
-<p>This plugin provides a way to vibrate the device. Its API aligns with the W3C vibration specification at http://www.w3.org/TR/vibration/</p>
-
-<p>The plugin defines a global object/method <code>navigator.vibrate</code>. Although in the global scope, it is not available until after the <code>deviceready</code> event.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-<span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2>Installation</h2>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">cordova plugin add cordova-plugin-vibration
-</span></code></pre></div></div>
+<ul>
+  <li><a href="#supported-platforms">Supported Platforms</a></li>
+  <li><a href="#platform-splash-screen-image-configuration">Platform Splash Screen Image Configuration</a>
+    <ul>
+      <li><a href="#example-configuration">Example Configuration</a></li>
+      <li><a href="#ios-specific-information">iOS-specific Information</a>
+        <ul>
+          <li><a href="#launch-storyboard-images">Launch Storyboard Images</a>
+            <ul>
+              <li><a href="#designing-launch-storyboard-images">Designing Launch Storyboard Images</a></li>
+              <li><a href="#scale">Scale</a></li>
+              <li><a href="#idioms">Idioms</a></li>
+              <li><a href="#size-classes">Size classes</a></li>
+              <li><a href="#single-image-launch-screen">Single-image launch screen</a></li>
+              <li><a href="#multi-image-launch-screen">Multi-image launch screen</a></li>
+              <li><a href="#dark-mode">Dark Mode</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#configxml-preferences">config.xml Preferences</a>
+    <ul>
+      <li><a href="#autohidesplashscreen"><code>AutoHideSplashScreen</code></a></li>
+      <li><a href="#fadesplashscreen"><code>FadeSplashScreen</code></a></li>
+      <li><a href="#fadesplashscreenduration"><code>FadeSplashScreenDuration</code></a></li>
+      <li><a href="#showsplashscreenspinner"><code>ShowSplashScreenSpinner</code></a></li>
+      <li><a href="#splashscreendelay"><code>SplashScreenDelay</code></a></li>
+    </ul>
+  </li>
+  <li><a href="#javascript-public-apis">JavaScript Public APIs</a>
+    <ul>
+      <li><a href="#navigatorsplashscreenhide"><code>navigator.splashscreen.hide</code></a></li>
+      <li><a href="#navigatorsplashscreenshow"><code>navigator.splashscreen.show</code></a></li>
+    </ul>
+  </li>
+  <li><a href="#quirks--known-issues">Quirks &amp; Known Issues</a>
+    <ul>
+      <li><a href="#ios">iOS</a></li>
+    </ul>
+  </li>
+</ul>
 
 <h2>Supported Platforms</h2>
 
 <ul>
   <li>iOS</li>
-  <li>Windows Phone</li>
-  <li>Android<br />
-The Android webview (API level 19 and up) supports the <a href="https://www.w3.org/TR/vibration/">W3C Vibration API</a> natively, so no Android specific implementation in this plugin is necessary.</li>
 </ul>
 
-<h2>navigator.vibrate</h2>
+<p>For other platforms, check the <code>cordova-plugin-splashscreen</code> for support.</p>
 
-<p>This function has three different functionalities based on parameters passed to it:</p>
+<h2>Platform Splash Screen Image Configuration</h2>
 
-<h3>Standard vibrate</h3>
+<h3>Example Configuration</h3>
 
-<p>Vibrates the device for a given amount of time.</p>
+<p>In the top-level <code>config.xml</code> file (not the one in <code>platforms</code>), add configuration elements like those specified here.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="nx">time</span><span class="p">)</span>
+<p>The value of the &quot;src&quot; attribute is relative to the project root directory and NOT to the <code>www</code> directory (see <code>Directory structure</code> below). You can name the source image file whatever you like. The internal name in the application is automatically determined by Cordova.</p>
+
+<p><strong>Directory structure:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>projectRoot
+    platforms
+    plugins
+    www
+    res
+        screen
+            ios
 </code></pre></div></div>
-<p>or</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([</span><span class="nx">time</span><span class="p">])</span>
+
+<p><strong>Config.xml:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--
+  Storyboard (supports all devices):
+  Note: images are determined by scale, idiom, and size traits. The following
+  are suggested based on current device form factors
+--&gt;</span>
+<span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~anyany.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~comany.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~comcom.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@3x~universal~anyany.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@3x~universal~anycom.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@3x~universal~comany.png"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
 </code></pre></div></div>
+
+<h3>iOS-specific Information</h3>
+
+<p>Launch storyboard images are sized based on scale, idiom, and size classes. It supports all devices, and can be used with split-screen/slide-over multitasking.</p>
+
+<p>There is no official support for providing a native-resolution launch image for the iPad Pro 12.9 or for providing launch images that work with split-screen multitasking or slide-over.</p>
+
+<p><strong>Note:</strong> Since iOS 11, for iPhone X devices and greater (with notch screen), make sure to add <code>viewport-fit=cover</code> to the viewport meta tag in your <code>index.html</code> file to display the app correctly like so: <code>&lt;meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover"&gt;</code> and make some modification to your app style by adding: <code>padding: env(safe-area-inset-top)</code> to your <code>index.css</code> file to avoid the unsafe areas behind notches in the screen.</p>
+
+<h4>Launch Storyboard Images</h4>
+
+<p>To support newer form factors and split-screen/slide-over multitasking, launch storyboard images are used.</p>
 
 <ul>
-  <li><strong>time</strong>: Milliseconds to vibrate the device. <em>(Number)</em></li>
+  <li>images are not specific to a given device.</li>
+  <li>images are scaled to fill the available viewport (while maintaining the aspect ratio).</li>
+  <li>the outer edges of the images will be cropped, and the amount will vary based on device an viewport.</li>
+  <li>there is no need to provide an image for each possible device, viewport, and orientation; iOS will choose the best image for the situation automatically.</li>
 </ul>
 
-<h4>Example</h4>
+<h5>Designing Launch Storyboard Images</h5>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Vibrate for 3 seconds</span>
-<span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+<p>The key to designing a launch storyboard image is understanding that the edges of the image will almost certainly be cropped. Therefore, one should not place any important information near the edges of any images provided to the launch storyboard. Only the center is a safe area, and this all but guarantees that following Apple&#39;s advice of presenting an unpopulated user interface will not work well.</p>
 
-<span class="c1">// Vibrate for 3 seconds</span>
-<span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([</span><span class="mi">3000</span><span class="p">]);</span>
-</code></pre></div></div>
-
-<h4>Quirks</h4>
-
-<h5>iOS Quirks</h5>
+<p>Instead, the following tips should enable you to create a launch image that works across a multitude of form factors, viewports, and orientations:</p>
 
 <ul>
   <li>
-    <p><strong>time</strong>: Ignores the specified time and vibrates for a pre-set amount of time.</p>
+    <p>Important graphics (logos, icons, titles) should be centered. The safe bounding region will vary, so you will need to test to ensure that the important graphics are never cropped. Better yet, don&#39;t supply any important graphics in the first place.</p>
 
-    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span> <span class="c1">// 3000 is ignored</span>
-</code></pre></div>    </div>
+    <ul>
+      <li>You <em>can</em> fine-tune the placement and size of these graphics.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Use a simple color wash. If you use two colors, you&#39;ll want one color to fill the top half of the image, and the second to fill the bottom half.  If you use a gradient, you&#39;ll probably want to ensure that the middle of the gradient lines up with the center of the image.</p>
+  </li>
+  <li>
+    <p>Don&#39;t worry about pixel perfection -- because the images are scaled, there&#39;s almost no chance the images will be perfectly fit to the pixel grid. Since all supported iOS devices use retina screens, users will be hard pressed to notice it anyway.</p>
   </li>
 </ul>
 
-<h5>Windows Phone Quirks</h5>
+<p>It is important to understand the concept of scale, idiom, and size class traits in order to use launch storyboard images effectively. Of the images supplied to the launch storyboard, iOS will choose the image that best matches the device and viewport and render that image. It is possible to supply only one launch image if so desired, but it is also possible to fine-tune the displayed launch image based on traits. When fine-tuning, one can ignore traits that aren&#39;t targeted or supported by the app.</p>
+
+<h5>Scale</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">scale</th>
+      <th style="text-align: center">devices</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1x</td>
+      <td style="text-align: center">All non-retina devices</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2x</td>
+      <td style="text-align: center">Most retina devices</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3x</td>
+      <td style="text-align: center">iPhone 6+/6s+,7s+</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In general, you&#39;ll want to supply 2x and 3x images. Cordova only supports retina devices now, so there&#39;s no point in supplying 1x images.</p>
+
+<h5>Idioms</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">idiom</th>
+      <th style="text-align: center">devices</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">ipad</td>
+      <td style="text-align: center">All iPads</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">iphone</td>
+      <td style="text-align: center">All iPhones and iPod Touches</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">universal</td>
+      <td style="text-align: center">All devices</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You only need to provide universal images unless you need to fine-tune for a specific device idiom.</p>
+
+<h5>Size classes</h5>
+
+<p>There are two size classes applies to both screen axes. Narrow viewports are considered to be the &quot;compact&quot; size class, and remaining viewports are considered &quot;regular&quot;. When supplying images to Xcode, however, one must choose between &quot;any &amp; compact&quot; and &quot;any &amp; regular&quot;. To stay consistent with the native terminology, this feature will match based on &quot;any&quot; and &quot;compact&quot;. <code>any</code> will match regular-sized viewports.</p>
+
+<p>Note: this feature uses <code>com</code> as an abbreviation for &quot;compact&quot; classes.</p>
+
+<p>The following classes are supported by this feature:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">width</th>
+      <th style="text-align: center">height</th>
+      <th style="text-align: center">orientation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">any</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">com</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">portrait</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">com</td>
+      <td style="text-align: center">landscape (wide)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">com</td>
+      <td style="text-align: center">com</td>
+      <td style="text-align: center">landscape (narrow)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>To see the complete list of size classes associated with devices and viewports, see <a href="http://www.sizeclasses.com">http://www.sizeclasses.com</a>.</p>
+
+<h5>Single-image launch screen</h5>
+
+<p>If your launch image is simple, you may be able to avoid creating a lot of different launch images and supply only one. The launch image needs to meet the following requirements:</p>
 
 <ul>
-  <li>
-    <p><strong>time</strong>: Max time is 5000ms (5s) and min time is 1ms</p>
-
-    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">8000</span><span class="p">);</span> <span class="c1">// will be truncated to 5000</span>
-</code></pre></div>    </div>
-  </li>
+  <li>the image should be square</li>
+  <li>the image should be large enough to fit on an iPad Pro 12.9&quot;: 2732x2732</li>
+  <li>anything important should fit within the center</li>
 </ul>
 
-<h5>Android Quirks</h5>
+<p>Keep in mind that the image will be cropped, possibly quite severely, depending upon the viewport.</p>
+
+<p>Once the image is created, you can include it in your project by adding the following to <code>config.xml</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~anyany.png"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>Because only one image is provided, iOS will utilize it in every context.</p>
+
+<h5>Multi-image launch screen</h5>
+
+<p>If a single launch image won&#39;t meet your needs, you will probably need to supply at least six images, if not more. Furthermore, keep in mind that it will not be possible to fine tune the image to a specific device, but only to a device class, display factor, and viewport size.</p>
+
+<p>If you don&#39;t need to target images to a specific idiom, you should create six images, as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">scale</th>
+      <th style="text-align: center">idiom</th>
+      <th style="text-align: center">width</th>
+      <th style="text-align: center">height</th>
+      <th style="text-align: center">size</th>
+      <th style="text-align: center">filename</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">2x*</td>
+      <td style="text-align: center">universal</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">2732x2732</td>
+      <td style="text-align: center"><code>Default@2x~universal~anyany.png</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2x</td>
+      <td style="text-align: center">universal</td>
+      <td style="text-align: center">com</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">1278x2732</td>
+      <td style="text-align: center"><code>Default@2x~universal~comany.png</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2x</td>
+      <td style="text-align: center">universal</td>
+      <td style="text-align: center">com</td>
+      <td style="text-align: center">com</td>
+      <td style="text-align: center">1334x750</td>
+      <td style="text-align: center"><code>Default@2x~universal~comcom.png</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3x*</td>
+      <td style="text-align: center">universal</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">2208x2208</td>
+      <td style="text-align: center"><code>Default@3x~universal~anyany.png</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3x</td>
+      <td style="text-align: center">universal</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">com</td>
+      <td style="text-align: center">2208x1242</td>
+      <td style="text-align: center"><code>Default@3x~universal~anycom.png</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3x</td>
+      <td style="text-align: center">universal</td>
+      <td style="text-align: center">com</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">1242x2208</td>
+      <td style="text-align: center"><code>Default@3x~universal~comany.png</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>* this image is required in order for iOS utilize the other images within this scale and idiom.</p>
 
 <blockquote>
-  <p>Calls to <code>navigator.vibrate</code> will immediately return <code>false</code> if user hasn&#39;t tapped on the frame or any embedded frame yet.</p>
+  <p>Note: If the 3x sizes look small too you, that&#39;s because there&#39;s only one device class that currently has a 3x density: the iPhone 6+/6s+/7+.</p>
 </blockquote>
 
-<p>See https://www.chromestatus.com/feature/5644273861001216</p>
+<p>The above looks like the following snippet when present in <code>config.xml</code>:</p>
 
-<h3>Vibrate with a pattern</h3>
-
-<p>Vibrates the device with a given pattern</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="nx">pattern</span><span class="p">);</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~anyany.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~comany.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~comcom.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@3x~universal~anyany.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@3x~universal~anycom.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@3x~universal~comany.png"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
+
+<p>Should one need to further fine tune based upon device idiom, one can do so. This might look like so:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">scale</th>
+      <th style="text-align: center">idiom</th>
+      <th style="text-align: center">width</th>
+      <th style="text-align: center">height</th>
+      <th style="text-align: center">size</th>
+      <th style="text-align: center">filename</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">2x*</td>
+      <td style="text-align: center">iphone</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">1334x1334</td>
+      <td style="text-align: center"><code>Default@2x~iphone~anyany.png</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2x</td>
+      <td style="text-align: center">iphone</td>
+      <td style="text-align: center">com</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">750x1334</td>
+      <td style="text-align: center"><code>Default@2x~iphone~comany.png</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2x</td>
+      <td style="text-align: center">iphone</td>
+      <td style="text-align: center">com</td>
+      <td style="text-align: center">com</td>
+      <td style="text-align: center">1334x750</td>
+      <td style="text-align: center"><code>Default@2x~iphone~comcom.png</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3x*</td>
+      <td style="text-align: center">iphone</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">2208x2208</td>
+      <td style="text-align: center"><code>Default@3x~iphone~anyany.png</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3x</td>
+      <td style="text-align: center">iphone</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">com</td>
+      <td style="text-align: center">2208x1242</td>
+      <td style="text-align: center"><code>Default@3x~iphone~anycom.png</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3x</td>
+      <td style="text-align: center">iphone</td>
+      <td style="text-align: center">com</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">1242x2208</td>
+      <td style="text-align: center"><code>Default@3x~iphone~comany.png</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2x*</td>
+      <td style="text-align: center">ipad</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">2732x2732</td>
+      <td style="text-align: center"><code>Default@2x~ipad~anyany.png</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2x</td>
+      <td style="text-align: center">ipad</td>
+      <td style="text-align: center">com</td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: center">1278x2732</td>
+      <td style="text-align: center"><code>Default@2x~ipad~comany.png</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>* this image is required in order for iOS utilize the other images within this scale and idiom.</p>
+
+<p>The above looks like the following in <code>config.xml</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~iphone~anyany.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~iphone~comany.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~iphone~comcom.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@3x~iphone~anyany.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@3x~iphone~anycom.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@3x~iphone~comany.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~ipad~anyany.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~ipad~comany.png"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h5>Dark Mode</h5>
+
+<p>Since <a href="https://github.com/apache/cordova-ios">Cordova-iOS@6.1.0</a>, it is now possible to optionally specify different SplashScreen images to use when the app is running in dark mode. The luminosity of SplashScreen images can be defined in <code>config.xml</code> using the <code>~dark</code> and <code>~light</code> suffixes.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Default image to be used for all modes --&gt;</span>
+<span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~anyany.png"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Image to use specifically for dark mode devices --&gt;</span>
+<span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~anyany~dark.png"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Image to use specifically for light mode devices --&gt;</span>
+<span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@2x~universal~anyany~light.png"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p><strong>Note:</strong> This works since iOS 13. iOS 12 and below will use the default SplashScreen without a luminosity suffix specified.</p>
+
+<h2>config.xml Preferences</h2>
+
+<h3><code>AutoHideSplashScreen</code></h3>
+
+<p>Indicates whether to hide splash screen automatically or not. The splash screen is hidden after the amount of time specified in the <code>SplashScreenDelay</code> preference.</p>
+
+<p><strong>Supported Platforms:</strong></p>
+
 <ul>
-  <li><strong>pattern</strong>: Sequence of durations (in milliseconds) for which to turn on or off the vibrator. <em>(Array of Numbers)</em></li>
+  <li>iOS</li>
 </ul>
 
-<h4>Example</h4>
+<p><strong>Data Type:</strong> <code>Boolean</code></p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Vibrate for 1 second</span>
-<span class="c1">// Wait for 1 second</span>
-<span class="c1">// Vibrate for 3 seconds</span>
-<span class="c1">// Wait for 1 second</span>
-<span class="c1">// Vibrate for 5 seconds</span>
-<span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">]);</span>
+<p><strong>Default Value:</strong> <code>true</code></p>
+
+<p><strong>Usage Example:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AutoHideSplashScreen"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 
-<h4>Quirks</h4>
+<h3><code>FadeSplashScreen</code></h3>
+
+<p>Controlls the ability of the fade in and out of the splash screen.</p>
+
+<p><strong>Supported Platforms:</strong></p>
 
 <ul>
-  <li>Not supported on iOS</li>
+  <li>iOS</li>
 </ul>
 
-<h3>Cancel vibration</h3>
+<p><strong>Data Type:</strong> <code>Boolean</code></p>
 
-<p>Immediately cancels any currently running vibration.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</code></pre></div></div>
-<p>or</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([])</span>
-</code></pre></div></div>
-<p>or</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
-</code></pre></div></div>
-<p>Passing in a parameter of 0, an empty array, or an array with one element of value 0 will cancel any vibrations.</p>
+<p><strong>Default Value:</strong> <code>true</code></p>
 
-<h4>Quirks</h4>
+<p><strong>Usage Example:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"FadeSplashScreen"</span> <span class="na">value=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h3><code>FadeSplashScreenDuration</code></h3>
+
+<p>Controlls the length of the the splash screen fade effect.</p>
+
+<p><strong>Supported Platforms:</strong></p>
 
 <ul>
-  <li>Not supported on iOS</li>
+  <li>iOS</li>
 </ul>
+
+<p><strong>Data Type:</strong> <code>Float</code>, in milliseconds</p>
+
+<p><strong>Default Value:</strong> <code>500</code></p>
+
+<p><strong>Usage Example:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"FadeSplashScreenDuration"</span> <span class="na">value=</span><span class="s">"750"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p><em>iOS Note</em>: <code>FadeSplashScreenDuration</code> is included into <code>SplashScreenDelay</code>, for example if you have <code>&lt;preference name="SplashScreenDelay" value="3000" /&gt;</code> and <code>&lt;preference name="FadeSplashScreenDuration" value="1000"/&gt;</code> defined in <code>config.xml</code>:</p>
+
+<ul>
+  <li>00:00 - splashscreen is shown</li>
+  <li>00:02 - fading has started</li>
+  <li>00:03 - splashscreen is hidden</li>
+</ul>
+
+<p>Turning the fading off via <code>&lt;preference name="FadeSplashScreen" value="false"/&gt;</code> technically means fading duration to be <code>0</code> so that in this example the overall splash screen delay will still be 3 seconds.</p>
+
+<p><em>Note</em>: This only applies to the application startup - you need to take the fading timeout into account when manually showing/hiding the splash screen in your application&#39;s code:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+<span class="p">},</span> <span class="nx">splashDuration</span> <span class="o">-</span> <span class="nx">fadeDuration</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3><code>ShowSplashScreenSpinner</code></h3>
+
+<p>Controlls the splash screen spinner.</p>
+
+<p><strong>Supported Platforms:</strong></p>
+
+<ul>
+  <li>iOS</li>
+</ul>
+
+<p><strong>Data Type:</strong> <code>Boolean</code></p>
+
+<p><strong>Default Value:</strong> <code>true</code></p>
+
+<p><strong>Usage Example:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"ShowSplashScreenSpinner"</span> <span class="na">value=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h3><code>SplashScreenDelay</code></h3>
+
+<p>Amount of time in milliseconds to wait before automatically hide splash screen.</p>
+
+<p><strong>Supported Platforms:</strong></p>
+
+<ul>
+  <li>iOS</li>
+</ul>
+
+<p><strong>Data Type:</strong> <code>Number</code>, in milliseconds</p>
+
+<p><strong>Default Value:</strong> <code>true</code></p>
+
+<ul>
+  <li>iOS
+<code>3000</code>: The splash screen will automatticly hide in 3 seconds.</li>
+</ul>
+
+<p><strong>Usage Example:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreenDelay"</span> <span class="na">value=</span><span class="s">"3000"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h2>JavaScript Public APIs</h2>
+
+<h3><code>navigator.splashscreen.hide</code></h3>
+
+<p>Dismiss the splash screen.</p>
+
+<p><strong>Supported Platforms:</strong></p>
+
+<ul>
+  <li>iOS</li>
+</ul>
+
+<p><strong>Usage Example:</strong></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p><strong>iOS Quirk:</strong></p>
+
+<p>The <code>config.xml</code> file&#39;s <code>AutoHideSplashScreen</code> setting must be <code>false</code>. To delay hiding the splash screen for two seconds, add a timer such as the following in the <code>deviceready</code> event handler:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+<span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3><code>navigator.splashscreen.show</code></h3>
+
+<p>Displays the splash screen.</p>
+
+<p><strong>Supported Platforms:</strong></p>
+
+<ul>
+  <li>iOS</li>
+</ul>
+
+<p><strong>Usage Example:</strong></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>Your application cannot call <code>navigator.splashscreen.show()</code> until the application has
+started and the <code>deviceready</code> event has fired. But since typically the splash
+screen is meant to be visible before your application has started, that would seem to
+defeat the purpose of the splash screen.  Providing any parameters in
+<code>config.xml</code> will automatically <code>show</code> the splash screen immediately after your
+application is launched and before it has fully started and received the <code>deviceready</code>
+event. For this reason, it is unlikely you will need to call <code>navigator.splashscreen.show()</code> to make the splash
+screen visible for application startup.</p>
+
+<h2>Quirks &amp; Known Issues</h2>
+
+<h3>iOS</h3>
+
+<ol>
+  <li>
+    <p>In iOS, the splash screen images are called launch images. These images are mandatory on iOS.</p>
+  </li>
+  <li>
+    <p><strong>App on target may not reflect changes to images</strong>
+Once you run the app on a target, iOS caches the launch image. Unfortunately, when you change the image, iOS does <em>not</em> invalidate the cache, which means you&#39;ll still see the old launch image. You should either: delete the app, or reset content &amp; settings (simulator).</p>
+  </li>
+  <li>
+    <p><strong>Simulator may not show expected images when launched from CLI</strong>
+When Xcode deploys to a specific simulator, it only copies the assets that match the simulator&#39;s characteristics. For example, if you try to run an app on the iPhone 6s Plus simulator, only @3x launch images are copied. When compiling from the CLI, however, the default is to assume an iPhone 5s, which means only @2x launch images are copied. Unless your launch images are markedly different, chances are good the difference would go unnoticed, but this does mean that the only accurate method of testing is to test on a physical device.</p>
+  </li>
+  <li>
+    <p><strong><code>anyany</code> must be provided for other variations to be used</strong>
+If you don&#39;t provide an <code>anyany</code> version of the launch image for a specific scale and idiom, the other variations (like <code>anycom</code>, <code>comany</code>, and <code>comcom</code>) will ignored.</p>
+  </li>
+</ol>
 
 
             </div>
