@@ -399,10 +399,10 @@ Amount of time in milliseconds to wait before automatically hide splash screen.
 **Default Value:** `true`
 
 - Android
-  `-1`: The splash screen will automatticly hide when the `onPageFinished` has been triggered.
+  `-1`: The splash screen will automatically hide when the `onPageFinished` has been triggered.
 
 - iOS
-  `3000`: The splash screen will automatticly hide in 3 seconds.
+  `3000`: The splash screen will automatically hide in 3 seconds.
 
 **Usage Example:**
 

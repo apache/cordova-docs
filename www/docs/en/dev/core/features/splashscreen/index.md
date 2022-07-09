@@ -399,10 +399,10 @@ Amount of time in milliseconds to wait before automatically hide splash screen.
 **Default Value:** `true`
 
 - Android
-  `-1`: The splash screen will automatticly hide when the `onPageFinished` has been triggered.
+  `-1`: The splash screen will automatically hide when the `onPageFinished` has been triggered.
 
 - iOS
-  `3000`: The splash screen will automatticly hide in 3 seconds.
+  `3000`: The splash screen will automatically hide in 3 seconds.
 
 **Usage Example:**
 
@@ -432,7 +432,7 @@ _Note:_ This setting is available but use at your own risk.
 
 ### `AndroidWindowSplashScreenAnimatedIcon`
 
-The splash screen image. This preference is used for both animated and non-animated icons. The current acceptable asset files can either be an XML Vector Drwable or PNG.
+The splash screen image. This preference is used for both animated and non-animated icons. The current acceptable asset files can either be a XML Vector Drawable or PNG.
 
 **Supported Platforms:**
 
@@ -450,7 +450,7 @@ The splash screen image. This preference is used for both animated and non-anima
 
 ### `AndroidWindowSplashScreenAnimationDuration`
 
-Defines the duration of the icon's animation if an Animated Vector Drwable is supplied as the splash screen image.
+Defines the duration of the icon's animation if an Animated Vector Drawable is supplied as the splash screen image.
 
 **Supported Platforms:**
 
