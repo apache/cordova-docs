@@ -23,16 +23,13 @@ toc_title: Android
 
 # Android Platform Guide
 
-This guide will show how to set up your development environment to build Cordova apps for Android devices and optionally use Android-specific command-line tools within your development workflow.
+This guide will help set up your development environment for building Cordova apps for Android devices and optionally use Android-specific command-line tools within your development workflow.
 
-You will need to install and set up the requirements that are reflected on this page regardless of whether you want to use the Android-specific command-line tools or Cordova CLI commands.
-
-For a comparison of the two development paths, see the
-[Overview](../../overview/index.html#development-paths). For details on the CLI, see [Cordova CLI Reference][cli_reference].
+You will need to install and set up the requirements regardless of whether you want to use the Android-specific command-line tools or Cordova CLI commands.
 
 ## Android API Level Support
 
-The supported [Android API Levels](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels) (versions of Android) corresponding with the released versions of Cordova-Android are listed in the table below:
+The supported [Android API Levels](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels) (versions of Android) corresponding with the Cordova-Android released versions are listed in the table below:
 
 cordova-android Version | Supported Android API-Levels | Equivalent Android Version
 ------------------------|------------------------------|-----------------------------
@@ -47,19 +44,19 @@ cordova-android Version | Supported Android API-Levels | Equivalent Android Vers
 4.0.X                   | 10 - 22                      | 2.3.3 - 5.1
 3.7.X                   | 10 - 21                      | 2.3.3 - 5.0.2
 
-_Note: The versions listed here are for Cordova's Android package, [cordova-android](https://github.com/apache/cordova-android), and not for the Cordova CLI._
+_**Note:** The [cordova-android](https://github.com/apache/cordova-android) versions listed above are not for the Cordova CLI._
 
-To determine what version of Cordova's Android package is installed in your Cordova project, run the command `cordova platform ls` in your project's root directory.
+To determine what version of the Cordova-Android package is installed in your Cordova project, run the command `cordova platform ls` in your project's root directory.
 
 As a general rule, Android versions become unsupported by Cordova as they dip below 5% on Google's [distribution dashboard](https://developer.android.com/about/dashboards/index.html).
 
 ## System Requirements
 
-Cordova-Android requires the Android SDK, which can be installed on either macOS, Linux or Windows.
+Cordova-Android requires the Android SDK, which can be installed on either macOS, Linux, or Windows.
 
 For the base system requirements, see the Android Studio's [System Requirements](https://developer.android.com/studio#Requirements).
 
-## Installing the Required Tooling
+## The Required Software & Tools
 
 ### Java Development Kit (JDK)
 
@@ -67,8 +64,7 @@ If you are using `cordova-android` 10.0.0 or greater, install the [Java Developm
 
 If you are using any version below `cordova-android` 10.0.0, install the [Java Development Kit (JDK) 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html).
 
-When installing on Windows, you will need to set the `JAVA_HOME` environment variable
-according to your JDK installation path. See [Setting Environment Variables](#setting-environment-variables)) on how to configure system environment variables.
+The `JAVA_HOME` environment variable must be set according to your JDK installation path when installing on a Windows environment. See the [Setting Environment Variables](#setting-environment-variables) section on how to set up environment variables.
 
 ### Gradle
 
@@ -76,17 +72,17 @@ As of Cordova-Android 6.4.0, [Gradle](https://gradle.org/install/) is required t
 
 When installing on Windows, you need to add the path to the Gradle's binary directory to your `path` environment variable. See [Setting Environment Variables](#setting-environment-variables)) on how to configure system environment variables.
 
-### Android SDK
+_**Note:** This is the system's Gradle version. The system's Gradle binary will create the Gradle Wrapper file that declares and obtains the appropriate version of Gradle needed for building the Android application. The system-level and project-level version of Gradle may not and does not need to match. The project-level's version of Gradle is defined in the Cordova-Android's package and set based on what Android supports._
 
-Install [Android Studio][android_studio]. Follow the instructions at the linked Android Developer site to get started.
+### Android Studio
 
-Opening Android Studio for the first time will guide you through the process of installing the Android SDK.
+Download and install [Android Studio][android_studio]. Follow the instructions at the linked Android Developer site to get started.
+
+Opening Android Studio for the first time will guide you through the process of installing the Android SDK packages.
 
 #### Adding SDK Packages
 
-After installing the Android SDK, you must also install the packages for whatever [API level](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels) you wish to target.
-
-It is recommended to install the highest SDK version that your version of cordova-android supports. (see [Android API Level Support](#android-api-level-support)).
+It is recommended to install the highest supported version of the SDK Platform and Build Tools based on the project's installed version of Cordova-Android. Please see the [Android API Level Support](#android-api-level-support) to find the supported version based on the Cordova-Android versions.
 
 In the Android Studio, open the **SDK Manager** (`Tools > SDK Manager`) and confirm that the following are installed for the targeted version of Android.:
 
@@ -122,7 +118,7 @@ It is also recommended to update the `PATH` environment variable to include the 
 - `build-tools`
   - This is required for the `apksigner` and `zipalign` tools.
 
-_Note: The directories above are generally located in the Android SDK ROOT._
+_**Note:** The directories above are generally located in the Android SDK ROOT._
 
 #### macOS and Linux
 
@@ -424,7 +420,7 @@ Webview.
 
 Cordova-Android projects can be opened in [Android Studio][android_studio]. This can be useful if you wish to use Android Studio's built in Android debugging and profiling tools or if you are developing Android plugins.
 
-_Note: When opening your project in Android Studio, it is recommended to NOT edit the code within the IDE. Editing in Android Studio will edit code residing in the `platforms` directory of your project. It is not updating the code in the projects root `www`)directory. The changes are liable to be overwritten. Instead, edit the `www` folder and copy over your changes by running `cordova prepare`._
+_**Note:** When opening your project in Android Studio, it is recommended to NOT edit the code within the IDE. Editing in Android Studio will edit code residing in the `platforms` directory of your project. It is not updating the code in the projects root `www`)directory. The changes are liable to be overwritten. Instead, edit the `www` folder and copy over your changes by running `cordova prepare`._
 
 Plugin developers wishing to edit their native code in Android Studio should use the `--link` flag when adding their plugin to the project with the `cordova plugin add`. This will create a symbolic link of the plugin files from the plugin source directory to the project's `platforms` directory.
 
@@ -543,7 +539,7 @@ The possible values for `pluginStatus` in the `pendingResult` field include the 
   - `"Invalid action"`
   - `"JSON error"`
 
-_Note: It is up to the plugin to decide what is contained in the `result` field and the meaning of the `pluginStatus` that is returned. Refer to the plugin's API documentationf or the expect results and how to use the values._
+_**Note:** It is up to the plugin to decide what is contained in the `result` field and the meaning of the `pluginStatus` that is returned. Refer to the plugin's API documentationf or the expect results and how to use the values._
 
 #### Example
 
