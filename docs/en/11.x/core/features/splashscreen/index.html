@@ -2268,48 +2268,66 @@
             
 
             <div id="page-toc-source">
-                <p>This core feature gives the ability to configure and control the platform&#39;s splash screen while your web application is launching.</p>
+                <h1>Splash Screen</h1>
+
+<p>This core feature gives the ability to configure and control the platform&#39;s splash screen while your web application is launching.</p>
 
 <ul>
-  <li><a href="#supported-platforms">Supported Platforms</a></li>
-  <li><a href="#platform-splash-screen-image-configuration">Platform Splash Screen Image Configuration</a>
+  <li><a href="#splash-screen">Splash Screen</a>
     <ul>
-      <li><a href="#example-configuration">Example Configuration</a></li>
-      <li><a href="#ios-specific-information">iOS-specific Information</a>
+      <li><a href="#supported-platforms">Supported Platforms</a></li>
+      <li><a href="#platform-splash-screen-image-configuration">Platform Splash Screen Image Configuration</a>
         <ul>
-          <li><a href="#launch-storyboard-images">Launch Storyboard Images</a>
+          <li><a href="#example-configuration">Example Configuration</a></li>
+          <li><a href="#android-specific-information">Android-specific Information</a>
             <ul>
-              <li><a href="#designing-launch-storyboard-images">Designing Launch Storyboard Images</a></li>
-              <li><a href="#scale">Scale</a></li>
-              <li><a href="#idioms">Idioms</a></li>
-              <li><a href="#size-classes">Size classes</a></li>
-              <li><a href="#single-image-launch-screen">Single-image launch screen</a></li>
-              <li><a href="#multi-image-launch-screen">Multi-image launch screen</a></li>
-              <li><a href="#dark-mode">Dark Mode</a></li>
+              <li><a href="#example-android-configuration">Example Android Configuration</a></li>
+            </ul>
+          </li>
+          <li><a href="#ios-specific-information">iOS-specific Information</a>
+            <ul>
+              <li><a href="#launch-storyboard-images">Launch Storyboard Images</a>
+                <ul>
+                  <li><a href="#designing-launch-storyboard-images">Designing Launch Storyboard Images</a></li>
+                  <li><a href="#scale">Scale</a></li>
+                  <li><a href="#idioms">Idioms</a></li>
+                  <li><a href="#size-classes">Size classes</a></li>
+                  <li><a href="#single-image-launch-screen">Single-image launch screen</a></li>
+                  <li><a href="#multi-image-launch-screen">Multi-image launch screen</a></li>
+                  <li><a href="#dark-mode">Dark Mode</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
         </ul>
       </li>
-    </ul>
-  </li>
-  <li><a href="#configxml-preferences">config.xml Preferences</a>
-    <ul>
-      <li><a href="#autohidesplashscreen"><code>AutoHideSplashScreen</code></a></li>
-      <li><a href="#fadesplashscreen"><code>FadeSplashScreen</code></a></li>
-      <li><a href="#fadesplashscreenduration"><code>FadeSplashScreenDuration</code></a></li>
-      <li><a href="#showsplashscreenspinner"><code>ShowSplashScreenSpinner</code></a></li>
-      <li><a href="#splashscreendelay"><code>SplashScreenDelay</code></a></li>
-    </ul>
-  </li>
-  <li><a href="#javascript-public-apis">JavaScript Public APIs</a>
-    <ul>
-      <li><a href="#navigatorsplashscreenhide"><code>navigator.splashscreen.hide</code></a></li>
-      <li><a href="#navigatorsplashscreenshow"><code>navigator.splashscreen.show</code></a></li>
-    </ul>
-  </li>
-  <li><a href="#quirks--known-issues">Quirks &amp; Known Issues</a>
-    <ul>
-      <li><a href="#ios">iOS</a></li>
+      <li><a href="#configxml-preferences">config.xml Preferences</a>
+        <ul>
+          <li><a href="#autohidesplashscreen"><code>AutoHideSplashScreen</code></a></li>
+          <li><a href="#fadesplashscreen"><code>FadeSplashScreen</code></a></li>
+          <li><a href="#fadesplashscreenduration"><code>FadeSplashScreenDuration</code></a></li>
+          <li><a href="#showsplashscreenspinner"><code>ShowSplashScreenSpinner</code></a></li>
+          <li><a href="#splashscreendelay"><code>SplashScreenDelay</code></a></li>
+          <li><a href="#androidpostsplashscreentheme"><code>AndroidPostSplashScreenTheme</code></a></li>
+          <li><a href="#androidwindowsplashscreenanimatedicon"><code>AndroidWindowSplashScreenAnimatedIcon</code></a></li>
+          <li><a href="#androidwindowsplashscreenanimationduration"><code>AndroidWindowSplashScreenAnimationDuration</code></a></li>
+          <li><a href="#androidwindowsplashscreenbackground"><code>AndroidWindowSplashScreenBackground</code></a></li>
+          <li><a href="#androidwindowsplashscreenbrandingimage"><code>AndroidWindowSplashScreenBrandingImage</code></a></li>
+          <li><a href="#androidwindowsplashscreeniconbackgroundcolor"><code>AndroidWindowSplashScreenIconBackgroundColor</code></a></li>
+        </ul>
+      </li>
+      <li><a href="#javascript-public-apis">JavaScript Public APIs</a>
+        <ul>
+          <li><a href="#navigatorsplashscreenhide"><code>navigator.splashscreen.hide</code></a></li>
+          <li><a href="#navigatorsplashscreenshow"><code>navigator.splashscreen.show</code></a></li>
+        </ul>
+      </li>
+      <li><a href="#quirks--known-issues">Quirks &amp; Known Issues</a>
+        <ul>
+          <li><a href="#ios">iOS</a></li>
+          <li><a href="#android">Android</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
@@ -2317,6 +2335,7 @@
 <h2>Supported Platforms</h2>
 
 <ul>
+  <li>Android</li>
   <li>iOS</li>
 </ul>
 
@@ -2338,12 +2357,17 @@
     www
     res
         screen
+            android
             ios
 </code></pre></div></div>
 
 <p><strong>Config.xml:</strong></p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AndroidWindowSplashScreenAnimatedIcon"</span> <span class="na">value=</span><span class="s">"res/screen/android/splashscreen.xml"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
+
+<span class="c">&lt;!--
   Storyboard (supports all devices):
   Note: images are determined by scale, idiom, and size traits. The following
   are suggested based on current device form factors
@@ -2355,6 +2379,27 @@
     <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@3x~universal~anyany.png"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@3x~universal~anycom.png"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/ios/Default@3x~universal~comany.png"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
+</code></pre></div></div>
+
+<h3>Android-specific Information</h3>
+
+<p>Starting in Android 12, Google has implemented a new SplashScreen API to controls the app launch animation which runs on a device with Android 12 and higher. For backwards compatability, Cordova has included the <code>core-splashscreen</code> compatability library which extends this features back to Android API 21 and higher.</p>
+
+<p>To effectively create your own Android SplashScreen assets, it is important to understand the requirements of an Adaptive Icon.</p>
+
+<p><strong>Resource:</strong></p>
+
+<ul>
+  <li><a href="https://developer.android.com/guide/topics/ui/splash-screen#splash_screen_dimensions">Splash Screen dimensions</a></li>
+  <li><a href="https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive">Adaptive icons</a></li>
+</ul>
+
+<h4>Example Android Configuration</h4>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Default --&gt;</span>
+    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AndroidWindowSplashScreenAnimatedIcon"</span> <span class="na">value=</span><span class="s">"res/screen/android/splashscreen.xml"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/platform&gt;</span>
 </code></pre></div></div>
 
@@ -2721,6 +2766,7 @@
 <p><strong>Supported Platforms:</strong></p>
 
 <ul>
+  <li>Android</li>
   <li>iOS</li>
 </ul>
 
@@ -2737,9 +2783,12 @@
 
 <p>Controlls the ability of the fade in and out of the splash screen.</p>
 
+<p>For Android, it controlls only the fade out.</p>
+
 <p><strong>Supported Platforms:</strong></p>
 
 <ul>
+  <li>Android</li>
   <li>iOS</li>
 </ul>
 
@@ -2759,6 +2808,7 @@
 <p><strong>Supported Platforms:</strong></p>
 
 <ul>
+  <li>Android</li>
   <li>iOS</li>
 </ul>
 
@@ -2815,6 +2865,7 @@
 <p><strong>Supported Platforms:</strong></p>
 
 <ul>
+  <li>Android</li>
   <li>iOS</li>
 </ul>
 
@@ -2823,13 +2874,140 @@
 <p><strong>Default Value:</strong> <code>true</code></p>
 
 <ul>
-  <li>iOS
-<code>3000</code>: The splash screen will automatticly hide in 3 seconds.</li>
+  <li>
+    <p>Android
+<code>-1</code>: The splash screen will automatically hide when the <code>onPageFinished</code> has been triggered.</p>
+  </li>
+  <li>
+    <p>iOS
+<code>3000</code>: The splash screen will automatically hide in 3 seconds.</p>
+  </li>
 </ul>
 
 <p><strong>Usage Example:</strong></p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreenDelay"</span> <span class="na">value=</span><span class="s">"3000"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h3><code>AndroidPostSplashScreenTheme</code></h3>
+
+<p>Sets the post-theme of the activity after splash screen hides.</p>
+
+<p><em>Note:</em> This setting is available but use at your own risk.</p>
+
+<p><strong>Supported Platforms:</strong></p>
+
+<ul>
+  <li>Android</li>
+</ul>
+
+<p><strong>Data Type:</strong> <code>String</code></p>
+
+<p><strong>Default Value:</strong> <code>@style/Theme.AppCompat.NoActionBar</code></p>
+
+<p><strong>Usage Example:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AndroidPostSplashScreenTheme"</span> <span class="na">value=</span><span class="s">"@style/Theme.AppCompat.NoActionBar"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h3><code>AndroidWindowSplashScreenAnimatedIcon</code></h3>
+
+<p>The splash screen image. This preference is used for both animated and non-animated icons. The current acceptable asset files can either be an XML Vector Drwable or PNG.</p>
+
+<p><strong>Supported Platforms:</strong></p>
+
+<ul>
+  <li>Android</li>
+</ul>
+
+<p><strong>Data Type:</strong> <code>String</code>, file path to the asset file</p>
+
+<p><strong>Default Value:</strong> If not supplied, the Cordova&#39;s default asset is used.</p>
+
+<p><strong>Usage Example:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AndroidWindowSplashScreenAnimatedIcon"</span> <span class="na">value=</span><span class="s">"res/screen/android/splashscreen.xml"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h3><code>AndroidWindowSplashScreenAnimationDuration</code></h3>
+
+<p>Defines the duration of the icon&#39;s animation if an Animated Vector Drwable is supplied as the splash screen image.</p>
+
+<p><strong>Supported Platforms:</strong></p>
+
+<ul>
+  <li>Android</li>
+</ul>
+
+<p><strong>Data Type:</strong> <code>Number</code>, in milliseconds</p>
+
+<p><strong>Default Value:</strong> <code>undefined</code></p>
+
+<p><strong>Usage Example:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AndroidWindowSplashScreenAnimationDuration"</span> <span class="na">value=</span><span class="s">"3000"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h3><code>AndroidWindowSplashScreenBackground</code></h3>
+
+<p>The splash screen background color.</p>
+
+<p><strong>Supported Platforms:</strong></p>
+
+<ul>
+  <li>Android</li>
+</ul>
+
+<p><strong>Data Type:</strong> <code>String</code>, color hex code value.</p>
+
+<p><strong>Default Value:</strong> <code>#ffffff</code></p>
+
+<p><strong>Usage Example:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AndroidWindowSplashScreenBackground"</span> <span class="na">value=</span><span class="s">"#ffffff"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h3><code>AndroidWindowSplashScreenBrandingImage</code></h3>
+
+<blockquote>
+  <p>:warning: this setting is currently unsupported by the Android&#39;s Splash Screen compatability library. <a href="https://issuetracker.google.com/issues/194301890">See Google Android Issue Tracker</a></p>
+</blockquote>
+
+<!--
+The splash screen's branding image.
+
+**Supported Platforms:**
+
+- Android
+
+**Data Type:** `String`, file path to the asset file
+
+**Default Value:** `undefined`
+
+**Usage Example:**
+
+```xml
+<preference name="AndroidWindowSplashScreenBrandingImage" value="res/screen/android/splashscreen_branding.xml" />
+```
+-->
+
+<h3><code>AndroidWindowSplashScreenIconBackgroundColor</code></h3>
+
+<p>The splash screen&#39;s icons background color. Useful to seperate increase the contrast seperation between the background and icon.</p>
+
+<p><strong>Supported Platforms:</strong></p>
+
+<ul>
+  <li>Android</li>
+</ul>
+
+<p><strong>Data Type:</strong> <code>String</code>, color hex code value.</p>
+
+<p><strong>Default Value:</strong> <code>undefined</code></p>
+
+<p><strong>Usage Example:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AndroidWindowSplashScreenIconBackgroundColor"</span> <span class="na">value=</span><span class="s">"#c0c0c0"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 
 <h2>JavaScript Public APIs</h2>
@@ -2841,6 +3019,7 @@
 <p><strong>Supported Platforms:</strong></p>
 
 <ul>
+  <li>Android</li>
   <li>iOS</li>
 </ul>
 
@@ -2902,6 +3081,13 @@ When Xcode deploys to a specific simulator, it only copies the assets that match
     <p><strong><code>anyany</code> must be provided for other variations to be used</strong>
 If you don&#39;t provide an <code>anyany</code> version of the launch image for a specific scale and idiom, the other variations (like <code>anycom</code>, <code>comany</code>, and <code>comcom</code>) will ignored.</p>
   </li>
+</ol>
+
+<h3>Android</h3>
+
+<ol>
+  <li><strong>Simulator does not show the splash screen when launching the application from Android Studio or Cordova CLI.</strong>
+This is a known Android simulator issue. After uploading the app to the simulator, exiting and opening the app will display show the Splash Screen. If changes are not showen, try also performing a clean build.</li>
 </ol>
 
 
