@@ -132,6 +132,99 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Tue, 12 Jul 2022 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2022/07/12/cordova-android-release-11.0.0.html">Cordova Android 11.0.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">12 Jul 2022</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                        <a class="comment" href="/announcements/2022/07/12/cordova-android-release-11.0.0.html#disqus_thread"></a>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released <code>Cordova Android 11.0.0</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@11.0.0</a></li>
+</ul>
+
+<h2>Release Highlights</h2>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
+cordova platform add android@11.0.0
+</code></pre></div></div>
+
+<p><strong>To install:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@11.0.0
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><strong>Android 12 SplashScreen API Integration</strong></p>
+
+    <p>As of Android 12, all Android 12 or higher devices display the new app launch animation. Google has applied this requirement to bring a standard design to all app launch screens.</p>
+
+    <p>Due to this requirement, users have seen and reported the display of multiple SplashScreens during the app launch. Since the new SplashScreen API can not be disabled, the old SplashScreen plugin is deprecated for Cordova-Android 11+.</p>
+
+    <p>We have integrated the Android 12 SplashScreen API including the compatibility library into the core of the Cordova-Android platform to provide support for Android API 22+.</p>
+
+    <p>For more information, please refer to the <a href="https://github.com/apache/cordova-android/pull/1441">PR</a> and <a href="https://cordova.apache.org/docs/en/latest/core/features/splashscreen/index.html">Cordova Docs</a>.</p>
+  </li>
+  <li>
+    <p><strong>Tooling and Default Support Bump</strong></p>
+
+    <ul>
+      <li>Target SDK (<code>targetSdk</code>): <code>32</code></li>
+      <li>SDK Build Tool: <code>32.0.0</code></li>
+      <li>Gradle: <code>7.4.2</code></li>
+      <li>Kotlin: <code>1.5.21</code></li>
+      <li>Android Gradle Plugin (AGP): <code>7.2.1</code></li>
+      <li>Google Services Gradle Plugin: <code>4.3.10</code></li>
+      <li>AndroidX App Compat Library: <code>1.4.2</code></li>
+      <li>AndroidX WebKit Library: <code>1.4.0</code></li>
+      <li>AndroidX SplashScreen Core Library: <code>1.0.0-rc01</code></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Environment Variable <code>ANDROID_HOME</code></strong></p>
+
+    <p>As of April 27, 2022, It appears Google has reversed its statement and declared that <code>ANDROID_HOME</code> is now the correct environment variable to set with the path of the SDK installation directory. It also notes that <code>ANDROID_SDK_ROOT</code> that also points to the SDK installation directory is deprecated.</p>
+  </li>
+  <li>
+    <p><strong>Custom Compile SDK</strong></p>
+
+    <p>We added back the ability to set a custom compileSdk value with the preference flag <code>android-compileSdkVersion</code>.</p>
+
+    <p>Example:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"android-compileSdkVersion"</span> <span class="na">value=</span><span class="s">"31"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Node Support</strong></p>
+
+    <p>Since Node 12 is no longer being supported by the Node.js team, we have dropped support for Node 12.</p>
+  </li>
+</ul>
+
+<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+
+</p>
+                    <div><a href="/announcements/2022/07/12/cordova-android-release-11.0.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Mon, 30 May 2022 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/news/2022/05/30/media-plugin-6.0.0-media-capture-plugin-4.0.0-release.html">Media Plugin 6.0.0 & Media Capture Plugin 4.0.0 Released!</a>
@@ -12434,7 +12527,7 @@ window.twttr = (function(d, s, id) {
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Mon, 30 May 2022 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Tue, 12 Jul 2022 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };

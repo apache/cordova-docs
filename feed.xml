@@ -6,9 +6,140 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Jul 2022 04:58:08 +0000</pubDate>
-    <lastBuildDate>Wed, 13 Jul 2022 04:58:08 +0000</lastBuildDate>
+    <pubDate>Wed, 13 Jul 2022 14:58:57 +0000</pubDate>
+    <lastBuildDate>Wed, 13 Jul 2022 14:58:57 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
+    
+      <item>
+        <title>Cordova Android 11.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Android 11.0.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Android applications.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@11.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove android
+cordova platform add android@11.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add android@11.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Android 12 SplashScreen API Integration&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;As of Android 12, all Android 12 or higher devices display the new app launch animation. Google has applied this requirement to bring a standard design to all app launch screens.&lt;/p&gt;
+
+    &lt;p&gt;Due to this requirement, users have seen and reported the display of multiple SplashScreens during the app launch. Since the new SplashScreen API can not be disabled, the old SplashScreen plugin is deprecated for Cordova-Android 11+.&lt;/p&gt;
+
+    &lt;p&gt;We have integrated the Android 12 SplashScreen API including the compatibility library into the core of the Cordova-Android platform to provide support for Android API 22+.&lt;/p&gt;
+
+    &lt;p&gt;For more information, please refer to the &lt;a href=&quot;https://github.com/apache/cordova-android/pull/1441&quot;&gt;PR&lt;/a&gt; and &lt;a href=&quot;https://cordova.apache.org/docs/en/latest/core/features/splashscreen/index.html&quot;&gt;Cordova Docs&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Tooling and Default Support Bump&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Target SDK (&lt;code&gt;targetSdk&lt;/code&gt;): &lt;code&gt;32&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;SDK Build Tool: &lt;code&gt;32.0.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Gradle: &lt;code&gt;7.4.2&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Kotlin: &lt;code&gt;1.5.21&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Android Gradle Plugin (AGP): &lt;code&gt;7.2.1&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Google Services Gradle Plugin: &lt;code&gt;4.3.10&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;AndroidX App Compat Library: &lt;code&gt;1.4.2&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;AndroidX WebKit Library: &lt;code&gt;1.4.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;AndroidX SplashScreen Core Library: &lt;code&gt;1.0.0-rc01&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Environment Variable &lt;code&gt;ANDROID_HOME&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;As of April 27, 2022, It appears Google has reversed its statement and declared that &lt;code&gt;ANDROID_HOME&lt;/code&gt; is now the correct environment variable to set with the path of the SDK installation directory. It also notes that &lt;code&gt;ANDROID_SDK_ROOT&lt;/code&gt; that also points to the SDK installation directory is deprecated.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Custom Compile SDK&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;We added back the ability to set a custom compileSdk value with the preference flag &lt;code&gt;android-compileSdkVersion&lt;/code&gt;.&lt;/p&gt;
+
+    &lt;p&gt;Example:&lt;/p&gt;
+
+    &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;preference&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android-compileSdkVersion&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;31&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Node Support&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Since Node 12 is no longer being supported by the Node.js team, we have dropped support for Node 12.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1441&quot;&gt;GH-1441&lt;/a&gt; feat!: &lt;strong&gt;Android&lt;/strong&gt; 12 splash screen&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1427&quot;&gt;GH-1427&lt;/a&gt; feat!: API 32 support&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1410&quot;&gt;GH-1410&lt;/a&gt; feat!: API 31 support&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1444&quot;&gt;GH-1444&lt;/a&gt; fix!: set &amp;amp; use &lt;code&gt;ANDROID_HOME&lt;/code&gt; as default&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1411&quot;&gt;GH-1411&lt;/a&gt; chore!: Drop Node 12 support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1448&quot;&gt;GH-1448&lt;/a&gt; feat: Update &lt;code&gt;androidx.appcompat&lt;/code&gt; version&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1446&quot;&gt;GH-1446&lt;/a&gt; feat: Update gradle plugin version&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1447&quot;&gt;GH-1447&lt;/a&gt; feat: Update google services pluging&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1431&quot;&gt;GH-1431&lt;/a&gt; feat: support custom &lt;code&gt;compileSdk&lt;/code&gt; setting&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1311&quot;&gt;GH-1311&lt;/a&gt; feat: added support for BoM imports&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1455&quot;&gt;GH-1455&lt;/a&gt; fix(&lt;code&gt;prepare&lt;/code&gt;): &lt;code&gt;destFile&lt;/code&gt; path separator&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1453&quot;&gt;GH-1453&lt;/a&gt; fix: support installing platfrom from local git checkout&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1449&quot;&gt;GH-1449&lt;/a&gt; fix: accept file cookies only if &lt;code&gt;AndroidInsecureFileModeEnabled&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1443&quot;&gt;GH-1443&lt;/a&gt; fix: force &lt;code&gt;hostname&lt;/code&gt; to lowercase&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1434&quot;&gt;GH-1434&lt;/a&gt; fix: restore &lt;code&gt;checkReqs&lt;/code&gt; in &lt;code&gt;prepare.js&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1154&quot;&gt;GH-1154&lt;/a&gt; fix: move &lt;code&gt;MainActivity.java&lt;/code&gt; to folder that tracks the app package name (widget id)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores, Dependencies &amp;amp; CI:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1451&quot;&gt;GH-1451&lt;/a&gt; chore: display warning on deprecated &lt;code&gt;&amp;lt;splash&amp;gt;&lt;/code&gt; tag usage&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1430&quot;&gt;GH-1430&lt;/a&gt; chore: remove unneeded deprecated annotation&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1421&quot;&gt;GH-1421&lt;/a&gt; chore(npm): bump &lt;code&gt;@cordova/eslint-config@^4.0.0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1420&quot;&gt;GH-1420&lt;/a&gt; chore(npm): bump dependencies&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1452&quot;&gt;GH-1452&lt;/a&gt; dep: bump &lt;code&gt;jasmine@4.2.1&lt;/code&gt; w/ &lt;code&gt;package-lock&lt;/code&gt; rebuild&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1439&quot;&gt;GH-1439&lt;/a&gt; ci: update github action workflow&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1424&quot;&gt;GH-1424&lt;/a&gt; ci: Added Node 18 to test matrix&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2022/07/12/cordova-android-release-11.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2022/07/12/cordova-android-release-11.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Media Plugin 6.0.0 &amp; Media Capture Plugin 4.0.0 Released!</title>
@@ -620,48 +751,6 @@ cordova plugin add cordova-plugin-media@5.0.4
         <category>news</category>
         
         <category>releases</category>
-        
-        
-        <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Template 6.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released a major update to our template!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-app-hello-world&quot;&gt;cordova-app-hello-world@6.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;In this release, we have removed the deprecated &lt;code&gt;cordova-plugin-whitelist&lt;/code&gt; from the default template. The functionality of the plugin was integrated into the core of Cordova Android since version 10.0.0.&lt;/p&gt;
-
-&lt;p&gt;If you create a new Cordova project and use an older version of Cordova Android (&amp;lt;10), you will need to add the &lt;code&gt;cordova-plugin-whitelist&lt;/code&gt; plugin.&lt;/p&gt;
-
-&lt;p&gt;Additionally, Cordova has removed the excessive &lt;code&gt;access&lt;/code&gt; and &lt;code&gt;allow-intent&lt;/code&gt; settings from the default &lt;code&gt;config.xml&lt;/code&gt; file. Previously, the default template assumed what defaults users needed, but not all user apps required these settings.&lt;/p&gt;
-
-&lt;p&gt;Removing these excessive defaults will help promote a more secure application by default, reduce the default project configurations to a bare minimum, and promote an opt-in approach for defining access permissions.&lt;/p&gt;
-
-&lt;p&gt;Existing projects are not affected by these changes. The default template is used only during the initial project creation.&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-app-hello-world/pull/73&quot;&gt;GH-73&lt;/a&gt; cleanup!(&lt;code&gt;config.xml&lt;/code&gt;): simplify defaults&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-app-hello-world/pull/67&quot;&gt;GH-67&lt;/a&gt; chore(ios): remove &lt;code&gt;gap&lt;/code&gt; from CSP&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-app-hello-world/pull/66&quot;&gt;GH-66&lt;/a&gt; chore!: remove whitelist plugin &amp;amp; reference&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/news/2021/10/31/template-release.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/news/2021/10/31/template-release.html</guid>
-        
-        <category>release</category>
-        
-        <category>template</category>
         
         
         <category>news</category>
