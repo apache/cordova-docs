@@ -34,19 +34,6 @@ cordova platform add android@11.0.0
 
     We have integrated the Android 12 SplashScreen API including the compatibility library into the core of the Cordova-Android platform to provide support for Android API 22+.
 
-    Only some of the exisiting SplashScreen configurations from the old plugin are still supported. For example: `AutoHideSplashScreen`, `SplashScreenDelay`, `FadeSplashScreen`, & `FadeSplashScreenDuration`.
-
-    With the integration of SplashScreen API 12, the following settings have been introduced:
-
-    * `AndroidWindowSplashScreenAnimatedIcon`: Contains the path of the resource image of the SplashScreen Icon. Either an `XML Android Drawable` or `PNG`
-    * `AndroidWindowSplashScreenBackground`: Contains the hex value of the SplashScreen background color. Default is white (#FFFFFF)
-    * `AndroidWindowSplashScreenIconBackgroundColor`: Contains the hex value of the SplashScreen Icon's background color. Default is not defined.
-
-    Also, there were also small behavior changes:
-
-    * `SplashScreenDelay` with `AutoHideSplashScreen` enabled will automatically hide the SplashScreen after the `onPageFinished` is triggered. The original behavior can be restored by setting the setting the `SplashScreenDelay` preference to `3000`, if preferred.
-    * `FadeSplashScreen` only controls the fade out.
-
     For more information, please refer to the [PR](https://github.com/apache/cordova-android/pull/1441) and [Cordova Docs](https://cordova.apache.org/docs/en/latest/core/features/splashscreen/index.html).
 
 * **Tooling and Default Support Bump**
