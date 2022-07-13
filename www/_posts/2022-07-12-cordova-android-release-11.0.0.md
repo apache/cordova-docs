@@ -32,7 +32,7 @@ cordova platform add android@11.0.0
 
     Due to this requirement, users have seen and reported the display of multiple SplashScreens during the app launch. Since the new SplashScreen API can not be disabled, the old SplashScreen plugin is deprecated for Cordova-Android 11+.
 
-    We have integrated into the core of the Cordova-Android platform the Android 12 SplashScreen API including the compatibility library to provide support for Android API 22+.
+    We have integrated the Android 12 SplashScreen API including the compatibility library into the core of the Cordova-Android platform to provide support for Android API 22+.
 
     Only some of the exisiting SplashScreen configurations from the old plugin are still supported. For example: `AutoHideSplashScreen`, `SplashScreenDelay`, `FadeSplashScreen`, & `FadeSplashScreenDuration`.
 
