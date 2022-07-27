@@ -54,9 +54,17 @@ Contains the project's web artifacts, such as .html, .css and .js files. As a co
 
 ### `node_modules/`
 
-TODO
-Dependencies inistalled via NPM.
-Base for `platforms` and `plugins`
+This directory contains all of the checked-out packages from the npmjs registry.
+
+When adding a Cordova platform or plugin with the `cordova platform add` and `cordova plugin add` command, these platforms and plugins are fetched from the npmjs registry and downloaded into the `node_modules/` directory.
+
+Cordova will then copy the necessary Cordova platform and plugin  source code from the `node_modules` directory and place them into the appropriate location for Cordova to function.
+
+It also contain scripts that is used during the `cordova prepare` and `cordova build` for each platform.
+
+The `node_modules` directory is  the original unedited source of truth and nothing should be edited in this directory. Additionally, this directory should not be checked into any version control system.
+
+For more details, see [npmjs folders documentation](https://docs.npmjs.com/cli/v7/configuring-npm/folders#node-modules).
 
 ### `platforms/`
 
