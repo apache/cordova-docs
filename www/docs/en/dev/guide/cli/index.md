@@ -70,6 +70,16 @@ To install the `cordova` command-line tool, follow these steps:
    `cordova` on the command line with no arguments and it should
    print help text.
 
+### Autocomplete
+
+You can get IDE-style autocompletions for `cordova` with <a href="https://fig.io/" target="_blank"><img src="https://fig.io/badges/Logo.svg" width="15" height="15"/></a> [Fig](https://fig.io/). It works in bash, zsh, and fish.
+
+To install, run:
+
+```shell
+brew install fig
+```
+
 ## Create the App
 
 Go to the directory where you maintain your source code, and create a cordova project:
