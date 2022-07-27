@@ -76,6 +76,8 @@ It is recommended not to check in `platforms/` and `plugins/` directories into v
 
 ### `merges/`
 
+The `merges/` directory is not included by default when creating a Cordova project through the CLI. The use of this directory is generally discouraged but still supported.
+
 Platform-specific web assets (HTML, CSS and JavaScript files) are contained within appropriate subfolders in this directory. These are deployed during a `prepare` to the appropriate native directory.  Files placed under `merges/` will override matching files in the `www/` folder for the relevant platform. A quick example, assuming a project structure of:
 
 ```text
