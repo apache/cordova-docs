@@ -38,8 +38,6 @@ myapp/
 └── www
 ```
 
-TODO resort properly
-
 ### `package.json`
 
 TODO
