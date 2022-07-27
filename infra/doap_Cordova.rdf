@@ -44,8 +44,8 @@
     <release>
        <Version>
            <name>Latest Stable</name>
-           <created>2021-12-21</created>
-           <revision>11.0.0</revision>
+           <created>2020-08-04</created>
+           <revision>10.0.0</revision>
        </Version>
    </release>
     <repository>
