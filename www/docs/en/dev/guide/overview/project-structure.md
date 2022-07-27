@@ -19,40 +19,30 @@ license: >
 
 title: Project Structure of a Cordova Project
 toc_title: Project Structure
-description: 
+description:
 ---
 
 # Project Structure
 
-## CLI project directory structure
+## CLI's Default Directory Structure
 
-Cordova CLI works with the following directory structure:
+A project created with Cordova CLI comes with the follow directory structure by default:
 
-```
+```text
 myapp/
 |-- package.json
 |-- config.xml
-|-- hooks/
-|-- merges/
-| | |-- android/
-| | |-- windows/
-| | |-- ios/
 |-- node_modules/
 |-- www/
 |-- platforms/
-| |-- android/
-| |-- windows/
-| |-- ios/
 |-- plugins/
-  |--cordova-plugin-camera/
-  
 ```
-TODO resort properly
 
+TODO resort properly
 
 ### `package.json`
 
-TODO 
+TODO
 
 ### `config.xml`
 
@@ -65,7 +55,7 @@ Contains the project's web artifacts, such as .html, .css and .js files. As a co
 ### `node_modules/`
 
 TODO
-Dependencies inistalled via NPM. 
+Dependencies inistalled via NPM.
 Base for `platforms` and `plugins`
 
 ### `platforms/`
@@ -78,17 +68,17 @@ Contains all the source code and build scripts for the platforms that you add to
 
 Any added plugins will be extracted or copied into this directory.
 
-### `hooks/`
+### Version control
 
-This directory may contains scripts used to customize cordova-cli commands. Any scripts you add to these directories will be executed before and after the commands corresponding to the directory name. Useful for integrating your own build systems or integrating with version control systems.
+It is recommended not to check in `platforms/` and `plugins/` directories into version control as they are considered a build artifact. Your platforms and plugins will be saved in `package.json` automatically. These platforms/plugins will be downloaded when `cordova prepare` is invoked.
 
-Refer to [Hooks Guide] for more information.
+## Optional Directories
 
 ### `merges/`
 
 Platform-specific web assets (HTML, CSS and JavaScript files) are contained within appropriate subfolders in this directory. These are deployed during a `prepare` to the appropriate native directory.  Files placed under `merges/` will override matching files in the `www/` folder for the relevant platform. A quick example, assuming a project structure of:
 
-```
+```text
 merges/
 |-- ios/
 | -- app.js
@@ -99,7 +89,3 @@ www/
 ```
 
 After building the Android and iOS projects, the Android application will contain both `app.js` and `android.js`. However, the iOS application will only contain an `app.js`, and it will be the one from `merges/ios/app.js`, overriding the "common" `app.js` located inside `www/`.
-
-### Version control
-
-It is recommended not to check in `platforms/` and `plugins/` directories into version control as they are considered a build artifact. Your platforms and plugins will be saved in `package.json` automatically. These platforms/plugins will be downloaded when `cordova prepare` is invoked.
