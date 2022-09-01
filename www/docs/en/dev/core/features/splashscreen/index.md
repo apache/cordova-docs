@@ -595,5 +595,5 @@ screen visible for application startup.
 ### Android
 
 1. **Android 12 does not show the splash screen when launching the application from Android Studio or Cordova CLI.**
-   This is a known Android 12 issue. After uploading the app to the device or simulator, exiting and opening the app will display show the Splash Screen. If changes are not shown, try also performing a clean build.
+   This is a known Android 12 issue. After uploading the app to the device or simulator, exiting and opening the app will show the Splash Screen. If changes are not shown, try also performing a clean build.
 It has been fixed on Android 13.
