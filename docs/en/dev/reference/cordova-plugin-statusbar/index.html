@@ -2337,7 +2337,7 @@
 </code></pre></div>    </div>
   </li>
   <li>
-    <p><strong>StatusBarStyle</strong> (status bar style, defaults to lightcontent). Set the status bar style (e.g. text color). Available options: <code>default</code>, <code>lightcontent</code>. <code>blacktranslucent</code> and <code>blackopaque</code> are also available, but <strong>deprecated</strong>, will be removed in next major release, use <code>lightcontent</code> instead.</p>
+    <p><strong>StatusBarStyle</strong> (status bar style, defaults to lightcontent). Set the status bar style (e.g. text color). Available options: <code>default</code>, <code>lightcontent</code>.</p>
 
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="StatusBarStyle" value="lightcontent" /&gt;
 </code></pre></div>    </div>
@@ -2399,8 +2399,6 @@ function onDeviceReady() {
   <li>StatusBar.overlaysWebView</li>
   <li>StatusBar.styleDefault</li>
   <li>StatusBar.styleLightContent</li>
-  <li>StatusBar.styleBlackTranslucent</li>
-  <li>StatusBar.styleBlackOpaque</li>
   <li>StatusBar.backgroundColorByName</li>
   <li>StatusBar.backgroundColorByHexString</li>
   <li>StatusBar.hide</li>
@@ -2463,40 +2461,6 @@ StatusBar.overlaysWebView(false);
 <p>Use the lightContent statusbar (light text, for dark backgrounds).</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>StatusBar.styleLightContent();
-</code></pre></div></div>
-
-<h2>Supported Platforms</h2>
-
-<ul>
-  <li>iOS</li>
-  <li>Android 6+</li>
-  <li>Windows</li>
-</ul>
-
-<h1>StatusBar.styleBlackTranslucent</h1>
-
-<p>Note: <code>styleBlackTranslucent</code> is <strong>deprecated</strong> and will be removed in next major release, use <code>styleLightContent</code> instead.</p>
-
-<p>Use the blackTranslucent statusbar (light text, for dark backgrounds).</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>StatusBar.styleBlackTranslucent();
-</code></pre></div></div>
-
-<h2>Supported Platforms</h2>
-
-<ul>
-  <li>iOS</li>
-  <li>Android 6+</li>
-  <li>Windows</li>
-</ul>
-
-<h1>StatusBar.styleBlackOpaque</h1>
-
-<p>Note: <code>styleBlackOpaque</code> is <strong>deprecated</strong> and will be removed in next major release, use <code>styleLightContent</code> instead.</p>
-
-<p>Use the blackOpaque statusbar (light text, for dark backgrounds).</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>StatusBar.styleBlackOpaque();
 </code></pre></div></div>
 
 <h2>Supported Platforms</h2>

@@ -2297,7 +2297,7 @@
 
 <h1>cordova-plugin-splashscreen</h1>
 
-<p><a href="https://github.com/apache/cordova-plugin-splashscreen/actions/workflows/android.yml"><img src="https://github.com/apache/cordova-plugin-splashscreen/actions/workflows/android.yml/badge.svg" alt="Android Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-splashscreen/actions/workflows/chrome.yml"><img src="https://github.com/apache/cordova-plugin-splashscreen/actions/workflows/chrome.yml/badge.svg" alt="Chrome Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-splashscreen/actions/workflows/lint.yml"><img src="https://github.com/apache/cordova-plugin-splashscreen/actions/workflows/lint.yml/badge.svg" alt="Lint Test" /></a></p>
+<p><a href="https://github.com/apache/cordova-plugin-splashscreen/actions/workflows/chrome.yml"><img src="https://github.com/apache/cordova-plugin-splashscreen/actions/workflows/chrome.yml/badge.svg" alt="Chrome Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-splashscreen/actions/workflows/lint.yml"><img src="https://github.com/apache/cordova-plugin-splashscreen/actions/workflows/lint.yml/badge.svg" alt="Lint Test" /></a></p>
 
 <p>This plugin displays and hides a splash screen while your web application is launching. Using its methods you can also show and hide the splash screen manually.</p>
 
@@ -2309,15 +2309,6 @@
       <li><a href="#platform-splash-screen-image-configuration">Platform Splash Screen Image Configuration</a>
         <ul>
           <li><a href="#example-configuration">Example Configuration</a></li>
-          <li><a href="#android-specific-information">Android-specific Information</a>
-            <ul>
-              <li><a href="#image-layout">Image Layout</a></li>
-              <li><a href="#density"><code>density</code></a></li>
-              <li><a href="#image-sizing-table">Image Sizing Table</a></li>
-              <li><a href="#dark-mode-api-28">Dark Mode (API 28+)</a></li>
-              <li><a href="#example-android-configuration">Example Android Configuration</a></li>
-            </ul>
-          </li>
           <li><a href="#windows-specific-information">Windows-specific Information</a></li>
         </ul>
       </li>
@@ -2326,7 +2317,6 @@
           <li><a href="#configxml">config.xml</a></li>
           <li><a href="#quirks">Quirks</a>
             <ul>
-              <li><a href="#android-quirks">Android Quirks</a></li>
               <li><a href="#browser-quirks">Browser Quirks</a></li>
               <li><a href="#windows-quirks">Windows Quirks</a></li>
             </ul>
@@ -2355,12 +2345,8 @@ cordova plugin add https://github.com/apache/cordova-plugin-splashscreen.git
 <h2>Supported Platforms</h2>
 
 <ul>
-  <li>Android
-<strong>Note</strong>: Android implementation has been moved to the core framework.
-  If using <code>cordova-android@10.x</code> or earlier, use <code>cordova-plugin-splashscreen@6.x</code>
-  If using <code>cordova-android@11.x</code> or later and exclusively developing for Android, this plugin can be uninstalled.</li>
   <li>Windows (<code>cordova-windows</code> version &gt;= 4.4.0 is required)<br />
-<strong>Note</strong>: Extended splashscreen does not require the plugin on Windows (as opposed to Android) in case you don&#39;t use the plugin API, i.e. programmatic hide/show.</li>
+<strong>Note</strong>: Extended splashscreen does not require the plugin on Windows in case you don&#39;t use the plugin API, i.e. programmatic hide/show.</li>
   <li>Browser</li>
 </ul>
 
@@ -2384,27 +2370,10 @@ cordova plugin add https://github.com/apache/cordova-plugin-splashscreen.git
         js
     res
         screen
-            android
             windows
 </code></pre></div></div>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-hdpi.png"</span> <span class="na">density=</span><span class="s">"land-hdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-ldpi.png"</span> <span class="na">density=</span><span class="s">"land-ldpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-mdpi.png"</span> <span class="na">density=</span><span class="s">"land-mdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-xhdpi.png"</span> <span class="na">density=</span><span class="s">"land-xhdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-xxhdpi.png"</span> <span class="na">density=</span><span class="s">"land-xxhdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-xxxhdpi.png"</span> <span class="na">density=</span><span class="s">"land-xxxhdpi"</span> <span class="nt">/&gt;</span>
-
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-hdpi.png"</span> <span class="na">density=</span><span class="s">"port-hdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-ldpi.png"</span> <span class="na">density=</span><span class="s">"port-ldpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-mdpi.png"</span> <span class="na">density=</span><span class="s">"port-mdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-xhdpi.png"</span> <span class="na">density=</span><span class="s">"port-xhdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-xxhdpi.png"</span> <span class="na">density=</span><span class="s">"port-xxhdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-xxxhdpi.png"</span> <span class="na">density=</span><span class="s">"port-xxxhdpi"</span> <span class="nt">/&gt;</span> 
-<span class="nt">&lt;/platform&gt;</span>
-
-<span class="c">&lt;!-- Configuration using MRT concept (Recommended, see "Windows-specific information" section for details): --&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Configuration using MRT concept (Recommended, see "Windows-specific information" section for details): --&gt;</span>
 <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/windows/splashscreen.png"</span> <span class="na">target=</span><span class="s">"SplashScreen"</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/windows/splashscreenphone.png"</span> <span class="na">target=</span><span class="s">"SplashScreenPhone"</span><span class="nt">/&gt;</span>
@@ -2417,126 +2386,6 @@ cordova plugin add https://github.com/apache/cordova-plugin-splashscreen.git
 &lt;/platform&gt;--&gt;</span>
 
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreenDelay"</span> <span class="na">value=</span><span class="s">"10000"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
-
-<h3>Android-specific Information</h3>
-
-<p>To effectively create your Android SplashScreen assets, it is important to understand the idiom and sizes used for the assets.</p>
-
-<p>Android defined its assets by the image&#39;s layout and <code>density</code>.</p>
-
-<h4>Image Layout</h4>
-
-<ul>
-  <li><code>land</code> short for landscape mode</li>
-  <li><code>port</code> short for portrait mode</li>
-</ul>
-
-<h4><code>density</code></h4>
-
-<p>The image&#39;s density refers to the number of pixels per square inch. Android, interchangeably refers to this as DPI.</p>
-
-<p>Not all devices have the same pixel size so it is important to create images for all DPI to ensure that the quality of the image for each device is great.</p>
-
-<p>If not all DPI images are considered, some devices might not show a SplashScreen or will use an incorrect DPI image that can result in a blurry scaled image.</p>
-
-<h4>Image Sizing Table</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">size</th>
-      <th style="text-align: center">portrait</th>
-      <th style="text-align: center">landscape</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">ldpi</td>
-      <td style="text-align: center">200x320</td>
-      <td style="text-align: center">320x200</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">mdpi</td>
-      <td style="text-align: center">320x480</td>
-      <td style="text-align: center">480x320</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">hdpi</td>
-      <td style="text-align: center">480x800</td>
-      <td style="text-align: center">800x480</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">xhdpi</td>
-      <td style="text-align: center">720x1280</td>
-      <td style="text-align: center">1280x720</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">xxhdpi</td>
-      <td style="text-align: center">960x1600</td>
-      <td style="text-align: center">1600x960</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">xxxhdpi</td>
-      <td style="text-align: center">1280x1920</td>
-      <td style="text-align: center">1920x1280</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4>Dark Mode (API 28+)</h4>
-
-<p>You can optionally provide an extra SplashScreen image to be used in dark/night mode when enabled on supported devices.
-To do this, add the <code>-night</code> keyword in between the <strong>layout</strong> and <strong>size</strong> keywords of the image&#39;s <code>density</code> attribute value. E.g.: <code>land-night-hdpi</code></p>
-
-<p>For more examples, please see <a href="#example-android-configuration">the Example Configuration</a> section.</p>
-
-<h4>Example Android Configuration</h4>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!-- Default 
-    Note: You should specify default resources for each density.
-      -- For instance, if the device(hdpi) is in landscape orientation and [density="land-hdpi"] 
-      -- does not exists, [density="hdpi"] will be selected 
-      If you do not declare this you will get MissingDefaultResource lint check errors.
-      --&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-hdpi.png"</span> <span class="na">density=</span><span class="s">"hdpi"</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-ldpi.png"</span> <span class="na">density=</span><span class="s">"ldpi"</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-mdpi.png"</span> <span class="na">density=</span><span class="s">"mdpi"</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-xhdpi.png"</span> <span class="na">density=</span><span class="s">"xhdpi"</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-xxhdpi.png"</span> <span class="na">density=</span><span class="s">"xxhdpi"</span><span class="nt">/&gt;</span>
-
-    <span class="c">&lt;!-- Landscape --&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-hdpi.png"</span> <span class="na">density=</span><span class="s">"land-hdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-ldpi.png"</span> <span class="na">density=</span><span class="s">"land-ldpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-mdpi.png"</span> <span class="na">density=</span><span class="s">"land-mdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-xhdpi.png"</span> <span class="na">density=</span><span class="s">"land-xhdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-xxhdpi.png"</span> <span class="na">density=</span><span class="s">"land-xxhdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-xxxhdpi.png"</span> <span class="na">density=</span><span class="s">"land-xxxhdpi"</span> <span class="nt">/&gt;</span>
-
-    <span class="c">&lt;!-- Portrait --&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-hdpi.png"</span> <span class="na">density=</span><span class="s">"port-hdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-ldpi.png"</span> <span class="na">density=</span><span class="s">"port-ldpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-mdpi.png"</span> <span class="na">density=</span><span class="s">"port-mdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-xhdpi.png"</span> <span class="na">density=</span><span class="s">"port-xhdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-xxhdpi.png"</span> <span class="na">density=</span><span class="s">"port-xxhdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-xxxhdpi.png"</span> <span class="na">density=</span><span class="s">"port-xxxhdpi"</span> <span class="nt">/&gt;</span>
-  
-    <span class="c">&lt;!-- Dark Mode --&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-night-hdpi.png"</span> <span class="na">density=</span><span class="s">"land-night-hdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-night-ldpi.png"</span> <span class="na">density=</span><span class="s">"land-night-ldpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-night-mdpi.png"</span> <span class="na">density=</span><span class="s">"land-night-mdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-night-xhdpi.png"</span> <span class="na">density=</span><span class="s">"land-night-xhdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-night-xxhdpi.png"</span> <span class="na">density=</span><span class="s">"land-night-xxhdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-land-night-xxxhdpi.png"</span> <span class="na">density=</span><span class="s">"land-night-xxxhdpi"</span> <span class="nt">/&gt;</span>
-
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-night-hdpi.png"</span> <span class="na">density=</span><span class="s">"port-night-hdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-night-ldpi.png"</span> <span class="na">density=</span><span class="s">"port-night-ldpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-night-mdpi.png"</span> <span class="na">density=</span><span class="s">"port-night-mdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-night-xhdpi.png"</span> <span class="na">density=</span><span class="s">"port-night-xhdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-night-xxhdpi.png"</span> <span class="na">density=</span><span class="s">"port-night-xxhdpi"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;splash</span> <span class="na">src=</span><span class="s">"res/screen/android/splash-port-night-xxxhdpi.png"</span> <span class="na">density=</span><span class="s">"port-night-xxxhdpi"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/platform&gt;</span>
 </code></pre></div></div>
 
 <h3>Windows-specific Information</h3>
@@ -2706,23 +2555,6 @@ to hide the splash screen spinner.</p>
 </ul>
 
 <h3>Quirks</h3>
-
-<h4>Android Quirks</h4>
-
-<p>In your <code>config.xml</code>, you can add the following preferences:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashMaintainAspectRatio"</span> <span class="na">value=</span><span class="s">"true|false"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashShowOnlyFirstTime"</span> <span class="na">value=</span><span class="s">"true|false"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SplashScreenSpinnerColor"</span> <span class="na">value=</span><span class="s">"white"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
-
-<p><code>SplashMaintainAspectRatio</code> preference is optional. If set to <code>true</code>, the splash screen drawable is not stretched to fit the full screen, but instead simply &quot;covers&quot; the screen, like CSS &quot;background-size:cover&quot;. This is very useful when splash screen images cannot be distorted in any way, for example when they contain scenery or text. This setting works best with images that have large margins (safe areas) that can be safely cropped on screens with different aspect ratios.</p>
-
-<p>The splash screen plugin reloads the splash screen whenever the orientation changes so that you can specify different splash screen images for portrait and landscape orientations.</p>
-
-<p><code>SplashShowOnlyFirstTime</code> preference is  optional and defaults to <code>true</code>. When set to <code>true</code> the splash screen will only appear on application launch. However, if you plan to use <code>navigator.app.exitApp()</code> to close the application and force the splash screen appear on the application&#39;s next launch, you should set this property to <code>false</code> (this also applies to closing the application with the Back button).</p>
-
-<p><code>SplashScreenSpinnerColor</code> preference is also optional and is ignored when not set. Setting it to a valid color name or HEX color code will change the color of the spinner on Android 5.0+ devices.</p>
 
 <h4>Browser Quirks</h4>
 
