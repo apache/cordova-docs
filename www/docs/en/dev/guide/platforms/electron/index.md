@@ -334,11 +334,11 @@ Building for multiple platforms on a single operating system may possible but ha
 
 The matrix below shows each host OS and for which platforms they are capable of building applications.
 
-| Host <sup>**[1]**</sup> |  Linux  |   Mac   |           Window            |
+| Host <sup>**[1]**</sup> |  Linux  |   Mac   |           Windows           |
 | ----------------------- | :-----: | :-----: | :-------------------------: |
 | Linux                   | &#9989; |         | &#10071; <sup>**[2]**</sup> |
 | Mac <sup>**[3]**</sup>  | &#9989; | &#9989; | &#10071; <sup>**[2]**</sup> |
-| Window                  |         |         |           &#9989;           |
+| Windows                 |         |         |           &#9989;           |
 
 **Limitations:**
 
