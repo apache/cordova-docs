@@ -78,7 +78,8 @@ simply hook `window.open` during initialization.  For example:
 
 #### <b>config.xml</b>
 - <b>InAppBrowserStatusBarStyle [iOS only]</b>: (string, options 'lightcontent' or 'default'. Defaults to 'default') set text color style for iOS.
-```
+
+```xml
 <preference name="InAppBrowserStatusBarStyle" value="lightcontent" />
 ```
 
