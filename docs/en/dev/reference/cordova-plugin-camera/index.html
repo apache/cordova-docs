@@ -2312,13 +2312,22 @@ function onDeviceReady() {
 
 <h2>Installation</h2>
 
-<p>This requires cordova 5.0+</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-camera
+</code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-camera Older versions of cordova can still install via the __deprecated__ id
+<p>It is also possible to install via repo url directly ( unstable )</p>
 
-cordova plugin add org.apache.cordova.camera It is also possible to install via repo url directly ( unstable )
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add https://github.com/apache/cordova-plugin-camera.git
+</code></pre></div></div>
 
-cordova plugin add https://github.com/apache/cordova-plugin-camera.git
+<h2>Plugin variables</h2>
+
+<p>The plugin uses the <code>ANDROIDX_CORE_VERSION</code> variable to configure <code>androidx.core:core</code> dependency. This allows to avoid conflicts with other plugins that have the dependency hardcoded.
+If no value is passed, it will use <code>1.6.+</code> as the default value.</p>
+
+<p>The variable is configured on install time</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-camera --variable ANDROIDX_CORE_VERSION=1.8.0
 </code></pre></div></div>
 
 <h2>How to Contribute</h2>

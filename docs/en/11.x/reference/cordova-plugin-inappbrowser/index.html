@@ -2342,118 +2342,137 @@ function onDeviceReady() {
 
 <h4><b>config.xml</b></h4>
 <ul>
-  <li><b>InAppBrowserStatusBarStyle [iOS only]</b>: (string, options &#39;lightcontent&#39;, &#39;darkcontent&#39; or &#39;default&#39;. Defaults to &#39;default&#39;) set text color style for iOS. &#39;lightcontent&#39; is intended for use on dark backgrounds. &#39;darkcontent&#39; is only available since iOS 13 and intended for use on light backgrounds.
-```</li>
+  <li><b>InAppBrowserStatusBarStyle [iOS only]</b>: (string, options &#39;lightcontent&#39;, &#39;darkcontent&#39; or &#39;default&#39;. Defaults to &#39;default&#39;) set text color style for iOS. &#39;lightcontent&#39; is intended for use on dark backgrounds. &#39;darkcontent&#39; is only available since iOS 13 and intended for use on light backgrounds.</li>
 </ul>
-<preference name="InAppBrowserStatusBarStyle" value="lightcontent" />
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-## cordova.InAppBrowser.open
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"InAppBrowserStatusBarStyle"</span> <span class="na">value=</span><span class="s">"lightcontent"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
 
-Opens a URL in a new `InAppBrowser` instance, the current browser
-instance, or the system browser.
+<h2>cordova.InAppBrowser.open</h2>
 
-    var ref = cordova.InAppBrowser.open(url, target, options);
+<p>Opens a URL in a new <code>InAppBrowser</code> instance, the current browser
+instance, or the system browser.</p>
 
-- __ref__: Reference to the `InAppBrowser` window when the target is set to `'_blank'`. _(InAppBrowser)_
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open(url, target, options);
+</code></pre></div></div>
 
-- __url__: The URL to load _(String)_. Call `encodeURI()` on this if the URL contains Unicode characters.
+<ul>
+  <li>
+    <p><strong>ref</strong>: Reference to the <code>InAppBrowser</code> window when the target is set to <code>'_blank'</code>. <em>(InAppBrowser)</em></p>
+  </li>
+  <li>
+    <p><strong>url</strong>: The URL to load <em>(String)</em>. Call <code>encodeURI()</code> on this if the URL contains Unicode characters.</p>
+  </li>
+  <li>
+    <p><strong>target</strong>: The target in which to load the URL, an optional parameter that defaults to <code>_self</code>. <em>(String)</em></p>
 
-- __target__: The target in which to load the URL, an optional parameter that defaults to `_self`. _(String)_
+    <ul>
+      <li><code>_self</code>: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the <code>InAppBrowser</code>.</li>
+      <li><code>_blank</code>: Opens in the <code>InAppBrowser</code>.</li>
+      <li><code>_system</code>: Opens in the system&#39;s web browser.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>options</strong>: Options for the <code>InAppBrowser</code>. Optional, defaulting to: <code>location=yes</code>. <em>(String)</em></p>
 
-    - `_self`: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the `InAppBrowser`.
-    - `_blank`: Opens in the `InAppBrowser`.
-    - `_system`: Opens in the system's web browser.
+    <p>The <code>options</code> string must not contain any blank space, and each feature&#39;s name/value pairs must be separated by a comma. Feature names are case insensitive.</p>
 
-- __options__: Options for the `InAppBrowser`. Optional, defaulting to: `location=yes`. _(String)_
+    <p>All platforms support:</p>
 
-    The `options` string must not contain any blank space, and each feature's name/value pairs must be separated by a comma. Feature names are case insensitive.
+    <ul>
+      <li><strong>location</strong>: Set to <code>yes</code> or <code>no</code> to turn the <code>InAppBrowser</code>&#39;s location bar on or off.</li>
+    </ul>
 
-    All platforms support:
+    <p>Android supports these additional options:</p>
 
-    - __location__: Set to `yes` or `no` to turn the `InAppBrowser`'s location bar on or off.
+    <ul>
+      <li><strong>hidden</strong>: set to <code>yes</code> to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to <code>no</code> (default) to have the browser open and load normally.</li>
+      <li><strong>beforeload</strong>: set to enable the <code>beforeload</code> event to modify which pages are actually loaded in the browser. Accepted values are <code>get</code> to intercept only GET requests, <code>post</code> to intercept on POST requests or <code>yes</code> to intercept both GET &amp; POST requests. Note that POST requests are not currently supported and will be ignored (if you set <code>beforeload=post</code> it will raise an error).</li>
+      <li><strong>clearcache</strong>: set to <code>yes</code> to have the browser&#39;s cookie cache cleared before the new window is opened</li>
+      <li><strong>clearsessioncache</strong>: set to <code>yes</code> to have the session cookie cache cleared before the new window is opened</li>
+      <li><strong>closebuttoncaption</strong>: set to a string to use as the close button&#39;s caption instead of a X. Note that you need to localize this value yourself.</li>
+      <li><strong>closebuttoncolor</strong>: set to a valid hex color string, for example: <code>#00ff00</code>, and it will change the
+  close button color from default, regardless of being a text or default X. Only has effect if user has location set to <code>yes</code>.</li>
+      <li><strong>footer</strong>: set to <code>yes</code> to show a close button in the footer similar to the iOS <strong>Done</strong> button. 
+  The close button will appear the same as for the header hence use <strong>closebuttoncaption</strong> and <strong>closebuttoncolor</strong> to set its properties.</li>
+      <li><strong>footercolor</strong>: set to a valid hex color string, for example <code>#00ff00</code> or <code>#CC00ff00</code> (<code>#aarrggbb</code>) , and it will change the footer color from default.
+  Only has effect if user has <strong>footer</strong> set to <code>yes</code>.</li>
+      <li><strong>hardwareback</strong>: set to <code>yes</code> to use the hardware back button to navigate backwards through the <code>InAppBrowser</code>&#39;s history. If there is no previous page, the <code>InAppBrowser</code> will close.  The default value is <code>yes</code>, so you must set it to <code>no</code> if you want the back button to simply close the InAppBrowser.</li>
+      <li><strong>hidenavigationbuttons</strong>: set to <code>yes</code> to hide the navigation buttons on the location toolbar, only has effect if user has location set to <code>yes</code>. The default value is <code>no</code>.</li>
+      <li><strong>hideurlbar</strong>: set to <code>yes</code> to hide the url bar on the location toolbar, only has effect if user has location set to <code>yes</code>. The default value is <code>no</code>.</li>
+      <li><strong>navigationbuttoncolor</strong>: set to a valid hex color string, for example: <code>#00ff00</code>, and it will change the color of both navigation buttons from default. Only has effect if user has location set to <code>yes</code> and not hidenavigationbuttons set to <code>yes</code>.</li>
+      <li><strong>toolbarcolor</strong>: set to a valid hex color string, for example: <code>#00ff00</code>, and it will change the color the toolbar from default. Only has effect if user has location set to <code>yes</code>.</li>
+      <li><strong>lefttoright</strong>: Set to <code>yes</code> to swap positions of the navigation buttons and the close button. Specifically, navigation buttons go to the right and close button to the left. Default value is <code>no</code>.</li>
+      <li><strong>zoom</strong>: set to <code>yes</code> to show Android browser&#39;s zoom controls, set to <code>no</code> to hide them.  Default value is <code>yes</code>.</li>
+      <li><strong>mediaPlaybackRequiresUserAction</strong>: Set to <code>yes</code> to prevent HTML5 audio or video from autoplaying (defaults to <code>no</code>).</li>
+      <li><strong>shouldPauseOnSuspend</strong>: Set to <code>yes</code> to make InAppBrowser WebView to pause/resume with the app to stop background audio (this may be required to avoid Google Play issues like described in <a href="https://issues.apache.org/jira/browse/CB-11013">CB-11013</a>).</li>
+      <li><strong>useWideViewPort</strong>: Sets whether the WebView should enable support for the &quot;viewport&quot; HTML meta tag or should use a wide viewport. When the value of the setting is <code>no</code>, the layout width is always set to the width of the WebView control in device-independent (CSS) pixels. When the value is <code>yes</code> and the page contains the viewport meta tag, the value of the width specified in the tag is used. If the page does not contain the tag or does not provide a width, then a wide viewport will be used. (defaults to <code>yes</code>).</li>
+      <li><strong>fullscreen</strong>: Sets whether the InappBrowser WebView is displayed fullscreen or not. In fullscreen mode, the status bar is hidden. Default value is <code>yes</code>.</li>
+    </ul>
 
-    Android supports these additional options:
+    <p>iOS supports these additional options:</p>
 
-    - __hidden__: set to `yes` to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to `no` (default) to have the browser open and load normally.
-    - __beforeload__: set to enable the `beforeload` event to modify which pages are actually loaded in the browser. Accepted values are `get` to intercept only GET requests, `post` to intercept on POST requests or `yes` to intercept both GET &amp; POST requests. Note that POST requests are not currently supported and will be ignored (if you set `beforeload=post` it will raise an error).
-    - __clearcache__: set to `yes` to have the browser's cookie cache cleared before the new window is opened
-    - __clearsessioncache__: set to `yes` to have the session cookie cache cleared before the new window is opened
-    - __closebuttoncaption__: set to a string to use as the close button's caption instead of a X. Note that you need to localize this value yourself.
-    - __closebuttoncolor__: set to a valid hex color string, for example: `#00ff00`, and it will change the
-    close button color from default, regardless of being a text or default X. Only has effect if user has location set to `yes`.
-    - __footer__: set to `yes` to show a close button in the footer similar to the iOS __Done__ button. 
-    The close button will appear the same as for the header hence use __closebuttoncaption__ and __closebuttoncolor__ to set its properties.
-    - __footercolor__: set to a valid hex color string, for example `#00ff00` or `#CC00ff00` (`#aarrggbb`) , and it will change the footer color from default.
-    Only has effect if user has __footer__ set to `yes`.
-    - __hardwareback__: set to `yes` to use the hardware back button to navigate backwards through the `InAppBrowser`'s history. If there is no previous page, the `InAppBrowser` will close.  The default value is `yes`, so you must set it to `no` if you want the back button to simply close the InAppBrowser.
-    - __hidenavigationbuttons__: set to `yes` to hide the navigation buttons on the location toolbar, only has effect if user has location set to `yes`. The default value is `no`.
-    - __hideurlbar__: set to `yes` to hide the url bar on the location toolbar, only has effect if user has location set to `yes`. The default value is `no`.
-    - __navigationbuttoncolor__: set to a valid hex color string, for example: `#00ff00`, and it will change the color of both navigation buttons from default. Only has effect if user has location set to `yes` and not hidenavigationbuttons set to `yes`.
-    - __toolbarcolor__: set to a valid hex color string, for example: `#00ff00`, and it will change the color the toolbar from default. Only has effect if user has location set to `yes`.
-    - __lefttoright__: Set to `yes` to swap positions of the navigation buttons and the close button. Specifically, navigation buttons go to the right and close button to the left. Default value is `no`.
-    - __zoom__: set to `yes` to show Android browser's zoom controls, set to `no` to hide them.  Default value is `yes`.
-    - __mediaPlaybackRequiresUserAction__: Set to `yes` to prevent HTML5 audio or video from autoplaying (defaults to `no`).
-    - __shouldPauseOnSuspend__: Set to `yes` to make InAppBrowser WebView to pause/resume with the app to stop background audio (this may be required to avoid Google Play issues like described in [CB-11013](https://issues.apache.org/jira/browse/CB-11013)).
-    - __useWideViewPort__: Sets whether the WebView should enable support for the "viewport" HTML meta tag or should use a wide viewport. When the value of the setting is `no`, the layout width is always set to the width of the WebView control in device-independent (CSS) pixels. When the value is `yes` and the page contains the viewport meta tag, the value of the width specified in the tag is used. If the page does not contain the tag or does not provide a width, then a wide viewport will be used. (defaults to `yes`).
-    - __fullscreen__: Sets whether the InappBrowser WebView is displayed fullscreen or not. In fullscreen mode, the status bar is hidden. Default value is `yes`.
+    <ul>
+      <li><strong>hidden</strong>: set to <code>yes</code> to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to <code>no</code> (default) to have the browser open and load normally.</li>
+      <li><strong>beforeload</strong>: set to enable the <code>beforeload</code> event to modify which pages are actually loaded in the browser. Accepted values are <code>get</code> to intercept only GET requests, <code>post</code> to intercept on POST requests or <code>yes</code> to intercept both GET &amp; POST requests. Note that POST requests are not currently supported and will be ignored (if you set <code>beforeload=post</code> it will raise an error).</li>
+      <li><strong>clearcache</strong>: set to <code>yes</code> to have the browser&#39;s cookie cache cleared before the new window is opened</li>
+      <li><strong>clearsessioncache</strong>: set to <code>yes</code> to have the session cookie cache cleared before the new window is opened. For WKWebView, requires iOS 11+ on target device.</li>
+      <li><strong>cleardata</strong>: set to <code>yes</code> to have the browser&#39;s entire local storage cleared (cookies, HTML5 local storage, IndexedDB, etc.) before the new window is opened</li>
+      <li><strong>closebuttoncolor</strong>: set as a valid hex color string, for example: <code>#00ff00</code>, to change from the default <strong>Done</strong> button&#39;s color. Only applicable if toolbar is not disabled.</li>
+      <li><strong>closebuttoncaption</strong>: set to a string to use as the <strong>Done</strong> button&#39;s caption. Note that you need to localize this value yourself.</li>
+      <li><strong>disallowoverscroll</strong>: Set to <code>yes</code> or <code>no</code> (default is <code>no</code>). Turns on/off the the bounce of the WKWebView&#39;s UIScrollView.</li>
+      <li><strong>hidenavigationbuttons</strong>:  set to <code>yes</code> or <code>no</code> to turn the toolbar navigation buttons on or off (defaults to <code>no</code>). Only applicable if toolbar is not disabled.</li>
+      <li><strong>navigationbuttoncolor</strong>:  set as a valid hex color string, for example: <code>#00ff00</code>, to change from the default color. Only applicable if navigation buttons are visible.</li>
+      <li><strong>toolbar</strong>:  set to <code>yes</code> or <code>no</code> to turn the toolbar on or off for the InAppBrowser (defaults to <code>yes</code>)</li>
+      <li><strong>toolbarcolor</strong>: set as a valid hex color string, for example: <code>#00ff00</code>, to change from the default color of the toolbar. Only applicable if toolbar is not disabled.</li>
+      <li><strong>toolbartranslucent</strong>:  set to <code>yes</code> or <code>no</code> to make the toolbar translucent(semi-transparent)  (defaults to <code>yes</code>). Only applicable if toolbar is not disabled.</li>
+      <li><strong>lefttoright</strong>: Set to <code>yes</code> to swap positions of the navigation buttons and the close button. Specifically, close button goes to the right and navigation buttons to the left.</li>
+      <li><strong>enableViewportScale</strong>:  Set to <code>yes</code> or <code>no</code> to prevent viewport scaling through a meta tag (defaults to <code>no</code>).</li>
+      <li><strong>mediaPlaybackRequiresUserAction</strong>: Set to <code>yes</code> to prevent HTML5 audio or video from autoplaying (defaults to <code>no</code>).</li>
+      <li><strong>allowInlineMediaPlayback</strong>: Set to <code>yes</code> or <code>no</code> to allow in-line HTML5 media playback, displaying within the browser window rather than a device-specific playback interface. The HTML&#39;s <code>video</code> element must also include the <code>webkit-playsinline</code> attribute (defaults to <code>no</code>).</li>
+      <li><strong>presentationstyle</strong>:  Set to <code>pagesheet</code>, <code>formsheet</code> or <code>fullscreen</code> to set the <a href="https://developer.apple.com/documentation/uikit/uimodalpresentationstyle">presentation style</a> (defaults to <code>fullscreen</code>).</li>
+      <li><strong>transitionstyle</strong>: Set to <code>fliphorizontal</code>, <code>crossdissolve</code> or <code>coververtical</code> to set the <a href="https://developer.apple.com/documentation/uikit/uimodaltransitionstyle">transition style</a> (defaults to <code>coververtical</code>).</li>
+      <li><strong>toolbarposition</strong>: Set to <code>top</code> or <code>bottom</code> (default is <code>bottom</code>). Causes the toolbar to be at the top or bottom of the window.</li>
+      <li><strong>hidespinner</strong>: Set to <code>yes</code> or <code>no</code> to change the visibility of the loading indicator (defaults to <code>no</code>).</li>
+    </ul>
 
-    iOS supports these additional options:
+    <p>Windows supports these additional options:</p>
 
-    - __hidden__: set to `yes` to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to `no` (default) to have the browser open and load normally.
-    - __beforeload__: set to enable the `beforeload` event to modify which pages are actually loaded in the browser. Accepted values are `get` to intercept only GET requests, `post` to intercept on POST requests or `yes` to intercept both GET &amp; POST requests. Note that POST requests are not currently supported and will be ignored (if you set `beforeload=post` it will raise an error).
-    - __clearcache__: set to `yes` to have the browser's cookie cache cleared before the new window is opened
-    - __clearsessioncache__: set to `yes` to have the session cookie cache cleared before the new window is opened. For WKWebView, requires iOS 11+ on target device.
-    - __cleardata__: set to `yes` to have the browser's entire local storage cleared (cookies, HTML5 local storage, IndexedDB, etc.) before the new window is opened
-    - __closebuttoncolor__: set as a valid hex color string, for example: `#00ff00`, to change from the default __Done__ button's color. Only applicable if toolbar is not disabled.
-    - __closebuttoncaption__: set to a string to use as the __Done__ button's caption. Note that you need to localize this value yourself.
-    - __disallowoverscroll__: Set to `yes` or `no` (default is `no`). Turns on/off the the bounce of the WKWebView's UIScrollView.
-    - __hidenavigationbuttons__:  set to `yes` or `no` to turn the toolbar navigation buttons on or off (defaults to `no`). Only applicable if toolbar is not disabled.
-    - __navigationbuttoncolor__:  set as a valid hex color string, for example: `#00ff00`, to change from the default color. Only applicable if navigation buttons are visible.
-    - __toolbar__:  set to `yes` or `no` to turn the toolbar on or off for the InAppBrowser (defaults to `yes`)
-    - __toolbarcolor__: set as a valid hex color string, for example: `#00ff00`, to change from the default color of the toolbar. Only applicable if toolbar is not disabled.
-    - __toolbartranslucent__:  set to `yes` or `no` to make the toolbar translucent(semi-transparent)  (defaults to `yes`). Only applicable if toolbar is not disabled.
-    - __lefttoright__: Set to `yes` to swap positions of the navigation buttons and the close button. Specifically, close button goes to the right and navigation buttons to the left.
-    - __enableViewportScale__:  Set to `yes` or `no` to prevent viewport scaling through a meta tag (defaults to `no`).
-    - __mediaPlaybackRequiresUserAction__: Set to `yes` to prevent HTML5 audio or video from autoplaying (defaults to `no`).
-    - __allowInlineMediaPlayback__: Set to `yes` or `no` to allow in-line HTML5 media playback, displaying within the browser window rather than a device-specific playback interface. The HTML's `video` element must also include the `webkit-playsinline` attribute (defaults to `no`).
-    - __presentationstyle__:  Set to `pagesheet`, `formsheet` or `fullscreen` to set the [presentation style](https://developer.apple.com/documentation/uikit/uimodalpresentationstyle) (defaults to `fullscreen`).
-    - __transitionstyle__: Set to `fliphorizontal`, `crossdissolve` or `coververtical` to set the [transition style](https://developer.apple.com/documentation/uikit/uimodaltransitionstyle) (defaults to `coververtical`).
-    - __toolbarposition__: Set to `top` or `bottom` (default is `bottom`). Causes the toolbar to be at the top or bottom of the window.
-    - __hidespinner__: Set to `yes` or `no` to change the visibility of the loading indicator (defaults to `no`).
+    <ul>
+      <li><strong>hidden</strong>: set to <code>yes</code> to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to <code>no</code> (default) to have the browser open and load normally.</li>
+      <li><strong>hardwareback</strong>: works the same way as on Android platform.</li>
+      <li><strong>fullscreen</strong>: set to <code>yes</code> to create the browser control without a border around it. Please note that if <strong>location=no</strong> is also specified, there will be no control presented to user to close IAB window.</li>
+    </ul>
+  </li>
+</ul>
 
-    Windows supports these additional options:
+<h3>Supported Platforms</h3>
 
-    - __hidden__: set to `yes` to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to `no` (default) to have the browser open and load normally.
-    - __hardwareback__: works the same way as on Android platform.
-    - __fullscreen__: set to `yes` to create the browser control without a border around it. Please note that if __location=no__ is also specified, there will be no control presented to user to close IAB window.
+<ul>
+  <li>Android</li>
+  <li>Browser</li>
+  <li>iOS</li>
+  <li>OSX</li>
+  <li>Windows</li>
+</ul>
 
+<h3>Example</h3>
 
-### Supported Platforms
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+var ref2 = cordova.InAppBrowser.open(encodeURI('http://ja.m.wikipedia.org/wiki/ハングル'), '_blank', 'location=yes');
+</code></pre></div></div>
 
-- Android
-- Browser
-- iOS
-- OSX
-- Windows
+<h3>OSX Quirks</h3>
 
-### Example
+<p>At the moment the only supported target in OSX is <code>_system</code>.</p>
 
-    var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
-    var ref2 = cordova.InAppBrowser.open(encodeURI('http://ja.m.wikipedia.org/wiki/ハングル'), '_blank', 'location=yes');
+<p><code>_blank</code> and <code>_self</code> targets are not yet implemented and are ignored silently. Pull requests and patches to get these to work are greatly appreciated.</p>
 
-### OSX Quirks
+<h3>iOS Quirks</h3>
 
-At the moment the only supported target in OSX is `_system`.
+<p>Since the introduction of iPadOS 13, iPads try to adapt their content mode / user agent for the optimal browsing experience. This may result in iPads having their user agent set to Macintosh, making it hard to detect them as mobile devices using user agent string sniffing. You can change this with the <code>PreferredContentMode</code> preference in <code>config.xml</code>.</p>
 
-`_blank` and `_self` targets are not yet implemented and are ignored silently. Pull requests and patches to get these to work are greatly appreciated.
-
-### iOS Quirks
-
-Since the introduction of iPadOS 13, iPads try to adapt their content mode / user agent for the optimal browsing experience. This may result in iPads having their user agent set to Macintosh, making it hard to detect them as mobile devices using user agent string sniffing. You can change this with the `PreferredContentMode` preference in `config.xml`.
-
-```xml
-&lt;preference name="PreferredContentMode" value="mobile" /&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"PreferredContentMode"</span> <span class="na">value=</span><span class="s">"mobile"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 
 <p>The example above forces the user agent to contain <code>iPad</code>. The other option is to use the value <code>desktop</code> to turn the user agent to <code>Macintosh</code>.</p>
