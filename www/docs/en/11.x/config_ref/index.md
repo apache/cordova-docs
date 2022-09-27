@@ -159,11 +159,11 @@ Examples:
 ```
 
 ## access
-Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain [Whitelist Guide](../guide/appdev/whitelist/index.html) for details.
+Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain [Whitelist Guide](../guide/appdev/allowlist/index.html) for details.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
-origin(string) | *Required* <br/> Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain [Whitelist Guide](../guide/appdev/whitelist/index.html) for details.
+origin(string) | *Required* <br/> Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain [Whitelist Guide](../guide/appdev/allowlist/index.html) for details.
 
 Examples:
 
@@ -183,7 +183,7 @@ Controls which URLs the WebView itself can be navigated to. Applies to top-level
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
-href(string) | *Required* <br/> Defines the set of external domains the WebView is allowed to navigate to. See the cordova-plugin-whitelist [cordova-plugin-whitelist][whitelist_navigation] for details.
+href(string) | *Required* <br/> Defines the set of external domains the WebView is allowed to navigate to. See the [Allow List Guide][whitelist_navigation] for details.
 
 Examples:
 
@@ -200,7 +200,7 @@ Controls which URLs the app is allowed to ask the system to open. By default, no
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
-href(string) | *Required* <br/> Defines which URLs the app is allowed to ask the system to open. See the cordova-plugin-whitelist [cordova-plugin-whitelist][whitelist_intent] for details.
+href(string) | *Required* <br/> Defines which URLs the app is allowed to ask the system to open. See the [Allow List Guide][whitelist_intent] for details.
 
 Examples:
 
@@ -541,8 +541,8 @@ Below is a sample config.xml file:
 [plugin_preference]:    ../plugin_ref/spec.html#preference
 [plugin_spec]:          ../reference/cordova-cli/index.html#plugin-spec
 [plugin_cli]:           ../reference/cordova-cli/index.html#cordova-plugin-command
-[whitelist_navigation]: ../reference/cordova-plugin-whitelist/index.html#navigation-whitelist
-[whitelist_intent]:     ../reference/cordova-plugin-whitelist/index.html#intent-whitelist
+[whitelist_navigation]: ../guide/appdev/allowlist/index.html#navigation-allow-list
+[whitelist_intent]:     ../guide/appdev/allowlist/index.html#intent-allow-list
 [statusbar_plugin]:     ../reference/cordova-plugin-statusbar/
 [edit_config]:          ../plugin_ref/spec.html#edit-config
 [config_file]:          ../plugin_ref/spec.html#config-file
