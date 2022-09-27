@@ -212,11 +212,11 @@ Examples:
 ```
 ## edit-config
 
-See [<edit-config> docs][edit_config] for plugin.xml.
+See [&lt;edit-config&gt; docs][edit_config] for plugin.xml.
 
 ## config-file
 
-See [<config-file> docs][config_file] for plugin.xml.
+See [&lt;config-file&gt; docs][config_file] for plugin.xml.
 
 ## engine
 Specifies details about what platform to restore during a prepare.
