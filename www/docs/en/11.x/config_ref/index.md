@@ -144,13 +144,11 @@ Examples:
 
 
 ## content
-Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily
-appears in a project's top-level ```www``` directory.
+Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily appears in a project's top-level ```www``` directory.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
-src(string) | *Required* <br/> Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily
-appears in a project's top-level ```www``` directory.
+src(string) | *Required* <br/> Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily appears in a project's top-level ```www``` directory.
 
 Examples:
 
@@ -161,14 +159,11 @@ Examples:
 ```
 
 ## access
-Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server.
-See the Domain [Whitelist Guide](../guide/appdev/whitelist/index.html) for details.
+Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain [Whitelist Guide](../guide/appdev/whitelist/index.html) for details.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
-origin(string) | *Required* <br/> Defines the set of external domains the app is allowed to communicate with.
-The default value shown above allows it to access any server.
-See the Domain [Whitelist Guide](../guide/appdev/whitelist/index.html) for details.
+origin(string) | *Required* <br/> Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain [Whitelist Guide](../guide/appdev/whitelist/index.html) for details.
 
 Examples:
 
@@ -188,8 +183,7 @@ Controls which URLs the WebView itself can be navigated to. Applies to top-level
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
-href(string) | *Required* <br/> Defines the set of external domains the WebView is allowed to navigate to.
-See the cordova-plugin-whitelist [cordova-plugin-whitelist][whitelist_navigation] for details.
+href(string) | *Required* <br/> Defines the set of external domains the WebView is allowed to navigate to. See the cordova-plugin-whitelist [cordova-plugin-whitelist][whitelist_navigation] for details.
 
 Examples:
 
@@ -206,8 +200,7 @@ Controls which URLs the app is allowed to ask the system to open. By default, no
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
-href(string) | *Required* <br/> Defines which URLs the app is allowed to ask the system to open.
-See the cordova-plugin-whitelist [cordova-plugin-whitelist][whitelist_intent] for details.
+href(string) | *Required* <br/> Defines which URLs the app is allowed to ask the system to open. See the cordova-plugin-whitelist [cordova-plugin-whitelist][whitelist_intent] for details.
 
 Examples:
 
@@ -526,7 +519,6 @@ Below is a sample config.xml file:
       Apache Cordova Team
   </author>
   <content src="index.html" />
-  <plugin name="cordova-plugin-whitelist" spec="1" />
   <access origin="*" />
   <allow-intent href="http://*/*" />
   <allow-intent href="https://*/*" />
