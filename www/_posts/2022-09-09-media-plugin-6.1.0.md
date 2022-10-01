@@ -24,7 +24,7 @@ For Android, we updated the media error response object to include the "message"
 
 For iOS, file scheme support has been implemented. Two fixes were applied to prevent crashes that occured when fetching the position while the time was not defined and to ensured that the category was defined after the recording was released.
 
-Please report any issues you find at [issues.cordova.io](http://issues.cordova.io/)!
+Please report any issues you find by following the this [How to File a Bug](https://github.com/apache/cordova#filing-a-bug) guide!
 
 <!--more-->
 # Changes include:
