@@ -2444,13 +2444,22 @@ platform. See <a href="images.html">Customize icons topic</a> for more informati
 </code></pre></div></div>
 
 <h2>content</h2>
-<p>Defines the app&#39;s starting page in the top-level web assets directory. The default value is index.html, which customarily
-appears in a project&#39;s top-level <code>www</code> directory.</p>
+<p>Defines the app&#39;s starting page in the top-level web assets directory. The default value is index.html, which customarily appears in a project&#39;s top-level <code>www</code> directory.</p>
 
-<p>Attributes(type) <br /> <span class="sub-header">Only for platform:</span> | Description
-&#8212;&#8212;&#8212;&#8212;&#8212;-- | &#8212;&#8212;&#8212;&#8212;
-src(string) | <em>Required</em> <br /> Defines the app&#39;s starting page in the top-level web assets directory. The default value is index.html, which customarily
-appears in a project&#39;s top-level <code>www</code> directory.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>src(string)</td>
+      <td><em>Required</em> <br /> Defines the app&#39;s starting page in the top-level web assets directory. The default value is index.html, which customarily appears in a project&#39;s top-level <code>www</code> directory.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
 
@@ -2460,14 +2469,22 @@ appears in a project&#39;s top-level <code>www</code> directory.</p>
 </code></pre></div></div>
 
 <h2>access</h2>
-<p>Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server.
-See the Domain <a href="../guide/appdev/whitelist/index.html">Whitelist Guide</a> for details.</p>
+<p>Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain <a href="../guide/appdev/allowlist/index.html">Whitelist Guide</a> for details.</p>
 
-<p>Attributes(type) <br /> <span class="sub-header">Only for platform:</span> | Description
-&#8212;&#8212;&#8212;&#8212;&#8212;-- | &#8212;&#8212;&#8212;&#8212;
-origin(string) | <em>Required</em> <br /> Defines the set of external domains the app is allowed to communicate with.
-The default value shown above allows it to access any server.
-See the Domain <a href="../guide/appdev/whitelist/index.html">Whitelist Guide</a> for details.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>origin(string)</td>
+      <td><em>Required</em> <br /> Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain <a href="../guide/appdev/allowlist/index.html">Whitelist Guide</a> for details.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
 
@@ -2483,10 +2500,20 @@ See the Domain <a href="../guide/appdev/whitelist/index.html">Whitelist Guide</a
 <h2>allow-navigation</h2>
 <p>Controls which URLs the WebView itself can be navigated to. Applies to top-level navigations only.</p>
 
-<p>Attributes(type) <br /> <span class="sub-header">Only for platform:</span> | Description
-&#8212;&#8212;&#8212;&#8212;&#8212;-- | &#8212;&#8212;&#8212;&#8212;
-href(string) | <em>Required</em> <br /> Defines the set of external domains the WebView is allowed to navigate to.
-See the cordova-plugin-whitelist <a href="../reference/cordova-plugin-whitelist/index.html#navigation-whitelist">cordova-plugin-whitelist</a> for details.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>href(string)</td>
+      <td><em>Required</em> <br /> Defines the set of external domains the WebView is allowed to navigate to. See the <a href="../guide/appdev/allowlist/index.html#navigation-allow-list">Allow List Guide</a> for details.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
 
@@ -2500,10 +2527,20 @@ See the cordova-plugin-whitelist <a href="../reference/cordova-plugin-whitelist/
 <h2>allow-intent</h2>
 <p>Controls which URLs the app is allowed to ask the system to open. By default, no external URLs are allowed.</p>
 
-<p>Attributes(type) <br /> <span class="sub-header">Only for platform:</span> | Description
-&#8212;&#8212;&#8212;&#8212;&#8212;-- | &#8212;&#8212;&#8212;&#8212;
-href(string) | <em>Required</em> <br /> Defines which URLs the app is allowed to ask the system to open.
-See the cordova-plugin-whitelist <a href="../reference/cordova-plugin-whitelist/index.html#intent-whitelist">cordova-plugin-whitelist</a> for details.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>href(string)</td>
+      <td><em>Required</em> <br /> Defines which URLs the app is allowed to ask the system to open. See the <a href="../guide/appdev/allowlist/index.html#intent-allow-list">Allow List Guide</a> for details.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Examples:</p>
 
@@ -2514,11 +2551,11 @@ See the cordova-plugin-whitelist <a href="../reference/cordova-plugin-whitelist/
 </code></pre></div></div>
 <h2>edit-config</h2>
 
-<p>See [<edit-config> docs][edit_config] for plugin.xml.</edit-config></p>
+<p>See <a href="../plugin_ref/spec.html#edit-config">&lt;edit-config&gt; docs</a> for plugin.xml.</p>
 
 <h2>config-file</h2>
 
-<p>See [<config-file> docs][config_file] for plugin.xml.</config-file></p>
+<p>See <a href="../plugin_ref/spec.html#config-file">&lt;config-file&gt; docs</a> for plugin.xml.</p>
 
 <h2>engine</h2>
 <p>Specifies details about what platform to restore during a prepare.</p>
@@ -2635,7 +2672,7 @@ and will be indicated as such.</p>
     </tr>
     <tr>
       <td>AllowNewWindows(boolean) <br /> ==iOS==</td>
-      <td><em>Default: false</em> <br /> Set to true to allow JavaScript <code>window.open</code> and HTML <code>target="\_blank"</code> links to open a new view overlaying the web view.</td>
+      <td><em>Default: false</em> <br /> Set to true to allow JavaScript <code>window.open</code> and HTML <code>target="_blank"</code> links to open a new view overlaying the web view.</td>
     </tr>
     <tr>
       <td>AndroidLaunchMode(string) <br /> ==Android==</td>
@@ -2643,7 +2680,7 @@ and will be indicated as such.</p>
     </tr>
     <tr>
       <td>AndroidInsecureFileModeEnabled(boolean) <br /> ==Android==</td>
-      <td><em>Default: false</em> <br />  If set to <code>true</code> loading <code>file:///</code> URLs is allowed. <strong>Note</strong>: Enabling this setting allows malicious scripts loaded in a file:// context to launch cross-site scripting attacks, either accessing arbitrary local files including WebView cookies, app private data or even credentials used on arbitrary web sites.</td>
+      <td><em>Default: false</em> <br />  If set to <code>true</code> loading <code>file:///</code> URLs is allowed. <strong>Note</strong>: Enabling this setting allows malicious scripts loaded in a <code>file:///</code> context to launch cross-site scripting attacks, either accessing arbitrary local files including WebView cookies, app private data or even credentials used on arbitrary web sites.</td>
     </tr>
     <tr>
       <td>android-maxSdkVersion(integer) <br /> ==Android==</td>
@@ -2739,7 +2776,7 @@ and will be indicated as such.</p>
     </tr>
     <tr>
       <td>KeepRunning(boolean) <br /> ==Android==</td>
-      <td><em>Default: true</em> <br />  Determines whether the application stays running in the background even after a <a href="../../../cordova/events/events.pause.html">pause</a> event fires. Setting this to false does not kill the app after a <a href="../../../cordova/events/events.pause.html">pause</a> event, but simply halts execution of code within the cordova webview while the app is in the background.</td>
+      <td><em>Default: true</em> <br />  Determines whether the application stays running in the background even after a <a href="../cordova/events/events.html#pause">pause</a> event fires. Setting this to false does not kill the app after a <a href="../cordova/events/events.html#pause">pause</a> event, but simply halts execution of code within the cordova webview while the app is in the background.</td>
     </tr>
     <tr>
       <td>KeyboardDisplayRequiresUserAction(boolean) <br /> ==iOS==</td>
@@ -3111,7 +3148,6 @@ default Cordova functionality. See <a href="../guide/appdev/hooks/index.html">Ho
       Apache Cordova Team
   <span class="nt">&lt;/author&gt;</span>
   <span class="nt">&lt;content</span> <span class="na">src=</span><span class="s">"index.html"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">"cordova-plugin-whitelist"</span> <span class="na">spec=</span><span class="s">"1"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"*"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"http://*/*"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"https://*/*"</span> <span class="nt">/&gt;</span>
