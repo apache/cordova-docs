@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released Cordova Android 11.0.0! This is one of Cordova&#39;s supported platforms for building Android application...">
+    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-media!  cordova-plugin-media@6.1.0To upgrade:cordova plugin remove cordova-p...">
 
     <title>
         
             
-                Cordova Android 11.0.0 Released! - Apache Cordova
+                Media Plugin 6.1.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2022/07/12/cordova-android-release-11.0.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/news/2022/09/09/media-plugin-6.1.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,130 +129,44 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova Android 11.0.0 Released!</div>
+        <div class="title">Media Plugin 6.1.0 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">12 Jul 2022</div>
+        <div class="date">09 Sep 2022</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released <code>Cordova Android 11.0.0</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
+            <p>We are happy to announce that we have just released an update for <code>cordova-plugin-media</code>!</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@11.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-media">cordova-plugin-media@6.1.0</a></li>
 </ul>
-
-<h2>Release Highlights</h2>
 
 <p><strong>To upgrade:</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
-cordova platform add android@11.0.0
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-media
+cordova plugin add cordova-plugin-media@6.1.0
 </code></pre></div></div>
 
-<p><strong>To install:</strong></p>
+<h2>Release Highlights</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@11.0.0
-</code></pre></div></div>
+<p>For Android, we updated the media error response object to include the &quot;message&quot; property. This property will provide additional information about the error. It also syncs in line with the media error response object that iOS returns.</p>
 
-<ul>
-  <li>
-    <p><strong>Android 12 SplashScreen API Integration</strong></p>
+<p>For iOS, file scheme support has been implemented. Two fixes were applied to prevent crashes that occured when fetching the position while the time was not defined and to ensured that the category was defined after the recording was released.</p>
 
-    <p>As of Android 12, all Android 12 or higher devices display the new app launch animation. Google has applied this requirement to bring a standard design to all app launch screens.</p>
-
-    <p>Due to this requirement, users have seen and reported the display of multiple SplashScreens during the app launch. Since the new SplashScreen API can not be disabled, the old SplashScreen plugin is deprecated for Cordova-Android 11+.</p>
-
-    <p>We have integrated the Android 12 SplashScreen API including the compatibility library into the core of the Cordova-Android platform to provide support for Android API 22+.</p>
-
-    <p>For more information, please refer to the <a href="https://github.com/apache/cordova-android/pull/1441">PR</a> and <a href="https://cordova.apache.org/docs/en/latest/core/features/splashscreen/index.html">Cordova Docs</a>.</p>
-  </li>
-  <li>
-    <p><strong>Tooling and Default Support Bump</strong></p>
-
-    <ul>
-      <li>Target SDK (<code>targetSdk</code>): <code>32</code></li>
-      <li>SDK Build Tool: <code>32.0.0</code></li>
-      <li>Gradle: <code>7.4.2</code></li>
-      <li>Kotlin: <code>1.5.21</code></li>
-      <li>Android Gradle Plugin (AGP): <code>7.2.1</code></li>
-      <li>Google Services Gradle Plugin: <code>4.3.10</code></li>
-      <li>AndroidX App Compat Library: <code>1.4.2</code></li>
-      <li>AndroidX WebKit Library: <code>1.4.0</code></li>
-      <li>AndroidX SplashScreen Core Library: <code>1.0.0-rc01</code></li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>Environment Variable <code>ANDROID_HOME</code></strong></p>
-
-    <p>As of April 27, 2022, It appears Google has reversed its statement and declared that <code>ANDROID_HOME</code> is now the correct environment variable to set with the path of the SDK installation directory. It also notes that <code>ANDROID_SDK_ROOT</code> that also points to the SDK installation directory is deprecated.</p>
-  </li>
-  <li>
-    <p><strong>Custom Compile SDK</strong></p>
-
-    <p>We added back the ability to set a custom compileSdk value with the preference flag <code>android-compileSdkVersion</code>.</p>
-
-    <p>Example:</p>
-
-    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"android-compileSdkVersion"</span> <span class="na">value=</span><span class="s">"31"</span> <span class="nt">/&gt;</span>
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p><strong>Node Support</strong></p>
-
-    <p>Since Node 12 is no longer being supported by the Node.js team, we have dropped support for Node 12.</p>
-  </li>
-</ul>
-
-<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+<p>Please report any issues you find by following the this <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
-<p><strong>Breaking:</strong></p>
-
 <ul>
-  <li><a href="https://github.com/apache/cordova-android/pull/1441">GH-1441</a> feat!: <strong>Android</strong> 12 splash screen</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1427">GH-1427</a> feat!: API 32 support</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1410">GH-1410</a> feat!: API 31 support</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1444">GH-1444</a> fix!: set &amp; use <code>ANDROID_HOME</code> as default</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1411">GH-1411</a> chore!: Drop Node 12 support</li>
-</ul>
-
-<p><strong>Features:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-android/pull/1448">GH-1448</a> feat: Update <code>androidx.appcompat</code> version</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1446">GH-1446</a> feat: Update gradle plugin version</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1447">GH-1447</a> feat: Update google services pluging</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1431">GH-1431</a> feat: support custom <code>compileSdk</code> setting</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1311">GH-1311</a> feat: added support for BoM imports</li>
-</ul>
-
-<p><strong>Fixes:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-android/pull/1455">GH-1455</a> fix(<code>prepare</code>): <code>destFile</code> path separator</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1453">GH-1453</a> fix: support installing platfrom from local git checkout</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1449">GH-1449</a> fix: accept file cookies only if <code>AndroidInsecureFileModeEnabled</code></li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1443">GH-1443</a> fix: force <code>hostname</code> to lowercase</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1434">GH-1434</a> fix: restore <code>checkReqs</code> in <code>prepare.js</code></li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1154">GH-1154</a> fix: move <code>MainActivity.java</code> to folder that tracks the app package name (widget id)</li>
-</ul>
-
-<p><strong>Chores, Dependencies &amp; CI:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-android/pull/1451">GH-1451</a> chore: display warning on deprecated <code>&lt;splash&gt;</code> tag usage</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1430">GH-1430</a> chore: remove unneeded deprecated annotation</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1421">GH-1421</a> chore(npm): bump <code>@cordova/eslint-config@^4.0.0</code></li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1420">GH-1420</a> chore(npm): bump dependencies</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1452">GH-1452</a> dep: bump <code>jasmine@4.2.1</code> w/ <code>package-lock</code> rebuild</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1439">GH-1439</a> ci: update github action workflow</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1424">GH-1424</a> ci: Added Node 18 to test matrix</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/357">GH-357</a> feat(android): add &#39;<code>message</code>&#39; field to media error <a href="https://issues.apache.org/jira/browse/CB-11641">CB-11641</a></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/352">GH-352</a> feat(ios): support <code>file</code> scheme</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/354">GH-354</a> fix(ios): Reset default audio session category when release (<a href="https://issues.apache.org/jira/browse/CB-13243">CB-13243</a>)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/353">GH-353</a> fix(ios): error on <code>getPosition</code> when time is <code>nan</code></li>
 </ul>
 
         </div>
@@ -261,37 +175,17 @@ cordova platform add android@11.0.0
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/news/2022/05/30/media-plugin-6.0.0-media-capture-plugin-4.0.0-release.html">Previous</a>
+                    <a href="/announcements/2022/07/12/cordova-android-release-11.0.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/news/2022/05/30/media-plugin-6.0.0-media-capture-plugin-4.0.0-release.html">Media Plugin 6.0.0 & Media Capture Plugin 4.0.0 Released!</a>
-                    <div class="date"> 30 May 2022 - By Bryan Ellis </div>
+                    <a class="title" href="/announcements/2022/07/12/cordova-android-release-11.0.0.html">Cordova Android 11.0.0 Released!</a>
+                    <div class="date"> 12 Jul 2022 - By Bryan Ellis </div>
                     <p class="content">
-                        We are happy to announce that we have just released an update...
+                        We are happy to announce that we have just released Cordova Android...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/news/2022/09/09/media-plugin-6.1.0.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/news/2022/09/09/media-plugin-6.1.0.html">Media Plugin 6.1.0 Released!</a>
-                    <div class="date"> 09 Sep 2022 - By Bryan Ellis </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released an update...
-                    </p>
                 
             </div>
         </div>
