@@ -144,13 +144,11 @@ Examples:
 
 
 ## content
-Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily
-appears in a project's top-level ```www``` directory.
+Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily appears in a project's top-level ```www``` directory.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
-src(string) | *Required* <br/> Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily
-appears in a project's top-level ```www``` directory.
+src(string) | *Required* <br/> Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily appears in a project's top-level ```www``` directory.
 
 Examples:
 
@@ -161,14 +159,11 @@ Examples:
 ```
 
 ## access
-Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server.
-See the Domain [Whitelist Guide](../guide/appdev/whitelist/index.html) for details.
+Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain [Whitelist Guide](../guide/appdev/allowlist/index.html) for details.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
-origin(string) | *Required* <br/> Defines the set of external domains the app is allowed to communicate with.
-The default value shown above allows it to access any server.
-See the Domain [Whitelist Guide](../guide/appdev/whitelist/index.html) for details.
+origin(string) | *Required* <br/> Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain [Whitelist Guide](../guide/appdev/allowlist/index.html) for details.
 
 Examples:
 
@@ -188,8 +183,7 @@ Controls which URLs the WebView itself can be navigated to. Applies to top-level
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
-href(string) | *Required* <br/> Defines the set of external domains the WebView is allowed to navigate to.
-See the cordova-plugin-whitelist [cordova-plugin-whitelist][whitelist_navigation] for details.
+href(string) | *Required* <br/> Defines the set of external domains the WebView is allowed to navigate to. See the [Allow List Guide][whitelist_navigation] for details.
 
 Examples:
 
@@ -206,8 +200,7 @@ Controls which URLs the app is allowed to ask the system to open. By default, no
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
-href(string) | *Required* <br/> Defines which URLs the app is allowed to ask the system to open.
-See the cordova-plugin-whitelist [cordova-plugin-whitelist][whitelist_intent] for details.
+href(string) | *Required* <br/> Defines which URLs the app is allowed to ask the system to open. See the [Allow List Guide][whitelist_intent] for details.
 
 Examples:
 
@@ -219,11 +212,11 @@ Examples:
 ```
 ## edit-config
 
-See [<edit-config> docs][edit_config] for plugin.xml.
+See [&lt;edit-config&gt; docs][edit_config] for plugin.xml.
 
 ## config-file
 
-See [<config-file> docs][config_file] for plugin.xml.
+See [&lt;config-file&gt; docs][config_file] for plugin.xml.
 
 ## engine
 Specifies details about what platform to restore during a prepare.
@@ -290,9 +283,9 @@ and will be indicated as such.
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
 AllowInlineMediaPlayback(boolean) <br/> ==iOS== | *Default: false* <br/>  Set to true to allow HTML5 media playback to appear inline within the screen layout, using browser-supplied controls rather than native controls. For this to work, add the ```playsinline``` attribute to any ```<video>``` elements. *NOTE*: Prior to iOS 10, ```<video>``` elements need to use the ```webkit-playsinline``` attribute name instead.
-AllowNewWindows(boolean) <br/> ==iOS== | *Default: false* <br/> Set to true to allow JavaScript `window.open` and HTML `target="\_blank"` links to open a new view overlaying the web view.
+AllowNewWindows(boolean) <br/> ==iOS== | *Default: false* <br/> Set to true to allow JavaScript `window.open` and HTML `target="_blank"` links to open a new view overlaying the web view.
 AndroidLaunchMode(string) <br/> ==Android== | *Default: singleTop* <br/> Allowed values: standard, singleTop, singleTask, singleInstance <br/>  Sets the Activity android:launchMode attribute. This changes what happens when the app is launched from app icon or intent and is already running.
-AndroidInsecureFileModeEnabled(boolean) <br/> ==Android== | *Default: false* <br/>  If set to `true` loading `file:///` URLs is allowed. __Note__: Enabling this setting allows malicious scripts loaded in a file:// context to launch cross-site scripting attacks, either accessing arbitrary local files including WebView cookies, app private data or even credentials used on arbitrary web sites.
+AndroidInsecureFileModeEnabled(boolean) <br/> ==Android== | *Default: false* <br/>  If set to `true` loading `file:///` URLs is allowed. __Note__: Enabling this setting allows malicious scripts loaded in a `file:///` context to launch cross-site scripting attacks, either accessing arbitrary local files including WebView cookies, app private data or even credentials used on arbitrary web sites.
 android-maxSdkVersion(integer) <br/> ==Android== | *Default: Not Specified* <br/>  Sets the `maxSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
 android-minSdkVersion(integer) <br/> ==Android== | *Default: Dependent on cordova-android Version* <br/>  Sets the `minSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
 android-targetSdkVersion(integer) <br/> ==Android== | *Default: Dependent on cordova-android Version* <br/>  Sets the `targetSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
@@ -316,7 +309,7 @@ GradlePluginKotlinEnabled (boolean) <br/> ==Android== | *Default: false* <br/>  
 GradlePluginKotlinCodeStyle (string) <br/> ==Android== | *Default: official* <br/> Allowed values: official, obsolete<br/>  Sets how the Kotlin code is formatting for readability.
 GradlePluginKotlinVersion (semver) <br/> ==Android== | *Default: 1.3.50* <br/> Set the version of the Kotlin Gradle plugin to be used.
 InAppBrowserStorageEnabled (boolean) <br/> ==Android== | *Default: true* <br/>  Controls whether pages opened within an InAppBrowser can access the same localStorage and WebSQL storage as pages opened with the default browser.
-KeepRunning(boolean) <br/> ==Android== | *Default: true* <br/>  Determines whether the application stays running in the background even after a [pause](../../../cordova/events/events.pause.html) event fires. Setting this to false does not kill the app after a [pause](../../../cordova/events/events.pause.html) event, but simply halts execution of code within the cordova webview while the app is in the background.
+KeepRunning(boolean) <br/> ==Android== | *Default: true* <br/>  Determines whether the application stays running in the background even after a [pause](../cordova/events/events.html#pause) event fires. Setting this to false does not kill the app after a [pause](../cordova/events/events.html#pause) event, but simply halts execution of code within the cordova webview while the app is in the background.
 KeyboardDisplayRequiresUserAction(boolean) <br/> ==iOS== | *Default: true* <br/>  Set to false to allow the keyboard to appear when calling focus() on form inputs.
 LoadUrlTimeoutValue(number in milliseconds) <br/> ==Android== | *Default: 20000, 20 seconds* <br/>  When loading a page, the amount of time to wait before throwing a timeout error.
 LoadingDialog(string) <br/> ==Android== | *Default: null* <br/>  If set, displays a dialog with the specified title and message, and a spinner, when loading the first page of an application. The title and message are separated by a comma in this value string, and that comma is removed before the dialog is displayed.
@@ -526,7 +519,6 @@ Below is a sample config.xml file:
       Apache Cordova Team
   </author>
   <content src="index.html" />
-  <plugin name="cordova-plugin-whitelist" spec="1" />
   <access origin="*" />
   <allow-intent href="http://*/*" />
   <allow-intent href="https://*/*" />
@@ -549,8 +541,8 @@ Below is a sample config.xml file:
 [plugin_preference]:    ../plugin_ref/spec.html#preference
 [plugin_spec]:          ../reference/cordova-cli/index.html#plugin-spec
 [plugin_cli]:           ../reference/cordova-cli/index.html#cordova-plugin-command
-[whitelist_navigation]: ../reference/cordova-plugin-whitelist/index.html#navigation-whitelist
-[whitelist_intent]:     ../reference/cordova-plugin-whitelist/index.html#intent-whitelist
+[whitelist_navigation]: ../guide/appdev/allowlist/index.html#navigation-allow-list
+[whitelist_intent]:     ../guide/appdev/allowlist/index.html#intent-allow-list
 [statusbar_plugin]:     ../reference/cordova-plugin-statusbar/
 [edit_config]:          ../plugin_ref/spec.html#edit-config
 [config_file]:          ../plugin_ref/spec.html#config-file

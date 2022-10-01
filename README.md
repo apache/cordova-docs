@@ -26,7 +26,7 @@ The site is built using a [gulp script](gulpfile.js) that is run by Node.JS (`np
 
 ### Common Tasks
 
-- [Working on `www/docs`](doc/working-on-docs.md) (updating drom `dev`, creating new version, pulling in external docs)
+- [Working on `www/docs`](doc/working-on-docs.md) (updating from `dev`, creating new version, pulling in external docs)
 - [Writing a Blog Post](doc/blogpost.md)
 - [Adding a Tool or a Showcase App](doc/tool-or-showcase-app.md)
 - [Translating](doc/translate.md)
