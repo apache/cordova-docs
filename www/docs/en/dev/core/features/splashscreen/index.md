@@ -111,7 +111,7 @@ projectRoot
 
 ### Android-specific Information
 
-Starting in Android 12, Google has implemented a new SplashScreen API to controls the app launch animation which runs on a device with Android 12 and higher. For backwards compatibility, Cordova has included the `core-splashscreen` compatibility library which extends this features back to Android API 21 and higher.
+Starting in Android 12, Google has implemented a new SplashScreen API to control the app launch animation which runs on a device with Android 12 and higher. For backwards compatibility, Cordova has included the `core-splashscreen` compatibility library which extends this features back to Android API 21 and higher.
 
 To effectively create your own Android SplashScreen assets, it is important to understand the requirements of an Adaptive Icon.
 
