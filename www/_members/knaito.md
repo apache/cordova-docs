@@ -6,6 +6,6 @@ twitter: https://twitter.com/knight_9999
 homepage: https://github.com/knight9999
 ---
 
-First learned about Cordova in 2012 and since then have been involved in hybrid app development, development support, and plugin development.
-Joined PMC Member in 2018 and assist with development and testing.
+Has first learned about Cordova in 2012 and has since been involved in hybrid app and plugin development and support.
+Joined PMC in 2018 and assists with development and testing.
 
