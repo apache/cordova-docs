@@ -5,11 +5,11 @@ title: Apache Cordova Contribute Guidelines
 
 # Contributor Guidelines
 
-Thanks for helping to improve Cordova! This page provides a general guide on making contributions to Cordova. If you can't find something on this page, please feel free to contact the [dev mailing list](http://cordova.apache.org/contact) or ask questions on the [Cordova Slack](http://slack.cordova.io/).
+Thanks for helping to improve Cordova! This page provides a general guide on making contributions to Cordova. If you can't find something on this page, please feel free to contact the [dev mailing list](https://cordova.apache.org/contact) or ask questions on the [Cordova Slack](http://slack.cordova.io/).
 
 ## Prerequisites
 
-Before contributing to Apache Cordova, it is recommended that you join the [mailing list](http://cordova.apache.org/contact/) and send a brief introduction of yourself.
+Before contributing to Apache Cordova, it is recommended that you join the [mailing list](https://cordova.apache.org/contact/) and send a brief introduction of yourself.
 
 ## Working with Issues
 Issues for all Apache Cordova components are on [GitHub](https://github.com/apache/cordova). When reporting issues, please follow [these guidelines](./issues.html).
@@ -30,15 +30,15 @@ The workflow for creating pull requests on Github generally follows these steps:
 2. [Create a local fork](https://help.github.com/articles/fork-a-repo/) of the appropriate Cordova repository
 3. In your local fork, create a branch dedicated to the issue you are working on
 4. Push your commits to this branch
-5. [Squash](http://www.git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Squashing-Commits) these commits into one single commit (see the section below regarding commit messages)
+5. [Squash](https://www.git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Squashing-Commits) these commits into one single commit (see the section below regarding commit messages)
 6. [Create a pull request](https://help.github.com/articles/using-pull-requests/) on the Cordova repository
 7. Ask for code review
 
-Please include the issue ID in the title of any pull requests made to Github. For more help on Git, see the [Git documentation](http://git-scm.com/doc).
+Please include the issue ID in the title of any pull requests made to Github. For more help on Git, see the [Git documentation](https://git-scm.com/doc).
 
 #### Code review
 
-However you submit code, you should always call out a reviewer to look at and merge your code. GitHub helpfully suggests possible reviewers whom you can add, or you can send a mail out to the [dev mailing list](http://cordova.apache.org/contact) with a link to the pull request.
+However you submit code, you should always call out a reviewer to look at and merge your code. GitHub helpfully suggests possible reviewers whom you can add, or you can send a mail out to the [dev mailing list](https://cordova.apache.org/contact) with a link to the pull request.
 
 ## Testing your code
 

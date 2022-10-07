@@ -46,7 +46,7 @@ For each corresponding native interface, see the list at the end of
 this section.
 
 In addition to these instructions, when preparing to write a plugin it
-is best to look over [existing plugins](http://cordova.apache.org/contribute)
+is best to look over [existing plugins](https://cordova.apache.org/contribute)
 for guidance.
 
 ## Building a Plugin
@@ -201,7 +201,7 @@ to work on your plugin and then simply rebuild the app to use your changes.
 
 You can use the `plugman` utility to check whether the plugin installs
 correctly for each platform.  Install `plugman` with the following
-[node](http://nodejs.org/) command:
+[node](https://nodejs.org/) command:
 
 ```bash
 npm install -g plugman

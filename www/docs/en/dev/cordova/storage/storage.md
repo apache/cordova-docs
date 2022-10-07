@@ -237,14 +237,14 @@ alternative storage options.
 [W3CSpecStorage]: https://html.spec.whatwg.org/multipage/webstorage.html
 [MDNStorage]: https://developer.mozilla.org/en-US/docs/Web/API/Storage
 [MDNStorageGuide]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
-[w3schoolsSQL]: http://www.w3schools.com/sql/sql_intro.asp
+[w3schoolsSQL]: https://www.w3schools.com/sql/sql_intro.asp
 [SQLite]: https://www.sqlite.org/
-[W3CIndexedDB]: http://www.w3.org/TR/IndexedDB/
+[W3CIndexedDB]: https://www.w3.org/TR/IndexedDB/
 [MDNIndexedDBAPI]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
 [MDNIndexedDBBasicConcepts]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 [MDNUsingIndexedDB]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB
 [MDNIndexedDBLimitsAndEviction]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
-[StructuredCloneAlgorithm]: http://w3c.github.io/html/infrastructure.html#safe-passing-of-structured-data
+[StructuredCloneAlgorithm]: https://w3c.github.io/html/infrastructure.html#safe-passing-of-structured-data
 [Html5RocksFileSystemTutorial]: http://www.html5rocks.com/en/tutorials/file/filesystem/
 [FileAPI]: https://github.com/apache/cordova-plugin-file/blob/master/README.md
 [SQLiteStorage]: https://github.com/litehelpers/Cordova-sqlite-storage#readme

@@ -34,7 +34,7 @@ Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Desc
 ---------------- | ------------
 xmlns(string) | *Required* <br/> The plugin namespace, `http://apache.org/cordova/ns/plugins/1.0`. If the document contains XML from other namespaces, such as tags to be added to the `AndroidManifest.xml` file in the case of Android, those namespaces should also be included in the <plugin> element.
 id(string) | *Required* <br/> A npm-style identifier for the plugin.
-version(string) | *Required* <br/> A version number for the plugin. [Semver](http://semver.org/) syntax is supported.
+version(string) | *Required* <br/> A version number for the plugin. [Semver](https://semver.org/) syntax is supported.
 
 Example:
 ```xml
@@ -333,7 +333,7 @@ Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Desc
 ---------------- | ------------
 target(string) | The file to be modified, and the path relative to the root of the Cordova project. If the specified file does not exist, the tool ignores the configuration change and continues installation. <br/> The target can include wildcard (`*`) elements. In this case, the CLI recursively searches through the project directory structure and uses the first match. <br/> On iOS, the location of configuration files relative to the project directory root is not known, so specifying a target of `config.xml` resolves to `cordova-ios-project/MyAppName/config.xml`.
 parent(string) | An XPath selector referencing the parent of the elements to be added to the config file. If you use absolute selectors, you can use a wildcard (`*`) to specify the root element, e.g., `/*/plugins`. If the selector does not resolve to a child of the specified document, the tool stops and reverses the installation process, issues a warning, and exits with a non-zero code. <br/> For `plist` files, the `parent` determines under what parent key the specified XML should be inserted.
-after(string) | A prioritized list of accepted siblings after which to add the XML snippet. Useful for specifying changes in files which require strict ordering of XML elements like [this](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement).
+after(string) | A prioritized list of accepted siblings after which to add the XML snippet. Useful for specifying changes in files which require strict ordering of XML elements like [this](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement).
 device-target(string) <br/> ==windows== | Allowed values: `win`, `phone`, `all`. <br/> Applicable when affecting the meta-name `package.appxmanifest`, this attribute indicates that the file should only be modified when building for the specified target device type.
 versions(string) <br/> ==windows== | Applicable when affecting the meta-name `package.appxmanifest`, this attribute indicates that app manifests for specific Windows versions should only be altered for versions that match the specified version string. Value can be any valid node semantic version range string.
 

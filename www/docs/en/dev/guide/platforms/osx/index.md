@@ -137,9 +137,9 @@ For further information, consult Apple's documentation:
    technical resources, the provisioning portal, distribution guides
    and community forums.
 
-* [Xcode User Guide](http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215)
+* [Xcode User Guide](https://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215)
 
-* The [xcode-select command](http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html),
+* The [xcode-select command](https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html),
   which helps specify the correct version of Xcode if more than one is installed.
 
 (Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)

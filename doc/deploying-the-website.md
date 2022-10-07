@@ -39,4 +39,4 @@ Once you are satisfied that you have added the required changes, commit with a m
 **NOTE**: The commit might take a while (up to 1 hour), depending on the number of files changed.
 
 
-[svn]: http://svnbook.red-bean.com/en/1.7/svn.intro.quickstart.html
+[svn]: https://svnbook.red-bean.com/en/1.7/svn.intro.quickstart.html

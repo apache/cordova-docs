@@ -1,13 +1,13 @@
 # -   name: Example Tool
 #     image: cordova.png
-#     url: http://example.com
+#     url: https://example.com
 #     description: >
 #         A description that can
 #         span multiple lines.
 
 -   name: Ionic Framework
     image: ionic.png
-    url: http://ionicframework.com/
+    url: https://ionicframework.com/
     description: >
         Ionic is a front-end SDK for building cross-platform mobile apps.
         Built on top of Angular, Ionic also provides a platform for
@@ -23,7 +23,7 @@
 
 -   name: Onsen UI
     image: onsen.png
-    url: http://onsen.io/
+    url: https://onsen.io/
     description: >
         Custom Elements-based HTML5 framework offers a large selection of
         components and responsive layout support. Onsen UI lets you create
@@ -32,7 +32,7 @@
 
 -   name: App Builder
     image: appbuilder.png
-    url: http://www.getappbuilder.com/
+    url: https://www.getappbuilder.com/
     description: >
         App Builder is a complete IDE for Microsoft Windows which allows to
         create HTML5 and native apps without programming knowledge. Offers
@@ -41,7 +41,7 @@
 
 -   name: Framework7
     image: framework7.png
-    url: http://www.idangero.us/framework7/
+    url: https://www.idangero.us/framework7/
     description: >
         Framework7 is a free and open source mobile HTML framework for
         developing hybrid mobile apps or web apps with iOS & Android

@@ -42,7 +42,7 @@ $ cordova create hello com.example.hello HelloWorld --template <git-remote-url>
 $ cordova create hello com.example.hello HelloWorld --template <path-to-template>
 ```
 
-After succesfully using a template to create your project, you'll want to indicate the platforms that you intend to target with your app. Go into your project folder and [add platforms](http://cordova.apache.org/docs/en/latest/guide/cli/index.html#add-platforms).
+After succesfully using a template to create your project, you'll want to indicate the platforms that you intend to target with your app. Go into your project folder and [add platforms](https://cordova.apache.org/docs/en/latest/guide/cli/index.html#add-platforms).
 
 ## Create a Template
 

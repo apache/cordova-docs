@@ -50,13 +50,13 @@ virtual machine environment or by using Boot Camp to dual-boot a
 Windows partition. Consult these resources to set up the required
 Windows development environment on a Mac:
 
-- [VMWare Fusion](http://msdn.microsoft.com/en-US/library/windows/apps/jj945426)
-- [Parallels Desktop](http://msdn.microsoft.com/en-US/library/windows/apps/jj945424)
-- [Boot Camp](http://msdn.microsoft.com/en-US/library/windows/apps/jj945423)
+- [VMWare Fusion](https://msdn.microsoft.com/en-US/library/windows/apps/jj945426)
+- [Parallels Desktop](https://msdn.microsoft.com/en-US/library/windows/apps/jj945424)
+- [Boot Camp](https://msdn.microsoft.com/en-US/library/windows/apps/jj945423)
 
 ## Installing the Requirements
 
-Install any edition of [Visual Studio](http://www.visualstudio.com/downloads) matching the version
+Install any edition of [Visual Studio](https://www.visualstudio.com/downloads) matching the version
 requirements listed above.
 
 ### Visual Studio 2017

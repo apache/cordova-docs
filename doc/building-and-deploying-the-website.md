@@ -11,4 +11,4 @@ Travis also runs `npm test` and will notify you if any of your `eslint` or `moch
 **NOTE**: Committing to Travis might take a while (up to 1 hour), depending on the number of files changed.
 
 [Travis]: https://travis-ci.org/
-[SVN]: http://svnbook.red-bean.com/en/1.7/svn.intro.quickstart.html
+[SVN]: https://svnbook.red-bean.com/en/1.7/svn.intro.quickstart.html

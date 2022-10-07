@@ -148,9 +148,9 @@ You could try a different method to install Ruby. Checkout [rbenv](https://githu
 
 
 [ruby_linux]: https://www.ruby-lang.org/en/documentation/installation/#package-management-systems
-[homebrew]: http://brew.sh/
+[homebrew]: https://brew.sh/
 [linux_node]: https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories#installing-node-js-v0-12
-[ruby_downloads]: http://rubyinstaller.org/downloads/
+[ruby_downloads]: https://rubyinstaller.org/downloads/
 [ruby_installer]: http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.3.exe
 [ruby_devkit]: http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe
 [nodejs]: https://nodejs.org/

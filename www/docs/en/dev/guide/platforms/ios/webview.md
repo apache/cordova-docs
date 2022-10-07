@@ -39,7 +39,7 @@ subdirectory within `platforms/ios`.
 
 To follow these instructions, make sure you have the latest Cordova
 distribution. Download it from
-[cordova.apache.org](http://cordova.apache.org) and unzip its iOS
+[cordova.apache.org](https://cordova.apache.org) and unzip its iOS
 package.
 
 You have two methods for adding Cordova to your project. The first is using [Carthage](https://github.com/Carthage/Carthage), and the 
@@ -174,7 +174,7 @@ After using either of these two methods, continue with the **"Using CDVViewContr
     ...or a remote site:
 
     ```xml
-    <content src="http://apache.org" />
+    <content src="https://apache.org" />
     ```
 
 1. Optionally, set the `useSplashScreen` property, which defaults to

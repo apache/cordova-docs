@@ -141,7 +141,7 @@ In the `config.xml`, we will add `resource-file` to copy the `colors.xml` into t
 
 ### See Also
 - [Android icon guide](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive)
-- [Android - Supporting multiple screens](http://developer.android.com/guide/practices/screens_support.html)
+- [Android - Supporting multiple screens](https://developer.android.com/guide/practices/screens_support.html)
 
 ## Browser
 Icons are not applicable to the Browser platform.

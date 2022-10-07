@@ -13,7 +13,7 @@ When you opt into telemetry, information about your usage of Apache Cordova CLI 
 * Cordova version
 * Commands executed, time of execution and status (success/failure)
 
-This information is saved in Google Analytics and handled by Google as described in their [privacy policy](http://www.google.com/policies/privacy/). See the [documentation for instructions on how to disable telemetry](http://cordova.apache.org/docs/en/latest/reference/cordova-cli/index.html#cordova-telemetry-command) if you prefer not to share your data.
+This information is saved in Google Analytics and handled by Google as described in their [privacy policy](https://www.google.com/policies/privacy/). See the [documentation for instructions on how to disable telemetry](https://cordova.apache.org/docs/en/latest/reference/cordova-cli/index.html#cordova-telemetry-command) if you prefer not to share your data.
 
 We use the gathered information to help us make our tool more useful and to better understand how it is used. We do not track or collect personally identifiable information or associate gathered data with any personally identifying information from other sources.
 
