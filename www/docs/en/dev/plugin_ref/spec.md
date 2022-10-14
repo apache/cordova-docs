@@ -533,6 +533,7 @@ target-dir(string) <br/> ==windows== | Indicates a subdirectory into which the f
 implementation(string) <br/> ==windows== | Sets the relative path to `.dll` file that contains implementation for WinMD component, written in C++.
 spec(string) <br/> ==ios== | Paired with `type="podspec"`, this is the spec string for the CocoaPod you want to install (static library only). CocoaPod support only exists in `cordova-ios 4.3.0` and `cordova-cli 6.4.0`. For your plugin, make sure  you add the appropriate `<engine>` tags and `package.json` [dependencies](../guide/hybrid/plugins/index.html#specifying-cordova-dependencies) to ensure backwards-compatible support.
 embed(boolean) <br/> ==ios== | *Default: false* <br/>Paired with `custom="true"`, this is set to true if you want to embed your custom framework into your app bundle, so it can be dynamically loaded at runtime (dynamic framework). This puts your custom framework in the 'Embedded Binaries' section of your Xcode Project Settings. Only supported with the combination of `cordova-ios@4.4.0` and `cordova-cli@7.0.0`
+link(boolean) <br/> ==ios== | *Default: !embed* <br/> Set this to true if you want to link the framework. This puts the framework in the 'Link Binaries with Libraries' section of your Xcode Project Settings.
 
 Examples:
 
