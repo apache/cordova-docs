@@ -5,9 +5,9 @@
 # the potential to make pages become PERMANENTLY UNREACHABLE. If in
 # doubt, refer to these links:
 #
-# RewriteRule       - http://httpd.apache.org/docs/current/mod/mod_rewrite.html
-# RewriteRule flags - http://httpd.apache.org/docs/current/rewrite/flags.html
-# .htaccess tester  - http://htaccess.madewithlove.be/
+# RewriteRule       - https://httpd.apache.org/docs/current/mod/mod_rewrite.html
+# RewriteRule flags - https://httpd.apache.org/docs/current/rewrite/flags.html
+# .htaccess tester  - https://htaccess.madewithlove.be/
 #
 # And remember: three-oh-ONE (301) menas you get ONE chance to get it right;
 #               three-oh-TWO (302) means you get TWO chances.

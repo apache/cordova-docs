@@ -2369,11 +2369,13 @@ different across versions of the same product.</p>
 
 <h3>Quick Example</h3>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Android:    Nexus One       returns "Passion" (Nexus One code name)</span>
-<span class="c1">//             Motorola Droid  returns "voles"</span>
-<span class="c1">// Browser:    Google Chrome   returns "Chrome"</span>
-<span class="c1">//             Safari          returns "Safari"</span>
-<span class="c1">// iOS:     for the iPad Mini, returns iPad2,5; iPhone 5 is iPhone 5,1. See https://www.theiphonewiki.com/wiki/Models</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Android: Pixel 4             returns "Pixel 4"</span>
+<span class="c1">//          Motorola Moto G3    returns "MotoG3"</span>
+<span class="c1">// Browser: Google Chrome       returns "Chrome"</span>
+<span class="c1">//          Safari              returns "Safari"</span>
+<span class="c1">// iOS:     iPad Mini           returns "iPad2,5"</span>
+<span class="c1">//          iPhone 5            returns "iPhone5,1"</span>
+<span class="c1">// See https://www.theiphonewiki.com/wiki/Models</span>
 <span class="c1">// OS X:                        returns "x86_64"</span>
 <span class="c1">//</span>
 <span class="kd">var</span> <span class="nx">model</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">model</span><span class="p">;</span>
@@ -2382,7 +2384,7 @@ different across versions of the same product.</p>
 <h3>Android Quirks</h3>
 
 <ul>
-  <li>Gets the <a href="https://developer.android.com/reference/android/os/Build.html#PRODUCT">product name</a> instead of the <a href="https://developer.android.com/reference/android/os/Build.html#MODEL">model name</a>, which is often the production code name. For example, the Nexus One returns <code>Passion</code>, and Motorola Droid returns <code>voles</code>.</li>
+  <li>Gets the <a href="https://developer.android.com/reference/android/os/Build.html#MODEL">model name</a>.</li>
 </ul>
 
 <h3>iOS Quirks</h3>
@@ -2610,10 +2612,10 @@ This parameter is only returned for iOS V14.0 or later, and is not returned for 
                         <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
                     </li>
                     <li>
-                        <a href="http://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
                     </li>
                     <li>
-                        <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">License</a>
+                        <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0">License</a>
                     </li>
                     <li>
                         <a href="/artwork">Artwork</a>
@@ -2625,7 +2627,7 @@ This parameter is only returned for iOS V14.0 or later, and is not returned for 
                 <ul class="nav">
                     <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
                     <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
-                    <li><a target="_blank" href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
                     <li><a href="/contact">Mailing List</a></li>
                     <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
                 </ul>
@@ -2634,16 +2636,16 @@ This parameter is only returned for iOS V14.0 or later, and is not returned for 
                 <h2>Apache Software Foundation</h2>
                 <ul class="nav">
                     <li>
-                        <a target="_blank" href="http://www.apache.org/">About ASF</a>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
                     </li>
                     <li>
-                        <a target="_blank" href="http://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
                     </li>
                     <li>
-                        <a target="_blank" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
                     </li>
                     <li>
-                        <a target="_blank" href="http://www.apache.org/security/">Security</a>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
                     </li>
                     <li>
                         <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
@@ -2664,8 +2666,8 @@ This parameter is only returned for iOS V14.0 or later, and is not returned for 
     </div>
 </div>
 <p class="copyright_text">
-    Copyright &copy; 2022 The Apache Software Foundation, Licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
-    Apache and the Apache feather logos are <a target="_blank" href="http://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    Copyright &copy; 2022 The Apache Software Foundation, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
     <br/>
     "Raleway" font used under license. For details see the <a href="/attributions/">attributions page</a>.
 </p>
