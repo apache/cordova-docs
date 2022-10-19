@@ -35,7 +35,7 @@ legacy `CordovaActivity` component that pre-dates the 1.9 release.
 
 1. To follow these instructions, make sure you have the latest Cordova
    distribution. Download it from
-   [cordova.apache.org](http://cordova.apache.org) and unzip its
+   [cordova.apache.org](https://cordova.apache.org) and unzip its
    Android package.
 
 1. Navigate to the Android package's `/framework` directory and run

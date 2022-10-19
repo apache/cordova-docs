@@ -118,7 +118,7 @@ This gives us a working Windows JavaScript plugin that uses a common file (`www/
 
 In Windows, Javascript authored apps are able to interop with native (C++) and managed code (C#, VB) by creating a Windows runtime component. You can learn the basics here and checkout more details in guides on MSDN:
 - [Creating Windows Runtime Components in C# and Visual Basic](https://msdn.microsoft.com/en-us/library/windows/apps/br230301.aspx)
-- [Creating Windows Runtime Components in C++](http://msdn.microsoft.com/en-us/library/windows/apps/hh441569.aspx)
+- [Creating Windows Runtime Components in C++](https://msdn.microsoft.com/en-us/library/windows/apps/hh441569.aspx)
 
 When you create your Windows Runtime Component, any class that is defined as `public ref class sealed` is considered an 'activatable class' and will be callable from JavaScript.
 
@@ -178,7 +178,7 @@ And that's it, we have an end to end C++ backed js callable plugin for use in Ap
 ### Considerations
 
 - The callback is typically async, so calling the callback right away is probably not expected by the caller. In practice, if the call is not async, you should at least use a javascript timeout to force the callback to be called asynchronously.
-- Activatable classes can be used to do event dispatching, async callbacks, passing your own object types, arrays, collections, overloaded methods and much more. Refer to [Creating Windows Runtime Components in C++](http://msdn.microsoft.com/en-us/library/windows/apps/hh441569.aspx) for details.
+- Activatable classes can be used to do event dispatching, async callbacks, passing your own object types, arrays, collections, overloaded methods and much more. Refer to [Creating Windows Runtime Components in C++](https://msdn.microsoft.com/en-us/library/windows/apps/hh441569.aspx) for details.
 
 ### Defining your plugin in plugin.xml
 

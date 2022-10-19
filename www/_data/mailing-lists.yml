@@ -25,7 +25,7 @@
             href: https://lists.apache.org/list.html?dev@cordova.apache.org
     description: >
         The Dev mailing list is a place for discussion about developing Apache Cordova.
-        <br/>If you are a Cordova user looking for help, use the <a href="http://stackoverflow.com/questions/tagged/cordova">cordova tag on Stack Overflow</a>.
+        <br/>If you are a Cordova user looking for help, use the <a href="https://stackoverflow.com/questions/tagged/cordova">cordova tag on Stack Overflow</a>.
 
 -   title: Commits Mailing List
     links:
@@ -81,4 +81,4 @@
             text: Issues Mailing List Archive
             href: https://lists.apache.org/list.html?issues@cordova.apache.org
     description: >
-        The Issues mailing list tracks comments and updates to <a href="http://issues.apache.org/jira/browse/CB">Jira items</a> regarding Apache Cordova.
+        The Issues mailing list tracks comments and updates to <a href="https://issues.apache.org/jira/browse/CB">Jira items</a> regarding Apache Cordova.

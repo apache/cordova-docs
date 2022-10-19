@@ -9,10 +9,10 @@ Apache Cordova's documentation is written in English but translations are availa
 
 If you know another language and are willing to help translate Apache Cordova, here are the steps to get started:
 
-1. Create a free account with Crowdin.net [http://crowdin.net](http://crowdin.net)
-2. Search for and find the Cordova project [http://crowdin.net/project/cordova/](http://crowdin.net/project/cordova/)
+1. Create a free account with Crowdin.net [https://crowdin.net](https://crowdin.net)
+2. Search for and find the Cordova project [https://crowdin.net/project/cordova/](https://crowdin.net/project/cordova/)
 3. Scroll down to find the languages that are currently being translated.
-4. Choose a language and click on the language to start contributing. e.g. [Spanish](http://crowdin.net/project/cordova/es-ES)
+4. Choose a language and click on the language to start contributing. e.g. [Spanish](https://crowdin.net/project/cordova/es-ES)
 5. Next to each of the markdown files you will see a button labelled "Translate". Clicking that button will open a translate page where the English version of the file is on the left.
 6. Click on a phrase in the left-hand panel. Then type a translation in the textarea to the right. Click the "Commit Translation" button.
 7. If a translation is already provided for a phrase you can vote it **up** or **down**. If you vote it **down** be sure to also include what you believe to be the correct translation.
@@ -25,7 +25,7 @@ The headers are used to provide links between pages.  It is therefore critical t
 
 (migrated from [README/en/README.md](README/en/README.md))
 
-Do you want the Apache Cordova documentation in another language? We do too! With the support of [Crowdin](http://crowdin.net/project/cordova), a translation and localization management platform, translators can login to the easy-to-use tooling and provide as much or as little translation assistance as they would like. If you know another language please support Cordova and contribute. http://crowdin.net/project/cordova. For some best practices for using the Crowdin tool please see our wiki http://wiki.apache.org/cordova/CordovaTranslations.
+Do you want the Apache Cordova documentation in another language? We do too! With the support of [Crowdin](https://crowdin.net/project/cordova), a translation and localization management platform, translators can login to the easy-to-use tooling and provide as much or as little translation assistance as they would like. If you know another language please support Cordova and contribute. https://crowdin.net/project/cordova. For some best practices for using the Crowdin tool please see our wiki http://wiki.apache.org/cordova/CordovaTranslations.
 
 Cordova language administrators, don't forget these steps:
 
@@ -230,7 +230,7 @@ It then searches through all of the languages from crowdin and downloads only th
 Finally, it pushes the translated language files back into github.
 
     #!/bin/bash
-    DOMAIN_NAME='http://api.crowdin.net'
+    DOMAIN_NAME='https://api.crowdin.net'
     
     #---CHANGE THE VARIABLES BELOW---
     BASE_GIT_REPO_PATH=/Users/pathTo/git/cordova
@@ -631,12 +631,12 @@ Another example is the use of *method names*, *constants*, etc., scattered throu
 It is not currently possible for an administrator to mark each of these elements as `Do not translate`,
 so our proofreaders will need to go through and verify they are not translated by translators or by the automated translation services.
 
-[Crowdin.net]: http://crowdin.net "Crowdin.net"
-[Crowdin Cordova project]: http://crowdin.net/project/cordova/
-[Spanish Cordova project]: http://crowdin.net/project/cordova/es-ES
-[Crowdin cli]: http://crowdin.net/page/cli-tool
-[Crowdin YouTube demo]: http://www.youtube.com/watch?v=LSnk3lAd7bo
-[Cordova docs edge]: http://cordova.apache.org/docs/en/edge/index.html
+[Crowdin.net]: https://crowdin.net "Crowdin.net"
+[Crowdin Cordova project]: https://crowdin.net/project/cordova/
+[Spanish Cordova project]: https://crowdin.net/project/cordova/es-ES
+[Crowdin cli]: https://crowdin.net/page/cli-tool
+[Crowdin YouTube demo]: https://www.youtube.com/watch?v=LSnk3lAd7bo
+[Cordova docs edge]: https://cordova.apache.org/docs/en/edge/index.html
 [JIRA]: https://issues.apache.org/jira/browse/CB
 [open a JIRA]: https://issues.apache.org/jira/secure/CreateIssue.jspa
 [crowdin support team]: mailto:support@crowdin.net

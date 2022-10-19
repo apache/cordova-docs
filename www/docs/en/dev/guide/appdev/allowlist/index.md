@@ -202,4 +202,4 @@ In iOS 10 and above, the `<access>` tag also supports these three attributes, de
 
 See the [ATS Technote](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) for more details.
 
-[1]: http://www.w3.org/TR/widgets-access/
+[1]: https://www.w3.org/TR/widgets-access/

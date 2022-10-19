@@ -1,7 +1,7 @@
 <!--
 Please make sure the checklist boxes are all checked before submitting the PR. The checklist is intended as a quick reference, for complete details please see our Contributor Guidelines:
 
-http://cordova.apache.org/contribute/contribute_guidelines.html
+https://cordova.apache.org/contribute/contribute_guidelines.html
 
 Thanks!
 -->

@@ -43,7 +43,7 @@ consuming Plugman as a node module or modifying the source code, see
 
 ## Installing Plugman
 
-To install plugman, you must have [node](http://nodejs.org/) installed
+To install plugman, you must have [node](https://nodejs.org/) installed
 on your machine. Then you can run the following command from anywhere
 in your environment to install plugman globally, so that it is
 available from any directory:
@@ -129,13 +129,13 @@ plugman -v
 
 ## Registry Actions
 
-There are a number of plugman commands that can be used for interacting with the [Plugin registry](http://plugins.cordova.io).
+There are a number of plugman commands that can be used for interacting with the [Plugin registry](https://plugins.cordova.io).
 Please note that these registry commands are specific to the _plugins.cordova.io_ plugin registry and may not be implemented by
 third-party plugin registries.
 
 ### Searching for a Plugin
 
-You can use Plugman to search the [Plugin registry](http://plugins.cordova.io) for plugin id's that match the given space separated list of keywords.
+You can use Plugman to search the [Plugin registry](https://plugins.cordova.io) for plugin id's that match the given space separated list of keywords.
 
 ```bash
 plugman search <plugin keywords>

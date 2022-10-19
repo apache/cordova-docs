@@ -27,7 +27,7 @@ There are multiple ways to contribute: report bugs, improve the docs, and
 contribute code.
   
 For instructions on this, start with the
-[contribution overview](http://cordova.apache.org/contribute/).
+[contribution overview](https://cordova.apache.org/contribute/).
 
 The details are explained there, but the important items are:
  - Check for Github issues that corresponds to your contribution and link or create them if necessary.

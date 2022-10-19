@@ -81,7 +81,7 @@ When running Cordova on Android, using `android:debuggable="true"` in the applic
 
 ### Do not use Android Gingerbread!
 * Set your min-target-sdk level higher than 10. API 10 is Gingerbread, and Gingerbread is no longer supported by Google or device manufacturers, and is therefore not recommend by the Cordova team.
-* Gingerbread has been shown to be insecure and one of the most targeted mobile OSs [http://www.mobilemag.com/2012/11/06/andriod-2-3-gingerbread-security/](http://bgr.com/2012/11/06/android-security-gingerbread-malware/).
+* Gingerbread has been shown to be insecure and one of the most targeted mobile OSs [https://www.mobilemag.com/2012/11/06/andriod-2-3-gingerbread-security/](https://bgr.com/2012/11/06/android-security-gingerbread-malware/).
 * The Whitelist on Android does not work with Gingerbread or lower. This means an attacker can load malicious code in an iframe that would then have access to all of the Cordova APIs and could use that access to steal personal data, send SMS messages to premium-rate numbers, and perform other malicious acts.
 
 ### Use InAppBrowser for outside links
