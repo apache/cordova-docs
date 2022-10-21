@@ -64,9 +64,10 @@
                 -moz-transition: background 0.25s linear;
                 transition: background 0.25s linear;
                 width: 36px;
-                background: url("{{ site.baseurl }}/static/img/sprite.png") no-repeat;
-                background-position: 3px -127px;
+                background: url("{{ site.baseurl }}/static/img/github-mark.png") no-repeat;
                 background-color: #4cc2e4;
+                background-size: 24px;
+                background-position: center;
                 height: 36px;
             }
 
@@ -75,12 +76,10 @@
                 margin-right: 3px;
             }
 
-            a.link-github {
-                background-position: 3px -127px;
-            }
-
             .project-label {
                 margin: 8px -8px 8px 8px;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
 
@@ -88,10 +87,6 @@
             li.first {
                 a.link-apache {
                     width: 115px;
-                }
-
-                a.link-github {
-                    width: 90px;
                 }
 
                 .project-label {
@@ -117,20 +112,13 @@
                     margin-right: 3px;
                 }
 
-                a.link-github {
-                    background-position: 3px -127px;
-                    width: 90px;
-                }
-
                 .project-label{
+                    margin: 0px -8px 0px 8px;
                     text-align: center;
                     padding: 12px;
-                    margin: 0px;
                 }
 
                 .link-box {
-                    width: 49.5%;
-                    display: inline-block;
                     text-align: center;
                     background-color: $brand-primary;
                     padding-top: 4px;

@@ -20,26 +20,16 @@ title: Contribute
             <li>File a <a href="./issues.html">bug or task</a></li>
             <li>Read the <a href="./contribute_guidelines.html">Contributor Guidelines</a></li>
             <li>Join the <a href="{{ site.baseurl }}/contact">Dev mailing list</a> and send a brief introduction of yourself to it</li>
-            <li>Join the discussion on <a href="http://slack.cordova.io/">Slack</a></li>
+            <li>Join the discussion on <a href="https://s.apache.org/cordova-slack">Slack</a></li>
             <li>Try out the next version of Cordova using <a href="{{ site.baseurl }}/contribute/nightly_builds.html">nightly builds</a></li>
         </ul>
     </div>
     <div class="col-sm-5">
         <div class="well">
-            <div class="input-group">
-                <input id="jira-search-box" type="text" class="form-control" placeholder="Search current issue list...">
-                <span class="input-group-btn">
-                    <button id="jira-search-button" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                </span>
-            </div>
             <ul class="nav issue-links">
                 <li>
-                    <span class="glyphicon glyphicon-warning-sign"></span><i>&nbsp;</i>
-                    <a href="https://issues.apache.org/jira/browse/CB/?selectedTab=com.atlassian.jira.jira-projects-plugin:issues-panel">View All Issues</a>
-                </li>
-                <li>
                     <span class="glyphicon glyphicon-list-alt"></span><i>&nbsp;</i>
-                    See all <a href="https://home.apache.org/phonebook.html?unix=cordova">Committers</a> / <a href="https://people.apache.org/unlistedclas.html">Contributors</a>
+                    See all <a href="https://home.apache.org/phonebook.html?unix=cordova">Committers</a>
                 </li>
                 <li>
                     <span class="glyphicon glyphicon-user"></span><i>&nbsp;</i>
@@ -57,18 +47,10 @@ title: Contribute
         <h2>{{ projectType.title }}</h2>
             {% for project in projectType.projects %}
 
-            {% if firstProjectType and forloop.first %}
-                {% assign itemClass = "first" %}
-            {% else %}
-                {% assign itemClass = "" %}
-            {% endif %}
-
-            <li class="{{ itemClass }}">
+            <li>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-8 project-label">
-                        {{ project.project }}
-                    </div>
-                    <div class="col-xs-12 col-sm-4 project-links">
+                    <div class="col-xs-8 col-sm-8 project-label">{{ project.project }}</div>
+                    <div class="col-xs-4 col-sm-4 project-links">
                         <div class="link-box">
                             <a class="link-github" target="_blank" href="{{ project.mirror }}"></a>
                         </div>

@@ -7,12 +7,6 @@
     -   project: iOS
         mirror: https://github.com/apache/cordova-ios
 
-    -   project: Mac OS X
-        mirror: https://github.com/apache/cordova-osx
-
-    -   project: Windows (desktop)
-        mirror: https://github.com/apache/cordova-windows
-
     -   project: Browser
         mirror: https://github.com/apache/cordova-browser
 
@@ -30,11 +24,20 @@
     -   project: Device
         mirror: https://github.com/apache/cordova-plugin-device
 
+    -   project: Device Motion
+        mirror: https://github.com/apache/cordova-plugin-device-motion
+
+    -   project: Device Orientation
+        mirror: https://github.com/apache/cordova-plugin-device-orientation
+
     -   project: Dialogs
         mirror: https://github.com/apache/cordova-plugin-dialogs
 
     -   project: File
         mirror: https://github.com/apache/cordova-plugin-file
+
+    -   project: File Transfer
+        mirror: https://github.com/apache/cordova-plugin-file-transfer
 
     -   project: Geolocation
         mirror: https://github.com/apache/cordova-plugin-geolocation
@@ -91,6 +94,12 @@
 
     -   project: Cordova Fetch
         mirror: https://github.com/apache/cordova-fetch
+
+    -   project: Cordova Node Xcode (Parser Utility)
+        mirror: https://github.com/apache/cordova-node-xcode
+
+    -   project: Cordova Eslint
+        mirror: https://github.com/apache/cordova-eslint
 
     -   project: Cordova Mobile Spec (Test Suite)
         mirror: https://github.com/apache/cordova-mobile-spec
