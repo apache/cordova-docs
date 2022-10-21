@@ -9878,27 +9878,24 @@ html[lang=ru] .docs #old-home ul li {
   -moz-transition: background 0.25s linear;
   transition: background 0.25s linear;
   width: 36px;
-  background: url("/static/img/sprite.png") no-repeat;
-  background-position: 3px -127px;
+  background: url("/static/img/github-mark.png") no-repeat;
   background-color: #4cc2e4;
+  background-size: 24px;
+  background-position: center;
   height: 36px;
 }
 .contribute-help .platforms-list li a.link-apache {
   background-position: 2px -94px;
   margin-right: 3px;
 }
-.contribute-help .platforms-list li a.link-github {
-  background-position: 3px -127px;
-}
 .contribute-help .platforms-list li .project-label {
   margin: 8px -8px 8px 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media (min-width: 768px) {
   .contribute-help .platforms-list li.first a.link-apache {
     width: 115px;
-  }
-  .contribute-help .platforms-list li.first a.link-github {
-    width: 90px;
   }
   .contribute-help .platforms-list li.first .project-label {
     width: 35%;
@@ -9917,18 +9914,12 @@ html[lang=ru] .docs #old-home ul li {
     width: 108px;
     margin-right: 3px;
   }
-  .contribute-help .platforms-list li a.link-github {
-    background-position: 3px -127px;
-    width: 90px;
-  }
   .contribute-help .platforms-list li .project-label {
+    margin: 0px -8px 0px 8px;
     text-align: center;
     padding: 12px;
-    margin: 0px;
   }
   .contribute-help .platforms-list li .link-box {
-    width: 49.5%;
-    display: inline-block;
     text-align: center;
     background-color: #4CC2E4;
     padding-top: 4px;
