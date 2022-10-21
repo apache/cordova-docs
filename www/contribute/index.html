@@ -47,17 +47,9 @@ title: Contribute
         <h2>{{ projectType.title }}</h2>
             {% for project in projectType.projects %}
 
-            {% if firstProjectType and forloop.first %}
-                {% assign itemClass = "first" %}
-            {% else %}
-                {% assign itemClass = "" %}
-            {% endif %}
-
-            <li class="{{ itemClass }}">
+            <li>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-8 project-label">
-                        {{ project.project }}
-                    </div>
+                    <div class="col-xs-12 col-sm-8 project-label">{{ project.project }}</div>
                     <div class="col-xs-12 col-sm-4 project-links">
                         <div class="link-box">
                             <a class="link-github" target="_blank" href="{{ project.mirror }}"></a>
