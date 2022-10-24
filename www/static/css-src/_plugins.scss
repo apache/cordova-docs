@@ -1,3 +1,22 @@
+.plugins-about {
+    max-width:405px;
+    margin:auto;
+
+    .what-is-a-plugin {
+        margin-top:20px;
+        img {
+            float:left;
+                padding-right: 20px;
+                padding-bottom: 20px;
+                width: 84px;
+        }
+    }
+}
+
+.plugins-about-cards {
+    margin: 0 20px;
+}
+
 .plugins {
     margin-top: 20px;
     display: flex;
