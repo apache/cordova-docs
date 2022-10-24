@@ -1,7 +1,6 @@
 -   title: Battery Status
-    id: cordova-plugin-battery-status
-    repo: https://github.com/apache/cordova-plugin-battery-status
-    npm: https://www.npmjs.com/package/cordova-plugin-battery-status
+    repoName: cordova-plugin-battery-status
+    packageName: cordova-plugin-battery-status
     supportedPlatforms:
     - android
     - browser
@@ -9,8 +8,8 @@
 
 -   title: Camera
     id: cordova-plugin-camera
-    repo: https://github.com/apache/cordova-plugin-camera
-    npm: https://www.npmjs.com/package/cordova-plugin-camera
+    repoName: cordova-plugin-camera
+    packageName: cordova-plugin-camera
     supportedPlatforms:
     - android
     - browser
@@ -18,8 +17,8 @@
 
 -   title: Device
     id: cordova-plugin-device
-    repo: https://github.com/apache/cordova-plugin-device
-    npm: https://www.npmjs.com/package/cordova-plugin-device
+    repoName: cordova-plugin-device
+    packageName: cordova-plugin-device
     supportedPlatforms:
     - android
     - browser
@@ -28,8 +27,8 @@
 
 -   title: Dialogs
     id: cordova-plugin-dialogs
-    repo: https://github.com/apache/cordova-plugin-dialogs
-    npm: https://www.npmjs.com/package/cordova-plugin-dialogs
+    repoName: cordova-plugin-dialogs
+    packageName: cordova-plugin-dialogs
     supportedPlatforms:
     - android
     - browser
@@ -37,8 +36,8 @@
 
 -   title: File
     id: cordova-plugin-file
-    repo: https://github.com/apache/cordova-plugin-file
-    npm: https://www.npmjs.com/package/cordova-plugin-file
+    repoName: cordova-plugin-file
+    packageName: cordova-plugin-file
     supportedPlatforms:
     - android
     - browser
@@ -46,16 +45,16 @@
 
 -   title: Geolocation
     id: cordova-plugin-geolocation
-    repo: https://github.com/apache/cordova-plugin-geolocation
-    npm: https://www.npmjs.com/package/cordova-plugin-geolocation
+    repoName: cordova-plugin-geolocation
+    packageName: cordova-plugin-geolocation
     supportedPlatforms:
     - android
     - ios
 
 -   title: In-App Browser
     id: cordova-plugin-inappbrowser
-    repo: https://github.com/apache/cordova-plugin-inappbrowser
-    npm: https://www.npmjs.com/package/cordova-plugin-inappbrowser
+    repoName: cordova-plugin-inappbrowser
+    packageName: cordova-plugin-inappbrowser
     supportedPlatforms:
     - android
     - browser
@@ -63,8 +62,8 @@
 
 -   title: Media
     id: cordova-plugin-media
-    repo: https://github.com/apache/cordova-plugin-media
-    npm: https://www.npmjs.com/package/cordova-plugin-media
+    repoName: cordova-plugin-media
+    packageName: cordova-plugin-media
     supportedPlatforms:
     - android
     - browser
@@ -72,8 +71,8 @@
 
 -   title: Media Capture
     id: cordova-plugin-media-capture
-    repo: https://github.com/apache/cordova-plugin-media-capture
-    npm: https://www.npmjs.com/package/cordova-plugin-media-capture
+    repoName: cordova-plugin-media-capture
+    packageName: cordova-plugin-media-capture
     supportedPlatforms:
     - android
     - browser
@@ -81,8 +80,8 @@
 
 -   title: Network Information
     id: cordova-plugin-network-information
-    repo: https://github.com/apache/cordova-plugin-network-information
-    npm: https://www.npmjs.com/package/cordova-plugin-network-information
+    repoName: cordova-plugin-network-information
+    packageName: cordova-plugin-network-information
     supportedPlatforms:
     - android
     - browser
@@ -90,31 +89,31 @@
 
 -   title: Screen Orientation
     id: cordova-plugin-screen-orientation
-    repo: https://github.com/apache/cordova-plugin-screen-orientation
-    npm: https://www.npmjs.com/package/cordova-plugin-screen-orientation
+    repoName: cordova-plugin-screen-orientation
+    packageName: cordova-plugin-screen-orientation
     supportedPlatforms:
     - android
     - ios
 
 -   title: Splash Screen
     id: cordova-plugin-splashscreen
-    repo: https://github.com/apache/cordova-plugin-splashscreen
-    npm: https://www.npmjs.com/package/cordova-plugin-splashscreen
+    repoName: cordova-plugin-splashscreen
+    packageName: cordova-plugin-splashscreen
     supportedPlatforms:
     - browser
 
 -   title: Status Bar
     id: cordova-plugin-statusbar
-    repo: https://github.com/apache/cordova-plugin-statusbar
-    npm: https://www.npmjs.com/package/cordova-plugin-statusbar
+    repoName: cordova-plugin-statusbar
+    packageName: cordova-plugin-statusbar
     supportedPlatforms:
     - android
     - ios
 
 -   title: Vibration
     id: cordova-plugin-vibration
-    repo: https://github.com/apache/cordova-plugin-vibration
-    npm: https://www.npmjs.com/package/cordova-plugin-vibration
+    repoName: cordova-plugin-vibration
+    packageName: cordova-plugin-vibration
     supportedPlatforms:
     - android
     - ios
