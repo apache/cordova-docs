@@ -62,6 +62,11 @@
                     font-weight: bold;
                     font-size: 1.1em;
                 }
+
+                .plugin-id {
+                    font-size: 0.6em;
+                    color: #747474;
+                }
             }
         }
 
@@ -126,10 +131,10 @@
                 display: inline-block;
 
                 svg {
-                    height: 28px;
-                    width: 28px;
+                    height: 22px;
+                    width: 22px;
                     fill: #333;
-                    transform: translate(0px, 4px);
+                    transform: translate(0px, 5px);
 
                     &.browser,
                     &.android {

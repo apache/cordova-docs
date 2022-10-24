@@ -38,6 +38,7 @@ description: Search here for Apache Cordova plugins published on NPM.
     <div class="title">
       <div class="title-left">
         <h2>{{ plugin.title }}</h2>
+        <div class="plugin-id">{{ plugin.id }}</div>
         <ul class="supported-platforms">
           {% for platform in plugin.supportedPlatforms %}
           <li class="platform"><svg class="platform-icon {{ platform }}"><use href="#{{ platform }}" /></svg></li>
@@ -50,7 +51,7 @@ description: Search here for Apache Cordova plugins published on NPM.
       </div>
     </div>
     <div class="install-step" onclick="copyToClipboard(this)">
-      <span class="text-to-copy">cordova plugin add {{ plugin.id }}</span>
+      <span class="text-to-copy">cordova plugin add <b>{{ plugin.id }}</b></span>
       <span class="glyphicon glyphicon-copy"></span>
     </div>
   </div>
