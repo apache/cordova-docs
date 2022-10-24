@@ -201,3 +201,162 @@ hr.results-divider-line {
 .fireos     { background-position: 70%; }
 .osx        { background-position: 80.8%; }
 .browser    { background-position: 92.2%; }
+
+.plugins {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    .plugin-card {
+        width: 44vh;
+        background: #e1e1e1;
+        border-radius: 4px;
+        padding: 10px;
+        margin: 5px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: center;
+        justify-content: center;
+        align-self: stretch;
+
+        .title {
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 1.1em;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            .title-left {
+                display: flex;
+                flex-direction: column;
+                align-content: flex-start;
+                justify-content: center;
+                align-items: flex-start;
+
+                h2 {
+                    padding: 0;
+                    margin: 0 0 5px 0;
+                    color: #333;
+                    font-weight: bold;
+                    font-size: 1.1em;
+                }
+            }
+        }
+
+        .links {
+            .mark {
+                float: right;
+                -webkit-transition: background 0.25s linear;
+                -moz-transition: background 0.25s linear;
+                transition: background 0.25s linear;
+                width: 36px;
+                height: 36px;
+                border-radius: 4px;
+                margin-right: 5px;
+
+                &.github {
+                    background: url("{{ site.baseurl }}/static/img/github-mark.png") no-repeat;
+                    background-color: #000;
+                    background-size: 24px;
+                    background-position: center;
+                }
+
+                &.npm {
+                    background: url("{{ site.baseurl }}/static/img/npm-mark.png") no-repeat;
+                    background-color: #c12127;
+                    background-size: 24px;
+                    background-position: center;
+                }
+            }
+        }
+
+        .install-step {
+            padding: 10px;
+            font-size: 0.8em;
+            border: 1px solid #f1f1f1;
+            border-radius: 4px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            width: 100%;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+
+            .text-to-copy {
+                user-select: none;
+            }
+
+            .glyphicon {
+                font-size: 1.4em;
+                color: #333;
+                margin-left: 10px;
+            }
+        }
+
+        .supported-platforms {
+            margin: 0;
+            padding: 0;
+
+            .platform {
+                display: inline-block;
+
+                svg {
+                    height: 28px;
+                    width: 28px;
+                    fill: #333;
+                    transform: translate(0px, 4px);
+
+                    &.browser,
+                    &.android {
+                        padding: 3px;
+                    }
+
+                    &.electron,
+                    &.ios {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        &.third-party {
+            background-color: #fff;
+            border: 1px solid #c12127;
+            cursor:pointer;
+            user-select: none;
+
+            .title {
+                font-size: 1em;
+                color: #333;
+                align-items: center;
+                margin: 0;
+            }
+
+            .links {
+                margin: 0;
+            }
+        }
+    }
+
+    @media (min-width: 750px) and (max-width: 1200px) {
+        .plugin-card {
+            width: 44vh;
+        }
+    }
+
+    @media (max-width: 749px) {
+        .plugin-card {
+            width: 100vh;
+        }
+    }
+}
