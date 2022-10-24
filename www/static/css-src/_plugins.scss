@@ -37,7 +37,7 @@
         flex-direction: column;
         align-items: flex-start;
         align-content: center;
-        justify-content: center;
+        justify-content: space-between;
         align-self: stretch;
 
         .title {
@@ -154,6 +154,7 @@
             border: 1px solid #c12127;
             cursor:pointer;
             user-select: none;
+            justify-content: center;
 
             .title {
                 font-size: 1em;
