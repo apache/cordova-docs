@@ -1,0 +1,76 @@
+.team {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    .team-card {
+        width: 80vw;
+        background: #f4f4f4;
+        border-radius: 4px;
+        padding: 35px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: center;
+        justify-content: space-between;
+        align-self: stretch;
+
+        .team-card-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            margin-bottom: 25px;
+
+            h2 {
+                // h2 tag was slighly darkened to for better contrast with the background color
+                color: #585858
+            }
+
+            .team-member-profile-image {
+                margin-right: 20px;
+                border-radius: 50%;
+                height: 128px;
+                width: 128px;
+            }
+
+            .social {
+                height: 20px;
+                width: 20px;
+                display: inline-block;
+                margin-right: 5px;
+
+                .social-icon {
+                    height: 100%;
+                    width: 100%;
+                    fill: currentColor;
+                }
+            }
+        }
+
+        .team-card-content > p {
+            margin-bottom: 0px;
+        }
+    }
+
+    @media (max-width: 540px) {
+        .team-card > .team-card-header > .team-member-profile-image {
+            height: 96px;
+            width: 96px;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .team-card > .team-card-header {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+}
