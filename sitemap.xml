@@ -22247,15 +22247,6 @@
     
 
     <url>
-    <loc>https://cordova.apache.org/plugins/faq.html</loc>
-</url>
-
-
-    
-    
-    
-
-    <url>
     <loc>https://cordova.apache.org/feed.xml</loc>
 </url>
 
@@ -28852,8 +28843,6 @@
 
     <url>
     <loc>https://cordova.apache.org/plugins/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
 </url>
 
 
@@ -46089,15 +46078,6 @@
     <loc>https://cordova.apache.org/docs/en/3.4.0/cordova/plugins/pluginapis.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
-</url>
-
-
-    
-    
-    
-
-    <url>
-    <loc>https://cordova.apache.org/static/js/plugins.js</loc>
 </url>
 
 
