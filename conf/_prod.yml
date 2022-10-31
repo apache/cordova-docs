@@ -3,4 +3,3 @@ default_linked_docs_version: latest
 destination: build-prod
 exclude:
     - static/css-src
-    - static/plugins

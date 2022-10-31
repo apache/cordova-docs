@@ -1,0 +1,119 @@
+-   title: Battery Status
+    repoName: cordova-plugin-battery-status
+    packageName: cordova-plugin-battery-status
+    supportedPlatforms:
+    - android
+    - browser
+    - ios
+
+-   title: Camera
+    id: cordova-plugin-camera
+    repoName: cordova-plugin-camera
+    packageName: cordova-plugin-camera
+    supportedPlatforms:
+    - android
+    - browser
+    - ios
+
+-   title: Device
+    id: cordova-plugin-device
+    repoName: cordova-plugin-device
+    packageName: cordova-plugin-device
+    supportedPlatforms:
+    - android
+    - browser
+    - electron
+    - ios
+
+-   title: Dialogs
+    id: cordova-plugin-dialogs
+    repoName: cordova-plugin-dialogs
+    packageName: cordova-plugin-dialogs
+    supportedPlatforms:
+    - android
+    - browser
+    - ios
+
+-   title: File
+    id: cordova-plugin-file
+    repoName: cordova-plugin-file
+    packageName: cordova-plugin-file
+    supportedPlatforms:
+    - android
+    - browser
+    - ios
+
+-   title: Geolocation
+    id: cordova-plugin-geolocation
+    repoName: cordova-plugin-geolocation
+    packageName: cordova-plugin-geolocation
+    supportedPlatforms:
+    - android
+    - ios
+
+-   title: In-App Browser
+    id: cordova-plugin-inappbrowser
+    repoName: cordova-plugin-inappbrowser
+    packageName: cordova-plugin-inappbrowser
+    supportedPlatforms:
+    - android
+    - browser
+    - ios
+
+-   title: Media
+    id: cordova-plugin-media
+    repoName: cordova-plugin-media
+    packageName: cordova-plugin-media
+    supportedPlatforms:
+    - android
+    - browser
+    - ios
+
+-   title: Media Capture
+    id: cordova-plugin-media-capture
+    repoName: cordova-plugin-media-capture
+    packageName: cordova-plugin-media-capture
+    supportedPlatforms:
+    - android
+    - browser
+    - ios
+
+-   title: Network Information
+    id: cordova-plugin-network-information
+    repoName: cordova-plugin-network-information
+    packageName: cordova-plugin-network-information
+    supportedPlatforms:
+    - android
+    - browser
+    - ios
+
+-   title: Screen Orientation
+    id: cordova-plugin-screen-orientation
+    repoName: cordova-plugin-screen-orientation
+    packageName: cordova-plugin-screen-orientation
+    supportedPlatforms:
+    - android
+    - ios
+
+-   title: Splash Screen
+    id: cordova-plugin-splashscreen
+    repoName: cordova-plugin-splashscreen
+    packageName: cordova-plugin-splashscreen
+    supportedPlatforms:
+    - browser
+
+-   title: Status Bar
+    id: cordova-plugin-statusbar
+    repoName: cordova-plugin-statusbar
+    packageName: cordova-plugin-statusbar
+    supportedPlatforms:
+    - android
+    - ios
+
+-   title: Vibration
+    id: cordova-plugin-vibration
+    repoName: cordova-plugin-vibration
+    packageName: cordova-plugin-vibration
+    supportedPlatforms:
+    - android
+    - ios

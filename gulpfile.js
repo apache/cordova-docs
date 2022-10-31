@@ -10,7 +10,6 @@ var child_process = require('child_process');
 var gutil = require('gulp-util');
 var Less = require('gulp-less');
 var Sass = require('gulp-sass')(require('sass'));
-var replace = require('gulp-replace');
 var header = require('gulp-header');
 var footer = require('gulp-footer');
 var rename = require('gulp-rename');
@@ -18,10 +17,6 @@ var browsersync = require('browser-sync');
 var vstream = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 
-var browserify = require('browserify');
-var babelify = require('babelify');
-var uglify = require('gulp-uglify');
-var envify = require('envify');
 var htmllint = require('gulp-htmllint');
 var Crawler = require('simplecrawler');
 var ncp = require('ncp');
@@ -43,7 +38,6 @@ var DOCS_DIR = path.join(SOURCE_DIR, 'docs');
 var FETCH_DIR = path.join(DOCS_DIR, 'en', 'dev', 'reference');
 var CSS_SRC_DIR = path.join(SOURCE_DIR, 'static', 'css-src');
 var CSS_OUT_DIR = path.join(SOURCE_DIR, 'static', 'css');
-var PLUGINS_SRC_DIR = path.join(SOURCE_DIR, 'static', 'plugins');
 var JS_DIR = path.join(SOURCE_DIR, 'static', 'js');
 var BIN_DIR = path.join(ROOT_DIR, 'tools', 'bin');
 
@@ -59,9 +53,6 @@ var DOCS_VERSION_FILE = path.join(DATA_DIR, 'docs-versions.yml');
 var ALL_PAGES_FILE = path.join(DATA_DIR, 'all-pages.yml');
 var FETCH_CONFIG = path.join(DATA_DIR, 'fetched-files.yml');
 var REDIRECTS_FILE = path.join(DATA_DIR, 'redirects.yml');
-var PLUGINS_FILE_NAME = 'plugins.js';
-var PLUGINS_FILE = path.join(JS_DIR, PLUGINS_FILE_NAME);
-var PLUGINS_SRC_FILE = path.join(PLUGINS_SRC_DIR, 'app.js');
 
 var BASE_CONFIGS = [CONFIG_FILE, DEFAULTS_CONFIG_FILE, VERSION_CONFIG_FILE];
 var DEV_CONFIGS = [DEV_CONFIG_FILE];
@@ -199,7 +190,7 @@ module.exports.help = module.exports.default = function help () {
     gutil.log('');
     gutil.log('Tasks:');
     gutil.log('');
-    gutil.log('    build         same as configs + data + styles + plugins + jekyll');
+    gutil.log('    build         same as configs + data + styles + jekyll');
     gutil.log('    jekyll        build with jekyll');
     gutil.log('    regen         same as jekyll + reload');
     gutil.log('    serve         build the site and open it in a browser');
@@ -207,8 +198,6 @@ module.exports.help = module.exports.default = function help () {
     gutil.log('');
     gutil.log('    newversion    create ' + NEXT_DOCS_VERSION + ' docs from dev docs');
     gutil.log('    snapshot      copy dev docs to ' + LATEST_DOCS_VERSION + ' docs');
-    gutil.log('');
-    gutil.log('    plugins       build ' + PLUGINS_FILE);
     gutil.log('');
     gutil.log('    configs       run all the below tasks');
     gutil.log('    defaults      create ' + DEFAULTS_CONFIG_FILE);
@@ -334,49 +323,7 @@ const asf = module.exports.asf = function asf () {
         .pipe(gulp.dest(path.join(PROD_DIR)));
 };
 
-const plugins = module.exports.plugins = function plugins () {
-    if (gutil.env.prod) {
-        process.env.NODE_ENV = 'production';
-    }
-
-    var stream = browserify(PLUGINS_SRC_FILE, { debug: !gutil.env.prod })
-        .transform(babelify, {
-            presets: ['@babel/preset-react'],
-
-            // @todo should remove the plugins block? It can build without it.
-            plugins: [
-                ['@babel/plugin-transform-react-jsx', { pragma: 'h' }]
-            ]
-        })
-        .transform(envify)
-        .bundle()
-        .on('error', gutil.log)
-        .pipe(vstream(PLUGINS_FILE_NAME))
-        .pipe(buffer());
-
-    if (gutil.env.prod) {
-        stream = stream
-            .pipe(uglify())
-            .on('error', gutil.log);
-    }
-
-    return stream
-        .pipe(gulp.dest(JS_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
-        .pipe(browsersync.reload({ stream: true }))
-
-        // NOTE:
-        //      adding YAML front matter after doing everything
-        //      else so that uglify doesn't screw it up
-        .pipe(header(YAML_FRONT_MATTER))
-
-        // WORKAROUND:
-        //           minified JS has some things that look like
-        //           Liquid tags, so we replace them manually
-        .pipe(replace('){{', '){ {'))
-        .pipe(gulp.dest(JS_DIR));
-};
-
-const build = module.exports.build = gulp.series(configs, data, styles, plugins, function build (done) {
+const build = module.exports.build = gulp.series(configs, data, styles, function build (done) {
     jekyllBuild(done);
 }, asf);
 
@@ -404,15 +351,6 @@ module.exports.watch = gulp.series(serve, function watch () {
         ],
         { interval: WATCH_INTERVAL },
         ['styles']
-    );
-    gulp.watch(
-        [
-            path.join(PLUGINS_SRC_DIR, '**', '*.js'),
-            path.join(PLUGINS_SRC_DIR, '**', '*.jsx'),
-            path.join(PLUGINS_SRC_DIR, '**', '*.json')
-        ],
-        { interval: WATCH_INTERVAL },
-        ['plugins']
     );
     gulp.watch(
         [
@@ -492,7 +430,6 @@ module.exports.clean = function clean (done) {
     remove(FETCH_DIR);
     remove(path.join(DATA_DIR, 'toc', '*-gen.yml'));
     remove(CSS_OUT_DIR);
-    remove(PLUGINS_FILE);
     remove(DOCS_VERSION_FILE);
     remove(ALL_PAGES_FILE);
     remove(DEFAULTS_CONFIG_FILE);

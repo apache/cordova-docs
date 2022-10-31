@@ -17,6 +17,15 @@
 // specific language governing permissions and limitations
 // under the License.
 
+function copyToClipboard(evt) {
+    let text = evt.querySelector('.text-to-copy').textContent;
+    navigator.clipboard.writeText(text);
+}
+
+function openNpmjsPluginsSearch() {
+    window.open('https://www.npmjs.com/search?q=keywords:ecosystem:cordova', '_blank');
+}
+
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
