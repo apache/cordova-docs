@@ -6,9 +6,49 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Nov 2022 15:17:18 +0000</pubDate>
-    <lastBuildDate>Tue, 01 Nov 2022 15:17:18 +0000</lastBuildDate>
+    <pubDate>Wed, 16 Nov 2022 05:20:17 +0000</pubDate>
+    <lastBuildDate>Wed, 16 Nov 2022 05:20:17 +0000</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
+    
+      <item>
+        <title>Cordova Common 4.1.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova-common@4.1.0&lt;/code&gt;. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like &lt;code&gt;config.xml&lt;/code&gt; parsing.&lt;/p&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;The most notable improvement in this minor release is the ability to pass nearly all XML DOM element attributes to the platform&amp;#39;s JS tooling. By passing down all attribute data, Cordova-Common no longer needs to be updated for adding and supporting new platform attributes.&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/181&quot;&gt;GH-181&lt;/a&gt; feat(PluginInfo): Allow XML Attributes to be passed through to core platforms&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/158&quot;&gt;GH-158&lt;/a&gt; fix(ConfigChanges): do not pass PlistValue to &lt;code&gt;xml_helpers.resolveParent&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/162&quot;&gt;GH-162&lt;/a&gt; refactor(PlatformMunger): DRY &amp;amp; simplify config munging&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/160&quot;&gt;GH-160&lt;/a&gt; refactor(xml-helpers): document &amp;amp; check function signature types&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/159&quot;&gt;GH-159&lt;/a&gt; refactor(ConfigChanges): use for-of loop for iterating over array&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/184&quot;&gt;GH-184&lt;/a&gt; chore: rebuild package-lock.json&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/176&quot;&gt;GH-176&lt;/a&gt; chore(npm): rebuilt package-lock to v2&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/173&quot;&gt;GH-173&lt;/a&gt; chore: npmrc&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/180&quot;&gt;GH-180&lt;/a&gt; ci: Remove Node 10/12 from matrix. Added Node 16 and 18.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/150&quot;&gt;GH-150&lt;/a&gt; ci: add node 14 to workflow&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/161&quot;&gt;GH-161&lt;/a&gt; test: fix invalid config for jasmine-spec-reporter&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 15 Nov 2022 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2022/11/15/cordova-common-release-4.1.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2022/11/15/cordova-common-release-4.1.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Media Plugin 6.1.0 Released!</title>
@@ -619,78 +659,6 @@ cordova plugin add cordova-plugin-device@2.1.0
         
         
         <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Media Plugin 5.0.4 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;Cordova Media Plugin (5.0.4)&lt;/code&gt;!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-media&quot;&gt;cordova-plugin-media@5.0.4&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-media
-cordova plugin add cordova-plugin-media@5.0.4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Resolved Mounted Storage for &lt;strong&gt;Android 11&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Android 11 had deprecated the &lt;code&gt;Environment.getExternalStorageDirectory()&lt;/code&gt; API that caused issues with fetching and mounting to the external directory. In this release, we changed the API with &lt;code&gt;context.getExternalFilesDir(null)&lt;/code&gt;, the alternative suggested API for fetching and mounting with the external storage directory.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/317&quot;&gt;GH-317&lt;/a&gt; fix(android): get external files directory for &lt;strong&gt;Android&lt;/strong&gt; 10+&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/249&quot;&gt;GH-249&lt;/a&gt; fix: #248 delete javascript reference to released media&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/241&quot;&gt;GH-241&lt;/a&gt; fix(types): Add type definition for getCurrentAmplitude&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/283&quot;&gt;GH-283&lt;/a&gt; refactor(eslint): use &lt;code&gt;cordova-eslint&lt;/code&gt; /w fix&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Chores &amp;amp; Deps:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/329&quot;&gt;GH-329&lt;/a&gt; dep: bump &lt;code&gt;@cordova/eslint-config@4.0.0&lt;/code&gt; w/ fix &amp;amp; &lt;code&gt;package-lock&lt;/code&gt; rebuild&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/284&quot;&gt;GH-284&lt;/a&gt; chore: adds &lt;code&gt;package-lock&lt;/code&gt; file&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/282&quot;&gt;GH-282&lt;/a&gt; chore(npm): use short notation in &lt;code&gt;package.json&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/275&quot;&gt;GH-275&lt;/a&gt; chore(npm): improve ignore list&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;CI &amp;amp; Tests:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/320&quot;&gt;GH-320&lt;/a&gt; ci(ios): update workflow w/ &lt;strong&gt;iOS&lt;/strong&gt; 15&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/313&quot;&gt;GH-313&lt;/a&gt; ci: add action-badge&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/312&quot;&gt;GH-312&lt;/a&gt; ci: remove travis &amp;amp; appveyor&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/311&quot;&gt;GH-311&lt;/a&gt; ci: add gh-actions workflows&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/298&quot;&gt;GH-298&lt;/a&gt; ci: add node-14.x to workflow&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/292&quot;&gt;GH-292&lt;/a&gt; ci(travis): update osx xcode image&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/291&quot;&gt;GH-291&lt;/a&gt; ci(travis): updates &lt;strong&gt;Android&lt;/strong&gt; API level&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/274&quot;&gt;GH-274&lt;/a&gt; ci: updates Node.js versions&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/318&quot;&gt;GH-318&lt;/a&gt; test(browser): disable test cases w/ play() due to Chrome&amp;#39;s Autoplay Policy&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/news/2022/01/25/media-plugin-5.0.4-release.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/news/2022/01/25/media-plugin-5.0.4-release.html</guid>
-        
-        <category>release</category>
-        
-        <category>plugins</category>
-        
-        
-        <category>news</category>
         
       </item>
     

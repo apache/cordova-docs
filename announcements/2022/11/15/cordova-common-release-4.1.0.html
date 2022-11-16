@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-media!  cordova-plugin-media@6.1.0To upgrade:cordova plugin remove cordova-p...">
+    <meta name="description" content="We are happy to announce that cordova-common@4.1.0. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides uti...">
 
     <title>
         
             
-                Media Plugin 6.1.0 Released! - Apache Cordova
+                Cordova Common 4.1.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/news/2022/09/09/media-plugin-6.1.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2022/11/15/cordova-common-release-4.1.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,44 +129,39 @@
 
 <div class="post">
     <header>
-        <div class="title">Media Plugin 6.1.0 Released!</div>
+        <div class="title">Cordova Common 4.1.0 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">09 Sep 2022</div>
+        <div class="date">15 Nov 2022</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released an update for <code>cordova-plugin-media</code>!</p>
-
-<ul>
-  <li><a href="https://www.npmjs.com/package/cordova-plugin-media">cordova-plugin-media@6.1.0</a></li>
-</ul>
-
-<p><strong>To upgrade:</strong></p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-media
-cordova plugin add cordova-plugin-media@6.1.0
-</code></pre></div></div>
+            <p>We are happy to announce that <code>cordova-common@4.1.0</code>. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like <code>config.xml</code> parsing.</p>
 
 <h2>Release Highlights</h2>
 
-<p>For Android, we updated the media error response object to include the &quot;message&quot; property. This property will provide additional information about the error. It also syncs in line with the media error response object that iOS returns.</p>
+<p>The most notable improvement in this minor release is the ability to pass nearly all XML DOM element attributes to the platform&#39;s JS tooling. By passing down all attribute data, Cordova-Common no longer needs to be updated for adding and supporting new platform attributes.</p>
 
-<p>For iOS, file scheme support has been implemented. Two fixes were applied to prevent crashes that occured when fetching the position while the time was not defined and to ensured that the category was defined after the recording was released.</p>
-
-<p>Please report any issues you find by following the this <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/357">GH-357</a> feat(android): add &#39;<code>message</code>&#39; field to media error <a href="https://issues.apache.org/jira/browse/CB-11641">CB-11641</a></li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/352">GH-352</a> feat(ios): support <code>file</code> scheme</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/354">GH-354</a> fix(ios): Reset default audio session category when release (<a href="https://issues.apache.org/jira/browse/CB-13243">CB-13243</a>)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media/pull/353">GH-353</a> fix(ios): error on <code>getPosition</code> when time is <code>nan</code></li>
+  <li><a href="https://github.com/apache/cordova-common/pull/181">GH-181</a> feat(PluginInfo): Allow XML Attributes to be passed through to core platforms</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/158">GH-158</a> fix(ConfigChanges): do not pass PlistValue to <code>xml_helpers.resolveParent</code></li>
+  <li><a href="https://github.com/apache/cordova-common/pull/162">GH-162</a> refactor(PlatformMunger): DRY &amp; simplify config munging</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/160">GH-160</a> refactor(xml-helpers): document &amp; check function signature types</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/159">GH-159</a> refactor(ConfigChanges): use for-of loop for iterating over array</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/184">GH-184</a> chore: rebuild package-lock.json</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/176">GH-176</a> chore(npm): rebuilt package-lock to v2</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/173">GH-173</a> chore: npmrc</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/180">GH-180</a> ci: Remove Node 10/12 from matrix. Added Node 16 and 18.</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/150">GH-150</a> ci: add node 14 to workflow</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/161">GH-161</a> test: fix invalid config for jasmine-spec-reporter</li>
 </ul>
 
         </div>
@@ -175,37 +170,17 @@ cordova plugin add cordova-plugin-media@6.1.0
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2022/07/12/cordova-android-release-11.0.0.html">Previous</a>
+                    <a href="/news/2022/09/09/media-plugin-6.1.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2022/07/12/cordova-android-release-11.0.0.html">Cordova Android 11.0.0 Released!</a>
-                    <div class="date"> 12 Jul 2022 - By Bryan Ellis </div>
+                    <a class="title" href="/news/2022/09/09/media-plugin-6.1.0.html">Media Plugin 6.1.0 Released!</a>
+                    <div class="date"> 09 Sep 2022 - By Bryan Ellis </div>
                     <p class="content">
-                        We are happy to announce that we have just released Cordova Android...
+                        We are happy to announce that we have just released an update...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2022/11/15/cordova-common-release-4.1.0.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2022/11/15/cordova-common-release-4.1.0.html">Cordova Common 4.1.0 Released!</a>
-                    <div class="date"> 15 Nov 2022 - By Bryan Ellis </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that cordova-common@4.1.0. This is one of the...
-                    </p>
                 
             </div>
         </div>
