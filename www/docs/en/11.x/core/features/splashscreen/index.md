@@ -437,6 +437,10 @@ _Note:_ This setting is available but use at your own risk.
 
 The splash screen image. This preference is used for both animated and non-animated icons. The current acceptable asset files can either be an XML Vector Drwable or PNG.
 
+:warning: Using [Adaptive Icons](https://medium.com/androiddevelopers/implementing-adaptive-icons-1e4d1795470e) requires Minimum SDK 26 to be set.
+
+:warning: Some XML Vector [features](https://developer.android.com/develop/ui/views/graphics/vector-drawable-resources) requires Minimum SDK 24 to be set.
+
 **Supported Platforms:**
 
 - Android
