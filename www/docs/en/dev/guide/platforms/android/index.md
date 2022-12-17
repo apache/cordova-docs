@@ -349,7 +349,7 @@ To sign an app, you need the following parameters:
 | Alias                 | `--alias`         | The id specifying the private key used for signing
 | Password              | `--password`      | Password for the private key specified
 | Type of the Keystore  | `--keystoreType`  | _Default: auto-detect based on file extension_<br>Either pkcs12 or jks
-| Package Type          | `--packageType`   | _Default: apk_<br>Specify whether to build an APK or an [AAB](https://developer.android.com/guide/app-bundle) (Android App Bundle) file.<br>Acceptable Values: `apk` or `bundle`
+| Package Type          | `--packageType`   | _Default: apk for debug, bundle for release_<br>Specify whether to build an APK or an [AAB](https://developer.android.com/guide/app-bundle) (Android App Bundle) file.<br>Acceptable Values: `apk` or `bundle`
 
 The parameters above can be specified as an argument when using the [Cordova CLI][cli_reference] `build` or `run` commands.
 
