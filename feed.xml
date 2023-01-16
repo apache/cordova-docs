@@ -6,9 +6,123 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 04 Jan 2023 10:15:05 +0000</pubDate>
-    <lastBuildDate>Wed, 04 Jan 2023 10:15:05 +0000</lastBuildDate>
+    <pubDate>Mon, 16 Jan 2023 09:22:02 +0000</pubDate>
+    <lastBuildDate>Mon, 16 Jan 2023 09:22:02 +0000</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
+    
+      <item>
+        <title>Cordova CLI 11.1.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released a minor update to our Cordova CLI!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova&quot;&gt;cordova@11.1.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This release also pins our internal libraries to the latest releases:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-lib&quot;&gt;cordova-lib@11.1.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-create&quot;&gt;cordova-create@4.1.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-fetch&quot;&gt;cordova-fetch@3.1.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-common&quot;&gt;cordova-common@4.1.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;This release officially appends the deprecation flag to the Windows &amp;amp; OSX platforms on the available platforms output screen.&lt;/p&gt;
+
+&lt;p&gt;We have updated our internal process to pass all of the XML attribute values in &lt;code&gt;config.xml&lt;/code&gt; to the platform packages so we can easily update the platforms without updating tooling and CLI.&lt;/p&gt;
+
+&lt;p&gt;We have updated all possible npm packages to the latest non-major release that Cordova can support.&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Cordova CLI 11.1.0:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/603&quot;&gt;GH-603&lt;/a&gt; dep: bump to latest minor+patch w/ &lt;code&gt;package-lock&lt;/code&gt; rebuild
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;cordova-common@^4.1.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;cordova-create@^4.1.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;cordova-lib@^11.1.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;systeminformation@^5.17.3&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/599&quot;&gt;GH-599&lt;/a&gt; chore: remove unnecessary gendered text&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/600&quot;&gt;GH-600&lt;/a&gt; ci: update codecov &amp;amp; run on node 14-18&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/587&quot;&gt;GH-587&lt;/a&gt; dep(npm): bump packages to latest minor/patch revisions w/ &lt;code&gt;package-lock&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Cordova Lib 11.1.0:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/904&quot;&gt;GH-904&lt;/a&gt; dep(npm): bump &lt;code&gt;cordova-fetch@3.1.0&lt;/code&gt; w/ package-lock rebuild&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/901&quot;&gt;GH-901&lt;/a&gt; feat: bump dependencies to latest minor &amp;amp; patch revision
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;fs-extra@^10.1.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;globby@^11.1.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;semver@^7.3.8&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;cordova-android@10.1.2&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;jasmine@^3.99.0&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/899&quot;&gt;GH-899&lt;/a&gt; feat: bump &lt;code&gt;cordova-common@4.1.0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/852&quot;&gt;GH-852&lt;/a&gt; feat(windows): deprecate platform&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/851&quot;&gt;GH-851&lt;/a&gt; feat(osx): deprecate platform&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Cordova Create 4.1.0:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/73&quot;&gt;GH-73&lt;/a&gt; dep(npm): bump dependencies to latest minor/patch &amp;amp; rebuild package-lock
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;cordova-common@^4.1.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;cordova-fetch@^3.1.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;fs-extra@^10.1.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;globby@^11.1.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;jasmine@^3.99.0&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/74&quot;&gt;GH-74&lt;/a&gt; ci(workflow): update node support &amp;amp; action dependencies&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Cordova Fetch 3.1.0:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/101&quot;&gt;GH-101&lt;/a&gt; ci(workflow): update node 14 to use npm ^7.2&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/100&quot;&gt;GH-100&lt;/a&gt; ci(workflow): update action dependencies &amp;amp; node versions&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/98&quot;&gt;GH-98&lt;/a&gt; dep(npm): bump w/ latetst minor &amp;amp; patch releases
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;cordova-common@^4.1.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;fs-extra@^9.1.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;npm-package-arg@^8.1.5&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;pacote@^11.3.5&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;resolve@^1.22.1&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;semver@^7.3.8&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;jasmine@^3.99.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;nyc@^15.1.0&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/97&quot;&gt;GH-97&lt;/a&gt; chore(npm): rebuilt &lt;code&gt;package-lock&lt;/code&gt; to v2&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/94&quot;&gt;GH-94&lt;/a&gt; ci(workflow): replace node 15 with node 16 (npm@7)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/93&quot;&gt;GH-93&lt;/a&gt; chore(npm): update &lt;code&gt;package-lock&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/news/2023/01/16/cordova-cli-11.1.0-release.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/news/2023/01/16/cordova-cli-11.1.0-release.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>news</category>
+        
+      </item>
     
       <item>
         <title>Cordova Common 4.1.0 Released!</title>
@@ -608,54 +722,6 @@ cordova plugin add cordova-plugin-device@2.1.0
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2022/03/22/osx-deprecation.html</guid>
         
         <category>news</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova OSX 7.0.0 released and deprecation notice</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova OSX 7.0.0&lt;/code&gt;!  This is one of Cordova&amp;#39;s supported platforms for building macOS desktop applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-osx&quot;&gt;cordova-osx@7.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;This version includes various dependency updates and makes the platform run on AppleSilicon Macs.&lt;/p&gt;
-
-&lt;p&gt;We have raised the minimum required NodeJS version for this release to 12.x.&lt;/p&gt;
-
-&lt;h2&gt;Deprecation Notice&lt;/h2&gt;
-
-&lt;p&gt;We are planning to deprecate the &lt;code&gt;cordova-osx&lt;/code&gt; platform soon. Please migrate to the &lt;code&gt;cordova-electron&lt;/code&gt; platform or try Mac Catalyst with the &lt;code&gt;cordova-ios&lt;/code&gt; platform.&lt;/p&gt;
-
-&lt;p&gt;Feel free to check out the discussions on the mailing list &lt;a href=&quot;https://lists.apache.org/thread/wjwx2y9roptq941gg96809fvhwt3rdto&quot;&gt;1&lt;/a&gt; &lt;a href=&quot;https://lists.apache.org/thread/lqq2xoy3pjqcyl052gv0qom2f31zgg8k&quot;&gt;2&lt;/a&gt; for more information and leave a comment if you have anything to add.&lt;/p&gt;
-
-&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-osx/pull/117&quot;&gt;GH-117&lt;/a&gt; Prepare release 7.0.0&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-osx/pull/105&quot;&gt;GH-105&lt;/a&gt; Fix to make Cordova OSX build successfully on AppleSilicon target.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-osx/pull/115&quot;&gt;GH-115&lt;/a&gt; refactor!: drop q&lt;/li&gt;
-  &lt;li&gt;chore: update GH description, homepage and labels&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-osx/pull/114&quot;&gt;GH-114&lt;/a&gt; refactor(versions): remove duplicated function&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-osx/pull/108&quot;&gt;GH-108&lt;/a&gt; ci: add node-14.x to workflow&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-osx/pull/107&quot;&gt;GH-107&lt;/a&gt; chore: clean up &lt;code&gt;package.json&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 09 Mar 2022 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2022/03/09/osx-release-7.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2022/03/09/osx-release-7.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
         
         
         <category>announcements</category>
