@@ -54,27 +54,28 @@ different screen resolutions.
 
 ## Android
 
-On Android, instead of using a single image for an icon, you can use two images (background and foreground) to create an **Adaptive Icon**. To use Adaptive Icons, you need to have installed at least version 9.0.0 of **Cordova** and version 8.0.0 of **Cordova-Android**.
+On Android, instead of using a single image for an icon, you can use two images (background and foreground) to create an **Adaptive Icon**. WIth the support for themed icons from Android 13, you can use three images (background, foreground and monochrome) to create an **Adaptive Icon**. To use Adaptive Icons, you need to have installed at least version 9.0.0 of **Cordova** and version 8.0.0 of **Cordova-Android**.
 
 Attributes    | Description
 --------------|--------------------------------------------------------------------------------
 background    | *Required for Adaptive* <br/> Location of the image (png or vector) relative to your project directory, or color reference
 foreground    | *Required for Adaptive* <br/> Location of the image (png or vector) relative to your project directory, or color reference
+monochrome    | *Optional for Adaptive but required for themed icons* <br/> Location of the image (png or vector) relative to your project directory
 density       | *Required* <br/> Specified icon density
 
 ### Adaptive Icons
 
-To use the adaptive icons the `background` and `foreground` attributes must be defined in place of the `src` attribute. The `src` attribute is not used for adaptive icons.
+To use the adaptive icons the `background`, `foreground` and optionally `monochrome` attributes must be defined in place of the `src` attribute. The `src` attribute is not used for adaptive icons.
 
 #### Adaptive Icon with Images:
 ```xml
 <platform name="android">
-  <icon background="res/icon/android/ldpi-background.png" density="ldpi" foreground="res/icon/android/ldpi-foreground.png" />
-  <icon background="res/icon/android/mdpi-background.png" density="mdpi" foreground="res/icon/android/mdpi-foreground.png" />
-  <icon background="res/icon/android/hdpi-background.png" density="hdpi" foreground="res/icon/android/hdpi-foreground.png" />
-  <icon background="res/icon/android/xhdpi-background.png" density="xhdpi" foreground="res/icon/android/xhdpi-foreground.png" />
-  <icon background="res/icon/android/xxhdpi-background.png" density="xxhdpi" foreground="res/icon/android/xxhdpi-foreground.png" />
-  <icon background="res/icon/android/xxxhdpi-background.png" density="xxxhdpi" foreground="res/icon/android/xxxhdpi-foreground.png" />
+  <icon monochrome="res/icon/android/ldpi-monochrome.png" background="res/icon/android/ldpi-background.png" density="ldpi" foreground="res/icon/android/ldpi-foreground.png" />
+  <icon monochrome="res/icon/android/mdpi-monochrome.png" background="res/icon/android/mdpi-background.png" density="mdpi" foreground="res/icon/android/mdpi-foreground.png" />
+  <icon monochrome="res/icon/android/hdpi-monochrome.png" background="res/icon/android/hdpi-background.png" density="hdpi" foreground="res/icon/android/hdpi-foreground.png" />
+  <icon monochrome="res/icon/android/xhdpi-monochrome.png" background="res/icon/android/xhdpi-background.png" density="xhdpi" foreground="res/icon/android/xhdpi-foreground.png" />
+  <icon monochrome="res/icon/android/xxhdpi-monochrome.png" background="res/icon/android/xxhdpi-background.png" density="xxhdpi" foreground="res/icon/android/xxhdpi-foreground.png" />
+  <icon monochrome="res/icon/android/xxxhdpi-monochrome.png" background="res/icon/android/xxxhdpi-background.png" density="xxxhdpi" foreground="res/icon/android/xxxhdpi-foreground.png" />
 </platform>
 ```
 
@@ -83,12 +84,12 @@ To use the adaptive icons the `background` and `foreground` attributes must be d
 #### Adaptive Icon with Vectors:
 ```xml
 <platform name="android">
-  <icon background="res/icon/android/ldpi-background.xml" density="ldpi" foreground="res/icon/android/ldpi-foreground.xml" src="res/android/ldpi.png" />
-  <icon background="res/icon/android/mdpi-background.xml" density="mdpi" foreground="res/icon/android/mdpi-foreground.xml" src="res/android/mdpi.png" />
-  <icon background="res/icon/android/hdpi-background.xml" density="hdpi" foreground="res/icon/android/hdpi-foreground.xml" src="res/android/hdpi.png" />
-  <icon background="res/icon/android/xhdpi-background.xml" density="xhdpi" foreground="res/icon/android/xhdpi-foreground.xml" src="res/android/xhdpi.png" />
-  <icon background="res/icon/android/xxhdpi-background.xml" density="xxhdpi" foreground="res/icon/android/xxhdpi-foreground.xml" src="res/android/xxhdpi.png" />
-  <icon background="res/icon/android/xxxhdpi-background.xml" density="xxxhdpi" foreground="res/icon/android/xxxhdpi-foreground.xml" src="res/android/xxxhdpi.png" />
+  <icon monochrome="res/icon/android/ldpi-monochrome.png" background="res/icon/android/ldpi-background.xml" density="ldpi" foreground="res/icon/android/ldpi-foreground.xml" src="res/android/ldpi.png" />
+  <icon monochrome="res/icon/android/mdpi-monochrome.png" background="res/icon/android/mdpi-background.xml" density="mdpi" foreground="res/icon/android/mdpi-foreground.xml" src="res/android/mdpi.png" />
+  <icon monochrome="res/icon/android/hdpi-monochrome.png" background="res/icon/android/hdpi-background.xml" density="hdpi" foreground="res/icon/android/hdpi-foreground.xml" src="res/android/hdpi.png" />
+  <icon monochrome="res/icon/android/xhdpi-monochrome.png" background="res/icon/android/xhdpi-background.xml" density="xhdpi" foreground="res/icon/android/xhdpi-foreground.xml" src="res/android/xhdpi.png" />
+  <icon monochrome="res/icon/android/xxhdpi-monochrome.png" background="res/icon/android/xxhdpi-background.xml" density="xxhdpi" foreground="res/icon/android/xxhdpi-foreground.xml" src="res/android/xxhdpi.png" />
+  <icon monochrome="res/icon/android/xxxhdpi-monochrome.png" background="res/icon/android/xxxhdpi-background.xml" density="xxxhdpi" foreground="res/icon/android/xxxhdpi-foreground.xml" src="res/android/xxxhdpi.png" />
 </platform>
 ```
 
@@ -109,12 +110,12 @@ In the `config.xml`, we will add `resource-file` to copy the `colors.xml` into t
 <platform name="android">
   <resource-file src="res/values/colors.xml" target="/app/src/main/res/values/colors.xml" />
 
-  <icon background="@color/background" density="ldpi" foreground="res/icon/android/ldpi-foreground.png" />
-  <icon background="@color/background" density="mdpi" foreground="res/icon/android/mdpi-foreground.png" />
-  <icon background="@color/background" density="hdpi" foreground="res/icon/android/hdpi-foreground.png" />
-  <icon background="@color/background" density="xhdpi" foreground="res/icon/android/xhdpi-foreground.png" />
-  <icon background="@color/background" density="xxhdpi" foreground="res/icon/android/xxhdpi-foreground.png" />
-  <icon background="@color/background" density="xxxhdpi" foreground="res/icon/android/xxxhdpi-foreground.png" />
+  <icon monochrome="res/icon/android/ldpi-monochrome.png" background="@color/background" density="ldpi" foreground="res/icon/android/ldpi-foreground.png" />
+  <icon monochrome="res/icon/android/mdpi-monochrome.png" background="@color/background" density="mdpi" foreground="res/icon/android/mdpi-foreground.png" />
+  <icon monochrome="res/icon/android/hdpi-monochrome.png" background="@color/background" density="hdpi" foreground="res/icon/android/hdpi-foreground.png" />
+  <icon monochrome="res/icon/android/xhdpi-monochrome.png" background="@color/background" density="xhdpi" foreground="res/icon/android/xhdpi-foreground.png" />
+  <icon monochrome="res/icon/android/xxhdpi-monochrome.png" background="@color/background" density="xxhdpi" foreground="res/icon/android/xxhdpi-foreground.png" />
+  <icon monochrome="res/icon/android/xxxhdpi-monochrome.png" background="@color/background" density="xxxhdpi" foreground="res/icon/android/xxxhdpi-foreground.png" />
 </platform>
 ```
 
@@ -141,6 +142,7 @@ In the `config.xml`, we will add `resource-file` to copy the `colors.xml` into t
 
 ### See Also
 - [Android icon guide](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive)
+- [Android Adaptive icons - User theming](https://developer.android.com/develop/ui/views/launch/icon_design_adaptive#user-theming)
 - [Android - Supporting multiple screens](https://developer.android.com/guide/practices/screens_support.html)
 
 ## Browser
