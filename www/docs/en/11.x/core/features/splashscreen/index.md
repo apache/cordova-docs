@@ -457,7 +457,7 @@ The splash screen image. This preference is used for both animated and non-anima
 
 ### `AndroidWindowSplashScreenAnimationDuration`
 
-Defines the duration of the icon's animation if an Animated Vector Drwable is supplied as the splash screen image.
+Defines the duration of the icon's animation if an Animated Vector Drawable is supplied as the splash screen image.
 
 **Supported Platforms:**
 
