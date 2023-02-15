@@ -6,9 +6,9 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 16 Jan 2023 09:22:02 +0000</pubDate>
-    <lastBuildDate>Mon, 16 Jan 2023 09:22:02 +0000</lastBuildDate>
-    <generator>Jekyll v4.3.1</generator>
+    <pubDate>Wed, 15 Feb 2023 22:00:11 +0000</pubDate>
+    <lastBuildDate>Wed, 15 Feb 2023 22:00:11 +0000</lastBuildDate>
+    <generator>Jekyll v4.3.2</generator>
     
       <item>
         <title>Cordova CLI 11.1.0 Released!</title>
