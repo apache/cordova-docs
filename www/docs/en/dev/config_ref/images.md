@@ -54,7 +54,9 @@ different screen resolutions.
 
 ## Android
 
-On Android, instead of using a single image for an icon, you can use two images (background and foreground) to create an **Adaptive Icon**. WIth the support for themed icons from Android 13, you can use three images (background, foreground and monochrome) to create an **Adaptive Icon**. To use Adaptive Icons, you need to have installed at least version 9.0.0 of **Cordova** and version 8.0.0 of **Cordova-Android**.
+Instead of using a single image for an icon, you can use two images (background and foreground) to create an **Adaptive Icon**. To use Adaptive Icons in Cordova, at minimum **Cordova CLI** 9.0.0 and **Cordova-Android** 8.0.0 is required.
+
+Android 13 has introduced themed icons which are monochrome images appended to the existing **Adaptive Icons**. To use Themed Icon in Cordova, at minimum **Cordova CLI** 12.0.0 and **Cordova-Android** 12.0.0 is required.
 
 Attributes    | Description
 --------------|--------------------------------------------------------------------------------
