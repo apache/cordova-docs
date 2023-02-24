@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released a minor update to our Cordova CLI!  cordova@11.1.0This release also pins our internal libraries to the la...">
+    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-screen-orientation!  cordova-plugin-screen-orientation@3.0.3To upgrade:cordo...">
 
     <title>
         
             
-                Cordova CLI 11.1.0 Released! - Apache Cordova
+                Screen Orientation Plugin 3.0.3 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/news/2023/01/16/cordova-cli-11.1.0-release.html">
+    <link rel="canonical" href="https://cordova.apache.org/news/2023/02/24/screen-orientation-plugin-3.0.3.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,113 +129,58 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova CLI 11.1.0 Released!</div>
+        <div class="title">Screen Orientation Plugin 3.0.3 Released!</div>
         <div class="author">By:
             
-              Bryan Ellis
+              <a href="https://twitter.com/niklasmaerz">Niklas Merz</a>
             
         </div>
-        <div class="date">16 Jan 2023</div>
+        <div class="date">24 Feb 2023</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released a minor update to our Cordova CLI!</p>
+            <p>We are happy to announce that we have just released an update for <code>cordova-plugin-screen-orientation</code>!</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova">cordova@11.1.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-screen-orientation">cordova-plugin-screen-orientation@3.0.3</a></li>
 </ul>
 
-<p>This release also pins our internal libraries to the latest releases:</p>
+<p><strong>To upgrade:</strong></p>
 
-<ul>
-  <li><a href="https://www.npmjs.com/package/cordova-lib">cordova-lib@11.1.0</a></li>
-  <li><a href="https://www.npmjs.com/package/cordova-create">cordova-create@4.1.0</a></li>
-  <li><a href="https://www.npmjs.com/package/cordova-fetch">cordova-fetch@3.1.0</a></li>
-  <li><a href="https://www.npmjs.com/package/cordova-common">cordova-common@4.1.0</a></li>
-</ul>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-screen-orientation
+cordova plugin add cordova-plugin-screen-orientation@3.0.3
+</code></pre></div></div>
 
 <h2>Release Highlights</h2>
 
-<p>This release officially appends the deprecation flag to the Windows &amp; OSX platforms on the available platforms output screen.</p>
+<p>This release improves compatibility with newer iOS versions (see (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/107">#107</a>)) and contains miscellaneous version updates.</p>
 
-<p>We have updated our internal process to pass all of the XML attribute values in <code>config.xml</code> to the platform packages so we can easily update the platforms without updating tooling and CLI.</p>
-
-<p>We have updated all possible npm packages to the latest non-major release that Cordova can support.</p>
-
-<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+<p>Please report any issues you find by following this <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
-<p><strong>Cordova CLI 11.1.0:</strong></p>
-
 <ul>
-  <li><a href="https://github.com/apache/cordova-cli/pull/603">GH-603</a> dep: bump to latest minor+patch w/ <code>package-lock</code> rebuild
-    <ul>
-      <li><code>cordova-common@^4.1.0</code></li>
-      <li><code>cordova-create@^4.1.0</code></li>
-      <li><code>cordova-lib@^11.1.0</code></li>
-      <li><code>systeminformation@^5.17.3</code></li>
-    </ul>
-  </li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/599">GH-599</a> chore: remove unnecessary gendered text</li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/600">GH-600</a> ci: update codecov &amp; run on node 14-18</li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/587">GH-587</a> dep(npm): bump packages to latest minor/patch revisions w/ <code>package-lock</code></li>
-</ul>
-
-<p><strong>Cordova Lib 11.1.0:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-lib/pull/904">GH-904</a> dep(npm): bump <code>cordova-fetch@3.1.0</code> w/ package-lock rebuild</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/901">GH-901</a> feat: bump dependencies to latest minor &amp; patch revision
-    <ul>
-      <li><code>fs-extra@^10.1.0</code></li>
-      <li><code>globby@^11.1.0</code></li>
-      <li><code>semver@^7.3.8</code></li>
-      <li><code>cordova-android@10.1.2</code></li>
-      <li><code>jasmine@^3.99.0</code></li>
-    </ul>
-  </li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/899">GH-899</a> feat: bump <code>cordova-common@4.1.0</code></li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/852">GH-852</a> feat(windows): deprecate platform</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/851">GH-851</a> feat(osx): deprecate platform</li>
-</ul>
-
-<p><strong>Cordova Create 4.1.0:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-create/pull/73">GH-73</a> dep(npm): bump dependencies to latest minor/patch &amp; rebuild package-lock
-    <ul>
-      <li><code>cordova-common@^4.1.0</code></li>
-      <li><code>cordova-fetch@^3.1.0</code></li>
-      <li><code>fs-extra@^10.1.0</code></li>
-      <li><code>globby@^11.1.0</code></li>
-      <li><code>jasmine@^3.99.0</code></li>
-    </ul>
-  </li>
-  <li><a href="https://github.com/apache/cordova-create/pull/74">GH-74</a> ci(workflow): update node support &amp; action dependencies</li>
-</ul>
-
-<p><strong>Cordova Fetch 3.1.0:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/101">GH-101</a> ci(workflow): update node 14 to use npm ^7.2</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/100">GH-100</a> ci(workflow): update action dependencies &amp; node versions</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/98">GH-98</a> dep(npm): bump w/ latetst minor &amp; patch releases
-    <ul>
-      <li><code>cordova-common@^4.1.0</code></li>
-      <li><code>fs-extra@^9.1.0</code></li>
-      <li><code>npm-package-arg@^8.1.5</code></li>
-      <li><code>pacote@^11.3.5</code></li>
-      <li><code>resolve@^1.22.1</code></li>
-      <li><code>semver@^7.3.8</code></li>
-      <li><code>jasmine@^3.99.0</code></li>
-      <li><code>nyc@^15.1.0</code></li>
-    </ul>
-  </li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/97">GH-97</a> chore(npm): rebuilt <code>package-lock</code> to v2</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/94">GH-94</a> ci(workflow): replace node 15 with node 16 (npm@7)</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/93">GH-93</a> chore(npm): update <code>package-lock</code></li>
+  <li>build(deps): bump json5 from 1.0.1 to 1.0.2 (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/110">#110</a>)</li>
+  <li>feat(ios): add support for <strong>iOS</strong> 16 (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/107">#107</a>)</li>
+  <li>fix(chrome): lock test (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/105">#105</a>)</li>
+  <li>chore: add .npmrc file to ensure the official NPM registry is used for package installations. (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/103">#103</a>)</li>
+  <li>chore: package-lock update (#104)</li>
+  <li>ci: sync workflow with paramedic (#101)</li>
+  <li>chore(npm): bump package-lock v2 w/ rebuild (#99)</li>
+  <li>ci(android): update java requirement for <code>cordova-android</code>@11 (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/92">#92</a>)</li>
+  <li>ci(ios): update workflow w/ <strong>iOS</strong> 15 (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/88">#88</a>)</li>
+  <li>ci: add action-badge (#87)</li>
+  <li>ci: remove travis &amp; appveyor (#86)</li>
+  <li>ci: add gh-actions workflows (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/84">#84</a>)</li>
+  <li>ci: add node-14.x to workflow (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/76">#76</a>)</li>
+  <li>fix: resolveOrientation function not working correctly (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/77">#77</a>)</li>
+  <li>chore: adds package-lock file (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/67">#67</a>)</li>
+  <li>refactor(eslint): use cordova-eslint /w fix (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/66">#66</a>)</li>
+  <li>chore(npm): use short notation in <code>package.json</code> (<a href="https://github.com/apache/cordova-plugin-screen-orientation/issues/64">#64</a>)</li>
+  <li>chore: removes old demo project. closes #52 (#65)</li>
+  <li>chore(asf): update git notification settings</li>
+  <li>Update CONTRIBUTING.md</li>
 </ul>
 
         </div>
@@ -244,37 +189,17 @@
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2022/11/15/cordova-common-release-4.1.0.html">Previous</a>
+                    <a href="/news/2023/01/16/cordova-cli-11.1.0-release.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2022/11/15/cordova-common-release-4.1.0.html">Cordova Common 4.1.0 Released!</a>
-                    <div class="date"> 15 Nov 2022 - By Bryan Ellis </div>
+                    <a class="title" href="/news/2023/01/16/cordova-cli-11.1.0-release.html">Cordova CLI 11.1.0 Released!</a>
+                    <div class="date"> 16 Jan 2023 - By Bryan Ellis </div>
                     <p class="content">
-                        We are happy to announce that cordova-common@4.1.0. This is one of the...
+                        We are happy to announce that we have just released a minor...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/news/2023/02/24/screen-orientation-plugin-3.0.3.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/news/2023/02/24/screen-orientation-plugin-3.0.3.html">Screen Orientation Plugin 3.0.3 Released!</a>
-                    <div class="date"> 24 Feb 2023 - By Niklas Merz </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released an update...
-                    </p>
                 
             </div>
         </div>

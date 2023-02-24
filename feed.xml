@@ -6,9 +6,68 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Feb 2023 22:00:11 +0000</pubDate>
-    <lastBuildDate>Wed, 15 Feb 2023 22:00:11 +0000</lastBuildDate>
+    <pubDate>Fri, 24 Feb 2023 14:48:14 +0000</pubDate>
+    <lastBuildDate>Fri, 24 Feb 2023 14:48:14 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Screen Orientation Plugin 3.0.3 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-screen-orientation&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-screen-orientation&quot;&gt;cordova-plugin-screen-orientation@3.0.3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-screen-orientation
+cordova plugin add cordova-plugin-screen-orientation@3.0.3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;This release improves compatibility with newer iOS versions (see (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/107&quot;&gt;#107&lt;/a&gt;)) and contains miscellaneous version updates.&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find by following this &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;build(deps): bump json5 from 1.0.1 to 1.0.2 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/110&quot;&gt;#110&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;feat(ios): add support for &lt;strong&gt;iOS&lt;/strong&gt; 16 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/107&quot;&gt;#107&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;fix(chrome): lock test (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/105&quot;&gt;#105&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;chore: add .npmrc file to ensure the official NPM registry is used for package installations. (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/103&quot;&gt;#103&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;chore: package-lock update (#104)&lt;/li&gt;
+  &lt;li&gt;ci: sync workflow with paramedic (#101)&lt;/li&gt;
+  &lt;li&gt;chore(npm): bump package-lock v2 w/ rebuild (#99)&lt;/li&gt;
+  &lt;li&gt;ci(android): update java requirement for &lt;code&gt;cordova-android&lt;/code&gt;@11 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/92&quot;&gt;#92&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;ci(ios): update workflow w/ &lt;strong&gt;iOS&lt;/strong&gt; 15 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/88&quot;&gt;#88&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;ci: add action-badge (#87)&lt;/li&gt;
+  &lt;li&gt;ci: remove travis &amp;amp; appveyor (#86)&lt;/li&gt;
+  &lt;li&gt;ci: add gh-actions workflows (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/84&quot;&gt;#84&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;ci: add node-14.x to workflow (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/76&quot;&gt;#76&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;fix: resolveOrientation function not working correctly (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/77&quot;&gt;#77&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;chore: adds package-lock file (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/67&quot;&gt;#67&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;refactor(eslint): use cordova-eslint /w fix (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/66&quot;&gt;#66&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;chore(npm): use short notation in &lt;code&gt;package.json&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/64&quot;&gt;#64&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;chore: removes old demo project. closes #52 (#65)&lt;/li&gt;
+  &lt;li&gt;chore(asf): update git notification settings&lt;/li&gt;
+  &lt;li&gt;Update CONTRIBUTING.md&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/news/2023/02/24/screen-orientation-plugin-3.0.3.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/news/2023/02/24/screen-orientation-plugin-3.0.3.html</guid>
+        
+        <category>release</category>
+        
+        <category>plugins</category>
+        
+        
+        <category>news</category>
+        
+      </item>
     
       <item>
         <title>Cordova CLI 11.1.0 Released!</title>
@@ -701,30 +760,6 @@ cordova plugin add cordova-plugin-device@2.1.0
         
         
         <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Deprecation of the Cordova OSX Platform</title>
-        <description>&lt;h2&gt;Deprecation of the Cordova OSX Platform&lt;/h2&gt;
-
-&lt;p&gt;We are hereby announcing the deprecation of &lt;a href=&quot;https://github.com/apache/cordova-osx#readme&quot;&gt;cordova-osx&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This means that the Cordova development community will not be doing any more work on this platform. Please migrate to the &lt;code&gt;cordova-electron&lt;/code&gt; platform or try Mac Catalyst with the &lt;code&gt;cordova-ios&lt;/code&gt; platform.&lt;/p&gt;
-
-&lt;p&gt;The usage and activity around the osx platform have been quite low for a long time. Cordova&amp;#39;s other solutions for building apps for macOS are actively maintained and especially cordova-ios offers better plugin support.&lt;/p&gt;
-
-&lt;p&gt;Your feedback is graciously accepted and appreciated!&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2022/03/22/osx-deprecation.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2022/03/22/osx-deprecation.html</guid>
-        
-        <category>news</category>
-        
-        
-        <category>announcements</category>
         
       </item>
     
