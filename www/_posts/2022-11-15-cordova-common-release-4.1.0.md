@@ -7,7 +7,7 @@ categories: announcements
 tags: news releases
 ---
 
-We are happy to announce that `cordova-common@4.1.0`. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like `config.xml` parsing.
+We are happy to announce that `cordova-common@4.1.0` has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like `config.xml` parsing.
 
 ## Release Highlights
 
