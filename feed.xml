@@ -6,9 +6,58 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 24 Feb 2023 14:48:14 +0000</pubDate>
-    <lastBuildDate>Fri, 24 Feb 2023 14:48:14 +0000</lastBuildDate>
+    <pubDate>Thu, 09 Mar 2023 06:48:15 +0000</pubDate>
+    <lastBuildDate>Thu, 09 Mar 2023 06:48:15 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Cordova Common 5.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova-common@5.0.0&lt;/code&gt; has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like &lt;code&gt;config.xml&lt;/code&gt; parsing.&lt;/p&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;The most notable changes in this major release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/186&quot;&gt;GH-186&lt;/a&gt; feat!: bump package requirement &lt;code&gt;node&amp;gt;=16&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As Node.js 14 nears the end-of-life (April 2023), we have bumped the minimum requirement to 16.0.0. This update has also increased the minimum npm requirement to 7.10.0.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/197&quot;&gt;GH-197&lt;/a&gt; feat(android): added &lt;code&gt;monochrome&lt;/code&gt; attribute&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In preparation for Cordova-Android&amp;#39;s next major release, supporting logic for Android&amp;#39;s monochrome icons has been included.&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/186&quot;&gt;GH-186&lt;/a&gt; feat!: bump package requirement node&amp;gt;=16&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/197&quot;&gt;GH-197&lt;/a&gt; feat(android): added monochrome attribute&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/99&quot;&gt;GH-99&lt;/a&gt; chore: drop q where possible&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/198&quot;&gt;GH-198&lt;/a&gt; test: Removed obsolete test&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/196&quot;&gt;GH-196&lt;/a&gt; dep: bump @cordova/eslint-config@^5.0.0&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/192&quot;&gt;GH-192&lt;/a&gt; dep!: bump all available packages&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/193&quot;&gt;GH-193&lt;/a&gt; refactor: replace underscore w/ lodash module pkgs&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/194&quot;&gt;GH-194&lt;/a&gt; refactor: renamed variable&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/188&quot;&gt;GH-188&lt;/a&gt; ci(actions): test w/ node 14, 16, 18&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/187&quot;&gt;GH-187&lt;/a&gt; ci(actions): update workflow&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2023/03/09/cordova-common-release-5.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2023/03/09/cordova-common-release-5.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Screen Orientation Plugin 3.0.3 Released!</title>
@@ -185,7 +234,7 @@ cordova plugin add cordova-plugin-screen-orientation@3.0.3
     
       <item>
         <title>Cordova Common 4.1.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova-common@4.1.0&lt;/code&gt;. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like &lt;code&gt;config.xml&lt;/code&gt; parsing.&lt;/p&gt;
+        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova-common@4.1.0&lt;/code&gt; has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like &lt;code&gt;config.xml&lt;/code&gt; parsing.&lt;/p&gt;
 
 &lt;h2&gt;Release Highlights&lt;/h2&gt;
 
@@ -700,59 +749,6 @@ cordova plugin add cordova-plugin-device@2.1.0
         <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html</guid>
-        
-        <category>release</category>
-        
-        <category>plugins</category>
-        
-        
-        <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Splash Screen Plugin Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released an update to our Splash Screen plugin!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/cordova-plugin-splashscreen&quot;&gt;cordova-plugin-splashscreen@6.0.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;h3&gt;Splash Screen&lt;/h3&gt;
-
-&lt;p&gt;This patch release fixes some bugs on Android, including an issue with the &amp;quot;backbutton&amp;quot; event &lt;a href=&quot;https://github.com/apache/cordova-android/issues/1106&quot;&gt;reported by some users&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/314&quot;&gt;GH-314&lt;/a&gt; fix: refocus after webview visible (#186)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/213&quot;&gt;GH-213&lt;/a&gt; fix(android): Fixes nav and title bars still appearing when app is fullscreen &lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/180&quot;&gt;GH-180&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/325&quot;&gt;GH-325&lt;/a&gt; chore: update package-lock.json&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/213&quot;&gt;GH-213&lt;/a&gt; GH-180 (android): Fixes nav and title bars still appearing when app is fullscreen&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/320&quot;&gt;GH-320&lt;/a&gt; ci(ios): update workflow w/ &lt;strong&gt;iOS&lt;/strong&gt; 15&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/319&quot;&gt;GH-319&lt;/a&gt; ci: add action-badge&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/318&quot;&gt;GH-318&lt;/a&gt; ci: remove travis &amp;amp; appveyor&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/317&quot;&gt;GH-317&lt;/a&gt; ci: add gh-actions workflows&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/312&quot;&gt;GH-312&lt;/a&gt; fix: autofocus after splashscreen&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/314&quot;&gt;GH-314&lt;/a&gt; fix: refocus after webview visible (#186)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/304&quot;&gt;GH-304&lt;/a&gt; ci: add node-14.x to workflow&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/291&quot;&gt;GH-291&lt;/a&gt; chore(docs): Update missing  default resources for &lt;strong&gt;Android&lt;/strong&gt; #689&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/293&quot;&gt;GH-293&lt;/a&gt; Documentation Enhancement for &lt;strong&gt;Android&lt;/strong&gt; Dark Mode&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/300&quot;&gt;GH-300&lt;/a&gt; docs: Added &lt;strong&gt;iOS&lt;/strong&gt; notes to supported platforms.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/296&quot;&gt;GH-296&lt;/a&gt; chore(pkg): remove default-valued field &amp;quot;homepage&amp;quot;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/292&quot;&gt;GH-292&lt;/a&gt; ci(travis): updates &lt;strong&gt;Android&lt;/strong&gt; API level&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/pull/286&quot;&gt;GH-286&lt;/a&gt; (docs): Add Information about how to use Dark Mode SplashScreens&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/news/2022/04/06/splashscreen-plugin-release.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/news/2022/04/06/splashscreen-plugin-release.html</guid>
         
         <category>release</category>
         

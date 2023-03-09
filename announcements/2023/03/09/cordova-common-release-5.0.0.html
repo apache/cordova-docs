@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released a minor update to our Cordova CLI!  cordova@11.1.0This release also pins our internal libraries to the la...">
+    <meta name="description" content="We are happy to announce that cordova-common@5.0.0 has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova toolin...">
 
     <title>
         
             
-                Cordova CLI 11.1.0 Released! - Apache Cordova
+                Cordova Common 5.0.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/news/2023/01/16/cordova-cli-11.1.0-release.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2023/03/09/cordova-common-release-5.0.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,113 +129,48 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova CLI 11.1.0 Released!</div>
+        <div class="title">Cordova Common 5.0.0 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">16 Jan 2023</div>
+        <div class="date">09 Mar 2023</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released a minor update to our Cordova CLI!</p>
-
-<ul>
-  <li><a href="https://www.npmjs.com/package/cordova">cordova@11.1.0</a></li>
-</ul>
-
-<p>This release also pins our internal libraries to the latest releases:</p>
-
-<ul>
-  <li><a href="https://www.npmjs.com/package/cordova-lib">cordova-lib@11.1.0</a></li>
-  <li><a href="https://www.npmjs.com/package/cordova-create">cordova-create@4.1.0</a></li>
-  <li><a href="https://www.npmjs.com/package/cordova-fetch">cordova-fetch@3.1.0</a></li>
-  <li><a href="https://www.npmjs.com/package/cordova-common">cordova-common@4.1.0</a></li>
-</ul>
+            <p>We are happy to announce that <code>cordova-common@5.0.0</code> has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like <code>config.xml</code> parsing.</p>
 
 <h2>Release Highlights</h2>
 
-<p>This release officially appends the deprecation flag to the Windows &amp; OSX platforms on the available platforms output screen.</p>
+<p>The most notable changes in this major release are:</p>
 
-<p>We have updated our internal process to pass all of the XML attribute values in <code>config.xml</code> to the platform packages so we can easily update the platforms without updating tooling and CLI.</p>
+<ul>
+  <li><a href="https://github.com/apache/cordova-common/pull/186">GH-186</a> feat!: bump package requirement <code>node&gt;=16</code></li>
+</ul>
 
-<p>We have updated all possible npm packages to the latest non-major release that Cordova can support.</p>
+<p>As Node.js 14 nears the end-of-life (April 2023), we have bumped the minimum requirement to 16.0.0. This update has also increased the minimum npm requirement to 7.10.0.</p>
 
-<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+<ul>
+  <li><a href="https://github.com/apache/cordova-common/pull/197">GH-197</a> feat(android): added <code>monochrome</code> attribute</li>
+</ul>
+
+<p>In preparation for Cordova-Android&#39;s next major release, supporting logic for Android&#39;s monochrome icons has been included.</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
-<p><strong>Cordova CLI 11.1.0:</strong></p>
-
 <ul>
-  <li><a href="https://github.com/apache/cordova-cli/pull/603">GH-603</a> dep: bump to latest minor+patch w/ <code>package-lock</code> rebuild
-    <ul>
-      <li><code>cordova-common@^4.1.0</code></li>
-      <li><code>cordova-create@^4.1.0</code></li>
-      <li><code>cordova-lib@^11.1.0</code></li>
-      <li><code>systeminformation@^5.17.3</code></li>
-    </ul>
-  </li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/599">GH-599</a> chore: remove unnecessary gendered text</li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/600">GH-600</a> ci: update codecov &amp; run on node 14-18</li>
-  <li><a href="https://github.com/apache/cordova-cli/pull/587">GH-587</a> dep(npm): bump packages to latest minor/patch revisions w/ <code>package-lock</code></li>
-</ul>
-
-<p><strong>Cordova Lib 11.1.0:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-lib/pull/904">GH-904</a> dep(npm): bump <code>cordova-fetch@3.1.0</code> w/ package-lock rebuild</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/901">GH-901</a> feat: bump dependencies to latest minor &amp; patch revision
-    <ul>
-      <li><code>fs-extra@^10.1.0</code></li>
-      <li><code>globby@^11.1.0</code></li>
-      <li><code>semver@^7.3.8</code></li>
-      <li><code>cordova-android@10.1.2</code></li>
-      <li><code>jasmine@^3.99.0</code></li>
-    </ul>
-  </li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/899">GH-899</a> feat: bump <code>cordova-common@4.1.0</code></li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/852">GH-852</a> feat(windows): deprecate platform</li>
-  <li><a href="https://github.com/apache/cordova-lib/pull/851">GH-851</a> feat(osx): deprecate platform</li>
-</ul>
-
-<p><strong>Cordova Create 4.1.0:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-create/pull/73">GH-73</a> dep(npm): bump dependencies to latest minor/patch &amp; rebuild package-lock
-    <ul>
-      <li><code>cordova-common@^4.1.0</code></li>
-      <li><code>cordova-fetch@^3.1.0</code></li>
-      <li><code>fs-extra@^10.1.0</code></li>
-      <li><code>globby@^11.1.0</code></li>
-      <li><code>jasmine@^3.99.0</code></li>
-    </ul>
-  </li>
-  <li><a href="https://github.com/apache/cordova-create/pull/74">GH-74</a> ci(workflow): update node support &amp; action dependencies</li>
-</ul>
-
-<p><strong>Cordova Fetch 3.1.0:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/101">GH-101</a> ci(workflow): update node 14 to use npm ^7.2</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/100">GH-100</a> ci(workflow): update action dependencies &amp; node versions</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/98">GH-98</a> dep(npm): bump w/ latetst minor &amp; patch releases
-    <ul>
-      <li><code>cordova-common@^4.1.0</code></li>
-      <li><code>fs-extra@^9.1.0</code></li>
-      <li><code>npm-package-arg@^8.1.5</code></li>
-      <li><code>pacote@^11.3.5</code></li>
-      <li><code>resolve@^1.22.1</code></li>
-      <li><code>semver@^7.3.8</code></li>
-      <li><code>jasmine@^3.99.0</code></li>
-      <li><code>nyc@^15.1.0</code></li>
-    </ul>
-  </li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/97">GH-97</a> chore(npm): rebuilt <code>package-lock</code> to v2</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/94">GH-94</a> ci(workflow): replace node 15 with node 16 (npm@7)</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/93">GH-93</a> chore(npm): update <code>package-lock</code></li>
+  <li><a href="https://github.com/apache/cordova-common/pull/186">GH-186</a> feat!: bump package requirement node&gt;=16</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/197">GH-197</a> feat(android): added monochrome attribute</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/99">GH-99</a> chore: drop q where possible</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/198">GH-198</a> test: Removed obsolete test</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/196">GH-196</a> dep: bump @cordova/eslint-config@^5.0.0</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/192">GH-192</a> dep!: bump all available packages</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/193">GH-193</a> refactor: replace underscore w/ lodash module pkgs</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/194">GH-194</a> refactor: renamed variable</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/188">GH-188</a> ci(actions): test w/ node 14, 16, 18</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/187">GH-187</a> ci(actions): update workflow</li>
 </ul>
 
         </div>
@@ -244,37 +179,17 @@
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2022/11/15/cordova-common-release-4.1.0.html">Previous</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2022/11/15/cordova-common-release-4.1.0.html">Cordova Common 4.1.0 Released!</a>
-                    <div class="date"> 15 Nov 2022 - By Bryan Ellis </div>
-                    <p class="content">
-                        We are happy to announce that cordova-common@4.1.0 has been released. This is...
-                    </p>
-                
-            </div>
-            <div class="col-sm-6">
-                
-                    <a href="/news/2023/02/24/screen-orientation-plugin-3.0.3.html">Next</a>
+                    <a href="/news/2023/02/24/screen-orientation-plugin-3.0.3.html">Previous</a>
                     <br>
                     <br>
                     <a class="title" href="/news/2023/02/24/screen-orientation-plugin-3.0.3.html">Screen Orientation Plugin 3.0.3 Released!</a>
                     <div class="date"> 24 Feb 2023 - By Niklas Merz </div>
                     <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
                         We are happy to announce that we have just released an update...
                     </p>
+                
+            </div>
+            <div class="col-sm-6">
                 
             </div>
         </div>
