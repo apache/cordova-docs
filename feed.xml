@@ -6,9 +6,54 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Mar 2023 06:48:15 +0000</pubDate>
-    <lastBuildDate>Thu, 09 Mar 2023 06:48:15 +0000</lastBuildDate>
+    <pubDate>Mon, 17 Apr 2023 17:27:08 +0000</pubDate>
+    <lastBuildDate>Mon, 17 Apr 2023 17:27:08 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Cordova iOS 6.3.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova iOS 6.3.0&lt;/code&gt;! This is Cordova&amp;#39;s official platform for building iOS mobile applications. &lt;strong&gt;This minor release contains three important fixes in preparation for the upcoming major release.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@6.3.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;This release contains a fix to allow inspecting of WebView content with the latest iOS and Xcode versions. It also fixes an iOS 16 bug and issues with NodeJS 18.&lt;/p&gt;
+
+&lt;p&gt;This release adds the preference &lt;code&gt;InspectableWebview&lt;/code&gt; for iOS 16.4 or later. Please check out the &lt;a href=&quot;https://github.com/apache/cordova-docs/pull/1291&quot;&gt;Pull request&lt;/a&gt; for the documentation.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
+cordova platform add ios@6.3.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;chore: npm audit fix&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1302&quot;&gt;GH-1302&lt;/a&gt; URL parsing for ATS in node 18&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1258&quot;&gt;GH-1258&lt;/a&gt; workaround for DisallowOverscroll on iOS 16&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1300&quot;&gt;GH-1300&lt;/a&gt; set webView.inspectable to true for Debug builds on iOS &amp;gt;= 16.4&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2023/04/15/cordova-ios-release-6.3.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2023/04/15/cordova-ios-release-6.3.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova Common 5.0.0 Released!</title>
@@ -681,81 +726,6 @@ cordova platform add android@10.1.2
         
         
         <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>File Plugin 7.0.0 &amp; Device Plugin 2.1.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-file&lt;/code&gt; &amp;amp; &lt;code&gt;cordova-plugin-device&lt;/code&gt;!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-file&quot;&gt;cordova-plugin-file@7.0.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-device&quot;&gt;cordova-plugin-device@2.1.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-file
-cordova plugin add cordova-plugin-file@7.0.0
-
-cordova plugin remove cordova-plugin-device
-cordova plugin add cordova-plugin-device@2.1.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;h3&gt;&lt;code&gt;cordova-plugin-file&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;For Android, a &lt;code&gt;WebViewAssetLoader&lt;/code&gt; proxy handler has been added to support loading &lt;code&gt;cdvfile&lt;/code&gt; URLs while using a custom scheme. It is recommended to use the &lt;code&gt;toURL&lt;/code&gt; method to fetch the consumable URL. When the app is served from the &lt;code&gt;http&lt;/code&gt; or &lt;code&gt;https&lt;/code&gt; protocol, the &lt;code&gt;toURL&lt;/code&gt; will return the appropriate consumable &lt;code&gt;cdvfile&lt;/code&gt; URL. If the app is used from the &lt;code&gt;file&lt;/code&gt; protocol, &lt;code&gt;toURL&lt;/code&gt; will return the native &lt;code&gt;file&lt;/code&gt; URL.&lt;/p&gt;
-
-&lt;h3&gt;&lt;code&gt;cordova-plugin-device&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;Electron native support has been added.&lt;/p&gt;
-
-&lt;p&gt;For Android, the &lt;code&gt;sdkVersion&lt;/code&gt; property is now included on the &lt;code&gt;window.device&lt;/code&gt; object, and returned within the &lt;code&gt;getInfo&lt;/code&gt; response object.&lt;/p&gt;
-
-&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;h2&gt;cordova-plugin-file&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/519&quot;&gt;GH-519&lt;/a&gt; chore!: removed old platform code &amp;amp; lint cleanup&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/517&quot;&gt;GH-517&lt;/a&gt; fix(android): support cdvfile assets for custom scheme&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/516&quot;&gt;GH-516&lt;/a&gt; fix(android): create &lt;code&gt;toURL&lt;/code&gt; override to preserve other platforms&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/487&quot;&gt;GH-487&lt;/a&gt; fix(android): Request external read permission when listing external directories&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/513&quot;&gt;GH-513&lt;/a&gt; feat(android): add &lt;code&gt;WebViewAssetLoader&lt;/code&gt; proxy handler for cdvfile&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/490&quot;&gt;GH-490&lt;/a&gt; chore: &lt;code&gt;npmrc&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/489&quot;&gt;GH-489&lt;/a&gt; fix: Brought back the return statement&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/470&quot;&gt;GH-470&lt;/a&gt; fix: Remove test log&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/447&quot;&gt;GH-447&lt;/a&gt; fix(browser): typo in &lt;code&gt;preparing.js&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/439&quot;&gt;GH-439&lt;/a&gt; chore: Require &lt;strong&gt;Android&lt;/strong&gt; 9&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/433&quot;&gt;GH-433&lt;/a&gt; refactor(android): Removed obsolete copyResource function&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/417&quot;&gt;GH-417&lt;/a&gt; fix(android): Use legacy storage&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;cordova-plugin-device&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-device/pull/167&quot;&gt;GH-167&lt;/a&gt; feat(ios): detect if app is running on a macOS desktop with Apple Silicon&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-device/pull/157&quot;&gt;GH-157&lt;/a&gt; feat(android): &lt;code&gt;getInfo&lt;/code&gt; response to include &lt;code&gt;sdkVersion&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-device/pull/152&quot;&gt;GH-152&lt;/a&gt; fix(osx): rename classes to fix plugin&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-device/pull/135&quot;&gt;GH-135&lt;/a&gt; feat(electron): add support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-device/pull/109&quot;&gt;GH-109&lt;/a&gt; Log error to &lt;code&gt;console&lt;/code&gt;, not to &lt;code&gt;dialog&lt;/code&gt; box&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/news/2022/04/11/file-plugin-7.0.0-device-plugin-2.1.0-release.html</guid>
-        
-        <category>release</category>
-        
-        <category>plugins</category>
-        
-        
-        <category>news</category>
         
       </item>
     

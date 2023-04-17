@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that cordova-common@5.0.0 has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova toolin...">
+    <meta name="description" content="We are happy to announce that we have just released Cordova iOS 6.3.0! This is Cordova&#39;s official platform for building iOS mobile applications. This min...">
 
     <title>
         
             
-                Cordova Common 5.0.0 Released! - Apache Cordova
+                Cordova iOS 6.3.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2023/03/09/cordova-common-release-5.0.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2023/04/15/cordova-ios-release-6.3.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,48 +129,44 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova Common 5.0.0 Released!</div>
+        <div class="title">Cordova iOS 6.3.0 Released!</div>
         <div class="author">By:
             
-              Bryan Ellis
+              <a href="https://twitter.com/niklasmaerz">Niklas Merz</a>
             
         </div>
-        <div class="date">09 Mar 2023</div>
+        <div class="date">15 Apr 2023</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that <code>cordova-common@5.0.0</code> has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like <code>config.xml</code> parsing.</p>
+            <p>We are happy to announce that we have just released <code>Cordova iOS 6.3.0</code>! This is Cordova&#39;s official platform for building iOS mobile applications. <strong>This minor release contains three important fixes in preparation for the upcoming major release.</strong></p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@6.3.0</a></li>
+</ul>
 
 <h2>Release Highlights</h2>
 
-<p>The most notable changes in this major release are:</p>
+<p>This release contains a fix to allow inspecting of WebView content with the latest iOS and Xcode versions. It also fixes an iOS 16 bug and issues with NodeJS 18.</p>
 
-<ul>
-  <li><a href="https://github.com/apache/cordova-common/pull/186">GH-186</a> feat!: bump package requirement <code>node&gt;=16</code></li>
-</ul>
+<p>This release adds the preference <code>InspectableWebview</code> for iOS 16.4 or later. Please check out the <a href="https://github.com/apache/cordova-docs/pull/1291">Pull request</a> for the documentation.</p>
 
-<p>As Node.js 14 nears the end-of-life (April 2023), we have bumped the minimum requirement to 16.0.0. This update has also increased the minimum npm requirement to 7.10.0.</p>
+<p><strong>To upgrade:</strong></p>
 
-<ul>
-  <li><a href="https://github.com/apache/cordova-common/pull/197">GH-197</a> feat(android): added <code>monochrome</code> attribute</li>
-</ul>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove ios
+cordova platform add ios@6.3.0
+</code></pre></div></div>
 
-<p>In preparation for Cordova-Android&#39;s next major release, supporting logic for Android&#39;s monochrome icons has been included.</p>
+<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-common/pull/186">GH-186</a> feat!: bump package requirement node&gt;=16</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/197">GH-197</a> feat(android): added monochrome attribute</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/99">GH-99</a> chore: drop q where possible</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/198">GH-198</a> test: Removed obsolete test</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/196">GH-196</a> dep: bump @cordova/eslint-config@^5.0.0</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/192">GH-192</a> dep!: bump all available packages</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/193">GH-193</a> refactor: replace underscore w/ lodash module pkgs</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/194">GH-194</a> refactor: renamed variable</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/188">GH-188</a> ci(actions): test w/ node 14, 16, 18</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/187">GH-187</a> ci(actions): update workflow</li>
+  <li>chore: npm audit fix</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1302">GH-1302</a> URL parsing for ATS in node 18</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1258">GH-1258</a> workaround for DisallowOverscroll on iOS 16</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1300">GH-1300</a> set webView.inspectable to true for Debug builds on iOS &gt;= 16.4</li>
 </ul>
 
         </div>
@@ -179,37 +175,17 @@
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/news/2023/02/24/screen-orientation-plugin-3.0.3.html">Previous</a>
+                    <a href="/announcements/2023/03/09/cordova-common-release-5.0.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/news/2023/02/24/screen-orientation-plugin-3.0.3.html">Screen Orientation Plugin 3.0.3 Released!</a>
-                    <div class="date"> 24 Feb 2023 - By Niklas Merz </div>
+                    <a class="title" href="/announcements/2023/03/09/cordova-common-release-5.0.0.html">Cordova Common 5.0.0 Released!</a>
+                    <div class="date"> 09 Mar 2023 - By Bryan Ellis </div>
                     <p class="content">
-                        We are happy to announce that we have just released an update...
+                        We are happy to announce that cordova-common@5.0.0 has been released. This is...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2023/04/15/cordova-ios-release-6.3.0.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2023/04/15/cordova-ios-release-6.3.0.html">Cordova iOS 6.3.0 Released!</a>
-                    <div class="date"> 15 Apr 2023 - By Niklas Merz </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released Cordova iOS...
-                    </p>
                 
             </div>
         </div>

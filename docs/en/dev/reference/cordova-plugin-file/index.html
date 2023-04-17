@@ -2867,6 +2867,21 @@ requires cordova-android@4.0.0 or greater).</p>
 for these two directories unless external storage is not mounted. However due to a limitation, when external storage is not mounted, it would ask for
 permission to write to <code>cordova.file.externalApplicationStorageDirectory</code>.</p>
 
+<h3>SDK Target Less Than 29</h3>
+
+<p>From the official <a href="https://developer.android.com/about/versions/11/privacy/storage">Storage updates in Android 11</a> documentation, the <a href="https://developer.android.com/reference/android/Manifest.permission#WRITE_EXTERNAL_STORAGE"><code>WRITE_EXTERNAL_STORAGE</code></a> permission is no longer operational and does not provide access.</p>
+
+<blockquote>
+  <p>If this permission is not allowlisted for an app that targets an API level before <a href="https://developer.android.com/reference/android/os/Build.VERSION_CODES#Q"><code>Build.VERSION_CODES.Q</code></a> (SDK 29) this permission cannot be granted to apps.</p>
+</blockquote>
+
+<p>If you need to add this permission, please add the following to your <code>config.xml</code>.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;config-file</span> <span class="na">target=</span><span class="s">"AndroidManifest.xml"</span> <span class="na">parent=</span><span class="s">"/*"</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.WRITE_EXTERNAL_STORAGE"</span> <span class="na">android:maxSdkVersion=</span><span class="s">"28"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/config-file&gt;</span>
+</code></pre></div></div>
+
 <h2>iOS Quirks</h2>
 
 <ul>
