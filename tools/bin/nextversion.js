@@ -21,31 +21,31 @@ function getNextVersion (previousVersion) {
     // get previous version number
     // NOTE:
     //      only versions of the form N.x are accepted
-    var previousVersionMatch = previousVersion.match(/^(\d+)\.x$/);
+    const previousVersionMatch = previousVersion.match(/^(\d+)\.x$/);
     if (!previousVersionMatch) {
         throw Error('invalid version');
     }
 
     // get next major version
-    var previousMajor = previousVersionMatch[1];
-    var nextMajor = parseInt(previousMajor) + 1;
+    const previousMajor = previousVersionMatch[1];
+    const nextMajor = parseInt(previousMajor) + 1;
 
     // create next version
-    var nextVersion = nextMajor + '.x';
+    const nextVersion = nextMajor + '.x';
 
     return nextVersion;
 }
 
 function main () {
     // get arg
-    var previousVersion = process.argv[2];
+    const previousVersion = process.argv[2];
     if (!previousVersion) {
         console.error('no version specified');
         process.exit(1);
     }
 
     // try to get the next version
-    var nextVersion = null;
+    let nextVersion = null;
     try {
         nextVersion = getNextVersion(previousVersion);
     } catch (e) {
@@ -57,7 +57,7 @@ function main () {
 }
 
 module.exports = {
-    getNextVersion: getNextVersion
+    getNextVersion
 };
 
 if (require.main === module) {

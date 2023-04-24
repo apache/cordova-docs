@@ -1,74 +1,74 @@
 'use strict';
 
 // dependencies
-var path = require('path');
-var fs = require('fs');
-var fse = require('fs-extra');
-var child_process = require('child_process');
+const path = require('path');
+const fs = require('fs');
+const fse = require('fs-extra');
+const child_process = require('child_process');
 
 // var gulp = require('gulp');
-var gutil = require('gulp-util');
-var Less = require('gulp-less');
-var Sass = require('gulp-sass')(require('sass'));
-var header = require('gulp-header');
-var footer = require('gulp-footer');
-var rename = require('gulp-rename');
-var browsersync = require('browser-sync');
-var vstream = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
+const gutil = require('gulp-util');
+const Less = require('gulp-less');
+const Sass = require('gulp-sass')(require('sass'));
+const header = require('gulp-header');
+const footer = require('gulp-footer');
+const rename = require('gulp-rename');
+const browsersync = require('browser-sync');
+const vstream = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
 
-var htmllint = require('gulp-htmllint');
-var Crawler = require('simplecrawler');
-var ncp = require('ncp');
+const htmllint = require('gulp-htmllint');
+const Crawler = require('simplecrawler');
+const ncp = require('ncp');
 
-var nextversion = require('./tools/bin/nextversion');
-var util = require('./tools/bin/util');
+const nextversion = require('./tools/bin/nextversion');
+const util = require('./tools/bin/util');
 const gulp = require('gulp');
 
 // constants
-var ROOT_DIR = '.';
-var CONFIG_DIR = 'conf';
-var SOURCE_DIR = path.join(ROOT_DIR, 'www');
-var DEV_DIR = path.join(ROOT_DIR, 'build-dev');
-var PROD_DIR = path.join(ROOT_DIR, 'build-prod');
+const ROOT_DIR = '.';
+const CONFIG_DIR = 'conf';
+const SOURCE_DIR = path.join(ROOT_DIR, 'www');
+const DEV_DIR = path.join(ROOT_DIR, 'build-dev');
+const PROD_DIR = path.join(ROOT_DIR, 'build-prod');
 
-var DATA_DIR = path.join(SOURCE_DIR, '_data');
-var TOC_DIR = path.join(DATA_DIR, 'toc');
-var DOCS_DIR = path.join(SOURCE_DIR, 'docs');
-var FETCH_DIR = path.join(DOCS_DIR, 'en', 'dev', 'reference');
-var CSS_SRC_DIR = path.join(SOURCE_DIR, 'static', 'css-src');
-var CSS_OUT_DIR = path.join(SOURCE_DIR, 'static', 'css');
-var JS_DIR = path.join(SOURCE_DIR, 'static', 'js');
-var BIN_DIR = path.join(ROOT_DIR, 'tools', 'bin');
+const DATA_DIR = path.join(SOURCE_DIR, '_data');
+const TOC_DIR = path.join(DATA_DIR, 'toc');
+const DOCS_DIR = path.join(SOURCE_DIR, 'docs');
+const FETCH_DIR = path.join(DOCS_DIR, 'en', 'dev', 'reference');
+const CSS_SRC_DIR = path.join(SOURCE_DIR, 'static', 'css-src');
+const CSS_OUT_DIR = path.join(SOURCE_DIR, 'static', 'css');
+const JS_DIR = path.join(SOURCE_DIR, 'static', 'js');
+const BIN_DIR = path.join(ROOT_DIR, 'tools', 'bin');
 
-var CONFIG_FILE = path.join(CONFIG_DIR, '_config.yml');
-var DEFAULTS_CONFIG_FILE = path.join(CONFIG_DIR, '_defaults.yml');
-var VERSION_CONFIG_FILE = path.join(CONFIG_DIR, '_version.yml');
-var PROD_CONFIG_FILE = path.join(CONFIG_DIR, '_prod.yml');
-var DEV_CONFIG_FILE = path.join(CONFIG_DIR, '_dev.yml');
-var NODOCS_CONFIG_FILE = path.join(CONFIG_DIR, '_nodocs.yml');
+const CONFIG_FILE = path.join(CONFIG_DIR, '_config.yml');
+const DEFAULTS_CONFIG_FILE = path.join(CONFIG_DIR, '_defaults.yml');
+const VERSION_CONFIG_FILE = path.join(CONFIG_DIR, '_version.yml');
+const PROD_CONFIG_FILE = path.join(CONFIG_DIR, '_prod.yml');
+const DEV_CONFIG_FILE = path.join(CONFIG_DIR, '_dev.yml');
+const NODOCS_CONFIG_FILE = path.join(CONFIG_DIR, '_nodocs.yml');
 
-var VERSION_FILE = 'VERSION';
-var DOCS_VERSION_FILE = path.join(DATA_DIR, 'docs-versions.yml');
-var ALL_PAGES_FILE = path.join(DATA_DIR, 'all-pages.yml');
-var FETCH_CONFIG = path.join(DATA_DIR, 'fetched-files.yml');
-var REDIRECTS_FILE = path.join(DATA_DIR, 'redirects.yml');
+const VERSION_FILE = 'VERSION';
+const DOCS_VERSION_FILE = path.join(DATA_DIR, 'docs-versions.yml');
+const ALL_PAGES_FILE = path.join(DATA_DIR, 'all-pages.yml');
+const FETCH_CONFIG = path.join(DATA_DIR, 'fetched-files.yml');
+const REDIRECTS_FILE = path.join(DATA_DIR, 'redirects.yml');
 
-var BASE_CONFIGS = [CONFIG_FILE, DEFAULTS_CONFIG_FILE, VERSION_CONFIG_FILE];
-var DEV_CONFIGS = [DEV_CONFIG_FILE];
-var PROD_CONFIGS = [PROD_CONFIG_FILE];
-var DEV_FLAGS = ['--trace'];
-var PROD_FLAGS = [];
+const BASE_CONFIGS = [CONFIG_FILE, DEFAULTS_CONFIG_FILE, VERSION_CONFIG_FILE];
+const DEV_CONFIGS = [DEV_CONFIG_FILE];
+const PROD_CONFIGS = [PROD_CONFIG_FILE];
+const DEV_FLAGS = ['--trace'];
+const PROD_FLAGS = [];
 
-var BASE_URL = '';
-var YAML_FRONT_MATTER = '---\n---\n';
-var WATCH_INTERVAL = 1000; // in milliseconds
-var VERSION_VAR_NAME = 'latest_docs_version';
-var LATEST_DOCS_VERSION = fs.readFileSync(VERSION_FILE, 'utf-8').trim();
-var NEXT_DOCS_VERSION = nextversion.getNextVersion(LATEST_DOCS_VERSION);
-var LANGUAGES = util.listdirsSync(DOCS_DIR);
+const BASE_URL = '';
+const YAML_FRONT_MATTER = '---\n---\n';
+const WATCH_INTERVAL = 1000; // in milliseconds
+const VERSION_VAR_NAME = 'latest_docs_version';
+const LATEST_DOCS_VERSION = fs.readFileSync(VERSION_FILE, 'utf-8').trim();
+const NEXT_DOCS_VERSION = nextversion.getNextVersion(LATEST_DOCS_VERSION);
+const LANGUAGES = util.listdirsSync(DOCS_DIR);
 
-var PROD_BY_DEFAULT = false;
+const PROD_BY_DEFAULT = false;
 
 // compute/get/set/adjust passed options
 gutil.env.prod = gutil.env.prod || PROD_BY_DEFAULT;
@@ -88,13 +88,13 @@ function fatal (message) {
 
 function execPiped (command, args, fileName) {
     console.log(command + ' ' + args.join(' '));
-    var task = child_process.spawn(command, args);
+    const task = child_process.spawn(command, args);
     return task.stdout.pipe(vstream(fileName)).pipe(buffer());
 }
 
 function exec (command, args, cb) {
     console.log(command + ' ' + args.join(' '));
-    var task = child_process.spawn(command, args, { stdio: 'inherit' });
+    const task = child_process.spawn(command, args, { stdio: 'inherit' });
     task.on('exit', cb);
 }
 
@@ -116,7 +116,7 @@ function getBundleExecutable () {
 }
 
 function getJekyllConfigs () {
-    var configs = BASE_CONFIGS;
+    let configs = BASE_CONFIGS;
 
     // add build-specific config files
     if (gutil.env.prod) {
@@ -134,9 +134,9 @@ function getJekyllConfigs () {
 }
 
 function jekyllBuild (done) {
-    var bundle = getBundleExecutable();
-    var configs = getJekyllConfigs();
-    var flags = gutil.env.prod ? PROD_FLAGS : DEV_FLAGS;
+    const bundle = getBundleExecutable();
+    const configs = getJekyllConfigs();
+    let flags = gutil.env.prod ? PROD_FLAGS : DEV_FLAGS;
 
     flags = flags.concat(['--config', configs.join(',')]);
 
@@ -145,10 +145,10 @@ function jekyllBuild (done) {
 
 function copyDocsVersion (oldVersion, newVersion, cb) {
     // copying a folder and a ToC file for each language
-    var numCopyOperations = LANGUAGES.length * 2;
+    const numCopyOperations = LANGUAGES.length * 2;
 
     // pseudo-CV (condition variable)
-    var numCopied = 0;
+    let numCopied = 0;
     function doneCopying (error) {
         if (error) {
             cb(error);
@@ -165,12 +165,12 @@ function copyDocsVersion (oldVersion, newVersion, cb) {
     // create a new version for each language
     LANGUAGES.forEach(function (languageName) {
         // get files to copy
-        var oldVersionDocs = path.join(DOCS_DIR, languageName, oldVersion);
-        var oldVersionToc = path.join(TOC_DIR, util.srcTocfileName(languageName, oldVersion));
-        var newVersionDocs = path.join(DOCS_DIR, languageName, newVersion);
-        var newVersionToc = path.join(TOC_DIR, util.srcTocfileName(languageName, newVersion));
+        const oldVersionDocs = path.join(DOCS_DIR, languageName, oldVersion);
+        const oldVersionToc = path.join(TOC_DIR, util.srcTocfileName(languageName, oldVersion));
+        const newVersionDocs = path.join(DOCS_DIR, languageName, newVersion);
+        const newVersionToc = path.join(TOC_DIR, util.srcTocfileName(languageName, newVersion));
 
-        var copyOptions = {
+        const copyOptions = {
             stopOnErr: true
         };
 
@@ -265,7 +265,7 @@ const docsVersion = module.exports['docs-version'] = function docsVersion () {
 };
 
 const pagesDict = module.exports['pages-dict'] = function pagesDict () {
-    var args = [
+    const args = [
         bin('gen_pages_dict.js'),
         '--siteRoot', SOURCE_DIR,
         '--redirectsFile', REDIRECTS_FILE,
@@ -328,7 +328,7 @@ const build = module.exports.build = gulp.series(configs, data, styles, function
 }, asf);
 
 const serve = module.exports.serve = gulp.series(build, function serve () {
-    var route = {};
+    const route = {};
 
     // set site root for browsersync
     if (gutil.env.prod) {
@@ -401,7 +401,7 @@ module.exports.newversion = gulp.series(fetch, function newVersion (done) {
 module.exports.snapshot = gulp.series(fetch, function snapshot (done) {
     // remove current version first
     LANGUAGES.forEach(function (languageName) {
-        var languageLatestDocs = path.join(DOCS_DIR, languageName, LATEST_DOCS_VERSION);
+        const languageLatestDocs = path.join(DOCS_DIR, languageName, LATEST_DOCS_VERSION);
         remove(languageLatestDocs);
     });
 

@@ -17,34 +17,34 @@
 
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var yaml = require('js-yaml');
-var glob = require('glob');
-var optimist = require('optimist');
+const fs = require('fs');
+const path = require('path');
+const yaml = require('js-yaml');
+const glob = require('glob');
+const optimist = require('optimist');
 
-var util = require('./util');
+const util = require('./util');
 
 // constants
-var LATEST_ALIAS_URI = '/latest/';
+const LATEST_ALIAS_URI = '/latest/';
 
 // helpers
 function pathToURI (filePath, rootPath) {
     return filePath
         .replace(new RegExp('^' + rootPath), '')
-        .replace(new RegExp('\\.md$'), '.html');
+        .replace(/\\.md$/, '.html');
 }
 
 function pagesFromRedirects (redirects, languages) {
-    var pages = {};
+    const pages = {};
 
     // add docs redirects
     if (typeof redirects.docs !== 'undefined') {
-        for (var redirectSource in redirects.docs) {
+        for (const redirectSource in redirects.docs) {
             // add an entry for the redirect's source, once for each language
-            for (var i = 0; i < languages.length; i++) {
-                var language = languages[i];
-                var pagePath = '/docs/' + language + '/' + redirectSource;
+            for (let i = 0; i < languages.length; i++) {
+                const language = languages[i];
+                const pagePath = '/docs/' + language + '/' + redirectSource;
 
                 pages[pagePath] = true;
             }
@@ -61,7 +61,7 @@ function isInLatestDocs (uri, latestVersion) {
 // main
 function main () {
     // get args
-    var argv = optimist
+    const argv = optimist
         .usage('Usage: $0 [options]')
         .demand('languages').describe('languages', 'comma-separated list of docs languages')
         .demand('latestVersion').describe('latestVersion', 'the current latest docs version')
@@ -69,38 +69,38 @@ function main () {
         .string('redirectsFile').describe('redirectsFile', 'file containing redirects for the website').default('redirectsFile', null)
         .argv;
 
-    var siteRootPath = argv.siteRoot;
-    var redirectsFilePath = argv.redirectsFile;
-    var latestVersion = argv.latestVersion;
-    var languages = argv.languages.split(',');
+    const siteRootPath = argv.siteRoot;
+    const redirectsFilePath = argv.redirectsFile;
+    const latestVersion = argv.latestVersion;
+    const languages = argv.languages.split(',');
 
     // pages to return
-    var pages = {};
+    let pages = {};
 
     // add pages for redirects if a redirects file was passed
     if (redirectsFilePath !== null) {
-        var redirectsString = fs.readFileSync(redirectsFilePath);
-        var redirects = yaml.load(redirectsString);
-        var redirectsPages = pagesFromRedirects(redirects, languages);
+        const redirectsString = fs.readFileSync(redirectsFilePath);
+        const redirects = yaml.load(redirectsString);
+        const redirectsPages = pagesFromRedirects(redirects, languages);
 
         pages = redirectsPages;
     }
 
     // add entries for all Markdown files in the site root
-    var allMarkdownFiles = path.join(siteRootPath, '**/*.md');
+    const allMarkdownFiles = path.join(siteRootPath, '**/*.md');
     glob(allMarkdownFiles, function (error, filePaths) {
         if (error) throw error;
 
-        for (var i = 0; i < filePaths.length; i++) {
-            var filePath = filePaths[i];
-            var fileURI = pathToURI(filePath, siteRootPath);
+        for (let i = 0; i < filePaths.length; i++) {
+            const filePath = filePaths[i];
+            const fileURI = pathToURI(filePath, siteRootPath);
 
             // add the page
             pages[fileURI] = true;
 
             // also add /latest/ version for pages in latest docs
             if (isInLatestDocs(fileURI, latestVersion)) {
-                var latestURI = fileURI.replace('/' + latestVersion + '/', LATEST_ALIAS_URI);
+                const latestURI = fileURI.replace('/' + latestVersion + '/', LATEST_ALIAS_URI);
 
                 pages[latestURI] = true;
             }

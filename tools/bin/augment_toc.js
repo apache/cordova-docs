@@ -17,24 +17,24 @@
 
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
+const fs = require('fs');
+const path = require('path');
 
-var yaml = require('js-yaml');
-var optimist = require('optimist');
-var chalk = require('chalk');
+const yaml = require('js-yaml');
+const optimist = require('optimist');
+const chalk = require('chalk');
 
-var util = require('./util');
+const util = require('./util');
 
 // constants
-var VERBOSE_BY_DEFAULT = false;
+const VERBOSE_BY_DEFAULT = false;
 
 // globals
-var verbose = VERBOSE_BY_DEFAULT;
+let verbose = VERBOSE_BY_DEFAULT;
 
 // helpers
 function augmentEntry (originalEntry, prefix) {
-    var augmentedEntry = {};
+    const augmentedEntry = {};
 
     // skip entries that have no URI
     if (!originalEntry.url) {
@@ -42,7 +42,7 @@ function augmentEntry (originalEntry, prefix) {
     }
 
     // get the path to the file to which this entry points
-    var filePath = path.join(prefix, originalEntry.url).replace('.html', '.md');
+    const filePath = path.join(prefix, originalEntry.url).replace('.html', '.md');
 
     // skip entries that don't point to a valid file
     if (!fs.existsSync(filePath)) {
@@ -51,9 +51,9 @@ function augmentEntry (originalEntry, prefix) {
     }
 
     // read in the referenced file and get its front matter
-    var fileContents = fs.readFileSync(filePath).toString();
-    var frontMatterString = util.getFrontMatterString(fileContents);
-    var frontMatter = yaml.load(frontMatterString);
+    const fileContents = fs.readFileSync(filePath).toString();
+    const frontMatterString = util.getFrontMatterString(fileContents);
+    const frontMatter = yaml.load(frontMatterString);
 
     augmentedEntry.name = decideOnName(originalEntry, frontMatter);
     augmentedEntry.url = originalEntry.url;
@@ -82,16 +82,16 @@ function decideOnName (originalEntry, frontMatter) {
 
 // public API
 function augmentToc (originalToc, prefix) {
-    var augmentedToc = [];
+    const augmentedToc = [];
 
     if (typeof prefix === 'undefined') {
         throw new Error('missing prefix for ToC');
     }
 
     // go through all original entries
-    for (var i = 0; i < originalToc.length; i++) {
-        var originalEntry = originalToc[i];
-        var augmentedEntry = {};
+    for (let i = 0; i < originalToc.length; i++) {
+        const originalEntry = originalToc[i];
+        let augmentedEntry = {};
 
         // recurse for entries with children, replacing their children with
         // their augmented equivalents
@@ -115,16 +115,16 @@ function augmentToc (originalToc, prefix) {
 }
 
 function augmentString (srcTocString, prefix) {
-    var srcToc = yaml.load(srcTocString);
-    var augmentedToc = augmentToc(srcToc, prefix);
-    var augmentedTocString = yaml.dump(augmentedToc, { indent: 4 });
+    const srcToc = yaml.load(srcTocString);
+    const augmentedToc = augmentToc(srcToc, prefix);
+    const augmentedTocString = yaml.dump(augmentedToc, { indent: 4 });
 
     return augmentedTocString;
 }
 
 function main () {
     // get args
-    var argv = optimist
+    const argv = optimist
         .usage('Usage: $0 [options]')
         .demand('srcToc').describe('srcToc', 'the source ToC for the given directory')
         .demand('srcRoot').describe('srcRoot', 'the directory containing files described by the ToC')
@@ -132,15 +132,15 @@ function main () {
         .alias('v', 'verbose')
         .argv;
 
-    var srcTocPath = argv.srcToc;
-    var srcRootPath = argv.srcRoot;
+    const srcTocPath = argv.srcToc;
+    const srcRootPath = argv.srcRoot;
 
     // set globals
     verbose = argv.verbose;
 
     // get augmented ToC
-    var srcTocString = fs.readFileSync(srcTocPath);
-    var augmentedTocString = augmentString(srcTocString, srcRootPath);
+    const srcTocString = fs.readFileSync(srcTocPath);
+    const augmentedTocString = augmentString(srcTocString, srcRootPath);
 
     console.log(util.generatedBy(__filename));
     console.log(augmentedTocString);
@@ -151,6 +151,6 @@ if (require.main === module) {
 }
 
 module.exports = {
-    augmentToc: augmentToc,
-    augmentString: augmentString
+    augmentToc,
+    augmentString
 };
