@@ -64,7 +64,7 @@ If you are using `cordova-android` 10.0.0 or greater, install the [Java Developm
 
 If you are using any version below `cordova-android` 10.0.0, install the [Java Development Kit (JDK) 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html).
 
-The `JAVA_HOME` environment variable must be set according to your JDK installation path when installing on a Windows environment. See the [Setting Environment Variables](#setting-environment-variables) section on how to set up environment variables.
+The `JAVA_HOME` environment variable must be set according to your JDK installation path. See the [Setting Environment Variables](#setting-environment-variables) section on how to set up environment variables. Alternatively as of `cordova-android` 10.0.0 or greater, `CORDOVA_JAVA_HOME` can be set in place of `JAVA_HOME`, allowing a JDK install to be used specifically for Cordova development.
 
 ### Gradle
 
