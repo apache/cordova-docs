@@ -435,7 +435,7 @@ _Note:_ This setting is available but use at your own risk.
 
 ### `AndroidWindowSplashScreenAnimatedIcon`
 
-The splash screen image. This preference is used for both animated and non-animated icons. The current acceptable asset files can either be an XML Vector Drwable or PNG.
+The splash screen image. This preference is used for both animated and non-animated icons. The current acceptable asset files can either be an XML Vector Drawable or PNG.
 
 :warning: Using [Adaptive Icons](https://medium.com/androiddevelopers/implementing-adaptive-icons-1e4d1795470e) requires Minimum SDK 26 to be set.
 
@@ -457,7 +457,7 @@ The splash screen image. This preference is used for both animated and non-anima
 
 ### `AndroidWindowSplashScreenAnimationDuration`
 
-Defines the duration of the icon's animation if an Animated Vector Drwable is supplied as the splash screen image.
+Defines the duration of the icon's animation if an Animated Vector Drawable is supplied as the splash screen image.
 
 **Supported Platforms:**
 

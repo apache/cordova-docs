@@ -174,6 +174,7 @@ To sign an app, you need the following parameters:
 | Authentication Key ID        | `--authenticationKeyID`       | (Optional) The key ID for the App Store Connect API key file, for automatic distribution signing.
 | Authentication Key Issuer ID | `--authenticationKeyIssuerID` | (Optional) The issuer ID value for the App Store Connect API credentials,for automatic distribution signing.
 
+
 ### Using build.json
 
 Alternatively, you could specify them in a build configuration file (`build.json`)
