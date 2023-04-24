@@ -2785,6 +2785,10 @@ and will be indicated as such.</p>
       <td><em>Default: true</em> <br />  Controls whether pages opened within an InAppBrowser can access the same localStorage and WebSQL storage as pages opened with the default browser.</td>
     </tr>
     <tr>
+      <td>InspectableWebview(boolean) <br /> ==Android== ==iOS==</td>
+      <td><em>Default: depends on Debug/Release build</em> <br />  On iOS 16.4 or later, enables or disables the webview inspector. Defaults to <code>true</code> on debug builds and <code>false</code> on release builds. This preference is ignored on iOS 16.3 and earlier; the inspector is always enabled on debug builds and always disabled on release builds.</td>
+    </tr>
+    <tr>
       <td>KeepRunning(boolean) <br /> ==Android==</td>
       <td><em>Default: true</em> <br />  Determines whether the application stays running in the background even after a <a href="../cordova/events/events.html#pause">pause</a> event fires. Setting this to false does not kill the app after a <a href="../cordova/events/events.html#pause">pause</a> event, but simply halts execution of code within the cordova webview while the app is in the background.</td>
     </tr>
