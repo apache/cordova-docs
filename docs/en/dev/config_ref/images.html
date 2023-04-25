@@ -2330,7 +2330,9 @@ different screen resolutions.</p>
 
 <h2>Android</h2>
 
-<p>On Android, instead of using a single image for an icon, you can use two images (background and foreground) to create an <strong>Adaptive Icon</strong>. To use Adaptive Icons, you need to have installed at least version 9.0.0 of <strong>Cordova</strong> and version 8.0.0 of <strong>Cordova-Android</strong>.</p>
+<p>Instead of using a single image for an icon, you can use two images (background and foreground) to create an <strong>Adaptive Icon</strong>. To use Adaptive Icons in Cordova, at minimum <strong>Cordova CLI</strong> 9.0.0 and <strong>Cordova-Android</strong> 8.0.0 is required.</p>
+
+<p>Android 13 has introduced themed icons which are monochrome images appended to the existing <strong>Adaptive Icons</strong>. To use Themed Icon in Cordova, at minimum <strong>Cordova CLI</strong> 12.0.0 and <strong>Cordova-Android</strong> 12.0.0 is required.</p>
 
 <table>
   <thead>
@@ -2349,6 +2351,10 @@ different screen resolutions.</p>
       <td><em>Required for Adaptive</em> <br /> Location of the image (png or vector) relative to your project directory, or color reference</td>
     </tr>
     <tr>
+      <td>monochrome</td>
+      <td><em>Optional for Adaptive but required for themed icons</em> <br /> Location of the image (png or vector) relative to your project directory</td>
+    </tr>
+    <tr>
       <td>density</td>
       <td><em>Required</em> <br /> Specified icon density</td>
     </tr>
@@ -2357,16 +2363,16 @@ different screen resolutions.</p>
 
 <h3>Adaptive Icons</h3>
 
-<p>To use the adaptive icons the <code>background</code> and <code>foreground</code> attributes must be defined in place of the <code>src</code> attribute. The <code>src</code> attribute is not used for adaptive icons.</p>
+<p>To use the adaptive icons the <code>background</code>, <code>foreground</code> and optionally <code>monochrome</code> attributes must be defined in place of the <code>src</code> attribute. The <code>src</code> attribute is not used for adaptive icons.</p>
 
 <h4>Adaptive Icon with Images:</h4>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/ldpi-background.png"</span> <span class="na">density=</span><span class="s">"ldpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/ldpi-foreground.png"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/mdpi-background.png"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/mdpi-foreground.png"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/hdpi-background.png"</span> <span class="na">density=</span><span class="s">"hdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/hdpi-foreground.png"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/xhdpi-background.png"</span> <span class="na">density=</span><span class="s">"xhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/xxhdpi-background.png"</span> <span class="na">density=</span><span class="s">"xxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/xxxhdpi-background.png"</span> <span class="na">density=</span><span class="s">"xxxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxxhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/ldpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/ldpi-background.png"</span> <span class="na">density=</span><span class="s">"ldpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/ldpi-foreground.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/mdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/mdpi-background.png"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/mdpi-foreground.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/hdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/hdpi-background.png"</span> <span class="na">density=</span><span class="s">"hdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/hdpi-foreground.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/xhdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/xhdpi-background.png"</span> <span class="na">density=</span><span class="s">"xhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/xxhdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/xxhdpi-background.png"</span> <span class="na">density=</span><span class="s">"xxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/xxxhdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/xxxhdpi-background.png"</span> <span class="na">density=</span><span class="s">"xxxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxxhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/platform&gt;</span>
 </code></pre></div></div>
 
@@ -2374,12 +2380,12 @@ different screen resolutions.</p>
 
 <h4>Adaptive Icon with Vectors:</h4>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/ldpi-background.xml"</span> <span class="na">density=</span><span class="s">"ldpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/ldpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/ldpi.png"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/mdpi-background.xml"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/mdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/mdpi.png"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/hdpi-background.xml"</span> <span class="na">density=</span><span class="s">"hdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/hdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/hdpi.png"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/xhdpi-background.xml"</span> <span class="na">density=</span><span class="s">"xhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xhdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/xhdpi.png"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/xxhdpi-background.xml"</span> <span class="na">density=</span><span class="s">"xxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxhdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/xxhdpi.png"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"res/icon/android/xxxhdpi-background.xml"</span> <span class="na">density=</span><span class="s">"xxxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxxhdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/xxxhdpi.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/ldpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/ldpi-background.xml"</span> <span class="na">density=</span><span class="s">"ldpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/ldpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/ldpi.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/mdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/mdpi-background.xml"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/mdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/mdpi.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/hdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/hdpi-background.xml"</span> <span class="na">density=</span><span class="s">"hdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/hdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/hdpi.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/xhdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/xhdpi-background.xml"</span> <span class="na">density=</span><span class="s">"xhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xhdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/xhdpi.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/xxhdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/xxhdpi-background.xml"</span> <span class="na">density=</span><span class="s">"xxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxhdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/xxhdpi.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/xxxhdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/xxxhdpi-background.xml"</span> <span class="na">density=</span><span class="s">"xxxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxxhdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/xxxhdpi.png"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/platform&gt;</span>
 </code></pre></div></div>
 
@@ -2398,12 +2404,12 @@ different screen resolutions.</p>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;resource-file</span> <span class="na">src=</span><span class="s">"res/values/colors.xml"</span> <span class="na">target=</span><span class="s">"/app/src/main/res/values/colors.xml"</span> <span class="nt">/&gt;</span>
 
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"@color/background"</span> <span class="na">density=</span><span class="s">"ldpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/ldpi-foreground.png"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"@color/background"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/mdpi-foreground.png"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"@color/background"</span> <span class="na">density=</span><span class="s">"hdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/hdpi-foreground.png"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"@color/background"</span> <span class="na">density=</span><span class="s">"xhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"@color/background"</span> <span class="na">density=</span><span class="s">"xxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;icon</span> <span class="na">background=</span><span class="s">"@color/background"</span> <span class="na">density=</span><span class="s">"xxxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxxhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/ldpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"@color/background"</span> <span class="na">density=</span><span class="s">"ldpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/ldpi-foreground.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/mdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"@color/background"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/mdpi-foreground.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/hdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"@color/background"</span> <span class="na">density=</span><span class="s">"hdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/hdpi-foreground.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/xhdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"@color/background"</span> <span class="na">density=</span><span class="s">"xhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/xxhdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"@color/background"</span> <span class="na">density=</span><span class="s">"xxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/xxxhdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"@color/background"</span> <span class="na">density=</span><span class="s">"xxxhdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/xxxhdpi-foreground.png"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/platform&gt;</span>
 </code></pre></div></div>
 
@@ -2430,6 +2436,7 @@ different screen resolutions.</p>
 <h3>See Also</h3>
 <ul>
   <li><a href="https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive">Android icon guide</a></li>
+  <li><a href="https://developer.android.com/develop/ui/views/launch/icon_design_adaptive#user-theming">Android Adaptive icons - User theming</a></li>
   <li><a href="https://developer.android.com/guide/practices/screens_support.html">Android - Supporting multiple screens</a></li>
 </ul>
 
