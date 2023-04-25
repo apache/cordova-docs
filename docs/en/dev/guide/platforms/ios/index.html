@@ -2490,11 +2490,15 @@ and the <a href="https://developer.apple.com/library/prerelease/ios/documentatio
   </tbody>
 </table>
 
+<p>These parameters can be specified using the command line arguments above to the Cordova CLI <code>build</code> or <code>run</code> commands.</p>
+
+<p><strong>Note</strong>: You should use double <code>--</code> to indicate that these are platform-specific arguments, for example:</p>
+
+<p><code>cordova run ios --release -- --codeSignIdentity="iPhone Developer" --developmentTeam=FG35JLLMXX4A --packageType=development</code>.</p>
+
 <h3>Using build.json</h3>
 
-<p>Alternatively, you could specify them in a build configuration file (<code>build.json</code>)
-using the <code>--buildConfig</code> argument to the same commands. Here&#39;s a sample of a
-build configuration file:</p>
+<p>Alternatively, you could specify these flags in a build configuration file (default: <code>build.json</code> or add the <code>--buildConfig</code> flag to the same commands, so you can also use other file names e.g. <code>cordova build ios --buildConfig=../customBuild.json</code>). Here&#39;s a sample of a build configuration file:</p>
 
 <p>For automatic signing, where provisioning profiles are managed automatically by Xcode (recommended):</p>
 
@@ -2538,6 +2542,8 @@ build configuration file:</p>
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
+
+<p>There is also support to mix and match command line arguments and parameters in <code>build.json</code>. Values from the command line arguments will get precedence.</p>
 
 <h2>Xcode Build Flags</h2>
 
