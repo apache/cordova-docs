@@ -17,23 +17,23 @@
 
 'use strict';
 
-var fs = require('fs');
-var fse = require('fs-extra');
-var https = require('https');
-var path = require('path');
-var child_process = require('child_process');
-var yaml = require('js-yaml');
-var optimist = require('optimist');
+const fs = require('fs');
+const fse = require('fs-extra');
+const https = require('https');
+const path = require('path');
+const child_process = require('child_process');
+const yaml = require('js-yaml');
+const optimist = require('optimist');
 
-var util = require('./util');
+const util = require('./util');
 
 // constants
-var DEFAULT_REPO_PATH = 'README.md';
-var DEFAULT_VERSION_NAME = 'dev';
-var DEFAULT_LANGUAGE_NAME = 'en';
+const DEFAULT_REPO_PATH = 'README.md';
+const DEFAULT_VERSION_NAME = 'dev';
+const DEFAULT_LANGUAGE_NAME = 'en';
 
-var THIS_FILE = path.basename(__filename);
-var WARNING_COMMENT = '<!-- WARNING: This file is generated. See ' + THIS_FILE + '. -->\n\n';
+const THIS_FILE = path.basename(__filename);
+const WARNING_COMMENT = '<!-- WARNING: This file is generated. See ' + THIS_FILE + '. -->\n\n';
 
 // helpers
 function isPluginName (packageName) {
@@ -49,7 +49,7 @@ function getRepoEditURI (repoName, commit, filePath) {
 }
 
 function getLatestRelease (packageName) {
-    var latestRelease = child_process.execSync('npm info ' + packageName + ' dist-tags.latest');
+    const latestRelease = child_process.execSync('npm info ' + packageName + ' dist-tags.latest');
     return latestRelease.toString().trim();
 }
 
@@ -59,8 +59,8 @@ function packageNameFromRepoName (repoName) {
 
 function getFetchedFileConfig (entry) {
     // get entry components
-    var srcConfig = entry.src;
-    var destConfig = entry.dest;
+    const srcConfig = entry.src;
+    const destConfig = entry.dest;
 
     // validate entry
     if (!srcConfig) {
@@ -102,7 +102,7 @@ function getFetchedFileConfig (entry) {
     }
 
     // make front matter
-    var frontMatter = {
+    const frontMatter = {
         edit_link: getRepoEditURI(srcConfig.repoName, srcConfig.commit, srcConfig.path),
         title: srcConfig.packageName
     };
@@ -114,8 +114,8 @@ function getFetchedFileConfig (entry) {
     }
 
     // set returned values
-    var fetchedFileConfig = {
-        frontMatter: frontMatter,
+    const fetchedFileConfig = {
+        frontMatter,
         downloadURI: getRepoFileURI(srcConfig.repoName, srcConfig.commit, srcConfig.path),
         savePath: destConfig.path
     };
@@ -124,7 +124,7 @@ function getFetchedFileConfig (entry) {
 }
 
 function getFrontMatter (text) {
-    var frontMatterString = util.getFrontMatterString(text);
+    const frontMatterString = util.getFrontMatterString(text);
     if (frontMatterString !== null) {
         return yaml.load(frontMatterString);
     }
@@ -132,7 +132,7 @@ function getFrontMatter (text) {
 }
 
 function setFrontMatter (text, frontMatter, options) {
-    var frontMatterString = yaml.dump(frontMatter, options);
+    const frontMatterString = yaml.dump(frontMatter, options);
     return util.setFrontMatterString(text, frontMatterString);
 }
 
@@ -151,7 +151,7 @@ function dumpEntries (downloadPrefix, entries) {
 
         // print the save path for the entry
         if (entry.dest && entry.dest.path) {
-            var filePath = path.join(downloadPrefix, entry.dest.path);
+            const filePath = path.join(downloadPrefix, entry.dest.path);
             console.log(filePath);
 
         // error out on invalid entries
@@ -165,15 +165,15 @@ function dumpEntries (downloadPrefix, entries) {
 function downloadEntries (downloadPrefix, entries) {
     entries.forEach(function (entry) {
         // verify and process entry
-        var fetchedFileConfig = getFetchedFileConfig(entry);
+        const fetchedFileConfig = getFetchedFileConfig(entry);
         if (!fetchedFileConfig) {
             process.exit(1);
         }
 
         // get info for fetching
-        var fetchURI = fetchedFileConfig.downloadURI;
-        var outFilePath = path.join(downloadPrefix, fetchedFileConfig.savePath);
-        var outFileDir = path.dirname(outFilePath);
+        const fetchURI = fetchedFileConfig.downloadURI;
+        const outFilePath = path.join(downloadPrefix, fetchedFileConfig.savePath);
+        const outFileDir = path.dirname(outFilePath);
 
         // create directory for the file if it doesn't exist
         if (!fs.existsSync(outFileDir)) {
@@ -183,7 +183,7 @@ function downloadEntries (downloadPrefix, entries) {
         console.log(fetchURI + ' -> ' + outFilePath);
 
         // open the file for writing
-        var outFile = fs.createWriteStream(outFilePath);
+        const outFile = fs.createWriteStream(outFilePath);
 
         // open an HTTP request for the file
         https.get(fetchURI, function (response) {
@@ -193,7 +193,7 @@ function downloadEntries (downloadPrefix, entries) {
             }
 
             // read in the response
-            var fileContents = '';
+            let fileContents = '';
             response.setEncoding('utf8');
             response.on('data', function (data) {
                 fileContents += data;
@@ -205,15 +205,15 @@ function downloadEntries (downloadPrefix, entries) {
                 //
                 // NOTE:
                 //      fileFrontMatter's properties should override those of newFrontMatter
-                var newFrontMatter = fetchedFileConfig.frontMatter;
-                var fileFrontMatter = getFrontMatter(fileContents);
-                var mergedFrontMatter = util.mergeObjects(newFrontMatter, fileFrontMatter);
+                const newFrontMatter = fetchedFileConfig.frontMatter;
+                const fileFrontMatter = getFrontMatter(fileContents);
+                const mergedFrontMatter = util.mergeObjects(newFrontMatter, fileFrontMatter);
 
                 // add a warning and set the merged file matter in the file
-                var contentsOnly = util.stripFrontMatter(fileContents);
+                let contentsOnly = util.stripFrontMatter(fileContents);
                 contentsOnly = WARNING_COMMENT + contentsOnly;
 
-                var augmentedContents = setFrontMatter(contentsOnly, mergedFrontMatter);
+                const augmentedContents = setFrontMatter(contentsOnly, mergedFrontMatter);
 
                 // write out the file
                 outFile.end(augmentedContents);
@@ -227,7 +227,7 @@ function downloadEntries (downloadPrefix, entries) {
 // main
 function main () {
     // get args
-    var argv = optimist
+    const argv = optimist
         .usage('Usage: $0 [options]')
         .demand('config')
         .demand('docsRoot')
@@ -241,12 +241,12 @@ function main () {
         .describe('dump', 'only print the downloaded files')
         .argv;
 
-    var configFile = argv.config;
-    var docsRoot = argv.docsRoot;
-    var targetVersion = argv.version;
-    var targetLanguage = argv.language;
-    var printOnly = argv.dump;
-    var downloadPrefix = path.join(docsRoot, targetLanguage, targetVersion);
+    const configFile = argv.config;
+    const docsRoot = argv.docsRoot;
+    const targetVersion = argv.version;
+    const targetLanguage = argv.language;
+    const printOnly = argv.dump;
+    const downloadPrefix = path.join(docsRoot, targetLanguage, targetVersion);
 
     // validate args
     if (!fs.existsSync(configFile)) {
@@ -260,8 +260,8 @@ function main () {
     }
 
     // get config
-    var fetchConfig = fs.readFileSync(configFile);
-    var configEntries = yaml.load(fetchConfig);
+    const fetchConfig = fs.readFileSync(configFile);
+    const configEntries = yaml.load(fetchConfig);
 
     // just dump entries if --dump was passed
     if (printOnly === true) {

@@ -17,30 +17,30 @@
 
 'use strict';
 
-var path = require('path');
-var yaml = require('js-yaml');
+const path = require('path');
+const yaml = require('js-yaml');
 
-var util = require('./util');
+const util = require('./util');
 
 // constants
-var USAGE = 'Usage: gen_defaults.js [docsRoot] [latestVersion]';
-var DEV_VERSION_NAME = 'dev';
+const USAGE = 'Usage: gen_defaults.js [docsRoot] [latestVersion]';
+const DEV_VERSION_NAME = 'dev';
 
 // constants for sitemap.xml
 // reference:
 //      http://www.sitemaps.org/protocol.html#xmlTagDefinitions
-var LATEST_CHANGE_FREQUENCY = 'monthly';
-var LATEST_PAGE_PRIORITY = 0.8;
+const LATEST_CHANGE_FREQUENCY = 'monthly';
+const LATEST_PAGE_PRIORITY = 0.8;
 
-var DEFAULT_CHANGE_FREQUENCY = 'monthly';
-var DEFAULT_PAGE_PRIORITY = LATEST_PAGE_PRIORITY / 2;
+const DEFAULT_CHANGE_FREQUENCY = 'monthly';
+const DEFAULT_PAGE_PRIORITY = LATEST_PAGE_PRIORITY / 2;
 
-var DEV_CHANGE_FREQUENCY = 'daily';
-var DEV_PAGE_PRIORITY = LATEST_PAGE_PRIORITY / 4;
+const DEV_CHANGE_FREQUENCY = 'daily';
+const DEV_PAGE_PRIORITY = LATEST_PAGE_PRIORITY / 4;
 
 function main () {
-    var rootDir = process.argv[2];
-    var latestVersionName = process.argv[3];
+    const rootDir = process.argv[2];
+    const latestVersionName = process.argv[3];
 
     if (!rootDir) {
         console.error(USAGE);
@@ -55,12 +55,12 @@ function main () {
     }
 
     // create defaults config
-    var config = { defaults: [] };
+    const config = { defaults: [] };
 
     // set defaults for each language
     util.listdirsSync(rootDir).forEach(function (langName) {
-        var langPath = path.join(rootDir, langName);
-        var languageDefaults = {
+        const langPath = path.join(rootDir, langName);
+        const languageDefaults = {
             scope: {
                 path: 'docs/' + langName
             },
@@ -74,10 +74,10 @@ function main () {
 
         // set defaults for each version
         util.listdirsSync(langPath).forEach(function (versionName) {
-            var tocfile = util.genTocfileName(langName, versionName);
+            const tocfile = util.genTocfileName(langName, versionName);
 
-            var changeFrequency = DEFAULT_CHANGE_FREQUENCY;
-            var pagePriority = DEFAULT_PAGE_PRIORITY;
+            let changeFrequency = DEFAULT_CHANGE_FREQUENCY;
+            let pagePriority = DEFAULT_PAGE_PRIORITY;
 
             // adjust priority and frequency based on version
             if (versionName === latestVersionName) {
@@ -88,12 +88,12 @@ function main () {
                 pagePriority = DEV_PAGE_PRIORITY;
             }
 
-            var current = false;
+            let current = false;
             if (versionName === latestVersionName || versionName === DEV_VERSION_NAME) {
                 current = true;
             }
 
-            var versionDefaults = {
+            const versionDefaults = {
                 scope: {
                     path: 'docs/' + langName + '/' + versionName
                 },
@@ -102,7 +102,7 @@ function main () {
                     tocfile: tocfile.replace('.yml', ''),
                     change_frequency: changeFrequency,
                     priority: pagePriority,
-                    current: current
+                    current
                 }
             };
 

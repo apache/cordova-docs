@@ -17,20 +17,20 @@
 
 'use strict';
 
-var path = require('path');
-var yaml = require('js-yaml');
+const path = require('path');
+const yaml = require('js-yaml');
 const semver = require('semver');
-var util = require('./util');
+const util = require('./util');
 
 // constants
-var LANGUAGE_MAP = {
+const LANGUAGE_MAP = {
     en: 'English'
 };
 
 function main () {
-    var scriptName = process.argv[1];
-    var rootDir = process.argv[2];
-    var config = {};
+    const scriptName = process.argv[1];
+    const rootDir = process.argv[2];
+    const config = {};
 
     if (!rootDir) {
         console.error('Please specify a directory from which to generate.');
@@ -39,8 +39,8 @@ function main () {
 
     // go through directory that contains all languages
     util.listdirsSync(rootDir).forEach(function (langId) {
-        var langPath = path.join(rootDir, langId);
-        var versionNames = util.listdirsSync(langPath);
+        const langPath = path.join(rootDir, langId);
+        let versionNames = util.listdirsSync(langPath);
 
         // Remove dev version for semver sort. We'll add it back later.
         versionNames.splice(versionNames.indexOf('dev'), 1);
@@ -63,7 +63,7 @@ function main () {
         versionNames.push('dev');
 
         // get language ID
-        var langName = LANGUAGE_MAP[langId];
+        const langName = LANGUAGE_MAP[langId];
         if (!langName) {
             console.error("Language identifier '" + langId + "' doesn't have an associated name. Please fix that by changing " + scriptName + '.');
             process.exit(1);

@@ -18,15 +18,15 @@
 'use strict';
 
 module.exports = (function () {
-    var fs = require('fs');
-    var path = require('path');
+    const fs = require('fs');
+    const path = require('path');
 
     function stripFrontMatter (text) {
         // get and replace front matter if it's there
         // NOTE:
         //      String.replace() replaces only the first occurrence
         //      of a string, which is what we want
-        var rawFrontMatterString = getRawFrontMatterString(text);
+        const rawFrontMatterString = getRawFrontMatterString(text);
         if (rawFrontMatterString !== null) {
             return text.replace(rawFrontMatterString, '');
         }
@@ -35,10 +35,10 @@ module.exports = (function () {
     }
 
     function getFrontMatterString (text) {
-        var rawFrontMatterString = getRawFrontMatterString(text);
+        const rawFrontMatterString = getRawFrontMatterString(text);
         if (rawFrontMatterString !== null) {
             // strip out front matter markers
-            var frontMatterString = rawFrontMatterString.replace(/^---\s*$/gm, '');
+            const frontMatterString = rawFrontMatterString.replace(/^---\s*$/gm, '');
             return frontMatterString;
         }
 
@@ -46,8 +46,8 @@ module.exports = (function () {
     }
 
     function setFrontMatterString (text, frontMatterString) {
-        var textOnly = stripFrontMatter(text);
-        var newText = '---\n' + frontMatterString + '---\n\n' + textOnly;
+        const textOnly = stripFrontMatter(text);
+        const newText = '---\n' + frontMatterString + '---\n\n' + textOnly;
         return newText;
     }
 
@@ -55,7 +55,7 @@ module.exports = (function () {
         // NOTE:
         //      [\s\S]  matches all characters
         //      *?      non-greedy *-match
-        var match = text.match(/^(---\s*\r?\n[\s\S]*?\r?\n---\s*\r?\n)[\s\S]*$/);
+        const match = text.match(/^(---\s*\r?\n[\s\S]*?\r?\n---\s*\r?\n)[\s\S]*$/);
         if (match === null) {
             return null;
         }
@@ -69,7 +69,7 @@ module.exports = (function () {
     }
 
     function tocfileName (language, version, suffix) {
-        var versionSlug = version.replace(/\./g, '-');
+        const versionSlug = version.replace(/\./g, '-');
         if (suffix) {
             suffix = '-' + suffix;
         } else {
@@ -87,7 +87,7 @@ module.exports = (function () {
     }
 
     function mergeObjects (a, b) {
-        var c = {};
+        const c = {};
 
         // NOTE: b's properties override a's properties
         Object.keys(a).forEach(function (key) {
@@ -104,15 +104,15 @@ module.exports = (function () {
     }
 
     return {
-        stripFrontMatter: stripFrontMatter,
-        getFrontMatterString: getFrontMatterString,
-        setFrontMatterString: setFrontMatterString,
-        getRawFrontMatterString: getRawFrontMatterString,
-        listdirsSync: listdirsSync,
-        tocfileName: tocfileName,
-        srcTocfileName: srcTocfileName,
-        genTocfileName: genTocfileName,
-        mergeObjects: mergeObjects,
-        generatedBy: generatedBy
+        stripFrontMatter,
+        getFrontMatterString,
+        setFrontMatterString,
+        getRawFrontMatterString,
+        listdirsSync,
+        tocfileName,
+        srcTocfileName,
+        genTocfileName,
+        mergeObjects,
+        generatedBy
     };
 })();

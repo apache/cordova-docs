@@ -17,21 +17,21 @@
 
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
+const fs = require('fs');
+const path = require('path');
 
-var argv = require('optimist').argv;
+const argv = require('optimist').argv;
 
-var augment = require('./augment_toc');
-var util = require('./util');
+const augment = require('./augment_toc');
+const util = require('./util');
 
 function main () {
-    var docsRoot = argv._[0];
-    var tocRoot = argv._[1];
+    const docsRoot = argv._[0];
+    const tocRoot = argv._[1];
 
     // validate args
     if ((!docsRoot) || (!tocRoot)) {
-        var scriptName = path.basename(process.argv[1]);
+        const scriptName = path.basename(process.argv[1]);
         console.log('usage: ' + scriptName + ' docsRoot tocRoot');
         console.log(scriptName + ': error: too few arguments');
         return 1;
@@ -39,27 +39,27 @@ function main () {
 
     // go through all the languages
     util.listdirsSync(docsRoot).forEach(function (languageName) {
-        var languagePath = path.join(docsRoot, languageName);
+        const languagePath = path.join(docsRoot, languageName);
 
         // go through all the versions
         util.listdirsSync(languagePath).forEach(function (versionName) {
-            var versionPath = path.join(languagePath, versionName);
+            const versionPath = path.join(languagePath, versionName);
 
-            var srcTocName = util.srcTocfileName(languageName, versionName);
-            var destTocName = util.genTocfileName(languageName, versionName);
+            const srcTocName = util.srcTocfileName(languageName, versionName);
+            const destTocName = util.genTocfileName(languageName, versionName);
 
-            var srcTocPath = path.join(tocRoot, srcTocName);
-            var destTocPath = path.join(tocRoot, destTocName);
+            const srcTocPath = path.join(tocRoot, srcTocName);
+            const destTocPath = path.join(tocRoot, destTocName);
 
             // read the input
             fs.readFile(srcTocPath, function (error, data) {
                 if (error) throw error;
 
                 // augment the ToC
-                var originalTocString = data.toString();
-                var augmentedTocString = augment.augmentString(originalTocString, versionPath);
-                var warningComment = util.generatedBy(__filename);
-                var output = warningComment + '\n' + augmentedTocString;
+                const originalTocString = data.toString();
+                const augmentedTocString = augment.augmentString(originalTocString, versionPath);
+                const warningComment = util.generatedBy(__filename);
+                const output = warningComment + '\n' + augmentedTocString;
 
                 // write the output
                 fs.writeFile(destTocPath, output, function (error, data) {
