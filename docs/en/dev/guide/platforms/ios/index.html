@@ -2472,6 +2472,21 @@ and the <a href="https://developer.apple.com/library/prerelease/ios/documentatio
       <td><code>--automaticProvisioning</code></td>
       <td>(Optional) Enable to allow Xcode to automatically manage provisioning profiles. Valid options are <code>false</code> (the default) and <code>true</code>.</td>
     </tr>
+    <tr>
+      <td>Authentication Key Path</td>
+      <td><code>--authenticationKeyPath</code></td>
+      <td>(Optional) The path to an <a href="https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api">App Store Connect API</a> p8 key file, for automatic distribution signing.</td>
+    </tr>
+    <tr>
+      <td>Authentication Key ID</td>
+      <td><code>--authenticationKeyID</code></td>
+      <td>(Optional) The key ID for the App Store Connect API key file, for automatic distribution signing.</td>
+    </tr>
+    <tr>
+      <td>Authentication Key Issuer ID</td>
+      <td><code>--authenticationKeyIssuerID</code></td>
+      <td>(Optional) The issuer ID value for the App Store Connect API credentials,for automatic distribution signing.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -2489,23 +2504,16 @@ build configuration file:</p>
             </span><span class="nl">"codeSignIdentity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iPhone Developer"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"developmentTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FG35JLLMXX4A"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"development"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"automaticProvisioning"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"buildFlag"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="s2">"EMBEDDED_CONTENT_CONTAINS_SWIFT = YES"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES=NO"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"LD_RUNPATH_SEARCH_PATHS = </span><span class="se">\"</span><span class="s2">@executable_path/Frameworks</span><span class="se">\"</span><span class="s2">"</span><span class="w">
-            </span><span class="p">]</span><span class="w">
+            </span><span class="nl">"automaticProvisioning"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nl">"release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nl">"codeSignIdentity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iPhone Developer"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"developmentTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FG35JLLMXX4A"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app-store"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"automaticProvisioning"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"buildFlag"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="s2">"EMBEDDED_CONTENT_CONTAINS_SWIFT = YES"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES=NO"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"LD_RUNPATH_SEARCH_PATHS = </span><span class="se">\"</span><span class="s2">@executable_path/Frameworks</span><span class="se">\"</span><span class="s2">"</span><span class="w">
-            </span><span class="p">]</span><span class="w">
+            </span><span class="nl">"authenticationKeyPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/path/to/AuthKey_D383SF739.p8"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"authenticationKeyID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"D383SF739"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"authenticationKeyIssuerID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6053b7fe-68a8-4acb-89be-165aa6465141"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
