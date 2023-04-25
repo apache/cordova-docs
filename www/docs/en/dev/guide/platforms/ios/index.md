@@ -175,11 +175,15 @@ To sign an app, you need the following parameters:
 | Authentication Key Issuer ID | `--authenticationKeyIssuerID` | (Optional) The issuer ID value for the App Store Connect API credentials,for automatic distribution signing.
 
 
+These parameters can be specified using the command line arguments above to the Cordova CLI `build` or `run` commands.
+
+**Note**: You should use double `--` to indicate that these are platform-specific arguments, for example:
+
+`cordova run ios --release -- --codeSignIdentity="iPhone Developer" --developmentTeam=FG35JLLMXX4A --packageType=development`.
+
 ### Using build.json
 
-Alternatively, you could specify them in a build configuration file (`build.json`)
-using the `--buildConfig` argument to the same commands. Here's a sample of a
-build configuration file:
+Alternatively, you could specify these flags in a build configuration file (default: `build.json` or add the `--buildConfig` flag to the same commands, so you can also use other file names e.g. `cordova build ios --buildConfig=../customBuild.json`). Here's a sample of a build configuration file:
 
 For automatic signing, where provisioning profiles are managed automatically by Xcode (recommended):
 
@@ -225,6 +229,8 @@ For manual signing, specifying the provisioning profiles by UUID:
     }
 }
 ```
+
+There is also support to mix and match command line arguments and parameters in `build.json`. Values from the command line arguments will get precedence.
 
 ## Xcode Build Flags
 
