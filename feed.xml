@@ -6,9 +6,46 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 25 Apr 2023 04:29:46 +0000</pubDate>
-    <lastBuildDate>Tue, 25 Apr 2023 04:29:46 +0000</lastBuildDate>
+    <pubDate>Tue, 16 May 2023 23:25:23 +0000</pubDate>
+    <lastBuildDate>Tue, 16 May 2023 23:25:23 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Cordova Browser 7.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Browser 7.0.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building browser targeted applications.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-browser&quot;&gt;cordova-browser@7.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;This release contains updates for more modern NodeJS runtimes and contains a ShellJS security fix.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove browser
+cordova platform add browser@7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Please report any issues you find at &lt;a href=&quot;https://github.com/apache/cordova-browser/issues&quot;&gt;GitHub Issues&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2&gt;Release Notes&lt;/h2&gt;
+
+&lt;p&gt;For a more detailed release notes, please see &lt;a href=&quot;https://github.com/apache/cordova-browser/blob/master/RELEASENOTES.md&quot;&gt;RELEASENOTES.md&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2023/05/13/cordova-browser-release-7.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2023/05/13/cordova-browser-release-7.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova iOS 6.3.0 Released!</title>
@@ -669,56 +706,6 @@ cordova platform add electron@3.1.0
         <pubDate>Mon, 30 May 2022 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2022/05/30/cordova-electron-release-3.1.0.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2022/05/30/cordova-electron-release-3.1.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Android 10.1.2 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Android 10.1.2&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Android applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@10.1.2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove android
-cordova platform add android@10.1.2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add android@10.1.2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The notable fixes in this release are to detect the &lt;code&gt;JAVA_HOME&lt;/code&gt; environment variable with Java 11, properly escape the app&amp;#39;s name, and explicitly define the &lt;code&gt;android:exported&lt;/code&gt; attribute on the &lt;code&gt;activity&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1372&quot;&gt;GH-1372&lt;/a&gt; fix(&lt;code&gt;AndroidManifest&lt;/code&gt;): explicitly define the &lt;code&gt;activity&lt;/code&gt; attribute &lt;code&gt;android:exported&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1406&quot;&gt;GH-1406&lt;/a&gt; fix: detect &lt;code&gt;JAVA_HOME&lt;/code&gt; with Java 11&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1401&quot;&gt;GH-1401&lt;/a&gt; fix(GH-1391): Reword minimum build tools version to make it more clear what is actually required.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1384&quot;&gt;GH-1384&lt;/a&gt; fix: escape &lt;code&gt;strings.xml&lt;/code&gt; app name&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 15 Apr 2022 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2022/04/15/cordova-android-release-10.1.2.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2022/04/15/cordova-android-release-10.1.2.html</guid>
         
         <category>news</category>
         

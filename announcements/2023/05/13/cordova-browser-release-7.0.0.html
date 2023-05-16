@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released Cordova iOS 6.3.0! This is Cordova&#39;s official platform for building iOS mobile applications. This min...">
+    <meta name="description" content="We are happy to announce that we have just released Cordova Browser 7.0.0! This is one of Cordova&#39;s supported platforms for building browser targeted app...">
 
     <title>
         
             
-                Cordova iOS 6.3.0 Released! - Apache Cordova
+                Cordova Browser 7.0.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2023/04/15/cordova-ios-release-6.3.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2023/05/13/cordova-browser-release-7.0.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,45 +129,37 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova iOS 6.3.0 Released!</div>
+        <div class="title">Cordova Browser 7.0.0 Released!</div>
         <div class="author">By:
             
-              <a href="https://twitter.com/niklasmaerz">Niklas Merz</a>
+              Norman Breau
             
         </div>
-        <div class="date">15 Apr 2023</div>
+        <div class="date">13 May 2023</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released <code>Cordova iOS 6.3.0</code>! This is Cordova&#39;s official platform for building iOS mobile applications. <strong>This minor release contains three important fixes in preparation for the upcoming major release.</strong></p>
+            <p>We are happy to announce that we have just released <code>Cordova Browser 7.0.0</code>! This is one of Cordova&#39;s supported platforms for building browser targeted applications.</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@6.3.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-browser">cordova-browser@7.0.0</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
 
-<p>This release contains a fix to allow inspecting of WebView content with the latest iOS and Xcode versions. It also fixes an iOS 16 bug and issues with NodeJS 18.</p>
-
-<p>This release adds the preference <code>InspectableWebview</code> for iOS 16.4 or later. Please check out the <a href="https://github.com/apache/cordova-docs/pull/1291">Pull request</a> for the documentation.</p>
+<p>This release contains updates for more modern NodeJS runtimes and contains a ShellJS security fix.</p>
 
 <p><strong>To upgrade:</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove ios
-cordova platform add ios@6.3.0
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove browser
+cordova platform add browser@7
 </code></pre></div></div>
 
-<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+<p>Please report any issues you find at <a href="https://github.com/apache/cordova-browser/issues">GitHub Issues</a>!</p>
 
-<!--more-->
-<h1>Changes include:</h1>
+<h2>Release Notes</h2>
 
-<ul>
-  <li>chore: npm audit fix</li>
-  <li><a href="https://github.com/apache/cordova-ios/pull/1302">GH-1302</a> URL parsing for ATS in node 18</li>
-  <li><a href="https://github.com/apache/cordova-ios/pull/1258">GH-1258</a> workaround for DisallowOverscroll on iOS 16</li>
-  <li><a href="https://github.com/apache/cordova-ios/pull/1300">GH-1300</a> set webView.inspectable to true for Debug builds on iOS &gt;= 16.4</li>
-</ul>
+<p>For a more detailed release notes, please see <a href="https://github.com/apache/cordova-browser/blob/master/RELEASENOTES.md">RELEASENOTES.md</a></p>
 
         </div>
     </section>
@@ -175,37 +167,17 @@ cordova platform add ios@6.3.0
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2023/03/09/cordova-common-release-5.0.0.html">Previous</a>
+                    <a href="/announcements/2023/04/15/cordova-ios-release-6.3.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2023/03/09/cordova-common-release-5.0.0.html">Cordova Common 5.0.0 Released!</a>
-                    <div class="date"> 09 Mar 2023 - By Bryan Ellis </div>
+                    <a class="title" href="/announcements/2023/04/15/cordova-ios-release-6.3.0.html">Cordova iOS 6.3.0 Released!</a>
+                    <div class="date"> 15 Apr 2023 - By Niklas Merz </div>
                     <p class="content">
-                        We are happy to announce that cordova-common@5.0.0 has been released. This is...
+                        We are happy to announce that we have just released Cordova iOS...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2023/05/13/cordova-browser-release-7.0.0.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2023/05/13/cordova-browser-release-7.0.0.html">Cordova Browser 7.0.0 Released!</a>
-                    <div class="date"> 13 May 2023 - By Norman Breau </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released Cordova Browser...
-                    </p>
                 
             </div>
         </div>
