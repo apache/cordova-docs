@@ -108,14 +108,15 @@ Cordova's CLI requires specific environment variables so it can function correct
 The following variables must be set:
 
 - `JAVA_HOME` - The environment variable to the location of your JDK installation
-- `ANDROID_SDK_ROOT` - The environment variable to the location of your Android SDK installation
+- `ANDROID_HOME` - The environment variable to the location of your Android SDK installation
 
 It is also recommended to update the `PATH` environment variable to include the following directories.
 
 - `cmdline-tools/latest/bin`
-- `emulator`
 - `platform-tools`
 - `build-tools`
+- `tool/bin`
+- `emulator`
   - This is required for the `apksigner` and `zipalign` tools.
 
 _**Note:** The directories above are generally located in the Android SDK ROOT._
@@ -127,15 +128,17 @@ On a Mac or Linux, with a text editor, create or modify the `~/.bash_profile` fi
 To set an environment variable, add a line that uses `export` like so (substitute the path with your local installation):
 
 ```bash
-export ANDROID_SDK_ROOT=/Development/android-sdk/
+export ANDROID_HOME=/Development/android-sdk/
 ```
 
 To update your `PATH`, add a line resembling the following (substitute the paths with your local Android SDK installation's location):
 
 ```bash
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
-export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/
-export PATH=$PATH:$ANDROID_SDK_ROOT/emulator/
+export PATH=$PATH:$ANDROID_HOME/platform-tools/
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/
+export PATH=$PATH:$ANDROID_HOME/tools/bin/
+export PATH=$PATH:$ANDROID_HOME/build-tools
+export PATH=$PATH:$ANDROID_HOME/emulator/
 ```
 
 Reload your terminal to see this change reflected or run the following command:
@@ -174,7 +177,9 @@ Example paths (substitute the paths with your local Android SDK installation's l
 ```txt
 C:\Users\[your user]\AppData\Local\Android\Sdk\platform-tools
 C:\Users\[your user]\AppData\Local\Android\Sdk\cmdline-tools\latest\bin
-C:\Users\[your user]\AppData\Local\Android\Sdk\tools\emulator
+C:\Users\[your user]\AppData\Local\Android\Sdk\build-tools
+C:\Users\[your user]\AppData\Local\Android\Sdk\tools\bin
+C:\Users\[your user]\AppData\Local\Android\Sdk\emulator
 ```
 
 Once all paths are added, click the **OK** button until all opened windows for setting & editing environment variables are closed.
