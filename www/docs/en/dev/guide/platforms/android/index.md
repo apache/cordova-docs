@@ -116,7 +116,6 @@ It is also recommended to update the `PATH` environment variable to include the 
 - `cmdline-tools/latest/bin`
 - `platform-tools`
 - `build-tools`
-- `tool/bin`
 - `emulator`
   - This is required for the `apksigner` and `zipalign` tools.
 
@@ -137,7 +136,6 @@ To update your `PATH`, add a line resembling the following (substitute the paths
 ```bash
 export PATH=$PATH:$ANDROID_HOME/platform-tools/
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/
-export PATH=$PATH:$ANDROID_HOME/tools/bin/
 export PATH=$PATH:$ANDROID_HOME/build-tools
 export PATH=$PATH:$ANDROID_HOME/emulator/
 ```
@@ -179,7 +177,6 @@ Example paths (substitute the paths with your local Android SDK installation's l
 C:\Users\[your user]\AppData\Local\Android\Sdk\platform-tools
 C:\Users\[your user]\AppData\Local\Android\Sdk\cmdline-tools\latest\bin
 C:\Users\[your user]\AppData\Local\Android\Sdk\build-tools
-C:\Users\[your user]\AppData\Local\Android\Sdk\tools\bin
 C:\Users\[your user]\AppData\Local\Android\Sdk\emulator
 ```
 
