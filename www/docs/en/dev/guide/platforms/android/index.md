@@ -88,6 +88,7 @@ In the Android Studio, open the **SDK Manager** (`Tools > SDK Manager`) and conf
 
 - Android's **SDK Platform** for your targeted API Level
 - **Android SDK Build-Tools** under the **SDK Tools** tab, for the targeted version.
+- **Android SDK Command-line Tools (latest)** under the **SDK Tools** tab, for the latest version.
 
 #### Android SDK Tools
 
