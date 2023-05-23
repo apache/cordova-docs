@@ -26,29 +26,57 @@ cordova platform add android@12.0.0
 cordova platform add android@12.0.0
 ```
 
+**BREAKING CHANGES:**
+
 * **Increased Minimum & Target SDK**
 
     This release has increased the minimum supported SDK version to 24 which is Android 7.0. It also has increased the target SDK to 33, Android 13.
 
-* **Tooling and Default Support Bump**
+* **Build Tools**
 
-  * Target SDK (`targetSdk`): `33`
-  * SDK Build Tool: `33.0.2`
-  * Kotlin: `1.7.21`
-  * Gradle: `7.6`
-  * Android Gradle Plugin (AGP): `7.4.2`
-  * Google Services Gradle Plugin: `4.3.15`
-  * AndroidX App Compat Library: `1.6.1`
-  * AndroidX WebKit Library: `1.6.0`
-  * AndroidX SplashScreen Core Library: `1.0.0`
+    To use `cordova-android@12`, SDK Platform `33` and SDK Build Tools `33.0.2` must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in your projects.
 
-* **Monochrome Support**
+    To install SDK Platform 32:
 
-    Android 13 has added Themed Icons support which is also known as Monochrome. This release has introduced support for Themed icons.
+    1. Open Android Studio's **SDK Manager**:
+    2. Click on `SDK Platforms` tab
+    3. Check `Android 13.0 (Tiramisu)` which has the `API Level` of `33`
+    4. Click `Apply`
+
+    ![Android SDK Platform]({{ site.baseurl }}/static/img/blog/2023/cordova-android-12-platform-sdk-33.png)
+
+    To install SDK Build Tools 32.0.2:
+
+    1. Open Android Studio's **SDK Manager**:
+    2. Click on `SDK Tools` tab
+    3. Check `Show Package Details`
+    4. Expand `Android SDK Build-Tools`
+    5. Check `33.0.2`
+    6. Click `Apply`
+
+    ![Android SDK Build Tools]({{ site.baseurl }}/static/img/blog/2023/cordova-android-12-sdk-build-tools-3302.png)
+
+* **Project Dependencies**
+
+    The following project dependencies were bumpped:
+
+    * Kotlin: `1.7.21`
+    * Gradle: `7.6`
+    * Android Gradle Plugin (AGP): `7.4.2`
+    * Google Services Gradle Plugin: `4.3.15`
+    * AndroidX App Compat Library: `1.6.1`
+    * AndroidX WebKit Library: `1.6.0`
+    * AndroidX SplashScreen Core Library: `1.0.0`
 
 * **Node Support**
 
     We have dropped support for Node 14.x and increase the minimum Node requirement to greater than or equal to 16.13.0.
+
+**New Features:**
+
+* **Monochrome Support**
+
+    Android 13 has added Themed Icons support which is also known as Monochrome. This release has introduced support for Themed icons.
 
 Please report any issues you find on our [Cordova-Android](https://github.com/apache/cordova-android/issues) GitHub issue tracker!
 
