@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released Cordova Browser 7.0.0! This is one of Cordova&#39;s supported platforms for building browser targeted app...">
+    <meta name="description" content="We are happy to announce that we have just released a major update to our Cordova CLI!  cordova@12.0.0In this CLI release, it also includes the latest intern...">
 
     <title>
         
             
-                Cordova Browser 7.0.0 Released! - Apache Cordova
+                Cordova CLI 12.0.0 & Internal Packages Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2023/05/13/cordova-browser-release-7.0.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/news/2023/05/22/cordova-cli-12.0.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,37 +129,154 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova Browser 7.0.0 Released!</div>
+        <div class="title">Cordova CLI 12.0.0 & Internal Packages Released!</div>
         <div class="author">By:
             
-              Norman Breau
+              Bryan Ellis
             
         </div>
-        <div class="date">13 May 2023</div>
+        <div class="date">22 May 2023</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released <code>Cordova Browser 7.0.0</code>! This is one of Cordova&#39;s supported platforms for building browser targeted applications.</p>
+            <p>We are happy to announce that we have just released a major update to our Cordova CLI!</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-browser">cordova-browser@7.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova">cordova@12.0.0</a></li>
+</ul>
+
+<p>In this CLI release, it also includes the latest internal libraries:</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-lib">cordova-lib@12.0.1</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-create">cordova-create@5.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-common">cordova-common@5.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-fetch">cordova-fetch@4.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-serve">cordova-serve@4.0.1</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
 
-<p>This release contains updates for more modern NodeJS runtimes and contains a ShellJS security fix.</p>
+<p>This release drops Nodejs 14 support. The minimum supported version that Cordova requires is greater than or equal to 16.13.0.</p>
 
-<p><strong>To upgrade:</strong></p>
+<p>In all releases, we have updated all npm packages to the possible latest release that Cordova can support.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove browser
-cordova platform add browser@7
-</code></pre></div></div>
+<p><strong>BREAKING CHANGES:</strong></p>
 
-<p>Please report any issues you find at <a href="https://github.com/apache/cordova-browser/issues">GitHub Issues</a>!</p>
+<p>We have removed the deprecated platforms <strong>OSX</strong> and <strong>Windows</strong> from the platform listing. While you can still install these platforms, you will need to use the full npm package names <code>cordova-osx</code> and <code>cordova-windows</code>. Please note that these platforms are no longer actively maintained, and there is a possibility that they may not function as expected and could break in the future. As a result, they will not receive any further support.</p>
 
-<h2>Release Notes</h2>
+<p>Additionally, we have removed all internal platform pinnings. When running the <code>cordova platform add &lt;PLATFORM&gt;</code> command, it will always fetch the latest available platform from the npm registry. This allows for immediate access to newly released platforms. If you require the command to consistently fetch a specific version, you will need to update your command to include the version pinning, like this: <code>cordova platform add &lt;PLATFORM&gt;@&lt;VERSION&gt;</code>.</p>
 
-<p>For a more detailed release notes, please see <a href="https://github.com/apache/cordova-browser/blob/master/RELEASENOTES.md">RELEASENOTES.md</a></p>
+<p>Please report any issues you find on our GitHub issue tracker! Please select below the appropriate repo when submitting.</p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-cli/issues">Cordova CLI - Issue Tracker</a></li>
+  <li><a href="https://github.com/apache/cordova-lib/issues">Cordova Lib - Issue Tracker</a></li>
+  <li><a href="https://github.com/apache/cordova-create/issues">Cordova Create - Issue Tracker</a></li>
+  <li><a href="https://github.com/apache/cordova-fetch/issues">Cordova Fetch - Issue Tracker</a></li>
+  <li><a href="https://github.com/apache/cordova-serve/issues">Cordova Serve - Issue Tracker</a></li>
+  <li><a href="https://github.com/apache/cordova-common/issues">Cordova Common - Issue Tracker</a></li>
+</ul>
+
+<!--more-->
+<h1>Changes include:</h1>
+
+<p><strong>Cordova CLI 12.0.0:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-cli/pull/611">GH-611</a> feat!(run): call platform api to list targets</li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/595">GH-595</a> feat!: remove <code>update-notifier</code> support</li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/615">GH-615</a> dep!: bump <code>cordova-create@5.0.0</code> &amp; <code>cordova-lib@12.0.0</code></li>
+  <li><a href="https://github.com/apache/cordova-cli/pull/613">GH-613</a> dep!: bump possible dependencies &amp; set bump node requirement <code>&gt;=16.13.0</code>
+    <ul>
+      <li><code>@cordova/eslint-config@^5.0.0</code></li>
+      <li><code>jasmine@^4.6.0</code></li>
+      <li><code>rewire@^6.0.0</code></li>
+      <li><code>cordova-common@5.0.0</code></li>
+      <li><code>fs-extra@11.1.1</code></li>
+      <li><code>nopt@7.1.0</code></li>
+      <li><code>semver@7.5.0</code></li>
+      <li><code>systeminformation@5.17.12</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Cordova Lib 12.0.0 &amp; 12.0.1:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-lib/pull/918">GH-918</a> fix: platform add with tarball &amp; directory</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/917">GH-917</a> feat!(<code>run</code>): call platform api to list targets</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/894">GH-894</a> feat!: remove platform pinning</li>
+  <li><a href="https://github.com/apache/cordova-lib/pull/896">GH-896</a> feat!: remove <strong>OSX</strong> &amp; <strong>Windows</strong> platform</li>
+</ul>
+
+<p><strong>Cordova Create 5.0.0:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-create/pull/82">GH-82</a> dep!: packages upgrade &amp; requirements
+    <ul>
+      <li>Bumped Packages
+        <ul>
+          <li><code>@cordova/eslint-config@latest@5.0.0</code></li>
+          <li><code>cordova-common@5.0.0</code></li>
+          <li><code>cordova-fetch@4.0.0</code></li>
+          <li><code>fs-extra@11.1.1</code></li>
+          <li><code>jasmine@4.6.0</code></li>
+          <li><code>rewire@6.0.0</code></li>
+          <li><code>npm-package-arg@10.1.0</code></li>
+        </ul>
+      </li>
+      <li>Rebuilt <code>package-lock.json</code></li>
+      <li>Bumped <code>node</code> engine requirement <code>&gt;=16.13.0</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Cordova Fetch 4.0.0:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-fetch/pull/108">GH-108</a> dep!: bumped <code>node</code> &amp; <code>npm</code> engine requirment &amp; dependencies w/ <code>package-lock</code> rebuild
+    <ul>
+      <li>Engine Requirement Update
+        <ul>
+          <li>Node: <code>&gt;= 16.13.0</code></li>
+          <li>npm: <code>&gt;= 8.1.0</code></li>
+        </ul>
+      </li>
+      <li>Package Upgrade
+        <ul>
+          <li><code>@npmcli/arborist@6.2.5</code></li>
+          <li><code>pacote@15.1.1</code></li>
+          <li><code>npm-package-arg@10.1.0</code></li>
+          <li><code>@cordova/eslint-config@5.0.0</code></li>
+          <li><code>fs-extra@11.1.1</code></li>
+          <li><code>cordova-common@5.0.0</code></li>
+          <li><code>jasmine@4.6.0</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/apache/cordova-fetch/pull/109">GH-109</a> dep!: bump <code>which@3.0.0</code></li>
+  <li><a href="https://github.com/apache/cordova-fetch/pull/102">GH-102</a> dep(npm): update <code>pacote@15.0.7</code></li>
+  <li><a href="https://github.com/apache/cordova-fetch/pull/75">GH-75</a> refactor: replace <code>superspawn</code> with <code>execa</code></li>
+  <li><a href="https://github.com/apache/cordova-fetch/pull/110">GH-110</a> test: remove private internal method testing and <code>rewire</code></li>
+  <li><a href="https://github.com/apache/cordova-fetch/pull/111">GH-111</a> ci: sync <code>codecov-action</code> setup between other repos</li>
+</ul>
+
+<p><strong>Cordova Serve 4.0.1:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-serve/pull/49">GH-49</a>, <a href="https://github.com/apache/cordova-serve/pull/51">GH-51</a>, <a href="https://github.com/apache/cordova-serve/pull/53">GH-53</a> chore: rebuilt package-lock.json</li>
+  <li><a href="https://github.com/apache/cordova-serve/pull/52">GH-52</a> ci: update github action workflow</li>
+  <li><a href="https://github.com/apache/cordova-serve/pull/46">GH-46</a> fix(main.js): color of 404 status in console logs</li>
+  <li><a href="https://github.com/apache/cordova-serve/pull/45">GH-45</a> fix(main.js): resolve deprecation warning on Node.js 12</li>
+  <li><a href="https://github.com/apache/cordova-serve/pull/44">GH-44</a> fix: pass mandatory args to platform API constructor</li>
+  <li><a href="https://github.com/apache/cordova-serve/pull/38">GH-38</a> ci: add node 14 to workflow</li>
+</ul>
+
+<p><strong>Cordova Common 5.0.0:</strong></p>
+
+<p>See the <a href="2023-03-09-cordova-common-release-5.0.0.md">Cordova Common Release 5.0.0</a> blog post.</p>
 
         </div>
     </section>
@@ -167,37 +284,17 @@ cordova platform add browser@7
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2023/04/15/cordova-ios-release-6.3.0.html">Previous</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2023/04/15/cordova-ios-release-6.3.0.html">Cordova iOS 6.3.0 Released!</a>
-                    <div class="date"> 15 Apr 2023 - By Niklas Merz </div>
-                    <p class="content">
-                        We are happy to announce that we have just released Cordova iOS...
-                    </p>
-                
-            </div>
-            <div class="col-sm-6">
-                
-                    <a href="/announcements/2023/05/22/cordova-android-12.0.0.html">Next</a>
+                    <a href="/announcements/2023/05/22/cordova-android-12.0.0.html">Previous</a>
                     <br>
                     <br>
                     <a class="title" href="/announcements/2023/05/22/cordova-android-12.0.0.html">Cordova Android 12.0.0 Released!</a>
                     <div class="date"> 22 May 2023 - By Bryan Ellis </div>
                     <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
                         We are happy to announce that we have just released Cordova Android...
                     </p>
+                
+            </div>
+            <div class="col-sm-6">
                 
             </div>
         </div>

@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released Cordova Browser 7.0.0! This is one of Cordova&#39;s supported platforms for building browser targeted app...">
+    <meta name="description" content="We are happy to announce that we have just released Cordova Android 12.0.0! This is one of Cordova&#39;s supported platforms for building Android application...">
 
     <title>
         
             
-                Cordova Browser 7.0.0 Released! - Apache Cordova
+                Cordova Android 12.0.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2023/05/13/cordova-browser-release-7.0.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2023/05/22/cordova-android-12.0.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,37 +129,187 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova Browser 7.0.0 Released!</div>
+        <div class="title">Cordova Android 12.0.0 Released!</div>
         <div class="author">By:
             
-              Norman Breau
+              Bryan Ellis
             
         </div>
-        <div class="date">13 May 2023</div>
+        <div class="date">22 May 2023</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released <code>Cordova Browser 7.0.0</code>! This is one of Cordova&#39;s supported platforms for building browser targeted applications.</p>
+            <p>We are happy to announce that we have just released <code>Cordova Android 12.0.0</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-browser">cordova-browser@7.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@12.0.0</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
 
-<p>This release contains updates for more modern NodeJS runtimes and contains a ShellJS security fix.</p>
-
 <p><strong>To upgrade:</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove browser
-cordova platform add browser@7
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
+cordova platform add android@12.0.0
 </code></pre></div></div>
 
-<p>Please report any issues you find at <a href="https://github.com/apache/cordova-browser/issues">GitHub Issues</a>!</p>
+<p><strong>To install:</strong></p>
 
-<h2>Release Notes</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@12.0.0
+</code></pre></div></div>
 
-<p>For a more detailed release notes, please see <a href="https://github.com/apache/cordova-browser/blob/master/RELEASENOTES.md">RELEASENOTES.md</a></p>
+<p><strong>BREAKING CHANGES:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>Increased Minimum &amp; Target SDK</strong></p>
+
+    <p>This release has increased the minimum supported SDK version to 24 which is Android 7.0. It also has increased the target SDK to 33, Android 13.</p>
+  </li>
+  <li>
+    <p><strong>Build Tools</strong></p>
+
+    <p>To use <code>cordova-android@12</code>, SDK Platform <code>33</code> and SDK Build Tools <code>33.0.2</code> must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in your projects.</p>
+
+    <p>To install SDK Platform 33:</p>
+
+    <ol>
+      <li>Open Android Studio&#39;s <strong>SDK Manager</strong>:</li>
+      <li>Click on <code>SDK Platforms</code> tab</li>
+      <li>Check <code>Android 13.0 (Tiramisu)</code> which has the <code>API Level</code> of <code>33</code></li>
+      <li>Click <code>Apply</code></li>
+    </ol>
+
+    <p><img src="/static/img/blog/2023/cordova-android-12-platform-sdk-33.png" alt="Android SDK Platform" /></p>
+
+    <p>To install SDK Build Tools 33.0.2:</p>
+
+    <ol>
+      <li>Open Android Studio&#39;s <strong>SDK Manager</strong>:</li>
+      <li>Click on <code>SDK Tools</code> tab</li>
+      <li>Check <code>Show Package Details</code></li>
+      <li>Expand <code>Android SDK Build-Tools</code></li>
+      <li>Check <code>33.0.2</code></li>
+      <li>Click <code>Apply</code></li>
+    </ol>
+
+    <p><img src="/static/img/blog/2023/cordova-android-12-sdk-build-tools-3302.png" alt="Android SDK Build Tools" /></p>
+  </li>
+  <li>
+    <p><strong>Project Dependencies</strong></p>
+
+    <p>The following project dependencies were bumpped:</p>
+
+    <ul>
+      <li>Kotlin: <code>1.7.21</code></li>
+      <li>Gradle: <code>7.6</code></li>
+      <li>Android Gradle Plugin (AGP): <code>7.4.2</code></li>
+      <li>Google Services Gradle Plugin: <code>4.3.15</code></li>
+      <li>AndroidX App Compat Library: <code>1.6.1</code></li>
+      <li>AndroidX WebKit Library: <code>1.6.0</code></li>
+      <li>AndroidX SplashScreen Core Library: <code>1.0.0</code></li>
+    </ul>
+
+    <p>If you or a plugin has made changes to any of the following configuration preferences, the build results might not match the expected outcomes with this release:</p>
+
+    <ul>
+      <li><code>android-minSdkVersion</code></li>
+      <li><code>android-maxSdkVersion</code></li>
+      <li><code>android-targetSdkVersion</code></li>
+      <li><code>android-compileSdkVersion</code></li>
+      <li><code>android-buildToolsVersion</code></li>
+      <li><code>GradleVersion</code></li>
+      <li><code>AndroidGradlePluginVersion</code></li>
+      <li><code>GradlePluginKotlinVersion</code></li>
+      <li><code>AndroidXAppCompatVersion</code></li>
+      <li><code>AndroidXWebKitVersion</code></li>
+      <li><code>GradlePluginGoogleServicesVersion</code></li>
+    </ul>
+
+    <p>Please take note of the versions that have been updated in this release. If you have manually modified any of these values, it is recommended to review and update the preference values accordingly.</p>
+  </li>
+  <li>
+    <p><strong>Node Support</strong></p>
+
+    <p>We have dropped support for Node 14.x and increase the minimum Node requirement to greater than or equal to 16.13.0.</p>
+  </li>
+</ul>
+
+<p><strong>New Features:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>Monochrome Support</strong></p>
+
+    <p>Android 13 has added Themed Icons support which is also known as Monochrome. This release has introduced support for Themed icons.</p>
+  </li>
+</ul>
+
+<p>Please report any issues you find on our <a href="https://github.com/apache/cordova-android/issues">Cordova-Android</a> GitHub issue tracker!</p>
+
+<!--more-->
+<h1>Changes include:</h1>
+
+<p><strong>Breaking:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-android/pull/1605">GH-1605</a> fix!: Make <code>CoreAndroid</code> plugin instantiate on load</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1539">GH-1539</a> feat!: bump Gradle 7.6 &amp; AGP 7.4.2</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1571">GH-1571</a> feat!: bump min SDK to 24</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1538">GH-1538</a> feat!: bump target sdk &amp; build tools for SDK 33 support</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1540">GH-1540</a> feat!: bump node engine requirement <code>&gt;=16.13.0</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1597">GH-1597</a> deprecate: <code>CoreAndroid.getBuildConfigValue</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1541">GH-1541</a> dep(npm)!: bump acceptable modules w/ rebuilt <code>package-lock</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1566">GH-1566</a> dep(npm)!: bump <code>cordova-common@5.0.0</code></li>
+</ul>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-android/pull/1602">GH-1602</a> feat: add <code>listTarget</code> api</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1574">GH-1574</a> feat: add plugin hooks for <code>WebViewClient.onRenderProcessGone</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1594">GH-1594</a> feat: bump default <code>kotlin</code> to version 1.7.21</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1550">GH-1550</a> feat: add <code>monochrome</code> app icon support</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1589">GH-1589</a> feat: <code>InspectableWebview</code> preference</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1568">GH-1568</a> feat: bump <code>androidx.appcompat.appcompat</code> 1.6.1</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1567">GH-1567</a> feat: bump <code>androidx.webkit.webkit</code> 1.6.0</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1547">GH-1547</a> feat: bump <code>com.google.gms.google-services</code> 4.3.15</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1546">GH-1546</a> feat: bump <code>androidx.core.core-splashscreen</code> 1.0.0</li>
+</ul>
+
+<p><strong>Fixes:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-android/pull/1606">GH-1606</a> fix: Gradle Args parsing</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1575">GH-1575</a> fix(<code>BuildHelper</code>): get package name from <code>ApplicationInfo</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1595">GH-1595</a> fix(test): Native test namespace refactor</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1471">GH-1471</a> fix: <code>ANDROID_HOME</code> is the new default, to check first and give advice</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1573">GH-1573</a> fix(GH-1432): Default <code>content</code> <code>src</code> when content tag is missing</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1506">GH-1506</a> fix: only do fadeout animation if <code>FadeSplashScreen</code> is true</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1505">GH-1505</a> fix: correctly flag API dependency on <code>AppCompat</code> for Maven</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1487">GH-1487</a> fix: Add <strong>Android</strong> prefix to <code>WindowSplashScreenBrandingImage</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1489">GH-1489</a> fix: import type definitions from obsolete <code>cordova-plugin-splashscreen</code></li>
+</ul>
+
+<p><strong>Chores, Refactor,  Dependencies &amp; CI:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-android/pull/1493">GH-1493</a> chore: add <code>lint:fix</code> script for fixing lint errors</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1491">GH-1491</a> chore: Use gradle 7.4.2 distribution url</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1588">GH-1588</a> refactor: Removed obsolete version code checks</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1492">GH-1492</a> refactor: replace deprecated <code>Handler</code> constructor</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1587">GH-1587</a> dep: bump npm dependencies
+    <ul>
+      <li><code>fs-extra@11.1.1</code></li>
+      <li><code>nopt@7.1.0</code></li>
+      <li><code>@cordova/eslint-config@5.0.0</code></li>
+      <li><code>jasmine@4.6.0</code></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1607">GH-1607</a> ci: Added NodeJS 20.x to the workflow matrix</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1542">GH-1542</a> ci(workflow): update <code>codecov/codecov-action@v3</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1532">GH-1532</a> ci: update <code>codecov/codecov-action</code> reporting format</li>
+</ul>
 
         </div>
     </section>
@@ -167,22 +317,22 @@ cordova platform add browser@7
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2023/04/15/cordova-ios-release-6.3.0.html">Previous</a>
+                    <a href="/announcements/2023/05/13/cordova-browser-release-7.0.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2023/04/15/cordova-ios-release-6.3.0.html">Cordova iOS 6.3.0 Released!</a>
-                    <div class="date"> 15 Apr 2023 - By Niklas Merz </div>
+                    <a class="title" href="/announcements/2023/05/13/cordova-browser-release-7.0.0.html">Cordova Browser 7.0.0 Released!</a>
+                    <div class="date"> 13 May 2023 - By Norman Breau </div>
                     <p class="content">
-                        We are happy to announce that we have just released Cordova iOS...
+                        We are happy to announce that we have just released Cordova Browser...
                     </p>
                 
             </div>
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2023/05/22/cordova-android-12.0.0.html">Next</a>
+                    <a href="/news/2023/05/22/cordova-cli-12.0.0.html">Next</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2023/05/22/cordova-android-12.0.0.html">Cordova Android 12.0.0 Released!</a>
+                    <a class="title" href="/news/2023/05/22/cordova-cli-12.0.0.html">Cordova CLI 12.0.0 & Internal Packages Released!</a>
                     <div class="date"> 22 May 2023 - By Bryan Ellis </div>
                     <p class="content">
                         <!--
@@ -196,7 +346,7 @@ cordova platform add browser@7
 
                             Reference: https://github.com/jekyll/jekyll/issues/2860
                         -->
-                        We are happy to announce that we have just released Cordova Android...
+                        We are happy to announce that we have just released a major...
                     </p>
                 
             </div>

@@ -132,6 +132,199 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Mon, 22 May 2023 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/news/2023/05/22/cordova-cli-12.0.0.html">Cordova CLI 12.0.0 & Internal Packages Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">22 May 2023</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                        <a class="comment" href="/news/2023/05/22/cordova-cli-12.0.0.html#disqus_thread"></a>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released a major update to our Cordova CLI!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova">cordova@12.0.0</a></li>
+</ul>
+
+<p>In this CLI release, it also includes the latest internal libraries:</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-lib">cordova-lib@12.0.1</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-create">cordova-create@5.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-common">cordova-common@5.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-fetch">cordova-fetch@4.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-serve">cordova-serve@4.0.1</a></li>
+</ul>
+
+<h2>Release Highlights</h2>
+
+<p>This release drops Nodejs 14 support. The minimum supported version that Cordova requires is greater than or equal to 16.13.0.</p>
+
+<p>In all releases, we have updated all npm packages to the possible latest release that Cordova can support.</p>
+
+<p><strong>BREAKING CHANGES:</strong></p>
+
+<p>We have removed the deprecated platforms <strong>OSX</strong> and <strong>Windows</strong> from the platform listing. While you can still install these platforms, you will need to use the full npm package names <code>cordova-osx</code> and <code>cordova-windows</code>. Please note that these platforms are no longer actively maintained, and there is a possibility that they may not function as expected and could break in the future. As a result, they will not receive any further support.</p>
+
+<p>Additionally, we have removed all internal platform pinnings. When running the <code>cordova platform add &lt;PLATFORM&gt;</code> command, it will always fetch the latest available platform from the npm registry. This allows for immediate access to newly released platforms. If you require the command to consistently fetch a specific version, you will need to update your command to include the version pinning, like this: <code>cordova platform add &lt;PLATFORM&gt;@&lt;VERSION&gt;</code>.</p>
+
+<p>Please report any issues you find on our GitHub issue tracker! Please select below the appropriate repo when submitting.</p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-cli/issues">Cordova CLI - Issue Tracker</a></li>
+  <li><a href="https://github.com/apache/cordova-lib/issues">Cordova Lib - Issue Tracker</a></li>
+  <li><a href="https://github.com/apache/cordova-create/issues">Cordova Create - Issue Tracker</a></li>
+  <li><a href="https://github.com/apache/cordova-fetch/issues">Cordova Fetch - Issue Tracker</a></li>
+  <li><a href="https://github.com/apache/cordova-serve/issues">Cordova Serve - Issue Tracker</a></li>
+  <li><a href="https://github.com/apache/cordova-common/issues">Cordova Common - Issue Tracker</a></li>
+</ul>
+
+</p>
+                    <div><a href="/news/2023/05/22/cordova-cli-12.0.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
+                    <div class="adorner" blogTime="Mon, 22 May 2023 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2023/05/22/cordova-android-12.0.0.html">Cordova Android 12.0.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">22 May 2023</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                        <a class="comment" href="/announcements/2023/05/22/cordova-android-12.0.0.html#disqus_thread"></a>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released <code>Cordova Android 12.0.0</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@12.0.0</a></li>
+</ul>
+
+<h2>Release Highlights</h2>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
+cordova platform add android@12.0.0
+</code></pre></div></div>
+
+<p><strong>To install:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@12.0.0
+</code></pre></div></div>
+
+<p><strong>BREAKING CHANGES:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>Increased Minimum &amp; Target SDK</strong></p>
+
+    <p>This release has increased the minimum supported SDK version to 24 which is Android 7.0. It also has increased the target SDK to 33, Android 13.</p>
+  </li>
+  <li>
+    <p><strong>Build Tools</strong></p>
+
+    <p>To use <code>cordova-android@12</code>, SDK Platform <code>33</code> and SDK Build Tools <code>33.0.2</code> must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in your projects.</p>
+
+    <p>To install SDK Platform 33:</p>
+
+    <ol>
+      <li>Open Android Studio&#39;s <strong>SDK Manager</strong>:</li>
+      <li>Click on <code>SDK Platforms</code> tab</li>
+      <li>Check <code>Android 13.0 (Tiramisu)</code> which has the <code>API Level</code> of <code>33</code></li>
+      <li>Click <code>Apply</code></li>
+    </ol>
+
+    <p><img src="/static/img/blog/2023/cordova-android-12-platform-sdk-33.png" alt="Android SDK Platform" /></p>
+
+    <p>To install SDK Build Tools 33.0.2:</p>
+
+    <ol>
+      <li>Open Android Studio&#39;s <strong>SDK Manager</strong>:</li>
+      <li>Click on <code>SDK Tools</code> tab</li>
+      <li>Check <code>Show Package Details</code></li>
+      <li>Expand <code>Android SDK Build-Tools</code></li>
+      <li>Check <code>33.0.2</code></li>
+      <li>Click <code>Apply</code></li>
+    </ol>
+
+    <p><img src="/static/img/blog/2023/cordova-android-12-sdk-build-tools-3302.png" alt="Android SDK Build Tools" /></p>
+  </li>
+  <li>
+    <p><strong>Project Dependencies</strong></p>
+
+    <p>The following project dependencies were bumpped:</p>
+
+    <ul>
+      <li>Kotlin: <code>1.7.21</code></li>
+      <li>Gradle: <code>7.6</code></li>
+      <li>Android Gradle Plugin (AGP): <code>7.4.2</code></li>
+      <li>Google Services Gradle Plugin: <code>4.3.15</code></li>
+      <li>AndroidX App Compat Library: <code>1.6.1</code></li>
+      <li>AndroidX WebKit Library: <code>1.6.0</code></li>
+      <li>AndroidX SplashScreen Core Library: <code>1.0.0</code></li>
+    </ul>
+
+    <p>If you or a plugin has made changes to any of the following configuration preferences, the build results might not match the expected outcomes with this release:</p>
+
+    <ul>
+      <li><code>android-minSdkVersion</code></li>
+      <li><code>android-maxSdkVersion</code></li>
+      <li><code>android-targetSdkVersion</code></li>
+      <li><code>android-compileSdkVersion</code></li>
+      <li><code>android-buildToolsVersion</code></li>
+      <li><code>GradleVersion</code></li>
+      <li><code>AndroidGradlePluginVersion</code></li>
+      <li><code>GradlePluginKotlinVersion</code></li>
+      <li><code>AndroidXAppCompatVersion</code></li>
+      <li><code>AndroidXWebKitVersion</code></li>
+      <li><code>GradlePluginGoogleServicesVersion</code></li>
+    </ul>
+
+    <p>Please take note of the versions that have been updated in this release. If you have manually modified any of these values, it is recommended to review and update the preference values accordingly.</p>
+  </li>
+  <li>
+    <p><strong>Node Support</strong></p>
+
+    <p>We have dropped support for Node 14.x and increase the minimum Node requirement to greater than or equal to 16.13.0.</p>
+  </li>
+</ul>
+
+<p><strong>New Features:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>Monochrome Support</strong></p>
+
+    <p>Android 13 has added Themed Icons support which is also known as Monochrome. This release has introduced support for Themed icons.</p>
+  </li>
+</ul>
+
+<p>Please report any issues you find on our <a href="https://github.com/apache/cordova-android/issues">Cordova-Android</a> GitHub issue tracker!</p>
+
+</p>
+                    <div><a href="/announcements/2023/05/22/cordova-android-12.0.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Sat, 13 May 2023 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/announcements/2023/05/13/cordova-browser-release-7.0.0.html">Cordova Browser 7.0.0 Released!</a>
@@ -12818,7 +13011,7 @@ window.twttr = (function(d, s, id) {
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Sat, 13 May 2023 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Mon, 22 May 2023 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };

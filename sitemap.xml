@@ -4,6 +4,16 @@
 <!-- posts -->
 
 <url>
+    <loc>https://cordova.apache.org/news/2023/05/22/cordova-cli-12.0.0.html</loc>
+</url>
+
+
+<url>
+    <loc>https://cordova.apache.org/announcements/2023/05/22/cordova-android-12.0.0.html</loc>
+</url>
+
+
+<url>
     <loc>https://cordova.apache.org/announcements/2023/05/13/cordova-browser-release-7.0.0.html</loc>
 </url>
 
