@@ -50,7 +50,7 @@ cordova platform add android@12.0.0
 
     We have dropped support for Node 14.x and increase the minimum Node requirement to greater than or equal to 16.13.0.
 
-Please report any issues you find at [issues.cordova.io](http://issues.cordova.io/)!
+Please report any issues you find on our [Cordova-Android](https://github.com/apache/cordova-android/issues) GitHub issue tracker!
 
 <!--more-->
 # Changes include:
