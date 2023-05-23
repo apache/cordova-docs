@@ -6,8 +6,8 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 23 May 2023 15:48:42 +0000</pubDate>
-    <lastBuildDate>Tue, 23 May 2023 15:48:42 +0000</lastBuildDate>
+    <pubDate>Tue, 23 May 2023 16:59:59 +0000</pubDate>
+    <lastBuildDate>Tue, 23 May 2023 16:59:59 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
@@ -207,7 +207,7 @@ cordova platform add android@12.0.0
       &lt;li&gt;Click &lt;code&gt;Apply&lt;/code&gt;&lt;/li&gt;
     &lt;/ol&gt;
 
-    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2023/cordova-android-12-platform-sdk-33.png&quot; alt=&quot;Android SDK Platform&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2023/cordova-android-12-platform-sdk-33.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Android SDK Platform&quot; /&gt;&lt;/p&gt;
 
     &lt;p&gt;To install SDK Build Tools 33.0.2:&lt;/p&gt;
 
@@ -220,7 +220,7 @@ cordova platform add android@12.0.0
       &lt;li&gt;Click &lt;code&gt;Apply&lt;/code&gt;&lt;/li&gt;
     &lt;/ol&gt;
 
-    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2023/cordova-android-12-sdk-build-tools-3302.png&quot; alt=&quot;Android SDK Build Tools&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2023/cordova-android-12-sdk-build-tools-3302.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Android SDK Build Tools&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Project Dependencies&lt;/strong&gt;&lt;/p&gt;
