@@ -68,6 +68,22 @@ cordova platform add android@12.0.0
     * AndroidX WebKit Library: `1.6.0`
     * AndroidX SplashScreen Core Library: `1.0.0`
 
+    If you or a plugin has made changes to any of the following configuration preferences, the build results might not match the expected outcomes with this release:
+
+    * `android-minSdkVersion`
+    * `android-maxSdkVersion`
+    * `android-targetSdkVersion`
+    * `android-compileSdkVersion`
+    * `android-buildToolsVersion`
+    * `GradleVersion`
+    * `AndroidGradlePluginVersion`
+    * `GradlePluginKotlinVersion`
+    * `AndroidXAppCompatVersion`
+    * `AndroidXWebKitVersion`
+    * `GradlePluginGoogleServicesVersion`
+
+    Please take note of the versions that have been updated in this release. If you have manually modified any of these values, it is recommended to review and update the preference values accordingly.
+
 * **Node Support**
 
     We have dropped support for Node 14.x and increase the minimum Node requirement to greater than or equal to 16.13.0.
