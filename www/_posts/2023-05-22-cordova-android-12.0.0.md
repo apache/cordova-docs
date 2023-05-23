@@ -43,7 +43,7 @@ cordova platform add android@12.0.0
     3. Check `Android 13.0 (Tiramisu)` which has the `API Level` of `33`
     4. Click `Apply`
 
-    ![Android SDK Platform]({{ site.baseurl }}/static/img/blog/2023/cordova-android-12-platform-sdk-33.png)
+    <img src="{{ site.baseurl }}/static/img/blog/2023/cordova-android-12-platform-sdk-33.png" style="width: 100%;" alt="Android SDK Platform" />
 
     To install SDK Build Tools 33.0.2:
 
@@ -54,7 +54,7 @@ cordova platform add android@12.0.0
     5. Check `33.0.2`
     6. Click `Apply`
 
-    ![Android SDK Build Tools]({{ site.baseurl }}/static/img/blog/2023/cordova-android-12-sdk-build-tools-3302.png)
+    <img src="{{ site.baseurl }}/static/img/blog/2023/cordova-android-12-sdk-build-tools-3302.png" style="width: 100%;" alt="Android SDK Build Tools" />
 
 * **Project Dependencies**
 
