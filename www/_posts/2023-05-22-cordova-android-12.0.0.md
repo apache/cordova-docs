@@ -36,7 +36,7 @@ cordova platform add android@12.0.0
 
     To use `cordova-android@12`, SDK Platform `33` and SDK Build Tools `33.0.2` must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in your projects.
 
-    To install SDK Platform 32:
+    To install SDK Platform 33:
 
     1. Open Android Studio's **SDK Manager**:
     2. Click on `SDK Platforms` tab
@@ -45,7 +45,7 @@ cordova platform add android@12.0.0
 
     ![Android SDK Platform]({{ site.baseurl }}/static/img/blog/2023/cordova-android-12-platform-sdk-33.png)
 
-    To install SDK Build Tools 32.0.2:
+    To install SDK Build Tools 33.0.2:
 
     1. Open Android Studio's **SDK Manager**:
     2. Click on `SDK Tools` tab
