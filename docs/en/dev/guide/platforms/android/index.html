@@ -2393,6 +2393,7 @@
 <ul>
   <li>Android&#39;s <strong>SDK Platform</strong> for your targeted API Level</li>
   <li><strong>Android SDK Build-Tools</strong> under the <strong>SDK Tools</strong> tab, for the targeted version.</li>
+  <li><strong>Android SDK Command-line Tools (latest)</strong> under the <strong>SDK Tools</strong> tab, for the latest version.</li>
 </ul>
 
 <h4>Android SDK Tools</h4>
@@ -2417,16 +2418,16 @@
 
 <ul>
   <li><code>JAVA_HOME</code> - The environment variable to the location of your JDK installation</li>
-  <li><code>ANDROID_SDK_ROOT</code> - The environment variable to the location of your Android SDK installation</li>
+  <li><code>ANDROID_HOME</code> - The environment variable to the location of your Android SDK installation</li>
 </ul>
 
 <p>It is also recommended to update the <code>PATH</code> environment variable to include the following directories.</p>
 
 <ul>
   <li><code>cmdline-tools/latest/bin</code></li>
-  <li><code>emulator</code></li>
   <li><code>platform-tools</code></li>
-  <li><code>build-tools</code>
+  <li><code>build-tools</code></li>
+  <li><code>emulator</code>
     <ul>
       <li>This is required for the <code>apksigner</code> and <code>zipalign</code> tools.</li>
     </ul>
@@ -2441,14 +2442,15 @@
 
 <p>To set an environment variable, add a line that uses <code>export</code> like so (substitute the path with your local installation):</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">ANDROID_SDK_ROOT</span><span class="o">=</span>/Development/android-sdk/
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">ANDROID_HOME</span><span class="o">=</span>/Development/android-sdk/
 </code></pre></div></div>
 
 <p>To update your <code>PATH</code>, add a line resembling the following (substitute the paths with your local Android SDK installation&#39;s location):</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_SDK_ROOT</span>/platform-tools/
-<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_SDK_ROOT</span>/cmdline-tools/latest/bin/
-<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_SDK_ROOT</span>/emulator/
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_HOME</span>/platform-tools/
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_HOME</span>/cmdline-tools/latest/bin/
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_HOME</span>/build-tools
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_HOME</span>/emulator/
 </code></pre></div></div>
 
 <p>Reload your terminal to see this change reflected or run the following command:</p>
@@ -2491,7 +2493,8 @@
 
 <pre><code class="language-txt">C:\Users\[your user]\AppData\Local\Android\Sdk\platform-tools
 C:\Users\[your user]\AppData\Local\Android\Sdk\cmdline-tools\latest\bin
-C:\Users\[your user]\AppData\Local\Android\Sdk\tools\emulator
+C:\Users\[your user]\AppData\Local\Android\Sdk\build-tools
+C:\Users\[your user]\AppData\Local\Android\Sdk\emulator
 </code></pre>
 
 <p>Once all paths are added, click the <strong>OK</strong> button until all opened windows for setting &amp; editing environment variables are closed.</p>
