@@ -23,9 +23,9 @@ toc_title: Android
 
 # Android Platform Guide
 
-This guide will help set up your development environment for building Cordova apps for Android devices and optionally use Android-specific command-line tools within your development workflow.
+This guide will assist you in setting up your development environment for building Cordova apps on Android devices. Additionally, it provides the option to incorporate Android-specific command-line tools into your development workflow.
 
-You will need to install and set up the requirements regardless of whether you want to use the Android-specific command-line tools or Cordova CLI commands.
+Regardless of whether you intend to utilize Android-specific command-line tools or Cordova CLI commands, you will need to install and configure the necessary requirements.
 
 ## Android API Level Support
 
@@ -33,6 +33,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
 
 cordova-android Version | Supported Android API-Levels | Equivalent Android Version
 ------------------------|------------------------------|-----------------------------
+12.X.X                  | 24 - 33                      | 7.0 - 13.0.0
 11.X.X                  | 22 - 32                      | 5.1 - 12.0.0 (L)
 10.X.X                  | 22 - 30                      | 5.1 - 11.0.0
 9.X.X                   | 22 - 29                      | 5.1 - 10.0.0
@@ -44,17 +45,17 @@ cordova-android Version | Supported Android API-Levels | Equivalent Android Vers
 4.0.X                   | 10 - 22                      | 2.3.3 - 5.1
 3.7.X                   | 10 - 21                      | 2.3.3 - 5.0.2
 
-_**Note:** The [cordova-android](https://github.com/apache/cordova-android) versions listed above are not for the Cordova CLI._
+_**Note:** The [cordova-android](https://github.com/apache/cordova-android) versions listed above are not the Cordova CLI versions._
 
-To determine what version of the Cordova-Android package is installed in your Cordova project, run the command `cordova platform ls` in your project's root directory.
+To find out the version of the Cordova-Android package installed in your Cordova project, navigate to the root directory of your project and execute the command `cordova platform ls`.
 
-As a general rule, Android versions become unsupported by Cordova as they dip below 5% on Google's [distribution dashboard](https://developer.android.com/about/dashboards/index.html).
+Cordova generally ceases support for Android versions that fall below 5% on Google's distribution dashboard. You can refer to Google's [Distribution dashboard](https://developer.android.com/about/dashboards/index.html) for more information.
 
 ## System Requirements
 
-Cordova-Android requires the Android SDK, which can be installed on either macOS, Linux, or Windows.
+Cordova-Android relies on the Android SDK, which can be installed on macOS, Linux, or Windows operating systems.
 
-For the base system requirements, see the Android Studio's [System Requirements](https://developer.android.com/studio#Requirements).
+To ensure your system meets the necessary requirements, please refer to the "[Install Android Studio](https://developer.android.com/studio/install)" guide provided by Google.
 
 ## The Required Software & Tools
 
@@ -80,27 +81,69 @@ Download and install [Android Studio][android_studio]. Follow the instructions a
 
 Opening Android Studio for the first time will guide you through the process of installing the Android SDK packages.
 
-#### Adding SDK Packages
+#### SDK Packages
 
-It is recommended to install the highest supported version of the SDK Platform and Build Tools based on the project's installed version of Cordova-Android. Please see the [Android API Level Support](#android-api-level-support) to find the supported version based on the Cordova-Android versions.
+It is recommended to install the latest version of the SDK Platform & SDK Tools based on the project's installed version of Cordova-Android. Refer to the [Android API Level Support](#android-api-level-support) section to find which version is supported based on the Cordova-Android version.
 
-In the Android Studio, open the **SDK Manager** (`Tools > SDK Manager`) and confirm that the following are installed for the targeted version of Android.:
+##### Installing SDK Platform
 
-- Android's **SDK Platform** for your targeted API Level
-- **Android SDK Build-Tools** under the **SDK Tools** tab, for the targeted version.
-- **Android SDK Command-line Tools (latest)** under the **SDK Tools** tab, for the latest version.
+1. Open Android Studio's
+2. Open **SDK Manager** (`Tools > SDK Manager`)
+3. Click on the **SDK Platforms** tab
+4. Select the Android version which matches the highest supported SDK based from the [Android API Level Support](#android-api-level-support)
+5. Click Apply
 
-#### Android SDK Tools
+For example: If the project has installed `cordova-android@12.0.0`, the highest supported SDK is 33. In step 3, of the above, "Android 13.0 (Tiramisu)", should have been selected.
 
-In Android Studio 3.6 or later, the obsolete Android SDK Tools will need to be intalled. To do this:
+<img src="{{ site.baseurl }}/static/img/guide/platforms/android/android-studio-electric-eel-20220101-2/sdk-manager/sdk-platform.png" style="width: 100%;" alt="Android SDK Platform" />
 
-1. Open the Android Studio
-2. Open the **SDK Manager** (`Tools > SDK Manager`)
-3. Navigate to the **SDK Tools** tab
-4. Uncheck `Hide Obsolete Packages`
-5. Check `Android SDK Tools (Obsolete)`
+##### Installing Android SDK Build-Tools
 
-See Android's documentation on how to [Update your tools with the SDK Manager](https://developer.android.com/studio/intro/update#sdk-manager) for more details.
+1. Open Android Studio's
+2. Open **SDK Manager** (`Tools > SDK Manager`)
+3. Click on the **SDK Tools** tab
+4. Check **Show Package Details**
+5. Expand **Android SDK Build-Tool**
+6. Check the highest supported Build-Tools based on the [Android API Level Support](#android-api-level-support).
+7. Click Apply
+
+For example: If the project has installed `cordova-android@12.0.0`, the highest supported SDK is 33. We want to select the highest available version of 33.x. At the time of this writing, "33.0.2" should have been selected in step 6.
+
+<img src="{{ site.baseurl }}/static/img/guide/platforms/android/android-studio-electric-eel-20220101-2/sdk-manager/sdk-build-tools.png" style="width: 100%;" alt="Android SDK Build-Tools" />
+
+##### Installing SDK Command-line Tools (latest)
+
+1. Open Android Studio's
+2. Open **SDK Manager** (`Tools > SDK Manager`)
+3. Click on the **SDK Tools** tab
+4. Check **Show Package Details**
+5. Expand **Android SDK Command-line Tools (latest)**
+6. Check **Android SDK Command-line Tools (latest)**
+7. Click Apply
+
+<img src="{{ site.baseurl }}/static/img/guide/platforms/android/android-studio-electric-eel-20220101-2/sdk-manager/command-line-tools-latest.png" style="width: 100%;" alt="SDK Command-line Tools (latest)" />
+
+##### Installing Android SDK Platform-Tools
+
+1. Open Android Studio's
+2. Open **SDK Manager** (`Tools > SDK Manager`)
+3. Click on the **SDK Tools** tab
+4. Check **Show Package Details**
+5. Check **Android SDK Platform-Tool**
+6. Click Apply
+
+<img src="{{ site.baseurl }}/static/img/guide/platforms/android/android-studio-electric-eel-20220101-2/sdk-manager/sdk-platform-tools.png" style="width: 100%;" alt="Android SDK Platform-Tools" />
+
+##### Installing Android Emulator
+
+1. Open Android Studio's
+2. Open **SDK Manager** (`Tools > SDK Manager`)
+3. Click on the **SDK Tools** tab
+4. Check **Show Package Details**
+5. Check **Android Emulator**
+6. Click Apply
+
+<img src="{{ site.baseurl }}/static/img/guide/platforms/android/android-studio-electric-eel-20220101-2/sdk-manager/android-emulator.png" style="width: 100%;" alt="Android Emulator" />
 
 ### Setting environment variables
 
@@ -431,10 +474,9 @@ To open a Cordova-Android project in Android Studio:
 
 1. Launch **Android Studio**
 2. Click the **Open** button
-    ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_project.png)
+    <img src="{{ site.baseurl }}/static/img/guide/platforms/android/android-studio-electric-eel-20220101-2/welcome-to-android-studio.png" style="width: 100%;" alt="Welcome to Android Studio" />
 3. Navigate to the project's Android platform directory: (`<project-root>/platforms/android`)
-    ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_select_location.png)
-4. For the `Gradle Sync` question you can simply answer **Yes**.
+4. Click **Open**
 
 Once it finishes importing, you should be able to build and run the app directly from **Android Studio**. 
 
@@ -444,6 +486,8 @@ For more resources, please see:
 - [Build and run your app](https://developer.android.com/studio/run/index.html)
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png)
+
+<img src="{{ site.baseurl }}/static/img/guide/platforms/android/android-studio-electric-eel-20220101-2/hello-cordova-main-activity.png" style="width: 100%;" alt="Hello Cordova MainActivity" />
 
 ## Upgrading
 
