@@ -183,11 +183,7 @@ Before running this command, you need to set up the device for testing, followin
 
 You can modify the default generated app to take advantage of standard web technologies, but for the app to access device-level features, you need to add plugins.
 
-A _plugin_ exposes a Javascript API for native SDK functionality. Plugins are typically hosted on npm and you can search for them on the [plugin search page](/plugins/). Some key APIs are provided by the Apache Cordova open source project and these are referred to as [Core Plugin APIs]. You can also use the CLI to launch the search page:
-
-```bash
-cordova plugin search camera
-```
+A _plugin_ exposes a Javascript API for native SDK functionality. Plugins are typically hosted on npm and you can search for them on the [plugin search page](/plugins/). Some key APIs are provided by the Apache Cordova open source project and these are referred to as [Core Plugin APIs].
 
 To add and save the camera plugin to `package.json`, we will specify the npm package name for the camera plugin:
 
