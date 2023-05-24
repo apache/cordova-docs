@@ -33,6 +33,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
 
 cordova-android Version | Supported Android API-Levels | Equivalent Android Version
 ------------------------|------------------------------|-----------------------------
+12.X.X                  | 24 - 33                      | 7.0 - 13.0.0
 11.X.X                  | 22 - 32                      | 5.1 - 12.0.0 (L)
 10.X.X                  | 22 - 30                      | 5.1 - 11.0.0
 9.X.X                   | 22 - 29                      | 5.1 - 10.0.0
