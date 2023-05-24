@@ -145,20 +145,6 @@ For example: If the project has installed `cordova-android@12.0.0`, the highest 
 
 <img src="{{ site.baseurl }}/static/img/guide/platforms/android/android-studio-electric-eel-20220101-2/sdk-manager/android-emulator.png" style="width: 100%;" alt="Android Emulator" />
 
-#### Installing Android SDK Tools (Obsolete)
-
-In Android Studio 3.6 or later, the obsolete Android SDK Tools will need to be intalled. To do this:
-
-1. Open the Android Studio
-2. Open the **SDK Manager** (`Tools > SDK Manager`)
-3. Navigate to the **SDK Tools** tab
-4. Uncheck `Hide Obsolete Packages`
-5. Check `Android SDK Tools (Obsolete)`
-
-<img src="{{ site.baseurl }}/static/img/guide/platforms/android/android-studio-electric-eel-20220101-2/sdk-manager/sdk-tools-obsolete.png" style="width: 100%;" alt="Android SDK Tools (Obsolete)" />
-
-See Android's documentation on how to [Update your tools with the SDK Manager](https://developer.android.com/studio/intro/update#sdk-manager) for more details.
-
 ### Setting environment variables
 
 Cordova's CLI requires specific environment variables so it can function correctly. If the environment variables are missing, the CLI will attempt to resolve the variable temporarily. If the missing variables fail to resolve, they must be set manually.
