@@ -93,7 +93,7 @@ It is recommended to install the latest version of the SDK Platform & SDK Tools 
 4. Select the Android version which matches the highest supported SDK based from the [Android API Level Support](#android-api-level-support)
 5. Click Apply
 
-For example: If the project has installed `cordova-android@12.0.0`, the higest supported SDK is 33. In step 3, of the above, "Android 13.0 (Tiramisu)", should have been selected.
+For example: If the project has installed `cordova-android@12.0.0`, the highest supported SDK is 33. In step 3, of the above, "Android 13.0 (Tiramisu)", should have been selected.
 
 <img src="{{ site.baseurl }}/static/img/guide/platforms/android/android-studio-electric-eel-20220101-2/sdk-manager/sdk-platform.png" style="width: 100%;" alt="Android SDK Platform" />
 
@@ -107,7 +107,7 @@ For example: If the project has installed `cordova-android@12.0.0`, the higest s
 6. Check the highest supported Build-Tools based on the [Android API Level Support](#android-api-level-support).
 7. Click Apply
 
-For example: If the project has installed `cordova-android@12.0.0`, the higest supported SDK is 33. We want to select the higest available version of 33.x. At the time of this writting, "33.0.2" should have been selected in step 6.
+For example: If the project has installed `cordova-android@12.0.0`, the highest supported SDK is 33. We want to select the highest available version of 33.x. At the time of this writing, "33.0.2" should have been selected in step 6.
 
 <img src="{{ site.baseurl }}/static/img/guide/platforms/android/android-studio-electric-eel-20220101-2/sdk-manager/sdk-build-tools.png" style="width: 100%;" alt="Android SDK Build-Tools" />
 
