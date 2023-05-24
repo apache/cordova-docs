@@ -201,13 +201,6 @@ Hooks could be defined in project's `config.xml` using `<hook>` elements, for ex
     <hook type="before_plugin_install" src="scripts/android/appAndroidBeforePluginInstall.js" />
     ...
 </platform>
-
-<platform name="windows">
-    <hook type="before_build" src="scripts/windows/appWinBeforeBuild.bat" />
-    <hook type="before_build" src="scripts/windows/appWinBeforeBuild.js" />
-    <hook type="before_plugin_install" src="scripts/windows/appWinBeforePluginInstall.js" />
-    ...
-</platform>
 ```
 
 ### Plugin hooks (plugin.xml)
