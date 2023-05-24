@@ -294,7 +294,7 @@
     <li>
         
             <a class="" href="/docs/en/dev/guide/platforms/windows/index.html">
-                Windows (deprecated)
+                
             </a>
             
         
@@ -309,7 +309,7 @@
     <li>
         
             <a class="" href="/docs/en/dev/guide/platforms/osx/index.html">
-                OS X (deprecated)
+                
             </a>
             
         
@@ -529,7 +529,7 @@
     <li>
         
             <a class="" href="/docs/en/dev/guide/platforms/windows/plugin.html">
-                Windows
+                
             </a>
             
         
@@ -1066,7 +1066,7 @@
 
 <li>
     <a class="" href="/docs/en/dev/guide/platforms/windows/index.html">
-        Windows (deprecated)
+        
     </a>
 </li>
 
@@ -1075,7 +1075,7 @@
 
 <li>
     <a class="" href="/docs/en/dev/guide/platforms/osx/index.html">
-        OS X (deprecated)
+        
     </a>
 </li>
 
@@ -1195,7 +1195,7 @@
 
 <li>
     <a class="" href="/docs/en/dev/guide/platforms/windows/plugin.html">
-        Windows
+        
     </a>
 </li>
 
@@ -2316,7 +2316,7 @@ If you do not specify an icon, the Apache Cordova logo is used.</p>
     </tr>
     <tr>
       <td>target</td>
-      <td><em>Optional</em> <br /> ==Windows== <br /> Destination filename for the image file and all its MRT companions</td>
+      <td><em>Optional</em> <br /> ==Electron== <br /> Set target to supply unique icons for <code>application</code> and <code>installer</code></td>
     </tr>
   </tbody>
 </table>
@@ -2481,70 +2481,6 @@ different screen resolutions.</p>
 <h3>See Also</h3>
 <ul>
   <li><a href="https://developer.apple.com/library/content/qa/qa1686/_index.html">App Icons on iPad and iPhone</a></li>
-</ul>
-
-<h2>Windows</h2>
-
-<p>For Windows the recommended approach to define application icons is to use the <code>target</code> attribute.</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/storelogo.png"</span> <span class="na">target=</span><span class="s">"StoreLogo"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/smalllogo.png"</span> <span class="na">target=</span><span class="s">"Square30x30Logo"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.png"</span> <span class="na">target=</span><span class="s">"Square44x44Logo"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square70x70Logo.png"</span> <span class="na">target=</span><span class="s">"Square70x70Logo"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square71x71Logo.png"</span> <span class="na">target=</span><span class="s">"Square71x71Logo"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square150x150Logo.png"</span> <span class="na">target=</span><span class="s">"Square150x150Logo"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square310x310Logo.png"</span> <span class="na">target=</span><span class="s">"Square310x310Logo"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Wide310x150Logo.png"</span> <span class="na">target=</span><span class="s">"Wide310x150Logo"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div></div>
-
-<p>where <code>src</code> is the path to the icon which needs to be added.</p>
-
-<p>The Windows platform handles MRT icons automatically, so if you specify <code>src="res/windows/storelogo.png"</code> the following files will be copied into the application&#39;s <code>images</code> folder: <code>res/windows/storelogo.scale-100.png</code>, <code>res/windows/storelogo.scale-200.png</code>, etc.</p>
-
-<p>TODO Define what MRT is.</p>
-
-<p>The <code>target</code> attribute specifies the base name for the resultant icons. For every icon file, its destination filename is calculated as <code>target + '.' + MRT_qualifiers + extension(src)</code>. For the icons to display properly in the application, every <code>target</code> value should be one of the icon filenames defined in the application&#39;s <code>.appxmanifest</code> file.</p>
-
-<p>Summarizing the above&#8230; using the <code>target</code> attribute it is possible to:</p>
-
-<ul>
-  <li>define a group of icons for different device scale factors using a single <code>&lt;icon ...&gt;</code> element, for example:
-    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/AppListIcon.png"</span> <span class="na">target=</span><span class="s">"Square44x44Logo"</span> <span class="nt">/&gt;</span>
-</code></pre></div>    </div>
-    <p>which is equivalent to the following lines:</p>
-    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.scale-100.png"</span> <span class="na">width=</span><span class="s">"44"</span> <span class="na">height=</span><span class="s">"44"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.scale-150.png"</span> <span class="na">width=</span><span class="s">"66"</span> <span class="na">height=</span><span class="s">"66"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.scale-200.png"</span> <span class="na">width=</span><span class="s">"88"</span> <span class="na">height=</span><span class="s">"88"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.scale-240.png"</span> <span class="na">width=</span><span class="s">"106"</span> <span class="na">height=</span><span class="s">"106"</span> <span class="nt">/&gt;</span>
-</code></pre></div>    </div>
-  </li>
-  <li>define icons with scale factors other than <code>scale-100</code> and <code>scale-240</code> (and any other MRT qualifiers)</li>
-</ul>
-
-<p>Although it is not recommended, it is also possible to define icons using the <code>width</code> and <code>height</code> attributes:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/logo.png"</span> <span class="na">width=</span><span class="s">"150"</span> <span class="na">height=</span><span class="s">"150"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/smalllogo.png"</span> <span class="na">width=</span><span class="s">"30"</span> <span class="na">height=</span><span class="s">"30"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/storelogo.png"</span> <span class="na">width=</span><span class="s">"50"</span> <span class="na">height=</span><span class="s">"50"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.scale-100.png"</span> <span class="na">width=</span><span class="s">"44"</span> <span class="na">height=</span><span class="s">"44"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square44x44Logo.scale-240.png"</span> <span class="na">width=</span><span class="s">"106"</span> <span class="na">height=</span><span class="s">"106"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square70x70Logo.scale-100.png"</span> <span class="na">width=</span><span class="s">"70"</span> <span class="na">height=</span><span class="s">"70"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square71x71Logo.scale-100.png"</span> <span class="na">width=</span><span class="s">"71"</span> <span class="na">height=</span><span class="s">"71"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square71x71Logo.scale-240.png"</span> <span class="na">width=</span><span class="s">"170"</span> <span class="na">height=</span><span class="s">"170"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square150x150Logo.scale-240.png"</span> <span class="na">width=</span><span class="s">"360"</span> <span class="na">height=</span><span class="s">"360"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Square310x310Logo.scale-100.png"</span> <span class="na">width=</span><span class="s">"310"</span> <span class="na">height=</span><span class="s">"310"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Wide310x150Logo.scale-100.png"</span> <span class="na">width=</span><span class="s">"310"</span> <span class="na">height=</span><span class="s">"150"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/Wide310x150Logo.scale-240.png"</span> <span class="na">width=</span><span class="s">"744"</span> <span class="na">height=</span><span class="s">"360"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div></div>
-
-<h3>See Also:</h3>
-<ul>
-  <li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/mt412102.aspx">Windows 10 platform guidelines for icons</a>.</li>
-  <li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh781198.aspx">Windows 8.1 tiles and icons sizes</a></li>
 </ul>
 
 <h2>Electron</h2>

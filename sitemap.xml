@@ -10825,17 +10825,6 @@
     
 
     <url>
-    <loc>https://cordova.apache.org/docs/en/dev/guide/platforms/osx/config.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.2</priority>
-</url>
-
-
-    
-    
-    
-
-    <url>
     <loc>https://cordova.apache.org/docs/en/6.x/guide/platforms/osx/config.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
@@ -30632,28 +30621,6 @@
     
 
     <url>
-    <loc>https://cordova.apache.org/docs/en/dev/guide/platforms/osx/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.2</priority>
-</url>
-
-
-    
-    
-    
-
-    <url>
-    <loc>https://cordova.apache.org/docs/en/dev/guide/platforms/windows/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.2</priority>
-</url>
-
-
-    
-    
-    
-
-    <url>
     <loc>https://cordova.apache.org/docs/en/dev/guide/platforms/electron/</loc>
     <changefreq>daily</changefreq>
     <priority>0.2</priority>
@@ -45181,28 +45148,6 @@
     
 
     <url>
-    <loc>https://cordova.apache.org/docs/en/dev/guide/platforms/osx/plugin.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.2</priority>
-</url>
-
-
-    
-    
-    
-
-    <url>
-    <loc>https://cordova.apache.org/docs/en/dev/guide/platforms/windows/plugin.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.2</priority>
-</url>
-
-
-    
-    
-    
-
-    <url>
     <loc>https://cordova.apache.org/docs/en/dev/guide/platforms/ios/plugin.html</loc>
     <changefreq>daily</changefreq>
     <priority>0.2</priority>
@@ -49783,17 +49728,6 @@
 
     <url>
     <loc>https://cordova.apache.org/docs/en/dev/guide/platforms/android/upgrade.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.2</priority>
-</url>
-
-
-    
-    
-    
-
-    <url>
-    <loc>https://cordova.apache.org/docs/en/dev/guide/platforms/windows/upgrade.html</loc>
     <changefreq>daily</changefreq>
     <priority>0.2</priority>
 </url>

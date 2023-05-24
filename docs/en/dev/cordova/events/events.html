@@ -294,7 +294,7 @@
     <li>
         
             <a class="" href="/docs/en/dev/guide/platforms/windows/index.html">
-                Windows (deprecated)
+                
             </a>
             
         
@@ -309,7 +309,7 @@
     <li>
         
             <a class="" href="/docs/en/dev/guide/platforms/osx/index.html">
-                OS X (deprecated)
+                
             </a>
             
         
@@ -527,7 +527,7 @@
     <li>
         
             <a class="" href="/docs/en/dev/guide/platforms/windows/plugin.html">
-                Windows
+                
             </a>
             
         
@@ -1066,7 +1066,7 @@
 
 <li>
     <a class="" href="/docs/en/dev/guide/platforms/windows/index.html">
-        Windows (deprecated)
+        
     </a>
 </li>
 
@@ -1075,7 +1075,7 @@
 
 <li>
     <a class="" href="/docs/en/dev/guide/platforms/osx/index.html">
-        OS X (deprecated)
+        
     </a>
 </li>
 
@@ -1195,7 +1195,7 @@
 
 <li>
     <a class="" href="/docs/en/dev/guide/platforms/windows/plugin.html">
-        Windows
+        
     </a>
 </li>
 
@@ -2345,7 +2345,6 @@ The application code could add listeners for these events. For example:</p>
             <th>Supported Platforms/<br />Events</th>
             <th>android</th>
             <th>ios</th>
-            <th>Windows</th>
         </tr>
     </thead>
     <tbody>
@@ -2353,73 +2352,61 @@ The application code could add listeners for these events. For example:</p>
             <th><a href="#deviceready">deviceready</a></th>
             <td data-col="android" class="y"></td>
             <td data-col="ios" class="y"></td>
-            <td data-col="win" class="y"></td>
         </tr>
         <tr>
             <th><a href="#pause">pause</a></th>
             <td data-col="android" class="y"></td>
             <td data-col="ios" class="y"></td>
-            <td data-col="win" class="y"></td>
         </tr>
         <tr>
             <th><a href="#resume">resume</a></th>
             <td data-col="android" class="y"></td>
             <td data-col="ios" class="y"></td>
-            <td data-col="win" class="y"></td>
         </tr>
         <tr>
             <th><a href="#backbutton">backbutton</a></th>
             <td data-col="android" class="y"></td>
             <td data-col="ios" class="n"></td>
-            <td data-col="win" class="y"></td>
         </tr>
         <tr>
             <th><a href="#menubutton">menubutton</a></th>
             <td data-col="android" class="y"></td>
             <td data-col="ios" class="n"></td>
-            <td data-col="win" class="n"></td>
         </tr>
         <tr>
             <th><a href="#searchbutton">searchbutton</a></th>
             <td data-col="android" class="y"></td>
             <td data-col="ios" class="n"></td>
-            <td data-col="win" class="n"></td>
         </tr>
         <tr>
             <th><a href="#startcallbutton">startcallbutton</a></th>
             <td data-col="android" class="n"></td>
             <td data-col="ios" class="n"></td>
-            <td data-col="win" class="n"></td>
         </tr>
         <tr>
             <th><a href="#endcallbutton">endcallbutton</a></th>
             <td data-col="android" class="n"></td>
             <td data-col="ios" class="n"></td>
-            <td data-col="win" class="n"></td>
         </tr>
         <tr>
             <th><a href="#volumedownbutton">volumedownbutton</a></th>
             <td data-col="android" class="y"></td>
             <td data-col="ios" class="n"></td>
-            <td data-col="win" class="n"></td>
         </tr>
         <tr>
             <th><a href="#volumeupbutton">volumeupbutton</a></th>
             <td data-col="android" class="y"></td>
             <td data-col="ios" class="n"></td>
-            <td data-col="win" class="n"></td>
         </tr>
         <tr>
             <th><a href="#activated">activated</a></th>
             <td data-col="android" class="n"></td>
             <td data-col="ios" class="n"></td>
-            <td data-col="win" class="y"></td>
         </tr>
         <tr>
             <th><a href="#cordovacallbackerror">cordovacallbackerror</a></th>
             <td data-col="android" class="y"></td>
             <td data-col="ios" class="y"></td>
-            <td data-col="win" class="y"></td>
         </tr>
     </tbody>
 </table>
@@ -2483,7 +2470,7 @@ device) is enabled for multi-tasking, this is paired with a subsequent
 <code>pause</code> event, but only under iOS 5. In effect, all locked apps in iOS
 5 that have multi-tasking enabled are pushed to the background.  For
 apps to remain running when locked under iOS 5, disable the app&#39;s
-multi-tasking by setting <a href="https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html">UIApplicationExitsOnSuspend</a>
+multi-tasking by setting [UIApplicationExitsOnSuspend][UIApplicationExitsOnSuspend]
 to <code>YES</code>. To run when locked on iOS 4, this setting does not matter.</p>
 
 <h2>resume</h2>
@@ -2517,7 +2504,7 @@ device) is enabled for multi-tasking, this is paired with a subsequent
 <code>resume</code> event, but only under iOS 5. In effect, all locked apps in
 iOS 5 that have multi-tasking enabled are pushed to the background.
 For apps to remain running when locked under iOS 5, disable the app&#39;s
-multi-tasking by setting <a href="https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html">UIApplicationExitsOnSuspend</a>
+multi-tasking by setting [UIApplicationExitsOnSuspend][UIApplicationExitsOnSuspend]
 to <code>YES</code>. To run when locked on iOS 4, this setting does not matter.</p>
   </li>
   <li>
@@ -2539,7 +2526,7 @@ timeout value of zero, or else the app hangs. For example:</p>
 
 <h3>Android Quirks</h3>
 
-<p>Refer <a href="../../guide/platforms/android/index.html#lifecycle-guide">Android Life Cycle Guide</a> for details on android quirks with
+<p>Refer [Android Life Cycle Guide][AndroidLifeCycleGuide] for details on android quirks with
 the <code>resume</code> event.</p>
 
 <h2>backbutton</h2>
@@ -2556,23 +2543,6 @@ back-button behavior.</p>
 <span class="kd">function</span> <span class="nx">onBackKeyDown</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Handle the back button</span>
 <span class="p">}</span>
-</code></pre></div></div>
-
-<h3>Windows Quirks</h3>
-
-<p>Throw an error in a <code>backbutton</code> callback to force the default behavior, which is an app exit:</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">backbutton</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">platformId</span> <span class="o">!==</span> <span class="dl">'</span><span class="s1">windows</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">!==</span> <span class="nx">firstPageUrl</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nb">window</span><span class="p">.</span><span class="nx">history</span><span class="p">.</span><span class="nx">back</span><span class="p">();</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="dl">'</span><span class="s1">Exit</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// This will suspend the app</span>
-    <span class="p">}</span>
-<span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
 </code></pre></div></div>
 
 <h2>menubutton</h2>
@@ -2662,39 +2632,7 @@ the default volume up behavior you can register an event listener for the <code>
 
 <h2>activated</h2>
 
-<p>The event fires when Windows Runtime activation has occurred. See <a href="https://msdn.microsoft.com/en-us/library/windows/apps/br212679.aspx">MSDN docs</a> for further details and activation types.</p>
-
-<h3>Quick Example</h3>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">activated</span><span class="dl">"</span><span class="p">,</span> <span class="nx">activated</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-
-<span class="kd">function</span> <span class="nx">activated</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">args</span> <span class="o">&amp;&amp;</span> <span class="nx">args</span><span class="p">.</span><span class="nx">kind</span> <span class="o">===</span> <span class="nx">Windows</span><span class="p">.</span><span class="nx">ApplicationModel</span><span class="p">.</span><span class="nx">Activation</span><span class="p">.</span><span class="nx">ActivationKind</span><span class="p">.</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
-       <span class="c1">// Using args.raw to get the native StorageFile object</span>
-        <span class="nx">Windows</span><span class="p">.</span><span class="nx">Storage</span><span class="p">.</span><span class="nx">FileIO</span><span class="p">.</span><span class="nx">readTextAsync</span><span class="p">(</span><span class="nx">args</span><span class="p">.</span><span class="nx">raw</span><span class="p">.</span><span class="nx">detail</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">files</span><span class="p">[</span><span class="mi">0</span><span class="p">]).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
-        <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
-        <span class="p">});</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h3>Windows Quirks</h3>
-
-<ul>
-  <li>
-    <p>Original activated event args are available in <code>args.raw.detail[0]</code> property and can be used to get a type information or invoke methods of one of the activation arguments,</p>
-  </li>
-  <li>
-    <p>Original activated event args are also cloned to <code>args.detail[0]</code> and can be used as a fallback in case an inner args property has been lost.<br />
-See https://issues.apache.org/jira/browse/CB-10653 for details.</p>
-  </li>
-  <li>
-    <p><code>activated</code> event might be fired before <code>deviceready</code> so you should save the activation flag and args to the app context in case you need them - for example in the <a href="https://issues.apache.org/jira/browse/CB-11924">Share target case</a>.
-The subscription to the <code>activated</code> event should be done before <code>deviceready</code> handler (in <code>app.bindEvents</code> in terms of the Cordova template).</p>
-  </li>
-</ul>
+<p>This event is not fired for Cordova.</p>
 
 <h2>cordovacallbackerror</h2>
 
