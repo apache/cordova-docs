@@ -6,8 +6,8 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 24 May 2023 12:45:42 +0000</pubDate>
-    <lastBuildDate>Wed, 24 May 2023 12:45:42 +0000</lastBuildDate>
+    <pubDate>Wed, 24 May 2023 12:46:35 +0000</pubDate>
+    <lastBuildDate>Wed, 24 May 2023 12:46:35 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
@@ -149,7 +149,7 @@
 
 &lt;p&gt;&lt;strong&gt;Cordova Common 5.0.0:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;See the &lt;a href=&quot;2023-03-09-cordova-common-release-5.0.0.md&quot;&gt;Cordova Common Release 5.0.0&lt;/a&gt; blog post.&lt;/p&gt;
+&lt;p&gt;See the &lt;a href=&quot;https://cordova.apache.org/announcements/2023/03/09/cordova-common-release-5.0.0.html&quot;&gt;Cordova Common Release 5.0.0&lt;/a&gt; blog post.&lt;/p&gt;
 </description>
         <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/news/2023/05/22/cordova-cli-12.0.0.html</link>
