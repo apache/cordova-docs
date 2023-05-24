@@ -143,7 +143,7 @@ For example: If the project has installed `cordova-android@12.0.0`, the higest s
 5. Check **Android Emulator**
 6. Click Apply
 
-<img src="{{ site.baseurl }}/static/img/guide/platforms/android/android-studio-electric-eel-20220101-2/sdk-manager/android-emulator.png" style"width: 100%;" alt="Android Emulator" />
+<img src="{{ site.baseurl }}/static/img/guide/platforms/android/android-studio-electric-eel-20220101-2/sdk-manager/android-emulator.png" style="width: 100%;" alt="Android Emulator" />
 
 #### Installing Android SDK Tools (Obsolete)
 
