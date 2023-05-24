@@ -41,8 +41,7 @@ src           | *Required* <br/> Location of the image file, relative to your pr
 platform      | *Optional* <br/> Target platform
 width         | *Optional* <br/> Icon width in pixels
 height        | *Optional* <br/> Icon height in pixels
-target        | *Optional* <br/> ==Windows== <br/> Destination filename for the image file and all its MRT companions
-
+target        | *Optional* <br/> ==Electron== <br/> Set target to supply unique icons for `application` and `installer`
 
 The following configuration can be used to define a single default icon
 which will be used for all platforms.
