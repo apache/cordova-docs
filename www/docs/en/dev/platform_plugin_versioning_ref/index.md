@@ -44,7 +44,9 @@ To save a platform, issue the following command:
 cordova platform add <platform[@<version>] | directory | git_url>
 ```
 
-After running the above command, the **`package.json`** should contain something as seen below:
+After running the above command, the **`package.json`** should update with the platform dependency and cordova related information.
+
+Example:
 
 ```json
 "cordova": {
@@ -57,29 +59,76 @@ After running the above command, the **`package.json`** should contain something
 }
 ```
 
-The `--nosave` flag prevents adding and deleting specified platforms to the `package.json` file. To prevent saving a platform, issue the following command:
+The `--nosave` flag prevents adding and deleting the specified platform from the `package.json` file.
+
+Example:
 
 ```bash
 cordova platform add <platform[@<version>] | directory | git_url> --nosave
 ```
 
-Some Examples:
+Here are various ways to add platforms.
 
-* **`cordova platform add android`** 
+*Adding with Cordova resolved name:*
 
-  Retrieves the pinned version of `cordova-android` platform from npm, adds it to the project and updates the `package.json` file.
+Example:
 
-* **`cordova platform add android@7.1.4`**
+```bash
+cordova platform add android
+```
 
-  Retrieves the `cordova-android` platform version `7.1.4` from npm, adds it to the project and updates the `package.json` file.
+The avaialble Cordova Resolved names are:
 
-* **`cordova platform add https://github.com/apache/cordova-android.git`**
-  
-  **`cordova platform add https://github.com/apache/cordova-android`**
-  
-  **`cordova platform add github:apache/cordova-android`**
+* `android`
+* `electron`
+* `ios`
+* `browser`
 
-  npm retrieves the `cordova-android` platform from the git repository, adds it to the project and updates the `package.json`.
+
+The `cordova-android` platform will be fetched from npm, added to the project and updates the `package.json` file.
+
+*Adding with Cordova resolved name and pinned version:*
+
+Example:
+
+```bash
+cordova platform add android@7.1.4
+```
+
+The `cordova-android` platform at version `7.1.4` will be fetched npm, added to the project and updates the `package.json` file.
+
+*Adding with npm package name:*
+
+Example:
+
+```bash
+cordova platform add cordova-android
+```
+
+The `cordova-android` platform will be fetched from npm, added to the project and updates the `package.json` file.
+
+*Adding with Git URL:*
+
+Example:
+
+```bash
+cordova platform add https://github.com/apache/cordova-android.git
+```
+
+or
+
+```bash
+cordova platform add https://github.com/apache/cordova-android
+```
+
+or
+
+```bash
+cordova platform add github:apache/cordova-android
+```
+
+npm will fetch the platform with git, added to the project and updates the `package.json` file.
+
   
 * **`cordova platform add C:/path/to/android/platform`**
 
