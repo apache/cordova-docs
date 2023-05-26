@@ -85,7 +85,7 @@ The avaialble Cordova Resolved names are:
 * `browser`
 
 
-The `cordova-android` platform will be fetched from npm, added to the project and updates the `package.json` file.
+The latest version of the `cordova-android` platform will be fetched from npm, added to the project and the `package.json` file will be updated.
 
 *Adding with Cordova resolved name and pinned version:*
 
@@ -95,7 +95,7 @@ Example:
 cordova platform add android@7.1.4
 ```
 
-The `cordova-android` platform at version `7.1.4` will be fetched npm, added to the project and updates the `package.json` file.
+The `cordova-android` platform at version `7.1.4` will be fetched from npm, added to the project and updates the `package.json` file.
 
 *Adding with npm package name:*
 
