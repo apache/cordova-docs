@@ -2297,7 +2297,9 @@
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add &lt;platform[@&lt;version&gt;] | directory | git_url&gt;
 </code></pre></div></div>
 
-<p>After running the above command, the <strong><code>package.json</code></strong> should contain something as seen below:</p>
+<p>After running the above command, the <strong><code>package.json</code></strong> should update with the platform dependency and cordova related information.</p>
+
+<p>Example:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"cordova"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
   </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -2309,33 +2311,85 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The <code>--nosave</code> flag prevents adding and deleting specified platforms to the <code>package.json</code> file. To prevent saving a platform, issue the following command:</p>
+<p>The <code>--nosave</code> flag prevents adding and deleting the specified platform from the <code>package.json</code> file.</p>
+
+<p>Example:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add &lt;platform[@&lt;version&gt;] | directory | git_url&gt; <span class="nt">--nosave</span>
 </code></pre></div></div>
 
-<p>Some Examples:</p>
+<p>The examples below fetch the package, extract it to <code>node_modules</code> and update the <code>package.json</code> file accordingly. Under the covers, this process is controlled by the npm CLI. Here are various ways to add platforms.</p>
+
+<p><em>Adding with Cordova resolved name:</em></p>
+
+<p>Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android
+</code></pre></div></div>
+
+<p>The avaialble Cordova resolved names are:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cordova Resolved Name</th>
+      <th>NPM Package Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>android</code></td>
+      <td><code>cordova-android</code></td>
+    </tr>
+    <tr>
+      <td><code>electron</code></td>
+      <td><code>cordova-electron</code></td>
+    </tr>
+    <tr>
+      <td><code>ios</code></td>
+      <td><code>cordova-ios</code></td>
+    </tr>
+    <tr>
+      <td><code>browser</code></td>
+      <td><code>cordova-browser</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Adding with Cordova resolved name and pinned version:</em></p>
+
+<p>Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@7.1.4
+</code></pre></div></div>
+
+<p>This command will explicitly fetch for version <code>7.1.4</code>.</p>
+
+<p><em>Adding with npm package name:</em></p>
+
+<p>Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add cordova-android
+</code></pre></div></div>
+
+<p><em>Adding with Git URL:</em></p>
+
+<p>Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add https://github.com/apache/cordova-android.git
+</code></pre></div></div>
+
+<p>or</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add https://github.com/apache/cordova-android
+</code></pre></div></div>
+
+<p>or</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add github:apache/cordova-android
+</code></pre></div></div>
 
 <ul>
-  <li>
-    <p><strong><code>cordova platform add android</code></strong></p>
-
-    <p>Retrieves the pinned version of <code>cordova-android</code> platform from npm, adds it to the project and updates the <code>package.json</code> file.</p>
-  </li>
-  <li>
-    <p><strong><code>cordova platform add android@7.1.4</code></strong></p>
-
-    <p>Retrieves the <code>cordova-android</code> platform version <code>7.1.4</code> from npm, adds it to the project and updates the <code>package.json</code> file.</p>
-  </li>
-  <li>
-    <p><strong><code>cordova platform add https://github.com/apache/cordova-android.git</code></strong></p>
-
-    <p><strong><code>cordova platform add https://github.com/apache/cordova-android</code></strong></p>
-
-    <p><strong><code>cordova platform add github:apache/cordova-android</code></strong></p>
-
-    <p>npm retrieves the <code>cordova-android</code> platform from the git repository, adds it to the project and updates the <code>package.json</code>.</p>
-  </li>
   <li>
     <p><strong><code>cordova platform add C:/path/to/android/platform</code></strong></p>
 
