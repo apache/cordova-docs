@@ -67,7 +67,7 @@ Example:
 cordova platform add <platform[@<version>] | directory | git_url> --nosave
 ```
 
-Here are various ways to add platforms.
+The examples below fetch the package, extract it to `node_modules` and update the `package.json` file accordingly. Under the covers, this process is controlled by the npm CLI. Here are various ways to add platforms.
 
 *Adding with Cordova resolved name:*
 
@@ -79,13 +79,12 @@ cordova platform add android
 
 The avaialble Cordova Resolved names are:
 
-* `android`
-* `electron`
-* `ios`
-* `browser`
-
-
-The latest version of the `cordova-android` platform will be fetched from npm, added to the project and the `package.json` file will be updated.
+| Cordova Resolved Name | NPM Package Name |
+| --- | --- |
+| `android` | `cordova-android` |
+| `electron` | `cordova-electron` |
+| `ios` | `cordova-ios` |
+| `browser` | `cordova-browser` |
 
 *Adding with Cordova resolved name and pinned version:*
 
@@ -95,7 +94,7 @@ Example:
 cordova platform add android@7.1.4
 ```
 
-The `cordova-android` platform at version `7.1.4` will be fetched from npm, added to the project and updates the `package.json` file.
+This command will explicitly fetch for version `7.1.4`.
 
 *Adding with npm package name:*
 
@@ -104,8 +103,6 @@ Example:
 ```bash
 cordova platform add cordova-android
 ```
-
-The `cordova-android` platform will be fetched from npm, added to the project and updates the `package.json` file.
 
 *Adding with Git URL:*
 
@@ -127,9 +124,6 @@ or
 cordova platform add github:apache/cordova-android
 ```
 
-npm will fetch the platform with git, added to the project and updates the `package.json` file.
-
-  
 * **`cordova platform add C:/path/to/android/platform`**
 
   Retrieves the Android platform from the specified directory, adds it to the project, and updates the `package.json` file.
