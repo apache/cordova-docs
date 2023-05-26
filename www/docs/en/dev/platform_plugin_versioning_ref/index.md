@@ -77,7 +77,7 @@ Example:
 cordova platform add android
 ```
 
-The avaialble Cordova Resolved names are:
+The avaialble Cordova resolved names are:
 
 | Cordova Resolved Name | NPM Package Name |
 | --- | --- |
