@@ -198,7 +198,7 @@ The following links are the best places to get help for Cordova:
 
     The official Apache Cordova Slack workspace is an excellent resource for seeking help from the community and obtaining quick answers to your questions.
 
-    However, it's important to note that our Slack workspace does not retain message history. This limits the accessibility of information in the long term. To ensure better retension of your question, it is advisable to create a thread in GitHub Discussions and share the link and a summary of your question in the Slack. 
+    However, it's important to note that our Slack workspace does not retain message history. This limits the accessibility of information in the long term. To ensure better retention of your question, it is advisable to create a thread in GitHub Discussions and share the link and a summary of your question in the Slack. 
 
     This way, you can benefit from the immediate responsiveness of Slack while also preserving the discussion and making it more accessible for future reference.
 
