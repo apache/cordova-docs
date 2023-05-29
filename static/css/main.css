@@ -8407,6 +8407,19 @@ code {
   border-radius: 4px !important;
 }
 
+.platform-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.platform-icon.android {
+  width: 18px;
+}
+
+.platform-icon.electron {
+  width: 21px;
+}
+
 /* @media (min-width: $screen-sm-min) { body { font-size:.5em; } } */
 body {
   height: 100%;
