@@ -221,6 +221,18 @@ code {
     border-radius: 4px !important;
 }
 
+.platform-icon {
+    width: 2.5rem;
+}
+
+.platform-icon.android {
+    width: 2rem;
+}
+
+.platform-icon.electron {
+    width: 2.3rem;
+}
+
 @import 'home';
 @import 'blog';
 @import 'plugins';
