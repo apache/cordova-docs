@@ -56,7 +56,8 @@ In addition to the various configuration options detailed below, you
 can also configure an application's core set of images for each target
 platform. See [Customize icons topic](images.html) for more information.
 
-# widget
+## widget
+
 Root element of the config.xml document.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
@@ -85,6 +86,7 @@ Examples:
 ```
 
 ## name
+
 Specifies the app's formal name, as it appears on the device's home screen and within app-store interfaces.
 
 Examples:
@@ -96,6 +98,7 @@ Examples:
 ```
 
 ### short name
+
 Specifies an optional display name for the app. Sometimes the app name should be displayed differently on device's home screen than on informational and app-store interfaces due to limited space.
 
 Examples:
@@ -107,6 +110,7 @@ Examples:
 ```
 
 ## description
+
 Specifies metadata that may appear within app-store listings.
 
 Examples:
@@ -118,6 +122,7 @@ Examples:
 ```
 
 ## author
+
 Specifies contact information that may appear within app-store listings.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
@@ -135,6 +140,7 @@ Examples:
 
 
 ## content
+
 Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily appears in a project's top-level ```www``` directory.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
@@ -213,6 +219,7 @@ See [&lt;config-file&gt; docs][edit_config] for plugin.xml.
 See [&lt;config-file&gt; docs][config_file] for plugin.xml.
 
 ## engine
+
 Specifies details about what platform to restore during a prepare.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
@@ -228,6 +235,7 @@ Examples:
 ```
 
 ## plugin
+
 Specifies details about what plugin to restore during a prepare. This element
 is automatically added to a project's `config.xml` when a plugin is added using
 the `--save` flag. See the [CLI reference][plugin_cli] for more information on
@@ -248,6 +256,7 @@ Examples:
 ```
 
 ### variable
+
 Persists the value of a CLI variable to be used when restoring a plugin during a
 prepare. This element is added to `config.xml` when a plugin that uses CLI variables
 is added using the `--save` flag. See the [CLI reference][plugin_cli] for more
@@ -273,6 +282,7 @@ Examples:
 ```
 
 ## preference
+
 Sets various options as pairs of name/value attributes. Each preference's name is case-insensitive. Many preferences are unique to specific platforms,
 and will be indicated as such.
 
@@ -380,6 +390,7 @@ Examples:
 ```
 
 ## feature
+
 If you use the CLI to build applications, you use the plugin command to enable device APIs. This does not modify the top-level config.xml file, so the <feature> element does not apply to your workflow. If you work directly in an SDK and using the platform-specific config.xml file as source, you use the <feature> tag to enable device-level APIs and external plugins. They often appear with custom values in platform-specific config.xml files. See the API Reference for details on how to specify each feature. See
 the [Plugin Development Guide](../guide/hybrid/plugins/index.html) for more information on plugins.
 NOTE: Most of the time, you do NOT want to set this directly.
@@ -390,6 +401,7 @@ name<br/>{% cdv_vartype string %} | *Required* <br/> The name of the plugin to e
 
 
 ### param
+
 Used to specify certain plugin parameters such as: what package to retrieve the plugin code from, and whether the plugin code is to be initialized during the Webview's initialization.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
@@ -415,6 +427,7 @@ Examples:
 
 
 ## platform
+
 When using the CLI to build applications, it is sometimes necessary to specify preferences or other elements specific to a particular platform. Use the <platform> element to specify configuration that should only appear in a single platform-specific config.xml file.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
@@ -430,6 +443,7 @@ Examples:
 ```
 
 ## hook
+
 Represents your custom script which will be called by Cordova when
 certain action occurs (for example, after plugin is added or platform
 prepare logic is invoked). This is useful when you need to extend
@@ -463,7 +477,8 @@ For Android:
 ```
 
 
-# Sample config.xml
+## Sample config.xml
+
 Below is a sample config.xml file:
 
 ```xml
