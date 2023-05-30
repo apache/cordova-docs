@@ -585,8 +585,6 @@ For more resources, please see:
 - [Meet Android Studio](https://developer.android.com/studio/intro)
 - [Build and run your app](https://developer.android.com/studio/run/index.html)
 
-![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png)
-
 <img src="{{ site.baseurl }}/static/img/guide/platforms/android/android-studio-electric-eel-20220101-2/hello-cordova-main-activity.png" style="width: 100%;" alt="Hello Cordova MainActivity" />
 
 ## Upgrading
