@@ -31,19 +31,34 @@ Regardless of whether you intend to utilize Android-specific command-line tools 
 
 The supported [Android API Levels](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels) (versions of Android) corresponding with the Cordova-Android released versions are listed in the table below:
 
-cordova-android Version | Supported Android API-Levels | Equivalent Android Version
+<!-- 
+Use this nicely formated list to update, copy, and minify to a single line for the table below.
+<ul>
+    <li>Build Tools: ^33.0.2</li>
+    <li>Kotlin: 1.7.21</li>
+    <li>Gradle: 7.6</li>
+    <li>Android Gradle Plugin: 7.4.2</li>
+    <li>AndroidX Compat Library: 1.6.1</li>
+    <li>AndroidX WebKit Library: 1.6.0</li>
+    <li>AndroidX Core SplashScreen: 1.0.0</li>
+    <li>Google Services Gradle Plugin: 4.3.15</li>
+</ul>
+-->
+
+cordova-android Version | Android API-Levels (Android Version) | Library &amp; Tooling Version
 ------------------------|------------------------------|-----------------------------
-12.X.X                  | 24 - 33                      | 7.0 - 13.0.0
-11.X.X                  | 22 - 32                      | 5.1 - 12.0.0 (L)
-10.X.X                  | 22 - 30                      | 5.1 - 11.0.0
-9.X.X                   | 22 - 29                      | 5.1 - 10.0.0
-8.X.X                   | 19 - 28                      | 4.4 - 9.0.0
-7.X.X                   | 19 - 27                      | 4.4 - 8.1
-6.X.X                   | 16 - 26                      | 4.1 - 8.0.0
-5.X.X                   | 14 - 23                      | 4.0 - 6.0.1
-4.1.X                   | 14 - 22                      | 4.0 - 5.1
-4.0.X                   | 10 - 22                      | 2.3.3 - 5.1
-3.7.X                   | 10 - 21                      | 2.3.3 - 5.0.2
+12.0.x                  | 24 (7.0) - 33 (13.0)                      | <ul><li>Build Tools: ^33.0.2</li><li>Kotlin: 1.7.21</li><li>Gradle: 7.6</li><li>Android Gradle Plugin: 7.4.2</li><li>AndroidX Compat Library: 1.6.1</li><li>AndroidX WebKit Library: 1.6.0</li><li>AndroidX Core SplashScreen: 1.0.0</li><li>Google Services Gradle Plugin: 4.3.15</li></ul>
+11.0.x                  | 22 (5.1) - 32 (12L)                      | <ul><li>Build Tools: ^32.0.0</li><li>Kotlin: 1.7.21</li><li>Gradle: 7.4.2</li><li>Android Gradle Plugin: 7.2.1</li><li>AndroidX Compat Library: 1.4.2</li><li>AndroidX WebKit Library: 1.4.0</li><li>AndroidX Core SplashScreen: 1.0.0-rc01</li><li>Google Services Gradle Plugin: 4.3.10</li></ul>
+10.1.x                  | 22 (5.1) - 30 (11.0)                      | <ul><li>Build Tools: ^30.0.3</li><li>Kotlin: 1.5.21</li><li>Gradle: 7.1.1</li><li>Android Gradle Plugin: 4.2.2</li><li>AndroidX Compat Library: 1.3.1</li><li>AndroidX WebKit Library: 1.4.0</li><li>Google Services Gradle Plugin: 4.3.8</li></ul>
+10.0.x                  | 22 (5.1) - 30 (11.0)                      | <ul><li>Build Tools: ^30.0.3</li><li>Kotlin: 1.5.20</li><li>Gradle: 7.1.1</li><li>Android Gradle Plugin: 4.2.2</li><li>AndroidX Compat Library: 1.3.0</li><li>AndroidX WebKit Library: 1.4.0</li><li>Google Services Gradle Plugin: 4.3.5</li></ul>
+9.X.X                   | 22 (5.1) - 29 (10.0)                      | -
+8.X.X                   | 19 (4.4) - 28 (9.0)                      | -
+7.X.X                   | 19 (4.4) - 27 (8.1)                      | -
+6.X.X                   | 16 (4.1) - 26 (8.0)                      | -
+5.X.X                   | 14 (4.0) - 23 (6.0)                      | -
+4.1.X                   | 14 (4.0) - 22 (5.1)                      | -
+4.0.X                   | 10 (2.3.3) - 22 (5.1)                      | -
+3.7.X                   | 10 (2.3.3) - 21 (5.0)                      | -
 
 _**Note:** The [cordova-android](https://github.com/apache/cordova-android) versions listed above are not the Cordova CLI versions._
 
