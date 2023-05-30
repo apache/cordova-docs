@@ -150,11 +150,12 @@ Examples:
 ```
 
 ## access
-Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain [Whitelist Guide](../guide/appdev/allowlist/index.html) for details.
+
+Defines the external domains that the app is allowed to communicate with. When the access origin is set to "*", the app can access any server, but this can potentially create a security risk. It is recommended to explicitly specify the permitted URLs to ensure a secure configuration. For detailed instructions, please refer to the [Allow List Guide](../guide/appdev/allowlist/index.html).
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
-origin<br/>{% cdv_vartype string %} | *Required* <br/> Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain [Whitelist Guide](../guide/appdev/allowlist/index.html) for details.
+origin<br/>{% cdv_vartype string %} | *Required* <br/> Defines the external domain URL or URL pattern that the app is allowed to communicate with.
 
 Examples:
 
@@ -168,13 +169,13 @@ Examples:
 </widget>
 ```
 
-
 ## allow-navigation
-Controls which URLs the WebView itself can be navigated to. Applies to top-level navigations only.
+
+Controls which URLs the WebView can be navigated to. Applies to top-level navigations only. See the [Allow List Guide][whitelist_navigation] for details.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
-href<br/>{% cdv_vartype string %} | *Required* <br/> Defines the set of external domains the WebView is allowed to navigate to. See the [Allow List Guide][whitelist_navigation] for details.
+href<br/>{% cdv_vartype string %} | *Required* <br/> Defines the external domain or domain pattern that the WebView is allowed to navigate to.
 
 Examples:
 
@@ -187,11 +188,12 @@ Examples:
 ```
 
 ## allow-intent
-Controls which URLs the app is allowed to ask the system to open. By default, no external URLs are allowed.
+
+Controls which URLs the app is allowed to ask the system to open. By default, no external URLs are allowed. See the [Allow List Guide][whitelist_intent] for details.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
-href<br/>{% cdv_vartype string %} | *Required* <br/> Defines which URLs the app is allowed to ask the system to open. See the [Allow List Guide][whitelist_intent] for details.
+href<br/>{% cdv_vartype string %} | *Required* <br/> Defines the URL or URL pattern that the app is allowed to ask the system to open.
 
 Examples:
 
@@ -201,6 +203,7 @@ Examples:
 <allow-intent href="tel:*" />
 <allow-intent href="sms:*" />
 ```
+
 ## edit-config
 
 See [&lt;config-file&gt; docs][edit_config] for plugin.xml.
