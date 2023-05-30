@@ -66,8 +66,8 @@ version<br/>{% cdv_vartype string %} | *Required* <br/> Full version number expr
 android-versionCode<br/>{% cdv_vartype string %} {% cdv_platform android %} | Alternative version for Android. Sets the [version code](https://developer.android.com/tools/publishing/versioning.html) for the application. See [the Android guide](../guide/platforms/android/index.html#setting-the-version-code) for information on how this attribute may be modified.
 ios-CFBundleVersion<br/>{% cdv_vartype string %} {% cdv_platform ios %} | Alternative version for iOS. For further details, see [iOS versioning](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
 android-packageName<br/>{% cdv_vartype string %} {% cdv_platform android %} | Alternative package name for Android, overrides `id`.
-ios-CFBundleIdentifier<br/>{% cdv_vartype string %}  <br/> {% cdv_platform ios %} | Alternative bundle id for iOS. Overrides `id`.
-defaultlocale <br /> {% cdv_platform ios %} | Specified the default language of the app, as an IANA language code.
+ios-CFBundleIdentifier<br/>{% cdv_vartype string %} {% cdv_platform ios %} | Alternative bundle id for iOS. Overrides `id`.
+defaultlocale <br /> {% cdv_vartype string %}{% cdv_platform ios %} | Specified the default language of the app, as an IANA language code.
 android-activityName<br/>{% cdv_vartype string %} {% cdv_platform android %} | Set the activity name for your app in AndroidManifest.xml. Note that this is only set once after the Android platform is first added.
 xmlns<br/>{% cdv_vartype string %} | *Required* <br/> Namespace for the config.xml document.
 xmlns:cdv<br/>{% cdv_vartype string %} | *Required* <br/> Namespace prefix.
@@ -393,7 +393,7 @@ Used to specify certain plugin parameters such as: what package to retrieve the 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ----------------- | ------------
 name<br/>{% cdv_vartype string %} {% cdv_platform ios %} {% cdv_platform android %} | *Required* <br/> Allowed values: android-package, ios-package, onload. <br/>  'ios-package' and 'android-package' are used to specify the name of the package (as specified by the 'value' attribute) to be used to initialize the plugin code, while 'onload' is used to specify whether the corresponding plugin (as specified in the 'value' attribute) is to be instantiated when the controller is initialized.
-value(string or boolean) <br/> {% cdv_platform ios %} {% cdv_platform android %} | *Required* <br/>  Specifies the name of the package to be used to initialize the plugin code (when the 'name' attribute is android-package or ios-package), specifies the name of the plugin to be loaded during controller initialization (when 'name' attribute is set to 'onload').
+value <br/> {% cdv_vartype String/Boolean %} {% cdv_platform ios %} {% cdv_platform android %} | *Required* <br/>  Specifies the name of the package to be used to initialize the plugin code (when the 'name' attribute is android-package or ios-package), specifies the name of the plugin to be loaded during controller initialization (when 'name' attribute is set to 'onload').
 
 
 Examples:
