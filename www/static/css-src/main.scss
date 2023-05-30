@@ -234,6 +234,47 @@ code {
     width: 21px;
 }
 
+.cdv-var-type {
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 5px;
+    height: 25px;
+
+    background-color: #bfbfbf;
+    color: #333333;
+
+    &.number {
+        background-color: #3ce4c5;
+        color: #333333;
+    }
+
+    &.string {
+        background-color: #3ccde4;
+        color: #333333;
+    }
+
+    &.boolean {
+        background-color: #3c78e4;
+        color: #ffffff;
+    }
+
+    &.object {
+        background-color: #3c51e4;
+        color: #ffffff;
+    }
+
+    &.float {
+        background-color: #7c3ce4;
+        color: #ffffff;
+    }
+
+    &.array {
+        background-color: #b33ce4;
+        color: #333333;
+    }
+}
+
 @import 'home';
 @import 'blog';
 @import 'plugins';
