@@ -56,6 +56,33 @@ In addition to the various configuration options detailed below, you
 can also configure an application's core set of images for each target
 platform. See [Customize icons topic](images.html) for more information.
 
+**Sample `config.xml`:**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+    xmlns:cdv="http://cordova.apache.org/ns/1.0"
+    id="io.cordova.hellocordova"
+    version="1.0.0">
+    <name>HelloCordova</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+
+    <content src="index.html" />
+
+    <!-- Security Related Settings -->
+    <access origin="https://cordova.apache.org" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+
+    <!-- Platform Configs & Platform Overriding Configs -->
+    <platform name="android"></platform>
+    <platform name="ios"></platform>
+</widget>
+```
+
 ## widget
 
 Root element of the config.xml document.
@@ -474,39 +501,6 @@ Examples:
 For Android:
 ```xml
 <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
-```
-
-
-## Sample config.xml
-
-Below is a sample config.xml file:
-
-```xml
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>HelloCordova</name>
-  <description>
-      A sample Apache Cordova application that responds to the deviceready event.
-  </description>
-  <author email="dev@cordova.apache.org" href="https://cordova.io">
-      Apache Cordova Team
-  </author>
-  <content src="index.html" />
-  <access origin="*" />
-  <allow-intent href="http://*/*" />
-  <allow-intent href="https://*/*" />
-  <allow-intent href="tel:*" />
-  <allow-intent href="sms:*" />
-  <allow-intent href="mailto:*" />
-  <allow-intent href="geo:*" />
-  <platform name="android">
-      <allow-intent href="market:*" />
-  </platform>
-  <platform name="ios">
-      <allow-intent href="itms:*" />
-      <allow-intent href="itms-apps:*" />
-  </platform>
-</widget>
 ```
 
 [uses-sdk]:             https://developer.android.com/guide/topics/manifest/uses-sdk-element.html
