@@ -25,36 +25,35 @@ description: List of supported tags in the config.xml file.
 
 # Config.xml
 
-`config.xml` is a global configuration file that controls many aspects
-of a cordova application's behavior. This
-platform-agnostic XML file is arranged based on the W3C's [Packaged
-Web Apps (Widgets)](https://www.w3.org/TR/widgets/) specification, and
-extended to specify core Cordova API features, plugins, and
-platform-specific settings.
+The `config.xml` file is a global configuration file that manages various aspects of a Cordova application's behavior. It is written in XML format and follows the structure outlined in the W3C's [Packaged Web Apps (Widgets)](https://www.w3.org/TR/widgets/) specification. Additionally, it is extended to include core Cordova API features, plugins, and platform-specific settings.
 
-For projects created with the Cordova CLI (described in [The
-Command-Line Interface](../guide/cli/index.html)), this file can be found in the top-level
-directory:
+If you are using the Cordova CLI to create your project (as explained in [The Command-Line Interface](../guide/cli/index.html)), you can locate the `config.xml` file in the top-level directory of your project.
 
-```
-app/config.xml
+```bash
+./hellocordova
+└── config.xml
 ```
 
-Note that before version 3.3.1-0.2.0, the file existed at `app/www/config.xml`,
-and that having it here is still supported.
+When using the CLI to build a project, versions of this file are passively copied into various `platforms/` subdirectories. For example:
 
-When using the CLI to build a project, versions of this file are
-passively copied into various `platforms/` subdirectories.
-For example:
-
+```bash
+./hellocordova
+└── platforms
+    ├── android
+    │   └── app
+    │       └── src
+    │           └── main
+    │               └── res
+    │                   └── xml
+    │                       └── config.xml
+    └── ios
+        └── HelloCordova
+            └── config.xml
 ```
-app/platforms/ios/AppName/config.xml
-app/platforms/android/res/xml/config.xml
-```
 
-In addition to the various configuration options detailed below, you
-can also configure an application's core set of images for each target
-platform. See [Customize icons topic](images.html) for more information.
+Some platforms offer integrated development environments (IDEs) like Xcode for iOS and Android Studio for Android, which allow you to build and test your application. If you choose to use these IDEs for building and testing your project, it is recommended to run the `cordova prepare` CLI command whenever you make changes to the Cordova application's `config.xml`. This ensures that the updated configurations are copied into the respective `platforms/` subdirectories.
+
+In addition to the configuration options described below, you have the ability to customize the core set of images for your application on each target platform. For more information, please refer to the topic on [Customizing Icons](images.html).
 
 **Sample `config.xml`:**
 
