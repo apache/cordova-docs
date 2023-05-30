@@ -22,6 +22,8 @@ toc_title: Customize icons
 description: Learn how to customize icons for your Cordova application.
 ---
 
+{% cdv_platform inject %}
+
 # Customize Icons
 
 This section shows how to configure an application's icon for various platforms. Documentation about splash screen images can be found in the Cordova-Plugin-Splashscreen documentation [Splashscreen plugin docs][splashscreen_plugin].
@@ -41,8 +43,8 @@ src           | *Required* <br/> Location of the image file, relative to your pr
 platform      | *Optional* <br/> Target platform
 width         | *Optional* <br/> Icon width in pixels
 height        | *Optional* <br/> Icon height in pixels
-density       | *Optional* <br/> ==Android== <br/> Specified icon density
-target        | *Optional* <br/> ==Windows== <br/> Destination filename for the image file and all its' MRT companions
+density       | *Optional* <br/> {% cdv_platform android %} <br/> Specified icon density
+target        | *Optional* <br/> {% cdv_platform windows %} <br/> Destination filename for the image file and all its' MRT companions
 
 
 The following configuration can be used to define a single default icon
