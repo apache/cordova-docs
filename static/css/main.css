@@ -8420,6 +8420,40 @@ code {
   width: 21px;
 }
 
+.cdv-var-type {
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 5px;
+  border-radius: 5px;
+  height: 25px;
+  background-color: #bfbfbf;
+  color: #333333;
+}
+.cdv-var-type.number {
+  background-color: #3ce4c5;
+  color: #333333;
+}
+.cdv-var-type.string {
+  background-color: #3ccde4;
+  color: #333333;
+}
+.cdv-var-type.boolean {
+  background-color: #3c78e4;
+  color: #ffffff;
+}
+.cdv-var-type.object {
+  background-color: #3c51e4;
+  color: #ffffff;
+}
+.cdv-var-type.float {
+  background-color: #7c3ce4;
+  color: #ffffff;
+}
+.cdv-var-type.array {
+  background-color: #b33ce4;
+  color: #333333;
+}
+
 /* @media (min-width: $screen-sm-min) { body { font-size:.5em; } } */
 body {
   height: 100%;
