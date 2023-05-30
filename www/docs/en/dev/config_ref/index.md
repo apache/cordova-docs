@@ -86,7 +86,7 @@ In addition to the configuration options described below, you have the ability t
 
 Root element of the config.xml document.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
 id<br/>{% cdv_vartype string %} | *Required* <br/> Specifies the app's identifier. The `id` should be in a [reverse-DNS format](https://en.wikipedia.org/wiki/Reverse_domain_name_notation#Examples) however, only alphanumeric and dot characters are allowed. e.g: `com.example.myapp`
 version<br/>{% cdv_vartype string %} | *Required* <br/> Full version number expressed in major/minor/patch notation.
@@ -151,7 +151,7 @@ Examples:
 
 Specifies contact information that may appear within app-store listings.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 email<br/>{% cdv_vartype string %} | *Required* <br/> Email of the author.
 href<br/>{% cdv_vartype string %} | *Required* <br/> Website of the author.
@@ -169,7 +169,7 @@ Examples:
 
 Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily appears in a project's top-level ```www``` directory.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 src<br/>{% cdv_vartype string %} | *Required* <br/> Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily appears in a project's top-level ```www``` directory.
 
@@ -185,7 +185,7 @@ Examples:
 
 Defines the external domains that the app is allowed to communicate with. When the access origin is set to "*", the app can access any server, but this can potentially create a security risk. It is recommended to explicitly specify the permitted URLs to ensure a secure configuration. For detailed instructions, please refer to the [Allow List Guide](../guide/appdev/allowlist/index.html).
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 origin<br/>{% cdv_vartype string %} | *Required* <br/> Defines the external domain URL or URL pattern that the app is allowed to communicate with.
 
@@ -205,7 +205,7 @@ Examples:
 
 Controls which URLs the WebView can be navigated to. Applies to top-level navigations only. See the [Allow List Guide][whitelist_navigation] for details.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 href<br/>{% cdv_vartype string %} | *Required* <br/> Defines the external domain or domain pattern that the WebView is allowed to navigate to.
 
@@ -223,7 +223,7 @@ Examples:
 
 Controls which URLs the app is allowed to ask the system to open. By default, no external URLs are allowed. See the [Allow List Guide][whitelist_intent] for details.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 href<br/>{% cdv_vartype string %} | *Required* <br/> Defines the URL or URL pattern that the app is allowed to ask the system to open.
 
@@ -248,7 +248,7 @@ See [&lt;config-file&gt; docs][config_file] for plugin.xml.
 
 Specifies details about what platform to restore during a prepare.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 name<br/>{% cdv_vartype string %} | *Required* <br/> Name of the platform to be restored
 spec<br/>{% cdv_vartype string %} | *Required* <br/> Details about the platform to be restored. This could be a ```major.minor.patch``` version number, a directory containing the platform or a url pointing to a git repository. This information will be used to retrieve the platform code to restore from NPM, a local directory or a git repository. See [Platform Spec][platform_spec] for further details.
@@ -269,7 +269,7 @@ adding plugins.
 
 _Note: As of Cordova 9.x, this tag is obsolete. [Learn More](https://github.com/apache/cordova-lib/pull/750)_
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 name<br/>{% cdv_vartype string %} | *Required* <br/> Name of the plugin to be restored
 spec<br/>{% cdv_vartype string %} | *Required* <br/> Details about the plugin to be restored. This could be a ```major.minor.patch``` version number, a directory containing the plugin or a url pointing to a git repository. This information will be used to retrieve the plugin code to restore from NPM, a local directory or a git repository. See [Plugin Spec][plugin_spec] for further details.
@@ -294,7 +294,7 @@ project. In order for changes to this value to take effect, remove the plugin fr
 project and restore it by running `cordova prepare`. See the
 [preference element][plugin_preference] of `plugin.xml` for more details on CLI variables.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 name<br/>{% cdv_vartype string %} | *Required* <br/> Name of the CLI variable. Can only contain capital letters, digits, and underscores.
 value<br/>{% cdv_vartype string %} | *Required* <br/> Value of the CLI variable to be used when restoring the parent plugin during a prepare.
@@ -312,7 +312,7 @@ Examples:
 Sets various options as pairs of name/value attributes. Each preference's name is case-insensitive. Many preferences are unique to specific platforms,
 and will be indicated as such.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 AllowInlineMediaPlayback<br/>{% cdv_vartype boolean %} {% cdv_platform ios %} | *Default: false* <br/>  Set to true to allow HTML5 media playback to appear inline within the screen layout, using browser-supplied controls rather than native controls. For this to work, add the ```playsinline``` attribute to any ```<video>``` elements. *NOTE*: Prior to iOS 10, ```<video>``` elements need to use the ```webkit-playsinline``` attribute name instead.
 AllowNewWindows<br/>{% cdv_vartype boolean %} {% cdv_platform ios %} | *Default: false* <br/> Set to true to allow JavaScript `window.open` and HTML `target="_blank"` links to open a new view overlaying the web view.
@@ -421,7 +421,7 @@ If you use the CLI to build applications, you use the plugin command to enable d
 the [Plugin Development Guide](../guide/hybrid/plugins/index.html) for more information on plugins.
 NOTE: Most of the time, you do NOT want to set this directly.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 name<br/>{% cdv_vartype string %} | *Required* <br/> The name of the plugin to enable.
 
@@ -430,7 +430,7 @@ name<br/>{% cdv_vartype string %} | *Required* <br/> The name of the plugin to e
 
 Used to specify certain plugin parameters such as: what package to retrieve the plugin code from, and whether the plugin code is to be initialized during the Webview's initialization.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 name<br/>{% cdv_vartype string %} {% cdv_platform ios %} {% cdv_platform android %} | *Required* <br/> Allowed values: android-package, ios-package, onload. <br/>  'ios-package' and 'android-package' are used to specify the name of the package (as specified by the 'value' attribute) to be used to initialize the plugin code, while 'onload' is used to specify whether the corresponding plugin (as specified in the 'value' attribute) is to be instantiated when the controller is initialized.
 value <br/> {% cdv_vartype String/Boolean %} {% cdv_platform ios %} {% cdv_platform android %} | *Required* <br/>  Specifies the name of the package to be used to initialize the plugin code (when the 'name' attribute is android-package or ios-package), specifies the name of the plugin to be loaded during controller initialization (when 'name' attribute is set to 'onload').
@@ -456,7 +456,7 @@ Examples:
 
 When using the CLI to build applications, it is sometimes necessary to specify preferences or other elements specific to a particular platform. Use the <platform> element to specify configuration that should only appear in a single platform-specific config.xml file.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 name<br/>{% cdv_vartype string %} | *Required* <br/> The platform whose preferences are being defined.
 
@@ -475,7 +475,7 @@ certain action occurs (for example, after plugin is added or platform
 prepare logic is invoked). This is useful when you need to extend
 default Cordova functionality. See [Hooks Guide](../guide/appdev/hooks/index.html) for more information.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 type<br/>{% cdv_vartype string %} | *Required* <br/> Specifies the action during which the custom script is to be called.
 src<br/>{% cdv_vartype string %} | *Required* <br/> Specifies the location of the script to be called when a specific action occurs.
@@ -490,7 +490,7 @@ Examples:
 
 This tag installs resource files into your platform, and is similar to the same tag in plugin.xml. This tag is currently only supported on `cordova-ios@4.4.0` or greater and `cordova-android@6.2.1` or greater.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
 src<br/>{% cdv_vartype string %} {% cdv_platform ios %} {% cdv_platform android %}| *Required* <br/> Location of the file relative to `config.xml`.
 target<br/>{% cdv_vartype string %} | Path to where the file will be copied in your directory.
