@@ -67,7 +67,7 @@ android-versionCode<br/>{% cdv_vartype string %} {% cdv_platform android %} | Al
 ios-CFBundleVersion<br/>{% cdv_vartype string %} {% cdv_platform ios %} | Alternative version for iOS. For further details, see [iOS versioning](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
 android-packageName<br/>{% cdv_vartype string %} {% cdv_platform android %} | Alternative package name for Android, overrides `id`.
 ios-CFBundleIdentifier<br/>{% cdv_vartype string %} {% cdv_platform ios %} | Alternative bundle id for iOS. Overrides `id`.
-defaultlocale <br /> {% cdv_vartype string %}{% cdv_platform ios %} | Specified the default language of the app, as an IANA language code.
+defaultlocale <br /> {% cdv_vartype string %}{% cdv_platform ios %} | Specify the default language of the app using an IANA language code. This preference key explicitly sets the value for [CFBundleDevelopmentRegion](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundledevelopmentregion). For example, you can use values like `en` or `en_US`.
 android-activityName<br/>{% cdv_vartype string %} {% cdv_platform android %} | Set the activity name for your app in AndroidManifest.xml. Note that this is only set once after the Android platform is first added.
 xmlns<br/>{% cdv_vartype string %} | *Required* <br/> Namespace for the config.xml document.
 xmlns:cdv<br/>{% cdv_vartype string %} | *Required* <br/> Namespace prefix.
