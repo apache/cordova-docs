@@ -57,7 +57,7 @@ The child elements of the `<engines>` element specify versions of Apache Cordova
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
-name(string) | *Required* <br/> Name of the engine. Here are the default engines that are supported : <ul><li> `cordova` </li> <li> `cordova-plugman` </li> <li> `cordova-android` </li> <li> `cordova-browser` </li> <li> `cordova-ios` </li> <li> `cordova-windows` </li> <li> `cordova-osx` </li> <li> `windows-os` </li> <li> `android-sdk` (returns the highest Android api level installed) </li> <li> `windows-sdk` (returns the native windows SDK version) </li> <li> `apple-xcode` (returns the xcode version) </li> <li> `apple-ios` (returns the highest iOS version installed) </li> <li> `apple-osx` (returns the OSX version) </li> You can also specify a custom framework apart from the default ones.
+-name(string) | *Required* <br/>Name of the engine. Here are the default engines that are supported: <ul><li>`cordova`</li><li> `cordova-plugman`</li><li>`cordova-android`</li> <li>`cordova-browser`</li><li>`cordova-ios`</li><li>`windows-os`</li><li>`android-sdk` (returns the highest Android api level installed) </li><li> `apple-xcode` (returns the xcode version) </li><li>`apple-ios` (returns the highest iOS version installed)</li><li>`apple-osx` (returns the macOS version)</li></ul> You can also specify a custom framework apart from the default ones.
 version(string) | *Required* <br/> The version that your framework must have in order to install. Semver syntax is supported.
 scriptSrc(string) | **For custom frameworks only** <br/> *Required* <br/>  The script file that tells plugman the version of the custom framework. Ideally, this file should be within the top level directory of your plugin directory.
 platform(string) | **For custom frameworks only** <br/> *Required* <br/> The platforms your framework supports. You may use the wildcard `*` to say supported for all platforms, specify multiple with a pipe character like `android|ios` or just a single platform like `android`.
@@ -247,7 +247,7 @@ Identifies platforms that have associated native code or require modifications t
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
-name(string) | *Required* <br/> Allowed values: ios, android, windows, browser, osx <br/> Identifies a platform as supported, associating the element's children with that platform.
+name(string) | *Required* <br/> Allowed values: ios, android, browser, electron <br/> Identifies a platform as supported, associating the element's children with that platform.
 
 Example:
 ```xml
@@ -279,7 +279,7 @@ Examples:
 
 ## header-file
 
-This is like `<source-file>` element but specifically for platforms such as iOS and Android that distinguish between source files, headers, and resources. This is not supported by Windows.
+This is like `<source-file>` element but specifically for platforms such as iOS and Android that distinguish between source files, headers, and resources.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
@@ -303,27 +303,12 @@ Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Desc
 ---------------- | ------------
 src(string) | *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
 target(string) | Path to where the file will be copied in your directory.
-arch(string) <br/> {% cdv_platform windows %} | Allowed values: `x86`, `x64` or `ARM`. <br/> Indicates that the file should only be included when building for the specified architecture.
-device-target <br/> {% cdv_platform windows %} | Allowed values: `win` (or `windows`), `phone` or `all`. <br/> Indicates that the file should only be included when building for the specified target device type.
-versions <br/> {% cdv_platform windows %} | Indicates that the file should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
-reference <br/> {% cdv_platform windows %} | Indicates that the file should be referenced from the src rather than copied to the target destination. The file will appear in Visual Studio with the file name specified by target, however will point to the respective src, depending on the architecture.
 
-Examples:
+Android Examples:
 
-For Android:
 ```xml
 <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
 ```
-
-For Windows:
-```xml
-<resource-file src="src/windows/win81/MobServices.pri" target="win81\MobServices.pri" device-target="windows" versions="8.1" arch="x64"/>
-
-<!-- Example of referencing  -->
-<resource-file src="x86/foo.dll" target="foo.dll" arch="x86" reference="true" />
-<resource-file src="x64/foo.dll" target="foo.dll" arch="x64" reference="true" />
-```
-__NOTE__: `target` should use backslashes to avoid DEP2100 deploy error in Visual Studio.
 
 ## config-file
 
@@ -335,9 +320,7 @@ Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Desc
 ---------------- | ------------
 target(string) | The file to be modified, and the path relative to the root of the Cordova project. If the specified file does not exist, the tool ignores the configuration change and continues installation. <br/> The target can include wildcard (`*`) elements. In this case, the CLI recursively searches through the project directory structure and uses the first match. <br/> On iOS, the location of configuration files relative to the project directory root is not known, so specifying a target of `config.xml` resolves to `cordova-ios-project/MyAppName/config.xml`.
 parent(string) | An XPath selector referencing the parent of the elements to be added to the config file. If you use absolute selectors, you can use a wildcard (`*`) to specify the root element, e.g., `/*/plugins`. If the selector does not resolve to a child of the specified document, the tool stops and reverses the installation process, issues a warning, and exits with a non-zero code. <br/> For `plist` files, the `parent` determines under what parent key the specified XML should be inserted.
-after(string) | A prioritized list of accepted siblings after which to add the XML snippet. Useful for specifying changes in files which require strict ordering of XML elements like [this](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement).
-device-target(string) <br/> {% cdv_platform windows %} | Allowed values: `win`, `phone`, `all`. <br/> Applicable when affecting the meta-name `package.appxmanifest`, this attribute indicates that the file should only be modified when building for the specified target device type.
-versions(string) <br/> {% cdv_platform windows %} | Applicable when affecting the meta-name `package.appxmanifest`, this attribute indicates that app manifests for specific Windows versions should only be altered for versions that match the specified version string. Value can be any valid node semantic version range string.
+after(string) | A prioritized list of accepted siblings after which to add the XML snippet. Useful for specifying changes in files which require strict ordering of XML elements.
 
 Examples:
 
@@ -362,18 +345,6 @@ For `plist`:
     </array>
 </config-file>
 ```
-
-For windows-specific attributes:
-```xml
-<config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="&lt;8.1.0">
-    <Capability Name="picturesLibrary" />
-    <DeviceCapability Name="webcam" />
-</config-file>
-<config-file target="package.appxmanifest" parent="/Package/Capabilities" versions=">=8.1.0" device-target="phone">
-    <DeviceCapability Name="webcam" />
-</config-file>
-```
-The above example will set pre-8.1 platforms (Windows 8, specifically) to require the `webcam` device capability and the `picturesLibrary` general capability, and apply the `webcam` device capability only to Windows 8.1 projects that build for Windows Phone.  Windows desktop 8.1 systems are unmodified.
 
 ## edit-config
 Similar to `config-file`, `edit-config` identifies an XML-based configuration file to be modified, where in that document the modification should take place, and what should be modified. Instead of appending new children to an XML document tree, `edit-config` makes modifications to attributes of XML elements. There are two modes which will determine what type of attribute modification will be made, `merge` or `overwrite`. `edit-config` has one child and that child will contain the attributes to be added.
@@ -515,11 +486,6 @@ custom(boolean) | Indicates whether the framework is included as part of your pl
 weak(boolean) | *Default: false* <br/> Indicates whether the framework should be weakly linked.
 type(string) | Indicates the type of framework to add.
 parent(string) | *Default: .* <br/> Sets the relative path to the directory containing the sub-project to which to add the reference. The default, `.`, implies the application project.
-arch(string) <br/> {% cdv_platform windows %} | Allowed values: `x86`, `x64` or `ARM`. <br/> Indicates that the framework should only be included when building for the specified architecture.
-device-target(string) <br/> {% cdv_platform windows %} | Allowed values: `win` (or `windows`), `phone` or `all`. <br/>  Indicates that the framework should only be included when building for the specified target device type.
-versions(string) <br/> {% cdv_platform windows %} | Indicates that the framework should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
-target-dir(string) <br/> {% cdv_platform windows %} | Indicates a subdirectory into which the framework should be copied. In practice, this is most important when plugin contains different framework versions for different chip architectures or device targets, but which have the same name. This allows you to specify different subfolders for each framework version so that they don't overlap each other.
-implementation(string) <br/> {% cdv_platform windows %} | Sets the relative path to `.dll` file that contains implementation for WinMD component, written in C++.
 spec(string) <br/> {% cdv_platform ios %} | Paired with `type="podspec"`, this is the spec string for the CocoaPod you want to install (static library only). CocoaPod support only exists in `cordova-ios 4.3.0` and `cordova-cli 6.4.0`. For your plugin, make sure  you add the appropriate `<engine>` tags and `package.json` [dependencies](../guide/hybrid/plugins/index.html#specifying-cordova-dependencies) to ensure backwards-compatible support.
 embed(boolean) <br/> {% cdv_platform ios %} | *Default: false* <br/>Paired with `custom="true"`, this is set to true if you want to embed your custom framework into your app bundle, so it can be dynamically loaded at runtime (dynamic framework). This puts your custom framework in the 'Embedded Binaries' section of your Xcode Project Settings. Only supported with the combination of `cordova-ios@4.4.0` and `cordova-cli@7.0.0`
 link(boolean) <br/> {% cdv_platform ios %} | *Default: !embed* <br/> Set this to true if you want to link the framework. This puts the framework in the 'Link Binaries with Libraries' section of your Xcode Project Settings.
@@ -527,6 +493,7 @@ link(boolean) <br/> {% cdv_platform ios %} | *Default: !embed* <br/> Set this to
 Examples:
 
 For iOS:
+
 ```xml
 <framework src="libsqlite3.dylib" />
 <framework src="social.framework" weak="true" />
@@ -535,6 +502,7 @@ For iOS:
 ```
 
 On Android (as of cordova-android@4.0.0), framework tags are used to include Maven dependencies, or to include bundled library projects.
+
 ```xml
 <!-- Depend on latest version of GCM from play services -->
 <framework src="com.google.android.gms:play-services-gcm:+" />
@@ -545,33 +513,9 @@ On Android (as of cordova-android@4.0.0), framework tags are used to include Mav
 ```
 
 Framework can also be used to have custom `.gradle` files sub-included into the main project's `build.gradle` file:
+
 ```xml
 <framework src="relative/path/rules.gradle" custom="true" type="gradleReference" />
-```
-
-On Windows, using `custom='true'` and `type='projectReference'` will add a reference to the project which will be added to the compile+link steps of the cordova project.  This essentially is the only way currently that a 'custom' framework can target multiple architectures as they are explicitly built as a dependency by the referencing cordova application.
-```xml
-<framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
-```
-
-Examples of using these Windows specific attributes:
-```xml
-<framework src="src/windows/example.dll" arch="x64" />
-<framework src="src/windows/example.dll" versions=">=8.0" />
-<framework src="src/windows/example.vcxproj" type="projectReference" target="win" />
-<framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" />
-<framework src="src/windows/example.dll" target-dir="bin/x64" arch="x64" custom="true"/>
-```
-
-Another example of using Windows-specific attributes to add a reference to WinMD components, written in C# and C++, whose API will be available at runtime:
-
-```xml
-<!-- C# component that consists of one .winmd file -->
-<framework src="lib\windows\component.winmd" versions="<10.0" />
-<!-- C++ component with separated metadata and implementation-->
-<framework src="lib\windows\x86\cppcomponent.winmd"
-           implementation="lib\windows\x86\cppcomponent.dll"
-           target-dir="component\x86" arch="x86" versions=">=10.0" />
 ```
 
 ## podspec ({% cdv_platform ios %})
