@@ -203,7 +203,7 @@ Examples:
 
 ## allow-navigation
 
-Controls which URLs the WebView can be navigated to. Applies to top-level navigations only. See the [Allow List Guide][whitelist_navigation] for details.
+Controls which URLs the WebView can be navigated to. Applies to top-level navigations only. See the [Allow List Guide][allow_list_navigation] for details.
 
 Attributes | Description
 ----------------- | ------------
@@ -221,7 +221,7 @@ Examples:
 
 ## allow-intent
 
-Controls which URLs the app is allowed to ask the system to open. By default, no external URLs are allowed. See the [Allow List Guide][whitelist_intent] for details.
+Controls which URLs the app is allowed to ask the system to open. By default, no external URLs are allowed. See the [Allow List Guide][allow_list_intent] for details.
 
 Attributes | Description
 ----------------- | ------------
@@ -516,8 +516,8 @@ For Android:
 [plugin_preference]:    ../plugin_ref/spec.html#preference
 [plugin_spec]:          ../reference/cordova-cli/index.html#plugin-spec
 [plugin_cli]:           ../reference/cordova-cli/index.html#cordova-plugin-command
-[whitelist_navigation]: ../guide/appdev/allowlist/index.html#navigation-allow-list
-[whitelist_intent]:     ../guide/appdev/allowlist/index.html#intent-allow-list
+[allow_list_navigation]: ../guide/appdev/allowlist/index.html#navigation-allow-list
+[allow_list_intent]:     ../guide/appdev/allowlist/index.html#intent-allow-list
 [statusbar_plugin]:     ../reference/cordova-plugin-statusbar/
 [edit_config]:          ../plugin_ref/spec.html#edit-config
 [config_file]:          ../plugin_ref/spec.html#config-file

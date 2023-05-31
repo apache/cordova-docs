@@ -260,8 +260,8 @@ For JavaScript, you can attach Safari to the app running within the iOS Simulato
 - Don't forget to add your plugin's mapping to `config.xml`. If you
   forget, an error is logged in the Xcode console.
 
-- Don't forget to add any hosts you connect to in the whitelist, as
-  described in Domain [Whitelist Guide](../../appdev/whitelist/index.html). If you forget, an error is
+- Don't forget to add any hosts you connect to in the allo list, as
+  described in Domain [Allow List Guide](../../appdev/allowlist/index.html). If you forget, an error is
   logged in the Xcode console.
 
 [plugin-dev]: ../../hybrid/plugins/index.html
