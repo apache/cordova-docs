@@ -490,31 +490,18 @@ Example:
 <plugins-plist key="Foo" string="CDVFoo" />
 ```
 
-## lib-file
+## lib-file ({% cdv_platform android %})
 
-Like source, resource, and header files, but specifically for platforms such as BlackBerry 10 that use user-generated libraries. For the Windows platform, the `<lib-file>` element allows the inclusion of an `<SDKReference>` in the generated Windows project files.
+The `<lib-file>` element can be used for installing **.jar** files in the project's **libs directory**.
 
 Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
 ---------------- | ------------
-src(string) | *Required* <br/> The location of the file relative to `plugin.xml`. If `src` can't be found, the CLI stops and reverses the installation, issues a warning about the problem, and exits with a non-zero code. <br/> For Windows, it indicates the name of the SDK to include (which will be used as value of the `Include` attribute of the generated `<SDKReference>` element).
-arch(string) | The architecture for which the `.so` file has been built, either `device` or `simulator`. <br/> For Windows, it indicates that the `<SDKReference>` should only be included when building for the specified architecture. Supported values are `x86`, `x64` or `ARM`.
-device-target(string) <br/> {% cdv_platform windows %} | Allowed values: `win` (or `windows`), `phone` or `all`. <br/> Indicates that the `<SDKReference>` should only be included when building for the specified target device type.
-versions(string) <br/> {% cdv_platform windows %} | Indicates that the `<SDKReference>` should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
-
-For Android, the `<lib-file>` element is used for installing **.jar** files in the project's **libs directory**. It supports only the `src` attribute which contains the relative path to the .jar file.
+src(string) | *Required* <br/> The location of the `.jar` file relative to `plugin.xml`. If `src` file can't be found, the CLI stops and reverses the installation, issues a warning about the problem, and exits with a non-zero code.
 
 Examples:
-```xml
-<lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
-<lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" />
-```
 
-For Windows:
 ```xml
-<lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" />
-<lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions=">=8.1" />
-<lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" />
-<lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="win" versions="8.0" arch="x86" />
+<lib-file src="src/android/libs/foobar.jar"/>
 ```
 
 ## framework
