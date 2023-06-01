@@ -2280,42 +2280,68 @@
 
 <h1>Config.xml</h1>
 
-<p><code>config.xml</code> is a global configuration file that controls many aspects
-of a cordova application&#39;s behavior. This
-platform-agnostic XML file is arranged based on the W3C&#39;s <a href="https://www.w3.org/TR/widgets/">Packaged
-Web Apps (Widgets)</a> specification, and
-extended to specify core Cordova API features, plugins, and
-platform-specific settings.</p>
+<p>The <code>config.xml</code> file is a global configuration file that manages various aspects of a Cordova application&#39;s behavior. It is written in XML format and follows the structure outlined in the W3C&#39;s <a href="https://www.w3.org/TR/widgets/">Packaged Web Apps (Widgets)</a> specification. Additionally, it is extended to include core Cordova API features, plugins, and platform-specific settings.</p>
 
-<p>For projects created with the Cordova CLI (described in <a href="../guide/cli/index.html">The
-Command-Line Interface</a>), this file can be found in the top-level
-directory:</p>
+<p>If you are using the Cordova CLI to create your project (as explained in <a href="../guide/cli/index.html">The Command-Line Interface</a>), you can locate the <code>config.xml</code> file in the top-level directory of your project.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app/config.xml
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./hellocordova
+└── config.xml
 </code></pre></div></div>
 
-<p>Note that before version 3.3.1-0.2.0, the file existed at <code>app/www/config.xml</code>,
-and that having it here is still supported.</p>
+<p>When using the CLI to build a project, versions of this file are passively copied into various <code>platforms/</code> subdirectories. For example:</p>
 
-<p>When using the CLI to build a project, versions of this file are
-passively copied into various <code>platforms/</code> subdirectories.
-For example:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app/platforms/ios/AppName/config.xml
-app/platforms/android/res/xml/config.xml
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./hellocordova
+└── platforms
+    ├── android
+    │   └── app
+    │       └── src
+    │           └── main
+    │               └── res
+    │                   └── xml
+    │                       └── config.xml
+    └── ios
+        └── HelloCordova
+            └── config.xml
 </code></pre></div></div>
 
-<p>In addition to the various configuration options detailed below, you
-can also configure an application&#39;s core set of images for each target
-platform. See <a href="images.html">Customize icons topic</a> for more information.</p>
+<p>Some platforms offer integrated development environments (IDEs) like Xcode for iOS and Android Studio for Android, which allow you to build and test your application. If you choose to use these IDEs for building and testing your project, it is recommended to run the <code>cordova prepare</code> CLI command whenever you make changes to the Cordova application&#39;s <code>config.xml</code>. This ensures that the updated configurations are copied into the respective <code>platforms/</code> subdirectories.</p>
 
-<h1>widget</h1>
+<p>In addition to the configuration options described below, you have the ability to customize the core set of images for your application on each target platform. For more information, please refer to the topic on <a href="images.html">Customizing Icons</a>.</p>
+
+<p><strong>Sample <code>config.xml</code>:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;widget</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/ns/widgets"</span>
+    <span class="na">xmlns:cdv=</span><span class="s">"http://cordova.apache.org/ns/1.0"</span>
+    <span class="na">id=</span><span class="s">"io.cordova.hellocordova"</span>
+    <span class="na">version=</span><span class="s">"1.0.0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>HelloCordova<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;description&gt;</span>Sample Apache Cordova App<span class="nt">&lt;/description&gt;</span>
+    <span class="nt">&lt;author</span> <span class="na">email=</span><span class="s">"dev@cordova.apache.org"</span> <span class="na">href=</span><span class="s">"https://cordova.apache.org"</span><span class="nt">&gt;</span>
+        Apache Cordova Team
+    <span class="nt">&lt;/author&gt;</span>
+
+    <span class="nt">&lt;content</span> <span class="na">src=</span><span class="s">"index.html"</span> <span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- Security Related Settings --&gt;</span>
+    <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"https://cordova.apache.org"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"http://*/*"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"https://*/*"</span> <span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- Platform Configs &amp; Platform Overriding Configs --&gt;</span>
+    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;&lt;/platform&gt;</span>
+    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;&lt;/platform&gt;</span>
+<span class="nt">&lt;/widget&gt;</span>
+</code></pre></div></div>
+
+<h2>widget</h2>
+
 <p>Root element of the config.xml document.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -2334,19 +2360,19 @@ platform. See <a href="images.html">Customize icons topic</a> for more informati
     </tr>
     <tr>
       <td>ios-CFBundleVersion<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
-      <td>Alternative version for iOS. For further details, see <a href="https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364">iOS versioning</a>.</td>
+      <td>Alternative version for iOS. For further details, see <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleversion">Apple Developer - CFBundleVersion</a>.</td>
     </tr>
     <tr>
       <td>android-packageName<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
-      <td>Alternative package name for Android, overrides <code>id</code>.</td>
+      <td>This preference overrides the id attribute with an alternative package name specifically for Android.</td>
     </tr>
     <tr>
-      <td>ios-CFBundleIdentifier<br /><span class="cdv-var-type string">String</span>  <br /> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
-      <td>Alternative bundle id for iOS. Overrides <code>id</code>.</td>
+      <td>ios-CFBundleIdentifier<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>This preference overrides the id attribute with an alternative bundle ID specifically for iOS.</td>
     </tr>
     <tr>
-      <td>defaultlocale <br /> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
-      <td>Specified the default language of the app, as an IANA language code.</td>
+      <td>defaultlocale <br /> <span class="cdv-var-type string">String</span><svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>Specify the default language of the app using an IANA language code. This preference key explicitly sets the value for <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundledevelopmentregion">CFBundleDevelopmentRegion</a>. For example, you can use values like <code>en</code> or <code>en_US</code>.</td>
     </tr>
     <tr>
       <td>android-activityName<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
@@ -2375,6 +2401,7 @@ platform. See <a href="images.html">Customize icons topic</a> for more informati
 </code></pre></div></div>
 
 <h2>name</h2>
+
 <p>Specifies the app&#39;s formal name, as it appears on the device&#39;s home screen and within app-store interfaces.</p>
 
 <p>Examples:</p>
@@ -2385,6 +2412,7 @@ platform. See <a href="images.html">Customize icons topic</a> for more informati
 </code></pre></div></div>
 
 <h3>short name</h3>
+
 <p>Specifies an optional display name for the app. Sometimes the app name should be displayed differently on device&#39;s home screen than on informational and app-store interfaces due to limited space.</p>
 
 <p>Examples:</p>
@@ -2395,6 +2423,7 @@ platform. See <a href="images.html">Customize icons topic</a> for more informati
 </code></pre></div></div>
 
 <h2>description</h2>
+
 <p>Specifies metadata that may appear within app-store listings.</p>
 
 <p>Examples:</p>
@@ -2405,12 +2434,13 @@ platform. See <a href="images.html">Customize icons topic</a> for more informati
 </code></pre></div></div>
 
 <h2>author</h2>
+
 <p>Specifies contact information that may appear within app-store listings.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -2434,12 +2464,13 @@ platform. See <a href="images.html">Customize icons topic</a> for more informati
 </code></pre></div></div>
 
 <h2>content</h2>
+
 <p>Defines the app&#39;s starting page in the top-level web assets directory. The default value is index.html, which customarily appears in a project&#39;s top-level <code>www</code> directory.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -2459,19 +2490,20 @@ platform. See <a href="images.html">Customize icons topic</a> for more informati
 </code></pre></div></div>
 
 <h2>access</h2>
-<p>Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain <a href="../guide/appdev/allowlist/index.html">Whitelist Guide</a> for details.</p>
+
+<p>Defines the external domains that the app is allowed to communicate with. When the access origin is set to &quot;*&quot;, the app can access any server, but this can potentially create a security risk. It is recommended to explicitly specify the permitted URLs to ensure a secure configuration. For detailed instructions, please refer to the <a href="../guide/appdev/allowlist/index.html">Allow List Guide</a>.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>origin<br /><span class="cdv-var-type string">String</span></td>
-      <td><em>Required</em> <br /> Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain <a href="../guide/appdev/allowlist/index.html">Whitelist Guide</a> for details.</td>
+      <td><em>Required</em> <br /> Defines the external domain URL or URL pattern that the app is allowed to communicate with.</td>
     </tr>
   </tbody>
 </table>
@@ -2488,19 +2520,20 @@ platform. See <a href="images.html">Customize icons topic</a> for more informati
 </code></pre></div></div>
 
 <h2>allow-navigation</h2>
-<p>Controls which URLs the WebView itself can be navigated to. Applies to top-level navigations only.</p>
+
+<p>Controls which URLs the WebView can be navigated to. Applies to top-level navigations only. See the <a href="../guide/appdev/allowlist/index.html#navigation-allow-list">Allow List Guide</a> for details.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>href<br /><span class="cdv-var-type string">String</span></td>
-      <td><em>Required</em> <br /> Defines the set of external domains the WebView is allowed to navigate to. See the <a href="../guide/appdev/allowlist/index.html#navigation-allow-list">Allow List Guide</a> for details.</td>
+      <td><em>Required</em> <br /> Defines the external domain or domain pattern that the WebView is allowed to navigate to.</td>
     </tr>
   </tbody>
 </table>
@@ -2515,19 +2548,20 @@ platform. See <a href="images.html">Customize icons topic</a> for more informati
 </code></pre></div></div>
 
 <h2>allow-intent</h2>
-<p>Controls which URLs the app is allowed to ask the system to open. By default, no external URLs are allowed.</p>
+
+<p>Controls which URLs the app is allowed to ask the system to open. By default, no external URLs are allowed. See the <a href="../guide/appdev/allowlist/index.html#intent-allow-list">Allow List Guide</a> for details.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>href<br /><span class="cdv-var-type string">String</span></td>
-      <td><em>Required</em> <br /> Defines which URLs the app is allowed to ask the system to open. See the <a href="../guide/appdev/allowlist/index.html#intent-allow-list">Allow List Guide</a> for details.</td>
+      <td><em>Required</em> <br /> Defines the URL or URL pattern that the app is allowed to ask the system to open.</td>
     </tr>
   </tbody>
 </table>
@@ -2539,6 +2573,7 @@ platform. See <a href="images.html">Customize icons topic</a> for more informati
 <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"tel:*"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"sms:*"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
+
 <h2>edit-config</h2>
 
 <p>See <a href="../plugin_ref/spec.html#edit-config">&lt;config-file&gt; docs</a> for plugin.xml.</p>
@@ -2548,12 +2583,13 @@ platform. See <a href="images.html">Customize icons topic</a> for more informati
 <p>See <a href="../plugin_ref/spec.html#config-file">&lt;config-file&gt; docs</a> for plugin.xml.</p>
 
 <h2>engine</h2>
+
 <p>Specifies details about what platform to restore during a prepare.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -2576,6 +2612,7 @@ platform. See <a href="images.html">Customize icons topic</a> for more informati
 </code></pre></div></div>
 
 <h2>plugin</h2>
+
 <p>Specifies details about what plugin to restore during a prepare. This element
 is automatically added to a project&#39;s <code>config.xml</code> when a plugin is added using
 the <code>--save</code> flag. See the <a href="../reference/cordova-cli/index.html#cordova-plugin-command">CLI reference</a> for more information on
@@ -2586,7 +2623,7 @@ adding plugins.</p>
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -2609,6 +2646,7 @@ adding plugins.</p>
 </code></pre></div></div>
 
 <h3>variable</h3>
+
 <p>Persists the value of a CLI variable to be used when restoring a plugin during a
 prepare. This element is added to <code>config.xml</code> when a plugin that uses CLI variables
 is added using the <code>--save</code> flag. See the <a href="../reference/cordova-cli/index.html#cordova-plugin-command">CLI reference</a> for more
@@ -2623,7 +2661,7 @@ project and restore it by running <code>cordova prepare</code>. See the
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -2647,13 +2685,14 @@ project and restore it by running <code>cordova prepare</code>. See the
 </code></pre></div></div>
 
 <h2>preference</h2>
+
 <p>Sets various options as pairs of name/value attributes. Each preference&#39;s name is case-insensitive. Many preferences are unique to specific platforms,
 and will be indicated as such.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -2680,11 +2719,47 @@ and will be indicated as such.</p>
     </tr>
     <tr>
       <td>android-minSdkVersion<br /><span class="cdv-var-type number">Number</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
-      <td><em>Default: Dependent on cordova-android Version</em> <br />  Sets the <code>minSdkVersion</code> attribute of the <code>&lt;uses-sdk&gt;</code> tag in the project&#39;s <code>AndroidManifest.xml</code> (see <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html">here</a>).</td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br />  Sets the <code>minSdkVersion</code> attribute of the <code>&lt;uses-sdk&gt;</code> tag in the project&#39;s <code>AndroidManifest.xml</code> (see <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html">here</a>).</td>
     </tr>
     <tr>
       <td>android-targetSdkVersion<br /><span class="cdv-var-type number">Number</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
-      <td><em>Default: Dependent on cordova-android Version</em> <br />  Sets the <code>targetSdkVersion</code> attribute of the <code>&lt;uses-sdk&gt;</code> tag in the project&#39;s <code>AndroidManifest.xml</code> (see <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html">here</a>).</td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br />  Sets the <code>targetSdkVersion</code> attribute of the <code>&lt;uses-sdk&gt;</code> tag in the project&#39;s <code>AndroidManifest.xml</code> (see <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html">here</a>).</td>
+    </tr>
+    <tr>
+      <td>android-compileSdkVersion<br /><span class="cdv-var-type number">Number</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br /> Sets the <code>compileSdkVersion</code> attribute.</td>
+    </tr>
+    <tr>
+      <td>android-buildToolsVersion<br /><span class="cdv-var-type semver">Semver</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br /> Expects a full version string eg. &quot;32.0.0&quot;. Changing this may also requires changing the PATH environment variable to find the proper build tools.<br /><br />This preference is primarily for cordova development, for testing upcoming versions of the Android SDK. Changing this has a high risk of breaking builds as newer build tools frequently introduce breaking changes.</td>
+    </tr>
+    <tr>
+      <td>GradleVersion<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br /> Sets the gradle wrapper version to use.<br /> <br />This preference is primarily for cordova development, for testing upcoming versions of the Android SDK. Changing this has a high risk of breaking builds as newer build tools frequently introduce breaking changes.</td>
+    </tr>
+    <tr>
+      <td>AndroidGradlePluginVersion<br /><span class="cdv-var-type semver">Semver</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br /> Sets the Android Gradle Plugin version to use.<br /> <br />This preference is primarily for cordova development, for testing upcoming versions of the Android SDK. Changing this has a high risk of breaking builds as newer build tools frequently introduce breaking changes.</td>
+    </tr>
+    <tr>
+      <td>AndroidXAppCompatVersion<br /><span class="cdv-var-type semver">Semver</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br /> Overrides Android App Compat library version.</td>
+    </tr>
+    <tr>
+      <td>AndroidXWebKitVersion<br /><span class="cdv-var-type semver">Semver</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br />Overrides Android WebKit library version.</td>
+    </tr>
+    <tr>
+      <td>AndroidGradlePluginGoogleServicesVersion<br /><span class="cdv-var-type semver">Semver</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br />Overrides the Google Services library version.</td>
+    </tr>
+    <tr>
+      <td>AndroidGradlePluginGoogleServicesEnabled<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: false</em> <br />Enables Google Services. The <code>google-services.json</code> file will be required.</td>
+    </tr>
+    <tr>
+      <td>GradlePluginKotlinEnabled<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: false</em> <br />Enables Kotlin plugin for Kotline support.</td>
     </tr>
     <tr>
       <td>AppendUserAgent<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
@@ -2715,12 +2790,8 @@ and will be indicated as such.</p>
       <td><em>Default: false</em> <br />   Set to true to allow a viewport meta tag to either disable or restrict the range of user scaling, which is enabled by default. Place a viewport such as the following in the HTML to disable scaling and fit content flexibly within the rendering WebView: <br /> <code>&lt;meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' /&gt;</code></td>
     </tr>
     <tr>
-      <td>ErrorUrl<br /><span class="cdv-var-type url">Url</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
-      <td><em>Default: null</em> <br />  If set, will display the referenced page upon an error in the application instead of a dialog with the title &quot;Application Error&quot;.</td>
-    </tr>
-    <tr>
-      <td>ErrorUrl<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
-      <td>If set, will display the referenced local page upon an error in the application.</td>
+      <td>ErrorUrl<br /><span class="cdv-var-type url">Url</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: null</em> <br />When this preference is set, the application will display the specified local page upon encountering an error. Additionally, if this preference is set, the Android system will suppress the default dialog titled &quot;Application Error&quot;.</td>
     </tr>
     <tr>
       <td>FullScreen<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
@@ -2909,6 +2980,7 @@ and will be indicated as such.</p>
 </code></pre></div></div>
 
 <h2>feature</h2>
+
 <p>If you use the CLI to build applications, you use the plugin command to enable device APIs. This does not modify the top-level config.xml file, so the <feature> element does not apply to your workflow. If you work directly in an SDK and using the platform-specific config.xml file as source, you use the <feature> tag to enable device-level APIs and external plugins. They often appear with custom values in platform-specific config.xml files. See the API Reference for details on how to specify each feature. See
 the [Plugin Development Guide](../guide/hybrid/plugins/index.html) for more information on plugins.
 NOTE: Most of the time, you do NOT want to set this directly.</feature></feature></p>
@@ -2916,7 +2988,7 @@ NOTE: Most of the time, you do NOT want to set this directly.</feature></feature
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -2929,12 +3001,13 @@ NOTE: Most of the time, you do NOT want to set this directly.</feature></feature
 </table>
 
 <h3>param</h3>
+
 <p>Used to specify certain plugin parameters such as: what package to retrieve the plugin code from, and whether the plugin code is to be initialized during the Webview&#39;s initialization.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -2944,7 +3017,7 @@ NOTE: Most of the time, you do NOT want to set this directly.</feature></feature
       <td><em>Required</em> <br /> Allowed values: android-package, ios-package, onload. <br />  &#39;ios-package&#39; and &#39;android-package&#39; are used to specify the name of the package (as specified by the &#39;value&#39; attribute) to be used to initialize the plugin code, while &#39;onload&#39; is used to specify whether the corresponding plugin (as specified in the &#39;value&#39; attribute) is to be instantiated when the controller is initialized.</td>
     </tr>
     <tr>
-      <td>value(string or boolean) <br /> <svg class="platform-icon ios"><use href="#ios"></use></svg> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td>value <br /> <span class="cdv-var-type string/boolean">String/boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg> <svg class="platform-icon android"><use href="#android"></use></svg></td>
       <td><em>Required</em> <br />  Specifies the name of the package to be used to initialize the plugin code (when the &#39;name&#39; attribute is android-package or ios-package), specifies the name of the plugin to be loaded during controller initialization (when &#39;name&#39; attribute is set to &#39;onload&#39;).</td>
     </tr>
   </tbody>
@@ -2965,12 +3038,13 @@ NOTE: Most of the time, you do NOT want to set this directly.</feature></feature
 </code></pre></div></div>
 
 <h2>platform</h2>
+
 <p>When using the CLI to build applications, it is sometimes necessary to specify preferences or other elements specific to a particular platform. Use the <platform> element to specify configuration that should only appear in a single platform-specific config.xml file.</platform></p>
 
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -2990,6 +3064,7 @@ NOTE: Most of the time, you do NOT want to set this directly.</feature></feature
 </code></pre></div></div>
 
 <h2>hook</h2>
+
 <p>Represents your custom script which will be called by Cordova when
 certain action occurs (for example, after plugin is added or platform
 prepare logic is invoked). This is useful when you need to extend
@@ -2998,7 +3073,7 @@ default Cordova functionality. See <a href="../guide/appdev/hooks/index.html">Ho
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -3026,7 +3101,7 @@ default Cordova functionality. See <a href="../guide/appdev/hooks/index.html">Ho
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -3046,36 +3121,6 @@ default Cordova functionality. See <a href="../guide/appdev/hooks/index.html">Ho
 
 <p>For Android:</p>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;resource-file</span> <span class="na">src=</span><span class="s">"FooPluginStrings.xml"</span> <span class="na">target=</span><span class="s">"res/values/FooPluginStrings.xml"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
-
-<h1>Sample config.xml</h1>
-<p>Below is a sample config.xml file:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version='1.0' encoding='utf-8'?&gt;</span>
-<span class="nt">&lt;widget</span> <span class="na">id=</span><span class="s">"io.cordova.hellocordova"</span> <span class="na">version=</span><span class="s">"0.0.1"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/ns/widgets"</span> <span class="na">xmlns:cdv=</span><span class="s">"http://cordova.apache.org/ns/1.0"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;name&gt;</span>HelloCordova<span class="nt">&lt;/name&gt;</span>
-  <span class="nt">&lt;description&gt;</span>
-      A sample Apache Cordova application that responds to the deviceready event.
-  <span class="nt">&lt;/description&gt;</span>
-  <span class="nt">&lt;author</span> <span class="na">email=</span><span class="s">"dev@cordova.apache.org"</span> <span class="na">href=</span><span class="s">"https://cordova.io"</span><span class="nt">&gt;</span>
-      Apache Cordova Team
-  <span class="nt">&lt;/author&gt;</span>
-  <span class="nt">&lt;content</span> <span class="na">src=</span><span class="s">"index.html"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"*"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"http://*/*"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"https://*/*"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"tel:*"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"sms:*"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"mailto:*"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"geo:*"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"market:*"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/platform&gt;</span>
-  <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"itms:*"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"itms-apps:*"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/platform&gt;</span>
-<span class="nt">&lt;/widget&gt;</span>
 </code></pre></div></div>
 
 

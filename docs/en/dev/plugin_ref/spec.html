@@ -2291,21 +2291,21 @@
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>xmlns(string)</td>
+      <td>xmlns<br /><span class="cdv-var-type string">String</span></td>
       <td><em>Required</em> <br /> The plugin namespace, <code>http://apache.org/cordova/ns/plugins/1.0</code>. If the document contains XML from other namespaces, such as tags to be added to the <code>AndroidManifest.xml</code> file in the case of Android, those namespaces should also be included in the <plugin> element.</plugin></td>
     </tr>
     <tr>
-      <td>id(string)</td>
+      <td>id<br /><span class="cdv-var-type string">String</span></td>
       <td><em>Required</em> <br /> A npm-style identifier for the plugin.</td>
     </tr>
     <tr>
-      <td>version(string)</td>
+      <td>version<br /><span class="cdv-var-type string">String</span></td>
       <td><em>Required</em> <br /> A version number for the plugin. <a href="https://semver.org/">Semver</a> syntax is supported.</td>
     </tr>
   </tbody>
@@ -2332,25 +2332,25 @@ for more information</p>
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>name(string)</td>
-      <td><em>Required</em> <br /> Name of the engine. Here are the default engines that are supported : &lt;ul&gt;&lt;li&gt; <code>cordova</code> &lt;/li&gt; &lt;li&gt; <code>cordova-plugman</code> &lt;/li&gt; &lt;li&gt; <code>cordova-android</code> &lt;/li&gt; &lt;li&gt; <code>cordova-browser</code> &lt;/li&gt; &lt;li&gt; <code>cordova-ios</code> &lt;/li&gt; &lt;li&gt; <code>cordova-windows</code> &lt;/li&gt; &lt;li&gt; <code>cordova-osx</code> &lt;/li&gt; &lt;li&gt; <code>windows-os</code> &lt;/li&gt; &lt;li&gt; <code>android-sdk</code> (returns the highest Android api level installed) &lt;/li&gt; &lt;li&gt; <code>windows-sdk</code> (returns the native windows SDK version) &lt;/li&gt; &lt;li&gt; <code>apple-xcode</code> (returns the xcode version) &lt;/li&gt; &lt;li&gt; <code>apple-ios</code> (returns the highest iOS version installed) &lt;/li&gt; &lt;li&gt; <code>apple-osx</code> (returns the OSX version) &lt;/li&gt; You can also specify a custom framework apart from the default ones.</td>
+      <td>name<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br />Name of the engine. Here are the default engines that are supported: <code>cordova</code>, <code>cordova-plugman</code>, <code>cordova-android</code>, <code>cordova-browser</code>, <code>cordova-ios</code>, <code>windows-os</code>, <code>android-sdk</code> (returns the highest Android api level installed) , <code>apple-xcode</code> (returns the xcode version), <code>apple-ios</code> (returns the highest iOS version installed), <code>apple-osx</code> (returns the macOS version). You can also specify a custom framework apart from the default ones.</td>
     </tr>
     <tr>
-      <td>version(string)</td>
+      <td>version<br /><span class="cdv-var-type string">String</span></td>
       <td><em>Required</em> <br /> The version that your framework must have in order to install. Semver syntax is supported.</td>
     </tr>
     <tr>
-      <td>scriptSrc(string)</td>
+      <td>scriptSrc<br /><span class="cdv-var-type string">String</span></td>
       <td><strong>For custom frameworks only</strong> <br /> <em>Required</em> <br />  The script file that tells plugman the version of the custom framework. Ideally, this file should be within the top level directory of your plugin directory.</td>
     </tr>
     <tr>
-      <td>platform(string)</td>
+      <td>platform<br /><span class="cdv-var-type string">String</span></td>
       <td><strong>For custom frameworks only</strong> <br /> <em>Required</em> <br /> The platforms your framework supports. You may use the wildcard <code>*</code> to say supported for all platforms, specify multiple with a pipe character like <code>android|ios</code> or just a single platform like <code>android</code>.</td>
     </tr>
   </tbody>
@@ -2431,17 +2431,17 @@ for more information</p>
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>src(string)</td>
+      <td>src<br /><span class="cdv-var-type string">String</span></td>
       <td><em>Required</em> <br />  Where the file or directory is located in the plugin package, relative to the <code>plugin.xml</code> document. If a file does not exist at the specified src location, the CLI stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.</td>
     </tr>
     <tr>
-      <td>target(string)</td>
+      <td>target<br /><span class="cdv-var-type string">String</span></td>
       <td><em>Required</em> <br /> Where the file or directory should be located in the Cordova app, relative to the <code>www</code> directory. If a file already exists at the target location, the CLI stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.</td>
     </tr>
   </tbody>
@@ -2465,17 +2465,17 @@ for more information</p>
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>src(string)</td>
+      <td>src<br /><span class="cdv-var-type string">String</span></td>
       <td>References a file in the plugin directory relative to the <code>plugin.xml</code> file. If src does not resolve to an existing file, the CLI stops and reverses the installation, issues a notification of the problem, and exits with a non-zero code.</td>
     </tr>
     <tr>
-      <td>name(string)</td>
+      <td>name<br /><span class="cdv-var-type string">String</span></td>
       <td>Provides the last part of the module name. It can generally be whatever you like, and it only matters if you want to use cordova.require to import other parts of your plugins in your JavaScript code. The module name for a <code>&lt;js-module&gt;</code> is your plugin&#39;s id followed by the value of name.</td>
     </tr>
   </tbody>
@@ -2497,13 +2497,13 @@ like. Any object not available on <code>window</code> is created.</p>
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>target(string)</td>
+      <td>target<br /><span class="cdv-var-type string">String</span></td>
       <td>The namespace where module.exports gets inserted to.</td>
     </tr>
   </tbody>
@@ -2523,13 +2523,13 @@ like. Any object not available on <code>window</code> is created.</p>
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>target(string)</td>
+      <td>target<br /><span class="cdv-var-type string">String</span></td>
       <td>The namespace which module.exports gets merged to.</td>
     </tr>
   </tbody>
@@ -2559,29 +2559,29 @@ like. Any object not available on <code>window</code> is created.</p>
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>id(string)</td>
+      <td>id<br /><span class="cdv-var-type string">String</span></td>
       <td>Provides the ID of the plugin.</td>
     </tr>
     <tr>
-      <td>url(string)</td>
+      <td>url<br /><span class="cdv-var-type string">String</span></td>
       <td>A URL for the plugin. This should reference a git repository, which the CLI attempts to clone.</td>
     </tr>
     <tr>
-      <td>commit(string)</td>
+      <td>commit<br /><span class="cdv-var-type string">String</span></td>
       <td>This is any git reference understood by <code>git checkout</code>: a branch or tag name (e.g., <code>master</code>, <code>0.3.1</code>), or a commit hash (e.g., <code>975ddb228af811dd8bb37ed1dfd092a3d05295f9</code>).</td>
     </tr>
     <tr>
-      <td>subdir(string)</td>
+      <td>subdir<br /><span class="cdv-var-type string">String</span></td>
       <td>Specifies that the targeted plugin dependency exists as a subdirectory of the git repository. This is helpful because it allows the repository to contain several related plugins, each specified individually. <br /> If you set the <code>url</code> of a <code>&lt;dependency&gt;</code> tag to <code>"."</code> and provide a <code>subdir</code>, the dependent plugin is installed from the same local or remote git repository as the parent plugin that specifies the <code>&lt;dependency&gt;</code> tag. <br /> Note that the <code>subdir</code> always specifies a path relative to the <em>root</em> of the git repository, not the parent plugin. This is true even if you installed the plugin with a local path directly to it.The CLI finds the root of the git repository and then finds the other plugin from there.</td>
     </tr>
     <tr>
-      <td>version(string)</td>
+      <td>version<br /><span class="cdv-var-type string">String</span></td>
       <td>The version of the plugin depended on. Semver syntax is supported.</td>
     </tr>
   </tbody>
@@ -2599,14 +2599,14 @@ like. Any object not available on <code>window</code> is created.</p>
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>name(string)</td>
-      <td><em>Required</em> <br /> Allowed values: ios, android, windows, browser, osx <br /> Identifies a platform as supported, associating the element&#39;s children with that platform.</td>
+      <td>name<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Allowed values: ios, android, browser, electron <br /> Identifies a platform as supported, associating the element&#39;s children with that platform.</td>
     </tr>
   </tbody>
 </table>
@@ -2624,25 +2624,25 @@ like. Any object not available on <code>window</code> is created.</p>
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>src(string)</td>
+      <td>src<br /><span class="cdv-var-type string">String</span></td>
       <td><em>Required</em> <br /> Location of the file relative to <code>plugin.xml</code>. If the src file can&#39;t be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.</td>
     </tr>
     <tr>
-      <td>target-dir(string)</td>
+      <td>target-dir<br /><span class="cdv-var-type string">String</span></td>
       <td>A directory into which the files should be copied, relative to the root of the Cordova project. In practice, this is most important for Java-based platforms, where a file in the <code>com.alunny.foo</code> package must be located within the <code>com/alunny/foo</code> directory. For platforms where the source directory is not important, this attribute should be omitted.</td>
     </tr>
     <tr>
-      <td>framework(boolean) <br /> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>framework<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
       <td><em>Default: false</em> <br />  If set to true, also adds the specified file as a framework to the project.</td>
     </tr>
     <tr>
-      <td>compiler-flags(string) <br /> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>compiler-flags<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
       <td>If set, assigns the specified compiler flags for the particular source file.</td>
     </tr>
   </tbody>
@@ -2659,26 +2659,26 @@ like. Any object not available on <code>window</code> is created.</p>
 
 <h2>header-file</h2>
 
-<p>This is like <code>&lt;source-file&gt;</code> element but specifically for platforms such as iOS and Android that distinguish between source files, headers, and resources. This is not supported by Windows.</p>
+<p>This is like <code>&lt;source-file&gt;</code> element but specifically for platforms such as iOS and Android that distinguish between source files, headers, and resources.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>src(string)</td>
+      <td>src<br /><span class="cdv-var-type string">String</span></td>
       <td><em>Required</em> <br /> Location of the file relative to <code>plugin.xml</code>. If the src file can&#39;t be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.</td>
     </tr>
     <tr>
-      <td>target-dir(string)</td>
+      <td>target-dir<br /><span class="cdv-var-type string">String</span></td>
       <td>A directory into which the files should be copied, relative to the root of the Cordova project.</td>
     </tr>
     <tr>
-      <td>type(string) <br /> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>type<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
       <td>If this value is <code>BridgingHeader</code>, the file is imported in the <code>Bridging-Header.h</code> and can be called from swift program.</td>
     </tr>
   </tbody>
@@ -2698,52 +2698,26 @@ like. Any object not available on <code>window</code> is created.</p>
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>src(string)</td>
+      <td>src<br /><span class="cdv-var-type string">String</span></td>
       <td><em>Required</em> <br /> Location of the file relative to <code>plugin.xml</code>. If the src file can&#39;t be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.</td>
     </tr>
     <tr>
-      <td>target(string)</td>
+      <td>target<br /><span class="cdv-var-type string">String</span></td>
       <td>Path to where the file will be copied in your directory.</td>
-    </tr>
-    <tr>
-      <td>arch(string) <br /> <svg class="platform-icon windows"><use href="#windows"></use></svg></td>
-      <td>Allowed values: <code>x86</code>, <code>x64</code> or <code>ARM</code>. <br /> Indicates that the file should only be included when building for the specified architecture.</td>
-    </tr>
-    <tr>
-      <td>device-target <br /> <svg class="platform-icon windows"><use href="#windows"></use></svg></td>
-      <td>Allowed values: <code>win</code> (or <code>windows</code>), <code>phone</code> or <code>all</code>. <br /> Indicates that the file should only be included when building for the specified target device type.</td>
-    </tr>
-    <tr>
-      <td>versions <br /> <svg class="platform-icon windows"><use href="#windows"></use></svg></td>
-      <td>Indicates that the file should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.</td>
-    </tr>
-    <tr>
-      <td>reference <br /> <svg class="platform-icon windows"><use href="#windows"></use></svg></td>
-      <td>Indicates that the file should be referenced from the src rather than copied to the target destination. The file will appear in Visual Studio with the file name specified by target, however will point to the respective src, depending on the architecture.</td>
     </tr>
   </tbody>
 </table>
 
-<p>Examples:</p>
+<p>Android Examples:</p>
 
-<p>For Android:</p>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;resource-file</span> <span class="na">src=</span><span class="s">"FooPluginStrings.xml"</span> <span class="na">target=</span><span class="s">"res/values/FooPluginStrings.xml"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
-
-<p>For Windows:</p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;resource-file</span> <span class="na">src=</span><span class="s">"src/windows/win81/MobServices.pri"</span> <span class="na">target=</span><span class="s">"win81\MobServices.pri"</span> <span class="na">device-target=</span><span class="s">"windows"</span> <span class="na">versions=</span><span class="s">"8.1"</span> <span class="na">arch=</span><span class="s">"x64"</span><span class="nt">/&gt;</span>
-
-<span class="c">&lt;!-- Example of referencing  --&gt;</span>
-<span class="nt">&lt;resource-file</span> <span class="na">src=</span><span class="s">"x86/foo.dll"</span> <span class="na">target=</span><span class="s">"foo.dll"</span> <span class="na">arch=</span><span class="s">"x86"</span> <span class="na">reference=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;resource-file</span> <span class="na">src=</span><span class="s">"x64/foo.dll"</span> <span class="na">target=</span><span class="s">"foo.dll"</span> <span class="na">arch=</span><span class="s">"x64"</span> <span class="na">reference=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
-<p><strong>NOTE</strong>: <code>target</code> should use backslashes to avoid DEP2100 deploy error in Visual Studio.</p>
 
 <h2>config-file</h2>
 
@@ -2754,30 +2728,22 @@ The <code>config-file</code> element only allows you to append new children to a
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>target(string)</td>
+      <td>target<br /><span class="cdv-var-type string">String</span></td>
       <td>The file to be modified, and the path relative to the root of the Cordova project. If the specified file does not exist, the tool ignores the configuration change and continues installation. <br /> The target can include wildcard (<code>*</code>) elements. In this case, the CLI recursively searches through the project directory structure and uses the first match. <br /> On iOS, the location of configuration files relative to the project directory root is not known, so specifying a target of <code>config.xml</code> resolves to <code>cordova-ios-project/MyAppName/config.xml</code>.</td>
     </tr>
     <tr>
-      <td>parent(string)</td>
+      <td>parent<br /><span class="cdv-var-type string">String</span></td>
       <td>An XPath selector referencing the parent of the elements to be added to the config file. If you use absolute selectors, you can use a wildcard (<code>*</code>) to specify the root element, e.g., <code>/*/plugins</code>. If the selector does not resolve to a child of the specified document, the tool stops and reverses the installation process, issues a warning, and exits with a non-zero code. <br /> For <code>plist</code> files, the <code>parent</code> determines under what parent key the specified XML should be inserted.</td>
     </tr>
     <tr>
-      <td>after(string)</td>
-      <td>A prioritized list of accepted siblings after which to add the XML snippet. Useful for specifying changes in files which require strict ordering of XML elements like <a href="https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement">this</a>.</td>
-    </tr>
-    <tr>
-      <td>device-target(string) <br /> <svg class="platform-icon windows"><use href="#windows"></use></svg></td>
-      <td>Allowed values: <code>win</code>, <code>phone</code>, <code>all</code>. <br /> Applicable when affecting the meta-name <code>package.appxmanifest</code>, this attribute indicates that the file should only be modified when building for the specified target device type.</td>
-    </tr>
-    <tr>
-      <td>versions(string) <br /> <svg class="platform-icon windows"><use href="#windows"></use></svg></td>
-      <td>Applicable when affecting the meta-name <code>package.appxmanifest</code>, this attribute indicates that app manifests for specific Windows versions should only be altered for versions that match the specified version string. Value can be any valid node semantic version range string.</td>
+      <td>after<br /><span class="cdv-var-type string">String</span></td>
+      <td>A prioritized list of accepted siblings after which to add the XML snippet. Useful for specifying changes in files which require strict ordering of XML elements.</td>
     </tr>
   </tbody>
 </table>
@@ -2804,38 +2770,27 @@ The <code>config-file</code> element only allows you to append new children to a
 <span class="nt">&lt;/config-file&gt;</span>
 </code></pre></div></div>
 
-<p>For windows-specific attributes:</p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;config-file</span> <span class="na">target=</span><span class="s">"package.appxmanifest"</span> <span class="na">parent=</span><span class="s">"/Package/Capabilities"</span> <span class="na">versions=</span><span class="s">"&amp;lt;8.1.0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;Capability</span> <span class="na">Name=</span><span class="s">"picturesLibrary"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;DeviceCapability</span> <span class="na">Name=</span><span class="s">"webcam"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/config-file&gt;</span>
-<span class="nt">&lt;config-file</span> <span class="na">target=</span><span class="s">"package.appxmanifest"</span> <span class="na">parent=</span><span class="s">"/Package/Capabilities"</span> <span class="na">versions=</span><span class="s">"&gt;=8.1.0"</span> <span class="na">device-target=</span><span class="s">"phone"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;DeviceCapability</span> <span class="na">Name=</span><span class="s">"webcam"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/config-file&gt;</span>
-</code></pre></div></div>
-<p>The above example will set pre-8.1 platforms (Windows 8, specifically) to require the <code>webcam</code> device capability and the <code>picturesLibrary</code> general capability, and apply the <code>webcam</code> device capability only to Windows 8.1 projects that build for Windows Phone.  Windows desktop 8.1 systems are unmodified.</p>
-
 <h2>edit-config</h2>
 <p>Similar to <code>config-file</code>, <code>edit-config</code> identifies an XML-based configuration file to be modified, where in that document the modification should take place, and what should be modified. Instead of appending new children to an XML document tree, <code>edit-config</code> makes modifications to attributes of XML elements. There are two modes which will determine what type of attribute modification will be made, <code>merge</code> or <code>overwrite</code>. <code>edit-config</code> has one child and that child will contain the attributes to be added.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>file(string)</td>
+      <td>file<br /><span class="cdv-var-type string">String</span></td>
       <td>The file to be modified, and the path relative to the root of the Cordova project. If the specified file does not exist, the tool ignores the configuration change and continues installation. <br /> The target can include wildcard (<code>*</code>) elements. In this case, the CLI recursively searches through the project directory structure and uses the first match. <br /> On iOS, the location of configuration files relative to the project directory root is not known, so specifying a target of <code>config.xml</code> resolves to <code>cordova-ios-project/MyAppName/config.xml</code>.</td>
     </tr>
     <tr>
-      <td>target(string)</td>
+      <td>target<br /><span class="cdv-var-type string">String</span></td>
       <td>An XPath selector referencing the target element to make attribute modifications to. If you use absolute selectors, you can use a wildcard (<code>*</code>) to specify the root element, e.g., <code>/*/plugins</code>. If the selector does not resolve to a child of the specified document, the tool stops and reverses the installation process, issues a warning, and exits with a non-zero code.</td>
     </tr>
     <tr>
-      <td>mode(string)</td>
+      <td>mode<br /><span class="cdv-var-type string">String</span></td>
       <td>The mode that determines what type of attribute modifications will be made. <br /> <code>merge</code> - Adds the specified attributes to the target element. Will replace the attribute values if the specified attributes already exist in the target element. <br /> <code>overwrite</code> - Replaces all attributes in the target element with the attributes specified.</td>
     </tr>
   </tbody>
@@ -2939,49 +2894,28 @@ The <code>config-file</code> element only allows you to append new children to a
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugins-plist</span> <span class="na">key=</span><span class="s">"Foo"</span> <span class="na">string=</span><span class="s">"CDVFoo"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 
-<h2>lib-file</h2>
+<h2>lib-file <svg class="platform-icon android"><use href="#android"></use></svg></h2>
 
-<p>Like source, resource, and header files, but specifically for platforms such as BlackBerry 10 that use user-generated libraries. For the Windows platform, the <code>&lt;lib-file&gt;</code> element allows the inclusion of an <code>&lt;SDKReference&gt;</code> in the generated Windows project files.</p>
+<p>The <code>&lt;lib-file&gt;</code> element can be used for installing <strong>.jar</strong> files in the project&#39;s <strong>libs directory</strong>.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>src(string)</td>
-      <td><em>Required</em> <br /> The location of the file relative to <code>plugin.xml</code>. If <code>src</code> can&#39;t be found, the CLI stops and reverses the installation, issues a warning about the problem, and exits with a non-zero code. <br /> For Windows, it indicates the name of the SDK to include (which will be used as value of the <code>Include</code> attribute of the generated <code>&lt;SDKReference&gt;</code> element).</td>
-    </tr>
-    <tr>
-      <td>arch(string)</td>
-      <td>The architecture for which the <code>.so</code> file has been built, either <code>device</code> or <code>simulator</code>. <br /> For Windows, it indicates that the <code>&lt;SDKReference&gt;</code> should only be included when building for the specified architecture. Supported values are <code>x86</code>, <code>x64</code> or <code>ARM</code>.</td>
-    </tr>
-    <tr>
-      <td>device-target(string) <br /> <svg class="platform-icon windows"><use href="#windows"></use></svg></td>
-      <td>Allowed values: <code>win</code> (or <code>windows</code>), <code>phone</code> or <code>all</code>. <br /> Indicates that the <code>&lt;SDKReference&gt;</code> should only be included when building for the specified target device type.</td>
-    </tr>
-    <tr>
-      <td>versions(string) <br /> <svg class="platform-icon windows"><use href="#windows"></use></svg></td>
-      <td>Indicates that the <code>&lt;SDKReference&gt;</code> should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.</td>
+      <td>src<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> The location of the <code>.jar</code> file relative to <code>plugin.xml</code>. If <code>src</code> file can&#39;t be found, the CLI stops and reverses the installation, issues a warning about the problem, and exits with a non-zero code.</td>
     </tr>
   </tbody>
 </table>
 
-<p>For Android, the <code>&lt;lib-file&gt;</code> element is used for installing <strong>.jar</strong> files in the project&#39;s <strong>libs directory</strong>. It supports only the <code>src</code> attribute which contains the relative path to the .jar file.</p>
-
 <p>Examples:</p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;lib-file</span> <span class="na">src=</span><span class="s">"src/BlackBerry10/native/device/libfoo.so"</span> <span class="na">arch=</span><span class="s">"device"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;lib-file</span> <span class="na">src=</span><span class="s">"src/BlackBerry10/native/simulator/libfoo.so"</span> <span class="na">arch=</span><span class="s">"simulator"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
 
-<p>For Windows:</p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;lib-file</span> <span class="na">src=</span><span class="s">"Microsoft.WinJS.2.0, Version=1.0"</span> <span class="na">arch=</span><span class="s">"x86"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;lib-file</span> <span class="na">src=</span><span class="s">"Microsoft.WinJS.2.0, Version=1.0"</span> <span class="na">versions=</span><span class="s">"&gt;=8.1"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;lib-file</span> <span class="na">src=</span><span class="s">"Microsoft.WinJS.2.0, Version=1.0"</span> <span class="na">target=</span><span class="s">"phone"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;lib-file</span> <span class="na">src=</span><span class="s">"Microsoft.WinJS.2.0, Version=1.0"</span> <span class="na">target=</span><span class="s">"win"</span> <span class="na">versions=</span><span class="s">"8.0"</span> <span class="na">arch=</span><span class="s">"x86"</span> <span class="nt">/&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;lib-file</span> <span class="na">src=</span><span class="s">"src/android/libs/foobar.jar"</span><span class="nt">/&gt;</span>
 </code></pre></div></div>
 
 <h2>framework</h2>
@@ -2991,61 +2925,41 @@ The <code>config-file</code> element only allows you to append new children to a
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>src(string)</td>
+      <td>src<br /><span class="cdv-var-type string">String</span></td>
       <td><em>Required</em> <br /> The name of the system framework or the relative path to one which is included as part of your plugin files.</td>
     </tr>
     <tr>
-      <td>custom(boolean)</td>
+      <td>custom<br /><span class="cdv-var-type boolean">Boolean</span></td>
       <td>Indicates whether the framework is included as part of your plugin files.</td>
     </tr>
     <tr>
-      <td>weak(boolean)</td>
+      <td>weak<br /><span class="cdv-var-type boolean">Boolean</span></td>
       <td><em>Default: false</em> <br /> Indicates whether the framework should be weakly linked.</td>
     </tr>
     <tr>
-      <td>type(string)</td>
+      <td>type<br /><span class="cdv-var-type string">String</span></td>
       <td>Indicates the type of framework to add.</td>
     </tr>
     <tr>
-      <td>parent(string)</td>
+      <td>parent<br /><span class="cdv-var-type string">String</span></td>
       <td><em>Default: .</em> <br /> Sets the relative path to the directory containing the sub-project to which to add the reference. The default, <code>.</code>, implies the application project.</td>
     </tr>
     <tr>
-      <td>arch(string) <br /> <svg class="platform-icon windows"><use href="#windows"></use></svg></td>
-      <td>Allowed values: <code>x86</code>, <code>x64</code> or <code>ARM</code>. <br /> Indicates that the framework should only be included when building for the specified architecture.</td>
-    </tr>
-    <tr>
-      <td>device-target(string) <br /> <svg class="platform-icon windows"><use href="#windows"></use></svg></td>
-      <td>Allowed values: <code>win</code> (or <code>windows</code>), <code>phone</code> or <code>all</code>. <br />  Indicates that the framework should only be included when building for the specified target device type.</td>
-    </tr>
-    <tr>
-      <td>versions(string) <br /> <svg class="platform-icon windows"><use href="#windows"></use></svg></td>
-      <td>Indicates that the framework should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.</td>
-    </tr>
-    <tr>
-      <td>target-dir(string) <br /> <svg class="platform-icon windows"><use href="#windows"></use></svg></td>
-      <td>Indicates a subdirectory into which the framework should be copied. In practice, this is most important when plugin contains different framework versions for different chip architectures or device targets, but which have the same name. This allows you to specify different subfolders for each framework version so that they don&#39;t overlap each other.</td>
-    </tr>
-    <tr>
-      <td>implementation(string) <br /> <svg class="platform-icon windows"><use href="#windows"></use></svg></td>
-      <td>Sets the relative path to <code>.dll</code> file that contains implementation for WinMD component, written in C++.</td>
-    </tr>
-    <tr>
-      <td>spec(string) <br /> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>spec<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
       <td>Paired with <code>type="podspec"</code>, this is the spec string for the CocoaPod you want to install (static library only). CocoaPod support only exists in <code>cordova-ios 4.3.0</code> and <code>cordova-cli 6.4.0</code>. For your plugin, make sure  you add the appropriate <code>&lt;engine&gt;</code> tags and <code>package.json</code> <a href="../guide/hybrid/plugins/index.html#specifying-cordova-dependencies">dependencies</a> to ensure backwards-compatible support.</td>
     </tr>
     <tr>
-      <td>embed(boolean) <br /> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>embed<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
       <td><em>Default: false</em> <br />Paired with <code>custom="true"</code>, this is set to true if you want to embed your custom framework into your app bundle, so it can be dynamically loaded at runtime (dynamic framework). This puts your custom framework in the &#39;Embedded Binaries&#39; section of your Xcode Project Settings. Only supported with the combination of <code>cordova-ios@4.4.0</code> and <code>cordova-cli@7.0.0</code></td>
     </tr>
     <tr>
-      <td>link(boolean) <br /> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>link<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
       <td><em>Default: !embed</em> <br /> Set this to true if you want to link the framework. This puts the framework in the &#39;Link Binaries with Libraries&#39; section of your Xcode Project Settings.</td>
     </tr>
   </tbody>
@@ -3054,6 +2968,7 @@ The <code>config-file</code> element only allows you to append new children to a
 <p>Examples:</p>
 
 <p>For iOS:</p>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"libsqlite3.dylib"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"social.framework"</span> <span class="na">weak=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"relative/path/to/my.framework"</span> <span class="na">custom=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
@@ -3061,6 +2976,7 @@ The <code>config-file</code> element only allows you to append new children to a
 </code></pre></div></div>
 
 <p>On Android (as of cordova-android@4.0.0), framework tags are used to include Maven dependencies, or to include bundled library projects.</p>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Depend on latest version of GCM from play services --&gt;</span>
 <span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"com.google.android.gms:play-services-gcm:+"</span> <span class="nt">/&gt;</span>
 <span class="c">&lt;!-- Depend on v21 of appcompat-v7 support library --&gt;</span>
@@ -3070,32 +2986,11 @@ The <code>config-file</code> element only allows you to append new children to a
 </code></pre></div></div>
 
 <p>Framework can also be used to have custom <code>.gradle</code> files sub-included into the main project&#39;s <code>build.gradle</code> file:</p>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"relative/path/rules.gradle"</span> <span class="na">custom=</span><span class="s">"true"</span> <span class="na">type=</span><span class="s">"gradleReference"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 
-<p>On Windows, using <code>custom='true'</code> and <code>type='projectReference'</code> will add a reference to the project which will be added to the compile+link steps of the cordova project.  This essentially is the only way currently that a &#39;custom&#39; framework can target multiple architectures as they are explicitly built as a dependency by the referencing cordova application.</p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"path/to/project/LibProj.csproj"</span> <span class="na">custom=</span><span class="s">"true"</span> <span class="na">type=</span><span class="s">"projectReference"</span><span class="nt">/&gt;</span>
-</code></pre></div></div>
-
-<p>Examples of using these Windows specific attributes:</p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"src/windows/example.dll"</span> <span class="na">arch=</span><span class="s">"x64"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"src/windows/example.dll"</span> <span class="na">versions=</span><span class="s">"&gt;=8.0"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"src/windows/example.vcxproj"</span> <span class="na">type=</span><span class="s">"projectReference"</span> <span class="na">target=</span><span class="s">"win"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"src/windows/example.vcxproj"</span> <span class="na">type=</span><span class="s">"projectReference"</span> <span class="na">target=</span><span class="s">"all"</span> <span class="na">versions=</span><span class="s">"8.1"</span> <span class="na">arch=</span><span class="s">"x86"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"src/windows/example.dll"</span> <span class="na">target-dir=</span><span class="s">"bin/x64"</span> <span class="na">arch=</span><span class="s">"x64"</span> <span class="na">custom=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
-</code></pre></div></div>
-
-<p>Another example of using Windows-specific attributes to add a reference to WinMD components, written in C# and C++, whose API will be available at runtime:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- C# component that consists of one .winmd file --&gt;</span>
-<span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"lib\windows\component.winmd"</span> <span class="na">versions=</span><span class="s">"&lt;10.0"</span> <span class="nt">/&gt;</span>
-<span class="c">&lt;!-- C++ component with separated metadata and implementation--&gt;</span>
-<span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"lib\windows\x86\cppcomponent.winmd"</span>
-           <span class="na">implementation=</span><span class="s">"lib\windows\x86\cppcomponent.dll"</span>
-           <span class="na">target-dir=</span><span class="s">"component\x86"</span> <span class="na">arch=</span><span class="s">"x86"</span> <span class="na">versions=</span><span class="s">"&gt;=10.0"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
-
-<h2>podspec (<svg class="platform-icon ios"><use href="#ios"></use></svg>)</h2>
+<h2>podspec <svg class="platform-icon ios"><use href="#ios"></use></svg></h2>
 <p>Identifies the CocoaPods <code>Podfile</code> that provides the dependencies in which the plugin depends on.</p>
 
 <p>This element contains a <code>&lt;config&gt;</code> and a <code>&lt;pods&gt;</code> tag.</p>
@@ -3106,9 +3001,21 @@ The <code>config-file</code> element only allows you to append new children to a
 <p>This element contains one or more <code>&lt;source&gt;</code> tags.</p>
 
 <h4>source</h4>
-<p>Attributes(type) | Description
-&#8212;&#8212;&#8212;&#8212;&#8212;- | &#8212;&#8212;&#8212;&#8212;
-url | <em>Required</em> <br /> The source url of pods spec.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>url<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> The source url of pods spec.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3>pods</h3>
 <p>The <code>&lt;pods&gt;</code> element identifies CocoaPods libraries.</p>
@@ -3118,17 +3025,17 @@ url | <em>Required</em> <br /> The source url of pods spec.</p>
 <table>
   <thead>
     <tr>
-      <th>Attributes(type)</th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>use-frameworks(string)</td>
+      <td>use-frameworks<br /><span class="cdv-var-type boolean">Boolean</span></td>
       <td>Default: false <br /> If <code>true</code>, the <code>use_frameworks!</code> attribute is declared in the Podfile.</td>
     </tr>
     <tr>
-      <td>inhibit-all-warnings(string)</td>
+      <td>inhibit-all-warnings<br /><span class="cdv-var-type boolean">Boolean</span></td>
       <td>Default: false <br /> If <code>true</code>, the <code>inhibit_all_warnings!</code> attribute is declared in the Podfile.</td>
     </tr>
   </tbody>
@@ -3145,47 +3052,47 @@ url | <em>Required</em> <br /> The source url of pods spec.</p>
   </thead>
   <tbody>
     <tr>
-      <td>name</td>
+      <td>name<br /><span class="cdv-var-type string">String</span></td>
       <td><em>Required</em><br /> Pod name</td>
     </tr>
     <tr>
-      <td>spec</td>
+      <td>spec<br /><span class="cdv-var-type string">String</span></td>
       <td>Pod spec</td>
     </tr>
     <tr>
-      <td>swift-version</td>
+      <td>swift-version<br /><span class="cdv-var-type string">String</span></td>
       <td>Specify swift version of the CocoaPods library</td>
     </tr>
     <tr>
-      <td>git</td>
+      <td>git<br /><span class="cdv-var-type string">String</span></td>
       <td>Pod <code>git</code> option.</td>
     </tr>
     <tr>
-      <td>branch</td>
+      <td>branch<br /><span class="cdv-var-type string">String</span></td>
       <td>Pod <code>branch</code> option.</td>
     </tr>
     <tr>
-      <td>tag</td>
+      <td>tag<br /><span class="cdv-var-type string">String</span></td>
       <td>Pod <code>tag</code> option.</td>
     </tr>
     <tr>
-      <td>commit</td>
+      <td>commit<br /><span class="cdv-var-type string">String</span></td>
       <td>Pod <code>commit</code> option.</td>
     </tr>
     <tr>
-      <td>configurations</td>
+      <td>configurations<br /><span class="cdv-var-type string">String</span></td>
       <td>Pod <code>configurations</code> option. For multiple values, separate them with a comma.</td>
     </tr>
     <tr>
-      <td>http</td>
+      <td>http<br /><span class="cdv-var-type string">String</span></td>
       <td>Pod <code>http</code> option.</td>
     </tr>
     <tr>
-      <td>path</td>
+      <td>path<br /><span class="cdv-var-type string">String</span></td>
       <td>Pod <code>path</code> option. Pod located on the local file system.</td>
     </tr>
     <tr>
-      <td>options</td>
+      <td>options<br /><span class="cdv-var-type string">String</span></td>
       <td>Pod options declared in raw format. If declared, the other Pod options are overwritten.<br />Example: <code>options=":git =&gt; 'https://github.com/Alamofire/Alamofire.git', :tag =&gt; '3.1.1'"</code></td>
     </tr>
   </tbody>
@@ -3284,17 +3191,17 @@ Preferences can be referenced elsewhere in <code>plugin.xml</code> using the syn
 <table>
   <thead>
     <tr>
-      <th>Attributes(type) <br /> <span class="sub-header">Only for platform:</span></th>
+      <th>Attributes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>name(string)</td>
+      <td>name<br /><span class="cdv-var-type string">String</span></td>
       <td><em>Required</em> <br /> Name of the variable. Can only contain capital letters, digits, and underscores.</td>
     </tr>
     <tr>
-      <td>default(string)</td>
+      <td>default<br /><span class="cdv-var-type string">String</span></td>
       <td>Default value of the variable. If present, its value will be used and no error will be emitted in case user does not enter any value.</td>
     </tr>
   </tbody>

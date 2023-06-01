@@ -2298,7 +2298,7 @@
 
 <h2>Iframes and the Callback Id Mechanism</h2>
 
-<p>If content is served in an iframe from a whitelisted domain, that domain will have access to the native Cordova bridge. This means that if you whitelist a third-party advertising network and serve those ads through an iframe, it is possible that a malicious ad will be able to break out of the iframe and perform malicious actions. Because of this, you should generally not use iframes unless you control the server that hosts the iframe content.  Also note that there are third party plugins available to support advertising networks. Note that this statement is not true for iOS, which intercepts everything including iframe connections.</p>
+<p>If content is served in an iframe from a allow listed domain, that domain will have access to the native Cordova bridge. This means that if you allow a third-party advertising network and serve those ads through an iframe, it is possible that a malicious ad will be able to break out of the iframe and perform malicious actions. Because of this, you should generally not use iframes unless you control the server that hosts the iframe content.  Also note that there are third party plugins available to support advertising networks. Note that this statement is not true for iOS, which intercepts everything including iframe connections.</p>
 
 <h2>Certificate Pinning</h2>
 
@@ -2338,12 +2338,12 @@
 <ul>
   <li>Set your min-target-sdk level higher than 10. API 10 is Gingerbread, and Gingerbread is no longer supported by Google or device manufacturers, and is therefore not recommend by the Cordova team.</li>
   <li>Gingerbread has been shown to be insecure and one of the most targeted mobile OSs <a href="https://bgr.com/2012/11/06/android-security-gingerbread-malware/">https://www.mobilemag.com/2012/11/06/andriod-2-3-gingerbread-security/</a>.</li>
-  <li>The Whitelist on Android does not work with Gingerbread or lower. This means an attacker can load malicious code in an iframe that would then have access to all of the Cordova APIs and could use that access to steal personal data, send SMS messages to premium-rate numbers, and perform other malicious acts.</li>
+  <li>The Allowlist on Android does not work with Gingerbread or lower. This means an attacker can load malicious code in an iframe that would then have access to all of the Cordova APIs and could use that access to steal personal data, send SMS messages to premium-rate numbers, and perform other malicious acts.</li>
 </ul>
 
 <h3>Use InAppBrowser for outside links</h3>
 <ul>
-  <li>Use the InAppBrowser when opening links to any outside website. This is much safer than whitelisting a domain name and including the content directly in your application because the InAppBrowser will use the native browser&#39;s security features and will not give the website access to your Cordova environment. Even if you trust the third party website and include it directly in your application, that third party website could link to malicious web content.</li>
+  <li>Use the InAppBrowser when opening links to any outside website. This is much safer than allow listing a domain name and including the content directly in your application because the InAppBrowser will use the native browser&#39;s security features and will not give the website access to your Cordova environment. Even if you trust the third party website and include it directly in your application, that third party website could link to malicious web content.</li>
 </ul>
 
 <h3>Validate all user input</h3>
