@@ -202,7 +202,6 @@ Use `plugin ls` (or `plugin list`, or `plugin` by itself) to view currently inst
 ```bash
 $ cordova plugin ls
 cordova-plugin-camera 2.1.0 "Camera"
-cordova-plugin-whitelist 1.2.1 "Whitelist"
 ```
 
 **See Also:**

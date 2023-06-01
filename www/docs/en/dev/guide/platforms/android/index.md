@@ -31,19 +31,119 @@ Regardless of whether you intend to utilize Android-specific command-line tools 
 
 The supported [Android API Levels](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels) (versions of Android) corresponding with the Cordova-Android released versions are listed in the table below:
 
-cordova-android Version | Supported Android API-Levels | Equivalent Android Version
-------------------------|------------------------------|-----------------------------
-12.X.X                  | 24 - 33                      | 7.0 - 13.0.0
-11.X.X                  | 22 - 32                      | 5.1 - 12.0.0 (L)
-10.X.X                  | 22 - 30                      | 5.1 - 11.0.0
-9.X.X                   | 22 - 29                      | 5.1 - 10.0.0
-8.X.X                   | 19 - 28                      | 4.4 - 9.0.0
-7.X.X                   | 19 - 27                      | 4.4 - 8.1
-6.X.X                   | 16 - 26                      | 4.1 - 8.0.0
-5.X.X                   | 14 - 23                      | 4.0 - 6.0.1
-4.1.X                   | 14 - 22                      | 4.0 - 5.1
-4.0.X                   | 10 - 22                      | 2.3.3 - 5.1
-3.7.X                   | 10 - 21                      | 2.3.3 - 5.0.2
+<table>
+    <thead>
+        <tr>
+            <th>cordova-android Version</th>
+            <th>Android API-Levels (Android Version)</th>
+            <th>Library &amp; Tooling Version</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>12.0.x</td>
+            <td>24 (7.0) - 33 (13.0)</td>
+            <td>
+                <ul>
+                    <li>Build Tools: ^33.0.2</li>
+                    <li>Kotlin: 1.7.21</li>
+                    <li>Gradle: 7.6</li>
+                    <li>Android Gradle Plugin: 7.4.2</li>
+                    <li>AndroidX Compat Library: 1.6.1</li>
+                    <li>AndroidX WebKit Library: 1.6.0</li>
+                    <li>AndroidX Core SplashScreen: 1.0.0</li>
+                    <li>Google Services Gradle Plugin: 4.3.15</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+        <td>11.0.x</td>
+        <td>22 (5.1) - 32 (12L)</td>
+        <td>
+            <ul>
+                <li>Build Tools: ^32.0.0</li>
+                <li>Kotlin: 1.7.21</li>
+                <li>Gradle: 7.4.2</li>
+                <li>Android Gradle Plugin: 7.2.1</li>
+                <li>AndroidX Compat Library: 1.4.2</li>
+                <li>AndroidX WebKit Library: 1.4.0</li>
+                <li>AndroidX Core SplashScreen: 1.0.0-rc01</li>
+                <li>Google Services Gradle Plugin: 4.3.10</li>
+            </ul>
+        </td>
+        </tr>
+        <tr>
+            <td>10.1.x</td>
+            <td>22 (5.1) - 30 (11.0)</td>
+            <td>
+                <ul>
+                    <li>Build Tools: ^30.0.3</li>
+                    <li>Kotlin: 1.5.21</li>
+                    <li>Gradle: 7.1.1</li>
+                    <li>Android Gradle Plugin: 4.2.2</li>
+                    <li>AndroidX Compat Library: 1.3.1</li>
+                    <li>AndroidX WebKit Library: 1.4.0</li>
+                    <li>Google Services Gradle Plugin: 4.3.8</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>10.0.x</td>
+            <td>22 (5.1) - 30 (11.0)</td>
+            <td>
+                <ul>
+                    <li>Build Tools: ^30.0.3</li>
+                    <li>Kotlin: 1.5.20</li>
+                    <li>Gradle: 7.1.1</li>
+                    <li>Android Gradle Plugin: 4.2.2</li>
+                    <li>AndroidX Compat Library: 1.3.0</li>
+                    <li>AndroidX WebKit Library: 1.4.0</li>
+                    <li>Google Services Gradle Plugin: 4.3.5</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>9.X.X</td>
+            <td>22 (5.1) - 29 (10.0)</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>8.X.X</td>
+            <td>19 (4.4) - 28 (9.0)</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>7.X.X</td>
+            <td>19 (4.4) - 27 (8.1)</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>6.X.X</td>
+            <td>16 (4.1) - 26 (8.0)</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>5.X.X</td>
+            <td>14 (4.0) - 23 (6.0)</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>4.1.X</td>
+            <td>14 (4.0) - 22 (5.1)</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>4.0.X</td>
+            <td>10 (2.3.3) - 22 (5.1)</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>3.7.X</td>
+            <td>10 (2.3.3) - 21 (5.0)</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
 
 _**Note:** The [cordova-android](https://github.com/apache/cordova-android) versions listed above are not the Cordova CLI versions._
 
@@ -484,8 +584,6 @@ For more resources, please see:
 
 - [Meet Android Studio](https://developer.android.com/studio/intro)
 - [Build and run your app](https://developer.android.com/studio/run/index.html)
-
-![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png)
 
 <img src="{{ site.baseurl }}/static/img/guide/platforms/android/android-studio-electric-eel-20220101-2/hello-cordova-main-activity.png" style="width: 100%;" alt="Hello Cordova MainActivity" />
 

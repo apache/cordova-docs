@@ -32,11 +32,11 @@ Plugin.xml file defines the structure and settings required for your plugin. It 
 
 The `plugin` element is the plugin manifest's top-level element.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-xmlns(string) | *Required* <br/> The plugin namespace, `http://apache.org/cordova/ns/plugins/1.0`. If the document contains XML from other namespaces, such as tags to be added to the `AndroidManifest.xml` file in the case of Android, those namespaces should also be included in the <plugin> element.
-id(string) | *Required* <br/> A npm-style identifier for the plugin.
-version(string) | *Required* <br/> A version number for the plugin. [Semver](https://semver.org/) syntax is supported.
+xmlns<br />{% cdv_vartype string %}| *Required* <br/> The plugin namespace, `http://apache.org/cordova/ns/plugins/1.0`. If the document contains XML from other namespaces, such as tags to be added to the `AndroidManifest.xml` file in the case of Android, those namespaces should also be included in the <plugin> element.
+id<br />{% cdv_vartype string %}| *Required* <br/> A npm-style identifier for the plugin.
+version<br />{% cdv_vartype string %}| *Required* <br/> A version number for the plugin. [Semver](https://semver.org/) syntax is supported.
 
 Example:
 ```xml
@@ -55,12 +55,12 @@ The child elements of the `<engines>` element specify versions of Apache Cordova
 >is in a plugin's `package.json`. See [specifying Cordova dependencies](../guide/hybrid/plugins/index.html#specifying-cordova-dependencies)
 >for more information
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-name(string) | *Required* <br/> Name of the engine. Here are the default engines that are supported : <ul><li> `cordova` </li> <li> `cordova-plugman` </li> <li> `cordova-android` </li> <li> `cordova-browser` </li> <li> `cordova-ios` </li> <li> `cordova-windows` </li> <li> `cordova-osx` </li> <li> `windows-os` </li> <li> `android-sdk` (returns the highest Android api level installed) </li> <li> `windows-sdk` (returns the native windows SDK version) </li> <li> `apple-xcode` (returns the xcode version) </li> <li> `apple-ios` (returns the highest iOS version installed) </li> <li> `apple-osx` (returns the OSX version) </li> You can also specify a custom framework apart from the default ones.
-version(string) | *Required* <br/> The version that your framework must have in order to install. Semver syntax is supported.
-scriptSrc(string) | **For custom frameworks only** <br/> *Required* <br/>  The script file that tells plugman the version of the custom framework. Ideally, this file should be within the top level directory of your plugin directory.
-platform(string) | **For custom frameworks only** <br/> *Required* <br/> The platforms your framework supports. You may use the wildcard `*` to say supported for all platforms, specify multiple with a pipe character like `android|ios` or just a single platform like `android`.
+name<br />{% cdv_vartype string %}| *Required* <br/>Name of the engine. Here are the default engines that are supported: `cordova`, `cordova-plugman`, `cordova-android`, `cordova-browser`, `cordova-ios`, `windows-os`, `android-sdk` (returns the highest Android api level installed) , `apple-xcode` (returns the xcode version), `apple-ios` (returns the highest iOS version installed), `apple-osx` (returns the macOS version). You can also specify a custom framework apart from the default ones.
+version<br />{% cdv_vartype string %}| *Required* <br/> The version that your framework must have in order to install. Semver syntax is supported.
+scriptSrc<br />{% cdv_vartype string %}| **For custom frameworks only** <br/> *Required* <br/>  The script file that tells plugman the version of the custom framework. Ideally, this file should be within the top level directory of your plugin directory.
+platform<br />{% cdv_vartype string %}| **For custom frameworks only** <br/> *Required* <br/> The platforms your framework supports. You may use the wildcard `*` to say supported for all platforms, specify multiple with a pipe character like `android|ios` or just a single platform like `android`.
 
 Examples:
 ```xml
@@ -143,10 +143,10 @@ Example:
 
 This element is used to list the files or directories to be copied into a Cordova app's `www` directory. Any `<asset>` elements that are nested within `<platform>` elements specify platform-specific web assets.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-src(string) | *Required* <br/>  Where the file or directory is located in the plugin package, relative to the `plugin.xml` document. If a file does not exist at the specified src location, the CLI stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.
-target(string) | *Required* <br/> Where the file or directory should be located in the Cordova app, relative to the `www` directory. If a file already exists at the target location, the CLI stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.
+src<br />{% cdv_vartype string %}| *Required* <br/>  Where the file or directory is located in the plugin package, relative to the `plugin.xml` document. If a file does not exist at the specified src location, the CLI stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.
+target<br />{% cdv_vartype string %}| *Required* <br/> Where the file or directory should be located in the Cordova app, relative to the `www` directory. If a file already exists at the target location, the CLI stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.
 
 Examples:
 ```xml
@@ -165,10 +165,10 @@ Assets can be targeted to subdirectories as well. This will create the `js/exper
 
 Most plugins include one or more JavaScript files.  Each `<js-module>` tag corresponds to a JavaScript file, and prevents the plugin's users from having to add a `<script>` tag for each file. Do not wrap the file with cordova.define, as it is added automatically. The module is wrapped in a closure, with module, exports, and require in scope, as is normal for AMD modules. Nesting `<js-module>` elements within `<platform>` declares platform-specific JavaScript module bindings.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-src(string) | References a file in the plugin directory relative to the `plugin.xml` file. If src does not resolve to an existing file, the CLI stops and reverses the installation, issues a notification of the problem, and exits with a non-zero code.
-name(string) | Provides the last part of the module name. It can generally be whatever you like, and it only matters if you want to use cordova.require to import other parts of your plugins in your JavaScript code. The module name for a `<js-module>` is your plugin's id followed by the value of name.
+src<br />{% cdv_vartype string %}| References a file in the plugin directory relative to the `plugin.xml` file. If src does not resolve to an existing file, the CLI stops and reverses the installation, issues a notification of the problem, and exits with a non-zero code.
+name<br />{% cdv_vartype string %}| Provides the last part of the module name. It can generally be whatever you like, and it only matters if you want to use cordova.require to import other parts of your plugins in your JavaScript code. The module name for a `<js-module>` is your plugin's id followed by the value of name.
 
 Example:
 
@@ -184,9 +184,9 @@ Also for this example, with a plugin id of `chrome-socket`, the module name will
 Allowed within `<js-module>` element. Used to specify the namespace under `window` object where module.exports gets inserted. You can have as many `<clobbers>` as you
 like. Any object not available on `window` is created.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-target(string) | The namespace where module.exports gets inserted to.
+target<br />{% cdv_vartype string %}| The namespace where module.exports gets inserted to.
 
 Example:
 ```xml
@@ -200,9 +200,9 @@ Here module.exports gets inserted into the `window` object as `window.chrome.soc
 
 Allowed within `<js-module>` element. Used to specify the namespace under `window` object where module.exports gets merged with any existing value. If any key already exists, the module's version overrides the original. You can have as many `<merges>` as you like. Any object not available on `window` is created.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-target(string) | The namespace which module.exports gets merged to.
+target<br />{% cdv_vartype string %}| The namespace which module.exports gets merged to.
 
 Example:
 ```xml
@@ -227,13 +227,13 @@ Example:
 
 The `<dependency>` tag allows you to specify other plugins on which the current plugin depends. The plugins are referenced by their unique npm ids or by github url.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-id(string) | Provides the ID of the plugin.
-url(string) | A URL for the plugin. This should reference a git repository, which the CLI attempts to clone.
-commit(string) | This is any git reference understood by `git checkout`: a branch or tag name (e.g., `master`, `0.3.1`), or a commit hash (e.g., `975ddb228af811dd8bb37ed1dfd092a3d05295f9`).
-subdir(string) | Specifies that the targeted plugin dependency exists as a subdirectory of the git repository. This is helpful because it allows the repository to contain several related plugins, each specified individually. <br/> If you set the `url` of a `<dependency>` tag to `"."` and provide a `subdir`, the dependent plugin is installed from the same local or remote git repository as the parent plugin that specifies the `<dependency>` tag. <br/> Note that the `subdir` always specifies a path relative to the _root_ of the git repository, not the parent plugin. This is true even if you installed the plugin with a local path directly to it.The CLI finds the root of the git repository and then finds the other plugin from there.
-version(string) | The version of the plugin depended on. Semver syntax is supported.
+id<br />{% cdv_vartype string %}| Provides the ID of the plugin.
+url<br />{% cdv_vartype string %}| A URL for the plugin. This should reference a git repository, which the CLI attempts to clone.
+commit<br />{% cdv_vartype string %}| This is any git reference understood by `git checkout`: a branch or tag name (e.g., `master`, `0.3.1`), or a commit hash (e.g., `975ddb228af811dd8bb37ed1dfd092a3d05295f9`).
+subdir<br />{% cdv_vartype string %}| Specifies that the targeted plugin dependency exists as a subdirectory of the git repository. This is helpful because it allows the repository to contain several related plugins, each specified individually. <br/> If you set the `url` of a `<dependency>` tag to `"."` and provide a `subdir`, the dependent plugin is installed from the same local or remote git repository as the parent plugin that specifies the `<dependency>` tag. <br/> Note that the `subdir` always specifies a path relative to the _root_ of the git repository, not the parent plugin. This is true even if you installed the plugin with a local path directly to it.The CLI finds the root of the git repository and then finds the other plugin from there.
+version<br />{% cdv_vartype string %}| The version of the plugin depended on. Semver syntax is supported.
 
 Examples:
 ```xml
@@ -245,9 +245,9 @@ Examples:
 
 Identifies platforms that have associated native code or require modifications to their configuration files. Tools using this specification can identify supported platforms and install the code into Cordova projects. Plugins without `<platform>` tags are assumed to be JavaScript-only, and therefore installable on any and all platforms.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-name(string) | *Required* <br/> Allowed values: ios, android, windows, browser, osx <br/> Identifies a platform as supported, associating the element's children with that platform.
+name<br />{% cdv_vartype string %}| *Required* <br/> Allowed values: ios, android, browser, electron <br/> Identifies a platform as supported, associating the element's children with that platform.
 
 Example:
 ```xml
@@ -260,12 +260,12 @@ Example:
 
 Identifies executable source code that should be installed into a project.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-src(string) | *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
-target-dir(string) | A directory into which the files should be copied, relative to the root of the Cordova project. In practice, this is most important for Java-based platforms, where a file in the `com.alunny.foo` package must be located within the `com/alunny/foo` directory. For platforms where the source directory is not important, this attribute should be omitted.
-framework(boolean) <br/> {% cdv_platform ios %} | *Default: false* <br/>  If set to true, also adds the specified file as a framework to the project.
-compiler-flags(string) <br/> {% cdv_platform ios %} | If set, assigns the specified compiler flags for the particular source file.
+src<br />{% cdv_vartype string %}| *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
+target-dir<br />{% cdv_vartype string %}| A directory into which the files should be copied, relative to the root of the Cordova project. In practice, this is most important for Java-based platforms, where a file in the `com.alunny.foo` package must be located within the `com/alunny/foo` directory. For platforms where the source directory is not important, this attribute should be omitted.
+framework<br />{% cdv_vartype boolean %} {% cdv_platform ios %} | *Default: false* <br/>  If set to true, also adds the specified file as a framework to the project.
+compiler-flags<br />{% cdv_vartype string %} {% cdv_platform ios %} | If set, assigns the specified compiler flags for the particular source file.
 
 Examples:
 ```xml
@@ -279,13 +279,13 @@ Examples:
 
 ## header-file
 
-This is like `<source-file>` element but specifically for platforms such as iOS and Android that distinguish between source files, headers, and resources. This is not supported by Windows.
+This is like `<source-file>` element but specifically for platforms such as iOS and Android that distinguish between source files, headers, and resources.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-src(string) | *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
-target-dir(string) | A directory into which the files should be copied, relative to the root of the Cordova project.
-type(string) <br/> {% cdv_platform ios %} | If this value is `BridgingHeader`, the file is imported in the `Bridging-Header.h` and can be called from swift program.
+src<br />{% cdv_vartype string %}| *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
+target-dir<br />{% cdv_vartype string %}| A directory into which the files should be copied, relative to the root of the Cordova project.
+type<br />{% cdv_vartype string %} {% cdv_platform ios %} | If this value is `BridgingHeader`, the file is imported in the `Bridging-Header.h` and can be called from swift program.
 
 Example:
 
@@ -299,31 +299,16 @@ For iOS:
 
 This is like `<source-file>` element, but specifically for platforms such as iOS and Android that distinguish between source files, headers, and resources.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-src(string) | *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
-target(string) | Path to where the file will be copied in your directory.
-arch(string) <br/> {% cdv_platform windows %} | Allowed values: `x86`, `x64` or `ARM`. <br/> Indicates that the file should only be included when building for the specified architecture.
-device-target <br/> {% cdv_platform windows %} | Allowed values: `win` (or `windows`), `phone` or `all`. <br/> Indicates that the file should only be included when building for the specified target device type.
-versions <br/> {% cdv_platform windows %} | Indicates that the file should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
-reference <br/> {% cdv_platform windows %} | Indicates that the file should be referenced from the src rather than copied to the target destination. The file will appear in Visual Studio with the file name specified by target, however will point to the respective src, depending on the architecture.
+src<br />{% cdv_vartype string %}| *Required* <br/> Location of the file relative to `plugin.xml`. If the src file can't be found, the CLI stops and reverses the installation, issues a notification about the problem, and exits with a non-zero code.
+target<br />{% cdv_vartype string %}| Path to where the file will be copied in your directory.
 
-Examples:
+Android Examples:
 
-For Android:
 ```xml
 <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
 ```
-
-For Windows:
-```xml
-<resource-file src="src/windows/win81/MobServices.pri" target="win81\MobServices.pri" device-target="windows" versions="8.1" arch="x64"/>
-
-<!-- Example of referencing  -->
-<resource-file src="x86/foo.dll" target="foo.dll" arch="x86" reference="true" />
-<resource-file src="x64/foo.dll" target="foo.dll" arch="x64" reference="true" />
-```
-__NOTE__: `target` should use backslashes to avoid DEP2100 deploy error in Visual Studio.
 
 ## config-file
 
@@ -331,13 +316,11 @@ Identifies an XML-based configuration file to be modified, where in that documen
 Two file types that have been tested for modification with this element are `xml` and `plist` files.
 The `config-file` element only allows you to append new children to an XML document tree. The children are XML literals to be inserted in the target document.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-target(string) | The file to be modified, and the path relative to the root of the Cordova project. If the specified file does not exist, the tool ignores the configuration change and continues installation. <br/> The target can include wildcard (`*`) elements. In this case, the CLI recursively searches through the project directory structure and uses the first match. <br/> On iOS, the location of configuration files relative to the project directory root is not known, so specifying a target of `config.xml` resolves to `cordova-ios-project/MyAppName/config.xml`.
-parent(string) | An XPath selector referencing the parent of the elements to be added to the config file. If you use absolute selectors, you can use a wildcard (`*`) to specify the root element, e.g., `/*/plugins`. If the selector does not resolve to a child of the specified document, the tool stops and reverses the installation process, issues a warning, and exits with a non-zero code. <br/> For `plist` files, the `parent` determines under what parent key the specified XML should be inserted.
-after(string) | A prioritized list of accepted siblings after which to add the XML snippet. Useful for specifying changes in files which require strict ordering of XML elements like [this](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement).
-device-target(string) <br/> {% cdv_platform windows %} | Allowed values: `win`, `phone`, `all`. <br/> Applicable when affecting the meta-name `package.appxmanifest`, this attribute indicates that the file should only be modified when building for the specified target device type.
-versions(string) <br/> {% cdv_platform windows %} | Applicable when affecting the meta-name `package.appxmanifest`, this attribute indicates that app manifests for specific Windows versions should only be altered for versions that match the specified version string. Value can be any valid node semantic version range string.
+target<br />{% cdv_vartype string %}| The file to be modified, and the path relative to the root of the Cordova project. If the specified file does not exist, the tool ignores the configuration change and continues installation. <br/> The target can include wildcard (`*`) elements. In this case, the CLI recursively searches through the project directory structure and uses the first match. <br/> On iOS, the location of configuration files relative to the project directory root is not known, so specifying a target of `config.xml` resolves to `cordova-ios-project/MyAppName/config.xml`.
+parent<br />{% cdv_vartype string %}| An XPath selector referencing the parent of the elements to be added to the config file. If you use absolute selectors, you can use a wildcard (`*`) to specify the root element, e.g., `/*/plugins`. If the selector does not resolve to a child of the specified document, the tool stops and reverses the installation process, issues a warning, and exits with a non-zero code. <br/> For `plist` files, the `parent` determines under what parent key the specified XML should be inserted.
+after<br />{% cdv_vartype string %}| A prioritized list of accepted siblings after which to add the XML snippet. Useful for specifying changes in files which require strict ordering of XML elements.
 
 Examples:
 
@@ -363,26 +346,14 @@ For `plist`:
 </config-file>
 ```
 
-For windows-specific attributes:
-```xml
-<config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="&lt;8.1.0">
-    <Capability Name="picturesLibrary" />
-    <DeviceCapability Name="webcam" />
-</config-file>
-<config-file target="package.appxmanifest" parent="/Package/Capabilities" versions=">=8.1.0" device-target="phone">
-    <DeviceCapability Name="webcam" />
-</config-file>
-```
-The above example will set pre-8.1 platforms (Windows 8, specifically) to require the `webcam` device capability and the `picturesLibrary` general capability, and apply the `webcam` device capability only to Windows 8.1 projects that build for Windows Phone.  Windows desktop 8.1 systems are unmodified.
-
 ## edit-config
 Similar to `config-file`, `edit-config` identifies an XML-based configuration file to be modified, where in that document the modification should take place, and what should be modified. Instead of appending new children to an XML document tree, `edit-config` makes modifications to attributes of XML elements. There are two modes which will determine what type of attribute modification will be made, `merge` or `overwrite`. `edit-config` has one child and that child will contain the attributes to be added.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-file(string) | The file to be modified, and the path relative to the root of the Cordova project. If the specified file does not exist, the tool ignores the configuration change and continues installation. <br/> The target can include wildcard (`*`) elements. In this case, the CLI recursively searches through the project directory structure and uses the first match. <br/> On iOS, the location of configuration files relative to the project directory root is not known, so specifying a target of `config.xml` resolves to `cordova-ios-project/MyAppName/config.xml`.
-target(string) | An XPath selector referencing the target element to make attribute modifications to. If you use absolute selectors, you can use a wildcard (`*`) to specify the root element, e.g., `/*/plugins`. If the selector does not resolve to a child of the specified document, the tool stops and reverses the installation process, issues a warning, and exits with a non-zero code.
-mode(string) | The mode that determines what type of attribute modifications will be made. <br/> `merge` - Adds the specified attributes to the target element. Will replace the attribute values if the specified attributes already exist in the target element. <br/> `overwrite` - Replaces all attributes in the target element with the attributes specified.
+file<br />{% cdv_vartype string %}| The file to be modified, and the path relative to the root of the Cordova project. If the specified file does not exist, the tool ignores the configuration change and continues installation. <br/> The target can include wildcard (`*`) elements. In this case, the CLI recursively searches through the project directory structure and uses the first match. <br/> On iOS, the location of configuration files relative to the project directory root is not known, so specifying a target of `config.xml` resolves to `cordova-ios-project/MyAppName/config.xml`.
+target<br />{% cdv_vartype string %}| An XPath selector referencing the target element to make attribute modifications to. If you use absolute selectors, you can use a wildcard (`*`) to specify the root element, e.g., `/*/plugins`. If the selector does not resolve to a child of the specified document, the tool stops and reverses the installation process, issues a warning, and exits with a non-zero code.
+mode<br />{% cdv_vartype string %}| The mode that determines what type of attribute modifications will be made. <br/> `merge` - Adds the specified attributes to the target element. Will replace the attribute values if the specified attributes already exist in the target element. <br/> `overwrite` - Replaces all attributes in the target element with the attributes specified.
 
 Example:
 
@@ -490,56 +461,39 @@ Example:
 <plugins-plist key="Foo" string="CDVFoo" />
 ```
 
-## lib-file
+## lib-file {% cdv_platform android %}
 
-Like source, resource, and header files, but specifically for platforms such as BlackBerry 10 that use user-generated libraries. For the Windows platform, the `<lib-file>` element allows the inclusion of an `<SDKReference>` in the generated Windows project files.
+The `<lib-file>` element can be used for installing **.jar** files in the project's **libs directory**.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-src(string) | *Required* <br/> The location of the file relative to `plugin.xml`. If `src` can't be found, the CLI stops and reverses the installation, issues a warning about the problem, and exits with a non-zero code. <br/> For Windows, it indicates the name of the SDK to include (which will be used as value of the `Include` attribute of the generated `<SDKReference>` element).
-arch(string) | The architecture for which the `.so` file has been built, either `device` or `simulator`. <br/> For Windows, it indicates that the `<SDKReference>` should only be included when building for the specified architecture. Supported values are `x86`, `x64` or `ARM`.
-device-target(string) <br/> {% cdv_platform windows %} | Allowed values: `win` (or `windows`), `phone` or `all`. <br/> Indicates that the `<SDKReference>` should only be included when building for the specified target device type.
-versions(string) <br/> {% cdv_platform windows %} | Indicates that the `<SDKReference>` should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
-
-For Android, the `<lib-file>` element is used for installing **.jar** files in the project's **libs directory**. It supports only the `src` attribute which contains the relative path to the .jar file.
+src<br />{% cdv_vartype string %}| *Required* <br/> The location of the `.jar` file relative to `plugin.xml`. If `src` file can't be found, the CLI stops and reverses the installation, issues a warning about the problem, and exits with a non-zero code.
 
 Examples:
-```xml
-<lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
-<lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" />
-```
 
-For Windows:
 ```xml
-<lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" />
-<lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions=">=8.1" />
-<lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" />
-<lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="win" versions="8.0" arch="x86" />
+<lib-file src="src/android/libs/foobar.jar"/>
 ```
 
 ## framework
 
 Identifies a framework (usually part of the OS/platform) on which the plugin depends.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-src(string) | *Required* <br/> The name of the system framework or the relative path to one which is included as part of your plugin files.
-custom(boolean) | Indicates whether the framework is included as part of your plugin files.
-weak(boolean) | *Default: false* <br/> Indicates whether the framework should be weakly linked.
-type(string) | Indicates the type of framework to add.
-parent(string) | *Default: .* <br/> Sets the relative path to the directory containing the sub-project to which to add the reference. The default, `.`, implies the application project.
-arch(string) <br/> {% cdv_platform windows %} | Allowed values: `x86`, `x64` or `ARM`. <br/> Indicates that the framework should only be included when building for the specified architecture.
-device-target(string) <br/> {% cdv_platform windows %} | Allowed values: `win` (or `windows`), `phone` or `all`. <br/>  Indicates that the framework should only be included when building for the specified target device type.
-versions(string) <br/> {% cdv_platform windows %} | Indicates that the framework should only be included when building for versions that match the specified version string. Value can be any valid node semantic version range string.
-target-dir(string) <br/> {% cdv_platform windows %} | Indicates a subdirectory into which the framework should be copied. In practice, this is most important when plugin contains different framework versions for different chip architectures or device targets, but which have the same name. This allows you to specify different subfolders for each framework version so that they don't overlap each other.
-implementation(string) <br/> {% cdv_platform windows %} | Sets the relative path to `.dll` file that contains implementation for WinMD component, written in C++.
-spec(string) <br/> {% cdv_platform ios %} | Paired with `type="podspec"`, this is the spec string for the CocoaPod you want to install (static library only). CocoaPod support only exists in `cordova-ios 4.3.0` and `cordova-cli 6.4.0`. For your plugin, make sure  you add the appropriate `<engine>` tags and `package.json` [dependencies](../guide/hybrid/plugins/index.html#specifying-cordova-dependencies) to ensure backwards-compatible support.
-embed(boolean) <br/> {% cdv_platform ios %} | *Default: false* <br/>Paired with `custom="true"`, this is set to true if you want to embed your custom framework into your app bundle, so it can be dynamically loaded at runtime (dynamic framework). This puts your custom framework in the 'Embedded Binaries' section of your Xcode Project Settings. Only supported with the combination of `cordova-ios@4.4.0` and `cordova-cli@7.0.0`
-link(boolean) <br/> {% cdv_platform ios %} | *Default: !embed* <br/> Set this to true if you want to link the framework. This puts the framework in the 'Link Binaries with Libraries' section of your Xcode Project Settings.
+src<br />{% cdv_vartype string %}| *Required* <br/> The name of the system framework or the relative path to one which is included as part of your plugin files.
+custom<br />{% cdv_vartype boolean %}| Indicates whether the framework is included as part of your plugin files.
+weak<br />{% cdv_vartype boolean %}| *Default: false* <br/> Indicates whether the framework should be weakly linked.
+type<br />{% cdv_vartype string %}| Indicates the type of framework to add.
+parent<br />{% cdv_vartype string %}| *Default: .* <br/> Sets the relative path to the directory containing the sub-project to which to add the reference. The default, `.`, implies the application project.
+spec<br />{% cdv_vartype string %} {% cdv_platform ios %} | Paired with `type="podspec"`, this is the spec string for the CocoaPod you want to install (static library only). CocoaPod support only exists in `cordova-ios 4.3.0` and `cordova-cli 6.4.0`. For your plugin, make sure  you add the appropriate `<engine>` tags and `package.json` [dependencies](../guide/hybrid/plugins/index.html#specifying-cordova-dependencies) to ensure backwards-compatible support.
+embed<br />{% cdv_vartype boolean %} {% cdv_platform ios %} | *Default: false* <br/>Paired with `custom="true"`, this is set to true if you want to embed your custom framework into your app bundle, so it can be dynamically loaded at runtime (dynamic framework). This puts your custom framework in the 'Embedded Binaries' section of your Xcode Project Settings. Only supported with the combination of `cordova-ios@4.4.0` and `cordova-cli@7.0.0`
+link<br />{% cdv_vartype boolean %} {% cdv_platform ios %} | *Default: !embed* <br/> Set this to true if you want to link the framework. This puts the framework in the 'Link Binaries with Libraries' section of your Xcode Project Settings.
 
 Examples:
 
 For iOS:
+
 ```xml
 <framework src="libsqlite3.dylib" />
 <framework src="social.framework" weak="true" />
@@ -548,6 +502,7 @@ For iOS:
 ```
 
 On Android (as of cordova-android@4.0.0), framework tags are used to include Maven dependencies, or to include bundled library projects.
+
 ```xml
 <!-- Depend on latest version of GCM from play services -->
 <framework src="com.google.android.gms:play-services-gcm:+" />
@@ -558,36 +513,12 @@ On Android (as of cordova-android@4.0.0), framework tags are used to include Mav
 ```
 
 Framework can also be used to have custom `.gradle` files sub-included into the main project's `build.gradle` file:
+
 ```xml
 <framework src="relative/path/rules.gradle" custom="true" type="gradleReference" />
 ```
 
-On Windows, using `custom='true'` and `type='projectReference'` will add a reference to the project which will be added to the compile+link steps of the cordova project.  This essentially is the only way currently that a 'custom' framework can target multiple architectures as they are explicitly built as a dependency by the referencing cordova application.
-```xml
-<framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
-```
-
-Examples of using these Windows specific attributes:
-```xml
-<framework src="src/windows/example.dll" arch="x64" />
-<framework src="src/windows/example.dll" versions=">=8.0" />
-<framework src="src/windows/example.vcxproj" type="projectReference" target="win" />
-<framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" />
-<framework src="src/windows/example.dll" target-dir="bin/x64" arch="x64" custom="true"/>
-```
-
-Another example of using Windows-specific attributes to add a reference to WinMD components, written in C# and C++, whose API will be available at runtime:
-
-```xml
-<!-- C# component that consists of one .winmd file -->
-<framework src="lib\windows\component.winmd" versions="<10.0" />
-<!-- C++ component with separated metadata and implementation-->
-<framework src="lib\windows\x86\cppcomponent.winmd"
-           implementation="lib\windows\x86\cppcomponent.dll"
-           target-dir="component\x86" arch="x86" versions=">=10.0" />
-```
-
-## podspec ({% cdv_platform ios %})
+## podspec {% cdv_platform ios %}
 Identifies the CocoaPods `Podfile` that provides the dependencies in which the plugin depends on.
 
 This element contains a `<config>` and a `<pods>` tag.
@@ -598,35 +529,36 @@ The `<config>` element identifies the source urls in which the CocoaPods specs a
 This element contains one or more `<source>` tags.
 
 #### source
-Attributes(type) | Description
+
+Attributes | Description
 ---------------- | ------------
-url | *Required* <br> The source url of pods spec.
+url<br />{% cdv_vartype string %} | *Required* <br> The source url of pods spec.
 
 ### pods
 The `<pods>` element identifies CocoaPods libraries.
 
 This element contains a `<pod>` tag for each CocoaPods libraries.
 
-Attributes(type) | Description
+Attributes | Description
 ---------------- | ------------
-use-frameworks(string) | Default: false <br/> If `true`, the `use_frameworks!` attribute is declared in the Podfile.
-inhibit-all-warnings(string) | Default: false <br/> If `true`, the `inhibit_all_warnings!` attribute is declared in the Podfile.
+use-frameworks<br />{% cdv_vartype boolean %}| Default: false <br/> If `true`, the `use_frameworks!` attribute is declared in the Podfile.
+inhibit-all-warnings<br />{% cdv_vartype boolean %}| Default: false <br/> If `true`, the `inhibit_all_warnings!` attribute is declared in the Podfile.
 
 #### pod
 
 Attributes(type) | Description
 ---------------- | ------------
-name | *Required*<br/> Pod name  
-spec | Pod spec
-swift-version | Specify swift version of the CocoaPods library
-git | Pod `git` option.
-branch | Pod `branch` option.
-tag | Pod `tag` option.
-commit | Pod `commit` option.
-configurations | Pod `configurations` option. For multiple values, separate them with a comma.
-http | Pod `http` option.
-path | Pod `path` option. Pod located on the local file system.
-options | Pod options declared in raw format. If declared, the other Pod options are overwritten.<br/>Example: `options=":git => 'https://github.com/Alamofire/Alamofire.git', :tag => '3.1.1'"`
+name<br />{% cdv_vartype string %} | *Required*<br/> Pod name  
+spec<br />{% cdv_vartype string %} | Pod spec
+swift-version<br />{% cdv_vartype string %} | Specify swift version of the CocoaPods library
+git<br />{% cdv_vartype string %} | Pod `git` option.
+branch<br />{% cdv_vartype string %} | Pod `branch` option.
+tag<br />{% cdv_vartype string %} | Pod `tag` option.
+commit<br />{% cdv_vartype string %} | Pod `commit` option.
+configurations<br />{% cdv_vartype string %} | Pod `configurations` option. For multiple values, separate them with a comma.
+http<br />{% cdv_vartype string %} | Pod `http` option.
+path<br />{% cdv_vartype string %} | Pod `path` option. Pod located on the local file system.
+options<br />{% cdv_vartype string %} | Pod options declared in raw format. If declared, the other Pod options are overwritten.<br/>Example: `options=":git => 'https://github.com/Alamofire/Alamofire.git', :tag => '3.1.1'"`
 
 Examples:
 
@@ -725,10 +657,10 @@ a `<preference>` tag.
 The CLI checks that these required preferences are passed in.  If not, it should warn the user how to pass the variable in and exit with a non-zero code.
 Preferences can be referenced elsewhere in `plugin.xml` using the syntax `$PREFERENCE_NAME`.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
-name(string) | *Required* <br/> Name of the variable. Can only contain capital letters, digits, and underscores.
-default(string) | Default value of the variable. If present, its value will be used and no error will be emitted in case user does not enter any value.
+name<br />{% cdv_vartype string %}| *Required* <br/> Name of the variable. Can only contain capital letters, digits, and underscores.
+default<br />{% cdv_vartype string %}| Default value of the variable. If present, its value will be used and no error will be emitted in case user does not enter any value.
 
 Example:
 ```xml

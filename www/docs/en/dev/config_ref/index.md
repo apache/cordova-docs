@@ -25,49 +25,76 @@ description: List of supported tags in the config.xml file.
 
 # Config.xml
 
-`config.xml` is a global configuration file that controls many aspects
-of a cordova application's behavior. This
-platform-agnostic XML file is arranged based on the W3C's [Packaged
-Web Apps (Widgets)](https://www.w3.org/TR/widgets/) specification, and
-extended to specify core Cordova API features, plugins, and
-platform-specific settings.
+The `config.xml` file is a global configuration file that manages various aspects of a Cordova application's behavior. It is written in XML format and follows the structure outlined in the W3C's [Packaged Web Apps (Widgets)](https://www.w3.org/TR/widgets/) specification. Additionally, it is extended to include core Cordova API features, plugins, and platform-specific settings.
 
-For projects created with the Cordova CLI (described in [The
-Command-Line Interface](../guide/cli/index.html)), this file can be found in the top-level
-directory:
+If you are using the Cordova CLI to create your project (as explained in [The Command-Line Interface](../guide/cli/index.html)), you can locate the `config.xml` file in the top-level directory of your project.
 
-```
-app/config.xml
+```bash
+./hellocordova
+└── config.xml
 ```
 
-Note that before version 3.3.1-0.2.0, the file existed at `app/www/config.xml`,
-and that having it here is still supported.
+When using the CLI to build a project, versions of this file are passively copied into various `platforms/` subdirectories. For example:
 
-When using the CLI to build a project, versions of this file are
-passively copied into various `platforms/` subdirectories.
-For example:
-
+```bash
+./hellocordova
+└── platforms
+    ├── android
+    │   └── app
+    │       └── src
+    │           └── main
+    │               └── res
+    │                   └── xml
+    │                       └── config.xml
+    └── ios
+        └── HelloCordova
+            └── config.xml
 ```
-app/platforms/ios/AppName/config.xml
-app/platforms/android/res/xml/config.xml
+
+Some platforms offer integrated development environments (IDEs) like Xcode for iOS and Android Studio for Android, which allow you to build and test your application. If you choose to use these IDEs for building and testing your project, it is recommended to run the `cordova prepare` CLI command whenever you make changes to the Cordova application's `config.xml`. This ensures that the updated configurations are copied into the respective `platforms/` subdirectories.
+
+In addition to the configuration options described below, you have the ability to customize the core set of images for your application on each target platform. For more information, please refer to the topic on [Customizing Icons](images.html).
+
+**Sample `config.xml`:**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+    xmlns:cdv="http://cordova.apache.org/ns/1.0"
+    id="io.cordova.hellocordova"
+    version="1.0.0">
+    <name>HelloCordova</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+
+    <content src="index.html" />
+
+    <!-- Security Related Settings -->
+    <access origin="https://cordova.apache.org" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+
+    <!-- Platform Configs & Platform Overriding Configs -->
+    <platform name="android"></platform>
+    <platform name="ios"></platform>
+</widget>
 ```
 
-In addition to the various configuration options detailed below, you
-can also configure an application's core set of images for each target
-platform. See [Customize icons topic](images.html) for more information.
+## widget
 
-# widget
 Root element of the config.xml document.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
 id<br/>{% cdv_vartype string %} | *Required* <br/> Specifies the app's identifier. The `id` should be in a [reverse-DNS format](https://en.wikipedia.org/wiki/Reverse_domain_name_notation#Examples) however, only alphanumeric and dot characters are allowed. e.g: `com.example.myapp`
 version<br/>{% cdv_vartype string %} | *Required* <br/> Full version number expressed in major/minor/patch notation.
 android-versionCode<br/>{% cdv_vartype string %} {% cdv_platform android %} | Alternative version for Android. Sets the [version code](https://developer.android.com/tools/publishing/versioning.html) for the application. See [the Android guide](../guide/platforms/android/index.html#setting-the-version-code) for information on how this attribute may be modified.
-ios-CFBundleVersion<br/>{% cdv_vartype string %} {% cdv_platform ios %} | Alternative version for iOS. For further details, see [iOS versioning](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364).
-android-packageName<br/>{% cdv_vartype string %} {% cdv_platform android %} | Alternative package name for Android, overrides `id`.
-ios-CFBundleIdentifier<br/>{% cdv_vartype string %}  <br/> {% cdv_platform ios %} | Alternative bundle id for iOS. Overrides `id`.
-defaultlocale <br /> {% cdv_platform ios %} | Specified the default language of the app, as an IANA language code.
+ios-CFBundleVersion<br/>{% cdv_vartype string %} {% cdv_platform ios %} | Alternative version for iOS. For further details, see [Apple Developer - CFBundleVersion](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleversion).
+android-packageName<br/>{% cdv_vartype string %} {% cdv_platform android %} | This preference overrides the id attribute with an alternative package name specifically for Android.
+ios-CFBundleIdentifier<br/>{% cdv_vartype string %} {% cdv_platform ios %} | This preference overrides the id attribute with an alternative bundle ID specifically for iOS.
+defaultlocale <br /> {% cdv_vartype string %}{% cdv_platform ios %} | Specify the default language of the app using an IANA language code. This preference key explicitly sets the value for [CFBundleDevelopmentRegion](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundledevelopmentregion). For example, you can use values like `en` or `en_US`.
 android-activityName<br/>{% cdv_vartype string %} {% cdv_platform android %} | Set the activity name for your app in AndroidManifest.xml. Note that this is only set once after the Android platform is first added.
 xmlns<br/>{% cdv_vartype string %} | *Required* <br/> Namespace for the config.xml document.
 xmlns:cdv<br/>{% cdv_vartype string %} | *Required* <br/> Namespace prefix.
@@ -85,6 +112,7 @@ Examples:
 ```
 
 ## name
+
 Specifies the app's formal name, as it appears on the device's home screen and within app-store interfaces.
 
 Examples:
@@ -96,6 +124,7 @@ Examples:
 ```
 
 ### short name
+
 Specifies an optional display name for the app. Sometimes the app name should be displayed differently on device's home screen than on informational and app-store interfaces due to limited space.
 
 Examples:
@@ -107,6 +136,7 @@ Examples:
 ```
 
 ## description
+
 Specifies metadata that may appear within app-store listings.
 
 Examples:
@@ -118,9 +148,10 @@ Examples:
 ```
 
 ## author
+
 Specifies contact information that may appear within app-store listings.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 email<br/>{% cdv_vartype string %} | *Required* <br/> Email of the author.
 href<br/>{% cdv_vartype string %} | *Required* <br/> Website of the author.
@@ -135,9 +166,10 @@ Examples:
 
 
 ## content
+
 Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily appears in a project's top-level ```www``` directory.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 src<br/>{% cdv_vartype string %} | *Required* <br/> Defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily appears in a project's top-level ```www``` directory.
 
@@ -150,11 +182,12 @@ Examples:
 ```
 
 ## access
-Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain [Whitelist Guide](../guide/appdev/allowlist/index.html) for details.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Defines the external domains that the app is allowed to communicate with. When the access origin is set to "*", the app can access any server, but this can potentially create a security risk. It is recommended to explicitly specify the permitted URLs to ensure a secure configuration. For detailed instructions, please refer to the [Allow List Guide](../guide/appdev/allowlist/index.html).
+
+Attributes | Description
 ----------------- | ------------
-origin<br/>{% cdv_vartype string %} | *Required* <br/> Defines the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain [Whitelist Guide](../guide/appdev/allowlist/index.html) for details.
+origin<br/>{% cdv_vartype string %} | *Required* <br/> Defines the external domain URL or URL pattern that the app is allowed to communicate with.
 
 Examples:
 
@@ -168,13 +201,13 @@ Examples:
 </widget>
 ```
 
-
 ## allow-navigation
-Controls which URLs the WebView itself can be navigated to. Applies to top-level navigations only.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Controls which URLs the WebView can be navigated to. Applies to top-level navigations only. See the [Allow List Guide][allow_list_navigation] for details.
+
+Attributes | Description
 ----------------- | ------------
-href<br/>{% cdv_vartype string %} | *Required* <br/> Defines the set of external domains the WebView is allowed to navigate to. See the [Allow List Guide][whitelist_navigation] for details.
+href<br/>{% cdv_vartype string %} | *Required* <br/> Defines the external domain or domain pattern that the WebView is allowed to navigate to.
 
 Examples:
 
@@ -187,11 +220,12 @@ Examples:
 ```
 
 ## allow-intent
-Controls which URLs the app is allowed to ask the system to open. By default, no external URLs are allowed.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Controls which URLs the app is allowed to ask the system to open. By default, no external URLs are allowed. See the [Allow List Guide][allow_list_intent] for details.
+
+Attributes | Description
 ----------------- | ------------
-href<br/>{% cdv_vartype string %} | *Required* <br/> Defines which URLs the app is allowed to ask the system to open. See the [Allow List Guide][whitelist_intent] for details.
+href<br/>{% cdv_vartype string %} | *Required* <br/> Defines the URL or URL pattern that the app is allowed to ask the system to open.
 
 Examples:
 
@@ -201,6 +235,7 @@ Examples:
 <allow-intent href="tel:*" />
 <allow-intent href="sms:*" />
 ```
+
 ## edit-config
 
 See [&lt;config-file&gt; docs][edit_config] for plugin.xml.
@@ -210,9 +245,10 @@ See [&lt;config-file&gt; docs][edit_config] for plugin.xml.
 See [&lt;config-file&gt; docs][config_file] for plugin.xml.
 
 ## engine
+
 Specifies details about what platform to restore during a prepare.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 name<br/>{% cdv_vartype string %} | *Required* <br/> Name of the platform to be restored
 spec<br/>{% cdv_vartype string %} | *Required* <br/> Details about the platform to be restored. This could be a ```major.minor.patch``` version number, a directory containing the platform or a url pointing to a git repository. This information will be used to retrieve the platform code to restore from NPM, a local directory or a git repository. See [Platform Spec][platform_spec] for further details.
@@ -225,6 +261,7 @@ Examples:
 ```
 
 ## plugin
+
 Specifies details about what plugin to restore during a prepare. This element
 is automatically added to a project's `config.xml` when a plugin is added using
 the `--save` flag. See the [CLI reference][plugin_cli] for more information on
@@ -232,7 +269,7 @@ adding plugins.
 
 _Note: As of Cordova 9.x, this tag is obsolete. [Learn More](https://github.com/apache/cordova-lib/pull/750)_
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 name<br/>{% cdv_vartype string %} | *Required* <br/> Name of the plugin to be restored
 spec<br/>{% cdv_vartype string %} | *Required* <br/> Details about the plugin to be restored. This could be a ```major.minor.patch``` version number, a directory containing the plugin or a url pointing to a git repository. This information will be used to retrieve the plugin code to restore from NPM, a local directory or a git repository. See [Plugin Spec][plugin_spec] for further details.
@@ -245,6 +282,7 @@ Examples:
 ```
 
 ### variable
+
 Persists the value of a CLI variable to be used when restoring a plugin during a
 prepare. This element is added to `config.xml` when a plugin that uses CLI variables
 is added using the `--save` flag. See the [CLI reference][plugin_cli] for more
@@ -256,7 +294,7 @@ project. In order for changes to this value to take effect, remove the plugin fr
 project and restore it by running `cordova prepare`. See the
 [preference element][plugin_preference] of `plugin.xml` for more details on CLI variables.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 name<br/>{% cdv_vartype string %} | *Required* <br/> Name of the CLI variable. Can only contain capital letters, digits, and underscores.
 value<br/>{% cdv_vartype string %} | *Required* <br/> Value of the CLI variable to be used when restoring the parent plugin during a prepare.
@@ -270,18 +308,28 @@ Examples:
 ```
 
 ## preference
+
 Sets various options as pairs of name/value attributes. Each preference's name is case-insensitive. Many preferences are unique to specific platforms,
 and will be indicated as such.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 AllowInlineMediaPlayback<br/>{% cdv_vartype boolean %} {% cdv_platform ios %} | *Default: false* <br/>  Set to true to allow HTML5 media playback to appear inline within the screen layout, using browser-supplied controls rather than native controls. For this to work, add the ```playsinline``` attribute to any ```<video>``` elements. *NOTE*: Prior to iOS 10, ```<video>``` elements need to use the ```webkit-playsinline``` attribute name instead.
 AllowNewWindows<br/>{% cdv_vartype boolean %} {% cdv_platform ios %} | *Default: false* <br/> Set to true to allow JavaScript `window.open` and HTML `target="_blank"` links to open a new view overlaying the web view.
 AndroidLaunchMode<br/>{% cdv_vartype string %} {% cdv_platform android %} | *Default: singleTop* <br/> Allowed values: standard, singleTop, singleTask, singleInstance <br/>  Sets the Activity android:launchMode attribute. This changes what happens when the app is launched from app icon or intent and is already running.
 AndroidInsecureFileModeEnabled<br/>{% cdv_vartype boolean %} {% cdv_platform android %} | *Default: false* <br/>  If set to `true` loading `file:///` URLs is allowed. __Note__: Enabling this setting allows malicious scripts loaded in a `file:///` context to launch cross-site scripting attacks, either accessing arbitrary local files including WebView cookies, app private data or even credentials used on arbitrary web sites.
 android-maxSdkVersion<br/>{% cdv_vartype number %} {% cdv_platform android %} | *Default: Not Specified* <br/>  Sets the `maxSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
-android-minSdkVersion<br/>{% cdv_vartype number %} {% cdv_platform android %} | *Default: Dependent on cordova-android Version* <br/>  Sets the `minSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
-android-targetSdkVersion<br/>{% cdv_vartype number %} {% cdv_platform android %} | *Default: Dependent on cordova-android Version* <br/>  Sets the `targetSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
+android-minSdkVersion<br/>{% cdv_vartype number %} {% cdv_platform android %} | *Default: [Dependent on cordova-android Version](../../guide/platforms/android/index.html#android-api-level-support)* <br/>  Sets the `minSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
+android-targetSdkVersion<br/>{% cdv_vartype number %} {% cdv_platform android %} | *Default: [Dependent on cordova-android Version](../../guide/platforms/android/index.html#android-api-level-support)* <br/>  Sets the `targetSdkVersion` attribute of the `<uses-sdk>` tag in the project's `AndroidManifest.xml` (see [here][uses-sdk]).
+android-compileSdkVersion<br/>{% cdv_vartype number %} {% cdv_platform android %} | *Default: [Dependent on cordova-android Version](../../guide/platforms/android/index.html#android-api-level-support)* <br/> Sets the `compileSdkVersion` attribute.
+android-buildToolsVersion<br/>{% cdv_vartype semver %} {% cdv_platform android %} | *Default: [Dependent on cordova-android Version](../../guide/platforms/android/index.html#android-api-level-support)* <br/> Expects a full version string eg. "32.0.0". Changing this may also requires changing the PATH environment variable to find the proper build tools.<br/><br/>This preference is primarily for cordova development, for testing upcoming versions of the Android SDK. Changing this has a high risk of breaking builds as newer build tools frequently introduce breaking changes.
+GradleVersion<br/>{% cdv_vartype string %} {% cdv_platform android %} | *Default: [Dependent on cordova-android Version](../../guide/platforms/android/index.html#android-api-level-support)* <br/> Sets the gradle wrapper version to use.<br/> <br/>This preference is primarily for cordova development, for testing upcoming versions of the Android SDK. Changing this has a high risk of breaking builds as newer build tools frequently introduce breaking changes.
+AndroidGradlePluginVersion<br/>{% cdv_vartype semver %} {% cdv_platform android %} | *Default: [Dependent on cordova-android Version](../../guide/platforms/android/index.html#android-api-level-support)* <br/> Sets the Android Gradle Plugin version to use.<br/> <br/>This preference is primarily for cordova development, for testing upcoming versions of the Android SDK. Changing this has a high risk of breaking builds as newer build tools frequently introduce breaking changes.
+AndroidXAppCompatVersion<br/>{% cdv_vartype semver %} {% cdv_platform android %} | *Default: [Dependent on cordova-android Version](../../guide/platforms/android/index.html#android-api-level-support)* <br/> Overrides Android App Compat library version.
+AndroidXWebKitVersion<br/>{% cdv_vartype semver %} {% cdv_platform android %} | *Default: [Dependent on cordova-android Version](../../guide/platforms/android/index.html#android-api-level-support)* <br/>Overrides Android WebKit library version.
+AndroidGradlePluginGoogleServicesVersion<br/>{% cdv_vartype semver %} {% cdv_platform android %} | *Default: [Dependent on cordova-android Version](../../guide/platforms/android/index.html#android-api-level-support)* <br/>Overrides the Google Services library version.
+AndroidGradlePluginGoogleServicesEnabled<br/>{% cdv_vartype boolean %} {% cdv_platform android %} | *Default: false* <br/>Enables Google Services. The `google-services.json` file will be required.
+GradlePluginKotlinEnabled<br/>{% cdv_vartype boolean %} {% cdv_platform android %} | *Default: false* <br/>Enables Kotlin plugin for Kotline support.
 AppendUserAgent<br/>{% cdv_vartype string %} {% cdv_platform android %} {% cdv_platform ios %} | If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.
 BackgroundColor<br/>{% cdv_vartype string %} {% cdv_platform android %} {% cdv_platform ios %} | Sets the app's background color. Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. <br/>__Note__: `transparent` value will set the application tile background to the accent color on Windows.
 BackupWebStorage<br/>{% cdv_vartype string %} {% cdv_platform ios %} | *Default: cloud* <br/> Allowed values: none, local, cloud. <br/>   Set to cloud to allow web storage data to backup via iCloud. Set to local to allow only local backups via iTunes sync. Set to none prevent web storage backups.
@@ -289,8 +337,7 @@ CordovaWebViewEngine<br/>{% cdv_vartype string %} {% cdv_platform ios %} | *Defa
 DefaultVolumeStream<br/>{% cdv_vartype string %} {% cdv_platform android %} | *Default: default* <br/>  Added in cordova-android 3.7.0, This preference sets which volume the hardware volume buttons link to. By default this is "call" for phones and "media" for tablets. Set this to "media" to have your app's volume buttons always change the media volume. Note that when using Cordova's media plugin, the volume buttons will dynamically change to controlling the media volume when any Media objects are active.
 DisallowOverscroll<br/>{% cdv_vartype boolean %} {% cdv_platform ios %} {% cdv_platform android %} | *Default: false* <br/>  Set to **true** if you don't want the interface to display any feedback when users scroll past the beginning or end of content. On iOS, overscroll gestures cause content to bounce back to its original position. on Android, they produce a more subtle glowing effect along the top or bottom edge of the content. <br/>
 EnableViewportScale<br/>{% cdv_vartype boolean %} {% cdv_platform ios %} | *Default: false* <br/>   Set to true to allow a viewport meta tag to either disable or restrict the range of user scaling, which is enabled by default. Place a viewport such as the following in the HTML to disable scaling and fit content flexibly within the rendering WebView: <br/> ```<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />```
-ErrorUrl<br/>{% cdv_vartype url %} {% cdv_platform android %} | *Default: null* <br/>  If set, will display the referenced page upon an error in the application instead of a dialog with the title "Application Error".
-ErrorUrl<br/>{% cdv_vartype string %} {% cdv_platform ios %} | If set, will display the referenced local page upon an error in the application.
+ErrorUrl<br/>{% cdv_vartype url %} {% cdv_platform android %} {% cdv_platform ios %} | *Default: null* <br/>When this preference is set, the application will display the specified local page upon encountering an error. Additionally, if this preference is set, the Android system will suppress the default dialog titled "Application Error".
 FullScreen<br/>{% cdv_vartype boolean %} {% cdv_platform android %} | *Default: false* <br/>  Allows you to hide the status bar at the top of the screen. <br/> __Note__: Recommended platform-agnostic way to achieve this is to use the [StatusBar plugin][statusbar_plugin].
 GapBetweenPages<br/>{% cdv_vartype float %} {% cdv_platform ios %} | *Default: 0* <br/>  The size of the gap, in points, between pages.
 GradlePluginGoogleServicesEnabled<br/>{% cdv_vartype boolean %} {% cdv_platform android %} | *Default: false* <br/>  Set to true to enable the Google Services Gradle plugin.
@@ -378,22 +425,24 @@ Examples:
 ```
 
 ## feature
+
 If you use the CLI to build applications, you use the plugin command to enable device APIs. This does not modify the top-level config.xml file, so the <feature> element does not apply to your workflow. If you work directly in an SDK and using the platform-specific config.xml file as source, you use the <feature> tag to enable device-level APIs and external plugins. They often appear with custom values in platform-specific config.xml files. See the API Reference for details on how to specify each feature. See
 the [Plugin Development Guide](../guide/hybrid/plugins/index.html) for more information on plugins.
 NOTE: Most of the time, you do NOT want to set this directly.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 name<br/>{% cdv_vartype string %} | *Required* <br/> The name of the plugin to enable.
 
 
 ### param
+
 Used to specify certain plugin parameters such as: what package to retrieve the plugin code from, and whether the plugin code is to be initialized during the Webview's initialization.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 name<br/>{% cdv_vartype string %} {% cdv_platform ios %} {% cdv_platform android %} | *Required* <br/> Allowed values: android-package, ios-package, onload. <br/>  'ios-package' and 'android-package' are used to specify the name of the package (as specified by the 'value' attribute) to be used to initialize the plugin code, while 'onload' is used to specify whether the corresponding plugin (as specified in the 'value' attribute) is to be instantiated when the controller is initialized.
-value(string or boolean) <br/> {% cdv_platform ios %} {% cdv_platform android %} | *Required* <br/>  Specifies the name of the package to be used to initialize the plugin code (when the 'name' attribute is android-package or ios-package), specifies the name of the plugin to be loaded during controller initialization (when 'name' attribute is set to 'onload').
+value <br/> {% cdv_vartype String/Boolean %} {% cdv_platform ios %} {% cdv_platform android %} | *Required* <br/>  Specifies the name of the package to be used to initialize the plugin code (when the 'name' attribute is android-package or ios-package), specifies the name of the plugin to be loaded during controller initialization (when 'name' attribute is set to 'onload').
 
 
 Examples:
@@ -413,9 +462,10 @@ Examples:
 
 
 ## platform
+
 When using the CLI to build applications, it is sometimes necessary to specify preferences or other elements specific to a particular platform. Use the <platform> element to specify configuration that should only appear in a single platform-specific config.xml file.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 name<br/>{% cdv_vartype string %} | *Required* <br/> The platform whose preferences are being defined.
 
@@ -428,12 +478,13 @@ Examples:
 ```
 
 ## hook
+
 Represents your custom script which will be called by Cordova when
 certain action occurs (for example, after plugin is added or platform
 prepare logic is invoked). This is useful when you need to extend
 default Cordova functionality. See [Hooks Guide](../guide/appdev/hooks/index.html) for more information.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ----------------- | ------------
 type<br/>{% cdv_vartype string %} | *Required* <br/> Specifies the action during which the custom script is to be called.
 src<br/>{% cdv_vartype string %} | *Required* <br/> Specifies the location of the script to be called when a specific action occurs.
@@ -448,7 +499,7 @@ Examples:
 
 This tag installs resource files into your platform, and is similar to the same tag in plugin.xml. This tag is currently only supported on `cordova-ios@4.4.0` or greater and `cordova-android@6.2.1` or greater.
 
-Attributes(type) <br/> <span class="sub-header">Only for platform:</span> | Description
+Attributes | Description
 ---------------- | ------------
 src<br/>{% cdv_vartype string %} {% cdv_platform ios %} {% cdv_platform android %}| *Required* <br/> Location of the file relative to `config.xml`.
 target<br/>{% cdv_vartype string %} | Path to where the file will be copied in your directory.
@@ -460,45 +511,13 @@ For Android:
 <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
 ```
 
-
-# Sample config.xml
-Below is a sample config.xml file:
-
-```xml
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>HelloCordova</name>
-  <description>
-      A sample Apache Cordova application that responds to the deviceready event.
-  </description>
-  <author email="dev@cordova.apache.org" href="https://cordova.io">
-      Apache Cordova Team
-  </author>
-  <content src="index.html" />
-  <access origin="*" />
-  <allow-intent href="http://*/*" />
-  <allow-intent href="https://*/*" />
-  <allow-intent href="tel:*" />
-  <allow-intent href="sms:*" />
-  <allow-intent href="mailto:*" />
-  <allow-intent href="geo:*" />
-  <platform name="android">
-      <allow-intent href="market:*" />
-  </platform>
-  <platform name="ios">
-      <allow-intent href="itms:*" />
-      <allow-intent href="itms-apps:*" />
-  </platform>
-</widget>
-```
-
 [uses-sdk]:             https://developer.android.com/guide/topics/manifest/uses-sdk-element.html
 [platform_spec]:        ../reference/cordova-cli/index.html#platform-spec
 [plugin_preference]:    ../plugin_ref/spec.html#preference
 [plugin_spec]:          ../reference/cordova-cli/index.html#plugin-spec
 [plugin_cli]:           ../reference/cordova-cli/index.html#cordova-plugin-command
-[whitelist_navigation]: ../guide/appdev/allowlist/index.html#navigation-allow-list
-[whitelist_intent]:     ../guide/appdev/allowlist/index.html#intent-allow-list
+[allow_list_navigation]: ../guide/appdev/allowlist/index.html#navigation-allow-list
+[allow_list_intent]:     ../guide/appdev/allowlist/index.html#intent-allow-list
 [statusbar_plugin]:     ../reference/cordova-plugin-statusbar/
 [edit_config]:          ../plugin_ref/spec.html#edit-config
 [config_file]:          ../plugin_ref/spec.html#config-file
