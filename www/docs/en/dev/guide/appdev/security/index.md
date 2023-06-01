@@ -42,7 +42,7 @@ By default the app's navigation is unrestricted. It's recommended to restrict th
 
 ## Iframes and the Callback Id Mechanism
 
-If content is served in an iframe from a allow listed domain, that domain will have access to the native Cordova bridge. This means that if you allowed a third-party advertising network and serve those ads through an iframe, it is possible that a malicious ad will be able to break out of the iframe and perform malicious actions. Because of this, you should generally not use iframes unless you control the server that hosts the iframe content.  Also note that there are third party plugins available to support advertising networks. Note that this statement is not true for iOS, which intercepts everything including iframe connections.
+If content is served in an iframe from a allow listed domain, that domain will have access to the native Cordova bridge. This means that if you allow a third-party advertising network and serve those ads through an iframe, it is possible that a malicious ad will be able to break out of the iframe and perform malicious actions. Because of this, you should generally not use iframes unless you control the server that hosts the iframe content.  Also note that there are third party plugins available to support advertising networks. Note that this statement is not true for iOS, which intercepts everything including iframe connections.
 
 ## Certificate Pinning
 
