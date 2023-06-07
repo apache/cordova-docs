@@ -332,7 +332,6 @@ AndroidGradlePluginGoogleServicesEnabled<br/>{% cdv_vartype boolean %} {% cdv_pl
 GradlePluginKotlinEnabled<br/>{% cdv_vartype boolean %} {% cdv_platform android %} | *Default: false* <br/>Enables Kotlin plugin for Kotline support.
 AppendUserAgent<br/>{% cdv_vartype string %} {% cdv_platform android %} {% cdv_platform ios %} | If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.
 BackgroundColor<br/>{% cdv_vartype string %} {% cdv_platform android %} {% cdv_platform ios %} | Sets the app's background color. Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. <br/>__Note__: `transparent` value will set the application tile background to the accent color on Windows.
-BackupWebStorage<br/>{% cdv_vartype string %} {% cdv_platform ios %} | *Default: cloud* <br/> Allowed values: none, local, cloud. <br/>   Set to cloud to allow web storage data to backup via iCloud. Set to local to allow only local backups via iTunes sync. Set to none prevent web storage backups.
 CordovaWebViewEngine<br/>{% cdv_vartype string %} {% cdv_platform ios %} | *Default: CDVWebViewEngine* <br/>  This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The 'value' here should match the 'feature' name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.
 DefaultVolumeStream<br/>{% cdv_vartype string %} {% cdv_platform android %} | *Default: default* <br/>  Added in cordova-android 3.7.0, This preference sets which volume the hardware volume buttons link to. By default this is "call" for phones and "media" for tablets. Set this to "media" to have your app's volume buttons always change the media volume. Note that when using Cordova's media plugin, the volume buttons will dynamically change to controlling the media volume when any Media objects are active.
 DisallowOverscroll<br/>{% cdv_vartype boolean %} {% cdv_platform ios %} {% cdv_platform android %} | *Default: false* <br/>  Set to **true** if you don't want the interface to display any feedback when users scroll past the beginning or end of content. On iOS, overscroll gestures cause content to bounce back to its original position. on Android, they produce a more subtle glowing effect along the top or bottom edge of the content. <br/>
@@ -386,7 +385,6 @@ Examples:
 <preference name="MediaPlaybackAllowsAirPlay" value="false"/>
 <preference name="MediaPlaybackRequiresUserAction" value="true"/>
 <preference name="AllowInlineMediaPlayback" value="true"/>
-<preference name="BackupWebStorage" value="local"/>
 <preference name="TopActivityIndicator" value="white"/>
 <preference name="SuppressesIncrementalRendering" value="true"/>
 <preference name="GapBetweenPages" value="0"/>
