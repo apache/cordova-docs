@@ -2770,10 +2770,6 @@ and will be indicated as such.</p>
       <td>Sets the app&#39;s background color. Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. <br /><strong>Note</strong>: <code>transparent</code> value will set the application tile background to the accent color on Windows.</td>
     </tr>
     <tr>
-      <td>BackupWebStorage<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
-      <td><em>Default: cloud</em> <br /> Allowed values: none, local, cloud. <br />   Set to cloud to allow web storage data to backup via iCloud. Set to local to allow only local backups via iTunes sync. Set to none prevent web storage backups.</td>
-    </tr>
-    <tr>
       <td>CordovaWebViewEngine<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
       <td><em>Default: CDVWebViewEngine</em> <br />  This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The &#39;value&#39; here should match the &#39;feature&#39; name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.</td>
     </tr>
@@ -2941,7 +2937,6 @@ and will be indicated as such.</p>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"MediaPlaybackAllowsAirPlay"</span> <span class="na">value=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"MediaPlaybackRequiresUserAction"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AllowInlineMediaPlayback"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"BackupWebStorage"</span> <span class="na">value=</span><span class="s">"local"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"TopActivityIndicator"</span> <span class="na">value=</span><span class="s">"white"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SuppressesIncrementalRendering"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"GapBetweenPages"</span> <span class="na">value=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
