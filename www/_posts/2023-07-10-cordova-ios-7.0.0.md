@@ -38,13 +38,20 @@ cordova platform add ios@7.0.0
 
 * **Removed default `CONFIGURATION_BUILD_DIR` overrides**
 
+    This will change the location of where the output files are generated.
+
+    * `build/emulator` will become `build/Debug-iphonesimulator`
+    * `build/device` will become `build/Release-iphoneos`
+
+    This will help ensure that debug and release files are never mixed up in the same directory and hypothetically prepare for `macos` builds.
+
 * **Node Support**
 
     We have dropped support for Node 14.x and increase the minimum Node requirement to greater than or equal to 16.13.0.
 
-* **Dropped Platform Binraries**
+* **Dropped Platform Binaries**
 
-    We no longer supply or package platform-centric workflow binraries in the `cordova-ios` npm package or GitHub repository.
+    We no longer supply or package platform-centric workflow binaries in the `cordova-ios` npm package or GitHub repository.
 
 * **Rename `Images.xcassets` to `Assets.xcassets`**
 
@@ -60,6 +67,10 @@ cordova platform add ios@7.0.0
 * **Support Apple Cloud Distribution Signing**
 
 * **Enable Mac Catalyst Support**
+
+    Apps built with Cordova-iOS can now target macOS using the Catalyst runtime. This can be enabled by checking the "macOS - Catalyst" checkbox in the Xcode project settings and then building for the macOS target in Xcode.
+
+    Currently, building for Catalyst from Cordova's command-line tool is not supported.
 
 Please report any issues you find on our [Cordova-iOS](https://github.com/apache/cordova-ios/issues) GitHub issue tracker!
 
