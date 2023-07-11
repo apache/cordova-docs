@@ -11,22 +11,22 @@ We are happy to announce that we have just released `Cordova iOS 7.0.0`! This is
 
 * [cordova-ios@7.0.0](https://www.npmjs.com/package/cordova-ios)
 
-## Release Highlights
-
-**To upgrade:**
+**Upgrade steps:**
 
 ```bash
 cordova platform remove ios
 cordova platform add ios@7.0.0
 ```
 
-**To install:**
+**New install steps:**
 
 ```bash
 cordova platform add ios@7.0.0
 ```
 
-**BREAKING CHANGES:**
+## Release Highlights
+
+### Breaking Changes
 
 * **Removal of `podspec` type from `framework` tag**
 
@@ -58,7 +58,7 @@ cordova platform add ios@7.0.0
 * **Remove deprecated API `colorFromColorString` from `CDVViewController`**
 * **Privatized the `CDVCommandDelegateImpl` class.**
 
-**New Features:**
+### New Features
 
 * **Added `LimitsNavigationsToAppBoundDomains` preference configuration**
 
@@ -75,7 +75,7 @@ cordova platform add ios@7.0.0
 Please report any issues you find on our [Cordova-iOS](https://github.com/apache/cordova-ios/issues) GitHub issue tracker!
 
 <!--more-->
-# Changes include:
+## Change Log
 
 **Breaking:**
 
