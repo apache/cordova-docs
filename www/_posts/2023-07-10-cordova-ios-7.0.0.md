@@ -66,6 +66,10 @@ cordova platform add ios@7.0.0
 
 * **Support Apple Cloud Distribution Signing**
 
+    Apple Cloud Distribution Signing allows using AppStore Connect API keys to automatically manage the distribution signing certificate and provisioning profiles. With Cordova-iOS 7.0.0, you can specify AppStore Connect API credentials in build.json or as command-line parameters to the cordova tool.
+
+    These options are `authenticationKeyPath`, `authenticationKeyID`, and `authenticationKeyIssuerID`, and they work in combination with the existing `automaticProvisioning` option.
+
 * **Enable Mac Catalyst Support**
 
     Apps built with Cordova-iOS can now target macOS using the Catalyst runtime. This can be enabled by checking the "macOS - Catalyst" checkbox in the Xcode project settings and then building for the macOS target in Xcode.
