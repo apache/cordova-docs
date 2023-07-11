@@ -53,6 +53,8 @@ cordova platform add ios@7.0.0
 
     We no longer supply or package platform-centric workflow binaries in the `cordova-ios` npm package or GitHub repository.
 
+    Please use the `cordova` CLI tool for managing your Cordova project plugins and platform configuration.
+
 * **Rename `Images.xcassets` to `Assets.xcassets`**
 
 * **Remove deprecated API `colorFromColorString` from `CDVViewController`**
