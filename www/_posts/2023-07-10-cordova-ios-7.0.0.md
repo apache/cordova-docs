@@ -43,7 +43,7 @@ cordova platform add ios@7.0.0
     * `build/emulator` will become `build/Debug-iphonesimulator`
     * `build/device` will become `build/Release-iphoneos`
 
-    This will help ensure that debug and release files are never mixed up in the same directory and hypothetically prepare for `macos` builds.
+    This will help ensure that debug and release files are never mixed up in the same directory and improves support for macOS `maccatalyst` builds.
 
 * **Node Support**
 
