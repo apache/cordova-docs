@@ -6,9 +6,98 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Jul 2023 15:54:56 +0000</pubDate>
-    <lastBuildDate>Tue, 11 Jul 2023 15:54:56 +0000</lastBuildDate>
+    <pubDate>Tue, 11 Jul 2023 15:55:35 +0000</pubDate>
+    <lastBuildDate>Tue, 11 Jul 2023 15:55:35 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>File Plugin 8.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-file&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-file&quot;&gt;cordova-plugin-file@8.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-file
+cordova plugin add cordova-plugin-file@8.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;h3&gt;Breaking Changes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Removed &lt;code&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt; permission&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;According to the official documentation on &lt;a href=&quot;https://developer.android.com/about/versions/11/privacy/storage&quot;&gt;Storage updates in Android 11&lt;/a&gt;, the &lt;a href=&quot;https://developer.android.com/reference/android/Manifest.permission#WRITE_EXTERNAL_STORAGE&quot;&gt;&lt;code&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt;&lt;/a&gt; permission is no longer operational and does not grant access to write to external storage.&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;If this permission is not allowlisted for an app that targets an API level before &lt;a href=&quot;https://developer.android.com/reference/android/os/Build.VERSION_CODES#Q&quot;&gt;&lt;code&gt;Build.VERSION_CODES.Q&lt;/code&gt;&lt;/a&gt; (SDK 29) this permission cannot be granted to apps.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;Although Cordova has removed this permission from the plugin by default, you can still add it back if needed by using the &lt;code&gt;config-file&lt;/code&gt; tag in your project&amp;#39;s &lt;code&gt;config.xml&lt;/code&gt; file.&lt;/p&gt;
+
+    &lt;p&gt;Example:&lt;/p&gt;
+
+    &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;config-file&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;AndroidManifest.xml&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;parent=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/*&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schemas.android.com/apk/res/android&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;uses-permission&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:maxSdkVersion=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;32&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/config-file&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;It&amp;#39;s important to note that other plugins used in your Cordova project may still include the &lt;code&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt; permission. To verify whether the permission is added by other plugins, you can check the merged &lt;code&gt;AndroidManifest.xml&lt;/code&gt; file.&lt;/p&gt;
+
+    &lt;p&gt;The merged &lt;code&gt;AndroidManifest.xml&lt;/code&gt; file can be found at the following location:&lt;/p&gt;
+
+    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  platforms/android/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;Please keep in mind that the example file path provided above is specific to debug builds. For release builds or different build variants, the file path may vary slightly.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Android 13+ Support&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Beginning from Android 13 (SDK 33), the &lt;code&gt;READ_EXTERNAL_STORAGE&lt;/code&gt; permission no longer has any effect. Instead, this permission has been replaced with more granular permissions: &lt;code&gt;READ_MEDIA_IMAGES&lt;/code&gt;, &lt;code&gt;READ_MEDIA_VIDEO&lt;/code&gt;, and &lt;code&gt;READ_MEDIA_AUDIO&lt;/code&gt;.&lt;/p&gt;
+
+    &lt;p&gt;To adapt to this change, we have introduced these three new permissions. This ensures that the existing functionality and behavior related to reading various media file are maintained for Android 13 and higher versions.&lt;/p&gt;
+
+    &lt;p&gt;Furthermore, to support the new granular permissions and Android 13 (SDK 33), we have raised the minimum requirement for &lt;code&gt;cordova-android&lt;/code&gt; to version &lt;code&gt;12.0.0&lt;/code&gt;. This version of Cordova-Android specifically includes the necessary updates to handle Android 13 and compile your project with the new permissions successfully.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find by following the this &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h2&gt;Changes Log&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/534&quot;&gt;GH-534&lt;/a&gt; fix(android): &lt;code&gt;FileError&lt;/code&gt; on a content &lt;code&gt;resolveLocalFileSystemURL&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/566&quot;&gt;GH-566&lt;/a&gt; feat(android): add &lt;code&gt;READ_MEDIA_*&lt;/code&gt; permissions for Android 13+&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/576&quot;&gt;GH-576&lt;/a&gt; feat(android)!: bump &lt;code&gt;cordova-android@12&lt;/code&gt; requirement&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/575&quot;&gt;GH-575&lt;/a&gt; ci: sync github workflow with paramedic base configs&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/574&quot;&gt;GH-574&lt;/a&gt; chore: update &lt;code&gt;@cordova/eslint-config@5.0.0&lt;/code&gt; w/ fixes&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/556&quot;&gt;GH-556&lt;/a&gt; feat(android)!: remove &lt;code&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt; permission from &lt;code&gt;plugin.xml&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/554&quot;&gt;GH-554&lt;/a&gt; spec(android): fix spec based on testing environment&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/547&quot;&gt;GH-547&lt;/a&gt; fix(types): Mark &lt;code&gt;FileWriter.write&lt;/code&gt; to support &lt;code&gt;ArrayBuffer&lt;/code&gt; data&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/535&quot;&gt;GH-535&lt;/a&gt; ci: sync workflow with paramedic&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/531&quot;&gt;GH-531&lt;/a&gt; dep(npm): bump package-lock v2 w/ rebuild&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/529&quot;&gt;GH-529&lt;/a&gt; ci(android): update java requirement for &lt;code&gt;cordova-android@11&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/news/2023/07/11/file-plugin-8.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/news/2023/07/11/file-plugin-8.0.0.html</guid>
+        
+        <category>release</category>
+        
+        <category>plugins</category>
+        
+        
+        <category>news</category>
+        
+      </item>
     
       <item>
         <title>Cordova iOS 7.0.0 Released!</title>
@@ -921,51 +1010,6 @@ cordova plugin add cordova-plugin-screen-orientation@3.0.3
         
         
         <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Media Plugin 6.1.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-media&lt;/code&gt;!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-media&quot;&gt;cordova-plugin-media@6.1.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-media
-cordova plugin add cordova-plugin-media@6.1.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;For Android, we updated the media error response object to include the &amp;quot;message&amp;quot; property. This property will provide additional information about the error. It also syncs in line with the media error response object that iOS returns.&lt;/p&gt;
-
-&lt;p&gt;For iOS, file scheme support has been implemented. Two fixes were applied to prevent crashes that occured when fetching the position while the time was not defined and to ensured that the category was defined after the recording was released.&lt;/p&gt;
-
-&lt;p&gt;Please report any issues you find by following the this &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/357&quot;&gt;GH-357&lt;/a&gt; feat(android): add &amp;#39;&lt;code&gt;message&lt;/code&gt;&amp;#39; field to media error &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-11641&quot;&gt;CB-11641&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/352&quot;&gt;GH-352&lt;/a&gt; feat(ios): support &lt;code&gt;file&lt;/code&gt; scheme&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/354&quot;&gt;GH-354&lt;/a&gt; fix(ios): Reset default audio session category when release (&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-13243&quot;&gt;CB-13243&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media/pull/353&quot;&gt;GH-353&lt;/a&gt; fix(ios): error on &lt;code&gt;getPosition&lt;/code&gt; when time is &lt;code&gt;nan&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/news/2022/09/09/media-plugin-6.1.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/news/2022/09/09/media-plugin-6.1.0.html</guid>
-        
-        <category>release</category>
-        
-        <category>plugins</category>
-        
-        
-        <category>news</category>
         
       </item>
     

@@ -132,6 +132,86 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Tue, 11 Jul 2023 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/news/2023/07/11/file-plugin-8.0.0.html">File Plugin 8.0.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">11 Jul 2023</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                        <a class="comment" href="/news/2023/07/11/file-plugin-8.0.0.html#disqus_thread"></a>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released an update for <code>cordova-plugin-file</code>!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-file">cordova-plugin-file@8.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-file
+cordova plugin add cordova-plugin-file@8.0.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<h3>Breaking Changes</h3>
+
+<ul>
+  <li>
+    <p><strong>Removed <code>WRITE_EXTERNAL_STORAGE</code> permission</strong></p>
+
+    <p>According to the official documentation on <a href="https://developer.android.com/about/versions/11/privacy/storage">Storage updates in Android 11</a>, the <a href="https://developer.android.com/reference/android/Manifest.permission#WRITE_EXTERNAL_STORAGE"><code>WRITE_EXTERNAL_STORAGE</code></a> permission is no longer operational and does not grant access to write to external storage.</p>
+
+    <blockquote>
+      <p>If this permission is not allowlisted for an app that targets an API level before <a href="https://developer.android.com/reference/android/os/Build.VERSION_CODES#Q"><code>Build.VERSION_CODES.Q</code></a> (SDK 29) this permission cannot be granted to apps.</p>
+    </blockquote>
+
+    <p>Although Cordova has removed this permission from the plugin by default, you can still add it back if needed by using the <code>config-file</code> tag in your project&#39;s <code>config.xml</code> file.</p>
+
+    <p>Example:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;config-file</span> <span class="na">target=</span><span class="s">"AndroidManifest.xml"</span> <span class="na">parent=</span><span class="s">"/*"</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.WRITE_EXTERNAL_STORAGE"</span> <span class="na">android:maxSdkVersion=</span><span class="s">"32"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/config-file&gt;</span>
+</code></pre></div>    </div>
+
+    <p>It&#39;s important to note that other plugins used in your Cordova project may still include the <code>WRITE_EXTERNAL_STORAGE</code> permission. To verify whether the permission is added by other plugins, you can check the merged <code>AndroidManifest.xml</code> file.</p>
+
+    <p>The merged <code>AndroidManifest.xml</code> file can be found at the following location:</p>
+
+    <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  platforms/android/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+</code></pre></div>    </div>
+
+    <p>Please keep in mind that the example file path provided above is specific to debug builds. For release builds or different build variants, the file path may vary slightly.</p>
+  </li>
+  <li>
+    <p><strong>Android 13+ Support</strong></p>
+
+    <p>Beginning from Android 13 (SDK 33), the <code>READ_EXTERNAL_STORAGE</code> permission no longer has any effect. Instead, this permission has been replaced with more granular permissions: <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>, and <code>READ_MEDIA_AUDIO</code>.</p>
+
+    <p>To adapt to this change, we have introduced these three new permissions. This ensures that the existing functionality and behavior related to reading various media file are maintained for Android 13 and higher versions.</p>
+
+    <p>Furthermore, to support the new granular permissions and Android 13 (SDK 33), we have raised the minimum requirement for <code>cordova-android</code> to version <code>12.0.0</code>. This version of Cordova-Android specifically includes the necessary updates to handle Android 13 and compile your project with the new permissions successfully.</p>
+  </li>
+</ul>
+
+<p>Please report any issues you find by following the this <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+
+</p>
+                    <div><a href="/news/2023/07/11/file-plugin-8.0.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Mon, 10 Jul 2023 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/announcements/2023/07/10/cordova-ios-7.0.0.html">Cordova iOS 7.0.0 Released!</a>
@@ -13122,7 +13202,7 @@ window.twttr = (function(d, s, id) {
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Mon, 10 Jul 2023 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Tue, 11 Jul 2023 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };
