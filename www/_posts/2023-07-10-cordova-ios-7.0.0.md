@@ -45,9 +45,9 @@ cordova platform add ios@7.0.0
 
     This will help ensure that debug and release files are never mixed up in the same directory and improves support for macOS `maccatalyst` builds.
 
-* **Node Support**
+* **Update supported NodeJS versions**
 
-    We have dropped support for Node 14.x and increase the minimum Node requirement to greater than or equal to 16.13.0.
+    We have dropped support for NodeJS 14.x and increase the minimum NodeJS requirement to greater than or equal to 16.13.0.
 
 * **Dropped Platform Binaries**
 
@@ -56,7 +56,7 @@ cordova platform add ios@7.0.0
 * **Rename `Images.xcassets` to `Assets.xcassets`**
 
 * **Remove deprecated API `colorFromColorString` from `CDVViewController`**
-* **Privatized the `CDVCommandDelegateImpl` class.**
+* **Remove the `CDVCommandDelegateImpl` class from public API**
 
 ### New Features
 
