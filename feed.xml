@@ -6,9 +6,238 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 07 Jun 2023 13:09:20 +0000</pubDate>
-    <lastBuildDate>Wed, 07 Jun 2023 13:09:20 +0000</lastBuildDate>
+    <pubDate>Tue, 11 Jul 2023 15:54:56 +0000</pubDate>
+    <lastBuildDate>Tue, 11 Jul 2023 15:54:56 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Cordova iOS 7.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova iOS 7.0.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building iOS applications.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@7.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Upgrade steps:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
+cordova platform add ios@7.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;New install steps:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add ios@7.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;h3&gt;Breaking Changes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Removal of &lt;code&gt;podspec&lt;/code&gt; type from &lt;code&gt;framework&lt;/code&gt; tag&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Since Cordova-iOS 5.0.0, the new &lt;code&gt;podspec&lt;/code&gt; tag was added to improve the readability and support of features that CocoaPods provided.&lt;/p&gt;
+
+    &lt;p&gt;This release officially removes the old &lt;code&gt;type=&quot;podspec&quot;&lt;/code&gt; implementation of the &lt;code&gt;framework&lt;/code&gt; tag. If you maintain plugins and still using the &lt;code&gt;framework&lt;/code&gt; tag to load pod specs, it is recommended to migrate to the newer implementation.&lt;/p&gt;
+
+    &lt;p&gt;For implementation specifications, please see our &lt;a href=&quot;https://cordova.apache.org/docs/en/dev/plugin_ref/spec.html#podspec-&quot;&gt;Apache Cordova - Podspec&lt;/a&gt; docs.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Removed default &lt;code&gt;CONFIGURATION_BUILD_DIR&lt;/code&gt; overrides&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;This will change the location of where the output files are generated.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;build/emulator&lt;/code&gt; will become &lt;code&gt;build/Debug-iphonesimulator&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;build/device&lt;/code&gt; will become &lt;code&gt;build/Release-iphoneos&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;This will help ensure that debug and release files are never mixed up in the same directory and improves support for macOS &lt;code&gt;maccatalyst&lt;/code&gt; builds.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Update supported NodeJS versions&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;We have dropped support for NodeJS 14.x and increase the minimum NodeJS requirement to greater than or equal to 16.13.0.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Dropped Platform Binaries&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;We no longer supply or package platform-centric workflow binaries in the &lt;code&gt;cordova-ios&lt;/code&gt; npm package or GitHub repository.&lt;/p&gt;
+
+    &lt;p&gt;Please use the &lt;code&gt;cordova&lt;/code&gt; CLI tool for managing your Cordova project plugins and platform configuration.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Rename &lt;code&gt;Images.xcassets&lt;/code&gt; to &lt;code&gt;Assets.xcassets&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Remove deprecated API &lt;code&gt;colorFromColorString&lt;/code&gt; from &lt;code&gt;CDVViewController&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Remove the &lt;code&gt;CDVCommandDelegateImpl&lt;/code&gt; class from public API&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;New Features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Added &lt;code&gt;LimitsNavigationsToAppBoundDomains&lt;/code&gt; preference configuration&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;This preference allows you to use cookie authentication or browser APIs but requires the value to be set to &lt;code&gt;YES&lt;/code&gt;. The default value is &lt;code&gt;NO&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Support Apple Cloud Distribution Signing&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Apple Cloud Distribution Signing allows using AppStore Connect API keys to automatically manage the distribution signing certificate and provisioning profiles. With Cordova-iOS 7.0.0, you can specify AppStore Connect API credentials in &lt;code&gt;build.json&lt;/code&gt; or as command-line parameters to the &lt;code&gt;cordova&lt;/code&gt; tool.&lt;/p&gt;
+
+    &lt;p&gt;These options are &lt;code&gt;authenticationKeyPath&lt;/code&gt;, &lt;code&gt;authenticationKeyID&lt;/code&gt;, and &lt;code&gt;authenticationKeyIssuerID&lt;/code&gt;, and they work in combination with the existing &lt;code&gt;automaticProvisioning&lt;/code&gt; option.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Enable Mac Catalyst Support&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Apps built with Cordova-iOS can now target macOS using the Catalyst runtime. This can be enabled by checking the &amp;quot;macOS - Catalyst&amp;quot; checkbox in the Xcode project settings and then building for the macOS target in Xcode.&lt;/p&gt;
+
+    &lt;p&gt;Currently, building for Catalyst from Cordova&amp;#39;s command-line tool is not supported.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-ios/issues&quot;&gt;Cordova-iOS&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h2&gt;Change Log&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1340&quot;&gt;GH-1340&lt;/a&gt; chore!: Remove &lt;code&gt;podspec&lt;/code&gt; support from &lt;code&gt;framework&lt;/code&gt; tag&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1310&quot;&gt;GH-1310&lt;/a&gt; feat!: Remove some Xcode build dir overrides&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1305&quot;&gt;GH-1305&lt;/a&gt; dep!: bump all possible dependencies w/ node engine requirement update &lt;code&gt;&amp;gt;=16.13.0&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;semver@7.4.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;plist@3.0.6&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;fs-extra@11.1.1&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;cordova-common@5.0.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;nopt@7.1.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;which@3.0.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;@cordova/eslint-config@5.0.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;jasmine@4.6.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;rewire@6.0.0&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1180&quot;&gt;GH-1180&lt;/a&gt; refactor!: drop platform binaries&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1169&quot;&gt;GH-1169&lt;/a&gt; chore!: Rename &lt;code&gt;Images.xcassets&lt;/code&gt; to &lt;code&gt;Assets.xcassets&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1161&quot;&gt;GH-1161&lt;/a&gt; chore!: Breaking API cleanups&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1182&quot;&gt;GH-1182&lt;/a&gt; dep(dev)!: bump eslint w/ corrections&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1181&quot;&gt;GH-1181&lt;/a&gt; dep!: use latest dependencies
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;nyc@^15.1.0&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1249&quot;&gt;GH-1249&lt;/a&gt; feat: Add &lt;code&gt;LimitsNavigationsToAppBoundDomains&lt;/code&gt; configuration key&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1320&quot;&gt;GH-1320&lt;/a&gt; feat: add &lt;code&gt;listTarget&lt;/code&gt; api &amp;amp; revert original bin file location&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1266&quot;&gt;GH-1266&lt;/a&gt; feat(plugman): support &lt;code&gt;framework&lt;/code&gt; &lt;code&gt;link&lt;/code&gt; attribute&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1276&quot;&gt;GH-1276&lt;/a&gt; feat: Support Apple Cloud Distribution signing&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1210&quot;&gt;GH-1210&lt;/a&gt; feat: support extending export options&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1251&quot;&gt;GH-1251&lt;/a&gt; feat: support multiple provisioning profiles&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1186&quot;&gt;GH-1186&lt;/a&gt; feat(versions): print error messages, not error objects&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1168&quot;&gt;GH-1168&lt;/a&gt; feat(catalyst): Enable Mac Catalyst support&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1050&quot;&gt;GH-1050&lt;/a&gt; feat: add &lt;code&gt;CDVWebViewEngineConfigurationDelegate&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1154&quot;&gt;GH-1154&lt;/a&gt; feat: Swift Package Manager support for CordovaLib&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1354&quot;&gt;GH-1354&lt;/a&gt; fix: Various ObjC/template cleanups&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1341&quot;&gt;GH-1341&lt;/a&gt; fix: Try updating &lt;code&gt;Podfile&lt;/code&gt; deployment target on prepare&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1343&quot;&gt;GH-1343&lt;/a&gt; fix: Apply new Xcode flags consistently across test projects&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1126&quot;&gt;GH-1126&lt;/a&gt; fix: replace of &lt;code&gt;podspec&lt;/code&gt; variables in &lt;code&gt;Podfile&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1336&quot;&gt;GH-1336&lt;/a&gt; fix: Xcode 15 Beta&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1337&quot;&gt;GH-1337&lt;/a&gt; fix: make the WebView the first responder when it loads&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1326&quot;&gt;GH-1326&lt;/a&gt; fix: memory leak when removing the &lt;code&gt;CDVViewController&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1312&quot;&gt;GH-1312&lt;/a&gt; fix(create): Ensure unix paths in Xcode project file&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1315&quot;&gt;GH-1315&lt;/a&gt; fix(splashscreen): positioning after rotation&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1295&quot;&gt;GH-1295&lt;/a&gt; fix(&lt;code&gt;CDVPlugin&lt;/code&gt;): swift init&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1255&quot;&gt;GH-1255&lt;/a&gt; fix: import type definitions from obsolete &lt;code&gt;cordova-plugin-splashscreen&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1170&quot;&gt;GH-1170&lt;/a&gt; fix(bin/create): set failing exit code on failure&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1171&quot;&gt;GH-1171&lt;/a&gt; fix(spec/create): handle &lt;code&gt;createAndBuild&lt;/code&gt; promises&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1140&quot;&gt;GH-1140&lt;/a&gt; fix: split xcode project location by env separator&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Refactors:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1206&quot;&gt;GH-1206&lt;/a&gt; refactor: platform version logic&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1204&quot;&gt;GH-1204&lt;/a&gt; refactor: move cordova minimum template&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1203&quot;&gt;GH-1203&lt;/a&gt; refactor!: do not copy JS lib to platform project&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1202&quot;&gt;GH-1202&lt;/a&gt; refactor: do not infer project root from script location&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1201&quot;&gt;GH-1201&lt;/a&gt; refactor(create): convert main implementation to class&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1200&quot;&gt;GH-1200&lt;/a&gt; refactor(create): sort functions in breadth-first call order&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1199&quot;&gt;GH-1199&lt;/a&gt; refactor(create): further cleanup&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1198&quot;&gt;GH-1198&lt;/a&gt; refactor(create): cleanup createProject&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1196&quot;&gt;GH-1196&lt;/a&gt; refactor: move project template out of bin w/ code changes&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1195&quot;&gt;GH-1195&lt;/a&gt; refactor(create): cleanup &lt;code&gt;copyTemplateFiles&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1194&quot;&gt;GH-1194&lt;/a&gt; refactor(create)!: move apple_* binaries &amp;amp; cleanup &lt;code&gt;copyScripts&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1193&quot;&gt;GH-1193&lt;/a&gt; refactor: cleanup create script&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1190&quot;&gt;GH-1190&lt;/a&gt; refactor: replace superspawn with execa&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1188&quot;&gt;GH-1188&lt;/a&gt; refactor: hide implementation of build &amp;amp; run&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1189&quot;&gt;GH-1189&lt;/a&gt; refactor(run): code cleanup&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1185&quot;&gt;GH-1185&lt;/a&gt; refactor(versions): DRY version binary code&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1167&quot;&gt;GH-1167&lt;/a&gt; refactor: Api class&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1158&quot;&gt;GH-1158&lt;/a&gt; refactor: replace &lt;code&gt;copy-www-build-step&lt;/code&gt; script with build phase&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1032&quot;&gt;GH-1032&lt;/a&gt; refactor: update allow list name&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1116&quot;&gt;GH-1116&lt;/a&gt; refactor(projectFile): drop dependency on underscore&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;chore(rat): add auto generated xcode files to ignore list&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1339&quot;&gt;GH-1339&lt;/a&gt; chore: Remove unused &lt;code&gt;BackupWebStorage&lt;/code&gt; preference&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1308&quot;&gt;GH-1308&lt;/a&gt; chore: remove long-unused &lt;code&gt;codeSignResourceRules&lt;/code&gt; option&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1183&quot;&gt;GH-1183&lt;/a&gt; chore: remove unused and outdated &lt;code&gt;listStartedEmulators&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1174&quot;&gt;GH-1174&lt;/a&gt; chore: remove stale coffeescript tests&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1173&quot;&gt;GH-1173&lt;/a&gt; chore: Remove unused imports from template&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1160&quot;&gt;GH-1160&lt;/a&gt; chore(swiftpm): Fix up CordovaLib Swift Package&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1034&quot;&gt;GH-1034&lt;/a&gt; chore: remove more deprecated &lt;code&gt;UIWebView&lt;/code&gt; things&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1145&quot;&gt;GH-1145&lt;/a&gt; chore: &lt;code&gt;npmrc&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1129&quot;&gt;GH-1129&lt;/a&gt; chore: rebuild &lt;code&gt;package-lock.json&lt;/code&gt; to address reported npm audit vulnerabilities&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1105&quot;&gt;GH-1105&lt;/a&gt; chore: add undeclared dependency &lt;code&gt;underscore&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Others:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1197&quot;&gt;GH-1197&lt;/a&gt; build: build &lt;code&gt;cordova.js&lt;/code&gt; during npm prepare&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1317&quot;&gt;GH-1317&lt;/a&gt; ci: add node 20.x&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1307&quot;&gt;GH-1307&lt;/a&gt; ci: Drop NodeJS 14 tests for non-darwin jobs&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1277&quot;&gt;GH-1277&lt;/a&gt; ci(workflow): update dependencies&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1271&quot;&gt;GH-1271&lt;/a&gt; ci: remove Node 10-12 &amp;amp; add Node 16-18.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1237&quot;&gt;GH-1237&lt;/a&gt; dep: bump &lt;code&gt;simple-plist&lt;/code&gt; from 1.3.0 to 1.3.1&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1208&quot;&gt;GH-1208&lt;/a&gt; dep: bump &lt;code&gt;jasmine@^3.10.0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1187&quot;&gt;GH-1187&lt;/a&gt; test(version): merge two test suites into one&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1184&quot;&gt;GH-1184&lt;/a&gt; test(create): further increase timeouts to avoid false negatives&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1177&quot;&gt;GH-1177&lt;/a&gt; test(create): waste less time on name variants&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1179&quot;&gt;GH-1179&lt;/a&gt; test: simpler killing of running simulators&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1178&quot;&gt;GH-1178&lt;/a&gt; test(versions): increase test timeout when invoking pod&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1176&quot;&gt;GH-1176&lt;/a&gt; test(create): increase test timeout&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1133&quot;&gt;GH-1133&lt;/a&gt; doc: &lt;code&gt;README&lt;/code&gt; improvements (cleaup, xcode debugging, etc)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2023/07/10/cordova-ios-7.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2023/07/10/cordova-ios-7.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova CLI 12.0.0 &amp; Internal Packages Released!</title>
@@ -737,137 +966,6 @@ cordova plugin add cordova-plugin-media@6.1.0
         
         
         <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Android 11.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Android 11.0.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Android applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@11.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove android
-cordova platform add android@11.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add android@11.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Android 12 SplashScreen API Integration&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;As of Android 12, all Android 12 or higher devices display the new app launch animation. Google has applied this requirement to bring a standard design to all app launch screens.&lt;/p&gt;
-
-    &lt;p&gt;Due to this requirement, users have seen and reported the display of multiple SplashScreens during the app launch. Since the new SplashScreen API can not be disabled, the old SplashScreen plugin is deprecated for Cordova-Android 11+.&lt;/p&gt;
-
-    &lt;p&gt;We have integrated the Android 12 SplashScreen API including the compatibility library into the core of the Cordova-Android platform to provide support for Android API 22+.&lt;/p&gt;
-
-    &lt;p&gt;For more information, please refer to the &lt;a href=&quot;https://github.com/apache/cordova-android/pull/1441&quot;&gt;PR&lt;/a&gt; and &lt;a href=&quot;https://cordova.apache.org/docs/en/latest/core/features/splashscreen/index.html&quot;&gt;Cordova Docs&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Tooling and Default Support Bump&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Target SDK (&lt;code&gt;targetSdk&lt;/code&gt;): &lt;code&gt;32&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;SDK Build Tool: &lt;code&gt;32.0.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Gradle: &lt;code&gt;7.4.2&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Kotlin: &lt;code&gt;1.5.21&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Android Gradle Plugin (AGP): &lt;code&gt;7.2.1&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Google Services Gradle Plugin: &lt;code&gt;4.3.10&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;AndroidX App Compat Library: &lt;code&gt;1.4.2&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;AndroidX WebKit Library: &lt;code&gt;1.4.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;AndroidX SplashScreen Core Library: &lt;code&gt;1.0.0-rc01&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Environment Variable &lt;code&gt;ANDROID_HOME&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;As of April 27, 2022, It appears Google has reversed its statement and declared that &lt;code&gt;ANDROID_HOME&lt;/code&gt; is now the correct environment variable to set with the path of the SDK installation directory. It also notes that &lt;code&gt;ANDROID_SDK_ROOT&lt;/code&gt; that also points to the SDK installation directory is deprecated.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Custom Compile SDK&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;We added back the ability to set a custom compileSdk value with the preference flag &lt;code&gt;android-compileSdkVersion&lt;/code&gt;.&lt;/p&gt;
-
-    &lt;p&gt;Example:&lt;/p&gt;
-
-    &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;preference&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android-compileSdkVersion&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;31&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Node Support&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Since Node 12 is no longer being supported by the Node.js team, we have dropped support for Node 12.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Breaking:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1441&quot;&gt;GH-1441&lt;/a&gt; feat!: &lt;strong&gt;Android&lt;/strong&gt; 12 splash screen&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1427&quot;&gt;GH-1427&lt;/a&gt; feat!: API 32 support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1410&quot;&gt;GH-1410&lt;/a&gt; feat!: API 31 support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1444&quot;&gt;GH-1444&lt;/a&gt; fix!: set &amp;amp; use &lt;code&gt;ANDROID_HOME&lt;/code&gt; as default&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1411&quot;&gt;GH-1411&lt;/a&gt; chore!: Drop Node 12 support&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1448&quot;&gt;GH-1448&lt;/a&gt; feat: Update &lt;code&gt;androidx.appcompat&lt;/code&gt; version&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1446&quot;&gt;GH-1446&lt;/a&gt; feat: Update gradle plugin version&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1447&quot;&gt;GH-1447&lt;/a&gt; feat: Update google services pluging&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1431&quot;&gt;GH-1431&lt;/a&gt; feat: support custom &lt;code&gt;compileSdk&lt;/code&gt; setting&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1311&quot;&gt;GH-1311&lt;/a&gt; feat: added support for BoM imports&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1455&quot;&gt;GH-1455&lt;/a&gt; fix(&lt;code&gt;prepare&lt;/code&gt;): &lt;code&gt;destFile&lt;/code&gt; path separator&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1453&quot;&gt;GH-1453&lt;/a&gt; fix: support installing platfrom from local git checkout&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1449&quot;&gt;GH-1449&lt;/a&gt; fix: accept file cookies only if &lt;code&gt;AndroidInsecureFileModeEnabled&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1443&quot;&gt;GH-1443&lt;/a&gt; fix: force &lt;code&gt;hostname&lt;/code&gt; to lowercase&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1434&quot;&gt;GH-1434&lt;/a&gt; fix: restore &lt;code&gt;checkReqs&lt;/code&gt; in &lt;code&gt;prepare.js&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1154&quot;&gt;GH-1154&lt;/a&gt; fix: move &lt;code&gt;MainActivity.java&lt;/code&gt; to folder that tracks the app package name (widget id)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Chores, Dependencies &amp;amp; CI:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1451&quot;&gt;GH-1451&lt;/a&gt; chore: display warning on deprecated &lt;code&gt;&amp;lt;splash&amp;gt;&lt;/code&gt; tag usage&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1430&quot;&gt;GH-1430&lt;/a&gt; chore: remove unneeded deprecated annotation&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1421&quot;&gt;GH-1421&lt;/a&gt; chore(npm): bump &lt;code&gt;@cordova/eslint-config@^4.0.0&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1420&quot;&gt;GH-1420&lt;/a&gt; chore(npm): bump dependencies&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1452&quot;&gt;GH-1452&lt;/a&gt; dep: bump &lt;code&gt;jasmine@4.2.1&lt;/code&gt; w/ &lt;code&gt;package-lock&lt;/code&gt; rebuild&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1439&quot;&gt;GH-1439&lt;/a&gt; ci: update github action workflow&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1424&quot;&gt;GH-1424&lt;/a&gt; ci: Added Node 18 to test matrix&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2022/07/12/cordova-android-release-11.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2022/07/12/cordova-android-release-11.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
         
       </item>
     
