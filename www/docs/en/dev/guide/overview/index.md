@@ -49,7 +49,7 @@ Use Apache Cordova if you are:
 There are several components to a Cordova application. The following
 diagram shows a high-level view of the Cordova application architecture.
 
-![]({{ site.baseurl }}/static/img/guide/cordovaapparchitecture.png)
+![]({{ site.baseurl }}/static/img/guide/cordovaapparchitecture-20230712.svg)
 
 ## WebView
 
