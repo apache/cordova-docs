@@ -371,7 +371,7 @@ UIWebViewDecelerationSpeed<br/>{% cdv_vartype string %} {% cdv_platform ios %} |
 deployment-target<br/>{% cdv_vartype string %} {% cdv_platform ios %} | This sets the IPHONEOS_DEPLOYMENT_TARGET in the build, which ultimately translates to the MinimumOSVersion in the ipa. For more details please refer to Apple's documentation on Deployment Target Settings
 target-device<br/>{% cdv_vartype string %} {% cdv_platform ios %} | *Default: universal* <br/> Allowed values: handset, tablet, universal <br/>  This property maps directly to TARGETED_DEVICE_FAMILY in the xcode project. Note that if you target universal (which is the default) you will need to supply screen shots for both iPhone and iPad or your app may be rejected.
 scheme<br/>{% cdv_vartype string %} {% cdv_platform android %} {% cdv_platform ios %} | *Default:* <br/> - Android: `https` <br/> - iOS: *not defined*, but falls back to `app` if the value is invalid.<br/><br/>*Allowed values:*<br/> - Android: `http` or `https`<br/> - iOS: Any non-reserved schemes.<br/><br/>This property contains the scheme which your app content is served from.
-hostname<br/>{% cdv_vartype string %} {% cdv_platform android %} {% cdv_platform ios %} | *Default:* `localhost`<br/><br/>This property contains the hostname which the app content is served from.
+hostname<br/>{% cdv_vartype string %} {% cdv_platform android %} {% cdv_platform ios %} | *Default:* `localhost`<br/><br/>This property contains the hostname which the app content is served from.<br/><br/>If the preference `scheme` is not defined for iOS, the `hostname` value will be ignored.
 
 Examples:
 
