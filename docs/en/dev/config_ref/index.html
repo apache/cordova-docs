@@ -2921,6 +2921,14 @@ and will be indicated as such.</p>
       <td>target-device<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
       <td><em>Default: universal</em> <br /> Allowed values: handset, tablet, universal <br />  This property maps directly to TARGETED_DEVICE_FAMILY in the xcode project. Note that if you target universal (which is the default) you will need to supply screen shots for both iPhone and iPad or your app may be rejected.</td>
     </tr>
+    <tr>
+      <td>scheme<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default:</em> <br /> - Android: <code>https</code> <br /> - iOS: <em>not defined</em>, but falls back to <code>app</code> if the value is invalid.<br /><br /><em>Allowed values:</em><br /> - Android: <code>http</code> or <code>https</code><br /> - iOS: Any non-reserved schemes.  (<a href="https://github.com/WebKit/WebKit/blob/ba2a851809a33013068ec8511883055cabd239be/Tools/TestWebKitAPI/Tests/WebKitCocoa/WKURLSchemeHandler-1.mm#L222-L244">Example Reserved Schemes</a>)<br /><br />This property contains the scheme which your app content is served from.</td>
+    </tr>
+    <tr>
+      <td>hostname<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default:</em> <code>localhost</code><br /><br />This property contains the hostname which the app content is served from.<br /><br />If the preference <code>scheme</code> is not defined for iOS, the <code>hostname</code> value will be ignored.</td>
+    </tr>
   </tbody>
 </table>
 
