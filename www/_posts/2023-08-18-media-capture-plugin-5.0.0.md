@@ -30,7 +30,7 @@ cordova plugin add cordova-plugin-media-capture@5.0.0
 
     The `READ_EXTERNAL_STORAGE` and  `WRITE_EXTERNAL_STORAGE` permissions are still defined but has declared the `maxSdkVersion` attribute with the value of `32` to ensure that the are not used in API 33 of higher.
 
-    Furthermore, to support the new granular permissions and Android 13 (SDK 33), we have raised the minimum requirement for `cordova-android` to version `12.0.0`. This version of Cordova-Android specifically includes the necessary updates to handle Android 13 and compile your project with the new permissions successfully.
+    Furthermore, to support the new granular permissions on Android 13 (SDK 33), we have raised the minimum requirement for `cordova-android` to version `12.0.0`. This version of Cordova-Android specifically includes the necessary updates to handle Android 13 and compile your project with the new permissions successfully.
 
 ### Features & Fixes
 
