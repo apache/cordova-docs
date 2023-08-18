@@ -6,9 +6,119 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 24 Jul 2023 17:56:36 +0000</pubDate>
-    <lastBuildDate>Mon, 24 Jul 2023 17:56:36 +0000</lastBuildDate>
+    <pubDate>Fri, 18 Aug 2023 15:08:04 +0000</pubDate>
+    <lastBuildDate>Fri, 18 Aug 2023 15:08:04 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Media-Capture Plugin 5.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-media-capture&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-media-capture&quot;&gt;cordova-plugin-media-capture@5.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-media-capture
+cordova plugin add cordova-plugin-media-capture@5.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;h3&gt;Breaking Changes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Android 13+ Support&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Beginning from Android 13 (SDK 33), the &lt;code&gt;READ_EXTERNAL_STORAGE&lt;/code&gt; permission no longer has any effect. Instead, this permission has been replaced with more granular permissions: &lt;code&gt;READ_MEDIA_IMAGES&lt;/code&gt;, &lt;code&gt;READ_MEDIA_VIDEO&lt;/code&gt;, and &lt;code&gt;READ_MEDIA_AUDIO&lt;/code&gt;. Also the &lt;code&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt; has &lt;a href=&quot;https://developer.android.com/reference/android/Manifest.permission#WRITE_EXTERNAL_STORAGE&quot;&gt;stopped providing write access starting from API level 30 and above&lt;/a&gt;.&lt;/p&gt;
+
+    &lt;p&gt;To adapt to this change, we have introduced these three new permissions. This ensures that the existing functionality and behavior related to reading various media file are maintained for Android 13 and higher versions.&lt;/p&gt;
+
+    &lt;p&gt;The &lt;code&gt;READ_EXTERNAL_STORAGE&lt;/code&gt; and  &lt;code&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt; permissions are still defined but has declared the &lt;code&gt;maxSdkVersion&lt;/code&gt; attribute with the value of &lt;code&gt;32&lt;/code&gt; to ensure that the are not used in API 33 of higher.&lt;/p&gt;
+
+    &lt;p&gt;Furthermore, to support the new granular permissions on Android 13 (SDK 33), we have raised the minimum requirement for &lt;code&gt;cordova-android&lt;/code&gt; to version &lt;code&gt;12.0.0&lt;/code&gt;. This version of Cordova-Android specifically includes the necessary updates to handle Android 13 and compile your project with the new permissions successfully.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Features &amp;amp; Fixes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Added video &lt;code&gt;quality&lt;/code&gt; option for iOS&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;You can now change the quality of the video that is being captured for iOS. By default, it will capture the highest quality.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Fixes for various iOS crashes&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Various fixes were implemented to enhance stability and user experience on iOS. Here are some example changes:&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;Implement an alert dialog to guide users to enable necessary permissions if they had previously denied them. This will occur when users attempt to use the capture feature.&lt;/li&gt;
+      &lt;li&gt;Improve the layout of the audio capture interface to fit and use the entire device screen.&lt;/li&gt;
+      &lt;li&gt;Implement safeguards to prevent application crashes in scenarios where audio data is unavailable ensuring a smoother and more reliable user experience.&lt;/li&gt;
+      &lt;li&gt;Implement measures to maintain the functionality of the capture feature even when users dismiss the capture window by swiping, ensuring consistent and uninterrupted functionality.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find by following the this &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h2&gt;Changes Log&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/274&quot;&gt;GH-274&lt;/a&gt; feat(android)!: bump file &amp;amp; &lt;strong&gt;Android&lt;/strong&gt; requirements&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/262&quot;&gt;GH-262&lt;/a&gt; feat(android)!: support API 33+ permissions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/214&quot;&gt;GH-214&lt;/a&gt; feat(ios): support capture &amp;#39;&lt;code&gt;quality&lt;/code&gt;&amp;#39; param for videos&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/256&quot;&gt;GH-256&lt;/a&gt; feat(ios): improve &lt;code&gt;Localizable.strings&lt;/code&gt; &amp;amp; add &lt;code&gt;FR&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/184&quot;&gt;GH-184&lt;/a&gt; fix(ios): UI issues with main thread and added alert for permission.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/279&quot;&gt;GH-279&lt;/a&gt; fix(ios): UI sizing of the audio capture controller according to parent view size&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/278&quot;&gt;GH-278&lt;/a&gt; fix(ios): &lt;code&gt;CAPTURE_APPLICATION_BUSY&lt;/code&gt; error when dismissing modal by swipe&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/197&quot;&gt;GH-197&lt;/a&gt; fix(ios): set type attribute for captured audio&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/232&quot;&gt;GH-232&lt;/a&gt; fix(android): prevent app crash caused by NPE on intent data or &lt;code&gt;mediaFile&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/195&quot;&gt;GH-195&lt;/a&gt; fix(MediaFiles): return missing &amp;#39;&lt;code&gt;lastModified&lt;/code&gt;&amp;#39; and &amp;#39;&lt;code&gt;end&lt;/code&gt;&amp;#39; attributes&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/212&quot;&gt;GH-212&lt;/a&gt; fix: use single version in &lt;code&gt;cordovaDependencies&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/269&quot;&gt;GH-269&lt;/a&gt; fix(ios): set category before creating &lt;code&gt;AVAudioRecorder&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Other Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/276&quot;&gt;GH-276&lt;/a&gt; dep: bump &lt;code&gt;@cordova/eslint-config@^5.0.0&lt;/code&gt; w/ lint fix &amp;amp; &lt;code&gt;package-lock&lt;/code&gt; rebuild&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/270&quot;&gt;GH-270&lt;/a&gt; chore: Update &lt;code&gt;SUPPORT_QUESTION.md&lt;/code&gt; template&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/252&quot;&gt;GH-252&lt;/a&gt; chore(npm): rebuilt &lt;code&gt;package-lock&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/273&quot;&gt;GH-273&lt;/a&gt; ci: sync github action workflow w/ paramedic base configs&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/254&quot;&gt;GH-254&lt;/a&gt; ci: sync workflow with paramedic&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/251&quot;&gt;GH-251&lt;/a&gt; ci(android): update java requirement for &lt;code&gt;cordova-android@11&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/news/2023/08/18/media-capture-plugin-5.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/news/2023/08/18/media-capture-plugin-5.0.0.html</guid>
+        
+        <category>release</category>
+        
+        <category>plugins</category>
+        
+        
+        <category>news</category>
+        
+      </item>
     
       <item>
         <title>File Plugin 8.0.0 Released!</title>
@@ -970,46 +1080,6 @@ cordova plugin add cordova-plugin-screen-orientation@3.0.3
         
         
         <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Common 4.1.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova-common@4.1.0&lt;/code&gt; has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like &lt;code&gt;config.xml&lt;/code&gt; parsing.&lt;/p&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;The most notable improvement in this minor release is the ability to pass nearly all XML DOM element attributes to the platform&amp;#39;s JS tooling. By passing down all attribute data, Cordova-Common no longer needs to be updated for adding and supporting new platform attributes.&lt;/p&gt;
-
-&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/181&quot;&gt;GH-181&lt;/a&gt; feat(PluginInfo): Allow XML Attributes to be passed through to core platforms&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/158&quot;&gt;GH-158&lt;/a&gt; fix(ConfigChanges): do not pass PlistValue to &lt;code&gt;xml_helpers.resolveParent&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/162&quot;&gt;GH-162&lt;/a&gt; refactor(PlatformMunger): DRY &amp;amp; simplify config munging&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/160&quot;&gt;GH-160&lt;/a&gt; refactor(xml-helpers): document &amp;amp; check function signature types&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/159&quot;&gt;GH-159&lt;/a&gt; refactor(ConfigChanges): use for-of loop for iterating over array&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/184&quot;&gt;GH-184&lt;/a&gt; chore: rebuild package-lock.json&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/176&quot;&gt;GH-176&lt;/a&gt; chore(npm): rebuilt package-lock to v2&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/173&quot;&gt;GH-173&lt;/a&gt; chore: npmrc&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/180&quot;&gt;GH-180&lt;/a&gt; ci: Remove Node 10/12 from matrix. Added Node 16 and 18.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/150&quot;&gt;GH-150&lt;/a&gt; ci: add node 14 to workflow&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/161&quot;&gt;GH-161&lt;/a&gt; test: fix invalid config for jasmine-spec-reporter&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 15 Nov 2022 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2022/11/15/cordova-common-release-4.1.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2022/11/15/cordova-common-release-4.1.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
         
       </item>
     

@@ -2679,6 +2679,9 @@ navigator.device.capture.captureImage(captureSuccess, captureError, options);
   <li>
     <p><strong>duration</strong>: The maximum duration of a video clip, in seconds.</p>
   </li>
+  <li>
+    <p><strong>quality</strong>: To allow capturing video at different qualities.  A value of <code>1</code> ( the default ) means high quality and value of <code>0</code> means low quality, suitable for MMS messages.</p>
+  </li>
 </ul>
 
 <h3>Example</h3>
@@ -2692,17 +2695,24 @@ navigator.device.capture.captureVideo(captureSuccess, captureError, options);
 <h3>iOS Quirks</h3>
 
 <ul>
-  <li>The <strong>limit</strong> property is ignored.  Only one video is recorded per invocation.</li>
+  <li>
+    <p>The <strong>limit</strong> property is ignored.  Only one video is recorded per invocation.</p>
+  </li>
+  <li>
+    <p>The <strong>quality</strong> property can have a value of <code>0.5</code> for medium quality.</p>
+  </li>
+  <li>
+    <p>See <a href="https://developer.apple.com/documentation/uikit/uiimagepickercontroller/1619154-videoquality?language=objc">here</a> for more details about the <strong>quality</strong> property on iOS.</p>
+  </li>
 </ul>
 
 <h3>Android Quirks</h3>
 
 <ul>
-  <li>Android supports an additional <strong>quality</strong> property, to allow capturing video at different qualities.  A value of <code>1</code> ( the default ) means high quality and value of <code>0</code> means low quality, suitable for MMS messages.
-See <a href="http://developer.android.com/reference/android/provider/MediaStore.html#EXTRA_VIDEO_QUALITY">here</a> for more details.</li>
+  <li>See <a href="http://developer.android.com/reference/android/provider/MediaStore.html#EXTRA_VIDEO_QUALITY">here</a> for more details about the <strong>quality</strong> property on Android.</li>
 </ul>
 
-<h3>Example ( Android w/ quality )</h3>
+<h3>Example ( w/ quality )</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// limit capture operation to 1 video clip of low quality
 var options = { limit: 1, quality: 0 };

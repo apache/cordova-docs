@@ -132,6 +132,83 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Fri, 18 Aug 2023 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/news/2023/08/18/media-capture-plugin-5.0.0.html">Media-Capture Plugin 5.0.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">18 Aug 2023</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                        <a class="comment" href="/news/2023/08/18/media-capture-plugin-5.0.0.html#disqus_thread"></a>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released an update for <code>cordova-plugin-media-capture</code>!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-media-capture">cordova-plugin-media-capture@5.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-media-capture
+cordova plugin add cordova-plugin-media-capture@5.0.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<h3>Breaking Changes</h3>
+
+<ul>
+  <li>
+    <p><strong>Android 13+ Support</strong></p>
+
+    <p>Beginning from Android 13 (SDK 33), the <code>READ_EXTERNAL_STORAGE</code> permission no longer has any effect. Instead, this permission has been replaced with more granular permissions: <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>, and <code>READ_MEDIA_AUDIO</code>. Also the <code>WRITE_EXTERNAL_STORAGE</code> has <a href="https://developer.android.com/reference/android/Manifest.permission#WRITE_EXTERNAL_STORAGE">stopped providing write access starting from API level 30 and above</a>.</p>
+
+    <p>To adapt to this change, we have introduced these three new permissions. This ensures that the existing functionality and behavior related to reading various media file are maintained for Android 13 and higher versions.</p>
+
+    <p>The <code>READ_EXTERNAL_STORAGE</code> and  <code>WRITE_EXTERNAL_STORAGE</code> permissions are still defined but has declared the <code>maxSdkVersion</code> attribute with the value of <code>32</code> to ensure that the are not used in API 33 of higher.</p>
+
+    <p>Furthermore, to support the new granular permissions on Android 13 (SDK 33), we have raised the minimum requirement for <code>cordova-android</code> to version <code>12.0.0</code>. This version of Cordova-Android specifically includes the necessary updates to handle Android 13 and compile your project with the new permissions successfully.</p>
+  </li>
+</ul>
+
+<h3>Features &amp; Fixes</h3>
+
+<ul>
+  <li>
+    <p><strong>Added video <code>quality</code> option for iOS</strong></p>
+
+    <p>You can now change the quality of the video that is being captured for iOS. By default, it will capture the highest quality.</p>
+  </li>
+  <li>
+    <p><strong>Fixes for various iOS crashes</strong></p>
+
+    <p>Various fixes were implemented to enhance stability and user experience on iOS. Here are some example changes:</p>
+
+    <ol>
+      <li>Implement an alert dialog to guide users to enable necessary permissions if they had previously denied them. This will occur when users attempt to use the capture feature.</li>
+      <li>Improve the layout of the audio capture interface to fit and use the entire device screen.</li>
+      <li>Implement safeguards to prevent application crashes in scenarios where audio data is unavailable ensuring a smoother and more reliable user experience.</li>
+      <li>Implement measures to maintain the functionality of the capture feature even when users dismiss the capture window by swiping, ensuring consistent and uninterrupted functionality.</li>
+    </ol>
+  </li>
+</ul>
+
+<p>Please report any issues you find by following the this <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+
+</p>
+                    <div><a href="/news/2023/08/18/media-capture-plugin-5.0.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Tue, 11 Jul 2023 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/news/2023/07/11/file-plugin-8.0.0.html">File Plugin 8.0.0 Released!</a>
@@ -13202,7 +13279,7 @@ window.twttr = (function(d, s, id) {
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Tue, 11 Jul 2023 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Fri, 18 Aug 2023 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };
