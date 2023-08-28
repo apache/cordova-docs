@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-media-capture!  cordova-plugin-media-capture@5.0.0To upgrade:cordova plugin ...">
+    <meta name="description" content="We are happy to announce that we have just released Cordova Android 12.0.1! This is one of Cordova&#39;s supported platforms for building Android application...">
 
     <title>
         
             
-                Media-Capture Plugin 5.0.0 Released! - Apache Cordova
+                Cordova Android 12.0.1 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/news/2023/08/18/media-capture-plugin-5.0.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2023/08/28/cordova-android-12.0.1.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,109 +129,55 @@
 
 <div class="post">
     <header>
-        <div class="title">Media-Capture Plugin 5.0.0 Released!</div>
+        <div class="title">Cordova Android 12.0.1 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">18 Aug 2023</div>
+        <div class="date">28 Aug 2023</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released an update for <code>cordova-plugin-media-capture</code>!</p>
+            <p>We are happy to announce that we have just released <code>Cordova Android 12.0.1</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-plugin-media-capture">cordova-plugin-media-capture@5.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@12.0.1</a></li>
 </ul>
-
-<p><strong>To upgrade:</strong></p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-media-capture
-cordova plugin add cordova-plugin-media-capture@5.0.0
-</code></pre></div></div>
 
 <h2>Release Highlights</h2>
 
-<h3>Breaking Changes</h3>
+<p><strong>To upgrade:</strong></p>
 
-<ul>
-  <li>
-    <p><strong>Android 13+ Support</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
+cordova platform add android@12.0.1
+</code></pre></div></div>
 
-    <p>Beginning from Android 13 (SDK 33), the <code>READ_EXTERNAL_STORAGE</code> permission no longer has any effect. Instead, this permission has been replaced with more granular permissions: <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>, and <code>READ_MEDIA_AUDIO</code>. Also the <code>WRITE_EXTERNAL_STORAGE</code> has <a href="https://developer.android.com/reference/android/Manifest.permission#WRITE_EXTERNAL_STORAGE">stopped providing write access starting from API level 30 and above</a>.</p>
+<p><strong>To install:</strong></p>
 
-    <p>To adapt to this change, we have introduced these three new permissions. This ensures that the existing functionality and behavior related to reading various media file are maintained for Android 13 and higher versions.</p>
-
-    <p>The <code>READ_EXTERNAL_STORAGE</code> and  <code>WRITE_EXTERNAL_STORAGE</code> permissions are still defined but has declared the <code>maxSdkVersion</code> attribute with the value of <code>32</code> to ensure that the are not used in API 33 of higher.</p>
-
-    <p>Furthermore, to support the new granular permissions on Android 13 (SDK 33), we have raised the minimum requirement for <code>cordova-android</code> to version <code>12.0.0</code>. This version of Cordova-Android specifically includes the necessary updates to handle Android 13 and compile your project with the new permissions successfully.</p>
-  </li>
-</ul>
-
-<h3>Features &amp; Fixes</h3>
-
-<ul>
-  <li>
-    <p><strong>Added video <code>quality</code> option for iOS</strong></p>
-
-    <p>You can now change the quality of the video that is being captured for iOS. By default, it will capture the highest quality.</p>
-  </li>
-  <li>
-    <p><strong>Fixes for various iOS crashes</strong></p>
-
-    <p>Various fixes were implemented to enhance stability and user experience on iOS. Here are some example changes:</p>
-
-    <ol>
-      <li>Implement an alert dialog to guide users to enable necessary permissions if they had previously denied them. This will occur when users attempt to use the capture feature.</li>
-      <li>Improve the layout of the audio capture interface to fit and use the entire device screen.</li>
-      <li>Implement safeguards to prevent application crashes in scenarios where audio data is unavailable ensuring a smoother and more reliable user experience.</li>
-      <li>Implement measures to maintain the functionality of the capture feature even when users dismiss the capture window by swiping, ensuring consistent and uninterrupted functionality.</li>
-    </ol>
-  </li>
-</ul>
-
-<p>Please report any issues you find by following the this <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
-
-<!--more-->
-<h2>Changes Log</h2>
-
-<p><strong>Breaking Changes:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/274">GH-274</a> feat(android)!: bump file &amp; <strong>Android</strong> requirements</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/262">GH-262</a> feat(android)!: support API 33+ permissions</li>
-</ul>
-
-<p><strong>Features:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/214">GH-214</a> feat(ios): support capture &#39;<code>quality</code>&#39; param for videos</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/256">GH-256</a> feat(ios): improve <code>Localizable.strings</code> &amp; add <code>FR</code></li>
-</ul>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@12.0.1
+</code></pre></div></div>
 
 <p><strong>Fixes:</strong></p>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/184">GH-184</a> fix(ios): UI issues with main thread and added alert for permission.</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/279">GH-279</a> fix(ios): UI sizing of the audio capture controller according to parent view size</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/278">GH-278</a> fix(ios): <code>CAPTURE_APPLICATION_BUSY</code> error when dismissing modal by swipe</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/197">GH-197</a> fix(ios): set type attribute for captured audio</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/232">GH-232</a> fix(android): prevent app crash caused by NPE on intent data or <code>mediaFile</code></li>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/195">GH-195</a> fix(MediaFiles): return missing &#39;<code>lastModified</code>&#39; and &#39;<code>end</code>&#39; attributes</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/212">GH-212</a> fix: use single version in <code>cordovaDependencies</code></li>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/269">GH-269</a> fix(ios): set category before creating <code>AVAudioRecorder</code></li>
+  <li>
+    <p><strong>Adaptive Icon Fix</strong></p>
+
+    <p>In Cordova-Android 12.0.0, an issue arose with the introduction of Android 13&#39;s Themed Icons support. This issue resulted in adaptive icons not being generated due to an incorrect validation check.</p>
+
+    <p>In this release, the problematic validation check was rectified. As a result, the adaptive icon will be generated even when monochrome attributes are not provided.</p>
+  </li>
 </ul>
 
-<p><strong>Other Changes:</strong></p>
+<p>Please report any issues you find on our <a href="https://github.com/apache/cordova-android/issues">Cordova-Android</a> GitHub issue tracker!</p>
+
+<!--more-->
+<h1>Changes include:</h1>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/276">GH-276</a> dep: bump <code>@cordova/eslint-config@^5.0.0</code> w/ lint fix &amp; <code>package-lock</code> rebuild</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/270">GH-270</a> chore: Update <code>SUPPORT_QUESTION.md</code> template</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/252">GH-252</a> chore(npm): rebuilt <code>package-lock</code></li>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/273">GH-273</a> ci: sync github action workflow w/ paramedic base configs</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/254">GH-254</a> ci: sync workflow with paramedic</li>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/251">GH-251</a> ci(android): update java requirement for <code>cordova-android@11</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1632">GH-1632</a> fix(android): <code>monochrome</code> checks</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1649">GH-1649</a> chore: rebuild <code>package-lock</code> w/ lint corrections</li>
 </ul>
 
         </div>
@@ -240,37 +186,17 @@ cordova plugin add cordova-plugin-media-capture@5.0.0
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/news/2023/07/11/file-plugin-8.0.0.html">Previous</a>
+                    <a href="/news/2023/08/18/media-capture-plugin-5.0.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/news/2023/07/11/file-plugin-8.0.0.html">File Plugin 8.0.0 Released!</a>
-                    <div class="date"> 11 Jul 2023 - By Bryan Ellis </div>
+                    <a class="title" href="/news/2023/08/18/media-capture-plugin-5.0.0.html">Media-Capture Plugin 5.0.0 Released!</a>
+                    <div class="date"> 18 Aug 2023 - By Bryan Ellis </div>
                     <p class="content">
                         We are happy to announce that we have just released an update...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2023/08/28/cordova-android-12.0.1.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2023/08/28/cordova-android-12.0.1.html">Cordova Android 12.0.1 Released!</a>
-                    <div class="date"> 28 Aug 2023 - By Bryan Ellis </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released Cordova Android...
-                    </p>
                 
             </div>
         </div>
