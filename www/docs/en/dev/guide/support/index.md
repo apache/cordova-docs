@@ -129,13 +129,6 @@ For additional functionality, you can explore a wide range of third-party plugin
     </tr>
 
     <tr>
-        <th><a href="../../reference/cordova-plugin-globalization/">Globalization</a></th>
-        <td data-col="android" class="y"></td>
-        <td data-col="ios"     class="y"></td>
-        <td data-col="electron" class="p">Tests Pending</td>
-    </tr>
-
-    <tr>
         <th><a href="../../reference/cordova-plugin-inappbrowser/">InAppBrowser</a></th>
         <td data-col="android" class="y"></td>
         <td data-col="ios"     class="y"></td>
