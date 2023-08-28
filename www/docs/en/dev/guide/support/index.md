@@ -150,7 +150,7 @@ For additional functionality, you can explore a wide range of third-party plugin
     </tr>
 
     <tr>
-        <th><a href="../../reference/cordova-plugin-splashscreen/">Splashscreen</a></th>
+        <th><a href="../../core/features/splashscreen/index.html">Splashscreen</a></th>
         <td data-col="android" class="y"></td>
         <td data-col="ios"     class="y"></td>
         <td data-col="electron" class="p">Tests Pending</td>
