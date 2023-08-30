@@ -46,7 +46,6 @@
             children:
                 - url: guide/platforms/android/plugin.html
                 - url: guide/platforms/ios/plugin.html
-                - url: guide/platforms/windows/plugin.html
         - url: plugin_ref/plugman.html
 -
     name: Advanced Topics
