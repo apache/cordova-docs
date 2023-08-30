@@ -17,13 +17,13 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Config.xml
+title: Config.xml API
 description: List of supported tags in the config.xml file.
 ---
 
 {% cdv_platform inject %}
 
-# Config.xml
+# Config.xml API
 
 The `config.xml` file is a global configuration file that manages various aspects of a Cordova application's behavior. It is written in XML format and follows the structure outlined in the W3C's [Packaged Web Apps (Widgets)](https://www.w3.org/TR/widgets/) specification. Additionally, it is extended to include core Cordova API features, plugins, and platform-specific settings.
 
