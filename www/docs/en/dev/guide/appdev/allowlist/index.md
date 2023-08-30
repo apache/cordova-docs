@@ -17,12 +17,12 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Allow List Guide
+title: Manage App's Allow List
 toc_title: Allow List
 description: Securely grant an application access to external resources.
 ---
 
-# Allow List Guide
+# Allow List
 
 Domain allow listing is a security model that controls access to external domains over which your application has no control. Cordova provides a configurable security policy to define which external sites may be accessed.
 

@@ -17,14 +17,14 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Customize app icons
-toc_title: Customize icons
+title: Customize App Icons
+toc_title: Icons
 description: Learn how to customize icons for your Cordova application.
 ---
 
 {% cdv_platform inject %}
 
-# Customize Icons
+# Icons
 
 This section shows how to configure an application's icon for various platforms. Documentation about splash screen images can be found in the Cordova-Plugin-Splashscreen documentation [Splashscreen plugin docs][splashscreen_plugin].
 

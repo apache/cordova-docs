@@ -17,12 +17,12 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Storage
-toc_title: Store data
+title: Data Storage
+toc_title: Data Storage
 description: Storing data on the device.
 ---
 
-# Storage
+# Data Storage
 
 Several storage APIs are available for Cordova applications.
 See html5rocks [storage overview][Html5RocksStorageOverview] and
