@@ -42,7 +42,7 @@
     children:
         - url: guide/hybrid/plugins/index.html
         -
-            name: Develop for platforms
+            name: Support a Platform
             children:
                 - url: guide/platforms/android/plugin.html
                 - url: guide/platforms/ios/plugin.html
