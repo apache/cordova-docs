@@ -17,13 +17,13 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Cordova App Templates
+title: App Templates
 description: Learn how to find, use, and create templates in Cordova.
-toc_title: Templates for apps
+toc_title: App Templates
 
 ---
 
-# Cordova App Templates
+# App Templates
 
 ## Use a Template
 
