@@ -54,23 +54,6 @@
         - url: config_ref/index.html
         - url: cordova/events/events.html
         - url: plugin_ref/spec.html
-        -
-            name: Plugins
-            children:
-                - url: reference/cordova-plugin-battery-status/index.html
-                - url: reference/cordova-plugin-camera/index.html
-                - url: reference/cordova-plugin-device/index.html
-                - url: reference/cordova-plugin-dialogs/index.html
-                - url: reference/cordova-plugin-file/index.html
-                - url: reference/cordova-plugin-geolocation/index.html
-                - url: reference/cordova-plugin-inappbrowser/index.html
-                - url: reference/cordova-plugin-media/index.html
-                - url: reference/cordova-plugin-media-capture/index.html
-                - url: reference/cordova-plugin-network-information/index.html
-                - url: reference/cordova-plugin-screen-orientation/index.html
-                - url: reference/cordova-plugin-splashscreen/index.html
-                - url: reference/cordova-plugin-statusbar/index.html
-                - url: reference/cordova-plugin-vibration/index.html
 
 -
     name: Resources
@@ -78,6 +61,24 @@
         - url: third-party/index.html
         - url: guide/cli/template.html
         - url: guide/next/index.html
+
+-
+    name: Plugins
+    children:
+        - url: reference/cordova-plugin-battery-status/index.html
+        - url: reference/cordova-plugin-camera/index.html
+        - url: reference/cordova-plugin-device/index.html
+        - url: reference/cordova-plugin-dialogs/index.html
+        - url: reference/cordova-plugin-file/index.html
+        - url: reference/cordova-plugin-geolocation/index.html
+        - url: reference/cordova-plugin-inappbrowser/index.html
+        - url: reference/cordova-plugin-media/index.html
+        - url: reference/cordova-plugin-media-capture/index.html
+        - url: reference/cordova-plugin-network-information/index.html
+        - url: reference/cordova-plugin-screen-orientation/index.html
+        - url: reference/cordova-plugin-splashscreen/index.html
+        - url: reference/cordova-plugin-statusbar/index.html
+        - url: reference/cordova-plugin-vibration/index.html
 
 -
     name: Advanced Topics
