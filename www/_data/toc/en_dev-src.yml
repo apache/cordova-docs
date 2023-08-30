@@ -38,7 +38,7 @@
         - url: third-party/index.html
 
 -
-    name: Create plugins
+    name: Plugin Development
     children:
         - url: guide/hybrid/plugins/index.html
         -
