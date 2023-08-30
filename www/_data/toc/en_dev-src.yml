@@ -36,8 +36,6 @@
                 - url: guide/appdev/privacy/index.html
                 - url: guide/appdev/allowlist/index.html
         - url: cordova/storage/storage.html
-        - url: guide/cli/template.html
-        - url: third-party/index.html
 
 -
     name: Plugin Development
@@ -75,7 +73,13 @@
                 - url: reference/cordova-plugin-vibration/index.html
 
 -
+    name: Resources
+    children:
+        - url: third-party/index.html
+        - url: guide/cli/template.html
+        - url: guide/next/index.html
+
+-
     name: Advanced Topics
     children:
         - url: guide/hybrid/webviews/index.html
-        - url: guide/next/index.html
