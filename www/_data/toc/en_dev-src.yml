@@ -1,5 +1,5 @@
 -
-    name: Introduction
+    name: Getting Started
     children:
         - url: guide/overview/index.html
 -
