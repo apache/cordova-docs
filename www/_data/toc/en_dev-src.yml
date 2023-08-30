@@ -3,6 +3,7 @@
     children:
         - url: guide/overview/index.html
         - url: guide/cli/index.html
+
 -
     name: Cordova Projects
     children:
@@ -11,6 +12,7 @@
         - url: platform_pinning/index.html
         - url: platform_plugin_versioning_ref/index.html
         - url: guide/appdev/hooks/index.html
+
 -
     name: App Development
     children:
@@ -47,13 +49,9 @@
                 - url: guide/platforms/android/plugin.html
                 - url: guide/platforms/ios/plugin.html
         - url: plugin_ref/plugman.html
+
 -
-    name: Advanced Topics
-    children:
-        - url: guide/hybrid/webviews/index.html
-        - url: guide/next/index.html
--
-    name: Reference
+    name: References
     children:
         - url: config_ref/index.html
         - url: cordova/events/events.html
@@ -75,3 +73,9 @@
                 - url: reference/cordova-plugin-splashscreen/index.html
                 - url: reference/cordova-plugin-statusbar/index.html
                 - url: reference/cordova-plugin-vibration/index.html
+
+-
+    name: Advanced Topics
+    children:
+        - url: guide/hybrid/webviews/index.html
+        - url: guide/next/index.html
