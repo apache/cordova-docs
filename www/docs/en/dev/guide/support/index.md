@@ -17,8 +17,8 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Cordova support by platform
-toc_title: Platform support
+title: Platform Support
+toc_title: Platform Support
 description: Compatibility table for all major plugins and features.
 ---
 
