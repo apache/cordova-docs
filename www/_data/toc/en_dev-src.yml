@@ -12,7 +12,7 @@
         - url: platform_plugin_versioning_ref/index.html
         - url: guide/appdev/hooks/index.html
 -
-    name: Create apps
+    name: App Development
     children:
         - url: guide/cli/template.html
         - url: third-party/index.html
