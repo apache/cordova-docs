@@ -17,12 +17,12 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Creating your first Cordova app
+title: Creating an App
 description: Learn how to create your first Cordova hybrid app using Cordova CLI.
-toc_title: Create your first app
+toc_title: Creating an App
 ---
 
-# Create your first Cordova app
+# Creating an App
 
 This guide shows you how to create  a JS/HTML Cordova application and deploy them to various native mobile platforms using the `cordova` command-line interface (CLI). For detailed reference on Cordova command-line, review the [CLI reference]
 

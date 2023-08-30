@@ -2,10 +2,10 @@
     name: Getting Started
     children:
         - url: guide/overview/index.html
+        - url: guide/cli/index.html
 -
     name: Create apps
     children:
-        - url: guide/cli/index.html
         - url: guide/cli/template.html
         - url: guide/support/index.html
         - url: third-party/index.html
