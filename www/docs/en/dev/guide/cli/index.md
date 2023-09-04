@@ -26,49 +26,19 @@ toc_title: Creating an App
 
 This guide shows you how to create  a JS/HTML Cordova application and deploy them to various native mobile platforms using the `cordova` command-line interface (CLI). For detailed reference on Cordova command-line, review the [CLI reference]
 
-## Installing the Cordova CLI
+## Creating the Cordova Project Space
 
-The Cordova command-line tool is distributed as an npm package.
+In terminal, go to the directory where you would like to create your Cordova's project.
 
-To install the `cordova` command-line tool, follow these steps:
-
-1. Download and install [Node.js](https://nodejs.org/en/download/). On installation you should be able to invoke `node` and `npm` on your line.
-
-1. (Optional) Download and install a [git client](http://git-scm.com/downloads), if you don't already have one. Following installation, you should be able to invoke `git` on your command line. The CLI uses it to download assets when they are referenced using a url to a git repo.
-
-1. Install the `cordova` module using `npm` utility of Node.js. The `cordova` module will automatically be downloaded by the `npm` utility.
-
-   - on macOS and Linux:
-
-      ```bash
-      npm install -g cordova
-      ```
-
-      For macOS and Linux users, you might need to use the `sudo` prefix when running the `npm` command to install this utility in restricted directories like `/usr/local/share`. However, if you are using the optional nvm/nave tool or have write access to the installation directory, you may be able to omit the `sudo` prefix.
-
-      It is also worth noting that it is generally recommended to avoid using `sudo` with `npm` to prevent potential issues with permissions and package installations.
-
-      Instead, it's recommended to use a version manager like nvm (Node Version Manager) or nave to manage Node.js and npm installations, which typically avoids the need for `sudo` when installing packages.
-
-   - on Windows:
-
-      ```bash
-      C:\>npm install -g cordova
-      ```
-
-   The `-g` flag above tells `npm` to install `cordova` globally. Otherwise it will be installed in the `node_modules` subdirectory of the current working directory.
-
-   Following installation, you should be able to run `cordova` on the command line with no arguments and it should print help text.
-
-## Create the App
-
-Go to the directory where you maintain your source code, and create a cordova project:
+Note that the next command will create a new project directory where your source code, resource files, configuration, and build artifacts will reside.
 
 ```bash
 cordova create hello com.example.hello HelloWorld
 ```
 
-This creates the required directory structure for your cordova app. By default, the `cordova create` script generates a skeletal web-based application whose home page is the project's `www/index.html` file.
+The above command will create a project directory named "hello" with the required directory structure for your Cordova app.
+
+By default, the `cordova create` script generates a skeletal web-based application where the apps landing page is the project's `www/index.html` file.
 
 ### See Also
 
