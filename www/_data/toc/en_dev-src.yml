@@ -22,8 +22,6 @@
             children:
                 - url: guide/platforms/android/index.html
                 - url: guide/platforms/ios/index.html
-                - url: guide/platforms/windows/index.html
-                - url: guide/platforms/osx/index.html
                 - url: guide/platforms/electron/index.html
         -
             name: Customization
