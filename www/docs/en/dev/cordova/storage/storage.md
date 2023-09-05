@@ -86,26 +86,13 @@ IndexedDB provides a simple and easy to understand data model, much like LocalSt
 But unlike LocalStorage, you can create multiple databases, with multiple stores per
 database, and its asynchronous API and search indexes provide performance benefits.
 
-IndexedDB is supported by the underlying WebView on all platforms, with known limitations on the following platforms:
-
-- browser
-- Windows
+IndexedDB is supported by the underlying WebView on all platforms, with known limitations on the `browser` platform.
 
 ### Web browser limitations
 
 The actual behavior may depend on which browser is used.
 There could be differences between the behavior on the Safari and Firefox browsers,
 for example.
-
-### Windows Limitations
-
-Windows platform support for IndexedDB is incomplete. For example, it lacks
-the following features:
-
-- Not available in web workers.
-- Doesn't support array keyPaths.
-- Doesn't support array keys.
-- Doesn't support object lookup via compound index.
 
 ### Usage Summary
 
