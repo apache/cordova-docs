@@ -18,7 +18,7 @@ license: >
     under the License.
 
 title: Platform Pinning
-toc_title: Platform pinning
+toc_title: Platform Pinning
 description: Cordova CLI pinned platform versions.
 ---
 

@@ -17,12 +17,12 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Privacy Guide
-toc_title: Manage privacy
+title: Manage App's Privacy
+toc_title: Privacy
 description: Learn about important mobile privacy issues.
 ---
 
-# Privacy Guide
+# Privacy
 
 Mobile privacy is a critical issue that every app developer must
 address. Your users expect that their private information will be

@@ -17,14 +17,14 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Plugin.xml reference documentation
-toc_title: Plugin.xml
+title: Plugin.xml API
+toc_title: Plugin.xml API
 description: List of supported tags in the plugin.xml file.
 ---
 
 {% cdv_platform inject %}
 
-# Plugin.xml
+# Plugin.xml API
 
 Plugin.xml file defines the structure and settings required for your plugin. It has several elements to provide details about your plugin.
 

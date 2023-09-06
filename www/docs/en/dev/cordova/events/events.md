@@ -17,7 +17,7 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Events
+title: Cordova JavaScript API
 description: List of Cordova JavaScript run-time events.
 ---
 

@@ -17,29 +17,28 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Cordova App Templates
+title: App Templates
 description: Learn how to find, use, and create templates in Cordova.
-toc_title: Templates for apps
+toc_title: App Templates
 
 ---
 
-# Cordova App Templates
+# App Templates
 
 ## Use a Template
 
 Templates allow you to use preexisting code to jumpstart your project. 
 
-![]({{ site.baseurl }}/static/img/guide/cli/template.png)
+![]({{ site.baseurl }}/static/img/guide/cli/npm-cordova-template-082023.png)
 
 Find a template to create your app from by seaching for the keyword `cordova:template` on [npm](https://www.npmjs.com/search?q=cordova%3Atemplate). You can also use local templates on your computer, or a Git repository.
 
 After locating a template you wish to use. Create your project using that template, by specifying the `--template` flag during the `create` command, followed by your template source.
 
 Creating a cordova project from an NPM package, Git repository, or local path:
-```
-$ cordova create hello com.example.hello HelloWorld --template <npm-package-name>
-$ cordova create hello com.example.hello HelloWorld --template <git-remote-url>
-$ cordova create hello com.example.hello HelloWorld --template <path-to-template>
+
+```bash
+cordova create hello com.example.hello HelloWorld --template <npm-package-name|git-repo|local-dir-path>
 ```
 
 After succesfully using a template to create your project, you'll want to indicate the platforms that you intend to target with your app. Go into your project folder and [add platforms](https://cordova.apache.org/docs/en/latest/guide/cli/index.html#add-platforms).
@@ -48,17 +47,21 @@ After succesfully using a template to create your project, you'll want to indica
 
 Begin by creating a cordova app that will become the basis for your template. Then you'll take the contents of your app and put them into the following structure. When your template is used, all of the contents within `template_src` will be used to create the new project, so be sure to include any necessary files in that folder. Reference [this example](https://github.com/apache/cordova-app-hello-world) for details.
 
+```text
+template_package
+├── package.json  (for your template package to be published on npm)
+├── index.js      (required)
+└── template_src  (required - contains template files)
+    ├── package.json
+    ├── config.xml
+    └── (files and folders that make up the template)
 ```
-template_package/
-├── package.json   	(optional; needed to publish template on npm)
-├── index.js 		(required)
-└── template_src/ 	(required)
-    └── CONTENTS OF APP TEMPLATE
-```
+
 > __NOTE__: `index.js` should export a reference to `template_src` and `package.json` should reference `index.js`. See [the example](https://github.com/apache/cordova-app-hello-world) for details on how that is done.
 
 To finish off your template, edit `package.json` to contain the keyword `"cordova:template"`.
-```javascript
+
+```json
 {
   ...
   "keywords": [

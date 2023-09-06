@@ -34,17 +34,59 @@ For details on the CLI, see [Cordova CLI Reference][cli].
 
 ## Requirements and Support
 
-Apple® tools required to build iOS applications only run on the OS X
-operating system on Intel-based Macs. Xcode® 11.0 (the minimum required
-version) runs only on OS X version 10.14.4 (Mojave) or greater, and
-includes the iOS 13 SDK (Software Development Kit).  To submit apps to
-the Apple App Store℠ requires the latest versions of the Apple tools.
+Apple® tools used for building iOS applications can only operate within the macOS environment. Xcode®, the primary tool for iOS application development, incorporates the iOS SDK (Software Development Kit). For submission to the Apple App Store℠, apps must be built using the most recent versions of these Apple tools.
 
-You can test many of the Cordova features using the iOS simulator
-installed with the iOS SDK and Xcode, but you need an actual device to
-fully test all of the app's device features before submitting to the
-App Store. The device must have at least iOS 11 installed, the
-minimum iOS version supported since the release of cordova-ios v6.0.0.
+You can evaluate many Cordova features by utilizing the iOS simulator integrated with the iOS SDK and Xcode. However, testing all of an app's device-specific functionalities requires an actual device before final submission to the App Store.
+
+The table below outlines Cordova-iOS's prerequisites by version. Additionally, Xcode has its own set of system requirements and it is advisable to refer to the [Minimum requirements and supported SDKs](https://developer.apple.com/support/xcode/#:~:text=Minimum%20requirements%20and%20supported%C2%A0SDKs) documentation for verification.
+
+<table>
+    <thead>
+        <tr>
+            <th>Cordova-iOS Version</th>
+            <th>iOS Minimum-Support</th>
+            <th>Tooling Version</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>7.x</td>
+            <td>11.0</td>
+            <td>
+                <ul>
+                    <li>Cocoapods: >=1.8.0</li>
+                    <li>ios-deploy: >=1.9.2</li>
+                    <li>Node: >=16.13.0</li>
+                    <li>Xcode (xcodebuild): >=11.0.0</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>6.x</td>
+            <td>11.0</td>
+            <td>
+                <ul>
+                    <li>Cocoapods: >=1.8.0</li>
+                    <li>ios-deploy: >=1.9.2</li>
+                    <li>Node: >=10.0.0</li>
+                    <li>Xcode (xcodebuild): >=11.0.0</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>5.x</td>
+            <td>10.0</td>
+            <td>
+                <ul>
+                    <li>Cocoapods: >=1.0.1</li>
+                    <li>ios-deploy: >=1.9.2</li>
+                    <li>Node: >=6.0.0</li>
+                    <li>Xcode (xcodebuild): >=10.0.0</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## Installing the Requirements
 

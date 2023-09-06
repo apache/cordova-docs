@@ -17,12 +17,12 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Plugin Development Guide
-toc_title: Create a plugin
-description: Develop your own plugin.
+title: Create a Plugin
+toc_title: Create a Plugin
+description: Develop your own Cordova plugin.
 ---
 
-# Plugin Development Guide
+# Create a Plugin
 
 A _plugin_ is a package of injected code that allows the Cordova webview within
 which the app renders to communicate with the native platform on

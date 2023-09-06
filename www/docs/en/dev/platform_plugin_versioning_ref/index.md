@@ -17,12 +17,12 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: Platforms and Plugins Version Management
-toc_title: Manage versions and platforms
-description: How to manage platforms and Cordova CLI versions.
+title: Version Management
+toc_title: Version Management
+description: How to manage platforms & plugins versions.
 ---
 
-# Platforms and Plugins Version Management
+# Version Management
 
 Cordova provides the ability to save and restore platforms and plugins.
 
