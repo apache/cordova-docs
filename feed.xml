@@ -6,9 +6,70 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Sep 2023 01:07:59 +0000</pubDate>
-    <lastBuildDate>Wed, 06 Sep 2023 01:07:59 +0000</lastBuildDate>
+    <pubDate>Wed, 06 Sep 2023 15:54:16 +0000</pubDate>
+    <lastBuildDate>Wed, 06 Sep 2023 15:54:16 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Cordova iOS 7.0.1 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova iOS 7.0.1&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building iOS applications.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@7.0.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
+cordova platform add ios@7.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add ios@7.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Building on Xcode 11&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Cordova-iOS 7 is documented to support Xcode 11 and later. However, due to recent changes to support &lt;code&gt;LimitsNavigationsToAppBoundDomains&lt;/code&gt;, builds fail on Xcode 11. To address this issue, we have added conditional checks to ensure that the app can be built with Xcode 11. Please note that the &lt;code&gt;LimitsNavigationsToAppBoundDomains&lt;/code&gt; feature will not be available when building with Xcode 11.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Fix paths in the Xcode pbxproj&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Cordova-iOS 7.0.0&amp;#39;s Xcode project file was missing path information for some files. While this worked fine within the Xcode app, it caused problems for plugins and hooks that were attempting to modify the project file programmatically. We&amp;#39;ve fixed this issue by ensuring that all files in the Xcode project include a path property.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-iOS/issues&quot;&gt;Cordova-iOS&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1369&quot;&gt;GH-1369&lt;/a&gt; fix: &lt;code&gt;xcodebuild&lt;/code&gt; version check to 11&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1358&quot;&gt;GH-1358&lt;/a&gt; fix: ensure Xcode project file references use &lt;code&gt;path&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1368&quot;&gt;GH-1368&lt;/a&gt; fix: make code compile on Xcode 11&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1360&quot;&gt;GH-1360&lt;/a&gt; fix: add missing cordova versions to &lt;code&gt;CDVAvailability.h&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2023/09/06/cordova-ios-7.0.1.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2023/09/06/cordova-ios-7.0.1.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova Android 12.0.1 Released!</title>
@@ -963,65 +1024,6 @@ cordova platform add ios@6.3.0
         
         
         <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Screen Orientation Plugin 3.0.3 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-screen-orientation&lt;/code&gt;!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-screen-orientation&quot;&gt;cordova-plugin-screen-orientation@3.0.3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-screen-orientation
-cordova plugin add cordova-plugin-screen-orientation@3.0.3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;This release improves compatibility with newer iOS versions (see (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/107&quot;&gt;#107&lt;/a&gt;)) and contains miscellaneous version updates.&lt;/p&gt;
-
-&lt;p&gt;Please report any issues you find by following this &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;build(deps): bump json5 from 1.0.1 to 1.0.2 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/110&quot;&gt;#110&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;feat(ios): add support for &lt;strong&gt;iOS&lt;/strong&gt; 16 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/107&quot;&gt;#107&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;fix(chrome): lock test (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/105&quot;&gt;#105&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;chore: add .npmrc file to ensure the official NPM registry is used for package installations. (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/103&quot;&gt;#103&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;chore: package-lock update (#104)&lt;/li&gt;
-  &lt;li&gt;ci: sync workflow with paramedic (#101)&lt;/li&gt;
-  &lt;li&gt;chore(npm): bump package-lock v2 w/ rebuild (#99)&lt;/li&gt;
-  &lt;li&gt;ci(android): update java requirement for &lt;code&gt;cordova-android&lt;/code&gt;@11 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/92&quot;&gt;#92&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;ci(ios): update workflow w/ &lt;strong&gt;iOS&lt;/strong&gt; 15 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/88&quot;&gt;#88&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;ci: add action-badge (#87)&lt;/li&gt;
-  &lt;li&gt;ci: remove travis &amp;amp; appveyor (#86)&lt;/li&gt;
-  &lt;li&gt;ci: add gh-actions workflows (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/84&quot;&gt;#84&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;ci: add node-14.x to workflow (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/76&quot;&gt;#76&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;fix: resolveOrientation function not working correctly (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/77&quot;&gt;#77&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;chore: adds package-lock file (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/67&quot;&gt;#67&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;refactor(eslint): use cordova-eslint /w fix (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/66&quot;&gt;#66&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;chore(npm): use short notation in &lt;code&gt;package.json&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-plugin-screen-orientation/issues/64&quot;&gt;#64&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;chore: removes old demo project. closes #52 (#65)&lt;/li&gt;
-  &lt;li&gt;chore(asf): update git notification settings&lt;/li&gt;
-  &lt;li&gt;Update CONTRIBUTING.md&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/news/2023/02/24/screen-orientation-plugin-3.0.3.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/news/2023/02/24/screen-orientation-plugin-3.0.3.html</guid>
-        
-        <category>release</category>
-        
-        <category>plugins</category>
-        
-        
-        <category>news</category>
         
       </item>
     

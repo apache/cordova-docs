@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released Cordova Android 12.0.1! This is one of Cordova&#39;s supported platforms for building Android application...">
+    <meta name="description" content="We are happy to announce that we have just released Cordova iOS 7.0.1! This is one of Cordova&#39;s supported platforms for building iOS applications.  cordo...">
 
     <title>
         
             
-                Cordova Android 12.0.1 Released! - Apache Cordova
+                Cordova iOS 7.0.1 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2023/08/28/cordova-android-12.0.1.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2023/09/06/cordova-ios-7.0.1.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,55 +129,60 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova Android 12.0.1 Released!</div>
+        <div class="title">Cordova iOS 7.0.1 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">28 Aug 2023</div>
+        <div class="date">06 Sep 2023</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released <code>Cordova Android 12.0.1</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
+            <p>We are happy to announce that we have just released <code>Cordova iOS 7.0.1</code>! This is one of Cordova&#39;s supported platforms for building iOS applications.</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@12.0.1</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@7.0.1</a></li>
 </ul>
 
 <h2>Release Highlights</h2>
 
 <p><strong>To upgrade:</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
-cordova platform add android@12.0.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove ios
+cordova platform add ios@7.0.1
 </code></pre></div></div>
 
 <p><strong>To install:</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@12.0.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@7.0.1
 </code></pre></div></div>
 
 <p><strong>Fixes:</strong></p>
 
 <ul>
   <li>
-    <p><strong>Adaptive Icon Fix</strong></p>
+    <p><strong>Building on Xcode 11</strong></p>
 
-    <p>In Cordova-Android 12.0.0, an issue arose with the introduction of Android 13&#39;s Themed Icons support. This issue resulted in adaptive icons not being generated due to an incorrect validation check.</p>
+    <p>Cordova-iOS 7 is documented to support Xcode 11 and later. However, due to recent changes to support <code>LimitsNavigationsToAppBoundDomains</code>, builds fail on Xcode 11. To address this issue, we have added conditional checks to ensure that the app can be built with Xcode 11. Please note that the <code>LimitsNavigationsToAppBoundDomains</code> feature will not be available when building with Xcode 11.</p>
+  </li>
+  <li>
+    <p><strong>Fix paths in the Xcode pbxproj</strong></p>
 
-    <p>In this release, the problematic validation check was rectified. As a result, the adaptive icon will be generated even when monochrome attributes are not provided.</p>
+    <p>Cordova-iOS 7.0.0&#39;s Xcode project file was missing path information for some files. While this worked fine within the Xcode app, it caused problems for plugins and hooks that were attempting to modify the project file programmatically. We&#39;ve fixed this issue by ensuring that all files in the Xcode project include a path property.</p>
   </li>
 </ul>
 
-<p>Please report any issues you find on our <a href="https://github.com/apache/cordova-android/issues">Cordova-Android</a> GitHub issue tracker!</p>
+<p>Please report any issues you find on our <a href="https://github.com/apache/cordova-iOS/issues">Cordova-iOS</a> GitHub issue tracker!</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-android/pull/1632">GH-1632</a> fix(android): <code>monochrome</code> checks</li>
-  <li><a href="https://github.com/apache/cordova-android/pull/1649">GH-1649</a> chore: rebuild <code>package-lock</code> w/ lint corrections</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1369">GH-1369</a> fix: <code>xcodebuild</code> version check to 11</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1358">GH-1358</a> fix: ensure Xcode project file references use <code>path</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1368">GH-1368</a> fix: make code compile on Xcode 11</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1360">GH-1360</a> fix: add missing cordova versions to <code>CDVAvailability.h</code></li>
 </ul>
 
         </div>
@@ -186,37 +191,17 @@ cordova platform add android@12.0.1
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/news/2023/08/18/media-capture-plugin-5.0.0.html">Previous</a>
+                    <a href="/announcements/2023/08/28/cordova-android-12.0.1.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/news/2023/08/18/media-capture-plugin-5.0.0.html">Media-Capture Plugin 5.0.0 Released!</a>
-                    <div class="date"> 18 Aug 2023 - By Bryan Ellis </div>
+                    <a class="title" href="/announcements/2023/08/28/cordova-android-12.0.1.html">Cordova Android 12.0.1 Released!</a>
+                    <div class="date"> 28 Aug 2023 - By Bryan Ellis </div>
                     <p class="content">
-                        We are happy to announce that we have just released an update...
+                        We are happy to announce that we have just released Cordova Android...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2023/09/06/cordova-ios-7.0.1.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2023/09/06/cordova-ios-7.0.1.html">Cordova iOS 7.0.1 Released!</a>
-                    <div class="date"> 06 Sep 2023 - By Bryan Ellis </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released Cordova iOS...
-                    </p>
                 
             </div>
         </div>
