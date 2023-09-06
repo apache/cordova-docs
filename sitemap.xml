@@ -39762,6 +39762,17 @@
     
 
     <url>
+    <loc>https://cordova.apache.org/docs/en/dev/guide/cli/installation.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.2</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
     <loc>https://cordova.apache.org/docs/en/2.1.0/guide/cordova-webview/ios.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
