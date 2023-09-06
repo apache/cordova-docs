@@ -30,7 +30,11 @@ cordova platform add ios@7.0.1
 
 * **Building on Xcode 11**
 
-    "Cordova-iOS 7 is documented to support Xcode 11 and later. However, due to recent changes to support `LimitsNavigationsToAppBoundDomains`, builds fail on Xcode 11. To address this issue, we have added conditional checks to ensure that the app can be built with Xcode 11. Please note that the `LimitsNavigationsToAppBoundDomains` feature will not be available when building with Xcode 11.
+    Cordova-iOS 7 is documented to support Xcode 11 and later. However, due to recent changes to support `LimitsNavigationsToAppBoundDomains`, builds fail on Xcode 11. To address this issue, we have added conditional checks to ensure that the app can be built with Xcode 11. Please note that the `LimitsNavigationsToAppBoundDomains` feature will not be available when building with Xcode 11.
+
+* **Fix paths in the Xcode pbxproj**
+
+    Cordova-iOS 7.0.0's Xcode project file was missing path information for some files. While this worked fine within the Xcode app, it caused problems for plugins and hooks that were attempting to modify the project file programmatically. We've fixed this issue by ensuring that all files in the Xcode project include a path property.
 
 Please report any issues you find on our [Cordova-iOS](https://github.com/apache/cordova-iOS/issues) GitHub issue tracker!
 
