@@ -2334,7 +2334,7 @@
 
 <p>This plugin provides a web browser view that displays when calling <code>cordova.InAppBrowser.open()</code>.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('https://apache.org', '_blank', 'location=yes');
 </code></pre></div></div>
 
 <h3><code>window.open</code></h3>
@@ -2474,7 +2474,7 @@ instance, or the system browser.
 
 ### Example
 
-    var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+    var ref = cordova.InAppBrowser.open('https://apache.org', '_blank', 'location=yes');
     var ref2 = cordova.InAppBrowser.open(encodeURI('http://ja.m.wikipedia.org/wiki/ハングル'), '_blank', 'location=yes');
 
 ### OSX Quirks
@@ -2687,7 +2687,7 @@ Since the introduction of iPadOS 13, iPads try to adapt their content mode / use
 
 <h3>Quick Example</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('https://apache.org', '_blank', 'location=yes');
 ref.addEventListener('loadstart', function(event) { alert(event.url); });
 </code></pre></div></div>
 
@@ -2732,7 +2732,7 @@ The function is passed an <code>InAppBrowserEvent</code> object.</p>
 
 <h3>Quick Example</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('https://apache.org', '_blank', 'location=yes');
 var myCallback = function(event) { alert(event.url); }
 ref.addEventListener('loadstart', myCallback);
 ref.removeEventListener('loadstart', myCallback);
@@ -2762,7 +2762,7 @@ ref.removeEventListener('loadstart', myCallback);
 
 <h3>Quick Example</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('https://apache.org', '_blank', 'location=yes');
 ref.close();
 </code></pre></div></div>
 
@@ -2790,7 +2790,7 @@ ref.close();
 
 <h3>Quick Example</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'hidden=yes');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('https://apache.org', '_blank', 'hidden=yes');
 // some time later...
 ref.show();
 </code></pre></div></div>
@@ -2818,7 +2818,7 @@ ref.show();
 
 <h3>Quick Example</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('https://apache.org', '_blank');
 // some time later...
 ref.hide();
 </code></pre></div></div>
@@ -2864,7 +2864,7 @@ evaluated.</li>
 
 <h3>Quick Example</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('https://apache.org', '_blank', 'location=yes');
 ref.addEventListener('loadstop', function() {
     ref.executeScript({file: "myscript.js"});
 });
@@ -2912,7 +2912,7 @@ ref.addEventListener('loadstop', function() {
 
 <h3>Quick Example</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('https://apache.org', '_blank', 'location=yes');
 ref.addEventListener('loadstop', function() {
     ref.insertCSS({file: "mystyles.css"});
 }); __
@@ -3086,13 +3086,13 @@ iab.open('local-url.html', 'random_string', 'location=no'); // loads in the InAp
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var iab = cordova.InAppBrowser;
 
-iab.open('http://whitelisted-url.com');                  // loads in the Cordova WebView
-iab.open('http://whitelisted-url.com', '_self');         // loads in the Cordova WebView
-iab.open('http://whitelisted-url.com', '_system');       // loads in the system browser
-iab.open('http://whitelisted-url.com', '_blank');        // loads in the InAppBrowser
-iab.open('http://whitelisted-url.com', 'random_string'); // loads in the InAppBrowser
+iab.open('https://whitelisted-url.com');                  // loads in the Cordova WebView
+iab.open('https://whitelisted-url.com', '_self');         // loads in the Cordova WebView
+iab.open('https://whitelisted-url.com', '_system');       // loads in the system browser
+iab.open('https://whitelisted-url.com', '_blank');        // loads in the InAppBrowser
+iab.open('https://whitelisted-url.com', 'random_string'); // loads in the InAppBrowser
 
-iab.open('http://whitelisted-url.com', 'random_string', 'location=no'); // loads in the InAppBrowser, no location bar
+iab.open('https://whitelisted-url.com', 'random_string', 'location=no'); // loads in the InAppBrowser, no location bar
 
 </code></pre></div></div>
 
@@ -3100,12 +3100,12 @@ iab.open('http://whitelisted-url.com', 'random_string', 'location=no'); // loads
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var iab = cordova.InAppBrowser;
 
-iab.open('http://url-that-fails-whitelist.com');                  // loads in the InAppBrowser
-iab.open('http://url-that-fails-whitelist.com', '_self');         // loads in the InAppBrowser
-iab.open('http://url-that-fails-whitelist.com', '_system');       // loads in the system browser
-iab.open('http://url-that-fails-whitelist.com', '_blank');        // loads in the InAppBrowser
-iab.open('http://url-that-fails-whitelist.com', 'random_string'); // loads in the InAppBrowser
-iab.open('http://url-that-fails-whitelist.com', 'random_string', 'location=no'); // loads in the InAppBrowser, no location bar
+iab.open('https://url-that-fails-whitelist.com');                  // loads in the InAppBrowser
+iab.open('https://url-that-fails-whitelist.com', '_self');         // loads in the InAppBrowser
+iab.open('https://url-that-fails-whitelist.com', '_system');       // loads in the system browser
+iab.open('https://url-that-fails-whitelist.com', '_blank');        // loads in the InAppBrowser
+iab.open('https://url-that-fails-whitelist.com', 'random_string'); // loads in the InAppBrowser
+iab.open('https://url-that-fails-whitelist.com', 'random_string', 'location=no'); // loads in the InAppBrowser, no location bar
 
 </code></pre></div></div>
 
