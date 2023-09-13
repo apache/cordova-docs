@@ -128,11 +128,9 @@ SDKs for mobile platforms often come bundled with emulators that execute a devic
 cordova emulate android
 ```
 
-![]({{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png)
+<img src="{{ site.baseurl }}/static/img/guide/cli/2023-android-connecting-to-emulator.png" style="width: 30%;" alt="Launching Emulator Process" /> <img src="{{ site.baseurl }}/static/img/guide/cli/2023-android-launching-to-emulator.png" style="width: 30%;" alt="Booting Android Image" /> <img src="{{ site.baseurl }}/static/img/guide/cli/2023-android-app-running-on-emulator.png" style="width: 30%;" alt="Displaying Cordova App" />
 
-Following up with the `cordova emulate` command refreshes the emulator image to display the latest application, which is now available for launch from the home screen:
-
-![]({{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png)
+Running `cordova emulate` will also prepare, rebuild, and redeploy the latest app to the emulator.
 
 Alternately, you can plug the handset into your computer and test the app directly:
 
