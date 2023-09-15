@@ -1,0 +1,3612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Upgrading iOS - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/12.x/guide/platforms/ios/upgrade.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '12.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Getting Started
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/cli/installation.html">
+                Installation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/cli/index.html">
+                Creating an App
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Cordova Projects
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-cli/index.html">
+                CLI Commands
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/support/index.html">
+                Platform Support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/platform_pinning/index.html">
+                Platform Pinning
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/platform_plugin_versioning_ref/index.html">
+                Version Management
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                App Development
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/platforms/electron/index.html">
+                Electron
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Customization
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/config_ref/images.html">
+                Icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/core/features/splashscreen/index.html">
+                Splash Screen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Security & Privacy
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/appdev/security/index.html">
+                Security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/appdev/privacy/index.html">
+                Privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/appdev/allowlist/index.html">
+                Allow List
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/cordova/storage/storage.html">
+                Data Storage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin Development
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/hybrid/plugins/index.html">
+                Create a Plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Support a Platform
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                References
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/config_ref/index.html">
+                Config.xml API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/plugin_ref/spec.html">
+                Plugin.xml API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/cordova/events/events.html">
+                Cordova JavaScript API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Resources
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/third-party/index.html">
+                Third-party Tools
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/cli/template.html">
+                App Templates
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-battery-status/index.html">
+                Battery Status
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-camera/index.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-device/index.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-dialogs/index.html">
+                Dialogs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-file/index.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-geolocation/index.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-inappbrowser/index.html">
+                Inappbrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-media/index.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-media-capture/index.html">
+                Media Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-network-information/index.html">
+                Network Information
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-screen-orientation/index.html">
+                Screen Orientation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-splashscreen/index.html">
+                Browser Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-statusbar/index.html">
+                Statusbar
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-vibration/index.html">
+                Vibration
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/cli/installation.html">
+        Installation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/cli/index.html">
+        Creating an App
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-cli/index.html">
+        CLI Commands
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/support/index.html">
+        Platform Support
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/platform_pinning/index.html">
+        Platform Pinning
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/platform_plugin_versioning_ref/index.html">
+        Version Management
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/platforms/electron/index.html">
+        Electron
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/config_ref/images.html">
+        Icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/core/features/splashscreen/index.html">
+        Splash Screen
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/appdev/security/index.html">
+        Security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/appdev/privacy/index.html">
+        Privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/appdev/allowlist/index.html">
+        Allow List
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/cordova/storage/storage.html">
+        Data Storage
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/hybrid/plugins/index.html">
+        Create a Plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/config_ref/index.html">
+        Config.xml API
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/plugin_ref/spec.html">
+        Plugin.xml API
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/cordova/events/events.html">
+        Cordova JavaScript API
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/third-party/index.html">
+        Third-party Tools
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/cli/template.html">
+        App Templates
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-battery-status/index.html">
+        Battery Status
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-camera/index.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-device/index.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-dialogs/index.html">
+        Dialogs
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-file/index.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-geolocation/index.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-inappbrowser/index.html">
+        Inappbrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-media/index.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-media-capture/index.html">
+        Media Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-network-information/index.html">
+        Network Information
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-screen-orientation/index.html">
+        Screen Orientation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-splashscreen/index.html">
+        Browser Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-statusbar/index.html">
+        Statusbar
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-vibration/index.html">
+        Vibration
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/dev/guide/platforms/ios/upgrade.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        12.x
+                        
+                            (Latest)
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                12.x
+                                
+                                    (Latest)
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/11.x/" class="missing-page">
+                                
+                                    
+                                11.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/10.x/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/" class="missing-page">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/" class="missing-page">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/" class="missing-page">
+                                
+                                    
+                                3.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/" class="missing-page">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/" class="missing-page">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/" class="missing-page">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Upgrading iOS</h1>
+
+<p>This guide shows how to modify iOS projects to upgrade from older
+versions of Cordova.  Most of these instructions apply to projects
+created with an older set of command-line tools that precede the
+<code>cordova</code> CLI utility. See <a href="../../cli/index.html">The Command-Line Interface</a> for information
+how to update the version of the CLI.</p>
+
+<p><strong>NOTE</strong>: You should use the latest shipped version of the iOS SDK, which is included with the latest version of Xcode.</p>
+
+<h2>Upgrading 4.x projects</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform rm ios
+cordova platform add ios
+</code></pre></div></div>
+
+<h2>Upgrading 3.6.0 Projects to 4.0.0</h2>
+
+<p>For non-CLI projects, run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/update path/to/project
+</code></pre></div></div>
+
+<p>For CLI projects:</p>
+
+<ol>
+  <li>
+    <p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Run <code>cordova platform update ios</code> in your existing projects.</p>
+  </li>
+</ol>
+
+<h2>Upgrading 3.3.0 Projects to 3.4.0</h2>
+
+<p>For non-CLI projects, run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/update path/to/project
+</code></pre></div></div>
+
+<p>For CLI projects:</p>
+
+<ol>
+  <li>
+    <p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Run <code>cordova platform update ios</code></p>
+  </li>
+</ol>
+
+<h2>Upgrading 3.2.0 Projects to 3.3.0</h2>
+
+<p>For non-CLI projects, run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/update path/to/project
+</code></pre></div></div>
+
+<p>For CLI projects:</p>
+
+<ol>
+  <li>
+    <p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Run <code>cordova platform update ios</code></p>
+  </li>
+</ol>
+
+<h2>Upgrading 3.1.0 Projects to 3.2.0</h2>
+
+<p>For non-CLI projects, run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/update path/to/project
+</code></pre></div></div>
+
+<p>For CLI projects:</p>
+
+<ol>
+  <li>
+    <p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Run <code>cordova platform update ios</code></p>
+  </li>
+</ol>
+
+<h2>Upgrading 3.0.0 Projects to 3.1.0</h2>
+
+<p>For non-CLI projects, run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/update path/to/project
+</code></pre></div></div>
+
+<p>For CLI projects:</p>
+
+<ol>
+  <li>
+    <p>Update the <code>cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Run <code>cordova platform update ios</code></p>
+  </li>
+</ol>
+
+<p>iOS 7 Issues:</p>
+
+<ol>
+  <li>
+    <p>Remove <code>width=device-width, height=device-height</code> from the
+<code>index.html</code> file&#39;s <code>viewport</code> <code>meta</code> tag. (See <a href="https://issues.apache.org/jira/browse/CB-4323">the relevant
+bug</a>.)</p>
+  </li>
+  <li>
+    <p>Update your media, media-capture and splashscreen core plugins for
+iOS 7 support.</p>
+  </li>
+</ol>
+
+<p>Xcode 5 Issues:</p>
+
+<ol>
+  <li>
+    <p>Update your Project Settings if Xcode 5 prompts you to do so (in the Issues Navigator).</p>
+  </li>
+  <li>
+    <p>Update your <strong>Compiler for C/C++/Objective-C</strong> setting, under the
+<strong>Build Settings</strong> tab, <strong>Build Options</strong> section. Choose <strong>Default
+compiler (Apple LLVM 5.0)</strong>.</p>
+  </li>
+</ol>
+
+<h2>Upgrade to the CLI (3.0.0) from 2.9.0</h2>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
+described in <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Add your platforms to the cordova project, for example: <code>cordova
+platform add ios</code>.</p>
+  </li>
+  <li>
+    <p>Copy the contents of the project&#39;s <code>www</code> directory to the <code>www</code> directory
+at the root of the cordova project you just created.</p>
+  </li>
+  <li>
+    <p>Copy or overwrite any native assets from your original project
+(<code>Resources</code>, etc.), making sure to add any
+new files to the <code>.xcodeproj</code> project. The iOS project builds
+inside the <code>platforms\ios</code> directory.</p>
+  </li>
+  <li>
+    <p>Copy the <code>config.xml</code> into the <code>www</code> directory, and remove any plugin
+definitions. Modify settings here instead of the platform directory.</p>
+  </li>
+  <li>
+    <p>Use the cordova CLI tool to install any plugins you need. Note that
+the CLI handles all core APIs as plugins, so they may need to be
+added. Only 3.0.0 plugins are compatible with the CLI.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
+</ol>
+
+<h2>Upgrading 2.9.0 Projects to 3.0.0</h2>
+
+<ol>
+  <li>
+    <p>Download and extract the Cordova 3.0.0 source to a permanent directory location on your hard drive, for example to <code>~/Documents/Cordova-3.0.0</code>.</p>
+  </li>
+  <li>
+    <p>Quit Xcode if it is running.</p>
+  </li>
+  <li>
+    <p>Using Terminal.app, navigate to the directory where you put the downloaded source above.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova.js</code> (note that it does not have a version suffix anymore, the version is in the file itself in the header) file from the new project into the <code>www</code> directory, and delete the <code>www/cordova.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova.js</code> file.</p>
+  </li>
+  <li>
+    <p>Delete the <code>CordovaLib</code> directory, and copy the <code>CordovaLib</code> directory from the new project into your project&#39;s root directory.</p>
+  </li>
+</ol>
+
+<p><strong>NOTE</strong>: Starting with Cordova 3.0.0, plugins are not pre-installed,
+and you need to use the <code>plugman</code> command-line utility to install them
+yourself. See <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a>.</p>
+
+<h2>Upgrading 2.8.0 Projects to 2.9.0</h2>
+
+<ol>
+  <li>
+    <p>Download and extract the Cordova 2.9.0 source to a permanent directory location on your hard drive, for example to <code>~/Documents/Cordova-2.9.0</code>.</p>
+  </li>
+  <li>
+    <p>Quit Xcode if it is running.</p>
+  </li>
+  <li>
+    <p>Using Terminal.app, navigate to the directory where you put the downloaded source above.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova.js</code> (note that it does not have a version suffix anymore, the version is in the file itself in the header) file from the new project into the <code>www</code> directory, and delete the <code>www/cordova.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova.js</code> file.</p>
+  </li>
+  <li>
+    <p>Delete the <code>CordovaLib</code> directory, and copy the <code>CordovaLib</code> directory from the new project into your project&#39;s root directory.</p>
+  </li>
+</ol>
+
+<h2>Upgrading 2.7.0 Projects to 2.8.0</h2>
+
+<ol>
+  <li>
+    <p>Download and extract the Cordova 2.8.0 source to a permanent directory location on your hard drive, for example to <code>~/Documents/Cordova-2.8.0</code>.</p>
+  </li>
+  <li>
+    <p>Quit Xcode if it is running.</p>
+  </li>
+  <li>
+    <p>Using Terminal.app, navigate to the directory where you put the downloaded source above.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova.js</code> (note that it does not have a version suffix anymore, the version is in the file itself in the header) file from the new project into the <code>www</code> directory, and delete the <code>www/cordova-2.7.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update any <code>&lt;plugin&gt;</code> tags in the <code>config.xml</code> file to <code>&lt;feature&gt;</code>
+tags. Note that existing <code>&lt;plugin&gt;</code> tags still work, but are
+deprecated. You can copy this information in the <code>config.xml</code> file
+for a new project. For example:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;plugins&gt;</span>
+     <span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">"LocalStorage"</span> <span class="na">value=</span><span class="s">"CDVLocalStorage"</span> <span class="nt">/&gt;</span>
+     <span class="c">&lt;!-- other plugins --&gt;</span>
+ <span class="nt">&lt;/plugins&gt;</span>
+
+ <span class="c">&lt;!-- change to: (note that a &lt;feature&gt; tag is on the same level as &lt;plugins&gt; --&gt;</span>
+ <span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"LocalStorage"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"ios-package"</span> <span class="na">value=</span><span class="s">"CDVLocalStorage"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;/feature&gt;</span>
+ <span class="c">&lt;!-- other &lt;feature&gt; tags --&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Delete the <code>CordovaLib</code> directory, and copy the <code>CordovaLib</code> directory from the new project into your project&#39;s root directory.</p>
+  </li>
+  <li>
+    <p>Add these two frameworks to your project:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> OpenAL
+ ImageIO
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Update your project&#39;s target <strong>Build Settings</strong>. Under <strong>Linking &#8594; Other Linker Flags</strong>, edit <strong>&quot;-Obj-C&quot;</strong> to be <strong>&quot;-ObjC&quot;</strong>.</p>
+  </li>
+  <li>
+    <p>Update your project&#39;s target <strong>Build Settings</strong>. Under <strong>Linking &#8594; Other Linker Flags</strong>, change <strong>&quot;-all_load&quot;</strong> to be <code>-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a</code>. You would only need to do this if you have the problem defined in <a href="https://issues.apache.org/jira/browse/CB-3458">this issue.</a>.</p>
+  </li>
+</ol>
+
+<h2>Upgrading 2.6.0 Projects to 2.7.0</h2>
+
+<ol>
+  <li>
+    <p>Download and extract the Cordova 2.7.0 source to a permanent directory location on your hard drive, for example to <code>~/Documents/Cordova-2.7.0</code>.</p>
+  </li>
+  <li>
+    <p>Quit Xcode if it is running.</p>
+  </li>
+  <li>
+    <p>Using Terminal.app, navigate to the directory where you put the downloaded source above.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. you need the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova-2.7.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova-2.6.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova-2.7.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update (or replace, if you never changed the file) the <code>AppDelegate.m</code> file according to the one from the new project (see <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=5c05ac80e056753c0e8736f887ba9f28d5b0774c;hp=623ad8ec3c46f656ea18c6c3a190d650dd64e479;hb=c6e71147386d4ad94b07428952d1aae0a9cbf3f5;hpb=c017fda8af00375a453cf27cfc488647972e9a23">this diff</a>).</p>
+  </li>
+  <li>
+    <p>In the <code>config.xml</code> file, <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=537705d76a5ef6bc5e57a8ebfcab78c02bb4110b;hp=8889726d9a8f8c530fe1371c56d858c34552992a;hb=064239b7b5fa9a867144cf1ee8b2fb798ce1f988;hpb=c9f233250d4b800f3412eeded811daaafb17b2cc">remove this line</a>.</p>
+  </li>
+  <li>
+    <p>Delete the <code>CordovaLib</code> directory, and copy the <code>CordovaLib</code> directory from the new project into your project&#39;s root directory.</p>
+  </li>
+</ol>
+
+<h2>Upgrading 2.5.0 Projects to 2.6.0</h2>
+
+<ol>
+  <li>
+    <p>Download and extract the Cordova 2.6.0 source to a permanent directory location on your hard drive, for example to <code>~/Documents/Cordova-2.6.0</code>.</p>
+  </li>
+  <li>
+    <p>Quit Xcode if it is running.</p>
+  </li>
+  <li>
+    <p>Using Terminal.app, navigate to the directory where you put the downloaded source above.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the project&#39;s <code>www/cordova-2.6.0.js</code> file into the <code>www</code> directory, and delete the <code>www/cordova-2.5.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (along with any other files that reference the script) to refer to the new <code>cordova-2.6.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update (or replace, if you never changed the file) the <code>AppDelegate.m</code> file according to the one from the new project (see <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=124a56bb4f361e95616f44d6d6f5a96ffa439b60;hp=318f79326176be8f16ebc93bad85dd745f4205b6;hb=a28c7712810a63396e9f32fa4eb94fe3f8b93985;hpb=36acdf55e4cab52802d73764c8a4b5b42cf18ef9">this diff</a>).</p>
+  </li>
+  <li>
+    <p>In the <code>config.xml</code> file, <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=1555b5e81de326a07efe0bccaa5f5e2326b07a9a;hp=0652d60f8d35ac13c825c572dca6ed01fea4a540;hb=95f16a6dc252db0299b8e2bb53797995b1e39aa1;hpb=a2de90b8f5f5f68bd9520bcbbb9afa3ac409b96d">add this new line</a>.</p>
+  </li>
+  <li>
+    <p>In the <code>config.xml</code> file, <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=d307827b7e67301171a913417fb10003d43ce39d;hp=04260aa9786d6d74ab20a07c86d7e8b34e31968c;hb=97b89edfae3527828c0ca6bb2f6d58d9ded95188;hpb=942d33c8e7174a5766029ea1232ba2e0df745c3f">add this new line</a>.</p>
+  </li>
+  <li>
+    <p>In the <code>config.xml</code> file, <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=8889726d9a8f8c530fe1371c56d858c34552992a;hp=d307827b7e67301171a913417fb10003d43ce39d;hb=57982de638a4dce6ae130a26662591741b065f00;hpb=ec411f18309d577b4debefd9a2f085ba719701d5">UIWebViewBounce has been changed to DisallowOverscroll, and default values are different</a>.</p>
+  </li>
+  <li>
+    <p>In the <code>config.xml</code> file, the <code>EnableLocation</code> preference has been deprecated.</p>
+  </li>
+  <li>
+    <p>Delete the <code>CordovaLib</code> directory, and copy the <code>CordovaLib</code> directory from the new project into your project&#39;s root directory.</p>
+  </li>
+</ol>
+
+<h2>Upgrading 2.4.0 Projects to 2.5.0</h2>
+
+<ol>
+  <li>
+    <p>Download and extract the Cordova 2.5.0 source to a permanent directory location on your hard drive, for example to <code>~/Documents/Cordova-2.5.0</code>.</p>
+  </li>
+  <li>
+    <p>Quit Xcode if it is running.</p>
+  </li>
+  <li>
+    <p>Using Terminal.app, navigate to the directory where you put the downloaded source above.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova-2.5.0.js</code> file from the new project into the <code>www</code> directory and delete the <code>www/cordova-2.4.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova-2.5.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update (or replace, if you never changed the file) the <code>AppDelegate.m</code> file according to the one from the new project (see <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=318f79326176be8f16ebc93bad85dd745f4205b6;hp=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hb=4001ae13fcb1fcbe73168327630fbc0ce44703d0;hpb=299a324e8c30065fc4511c1fe59c6515d4842f09">this diff</a>).</p>
+  </li>
+  <li>
+    <p>In the <code>config.xml</code> file, <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=903944c4b1e58575295c820e154be2f5f09e6314;hp=721c734120b13004a4a543ee25f4287e541f34be;hb=ae467249b4a256bd31ee89aea7a06f4f2316b8ac;hpb=9e39f7ef8096fb15b38121ab0e245a3a958d9cbb">add these new lines</a>.</p>
+  </li>
+  <li>
+    <p>In the <code>config.xml</code> file, <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=64e71636f5dd79fa0978a97b9ff5aa3860a493f5;hp=d8579352dfb21c14e5748e09b2cf3f4396450163;hb=0e711f8d09377a7ac10ff6be4ec17d22cdbee88d;hpb=57c3c082ed9be41c0588d0d63a1d2bfcd2ed878c">edit the root element, change it from cordova to widget</a>.</p>
+  </li>
+  <li>
+    <p>In the <code>config.xml</code> file, <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=721c734120b13004a4a543ee25f4287e541f34be;hp=7d67508b70914aa921a16e79f79c00512502a8b6;hb=187bf21b308551bfb4b98b1a5e11edf04f699791;hpb=03b8854bdf039bcefbe0212db937abd81ac675e4">remove the OpenAllWhitelistURLsInWebView preference</a>.</p>
+  </li>
+  <li>
+    <p>Delete the <code>cordova</code> directory, and copy the <code>cordova</code> directory from the new project into your project&#39;s root directory. In 2.5.0, this has updated scripts.</p>
+  </li>
+  <li>
+    <p>Delete the <code>CordovaLib</code> directory, and copy the <code>CordovaLib</code> directory from the new project into your project&#39;s root directory.</p>
+  </li>
+</ol>
+
+<h2>Upgrading 2.3.0 Projects to 2.4.0</h2>
+
+<ol>
+  <li>
+    <p>Download and extract the Cordova 2.4.0 source to a permanent directory location on your hard drive, for example to <code>~/Documents/Cordova-2.4.0</code>.</p>
+  </li>
+  <li>
+    <p>Quit Xcode if it is running.</p>
+  </li>
+  <li>
+    <p>Using Terminal.app, navigate to the directory where you put the downloaded source above.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova-2.4.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova-2.3.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova-2.4.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update (or replace, if you never changed the files) the <code>MainViewController.m</code> file according to the one from the new project (see <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/MainViewController.m;h=5f9eeac15c2437cd02a6eb5835b48374e9b94100;hp=89da1082d06ba5e5d0dffc5b2e75a3a06d5c2aa6;hb=b4a2e4ae0445ba7aec788090dce9b822d67edfd8;hpb=a484850f4610e73c7b20cd429a7794ba829ec997">this diff</a>).</p>
+  </li>
+  <li>
+    <p>Update (or replace, if you never changed the file) the <code>AppDelegate.m</code> file according to the one from the new project (see <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hp=1ca3dafeb354c4442b7e149da4f281675aa6b740;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d">this diff</a>).</p>
+  </li>
+  <li>
+    <p>In the <code>config.xml</code> file, <a href="https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=7d67508b70914aa921a16e79f79c00512502a8b6;hp=337d38da6f40c7432b0bce05aa3281d797eec40a;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d">add this new line</a>.</p>
+  </li>
+  <li>
+    <p>Delete the <code>cordova</code> directory, and copy the <code>cordova</code> directory from the new project into your project&#39;s root directory. In 2.4.0, this has fixed scripts.</p>
+  </li>
+  <li>
+    <p>Delete the <code>CordovaLib</code> directory, and copy the <code>CordovaLib</code> directory from the new project into your project&#39;s root directory.</p>
+  </li>
+  <li>
+    <p>Add AssetsLibrary.framework as a resource to your project.  (See <a href="https://developer.apple.com/library/ios/#recipes/xcode_help-project_editor/Articles/AddingaLibrarytoaTarget.html">Apple&#39;s documentation</a> for instructions on how to do so.).</p>
+  </li>
+</ol>
+
+<h2>Upgrading 2.2.0 Projects to 2.3.0</h2>
+
+<ol>
+  <li>
+    <p>Download and extract the Cordova 2.3.0 source to a permanent directory location on your hard drive, for example to <code>~/Documents/Cordova-2.3.0</code>.</p>
+  </li>
+  <li>
+    <p>Quit Xcode if it is running.</p>
+  </li>
+  <li>
+    <p>Using Terminal.app, navigate to the directory where you put the downloaded source above.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova-2.3.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova-2.2.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova-2.3.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update (or replace, if you never changed the file) the <code>MainViewController.m</code> according to the one from the new project.</p>
+  </li>
+  <li>
+    <p>Delete the <code>cordova</code> directory, and copy the <code>cordova</code> directory from the new project into your project&#39;s root directory. In 2.3.0, this has new scripts.</p>
+  </li>
+  <li>
+    <p>Delete the <code>CordovaLib</code> directory, and copy the <code>CordovaLib</code> directory from the new project into your project&#39;s root directory.</p>
+  </li>
+  <li>
+    <p>Convert the <code>Cordova.plist</code> file to <code>config.xml</code>, by running the script <code>bin/cordova\_plist\_to\_config\_xml</code> on your project file.</p>
+  </li>
+  <li>
+    <p>Add the InAppBrowser plugin to the <code>config.xml</code>, by adding this tag under <code>&lt;cordova&gt;&lt;plugins&gt;</code>:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">"InAppBrowser"</span> <span class="na">value=</span><span class="s">"CDVInAppBrowser"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Note that Objective-C plugins are <em>not</em> whitelisted anymore. To whitelist your connections with the app whitelist, you need to set the <code>User-Agent</code> header of the connection to the same user-agent as the main Cordova WebView.
+You can get this by accessing the <code>userAgent</code> property off the main view-controller. The main view-controller (<code>CDVViewController</code>) also has a <code>URLisAllowed</code> method for you to check whether a URL passes the whitelist.</p>
+  </li>
+  <li>
+    <p>Device API changes:</p>
+    <ul>
+      <li>For iOS, device.platform used to return <code>iPhone</code>, <code>iPad</code> or <code>iPod Touch</code>; now it returns (correctly) <code>iOS</code>.</li>
+      <li>For iOS, device.name (now deprecated for all platforms) used to return the name of the user’s device (e.g. ‘Shazron’s iPhone 5′); now it returns what device.platform used to return: <code>iPhone</code>, <code>iPad</code> or <code>iPod Touch</code>.</li>
+      <li>For all platforms, there is a new property called device.model; this returns the specific device model, e.g. <code>iPad2,5</code> (for other platforms, this returns what device.name used to return).</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>Upgrading 2.1.0 Projects to 2.2.0</h2>
+
+<ol>
+  <li>
+    <p>Download and extract the Cordova 2.2.0 source to a permanent directory location on your hard drive, for example to <code>~/Documents/Cordova-2.2.0</code>.</p>
+  </li>
+  <li>
+    <p>Quit Xcode if it is running.</p>
+  </li>
+  <li>
+    <p>Using Terminal.app, navigate to the directory where you put the downloaded source above.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova-2.2.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova-2.1.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova-2.2.0.js</code> file.</p>
+  </li>
+  <li>Update (or replace, if you never changed the file) the <code>MainViewController.m</code> according to the one from the new project:
+    <ul>
+      <li>Updated &#8594; viewWillAppear</li>
+    </ul>
+  </li>
+  <li>
+    <p>Copy the <code>cordova</code> directory from the new project into your project&#39;s root directory. In 2.2.0, this has an updated &#39;emulate&#39; script.</p>
+  </li>
+  <li>Next, update the <code>CordovaLib</code> sub-project reference. Beginning with Cordova 2.1.0, we are not using the CORDOVALIB Xcode variable anymore when referencing where <code>CordovaLib</code> resides, the reference is an absolute file reference now.
+    <ol>
+      <li>Launch Terminal.app</li>
+      <li>Go to the location where you installed Cordova (see Step 1), in the <code>bin</code> subdirectory</li>
+      <li>
+        <p>Run the script below where the first parameter is the path to your project&#39;s <code>.xcodeproj</code> file:</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> update_cordova_subproject path/to/your/project/xcodeproj
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<p><strong>NOTE</strong>: In 2.2.0, the <code>bin/create</code> script copy in the <code>CordovaLib</code> sub-project into your project. To have the same kind of setup, just copy in the right <code>CordovaLib</code> into your project directory, and update the <code>CordovaLib</code> sub-project location (relative to the project) in the Xcode File Inspector.</p>
+
+<h2>Upgrading 2.0.0 Projects to 2.1.0</h2>
+
+<p>With Cordova 2.1.0, <code>CordovaLib</code> has been upgraded to use <strong>Automatic Reference Counting (ARC)</strong>. You don&#39;t need to upgrade to <strong>ARC</strong> to use CordovaLib, but if you want to upgrade your project to use <strong>ARC</strong>, please use the Xcode migration wizard from the menu: <strong>Edit &#8594; Refactor &#8594; Convert to Objective-C ARC&#8230;</strong>, de-select libCordova.a, then run the wizard to completion.</p>
+
+<ol>
+  <li>
+    <p>Download and extract the Cordova 2.1.0 source to a permanent directory location on your hard drive, for example to <code>~/Documents/Cordova-2.1.0</code>.</p>
+  </li>
+  <li>
+    <p>Quit Xcode if it is running.</p>
+  </li>
+  <li>
+    <p>Using Terminal.app, navigate to the directory where you put the downloaded source above.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova-2.1.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova-2.0.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova-2.1.0.js</code> file.</p>
+  </li>
+  <li>Update (or replace, if you never changed the file) the <code>AppDelegate.m</code> according to the one from the new project:
+    <ul>
+      <li>Edited &#8594; application:didFinishLaunchingWithOptions:</li>
+      <li>Added  &#8594; application:supportedInterfaceOrientationsForWindow:</li>
+    </ul>
+  </li>
+  <li>Update (or replace, if you never changed the file) the <code>MainViewController.m</code> according to the one from the new project:
+    <ul>
+      <li>Added &#8594; viewWillAppear</li>
+    </ul>
+  </li>
+  <li>
+    <p>Copy the <code>cordova</code> directory from the new project into your project&#39;s root directory. In 2.1.0, this has the updated scripts to support paths with spaces.</p>
+  </li>
+  <li>
+    <p>Remove the <code>VERSION</code> file reference from your project (<em>not</em> the one in <code>CordovaLib</code>).</p>
+  </li>
+  <li>Next, update the <code>CordovaLib</code> sub-project reference. Beginning with Cordova 2.1.0, we are not using the CORDOVALIB Xcode variable anymore when referencing where <code>CordovaLib</code> resides, the reference is an absolute file reference now.
+    <ol>
+      <li>Launch Terminal.app</li>
+      <li>Go to the location where you installed Cordova (see Step 1), in the <code>bin</code> subdirectory</li>
+      <li>
+        <p>Run the script below where the first parameter is the path to your project&#39;s <code>.xcodeproj</code> file:</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> update_cordova_subproject path/to/your/project/xcodeproj
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h2>Upgrading 1.9.0 Projects to 2.0.0</h2>
+
+<ol>
+  <li>
+    <p>Install Cordova 2.0.0.</p>
+  </li>
+  <li>
+    <p>Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova-2.0.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova-1.9.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova-2.0.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code>cordova</code> directory from the new project into your project&#39;s root directory (if you want the project command-line tools).</p>
+  </li>
+  <li>
+    <p>Add a new entry under <code>Plugins</code> in the <code>Cordova.plist</code> file, under
+the <strong>Supporting Files</strong> group. The key is <code>Device</code> and the value
+is <code>CDVDevice</code>.</p>
+  </li>
+  <li>
+    <p>Remove <code>Cordova.framework</code>.</p>
+  </li>
+  <li>
+    <p>Remove <code>verify.sh</code> from the <strong>Supporting Files</strong> group.</p>
+  </li>
+  <li>
+    <p>Select the project icon in the Project Navigator, select your project <strong>Target</strong>, then select the <strong>Build Settings</strong> tab.</p>
+  </li>
+  <li>
+    <p>Search for <strong>Preprocessor Macros</strong>, then remove all <strong>CORDOVA_FRAMEWORK=1</strong> values.</p>
+  </li>
+  <li>
+    <p>Locate the <code>CordovaLib</code> directory that was installed in your hard-drive under your home folder&#39;s <code>Documents</code> subdirectory.</p>
+  </li>
+  <li>
+    <p>Locate the <code>CordovaLib.xcodeproj</code> file in the <code>CordovaLib</code> directory, then drag and drop the file into your project. It should appear as a sub-project.</p>
+  </li>
+  <li>
+    <p>Build your project, you should get some errors relating to <code>#import</code> directives.</p>
+  </li>
+  <li>
+    <p>For the <code>#import</code> errors, change any quote-based imports in this style:</p>
+
+    <div class="language-objective_c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#import "CDV.h"
+</span></code></pre></div>    </div>
+
+    <p>to this brackets-based style:</p>
+
+    <div class="language-objective_c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#import &lt;Cordova/CDV.h&gt;
+</span></code></pre></div>    </div>
+
+    <p>and remove any <code>#ifdef</code> wrappers around any Cordova imports, they are not needed anymore (the imports are now unified)</p>
+  </li>
+  <li>
+    <p>Build your project again, and it should not have any <code>#import</code> errors.</p>
+  </li>
+  <li>
+    <p>Select the <strong>project icon</strong> in the Project Navigator, select your project <strong>Target</strong>, then select the <strong>Build Phases</strong> tab.</p>
+  </li>
+  <li>
+    <p>Expand the <strong>Target Dependencies</strong> phase, then select the <strong>+</strong> button.</p>
+  </li>
+  <li>
+    <p>Select the <code>CordovaLib</code> target, then select the <strong>Add</strong> button.</p>
+  </li>
+  <li>
+    <p>Expand the first <strong>Link Binary with Libraries</strong> phase (it should already contain a bunch of frameworks), then select the <strong>+</strong> button.</p>
+  </li>
+  <li>
+    <p>Select the <code>libCordova.a</code> static library, then select the <strong>Add</strong> button.</p>
+  </li>
+  <li>
+    <p>Delete the <strong>Run Script</strong> phase.</p>
+  </li>
+  <li>
+    <p>Select the <strong>project icon</strong> in the Project Navigator, select your project <strong>Target</strong>, then select the <strong>Build Settings</strong> tab.</p>
+  </li>
+  <li>
+    <p>Search for <strong>Other Linker Flags</strong>, and add the values <strong>-force_load</strong> and <strong>-Obj-C</strong>.</p>
+  </li>
+  <li>
+    <p>Expand the <code>CordovaLib</code> sub-project.</p>
+  </li>
+  <li>
+    <p>Locate the <code>VERSION</code> file, drag it into your main project (we want to create a link to it, not a copy).</p>
+  </li>
+  <li>
+    <p>Select the <strong>Create groups for any added folders</strong> radio button, then select the <strong>Finish</strong> button.</p>
+  </li>
+  <li>
+    <p>Select the <code>VERSION</code> file that you just dragged in a previous step.</p>
+  </li>
+  <li>
+    <p>Type the <strong>Option-Command-1</strong> key combination to show the <strong>File Inspector</strong> (or menuitem <strong>View &#8594; Utilities &#8594; Show File Inspector</strong>).</p>
+  </li>
+  <li>
+    <p>Choose <strong>Relative to CORDOVALIB</strong> in the <strong>File Inspector</strong> for the drop-down menu for <strong>Location</strong>.</p>
+  </li>
+  <li>
+    <p>Set the Xcode preference <strong>Xcode Preferences &#8594; Locations &#8594; Derived Data &#8594; Advanced&#8230;</strong> to <strong>Unique</strong>, so that the unified headers can be found.</p>
+  </li>
+  <li>
+    <p>Select the <strong>project icon</strong> in the Project Navigator, select your <strong>Target</strong>, then select the <strong>Build Settings</strong> tab.</p>
+  </li>
+  <li>
+    <p>Search for <strong>Header Search Paths</strong>. For that setting, append these three values, including quotes:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"</span><span class="si">$(</span>TARGET_BUILD_DIR<span class="si">)</span><span class="s2">/usr/local/lib/include"</span>
+
+<span class="s2">"</span><span class="si">$(</span>OBJROOT<span class="si">)</span><span class="s2">/UninstalledProducts/include"</span>
+
+<span class="s2">"</span><span class="si">$(</span>BUILT_PRODUCTS_DIR<span class="si">)</span><span class="s2">"</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Search for <strong>Other Linker Flags</strong>. For that setting, append this value:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">-weak_framework</span> CoreFoundation
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Build your project, it should compile and link with <strong>no issues</strong>.</p>
+  </li>
+  <li>
+    <p>Select your project from the <strong>Scheme</strong> drop-down, and then select <strong>iPhone 5.1 Simulator</strong>.</p>
+  </li>
+  <li>
+    <p>Select the <strong>Run</strong> button.</p>
+  </li>
+</ol>
+
+<p><strong>NOTE</strong>: If your project is not working as expected in the Simulator, please take a note of any errors in the console log in Xcode for clues.</p>
+
+<h2>Upgrading 1.8.x Projects to 1.9.0</h2>
+
+<ol>
+  <li>
+    <p>Install Cordova 1.9.0.</p>
+  </li>
+  <li>
+    <p>Create a new project. You will need some of the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova-1.9.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova-1.8.x.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova-1.9.0.js</code> file.</p>
+  </li>
+</ol>
+
+<p><strong>NOTE</strong>: 1.9.0 supports the new <code>BackupWebStorage</code> boolean <code>Cordova.plist</code> setting. It&#39;s enabled by default, so set it to
+<code>false</code> to disable it, especially on iOS 6. See <a href="https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html">Release Notes: Safari and UIKit Section</a></p>
+
+<h2>Upgrading 1.7.0 Projects to 1.8.x</h2>
+
+<ol>
+  <li>
+    <p>Install Cordova 1.8.0.</p>
+  </li>
+  <li>
+    <p>Create a new project. You will need some of the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova-1.8.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova-1.7.x.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova-1.8.0.js</code> file.</p>
+  </li>
+</ol>
+
+<p>If you intend on using the Capture API, you will need the new <strong>iPad retina-display</strong> assets:</p>
+
+<ol>
+  <li>
+    <p>Copy the <code>Resources/Capture.bundle</code> item from the new project into your project directory, over-writing your existing <code>Resources/Capture.bundle</code> item.</p>
+  </li>
+  <li>
+    <p>In your project, select the <code>Capture.bundle</code> item into your Project Navigator in Xcode, type the <strong>Delete</strong> key, then select <strong>Remove Reference</strong> from the resulting dialog.</p>
+  </li>
+  <li>
+    <p>Drag the new <code>Capture.bundle</code> from Step 1 above into your Project Navigator in Xcode, then select the <strong>Create groups for any added folders</strong> radio button.</p>
+  </li>
+</ol>
+
+<h2>Upgrading 1.6.x Projects to 1.7.0</h2>
+
+<ol>
+  <li>
+    <p>Install Cordova 1.7.0.</p>
+  </li>
+  <li>
+    <p>Create a new project. You will need some of the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova-1.7.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova-1.6.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova-1.7.0.js</code> file.</p>
+  </li>
+</ol>
+
+<h2>Upgrading 1.5.0 Projects to 1.6.x</h2>
+
+<ol>
+  <li>
+    <p>Install Cordova 1.6.1.</p>
+  </li>
+  <li>
+    <p>Make a backup of <code>AppDelegate.m</code>, <code>AppDelegate.h</code>, <code>MainViewController.m</code>, <code>MainViewController.h</code>, and <code>Cordova.plist</code> in your project.</p>
+  </li>
+  <li>
+    <p>Create a new project. You will need some of the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy these files from the new project into your 1.5.0-based project directory on disk, replacing any old files (backup your files first from step 2 above):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> AppDelegate.h
+ AppDelegate.m
+ MainViewController.h
+ MainViewController.m
+ Cordova.plist
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add all the new <code>MainViewController</code> and <code>AppDelegate</code> files into your Xcode project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova-1.6.1.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/cordova-1.5.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>cordova-1.6.1.js</code> file.</p>
+  </li>
+  <li>
+    <p>Add the new <code>Cordova.plist</code> file into your project. This is
+necessary because the core plugin service names must change to
+match the ones from Android and BlackBerry, for a unified Cordova
+JavaScript file (<code>cordova-js</code>).</p>
+  </li>
+  <li>
+    <p>Integrate any settings, <strong>Plugins</strong> and <strong>ExternalHosts</strong> entries that you had in your <strong>backed-up Cordova.plist</strong> into the new <code>Cordova.plist</code>.</p>
+  </li>
+  <li>
+    <p>Integrate any project-specific code that you have in your backed-up <code>AppDelegate.h</code> and <code>AppDelegate.m</code> into the new <code>AppDelegate</code> files. Any <code>UIWebViewDelegate</code> or <code>CDVCommandDelegate</code> code in <code>AppDelegate.m</code> needs to go into <code>MainViewController.m</code> now (see commented-out sections in that file).</p>
+  </li>
+  <li>
+    <p>Integrate any project-specific code that you have in your backed-up <code>MainViewController.h</code> and <code>MainViewController.m</code> into the new MainViewController files.</p>
+  </li>
+  <li>
+    <p>Click on the project icon in the Project Navigator, select your <strong>Project</strong>, then select the <strong>Build Settings</strong> tab.</p>
+  </li>
+  <li>
+    <p>Enter <strong>Compiler for C/C++/Objective-C</strong> in the search field.</p>
+  </li>
+  <li>
+    <p>Select the <strong>Apple LLVM Compiler 3.1</strong> value.</p>
+  </li>
+</ol>
+
+<h2>Upgrading 1.4.x Projects to 1.5.0</h2>
+
+<ol>
+  <li>
+    <p>Install Cordova 1.5.0.</p>
+  </li>
+  <li>
+    <p>Create a new project and run it once. You will need some of the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/cordova-1.5.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/phonegap-1.4.x.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new Cordova <code>cordova-1.5.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Find <code>PhoneGap.framework</code> in your Project Navigator, select it.</p>
+  </li>
+  <li>
+    <p>Type the <strong>Delete</strong> key and delete the <code>PhoneGap.framework</code> reference in the Project Navigator.</p>
+  </li>
+  <li>
+    <p>Type the <strong>Option-Command-A</strong> key combination, which should drop down a sheet to add files to your project (the <strong>Add Files&#8230;</strong> sheet). Make sure the <strong>Created groups for any added folders</strong> radio button is selected.</p>
+  </li>
+  <li>
+    <p>Type the <strong>Shift-Command-G</strong> key combination, which should drop down another sheet for you to go to a folder (the <strong>Go to the folder:</strong> sheet).</p>
+  </li>
+  <li>
+    <p>Enter <code>/Users/Shared/Cordova/Frameworks/Cordova.framework</code> in the <strong>Go to the folder:</strong> sheet and then press the <strong>Go</strong> button.</p>
+  </li>
+  <li>
+    <p>Press the <strong>Add</strong> button in the <strong>Add Files&#8230;</strong> sheet.</p>
+  </li>
+  <li>
+    <p>Select <code>Cordova.framework</code> in the Project Navigator.</p>
+  </li>
+  <li>
+    <p>Type the <strong>Option-Command-1</strong> key combination to show the <strong>File Inspector</strong>.</p>
+  </li>
+  <li>
+    <p>Choose <strong>Absolute Path</strong> in the <strong>File Inspector</strong> for the drop-down menu for <strong>Location</strong>.</p>
+  </li>
+  <li>
+    <p>Type the <strong>Option-Command-A</strong> key combination, which should drop down a sheet to add files to your project (the <strong>Add Files&#8230;</strong> sheet). Make sure the <strong>Created groups for any added folders</strong> radio button is selected.</p>
+  </li>
+  <li>
+    <p>Type the <strong>Shift-Command-G</strong> key combination, which should drop down another sheet for you to go to a folder (the <strong>Go to the folder:</strong> sheet).</p>
+  </li>
+  <li>
+    <p>Enter <code>~/Documents/CordovaLib/Classes/deprecated</code> in the <strong>Go to the folder:</strong> sheet and then press the <strong>Go</strong> button.</p>
+  </li>
+  <li>
+    <p>Press the <strong>Add</strong> button in the <strong>Add Files&#8230;</strong> sheet.</p>
+  </li>
+  <li>
+    <p>In the <code>AppDelegate.h</code>, <code>AppDelegate.m</code>, and <code>MainViewController.h</code> files, replace the whole <code>#ifdef PHONEGAP_FRAMEWORK</code> block with:</p>
+
+    <div class="language-objective_c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#import "CDVDeprecated.h"
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Click on the <strong>project icon</strong> in the Project Navigator, select your <strong>Target</strong>, then select the <strong>Build Settings</strong> tab.</p>
+  </li>
+  <li>
+    <p>Search for <strong>Framework Search Paths</strong>.</p>
+  </li>
+  <li>
+    <p>Replace the existing value with <code>/Users/Shared/Cordova/Frameworks</code>.</p>
+  </li>
+  <li>
+    <p>Search for <strong>Preprocessor Macros</strong>.</p>
+  </li>
+  <li>
+    <p>For the first (combined) value, replace the value with <strong>CORDOVA_FRAMEWORK=YES</strong>.</p>
+  </li>
+  <li>
+    <p>Select the <strong>Build Phases</strong> tab.</p>
+  </li>
+  <li>
+    <p>Expand <strong>Run Script</strong>.</p>
+  </li>
+  <li>
+    <p>Replace any occurrences of <strong>PhoneGap</strong> with <strong>Cordova</strong>.</p>
+  </li>
+  <li>
+    <p>Find the <code>PhoneGap.plist</code> file in the Project Navigator, and click on the filename once to enter name edit mode.</p>
+  </li>
+  <li>
+    <p>Rename <code>PhoneGap.plist</code> to <code>Cordova.plist</code>.</p>
+  </li>
+  <li>
+    <p>Right-click on <code>Cordova.plist</code> and choose <strong>Open As &#8594; Source Code</strong>.</p>
+  </li>
+  <li>
+    <p>Press <strong>Option-Command-F</strong>, choose <strong>Replace</strong> from the drop-down on the top left of the Source window.</p>
+  </li>
+  <li>
+    <p>Enter <code>com.phonegap</code> for the Find string, and <code>org.apache.cordova</code>
+for the Replace string, then press the <strong>Replace All</strong> button.</p>
+  </li>
+  <li>
+    <p>Enter <strong>PG</strong> for the Find string, and <strong>CDV</strong> for the Replace
+string, then press the <strong>Replace All</strong> button.</p>
+  </li>
+  <li>
+    <p>Press <strong>Command-B</strong> to build. You still have deprecations
+that you can get rid of in the future (see <code>CDVDeprecated.h</code>. For
+example, replace classes in your code that use PG* to CDV*).</p>
+  </li>
+</ol>
+
+<h2>Upgrading 1.4.0 Projects to 1.4.1</h2>
+
+<ol>
+  <li>
+    <p>Install Cordova 1.4.1.</p>
+  </li>
+  <li>
+    <p>Make a backup of <code>MainViewController.m</code>.</p>
+  </li>
+  <li>
+    <p>Create a new project. You will need some of the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>MainViewController.m</code> file from the new project into your 1.4.0-based project directory on disk, replacing the old file (backup your files first from step 2 above).</p>
+  </li>
+  <li>
+    <p>Add the <code>MainViewController.m</code> file into your Xcode project.</p>
+  </li>
+  <li>
+    <p>Integrate any project-specific code that you have in your backed-up <code>MainViewController.m</code> into the new file.</p>
+  </li>
+  <li>
+    <p>Updating the <code>phonegap-1.4.0.js</code> file is optional, nothing has changed in the JavaScript between 1.4.0 and 1.4.1.</p>
+  </li>
+</ol>
+
+<h2>Upgrading 1.3.0 Projects to 1.4.0</h2>
+
+<ol>
+  <li>
+    <p>Install Cordova 1.4.0.</p>
+  </li>
+  <li>
+    <p>Make a backup of <code>AppDelegate.m</code> and <code>AppDelegate.h</code> in your project.</p>
+  </li>
+  <li>
+    <p>Create a new project. You will need some of the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy these files from the new project into your 1.3.0-based project directory on disk, replacing any old files (backup your files first from step 2 above):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> AppDelegate.h
+ AppDelegate.m
+ MainViewController.h
+ MainViewController.m
+ MainViewController.xib
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add all the <code>MainViewController</code> files into your Xcode project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/phonegap-1.4.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/phonegap-1.3.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>phonegap-1.4.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Add a new entry under <code>Plugins</code> in the <code>PhoneGap.plist</code> file. The
+key is <code>com.phonegap.battery</code> and the value is <code>PGBattery</code>.</p>
+  </li>
+  <li>
+    <p>Integrate any project-specific code that you have in your backed-up <code>AppDelegate.h</code> and <code>AppDelegate.m</code> into the new AppDelegate files.</p>
+  </li>
+</ol>
+
+<h2>Upgrading 1.2.0 Projects to 1.3.0</h2>
+
+<ol>
+  <li>
+    <p>Install Cordova 1.3.0.</p>
+  </li>
+  <li>
+    <p>Make a backup of <code>AppDelegate.m</code> and <code>AppDelegate.h</code> in your project.</p>
+  </li>
+  <li>
+    <p>Create a new project. You will need some of the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy these files from the new project into your 1.2.0-based project directory on disk, replacing any old files (backup your files first from step 2 above):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> AppDelegate.h
+ AppDelegate.m
+ MainViewController.h
+ MainViewController.m
+ MainViewController.xib
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add all the <code>MainViewController</code> files into your Xcode project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/phonegap-1.3.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/phonegap-1.2.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>phonegap-1.3.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Add a new entry under <code>Plugins</code> in the <code>PhoneGap.plist</code> file. The
+key is <code>com.phonegap.battery</code> and the value is <code>PGBattery</code>.</p>
+  </li>
+  <li>
+    <p>Integrate any project-specific code that you have in your backed-up <code>AppDelegate.h</code> and <code>AppDelegate.m</code> into the new AppDelegate files.</p>
+  </li>
+</ol>
+
+<h2>Upgrading 1.1.0 Projects to 1.2.0</h2>
+
+<ol>
+  <li>
+    <p>Install Cordova 1.2.0.</p>
+  </li>
+  <li>
+    <p>Make a backup of <code>AppDelegate.m</code> and <code>AppDelegate.h</code> in your project.</p>
+  </li>
+  <li>
+    <p>Create a new project. You will need some of the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy these files from the new project into your 1.1.0-based project directory on disk, replacing any old files (backup your files first from step 2 above):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> AppDelegate.h
+ AppDelegate.m
+ MainViewController.h
+ MainViewController.m
+ MainViewController.xib
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add all the <code>MainViewController</code> files into your Xcode project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/phonegap-1.2.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/phonegap-1.1.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>phonegap-1.2.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Add a new entry under <code>Plugins</code> in the <code>PhoneGap.plist</code> file. The
+key is <code>com.phonegap.battery</code> and the value is <code>PGBattery</code>.</p>
+  </li>
+  <li>
+    <p>Integrate any project-specific code that you have in your backed-up <code>AppDelegate.h</code> and <code>AppDelegate.m</code> into the new AppDelegate files.</p>
+  </li>
+</ol>
+
+<h2>Upgrading 1.0.0 Projects to 1.1.0</h2>
+
+<ol>
+  <li>
+    <p>Install Cordova 1.1.0.</p>
+  </li>
+  <li>
+    <p>Make a backup of <code>AppDelegate.m</code> and <code>AppDelegate.h</code> in your project.</p>
+  </li>
+  <li>
+    <p>Create a new project. You will need some of the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy these files from the new project into your 1.0.0-based project directory on disk, replacing any old files (backup your files first from step 2 above):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> AppDelegate.h
+ AppDelegate.m
+ MainViewController.h
+ MainViewController.m
+ MainViewController.xib
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add all the <code>MainViewController</code> files into your Xcode project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/phonegap-1.1.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/phonegap-1.0.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>phonegap-1.1.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Add a new entry under <code>Plugins</code> in the <code>PhoneGap.plist</code> file. The
+key is <code>com.phonegap.battery</code> and the value is <code>PGBattery</code>.</p>
+  </li>
+  <li>
+    <p>Integrate any project-specific code that you have in your backed-up <code>AppDelegate.h</code> and <code>AppDelegate.m</code> into the new AppDelegate files.</p>
+  </li>
+</ol>
+
+<h2>Upgrading 0.9.6 Projects to 1.0.0</h2>
+
+<ol>
+  <li>
+    <p>Install Cordova 1.0.0.</p>
+  </li>
+  <li>
+    <p>Make a backup of <code>AppDelegate.m</code> and <code>AppDelegate.h</code> in your project.</p>
+  </li>
+  <li>
+    <p>Create a new project. You will need some of the assets from this new project.</p>
+  </li>
+  <li>
+    <p>Copy these files from the new project into your 0.9.6-based project directory on disk, replacing any old files (backup your files first from step 2 above):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> AppDelegate.h
+ AppDelegate.m
+ MainViewController.h
+ MainViewController.m
+ MainViewController.xib
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add all the <code>MainViewController</code> files into your Xcode project.</p>
+  </li>
+  <li>
+    <p>Copy the <code>www/phonegap-1.0.0.js</code> file from the new project into the <code>www</code> directory, and delete the <code>www/phonegap-0.9.6.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update the Cordova script reference in the <code>www/index.html</code> file (and any other files that contain the script reference) to point to the new <code>phonegap-1.0.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Add a new entry under <code>Plugins</code> in the <code>PhoneGap.plist</code> file. The
+key is <code>com.phonegap.battery</code> and the value is <code>PGBattery</code>.</p>
+  </li>
+  <li>
+    <p>Integrate any project-specific code that you have in your backed-up <code>AppDelegate.h</code> and <code>AppDelegate.m</code> into the new AppDelegate files.</p>
+  </li>
+</ol>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2023 The Apache Software Foundation, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  12.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

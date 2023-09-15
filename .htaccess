@@ -580,7 +580,7 @@ RewriteRule ^.*/plugins/authors.html$ /docs/en/latest/guide/hybrid/plugins/index
 #       "/latest/" to be in the URI in order to activate. Placing this rule
 #       before them will rewrite "/latest/" to the latest version and redirects
 #       for "/latest/some/path.html" will never activate.
-RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/latest/(.*)$ /docs/$1/11.x/$2 [L]
+RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/latest/(.*)$ /docs/$1/12.x/$2 [L]
 
 # Redirect http to https
 # From Cordova PMC Member raphinesse 

@@ -1,0 +1,3188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="Capture audio, video, and images. ">
+
+    <title>
+        
+            
+                Media Capture - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/12.x/reference/cordova-plugin-media-capture/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '12.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Getting Started
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/cli/installation.html">
+                Installation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/cli/index.html">
+                Creating an App
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Cordova Projects
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-cli/index.html">
+                CLI Commands
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/support/index.html">
+                Platform Support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/platform_pinning/index.html">
+                Platform Pinning
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/platform_plugin_versioning_ref/index.html">
+                Version Management
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                App Development
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/platforms/electron/index.html">
+                Electron
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Customization
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/config_ref/images.html">
+                Icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/core/features/splashscreen/index.html">
+                Splash Screen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Security & Privacy
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/appdev/security/index.html">
+                Security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/appdev/privacy/index.html">
+                Privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/appdev/allowlist/index.html">
+                Allow List
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/cordova/storage/storage.html">
+                Data Storage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin Development
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/hybrid/plugins/index.html">
+                Create a Plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Support a Platform
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                References
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/config_ref/index.html">
+                Config.xml API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/plugin_ref/spec.html">
+                Plugin.xml API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/cordova/events/events.html">
+                Cordova JavaScript API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Resources
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/third-party/index.html">
+                Third-party Tools
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/cli/template.html">
+                App Templates
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-battery-status/index.html">
+                Battery Status
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-camera/index.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-device/index.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-dialogs/index.html">
+                Dialogs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-file/index.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-geolocation/index.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-inappbrowser/index.html">
+                Inappbrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-media/index.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-media-capture/index.html">
+                Media Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-network-information/index.html">
+                Network Information
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-screen-orientation/index.html">
+                Screen Orientation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-splashscreen/index.html">
+                Browser Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-statusbar/index.html">
+                Statusbar
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-vibration/index.html">
+                Vibration
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/cli/installation.html">
+        Installation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/cli/index.html">
+        Creating an App
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-cli/index.html">
+        CLI Commands
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/support/index.html">
+        Platform Support
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/platform_pinning/index.html">
+        Platform Pinning
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/platform_plugin_versioning_ref/index.html">
+        Version Management
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/platforms/electron/index.html">
+        Electron
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/config_ref/images.html">
+        Icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/core/features/splashscreen/index.html">
+        Splash Screen
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/appdev/security/index.html">
+        Security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/appdev/privacy/index.html">
+        Privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/appdev/allowlist/index.html">
+        Allow List
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/cordova/storage/storage.html">
+        Data Storage
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/hybrid/plugins/index.html">
+        Create a Plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/config_ref/index.html">
+        Config.xml API
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/plugin_ref/spec.html">
+        Plugin.xml API
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/cordova/events/events.html">
+        Cordova JavaScript API
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/third-party/index.html">
+        Third-party Tools
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/cli/template.html">
+        App Templates
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-battery-status/index.html">
+        Battery Status
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-camera/index.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-device/index.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-dialogs/index.html">
+        Dialogs
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-file/index.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-geolocation/index.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-inappbrowser/index.html">
+        Inappbrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-media/index.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-media-capture/index.html">
+        Media Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-network-information/index.html">
+        Network Information
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-screen-orientation/index.html">
+        Screen Orientation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-splashscreen/index.html">
+        Browser Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-statusbar/index.html">
+        Statusbar
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-vibration/index.html">
+        Vibration
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+                    <a class="edit hidden-xs hidden-sm" href="https://github.com/apache/cordova-plugin-media-capture/blob/master/README.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+
+                
+                
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        12.x
+                        
+                            (Latest)
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                12.x
+                                
+                                    (Latest)
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/11.x/" class="missing-page">
+                                
+                                    
+                                11.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/10.x/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/" class="missing-page">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/" class="missing-page">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/" class="missing-page">
+                                
+                                    
+                                3.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/" class="missing-page">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/" class="missing-page">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/" class="missing-page">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+
+            <!-- plugin version warning -->
+            
+                <div class="alert alert-warning docs-alert" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                     master.
+                    <a href="https://github.com/apache/cordova-plugin-media-capture/releases">
+                        
+                    </a>
+                </div>
+            
+
+            <div id="page-toc-source">
+                <!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<h1>cordova-plugin-media-capture</h1>
+
+<p><a href="https://github.com/apache/cordova-plugin-media-capture/actions/workflows/android.yml"><img src="https://github.com/apache/cordova-plugin-media-capture/actions/workflows/android.yml/badge.svg" alt="Android Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-media-capture/actions/workflows/chrome.yml"><img src="https://github.com/apache/cordova-plugin-media-capture/actions/workflows/chrome.yml/badge.svg" alt="Chrome Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-media-capture/actions/workflows/ios.yml"><img src="https://github.com/apache/cordova-plugin-media-capture/actions/workflows/ios.yml/badge.svg" alt="iOS Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-media-capture/actions/workflows/lint.yml"><img src="https://github.com/apache/cordova-plugin-media-capture/actions/workflows/lint.yml/badge.svg" alt="Lint Test" /></a></p>
+
+<p>This plugin provides access to the device&#39;s audio, image, and video capture capabilities.</p>
+
+<p><strong>WARNING</strong>: Collection and use of images, video, or
+audio from the device&#39;s camera or microphone raises important privacy
+issues.  Your app&#39;s privacy policy should discuss how the app uses
+such sensors and whether the data recorded is shared with any other
+parties.  In addition, if the app&#39;s use of the camera or microphone is
+not apparent in the user interface, you should provide a just-in-time
+notice before the app accesses the camera or microphone (if the
+device operating system doesn&#39;t do so already). That notice should
+provide the same information noted above, as well as obtaining the
+user&#39;s permission (e.g., by presenting choices for <strong>OK</strong> and <strong>No
+Thanks</strong>).  Note that some app marketplaces may require your app to
+provide just-in-time notice and obtain permission from the user prior
+to accessing the camera or microphone.  For more information, please
+see the Privacy Guide.</p>
+
+<p>This plugin defines global <code>navigator.device.capture</code> object.</p>
+
+<p>Although in the global scope, it is not available until after the <code>deviceready</code> event.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(navigator.device.capture);
+}
+</code></pre></div></div>
+
+<h2>Installation</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-media-capture
+</code></pre></div></div>
+
+<h2>Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>Browser</li>
+  <li>iOS</li>
+  <li>Windows</li>
+</ul>
+
+<h2>Objects</h2>
+
+<ul>
+  <li>Capture</li>
+  <li>CaptureAudioOptions</li>
+  <li>CaptureImageOptions</li>
+  <li>CaptureVideoOptions</li>
+  <li>CaptureCallback</li>
+  <li>CaptureErrorCB</li>
+  <li>ConfigurationData</li>
+  <li>MediaFile</li>
+  <li>MediaFileData</li>
+</ul>
+
+<h2>Methods</h2>
+
+<ul>
+  <li>capture.captureAudio</li>
+  <li>capture.captureImage</li>
+  <li>capture.captureVideo</li>
+  <li>MediaFile.getFormatData</li>
+</ul>
+
+<h2>Properties</h2>
+
+<ul>
+  <li>
+    <p><strong>supportedAudioModes</strong>: The audio recording formats supported by the device. (ConfigurationData[])</p>
+  </li>
+  <li>
+    <p><strong>supportedImageModes</strong>: The recording image sizes and formats supported by the device. (ConfigurationData[])</p>
+  </li>
+  <li>
+    <p><strong>supportedVideoModes</strong>: The recording video resolutions and formats supported by the device. (ConfigurationData[])</p>
+  </li>
+</ul>
+
+<h2>capture.captureAudio</h2>
+
+<blockquote>
+  <p>Start the audio recorder application and return information about captured audio clip files.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.device.capture.captureAudio(
+    CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
+);
+</code></pre></div></div>
+
+<h3>Description</h3>
+
+<p>Starts an asynchronous operation to capture audio recordings using the
+device&#39;s default audio recording application.  The operation allows
+the device user to capture multiple recordings in a single session.</p>
+
+<p>The capture operation ends when either the user exits the audio
+recording application, or the maximum number of recordings specified
+by <code>CaptureAudioOptions.limit</code> is reached.  If no <code>limit</code> parameter
+value is specified, it defaults to one (1), and the capture operation
+terminates after the user records a single audio clip.</p>
+
+<p>When the capture operation finishes, the <code>CaptureCallback</code> executes
+with an array of <code>MediaFile</code> objects describing each captured audio
+clip file.  If the user terminates the operation before an audio clip
+is captured, the <code>CaptureErrorCallback</code> executes with a <code>CaptureError</code>
+object, featuring the <code>CaptureError.CAPTURE_NO_MEDIA_FILES</code> error
+code.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows</li>
+</ul>
+
+<h3>Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// capture callback
+var captureSuccess = function(mediaFiles) {
+    var i, path, len;
+    for (i = 0, len = mediaFiles.length; i &lt; len; i += 1) {
+        path = mediaFiles[i].fullPath;
+        // do something interesting with the file
+    }
+};
+
+// capture error callback
+var captureError = function(error) {
+    navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+};
+
+// start audio capture
+navigator.device.capture.captureAudio(captureSuccess, captureError, {limit:2});
+</code></pre></div></div>
+
+<h3>iOS Quirks</h3>
+
+<ul>
+  <li>iOS does not have a default audio recording application, so a simple user interface is provided.</li>
+</ul>
+
+<h3>Windows Phone 7 and 8 Quirks</h3>
+
+<ul>
+  <li>Windows Phone 7 does not have a default audio recording application, so a simple user interface is provided.</li>
+</ul>
+
+<h2>capture.captureImage</h2>
+
+<blockquote>
+  <p>Start the camera application and return information about captured image files.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.device.capture.captureImage(
+    CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
+);
+</code></pre></div></div>
+
+<h3>Description</h3>
+
+<p>Starts an asynchronous operation to capture images using the device&#39;s
+camera application.  The operation allows users to capture more than
+one image in a single session.</p>
+
+<p>The capture operation ends either when the user closes the camera
+application, or the maximum number of recordings specified by
+<code>CaptureImageOptions.limit</code> is reached.  If no <code>limit</code> value is
+specified, it defaults to one (1), and the capture operation
+terminates after the user captures a single image.</p>
+
+<p>When the capture operation finishes, it invokes the <code>CaptureCB</code>
+callback with an array of <code>MediaFile</code> objects describing each captured
+image file.  If the user terminates the operation before capturing an
+image, the <code>CaptureErrorCB</code> callback executes with a <code>CaptureError</code>
+object featuring a <code>CaptureError.CAPTURE_NO_MEDIA_FILES</code> error code.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+  <li>Browser</li>
+  <li>iOS</li>
+  <li>Windows</li>
+</ul>
+
+<h3>iOS Quirks</h3>
+
+<p>Since iOS 10 it&#39;s mandatory to provide an usage description in the <code>info.plist</code> if trying to access privacy-sensitive data. When the system prompts the user to allow access, this usage description string will displayed as part of the permission dialog box, but if you didn&#39;t provide the usage description, the app will crash before showing the dialog. Also, Apple will reject apps that access private data but don&#39;t provide an usage description.</p>
+
+<p>This plugins requires the following usage descriptions:</p>
+
+<ul>
+  <li><code>NSCameraUsageDescription</code> describes the reason the app accesses the user&#39;s camera.</li>
+  <li><code>NSMicrophoneUsageDescription</code> describes the reason the app accesses the user&#39;s microphone.</li>
+  <li><code>NSPhotoLibraryUsageDescriptionentry</code> describes the reason the app accesses the user&#39;s photo library.</li>
+</ul>
+
+<p>To add these entries into the <code>info.plist</code>, you can use the <code>edit-config</code> tag in the <code>config.xml</code> like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge"&gt;
+    &lt;string&gt;need camera access to take pictures&lt;/string&gt;
+&lt;/edit-config&gt;
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;edit-config target="NSMicrophoneUsageDescription" file="*-Info.plist" mode="merge"&gt;
+    &lt;string&gt;need microphone access to record sounds&lt;/string&gt;
+&lt;/edit-config&gt;
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge"&gt;
+    &lt;string&gt;need to photo library access to get pictures from there&lt;/string&gt;
+&lt;/edit-config&gt;
+</code></pre></div></div>
+
+<h3>Browser Quirks</h3>
+
+<p>Works in Chrome, Firefox and Opera only (since IE and Safari doesn&#39;t supports
+navigator.getUserMedia API)</p>
+
+<p>Displaying images using captured file&#39;s URL available in Chrome/Opera only.
+Firefox stores captured images in IndexedDB storage (see File plugin documentation),
+and due to this the only way to show captured image is to read it and show using its DataURL.</p>
+
+<h3>Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// capture callback
+var captureSuccess = function(mediaFiles) {
+    var i, path, len;
+    for (i = 0, len = mediaFiles.length; i &lt; len; i += 1) {
+        path = mediaFiles[i].fullPath;
+        // do something interesting with the file
+    }
+};
+
+// capture error callback
+var captureError = function(error) {
+    navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+};
+
+// start image capture
+navigator.device.capture.captureImage(captureSuccess, captureError, {limit:2});
+</code></pre></div></div>
+
+<h2>capture.captureVideo</h2>
+
+<blockquote>
+  <p>Start the video recorder application and return information about captured video clip files.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.device.capture.captureVideo(
+    CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
+);
+</code></pre></div></div>
+
+<h3>Description</h3>
+
+<p>Starts an asynchronous operation to capture video recordings using the
+device&#39;s video recording application.  The operation allows the user
+to capture more than one recordings in a single session.</p>
+
+<p>The capture operation ends when either the user exits the video
+recording application, or the maximum number of recordings specified
+by <code>CaptureVideoOptions.limit</code> is reached.  If no <code>limit</code> parameter
+value is specified, it defaults to one (1), and the capture operation
+terminates after the user records a single video clip.</p>
+
+<p>When the capture operation finishes, it the <code>CaptureCB</code> callback
+executes with an array of <code>MediaFile</code> objects describing each captured
+video clip file.  If the user terminates the operation before
+capturing a video clip, the <code>CaptureErrorCB</code> callback executes with a
+<code>CaptureError</code> object featuring a
+<code>CaptureError.CAPTURE_NO_MEDIA_FILES</code> error code.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows</li>
+</ul>
+
+<h3>Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// capture callback
+var captureSuccess = function(mediaFiles) {
+    var i, path, len;
+    for (i = 0, len = mediaFiles.length; i &lt; len; i += 1) {
+        path = mediaFiles[i].fullPath;
+        // do something interesting with the file
+    }
+};
+
+// capture error callback
+var captureError = function(error) {
+    navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+};
+
+// start video capture
+navigator.device.capture.captureVideo(captureSuccess, captureError, {limit:2});
+</code></pre></div></div>
+
+<h2>CaptureAudioOptions</h2>
+
+<blockquote>
+  <p>Encapsulates audio capture configuration options.</p>
+</blockquote>
+
+<h3>Properties</h3>
+
+<ul>
+  <li>
+    <p><strong>limit</strong>: The maximum number of audio clips the device user can record in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: The maximum duration of an audio sound clip, in seconds.</p>
+  </li>
+</ul>
+
+<h3>Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// limit capture operation to 3 media files, no longer than 10 seconds each
+var options = { limit: 3, duration: 10 };
+
+navigator.device.capture.captureAudio(captureSuccess, captureError, options);
+</code></pre></div></div>
+
+<h3>Android Quirks</h3>
+
+<ul>
+  <li>The <code>duration</code> parameter is not supported.  Recording lengths can&#39;t be limited programmatically.</li>
+</ul>
+
+<h3>iOS Quirks</h3>
+
+<ul>
+  <li>The <code>limit</code> parameter is not supported, so only one recording can be created for each invocation.</li>
+</ul>
+
+<h2>CaptureImageOptions</h2>
+
+<blockquote>
+  <p>Encapsulates image capture configuration options.</p>
+</blockquote>
+
+<h3>Properties</h3>
+
+<ul>
+  <li><strong>limit</strong>: The maximum number of images the user can capture in a single capture operation. The value must be greater than or equal to 1 (defaults to 1).</li>
+</ul>
+
+<h3>Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// limit capture operation to 3 images
+var options = { limit: 3 };
+
+navigator.device.capture.captureImage(captureSuccess, captureError, options);
+</code></pre></div></div>
+
+<h3>iOS Quirks</h3>
+
+<ul>
+  <li>The <strong>limit</strong> parameter is not supported, and only one image is taken per invocation.</li>
+</ul>
+
+<h2>CaptureVideoOptions</h2>
+
+<blockquote>
+  <p>Encapsulates video capture configuration options.</p>
+</blockquote>
+
+<h3>Properties</h3>
+
+<ul>
+  <li>
+    <p><strong>limit</strong>: The maximum number of video clips the device&#39;s user can capture in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: The maximum duration of a video clip, in seconds.</p>
+  </li>
+  <li>
+    <p><strong>quality</strong>: To allow capturing video at different qualities.  A value of <code>1</code> ( the default ) means high quality and value of <code>0</code> means low quality, suitable for MMS messages.</p>
+  </li>
+</ul>
+
+<h3>Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// limit capture operation to 3 video clips
+var options = { limit: 3 };
+
+navigator.device.capture.captureVideo(captureSuccess, captureError, options);
+</code></pre></div></div>
+
+<h3>iOS Quirks</h3>
+
+<ul>
+  <li>
+    <p>The <strong>limit</strong> property is ignored.  Only one video is recorded per invocation.</p>
+  </li>
+  <li>
+    <p>The <strong>quality</strong> property can have a value of <code>0.5</code> for medium quality.</p>
+  </li>
+  <li>
+    <p>See <a href="https://developer.apple.com/documentation/uikit/uiimagepickercontroller/1619154-videoquality?language=objc">here</a> for more details about the <strong>quality</strong> property on iOS.</p>
+  </li>
+</ul>
+
+<h3>Android Quirks</h3>
+
+<ul>
+  <li>See <a href="http://developer.android.com/reference/android/provider/MediaStore.html#EXTRA_VIDEO_QUALITY">here</a> for more details about the <strong>quality</strong> property on Android.</li>
+</ul>
+
+<h3>Example ( w/ quality )</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// limit capture operation to 1 video clip of low quality
+var options = { limit: 1, quality: 0 };
+navigator.device.capture.captureVideo(captureSuccess, captureError, options);
+</code></pre></div></div>
+
+<h2>CaptureCB</h2>
+
+<blockquote>
+  <p>Invoked upon a successful media capture operation.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function captureSuccess( MediaFile[] mediaFiles ) { ... };
+</code></pre></div></div>
+
+<h3>Description</h3>
+
+<p>This function executes after a successful capture operation completes.
+At this point a media file has been captured, and either the user has
+exited the media capture application, or the capture limit has been
+reached.</p>
+
+<p>Each <code>MediaFile</code> object describes a captured media file.</p>
+
+<h3>Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// capture callback
+function captureSuccess(mediaFiles) {
+    var i, path, len;
+    for (i = 0, len = mediaFiles.length; i &lt; len; i += 1) {
+        path = mediaFiles[i].fullPath;
+        // do something interesting with the file
+    }
+};
+</code></pre></div></div>
+
+<h2>CaptureError</h2>
+
+<blockquote>
+  <p>Encapsulates the error code resulting from a failed media capture operation.</p>
+</blockquote>
+
+<h3>Properties</h3>
+
+<ul>
+  <li><strong>code</strong>: One of the pre-defined error codes listed below.</li>
+</ul>
+
+<h3>Constants</h3>
+
+<ul>
+  <li>
+    <p><code>CaptureError.CAPTURE_INTERNAL_ERR</code>: The camera or microphone failed to capture image or sound.</p>
+  </li>
+  <li>
+    <p><code>CaptureError.CAPTURE_APPLICATION_BUSY</code>: The camera or audio capture application is currently serving another capture request.</p>
+  </li>
+  <li>
+    <p><code>CaptureError.CAPTURE_INVALID_ARGUMENT</code>: Invalid use of the API (e.g., the value of <code>limit</code> is less than one).</p>
+  </li>
+  <li>
+    <p><code>CaptureError.CAPTURE_NO_MEDIA_FILES</code>: The user exits the camera or audio capture application before capturing anything.</p>
+  </li>
+  <li>
+    <p><code>CaptureError.CAPTURE_PERMISSION_DENIED</code>: The user denied a permission required to perform the given capture request.</p>
+  </li>
+  <li>
+    <p><code>CaptureError.CAPTURE_NOT_SUPPORTED</code>: The requested capture operation is not supported.</p>
+  </li>
+</ul>
+
+<h2>CaptureErrorCB</h2>
+
+<blockquote>
+  <p>Invoked if an error occurs during a media capture operation.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function captureError( CaptureError error ) { ... };
+</code></pre></div></div>
+
+<h3>Description</h3>
+
+<p>This function executes if an error occurs when trying to launch a
+media capture operation. Failure scenarios include when the capture
+application is busy, a capture operation is already taking place, or
+the user cancels the operation before any media files are captured.</p>
+
+<p>This function executes with a <code>CaptureError</code> object containing an
+appropriate error <code>code</code>.</p>
+
+<h3>Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// capture error callback
+var captureError = function(error) {
+    navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+};
+</code></pre></div></div>
+
+<h2>ConfigurationData</h2>
+
+<blockquote>
+  <p>Encapsulates a set of media capture parameters that a device supports.</p>
+</blockquote>
+
+<h3>Description</h3>
+
+<p>Describes media capture modes supported by the device.  The
+configuration data includes the MIME type, and capture dimensions for
+video or image capture.</p>
+
+<p>The MIME types should adhere to <a href="http://www.ietf.org/rfc/rfc2046.txt">RFC2046</a>.  Examples:</p>
+
+<ul>
+  <li><code>video/3gpp</code></li>
+  <li><code>video/quicktime</code></li>
+  <li><code>image/jpeg</code></li>
+  <li><code>audio/amr</code></li>
+  <li><code>audio/wav</code></li>
+</ul>
+
+<h3>Properties</h3>
+
+<ul>
+  <li>
+    <p><strong>type</strong>: The ASCII-encoded lowercase string representing the media type. (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>height</strong>: The height of the image or video in pixels.  The value is zero for sound clips. (Number)</p>
+  </li>
+  <li>
+    <p><strong>width</strong>: The width of the image or video in pixels.  The value is zero for sound clips. (Number)</p>
+  </li>
+</ul>
+
+<h3>Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// retrieve supported image modes
+var imageModes = navigator.device.capture.supportedImageModes;
+
+// Select mode that has the highest horizontal resolution
+var width = 0;
+var selectedmode;
+for each (var mode in imageModes) {
+    if (mode.width &gt; width) {
+        width = mode.width;
+        selectedmode = mode;
+    }
+}
+</code></pre></div></div>
+
+<p>Not supported by any platform.  All configuration data arrays are empty.</p>
+
+<h2>MediaFile.getFormatData</h2>
+
+<blockquote>
+  <p>Retrieves format information about the media capture file.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mediaFile.getFormatData(
+    MediaFileDataSuccessCB successCallback,
+    [MediaFileDataErrorCB errorCallback]
+);
+</code></pre></div></div>
+
+<h3>Description</h3>
+
+<p>This function asynchronously attempts to retrieve the format
+information for the media file.  If successful, it invokes the
+<code>MediaFileDataSuccessCB</code> callback with a <code>MediaFileData</code> object.  If
+the attempt fails, this function invokes the <code>MediaFileDataErrorCB</code>
+callback.</p>
+
+<h3>Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows</li>
+</ul>
+
+<h3>Android Quirks</h3>
+
+<p>The API to access media file format information is limited, so not all
+<code>MediaFileData</code> properties are supported.</p>
+
+<h3>iOS Quirks</h3>
+
+<p>The API to access media file format information is limited, so not all
+<code>MediaFileData</code> properties are supported.</p>
+
+<h2>MediaFile</h2>
+
+<blockquote>
+  <p>Encapsulates properties of a media capture file.</p>
+</blockquote>
+
+<h3>Properties</h3>
+
+<ul>
+  <li>
+    <p><strong>name</strong>: The name of the file, without path information. (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>fullPath</strong>: The full path of the file, including the name. (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>type</strong>: The file&#39;s mime type (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>lastModifiedDate</strong>: The date and time when the file was last modified. (Date)</p>
+  </li>
+  <li>
+    <p><strong>size</strong>: The size of the file, in bytes. (Number)</p>
+  </li>
+</ul>
+
+<h3>Methods</h3>
+
+<ul>
+  <li><strong>MediaFile.getFormatData</strong>: Retrieves the format information of the media file.</li>
+</ul>
+
+<h2>MediaFileData</h2>
+
+<blockquote>
+  <p>Encapsulates format information about a media file.</p>
+</blockquote>
+
+<h3>Properties</h3>
+
+<ul>
+  <li>
+    <p><strong>codecs</strong>: The actual format of the audio and video content. (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>bitrate</strong>: The average bitrate of the content.  The value is zero for images. (Number)</p>
+  </li>
+  <li>
+    <p><strong>height</strong>: The height of the image or video in pixels. The value is zero for audio clips. (Number)</p>
+  </li>
+  <li>
+    <p><strong>width</strong>: The width of the image or video in pixels. The value is zero for audio clips. (Number)</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: The length of the video or sound clip in seconds. The value is zero for images. (Number)</p>
+  </li>
+</ul>
+
+<h3>Android Quirks</h3>
+
+<p>Supports the following <code>MediaFileData</code> properties:</p>
+
+<ul>
+  <li>
+    <p><strong>codecs</strong>: Not supported, and returns <code>null</code>.</p>
+  </li>
+  <li>
+    <p><strong>bitrate</strong>: Not supported, and returns zero.</p>
+  </li>
+  <li>
+    <p><strong>height</strong>: Supported: image and video files only.</p>
+  </li>
+  <li>
+    <p><strong>width</strong>: Supported: image and video files only.</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: Supported: audio and video files only.</p>
+  </li>
+</ul>
+
+<h3>iOS Quirks</h3>
+
+<p>Supports the following <code>MediaFileData</code> properties:</p>
+
+<ul>
+  <li>
+    <p><strong>codecs</strong>: Not supported, and returns <code>null</code>.</p>
+  </li>
+  <li>
+    <p><strong>bitrate</strong>: Supported on iOS4 devices for audio only. Returns zero for images and videos.</p>
+  </li>
+  <li>
+    <p><strong>height</strong>: Supported: image and video files only.</p>
+  </li>
+  <li>
+    <p><strong>width</strong>: Supported: image and video files only.</p>
+  </li>
+  <li>
+    <p><strong>duration</strong>: Supported: audio and video files only.</p>
+  </li>
+</ul>
+
+<h2>Android Lifecycle Quirks</h2>
+
+<p>When capturing audio, video, or images on the Android platform, there is a chance that the
+application will get destroyed after the Cordova Webview is pushed to the background by
+the native capture application. See the <a href="http://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#lifecycle-guide">Android Lifecycle Guide</a> for
+a full description of the issue. In this case, the success and failure callbacks passed
+to the capture method will not be fired and instead the results of the call will be
+delivered via a document event that fires after the Cordova <a href="http://cordova.apache.org/docs/en/latest/cordova/events/events.html#resume">resume event</a>.</p>
+
+<p>In your app, you should subscribe to the two possible events like so:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// pendingcaptureresult is fired if the capture call is successful</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">pendingcaptureresult</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">mediaFiles</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Do something with result</span>
+    <span class="p">});</span>
+
+    <span class="c1">// pendingcaptureerror is fired if the capture call is unsuccessful</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">pendingcaptureerror</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Handle error case</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="c1">// Only subscribe to events after deviceready fires</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">deviceready</span><span class="dl">'</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>It is up you to track what part of your code these results are coming from. Be sure to
+save and restore your app&#39;s state as part of the <a href="http://cordova.apache.org/docs/en/latest/cordova/events/events.html#pause">pause</a> and
+<a href="http://cordova.apache.org/docs/en/latest/cordova/events/events.html#resume">resume</a> events as appropriate. Please note that these events will only
+fire on the Android platform and only when the Webview was destroyed during a capture
+operation.</p>
+
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2023 The Apache Software Foundation, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  12.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>

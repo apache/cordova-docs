@@ -220,7 +220,7 @@
     <li>
         
             <a class="" href="/docs/en/dev/reference/cordova-cli/index.html">
-                CLI Reference
+                CLI Commands
             </a>
             
         
@@ -916,7 +916,7 @@
     <li>
         
             <a class="" href="/docs/en/dev/reference/cordova-plugin-splashscreen/index.html">
-                Splashscreen
+                Browser Splashscreen
             </a>
             
         
@@ -1052,7 +1052,7 @@
 
 <li>
     <a class="" href="/docs/en/dev/reference/cordova-cli/index.html">
-        CLI Reference
+        CLI Commands
     </a>
 </li>
 
@@ -1421,7 +1421,7 @@
 
 <li>
     <a class="" href="/docs/en/dev/reference/cordova-plugin-splashscreen/index.html">
-        Splashscreen
+        Browser Splashscreen
     </a>
 </li>
 
@@ -1524,9 +1524,31 @@
                             <a href="/docs/en/latest/" class="missing-page">
                                 
                                     
-                                11.x
+                                12.x
                                 
                                     (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/11.x/" class="missing-page">
+                                
+                                    
+                                11.x
                                 
                             
                                 
@@ -2543,6 +2565,7 @@ Since the introduction of iPadOS 13, iPads try to adapt their content mode / use
       <li><strong>exit</strong>: event fires when the <code>InAppBrowser</code> window is closed.</li>
       <li><strong>beforeload</strong>: event fires when the <code>InAppBrowser</code> decides whether to load an URL or not (only with option <code>beforeload</code> set).</li>
       <li><strong>message</strong>: event fires when the <code>InAppBrowser</code> receives a message posted from the page loaded inside the <code>InAppBrowser</code> Webview.</li>
+      <li><strong>download</strong>: <em>(Android Only)</em> event fires when the <code>InAppBrowser</code> loads a URL that leads in downloading of a file.</li>
     </ul>
   </li>
   <li>
@@ -2646,25 +2669,43 @@ Since the introduction of iPadOS 13, iPads try to adapt their content mode / use
 <span class="p">}</span>
 
 </code></pre></div></div>
+<h4>Download event Example</h4>
+
+<p>Whenever the InAppBrowser receives or locates to a url which leads in downloading a file, the callback assigned to the &quot;download&quot; event is called. The parameter passed to this callback is an object with the the following properties</p>
+
+<ul>
+  <li><strong>type</strong> <em>it contains the String value &quot;download&quot; always</em></li>
+  <li><strong>url</strong> <em>The url that leaded to the downloading of file. Basically, the download link of file</em></li>
+  <li><strong>userAgent</strong> <em>User Agent of the webview</em></li>
+  <li><strong>contentDisposition</strong> <em>If the url contains &quot;content-disposition&quot; header, then this property holds the value of that field else this field is empty</em></li>
+  <li><strong>contentLength</strong> <em>If the link of the file allows to obtain file size then this property holds the file size else it contains int value 0</em></li>
+  <li><strong>mimetype</strong> <em>The MIME type of the file</em></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+function downloadListener(params){
+    var url = params.url;
+    var mimetype = params.mimetype;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", params.url);
+    xhr.onload = function() {
+        var content = xhr.responseText;
+    };
+    xhr.send();
+
+}
+
+</code></pre></div></div>
 
 <h3>InAppBrowserEvent Properties</h3>
 
 <ul>
-  <li>
-    <p><strong>type</strong>: the eventname, either <code>loadstart</code>, <code>loadstop</code>, <code>loaderror</code>, <code>message</code> or <code>exit</code>. <em>(String)</em></p>
-  </li>
-  <li>
-    <p><strong>url</strong>: the URL that was loaded. <em>(String)</em></p>
-  </li>
-  <li>
-    <p><strong>code</strong>: the error code, only in the case of <code>loaderror</code>. <em>(Number)</em></p>
-  </li>
-  <li>
-    <p><strong>message</strong>: the error message, only in the case of <code>loaderror</code>. <em>(String)</em></p>
-  </li>
-  <li>
-    <p><strong>data</strong>: the message contents , only in the case of <code>message</code>. A stringified JSON object. <em>(String)</em></p>
-  </li>
+  <li><strong>type</strong>: the eventname, either <code>loadstart</code>, <code>loadstop</code>, <code>loaderror</code>, <code>message</code> or <code>exit</code>. <em>(String)</em></li>
+  <li><strong>url</strong>: the URL that was loaded. <em>(String)</em></li>
+  <li><strong>code</strong>: the error code, only in the case of <code>loaderror</code>. <em>(Number)</em></li>
+  <li><strong>message</strong>: the error message, only in the case of <code>loaderror</code>. <em>(String)</em></li>
+  <li><strong>data</strong>: the message contents , only in the case of <code>message</code>. A stringified JSON object. <em>(String)</em></li>
 </ul>
 
 <h3>Supported Platforms</h3>
@@ -2713,6 +2754,7 @@ ref.addEventListener('loadstart', function(event) { alert(event.url); });
       <li><strong>loaderror</strong>: event fires when the <code>InAppBrowser</code> encounters an error loading a URL.</li>
       <li><strong>exit</strong>: event fires when the <code>InAppBrowser</code> window is closed.</li>
       <li><strong>message</strong>: event fires when the <code>InAppBrowser</code> receives a message posted from the page loaded inside the <code>InAppBrowser</code> Webview.</li>
+      <li><strong>download</strong>: <em>(Android only)</em> event fires when the <code>InAppBrowser</code> loads a URL that leads in downloading of a file.</li>
     </ul>
   </li>
   <li>

@@ -1,0 +1,3276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="List of supported tags in the config.xml file. ">
+
+    <title>
+        
+            
+                Config.xml API - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/12.x/config_ref/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+    <!-- Algolia Search CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                    <input id="header-search-field" type="text" placeholder="Search '12.x' docs..." class="form-control hidden-xs" autocomplete="off">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Getting Started
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/cli/installation.html">
+                Installation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/cli/index.html">
+                Creating an App
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Cordova Projects
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-cli/index.html">
+                CLI Commands
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/support/index.html">
+                Platform Support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/platform_pinning/index.html">
+                Platform Pinning
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/platform_plugin_versioning_ref/index.html">
+                Version Management
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                App Development
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/platforms/electron/index.html">
+                Electron
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Customization
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/config_ref/images.html">
+                Icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/core/features/splashscreen/index.html">
+                Splash Screen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Security & Privacy
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/appdev/security/index.html">
+                Security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/appdev/privacy/index.html">
+                Privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/appdev/allowlist/index.html">
+                Allow List
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/cordova/storage/storage.html">
+                Data Storage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin Development
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/hybrid/plugins/index.html">
+                Create a Plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Support a Platform
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                References
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/config_ref/index.html">
+                Config.xml API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/plugin_ref/spec.html">
+                Plugin.xml API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/cordova/events/events.html">
+                Cordova JavaScript API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Resources
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/third-party/index.html">
+                Third-party Tools
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/cli/template.html">
+                App Templates
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-battery-status/index.html">
+                Battery Status
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-camera/index.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-device/index.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-dialogs/index.html">
+                Dialogs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-file/index.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-geolocation/index.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-inappbrowser/index.html">
+                Inappbrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-media/index.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-media-capture/index.html">
+                Media Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-network-information/index.html">
+                Network Information
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-screen-orientation/index.html">
+                Screen Orientation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-splashscreen/index.html">
+                Browser Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-statusbar/index.html">
+                Statusbar
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/reference/cordova-plugin-vibration/index.html">
+                Vibration
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/cli/installation.html">
+        Installation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/cli/index.html">
+        Creating an App
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-cli/index.html">
+        CLI Commands
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/support/index.html">
+        Platform Support
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/platform_pinning/index.html">
+        Platform Pinning
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/platform_plugin_versioning_ref/index.html">
+        Version Management
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/platforms/electron/index.html">
+        Electron
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/config_ref/images.html">
+        Icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/core/features/splashscreen/index.html">
+        Splash Screen
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/appdev/security/index.html">
+        Security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/appdev/privacy/index.html">
+        Privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/appdev/allowlist/index.html">
+        Allow List
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/cordova/storage/storage.html">
+        Data Storage
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/hybrid/plugins/index.html">
+        Create a Plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/config_ref/index.html">
+        Config.xml API
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/plugin_ref/spec.html">
+        Plugin.xml API
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/cordova/events/events.html">
+        Cordova JavaScript API
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/third-party/index.html">
+        Third-party Tools
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/cli/template.html">
+        App Templates
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-battery-status/index.html">
+        Battery Status
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-camera/index.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-device/index.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-dialogs/index.html">
+        Dialogs
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-file/index.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-geolocation/index.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-inappbrowser/index.html">
+        Inappbrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-media/index.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-media-capture/index.html">
+        Media Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-network-information/index.html">
+        Network Information
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-screen-orientation/index.html">
+        Screen Orientation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-splashscreen/index.html">
+        Browser Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-statusbar/index.html">
+        Statusbar
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/reference/cordova-plugin-vibration/index.html">
+        Vibration
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/dev/config_ref/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        12.x
+                        
+                            (Latest)
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/" class="missing-page">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/" class="missing-page">
+                                
+                                    <span class="selected">
+                                        
+                                12.x
+                                
+                                    (Latest)
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/11.x/" class="missing-page">
+                                
+                                    
+                                11.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/10.x/" class="missing-page">
+                                
+                                    
+                                10.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/" class="missing-page">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/" class="missing-page">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/" class="missing-page">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/" class="missing-page">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/" class="missing-page">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/" class="missing-page">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/" class="missing-page">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/" class="missing-page">
+                                
+                                    
+                                3.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/" class="missing-page">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/" class="missing-page">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/" class="missing-page">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <svg xmlns="http://www.w3.org/2000/svg" hidden="" style="display: none !important"><symbol id="browser" viewBox="461.6 9.3 30 30"><path d="M476.7 10.3c-7.7 0-14 6.3-14 14s6.3 14 14 14 14-6.3 14-14-6.3-14-14-14m9.8 9h-5.1c-.3-2.1-.8-4-1.4-5.5 2.8.9 5.1 2.9 6.5 5.5m-6.8 5-.1 3h-5.8l-.1-3 .1-3h5.8l.1 3m-3 11h-.9c-.6-1.1-1.4-3.1-1.8-6h5.3c-.4 2.9-1.1 4.8-1.8 6h-.8m-2.7-16c.4-2.9 1.1-4.8 1.8-6h1.8c.6 1.1 1.4 3.1 1.8 6H474zm-.6-5.5c-.6 1.5-1.1 3.4-1.4 5.5h-5.1c1.3-2.6 3.6-4.6 6.5-5.5m-7.3 7.5h5.7l-.1 3 .1 3h-5.7c-.3-1-.4-2-.4-3s.1-2 .4-3m.8 8h5.1c.3 2.1.8 4 1.4 5.5-2.9-.9-5.2-2.9-6.5-5.5m13.1 5.5c.6-1.5 1.1-3.4 1.4-5.5h5.1a11.4 11.4 0 0 1-6.5 5.5m7.2-7.5h-5.7l.1-3-.1-3h5.7c.3 1 .4 2 .4 3 .1 1.1-.1 2.1-.4 3" /></symbol><symbol id="android" viewBox="0 0 553 553"><path d="M76.8 179.1a33 33 0 0 0-24.3 10 32.6 32.6 0 0 0-10 24V356a33 33 0 0 0 10 24.2 33 33 0 0 0 24.3 10 32 32 0 0 0 24-10 33.3 33.3 0 0 0 9.9-24.2V213c0-9.3-3.3-17.2-10-23.9a32.6 32.6 0 0 0-24-10zM352 50.8l23.6-43.5c1.5-2.9 1-5-1.7-6.6-2.9-1.4-5-.7-6.6 2l-24 43.8c-21-9.3-43.3-14-66.8-14s-45.7 4.7-66.8 14L185.8 2.7c-1.6-2.7-3.8-3.4-6.7-2-2.6 1.5-3.2 3.7-1.6 6.6L201 50.8c-24 12.2-43 29.2-57.2 51a128.9 128.9 0 0 0-21.2 71.7H430c0-26-7.1-49.8-21.3-71.6a146.3 146.3 0 0 0-56.8-51zm-136.5 63.4a12.5 12.5 0 0 1-9.1 3.8 12.7 12.7 0 0 1-12.6-13c0-3.5 1.2-6.6 3.6-9.1 2.5-2.6 5.5-3.8 9-3.8s6.6 1.2 9.1 3.8c2.6 2.5 3.9 5.6 3.9 9.1 0 3.6-1.3 6.6-3.9 9.2zm140.1 0a12 12 0 0 1-9 3.8c-3.5 0-6.5-1.3-9-3.8a12.4 12.4 0 0 1-4-9.2c0-3.5 1.4-6.6 4-9.1a12 12 0 0 1 9-3.8 12 12 0 0 1 9 3.8c2.5 2.5 3.7 5.6 3.7 9.1 0 3.6-1.2 6.6-3.7 9.2zM124 406.8c0 10.2 3.5 18.8 10.6 26 7 7 15.7 10.6 26 10.6H185l.4 75.4c0 9.5 3.3 17.6 10 24.3s14.6 10 23.9 10c9.5 0 17.6-3.4 24.2-10s10-14.8 10-24.3v-75.4h45.8v75.4c0 9.5 3.4 17.6 10 24.3s14.7 10 24.3 10c9.5 0 17.6-3.4 24.2-10s10-14.8 10-24.3v-75.4h25a35 35 0 0 0 25.5-10.7 35 35 0 0 0 10.7-25.9V185.4H124v221.4zm352.3-227.7a33 33 0 0 0-24 9.8 32.5 32.5 0 0 0-10 24.1v143c0 9.5 3.4 17.6 10 24.2s14.7 10 24 10c9.5 0 17.6-3.3 24.2-10s10-14.7 10-24.2V213a32 32 0 0 0-10-24 33.3 33.3 0 0 0-24.2-9.9z" /></symbol><symbol id="ios" viewBox="0 0 512 512"><path d="M410 334s-10 29-30 59c-5 9-29 43-58 43-21 0-35-15-62-15-33 0-46 15-67 15-11 1-22-5-34-16-77-73-81-181-52-225 18-29 48-47 81-48 26 0 54 17 65 17 8 0 50-20 74-18 33 3 56 15 73 38-49 24-66 117 10 150zM329 56c8 32-27 93-79 90-3-43 34-87 79-90z" /></symbol><symbol id="electron" viewBox="0 0 256 256"><path d="M100.5 71.69c-26-4.74-46.57.22-54.76 14.41-6.12 10.6-4.37 24.64 4.24 39.65a2.67 2.67 0 1 0 4.63-2.65c-7.76-13.52-9.27-25.64-4.25-34.33 6.8-11.79 25.15-16.21 49.19-11.83a2.67 2.67 0 0 0 .95-5.25zm-37 72.3c10.52 11.56 24.18 22.4 39.76 31.4 37.72 21.78 77.88 27.6 97.67 14.1a2.67 2.67 0 1 0-3-4.4c-17.72 12.07-55.86 6.54-92-14.32-15.12-8.73-28.35-19.23-38.48-30.36A2.67 2.67 0 1 0 63.5 144z" /><path d="M194.62 140.75c17.03-20.11 22.97-40.35 14.8-54.5-6.02-10.43-18.74-15.94-35.65-16.16a2.67 2.67 0 0 0-.07 5.34c15.2.2 26.17 4.94 31.1 13.48 6.79 11.76 1.49 29.8-14.25 48.4a2.67 2.67 0 1 0 4.07 3.44zm-43.76-68.17c-15.4 3.3-31.79 9.75-47.52 18.83-38.94 22.49-64.35 55.64-60.82 79.68a2.67 2.67 0 1 0 5.28-.78c-3.14-21.34 20.94-52.77 58.2-74.28 15.27-8.81 31.14-15.06 45.98-18.24a2.67 2.67 0 1 0-1.12-5.21z" /><path d="M87.77 187.75c8.9 24.86 23.47 40.17 39.85 40.17 11.94 0 23-8.14 31.61-22.48a2.67 2.67 0 1 0-4.57-2.75c-7.75 12.89-17.26 19.9-27.04 19.9-13.6 0-26.6-13.66-34.83-36.63a2.67 2.67 0 1 0-5.02 1.8zm81.32-4.86c4.61-14.73 7.09-31.72 7.09-49.42 0-44.18-15.47-82.27-37.49-92.05a2.67 2.67 0 0 0-2.16 4.88c19.64 8.72 34.31 44.86 34.31 87.17 0 17.17-2.4 33.63-6.84 47.83a2.67 2.67 0 1 0 5.1 1.59zm50.23-2.61a12.76 12.76 0 1 0-25.53 0 12.76 12.76 0 0 0 25.53 0zm-5.34 0a7.43 7.43 0 1 1-14.86 0 7.43 7.43 0 0 1 14.86 0zM48.5 193.04a12.76 12.76 0 1 0 0-25.52 12.76 12.76 0 0 0 0 25.52zm0-5.33a7.43 7.43 0 1 1 0-14.86 7.43 7.43 0 0 1 0 14.86z" /><path d="M127.62 54.44a12.76 12.76 0 1 0 0-25.52 12.76 12.76 0 0 0 0 25.52zm0-5.33a7.43 7.43 0 1 1 0-14.86 7.43 7.43 0 0 1 0 14.86zm1.95 93.38a9.23 9.23 0 0 1-10.98-7.07 9.24 9.24 0 0 1 7.08-10.98 9.24 9.24 0 0 1 3.9 18.05z" /></symbol></svg>
+
+<h1>Config.xml API</h1>
+
+<p>The <code>config.xml</code> file is a global configuration file that manages various aspects of a Cordova application&#39;s behavior. It is written in XML format and follows the structure outlined in the W3C&#39;s <a href="https://www.w3.org/TR/widgets/">Packaged Web Apps (Widgets)</a> specification. Additionally, it is extended to include core Cordova API features, plugins, and platform-specific settings.</p>
+
+<p>If you are using the Cordova CLI to create your project (as explained in <a href="../guide/cli/index.html">The Command-Line Interface</a>), you can locate the <code>config.xml</code> file in the top-level directory of your project.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./hellocordova
+└── config.xml
+</code></pre></div></div>
+
+<p>When using the CLI to build a project, versions of this file are passively copied into various <code>platforms/</code> subdirectories. For example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./hellocordova
+└── platforms
+    ├── android
+    │   └── app
+    │       └── src
+    │           └── main
+    │               └── res
+    │                   └── xml
+    │                       └── config.xml
+    └── ios
+        └── HelloCordova
+            └── config.xml
+</code></pre></div></div>
+
+<p>Some platforms offer integrated development environments (IDEs) like Xcode for iOS and Android Studio for Android, which allow you to build and test your application. If you choose to use these IDEs for building and testing your project, it is recommended to run the <code>cordova prepare</code> CLI command whenever you make changes to the Cordova application&#39;s <code>config.xml</code>. This ensures that the updated configurations are copied into the respective <code>platforms/</code> subdirectories.</p>
+
+<p>In addition to the configuration options described below, you have the ability to customize the core set of images for your application on each target platform. For more information, please refer to the topic on <a href="images.html">Customizing Icons</a>.</p>
+
+<p><strong>Sample <code>config.xml</code>:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;widget</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/ns/widgets"</span>
+    <span class="na">xmlns:cdv=</span><span class="s">"http://cordova.apache.org/ns/1.0"</span>
+    <span class="na">id=</span><span class="s">"io.cordova.hellocordova"</span>
+    <span class="na">version=</span><span class="s">"1.0.0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>HelloCordova<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;description&gt;</span>Sample Apache Cordova App<span class="nt">&lt;/description&gt;</span>
+    <span class="nt">&lt;author</span> <span class="na">email=</span><span class="s">"dev@cordova.apache.org"</span> <span class="na">href=</span><span class="s">"https://cordova.apache.org"</span><span class="nt">&gt;</span>
+        Apache Cordova Team
+    <span class="nt">&lt;/author&gt;</span>
+
+    <span class="nt">&lt;content</span> <span class="na">src=</span><span class="s">"index.html"</span> <span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- Security Related Settings --&gt;</span>
+    <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"https://cordova.apache.org"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"http://*/*"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"https://*/*"</span> <span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- Platform Configs &amp; Platform Overriding Configs --&gt;</span>
+    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;&lt;/platform&gt;</span>
+    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;&lt;/platform&gt;</span>
+<span class="nt">&lt;/widget&gt;</span>
+</code></pre></div></div>
+
+<h2>widget</h2>
+
+<p>Root element of the config.xml document.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Specifies the app&#39;s identifier. The <code>id</code> should be in a <a href="https://en.wikipedia.org/wiki/Reverse_domain_name_notation#Examples">reverse-DNS format</a> however, only alphanumeric and dot characters are allowed. e.g: <code>com.example.myapp</code></td>
+    </tr>
+    <tr>
+      <td>version<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Full version number expressed in major/minor/patch notation.</td>
+    </tr>
+    <tr>
+      <td>android-versionCode<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td>Alternative version for Android. Sets the <a href="https://developer.android.com/tools/publishing/versioning.html">version code</a> for the application. See <a href="../guide/platforms/android/index.html#setting-the-version-code">the Android guide</a> for information on how this attribute may be modified.</td>
+    </tr>
+    <tr>
+      <td>ios-CFBundleVersion<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>Alternative version for iOS. For further details, see <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleversion">Apple Developer - CFBundleVersion</a>.</td>
+    </tr>
+    <tr>
+      <td>android-packageName<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td>This preference overrides the id attribute with an alternative package name specifically for Android.</td>
+    </tr>
+    <tr>
+      <td>ios-CFBundleIdentifier<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>This preference overrides the id attribute with an alternative bundle ID specifically for iOS.</td>
+    </tr>
+    <tr>
+      <td>defaultlocale <br /> <span class="cdv-var-type string">String</span><svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>Specify the default language of the app using an IANA language code. This preference key explicitly sets the value for <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundledevelopmentregion">CFBundleDevelopmentRegion</a>. For example, you can use values like <code>en</code> or <code>en_US</code>.</td>
+    </tr>
+    <tr>
+      <td>android-activityName<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td>Set the activity name for your app in AndroidManifest.xml. Note that this is only set once after the Android platform is first added.</td>
+    </tr>
+    <tr>
+      <td>xmlns<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Namespace for the config.xml document.</td>
+    </tr>
+    <tr>
+      <td>xmlns:cdv<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Namespace prefix.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Android --&gt;</span>
+<span class="nt">&lt;widget</span> <span class="na">id=</span><span class="s">"io.cordova.hellocordova"</span> <span class="na">version=</span><span class="s">"0.0.1"</span> <span class="na">android-versionCode=</span><span class="s">"13"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/ns/widgets"</span> <span class="na">xmlns:cdv=</span><span class="s">"http://cordova.apache.org/ns/1.0"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/widget&gt;</span>
+
+<span class="c">&lt;!-- iOS --&gt;</span>
+<span class="nt">&lt;widget</span> <span class="na">id=</span><span class="s">"io.cordova.hellocordova"</span> <span class="na">version=</span><span class="s">"0.0.1"</span> <span class="na">ios-CFBundleVersion=</span><span class="s">"0.1.3"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/ns/widgets"</span> <span class="na">xmlns:cdv=</span><span class="s">"http://cordova.apache.org/ns/1.0"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/widget&gt;</span>
+</code></pre></div></div>
+
+<h2>name</h2>
+
+<p>Specifies the app&#39;s formal name, as it appears on the device&#39;s home screen and within app-store interfaces.</p>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;name&gt;</span>HelloCordova<span class="nt">&lt;/name&gt;</span>
+<span class="nt">&lt;/widget&gt;</span>
+</code></pre></div></div>
+
+<h3>short name</h3>
+
+<p>Specifies an optional display name for the app. Sometimes the app name should be displayed differently on device&#39;s home screen than on informational and app-store interfaces due to limited space.</p>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;name</span> <span class="na">short=</span><span class="s">"HiCdv"</span><span class="nt">&gt;</span>HelloCordova<span class="nt">&lt;/name&gt;</span>
+<span class="nt">&lt;/widget&gt;</span>
+</code></pre></div></div>
+
+<h2>description</h2>
+
+<p>Specifies metadata that may appear within app-store listings.</p>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;description&gt;</span>A sample Apache Cordova application<span class="nt">&lt;/description&gt;</span>
+<span class="nt">&lt;/widget&gt;</span>
+</code></pre></div></div>
+
+<h2>author</h2>
+
+<p>Specifies contact information that may appear within app-store listings.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>email<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Email of the author.</td>
+    </tr>
+    <tr>
+      <td>href<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Website of the author.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;author</span> <span class="na">email=</span><span class="s">"dev@cordova.apache.org"</span> <span class="na">href=</span><span class="s">"https://cordova.io"</span><span class="nt">&gt;&lt;/author&gt;</span>
+<span class="nt">&lt;/widget&gt;</span>
+</code></pre></div></div>
+
+<h2>content</h2>
+
+<p>Defines the app&#39;s starting page in the top-level web assets directory. The default value is index.html, which customarily appears in a project&#39;s top-level <code>www</code> directory.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>src<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Defines the app&#39;s starting page in the top-level web assets directory. The default value is index.html, which customarily appears in a project&#39;s top-level <code>www</code> directory.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;content</span> <span class="na">src=</span><span class="s">"startPage.html"</span><span class="nt">&gt;&lt;/content&gt;</span>
+<span class="nt">&lt;/widget&gt;</span>
+</code></pre></div></div>
+
+<h2>access</h2>
+
+<p>Defines the external domains that the app is allowed to communicate with. When the access origin is set to &quot;*&quot;, the app can access any server, but this can potentially create a security risk. It is recommended to explicitly specify the permitted URLs to ensure a secure configuration. For detailed instructions, please refer to the <a href="../guide/appdev/allowlist/index.html">Allow List Guide</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>origin<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Defines the external domain URL or URL pattern that the app is allowed to communicate with.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"*"</span><span class="nt">&gt;&lt;/access&gt;</span>
+<span class="nt">&lt;/widget&gt;</span>
+
+<span class="nt">&lt;widget</span> <span class="err">...</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://google.com"</span><span class="nt">&gt;&lt;/access&gt;</span>
+<span class="nt">&lt;/widget&gt;</span>
+</code></pre></div></div>
+
+<h2>allow-navigation</h2>
+
+<p>Controls which URLs the WebView can be navigated to. Applies to top-level navigations only. See the <a href="../guide/appdev/allowlist/index.html#navigation-allow-list">Allow List Guide</a> for details.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>href<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Defines the external domain or domain pattern that the WebView is allowed to navigate to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Allow links to example.com --&gt;</span>
+<span class="nt">&lt;allow-navigation</span> <span class="na">href=</span><span class="s">"http://example.com/*"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Wildcards are allowed for the protocol, as a prefix to the host, or as a suffix to the path --&gt;</span>
+<span class="nt">&lt;allow-navigation</span> <span class="na">href=</span><span class="s">"*://*.example.com/*"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h2>allow-intent</h2>
+
+<p>Controls which URLs the app is allowed to ask the system to open. By default, no external URLs are allowed. See the <a href="../guide/appdev/allowlist/index.html#intent-allow-list">Allow List Guide</a> for details.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>href<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Defines the URL or URL pattern that the app is allowed to ask the system to open.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"http://*/*"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"https://*/*"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"tel:*"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"sms:*"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h2>edit-config</h2>
+
+<p>See <a href="../plugin_ref/spec.html#edit-config">&lt;config-file&gt; docs</a> for plugin.xml.</p>
+
+<h2>config-file</h2>
+
+<p>See <a href="../plugin_ref/spec.html#config-file">&lt;config-file&gt; docs</a> for plugin.xml.</p>
+
+<h2>engine</h2>
+
+<p>Specifies details about what platform to restore during a prepare.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Name of the platform to be restored</td>
+    </tr>
+    <tr>
+      <td>spec<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Details about the platform to be restored. This could be a <code>major.minor.patch</code> version number, a directory containing the platform or a url pointing to a git repository. This information will be used to retrieve the platform code to restore from NPM, a local directory or a git repository. See <a href="../reference/cordova-cli/index.html#platform-spec">Platform Spec</a> for further details.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;engine</span> <span class="na">name=</span><span class="s">"android"</span> <span class="na">spec=</span><span class="s">"https://github.com/apache/cordova-android.git#5.1.1"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;engine</span> <span class="na">name=</span><span class="s">"ios"</span> <span class="na">spec=</span><span class="s">"^4.0.0"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h2>plugin</h2>
+
+<p>Specifies details about what plugin to restore during a prepare. This element
+is automatically added to a project&#39;s <code>config.xml</code> when a plugin is added using
+the <code>--save</code> flag. See the <a href="../reference/cordova-cli/index.html#cordova-plugin-command">CLI reference</a> for more information on
+adding plugins.</p>
+
+<p><em>Note: As of Cordova 9.x, this tag is obsolete. <a href="https://github.com/apache/cordova-lib/pull/750">Learn More</a></em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Name of the plugin to be restored</td>
+    </tr>
+    <tr>
+      <td>spec<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Details about the plugin to be restored. This could be a <code>major.minor.patch</code> version number, a directory containing the plugin or a url pointing to a git repository. This information will be used to retrieve the plugin code to restore from NPM, a local directory or a git repository. See <a href="../reference/cordova-cli/index.html#plugin-spec">Plugin Spec</a> for further details.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">"cordova-plugin-device"</span> <span class="na">spec=</span><span class="s">"^1.1.0"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">"cordova-plugin-device"</span> <span class="na">spec=</span><span class="s">"https://github.com/apache/cordova-plugin-device.git#1.0.0"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h3>variable</h3>
+
+<p>Persists the value of a CLI variable to be used when restoring a plugin during a
+prepare. This element is added to <code>config.xml</code> when a plugin that uses CLI variables
+is added using the <code>--save</code> flag. See the <a href="../reference/cordova-cli/index.html#cordova-plugin-command">CLI reference</a> for more
+information on adding plugins.</p>
+
+<p>Note that this value is only used when the plugin is restored to the project during a
+prepare, changing it will <em>not</em> change the value used by the plugin in the current
+project. In order for changes to this value to take effect, remove the plugin from the
+project and restore it by running <code>cordova prepare</code>. See the
+<a href="../plugin_ref/spec.html#preference">preference element</a> of <code>plugin.xml</code> for more details on CLI variables.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Name of the CLI variable. Can only contain capital letters, digits, and underscores.</td>
+    </tr>
+    <tr>
+      <td>value<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Value of the CLI variable to be used when restoring the parent plugin during a prepare.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">"cordova-plugin-device"</span> <span class="na">spec=</span><span class="s">"^1.1.0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;variable</span> <span class="na">name=</span><span class="s">"MY_VARIABLE"</span> <span class="na">value=</span><span class="s">"my_variable_value"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
+
+<h2>preference</h2>
+
+<p>Sets various options as pairs of name/value attributes. Each preference&#39;s name is case-insensitive. Many preferences are unique to specific platforms,
+and will be indicated as such.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AllowInlineMediaPlayback<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: false</em> <br />  Set to true to allow HTML5 media playback to appear inline within the screen layout, using browser-supplied controls rather than native controls. For this to work, add the <code>playsinline</code> attribute to any <code>&lt;video&gt;</code> elements. <em>NOTE</em>: Prior to iOS 10, <code>&lt;video&gt;</code> elements need to use the <code>webkit-playsinline</code> attribute name instead.</td>
+    </tr>
+    <tr>
+      <td>AllowNewWindows<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: false</em> <br /> Set to true to allow JavaScript <code>window.open</code> and HTML <code>target="_blank"</code> links to open a new view overlaying the web view.</td>
+    </tr>
+    <tr>
+      <td>AndroidLaunchMode<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: singleTop</em> <br /> Allowed values: standard, singleTop, singleTask, singleInstance <br />  Sets the Activity android:launchMode attribute. This changes what happens when the app is launched from app icon or intent and is already running.</td>
+    </tr>
+    <tr>
+      <td>AndroidInsecureFileModeEnabled<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: false</em> <br />  If set to <code>true</code> loading <code>file:///</code> URLs is allowed. <strong>Note</strong>: Enabling this setting allows malicious scripts loaded in a <code>file:///</code> context to launch cross-site scripting attacks, either accessing arbitrary local files including WebView cookies, app private data or even credentials used on arbitrary web sites.</td>
+    </tr>
+    <tr>
+      <td>android-maxSdkVersion<br /><span class="cdv-var-type number">Number</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: Not Specified</em> <br />  Sets the <code>maxSdkVersion</code> attribute of the <code>&lt;uses-sdk&gt;</code> tag in the project&#39;s <code>AndroidManifest.xml</code> (see <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html">here</a>).</td>
+    </tr>
+    <tr>
+      <td>android-minSdkVersion<br /><span class="cdv-var-type number">Number</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br />  Sets the <code>minSdkVersion</code> attribute of the <code>&lt;uses-sdk&gt;</code> tag in the project&#39;s <code>AndroidManifest.xml</code> (see <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html">here</a>).</td>
+    </tr>
+    <tr>
+      <td>android-targetSdkVersion<br /><span class="cdv-var-type number">Number</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br />  Sets the <code>targetSdkVersion</code> attribute of the <code>&lt;uses-sdk&gt;</code> tag in the project&#39;s <code>AndroidManifest.xml</code> (see <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html">here</a>).</td>
+    </tr>
+    <tr>
+      <td>android-compileSdkVersion<br /><span class="cdv-var-type number">Number</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br /> Sets the <code>compileSdkVersion</code> attribute.</td>
+    </tr>
+    <tr>
+      <td>android-buildToolsVersion<br /><span class="cdv-var-type semver">Semver</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br /> Expects a full version string eg. &quot;32.0.0&quot;. Changing this may also requires changing the PATH environment variable to find the proper build tools.<br /><br />This preference is primarily for cordova development, for testing upcoming versions of the Android SDK. Changing this has a high risk of breaking builds as newer build tools frequently introduce breaking changes.</td>
+    </tr>
+    <tr>
+      <td>GradleVersion<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br /> Sets the gradle wrapper version to use.<br /> <br />This preference is primarily for cordova development, for testing upcoming versions of the Android SDK. Changing this has a high risk of breaking builds as newer build tools frequently introduce breaking changes.</td>
+    </tr>
+    <tr>
+      <td>AndroidGradlePluginVersion<br /><span class="cdv-var-type semver">Semver</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br /> Sets the Android Gradle Plugin version to use.<br /> <br />This preference is primarily for cordova development, for testing upcoming versions of the Android SDK. Changing this has a high risk of breaking builds as newer build tools frequently introduce breaking changes.</td>
+    </tr>
+    <tr>
+      <td>AndroidXAppCompatVersion<br /><span class="cdv-var-type semver">Semver</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br /> Overrides Android App Compat library version.</td>
+    </tr>
+    <tr>
+      <td>AndroidXWebKitVersion<br /><span class="cdv-var-type semver">Semver</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br />Overrides Android WebKit library version.</td>
+    </tr>
+    <tr>
+      <td>AndroidGradlePluginGoogleServicesVersion<br /><span class="cdv-var-type semver">Semver</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: <a href="../../guide/platforms/android/index.html#android-api-level-support">Dependent on cordova-android Version</a></em> <br />Overrides the Google Services library version.</td>
+    </tr>
+    <tr>
+      <td>AndroidGradlePluginGoogleServicesEnabled<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: false</em> <br />Enables Google Services. The <code>google-services.json</code> file will be required.</td>
+    </tr>
+    <tr>
+      <td>GradlePluginKotlinEnabled<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: false</em> <br />Enables Kotlin plugin for Kotline support.</td>
+    </tr>
+    <tr>
+      <td>AppendUserAgent<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.</td>
+    </tr>
+    <tr>
+      <td>BackgroundColor<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>Sets the app&#39;s background color. Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. <br /><strong>Note</strong>: <code>transparent</code> value will set the application tile background to the accent color on Windows.</td>
+    </tr>
+    <tr>
+      <td>CordovaWebViewEngine<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: CDVWebViewEngine</em> <br />  This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The &#39;value&#39; here should match the &#39;feature&#39; name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.</td>
+    </tr>
+    <tr>
+      <td>DefaultVolumeStream<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: default</em> <br />  Added in cordova-android 3.7.0, This preference sets which volume the hardware volume buttons link to. By default this is &quot;call&quot; for phones and &quot;media&quot; for tablets. Set this to &quot;media&quot; to have your app&#39;s volume buttons always change the media volume. Note that when using Cordova&#39;s media plugin, the volume buttons will dynamically change to controlling the media volume when any Media objects are active.</td>
+    </tr>
+    <tr>
+      <td>DisallowOverscroll<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: false</em> <br />  Set to <strong>true</strong> if you don&#39;t want the interface to display any feedback when users scroll past the beginning or end of content. On iOS, overscroll gestures cause content to bounce back to its original position. on Android, they produce a more subtle glowing effect along the top or bottom edge of the content. <br /></td>
+    </tr>
+    <tr>
+      <td>EnableViewportScale<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: false</em> <br />   Set to true to allow a viewport meta tag to either disable or restrict the range of user scaling, which is enabled by default. Place a viewport such as the following in the HTML to disable scaling and fit content flexibly within the rendering WebView: <br /> <code>&lt;meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' /&gt;</code></td>
+    </tr>
+    <tr>
+      <td>ErrorUrl<br /><span class="cdv-var-type url">Url</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: null</em> <br />When this preference is set, the application will display the specified local page upon encountering an error. Additionally, if this preference is set, the Android system will suppress the default dialog titled &quot;Application Error&quot;.</td>
+    </tr>
+    <tr>
+      <td>FullScreen<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: false</em> <br />  Allows you to hide the status bar at the top of the screen. <br /> <strong>Note</strong>: Recommended platform-agnostic way to achieve this is to use the <a href="../reference/cordova-plugin-statusbar/">StatusBar plugin</a>.</td>
+    </tr>
+    <tr>
+      <td>GapBetweenPages<br /><span class="cdv-var-type float">Float</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: 0</em> <br />  The size of the gap, in points, between pages.</td>
+    </tr>
+    <tr>
+      <td>GradlePluginGoogleServicesEnabled<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: false</em> <br />  Set to true to enable the Google Services Gradle plugin.</td>
+    </tr>
+    <tr>
+      <td>GradlePluginGoogleServicesEnabled<br /><span class="cdv-var-type semver">Semver</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: 4.2.0</em> <br />  Set version of Google Services Gradle plugin to be used.</td>
+    </tr>
+    <tr>
+      <td>GradlePluginKotlinEnabled<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: false</em> <br />  Set to true to allow Kotlin files to be built.</td>
+    </tr>
+    <tr>
+      <td>GradlePluginKotlinCodeStyle <br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: official</em> <br /> Allowed values: official, obsolete<br />  Sets how the Kotlin code is formatting for readability.</td>
+    </tr>
+    <tr>
+      <td>GradlePluginKotlinVersion<br /><span class="cdv-var-type semver">Semver</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: 1.3.50</em> <br /> Set the version of the Kotlin Gradle plugin to be used.</td>
+    </tr>
+    <tr>
+      <td>InAppBrowserStorageEnabled<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: true</em> <br />  Controls whether pages opened within an InAppBrowser can access the same localStorage and WebSQL storage as pages opened with the default browser.</td>
+    </tr>
+    <tr>
+      <td>InspectableWebview<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: depends on Debug/Release build</em> <br />  On iOS 16.4 or later, enables or disables the webview inspector. Defaults to <code>true</code> on debug builds and <code>false</code> on release builds. This preference is ignored on iOS 16.3 and earlier; the inspector is always enabled on debug builds and always disabled on release builds.</td>
+    </tr>
+    <tr>
+      <td>KeepRunning<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: true</em> <br />  Determines whether the application stays running in the background even after a <a href="../cordova/events/events.html#pause">pause</a> event fires. Setting this to false does not kill the app after a <a href="../cordova/events/events.html#pause">pause</a> event, but simply halts execution of code within the cordova webview while the app is in the background.</td>
+    </tr>
+    <tr>
+      <td>KeyboardDisplayRequiresUserAction<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: true</em> <br />  Set to false to allow the keyboard to appear when calling focus() on form inputs.</td>
+    </tr>
+    <tr>
+      <td>LoadUrlTimeoutValue<br /><span class="cdv-var-type number">Number</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: 20000, 20 seconds</em> <br />  When loading a page, the amount of time in miliseconds to wait before throwing a timeout error.</td>
+    </tr>
+    <tr>
+      <td>LoadingDialog<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: null</em> <br />  If set, displays a dialog with the specified title and message, and a spinner, when loading the first page of an application. The title and message are separated by a comma in this value string, and that comma is removed before the dialog is displayed.</td>
+    </tr>
+    <tr>
+      <td>LogLevel<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: DEBUG</em> <br /> Allowed values: ERROR, WARN, INFO, DEBUG, VERBOSE <br />  Sets the minimum log level through which log messages from your application will be filtered.</td>
+    </tr>
+    <tr>
+      <td>MediaPlaybackAllowsAirPlay<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: true</em> <br />  Set to false to prevent Air Play from being used in this view. Available in default UIWebView and WKWebView.</td>
+    </tr>
+    <tr>
+      <td>MediaPlaybackRequiresUserAction<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: false</em> <br />  Set to true to prevent HTML5 videos or audios from playing automatically with the autoplay attribute or via JavaScript.</td>
+    </tr>
+    <tr>
+      <td>Orientation<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Default: default</em> <br /> Allowed values: default, landscape, portrait <br /> Allows you to lock orientation and prevent the interface from rotating in response to changes in orientation. <br /> <strong>NOTE:</strong> The default value means Cordova will strip the orientation preference entry from the platform&#39;s manifest/configuration file allowing the platform to fallback to its default behavior. For iOS, to specify both portrait &amp; landscape mode you would use the platform specific value &#39;all&#39;.</td>
+    </tr>
+    <tr>
+      <td>OverrideUserAgent<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>If set, the value will replace the old UserAgent of webview. It is helpful to identify the request from app/browser when requesting remote pages. Use with caution, this may cause compatibility issues with web servers. For most cases, use AppendUserAgent instead.</td>
+    </tr>
+    <tr>
+      <td>PageLength<br /><span class="cdv-var-type float">Float</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: 0</em> <br />  The size of each page, in points, in the direction that the pages flow. When PaginationMode is right to left or left to right, this property represents the width of each page. When PaginationMode is topToBottom or bottomToTop, this property represents the height of each page. The default value is 0, which means the layout uses the size of the viewport to determine the dimensions of the page.</td>
+    </tr>
+    <tr>
+      <td>PaginationBreakingMode<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: page</em> <br /> Allowed values: page, column <br />  Valid values are page and column.The manner in which column- or page-breaking occurs. This property determines whether certain CSS properties regarding column- and page-breaking are honored or ignored. When this property is set to column, the content respects the CSS properties related to column-breaking in place of page-breaking.</td>
+    </tr>
+    <tr>
+      <td>PaginationMode<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: unpaginated</em> <br /> Allowed values: unpaginated, leftToRight, topToBottom, bottomToTop, rightToLeft <br />  This property determines whether content in the web view is broken up into pages that fill the view one screen at a time,or shown as one long scrolling view. If set to a paginated form, this property toggles a paginated layout on the content, causing the web view to use the values of PageLength and GapBetweenPages to relayout its content.</td>
+    </tr>
+    <tr>
+      <td>PreferredContentMode<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: auto</em> <br />  Sets the content mode (user agent) for the WebView and InAppBrowsers WebView on iPads. Valid values are: <code>mobile</code> and <code>desktop</code>.</td>
+    </tr>
+    <tr>
+      <td>InAppBrowserStatusBarStyle<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: default</em> <br />  Set text color style of the StatusBar for InAppBrowser for iOS. Valid values are: <code>lightcontent</code> and <code>default</code>.</td>
+    </tr>
+    <tr>
+      <td>SetFullscreen<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: false</em> <br />  Same as the Fullscreen parameter in the global configuration of this xml file. This Android-specific element is deprecated in favor of the global Fullscreen element, and will be removed in a future version.</td>
+    </tr>
+    <tr>
+      <td>ShowTitle<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: false</em> <br />  Show the title at the top of the screen.</td>
+    </tr>
+    <tr>
+      <td>Suppresses3DTouchGesture<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: false</em> <br />  Set to true to avoid 3D Touch capable iOS devices rendering a magnifying glass widget when the user applies force while longpressing the webview. Test your app thoroughly since this disables onclick handlers, but plays nice with ontouchend. If this setting is true, SuppressesLongPressGesture will effectively be true as well.</td>
+    </tr>
+    <tr>
+      <td>SuppressesIncrementalRendering<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: false</em> <br />  Set to true to wait until all content has been received before it renders to the screen.</td>
+    </tr>
+    <tr>
+      <td>SuppressesLongPressGesture<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: false</em> <br />  Set to true to avoid iOS9+ rendering a magnifying glass widget when the user longpresses the webview. Test your app thoroughly since this may interfere with text selection capabilities.</td>
+    </tr>
+    <tr>
+      <td>SwiftVersion<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: (empty)</em> <br /> Set to specify the Swift Version.</td>
+    </tr>
+    <tr>
+      <td>TopActivityIndicator<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: gray</em> <br /> Allowed values: whiteLarge, white, gray. <br />   <br /> Controls the appearance of the small spinning icon in the status bar that indicates significant processor activity.</td>
+    </tr>
+    <tr>
+      <td>UIWebViewDecelerationSpeed<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: normal</em> <br /> Allowed values: normal, fast <br />  This property controls the deceleration speed of momentum scrolling. normal is the default speed for most native apps, and fast is the default for Mobile Safari.</td>
+    </tr>
+    <tr>
+      <td>deployment-target<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>This sets the IPHONEOS_DEPLOYMENT_TARGET in the build, which ultimately translates to the MinimumOSVersion in the ipa. For more details please refer to Apple&#39;s documentation on Deployment Target Settings</td>
+    </tr>
+    <tr>
+      <td>target-device<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: universal</em> <br /> Allowed values: handset, tablet, universal <br />  This property maps directly to TARGETED_DEVICE_FAMILY in the xcode project. Note that if you target universal (which is the default) you will need to supply screen shots for both iPhone and iPad or your app may be rejected.</td>
+    </tr>
+    <tr>
+      <td>scheme<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default:</em> <br /> - Android: <code>https</code> <br /> - iOS: <em>not defined</em>, but falls back to <code>app</code> if the value is invalid.<br /><br /><em>Allowed values:</em><br /> - Android: <code>http</code> or <code>https</code><br /> - iOS: Any non-reserved schemes.  (<a href="https://github.com/WebKit/WebKit/blob/ba2a851809a33013068ec8511883055cabd239be/Tools/TestWebKitAPI/Tests/WebKitCocoa/WKURLSchemeHandler-1.mm#L222-L244">Example Reserved Schemes</a>)<br /><br />This property contains the scheme which your app content is served from.</td>
+    </tr>
+    <tr>
+      <td>hostname<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default:</em> <code>localhost</code><br /><br />This property contains the hostname which the app content is served from.<br /><br />If the preference <code>scheme</code> is not defined for iOS, the <code>hostname</code> value will be ignored.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"DisallowOverscroll"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"Fullscreen"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"BackgroundColor"</span> <span class="na">value=</span><span class="s">"0xff0000ff"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"HideKeyboardFormAccessoryBar"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"Orientation"</span> <span class="na">value=</span><span class="s">"landscape"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- iOS only preferences --&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"EnableViewportScale"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"MediaPlaybackAllowsAirPlay"</span> <span class="na">value=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"MediaPlaybackRequiresUserAction"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AllowInlineMediaPlayback"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"TopActivityIndicator"</span> <span class="na">value=</span><span class="s">"white"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SuppressesIncrementalRendering"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"GapBetweenPages"</span> <span class="na">value=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"PageLength"</span> <span class="na">value=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"PaginationBreakingMode"</span> <span class="na">value=</span><span class="s">"page"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"PaginationMode"</span> <span class="na">value=</span><span class="s">"unpaginated"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"UIWebViewDecelerationSpeed"</span> <span class="na">value=</span><span class="s">"fast"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"ErrorUrl"</span> <span class="na">value=</span><span class="s">"myErrorPage.html"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"OverrideUserAgent"</span> <span class="na">value=</span><span class="s">"Mozilla/5.0 My Browser"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AppendUserAgent"</span> <span class="na">value=</span><span class="s">"My Browser"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"target-device"</span> <span class="na">value=</span><span class="s">"universal"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"deployment-target"</span> <span class="na">value=</span><span class="s">"7.0"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"CordovaWebViewEngine"</span> <span class="na">value=</span><span class="s">"CDVWebViewEngine"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"CordovaDefaultWebViewEngine"</span> <span class="na">value=</span><span class="s">"CDVWebViewEngine"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"SuppressesLongPressGesture"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"Suppresses3DTouchGesture"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Android only preferences --&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"KeepRunning"</span> <span class="na">value=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"LoadUrlTimeoutValue"</span> <span class="na">value=</span><span class="s">"10000"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"InAppBrowserStorageEnabled"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"LoadingDialog"</span> <span class="na">value=</span><span class="s">"My Title,My Message"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"ErrorUrl"</span> <span class="na">value=</span><span class="s">"myErrorPage.html"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"ShowTitle"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"LogLevel"</span> <span class="na">value=</span><span class="s">"VERBOSE"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AndroidLaunchMode"</span> <span class="na">value=</span><span class="s">"singleTop"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AndroidInsecureFileModeEnabled"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"DefaultVolumeStream"</span> <span class="na">value=</span><span class="s">"call"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"OverrideUserAgent"</span> <span class="na">value=</span><span class="s">"Mozilla/5.0 My Browser"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AppendUserAgent"</span> <span class="na">value=</span><span class="s">"My Browser"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"GradlePluginGoogleServicesEnabled"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"GradlePluginGoogleServicesVersion"</span> <span class="na">value=</span><span class="s">"4.2.0"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"GradlePluginKotlinEnabled"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"GradlePluginKotlinCodeStyle"</span> <span class="na">value=</span><span class="s">"official"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"GradlePluginKotlinVersion"</span> <span class="na">value=</span><span class="s">"1.3.50"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h2>feature</h2>
+
+<p>If you use the CLI to build applications, you use the plugin command to enable device APIs. This does not modify the top-level config.xml file, so the <feature> element does not apply to your workflow. If you work directly in an SDK and using the platform-specific config.xml file as source, you use the <feature> tag to enable device-level APIs and external plugins. They often appear with custom values in platform-specific config.xml files. See the API Reference for details on how to specify each feature. See
+the [Plugin Development Guide](../guide/hybrid/plugins/index.html) for more information on plugins.
+NOTE: Most of the time, you do NOT want to set this directly.</feature></feature></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> The name of the plugin to enable.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>param</h3>
+
+<p>Used to specify certain plugin parameters such as: what package to retrieve the plugin code from, and whether the plugin code is to be initialized during the Webview&#39;s initialization.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Required</em> <br /> Allowed values: android-package, ios-package, onload. <br />  &#39;ios-package&#39; and &#39;android-package&#39; are used to specify the name of the package (as specified by the &#39;value&#39; attribute) to be used to initialize the plugin code, while &#39;onload&#39; is used to specify whether the corresponding plugin (as specified in the &#39;value&#39; attribute) is to be instantiated when the controller is initialized.</td>
+    </tr>
+    <tr>
+      <td>value <br /> <span class="cdv-var-type string/boolean">String/boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Required</em> <br />  Specifies the name of the package to be used to initialize the plugin code (when the &#39;name&#39; attribute is android-package or ios-package), specifies the name of the plugin to be loaded during controller initialization (when &#39;name&#39; attribute is set to &#39;onload&#39;).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Here is how to specify the Device API for Android projects --&gt;</span>
+<span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"Device"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"android-package"</span> <span class="na">value=</span><span class="s">"org.apache.cordova.device.Device"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/feature&gt;</span>
+
+<span class="c">&lt;!-- Here's how the element appears for iOS projects --&gt;</span>
+<span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"Device"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"ios-package"</span> <span class="na">value=</span><span class="s">"CDVDevice"</span> <span class="nt">/&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"onload"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/feature&gt;</span>
+</code></pre></div></div>
+
+<h2>platform</h2>
+
+<p>When using the CLI to build applications, it is sometimes necessary to specify preferences or other elements specific to a particular platform. Use the <platform> element to specify configuration that should only appear in a single platform-specific config.xml file.</platform></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> The platform whose preferences are being defined.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"Fullscreen"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
+</code></pre></div></div>
+
+<h2>hook</h2>
+
+<p>Represents your custom script which will be called by Cordova when
+certain action occurs (for example, after plugin is added or platform
+prepare logic is invoked). This is useful when you need to extend
+default Cordova functionality. See <a href="../guide/appdev/hooks/index.html">Hooks Guide</a> for more information.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>type<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Specifies the action during which the custom script is to be called.</td>
+    </tr>
+    <tr>
+      <td>src<br /><span class="cdv-var-type string">String</span></td>
+      <td><em>Required</em> <br /> Specifies the location of the script to be called when a specific action occurs.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;hook</span> <span class="na">type=</span><span class="s">"after_plugin_install"</span> <span class="na">src=</span><span class="s">"scripts/afterPluginInstall.js"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h2>resource-file</h2>
+
+<p>This tag installs resource files into your platform, and is similar to the same tag in plugin.xml. This tag is currently only supported on <code>cordova-ios@4.4.0</code> or greater and <code>cordova-android@6.2.1</code> or greater.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>src<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Required</em> <br /> Location of the file relative to <code>config.xml</code>.</td>
+    </tr>
+    <tr>
+      <td>target<br /><span class="cdv-var-type string">String</span></td>
+      <td>Path to where the file will be copied in your directory.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples:</p>
+
+<p>For Android:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;resource-file</span> <span class="na">src=</span><span class="s">"FooPluginStrings.xml"</span> <span class="na">target=</span><span class="s">"res/values/FooPluginStrings.xml"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2023 The Apache Software Foundation, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+    
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+    docsearch({
+        apiKey: '0a916ab198bd93d031aa70611271e42e',
+        indexName: 'cordova',
+        inputSelector: '#header-search-field',
+        algoliaOptions: { 'facetFilters': ["version:  12.x", "language: en"] }
+    });
+</script>
+
+</body>
+</html>
