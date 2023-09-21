@@ -26,6 +26,14 @@ cordova plugin add cordova-plugin-geolocation@5.0.0
 
 The JavaScript of the plugin has been upgraded to use ES6 features, such as `let` and `const`.
 
+**NOTE**: This release has failed to upgrade required engines. Despite the declared requirement on `cordova-android` >= 6.3.0 and no declared requirement on iOS, the new minimum requirements will be:
+
+- cordova-ios 6 or later
+- cordova-android 10 or later
+
+Earlier versions of these platforms may not work as expected. As always, it will be recommended to use the latest version available.
+The engines _may be corrected_ in a patch release at a later date.
+
 * **Cordova Windows Support Drop**
 
 Support for the deprecated [cordova-windows](https://github.com/apache/cordova-windows) platform has been dropped and entirely removed in this release.
