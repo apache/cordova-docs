@@ -50,7 +50,7 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
 
     In this release of the `media` plugin, the dependency of the file plugin has been bumped to `8.0.0` which introduced Android 13 support. This support includes the Android 13's more granular permissions `READ_MEDIA_IMAGES`, `READ_MEDIA_VIDEO`, and `READ_MEDIA_AUDIO`.
 
-    Additional we have raised the minimum requirement for `cordova-android` to version `12.0.0`.
+    Additionally we have raised the minimum requirement for `cordova-android` to version `12.0.0`.
 
     For more information, check out the [Cordova's File Plugin 8.0.0 release blog post](https://cordova.apache.org/news/2023/07/11/file-plugin-8.0.0.html).
 
