@@ -95,9 +95,19 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
     Refer to the [Allow List](https://cordova.apache.org/docs/en/12.x/guide/appdev/allowlist/index.html) page of the Cordova Documentation for more information in how to configure the list.
 
 * **Fixed Download Functionality for Android Q+**
+
+
 * **Removed Hardcoded `X-Requested-With` Header**
+
+    This hardcoded header was removed from the Android platform. This header was also not set in any other platform. It is up to the app developer to set the header if it is desired to 'disguise' the HTTP call as an XMLHttpRequest.
+
 * **Fixed Missing Headers on File Upload**
+
+    In iOS, header data was not properly being set during file upload. In this release, the `applyRequestHeaders` method was updated to ensure that the headers were being applied.
+
 * **Re-implemented UserAgent Overwrites**
+
+    In iOS, the ability to overwrite the UserAgent using the `navigator.userAgent` value from the WebView was re-implemented.
 
 Please report any issues you find at [issues.cordova.io](http://issues.cordova.io/)!
 
