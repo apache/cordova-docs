@@ -16,8 +16,8 @@ We are happy to announce that we have just released an update for the following 
 **To upgrade:**
 
 ```bash
-cordova plugin remove cordova-plugin-file
-cordova plugin add cordova-plugin-file@7.0.0
+cordova plugin remove cordova-plugin-camera
+cordova plugin add cordova-plugin-camera@7.0.0
 
 cordova plugin remove cordova-plugin-media
 cordova plugin add cordova-plugin-media@7.0.0
@@ -28,7 +28,7 @@ cordova plugin add cordova-plugin-file-transfer@7.0.0
 
 ## Release Highlights
 
-### `cordova-plugin-file`
+### `cordova-plugin-camera`
 
 * **Android 13 Support**
 * **Removed Deprecated Platforms**
