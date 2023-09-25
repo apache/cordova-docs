@@ -59,6 +59,17 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
     As the Cordova-Windows platform has been deprecated, the supporting logic for that platform has been removed from this plugin.
 
 * **Ability to load files from custom scheme and leading slash directory paths**
+
+    The file plugin can now accept URL constructed with a custom scheme or a leading slash.
+
+    **Custom Scheme Example:**
+
+    By default, iOS uses the following custom scheme `app://localhost/`. You can now pass in `app://localhost/file.txt` to prepresent a file in the root directory which the app content is loaded from, `www`.
+
+    **Leading Slash Example:**
+
+    It can also load the same file `file.txt` from the above example if the provided URL was `/file.txt`. It will navigate from the root directory of which the app content is loaded from, `www`.
+
 * **Increased Android's Audio Quality**
 
 ### `cordova-plugin-file-transfer`
