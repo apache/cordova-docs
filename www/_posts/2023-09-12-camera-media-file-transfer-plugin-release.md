@@ -37,6 +37,9 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
     Furthermore, to support the new granular permissions and Android 13 (SDK 33), we have raised the minimum requirement for `cordova-android` to version `12.0.0`. This version of Cordova-Android specifically includes the necessary updates to handle Android 13 and compile your project with the new permissions successfully.
 
 * **Removed Deprecated Platforms**
+
+    As the Cordova-Windows and Cordova-OSX platform has been deprecated, the supporting logic for these platforms has been removed from this plugin.
+
 * **Retain Image Exif Data from Photo Library (iOS)**
 
 ### `cordova-plugin-media`
@@ -50,6 +53,9 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
     For more information, check out the [Cordova's File Plugin 8.0.0 release blog post](https://cordova.apache.org/news/2023/07/11/file-plugin-8.0.0.html).
 
 * **Removed Deprecated Windows Platforms**
+
+    As the Cordova-Windows platform has been deprecated, the supporting logic for that platform has been removed from this plugin.
+
 * **Ability to files from custom scheme an leading slash directory paths**
 * **Increased Android's Audio Quality**
 
@@ -62,6 +68,9 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
     For more information, check out the [Cordova's File Plugin 8.0.0 release blog post](https://cordova.apache.org/news/2023/07/11/file-plugin-8.0.0.html).
 
 * **Removed Deprecated Platforms**
+
+    As the Cordova Windows/WP8, OSX, Amazon Fire OS, Blackberry 10, Windows Phone & Firefox OS platform has been deprecated, the supporting logic for these platforms has been removed from this plugin.
+
 * **Removed Deprecated `whitelist` Plugin**
 * **Fixed Download Functionality for Android Q+**
 * **Removed Hardcoded `X-Requested-With` Header**
