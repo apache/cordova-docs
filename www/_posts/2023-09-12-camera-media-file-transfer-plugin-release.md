@@ -96,7 +96,6 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
 
 * **Fixed Download Functionality for Android Q+**
 
-
 * **Removed Hardcoded `X-Requested-With` Header**
 
     This hardcoded header was removed from the Android platform. This header was also not set in any other platform. It is up to the app developer to set the header if it is desired to 'disguise' the HTTP call as an XMLHttpRequest.
