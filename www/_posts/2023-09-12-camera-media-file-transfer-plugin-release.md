@@ -31,12 +31,24 @@ cordova plugin add cordova-plugin-file-transfer@7.0.0
 ### `cordova-plugin-camera`
 
 * **Android 13 Support**
+
+    In this release of the `camera` plugin, the `maxSdkTarget` for the `WRITE_EXTERNAL_STORAGE` permission has been set to `32`. This change was made as the permission has been deprecated and replaced by Android 13's more granular permissions, `READ_MEDIA_IMAGES` and `READ_MEDIA_VIDEO`. Additionally, the `getPermissions` method has been improved to accurately fetch the required permissions based on the Android version. If Android 13 and above, it will also fetch based on media type.
+
+    Furthermore, to support the new granular permissions and Android 13 (SDK 33), we have raised the minimum requirement for `cordova-android` to version `12.0.0`. This version of Cordova-Android specifically includes the necessary updates to handle Android 13 and compile your project with the new permissions successfully.
+
 * **Removed Deprecated Platforms**
 * **Retain Image Exif Data from Photo Library (iOS)**
 
 ### `cordova-plugin-media`
 
 * **Android 13 Support**
+
+    In this release of the `media` plugin, the depdendency of the file plugin has been bumped to `8.0.0` which introduced Android 13 support. This support includes the Android 13's more granular permissions `READ_MEDIA_IMAGES`, `READ_MEDIA_VIDEO`, and `READ_MEDIA_AUDIO`.
+
+    Additional we have raised the minimum requirement for `cordova-android` to version `12.0.0`.
+
+    For more information, check out the [Cordova's File Plugin 8.0.0 release blog post](https://cordova.apache.org/news/2023/07/11/file-plugin-8.0.0.html).
+
 * **Removed Deprecated Windows Platforms**
 * **Ability to files from custom scheme an leading slash directory paths**
 * **Increased Android's Audio Quality**
@@ -44,6 +56,11 @@ cordova plugin add cordova-plugin-file-transfer@7.0.0
 ### `cordova-plugin-file-transfer`
 
 * **Bumped File Dependecy for Android 13 Support**
+
+    In this release of the `file-transfer` plugin, the dependency on the file plugin has been updated to version `8.0.0`, enabling Android 13 support. Consequently, the minimum requirement for `cordova-android` has been raised to version `12.0.0` to align with the updated file plugin.
+
+    For more information, check out the [Cordova's File Plugin 8.0.0 release blog post](https://cordova.apache.org/news/2023/07/11/file-plugin-8.0.0.html).
+
 * **Removed Deprecated Platforms**
 * **Removed Deprecated `whitelist` Plugin**
 * **Fixed Download Functionality for Android Q+**
