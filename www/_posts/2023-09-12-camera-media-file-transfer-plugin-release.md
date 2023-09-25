@@ -23,7 +23,7 @@ cordova plugin remove cordova-plugin-media
 cordova plugin add cordova-plugin-media@7.0.0
 
 cordova plugin remove cordova-plugin-file-transfer
-cordova plugin add cordova-plugin-file-transfer@7.0.0
+cordova plugin add cordova-plugin-file-transfer@2.0.0
 ```
 
 ## Release Highlights
