@@ -64,11 +64,11 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
 
     **Custom Scheme Example:**
 
-    By default, iOS uses the following custom scheme `app://localhost/`. You can now pass in `app://localhost/file.txt` to prepresent a file in the root directory which the app content is loaded from, `www`.
+    By default, iOS uses the following custom scheme `app://localhost/`. You can now pass in `app://localhost/file.mp4` to prepresent a media file located in the root directory of which the app content is loaded from, `www`.
 
     **Leading Slash Example:**
 
-    It can also load the same file `file.txt` from the above example if the provided URL was `/file.txt`. It will navigate from the root directory of which the app content is loaded from, `www`.
+    It can also load the same file `file.mp4` from the above example if the provided URL was `/file.mp4`. It will navigate from the root directory of which the app content is loaded from, `www`.
 
 * **Increased Android's Audio Quality**
 
