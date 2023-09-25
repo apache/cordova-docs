@@ -34,7 +34,7 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
 
     In this release of the `camera` plugin, the `maxSdkTarget` for the `WRITE_EXTERNAL_STORAGE` permission has been set to `32`. This change was made as the permission has been deprecated and replaced by Android 13's more granular permissions, `READ_MEDIA_IMAGES` and `READ_MEDIA_VIDEO`. Additionally, the `getPermissions` method has been improved to accurately fetch the required permissions based on the Android version. If Android 13 and above, it will also fetch based on media type.
 
-    Furthermore, to support the new granular permissions and Android 13 (SDK 33), we have raised the minimum requirement for `cordova-android` to version `12.0.0`. This version of Cordova-Android specifically includes the necessary updates to handle Android 13 and compile your project with the new permissions successfully.
+    Furthermore, to support the new granular permissions on Android 13 (SDK 33), we have raised the minimum requirement for `cordova-android` to version `12.0.0`. This version of Cordova-Android specifically includes the necessary updates to handle Android 13 and compile your project with the new permissions successfully.
 
 * **Removed Deprecated Platforms**
 
@@ -48,7 +48,7 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
 
 * **Android 13 Support**
 
-    In this release of the `media` plugin, the depdendency of the file plugin has been bumped to `8.0.0` which introduced Android 13 support. This support includes the Android 13's more granular permissions `READ_MEDIA_IMAGES`, `READ_MEDIA_VIDEO`, and `READ_MEDIA_AUDIO`.
+    In this release of the `media` plugin, the dependency of the file plugin has been bumped to `8.0.0` which introduced Android 13 support. This support includes the Android 13's more granular permissions `READ_MEDIA_IMAGES`, `READ_MEDIA_VIDEO`, and `READ_MEDIA_AUDIO`.
 
     Additional we have raised the minimum requirement for `cordova-android` to version `12.0.0`.
 
@@ -74,7 +74,7 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
 
     From this plugin's version and onward, the Android's captured audio quality has been increased significantly. This was achieved by increasing the bit rate to 96 Kbps and the sampling rate to 44.1 kHz.
 
-    > **PR's Note:** This plugin uses the AAC encoder, which generally provides better quality audio at a lower bitrate compared against MP3 encoder. While researching acceptable bitrate of AAC compared against MP3, some suggest using 96 Kbps for AAC while MP3 would be 128 Kbps. But this does not mean it is identical. In terms of quality, it will always result in source and equiptment.
+    > **PR's Note:** This plugin uses the AAC encoder, which generally provides better quality audio at a lower bitrate compared against MP3 encoder. While researching acceptable bitrate of AAC compared against MP3, some suggest using 96 Kbps for AAC while MP3 would be 128 Kbps. But this does not mean it is identical. In terms of quality, it will always depend on the source and underlying equipment.
 
 ### `cordova-plugin-file-transfer`
 
