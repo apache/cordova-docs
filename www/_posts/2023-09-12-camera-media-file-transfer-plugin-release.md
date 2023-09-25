@@ -72,6 +72,11 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
     As the Cordova Windows/WP8, OSX, Amazon Fire OS, Blackberry 10, Windows Phone & Firefox OS platform has been deprecated, the supporting logic for these platforms has been removed from this plugin.
 
 * **Removed Deprecated `whitelist` Plugin**
+
+    The legacy `whitelist` plugin has been deprecated for a long time and is no longer needed in the `file-transfer` plugin. This plugin will continue call and check against the `shouldAllowRequest` method which is apart of the platform core coding.
+
+    Refer to the [Allow List](https://cordova.apache.org/docs/en/12.x/guide/appdev/allowlist/index.html) page of the Cordova Documentation for more information in how to configure the list.
+
 * **Fixed Download Functionality for Android Q+**
 * **Removed Hardcoded `X-Requested-With` Header**
 * **Fixed Missing Headers on File Upload**
