@@ -42,6 +42,8 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
 
 * **Retain Image Exif Data from Photo Library (iOS)**
 
+    This release contains a fix to preserve image's EXIF data for iOS.
+
 ### `cordova-plugin-media`
 
 * **Android 13 Support**
