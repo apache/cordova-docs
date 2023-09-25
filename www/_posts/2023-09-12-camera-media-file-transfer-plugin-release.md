@@ -58,7 +58,7 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
 
     As the Cordova-Windows platform has been deprecated, the supporting logic for that platform has been removed from this plugin.
 
-* **Ability to files from custom scheme an leading slash directory paths**
+* **Ability to load files from custom scheme and leading slash directory paths**
 * **Increased Android's Audio Quality**
 
 ### `cordova-plugin-file-transfer`
