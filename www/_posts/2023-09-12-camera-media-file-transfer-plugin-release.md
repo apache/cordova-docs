@@ -72,6 +72,10 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
 
 * **Increased Android's Audio Quality**
 
+    From this plugin's version and onward, the Android's captured audio quality has been increased significantly. This was achieved by increasing the bit rate to 96 Kbps and the sampling rate to 44.1 kHz.
+
+    > **PR's Note:** This plugin uses the AAC encoder, which generally provides better quality audio at a lower bitrate compared against MP3 encoder. While researching acceptable bitrate of AAC compared against MP3, some suggest using 96 Kbps for AAC while MP3 would be 128 Kbps. But this does not mean it is identical. In terms of quality, it will always result in source and equiptment.
+
 ### `cordova-plugin-file-transfer`
 
 * **Bumped File Dependecy for Android 13 Support**
