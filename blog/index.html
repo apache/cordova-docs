@@ -224,6 +224,158 @@ The engines <em>may be corrected</em> in a patch release at a later date.</p>
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Tue, 12 Sep 2023 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/news/2023/09/12/camera-media-file-transfer-plugin-release.html">Camera 7.0.0, Media 7.0.0 & File-Transfer 2.0.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">12 Sep 2023</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                        <a class="comment" href="/news/2023/09/12/camera-media-file-transfer-plugin-release.html#disqus_thread"></a>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released an update for the following plugins!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-camera">cordova-plugin-camera@7.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-media">cordova-plugin-media@7.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-file-transfer">cordova-plugin-file-transfer@2.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-camera
+cordova plugin add cordova-plugin-camera@7.0.0
+
+cordova plugin remove cordova-plugin-media
+cordova plugin add cordova-plugin-media@7.0.0
+
+cordova plugin remove cordova-plugin-file-transfer
+cordova plugin add cordova-plugin-file-transfer@2.0.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<h3><code>cordova-plugin-camera</code></h3>
+
+<ul>
+  <li>
+    <p><strong>Android 13 Support</strong></p>
+
+    <p>In this release of the <code>camera</code> plugin, the <code>maxSdkTarget</code> for the <code>WRITE_EXTERNAL_STORAGE</code> permission has been set to <code>32</code>. This change was made as the permission has been deprecated and replaced by Android 13&#39;s more granular permissions, <code>READ_MEDIA_IMAGES</code> and <code>READ_MEDIA_VIDEO</code>. Additionally, the <code>getPermissions</code> method has been improved to accurately fetch the required permissions based on the Android version. If Android 13 and above, it will also fetch based on media type.</p>
+
+    <p>Furthermore, to support the new granular permissions on Android 13 (SDK 33), we have raised the minimum requirement for <code>cordova-android</code> to version <code>12.0.0</code>. This version of Cordova-Android specifically includes the necessary updates to handle Android 13 and compile your project with the new permissions successfully.</p>
+  </li>
+  <li>
+    <p><strong>Removed Deprecated Platforms</strong></p>
+
+    <p>As the Cordova-Windows and Cordova-OSX platform has been deprecated, the supporting logic for these platforms has been removed from this plugin.</p>
+  </li>
+  <li>
+    <p><strong>Retain Image Exif Data from Photo Library (iOS)</strong></p>
+
+    <p>This release contains a fix to preserve image&#39;s EXIF data for iOS.</p>
+  </li>
+</ul>
+
+<h3><code>cordova-plugin-media</code></h3>
+
+<ul>
+  <li>
+    <p><strong>Android 13 Support</strong></p>
+
+    <p>In this release of the <code>media</code> plugin, the dependency of the file plugin has been bumped to <code>8.0.0</code> which introduced Android 13 support. This support includes the Android 13&#39;s more granular permissions <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>, and <code>READ_MEDIA_AUDIO</code>.</p>
+
+    <p>Additionally we have raised the minimum requirement for <code>cordova-android</code> to version <code>12.0.0</code>.</p>
+
+    <p>For more information, check out the <a href="https://cordova.apache.org/news/2023/07/11/file-plugin-8.0.0.html">Cordova&#39;s File Plugin 8.0.0 release blog post</a>.</p>
+  </li>
+  <li>
+    <p><strong>Removed Deprecated Windows Platforms</strong></p>
+
+    <p>As the Cordova-Windows platform has been deprecated, the supporting logic for that platform has been removed from this plugin.</p>
+  </li>
+  <li>
+    <p><strong>Ability to load files from custom scheme and leading slash directory paths</strong></p>
+
+    <p>The file plugin can now accept URL constructed with a custom scheme or a leading slash.</p>
+
+    <p><strong>Custom Scheme Example:</strong></p>
+
+    <p>By default, iOS uses the following custom scheme <code>app://localhost/</code>. You can now pass in <code>app://localhost/file.mp4</code> to prepresent a media file located in the root directory of which the app content is loaded from, <code>www</code>.</p>
+
+    <p><strong>Leading Slash Example:</strong></p>
+
+    <p>It can also load the same file <code>file.mp4</code> from the above example if the provided URL was <code>/file.mp4</code>. It will navigate from the root directory of which the app content is loaded from, <code>www</code>.</p>
+  </li>
+  <li>
+    <p><strong>Increased Android&#39;s Audio Quality</strong></p>
+
+    <p>From this plugin&#39;s version and onward, the Android&#39;s captured audio quality has been increased significantly. This was achieved by increasing the bit rate to 96 Kbps and the sampling rate to 44.1 kHz.</p>
+
+    <blockquote>
+      <p><strong>PR&#39;s Note:</strong> This plugin uses the AAC encoder, which generally provides better quality audio at a lower bitrate compared against MP3 encoder. While researching acceptable bitrate of AAC compared against MP3, some suggest using 96 Kbps for AAC while MP3 would be 128 Kbps. But this does not mean it is identical. In terms of quality, it will always depend on the source and underlying equipment.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3><code>cordova-plugin-file-transfer</code></h3>
+
+<ul>
+  <li>
+    <p><strong>Bumped File Dependecy for Android 13 Support</strong></p>
+
+    <p>In this release of the <code>file-transfer</code> plugin, the dependency on the file plugin has been updated to version <code>8.0.0</code>, enabling Android 13 support. Consequently, the minimum requirement for <code>cordova-android</code> has been raised to version <code>12.0.0</code> to align with the updated file plugin.</p>
+
+    <p>For more information, check out the <a href="https://cordova.apache.org/news/2023/07/11/file-plugin-8.0.0.html">Cordova&#39;s File Plugin 8.0.0 release blog post</a>.</p>
+  </li>
+  <li>
+    <p><strong>Removed Deprecated Platforms</strong></p>
+
+    <p>As the Cordova Windows/WP8, OSX, Amazon Fire OS, Blackberry 10, Windows Phone &amp; Firefox OS platform has been deprecated, the supporting logic for these platforms has been removed from this plugin.</p>
+  </li>
+  <li>
+    <p><strong>Removed Deprecated <code>whitelist</code> Plugin</strong></p>
+
+    <p>The legacy <code>whitelist</code> plugin has been deprecated for a long time and is no longer needed in the <code>file-transfer</code> plugin. This plugin will continue call and check against the <code>shouldAllowRequest</code> method which is apart of the platform core coding.</p>
+
+    <p>Refer to the <a href="https://cordova.apache.org/docs/en/12.x/guide/appdev/allowlist/index.html">Allow List</a> page of the Cordova Documentation for more information in how to configure the list.</p>
+  </li>
+  <li>
+    <p><strong>Fixed Download Functionality for Android Q+</strong></p>
+  </li>
+  <li>
+    <p><strong>Removed Hardcoded <code>X-Requested-With</code> Header</strong></p>
+
+    <p>This hardcoded header was removed from the Android platform. This header was also not set in any other platform. It is up to the app developer to set the header if it is desired to &#39;disguise&#39; the HTTP call as an XMLHttpRequest.</p>
+  </li>
+  <li>
+    <p><strong>Fixed Missing Headers on File Upload</strong></p>
+
+    <p>In iOS, header data was not properly being set during file upload. In this release, the <code>applyRequestHeaders</code> method was updated to ensure that the headers were being applied.</p>
+  </li>
+  <li>
+    <p><strong>Re-implemented UserAgent Overwrites</strong></p>
+
+    <p>In iOS, the ability to overwrite the UserAgent using the <code>navigator.userAgent</code> value from the WebView was re-implemented.</p>
+  </li>
+</ul>
+
+<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+
+</p>
+                    <div><a href="/news/2023/09/12/camera-media-file-transfer-plugin-release.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Wed, 06 Sep 2023 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/announcements/2023/09/06/cordova-ios-7.0.1.html">Cordova iOS 7.0.1 Released!</a>
