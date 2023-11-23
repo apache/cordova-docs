@@ -6,9 +6,76 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Sep 2023 00:55:08 +0000</pubDate>
-    <lastBuildDate>Tue, 26 Sep 2023 00:55:08 +0000</lastBuildDate>
+    <pubDate>Thu, 23 Nov 2023 16:32:05 +0000</pubDate>
+    <lastBuildDate>Thu, 23 Nov 2023 16:32:05 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Cordova Plugin InAppBrowser 6.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released an update to &lt;code&gt;cordova-plugin-inappbrowser&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-inappbrowser&quot;&gt;cordova-plugin-inappbrowser@6.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;This is a new major version with breaking changes which requires at least &lt;code&gt;cordova-android@10.0.0&lt;/code&gt; and &lt;code&gt;cordova-ios@6.0.0&lt;/code&gt;. Make sure to check and update your platforms.&lt;/p&gt;
+
+&lt;p&gt;The most notable improvements in this major release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Permission requests for Android&lt;/li&gt;
+  &lt;li&gt;Removal of deprecated code and platforms&lt;/li&gt;
+  &lt;li&gt;Make WebView inspectable on iOS&lt;/li&gt;
+  &lt;li&gt;Make system open tel, sms, mailto and geo links on iOS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find on &lt;a href=&quot;http://https://github.com/apache/cordova-plugin-inappbrowser/issues&quot;&gt;GitHub&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1033&quot;&gt;GH-1033&lt;/a&gt; chore: bump to next major release 6.0.0 &amp;amp; update deependencies&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1032&quot;&gt;GH-1032&lt;/a&gt; chore(lint): update eslint config and apply fixes&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1030&quot;&gt;GH-1030&lt;/a&gt; fix!: remove deprecated platforms &lt;strong&gt;Windows&lt;/strong&gt; &amp;amp; osx&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1031&quot;&gt;GH-1031&lt;/a&gt; fix(ios): Remove deprecation warnings and old code&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/927&quot;&gt;GH-927&lt;/a&gt; fix: explicitly import dependencies, instead of relying on PCH files. This is important in Swift projects, where you cannot use prefix headers.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/968&quot;&gt;GH-968&lt;/a&gt; GH-706 &lt;strong&gt;Android&lt;/strong&gt;: Allow permissions requests&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1029&quot;&gt;GH-1029&lt;/a&gt; chore: update asf config&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1019&quot;&gt;GH-1019&lt;/a&gt; feat(android): Download event&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1020&quot;&gt;GH-1020&lt;/a&gt; ci(gh-action): Paramedic CI sync&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1015&quot;&gt;GH-1015&lt;/a&gt; feat(ios): Make WebView inspectable&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1016&quot;&gt;GH-1016&lt;/a&gt; chore: use https urls in tests and &lt;code&gt;README&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1017&quot;&gt;GH-1017&lt;/a&gt; chore: Update SUPPORT_QUESTION.md template&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/977&quot;&gt;GH-977&lt;/a&gt; fix(docs): missing xml indicator in code block&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/971&quot;&gt;GH-971&lt;/a&gt; ci: sync workflow with paramedic&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/964&quot;&gt;GH-964&lt;/a&gt; dep(npm): bump package-lock v2 w/ rebuild&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/957&quot;&gt;GH-957&lt;/a&gt; ci(android): update java requirement for &lt;code&gt;cordova-android&lt;/code&gt;@11&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/946&quot;&gt;GH-946&lt;/a&gt; fix(android): increase toolbar to 48dp&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/912&quot;&gt;GH-912&lt;/a&gt; ci(ios): update workflow w/ &lt;strong&gt;iOS&lt;/strong&gt; 15&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/907&quot;&gt;GH-907&lt;/a&gt; ci: add action-badge&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/906&quot;&gt;GH-906&lt;/a&gt; ci: remove travis &amp;amp; appveyor&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/903&quot;&gt;GH-903&lt;/a&gt; ci: add gh-actions workflows&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/861&quot;&gt;GH-861&lt;/a&gt; fix(android): add space between default useragent and custom AppendUserAgent&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/881&quot;&gt;GH-881&lt;/a&gt; fix(ios): make system open tel, sms, mailto and geo links&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 23 Nov 2023 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2023/11/23/inappbrowser-release-6.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2023/11/23/inappbrowser-release-6.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        <category>plugins</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Geolocation Plugin 5.0.0 Released!</title>
@@ -1278,43 +1345,6 @@ cordova platform add android@12.0.0
         <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2023/05/22/cordova-android-12.0.0.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2023/05/22/cordova-android-12.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Browser 7.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Browser 7.0.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building browser targeted applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-browser&quot;&gt;cordova-browser@7.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;This release contains updates for more modern NodeJS runtimes and contains a ShellJS security fix.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove browser
-cordova platform add browser@7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Please report any issues you find at &lt;a href=&quot;https://github.com/apache/cordova-browser/issues&quot;&gt;GitHub Issues&lt;/a&gt;!&lt;/p&gt;
-
-&lt;h2&gt;Release Notes&lt;/h2&gt;
-
-&lt;p&gt;For a more detailed release notes, please see &lt;a href=&quot;https://github.com/apache/cordova-browser/blob/master/RELEASENOTES.md&quot;&gt;RELEASENOTES.md&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2023/05/13/cordova-browser-release-7.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2023/05/13/cordova-browser-release-7.0.0.html</guid>
         
         <category>news</category>
         

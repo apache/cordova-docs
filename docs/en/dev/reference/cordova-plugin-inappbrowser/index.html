@@ -2479,20 +2479,12 @@ instance, or the system browser.
     - __toolbarposition__: Set to `top` or `bottom` (default is `bottom`). Causes the toolbar to be at the top or bottom of the window.
     - __hidespinner__: Set to `yes` or `no` to change the visibility of the loading indicator (defaults to `no`).
 
-    Windows supports these additional options:
-
-    - __hidden__: set to `yes` to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to `no` (default) to have the browser open and load normally.
-    - __hardwareback__: works the same way as on Android platform.
-    - __fullscreen__: set to `yes` to create the browser control without a border around it. Please note that if __location=no__ is also specified, there will be no control presented to user to close IAB window.
-
 
 ### Supported Platforms
 
 - Android
 - Browser
 - iOS
-- OSX
-- Windows
 
 ### Example
 
@@ -2714,17 +2706,11 @@ function downloadListener(params){
   <li>Android</li>
   <li>Browser</li>
   <li>iOS</li>
-  <li>Windows</li>
-  <li>OSX</li>
 </ul>
 
 <h3>Browser Quirks</h3>
 
 <p><code>loadstart</code>, <code>loaderror</code>, <code>message</code> events are not fired.</p>
-
-<h3>Windows Quirks</h3>
-
-<p><code>message</code> event is not fired.</p>
 
 <h3>Quick Example</h3>
 
@@ -2769,7 +2755,6 @@ The function is passed an <code>InAppBrowserEvent</code> object.</p>
   <li>Android</li>
   <li>Browser</li>
   <li>iOS</li>
-  <li>Windows</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -2799,7 +2784,6 @@ ref.removeEventListener('loadstart', myCallback);
   <li>Android</li>
   <li>Browser</li>
   <li>iOS</li>
-  <li>Windows</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -2827,7 +2811,6 @@ ref.close();
   <li>Android</li>
   <li>Browser</li>
   <li>iOS</li>
-  <li>Windows</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -2855,7 +2838,6 @@ ref.show();
 <ul>
   <li>Android</li>
   <li>iOS</li>
-  <li>Windows</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -2901,7 +2883,6 @@ evaluated.</li>
   <li>Android</li>
   <li>Browser</li>
   <li>iOS</li>
-  <li>Windows</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -2917,10 +2898,6 @@ ref.addEventListener('loadstop', function() {
 <ul>
   <li>only <strong>code</strong> key is supported.</li>
 </ul>
-
-<h3>Windows Quirks</h3>
-
-<p>Due to <a href="https://msdn.microsoft.com/en-us/library/windows.ui.xaml.controls.webview.invokescriptasync.aspx">MSDN docs</a> the invoked script can return only string values, otherwise the parameter, passed to <strong>callback</strong> will be <code>[null]</code>.</p>
 
 <h2>InAppBrowser.insertCSS</h2>
 
@@ -2949,7 +2926,6 @@ ref.addEventListener('loadstop', function() {
 <ul>
   <li>Android</li>
   <li>iOS</li>
-  <li>Windows</li>
 </ul>
 
 <h3>Quick Example</h3>

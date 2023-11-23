@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-geolocation!  cordova-plugin-geolocation@5.0.0To upgrade:cordova plugin remo...">
+    <meta name="description" content="We are happy to announce that we have just released an update to cordova-plugin-inappbrowser!  cordova-plugin-inappbrowser@6.0.0Release HighlightsThis is a n...">
 
     <title>
         
             
-                Geolocation Plugin 5.0.0 Released! - Apache Cordova
+                Cordova Plugin InAppBrowser 6.0.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/news/2023/09/21/geolocation-plugin-5.0.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2023/11/23/inappbrowser-release-6.0.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,118 +129,64 @@
 
 <div class="post">
     <header>
-        <div class="title">Geolocation Plugin 5.0.0 Released!</div>
+        <div class="title">Cordova Plugin InAppBrowser 6.0.0 Released!</div>
         <div class="author">By:
             
-              Norman Breau
+              <a href="https://twitter.com/niklasmaerz">Niklas Merz</a>
             
         </div>
-        <div class="date">21 Sep 2023</div>
+        <div class="date">23 Nov 2023</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released an update for <code>cordova-plugin-geolocation</code>!</p>
+            <p>We are happy to announce that we have just released an update to <code>cordova-plugin-inappbrowser</code>!</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-plugin-geolocation">cordova-plugin-geolocation@5.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-inappbrowser">cordova-plugin-inappbrowser@6.0.0</a></li>
 </ul>
-
-<p><strong>To upgrade:</strong></p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-geolocation
-cordova plugin add cordova-plugin-geolocation@5.0.0
-</code></pre></div></div>
 
 <h2>Release Highlights</h2>
 
-<h3>Breaking Changes</h3>
+<p>This is a new major version with breaking changes which requires at least <code>cordova-android@10.0.0</code> and <code>cordova-ios@6.0.0</code>. Make sure to check and update your platforms.</p>
+
+<p>The most notable improvements in this major release are:</p>
 
 <ul>
-  <li><strong>Modern JavaScript</strong></li>
+  <li>Permission requests for Android</li>
+  <li>Removal of deprecated code and platforms</li>
+  <li>Make WebView inspectable on iOS</li>
+  <li>Make system open tel, sms, mailto and geo links on iOS</li>
 </ul>
 
-<p>The JavaScript of the plugin has been upgraded to use ES6 features, such as <code>let</code> and <code>const</code>.</p>
-
-<p><strong>NOTE</strong>: This release has failed to upgrade required engines. Despite the declared requirement on <code>cordova-android</code> &gt;= 6.3.0 and no declared requirement on iOS, the new minimum requirements will be:</p>
-
-<ul>
-  <li>cordova-ios 6 or later</li>
-  <li>cordova-android 10 or later</li>
-</ul>
-
-<p>Earlier versions of these platforms may not work as expected. As always, it will be recommended to use the latest version available.
-The engines <em>may be corrected</em> in a patch release at a later date.</p>
-
-<ul>
-  <li><strong>Cordova Windows Support Drop</strong></li>
-</ul>
-
-<p>Support for the deprecated <a href="https://github.com/apache/cordova-windows">cordova-windows</a> platform has been dropped and entirely removed in this release.</p>
-
-<h3>Notable Fixes</h3>
-
-<ul>
-  <li>
-    <p><strong>Sanity check on Geolocation serialization on iOS</strong></p>
-
-    <p>A rare occurrence of <code>Infinity</code> values would cause a crash during JSON serialization on iOS. This is now caught and will now produce a Position Unavailable error gracefully.</p>
-  </li>
-  <li>
-    <p><strong>Improved Android Permission Handling</strong></p>
-
-    <p>Android has received fixes for when handling coarse vs fine location permissions for improved compatibility on Android 12+ devices. Android will now handle the following situations:</p>
-
-    <ol>
-      <li>Permission request that consists of only <code>COARSE</code> location.</li>
-      <li>Permission request that consists of both <code>COARSE</code> and <code>FINE</code> (high accuracy) location.</li>
-      <li>Permission upgrade for when <code>COARSE</code> is granted, but <code>FINE</code> is required.</li>
-    </ol>
-  </li>
-</ul>
-
-<p>For more details on these changes, see the <a href="https://github.com/apache/cordova-plugin-geolocation/pull/250">PR</a>.</p>
-
-<ul>
-  <li><strong>Improved W3C Compliance</strong></li>
-</ul>
-
-<p>Fixes has been made to the <code>heading</code> and <code>speed</code> to better conform to the <a href="https://www.w3.org/TR/geolocation/#constructing-a-geolocationposition">W3C Geolocation API</a> specification. If either of these values are not determined to be expected valid range, they will now return <code>null</code> to provide better consistency between Cordova and other web environments.</p>
-
-<p>Please report any issues you find by following the this <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+<p>Please report any issues you find on <a href="http://https://github.com/apache/cordova-plugin-inappbrowser/issues">GitHub</a>!</p>
 
 <!--more-->
-<h2>Changes Log</h2>
-
-<p><strong>Breaking Changes:</strong></p>
+<h1>Changes include:</h1>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/260">GH-260</a> chore(eslint): config upgrade to 5.0.0 (#260)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/267">GH-267</a> chore(windows)!: Remove <strong>Windows</strong> platform (#267)</li>
-</ul>
-
-<p><strong>Fixes:</strong></p>
-<ul>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/270">GH-270</a> fix: heading speed w3c spec (#270)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/250">GH-250</a> (android) fix: respect requested location accuracy when checking/requesting permissions on <strong>Android</strong> 12+ Handle bug on API &lt; 32 when requesting COARSE permission results in TIMEOUT error.</li>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/231">GH-231</a> (ios) fix: Check NSDictionary constructed from native CLLocation data is valid for conversion to JSON before attempting conversion. Prevents crashes due to values invalid for JSON conversion such as INFINITY.</li>
-</ul>
-
-<p><strong>Other Changes:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/247">GH-247</a> ci(android): update java requirement for <code>cordova-android</code>@11 (#247)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/241">GH-241</a> ci(ios): update workflow w/ <strong>iOS</strong> 15 (#241)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/239">GH-239</a> ci: add action-badge (#239)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/238">GH-238</a> ci: remove travis &amp; appveyor (#238)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/236">GH-236</a> chore: npmrc (#236)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/234">GH-234</a> ci: add gh-actions workflows (#234)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/217">GH-217</a> ci: add node-14.x to workflow (#217)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/251">GH-251</a> ci: sync workflow with paramedic (#251)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/249">GH-249</a> dep(npm): bump package-lock v2 w/ rebuild (#249)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/268">GH-268</a> ci(gh-action): Sync with paramedic configs (#268)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/261">GH-261</a> ci: Sync with paramedic. Removed API 22 &amp; 31, added API 24 &amp; API 33 (#261)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/265">GH-265</a> chore: package-lock (#265)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-geolocation/pull/269">GH-269</a> test(windows): Remove window platform references from tests (#269)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1033">GH-1033</a> chore: bump to next major release 6.0.0 &amp; update deependencies</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1032">GH-1032</a> chore(lint): update eslint config and apply fixes</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1030">GH-1030</a> fix!: remove deprecated platforms <strong>Windows</strong> &amp; osx</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1031">GH-1031</a> fix(ios): Remove deprecation warnings and old code</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/927">GH-927</a> fix: explicitly import dependencies, instead of relying on PCH files. This is important in Swift projects, where you cannot use prefix headers.</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/968">GH-968</a> GH-706 <strong>Android</strong>: Allow permissions requests</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1029">GH-1029</a> chore: update asf config</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1019">GH-1019</a> feat(android): Download event</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1020">GH-1020</a> ci(gh-action): Paramedic CI sync</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1015">GH-1015</a> feat(ios): Make WebView inspectable</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1016">GH-1016</a> chore: use https urls in tests and <code>README</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1017">GH-1017</a> chore: Update SUPPORT_QUESTION.md template</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/977">GH-977</a> fix(docs): missing xml indicator in code block</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/971">GH-971</a> ci: sync workflow with paramedic</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/964">GH-964</a> dep(npm): bump package-lock v2 w/ rebuild</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/957">GH-957</a> ci(android): update java requirement for <code>cordova-android</code>@11</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/946">GH-946</a> fix(android): increase toolbar to 48dp</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/912">GH-912</a> ci(ios): update workflow w/ <strong>iOS</strong> 15</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/907">GH-907</a> ci: add action-badge</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/906">GH-906</a> ci: remove travis &amp; appveyor</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/903">GH-903</a> ci: add gh-actions workflows</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/861">GH-861</a> fix(android): add space between default useragent and custom AppendUserAgent</li>
+  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/881">GH-881</a> fix(ios): make system open tel, sms, mailto and geo links</li>
 </ul>
 
         </div>
@@ -249,37 +195,17 @@ The engines <em>may be corrected</em> in a patch release at a later date.</p>
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/news/2023/09/12/camera-media-file-transfer-plugin-release.html">Previous</a>
+                    <a href="/news/2023/09/21/geolocation-plugin-5.0.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/news/2023/09/12/camera-media-file-transfer-plugin-release.html">Camera 7.0.0, Media 7.0.0 & File-Transfer 2.0.0 Released!</a>
-                    <div class="date"> 12 Sep 2023 - By Bryan Ellis </div>
+                    <a class="title" href="/news/2023/09/21/geolocation-plugin-5.0.0.html">Geolocation Plugin 5.0.0 Released!</a>
+                    <div class="date"> 21 Sep 2023 - By Norman Breau </div>
                     <p class="content">
                         We are happy to announce that we have just released an update...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2023/11/23/inappbrowser-release-6.0.0.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2023/11/23/inappbrowser-release-6.0.0.html">Cordova Plugin InAppBrowser 6.0.0 Released!</a>
-                    <div class="date"> 23 Nov 2023 - By Niklas Merz </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released an update...
-                    </p>
                 
             </div>
         </div>
