@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released an update to cordova-plugin-inappbrowser!  cordova-plugin-inappbrowser@6.0.0Release HighlightsThis is a n...">
+    <meta name="description" content="The Apache Cordova projects wants to understand the users and contributors better. Therefore, we invite you take part in a short survey for app developers an...">
 
     <title>
         
             
-                Cordova Plugin InAppBrowser 6.0.0 Released! - Apache Cordova
+                Announcing the Cordova User & Contributor Survey! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2023/11/23/inappbrowser-release-6.0.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2023/11/24/survey.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -129,65 +129,23 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova Plugin InAppBrowser 6.0.0 Released!</div>
+        <div class="title">Announcing the Cordova User & Contributor Survey!</div>
         <div class="author">By:
             
               <a href="https://twitter.com/niklasmaerz">Niklas Merz</a>
             
         </div>
-        <div class="date">23 Nov 2023</div>
+        <div class="date">24 Nov 2023</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released an update to <code>cordova-plugin-inappbrowser</code>!</p>
+            <p>The Apache Cordova projects wants to understand the users and contributors better. Therefore, we invite you take part in a short survey for app developers and contributors of Cordova plugins.</p>
 
-<ul>
-  <li><a href="https://www.npmjs.com/package/cordova-plugin-inappbrowser">cordova-plugin-inappbrowser@6.0.0</a></li>
-</ul>
+<p>The survey questions are designed to not contain any personal information and can be answered anonymously. <em>Please take note that the survey is using Google Forms to process the responses. The <a href="https://policies.google.com/privacy?hl=en">Google privacy policy</a> is applicable for the data processed.</em></p>
 
-<h2>Release Highlights</h2>
+<p><strong><a href="https://forms.gle/2HKWATLcRQdw85mE6">Take survey</a></strong></p>
 
-<p>This is a new major version with breaking changes which requires at least <code>cordova-android@10.0.0</code> and <code>cordova-ios@6.0.0</code>. Make sure to check and update your platforms.</p>
-
-<p>The most notable improvements in this major release are:</p>
-
-<ul>
-  <li>Permission requests for Android</li>
-  <li>Removal of deprecated code and platforms</li>
-  <li>Make WebView inspectable on iOS</li>
-  <li>Make system open tel, sms, mailto and geo links on iOS</li>
-</ul>
-
-<p>Please report any issues you find on <a href="http://https://github.com/apache/cordova-plugin-inappbrowser/issues">GitHub</a>!</p>
-
-<!--more-->
-<h1>Changes include:</h1>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1033">GH-1033</a> chore: bump to next major release 6.0.0 &amp; update deependencies</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1032">GH-1032</a> chore(lint): update eslint config and apply fixes</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1030">GH-1030</a> fix!: remove deprecated platforms <strong>Windows</strong> &amp; osx</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1031">GH-1031</a> fix(ios): Remove deprecation warnings and old code</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/927">GH-927</a> fix: explicitly import dependencies, instead of relying on PCH files. This is important in Swift projects, where you cannot use prefix headers.</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/968">GH-968</a> GH-706 <strong>Android</strong>: Allow permissions requests</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1029">GH-1029</a> chore: update asf config</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1019">GH-1019</a> feat(android): Download event</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1020">GH-1020</a> ci(gh-action): Paramedic CI sync</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1015">GH-1015</a> feat(ios): Make WebView inspectable</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1016">GH-1016</a> chore: use https urls in tests and <code>README</code></li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1017">GH-1017</a> chore: Update SUPPORT_QUESTION.md template</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/977">GH-977</a> fix(docs): missing xml indicator in code block</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/971">GH-971</a> ci: sync workflow with paramedic</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/964">GH-964</a> dep(npm): bump package-lock v2 w/ rebuild</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/957">GH-957</a> ci(android): update java requirement for <code>cordova-android</code>@11</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/946">GH-946</a> fix(android): increase toolbar to 48dp</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/912">GH-912</a> ci(ios): update workflow w/ <strong>iOS</strong> 15</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/907">GH-907</a> ci: add action-badge</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/906">GH-906</a> ci: remove travis &amp; appveyor</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/903">GH-903</a> ci: add gh-actions workflows</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/861">GH-861</a> fix(android): add space between default useragent and custom AppendUserAgent</li>
-  <li><a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/881">GH-881</a> fix(ios): make system open tel, sms, mailto and geo links</li>
-</ul>
+<p>Thank you very much for taking part in this survey. The goal of this survey is to identify areas that can be improved by the Cordova community together. The survey is open from now on to December 24, 2023. The results will be shared on the Cordova blog.</p>
 
         </div>
     </section>
@@ -195,37 +153,17 @@
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/news/2023/09/21/geolocation-plugin-5.0.0.html">Previous</a>
+                    <a href="/announcements/2023/11/23/inappbrowser-release-6.0.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/news/2023/09/21/geolocation-plugin-5.0.0.html">Geolocation Plugin 5.0.0 Released!</a>
-                    <div class="date"> 21 Sep 2023 - By Norman Breau </div>
+                    <a class="title" href="/announcements/2023/11/23/inappbrowser-release-6.0.0.html">Cordova Plugin InAppBrowser 6.0.0 Released!</a>
+                    <div class="date"> 23 Nov 2023 - By Niklas Merz </div>
                     <p class="content">
                         We are happy to announce that we have just released an update...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2023/11/24/survey.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2023/11/24/survey.html">Announcing the Cordova User & Contributor Survey!</a>
-                    <div class="date"> 24 Nov 2023 - By Niklas Merz </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        The Apache Cordova projects wants to understand the users and contributors better....
-                    </p>
                 
             </div>
         </div>

@@ -6,9 +6,30 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Nov 2023 16:32:05 +0000</pubDate>
-    <lastBuildDate>Thu, 23 Nov 2023 16:32:05 +0000</lastBuildDate>
+    <pubDate>Fri, 24 Nov 2023 07:41:52 +0000</pubDate>
+    <lastBuildDate>Fri, 24 Nov 2023 07:41:52 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Announcing the Cordova User &amp; Contributor Survey!</title>
+        <description>&lt;p&gt;The Apache Cordova projects wants to understand the users and contributors better. Therefore, we invite you take part in a short survey for app developers and contributors of Cordova plugins.&lt;/p&gt;
+
+&lt;p&gt;The survey questions are designed to not contain any personal information and can be answered anonymously. &lt;em&gt;Please take note that the survey is using Google Forms to process the responses. The &lt;a href=&quot;https://policies.google.com/privacy?hl=en&quot;&gt;Google privacy policy&lt;/a&gt; is applicable for the data processed.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://forms.gle/2HKWATLcRQdw85mE6&quot;&gt;Take survey&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Thank you very much for taking part in this survey. The goal of this survey is to identify areas that can be improved by the Cordova community together. The survey is open from now on to December 24, 2023. The results will be shared on the Cordova blog.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2023/11/24/survey.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2023/11/24/survey.html</guid>
+        
+        <category>news</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova Plugin InAppBrowser 6.0.0 Released!</title>
@@ -1165,193 +1186,6 @@ cordova platform add ios@7.0.0
         
         
         <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Android 12.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Android 12.0.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Android applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@12.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove android
-cordova platform add android@12.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add android@12.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;BREAKING CHANGES:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Increased Minimum &amp;amp; Target SDK&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;This release has increased the minimum supported SDK version to 24 which is Android 7.0. It also has increased the target SDK to 33, Android 13.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Build Tools&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;To use &lt;code&gt;cordova-android@12&lt;/code&gt;, SDK Platform &lt;code&gt;33&lt;/code&gt; and SDK Build Tools &lt;code&gt;33.0.2&lt;/code&gt; must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in your projects.&lt;/p&gt;
-
-    &lt;p&gt;To install SDK Platform 33:&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;Open Android Studio&amp;#39;s &lt;strong&gt;SDK Manager&lt;/strong&gt;:&lt;/li&gt;
-      &lt;li&gt;Click on &lt;code&gt;SDK Platforms&lt;/code&gt; tab&lt;/li&gt;
-      &lt;li&gt;Check &lt;code&gt;Android 13.0 (Tiramisu)&lt;/code&gt; which has the &lt;code&gt;API Level&lt;/code&gt; of &lt;code&gt;33&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Click &lt;code&gt;Apply&lt;/code&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2023/cordova-android-12-platform-sdk-33.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Android SDK Platform&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;To install SDK Build Tools 33.0.2:&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;Open Android Studio&amp;#39;s &lt;strong&gt;SDK Manager&lt;/strong&gt;:&lt;/li&gt;
-      &lt;li&gt;Click on &lt;code&gt;SDK Tools&lt;/code&gt; tab&lt;/li&gt;
-      &lt;li&gt;Check &lt;code&gt;Show Package Details&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Expand &lt;code&gt;Android SDK Build-Tools&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Check &lt;code&gt;33.0.2&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Click &lt;code&gt;Apply&lt;/code&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2023/cordova-android-12-sdk-build-tools-3302.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Android SDK Build Tools&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Project Dependencies&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;The following project dependencies were bumpped:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Kotlin: &lt;code&gt;1.7.21&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Gradle: &lt;code&gt;7.6&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Android Gradle Plugin (AGP): &lt;code&gt;7.4.2&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Google Services Gradle Plugin: &lt;code&gt;4.3.15&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;AndroidX App Compat Library: &lt;code&gt;1.6.1&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;AndroidX WebKit Library: &lt;code&gt;1.6.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;AndroidX SplashScreen Core Library: &lt;code&gt;1.0.0&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;If you or a plugin has made changes to any of the following configuration preferences, the build results might not match the expected outcomes with this release:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;android-minSdkVersion&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;android-maxSdkVersion&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;android-targetSdkVersion&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;android-compileSdkVersion&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;android-buildToolsVersion&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;GradleVersion&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;AndroidGradlePluginVersion&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;GradlePluginKotlinVersion&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;AndroidXAppCompatVersion&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;AndroidXWebKitVersion&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;GradlePluginGoogleServicesVersion&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;Please take note of the versions that have been updated in this release. If you have manually modified any of these values, it is recommended to review and update the preference values accordingly.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Node Support&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;We have dropped support for Node 14.x and increase the minimum Node requirement to greater than or equal to 16.13.0.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;New Features:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Monochrome Support&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Android 13 has added Themed Icons support which is also known as Monochrome. This release has introduced support for Themed icons.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-android/issues&quot;&gt;Cordova-Android&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Breaking:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1605&quot;&gt;GH-1605&lt;/a&gt; fix!: Make &lt;code&gt;CoreAndroid&lt;/code&gt; plugin instantiate on load&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1539&quot;&gt;GH-1539&lt;/a&gt; feat!: bump Gradle 7.6 &amp;amp; AGP 7.4.2&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1571&quot;&gt;GH-1571&lt;/a&gt; feat!: bump min SDK to 24&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1538&quot;&gt;GH-1538&lt;/a&gt; feat!: bump target sdk &amp;amp; build tools for SDK 33 support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1540&quot;&gt;GH-1540&lt;/a&gt; feat!: bump node engine requirement &lt;code&gt;&amp;gt;=16.13.0&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1597&quot;&gt;GH-1597&lt;/a&gt; deprecate: &lt;code&gt;CoreAndroid.getBuildConfigValue&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1541&quot;&gt;GH-1541&lt;/a&gt; dep(npm)!: bump acceptable modules w/ rebuilt &lt;code&gt;package-lock&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1566&quot;&gt;GH-1566&lt;/a&gt; dep(npm)!: bump &lt;code&gt;cordova-common@5.0.0&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1602&quot;&gt;GH-1602&lt;/a&gt; feat: add &lt;code&gt;listTarget&lt;/code&gt; api&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1574&quot;&gt;GH-1574&lt;/a&gt; feat: add plugin hooks for &lt;code&gt;WebViewClient.onRenderProcessGone&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1594&quot;&gt;GH-1594&lt;/a&gt; feat: bump default &lt;code&gt;kotlin&lt;/code&gt; to version 1.7.21&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1550&quot;&gt;GH-1550&lt;/a&gt; feat: add &lt;code&gt;monochrome&lt;/code&gt; app icon support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1589&quot;&gt;GH-1589&lt;/a&gt; feat: &lt;code&gt;InspectableWebview&lt;/code&gt; preference&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1568&quot;&gt;GH-1568&lt;/a&gt; feat: bump &lt;code&gt;androidx.appcompat.appcompat&lt;/code&gt; 1.6.1&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1567&quot;&gt;GH-1567&lt;/a&gt; feat: bump &lt;code&gt;androidx.webkit.webkit&lt;/code&gt; 1.6.0&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1547&quot;&gt;GH-1547&lt;/a&gt; feat: bump &lt;code&gt;com.google.gms.google-services&lt;/code&gt; 4.3.15&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1546&quot;&gt;GH-1546&lt;/a&gt; feat: bump &lt;code&gt;androidx.core.core-splashscreen&lt;/code&gt; 1.0.0&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1606&quot;&gt;GH-1606&lt;/a&gt; fix: Gradle Args parsing&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1575&quot;&gt;GH-1575&lt;/a&gt; fix(&lt;code&gt;BuildHelper&lt;/code&gt;): get package name from &lt;code&gt;ApplicationInfo&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1595&quot;&gt;GH-1595&lt;/a&gt; fix(test): Native test namespace refactor&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1471&quot;&gt;GH-1471&lt;/a&gt; fix: &lt;code&gt;ANDROID_HOME&lt;/code&gt; is the new default, to check first and give advice&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1573&quot;&gt;GH-1573&lt;/a&gt; fix(GH-1432): Default &lt;code&gt;content&lt;/code&gt; &lt;code&gt;src&lt;/code&gt; when content tag is missing&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1506&quot;&gt;GH-1506&lt;/a&gt; fix: only do fadeout animation if &lt;code&gt;FadeSplashScreen&lt;/code&gt; is true&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1505&quot;&gt;GH-1505&lt;/a&gt; fix: correctly flag API dependency on &lt;code&gt;AppCompat&lt;/code&gt; for Maven&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1487&quot;&gt;GH-1487&lt;/a&gt; fix: Add &lt;strong&gt;Android&lt;/strong&gt; prefix to &lt;code&gt;WindowSplashScreenBrandingImage&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1489&quot;&gt;GH-1489&lt;/a&gt; fix: import type definitions from obsolete &lt;code&gt;cordova-plugin-splashscreen&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Chores, Refactor,  Dependencies &amp;amp; CI:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1493&quot;&gt;GH-1493&lt;/a&gt; chore: add &lt;code&gt;lint:fix&lt;/code&gt; script for fixing lint errors&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1491&quot;&gt;GH-1491&lt;/a&gt; chore: Use gradle 7.4.2 distribution url&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1588&quot;&gt;GH-1588&lt;/a&gt; refactor: Removed obsolete version code checks&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1492&quot;&gt;GH-1492&lt;/a&gt; refactor: replace deprecated &lt;code&gt;Handler&lt;/code&gt; constructor&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1587&quot;&gt;GH-1587&lt;/a&gt; dep: bump npm dependencies
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;fs-extra@11.1.1&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;nopt@7.1.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;@cordova/eslint-config@5.0.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;jasmine@4.6.0&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1607&quot;&gt;GH-1607&lt;/a&gt; ci: Added NodeJS 20.x to the workflow matrix&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1542&quot;&gt;GH-1542&lt;/a&gt; ci(workflow): update &lt;code&gt;codecov/codecov-action@v3&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1532&quot;&gt;GH-1532&lt;/a&gt; ci: update &lt;code&gt;codecov/codecov-action&lt;/code&gt; reporting format&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2023/05/22/cordova-android-12.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2023/05/22/cordova-android-12.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
         
       </item>
     
