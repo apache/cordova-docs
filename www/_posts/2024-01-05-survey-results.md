@@ -17,13 +17,13 @@ The top 3 reasons for picking Cordova are **ease of use, cross-platform support 
 
 Cordova's unofficial goal has always been to cease to exist once the Web catches up with supporting new APIs and features similar to native. Therefore, it's good news that a small number of users (6.1%) migrated their apps to **PWAs**. About 13% migrated to **Capacitor** and 3% to Flutter and React-Native each. About 2% of projects moved to Electron or fully native. Around 4% are thinking about or are in the process of migrating.
 
-**The majority of respondents (76.8%) have not migrated apps to alternative solutions.**
+**Only 23.2% of respondents have migrated apps to alternative solutions.**
 
 The biggest reason to migrate is **not well maintained plugins** followed by **OS and app store compatibility issues** and **slow development of the framework itself**. This is something we as the Cordova community need to address. Some users also mentioned the fear of long term support. Others had build or Gradle issues or preferred more modern frameworks with Typescript support and a better developer experience. WebView and performance issues also got mentioned a handful of times.
 
 ## Contributing
 
-The majority of respondents (61.4%) did not contribute to Apache maintained plugins, platforms or tooling yet. 21.1% already contributed and 17.5% would love to start contributing.
+Only a minority of respondents (21.1%) have contributed to Apache maintained plugins, platforms, or tooling and 17.5% would love to start contributing.
 
 The answers to the question "What's holding you back from contributing?" are probably pretty typical for open source projects. The biggest factors are time (53%) and work-life-balance (37%). The second most mentioned reasons **I need help getting started** (21%) and **Imposter Syndrome** (10%) we should address with better documentation and support for first contributors.
 
@@ -55,3 +55,15 @@ Most respondents didn't share any feedback for plugins and quite a few mentioned
 Because of its maturity and age there are many Cordova plugins for almost any use case, but the lack of maintenance is concerning for a lot of users. Quite a few plugin authors moved on and longer maintain their plugin and users have a hard time finding working forks and fixes. Some respondents suggested that a list of curated plugins could help with that.
 
 Some users also find developing and testing plugins very hard.
+
+# Conclusions
+
+
+<!-- 
+
+Images
+Quotes
+Success Stories
+
+-->
+
