@@ -25,7 +25,7 @@ The top 3 reasons for picking Cordova are **ease of use, cross-platform support 
 
 Cordova's unofficial goal has always been to cease to exist once the Web catches up with supporting new APIs and features similar to native. Therefore, it's good news that a small number of users (6.1%) migrated their apps to **PWAs**. About 13% migrated to **Capacitor** and 3% to Flutter and React-Native each. About 2% of projects moved to Electron or fully native. Around 4% are thinking about or are in the process of migrating.
 
-![Chart migrating]({{ site.baseurl }}/static/img/blog/2024/survey/image2png)
+![Chart migrating]({{ site.baseurl }}/static/img/blog/2024/survey/image2.png)
 
 **Only 23.2% of respondents have migrated apps to alternative solutions.**
 
