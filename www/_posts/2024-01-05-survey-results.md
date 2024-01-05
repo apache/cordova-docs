@@ -63,7 +63,7 @@ Some users also fear the longevity of the project and think that new APIs and ch
 
 > I’m so grateful for the plugins! I understand how hard they can be to maintain.
 
-Most respondents didn't share any feedback for plugins and quite a few mentioned they were pleased with Cordovas plugin ecosystem.
+Most respondents didn't share any feedback for plugins and quite a few mentioned they were pleased with Cordova's plugin ecosystem.
 
 Because of its maturity and age there are many Cordova plugins for almost any use case, but the lack of maintenance is concerning for a lot of users. Quite a few plugin authors moved on and longer maintain their plugin and users have a hard time finding working forks and fixes. Some respondents suggested that a list of curated plugins could help with that.
 
