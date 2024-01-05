@@ -55,7 +55,7 @@ The most mentioned issues is the **lack of maintenance for third party plugins**
 
 Many users also mentioned issues with **native projects**. They tend to break with updates or require manual changes that cause headaches with Cordovas hooks and ephemeral native projects.
 
-Quite a lot of pain points also evolve around **documentation**. We should work on better documentation for config.xml and how to develop plugins. Some users also would like (video) tutorials. Sometimes information about new features or changes are hidden somewhere in PRs, issues and comments. We should do a better job updating the documentation.
+Quite a lot of pain points also involve around **documentation**. We should work on better documentation for config.xml and how to develop plugins. Some users also would like (video) tutorials. Sometimes information about new features or changes are hidden somewhere in PRs, issues and comments. We should do a better job updating the documentation.
 
 Some users also fear the longevity of the project and think that new APIs and changes take too long to be supported. The project is quite old, and some code is considered legacy code today and some users would like to see support for new languages like Typescript, Swift, Kotlin.
 
