@@ -13,7 +13,7 @@ Thank you very much for taking part in our user & contributor survey. We receive
 
 Obviously almost all respondents work with Cordova and the most used platforms are **Android (97.4%), iOS (89%)**, Browser (21.1%) and Electron (7%). Windows and macOS Catalyst got only a handful of responses in total.
 
-![Chart platforms]({{ site.baseurl }}/static/img/blog/2024/survey/image7.png)
+<img src="{{ site.baseurl }}/static/img/blog/2024/survey/image7.png" style="width: 100%;" alt="Chart platforms" />
 
 > Build apps with access to native features not yet present in the web platform
 
@@ -25,7 +25,7 @@ The top 3 reasons for picking Cordova are **ease of use, cross-platform support 
 
 Cordova's unofficial goal has always been to cease to exist once the Web catches up with supporting new APIs and features similar to native. Therefore, it's good news that a small number of users (6.1%) migrated their apps to **PWAs**. About 13% migrated to **Capacitor** and 3% to Flutter and React-Native each. About 2% of projects moved to Electron or fully native. Around 4% are thinking about or are in the process of migrating.
 
-![Chart migrating]({{ site.baseurl }}/static/img/blog/2024/survey/image2.png)
+<img src="{{ site.baseurl }}/static/img/blog/2024/survey/image2.png" style="width: 100%;" alt="Chart migrating" />
 
 **Only 23.2% of respondents have migrated apps to alternative solutions.**
 
@@ -37,7 +37,7 @@ Only a minority of respondents (21.1%) have contributed to Apache maintained plu
 
 The answers to the question "What's holding you back from contributing?" are probably pretty typical for open source projects. The biggest factors are time (53%) and work-life-balance (37%). The second most mentioned reasons **I need help getting started** (21%) and **Imposter Syndrome** (10%) we should address with better documentation and support for first contributors.
 
-![Chart contributing]({{ site.baseurl }}/static/img/blog/2024/survey/image1.png)
+<img src="{{ site.baseurl }}/static/img/blog/2024/survey/image1.png" style="width: 100%;" alt="Chart contributing" />
 
 For those who are interested in contributing to Apache Cordova, the best way is to submit PR. It could be to fix a known issue that you might have or others have reported, or submitting new features. In terms of Work-Life balance, Apache Cordova is based on volunteering. There is no requirement in dedicating time every day. Usually some might work on Cordova for a few minutes when they can spare.
 
@@ -45,7 +45,7 @@ Some users develop for the Web only and don't want to get into the native part w
 
 We also included a question about **release voting** because we think that most users don't know how the release process at Apache works. For every release we need at least 3 members of the PMC to check and cast a positive vote on the release. Persons who are not part of the PMC can vote as well and help test the release. The voting and decision process for releases happens on the mailing list. Sometimes it can take a while to finally publish a release because 3 PMC members need to find time to check it. If we can onboard new members, releases might happen a little faster again.
 
-![Chart voting]({{ site.baseurl }}/static/img/blog/2024/survey/image4.png)
+<img src="{{ site.baseurl }}/static/img/blog/2024/survey/image4.png" style="width: 100%;" alt="Chart voting" />
 
 ## Areas of improvement
 
