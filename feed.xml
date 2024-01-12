@@ -6,9 +6,124 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 24 Nov 2023 07:41:52 +0000</pubDate>
-    <lastBuildDate>Fri, 24 Nov 2023 07:41:52 +0000</lastBuildDate>
-    <generator>Jekyll v4.3.2</generator>
+    <pubDate>Fri, 12 Jan 2024 11:34:59 +0000</pubDate>
+    <lastBuildDate>Fri, 12 Jan 2024 11:34:59 +0000</lastBuildDate>
+    <generator>Jekyll v4.3.3</generator>
+    
+      <item>
+        <title>Cordova Survey 2023 Results</title>
+        <description>&lt;p&gt;Thank you very much for taking part in our user &amp;amp; contributor survey. We received 228 submissions. Let&amp;#39;s dive straight into the data.&lt;/p&gt;
+
+&lt;h2&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;Obviously almost all respondents work with Cordova and the most used platforms are &lt;strong&gt;Android (97.4%), iOS (89%)&lt;/strong&gt;, Browser (21.1%) and Electron (7%). Windows and macOS Catalyst got only a handful of responses in total.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/survey/image7.png&quot; alt=&quot;Chart platforms&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Build apps with access to native features not yet present in the web platform&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The top 3 reasons for picking Cordova are &lt;strong&gt;ease of use, cross-platform support and the prevalence and familiarity of web skills and technologies&lt;/strong&gt;. These reasons all were mentioned almost equally. Quite a few (~20) users mentioned that Cordova was chosen a while ago, or they migrated from Phonegap (~7). There are probably quite a few long-running Cordova projects out there. Other mentioned reasons are the support of native features, Ionic, fast development, maturity of the project and open source.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It is easy to write, inspect and debug like a webpage&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Alternatives&lt;/h2&gt;
+
+&lt;p&gt;Cordova&amp;#39;s unofficial goal has always been to cease to exist once the Web catches up with supporting new APIs and features similar to native. Therefore, it&amp;#39;s good news that a small number of users (6.1%) migrated their apps to &lt;strong&gt;PWAs&lt;/strong&gt;. About 13% migrated to &lt;strong&gt;Capacitor&lt;/strong&gt; and 3% to Flutter and React-Native each. About 2% of projects moved to Electron or fully native. Around 4% are thinking about or are in the process of migrating.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/survey/image2.png&quot; alt=&quot;Chart migrating&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Only 23.2% of respondents have migrated apps to alternative solutions.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The biggest reason to migrate is &lt;strong&gt;not well maintained plugins&lt;/strong&gt; followed by &lt;strong&gt;operating system and app store compatibility issues&lt;/strong&gt; and &lt;strong&gt;slow development of the framework itself&lt;/strong&gt;. This is something we as the Cordova community needs to address. Some users also mentioned the fear of long term support. Others had build or Gradle issues or preferred more modern frameworks with Typescript support and a better developer experience. WebView and performance issues also got mentioned a handful of times.&lt;/p&gt;
+
+&lt;h2&gt;Contributing&lt;/h2&gt;
+
+&lt;p&gt;Only a minority of respondents (21.1%) have contributed to Apache maintained plugins, platforms, or tooling and 17.5% would love to start contributing.&lt;/p&gt;
+
+&lt;p&gt;The answers to the question &amp;quot;What&amp;#39;s holding you back from contributing?&amp;quot; are probably pretty typical for open source projects. The biggest factors are time (53%) and work-life-balance (37%). The second most mentioned reasons &lt;strong&gt;I need help getting started&lt;/strong&gt; (21%) and &lt;strong&gt;Imposter Syndrome&lt;/strong&gt; (10%) we should address with better documentation and support for first contributors.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/survey/image1.png&quot; alt=&quot;Chart contributing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For those who are interested in contributing to Apache Cordova, the best way is to submit PR. It could be to fix a known issue that you might have or others have reported, or submitting new features. In terms of Work-Life balance, Apache Cordova is based on volunteering. There is no requirement in dedicating time every day. Usually some might work on Cordova for a few minutes when they can spare.&lt;/p&gt;
+
+&lt;p&gt;Some users develop for the Web only and don&amp;#39;t want to get into the native part which is totally fair because that&amp;#39;s the point of using Cordova. Developing plugins and getting into Cordova internals is not as hard and scary as it might look at first, and we really need your support for the project.&lt;/p&gt;
+
+&lt;p&gt;We also included a question about &lt;strong&gt;release voting&lt;/strong&gt; because we think that most users don&amp;#39;t know how the release process at Apache works. For every release we need at least 3 members of the PMC to check and cast a positive vote on the release. Persons who are not part of the PMC can vote as well and help test the release. The voting and decision process for releases happens on the mailing list. Sometimes it can take a while to finally publish a release because 3 PMC members need to find time to check it. If we can onboard new members, releases might happen a little faster again.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/survey/image4.png&quot; alt=&quot;Chart voting&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Areas of improvement&lt;/h2&gt;
+
+&lt;p&gt;One of the main reasons to run this survey was to identify the pain points for many Cordova developers. If we can identify the areas that need improvements we can gather ideas for quick fixes and long term goals.&lt;/p&gt;
+
+&lt;p&gt;The most mentioned issues is the &lt;strong&gt;lack of maintenance for third party plugins&lt;/strong&gt;. More on that in the next paragraph. The second-biggest pain point is keeping up with App/Play store requirements and OS API changes combined with &lt;strong&gt;slow releases and breaking updates&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Many users also mentioned issues with &lt;strong&gt;native projects&lt;/strong&gt;. They tend to break with updates or require manual changes that cause headaches with Cordovas hooks and ephemeral native projects.&lt;/p&gt;
+
+&lt;p&gt;Quite a lot of pain points also involve around &lt;strong&gt;documentation&lt;/strong&gt;. We should work on better documentation for config.xml and how to develop plugins. Some users also would like (video) tutorials. Sometimes information about new features or changes are hidden somewhere in PRs, issues and comments. We should do a better job updating the documentation.&lt;/p&gt;
+
+&lt;p&gt;Some users also fear the longevity of the project and think that new APIs and changes take too long to be supported. The project is quite old, and some code is considered legacy code today and some users would like to see support for new languages like Typescript, Swift, Kotlin.&lt;/p&gt;
+
+&lt;h2&gt;Plugins&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I’m so grateful for the plugins! I understand how hard they can be to maintain.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Most respondents didn&amp;#39;t share any feedback for plugins and quite a few mentioned they were pleased with Cordova&amp;#39;s plugin ecosystem.&lt;/p&gt;
+
+&lt;p&gt;Because of its maturity and age there are many Cordova plugins for almost any use case, but the lack of maintenance is concerning for a lot of users. Quite a few plugin authors moved on and longer maintain their plugin and users have a hard time finding working forks and fixes. Some respondents suggested that a list of curated plugins could help with that.&lt;/p&gt;
+
+&lt;p&gt;Some users also find developing and testing plugins very hard.&lt;/p&gt;
+
+&lt;h3&gt;Some user voices&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Building cordova plugins is not ideal because the plugins are authored outside of any native project which makes it hard to develop and test. Not having the native project available means the plugin cannot be built independently of a cordova project, cannot be tested independently of a cordova project, and cannot make use of the standard IDE with intellisense without a cordova project.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;There are many Cordova plugins that are currently not maintained, which makes adding a new plugin to a project really painful, as you always have to check if the plugin is still functional and if there are alternative plugins.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Overall, very good, considering they&amp;#39;re mostly by volunteers. But my impression has been that some plugins that have no alternative aren&amp;#39;t always well-maintained (no specific examples, sorry).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Sometimes poorly maintained, slow to implement fixes, outdated, etc. But yet still critical for any real Cordova project&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I always end up forking them due to them no being updated with each Cordova release&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Cordova makes it simple to build plugins.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Closing words&lt;/h2&gt;
+
+&lt;p&gt;This survey got over 200 responses and considering only a fraction of people who actually see the survey will respond, there are probably quite a lot of happy Cordova users and new and long-running app projects out there. We got some good feedback of the most requested improvements and biggest pain points.&lt;/p&gt;
+
+&lt;p&gt;As you might know, most of the maintainers are volunteers and work on Cordova in their free time. Therefore, we need your help ensuring that Cordova remains a robust and reliable platform for building mobile apps. Your involvement, whether it&amp;#39;s providing feedback, fixing bugs, or developing plugins, is essential to ensuring Cordova&amp;#39;s continued relevance and adoption. The Cordova PMC will do its best to make contributing as easy as possible and provide developer guidance, code reviews, documentation, and frequent releases. A large portion of bug fixes, plugins and features have been provided by dedicated individuals for many years now and will be in the future. You can contribute to Cordova&amp;#39;s future success with your fixes, solutions, plugins and collaboration on releases.&lt;/p&gt;
+
+&lt;p&gt;Thank you for being a part of the Cordova community. Together, we can shape the future of mobile development.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2024/01/12/survey-results.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/01/12/survey-results.html</guid>
+        
+        <category>news</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Announcing the Cordova User &amp; Contributor Survey!</title>
@@ -1032,160 +1147,6 @@ cordova platform add ios@7.0.0
         
         
         <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova CLI 12.0.0 &amp; Internal Packages Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released a major update to our Cordova CLI!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova&quot;&gt;cordova@12.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In this CLI release, it also includes the latest internal libraries:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-lib&quot;&gt;cordova-lib@12.0.1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-create&quot;&gt;cordova-create@5.0.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-common&quot;&gt;cordova-common@5.0.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-fetch&quot;&gt;cordova-fetch@4.0.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-serve&quot;&gt;cordova-serve@4.0.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;This release drops Nodejs 14 support. The minimum supported version that Cordova requires is greater than or equal to 16.13.0.&lt;/p&gt;
-
-&lt;p&gt;In all releases, we have updated all npm packages to the possible latest release that Cordova can support.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;BREAKING CHANGES:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;We have removed the deprecated platforms &lt;strong&gt;OSX&lt;/strong&gt; and &lt;strong&gt;Windows&lt;/strong&gt; from the platform listing. While you can still install these platforms, you will need to use the full npm package names &lt;code&gt;cordova-osx&lt;/code&gt; and &lt;code&gt;cordova-windows&lt;/code&gt;. Please note that these platforms are no longer actively maintained, and there is a possibility that they may not function as expected and could break in the future. As a result, they will not receive any further support.&lt;/p&gt;
-
-&lt;p&gt;Additionally, we have removed all internal platform pinnings. When running the &lt;code&gt;cordova platform add &amp;lt;PLATFORM&amp;gt;&lt;/code&gt; command, it will always fetch the latest available platform from the npm registry. This allows for immediate access to newly released platforms. If you require the command to consistently fetch a specific version, you will need to update your command to include the version pinning, like this: &lt;code&gt;cordova platform add &amp;lt;PLATFORM&amp;gt;@&amp;lt;VERSION&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Please report any issues you find on our GitHub issue tracker! Please select below the appropriate repo when submitting.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/issues&quot;&gt;Cordova CLI - Issue Tracker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/issues&quot;&gt;Cordova Lib - Issue Tracker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/issues&quot;&gt;Cordova Create - Issue Tracker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/issues&quot;&gt;Cordova Fetch - Issue Tracker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-serve/issues&quot;&gt;Cordova Serve - Issue Tracker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/issues&quot;&gt;Cordova Common - Issue Tracker&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Cordova CLI 12.0.0:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/611&quot;&gt;GH-611&lt;/a&gt; feat!(run): call platform api to list targets&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/595&quot;&gt;GH-595&lt;/a&gt; feat!: remove &lt;code&gt;update-notifier&lt;/code&gt; support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/615&quot;&gt;GH-615&lt;/a&gt; dep!: bump &lt;code&gt;cordova-create@5.0.0&lt;/code&gt; &amp;amp; &lt;code&gt;cordova-lib@12.0.0&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/613&quot;&gt;GH-613&lt;/a&gt; dep!: bump possible dependencies &amp;amp; set bump node requirement &lt;code&gt;&amp;gt;=16.13.0&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;@cordova/eslint-config@^5.0.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;jasmine@^4.6.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;rewire@^6.0.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;cordova-common@5.0.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;fs-extra@11.1.1&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;nopt@7.1.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;semver@7.5.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;systeminformation@5.17.12&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Cordova Lib 12.0.0 &amp;amp; 12.0.1:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/918&quot;&gt;GH-918&lt;/a&gt; fix: platform add with tarball &amp;amp; directory&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/917&quot;&gt;GH-917&lt;/a&gt; feat!(&lt;code&gt;run&lt;/code&gt;): call platform api to list targets&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/894&quot;&gt;GH-894&lt;/a&gt; feat!: remove platform pinning&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/896&quot;&gt;GH-896&lt;/a&gt; feat!: remove &lt;strong&gt;OSX&lt;/strong&gt; &amp;amp; &lt;strong&gt;Windows&lt;/strong&gt; platform&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Cordova Create 5.0.0:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/82&quot;&gt;GH-82&lt;/a&gt; dep!: packages upgrade &amp;amp; requirements
-    &lt;ul&gt;
-      &lt;li&gt;Bumped Packages
-        &lt;ul&gt;
-          &lt;li&gt;&lt;code&gt;@cordova/eslint-config@latest@5.0.0&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code&gt;cordova-common@5.0.0&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code&gt;cordova-fetch@4.0.0&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code&gt;fs-extra@11.1.1&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code&gt;jasmine@4.6.0&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code&gt;rewire@6.0.0&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code&gt;npm-package-arg@10.1.0&lt;/code&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Rebuilt &lt;code&gt;package-lock.json&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Bumped &lt;code&gt;node&lt;/code&gt; engine requirement &lt;code&gt;&amp;gt;=16.13.0&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Cordova Fetch 4.0.0:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/108&quot;&gt;GH-108&lt;/a&gt; dep!: bumped &lt;code&gt;node&lt;/code&gt; &amp;amp; &lt;code&gt;npm&lt;/code&gt; engine requirment &amp;amp; dependencies w/ &lt;code&gt;package-lock&lt;/code&gt; rebuild
-    &lt;ul&gt;
-      &lt;li&gt;Engine Requirement Update
-        &lt;ul&gt;
-          &lt;li&gt;Node: &lt;code&gt;&amp;gt;= 16.13.0&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;npm: &lt;code&gt;&amp;gt;= 8.1.0&lt;/code&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Package Upgrade
-        &lt;ul&gt;
-          &lt;li&gt;&lt;code&gt;@npmcli/arborist@6.2.5&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code&gt;pacote@15.1.1&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code&gt;npm-package-arg@10.1.0&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code&gt;@cordova/eslint-config@5.0.0&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code&gt;fs-extra@11.1.1&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code&gt;cordova-common@5.0.0&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code&gt;jasmine@4.6.0&lt;/code&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/109&quot;&gt;GH-109&lt;/a&gt; dep!: bump &lt;code&gt;which@3.0.0&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/102&quot;&gt;GH-102&lt;/a&gt; dep(npm): update &lt;code&gt;pacote@15.0.7&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/75&quot;&gt;GH-75&lt;/a&gt; refactor: replace &lt;code&gt;superspawn&lt;/code&gt; with &lt;code&gt;execa&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/110&quot;&gt;GH-110&lt;/a&gt; test: remove private internal method testing and &lt;code&gt;rewire&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/111&quot;&gt;GH-111&lt;/a&gt; ci: sync &lt;code&gt;codecov-action&lt;/code&gt; setup between other repos&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Cordova Serve 4.0.1:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-serve/pull/49&quot;&gt;GH-49&lt;/a&gt;, &lt;a href=&quot;https://github.com/apache/cordova-serve/pull/51&quot;&gt;GH-51&lt;/a&gt;, &lt;a href=&quot;https://github.com/apache/cordova-serve/pull/53&quot;&gt;GH-53&lt;/a&gt; chore: rebuilt package-lock.json&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-serve/pull/52&quot;&gt;GH-52&lt;/a&gt; ci: update github action workflow&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-serve/pull/46&quot;&gt;GH-46&lt;/a&gt; fix(main.js): color of 404 status in console logs&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-serve/pull/45&quot;&gt;GH-45&lt;/a&gt; fix(main.js): resolve deprecation warning on Node.js 12&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-serve/pull/44&quot;&gt;GH-44&lt;/a&gt; fix: pass mandatory args to platform API constructor&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-serve/pull/38&quot;&gt;GH-38&lt;/a&gt; ci: add node 14 to workflow&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Cordova Common 5.0.0:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;See the &lt;a href=&quot;https://cordova.apache.org/announcements/2023/03/09/cordova-common-release-5.0.0.html&quot;&gt;Cordova Common Release 5.0.0&lt;/a&gt; blog post.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/news/2023/05/22/cordova-cli-12.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/news/2023/05/22/cordova-cli-12.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>news</category>
         
       </item>
     
