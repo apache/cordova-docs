@@ -6,13 +6,17 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 12 Jan 2024 12:31:06 +0000</pubDate>
-    <lastBuildDate>Fri, 12 Jan 2024 12:31:06 +0000</lastBuildDate>
+    <pubDate>Fri, 12 Jan 2024 12:36:19 +0000</pubDate>
+    <lastBuildDate>Fri, 12 Jan 2024 12:36:19 +0000</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
     
       <item>
         <title>Cordova Survey 2023 Results</title>
         <description>&lt;p&gt;Thank you very much for taking part in our user &amp;amp; contributor survey. We received 228 submissions. Let&amp;#39;s dive straight into the data.&lt;/p&gt;
+
+&lt;p&gt;This survey got over 200 responses and considering only a fraction of people who actually see the survey will respond, there are probably quite a lot of happy Cordova users and new and long-running app projects out there. We got some good feedback of the most requested improvements and biggest pain points.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;h2&gt;Usage&lt;/h2&gt;
 
@@ -107,8 +111,6 @@
 &lt;/blockquote&gt;
 
 &lt;h2&gt;Closing words&lt;/h2&gt;
-
-&lt;p&gt;This survey got over 200 responses and considering only a fraction of people who actually see the survey will respond, there are probably quite a lot of happy Cordova users and new and long-running app projects out there. We got some good feedback of the most requested improvements and biggest pain points.&lt;/p&gt;
 
 &lt;p&gt;As you might know, most of the maintainers are volunteers and work on Cordova in their free time. Therefore, we need your help ensuring that Cordova remains a robust and reliable platform for building mobile apps. Your involvement, whether it&amp;#39;s providing feedback, fixing bugs, or developing plugins, is essential to ensuring Cordova&amp;#39;s continued relevance and adoption. The Cordova PMC will do its best to make contributing as easy as possible and provide developer guidance, code reviews, documentation, and frequent releases. A large portion of bug fixes, plugins and features have been provided by dedicated individuals for many years now and will be in the future. You can contribute to Cordova&amp;#39;s future success with your fixes, solutions, plugins and collaboration on releases.&lt;/p&gt;
 
