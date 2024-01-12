@@ -29,7 +29,7 @@ Cordova's unofficial goal has always been to cease to exist once the Web catches
 
 **Only 23.2% of respondents have migrated apps to alternative solutions.**
 
-The biggest reason to migrate is **not well maintained plugins** followed by **operating system and app store compatibility issues** and **slow development of the framework itself**. This is something we as the Cordova community need to address. Some users also mentioned the fear of long term support. Others had build or Gradle issues or preferred more modern frameworks with Typescript support and a better developer experience. WebView and performance issues also got mentioned a handful of times.
+The biggest reason to migrate is **not well maintained plugins** followed by **operating system and app store compatibility issues** and **slow development of the framework itself**. This is something we as the Cordova community needs to address. Some users also mentioned the fear of long term support. Others had build or Gradle issues or preferred more modern frameworks with Typescript support and a better developer experience. WebView and performance issues also got mentioned a handful of times.
 
 ## Contributing
 
