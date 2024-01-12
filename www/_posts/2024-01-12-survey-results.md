@@ -9,6 +9,10 @@ tags: news
 ---
 Thank you very much for taking part in our user & contributor survey. We received 228 submissions. Let's dive straight into the data.
 
+This survey got over 200 responses and considering only a fraction of people who actually see the survey will respond, there are probably quite a lot of happy Cordova users and new and long-running app projects out there. We got some good feedback of the most requested improvements and biggest pain points.
+
+<!--more-->
+
 ## Usage
 
 Obviously almost all respondents work with Cordova and the most used platforms are **Android (97.4%), iOS (89%)**, Browser (21.1%) and Electron (7%). Windows and macOS Catalyst got only a handful of responses in total.
@@ -84,8 +88,6 @@ Some users also find developing and testing plugins very hard.
 > Cordova makes it simple to build plugins.
 
 ## Closing words
-
-This survey got over 200 responses and considering only a fraction of people who actually see the survey will respond, there are probably quite a lot of happy Cordova users and new and long-running app projects out there. We got some good feedback of the most requested improvements and biggest pain points.
 
 As you might know, most of the maintainers are volunteers and work on Cordova in their free time. Therefore, we need your help ensuring that Cordova remains a robust and reliable platform for building mobile apps. Your involvement, whether it's providing feedback, fixing bugs, or developing plugins, is essential to ensuring Cordova's continued relevance and adoption. The Cordova PMC will do its best to make contributing as easy as possible and provide developer guidance, code reviews, documentation, and frequent releases. A large portion of bug fixes, plugins and features have been provided by dedicated individuals for many years now and will be in the future. You can contribute to Cordova's future success with your fixes, solutions, plugins and collaboration on releases.
 
