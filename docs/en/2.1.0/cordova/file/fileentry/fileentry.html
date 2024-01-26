@@ -28,8 +28,6 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
     <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
-    <!-- Algolia Search CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
 
     <!-- Fonts -->
     <!-- For attribution information, see www/attributions.html -->
@@ -106,7 +104,6 @@
                             <form class="navbar-form navbar-right" id="header-search-form" role="search">
                                 <div class="input-group">
                                     
-                                    <input id="header-search-field" type="text" placeholder="Search '2.1.0' docs..." class="form-control hidden-xs" autocomplete="off">
                                 </div>
                             </form>
                         </li>
@@ -1836,7 +1833,7 @@ entry.file(success, fail);
                         <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0">License</a>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
                     </li>
                     <li>
                         <a href="/artwork">Artwork</a>
@@ -1858,6 +1855,9 @@ entry.file(success, fail);
                 <ul class="nav">
                     <li>
                         <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
                     </li>
                     <li>
                         <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
@@ -1883,11 +1883,10 @@ entry.file(success, fail);
             Learn More
         </a>
         <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
-        <script async defer src="https://slack-cordova-io.herokuapp.com/slackin.js"></script>
     </div>
 </div>
 <p class="copyright_text">
-    Copyright &copy; 2024 The Apache Software Foundation, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br/>
+    Copyright &copy; 2024 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
     Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
     <br/>
     <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
@@ -1905,19 +1904,5 @@ entry.file(success, fail);
 
     <script defer type="text/javascript" src="/static/js/index.js"></script>
     <script defer type="text/javascript" src="/static/js/twitter.js"></script>
-    
-
-
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
-<script type="text/javascript">
-    docsearch({
-        apiKey: '0a916ab198bd93d031aa70611271e42e',
-        indexName: 'cordova',
-        inputSelector: '#header-search-field',
-        algoliaOptions: { 'facetFilters': ["version:  2.1.0", "language: en"] }
-    });
-</script>
-
 </body>
 </html>
