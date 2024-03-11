@@ -129,6 +129,78 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Mon, 11 Mar 2024 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2024/03/11/cordova-electron-release-4.0.0.html">Cordova Electron 4.0.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">11 Mar 2024</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                        <a class="comment" href="/announcements/2024/03/11/cordova-electron-release-4.0.0.html#disqus_thread"></a>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released <code>Cordova Electron 4.0.0</code>! This is one of Cordova&#39;s supported platforms for building Electron applications.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-electron">cordova-electron@4.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove electron
+cordova platform add electron@4.0.0
+</code></pre></div></div>
+
+<p><strong>To install:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add electron@4.0.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<p>Some of the notable breaking changes in this release are:</p>
+
+<p><strong>Node.js Requirement:</strong></p>
+
+<p>This release requires the environment to have <strong>Node.js</strong> <code>18.0.0</code> or higher. It is recommended to use the current LTS, which is <code>20.11.1</code> at the time of this release.</p>
+
+<p><strong>Electron Update:</strong></p>
+
+<p>The <strong>Electron</strong> core dependencies have been updated to <code>29.0.0</code>. This version of Electron comes with the following app stack:</p>
+
+<ul>
+  <li>Chromium 122.0.6261.39</li>
+  <li>Node v20.9.0</li>
+  <li>V8 12.2</li>
+</ul>
+
+<p>More information about Electron 29.0.0 can be read on their <a href="https://www.electronjs.org/blog/electron-29-0">blog post here</a>.</p>
+
+<p><strong>Removed Plugin Argument&#39;s Accidental Multidimensional Array Wrapping:</strong></p>
+
+<p>In Cordova-Electron 3.0.0, plugin support was introduced, but an unintentional multidimensional array wrapping of the plugin arguments occurred. This wrapping may not have been noticeable to app developers, but it affected plugin developers.</p>
+
+<p>Typically, a plugin includes a set of APIs that may accept arguments, and these arguments are forwarded to the native side of the plugin. Due to improper argument spreading, plugin developers had to consistently access index 0 at the first level to retrieve the actual arguments, as in <code>args[0][0]</code>. There was never an <code>args[n+1]</code> scenario.</p>
+
+<p>This release corrected this issue. Plugin developers will need to update their plugins if the plugins are designed to read passed-in arguments.</p>
+
+<p>For a quick start guide and in-depth configuration setup, please check out our <a href="https://cordova.apache.org/docs/en/12.x/guide/platforms/electron/index.html">Cordova Electron Documentation</a>!</p>
+
+<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+
+</p>
+                    <div><a href="/announcements/2024/03/11/cordova-electron-release-4.0.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Fri, 12 Jan 2024 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/announcements/2024/01/12/survey-results.html">Cordova Survey 2023 Results</a>
@@ -13713,7 +13785,7 @@ just around the corner (July 19, 2013), and we are really excited about it!</p>
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Fri, 12 Jan 2024 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Mon, 11 Mar 2024 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };
