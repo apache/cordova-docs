@@ -34,7 +34,7 @@ When working in the CLI you can define application icon(s) via the `<icon>` elem
 If you do not specify an icon, the Apache Cordova logo is used.
 
 ```xml
-    <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
+    <icon src="res/ios/icon.png" platform="ios" width="57" height="57" />
 ```
 
 Attributes    | Description
@@ -43,7 +43,7 @@ src           | *Required* <br/> Location of the image file, relative to your pr
 platform      | *Optional* <br/> Target platform
 width         | *Optional* <br/> Icon width in pixels
 height        | *Optional* <br/> Icon height in pixels
-target        | *Optional* <br/> {% cdv_platform electron %} <br/> Set target to supply unique icons for `application` and `installer`
+target        | *Optional* <br/> {% cdv_platform electron %} <br/> Set target to supply unique icons for `app` and `installer`
 
 The following configuration can be used to define a single default icon
 which will be used for all platforms.
