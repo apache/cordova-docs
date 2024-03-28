@@ -343,7 +343,7 @@ Controlls the length of the the splash screen fade effect.
 
 **Data Type:** `Float`, in milliseconds
 
-**Default Value:** `500`
+**Default Value:** `500` (Android), `250` (iOS)
 
 **Usage Example:**
 
@@ -368,24 +368,6 @@ window.setTimeout(function () {
 }, splashDuration - fadeDuration);
 ```
 
-### `ShowSplashScreenSpinner`
-
-Controlls the splash screen spinner.
-
-**Supported Platforms:**
-
-- iOS
-
-**Data Type:** `Boolean`
-
-**Default Value:** `true`
-
-**Usage Example:**
-
-```xml
-<preference name="ShowSplashScreenSpinner" value="false"/>
-```
-
 ### `SplashScreenDelay`
 
 Amount of time in milliseconds to wait before automatically hide splash screen.
@@ -397,18 +379,33 @@ Amount of time in milliseconds to wait before automatically hide splash screen.
 
 **Data Type:** `Number`, in milliseconds
 
-**Default Value:** `true`
+**Default Value:** `0`
 
-- Android
-  `-1`: The splash screen will automatically hide when the `onPageFinished` has been triggered.
-
-- iOS
-  `3000`: The splash screen will automatically hide in 3 seconds.
+By default, the splash screen will automatically hide when the web content has finished loading. If you set a delay here, the splash screen will remain visible for that duration after the page load.
 
 **Usage Example:**
 
 ```xml
 <preference name="SplashScreenDelay" value="3000" />
+```
+
+### `SplashScreenBackgroundColor`
+
+The splash screen background color.
+
+**Supported Platforms:**
+
+- Android
+- iOS
+
+**Data Type:** `String`, color hex code value.
+
+**Default Value:** `#ffffff`
+
+**Usage Example:**
+
+```xml
+<preference name="SplashScreenBackgroundColor" value="#ffffff" />
 ```
 
 ### `AndroidPostSplashScreenTheme`
@@ -473,7 +470,7 @@ Defines the duration of the icon's animation if an Animated Vector Drawable is s
 
 ### `AndroidWindowSplashScreenBackground`
 
-The splash screen background color.
+Deprecated, use `SplashScreenBackgroundColor` instead.
 
 **Supported Platforms:**
 
@@ -544,16 +541,6 @@ Dismiss the splash screen.
 
 ```js
 navigator.splashscreen.hide();
-```
-
-**iOS Quirk:**
-
-The `config.xml` file's `AutoHideSplashScreen` setting must be `false`. To delay hiding the splash screen for two seconds, add a timer such as the following in the `deviceready` event handler:
-
-```js
-setTimeout(function() {
-    navigator.splashscreen.hide();
-}, 2000);
 ```
 
 ### `navigator.splashscreen.show`
