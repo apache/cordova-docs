@@ -11,8 +11,6 @@ We are happy to announce that we have just released `Cordova iOS 7.1.0`! This is
 
 * [cordova-ios@7.1.0](https://www.npmjs.com/package/cordova-ios)
 
-## Release Highlights
-
 **To upgrade:**
 
 ```bash
@@ -25,6 +23,8 @@ cordova platform add ios@7.1.0
 ```bash
 cordova platform add ios@7.1.0
 ```
+
+## Release Highlights
 
 **Features:**
 
