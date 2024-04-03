@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released Cordova Electron 4.0.0! This is one of Cordova&#39;s supported platforms for building Electron applicatio...">
+    <meta name="description" content="We are happy to announce that we have just released Cordova iOS 7.1.0! This is one of Cordova&#39;s supported platforms for building iOS applications.  cordo...">
 
     <title>
         
             
-                Cordova Electron 4.0.0 Released! - Apache Cordova
+                Cordova iOS 7.1.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2024/03/11/cordova-electron-release-4.0.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2024/04/03/cordova-ios-7.1.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -126,95 +126,129 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova Electron 4.0.0 Released!</div>
+        <div class="title">Cordova iOS 7.1.0 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">11 Mar 2024</div>
+        <div class="date">03 Apr 2024</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released <code>Cordova Electron 4.0.0</code>! This is one of Cordova&#39;s supported platforms for building Electron applications.</p>
+            <p>We are happy to announce that we have just released <code>Cordova iOS 7.1.0</code>! This is one of Cordova&#39;s supported platforms for building iOS applications.</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-electron">cordova-electron@4.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@7.1.0</a></li>
 </ul>
 
 <p><strong>To upgrade:</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove electron
-cordova platform add electron@4.0.0
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove ios
+cordova platform add ios@7.1.0
 </code></pre></div></div>
 
 <p><strong>To install:</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add electron@4.0.0
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@7.1.0
 </code></pre></div></div>
 
 <h2>Release Highlights</h2>
 
-<p>Some of the notable breaking changes in this release are:</p>
-
-<p><strong>Node.js Requirement:</strong></p>
-
-<p>This release requires the environment to have <strong>Node.js</strong> <code>18.0.0</code> or higher. It is recommended to use the current LTS, which is <code>20.11.1</code> at the time of this release.</p>
-
-<p><strong>Electron Update:</strong></p>
-
-<p>The <strong>Electron</strong> core dependencies have been updated to <code>29.0.0</code>. This version of Electron comes with the following app stack:</p>
+<h3>Features</h3>
 
 <ul>
-  <li>Chromium 122.0.6261.39</li>
-  <li>Node v20.9.0</li>
-  <li>V8 12.2</li>
+  <li>
+    <p><strong><code>SplashScreenBackgroundColor</code> preference support</strong></p>
+
+    <p>This preference allows you to set the splashscreen&#39;s background colour. If no <code>SplashScreenBackgroundColor</code> is provided, it will fall back to the <code>BackgroundColor</code>, which is the current behavior, and then fallback to the system background colour when nothing is defined.</p>
+  </li>
+  <li>
+    <p><strong><code>privacy-manifest</code> Support</strong></p>
+
+    <p>This release supplies the templated blank privacy manifest file, <code>PrivacyInfo.xcprivacy</code> which can be configured from <code>config.xml</code>.</p>
+
+    <p>This release focuses specifically on providing support for app developers to set this configuration, while a later release will introduce support for plugin developers.</p>
+
+    <p>It is recommended that plugin developers help app developers by providing in their plugin documentation the necessary configuration setup.</p>
+
+    <p>Below is an example config.xml entry that app developers can define to configure the privacy manifest file.</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;privacy-manifest&gt;</span>
+          <span class="nt">&lt;key&gt;</span>NSPrivacyTracking<span class="nt">&lt;/key&gt;</span>
+          <span class="nt">&lt;true/&gt;</span>
+          <span class="nt">&lt;key&gt;</span>NSPrivacyCollectedDataTypes<span class="nt">&lt;/key&gt;</span>
+          <span class="nt">&lt;array/&gt;</span>
+          <span class="nt">&lt;key&gt;</span>NSPrivacyAccessedAPITypes<span class="nt">&lt;/key&gt;</span>
+          <span class="nt">&lt;array/&gt;</span>
+          <span class="nt">&lt;key&gt;</span>NSPrivacyTrackingDomains<span class="nt">&lt;/key&gt;</span>
+          <span class="nt">&lt;array/&gt;</span>
+      <span class="nt">&lt;/privacy-manifest&gt;</span>
+  <span class="nt">&lt;/platform&gt;</span>
+</code></pre></div>    </div>
+
+    <p>The contents and values of <code>NSPrivacyTracking</code>, <code>NSPrivacyCollectedDataTypes</code>, <code>NSPrivacyAccessedAPITypes</code>, and <code>NSPrivacyTrackingDomains</code> will depend on the specific native APIs being utilized.</p>
+
+    <p>It is recommended to read the Apple Developer documentation to better understand these parameters.</p>
+
+    <ul>
+      <li><a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files">Privacy manifest files</a></li>
+      <li><a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_use_of_required_reason_api">Describing use of required reason API</a></li>
+      <li><a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests">Describing data use in privacy manifests</a></li>
+    </ul>
+  </li>
 </ul>
 
-<p>More information about Electron 29.0.0 can be read on their <a href="https://www.electronjs.org/blog/electron-29-0">blog post here</a>.</p>
+<h3>Fixes</h3>
 
-<p><strong>Removed Plugin Argument&#39;s Accidental Multidimensional Array Wrapping:</strong></p>
+<ul>
+  <li>
+    <p><strong>Use <code>PROVISIONING_PROFILE_SPECIFIER</code> for manual codesigning</strong></p>
 
-<p>In Cordova-Electron 3.0.0, plugin support was introduced, but an unintentional multidimensional array wrapping of the plugin arguments occurred. This wrapping may not have been noticeable to app developers, but it affected plugin developers.</p>
+    <p>Allows you to use either the UUID or name value from the provisioning profile for the build flag <code>provisioningProfile</code> in either the <code>build.json</code> configuration file or via the CLI command.</p>
+  </li>
+  <li>
+    <p><strong>WASM MIME type error</strong></p>
 
-<p>Typically, a plugin includes a set of APIs that may accept arguments, and these arguments are forwarded to the native side of the plugin. Due to improper argument spreading, plugin developers had to consistently access index 0 at the first level to retrieve the actual arguments, as in <code>args[0][0]</code>. There was never an <code>args[n+1]</code> scenario.</p>
+    <p>Enables WebAssembly support in Cordova WebView.</p>
+  </li>
+</ul>
 
-<p>This release corrected this issue. Plugin developers will need to update their plugins if the plugins are designed to read passed-in arguments.</p>
-
-<p>For a quick start guide and in-depth configuration setup, please check out our <a href="https://cordova.apache.org/docs/en/12.x/guide/platforms/electron/index.html">Cordova Electron Documentation</a>!</p>
-
-<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+<p>Please report any issues you find on our <a href="https://github.com/apache/cordova-iOS/issues">Cordova-iOS</a> GitHub issue tracker!</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
-<h4>Breaking</h4>
+<p><strong>Features:</strong></p>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-electron/pull/263">GH-263</a> feat!: bump <code>electron@^29.0.0</code> w/ supporting changes</li>
-  <li><a href="https://github.com/apache/cordova-electron/pull/266">GH-266</a> fix!: remove extra array wrapper from passed arguments</li>
-  <li><a href="https://github.com/apache/cordova-electron/pull/264">GH-264</a> npm(dep)!: bump <code>electron-builder@^24.12.0</code>, bump node engine requirement &amp; CI
-    <ul>
-      <li>Updates Node Engine Requirement <code>&gt;= 18.0.0</code></li>
-    </ul>
-  </li>
-  <li><a href="https://github.com/apache/cordova-electron/pull/271">GH-271</a> dep!: bump <code>fs-extra@^11.2.0</code></li>
-  <li><a href="https://github.com/apache/cordova-electron/pull/265">GH-265</a> npm(dep)!: bump other dependencies</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1411">GH-1411</a> feat: <code>SplashScreenBackgroundColor</code> preference support</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1406">GH-1406</a> feat: add <code>privacy-manifest</code> config support</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1383">GH-1383</a> feat: add PrivacyInfo.xcprivacy for CordovaLib &amp; app template</li>
 </ul>
 
-<h4>Others</h4>
+<p><strong>Fixes:</strong></p>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-electron/pull/232">GH-232</a> dep(npm): bump dev dependencies</li>
-  <li><a href="https://github.com/apache/cordova-electron/pull/270">GH-270</a> chore: rebuilt <code>package-lock.json</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1405">GH-1405</a> fix: use <code>PROVISIONING_PROFILE_SPECIFIER</code> for manual codesigning</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1374">GH-1374</a> fix: WASM MIME type error by specifying it in Info.plist template</li>
 </ul>
 
-<h4>CI:**</h4>
+<p><strong>Chores:</strong></p>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-electron/pull/268">GH-268</a> ci: downgrade codecov action dependency to v3</li>
-  <li><a href="https://github.com/apache/cordova-electron/pull/267">GH-267</a> ci: add node 20.x &amp; use latest action dependencies</li>
-  <li><a href="https://github.com/apache/cordova-electron/pull/236">GH-236</a> ci: update github action workflow</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1413">GH-1413</a> chore(deps): Modernize some dependencies</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1404">GH-1404</a> chore: update package &amp; package-lock</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1382">GH-1382</a> chore(deps-dev): bump <code>@babel/traverse</code> from 7.21.4 to 7.23.2</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1380">GH-1380</a> chore: Update Slack signup link in SUPPORT_QUESTION.md</li>
+</ul>
+
+<p><strong>CI:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1412">GH-1412</a> ci: Fix ObjC testing with latest Xcode</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1408">GH-1408</a> ci(gh-action): add Apache RAT &amp; package license checker workflow w/ license header additions</li>
 </ul>
 
         </div>
@@ -223,37 +257,17 @@ cordova platform add electron@4.0.0
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2024/01/12/survey-results.html">Previous</a>
+                    <a href="/announcements/2024/03/11/cordova-electron-release-4.0.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2024/01/12/survey-results.html">Cordova Survey 2023 Results</a>
-                    <div class="date"> 12 Jan 2024 - By Niklas Merz </div>
+                    <a class="title" href="/announcements/2024/03/11/cordova-electron-release-4.0.0.html">Cordova Electron 4.0.0 Released!</a>
+                    <div class="date"> 11 Mar 2024 - By Bryan Ellis </div>
                     <p class="content">
-                        Thank you very much for taking part in our user &amp; contributor...
+                        We are happy to announce that we have just released Cordova Electron...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2024/04/03/cordova-ios-7.1.0.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2024/04/03/cordova-ios-7.1.0.html">Cordova iOS 7.1.0 Released!</a>
-                    <div class="date"> 03 Apr 2024 - By Bryan Ellis </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released Cordova iOS...
-                    </p>
                 
             </div>
         </div>

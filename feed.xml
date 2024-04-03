@@ -6,9 +6,139 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 Mar 2024 15:13:16 +0000</pubDate>
-    <lastBuildDate>Mon, 11 Mar 2024 15:13:16 +0000</lastBuildDate>
+    <pubDate>Wed, 03 Apr 2024 15:25:21 +0000</pubDate>
+    <lastBuildDate>Wed, 03 Apr 2024 15:25:21 +0000</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
+    
+      <item>
+        <title>Cordova iOS 7.1.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova iOS 7.1.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building iOS applications.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@7.1.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
+cordova platform add ios@7.1.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add ios@7.1.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;h3&gt;Features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code&gt;SplashScreenBackgroundColor&lt;/code&gt; preference support&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;This preference allows you to set the splashscreen&amp;#39;s background colour. If no &lt;code&gt;SplashScreenBackgroundColor&lt;/code&gt; is provided, it will fall back to the &lt;code&gt;BackgroundColor&lt;/code&gt;, which is the current behavior, and then fallback to the system background colour when nothing is defined.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code&gt;privacy-manifest&lt;/code&gt; Support&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;This release supplies the templated blank privacy manifest file, &lt;code&gt;PrivacyInfo.xcprivacy&lt;/code&gt; which can be configured from &lt;code&gt;config.xml&lt;/code&gt;.&lt;/p&gt;
+
+    &lt;p&gt;This release focuses specifically on providing support for app developers to set this configuration, while a later release will introduce support for plugin developers.&lt;/p&gt;
+
+    &lt;p&gt;It is recommended that plugin developers help app developers by providing in their plugin documentation the necessary configuration setup.&lt;/p&gt;
+
+    &lt;p&gt;Below is an example config.xml entry that app developers can define to configure the privacy manifest file.&lt;/p&gt;
+
+    &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;platform&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ios&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;privacy-manifest&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;key&amp;gt;&lt;/span&gt;NSPrivacyTracking&lt;span class=&quot;nt&quot;&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;true/&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;key&amp;gt;&lt;/span&gt;NSPrivacyCollectedDataTypes&lt;span class=&quot;nt&quot;&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;array/&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;key&amp;gt;&lt;/span&gt;NSPrivacyAccessedAPITypes&lt;span class=&quot;nt&quot;&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;array/&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;key&amp;gt;&lt;/span&gt;NSPrivacyTrackingDomains&lt;span class=&quot;nt&quot;&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;array/&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/privacy-manifest&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/platform&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;The contents and values of &lt;code&gt;NSPrivacyTracking&lt;/code&gt;, &lt;code&gt;NSPrivacyCollectedDataTypes&lt;/code&gt;, &lt;code&gt;NSPrivacyAccessedAPITypes&lt;/code&gt;, and &lt;code&gt;NSPrivacyTrackingDomains&lt;/code&gt; will depend on the specific native APIs being utilized.&lt;/p&gt;
+
+    &lt;p&gt;It is recommended to read the Apple Developer documentation to better understand these parameters.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/bundleresources/privacy_manifest_files&quot;&gt;Privacy manifest files&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_use_of_required_reason_api&quot;&gt;Describing use of required reason API&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests&quot;&gt;Describing data use in privacy manifests&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Fixes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Use &lt;code&gt;PROVISIONING_PROFILE_SPECIFIER&lt;/code&gt; for manual codesigning&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Allows you to use either the UUID or name value from the provisioning profile for the build flag &lt;code&gt;provisioningProfile&lt;/code&gt; in either the &lt;code&gt;build.json&lt;/code&gt; configuration file or via the CLI command.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;WASM MIME type error&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Enables WebAssembly support in Cordova WebView.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-iOS/issues&quot;&gt;Cordova-iOS&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1411&quot;&gt;GH-1411&lt;/a&gt; feat: &lt;code&gt;SplashScreenBackgroundColor&lt;/code&gt; preference support&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1406&quot;&gt;GH-1406&lt;/a&gt; feat: add &lt;code&gt;privacy-manifest&lt;/code&gt; config support&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1383&quot;&gt;GH-1383&lt;/a&gt; feat: add PrivacyInfo.xcprivacy for CordovaLib &amp;amp; app template&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1405&quot;&gt;GH-1405&lt;/a&gt; fix: use &lt;code&gt;PROVISIONING_PROFILE_SPECIFIER&lt;/code&gt; for manual codesigning&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1374&quot;&gt;GH-1374&lt;/a&gt; fix: WASM MIME type error by specifying it in Info.plist template&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1413&quot;&gt;GH-1413&lt;/a&gt; chore(deps): Modernize some dependencies&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1404&quot;&gt;GH-1404&lt;/a&gt; chore: update package &amp;amp; package-lock&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1382&quot;&gt;GH-1382&lt;/a&gt; chore(deps-dev): bump &lt;code&gt;@babel/traverse&lt;/code&gt; from 7.21.4 to 7.23.2&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1380&quot;&gt;GH-1380&lt;/a&gt; chore: Update Slack signup link in SUPPORT_QUESTION.md&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;CI:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1412&quot;&gt;GH-1412&lt;/a&gt; ci: Fix ObjC testing with latest Xcode&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1408&quot;&gt;GH-1408&lt;/a&gt; ci(gh-action): add Apache RAT &amp;amp; package license checker workflow w/ license header additions&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 03 Apr 2024 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2024/04/03/cordova-ios-7.1.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/04/03/cordova-ios-7.1.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova Electron 4.0.0 Released!</title>
@@ -920,95 +1050,6 @@ cordova plugin add cordova-plugin-media-capture@5.0.0
         <pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/news/2023/08/18/media-capture-plugin-5.0.0.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/news/2023/08/18/media-capture-plugin-5.0.0.html</guid>
-        
-        <category>release</category>
-        
-        <category>plugins</category>
-        
-        
-        <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>File Plugin 8.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-file&lt;/code&gt;!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-file&quot;&gt;cordova-plugin-file@8.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-file
-cordova plugin add cordova-plugin-file@8.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;h3&gt;Breaking Changes&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Removed &lt;code&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt; permission&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;According to the official documentation on &lt;a href=&quot;https://developer.android.com/about/versions/11/privacy/storage&quot;&gt;Storage updates in Android 11&lt;/a&gt;, the &lt;a href=&quot;https://developer.android.com/reference/android/Manifest.permission#WRITE_EXTERNAL_STORAGE&quot;&gt;&lt;code&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt;&lt;/a&gt; permission is no longer operational and does not grant access to write to external storage.&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;If this permission is not allowlisted for an app that targets an API level before &lt;a href=&quot;https://developer.android.com/reference/android/os/Build.VERSION_CODES#Q&quot;&gt;&lt;code&gt;Build.VERSION_CODES.Q&lt;/code&gt;&lt;/a&gt; (SDK 29) this permission cannot be granted to apps.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;p&gt;Although Cordova has removed this permission from the plugin by default, you can still add it back if needed by using the &lt;code&gt;config-file&lt;/code&gt; tag in your project&amp;#39;s &lt;code&gt;config.xml&lt;/code&gt; file.&lt;/p&gt;
-
-    &lt;p&gt;Example:&lt;/p&gt;
-
-    &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;config-file&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;AndroidManifest.xml&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;parent=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/*&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schemas.android.com/apk/res/android&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;uses-permission&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:maxSdkVersion=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;32&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/config-file&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;It&amp;#39;s important to note that other plugins used in your Cordova project may still include the &lt;code&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt; permission. To verify whether the permission is added by other plugins, you can check the merged &lt;code&gt;AndroidManifest.xml&lt;/code&gt; file.&lt;/p&gt;
-
-    &lt;p&gt;The merged &lt;code&gt;AndroidManifest.xml&lt;/code&gt; file can be found at the following location:&lt;/p&gt;
-
-    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  platforms/android/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;Please keep in mind that the example file path provided above is specific to debug builds. For release builds or different build variants, the file path may vary slightly.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Android 13+ Support&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Beginning from Android 13 (SDK 33), the &lt;code&gt;READ_EXTERNAL_STORAGE&lt;/code&gt; permission no longer has any effect. Instead, this permission has been replaced with more granular permissions: &lt;code&gt;READ_MEDIA_IMAGES&lt;/code&gt;, &lt;code&gt;READ_MEDIA_VIDEO&lt;/code&gt;, and &lt;code&gt;READ_MEDIA_AUDIO&lt;/code&gt;.&lt;/p&gt;
-
-    &lt;p&gt;To adapt to this change, we have introduced these three new permissions. This ensures that the existing functionality and behavior related to reading various media file are maintained for Android 13 and higher versions.&lt;/p&gt;
-
-    &lt;p&gt;Furthermore, to support the new granular permissions and Android 13 (SDK 33), we have raised the minimum requirement for &lt;code&gt;cordova-android&lt;/code&gt; to version &lt;code&gt;12.0.0&lt;/code&gt;. This version of Cordova-Android specifically includes the necessary updates to handle Android 13 and compile your project with the new permissions successfully.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find by following the this &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h2&gt;Changes Log&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/534&quot;&gt;GH-534&lt;/a&gt; fix(android): &lt;code&gt;FileError&lt;/code&gt; on a content &lt;code&gt;resolveLocalFileSystemURL&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/566&quot;&gt;GH-566&lt;/a&gt; feat(android): add &lt;code&gt;READ_MEDIA_*&lt;/code&gt; permissions for Android 13+&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/576&quot;&gt;GH-576&lt;/a&gt; feat(android)!: bump &lt;code&gt;cordova-android@12&lt;/code&gt; requirement&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/575&quot;&gt;GH-575&lt;/a&gt; ci: sync github workflow with paramedic base configs&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/574&quot;&gt;GH-574&lt;/a&gt; chore: update &lt;code&gt;@cordova/eslint-config@5.0.0&lt;/code&gt; w/ fixes&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/556&quot;&gt;GH-556&lt;/a&gt; feat(android)!: remove &lt;code&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt; permission from &lt;code&gt;plugin.xml&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/554&quot;&gt;GH-554&lt;/a&gt; spec(android): fix spec based on testing environment&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/547&quot;&gt;GH-547&lt;/a&gt; fix(types): Mark &lt;code&gt;FileWriter.write&lt;/code&gt; to support &lt;code&gt;ArrayBuffer&lt;/code&gt; data&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/535&quot;&gt;GH-535&lt;/a&gt; ci: sync workflow with paramedic&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/531&quot;&gt;GH-531&lt;/a&gt; dep(npm): bump package-lock v2 w/ rebuild&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/529&quot;&gt;GH-529&lt;/a&gt; ci(android): update java requirement for &lt;code&gt;cordova-android@11&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/news/2023/07/11/file-plugin-8.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/news/2023/07/11/file-plugin-8.0.0.html</guid>
         
         <category>release</category>
         

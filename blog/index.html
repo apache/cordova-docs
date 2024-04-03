@@ -129,6 +129,110 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Wed, 03 Apr 2024 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2024/04/03/cordova-ios-7.1.0.html">Cordova iOS 7.1.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">03 Apr 2024</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                        <a class="comment" href="/announcements/2024/04/03/cordova-ios-7.1.0.html#disqus_thread"></a>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released <code>Cordova iOS 7.1.0</code>! This is one of Cordova&#39;s supported platforms for building iOS applications.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@7.1.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove ios
+cordova platform add ios@7.1.0
+</code></pre></div></div>
+
+<p><strong>To install:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@7.1.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<h3>Features</h3>
+
+<ul>
+  <li>
+    <p><strong><code>SplashScreenBackgroundColor</code> preference support</strong></p>
+
+    <p>This preference allows you to set the splashscreen&#39;s background colour. If no <code>SplashScreenBackgroundColor</code> is provided, it will fall back to the <code>BackgroundColor</code>, which is the current behavior, and then fallback to the system background colour when nothing is defined.</p>
+  </li>
+  <li>
+    <p><strong><code>privacy-manifest</code> Support</strong></p>
+
+    <p>This release supplies the templated blank privacy manifest file, <code>PrivacyInfo.xcprivacy</code> which can be configured from <code>config.xml</code>.</p>
+
+    <p>This release focuses specifically on providing support for app developers to set this configuration, while a later release will introduce support for plugin developers.</p>
+
+    <p>It is recommended that plugin developers help app developers by providing in their plugin documentation the necessary configuration setup.</p>
+
+    <p>Below is an example config.xml entry that app developers can define to configure the privacy manifest file.</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;privacy-manifest&gt;</span>
+          <span class="nt">&lt;key&gt;</span>NSPrivacyTracking<span class="nt">&lt;/key&gt;</span>
+          <span class="nt">&lt;true/&gt;</span>
+          <span class="nt">&lt;key&gt;</span>NSPrivacyCollectedDataTypes<span class="nt">&lt;/key&gt;</span>
+          <span class="nt">&lt;array/&gt;</span>
+          <span class="nt">&lt;key&gt;</span>NSPrivacyAccessedAPITypes<span class="nt">&lt;/key&gt;</span>
+          <span class="nt">&lt;array/&gt;</span>
+          <span class="nt">&lt;key&gt;</span>NSPrivacyTrackingDomains<span class="nt">&lt;/key&gt;</span>
+          <span class="nt">&lt;array/&gt;</span>
+      <span class="nt">&lt;/privacy-manifest&gt;</span>
+  <span class="nt">&lt;/platform&gt;</span>
+</code></pre></div>    </div>
+
+    <p>The contents and values of <code>NSPrivacyTracking</code>, <code>NSPrivacyCollectedDataTypes</code>, <code>NSPrivacyAccessedAPITypes</code>, and <code>NSPrivacyTrackingDomains</code> will depend on the specific native APIs being utilized.</p>
+
+    <p>It is recommended to read the Apple Developer documentation to better understand these parameters.</p>
+
+    <ul>
+      <li><a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files">Privacy manifest files</a></li>
+      <li><a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_use_of_required_reason_api">Describing use of required reason API</a></li>
+      <li><a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests">Describing data use in privacy manifests</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+  <li>
+    <p><strong>Use <code>PROVISIONING_PROFILE_SPECIFIER</code> for manual codesigning</strong></p>
+
+    <p>Allows you to use either the UUID or name value from the provisioning profile for the build flag <code>provisioningProfile</code> in either the <code>build.json</code> configuration file or via the CLI command.</p>
+  </li>
+  <li>
+    <p><strong>WASM MIME type error</strong></p>
+
+    <p>Enables WebAssembly support in Cordova WebView.</p>
+  </li>
+</ul>
+
+<p>Please report any issues you find on our <a href="https://github.com/apache/cordova-iOS/issues">Cordova-iOS</a> GitHub issue tracker!</p>
+
+</p>
+                    <div><a href="/announcements/2024/04/03/cordova-ios-7.1.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Mon, 11 Mar 2024 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/announcements/2024/03/11/cordova-electron-release-4.0.0.html">Cordova Electron 4.0.0 Released!</a>
@@ -13785,7 +13889,7 @@ just around the corner (July 19, 2013), and we are really excited about it!</p>
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Mon, 11 Mar 2024 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Wed, 03 Apr 2024 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };
