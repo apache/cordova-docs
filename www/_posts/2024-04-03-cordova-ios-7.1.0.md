@@ -69,11 +69,11 @@ cordova platform add ios@7.1.0
 
 * **Use `PROVISIONING_PROFILE_SPECIFIER` for manual codesigning**
 
-    Previously, the `PROVISIONING_PROFILE` flag was being set for manual codesigning. This flag only accepted the provisioning profile's `UUID`. To accept the provisioning profile's `name` value, the `PROVISIONING_PROFILE_SPECIFIER` flag should be set instead. The `PROVISIONING_PROFILE_SPECIFIER` flag accepts both `name` and `UUID` values for the specified provisioning profile.
+    Allows you to use either the UUID or name value from the provisioning profile for the build flag `provisioningProfile` in either the `build.json` configuration file or via the CLI command.
 
 * **WASM MIME type error**
 
-    This release added the `application/wasm` MIME type to `Info.plist` so that WebAssembly can load.
+    Enables WebAssembly support in Cordova WebView.
 
 Please report any issues you find on our [Cordova-iOS](https://github.com/apache/cordova-iOS/issues) GitHub issue tracker!
 
