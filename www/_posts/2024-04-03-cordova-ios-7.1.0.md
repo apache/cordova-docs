@@ -32,7 +32,7 @@ cordova platform add ios@7.1.0
 
     This preference allows you to set the splashscreen's background colour. If no `SplashScreenBackgroundColor` is provided, it will fall back to the `BackgroundColor`, which is the current behavior, and then fallback to the system background colour when nothing is defined.
 
-* **`privacy-manifest` Supprot**
+* **`privacy-manifest` Support**
 
     This release supplies the templated blank privacy manifest file, `PrivacyInfo.xcprivacy` which can be configured from `config.xml`.
 
