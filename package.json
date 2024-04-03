@@ -30,7 +30,7 @@
     "chalk": "^4.1.2",
     "fs-extra": "^10.0.0",
     "glob": "^7.1.7",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-footer": "^2.0.2",
     "gulp-header": "^2.0.9",
     "gulp-htmllint": "0.0.19",
