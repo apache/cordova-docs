@@ -26,7 +26,7 @@ cordova platform add ios@7.1.0
 
 ## Release Highlights
 
-**Features:**
+### Features
 
 * **`SplashScreenBackgroundColor` preference support**
 
@@ -65,11 +65,11 @@ cordova platform add ios@7.1.0
     * [Describing use of required reason API](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_use_of_required_reason_api)
     * [Describing data use in privacy manifests](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests)
 
-**Fixes:**
+### Fixes
 
 * **Use `PROVISIONING_PROFILE_SPECIFIER` for manual codesigning**
 
-    Previosuly, the `PROVISIONING_PROFILE` flag was being set for manual codesigning. This flag only accepted the provisioning profile's `UUID`. To accept the provisioning profile's `name` value, the `PROVISIONING_PROFILE_SPECIFIER` flag should be set instead. The `PROVISIONING_PROFILE_SPECIFIER` flag accepts both `name` and `UUID` values for the specified provisioning profile.
+    Previously, the `PROVISIONING_PROFILE` flag was being set for manual codesigning. This flag only accepted the provisioning profile's `UUID`. To accept the provisioning profile's `name` value, the `PROVISIONING_PROFILE_SPECIFIER` flag should be set instead. The `PROVISIONING_PROFILE_SPECIFIER` flag accepts both `name` and `UUID` values for the specified provisioning profile.
 
 * **WASM MIME type error**
 
