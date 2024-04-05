@@ -26,11 +26,11 @@
     "@babel/core": "^7.21.4",
     "@babel/preset-react": "^7.14.5",
     "@cordova/eslint-config": "^5.0.0",
-    "browser-sync": "^2.29.1",
+    "browser-sync": "^3.0.2",
     "chalk": "^4.1.2",
     "fs-extra": "^10.0.0",
     "glob": "^7.1.7",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-footer": "^2.0.2",
     "gulp-header": "^2.0.9",
     "gulp-htmllint": "0.0.19",
@@ -46,6 +46,14 @@
     "simplecrawler": "^1.1.9",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
+  },
+  "overrides": {
+    "optimist": {
+      "minimist": "1.2.8"
+    }
+  },
+  "engines": {
+    "node": ">=16.20.2"
   },
   "repository": "github:apache/cordova-docs",
   "bugs": "https://github.com/apache/cordova-docs/issues",
