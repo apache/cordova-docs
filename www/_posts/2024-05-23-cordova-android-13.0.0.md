@@ -87,7 +87,7 @@ cordova platform add android@13.0.0
 
 * **Removed `kotlin-android-extensions`**
 
-    `kotlin-android-extensions` will no longer be checked out when kotlin is less than or equal to version `1.8.0`.
+    `kotlin-android-extensions` will no longer be checked out when kotlin is greater than or equal to version `1.8.0`.
 
 ### Feature
 
