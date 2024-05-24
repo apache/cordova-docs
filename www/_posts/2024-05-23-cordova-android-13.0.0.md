@@ -51,12 +51,12 @@ cordova platform add android@13.0.0
 
     To install SDK Build Tools 34.0.0:
 
-    5. Open Android Studio's **SDK Manager**:
-    6. Click on `SDK Tools` tab
-    7. Check `Show Package Details`
-    8. Expand `Android SDK Build-Tools`
-    9. Check `34.0.0`
-    10. Click `Apply`
+    1. Open Android Studio's **SDK Manager**:
+    2. Click on `SDK Tools` tab
+    3. Check `Show Package Details`
+    4. Expand `Android SDK Build-Tools`
+    5. Check `34.0.0`
+    6. Click `Apply`
 
     <img src="{{ site.baseurl }}/static/img/blog/2024/cordova-android-13-sdk-build-tools-3400.png" style="width: 100%;" alt="Android SDK Build Tools" />
 
@@ -70,14 +70,16 @@ cordova platform add android@13.0.0
 
     If you or a plugin has made changes to any of the following configuration preferences, the build results might not match the expected outcomes with this release:
 
-    * `android-minSdkVersion`
-    * `android-maxSdkVersion`
-    * `android-targetSdkVersion`
-    * `android-compileSdkVersion`
-    * `android-buildToolsVersion`
-    * `GradleVersion`
-    * `AndroidGradlePluginVersion`
-    * `GradlePluginKotlinVersion`
+    |Preference|Default Value|
+    |---|---|
+    |`android-minSdkVersion`|24|
+    |`android-maxSdkVersion`|_Not set_|
+    |`android-targetSdkVersion`|34|
+    |`android-compileSdkVersion`|_android-targetSdkVersion configured value_|
+    |`android-buildToolsVersion`|34.0.0|
+    |`GradleVersion`|8.7|
+    |`AndroidGradlePluginVersion`|8.3.0|
+    |`GradlePluginKotlinVersion`|1.9.24|
 
     Please take note of the versions that have been updated in this release. If you have manually modified any of these values, it is recommended to review and update the preference values accordingly.
 
