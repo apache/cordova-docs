@@ -129,6 +129,201 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Thu, 23 May 2024 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2024/05/23/cordova-android-13.0.0.html">Cordova Android 13.0.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">23 May 2024</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                        <a class="comment" href="/announcements/2024/05/23/cordova-android-13.0.0.html#disqus_thread"></a>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released <code>Cordova Android 13.0.0</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@13.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
+cordova platform add android@13.0.0
+</code></pre></div></div>
+
+<p><strong>To install:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@13.0.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<h3>BREAKING CHANGES</h3>
+
+<ul>
+  <li>
+    <p><strong>Increased Target SDK</strong></p>
+
+    <p>This release has increased the target SDK to 34 (Android 14).</p>
+  </li>
+  <li>
+    <p><strong>Increased Android Studio Requirement</strong></p>
+
+    <p>Android Studio Jellyfish is required if building and running from Android Studio.</p>
+  </li>
+  <li>
+    <p><strong>Required Build Tools</strong></p>
+
+    <p>To use <code>cordova-android@13</code>, SDK Platform <code>34</code> and SDK Build Tools <code>34.0.0</code> must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in your projects.</p>
+
+    <p>To install SDK Platform 34:</p>
+
+    <ol>
+      <li>Open Android Studio&#39;s <strong>SDK Manager</strong>:</li>
+      <li>Click on <code>SDK Platforms</code> tab</li>
+      <li>Check <code>Android 14.0 ("UpsideDownCake")</code> which has the <code>API Level</code> of <code>34</code></li>
+      <li>Click <code>Apply</code></li>
+    </ol>
+
+    <p><img src="/static/img/blog/2024/cordova-android-13-platform-sdk-34.png" style="width: 100%;" alt="Android SDK Platform" /></p>
+
+    <p>To install SDK Build Tools 34.0.0:</p>
+
+    <ol>
+      <li>Open Android Studio&#39;s <strong>SDK Manager</strong>:</li>
+      <li>Click on <code>SDK Tools</code> tab</li>
+      <li>Check <code>Show Package Details</code></li>
+      <li>Expand <code>Android SDK Build-Tools</code></li>
+      <li>Check <code>34.0.0</code></li>
+      <li>Click <code>Apply</code></li>
+    </ol>
+
+    <p><img src="/static/img/blog/2024/cordova-android-13-sdk-build-tools-3400.png" style="width: 100%;" alt="Android SDK Build Tools" /></p>
+  </li>
+  <li>
+    <p><strong>Project Dependencies</strong></p>
+
+    <p>The following project dependencies were bumpped:</p>
+
+    <ul>
+      <li>Kotlin: <code>1.9.24</code></li>
+      <li>Gradle: <code>8.7</code></li>
+      <li>Android Gradle Plugin (AGP): <code>8.3.0</code></li>
+    </ul>
+
+    <p>If you or a plugin has made changes to any of the following configuration preferences, the build results might not match the expected outcomes with this release:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Preference</th>
+          <th>Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>android-minSdkVersion</code></td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td><code>android-maxSdkVersion</code></td>
+          <td><em>Not set</em></td>
+        </tr>
+        <tr>
+          <td><code>android-targetSdkVersion</code></td>
+          <td>34</td>
+        </tr>
+        <tr>
+          <td><code>android-compileSdkVersion</code></td>
+          <td><em>android-targetSdkVersion configured value</em></td>
+        </tr>
+        <tr>
+          <td><code>android-buildToolsVersion</code></td>
+          <td>34.0.0</td>
+        </tr>
+        <tr>
+          <td><code>GradleVersion</code></td>
+          <td>8.7</td>
+        </tr>
+        <tr>
+          <td><code>AndroidGradlePluginVersion</code></td>
+          <td>8.3.0</td>
+        </tr>
+        <tr>
+          <td><code>GradlePluginKotlinVersion</code></td>
+          <td>1.9.24</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Please take note of the versions that have been updated in this release. If you have manually modified any of these values, it is recommended to review and update the preference values accordingly.</p>
+  </li>
+  <li>
+    <p><strong>Increased Java Requirement</strong></p>
+
+    <p>The Java Development Kit (JDK) requirement has been increased to version 17 due to the new versions of dependencies and tooling previously described.</p>
+  </li>
+  <li>
+    <p><strong>Removed <code>kotlin-android-extensions</code></strong></p>
+
+    <p><code>kotlin-android-extensions</code> will no longer be checked out when kotlin is greater than or equal to version <code>1.8.0</code>.</p>
+  </li>
+</ul>
+
+<h3>Feature</h3>
+
+<ul>
+  <li>
+    <p><strong>Added <code>SplashScreenBackgroundColor</code> Preference Support</strong></p>
+
+    <p>Added support for a general preference to be consistent across platforms for setting the splash screen background color.</p>
+
+    <p>The following order of priority is applied when it comes to the Cordova Android platform:</p>
+
+    <ul>
+      <li><code>AndroidWindowSplashScreenBackground</code> preference</li>
+      <li><code>SplashScreenBackgroundColor</code> preference</li>
+      <li><code>BackgroundColor</code> preference</li>
+      <li><code>#ffffff</code> hardcoded</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Add Camera Intent Support for File Input Capture</strong></p>
+
+    <p>Allows user to access and use the camera when the HTML file <code>input</code> tag contains the <code>capture</code> flag.</p>
+
+    <p>Example:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">capture</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Added <code>ResolveServiceWorkerRequests</code> Preference Support</strong></p>
+
+    <p>Added a preference that makes it possible for service worker requests to go through the asset loader. By default this is enabled.</p>
+
+    <p>This can be disabled with the following preference.</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"ResolveServiceWorkerRequests"</span> <span class="na">value=</span><span class="s">"false"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Please report any issues you find on our <a href="https://github.com/apache/cordova-android/issues">Cordova-android</a> GitHub issue tracker!</p>
+
+</p>
+                    <div><a href="/announcements/2024/05/23/cordova-android-13.0.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Wed, 03 Apr 2024 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/announcements/2024/04/03/cordova-ios-7.1.0.html">Cordova iOS 7.1.0 Released!</a>
@@ -13889,7 +14084,7 @@ just around the corner (July 19, 2013), and we are really excited about it!</p>
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Wed, 03 Apr 2024 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Thu, 23 May 2024 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };

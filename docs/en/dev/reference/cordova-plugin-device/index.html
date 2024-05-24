@@ -2393,8 +2393,6 @@ Although the object is in the global scope, it is not available until after the 
   <li>Android</li>
   <li>Browser</li>
   <li>iOS</li>
-  <li>Windows</li>
-  <li>OS X</li>
 </ul>
 
 <h2>device.model</h2>
@@ -2409,8 +2407,6 @@ different across versions of the same product.</p>
   <li>Android</li>
   <li>Browser</li>
   <li>iOS</li>
-  <li>Windows</li>
-  <li>OS X</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -2455,8 +2451,6 @@ different across versions of the same product.</p>
   <li>Android</li>
   <li>Browser</li>
   <li>iOS</li>
-  <li>Windows</li>
-  <li>OS X</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -2465,8 +2459,6 @@ different across versions of the same product.</p>
 <span class="c1">//   - "Android"</span>
 <span class="c1">//   - "browser"</span>
 <span class="c1">//   - "iOS"</span>
-<span class="c1">//   - "WinCE"</span>
-<span class="c1">//   - "Mac OS X"</span>
 <span class="c1">//</span>
 <span class="kd">var</span> <span class="nx">devicePlatform</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">platform</span><span class="p">;</span>
 </code></pre></div></div>
@@ -2487,8 +2479,6 @@ different across versions of the same product.</p>
 <ul>
   <li>Android</li>
   <li>iOS</li>
-  <li>Windows</li>
-  <li>OS X</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -2497,9 +2487,6 @@ different across versions of the same product.</p>
 <span class="c1">//</span>
 <span class="c1">// iOS: (Paraphrased from the UIDevice Class documentation)</span>
 <span class="c1">//         Returns the [UIDevice identifierForVendor] UUID which is unique and the same for all apps installed by the same vendor. However the UUID can be different if the user deletes all apps from the vendor and then reinstalls it.</span>
-<span class="c1">//</span>
-<span class="c1">// Windows Phone 7 : Returns a hash of device+current user,</span>
-<span class="c1">// if the user is not defined, a guid is generated and will persist until the app is uninstalled</span>
 <span class="c1">//</span>
 <span class="kd">var</span> <span class="nx">deviceID</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">uuid</span><span class="p">;</span>
 </code></pre></div></div>
@@ -2543,8 +2530,6 @@ The UUID will be the same if app is restored from a backup or iCloud as it is sa
   <li>Android</li>
   <li>Browser</li>
   <li>iOS</li>
-  <li>Windows</li>
-  <li>OS X</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -2556,10 +2541,6 @@ The UUID will be the same if app is restored from a backup or iCloud as it is sa
 <span class="c1">// Browser:    Returns version number for the browser</span>
 <span class="c1">//</span>
 <span class="c1">// iOS:     iOS 3.2 returns "3.2"</span>
-<span class="c1">//</span>
-<span class="c1">// Windows 8: return the current OS version, ex on Windows 8.1 returns 6.3.9600.16384</span>
-<span class="c1">//</span>
-<span class="c1">// OS X:        El Capitan would return "10.11.2"</span>
 <span class="c1">//</span>
 <span class="kd">var</span> <span class="nx">deviceVersion</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">version</span><span class="p">;</span>
 </code></pre></div></div>
@@ -2576,7 +2557,6 @@ The UUID will be the same if app is restored from a backup or iCloud as it is sa
 <ul>
   <li>Android</li>
   <li>iOS</li>
-  <li>Windows</li>
 </ul>
 
 <h3>Quick Example</h3>
@@ -2639,6 +2619,50 @@ This parameter is only returned for iOS V14.0 or later, and is not returned for 
 <ul>
   <li>iOS</li>
 </ul>
+
+<hr />
+
+<h2>iOS Privacy Manifest</h2>
+
+<p>As of May 1, 2024, Apple requires a privacy manifest file to be created for apps and third-party SDKs. The purpose of the privacy manifest file is to explain the data being collected and the reasons for the required APIs it uses. Starting with <code>cordova-ios@7.1.0</code>, APIs are available for configuring the privacy manifest file from <code>config.xml</code>.</p>
+
+<p>This plugin comes pre-bundled with a <code>PrivacyInfo.xcprivacy</code> file that contains the list of APIs it uses and the reasons for using them.</p>
+
+<p>However, as an app developer, it will be your responsibility to identify additional information explaining what your app does with that data.</p>
+
+<p>In this case, you will need to review the &quot;<a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests">Describing data use in privacy manifests</a>&quot; to understand the list of known <code>NSPrivacyCollectedDataTypes</code> and <code>NSPrivacyCollectedDataTypePurposes</code>.</p>
+
+<p>For example, if you collected the device ID for app functionality and analytics, you would write the following in <code>config.xml</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;privacy-manifest&gt;</span>
+        <span class="nt">&lt;key&gt;</span>NSPrivacyTracking<span class="nt">&lt;/key&gt;</span>
+        <span class="nt">&lt;false/&gt;</span>
+        <span class="nt">&lt;key&gt;</span>NSPrivacyTrackingDomains<span class="nt">&lt;/key&gt;</span>
+        <span class="nt">&lt;array/&gt;</span>
+        <span class="nt">&lt;key&gt;</span>NSPrivacyAccessedAPITypes<span class="nt">&lt;/key&gt;</span>
+        <span class="nt">&lt;array/&gt;</span>
+        <span class="nt">&lt;key&gt;</span>NSPrivacyCollectedDataTypes<span class="nt">&lt;/key&gt;</span>
+        <span class="nt">&lt;array&gt;</span>
+            <span class="nt">&lt;dict&gt;</span>
+                <span class="nt">&lt;key&gt;</span>NSPrivacyCollectedDataType<span class="nt">&lt;/key&gt;</span>
+                <span class="nt">&lt;string&gt;</span>NSPrivacyCollectedDataTypeDeviceID<span class="nt">&lt;/string&gt;</span>
+                <span class="nt">&lt;key&gt;</span>NSPrivacyCollectedDataTypeLinked<span class="nt">&lt;/key&gt;</span>
+                <span class="nt">&lt;false/&gt;</span>
+                <span class="nt">&lt;key&gt;</span>NSPrivacyCollectedDataTypeTracking<span class="nt">&lt;/key&gt;</span>
+                <span class="nt">&lt;false/&gt;</span>
+                <span class="nt">&lt;key&gt;</span>NSPrivacyCollectedDataTypePurposes<span class="nt">&lt;/key&gt;</span>
+                <span class="nt">&lt;array&gt;</span>
+                    <span class="nt">&lt;string&gt;</span>NSPrivacyCollectedDataTypePurposeAnalytics<span class="nt">&lt;/string&gt;</span>
+                    <span class="nt">&lt;string&gt;</span>NSPrivacyCollectedDataTypePurposeAppFunctionality<span class="nt">&lt;/string&gt;</span>
+                <span class="nt">&lt;/array&gt;</span>
+            <span class="nt">&lt;/dict&gt;</span>
+        <span class="nt">&lt;/array&gt;</span>
+    <span class="nt">&lt;/privacy-manifest&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
+</code></pre></div></div>
+
+<p>Also, ensure all four keys—<code>NSPrivacyTracking</code>, <code>NSPrivacyTrackingDomains</code>, <code>NSPrivacyAccessedAPITypes</code>, and <code>NSPrivacyCollectedDataTypes</code>—are defined, even if you are not making an addition to the other items. Apple requires all to be defined.</p>
 
 
             </div>

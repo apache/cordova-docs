@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released Cordova iOS 7.1.0! This is one of Cordova&#39;s supported platforms for building iOS applications.  cordo...">
+    <meta name="description" content="We are happy to announce that we have just released Cordova Android 13.0.0! This is one of Cordova&#39;s supported platforms for building Android application...">
 
     <title>
         
             
-                Cordova iOS 7.1.0 Released! - Apache Cordova
+                Cordova Android 13.0.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2024/04/03/cordova-ios-7.1.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2024/05/23/cordova-android-13.0.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -126,129 +126,228 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova iOS 7.1.0 Released!</div>
+        <div class="title">Cordova Android 13.0.0 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">03 Apr 2024</div>
+        <div class="date">23 May 2024</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released <code>Cordova iOS 7.1.0</code>! This is one of Cordova&#39;s supported platforms for building iOS applications.</p>
+            <p>We are happy to announce that we have just released <code>Cordova Android 13.0.0</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@7.1.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@13.0.0</a></li>
 </ul>
 
 <p><strong>To upgrade:</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove ios
-cordova platform add ios@7.1.0
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
+cordova platform add android@13.0.0
 </code></pre></div></div>
 
 <p><strong>To install:</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@7.1.0
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@13.0.0
 </code></pre></div></div>
 
 <h2>Release Highlights</h2>
 
-<h3>Features</h3>
+<h3>BREAKING CHANGES</h3>
 
 <ul>
   <li>
-    <p><strong><code>SplashScreenBackgroundColor</code> preference support</strong></p>
+    <p><strong>Increased Target SDK</strong></p>
 
-    <p>This preference allows you to set the splashscreen&#39;s background colour. If no <code>SplashScreenBackgroundColor</code> is provided, it will fall back to the <code>BackgroundColor</code>, which is the current behavior, and then fallback to the system background colour when nothing is defined.</p>
+    <p>This release has increased the target SDK to 34 (Android 14).</p>
   </li>
   <li>
-    <p><strong><code>privacy-manifest</code> Support</strong></p>
+    <p><strong>Increased Android Studio Requirement</strong></p>
 
-    <p>This release supplies the templated blank privacy manifest file, <code>PrivacyInfo.xcprivacy</code> which can be configured from <code>config.xml</code>.</p>
+    <p>Android Studio Jellyfish is required if building and running from Android Studio.</p>
+  </li>
+  <li>
+    <p><strong>Required Build Tools</strong></p>
 
-    <p>This release focuses specifically on providing support for app developers to set this configuration, while a later release will introduce support for plugin developers.</p>
+    <p>To use <code>cordova-android@13</code>, SDK Platform <code>34</code> and SDK Build Tools <code>34.0.0</code> must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in your projects.</p>
 
-    <p>It is recommended that plugin developers help app developers by providing in their plugin documentation the necessary configuration setup.</p>
+    <p>To install SDK Platform 34:</p>
 
-    <p>Below is an example config.xml entry that app developers can define to configure the privacy manifest file.</p>
+    <ol>
+      <li>Open Android Studio&#39;s <strong>SDK Manager</strong>:</li>
+      <li>Click on <code>SDK Platforms</code> tab</li>
+      <li>Check <code>Android 14.0 ("UpsideDownCake")</code> which has the <code>API Level</code> of <code>34</code></li>
+      <li>Click <code>Apply</code></li>
+    </ol>
 
-    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;privacy-manifest&gt;</span>
-          <span class="nt">&lt;key&gt;</span>NSPrivacyTracking<span class="nt">&lt;/key&gt;</span>
-          <span class="nt">&lt;true/&gt;</span>
-          <span class="nt">&lt;key&gt;</span>NSPrivacyCollectedDataTypes<span class="nt">&lt;/key&gt;</span>
-          <span class="nt">&lt;array/&gt;</span>
-          <span class="nt">&lt;key&gt;</span>NSPrivacyAccessedAPITypes<span class="nt">&lt;/key&gt;</span>
-          <span class="nt">&lt;array/&gt;</span>
-          <span class="nt">&lt;key&gt;</span>NSPrivacyTrackingDomains<span class="nt">&lt;/key&gt;</span>
-          <span class="nt">&lt;array/&gt;</span>
-      <span class="nt">&lt;/privacy-manifest&gt;</span>
-  <span class="nt">&lt;/platform&gt;</span>
-</code></pre></div>    </div>
+    <p><img src="/static/img/blog/2024/cordova-android-13-platform-sdk-34.png" style="width: 100%;" alt="Android SDK Platform" /></p>
 
-    <p>The contents and values of <code>NSPrivacyTracking</code>, <code>NSPrivacyCollectedDataTypes</code>, <code>NSPrivacyAccessedAPITypes</code>, and <code>NSPrivacyTrackingDomains</code> will depend on the specific native APIs being utilized.</p>
+    <p>To install SDK Build Tools 34.0.0:</p>
 
-    <p>It is recommended to read the Apple Developer documentation to better understand these parameters.</p>
+    <ol>
+      <li>Open Android Studio&#39;s <strong>SDK Manager</strong>:</li>
+      <li>Click on <code>SDK Tools</code> tab</li>
+      <li>Check <code>Show Package Details</code></li>
+      <li>Expand <code>Android SDK Build-Tools</code></li>
+      <li>Check <code>34.0.0</code></li>
+      <li>Click <code>Apply</code></li>
+    </ol>
+
+    <p><img src="/static/img/blog/2024/cordova-android-13-sdk-build-tools-3400.png" style="width: 100%;" alt="Android SDK Build Tools" /></p>
+  </li>
+  <li>
+    <p><strong>Project Dependencies</strong></p>
+
+    <p>The following project dependencies were bumpped:</p>
 
     <ul>
-      <li><a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files">Privacy manifest files</a></li>
-      <li><a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_use_of_required_reason_api">Describing use of required reason API</a></li>
-      <li><a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests">Describing data use in privacy manifests</a></li>
+      <li>Kotlin: <code>1.9.24</code></li>
+      <li>Gradle: <code>8.7</code></li>
+      <li>Android Gradle Plugin (AGP): <code>8.3.0</code></li>
     </ul>
+
+    <p>If you or a plugin has made changes to any of the following configuration preferences, the build results might not match the expected outcomes with this release:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Preference</th>
+          <th>Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>android-minSdkVersion</code></td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td><code>android-maxSdkVersion</code></td>
+          <td><em>Not set</em></td>
+        </tr>
+        <tr>
+          <td><code>android-targetSdkVersion</code></td>
+          <td>34</td>
+        </tr>
+        <tr>
+          <td><code>android-compileSdkVersion</code></td>
+          <td><em>android-targetSdkVersion configured value</em></td>
+        </tr>
+        <tr>
+          <td><code>android-buildToolsVersion</code></td>
+          <td>34.0.0</td>
+        </tr>
+        <tr>
+          <td><code>GradleVersion</code></td>
+          <td>8.7</td>
+        </tr>
+        <tr>
+          <td><code>AndroidGradlePluginVersion</code></td>
+          <td>8.3.0</td>
+        </tr>
+        <tr>
+          <td><code>GradlePluginKotlinVersion</code></td>
+          <td>1.9.24</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Please take note of the versions that have been updated in this release. If you have manually modified any of these values, it is recommended to review and update the preference values accordingly.</p>
+  </li>
+  <li>
+    <p><strong>Increased Java Requirement</strong></p>
+
+    <p>The Java Development Kit (JDK) requirement has been increased to version 17 due to the new versions of dependencies and tooling previously described.</p>
+  </li>
+  <li>
+    <p><strong>Removed <code>kotlin-android-extensions</code></strong></p>
+
+    <p><code>kotlin-android-extensions</code> will no longer be checked out when kotlin is greater than or equal to version <code>1.8.0</code>.</p>
   </li>
 </ul>
 
-<h3>Fixes</h3>
+<h3>Feature</h3>
 
 <ul>
   <li>
-    <p><strong>Use <code>PROVISIONING_PROFILE_SPECIFIER</code> for manual codesigning</strong></p>
+    <p><strong>Added <code>SplashScreenBackgroundColor</code> Preference Support</strong></p>
 
-    <p>Allows you to use either the UUID or name value from the provisioning profile for the build flag <code>provisioningProfile</code> in either the <code>build.json</code> configuration file or via the CLI command.</p>
+    <p>Added support for a general preference to be consistent across platforms for setting the splash screen background color.</p>
+
+    <p>The following order of priority is applied when it comes to the Cordova Android platform:</p>
+
+    <ul>
+      <li><code>AndroidWindowSplashScreenBackground</code> preference</li>
+      <li><code>SplashScreenBackgroundColor</code> preference</li>
+      <li><code>BackgroundColor</code> preference</li>
+      <li><code>#ffffff</code> hardcoded</li>
+    </ul>
   </li>
   <li>
-    <p><strong>WASM MIME type error</strong></p>
+    <p><strong>Add Camera Intent Support for File Input Capture</strong></p>
 
-    <p>Enables WebAssembly support in Cordova WebView.</p>
+    <p>Allows user to access and use the camera when the HTML file <code>input</code> tag contains the <code>capture</code> flag.</p>
+
+    <p>Example:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">capture</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Added <code>ResolveServiceWorkerRequests</code> Preference Support</strong></p>
+
+    <p>Added a preference that makes it possible for service worker requests to go through the asset loader. By default this is enabled.</p>
+
+    <p>This can be disabled with the following preference.</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"ResolveServiceWorkerRequests"</span> <span class="na">value=</span><span class="s">"false"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
   </li>
 </ul>
 
-<p>Please report any issues you find on our <a href="https://github.com/apache/cordova-iOS/issues">Cordova-iOS</a> GitHub issue tracker!</p>
+<p>Please report any issues you find on our <a href="https://github.com/apache/cordova-android/issues">Cordova-android</a> GitHub issue tracker!</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
+<p><strong>Breaking Changes:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-android/pull/1678">GH-1678</a> feat!: API 34 Support</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1543">GH-1543</a> feat!: bump <code>kotlin@1.9.24</code> &amp; drop <code>kotlin-android-extensions</code> when kotlin <code>&gt;=1.8.0</code></li>
+</ul>
+
 <p><strong>Features:</strong></p>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-ios/pull/1411">GH-1411</a> feat: <code>SplashScreenBackgroundColor</code> preference support</li>
-  <li><a href="https://github.com/apache/cordova-ios/pull/1406">GH-1406</a> feat: add <code>privacy-manifest</code> config support</li>
-  <li><a href="https://github.com/apache/cordova-ios/pull/1383">GH-1383</a> feat: add PrivacyInfo.xcprivacy for CordovaLib &amp; app template</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1700">GH-1700</a> feat(splash): Support <code>SplashScreenBackgroundColor</code> preference</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1609">GH-1609</a> feat: add camera intent with file input capture</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1696">GH-1696</a> feat: Add <code>ResolveServiceWorkerRequests</code> preference</li>
 </ul>
 
-<p><strong>Fixes:</strong></p>
+<p><strong>Chores, Dependencies &amp; CI:</strong></p>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-ios/pull/1405">GH-1405</a> fix: use <code>PROVISIONING_PROFILE_SPECIFIER</code> for manual codesigning</li>
-  <li><a href="https://github.com/apache/cordova-ios/pull/1374">GH-1374</a> fix: WASM MIME type error by specifying it in Info.plist template</li>
-</ul>
-
-<p><strong>Chores:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-ios/pull/1413">GH-1413</a> chore(deps): Modernize some dependencies</li>
-  <li><a href="https://github.com/apache/cordova-ios/pull/1404">GH-1404</a> chore: update package &amp; package-lock</li>
-  <li><a href="https://github.com/apache/cordova-ios/pull/1382">GH-1382</a> chore(deps-dev): bump <code>@babel/traverse</code> from 7.21.4 to 7.23.2</li>
-  <li><a href="https://github.com/apache/cordova-ios/pull/1380">GH-1380</a> chore: Update Slack signup link in SUPPORT_QUESTION.md</li>
-</ul>
-
-<p><strong>CI:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-ios/pull/1412">GH-1412</a> ci: Fix ObjC testing with latest Xcode</li>
-  <li><a href="https://github.com/apache/cordova-ios/pull/1408">GH-1408</a> ci(gh-action): add Apache RAT &amp; package license checker workflow w/ license header additions</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1677">GH-1677</a> chore(deps-dev): bump <code>@babel/traverse</code> from <code>7.22.10</code> to <code>7.23.2</code></li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1713">GH-1713</a> dep: bump npm dependencies 20240515
+    <ul>
+      <li><code>semver@7.6.2</code></li>
+      <li><code>rewire@7.0.0</code></li>
+      <li><code>nopt@7.2.1</code></li>
+      <li><code>jasmine@5.1.0</code></li>
+      <li><code>fs-extra@11.2.0</code></li>
+      <li><code>fast-glob@3.3.2</code></li>
+      <li><code>dedent@1.5.3</code></li>
+      <li><code>@cordova/eslint-config@5.1.0</code></li>
+      <li><code>which@4.0.0</code></li>
+      <li><code>properties-parser@0.6.0</code></li>
+      <li><code>android-versions@2.0.0</code></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1711">GH-1711</a> ci: Set up CodeQL analysis w/ fixes</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1687">GH-1687</a> ci(release-audit): add license header and dependency checker</li>
+  <li><a href="https://github.com/apache/cordova-android/pull/1703">GH-1703</a> ci: update <code>codecov@v4</code> w/ token</li>
 </ul>
 
         </div>
@@ -257,37 +356,17 @@ cordova platform add ios@7.1.0
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2024/03/11/cordova-electron-release-4.0.0.html">Previous</a>
+                    <a href="/announcements/2024/04/03/cordova-ios-7.1.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2024/03/11/cordova-electron-release-4.0.0.html">Cordova Electron 4.0.0 Released!</a>
-                    <div class="date"> 11 Mar 2024 - By Bryan Ellis </div>
+                    <a class="title" href="/announcements/2024/04/03/cordova-ios-7.1.0.html">Cordova iOS 7.1.0 Released!</a>
+                    <div class="date"> 03 Apr 2024 - By Bryan Ellis </div>
                     <p class="content">
-                        We are happy to announce that we have just released Cordova Electron...
+                        We are happy to announce that we have just released Cordova iOS...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2024/05/23/cordova-android-13.0.0.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2024/05/23/cordova-android-13.0.0.html">Cordova Android 13.0.0 Released!</a>
-                    <div class="date"> 23 May 2024 - By Bryan Ellis </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released Cordova Android...
-                    </p>
                 
             </div>
         </div>

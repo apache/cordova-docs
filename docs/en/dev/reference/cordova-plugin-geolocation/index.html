@@ -3153,6 +3153,23 @@ callback function when an error occurs with navigator.geolocation.</p>
 
 </code></pre></div></div>
 
+<hr />
+
+<h2>iOS Privacy Manifest</h2>
+
+<p>As of May 1, 2024, Apple requires a privacy manifest file to be created for apps and third-party SDKs. The purpose of the privacy manifest file is to explain the data being collected and the reasons for the required APIs it uses. Starting with <code>cordova-ios@7.1.0</code>, APIs are available for configuring the privacy manifest file from <code>config.xml</code>.</p>
+
+<p>As an app developer, it will be your responsibility to identify additional information explaining what your app does with that data.
+In this case, you will need to review the &quot;<a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests">Describing data use in privacy manifests</a>&quot; to understand the list of known <code>NSPrivacyCollectedDataTypes</code> and <code>NSPrivacyCollectedDataTypePurposes</code>.</p>
+
+<p>Also, ensure all four keys—<code>NSPrivacyTracking</code>, <code>NSPrivacyTrackingDomains</code>, <code>NSPrivacyAccessedAPITypes</code>, and <code>NSPrivacyCollectedDataTypes</code>—are defined, even if you are not making an addition to the other items. Apple requires all to be defined.</p>
+
+<p>Additional Resources:</p>
+<ul>
+  <li><a href="https://developer.apple.com/app-store/app-privacy-details/">App Privacy Details</a></li>
+  <li><a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files?language=objc">Privacy Manifest Files</a></li>
+</ul>
+
 
             </div>
         </div>

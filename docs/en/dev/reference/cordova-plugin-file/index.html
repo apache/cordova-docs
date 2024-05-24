@@ -3586,6 +3586,20 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
 
 <p>When creating subfolders, you need to create each folder separately as shown in the preceding code.</p>
 
+<hr />
+
+<h2>iOS Privacy Manifest</h2>
+
+<p>As of May 1, 2024, Apple requires a privacy manifest file to be created for apps and third-party SDKs. The purpose of the privacy manifest file is to explain the data being collected and the reasons for the required APIs it uses. Starting with <code>cordova-ios@7.1.0</code>, APIs are available for configuring the privacy manifest file from <code>config.xml</code>.</p>
+
+<p>This plugin comes pre-bundled with a <code>PrivacyInfo.xcprivacy</code> file that contains the list of APIs it uses and the reasons for using them.</p>
+
+<p>However, as an app developer, it will be your responsibility to identify additional information explaining what your app does with that data.</p>
+
+<p>In this case, you will need to review the &quot;<a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests">Describing data use in privacy manifests</a>&quot; to understand the list of known <code>NSPrivacyCollectedDataTypes</code> and <code>NSPrivacyCollectedDataTypePurposes</code>.</p>
+
+<p>Also, ensure all four keys—<code>NSPrivacyTracking</code>, <code>NSPrivacyTrackingDomains</code>, <code>NSPrivacyAccessedAPITypes</code>, and <code>NSPrivacyCollectedDataTypes</code>—are defined, even if you are not making an addition to the other items. Apple requires all to be defined.</p>
+
 
             </div>
         </div>
