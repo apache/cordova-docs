@@ -2361,10 +2361,6 @@
       <td>Get help for a command</td>
     </tr>
     <tr>
-      <td><code>telemetry</code></td>
-      <td>Turn telemetry collection on or off</td>
-    </tr>
-    <tr>
       <td><code>config</code></td>
       <td>Set, get, delete, edit, and list global cordova options</td>
     </tr>
@@ -2449,10 +2445,6 @@
     <tr>
       <td>--nohooks</td>
       <td>Suppress executing hooks (taking RegExp hook patterns as parameters)</td>
-    </tr>
-    <tr>
-      <td>--no-telemetry</td>
-      <td>Disable telemetry collection for the current command.</td>
     </tr>
   </tbody>
 </table>
@@ -3263,50 +3255,6 @@ reports and getting help.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova serve <span class="o">[</span>port]
 </code></pre></div></div>
-
-<h2><code>cordova telemetry</code> command</h2>
-
-<p>Turns telemetry collection on or off.</p>
-
-<p><strong>Command Syntax:</strong></p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova telemetry <span class="o">[</span>State]
-</code></pre></div></div>
-
-<table>
-  <thead>
-    <tr>
-      <th>State</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>on</td>
-      <td>Turn telemetry collection on.</td>
-    </tr>
-    <tr>
-      <td>off</td>
-      <td>Turn telemetry collection off.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3>Details</h3>
-
-<p>A timed prompt asking the user to opt-in or out is displayed the first time cordova is run.
-It lasts for 30 seconds, after which the user is automatically opted-out if they don&#39;t provide any answer.
-In CI environments, the <code>CI</code> environment variable can be set, which will prevent the prompt from showing up.
-Telemetry collection can also be turned off on a single command by using the <code>--no-telemetry</code> flag.</p>
-
-<p><strong>Usage Example:</strong></p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova telemetry on
-cordova telemetry off
-cordova build <span class="nt">--no-telemetry</span>
-</code></pre></div></div>
-
-<p>For details, see our privacy notice: https://cordova.apache.org/privacy</p>
 
 <h2><code>cordova help</code> command</h2>
 
