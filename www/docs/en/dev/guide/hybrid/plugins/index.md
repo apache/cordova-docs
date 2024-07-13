@@ -183,7 +183,6 @@ listed below, and each builds on the simple Echo Plugin example above:
 
 - [Android Plugins](../../platforms/android/plugin.html)
 - [iOS Plugins](../../platforms/ios/plugin.html)
-- [Windows Plugins](../../platforms/windows/plugin.html)
 
 ## Testing a Plugin during development
 
@@ -254,14 +253,13 @@ To surface the plugin in [Cordova Plugin Search](/plugins/), add the `ecosystem:
 To indicate support for a particular platform, add a keyword in the format `cordova-<platformName>` to the list of keywords in `package.json`.
 Plugman's `createpackagejson` command does this for you, but if you did not use it to generate your `package.json`, you should manually edit it as shown below.
 
-For example, for a plugin that supports Android, iOS & Windows, the keywords in `package.json` should include:
+For example, for a plugin that supports Android & iOS the keywords in `package.json` should include:
 
 ```json
 "keywords": [
     "ecosystem:cordova",
     "cordova-android",
-    "cordova-ios",
-    "cordova-windows"
+    "cordova-ios"
 ]
 ```
 
@@ -306,7 +304,7 @@ structure:
 * `PLUGIN_VERSION` specifies the version of your plugin. It should adhere to the syntax for a single version as defined by [npm's semver package][npm-semver] or an upper bound (see [below](#upper-bounds))
 * `DEPENDENCY` may be one of the following:
     * The Cordova CLI: `"cordova"`
-    * A Cordova platform: `"cordova-android"`, `"cordova-ios"`, `"cordova-windows"`, etc.
+    * A Cordova platform: `"cordova-android"`, `"cordova-ios"`, etc.
     * Another Cordova plugin: `"cordova-plugin-camera"`, etc.
 * `SEMVER_RANGE` should adhere to the syntax for a range as defined by [npm's semver package][npm-semver]
 
