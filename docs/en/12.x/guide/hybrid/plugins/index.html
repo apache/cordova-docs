@@ -2480,7 +2480,6 @@ listed below, and each builds on the simple Echo Plugin example above:</p>
 <ul>
   <li><a href="../../platforms/android/plugin.html">Android Plugins</a></li>
   <li><a href="../../platforms/ios/plugin.html">iOS Plugins</a></li>
-  <li><a href="../../platforms/windows/plugin.html">Windows Plugins</a></li>
 </ul>
 
 <h2>Testing a Plugin during development</h2>
@@ -2552,13 +2551,12 @@ dependencies load properly:</p>
 <p>To indicate support for a particular platform, add a keyword in the format <code>cordova-&lt;platformName&gt;</code> to the list of keywords in <code>package.json</code>.
 Plugman&#39;s <code>createpackagejson</code> command does this for you, but if you did not use it to generate your <code>package.json</code>, you should manually edit it as shown below.</p>
 
-<p>For example, for a plugin that supports Android, iOS &amp; Windows, the keywords in <code>package.json</code> should include:</p>
+<p>For example, for a plugin that supports Android &amp; iOS the keywords in <code>package.json</code> should include:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"keywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="s2">"ecosystem:cordova"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"cordova-android"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cordova-ios"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cordova-windows"</span><span class="w">
+    </span><span class="s2">"cordova-ios"</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
@@ -2604,7 +2602,7 @@ structure:</p>
   <li><code>DEPENDENCY</code> may be one of the following:
     <ul>
       <li>The Cordova CLI: <code>"cordova"</code></li>
-      <li>A Cordova platform: <code>"cordova-android"</code>, <code>"cordova-ios"</code>, <code>"cordova-windows"</code>, etc.</li>
+      <li>A Cordova platform: <code>"cordova-android"</code>, <code>"cordova-ios"</code> etc.</li>
       <li>Another Cordova plugin: <code>"cordova-plugin-camera"</code>, etc.</li>
     </ul>
   </li>
