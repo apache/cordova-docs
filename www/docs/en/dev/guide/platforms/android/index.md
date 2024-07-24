@@ -45,7 +45,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
             <td>24 (7.0) - 33 (13.0)</td>
             <td>
                 <ul>
-                    <li>Build Tools: ^33.0.2</li>
+                    <li>Build Tools: ^34.0.0</li>
                     <li>Kotlin: 1.7.21</li>
                     <li>Gradle: 7.6</li>
                     <li>Android Gradle Plugin: 7.4.2</li>
@@ -161,7 +161,7 @@ To ensure your system meets the necessary requirements, please refer to the "[In
 
 ### Java Development Kit (JDK)
 
-If you are using `cordova-android` 10.0.0 or greater, install the [Java Development Kit (JDK) 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
+If you are using `cordova-android` 10.0.0 or greater, install the [Java Development Kit (JDK) 17](https://www.oracle.com/java/technologies/downloads/#java17).
 
 If you are using any version below `cordova-android` 10.0.0, install the [Java Development Kit (JDK) 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html).
 
