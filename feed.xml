@@ -6,9 +6,82 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Jul 2024 18:47:06 +0000</pubDate>
-    <lastBuildDate>Tue, 16 Jul 2024 18:47:06 +0000</lastBuildDate>
+    <pubDate>Wed, 24 Jul 2024 05:19:14 +0000</pubDate>
+    <lastBuildDate>Wed, 24 Jul 2024 05:19:14 +0000</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
+    
+      <item>
+        <title>Cordova iOS 7.1.1 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova iOS 7.1.1&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building iOS applications.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@7.1.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
+cordova platform add ios@7.1.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add ios@7.1.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;h3&gt;Fixes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Properly uninstall plugins with asset tags&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Fixed issues where plugins were not uninstalling properly if the plugin had &lt;code&gt;&amp;lt;asset&amp;gt;&lt;/code&gt; tags defined in &lt;code&gt;plugin.xml&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Version warnings during plugin add&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Fixed an issue that displayed version check failure warnings when installing plugins.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Moved &lt;code&gt;CODE_SIGN_ENTITLEMENTS&lt;/code&gt; to the target settings of the application target within the Xcode project.&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-iOS/issues&quot;&gt;Cordova-iOS&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1446&quot;&gt;GH-1446&lt;/a&gt; fix: uninstall plugin with &lt;code&gt;asset&lt;/code&gt; tag&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1435&quot;&gt;GH-1435&lt;/a&gt; fix: Fix version checking helper scripts&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1436&quot;&gt;GH-1436&lt;/a&gt; fix: Properly set the webview config when it is provided&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1438&quot;&gt;GH-1438&lt;/a&gt; fix: Set CodeSigning Entitlements in Xcode Project at Target level&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Others:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1426&quot;&gt;GH-1426&lt;/a&gt; chore: Update CordovaLib.xcodeproj fixture&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1419&quot;&gt;GH-1419&lt;/a&gt; ci: update codecov@v4 w/ token&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 24 Jul 2024 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2024/07/24/cordova-ios-7.1.1.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/07/24/cordova-ios-7.1.1.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova Android 13.0.0 Released!</title>
@@ -1113,62 +1186,6 @@ cordova platform add ios@7.0.1
         <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2023/09/06/cordova-ios-7.0.1.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2023/09/06/cordova-ios-7.0.1.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Android 12.0.1 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Android 12.0.1&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Android applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@12.0.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove android
-cordova platform add android@12.0.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add android@12.0.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Adaptive Icon Fix&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;In Cordova-Android 12.0.0, an issue arose with the introduction of Android 13&amp;#39;s Themed Icons support. This issue resulted in adaptive icons not being generated due to an incorrect validation check.&lt;/p&gt;
-
-    &lt;p&gt;In this release, the problematic validation check was rectified. As a result, the adaptive icon will be generated even when monochrome attributes are not provided.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-android/issues&quot;&gt;Cordova-Android&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1632&quot;&gt;GH-1632&lt;/a&gt; fix(android): &lt;code&gt;monochrome&lt;/code&gt; checks&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1649&quot;&gt;GH-1649&lt;/a&gt; chore: rebuild &lt;code&gt;package-lock&lt;/code&gt; w/ lint corrections&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2023/08/28/cordova-android-12.0.1.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2023/08/28/cordova-android-12.0.1.html</guid>
         
         <category>news</category>
         
