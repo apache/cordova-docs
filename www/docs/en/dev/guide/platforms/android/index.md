@@ -41,6 +41,22 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
     </thead>
     <tbody>
         <tr>
+            <td>13.0.x</td>
+            <td>24 (7.0) - 34 (14.0)</td>
+            <td>
+                <ul>
+                    <li>Build Tools: ^34.0.0</li>
+                    <li>Kotlin: 1.9.24</li>
+                    <li>Gradle: 8.7</li>
+                    <li>Android Gradle Plugin: 8.3.0</li>
+                    <li>AndroidX Compat Library: 1.6.1</li>
+                    <li>AndroidX WebKit Library: 1.6.0</li>
+                    <li>AndroidX Core SplashScreen: 1.0.0</li>
+                    <li>Google Services Gradle Plugin: 4.3.15</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
             <td>12.0.x</td>
             <td>24 (7.0) - 33 (13.0)</td>
             <td>
@@ -161,9 +177,11 @@ To ensure your system meets the necessary requirements, please refer to the "[In
 
 ### Java Development Kit (JDK)
 
-If you are using `cordova-android` 10.0.0 or greater, install the [Java Development Kit (JDK) 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
+If using `cordova-android` 13 or later, install the [Java Development Kit (JDK) 17](https://www.oracle.com/java/technologies/downloads/#java17).
 
-If you are using any version below `cordova-android` 10.0.0, install the [Java Development Kit (JDK) 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html).
+If using `cordova-android` 10 through 12, install the [Java Development Kit (JDK) 11](https://www.oracle.com/java/technologies/downloads/#java11)
+
+If using `cordova-android` 9 or earlier, install the [Java Development Kit (JDK) 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html).
 
 The `JAVA_HOME` environment variable must be set according to your JDK installation path. See the [Setting Environment Variables](#setting-environment-variables) section on how to set up environment variables. Alternatively as of `cordova-android` 10.0.0 or greater, `CORDOVA_JAVA_HOME` can be set in place of `JAVA_HOME`, allowing a JDK install to be used specifically for Cordova development.
 
