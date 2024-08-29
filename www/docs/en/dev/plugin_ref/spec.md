@@ -556,7 +556,6 @@ branch<br />{% cdv_vartype string %} | Pod `branch` option.
 tag<br />{% cdv_vartype string %} | Pod `tag` option.
 commit<br />{% cdv_vartype string %} | Pod `commit` option.
 configurations<br />{% cdv_vartype string %} | Pod `configurations` option. For multiple values, separate them with a comma.
-http<br />{% cdv_vartype string %} | Pod `http` option.
 path<br />{% cdv_vartype string %} | Pod `path` option. Pod located on the local file system.
 options<br />{% cdv_vartype string %} | Pod options declared in raw format. If declared, the other Pod options are overwritten.<br/>Example: `options=":git => 'https://github.com/Alamofire/Alamofire.git', :tag => '3.1.1'"`
 
