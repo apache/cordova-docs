@@ -538,7 +538,7 @@ cordova run [<platform> [...]]
 
 ### Examples
 
-- Run a release build of current cordova project on `android` platform emulator named `Nexus_5_API_23_x86`. Use the spcified build configuration when running:
+- Run a release build of current cordova project on `android` platform emulator named `Nexus_5_API_23_x86`. Use the specified build configuration when running:
 
 ```bash
 cordova run android --release --buildConfig=..\myBuildConfig.json --target=Nexus_5_API_23_x86
