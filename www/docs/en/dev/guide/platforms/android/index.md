@@ -284,12 +284,19 @@ _**Note:** The directories above are generally located in the Android SDK ROOT._
 
 #### macOS and Linux
 
-On a Mac or Linux, with a text editor, create or modify the `~/.bash_profile` file.
+On a Mac older then Catalina or on Linux, create or modify the `~/.bash_profile` file for e.g. with a text editor.
+On macOS Catalina and newer, create or modify the `~/.zprofile`, because it's using ZSH instead of Bash.
 
 To set an environment variable, add a line that uses `export` like so (substitute the path with your local installation):
 
 ```bash
 export ANDROID_HOME=/Development/android-sdk/
+```
+
+on macOS
+
+```zsh
+export ANDROID_HOME=~/Library/Android/sdk/
 ```
 
 To update your `PATH`, add a line resembling the following (substitute the paths with your local Android SDK installation's location):
@@ -305,6 +312,12 @@ Reload your terminal to see this change reflected or run the following command:
 
 ```bash
 source ~/.bash_profile
+```
+
+macOS Catalina and newer
+
+```bash
+source ~/.zprofile
 ```
 
 #### Windows
