@@ -282,29 +282,48 @@ It is also recommended to update the `PATH` environment variable to include the 
 
 _**Note:** The directories above are generally located in the Android SDK ROOT._
 
-#### macOS and Linux
+#### Linux and macOS
 
-On a Mac or Linux, with a text editor, create or modify the `~/.bash_profile` file.
+On Linux or macOS versions prior to Catalina, use any text editor to create or modify the `~/.bash_profile` file.
+<br>On macOS Catalina and newer, create or modify the `~/.zprofile` file, as the default shell has changed.
 
-To set an environment variable, add a line that uses `export` like so (substitute the path with your local installation):
+Add the following line to your shell's profile to set up the `ANDROID_HOME` environment variable.
+    
+**Linux:**
 
 ```bash
-export ANDROID_HOME=/Development/android-sdk/
+export ANDROID_HOME=~/Android/Sdk
 ```
 
-To update your `PATH`, add a line resembling the following (substitute the paths with your local Android SDK installation's location):
+**macOS:**
+
+```bash
+export ANDROID_HOME=~/Library/Android/sdk
+```
+
+The above examples point to the standard paths where the Android SDK is typically stored. Depending on your environment configuration, the path may differ. Be sure to confirm that the path exist or adjust them to match your local installation.
+
+After setting the `ANDROID_HOME` environment variable, update the `PATH` variable to include directories containing various Android-related binaries.
 
 ```bash
 export PATH=$PATH:$ANDROID_HOME/platform-tools/
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/
-export PATH=$PATH:$ANDROID_HOME/build-tools
+export PATH=$PATH:$ANDROID_HOME/build-tools/
 export PATH=$PATH:$ANDROID_HOME/emulator/
 ```
 
 Reload your terminal to see this change reflected or run the following command:
 
+**Linux and macOS older then Catalina:**
+
 ```bash
 source ~/.bash_profile
+```
+
+**macOS Catalina and newer:**
+
+```bash
+source ~/.zprofile
 ```
 
 #### Windows
